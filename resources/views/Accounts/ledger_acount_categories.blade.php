@@ -147,7 +147,6 @@ $no=1;
                         <div class="form-group mb-3">
                             <label>Status</label>
                             <textarea class="form-control" name="ledgeraccount_categories_desc"   id="expanse-type-status">
-
                             </textarea>
                         </div>
                         </div>
