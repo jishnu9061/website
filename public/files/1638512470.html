@@ -1,0 +1,165 @@
+<!-- Content Wrapper. Contains page content -->
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/datatable.css') ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/datatable2.css') ?>">
+
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="card">
+    <div class="card-content">
+      <div class="col-md-6 pl-0">
+        <h4 class="caption mb-0 my-0"> Report
+        <small><span class="label label-success">Family Report</span></small></h4>
+      </div>
+      <div class="col-md-6">
+        <ol class="breadcrumb">
+          <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+          <li class="active">Family Report</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <!-- Main content -->
+  <section class="content">
+    <!-- Small boxes (Stat box) -->
+    <div class="row">
+      <div class="col-md-12 col-xs-12">
+        <div id="messages"></div>
+        <?php if ($this->session->flashdata('success')): ?>
+        <div class="alert alert-success alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <?php echo $this->session->flashdata('success'); ?>
+        </div>
+        <?php elseif ($this->session->flashdata('error')): ?>
+        <div class="alert alert-error alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <?php echo $this->session->flashdata('error'); ?>
+        </div>
+        <?php endif;?>
+        <div class="box">
+          <div class="box-header">
+            <h3 class="box-title">Family Report</h3>
+          </div>
+          <!-- /.box-header -->
+          <form role="form" action="<?php base_url('familyreport/index')?>" method="post" class="form-horizontal">
+            <div class="box-body">
+              <?php echo validation_errors(); ?>
+              <div class="form-group col-md-4">
+                <label class="w-100" for="groups">Family No</label>
+                <select class="form-control w-100 select-with" id="mahal_no" name="mahal_no">
+                  <option value="">Select</option>
+                  <?php foreach ($mahal_no as $key => $v): ?>
+                  <option value="<?php echo $v['mahal_no'] ?>"<?php if ($v['mahal_no'] == $res) {?>  <?php }?>><?php echo $v['mahal_no'] ?></option>
+                  <?php endforeach?>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label class="w-100" for="groups">Areas</label>
+                <select class="form-control w-100 select-with" id="place_id" name="place_id">
+                  <option value="">Select</option>
+                  <?php foreach($place_id as $row):?>
+                    <option value="<?php echo $row->place_id?>"><?php echo $row->placename ?></option>
+                  <?php endforeach; ?>
+                </select>
+              </div>
+              <div class="col-md-2 col-xs-12">
+                <button type="submit" id="searchBtn" class="btn btn-primary" style="margin-top:25px;margin-left:-12px;"> <i class="fa fa-search"></i> Search</button>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- /.box-body -->
+      </form>
+      <!-- /.box-body -->
+      <!-- search list -->
+
+      <?php if ($is_search == 1) {?>
+        <a class= "btn btn-primary "  href="<?php echo base_url('FamilyReport/generatepdf')?>">PDF</a>
+
+      <div class="table-responsive">
+        <table class="table table-striped " id="listTble">
+          <thead>
+            <tr>
+              <th>Sl No</th>
+              <th>Family No</th>
+              <th>House Name</th>
+              <th>Guardian Name</th>
+              <th>Phone</th>
+              <th>Mcount</th>
+              <th>Fecount</th>
+              <th>Area</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php if ($result > 0) 
+            {
+		          foreach ($result as $key => $res) 
+              {
+			          $guardianName = $res['first_name'] . " " . $res['last_name'];
+			      ?>
+            <tr>
+              <td><?php echo $key + 1; ?></td>
+              <td><?php echo $res['mahal_no']; ?></td>
+              <td><?php echo $res['house_name']; ?></td>
+              <td><?php echo $guardianName; ?></td>
+              <td><?php echo $res['phone']; ?></td>
+              <td><?php echo $res['male_count']; ?></td> 
+              <td><?php echo $res['female_count']; ?></td> 
+              <td><?php echo $res['place']; ?></td>
+            </tr>
+            <?php }} else {?>
+            <tr>
+              <td colspan="6" style="text-align: center;font-size: 15px;font-weight: bold;">No details found</td>
+            </tr>
+            <?php }?>
+          </tbody>
+        </table>
+      </div>
+      <?php }?>
+      <!-- search list ends -->
+    </div>
+  </div>
+</div>
+</section>
+</div>
+<script type="text/javascript" src="<?php echo base_url() ?>assets/js/datatable.js"></script>
+<script type="text/javascript" src="<?php echo base_url() ?>assets/js/datatable_2.js"></script>
+<script type="text/javascript" src="<?php echo base_url() ?>assets/js/datatable_3.js"></script>
+<script type="text/javascript" src="<?php echo base_url() ?>assets/js/datatable_4.js"></script>
+<script type="text/javascript" src="<?php echo base_url() ?>assets/js/datatable_5.js"></script>
+<script type="text/javascript" src="<?php echo base_url() ?>assets/js/datatable_6.js"></script>
+<script type="text/javascript" src="<?php echo base_url() ?>assets/js/datatable_7.js"></script>
+
+<!-- /.content-wrapper -->
+<script type="text/javascript">
+$(document).ready(function() {
+$("#mainReportsNav").addClass('active');
+$("#familyReportNav").addClass('active');
+$('#mahal_no').select2();
+$('#listTble').DataTable({
+"bDestroy": true,
+dom: 'Bfrtip',
+buttons: [
+{
+extend:    'copyHtml5',
+text:      '<i class="fas fa-copy"></i>',
+titleAttr: 'Copy'
+},
+{
+extend:    'excelHtml5',
+text:      '<i class="fas fa-file-excel"></i>',
+titleAttr: 'Excel'
+},
+{
+extend:    'csvHtml5',
+text:      '<i class="fas fa-file-csv"></i>',
+titleAttr: 'CSV'
+},
+{
+extend:    'pdfHtml5',
+text:      '<i class="fas fa-file-pdf"></i>',
+titleAttr: 'PDF'
+}
+]
+});
+});
+</script>

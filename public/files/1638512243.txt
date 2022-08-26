@@ -1,0 +1,34 @@
+
+  $(document).on('click','#testing',function(){
+   
+     $('.checkz:checked').each(function() {
+   var allowanceid=this.value;
+   var staffid = $('#staffname').val();
+   
+
+
+         $.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+    });
+        
+          $.ajax({
+            method:"POST",
+            url:"/allowancetostaff",
+            data:{
+
+                'staffid':staffid,
+                'allowanceid':allowanceid,
+
+            
+            },
+          
+            success: function (response){
+                alert(response.status);
+            },
+
+          });
+          
+    });
+     })
