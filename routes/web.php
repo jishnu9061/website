@@ -593,6 +593,8 @@ Route::any('/ledger_budget_category','AccountsController@ledger_budget_category'
 Route::any('/save_ledger_budget_category','AccountsController@save_ledger_budget_category')->name('save_ledger_budget_category');
 Route::any('/update_ledger_budget_category','AccountsController@update_ledger_budget_category')->name('update_ledger_budget_category');
 Route::any('/delete_ledger_budget_category/{id}','AccountsController@delete_ledger_budget_category')->name('delete_ledger_budget_category');
+
+Route::any('/expense_report','AccountsController@expense_report')->name('expense_report');
 //vipin end
 
 Route::any('/get_subcat', 'AccountsController@get_subcat')->name('get_subcat');

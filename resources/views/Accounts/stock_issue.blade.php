@@ -51,8 +51,8 @@
              </select>
             </div>
              <div class="col-md-3">
-            <select name="stock_transaction_subtype" required id="stock-transaction-subtype" class="form-control">
-                <option value=""> SUBTYPE</option>
+            <select name="stock_transaction_subtype" required id="stock-transaction-subtype" class="form-control text-center">
+                <option value=""> ---Select--- </option>
                 {{-- <option value="1"> PURCHASE </option> --}}
                 <option value="2"> SALE </option>
                 {{-- <option value="2"> SALES RETURN </option> --}}
