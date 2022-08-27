@@ -196,7 +196,7 @@
                                     </li>
                                     <li class="submenu-item ">
                                         <a href="{{url('attendance')}}" class='sidebar-link'>
-                                            <span>Attendance(Csv Upload)</span>
+                                            <span>Attendance(CSV Upload)</span>
                                         </a>
                                     </li>
                                 </ul>
