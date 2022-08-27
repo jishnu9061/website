@@ -45,7 +45,7 @@ $no=1;
           <td id="expanse-name">{{ $exp_type->accounts_name }}</td>
           <td id="expanse_status">{{ $exp_type->category_name}}</td>
           <td id="expanse_status">{{ $exp_type->subcategory_name}}</td>
-          <td></td>
+          <td>{{ $exp_type->budget_name }}</td>
           <td id="expanse_status">{{ $exp_type->accounts_desc}}</td>
 
                <input type="hidden" id="expanse_type_id" value="{{$exp_type->id}}" name="">
@@ -54,7 +54,7 @@ $no=1;
 
 
                 <a href="#" class="edits"    data-toggle="modal" id="amb_edit" data-bs-toggle="modal"
-                   data-bs-target="#edit"><i class="fas fa-edit" onclick="values_edit(`{{$exp_type->id}}`,`{{$exp_type->category_id}}`,`{{$exp_type->subcategory_id}}`,`{{$exp_type->accounts_name}}`,`{{$exp_type->accounts_desc}}`);" >
+                   data-bs-target="#edit"><i class="fas fa-edit" onclick="values_edit(`{{$exp_type->id}}`,`{{$exp_type->category_id}}`,`{{$exp_type->subcategory_id}}`,`{{$exp_type->accounts_name}}`,`{{$exp_type->accounts_desc}}`,'{{ $exp_type->budget_id }}');" >
                        </i></a>
   {{-- @endif --}}
                     </td>
@@ -254,7 +254,7 @@ $no=1;
   </script>
 
   <script>
-    function values_edit(val1,val2,val3,val4,val5){
+    function values_edit(val1,val2,val3,val4,val5,val6){
 
 
         $("#account_cat_edit").val(val2).change();
@@ -262,6 +262,7 @@ $no=1;
         $("#expanse_type_name").val(val4);
        $("#expanse-type-status").val(val5);
        $('#id').val(val1);
+       $('#editbudget_cat').val(val6).change();
       };
 
 

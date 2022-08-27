@@ -15,8 +15,9 @@ class AccountsController extends Controller
         $ledger_account=DB::table('ledgeraccounts')
         ->leftJoin('ledgeraccount_categories', 'ledgeraccount_categories.id', '=', 'ledgeraccounts.accounts_category')
         ->leftJoin('ledgeraccount_subcategories', 'ledgeraccount_subcategories.id', '=', 'ledgeraccounts.accounts_subcategory')
+        ->leftjoin('budget_types','budget_types.id','=','ledgeraccounts.budget_cat')
         ->select('*','ledgeraccount_categories.ledgeraccount_categories as category_name','ledgeraccount_subcategories.ledgeraccount_subcategories as subcategory_name'
-        ,'ledgeraccount_categories.id as category_id','ledgeraccount_subcategories.id as subcategory_id','ledgeraccounts.id as id')
+        ,'ledgeraccount_categories.id as category_id','ledgeraccount_subcategories.id as subcategory_id','ledgeraccounts.id as id','budget_types.id as budget_id')
         ->get();
         $category=DB::table('ledgeraccount_categories')->get();
         $subcategory=DB::table('ledgeraccount_subcategories')->get();
@@ -32,6 +33,7 @@ class AccountsController extends Controller
                    'accounts_name'     =>   $request->accounts_name,
                    'accounts_category'     =>   $request->accounts_category,
                    'accounts_subcategory'     =>   $request->accounts_subcategory,
+                   'budget_cat' => $request->budget_cat,
                    'accounts_desc'   =>   $request->accounts_desc,
                    'accounts_company'   =>   Auth::user()->Hospital,
             )
@@ -46,6 +48,7 @@ class AccountsController extends Controller
             'accounts_name'=>$request->accounts_name,
             'accounts_category'=>$request->accounts_category,
             'accounts_subcategory'=>$request->accounts_subcategory,
+            'budget_cat'=>$request->editbudget_cat,
             'accounts_desc'=>$request->accounts_desc);
         DB::table('ledgeraccounts')->where('id', $request->id)->update($data);
 
