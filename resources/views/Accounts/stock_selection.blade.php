@@ -35,8 +35,8 @@
         </div>
 <div class="col-md-6">
 
-    <button type="button"  class="btn btn-primary"  data-toggle="modal"  data-bs-toggle="modal"
-    data-bs-target="#11default"  class="btn btn-secondary">Create Item</button>
+    {{-- <button type="button"  class="btn btn-primary"  data-toggle="modal"  data-bs-toggle="modal"
+    data-bs-target="#11default"  class="btn btn-secondary">Create Item</button> --}}
 </div>
 
 
@@ -52,7 +52,7 @@
             </div>
              <div class="col-md-3">
             <select name="stock_transaction_subtype" required id="stock-transaction-subtype" class="form-control">
-                <option value=""> SUBTYPE</option>
+                <option value="">---Select---</option>
                 <option value="1"> PURCHASE </option>
                 {{-- <option value="2"> SALE </option> --}}
                 <option value="2"> SALES RETURN </option>

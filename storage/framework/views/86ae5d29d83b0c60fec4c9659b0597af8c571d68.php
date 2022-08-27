@@ -148,7 +148,7 @@
                                     </li>
                                     <li class="submenu-item ">
                                         <a href="<?php echo e(url('attendance')); ?>" class='sidebar-link'>
-                                            <span>Attendance(Csv Upload)</span>
+                                            <span>Attendance(CSV Upload)</span>
                                         </a>
                                     </li>
                                 </ul>
