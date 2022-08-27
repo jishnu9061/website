@@ -74,7 +74,7 @@
                                         $admin = array("usermanagement", "adddepartments","add_labdept","add_surgery_types","adddepartmentadmin","addroomstypes","addroomtypes","beds","Add_Ambulance_details");
                                         $lab = array("labcategory", "labtests", "labprofile","patlabtest","alllabtestsview");
                                         $hr = array("addallowance", "addstaffs", "staffs","loans","payslip","attendance","attendanceview","payslipbulk","generatepayslip","managestaff");
-                                        $accounts = array("ledger_acount_categories", "ledger_acount_subcategories","ledger_budget_category", "ledger_acounts","journal","ledger","trialbalance","profitandlossaccount");
+                                        $accounts = array("ledger_acount_categories", "ledger_acount_subcategories","ledger_budget_category", "ledger_acounts","expense_report","journal","ledger","trialbalance","profitandlossaccount");
                                         $doctor = array("Consultation", "todaysappointments", "reappointments","allpatients","dutyschedulefetch","applyleave");
                                         $casuality = array("casuality_patient", "ambulance_details");
                                         $pharmacy = array("serving", "manage_biils","allmedicinez", "allmedicinez","serving", "manage_biils");
@@ -156,7 +156,7 @@
                             <?php endif; ?>
                             <?php if(Auth::user()->role == 'account' || Auth::user()->role == 'hospitaladmin'): ?>
                                 <?php
-                                    $accounts = array("ledger_acount_categories", "ledger_acount_subcategories","ledger_budget_category", "ledger_acounts","journal","ledger","trialbalance","profitandlossaccount","balancesheet","stock_section","stock_issue","store_ledger","stock_categories","stock_subcategories","stock_items");
+                                    $accounts = array("ledger_acount_categories", "ledger_acount_subcategories","ledger_budget_category", "ledger_acounts","expense_report","journal","ledger","trialbalance","profitandlossaccount","balancesheet","stock_section","stock_issue","store_ledger","stock_categories","stock_subcategories","stock_items");
                                 ?>
                             <li class="sidebar-item  has-sub">
                                 <a href="<?php echo e(url('home')); ?>" class="sidebar-link">
@@ -186,6 +186,11 @@
                                                <span>Ledger Account</span>
                                            </a>
                                            </li>
+                                           <li class="submenu-item ">
+                                            <a href="<?php echo e(url('expense_report')); ?>" class=" sidebar-link">
+                                            <span>Expense Report</span>
+                                        </a>
+                                        </li>
                                            <li class="submenu-item ">
                                                <a href="<?php echo e(url('journal')); ?>" class=" sidebar-link" >
                                                <span>Journal</span>
