@@ -15,7 +15,7 @@
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HMS</title>
+    <title>CRA</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com/">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet">
@@ -23,13 +23,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css">
     <link rel="stylesheet" href="{{asset('/') }}assets/vendors/iconly/bold.css">
 </head>
-<a href="javascript:history.back()"  class="btn btn-primary" style="margin-bottom:10px;">Back</a>
+<br/>
+<a href="javascript:history.back()"  class="btn btn-primary" style="margin-bottom:10px;margin-left:20px;">Back</a>
 <div class="container-fluid">
 	<br>
-    <h2>Add Groups</h2>
+    <h2 class="text-center">Expense Report</h2>
 
-        <button  class="btn btn-primary "  data-toggle="modal" id="patient" data-bs-toggle="modal"
-        data-bs-target="#default"  class="btn btn-secondary">Add Groups</button>
+        {{-- <button  class="btn btn-primary "  data-toggle="modal" id="patient" data-bs-toggle="modal"
+        data-bs-target="#default"  class="btn btn-secondary">Add Groups</button> --}}
 
       <div class="table-responsive-fluid">
 <table class="table table-striped" id="allpatients" style="margin-top: 40px;">
@@ -56,6 +57,57 @@
   <tbody>
       <tr>
         <td>1</td>
+        <td>fdf</td>
+        <td>fdffd</td>
+        <td>fdfdfd</td>
+        <td>fdfdfd</td>
+        <td>fdfdfd</td>
+        <td>fdffdd</td>
+        <td>fdffd</td>
+        <td>fdfdf</td>
+        <td>fdfdfd</td>
+        <td>fdfdf</td>
+        <td>fdfd</td>
+        <td>fddfdfd</td>
+        <td>fdfd</td>
+        <td>fdfd</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>fdf</td>
+        <td>fdffd</td>
+        <td>fdfdfd</td>
+        <td>fdfdfd</td>
+        <td>fdfdfd</td>
+        <td>fdffdd</td>
+        <td>fdffd</td>
+        <td>fdfdf</td>
+        <td>fdfdfd</td>
+        <td>fdfdf</td>
+        <td>fdfd</td>
+        <td>fddfdfd</td>
+        <td>fdfd</td>
+        <td>fdfd</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>fdf</td>
+        <td>fdffd</td>
+        <td>fdfdfd</td>
+        <td>fdfdfd</td>
+        <td>fdfdfd</td>
+        <td>fdffdd</td>
+        <td>fdffd</td>
+        <td>fdfdf</td>
+        <td>fdfdfd</td>
+        <td>fdfdf</td>
+        <td>fdfd</td>
+        <td>fddfdfd</td>
+        <td>fdfd</td>
+        <td>fdfd</td>
+      </tr>
+      <tr>
+        <td>4</td>
         <td>fdf</td>
         <td>fdffd</td>
         <td>fdfdfd</td>
