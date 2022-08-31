@@ -1,4 +1,4 @@
-@extends('layouts.cra_main')
+@extends('layouts.hmsmain')
 @section('content')
 <div class="container">
 	<br>
