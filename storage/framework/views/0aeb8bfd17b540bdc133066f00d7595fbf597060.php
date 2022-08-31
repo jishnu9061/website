@@ -2,8 +2,10 @@
 <?php $__env->startSection('content'); ?>
 <div class="container">
 	<br>
-    <h2>Account Type</h2>
+    <h2>Add Groups</h2>
 
+        <button  class="btn btn-primary "  data-toggle="modal" id="patient" data-bs-toggle="modal"
+        data-bs-target="#default"  class="btn btn-secondary">Add Groups</button>
 
       <div class="table-responsive">
 <table class="table table-striped" id="allpatients" style="margin-top: 40px;">
@@ -11,10 +13,10 @@
     <tr>
       <th scope="col">Sl</th>
       
-      <th scope="col">Account Type</th>
-      
-      
-      
+      <th scope="col">Groups</th>
+      <th scope="col">Description </th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
 
     </tr>
   </thead>
@@ -27,9 +29,19 @@ $no=1;
           <td id="name"><?php echo e($no++); ?></td>
           
           <td id="expanse-name"><?php echo e($ledcat->ledgeraccount_subcategories); ?></td>
-          
+          <td id="expanse_status"><?php echo e($ledcat->ledgeraccount_subcategories_desc); ?></td>
           <input type="hidden" id="id" value="<?php echo e($ledcat->id); ?>" name="">
-               
+               <td>
+    <?php if($ledcat->accountssub_update_privilage == 0): ?>
+                <a href="#" class="edits"    data-toggle="modal" id="amb_edit" data-bs-toggle="modal"
+                   data-bs-target="#edit"><i class="fas fa-edit" onclick="values_edit(`<?php echo e($ledcat->id); ?>`,`<?php echo e($ledcat->cat_id); ?>`,`<?php echo e($ledcat->ledgeraccount_subcategories); ?>`,`<?php echo e($ledcat->ledgeraccount_subcategories_desc); ?>`);" ></i></a>
+                   <?php endif; ?>
+                </td>
+                   <td>
+    <?php if($ledcat->accountssub_update_privilage == 0): ?>
+                    <a onclick="return confirm('Are you sure ?');" href="<?php echo e(url('delete_ledger_accounts_subcategories/'.$ledcat->id)); ?>"><i class="fas fa-trash-alt"></i></a>
+                    <?php endif; ?>
+                </td>
       </tr>
  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
@@ -50,7 +62,7 @@ $no=1;
 
 
 
-                                    <h5 class="modal-title bb" id="myModalLabel1"> Account Types </h5>
+                                    <h5 class="modal-title bb" id="myModalLabel1"> Groups </h5>
 
 
 
@@ -67,7 +79,7 @@ $no=1;
                                             
 
                         <div class="form-group mb-3">
-                            <label>Account Type Name </label>
+                            <label>Group Name </label>
 			                <input type="text" class="form-control" name="ledgeraccount_subcategories" placeholder="" required>
                         </div>
                         <div class="form-group mb-3">
@@ -108,7 +120,7 @@ $no=1;
 
 
 
-                                    <h5 class="modal-title bb" id="myModalLabel1">Edit Account Type</h5>
+                                    <h5 class="modal-title bb" id="myModalLabel1">Edit Groups</h5>
 
 
 
@@ -128,7 +140,7 @@ $no=1;
                                                
 
                            <div class="form-group mb-3">
-                               <label>Account Type Name </label>
+                               <label>Group Name </label>
                                <input type="text" class="form-control" name="ledgeraccount_subcategories" id="subcat-name" placeholder="" required>
                            </div>
                            <div class="form-group mb-3">
@@ -146,7 +158,7 @@ $no=1;
 
 
                                     <div class="modal-footer">
-                                        <button type="submit" class="btn btn-primary" >Save</button>
+                                        <button type="submit" class="btn btn-primary" >Update</button>
                                         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
                                     </div>
                                       </form>
