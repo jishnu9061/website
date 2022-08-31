@@ -1,4 +1,4 @@
- @extends('layouts.hmsmain')
+ @extends('layouts.cra_main')
 @section('content')
             
                 <section class="row">
