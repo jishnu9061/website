@@ -681,3 +681,6 @@ Route::any('/update_surtypes', 'surgeryController@update')->name('update_surtype
 Route::any('delete_surgery{id}', 'surgeryController@destroy')->name('delete_surgery');
 Route::get('calendar-event', 'CalenderController@index')->name('calendar-event');
 Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents']);
+//mugunth
+Route::any('add_new_client','ClientManagement@index')->name('add_new_client');
+//mugunth
