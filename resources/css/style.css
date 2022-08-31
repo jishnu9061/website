@@ -103,7 +103,6 @@
      -o-transition: all .3s ease-in-out;
      transition: all .3s ease-in-out;
 }
-}
  .btn-custom {
      margin-top: 20px;
      background-color: transparent !important;
@@ -125,7 +124,6 @@
  blockquote {
      margin: 20px 0 20px;
      padding: 30px;
-}
 }
  ul, li, ol{
      list-style: none;
