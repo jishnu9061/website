@@ -458,7 +458,7 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
             <li>
-            <a href="add_new_client">
+            <a href="{{url('add_new_client')}}">
               <i class="bi bi-circle"></i><span>Add New Client</span>
             </a>
           <li>
