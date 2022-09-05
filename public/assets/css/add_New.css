@@ -4,11 +4,12 @@ body{
 }
 .nav_head{
     background-color: rgb(250, 255, 254);
-    margin-left: 9rem;
+    margin-left: 15rem;
     margin-right: 105px;
-    width: 68rem;
+    width: 67rem;
     border-radius: 3px;
-    box-shadow: 2px 2px 3px rgb(138, 135, 135);
+    box-shadow: 2px 2px 3px rgb(138 135 135);
+    margin-top: 71px;
 
 }
 .nav_h_1 {
@@ -19,7 +20,7 @@ body{
 }
 
 .b_rad {
-    background-color: rgb(241 230 208);
+    background-color: #ebd4aa;
     text-align: center;
     width: 20px;
     height: 20px;
@@ -40,12 +41,12 @@ p {
 }
 
 .container-1{
-    background-color: rgb(241 230 208);
-   height: 52rem;
-   width: 68rem;
-    margin-left: 9rem;
+    background-color: #ebd4aa;
+    height: 52rem;
+    width: 67rem;
+    margin-left: 15rem;
     margin-right: 20px;
-    box-shadow: 1px 2px 3px rgb(167, 163, 163);
+    box-shadow: 1px 2px 3px rgb(167 163 163);
     border-radius: 11px;
 }
 .form{
@@ -70,11 +71,11 @@ p {
 
 
 .client_number{
-    width: 62px;
+    width: 72px;
     height: 22px;
     border: 1px solid rgb(146, 146, 150);
     border-radius: 8px;
-    margin-left: 22px;
+    margin-left: 25px;
 }
 .client_type{
    
@@ -83,7 +84,7 @@ p {
     border: 1px solid rgb(146, 146, 150);
     border-radius: 8px;
     
-    margin-left: 37px;
+    margin-left: 40px;
 }
 .citizen_status{
     
@@ -91,136 +92,136 @@ p {
     width: 72px;
     border: 1px solid rgb(146, 146, 150);
     border-radius: 8px;
-    margin-left: 30px;  
+    margin-left: 27px;  
 }
 .b_nbr{
     height: 22px;
     border: 1px solid rgb(146, 146, 150);
     border-radius: 8px; 
-    margin-left: 19px; 
-    width: 161px;
+    margin-left: 8px; 
+    width: 168px;
 }
 .country{
     
     height: 22px;
     border: 1px solid rgb(146, 146, 150);
     border-radius: 8px; 
-    margin-left: 57px;
-    width: 171px;
+    margin-left: 56px;
+    width: 168px;
 }
 .ph_nbr{
     height: 22px;
     border: 1px solid rgb(146, 146, 150);
     border-radius: 8px;
-    margin-left: 28px;
-    width: 171px;
+    margin-left: 27px;
+    width: 168px;
 }
 .fax_nbr{
     height: 22px;
     border: 1px solid rgb(146, 146, 150);
     border-radius: 8px;
-    margin-left: 60px;
-    width: 171px;
+    margin-left: 59px;
+    width: 168px;
 
 }
 .email{
     height: 22px;
     border: 1px solid rgb(146, 146, 150);
     border-radius: 8px;
-    margin-left: 30px;
-    width: 171px;
+    margin-left: 25px;
+    width: 168px;
 }
 .website{
     height: 22px;
     border: 1px solid rgb(146, 146, 150);
     border-radius: 8px;
-    margin-left: 57px;
-    width: 171px;
+    margin-left: 55px;
+    width: 168px;
 }
 .bought{
     height: 22px;
     border: 1px solid rgb(146, 146, 150);
     border-radius: 8px;
-    margin-left: 34px;
-    width: 175px;
+    margin-left: 32px;
+    width: 168px;
 }
 .reporting{
     height: 22px;
     border: 1px solid rgb(146, 146, 150);
     border-radius: 8px;
-    margin-left: 49px;
-    width: 115px;
+    margin-left: 24px;
+    width: 108px;
 }
 .client_source{
     height: 22px;
     border: 1px solid rgb(146, 146, 150);
     border-radius: 8px;
-    margin-left: 33px;
-    width: 88px;
+    margin-left: 29px;
+    width: 108px;
 }
 .source_narration{
     height: 22px;
     border: 1px solid rgb(146, 146, 150);
     border-radius: 8px;
-    margin-left: 19px;
+    margin-left: 35px;
 
-    width: 160px;
+    width: 168px;
 }
 .cli_nam{
     height: 22px;
     border: 1px solid rgb(146, 146, 150);
     border-radius: 8px;
-    margin-left: 23px;
-    width: 139px;
+    margin-left: 24px;
+    width: 168px;
 }
 .cli_industry{
     height: 22px;
     border: 1px solid rgb(146, 146, 150);
     border-radius: 8px;
     margin-left: 14px;
-    width: 144px;
+    width: 168px;
 }
 .pin_no{
     height: 22px;
     border: 1px solid rgb(146, 146, 150);
     border-radius: 8px;
-    margin-left: 49px;
-    width: 70px;
+    margin-left: 51px;
+    width: 72px;
 }
 .po_addres{
     height: 22px;
     border: 1px solid rgb(146, 146, 150);
     border-radius: 8px;
     margin-left: 13px;
-    width: 70px;
+    width: 72px;
 }
 
 .po_code{
     height: 22px;
     border: 1px solid rgb(146, 146, 150);
     border-radius: 8px;  
-    margin-left: 27px;
-    width: 70px;
+    margin-left: 26px;
+    width: 72px;
 }
 .town{
     height: 22px;
     border: 1px solid rgb(146, 146, 150);
     border-radius: 8px;
-    margin-left: 62px;
-    width: 70px;
+    margin-left: 61px;
+    width: 72px;
 }
 .phy_address{
     height: 54px;
     border: 1px solid rgb(146, 146, 150);
     border-radius: 8px;
-    margin-left: 6px;
+    margin-left: 3px;
     width: 14rem;
 }
 .notes{
     height: 54px;
     border: 1px solid rgb(146, 146, 150);
     border-radius: 8px;
-    margin-left: 62px;
+    margin-left: 58px;
     width: 14rem;
 }
 

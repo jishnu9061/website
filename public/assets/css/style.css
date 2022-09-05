@@ -14,7 +14,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: #f6f9ff;
+  /* background: #f6f9ff; */
   color: #444444;
 }
 
@@ -445,7 +445,7 @@ h6 {
   border: 0;
   font-size: 14px;
   color: #012970;
-  border: 1px solid rgba(1, 41, 112, 0.2);
+  /* border: 1px solid rgba(1, 41, 112, 0.2); */
   padding: 7px 38px 7px 8px;
   border-radius: 3px;
   transition: 0.3s;
@@ -618,7 +618,7 @@ h6 {
   top: 60px;
   left: 0;
   bottom: 0;
-  width: 300px;
+  width: 220px;
   z-index: 996;
   transition: all 0.3s;
   padding: 20px;
@@ -1257,4 +1257,10 @@ h6 {
   text-align: center;
   font-size: 13px;
   color: #012970;
+}
+
+.logo img {
+  max-height: 58px;
+  /* margin-right: 6px; */
+  width: 75px;
 }

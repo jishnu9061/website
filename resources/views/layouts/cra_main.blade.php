@@ -65,7 +65,7 @@
 
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
+        <img src="assets/img/cr_logo.jpeg" alt="">
         <span class="d-none d-lg-block">CR</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -467,8 +467,8 @@
               <i class="bi bi-circle"></i><span>Client List</span>
             </a>
           </li>
-            <a href="tables-general.html">
-              <i class="bi bi-circle"></i><span>General Tables</span>
+            <a href="{{('clients')}}">
+              <i class="bi bi-circle"></i><span>Clients</span>
             </a>
           </li>
           <li>
@@ -508,8 +508,8 @@
         </a>
         <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="icons-bootstrap.html">
-              <i class="bi bi-circle"></i><span>Bootstrap Icons</span>
+            <a href="{{('client_invoicing')}}">
+              <i class="bi bi-circle"></i><span>Client Invoicing</span>
             </a>
           </li>
           <li>

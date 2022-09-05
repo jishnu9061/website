@@ -1,3 +1,6 @@
+@extends('layouts.cra_main');
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -139,3 +142,4 @@
 </body>
 
 </html>
+@endsection
