@@ -683,4 +683,5 @@ Route::get('calendar-event', 'CalenderController@index')->name('calendar-event')
 Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents']);
 //mugunth
 Route::any('add_new_client','ClientManagement@index')->name('add_new_client');
+Route::any('client_list','ClientList@index')->name('client_list');
 //mugunth

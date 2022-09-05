@@ -461,7 +461,12 @@
             <a href="{{url('add_new_client')}}">
               <i class="bi bi-circle"></i><span>Add New Client</span>
             </a>
-          <li>
+           <li>
+           <li>
+            <a href="{{('client_list')}}">
+              <i class="bi bi-circle"></i><span>Client List</span>
+            </a>
+          </li>
             <a href="tables-general.html">
               <i class="bi bi-circle"></i><span>General Tables</span>
             </a>
