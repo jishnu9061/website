@@ -97,51 +97,6 @@
                                             <span>Add Departments</span>
                                         </a>
                                     </li>
-                                    {{-- <li class="submenu-item ">
-                                        <a href="{{url('addfloor')}}" class='sidebar-link'>
-                                            <span>Add Floor</span>
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item ">
-                                        <a href="{{url('add_labdept')}}" class='sidebar-link'>
-                                            <span>Add Lab Department</span>
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item ">
-                                        <a href="{{url('add_surgery_types')}}" class='sidebar-link'>
-                                            <span>Add Surgery Types</span>
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item ">
-                                        <a href="{{url('adddepartmentadmin')}}" class='sidebar-link'>
-                                            <span>Add Department Admin</span>
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item ">
-                                        <a href="{{url('view_dept_admin')}}" class='sidebar-link'>
-                                            <span>View Department Admin</span>
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item ">
-                                        <a href="{{url('addroomstypes')}}" class='sidebar-link'>
-                                            <span>Add Room Types</span>
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item ">
-                                        <a href="{{url('addroomtypes')}}" class='sidebar-link'>
-                                            <span>Add Rooms</span>
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item ">
-                                        <a href="{{url('beds')}}" class='sidebar-link'>
-                                            <span>Room Management</span>
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item ">
-                                        <a href="{{url('Add_Ambulance_details')}}" class='sidebar-link'>
-                                            <span>Ambulance Services</span>
-                                        </a>
-                                    </li> --}}
                                 </ul>
                                 </li>
                             @endif
