@@ -24,12 +24,11 @@ $('#price').prop('readonly', true);
 });
 </script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
+    <div>
     <h2>Add New Client</h2>
-    <hr class="mb-4">
-
+    <hr class="mb-4">.
+</div>
   </div>
-<h6>Basic Details</h6>
-<hr class="mb-4">
   <div class="row">
 
     <div class="col-md-12 order-md-1">
@@ -350,11 +349,24 @@ $('#price').prop('readonly', true);
     </div>
       </div>
     <br>
-        <label for="username">Address</label>
-        <textarea class="form-control" name="address">
+    <div>
+    <label for="username">Physical Address</label>
+        <textarea class="form-control" name="physicaladdress">
 
         </textarea>
     <div id="test" style="height:20px;"></div>
+
+    </div>
+    <br>
+    <div>
+    <label for="username">Notes</label>
+        <textarea class="form-control" name="notes">
+
+        </textarea>
+    <div id="test" style="height:20px;"></div>
+
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
 
 
    
