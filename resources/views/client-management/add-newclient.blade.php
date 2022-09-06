@@ -58,9 +58,6 @@ $('#price').prop('readonly', true);
             <label for="cars">Client Type</label>
             <select name="type" id="cars">
                 <option value="volvo"></option>
-                <option value="saab"></option>
-                <option value="opel"></option>
-                <option value="audi"></option>
             </select>
           </div>
         </div>
@@ -74,9 +71,6 @@ $('#price').prop('readonly', true);
             </div>
             <select name="citizen" id="cars">
                 <option value="volvo"></option>
-                <option value="saab"></option>
-                <option value="opel"></option>
-                <option value="audi"></option>
             </select>
           </div>
         </div>
@@ -109,9 +103,6 @@ $('#price').prop('readonly', true);
             </div>
             <select name="country" id="cars">
                 <option value="volvo"></option>
-                <option value="saab"></option>
-                <option value="opel"></option>
-                <option value="audi"></option>
             </select>
           </div>
         </div>
@@ -194,9 +185,6 @@ $('#price').prop('readonly', true);
             </div>
             <select name="brought" id="cars">
                 <option value="volvo"></option>
-                <option value="saab"></option>
-                <option value="opel"></option>
-                <option value="audi"></option>
             </select>
           </div>
         </div>
@@ -211,9 +199,6 @@ $('#price').prop('readonly', true);
             </div>
             <select name="report" id="cars">
                 <option value="volvo"></option>
-                <option value="saab"></option>
-                <option value="opel"></option>
-                <option value="audi"></option>
             </select>
           </div>
         </div>
@@ -227,9 +212,6 @@ $('#price').prop('readonly', true);
             </div>
             <select name="clientsource" id="cars">
                 <option value="volvo"></option>
-                <option value="saab"></option>
-                <option value="opel"></option>
-                <option value="audi"></option>
             </select>
           </div>
         </div>
@@ -278,9 +260,6 @@ $('#price').prop('readonly', true);
         </div>
         <select name="industry" id="cars">
             <option value="volvo"></option>
-            <option value="saab"></option>
-            <option value="opel"></option>
-            <option value="audi"></option>
         </select>
       </div>
     </div>
@@ -345,6 +324,7 @@ $('#price').prop('readonly', true);
         <div class="invalid-feedback" style="width: 100%;">
           Number is required.
         </div>
+        
       </div>
     </div>
       </div>
@@ -366,7 +346,7 @@ $('#price').prop('readonly', true);
     <div id="test" style="height:20px;"></div>
 
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">submit</button>
 
 
    
