@@ -13,7 +13,7 @@ class ClientManagement extends Controller
      */
     public function index()
     {
-        return view('client.add_new_client');
+        return view('client-management.add_newclient');
     }
 
     /**
