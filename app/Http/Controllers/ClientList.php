@@ -13,7 +13,7 @@ class Clientlist extends Controller
      */
     public function index()
     {
-        return view('client.client_list');
+        return view('client-management.client-list');
     }
 
     /**
