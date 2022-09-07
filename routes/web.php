@@ -48,7 +48,7 @@ Route::any('/allocateroom', 'bedsController@allocateroom');
 Route::any('/allocatenonacroom', 'bedsController@allocatenonacroom');
 Route::any('/hospitals', 'hospitalController@hospitals');
 Route::any('/addhospital', 'hospitalController@addhospital');
-Route::any('/admins', 'hospitalController@admins');
+// Route::any('/admins', 'hospitalController@admins');
 Route::any('/roles', 'hospitalController@roles');
 //rooms
 Route::any('/addroomtypes', 'hospitalController@addroomtypes');
