@@ -689,3 +689,7 @@ Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents'])
 Route::any('add_newclient',"ClientManagement@index")->name('add_newclient');
 Route::any('client_list','ClientList@index')->name('client_list');
 //mugunth
+
+//Reshma
+Route::any('company_details','SystemSetting@index')->name('company_details');
+//Reshma
