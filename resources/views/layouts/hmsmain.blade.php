@@ -446,7 +446,7 @@
                                         </a>
                                     </li>
                                     <li class="submenu-item ">
-                                        <a href="" class='sidebar-link'>
+                                        <a href="{{url('client_list')}}" class='sidebar-link'>
                                             <span>Client List</span>
                                         </a>
                                     </li>
