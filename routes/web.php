@@ -688,3 +688,5 @@ Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents'])
 // Route::any('client_invoicing','client_invoicing@index')->name('client_invoicing');
 Route::any('add_newclient',"ClientManagement@index")->name('add_newclient');
 //mugunth
+Route::any('currency',"currency@index")->name('currency');
+Route::any('edit_currency',"editcurrency@index")->name('edit_currency');
