@@ -128,7 +128,7 @@ $('#price').prop('readonly', true);
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-6">
            <div class="mb-1">
           <label for="username">File & Fee Balances</label>
           <div class="input-group">
@@ -143,7 +143,7 @@ $('#price').prop('readonly', true);
         </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-6">
             <div class="mb-1">
           <label for="username">Status</label>
           <div class="input-group">
@@ -157,7 +157,7 @@ $('#price').prop('readonly', true);
           </div>
         </div>
         </div>
-        <div class="col-md-4">
+        <!-- <div class="col-md-4">
             <div class="mb-1">
           <label for="username">Action </label>
           <div class="input-group">
@@ -169,10 +169,10 @@ $('#price').prop('readonly', true);
               .
             </div>
           </div>
-        </div>
+        </div> -->
         
            
-          </div>
+          <!-- </div> -->
         </div>
         <br>
         
