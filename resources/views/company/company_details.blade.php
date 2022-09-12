@@ -2,22 +2,50 @@
 @section('content')
 <html>
     <head>
-      <meta charset="UTF-8">
+     
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
       <title>Company Details</title>
       <link rel="stylesheet" href="{{asset('/') }}assets/css/cstyle.css">
+      <style>
+        body
+        {
+          background-color: #f0e7ce;
+        }
+        label
+      {
+       
+        font-size:large;
+        width:200px;
+        display:inline-block;
+        font-family: monospace;
+        color: rgb(13, 1, 56); 
+        }
+        input
+        {
+          width: 450px;
+          height:30px;
+
+        }
+        
+</style>
 </head>
 <body>
-  	
-<button type="button" class="btn btn-primary" style="background-color:rgb(13, 1, 56);Width: 73%;">Add company</button><br><br>
+  <form>
+  	<!-- <div class="container">
+    <form class="form-horizontal" action="/action_page.php"> -->
 
-<div class = "company">
-    <div>
-<a href="#"  class="btn btn-primary" style="margin-bottom:25px;float:right;margin-right:40px;">ADD LOGO</a>
+<button type="file" class="btn btn-primary" style="background-color:white;color:rgb(13, 1, 56);  font-weight: bold;Width: 73%;">Add company</button><br><br>
 
-</div> 
+ <div class = "company">
+   
+<a href="#"  class="btn btn-primary" style="margin-bottom:25px;float:right;margin-right:335px;">ADD LOGO</a>
 
-
-  <label> Company Name </label>
+<label> Company Name </label>
   <input type="text" id="name" name="name" value=""size="50"> <br><br>
   <label>Company Address</label>
   <input type="text" id="address" name="address" value=""size="50">
@@ -29,8 +57,8 @@
   <label>Company Email</label>
   <input type="text" id="email" name="email" value=""size="50"><br><br>
   <label>Company Type</label>
-  <!-- <input type="text" id="type" name="type" value=""size="50"><br><br> -->
-  <select style="width:372px;height: 25px;">
+  
+ <select style="width:450px;height: 30px;">
     <option>   select        </option>
     <option>Partnership</option>
     <option>Sole partership</option>
@@ -46,7 +74,7 @@
   <label>NHIF Code</label>
   <input type="text" id="ncode" name="ncode" value=""size="50"><br><br>
   <label>NSSF Number</label>
-  <input type="text" id="nnum" name="nnum" value=""size="50"><br><br>
+  <input type="text" id="nnum" name="nnum" value=""size="50"><br><br> 
 
 
 <!-- <button class="btn1">Save</button>
@@ -61,6 +89,8 @@
 
 
       </div>
+</form>
+<!-- </div> -->
    </body>
 </html>
 @endsection

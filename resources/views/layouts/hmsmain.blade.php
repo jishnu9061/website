@@ -461,7 +461,7 @@
                                 <li class="sidebar-item  has-sub">
                                     <a href="" class='sidebar-link'>
                                         <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
-                                            <span>SystemSetting</span>
+                                            <span>System Setting</span>
                                     </a>
                                     <ul class="submenu">
                                     <li class="submenu-item ">
