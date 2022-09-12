@@ -687,10 +687,11 @@ Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents'])
 // Route::any('clients','clients@index')->name('clients');
 // Route::any('client_invoicing','client_invoicing@index')->name('client_invoicing');
 Route::any('add_newclient',"ClientManagement@index")->name('add_newclient');
-vinuglobal
+// vinuglobal
 //mugunth
 Route::any('currency',"currency@index")->name('currency');
 Route::any('edit_currency',"editcurrency@index")->name('edit_currency');
 Route::any('client_list','ClientList@index')->name('client_list');
+Route::any('register_file',"reg_file@index")->name('add_newclient');
 //mugunth
-develop
+// develop
