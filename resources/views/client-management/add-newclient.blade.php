@@ -346,7 +346,7 @@ $('#price').prop('readonly', true);
     <div id="test" style="height:20px;"></div>
 
     </div>
-    <button type="submit" class="btn btn-primary">submit</button>
+    <button type="submit" class="btn btn-primary submit_btn">submit</button>
 
 
    
