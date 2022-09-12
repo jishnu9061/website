@@ -459,6 +459,18 @@
                                         <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
                                             <span>File Management</span>
                                     </a>
+                                    <ul class="submenu">
+                                    <li class="submenu-item ">
+                                        <a href="{{url('register_file')}}" class='sidebar-link'>
+                                            <span>Add New File</span>
+                                        </a>
+                                    </li>
+                                    <li class="submenu-item ">
+                                        <a href="{{url('client_list')}}" class='sidebar-link'>
+                                            <span>File List</span>
+                                        </a>
+                                    </li>
+                                    </ul>
                                    
                                     </li>
                             @endif

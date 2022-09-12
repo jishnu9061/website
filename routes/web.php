@@ -693,4 +693,4 @@ Route::any('currency',"currency@index")->name('currency');
 Route::any('edit_currency',"editcurrency@index")->name('edit_currency');
 Route::any('client_list','ClientList@index')->name('client_list');
 //mugunth
-// develop
+?>

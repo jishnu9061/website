@@ -25,7 +25,7 @@ $('#price').prop('readonly', true);
 </script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
     <div>
-    <h2>Add New Client</h2>
+    <h2>Add New File</h2>
     <hr class="mb-4">.
 </div>
   </div>
