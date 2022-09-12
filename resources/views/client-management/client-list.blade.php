@@ -17,9 +17,10 @@
     <div class="container">
         <h3 class="text-center" style="color: #070344;"><b>Client List</b></h3>
        <br>
-       <button type="button" class="buttn_clr" data-toggle="modal" data-target="#myModal"><b>Add Client</b></button><br><br>
-
-
+      
+       <div id="mydatatable_filter" class="dataTables_filter">
+        <label><b>Search:</b><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
+       </div>
        
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">

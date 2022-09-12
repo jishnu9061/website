@@ -312,43 +312,68 @@ $('#price').prop('readonly', true);
 
     </div>
     <br>
-        <div class="row">
-      <div class="col-md-4">
-       <div class="mb-1">
-      <label for="username">Client Number</label>
-      <div class="input-group">
-        <div class="input-group-prepend">
+    <div class="row">
+          <div class="col-md-4">
+           <div class="mb-1">
+          <label for="username">Town</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
 
+            </div>
+              <input type="text" class="form-control" name="pin" id="username"  required>
+            <div class="invalid-feedback" style="width: 100%;">
+             Pin No  is required.
+            </div>
+          </div>
         </div>
-          <input type="text" class="form-control" name="number" id="username" required>
-        <div class="invalid-feedback" style="width: 100%;">
-          Number is required.
+          </div>
+
+          <div class="col-md-4">
+            <div class="mb-1">
+          <div class="input-group">
+           
+            <label for="cars"> Physical Address</label>
+            <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+            <div class="invalid-feedback" style="width: 100%;">
+             Postal Address is required.
+            </div>
+          </div>
         </div>
-        
-      </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mb-1">
+           
+          <label for="username">Notes</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+            <div class="invalid-feedback" style="width: 100%;">
+             Postal Code is required.
+            </div>
+          </div>
+        </div>
+          </div>
+
     </div>
-      </div>
     <br>
-    <div>
-    <label for="username">Physical Address</label>
-        <textarea class="form-control" name="physicaladdress">
+    <div class="container">
+  <div class="row">
+    <div class="col-sm">
+    
+    </div>
+    <div class="col-sm">
+    <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Back</button>
 
-        </textarea>
-    <div id="test" style="height:20px;"></div>
+    
+    <button type="submit" class="btn btn-primary submit_btn btn_align">Submit</button>
 
     </div>
-    <br>
-    <div>
-    <label for="username">Notes</label>
-        <textarea class="form-control" name="notes">
-
-        </textarea>
-    <div id="test" style="height:20px;"></div>
-
-    </div>
-    <button type="submit" class="btn btn-primary submit_btn">submit</button>
-
-
+  </div>
+</div>
+     
+    
    
           </div>
 
