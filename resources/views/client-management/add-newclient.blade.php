@@ -371,15 +371,8 @@ $('#price').prop('readonly', true);
 
     </div>
   </div>
-</div>
-     
-    
-   
+</div>  
           </div>
-
-          
-
-
 
    </tbody>
 </table>
