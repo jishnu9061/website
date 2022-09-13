@@ -33,6 +33,7 @@ a.button1{
   color:rgb(240, 205, 10);
   text-align:center;
   transition: all 0.2s;
+ 
   }
  
 
@@ -51,6 +52,7 @@ a.button1{
     text-align:center;
     transition: all 0.2s;
     outline: auto;
+    
     }
 
     /* a.button3{

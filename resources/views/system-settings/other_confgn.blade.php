@@ -21,8 +21,10 @@
     font-weight:bold;
     color:rgb(13, 1, 56); 
     background-color:rgb(177, 127, 62);
+    padding:15px;
+    
     }
-   p{
+   /* p{
     font-size:large;
    }
     a
@@ -51,22 +53,34 @@ font-weight:300;
 color:rgb(240, 205, 10);
 text-align:center;
 transition: all 0.2s;
+} */
+a.btn.btn-primary{
+  color:white;
+  margin-right:300px;
+  margin-left:200px;
 }
+
 </style>
 </head>
 <body>
-<h2>Other Configurations</h2>
-<p><a href="#">Configurations</a> | <a href="#">Company Branch</a> | <a href="#">Template Category</a> | <a href="#">Letter Types</a> | <a href="#">Payment Items</a> | <a href="#">Courts</a> | <a href="#">Description Selection</a> | <a href="#">Tax Tables</a> | <a href="#">Notifications</a> </p>
+  <form>
+<h2>Other Configurations</h2><br><br>
 
-<!-- <div id="Company Branch">
-<h1>Company Branch</h1>
-<p>
+<!-- <p><a href="#">Configurations</a> | <a href="#">Company Branch</a> | <a href="#">Template Category</a> | <a href="#">Letter Types</a> | <a href="#">Payment Items</a> | <a href="#">Courts</a> | <a href="#">Description Selection</a> | <a href="#">Tax Tables</a> | <a href="#">Notifications</a> </p> -->
+<div class="btn-group-vertical">
 
+<a href="#"  class="btn btn-primary" >Configurations</a><br>
+<a href="http://localhost/CRA/resources/views/system-settings/company_branch.php"  class="btn btn-primary">Company Branch</a><br>
+<a href="#"  class="btn btn-primary">Template Category</a><br>
+<a href="#"  class="btn btn-primary">Letter Types</a><br>
+<a href="#"  class="btn btn-primary">Payment Items</a><br>
+<a href="#"  class="btn btn-primary">Courts</a><br>
+<a href="#"  class="btn btn-primary">Description Selections</a><br>
+<a href="#"  class="btn btn-primary">Tax Tables</a><br>
+<a href="#"  class="btn btn-primary">Notifications</a><br>
+</div>
 
-</p>
-</div> -->
-
-
+</form>
 </body>
 </html>
 @endsection
