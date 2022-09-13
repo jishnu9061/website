@@ -479,6 +479,12 @@
                                             <span>Company</span>
                                         </a>
                                     </li>
+                                    <li class="submenu-item ">
+                                        <a href="{{url('company_branch')}}" class='sidebar-link'>
+                                            <span>Other Configurations</span>
+                                        </a>
+                                   
+                                    </li>
                                     </ul>
                                 </li>
 

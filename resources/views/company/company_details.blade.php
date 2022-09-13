@@ -39,7 +39,7 @@
   	<!-- <div class="container">
     <form class="form-horizontal" action="/action_page.php"> -->
 
-<button type="file" class="btn btn-primary" style="background-color:white;color:rgb(13, 1, 56);  font-weight: bold;Width: 73%;">Add company</button><br><br>
+    <a href="#" class="btn btn-primary" style="background-color:white;color:rgb(13, 1, 56);  font-weight: bold;Width: 73%;">Add company</a><br><br>
 
  <div class = "company">
    
@@ -68,13 +68,13 @@
     <option>Others</option>
 </select><br><br>
   <label>PIN No</label>
-  <input type="text" id="pin" name="pin" value=""size="50"><br><br>
+  <input type="number" id="pin" name="pin" value=""size="50"><br><br>
   <label>VAT No</label>
-  <input type="text" id="vatno" name="vatno" value=""size="50"><br><br>
+  <input type="number" id="vatno" name="vatno" value=""size="50"><br><br>
   <label>NHIF Code</label>
   <input type="text" id="ncode" name="ncode" value=""size="50"><br><br>
   <label>NSSF Number</label>
-  <input type="text" id="nnum" name="nnum" value=""size="50"><br><br> 
+  <input type="number" id="nnum" name="nnum" value=""size="50"><br><br> 
 
 
 <!-- <button class="btn1">Save</button>
