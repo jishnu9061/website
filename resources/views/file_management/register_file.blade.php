@@ -56,9 +56,7 @@ $('#price').prop('readonly', true);
           <div class="input-group">
            
             <label for="cars">File Name</label>
-            <select name="type" id="cars">
-                <option value="volvo"></option>
-            </select>
+            <input type="password" class="form-control" name="telephone" id="confirm_password" required>
           </div>
         </div>
           </div>
@@ -69,9 +67,7 @@ $('#price').prop('readonly', true);
             <div class="input-group-prepend">
 
             </div>
-            <select name="citizen" id="cars">
-                <option value="volvo"></option>
-            </select>
+            <input type="date" class="form-control" name="telephone" id="confirm_password" required>
           </div>
         </div>
           </div>
@@ -101,9 +97,7 @@ $('#price').prop('readonly', true);
             <div class="input-group-prepend">
 
             </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
+            <input type="password" class="form-control" name="telephone" id="confirm_password" required>
           </div>
         </div>
         </div>
@@ -114,7 +108,7 @@ $('#price').prop('readonly', true);
             <div class="input-group-prepend">
 
             </div>
-            <input type="password" class="form-control" name="telephone" id="confirm_password" required>
+            <input type="date" class="form-control" name="telephone" id="confirm_password" required>
             <div class="invalid-feedback" style="width: 100%;">
               
             </div>
@@ -176,7 +170,7 @@ $('#price').prop('readonly', true);
         </div>
         <br>
         
-    <button type="submit" class="btn btn-primary">submit</button>
+    <button type="submit" class="btn btn-primary" style ="margin-left:16rem;">submit</button>
 
 
    

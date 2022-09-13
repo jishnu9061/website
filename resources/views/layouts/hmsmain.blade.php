@@ -470,6 +470,11 @@
                                             <span>File List</span>
                                         </a>
                                     </li>
+                                    <li class="submenu-item ">
+                                        <a href="{{url('edit_file')}}" class='sidebar-link'>
+                                            <span>Edit File</span>
+                                        </a>
+                                    </li>
                                     </ul>
                                    
                                     </li>
