@@ -57,7 +57,7 @@ $('#price').prop('readonly', true);
            
             <label for="cars">Client Type</label>
             <select name="type" id="cars">
-                <option value="volvo"></option>
+                <option value=""></option>
             </select>
           </div>
         </div>

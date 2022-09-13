@@ -16,6 +16,10 @@ class ClientManagement extends Controller
         return view('client-management.add-newclient');
     }
 
+    public function view(){
+        return view('client-management.client-list');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -54,9 +58,9 @@ class ClientManagement extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-        //
+        return view('client-management.edit_client');
     }
 
     /**
