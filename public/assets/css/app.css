@@ -1561,18 +1561,19 @@
                     color: rgb(255, 255, 255);
                     background-color: #070344;
                     padding: 8px;
-                    width:50%;
+                    width: 50%;
                     margin-left: 240px;
                     border-radius: 10px;
                 }
 
-                .btn_align{
+                .btn_align {
                     margin-left: -480px;
                 }
 
-                .btn_sumbit{
+                .btn_sumbit {
                     margin-left: -100px;
                 }
+
                 .box {
                     padding: 7px;
                 }

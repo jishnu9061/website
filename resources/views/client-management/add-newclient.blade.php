@@ -364,10 +364,10 @@ $('#price').prop('readonly', true);
     
     </div>
     <div class="col-sm">
-    <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Back</button>
+    <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Submit</button>
 
     
-    <button type="submit" class="btn btn-primary submit_btn btn_align">Submit</button>
+    <button type="submit" class="btn btn-primary submit_btn btn_align">Back</button>
 
     </div>
   </div>

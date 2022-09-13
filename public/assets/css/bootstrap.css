@@ -2714,10 +2714,10 @@ textarea.form-control-lg {
     border: 0;
 }
 
-.cover{
-    margin-left:-10px;
-    margin-right:100px;
-    padding:-50px;
+.cover {
+    margin-left: -10px;
+    margin-right: 100px;
+    padding: -50px;
 }
 
 .form-range::-webkit-slider-thumb {
