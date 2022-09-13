@@ -480,7 +480,7 @@
                                         </a>
                                     </li>
                                     <li class="submenu-item ">
-                                        <a href="{{url('company_branch')}}" class='sidebar-link'>
+                                        <a href="{{url('other_confgn')}}" class='sidebar-link'>
                                             <span>Other Configurations</span>
                                         </a>
                                    

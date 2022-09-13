@@ -13,7 +13,7 @@ class SystemSetting extends Controller
      */
     public function index()
     {
-       return view('company.company_details');
+       return view('system-settings.company_details');
      
     }
 

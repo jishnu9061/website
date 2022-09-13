@@ -56,7 +56,7 @@ transition: all 0.2s;
 </head>
 <body>
 <h2>Other Configurations</h2>
-<p><a href="#">Configurations</a> | <a href="#Company Branch">Company Branch</a> | <a href="#">Template Category</a> | <a href="#">Letter Types</a> | <a href="#">Payment Items</a> | <a href="#">Courts</a> | <a href="#">Description Selection</a> | <a href="#">Tax Tables</a> | <a href="#">Notifications</a> </p>
+<p><a href="#">Configurations</a> | <a href="#">Company Branch</a> | <a href="#">Template Category</a> | <a href="#">Letter Types</a> | <a href="#">Payment Items</a> | <a href="#">Courts</a> | <a href="#">Description Selection</a> | <a href="#">Tax Tables</a> | <a href="#">Notifications</a> </p>
 
 <!-- <div id="Company Branch">
 <h1>Company Branch</h1>

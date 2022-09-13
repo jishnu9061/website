@@ -13,7 +13,7 @@ class OtherConfigtn extends Controller
      */
     public function index()
     {
-        return view('company.other_confgn');
+        return view('system-settings.other_confgn');
     }
 
     /**
