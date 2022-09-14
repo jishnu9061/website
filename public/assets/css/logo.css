@@ -1,0 +1,162 @@
+.row{
+    margin-left: 19rem;
+    margin-top: 9rem;
+}
+
+.col-sm-3 {
+    background-color: rgba(247, 229, 184, 0.8);
+    height: 7rem;
+    padding: 20px;
+    margin:2rem;
+    margin-left: 5rem;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+  }
+  img{
+    width: 41px;
+    height: 36px;
+    margin-left: -218px;
+  }
+  p{
+    margin-top: -34px;
+   
+
+  }
+  a{
+    margin-left: 1px;
+    text-decoration: none;
+    color: rgb(27, 7, 119);
+  }
+  #m_f{
+    margin-top: -26px;
+    margin-left: -78px;
+  }
+
+  #f_s_r{
+    margin-top: -26px;
+    margin-left: -58px;
+  }
+  #f_a{
+    margin-top: -26px;
+    margin-left: -89px;
+  }
+  #f_r{
+    margin-top: -26px;
+    margin-left: -86px;
+  }
+
+  #f_n{
+    margin-top: -26px;
+    margin-left: -97px;
+  }
+  #f_i{
+    margin-top: -26px;
+    margin-left: -69px;
+  }
+  #o_i_l{
+    margin-left: -56px;
+  }
+  #d_t{
+    margin-left: -93px;
+  }
+  #m_d{
+    margin-left: -90px;
+  }
+  #appoint{
+    margin-top: -26px;
+    margin-left: -84px;
+  }
+  #update{
+    margin-top: -26px;
+    margin-left: -111px;
+  }
+  #b_u{
+    margin-top: -26px;
+    margin-left: -103px;
+  }
+  #c_m{
+    margin-top: -26px;
+    margin-left: -76px;
+  }
+  #notes{
+    margin-top: -26px;
+    margin-left: -117px;
+  }
+  #w_f_m{
+    margin-left: -82px;
+  }
+
+
+  @media only screen and (max-width: 600px) {
+    .row{
+        margin-left: -43px;
+        margin-top: 9rem;
+    }
+    .col-sm-3{
+        text-align: center;
+    }
+    img{
+        width: 41px;
+        height: 36px;
+        margin-left: -118px;
+      }
+      #m_f{
+        margin-top: -26px;
+        margin-left: 25px;
+      }
+      #f_s_r{
+        margin-top: -26px;
+        margin-left: 47px;
+      }
+      #f_a{
+        margin-top: -26px;
+        margin-left: 17px;
+      }
+      #f_r{
+        margin-top: -26px;
+        margin-left: 16px;
+      }
+    
+      #f_n{
+        margin-top: -26px;
+        margin-left: 5px;
+      }
+      #f_i{
+        margin-top: -26px;
+        margin-left: 38px;
+      }
+      #o_i_l{
+        margin-left: 54px;
+      }
+      #d_t{
+        margin-left: 8px;
+      }
+      #m_d{
+        margin-left: 14px;
+      }
+      #appoint{
+        margin-top: -26px;
+        margin-left: 23px;
+      }
+      #update{
+        margin-top: -26px;
+        margin-left: -10px;
+      }
+      #b_u{
+        margin-top: -26px;
+        margin-left: 2px;
+      }
+      #c_m{
+        margin-top: -26px;
+        margin-left: 29px;
+      }
+      #notes{
+        margin-top: -26px;
+        margin-left: -15px;
+      }
+      #w_f_m{
+        margin-left: 21px;
+      }
+      
+  }

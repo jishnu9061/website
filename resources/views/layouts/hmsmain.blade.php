@@ -434,25 +434,10 @@
                                     </li> --}}
                                 </ul>
                                 </li>
-                                <li class="sidebar-item  has-sub">
-                                    <a href="" class='sidebar-link'>
-                                        <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
+                                <li class="submenu-item ">
+                                        <a href="{{url('client-index')}}" class='sidebar-link'>
                                             <span>Client Management</span>
-                                    </a>
-                                    <ul class="submenu">
-                                    <li class="submenu-item ">
-                                        <a href="{{url('client_list')}}" class='sidebar-link'>
-                                            <span>Add New Client</span>
                                         </a>
-                                    </li>
-                                    </ul>
-                                    <ul class="submenu">
-                                    <li class="submenu-item ">
-                                        <a href="{{url('client_list')}}" class='sidebar-link'>
-                                            <span>Add New Client</span>
-                                        </a>
-                                    </li>
-                                    </ul>
                                 </li>
                             @endif
                             @if(Auth::user()->role == 'hr' || Auth::user()->role == 'hospitaladmin')
