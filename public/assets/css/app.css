@@ -312,6 +312,11 @@
                     border-radius: 4.58px;
                 }
 
+                .add-btn{
+                    width:15%;
+                    color:yellow;
+                }
+
                 .btn.btn-primary ::after:focus {
                     border: 2px solid #3e699b87;
                 }
