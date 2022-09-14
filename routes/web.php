@@ -693,4 +693,5 @@ Route::any('client_list','ClientList@index')->name('client_list');
 //Reshma
 Route::any('company_details','SystemSetting@index')->name('company_details');
 Route::any('other_confgn','OtherConfigtn@index')->name('other_confgn');
+Route::any('weekend_holiday','Holidays@index')->name('weekend_holiday');
 //Reshma

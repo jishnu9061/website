@@ -464,19 +464,16 @@
                                             <span>System Setting</span>
                                     </a>
                                     <ul class="submenu">
-                                    <li class="submenu-item ">
-                                        <a href="{{url('#')}}" class='sidebar-link'>
-                                            <span>Holidays</span>
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item ">
-                                        <a href="{{url('#')}}" class='sidebar-link'>
-                                            <span>Bank</span>
-                                        </a>
-                                    </li>
+                                   
+                                   
                                     <li class="submenu-item ">
                                         <a href="{{url('company_details')}}" class='sidebar-link'>
                                             <span>Company</span>
+                                        </a>
+                                    </li>
+                                    <li class="submenu-item ">
+                                        <a href="{{url('weekend_holiday')}}" class='sidebar-link'>
+                                            <span>Holidays</span>
                                         </a>
                                     </li>
                                     <li class="submenu-item ">

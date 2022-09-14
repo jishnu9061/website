@@ -73,7 +73,8 @@
     <td>NBI</td>
     <td>Nairobi</td>
     <td style="color:green;font-weight:bold;">Active</td>
-    <td>Edit</td>
+    <td><a href="edit_db" target="_blank"style="color:blue;">Edit</a> 
+</td>
     <td><input type="checkbox"></td>
     </tr>
 
@@ -83,7 +84,7 @@
     <td>MSA</td>
     <td>Mombasa</td>
     <td style="color:red;font-weight:bold;">In-Active</td>
-    <td>Edit</td>
+    <td><a href="edit_db" target="_blank"style="color:blue;">Edit</a>
     <td><input type="checkbox"></td>
     </tr>
   
@@ -91,8 +92,8 @@
 
 <select style="width:200px;height: 30px;background-color:#f0e7ce; border: 1px solid rgb(177, 127, 62);padding-right:10px;margin-left:1250px;">
     <option>  Activate Category </option>
-    <option>---</option>
-    <option>----</option>
+    <option>De-Activate Category</option>
+    <option>Delete Category</option>
 </select>
 <button class="btn btn-primary" style="width:42px;height:35px;background-color:rgb(177, 127, 62); border: 1px solid rgb(240, 205, 10);margin-left:1250px;
             color:rgb(13, 1, 56);text-align: center; ">Go</button>
