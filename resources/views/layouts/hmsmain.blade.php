@@ -446,7 +446,13 @@
                                         </a>
                                     </li>
                                     </ul>
-                                
+                                    <ul class="submenu">
+                                    <li class="submenu-item ">
+                                        <a href="{{url('client_list')}}" class='sidebar-link'>
+                                            <span>Add New Client</span>
+                                        </a>
+                                    </li>
+                                    </ul>
                                 </li>
                             @endif
                             @if(Auth::user()->role == 'hr' || Auth::user()->role == 'hospitaladmin')
