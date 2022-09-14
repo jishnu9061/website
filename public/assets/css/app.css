@@ -316,6 +316,9 @@
                     width:15%;
                     color:yellow;
                 }
+                .clr{
+                    color:#000;
+                }
 
                 .btn.btn-primary ::after:focus {
                     border: 2px solid #3e699b87;
