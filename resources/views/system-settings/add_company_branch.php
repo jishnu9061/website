@@ -31,7 +31,7 @@
             font-weight:bold;
             font-family:  Arial, Helvetica, sans-serif;
             color:rgb(13, 1, 56); 
-            text-align:left ;
+            text-align:left;
             background-color:rgb(177, 127, 62);
             
            
