@@ -27,8 +27,7 @@
   
 a.btn.btn-primary{
   color: rgb(238, 196, 105);
-
- 
+  background-color:rgb(29, 2, 129);
  
 }
 
@@ -43,7 +42,7 @@ a.btn.btn-primary{
 <div class="container-fluid">
   
 
-<a href="#"  class="btn btn-primary" >Configurations</a><br><br>
+<a href="#"  ><button type="button" class="btn btn-primary btn btn-block">Configurations</button></a><br><br>
 <a href="{{url('company_branch')}}"  class="btn btn-primary">Company Branch</a><br><br>
 <a href="#"  class="btn btn-primary">Template Category</a><br><br>
 <a href="#"  class="btn btn-primary">Letter Types</a><br><br>
