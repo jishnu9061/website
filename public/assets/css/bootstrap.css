@@ -58,7 +58,7 @@ body {
     font-weight: 400;
     line-height: 1.5;
     color: #607080;
-    background-color: #f2f7ff;
+    background-color: white;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -11683,7 +11683,7 @@ fieldset:disabled .btn {
     background: #f1f1f1;
 
     /* Track */
-    ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
         background: #ffffff2b;
         border-radius: 10px;
     }
@@ -11697,5 +11697,5 @@ fieldset:disabled .btn {
 
     background: #0000001f;
 
-    border-radius: 10px;
+    border-radius : 10px;
 }
