@@ -10,7 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
 
       <title>Company Details</title>
-      <link rel="stylesheet" href="assets/css/cstyle.css"> 
+      <!-- <link rel="stylesheet" href="assets/css/cstyle.css">  -->
       <style>
         body
         {
