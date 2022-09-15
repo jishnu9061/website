@@ -24,23 +24,29 @@
           margin-right:10px;
           padding-top:10px;
         }
-        h1
+         h1
         {
             padding-top:10px;
             font-size:large;
             font-weight:bold;
             font-family:  Arial, Helvetica, sans-serif;
             color:rgb(13, 1, 56); 
-            text-align: ;
-            /* margin-right:300px; */
+            text-align:left ;
             background-color:rgb(177, 127, 62);
-            padding:15px;
-        }
+            
+           
+        } 
 
      
         .container{
+            padding-top:20px;
+            border: 3px solid rgb(177, 127, 62);
             text-align: left;
             margin-top: 50px;
+            padding-left:25px;
+            padding-bottom:10px;
+           
+            /* padding:5px; */
         }
         label
       {
@@ -53,7 +59,7 @@
         }
         input
         {
-          width: 450px;
+          width: 400px;
           height:30px;
 
         }

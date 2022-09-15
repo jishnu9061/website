@@ -15,6 +15,7 @@ class OtherConfigtn extends Controller
     {
         return view('system-settings.other_confgn');
     }
+    
 
     /**
      * Show the form for creating a new resource.

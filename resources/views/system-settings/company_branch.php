@@ -22,13 +22,20 @@
             margin-left:25px;
             border: 1px solid rgb(240, 205, 10);
         }
-        h1{
-            font-family:  Arial, Helvetica, sans-serif;
+        h1
+        {
+            padding-top:10px;
             font-size:large;
             font-weight:bold;
+            font-family:  Arial, Helvetica, sans-serif;
             color:rgb(13, 1, 56); 
+            text-align:left ;
             background-color:rgb(177, 127, 62);
-            padding:15px;
+            margin-left:25px;
+           
+        } 
+        p{
+          margin-left:25px;
         }
         table {
             font-family: arial, sans-serif;
@@ -50,22 +57,28 @@
          td{
             color:rgb(13, 1, 56);
          }
+
+        
        
 </style>
     </head>
     <body>
+  
         <h1>Company Branch</h1>
+       
+
     <a href="http://localhost/CRA/resources/views/system-settings/add_company_branch.php" class="btn btn-primary" >Add Branch</a><br><br>
+    <p>Total Result: 2</p>
     <table>
    
   <tr>
-    <th>*</th>
+    <th>Sl No</th>
     <th>Branch No</th>
     <th>Branch Code</th>
     <th>Branch Name</th>
     <th>Status</th>
     <th>Edit</th>
-    <th><input type="checkbox"></th>
+    <th></th>
   </tr>
   <tr>
     <td>1</td>
@@ -97,6 +110,7 @@
 </select>
 <button class="btn btn-primary" style="width:42px;height:35px;background-color:rgb(177, 127, 62); border: 1px solid rgb(240, 205, 10);margin-left:1250px;
             color:rgb(13, 1, 56);text-align: center; ">Go</button>
+        
 
 
  

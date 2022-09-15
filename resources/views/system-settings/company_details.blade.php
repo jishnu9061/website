@@ -39,7 +39,7 @@
   	<!-- <div class="container">
     <form class="form-horizontal" action="/action_page.php"> -->
 
-    <a href="#" class="btn btn-primary" style="background-color:white;color:rgb(13, 1, 56);  font-weight: bold;Width: 73%;">Add company</a><br><br>
+    <a href="#" class="btn btn-primary" style="rgb(13, 1, 56);color:rgb(13, 1, 56);  font-weight: bold;Width: 73%;">Add company</a><br><br>
 
  <div class = "company">
    
