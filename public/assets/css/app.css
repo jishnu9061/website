@@ -304,6 +304,8 @@
                 }
 
                 .btn.btn-primary {
+                    color: #fff;
+                    background: linear-gradient(0deg, rgb(177,127,62), rgb(177, 127, 62)), linear-gradient(102.78deg, rgba(55, 77, 109, 0.15) -1.58%, rgba(55, 77, 109, 0.15) 114.31%);
                     color: rgb(238, 196, 105);
                     background: linear-gradient(0deg, rgb(1, 1, 82), rgb(6, 6, 58)), linear-gradient(102.78deg, rgba(55, 77, 109, 0.15) -1.58%, rgba(55, 77, 109, 0.15) 114.31%);
                     background-blend-mode: soft-light, normal;

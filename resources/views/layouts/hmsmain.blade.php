@@ -445,6 +445,36 @@
                                 @php
                                     $hr = array("addallowance", "addstaffs", "staffs","loans","payslip","attendance","attendanceview","payslipbulk","generatepayslip","managestaff");
                                 @endphp
+
+                                <li class="sidebar-item  has-sub">
+                                    <a href="" class='sidebar-link'>
+                                        <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
+                                            <span>System Setup</span>
+                                    </a>
+                                    <ul class="submenu">
+                                   
+                                    <li class="submenu-item ">
+                                        <a href="{{url('company_details')}}" class='sidebar-link'>
+                                            <span>Company</span>
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="submenu-item ">
+                                        <a href="{{url('weekend_holiday')}}" class='sidebar-link'>
+                                            <span>Holidays</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="submenu-item ">
+                                        <a href="{{url('other_confgn')}}" class='sidebar-link'>
+                                            <span>Other Configurations</span>
+                                        </a>
+                                    </li>
+                                   
+                                    </ul>
+                                </li>
+
+
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('home')}}" class='sidebar-link'>
                                         <i class="bi bi-grid-fill" style="font-weight: 400;"></i>
