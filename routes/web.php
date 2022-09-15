@@ -697,3 +697,10 @@ Route::any('company_branch','OtherConfigtn@branch')->name('company_branch');
 Route::any('add_branch','OtherConfigtn@addbranch')->name('add_branch');
 Route::any('weekend_holiday','Holidays@index')->name('weekend_holiday');
 //Reshma
+Route::any('add_newclient',"ClientManagement@create")->name('add_newclient');
+Route::any('client_list','ClientManagement@view')->name('client_list');
+Route::any('edit_client','ClientManagement@edit')->name('edit_client');
+Route::any('view-client','ClientManagement@show')->name('view-client');
+Route::any('client-index',"ClientManagement@index")->name('client-index');
+//mugunth
+?>
