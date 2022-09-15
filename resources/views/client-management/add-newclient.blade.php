@@ -27,6 +27,8 @@ $('#price').prop('readonly', true);
     <div>
     <h2>Add New Client</h2>
     <hr class="mb-4">.
+    <button type="submit" class="  client_btn">Add Client</button>
+    <br><br>
 </div>
   </div>
   <div class="row">
@@ -62,6 +64,7 @@ $('#price').prop('readonly', true);
           </div>
         </div>
           </div>
+          
           <div class="col-md-4">
             <div class="mb-1">
           <label for="username">Citizen Status</label>
