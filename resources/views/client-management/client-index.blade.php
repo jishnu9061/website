@@ -18,18 +18,18 @@
 <div class="container-fluid">
   
   <div class="row sm">
-    <div class="col-sm-6 " > <a><img class="logo_size" src="image\logo\icon.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > Client Handling</button></a></div>
-    <div class="col-sm-6 " > <a><img class="logo_size" src="image\logo\icon.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > Matter</button></a></div>
-    <div class="col-sm-6 " > <a><img class="logo_size" src="image\logo\icon-1.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" >Assign Lawyer</button></a></div>
+    <div class="col-sm-4 " > <a><img class="logo_size" src="image\logo\icon.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > Client Handling</button></a></div>
+    <div class="col-sm-4 " > <a><img class="logo_size" src="image\logo\icon.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > Matter</button></a></div>
+    <div class="col-sm-4 " > <a><img class="logo_size" src="image\logo\icon-1.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" >Assign Lawyer</button></a></div>
 
-    <div class="col-sm-6 " > <a><img class="logo_size" src="image\logo\icon-2.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > Client Follow Up</button></a></div>
-    <div class="col-sm-6 " > <a><img class="logo_size" src="image\logo\icon-3.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > Complaint Registration</button></a></div>
-    <div class="col-sm-6 " > <a><img class="logo_size" src="image\logo\icon-4.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > Client Comunication</button></a></div>
+    <div class="col-sm-4 " > <a><img class="logo_size" src="image\logo\icon-2.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > Client Follow Up</button></a></div>
+    <div class="col-sm-4 " > <a><img class="logo_size" src="image\logo\icon-3.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > Complaint Registration</button></a></div>
+    <div class="col-sm-4 " > <a><img class="logo_size" src="image\logo\icon-4.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > Client Comunication</button></a></div>
 
-    <div class="col-sm-6 " > <a><img class="logo_size" src="image\logo\icon-5.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > Client Service Reception</button></a></div>
-    <div class="col-sm-6 " > <a><img class="logo_size" src="image\logo\icon-6.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > Client Document</button></a></div>
-    <div class="col-sm-6 " > <a href="{{url('client_list')}}"><img class="logo_size" src="image\logo\icon-7.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > Client List</button></a></div>
-    <div class="col-sm-6" > <a><img class="logo_size" src="image\logo\icon-8.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > Client Pickup Reception</button></a></div>
+    <div class="col-sm-4" > <a><img class="logo_size" src="image\logo\icon-5.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > Client Service Reception</button></a></div>
+    <div class="col-sm-4" > <a><img class="logo_size" src="image\logo\icon-6.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > Client Document</button></a></div>
+    <div class="col-sm-4" > <a href="{{url('client_list')}}"><img class="logo_size" src="image\logo\icon-7.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > Client List</button></a></div>
+    <div class="col-sm-4" > <a><img class="logo_size" src="image\logo\icon-8.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > Client Pickup Reception</button></a></div>
    
   </div>
 </div>
