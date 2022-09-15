@@ -48,7 +48,7 @@ Route::any('/allocateroom', 'bedsController@allocateroom');
 Route::any('/allocatenonacroom', 'bedsController@allocatenonacroom');
 Route::any('/hospitals', 'hospitalController@hospitals');
 Route::any('/addhospital', 'hospitalController@addhospital');
-Route::any('/admins', 'hospitalController@admins');
+// Route::any('/admins', 'hospitalController@admins');
 Route::any('/roles', 'hospitalController@roles');
 //rooms
 Route::any('/addroomtypes', 'hospitalController@addroomtypes');
@@ -593,6 +593,8 @@ Route::any('/ledger_budget_category','AccountsController@ledger_budget_category'
 Route::any('/save_ledger_budget_category','AccountsController@save_ledger_budget_category')->name('save_ledger_budget_category');
 Route::any('/update_ledger_budget_category','AccountsController@update_ledger_budget_category')->name('update_ledger_budget_category');
 Route::any('/delete_ledger_budget_category/{id}','AccountsController@delete_ledger_budget_category')->name('delete_ledger_budget_category');
+
+Route::any('/expense_report','AccountsController@expense_report')->name('expense_report');
 //vipin end
 
 Route::any('/get_subcat', 'AccountsController@get_subcat')->name('get_subcat');
@@ -673,13 +675,23 @@ Route::any('/otpatient_details', 'doctorController@otpatient_details')->name('ot
 Route::any('/add_ot_patient', 'doctorController@add_ot_patient')->name('add_ot_patient');
 Route::any('/edit_ot_patient', 'doctorController@update_ot_patient')->name('edit_ot_patient');
 Route::any('surgery_delete{id}', 'doctorController@surgery_delete')->name('surgery_delete');
-Route::any('/add_surgery_types', 'surgeryController@add_surgery_types')->name('add_surgery_types');
+// Route::any('/add_surgery_types', 'surgeryController@add_surgery_types')->name('add_surgery_types');
 Route::any('/add_surtypes', 'surgeryController@store')->name('add_surtypes');
 Route::any('/update_surtypes', 'surgeryController@update')->name('update_surtypes');
 Route::any('delete_surgery{id}', 'surgeryController@destroy')->name('delete_surgery');
 Route::get('calendar-event', 'CalenderController@index')->name('calendar-event');
 Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents']);
-Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents']);
 
-
+//mugunth
+// Route::any('add_new_client','ClientManagement@index')->name('add_new_client');
+// Route::any('client_list','ClientList@index')->name('client_list');
+// Route::any('clients','clients@index')->name('clients');
+// Route::any('client_invoicing','client_invoicing@index')->name('client_invoicing');
+Route::any('add_newclient',"ClientManagement@create")->name('add_newclient');
+Route::any('client_list','ClientManagement@view')->name('client_list');
+Route::any('edit_client','ClientManagement@edit')->name('edit_client');
+Route::any('view-client','ClientManagement@show')->name('view-client');
+Route::any('client-index',"ClientManagement@index")->name('client-index');
+//mugunth
+?>
 

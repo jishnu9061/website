@@ -1,4 +1,4 @@
-@extends('layouts.hmsmain')
+@extends('layouts.add_client')
 @section('content')
 {{-- <div class="container mt-5" style="max-width: 100%">
                         

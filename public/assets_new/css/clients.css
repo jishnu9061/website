@@ -1,0 +1,171 @@
+body{
+    
+    height: 66rem;
+}
+
+.nav_head{
+    background-color: rgb(250, 255, 254);
+    margin-left: 2rem;
+    margin-right: 105px;
+    width: 17rem;
+    border-radius: 3px;
+    height: 4rem;
+    
+
+}
+.nav_h_1 {
+    margin-left: 41px;
+    display: flex;
+
+    margin-top: 10px;
+}
+
+.b_rad {
+    background-color:#ebd4aa;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    margin-top: 9px;
+    border-radius: 10px;
+}
+
+.arrow {
+    background-color: #ebd4aa;
+    margin-top: -63px;
+    /* font-size: 1px; */
+    border-radius: 25px;
+    margin-left: 0px;
+    border: 0
+}
+
+p {
+    margin-top: 4px;
+    font-size: 13px;
+    
+}
+.nav_container{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.main_container{
+    height: 28rem;
+    background-color: white;
+    margin-right: 30px;
+    margin-left: 30px;
+    
+}
+.container_1{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -12px;
+   
+   
+}
+
+.cli_pickup{
+    display: flex;
+    background-color: rgb(231 201 174);
+    width: 40rem;
+    height: 3rem;
+    border-radius: 10px;
+
+}
+.search_box{
+    display: flex;
+    background-color: rgb(231 201 174);
+    width: 43rem;
+    height: 3rem;
+    text-align: center;
+    border-radius: 10px;
+
+}
+p {
+   
+    margin-bottom: 1rem;
+    margin-top: 9px;
+    margin-left: 14rem;
+}
+#seach{
+    margin-top: 12px;
+    height: 22px;
+    border: 0;
+    border-radius: 0px 8px 8px 0px;
+}
+.ic_on{
+    background-color: aliceblue;
+    height: 22px;
+    margin-top: 12px;
+    width: 27px;
+    margin-left: 14rem;
+    border-radius: 8px 0px 0px 8px;
+
+}
+.bi-search{
+    color: rgb(123, 126, 129);
+    margin-bottom: 3px;
+}
+.t_able{
+    margin-top: 4rem;
+}
+
+
+table{
+    border-radius: 20px 20px 0px 0px;
+    background-color: rgb(11, 2, 78);
+    height: 28rem;
+    box-shadow: 1px 1px 3px 1px #b3b3b8;
+}
+thead{
+    
+    font-family: 'Abel', sans-serif;
+    color: rgb(134, 130, 130);
+    font-size: 13px;
+
+}
+tbody{
+    background-color:white;
+    border: 1px solid white;
+}
+
+.admin{
+   
+    margin-right: 2rem;
+    margin-top: 11px;
+}
+
+img{
+    height: 39px;
+    width: 39px;
+  
+    margin-right: 48px;
+}
+select {
+    word-wrap: normal;
+    border: 0;
+    margin-right: 32px;
+    color: #e7b375;
+}
+.add_cli{
+    margin-top: 14px;
+    margin-left: 10px;
+}
+tbody tr td{
+    color: rgb(101, 101, 107);
+    font-size: 11px;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 600px) {
+    .nav_container.responsive {position: relative;}
+    .nav_container.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+}
+    .nav_container.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }

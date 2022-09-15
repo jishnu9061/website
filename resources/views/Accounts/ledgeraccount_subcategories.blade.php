@@ -129,7 +129,7 @@ $no=1;
 
 
 
-                                    <h5 class="modal-title bb" id="myModalLabel1">Edit Account Type</h5>
+                                    <h5 class="modal-title bb" id="myModalLabel1">Edit Groups</h5>
 
 
 
@@ -158,7 +158,7 @@ $no=1;
                                                </div> --}}
 
                            <div class="form-group mb-3">
-                               <label>Account Type Name </label>
+                               <label>Group Name </label>
                                <input type="text" class="form-control" name="ledgeraccount_subcategories" id="subcat-name" placeholder="" required>
                            </div>
                            <div class="form-group mb-3">
@@ -176,7 +176,7 @@ $no=1;
 
 
                                     <div class="modal-footer">
-                                        <button type="submit" class="btn btn-primary" >Save</button>
+                                        <button type="submit" class="btn btn-primary" >Update</button>
                                         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
                                     </div>
                                       </form>
