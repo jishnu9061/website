@@ -681,22 +681,14 @@ Route::any('/update_surtypes', 'surgeryController@update')->name('update_surtype
 Route::any('delete_surgery{id}', 'surgeryController@destroy')->name('delete_surgery');
 Route::get('calendar-event', 'CalenderController@index')->name('calendar-event');
 Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents']);
-//mugunth
-// Route::any('add_new_client','ClientManagement@index')->name('add_new_client');
-// Route::any('client_list','ClientList@index')->name('client_list');
-// Route::any('clients','clients@index')->name('clients');
-// Route::any('client_invoicing','client_invoicing@index')->name('client_invoicing');
-// Route::any('add_newclient',"ClientManagement@index")->name('add_newclient');
-// vinuglobal
-// Route::any('register_file','reg_file@index')->name('register_file');
-// Route::any('edit_file','edit_file@index')->name('register_file');
-// Route::any('currency',"currency@index")->name('currency');
-// Route::any('edit_currency',"editcurrency@index")->name('edit_currency');
-// // Route::any('client_list','ClientList@index')->name('client_list');
-// Route::any('file_list','filelist@index')->name('file_list');
 
-// Route::any('file_management','file_management@index')->name('file_management');
-
+//Reshma
+Route::any('company_details','SystemSetting@index')->name('company_details');
+Route::any('other_confgn','OtherConfigtn@index')->name('other_confgn');
+Route::any('company_branch','OtherConfigtn@branch')->name('company_branch');
+Route::any('add_company_branch','OtherConfigtn@addbranch')->name('add_company_branch');
+Route::any('weekend_holiday','Holidays@index')->name('weekend_holiday');
+//Reshma
 
 Route::any('add_newclient',"ClientManagement@create")->name('add_newclient');
 Route::any('client_list','ClientManagement@view')->name('client_list');
@@ -704,6 +696,7 @@ Route::any('edit_client','ClientManagement@edit')->name('edit_client');
 Route::any('view-client','ClientManagement@show')->name('view-client');
 Route::any('client-index',"ClientManagement@index")->name('client-index');
 //mugunth
+
 
 
 //vinu
@@ -715,5 +708,6 @@ Route::any('edit-file',"filemanagement@edit")->name('edit-file');
 
 
 ?>
+
 
 
