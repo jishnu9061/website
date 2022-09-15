@@ -440,32 +440,18 @@
                                             <span>Client Management</span>
                                         </a>
                                 </li>
+
+                               
+
+
                             @endif
                             @if(Auth::user()->role == 'hospitaladmin')
-                                <li class="sidebar-item  has-sub">
-                                    <a href="{{url('usermanagement')}}" class='sidebar-link'>
+                            <li class="submenu-item" style="list-style:none;">
+                                        <a href="{{url('file_managementindex')}}" class='sidebar-link'>
                                         <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
                                             <span>File Management</span>
-                                    </a>
-                                    <ul class="submenu">
-                                    <li class="submenu-item ">
-                                        <a href="{{url('file_management')}}" class='sidebar-link'>
-                                            <span>Add New File</span>
                                         </a>
-                                    </li>
-                                    <li class="submenu-item ">
-                                        <a href="{{url('file_list')}}" class='sidebar-link'>
-                                            <span>File List</span>
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item ">
-                                        <a href="{{url('edit_file')}}" class='sidebar-link'>
-                                            <span>Edit File</span>
-                                        </a>
-                                    </li>
-                                    </ul>
-                                   
-                                    </li>
+                                </li>
                             @endif
                             @if(Auth::user()->role == 'hr' || Auth::user()->role == 'hospitaladmin')
                                 @php

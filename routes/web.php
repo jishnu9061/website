@@ -704,6 +704,16 @@ Route::any('edit_client','ClientManagement@edit')->name('edit_client');
 Route::any('view-client','ClientManagement@show')->name('view-client');
 Route::any('client-index',"ClientManagement@index")->name('client-index');
 //mugunth
+
+
+//vinu
+Route::any('file_managementindex',"filemanagement@index")->name('file_managementindex');
+Route::any('file-list',"filemanagement@view")->name('file-list');
+Route::any('edit-file',"filemanagement@edit")->name('edit-file');
+//vinu
+
+
+
 ?>
 
 
