@@ -736,7 +736,7 @@
             </header>
             <div class="page-heading" >
                 {{-- <h3 style="color:#c30147;">{{Auth::user()->Hospital}}</h3> --}}
-                <h3 style="color:#c30147;">ERP Global</h3>
+                {{-- <h3 style="color:#c30147;">ERP Global</h3> --}}
             </div>
             <a href="javascript:history.back()"  class="btn btn-primary" style="margin-bottom:10px;">Back</a>
             <div style="margin-left: 83%;margin-top: -8%;">
