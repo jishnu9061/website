@@ -434,23 +434,11 @@
                                     </li> --}}
                                 </ul>
                                 </li>
-                                <li class="sidebar-item  has-sub">
-                                    <a href="" class='sidebar-link'>
+                                <li class="submenu-item " style="list-style:none;">
+                                        <a href="{{url('client-index')}}" class='sidebar-link'>
                                         <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
                                             <span>Client Management</span>
-                                    </a>
-                                    <ul class="submenu">
-                                    <li class="submenu-item ">
-                                        <a href="{{url('add_newclient')}}" class='sidebar-link'>
-                                            <span>Add New Client</span>
                                         </a>
-                                    </li>
-                                    <li class="submenu-item ">
-                                        <a href="{{url('client_list')}}" class='sidebar-link'>
-                                            <span>Client List</span>
-                                        </a>
-                                    </li>
-                                    </ul>
                                 </li>
                             @endif
                             @if(Auth::user()->role == 'hospitaladmin')
@@ -943,7 +931,7 @@
             </header>
             <div class="page-heading" >
                 {{-- <h3 style="color:#c30147;">{{Auth::user()->Hospital}}</h3> --}}
-                <h3 style="color:#c30147;">ERP Global</h3>
+                {{-- <h3 style="color:#c30147;">ERP Global</h3> --}}
             </div>
             <a href="javascript:history.back()"  class="btn btn-primary" style="margin-bottom:10px;">Back</a>
             <div style="margin-left: 83%;margin-top: -8%;">

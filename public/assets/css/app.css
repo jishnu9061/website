@@ -325,6 +325,23 @@
 
 
 
+                .btn_align_btn{
+                    width:55%;
+                    margin:18px;
+                    height:60px;
+                    padding-top:-20px;
+                }
+                .logo_size{
+                    width:15%;
+                }
+                .add-btn{
+                    width:15%;
+                    color:yellow;
+                }
+                .clr{
+                    color:#000;
+                }
+
                 .btn.btn-primary ::after:focus {
                     border: 2px solid #3e699b87;
                 }

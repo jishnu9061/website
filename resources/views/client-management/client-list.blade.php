@@ -21,7 +21,7 @@
        <div id="mydatatable_filter" class="dataTables_filter">
         <label><b>Search:</b><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
        </div>
-       
+       <a href="{{('add_newclient')}}"><button class="btn btn-primary add-btn">Add Client</button></a>
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
@@ -29,7 +29,8 @@
                 <thead>
                     <tr>
                         <th class="text-center"> No</th>
-                        <th class="text-center"> Client Number</th>
+                        <th class="text-center"> Client No</th>
+                        <th class="text-center">Client</th>
                         <th class="text-center">Email Address</th>
                         <th class="text-center">Services Offered</th>
                         <th class="text-center">Status</th>
@@ -43,9 +44,10 @@
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row"class="text-center"><a href=""><i  style="color:black;" class="fa fa-eye" aria-hidden="true"></i>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row"class="text-center"><a href="{{url('view-client')}}"><i  style="color:black;" class="fa fa-eye" aria-hidden="true"></i>
                            <input type="hidden" value="" id="medicine_id_hidden" class="applicate" name="supplier_id_hidden">
-                            <a href=""><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
+                            <a href="{{url('edit_client')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
                             <a  onClick="return myFunction();" href="" style="color:black;"><i class="fas fa-trash-alt"></i></a></td>
                         </tr>
                 </tbody>
