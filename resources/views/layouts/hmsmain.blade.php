@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HMS</title>
+    <title>CRA</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com/">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet">
@@ -461,12 +461,12 @@
                                     </a>
                                     <ul class="submenu">
                                     <li class="submenu-item ">
-                                        <a href="{{url('register_file')}}" class='sidebar-link'>
+                                        <a href="{{url('file_management')}}" class='sidebar-link'>
                                             <span>Add New File</span>
                                         </a>
                                     </li>
                                     <li class="submenu-item ">
-                                        <a href="{{url('client_list')}}" class='sidebar-link'>
+                                        <a href="{{url('file_list')}}" class='sidebar-link'>
                                             <span>File List</span>
                                         </a>
                                     </li>

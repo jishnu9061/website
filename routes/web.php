@@ -693,6 +693,10 @@ Route::any('edit_file','edit_file@index')->name('register_file');
 Route::any('currency',"currency@index")->name('currency');
 Route::any('edit_currency',"editcurrency@index")->name('edit_currency');
 Route::any('client_list','ClientList@index')->name('client_list');
+Route::any('file_list','filelist@index')->name('file_list');
+
+Route::any('file_management','file_management@index')->name('file_management');
+
 
 //mugunth
 ?>

@@ -311,6 +311,19 @@
                     box-sizing: border-box;
                     border-radius: 4.58px;
                 }
+                .btn_margin{
+                    margin:20px;
+                }
+
+
+                .btn_p_btn{
+                    width: 55%;
+                    margin: 18px;
+                    height: 60px;
+                    padding-top: -20px;
+                }
+
+
 
                 .btn.btn-primary ::after:focus {
                     border: 2px solid #3e699b87;

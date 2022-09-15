@@ -8,6 +8,6 @@ class edit_file extends Controller
 {
     public function index()
     {
-        return view('file_management.edit_file');
+        return view('filemanagement.edit_file');
     }
 }
