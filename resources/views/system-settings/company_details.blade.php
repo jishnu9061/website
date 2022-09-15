@@ -30,6 +30,37 @@
           height:30px;
 
         }
+        a.button1{
+  display : inline-block;
+  padding:0.35em 1.2em;
+  background-color:rgb(13, 1, 56); 
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-weight:300;
+  color:rgb(240, 205, 10);
+  text-align:center;
+  transition: all 0.2s;
+ 
+  }
+ 
+
+  a.button2{
+    display : inline-block;
+    padding:0.35em 1.2em;
+    background-color:#f0e7ce; 
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    border-color: rgb(13, 1, 56); 
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight:300;
+    color:rgb(13, 1, 56);
+    text-align:center;
+    transition: all 0.2s;
+    outline: auto;
+  }
         
 </style>
 </head>
@@ -38,7 +69,7 @@
   	<!-- <div class="container">
     <form class="form-horizontal" action="/action_page.php"> -->
 
-    <a href="#" class="btn btn-primary" style="rgb(13, 1, 56);color:rgb(13, 1, 56);  font-weight: bold;width: 73%;">Add Company</a><br><br>
+    <a href="#" class="btn btn-primary" style="rgb(13, 1, 56);color:rgb(240, 205, 10); font-weight: bold;width: 73%;">Add Company</a><br><br>
 
     <a href="#"  class="btn btn-primary" style="margin-bottom:25px;float:right;margin-right:335px;">ADD LOGO</a><br><br><br>
  <div class = "company">

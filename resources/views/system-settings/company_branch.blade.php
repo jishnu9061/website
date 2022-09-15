@@ -70,7 +70,7 @@
         <h1>Company Branch</h1>
        
 
-    <a href="{{url('add_company_branch')}}"  class="btn btn-primary" >Add Branch</a><br><br>
+    <a href="{{url('add_company_branch')}}"  class="btn btn-primary"style="color:rgb(238, 196, 105);background-color:rgb(13, 1, 56);" >Add Branch</a><br><br>
     <p>Total Result: 2</p>
     <table>
    

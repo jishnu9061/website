@@ -26,7 +26,7 @@
     }
   
 a.btn.btn-primary{
-  color:white;
+  color: rgb(238, 196, 105);
   margin-right:300px;
   margin-left:200px;
 }
