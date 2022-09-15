@@ -312,6 +312,15 @@
                     border-radius: 4.58px;
                 }
 
+                .btn_align_btn{
+                    width:55%;
+                    margin:18px;
+                    height:60px;
+                    padding-top:-20px;
+                }
+                .logo_size{
+                    width:15%;
+                }
                 .add-btn{
                     width:15%;
                     color:yellow;
