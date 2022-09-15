@@ -338,13 +338,16 @@ tfoot,
 tr,
 td,
 th {
-    border-color: snow;
+    border-color: rgb(248, 245, 239);
     border-style: solid;
-    border-width: 0;
+    border-width: 5px;
+ 
 }
+
 
 label {
     display: inline-block;
+    color: #020b38;
 }
 
 button {
@@ -2713,10 +2716,10 @@ textarea.form-control-lg {
     border: 0;
 }
 
-.cover{
-    margin-left:-10px;
-    margin-right:100px;
-    padding:-50px;
+.cover {
+    margin-left: -10px;
+    margin-right: 100px;
+    padding: -50px;
 }
 
 .form-range::-webkit-slider-thumb {
@@ -2978,7 +2981,7 @@ textarea.form-control-lg {
     margin-left: -1px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    width: 500px;
+    width: 558px;
     position: relative;
     display: flex;
     flex-wrap: wrap;

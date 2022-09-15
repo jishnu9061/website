@@ -13,7 +13,12 @@ class ClientManagement extends Controller
      */
     public function index()
     {
-        return view('client-management.add-newclient');
+        return view('client-management.client-index');
+    }
+
+    public function view(){
+
+        return view('client-management.client-list');
     }
 
     /**
@@ -23,7 +28,7 @@ class ClientManagement extends Controller
      */
     public function create()
     {
-        //
+        return view('client-management.add-newclient');
     }
 
     /**
@@ -43,9 +48,9 @@ class ClientManagement extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        return view('client-management.view-client');
     }
 
     /**
@@ -54,9 +59,9 @@ class ClientManagement extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-        //
+        return view('client-management.edit_client');
     }
 
     /**

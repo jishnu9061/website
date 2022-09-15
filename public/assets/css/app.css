@@ -304,12 +304,29 @@
                 }
 
                 .btn.btn-primary {
-                    color: #fff;
-                    background: linear-gradient(0deg, #5e829d, #5e829d), linear-gradient(102.78deg, rgba(55, 77, 109, 0.15) -1.58%, rgba(55, 77, 109, 0.15) 114.31%);
+                    color: rgb(238, 196, 105);
+                    background: linear-gradient(0deg, rgb(1, 1, 82), rgb(6, 6, 58)), linear-gradient(102.78deg, rgba(55, 77, 109, 0.15) -1.58%, rgba(55, 77, 109, 0.15) 114.31%);
                     background-blend-mode: soft-light, normal;
                     border: 0.5px solid rgba(157, 168, 176, 0.4);
                     box-sizing: border-box;
                     border-radius: 4.58px;
+                }
+
+                .btn_align_btn{
+                    width:55%;
+                    margin:18px;
+                    height:60px;
+                    padding-top:-20px;
+                }
+                .logo_size{
+                    width:15%;
+                }
+                .add-btn{
+                    width:15%;
+                    color:yellow;
+                }
+                .clr{
+                    color:#000;
                 }
 
                 .btn.btn-primary ::after:focus {
@@ -1541,6 +1558,41 @@
                 .dataTable-table:not(.table-borderless) thead th {
                     border-bottom: 1px solid #dedede !important;
                     color: white;
+                    background-color: rgb(177, 127, 62);
+                    border-radius: 5px;
+                }
+
+                .pencil {
+                    color: #000;
+                }
+
+                .buttn_clr {
+                    color: rgb(255, 255, 255);
+                    background-color: #070344;
+                    padding: 8px;
+                    width: 15%;
+                    border-radius: 10px;
+                }
+
+                .submit_btn {
+                    color: rgb(255, 255, 255);
+                    background-color: #070344;
+                    padding: 8px;
+                    width: 50%;
+                    margin-left: 240px;
+                    border-radius: 10px;
+                }
+
+                .btn_align {
+                    margin-left: -480px;
+                }
+
+                .btn_sumbit {
+                    margin-left: -100px;
+                }
+
+                .box {
+                    padding: 7px;
                 }
 
                 .table.table-sm tr td,
@@ -1969,6 +2021,18 @@
                 a:hover {
                     color: #717ff5;
                     text-decoration: none;
+                }
+
+                .cont_div {
+                    color: rgb(6, 6, 104);
+                    margin-left: 50px;
+                }
+
+                .arrow {
+                    background-color: rgb(247, 209, 160);
+                    border-radius: 2px;
+                    color: #000;
+                    margin-bottom: -53px;
                 }
 
                 h1,
