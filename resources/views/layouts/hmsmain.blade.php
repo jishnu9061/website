@@ -434,7 +434,7 @@
                                     </li> --}}
                                 </ul>
                                 </li>
-                                <li class="submenu-item ">
+                                <li class="submenu-item " style="list-style:none;">
                                         <a href="{{url('client-index')}}" class='sidebar-link'>
                                             <span>Client Management</span>
                                         </a>
