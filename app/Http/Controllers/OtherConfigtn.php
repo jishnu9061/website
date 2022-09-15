@@ -11,10 +11,19 @@ class OtherConfigtn extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    
+
     public function index()
     {
         return view('system-settings.other_confgn');
+    }
+
+    public function branch()
+    {
+        return view('system-settings.company_branch');
+    }
+    public function addbranch()
+    {
+        return view('system-settings.add_company_branch');
     }
     
 
@@ -83,4 +92,5 @@ class OtherConfigtn extends Controller
     {
         //
     }
+
 }

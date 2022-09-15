@@ -41,7 +41,8 @@ a.btn.btn-primary{
 <div class="btn-group-vertical">
 
 <a href="#"  class="btn btn-primary" >Configurations</a><br>
-<a href="http://localhost/CRA/resources/views/system-settings/company_branch.php"  class="btn btn-primary">Company Branch</a><br>
+<!-- <a href="http://localhost/CRA/resources/views/system-settings/company_branch.php"  class="btn btn-primary">Company Branch</a><br> -->
+<a href="{{url('company_branch')}}"  class="btn btn-primary">Company Branch</a><br>
 <a href="#"  class="btn btn-primary">Template Category</a><br>
 <a href="#"  class="btn btn-primary">Letter Types</a><br>
 <a href="#"  class="btn btn-primary">Payment Items</a><br>

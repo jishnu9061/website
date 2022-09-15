@@ -1,3 +1,6 @@
+@extends('layouts.hmsmain')
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -163,3 +166,4 @@ a.button4{
     
     </body>
 </html>
+@endsection
