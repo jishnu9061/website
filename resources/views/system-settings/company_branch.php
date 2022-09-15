@@ -3,14 +3,14 @@
      
       <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <style>
      body
         {
           background-color: #f0e7ce;
-          font-family:  Arial, Helvetica, sans-serif;
+          /* font-family:  Arial, Helvetica, sans-serif; */
           margin-left:10px;
           margin-right:10px;
         }
@@ -21,13 +21,14 @@
             margin-top:30px;
             margin-left:25px;
             border: 1px solid rgb(240, 205, 10);
+            border-collapse: collapse;
         }
         h1
         {
             padding-top:10px;
             font-size:large;
             font-weight:bold;
-            font-family:  Arial, Helvetica, sans-serif;
+            /* font-family:  Arial, Helvetica, sans-serif; */
             color:rgb(13, 1, 56); 
             text-align:left ;
             background-color:rgb(177, 127, 62);
@@ -38,7 +39,7 @@
           margin-left:25px;
         }
         table {
-            font-family: arial, sans-serif;
+            /* font-family: arial, sans-serif; */
             border-collapse: collapse;
             width: 95%;
             margin-left:25px;

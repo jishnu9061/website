@@ -5,7 +5,7 @@
      
       <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="table.js"></script>
@@ -14,11 +14,11 @@
      body
         {
           background-color: #f0e7ce;
-          font-family:  Arial, Helvetica, sans-serif;
+          /* font-family:  Arial, Helvetica, sans-serif; */
         }
         h2
         {
-            font-family:  Arial, Helvetica, sans-serif;
+            /* font-family:  Arial, Helvetica, sans-serif; */
             font-size:large;
             font-weight:bold;
             color:rgb(13, 1, 56); 
@@ -26,7 +26,7 @@
             padding:15px;
          }
          table{
-            font-family: arial, sans-serif;
+            /* font-family: arial, sans-serif; */
             border-collapse: collapse;
             width: 50%;
             margin-left:300px;
@@ -55,13 +55,15 @@
 <h2>Weekend and Holidays</h2><br><br>
 <a href="#" class="btn btn-primary" style="margin-top:0px;">Add New Holiday / Weekend Date</a>
 <p style="color:black;"><a href="#"style="color:blue; font-size:x-small;">2017</a> | <a href="#"style="color:blue;font-size:x-small;">2018</a> | <a href="#"style="color:blue;font-size:x-small;">2019</a> | <a href="#"style="color:blue;font-size:x-small;">2020</a> | <a href="#"style="color:blue;font-size:x-small;">2021</a> | <a href="#"style="color:blue;font-size:x-small;">2022</a><br><br>
-
 <h3 style="color:rgb(177, 127, 62);font-size:large;font-weight:bold;text-align:center;">Weekend & Holiday Dates - 2022</h3>
+
+
+
 <table>
 
    
   <tr>
-    <th>*</th>
+    <th>Sl No:</th>
     <th>Date</th>
     <th>Day</th>
     <th>Delete</th>

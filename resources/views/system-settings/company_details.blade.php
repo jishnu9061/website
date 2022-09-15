@@ -5,12 +5,12 @@
      
       <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
 
       <title>Company Details</title>
-      <link rel="stylesheet" href="{{asset('/') }}assets/css/cstyle.css">
+      <link rel="stylesheet" href="assets/css/cstyle.css"> 
       <style>
         body
         {
@@ -22,7 +22,6 @@
         font-size:large;
         width:200px;
         display:inline-block;
-        font-family: monospace;
         color: rgb(13, 1, 56); 
         }
         input
@@ -39,13 +38,11 @@
   	<!-- <div class="container">
     <form class="form-horizontal" action="/action_page.php"> -->
 
-    <a href="#" class="btn btn-primary" style="rgb(13, 1, 56);color:rgb(13, 1, 56);  font-weight: bold;Width: 73%;">Add company</a><br><br>
+    <a href="#" class="btn btn-primary" style="rgb(13, 1, 56);color:rgb(13, 1, 56);  font-weight: bold;width: 73%;">Add Company</a><br><br>
 
+    <a href="#"  class="btn btn-primary" style="margin-bottom:25px;float:right;margin-right:335px;">ADD LOGO</a><br><br><br>
  <div class = "company">
-   
-<a href="#"  class="btn btn-primary" style="margin-bottom:25px;float:right;margin-right:335px;">ADD LOGO</a>
-
-<label> Company Name </label>
+   <label> Company Name </label>
   <input type="text" id="name" name="name" value=""size="50"> <br><br>
   <label>Company Address</label>
   <input type="text" id="address" name="address" value=""size="50">
