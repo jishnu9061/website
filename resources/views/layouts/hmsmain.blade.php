@@ -436,6 +436,7 @@
                                 </li>
                                 <li class="submenu-item " style="list-style:none;">
                                         <a href="{{url('client-index')}}" class='sidebar-link'>
+                                        <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
                                             <span>Client Management</span>
                                         </a>
                                 </li>
