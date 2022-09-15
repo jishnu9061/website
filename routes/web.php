@@ -695,7 +695,7 @@ Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents'])
 // // Route::any('client_list','ClientList@index')->name('client_list');
 // Route::any('file_list','filelist@index')->name('file_list');
 
-Route::any('file_management','file_management@index')->name('file_management');
+// Route::any('file_management','file_management@index')->name('file_management');
 
 
 //mugunth
