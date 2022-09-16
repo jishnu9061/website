@@ -681,20 +681,31 @@ Route::any('/update_surtypes', 'surgeryController@update')->name('update_surtype
 Route::any('delete_surgery{id}', 'surgeryController@destroy')->name('delete_surgery');
 Route::get('calendar-event', 'CalenderController@index')->name('calendar-event');
 Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents']);
+
 //mugunth
 // Route::any('add_new_client','ClientManagement@index')->name('add_new_client');
 // Route::any('client_list','ClientList@index')->name('client_list');
 // Route::any('clients','clients@index')->name('clients');
 // Route::any('client_invoicing','client_invoicing@index')->name('client_invoicing');
-Route::any('add_newclient',"ClientManagement@index")->name('add_newclient');
-Route::any('client_list','ClientList@index')->name('client_list');
 
 //Reshma
 Route::any('company_details','SystemSetting@index')->name('company_details');
+Route::any('add_company_details','SystemSetting@addcompany')->name('add_company_details');
+Route::any('edit_company_details','SystemSetting@editcompany')->name('edit_company_details');
+
 Route::any('other_confgn','OtherConfigtn@index')->name('other_confgn');
 Route::any('company_branch','OtherConfigtn@branch')->name('company_branch');
 Route::any('add_company_branch','OtherConfigtn@addbranch')->name('add_company_branch');
+Route::any('edit_company_branch','OtherConfigtn@editbranch')->name('edit_company_branch');
+
 Route::any('weekend_holiday','Holidays@index')->name('weekend_holiday');
+Route::any('add_new_holiday','Holidays@addholiday')->name('add_new_holiday');
+Route::any('holiday_2017','Holidays@holiday2017')->name('holiday_2017');
+Route::any('holiday_2018','Holidays@holiday2018')->name('holiday_2018');
+Route::any('holiday_2019','Holidays@holiday2019')->name('holiday_2019');
+Route::any('holiday_2020','Holidays@holiday2020')->name('holiday_2020');
+Route::any('holiday_2021','Holidays@holiday2021')->name('holiday_2021');
+Route::any('holiday_2022','Holidays@holiday2022')->name('holiday_2022');
 //Reshma
 //mugunth
 Route::any('add_newclient',"ClientManagement@create")->name('add_newclient');

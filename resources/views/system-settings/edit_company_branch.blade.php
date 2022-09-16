@@ -26,7 +26,7 @@
           padding-top:10px;
         }
         h2
-        {
+    {
     /* font-family:  Arial, Helvetica, sans-serif; */
     font-size:large;
     font-weight:bold;
@@ -43,11 +43,11 @@
         label
       {
        
-        font-size:medium;
+        font-size:large;
         width:200px;
         display:inline-block;
         /* font-family: monospace; */
-      
+        color: rgb(13, 1, 56); 
         }
         input
         {
@@ -91,13 +91,12 @@ a.button4{
   outline: auto;
  
   }
-
       
         </style>
 
 </head>
 <body>
-<h2>Add Company Branch</h2>
+<h2>Edit Company Branch</h2>
 
 <div class="container">
         <form action="#">

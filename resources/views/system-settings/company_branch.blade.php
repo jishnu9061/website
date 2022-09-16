@@ -18,25 +18,24 @@
         }
         a.btn.btn-primary
         {
-            background-color:rgb(177, 127, 62);
-            color:rgb(13, 1, 56); 
+          background-color:rgb(29, 2, 129);
+            color: rgb(238, 196, 105)
             margin-top:30px;
             margin-left:25px;
             border: 1px solid rgb(240, 205, 10);
             border-collapse: collapse;
+    
         }
-        h1
-        {
-            padding-top:10px;
-            font-size:large;
-            font-weight:bold;
-            /* font-family:  Arial, Helvetica, sans-serif; */
-            color:rgb(13, 1, 56); 
-            text-align:left ;
-            background-color:rgb(177, 127, 62);
-            margin-left:25px;
-           
-        } 
+        h2
+    {
+    /* font-family:  Arial, Helvetica, sans-serif; */
+    font-size:large;
+    font-weight:bold;
+    color:rgb(13, 1, 56); 
+    background-color:rgb(177, 127, 62);
+    padding:15px;
+    
+    }
         p{
           margin-left:25px;
         }
@@ -67,10 +66,10 @@
     </head>
     <body>
   
-        <h1>Company Branch</h1>
+        <h2>Company Branch</h2>
        
 
-    <a href="{{url('add_company_branch')}}"  class="btn btn-primary"style="color:rgb(238, 196, 105);background-color:rgb(13, 1, 56);" >Add Branch</a><br><br>
+    <a href="{{url('add_company_branch')}}"  class="btn btn-primary"style="color:rgb(238, 196, 105);background-color:rgb(29, 2, 129);" >Add Branch</a><br><br>
     <p>Total Result: 2</p>
     <table>
    
@@ -89,31 +88,31 @@
     <td>NBI</td>
     <td>Nairobi</td>
     <td style="color:green;font-weight:bold;">Active</td>
-    <td><a href="edit_db" target="_blank"style="color:blue;">Edit</a> 
+    <td><a href="{{url('edit_company_branch')}}"style="color:blue;">Edit</a> 
 </td>
     <td><input type="checkbox"></td>
     </tr>
 
   <tr>
-    <td>2</td>
-    <td>03</td>
-    <td>MSA</td>
-    <td>Mombasa</td>
+    <td>  </td>
+    <td>  </td>
+    <td>  </td>
+    <td>   </td>
     <td style="color:red;font-weight:bold;">In-Active</td>
-    <td><a href="edit_db" target="_blank"style="color:blue;">Edit</a>
+    <td><a href="{{url('edit_company_branch')}}"style="color:blue;">Edit</a> 
     <td><input type="checkbox"></td>
     </tr>
   
 </table><br><br>
 
-<select style="width:200px;height: 30px;background-color:#f0e7ce; border: 1px solid rgb(177, 127, 62);padding-right:10px;margin-left:1250px;">
+<!-- <select style="width:200px;height: 30px;background-color:#f0e7ce; border: 1px solid rgb(177, 127, 62);padding-right:10px;margin-left:1250px;">
     <option>  Activate Category </option>
     <option>De-Activate Category</option>
     <option>Delete Category</option>
 </select>
 <button class="btn btn-primary" style="width:42px;height:35px;background-color:rgb(177, 127, 62); border: 1px solid rgb(240, 205, 10);margin-left:1250px;
             color:rgb(13, 1, 56);text-align: center; ">Go</button>
-        
+         -->
 </body>
     </html>
     @endsection

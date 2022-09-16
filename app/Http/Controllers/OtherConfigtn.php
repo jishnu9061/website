@@ -25,6 +25,10 @@ class OtherConfigtn extends Controller
     {
         return view('system-settings.add_company_branch');
     }
+    public function editbranch()
+    {
+        return view('system-settings.edit_company_branch');
+    }
     
 
     /**

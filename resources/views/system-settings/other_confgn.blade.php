@@ -27,32 +27,39 @@
   
 a.btn.btn-primary{
   color: rgb(238, 196, 105);
-  margin-right:300px;
+  background-color:rgb(29, 2, 129);
+}
+button{
   margin-left:200px;
 }
+
 
 </style>
 </head>
 <body>
-  <form>
+ 
 <h2>Other Configurations</h2><br><br>
 
 <!-- <p><a href="#">Configurations</a> | <a href="#">Company Branch</a> | <a href="#">Template Category</a> | <a href="#">Letter Types</a> | <a href="#">Payment Items</a> | <a href="#">Courts</a> | <a href="#">Description Selection</a> | <a href="#">Tax Tables</a> | <a href="#">Notifications</a> </p> -->
-<div class="btn-group-vertical">
+<div class="container-fluid">
+  
 
-<a href="#"  class="btn btn-primary" >Configurations</a><br>
-<!-- <a href="http://localhost/CRA/resources/views/system-settings/company_branch.php"  class="btn btn-primary">Company Branch</a><br> -->
-<a href="{{url('company_branch')}}"  class="btn btn-primary">Company Branch</a><br>
-<a href="#"  class="btn btn-primary">Template Category</a><br>
-<a href="#"  class="btn btn-primary">Letter Types</a><br>
-<a href="#"  class="btn btn-primary">Payment Items</a><br>
-<a href="http://localhost/CRA/resources/views/system-settings/courts.php"  class="btn btn-primary">Courts</a><br>
-<a href="#"  class="btn btn-primary">Description Selections</a><br>
-<a href="#"  class="btn btn-primary">Tax Tables</a><br>
-<a href="#"  class="btn btn-primary">Notifications</a><br>
+<a href="#"  ><button type="button" class="btn btn-primary ">Configurations</button></a><br><br>
+<a href="{{url('company_branch')}}"><button type="button" class="btn btn-primary ">Company Branch</button></a><br><br>
+<a href="#"  ><button type="button" class="btn btn-primary ">Template Category</button></a><br><br>
+<a href="#"  ><button type="button" class="btn btn-primary ">Letter Types</button></a><br><br>
+<a href="#"  ><button type="button" class="btn btn-primary ">Payment Items</button></a><br><br>
+<a href="#"  ><button type="button" class="btn btn-primary ">Courts</button></a><br><br>
+<a href="#"  ><button type="button" class="btn btn-primary ">Description Selections</button></a><br><br>
+<a href="#"  ><button type="button" class="btn btn-primary ">Tax Tables</button></a><br><br>
+<a href="#"  ><button type="button" class="btn btn-primary ">Notifications</button></a><br><br>
+
 </div>
+<!-- <button type="button" class="btn btn-primary btn btn-block">Block level button</button>
+<button type="button" class="btn btn-primary btn btn-block">Block level button</button> -->
 
-</form>
+
+
 </body>
 </html>
 @endsection

@@ -46,7 +46,7 @@
          </style>
 </head>
 <body>
-  <form>
+<form>
 <h2>Weekend and Holidays</h2><br><br>
 <a href="{{url('add_new_holiday')}}"  class="btn btn-primary" style="margin-top:0px;">Add New Holiday / Weekend Date</a>
 <p><a href="{{url('holiday_2017')}}"style="color:blue; font-size:x-small;">2017</a> | <a href="{{url('holiday_2018')}}"style="color:blue;font-size:x-small;">2018</a> | <a href="{{url('holiday_2019')}}"style="color:blue;font-size:x-small;">2019</a> | <a href="{{url('holiday_2020')}}"style="color:blue;font-size:x-small;">2020</a> | <a href="{{url('holiday_2021')}}"style="color:blue;font-size:x-small;">2021</a> | <a href="{{url('holiday_2022')}}"style="color:blue;font-size:x-small;">2022</a><br><br>
@@ -67,7 +67,7 @@
 <tr>
     <td>2</td>
     <td>02-01-2022</td>
-    <td> Sunday</td>
+    <td>Sunday</td>
     <td><a href="del_db" target="_blank"style="color:blue;">Delete</a></td>
 </tr>
 <tr>
@@ -102,7 +102,6 @@
 </tr>
 </table><br><br>
 </form>
-
     </body>
 </html>
 @endsection
