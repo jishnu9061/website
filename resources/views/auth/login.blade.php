@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Multihospital</title>
+    <title>CRA</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
@@ -18,12 +18,11 @@
 
 <body>
     <div id="auth">
-        
-<div class="row h-100">
+        <div class="row h-100">
     <div class="col-lg-5 col-12">
         <div id="auth-left">
             <div class="auth-logo">
-                <a href="index-2.html"><img src="assets/images/logo/logo.png" alt="Logo"></a>
+                <img  id="cr_logo" src="assets/images/Logo cra.png" alt="" style="width:50%;height:50%">
             </div>
             <h1 class="auth-title">Log in.</h1>
             <p class="auth-subtitle mb-5">Log in with your data that you entered during registration.</p>
