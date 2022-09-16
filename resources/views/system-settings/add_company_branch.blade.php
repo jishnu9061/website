@@ -25,16 +25,16 @@
           margin-right:10px;
           padding-top:10px;
         }
-         h1
+        h2
         {
-            padding-top:10px;
-            font-size:large;
-            font-weight:bold;
-          
-            color:rgb(13, 1, 56); 
-            text-align:left;
-            background-color:rgb(177, 127, 62);
-        } 
+    /* font-family:  Arial, Helvetica, sans-serif; */
+    font-size:large;
+    font-weight:bold;
+    color:rgb(13, 1, 56); 
+    background-color:rgb(177, 127, 62);
+    padding:15px;
+    
+    }
         .container{
             padding-top:20px;
             margin-top: 50px;
@@ -47,7 +47,7 @@
         width:200px;
         display:inline-block;
         /* font-family: monospace; */
-        color: rgb(13, 1, 56); 
+      
         }
         input
         {
@@ -91,67 +91,68 @@ a.button4{
   outline: auto;
  
   }
+
       
         </style>
 
 </head>
 <body>
-<h1>Add Company Branch</h1>
+<h2>Add Company Branch</h2>
 
 <div class="container">
         <form action="#">
             <div class="form-group">
-                <label for="Branch No">Branch No:</label>
+                <label for="Branch No"style="color:rgb(13, 1, 56);">Branch No:</label>
                 <input type="number"  id="bnum" name="bnum"value=""size="50"><br><br>
             </div>
 
             <div class="form-group">
-                <label for="Branch Code">Branch Code:</label>
+                <label for="Branch Code"style="color:rgb(13, 1, 56);">Branch Code:</label>
                 <input type="text"  id="bcode" name="bcodes"value=""size="50"><br><br>
             </div>
 
             <div class="form-group">
-                <label for="Branch Name">Branch Name:</label>
+                <label for="Branch Name"style="color:rgb(13, 1, 56);">Branch Name:</label>
                 <input type="text"  id="bname" name="bname"value=""size="50"><br><br>
             </div>
 
             <div class="form-group">
-                <label for="Postal Address">Postal Address:</label>
+                <label for="Postal Address"style="color:rgb(13, 1, 56);">Postal Address:</label>
                 <input type="text"id="padd" name="padd"value=""size="50"><br><br>
             </div>
 
             <div class="form-group">
-                <label for="tel">Tel:</label>
+                <label for="tel"style="color:rgb(13, 1, 56);">Tel:</label>
                 <input type="number"  id="tel" name="tel"value=""size="50"><br><br>
             </div>
 
             <div class="form-group">
-                <label for="mobile">Mobile:</label>
+                <label for="mobile"style="color:rgb(13, 1, 56);">Mobile:</label>
                 <input type="number"  id="mobile" name="mobile"value=""size="50"><br><br>
             </div>
 
             <div class="form-group">
-                <label for="fax">Fax:</label>
+                <label for="fax"style="color:rgb(13, 1, 56);">Fax:</label>
                 <input type="text"  id="fax" name="fax"value=""size="50"><br><br>
             </div>
 
             <div class="form-group">
-                <label for="town">Town:</label>
+                <label for="town"style="color:rgb(13, 1, 56);">Town:</label>
                 <input type="text" id="town" name="town"value=""size="50"><br><br>
             </div>
 
             <div class="form-group">
-                <label for="email">Email:</label>
+                <label for="email"style="color:rgb(13, 1, 56);">Email:</label>
                 <input type="email"  id="email" name="email"value=""size="50"><br><br>
             </div>
 
             <div class="form-group">
-                <label for="website">Website:</label>
+                <label for="website"style="color:rgb(13, 1, 56);">Website:</label>
                 <input type="text" id="website" name="website"value=""size="50"><br><br>
             </div>
 
             <div class="form-group">
-                <label for="physical address">Physical Address:</label>
+                <label for="physical address"style="color:rgb(13, 1, 56);">Physical Address:</label>
                 <input type="text" id="phadd" name="phadd"value=""size="50"><br><br>
             </div>
 

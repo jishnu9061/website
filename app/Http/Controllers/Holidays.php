@@ -15,6 +15,35 @@ class Holidays extends Controller
     {
         return view('system-settings.weekend_holiday');
     }
+    public function addholiday()
+    {
+        return view('system-settings.add_new_holiday');
+    }
+    public function holiday2017()
+    {
+        return view('system-settings.holiday_2017');
+    }
+    public function holiday2018()
+    {
+        return view('system-settings.holiday_2018');
+    }
+    public function holiday2019()
+    {
+        return view('system-settings.holiday_2019');
+    }
+    public function holiday2020()
+    {
+        return view('system-settings.holiday_2020');
+    }
+    public function holiday2021()
+    {
+        return view('system-settings.holiday_2021');
+    }
+    public function holiday2022()
+    {
+        return view('system-settings.holiday_2022');
+    }
+   
 
     /**
      * Show the form for creating a new resource.
