@@ -67,24 +67,24 @@
     transition: all 0.2s;
     outline: auto;
   }
-  form{
+  /* form{
     background-color: #f0e7ce;
     padding-left:1px;
     margin-bottom:30px;
 
-  }
+  } */
         
 </style>
 </head>
 <body>
-  <!-- <form style="border:1px hidden ;margin-left:0px; "><br><br>  -->
-  <form style="border:1px hidden ;margin-left:0px;"name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  <form ><br><br> 
+  
   	<!-- <div class="container">
     <form class="form-horizontal" action="/action_page.php"> -->
 
     <a href="#" class="btn btn-primary" style="margin-left:50px;background-color:rgb(13, 1, 56);color: rgb(238, 196, 105); font-weight: bold;width: 90%;">Add Company</a><br><br>
  
-    <a href="#"  class="btn btn-seconday" style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105);margin-bottom:25px;float:right;margin-right:100px;"><input type="file" id="img" name="img" accept="image/*">ADD LOGO</a><br><br><br>
+    <a href="#"  class="btn btn-seconday" style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105);margin-bottom:25px;float:right;margin-right:100px;">ADD LOGO</a><br><br><br>
   
    
  
@@ -104,7 +104,7 @@
   <input type="text" id="email" name="email" value=""size="50"><br><br>
   <label>Company Type</label>
   
- <select style="width:450px;height: 30px;color:black">
+ <select style="width:450px;height: 30px;color:black"type="text" value="" name="type">
     <option>   select        </option>
     <option>Partnership</option>
     <option>Sole partership</option>
@@ -122,30 +122,16 @@
   <label>NSSF Number</label>
   <input type="number" id="nnum" name="nnum" value=""size="50"><br><br> 
 
+  <input  type="submit"value="Save" name="Submit"style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105); ">
+  
+  <input type="button"value="Cancel" name="cancel"style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105); ">
+<!-- <a href="something" class="button1"style="margin-left:50px;">Save</a>
+<a href="something" class="button2">Cancel</a><br><br> -->
 
-<!-- <button class="btn1">Save</button>
-<button class="btn2">Cancel</button>  -->
-
-<a href="something" class="button1"style="margin-left:50px;">Save</a>
-<a href="something" class="button2">Cancel</a><br><br>
-
-
-<!-- <a href="something" class="button3">add</a> -->
-<!-- <button class="button3 btn btn-secondary"><a href="something">Add</a></button> -->
-
-
-      </div>
+    </div>
 </form>
 <!-- </div> -->
-<script>
-function validateForm() {
-  let x = document.forms["myForm"]["name"].value;
-  if (x == "") {
-    alert("Name must be filled out");
-    return false;
-  }
-}
-</script>
+
    </body>
 </html>
 @endsection

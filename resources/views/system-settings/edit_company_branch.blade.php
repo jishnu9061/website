@@ -156,8 +156,9 @@ a.button4{
             </div>
 
         
- <a href="something" class="button3">Submit</a>
-<a href="something" class="button4">Close</a>
+            <input  type="submit"value="Save" name="Submit"style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105); ">
+  
+  <input type="button"value="Close" name="close"style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105); ">
 
     </div>
     </form>
