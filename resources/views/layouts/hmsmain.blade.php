@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HMS</title>
+    <title>CRA</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com/">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet">
@@ -356,10 +356,10 @@
                             @endif
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
-                                    <a href="{{url('usermanagement')}}" class='sidebar-link'>
+                                    <!-- <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
                                             <span>User Management</span>
-                                    </a>
+                                    </a> -->
                                     @php
                                         $admin = array("usermanagement", "adddepartments","add_labdept","add_surgery_types","adddepartmentadmin","addroomstypes","addroomtypes","beds","Add_Ambulance_details");
                                         $lab = array("labcategory", "labtests", "labprofile","patlabtest","alllabtestsview");
@@ -436,6 +436,7 @@
                                 </li>
                                 <li class="submenu-item " style="list-style:none;">
                                         <a href="{{url('client-index')}}" class='sidebar-link'>
+                                        <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
                                             <span>Client Management</span>
                                         </a>
                                 </li>
@@ -444,6 +445,36 @@
                                 @php
                                     $hr = array("addallowance", "addstaffs", "staffs","loans","payslip","attendance","attendanceview","payslipbulk","generatepayslip","managestaff");
                                 @endphp
+
+                                <li class="sidebar-item  has-sub">
+                                    <a href="" class='sidebar-link'>
+                                        <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
+                                            <span>System Setup</span>
+                                    </a>
+                                    <ul class="submenu">
+                                   
+                                    <li class="submenu-item ">
+                                        <a href="{{url('company_details')}}" class='sidebar-link'>
+                                            <span>Company</span>
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="submenu-item ">
+                                        <a href="{{url('weekend_holiday')}}" class='sidebar-link'>
+                                            <span>Holidays</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="submenu-item ">
+                                        <a href="{{url('other_confgn')}}" class='sidebar-link'>
+                                            <span>Other Configurations</span>
+                                        </a>
+                                    </li>
+                                   
+                                    </ul>
+                                </li>
+
+
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('home')}}" class='sidebar-link'>
                                         <i class="bi bi-grid-fill" style="font-weight: 400;"></i>

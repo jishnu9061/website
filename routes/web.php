@@ -687,6 +687,16 @@ Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents'])
 // Route::any('client_list','ClientList@index')->name('client_list');
 // Route::any('clients','clients@index')->name('clients');
 // Route::any('client_invoicing','client_invoicing@index')->name('client_invoicing');
+
+//mugunth
+
+//Reshma
+Route::any('company_details','SystemSetting@index')->name('company_details');
+Route::any('other_confgn','OtherConfigtn@index')->name('other_confgn');
+Route::any('company_branch','OtherConfigtn@branch')->name('company_branch');
+Route::any('add_company_branch','OtherConfigtn@addbranch')->name('add_company_branch');
+Route::any('weekend_holiday','Holidays@index')->name('weekend_holiday');
+//Reshma
 Route::any('add_newclient',"ClientManagement@create")->name('add_newclient');
 Route::any('client_list','ClientManagement@view')->name('client_list');
 Route::any('edit_client','ClientManagement@edit')->name('edit_client');
@@ -694,4 +704,3 @@ Route::any('view-client','ClientManagement@show')->name('view-client');
 Route::any('client-index',"ClientManagement@index")->name('client-index');
 //mugunth
 ?>
-
