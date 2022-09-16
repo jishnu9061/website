@@ -67,7 +67,7 @@
 <tr>
     <td>2</td>
     <td>02-01-2022</td>
-    <td>Sunday</td>
+    <td> Sunday</td>
     <td><a href="del_db" target="_blank"style="color:blue;">Delete</a></td>
 </tr>
 <tr>

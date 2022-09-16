@@ -43,7 +43,7 @@
         label
       {
        
-        font-size:large;
+        font-size:medium;
         width:200px;
         display:inline-block;
         /* font-family: monospace; */
