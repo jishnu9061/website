@@ -49,8 +49,8 @@
   <form>
 <h2>Weekend and Holidays</h2><br><br>
 <a href="{{url('add_new_holiday')}}"  class="btn btn-primary" style="margin-top:0px;">Add New Holiday / Weekend Date</a>
-<p><a href="{{url('holiday_2017')}}"style="color:blue; font-size:x-small;">2017</a> | <a href="{{url('holiday_2018')}}"style="color:blue;font-size:x-small;">2018</a> | <a href="{{url('holiday_2019')}}"style="color:blue;font-size:x-small;">2019</a> | <a href="{{url('holiday_2020')}}"style="color:blue;font-size:x-small;">2020</a> | <a href="{{url('holiday_2021')}}"style="color:blue;font-size:x-small;">2021</a> | <a href="{{url('holiday_2022')}}"style="color:blue;font-size:x-small;">2022</a><br><br>
-<h3 style="color:rgb(177, 127, 62);font-size:large;font-weight:bold;text-align:center;">Weekend & Holiday Dates - 2022</h3>
+<p style="color:black;"><a href="{{url('holiday_2017')}}"style="color:blue; font-size:x-small;">2017</a> | <a href="{{url('holiday_2018')}}"style="color:blue;font-size:x-small;">2018</a> | <a href="#"style="color:blue;font-size:x-small;">2019</a> | <a href="#"style="color:blue;font-size:x-small;">2020</a> | <a href="#"style="color:blue;font-size:x-small;">2021</a> | <a href="#"style="color:blue;font-size:x-small;">2022</a><br><br>
+<h3 style="color:rgb(177, 127, 62);font-size:large;font-weight:bold;text-align:center;">Weekend & Holiday Dates - 2017</h3>
 <table>
     <tr>
     <th>Sl No:</th>
@@ -60,46 +60,11 @@
 </tr>
   <tr>
     <td>1</td>
-    <td>01-01-2022</td>
+    <td>01-01-2017</td>
     <td>Saturday</td>
     <td><a href="del_db" target="_blank"style="color:blue;">Delete</a></td>
 </tr>
-<tr>
-    <td>2</td>
-    <td>02-01-2022</td>
-    <td> Sunday</td>
-    <td><a href="del_db" target="_blank"style="color:blue;">Delete</a></td>
-</tr>
-<tr>
-    <td>3</td>
-    <td>08-01-2022</td>
-    <td>Saturday</td>
-    <td><a href="del_db" target="_blank"style="color:blue;">Delete</a></td>
-</tr>
-<tr>
-    <td>4</td>
-    <td>09-01-2022</td>
-    <td>Sunday</td>
-    <td><a href="del_db" target="_blank"style="color:blue;">Delete</a></td>
-</tr>
-<tr>
-    <td>5</td>
-    <td>15-01-2022</td>
-    <td>Saturday</td>
-    <td><a href="del_db" target="_blank"style="color:blue;">Delete</a></td>
-</tr>
-<tr>
-    <td>6</td>
-    <td>16-01-2022</td>
-    <td>Sunday</td>
-    <td><a href="del_db" target="_blank"style="color:blue;">Delete</a></td>
-</tr>
-<tr>
-    <td>7</td>
-    <td>22-01-2022</td>
-    <td>Saturday</td>
-    <td><a href="del_db" target="_blank"style="color:blue;">Delete</a></td>
-</tr>
+
 </table><br><br>
 </form>
 
