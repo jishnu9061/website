@@ -62,7 +62,7 @@
     <td>Stima Investment Plaza,3rd floor,Mushembi Rd,Parklands</td>
     <td>Nairobi,Keniya</td>
     <td style="color:green;font-weight:bold;"><img src=”https://www.pexels.com/photo/high-rise-buildings-443383/” ></td>
-    <td><a href="{{url('edit_company_details')}}"style="color:blue;">Edit</a> 
+    <td><a href="{{url('edit_company_details')}}"style="color:blue;">Edit</a>
 </td>
     <!-- <td><input type="checkbox"></td> -->
     </tr>
