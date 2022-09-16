@@ -30,7 +30,8 @@ $('#price').prop('readonly', true);
 
   <div class="container mt-5">
       <button type="button" class="btn btn-primary client_btn" data-bs-toggle="modal" data-bs-target="#mymodal">Type</button>
-      <button type="button" class="btn btn-primary country_btn" data-bs-toggle="modal" data-bs-target="#my">Country</button>
+      <button type="button" class="btn btn-primary country_btn
+      " data-bs-toggle="modal" data-bs-target="#my">Country</button>
   </div>
 </div>
 </div>
@@ -245,7 +246,7 @@ $('#price').prop('readonly', true);
                                 <label for="username">Pin No</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend"></div>
-                                        <input type="number" class="form-control" name="pin" id="age" value="" placeholder="Pin No" min="0" max="99">
+                                        <input type="text" class="form-control" name="pin" id="age" value="" placeholder="Pin No" min="0" max="99">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Age is required.
                                         </div>
