@@ -695,6 +695,7 @@ Route::any('company_details','SystemSetting@index')->name('company_details');
 Route::any('other_confgn','OtherConfigtn@index')->name('other_confgn');
 Route::any('company_branch','OtherConfigtn@branch')->name('company_branch');
 Route::any('add_company_branch','OtherConfigtn@addbranch')->name('add_company_branch');
+Route::any('edit_company_branch','OtherConfigtn@editbranch')->name('edit_company_branch');
 Route::any('weekend_holiday','Holidays@index')->name('weekend_holiday');
 //Reshma
 Route::any('add_newclient',"ClientManagement@create")->name('add_newclient');

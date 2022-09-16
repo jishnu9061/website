@@ -90,16 +90,16 @@
     <td>NBI</td>
     <td>Nairobi</td>
     <td style="color:green;font-weight:bold;">Active</td>
-    <td><a href="edit_db" target="_blank"style="color:blue;">Edit</a> 
+    <td><a href="{{url('edit_company_branch')}}" target="_blank"style="color:blue;">Edit</a> 
 </td>
     <td><input type="checkbox"></td>
     </tr>
 
   <tr>
-    <td>2</td>
-    <td>03</td>
-    <td>MSA</td>
-    <td>Mombasa</td>
+    <td>  </td>
+    <td>  </td>
+    <td>  </td>
+    <td>   </td>
     <td style="color:red;font-weight:bold;">In-Active</td>
     <td><a href="edit_db" target="_blank"style="color:blue;">Edit</a>
     <td><input type="checkbox"></td>
