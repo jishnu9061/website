@@ -33,7 +33,7 @@
     <div id="calender"></div>
 
 </div>
-{{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+{{-- {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
     Launch demo modal
   </button> --}}
   
@@ -41,50 +41,51 @@
     {{-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"> --}}
         <div id="exampleModal" class="modal modal-top fade calendar-modal">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
+                <div class="modal-content" style="background-color:rgb(182, 127, 55)" >
                     <form id="add-event" action="{{url('add_ot_patient')}}" method="post">
                         @csrf 
                         <div class="modal-body" id="slotdata">
-                            <div class="modal-header" style="background-color:#5e829d">
-                                <h4 style="text-align:center;" class="text-white"><b>Operation Theatre Booking</b></h4>
+                            <div class="modal-header" style="background-color:rgb(1, 1, 82)">
+                                <h4 style="text-align:center;" class="text-white"><b>Add Events</b></h4>
                             </div>
                             <div class="modal-body">
                                 <div class="row">
-                                    <div class="col-md-4 col-lg-4">
+                                    <div class="col-md-4 col-lg-12">
                                         <div class="form-group">
-                                            <label>Date</label>
+                                            <label style="color:white">Date</label>
                                             <input type="text" id="enamez" class="form-control" name="sur_date">
                                         </div>
                                     </div>
-                                    <div class="col-md-8 col-lg-8">
+                                    {{-- <div class="col-md-8 col-lg-8"> --}}
                                     {{-- <div class="form-group">
                                         <label>Title</label> --}}
-                                        <input type="hidden" value="Booked" class="form-control" name="sur_title" style="text-align:center;">
+                                        {{-- <input type="hidden" value="Booked" class="form-control" name="sur_title" style="text-align:center;"> --}}
                                     {{-- </div> --}}
-                                    <div class="mb-3">
+                                    <div class="col-md-8 col-lg-12">
                                         <div class="form-group"> 
-                                    <label>Doctor</label>
-                                    @php
+                                    <label style="color:white">Event Name</label>
+                                        <input type="text" value="" class="form-control" name="sur_title" style="text-align:center;">
+                                    {{-- @php
                                       $users=DB::table('users')->where('id',Auth::user()->id)->get(); 
-                                    @endphp
-                                    <select class="form-control" id="doctor_name" name="doctor_name" style="pointer-events:none">
+                                    @endphp --}}
+                                    {{-- <select class="form-control" id="doctor_name" name="doctor_name" style="pointer-events:none">
                                       <option>Select</option> 
                                       @foreach ($users as $doc)
                                           <option value="{{$doc->id}}"{{($doc->id==Auth::user()->id) ? "selected" : ""}}>{{ $doc->name }}</option>
                                       @endforeach                        
-                                    </select>
-                                    </div>
+                                    </select> --}}
+                                    {{-- </div> --}}
                                     </div>
                                     </div>
                                 </div>
-                                <div class="row">
+                                {{-- <div class="row">
                                     <div class="col-md-12 col-lg-12">
                                         <div class="form-group">
                                             <label>Choose Color</label>
                                             <input type="color" name="color" class="form-control">
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div class="row">
                                     {{-- <div class="col-md-4 col-lg-4">
                                         <div class="form-group">
@@ -97,7 +98,7 @@
                                             date_default_timezone_set("Asia/Calcutta");   //India time (GMT+5:30)
                                           ?>
                                          <div class="form-group">
-                                            <label>Start Time</label>
+                                            <label style="color:white">Start Time</label>
                                             <input type="time" name="start_time" id="start_time" class="form-control" required>
                                          </div>
                                     </div>
@@ -106,7 +107,7 @@
                                             date_default_timezone_set("Asia/Calcutta");   //India time (GMT+5:30)
                                           ?>
                                          <div class="form-group">
-                                            <label>End Time</label>
+                                            <label style="color:white">End Time</label>
                                             <input type="time" name="end_time" id="end_time" class="form-control" required>
                                          </div>
                                     </div>
@@ -190,12 +191,12 @@
                               </div>
                             </div> --}}
                             </div>
-                        <div class="modal-footer">
+                        <div class="modal-footer" style="background-color:rgb(1, 1, 82)">
                             {{-- <button type="submit" class="btn btn-success">Save</button>
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> --}}
-                            <button type="button" class="btn  text-white" data-bs-dismiss="modal"style="width:20%;background-color:#5e829d" data-dismiss="modal"> <i class="bx bx-x d-block d-sm-none"></i>
-                                <span class="d-none d-sm-block"></span>Close</button>
-                            <button type="submit" class="btn text-white" style="background-color:#5e829d;">Save</button>
+                            <button type="button" class="btn  text-white" data-bs-dismiss="modal" style="background-color:rgb(182, 127, 55);width:30%" data-dismiss="modal"> <i class="bx bx-x d-block d-sm-none"></i>
+                                <span class="d-none d-sm-block"></span><b>Close</b></button>
+                            <button type="submit" class="btn text-white" style="background-color:rgb(182, 127, 55);width:30%"><b>Save</b></button>
                         </div>
                     
                         </div>
@@ -219,7 +220,7 @@
                     </div>
                 </div>
             </div> --}}
-            <div class="modal fade" id="modal-view-event" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            {{-- <div class="modal fade" id="modal-view-event" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-body">
@@ -243,7 +244,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
              {{-- event_viewmodal end --}}
 <script>
 
