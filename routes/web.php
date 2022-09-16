@@ -681,13 +681,13 @@ Route::any('/update_surtypes', 'surgeryController@update')->name('update_surtype
 Route::any('delete_surgery{id}', 'surgeryController@destroy')->name('delete_surgery');
 Route::get('calendar-event', 'CalenderController@index')->name('calendar-event');
 Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents']);
+
 //mugunth
 // Route::any('add_new_client','ClientManagement@index')->name('add_new_client');
 // Route::any('client_list','ClientList@index')->name('client_list');
 // Route::any('clients','clients@index')->name('clients');
 // Route::any('client_invoicing','client_invoicing@index')->name('client_invoicing');
-Route::any('add_newclient',"ClientManagement@index")->name('add_newclient');
-Route::any('client_list','ClientList@index')->name('client_list');
+
 //mugunth
 
 //Reshma
