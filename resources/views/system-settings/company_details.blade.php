@@ -14,23 +14,28 @@
       <style>
         body
         {
-          background-color: #f0e7ce;
+          background-color: white;
+          /* font-family:"Nunito"; */
         }
         label
       {
        
-        font-size:large;
+        font-size:medium;
         width:200px;
         display:inline-block;
         color: rgb(13, 1, 56); 
+        margin-left:50px;
+        font-family:"Nunito";
         }
         input
         {
           width: 450px;
           height:30px;
+          color:black;
 
         }
         a.button1{
+          margin-left:50px;
   display : inline-block;
   padding:0.35em 1.2em;
   background-color:rgb(13, 1, 56); 
@@ -47,6 +52,7 @@
  
 
   a.button2{
+    margin-left:50px;
     display : inline-block;
     padding:0.35em 1.2em;
     background-color:#f0e7ce; 
@@ -61,17 +67,29 @@
     transition: all 0.2s;
     outline: auto;
   }
+  /* form{
+    background-color: #f0e7ce;
+    padding-left:1px;
+    margin-bottom:30px;
+
+  } */
         
 </style>
 </head>
 <body>
-  <form>
+  <form ><br><br> 
+  
   	<!-- <div class="container">
     <form class="form-horizontal" action="/action_page.php"> -->
 
-    <a href="#" class="btn btn-primary" style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105); font-weight: bold;width: 73%;">Add Company</a><br><br>
+    <a href="#" class="btn btn-primary" style="margin-left:50px;background-color:rgb(13, 1, 56);color: rgb(238, 196, 105); font-weight: bold;width: 90%;">Add Company</a><br><br>
+ 
+    <a href="#"  class="btn btn-seconday" style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105);margin-bottom:25px;float:right;margin-right:100px;">ADD LOGO</a><br><br><br>
+  
+   
+ 
+  
 
-    <a href="#"  class="btn btn-primary" style="margin-bottom:25px;float:right;margin-right:335px;">ADD LOGO</a><br><br><br>
  <div class = "company">
    <label> Company Name </label>
   <input type="text" id="name" name="name" value=""size="50"> <br><br>
@@ -86,7 +104,7 @@
   <input type="text" id="email" name="email" value=""size="50"><br><br>
   <label>Company Type</label>
   
- <select style="width:450px;height: 30px;">
+ <select style="width:450px;height: 30px;color:black"type="text" value="" name="type">
     <option>   select        </option>
     <option>Partnership</option>
     <option>Sole partership</option>
@@ -104,21 +122,16 @@
   <label>NSSF Number</label>
   <input type="number" id="nnum" name="nnum" value=""size="50"><br><br> 
 
+  <input  type="submit"value="Save" name="Submit"style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105); ">
+  
+  <input type="button"value="Cancel" name="cancel"style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105); ">
+<!-- <a href="something" class="button1"style="margin-left:50px;">Save</a>
+<a href="something" class="button2">Cancel</a><br><br> -->
 
-<!-- <button class="btn1">Save</button>
-<button class="btn2">Cancel</button>  -->
-
-<a href="something" class="button1">Save</a>
-<a href="something" class="button2">Cancel</a>
-
-
-<!-- <a href="something" class="button3">add</a> -->
-<!-- <button class="button3 btn btn-secondary"><a href="something">Add</a></button> -->
-
-
-      </div>
+    </div>
 </form>
 <!-- </div> -->
+
    </body>
 </html>
 @endsection

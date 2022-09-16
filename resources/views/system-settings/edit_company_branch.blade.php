@@ -26,7 +26,7 @@
           padding-top:10px;
         }
         h2
-        {
+    {
     /* font-family:  Arial, Helvetica, sans-serif; */
     font-size:large;
     font-weight:bold;
@@ -43,11 +43,11 @@
         label
       {
        
-        font-size:medium;
+        font-size:large;
         width:200px;
         display:inline-block;
         /* font-family: monospace; */
-      
+        color: rgb(13, 1, 56); 
         }
         input
         {
@@ -91,13 +91,12 @@ a.button4{
   outline: auto;
  
   }
-
       
         </style>
 
 </head>
 <body>
-<h2>Add Company Branch</h2>
+<h2>Edit Company Branch</h2>
 
 <div class="container">
         <form action="#">
@@ -157,8 +156,9 @@ a.button4{
             </div>
 
         
- <a href="something" class="button3">Submit</a>
-<a href="something" class="button4">Close</a>
+            <input  type="submit"value="Save" name="Submit"style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105); ">
+  
+  <input type="button"value="Close" name="close"style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105); ">
 
     </div>
     </form>

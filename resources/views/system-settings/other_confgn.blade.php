@@ -28,7 +28,9 @@
 a.btn.btn-primary{
   color: rgb(238, 196, 105);
   background-color:rgb(29, 2, 129);
- 
+}
+button{
+  margin-left:200px;
 }
 
 
@@ -42,15 +44,16 @@ a.btn.btn-primary{
 <div class="container-fluid">
   
 
-<a href="#"  ><button type="button" class="btn btn-primary btn btn-block">Configurations</button></a><br><br>
-<a href="{{url('company_branch')}}"  class="btn btn-primary">Company Branch</a><br><br>
-<a href="#"  class="btn btn-primary">Template Category</a><br><br>
-<a href="#"  class="btn btn-primary">Letter Types</a><br><br>
-<a href="#"  class="btn btn-primary">Payment Items</a><br><br>
-<a href="#"  class="btn btn-primary">Courts</a><br><br>
-<a href="#"  class="btn btn-primary">Description Selections</a><br><br>
-<a href="#"  class="btn btn-primary">Tax Tables</a><br><br>
-<a href="#"  class="btn btn-primary">Notifications</a><br><br>
+<a href="#"  ><button type="button" class="btn btn-primary ">Configurations</button></a><br><br>
+<a href="{{url('company_branch')}}"><button type="button" class="btn btn-primary ">Company Branch</button></a><br><br>
+<a href="#"  ><button type="button" class="btn btn-primary ">Template Category</button></a><br><br>
+<a href="#"  ><button type="button" class="btn btn-primary ">Letter Types</button></a><br><br>
+<a href="#"  ><button type="button" class="btn btn-primary ">Payment Items</button></a><br><br>
+<a href="#"  ><button type="button" class="btn btn-primary ">Courts</button></a><br><br>
+<a href="#"  ><button type="button" class="btn btn-primary ">Description Selections</button></a><br><br>
+<a href="#"  ><button type="button" class="btn btn-primary ">Tax Tables</button></a><br><br>
+<a href="#"  ><button type="button" class="btn btn-primary ">Notifications</button></a><br><br>
+
 </div>
 <!-- <button type="button" class="btn btn-primary btn btn-block">Block level button</button>
 <button type="button" class="btn btn-primary btn btn-block">Block level button</button> -->
