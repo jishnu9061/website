@@ -106,7 +106,7 @@ a.button4{
 
 </head>
 <body>
-<h2>Edit Holiday</h2><br><br>
+<h2>Edit Holidays</h2><br><br>
 <!-- <div class="container">
         <form action="#">
             <div class="form-group">
