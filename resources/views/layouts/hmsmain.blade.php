@@ -42,7 +42,7 @@
 <body>
 
  <!-- ======= Header ======= -->
- <header id="header" class="header fixed-top d-flex align-items-center">
+ {{-- <header id="header" class="header fixed-top d-flex align-items-center"> --}}
 
 <!-- <div class="d-flex align-items-center justify-content-between">
   <a href="index.html" class="logo d-flex align-items-center">
@@ -53,23 +53,23 @@
 </div> -->
 <!-- End Logo -->
 
-<div class="search-bar">
+{{-- <div class="search-bar">
   <form class="search-form d-flex align-items-center" method="POST" action="#">
     <input type="text" name="query" placeholder="Search..." title="Enter search keyword">
     <button type="submit" title="Search"><i class="bi bi-search"></i></button>
   </form>
-</div><!-- End Search Bar -->
+</div><!-- End Search Bar --> --}}
 
 
 
-<nav class="header-nav ms-auto">
+{{-- <nav class="header-nav ms-auto">
   <ul class="d-flex align-items-center">
 
     <li class="nav-item d-block d-lg-none">
       <a class="nav-link nav-icon search-bar-toggle " href="#">
         <i class="bi bi-search"></i>
       </a>
-    </li><!-- End Search Icon-->
+    </li><!-- End Search Icon--> --}}
 
 
 
@@ -77,7 +77,7 @@
 
 
 
-
+{{-- 
     <li class="nav-item  pe-3">
 
       <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
@@ -86,33 +86,19 @@
       </a><!-- End Profile Iamge Icon -->
 
     
-    </li><!-- End Profile Nav -->
+    </li><!-- End Profile Nav --> --}}
 
     
-    <li class="nav-item  pe-3">
+    {{-- <li class="nav-item  pe-3">
 
       <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-        <img src="add-icon--line-iconset--iconsmind-29.png" alt="Profile" class="rounded-circle">
-        <span class="d-none d-md-block  ps-2">Addon</span>
-      </a><!-- End Profile Iamge Icon -->
+        {{-- <img src="add-icon--line-iconset--iconsmind-29.png" alt="Profile" class="rounded-circle"> --}}
+        {{-- <span class="d-none d-md-block  ps-2">Addon</span>
+      </a><!-- End Profile Iamge Icon --> --}}
 
     
-    </li><!-- End Profile Nav -->
-
-
-
-    
-
-
-
-
-
-
-
-
-    
-
-    <li class="nav-item dropdown">
+    {{-- </li><!-- End Profile Nav --> --}}
+    {{-- <li class="nav-item dropdown">
 
       <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
         <i class="bi bi-bell"></i>
@@ -312,7 +298,7 @@
     </li><!-- End Profile Nav -->
 
   </ul>
-</nav><!-- End Icons Navigation -->
+</nav><!-- End Icons Navigation --> --}}
 
 </header><!-- End Header -->
     <div id="app">
@@ -323,19 +309,19 @@
                         <div class="logo">
                             <a href="{{ url('home') }}">
                                 <!-- {{-- <img src="assets/images/logo/logo.png" alt="Logo" srcset=""> --}} -->
-                            <img  id="cr_logo" src="assets/images/Logo cra.png" alt="">
+                            <img  id="cr_logo" src="assets/images/Logo cra.png"  alt="">
                                 
                             </a>
                         </div>
-                        <div class="toggler">
+                        {{-- <div class="toggler">
                             <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="sidebar-menu">
                     <ul class="menu">
-                        <li class="sidebar-title">Menu</li>
-                            @if(Auth::user()->role == 'superadmin')
+                        <li class="sidebar-title"></li>
+                            {{-- @if(Auth::user()->role == 'superadmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="#" class='sidebar-link'>
                                         <i class="bi bi-stack"></i>
@@ -353,7 +339,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                            @endif
+                            @endif --}}
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <!-- <a href="{{url('usermanagement')}}" class='sidebar-link'>
@@ -387,57 +373,13 @@
                                             <span>Add Departments</span>
                                         </a>
                                     </li>
-                                    {{-- <li class="submenu-item ">
-                                        <a href="{{url('addfloor')}}" class='sidebar-link'>
-                                            <span>Add Floor</span>
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item ">
-                                        <a href="{{url('add_labdept')}}" class='sidebar-link'>
-                                            <span>Add Lab Department</span>
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item ">
-                                        <a href="{{url('add_surgery_types')}}" class='sidebar-link'>
-                                            <span>Add Surgery Types</span>
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item ">
-                                        <a href="{{url('adddepartmentadmin')}}" class='sidebar-link'>
-                                            <span>Add Department Admin</span>
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item ">
-                                        <a href="{{url('view_dept_admin')}}" class='sidebar-link'>
-                                            <span>View Department Admin</span>
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item ">
-                                        <a href="{{url('addroomstypes')}}" class='sidebar-link'>
-                                            <span>Add Room Types</span>
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item ">
-                                        <a href="{{url('addroomtypes')}}" class='sidebar-link'>
-                                            <span>Add Rooms</span>
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item ">
-                                        <a href="{{url('beds')}}" class='sidebar-link'>
-                                            <span>Room Management</span>
-                                        </a>
-                                    </li>
-                                    <li class="submenu-item ">
-                                        <a href="{{url('Add_Ambulance_details')}}" class='sidebar-link'>
-                                            <span>Ambulance Services</span>
-                                        </a>
-                                    </li> --}}
+                                    
                                 </ul>
                                 </li>
                                 <li class="submenu-item " style="list-style:none;">
                                         <a href="{{url('client-index')}}" class='sidebar-link'>
-                                        <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
-                                            <span>Client Management</span>
+                                        <i class="fa-regular fa-user"></i>
+                                            <span>Manage Client</span>
                                         </a>
                                 </li>
 
@@ -460,8 +402,8 @@
 
                                 <li class="sidebar-item  has-sub">
                                     <a href="" class='sidebar-link'>
-                                        <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
-                                            <span>System Setup</span>
+                                        <i class="fa fa-gear"></i>
+                                            <span>Settings</span>
                                     </a>
                                     <ul class="submenu">
                                    
@@ -941,15 +883,15 @@
         </div>
         <div id="main">
             <header class="mb-3">
-                <a href="#" class="burger-btn d-block d-xl-none">
+                {{-- <a href="#" class="burger-btn d-block d-xl-none">
                     <i class="bi bi-justify fs-3"></i>
-                </a>
+                </a> --}}
             </header>
             <div class="page-heading" >
                 {{-- <h3 style="color:#c30147;">{{Auth::user()->Hospital}}</h3> --}}
                 {{-- <h3 style="color:#c30147;">ERP Global</h3> --}}
             </div>
-            <a href="javascript:history.back()"  class="btn btn-primary" style="margin-bottom:10px;">Back</a>
+            {{-- <a href="javascript:history.back()"  class="btn btn-primary" style="margin-bottom:10px;">Back</a> --}}
             <div style="margin-left: 83%;margin-top: -8%;">
                 <div class="avatar avatar-xl">
                     <img  style="margin-left: 28%;" src="assets/images/faces/1.jpg" alt="Face 1">
@@ -957,7 +899,7 @@
                 <h5 class="font-bold"> {{ Auth::user()->name }}</h5>
                 <h6 class="text-muted mb-0"><a href="{{url('logt')}}">logout</a></h6>
                 <div>
-                    <p>{{ Auth::user()->role }}</p>
+                    <p></p>
                 </div>
             </div>
             <div class="page-content">

@@ -15,7 +15,7 @@
 
 <body>
     <div class="container">
-        <h3 class="text-center" style="color: #070344;"><b>Client List</b></h3>
+        <h3 class="text-center" style="color: #070344; text-shadow: 1px 2px;"><b>Client List</b></h3>
        <br>
       
        <div id="mydatatable_filter" class="dataTables_filter">

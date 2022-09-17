@@ -16,6 +16,21 @@ class SystemSetting extends Controller
        return view('system-settings.company_details');
      
     }
+    public function addcompany()
+    {
+       return view('system-settings.add_company_details');
+     
+    }
+    public function editcompany()
+    {
+       return view('system-settings.edit_company_details');
+     
+    }
+    public function viewcompany()
+    {
+       return view('system-settings.view_company_details');
+     
+    }
 
     /**
      * Show the form for creating a new resource.

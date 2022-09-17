@@ -26,18 +26,16 @@
             border-collapse: collapse;
     
         }
-        h1
-        {
-            padding-top:10px;
-            font-size:large;
-            font-weight:bold;
-            /* font-family:  Arial, Helvetica, sans-serif; */
-            color:rgb(13, 1, 56); 
-            text-align:left ;
-            background-color:rgb(177, 127, 62);
-            margin-left:25px;
-           
-        } 
+        h2
+    {
+    /* font-family:  Arial, Helvetica, sans-serif; */
+    font-size:large;
+    font-weight:bold;
+    color:rgb(13, 1, 56); 
+    background-color:rgb(177, 127, 62);
+    padding:15px;
+    
+    }
         p{
           margin-left:25px;
         }
@@ -68,7 +66,7 @@
     </head>
     <body>
   
-        <h1>Company Branch</h1>
+        <h2>Company Branch</h2>
        
 
     <a href="{{url('add_company_branch')}}"  class="btn btn-primary"style="color:rgb(238, 196, 105);background-color:rgb(29, 2, 129);" >Add Branch</a><br><br>
@@ -81,8 +79,8 @@
     <th>Branch Code</th>
     <th>Branch Name</th>
     <th>Status</th>
-    <th>Edit</th>
-    <th></th>
+    <th>Action</th>
+  
   </tr>
   <tr>
     <td>1</td>
@@ -90,19 +88,22 @@
     <td>NBI</td>
     <td>Nairobi</td>
     <td style="color:green;font-weight:bold;">Active</td>
-    <td><a href="edit_db" target="_blank"style="color:blue;">Edit</a> 
-</td>
-    <td><input type="checkbox"></td>
+    <td  scope="row"class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
+                        <a href="{{url('edit_company_branch')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                            <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
+   
     </tr>
 
   <tr>
-    <td>2</td>
-    <td>03</td>
-    <td>MSA</td>
-    <td>Mombasa</td>
+    <td>  </td>
+    <td>  </td>
+    <td>  </td>
+    <td>   </td>
     <td style="color:red;font-weight:bold;">In-Active</td>
-    <td><a href="edit_db" target="_blank"style="color:blue;">Edit</a>
-    <td><input type="checkbox"></td>
+    <td  scope="row"class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
+                        <a href="{{url('edit_company_branch')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                            <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
+
     </tr>
   
 </table><br><br>

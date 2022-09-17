@@ -46,7 +46,7 @@
          </style>
 </head>
 <body>
-  <form>
+<form>
 <h2>Weekend and Holidays</h2><br><br>
 <a href="{{url('add_new_holiday')}}"  class="btn btn-primary" style="margin-top:0px;">Add New Holiday / Weekend Date</a>
 <p><a href="{{url('holiday_2017')}}"style="color:blue; font-size:x-small;">2017</a> | <a href="{{url('holiday_2018')}}"style="color:blue;font-size:x-small;">2018</a> | <a href="{{url('holiday_2019')}}"style="color:blue;font-size:x-small;">2019</a> | <a href="{{url('holiday_2020')}}"style="color:blue;font-size:x-small;">2020</a> | <a href="{{url('holiday_2021')}}"style="color:blue;font-size:x-small;">2021</a> | <a href="{{url('holiday_2022')}}"style="color:blue;font-size:x-small;">2022</a><br><br>
@@ -56,36 +56,52 @@
     <th>Sl No:</th>
     <th>Date</th>
     <th>Day</th>
-    <th>Action</th>
+    <th>Delete</th>
 </tr>
   <tr>
     <td>1</td>
     <td>01-01-2022</td>
     <td>Saturday</td>
-     <td  scope="row"class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
-                        <a href="{{url('edit_holiday')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                            <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
+    <td><a href="del_db" target="_blank"style="color:blue;">Delete</a></td>
 </tr>
 <tr>
-    <td></td>
-    <td></td>
-    <td> </td>
-    <td  scope="row"class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
-                        <a href="{{url('edit_holiday')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                            <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
+    <td>2</td>
+    <td>02-01-2022</td>
+    <td>Sunday</td>
+    <td><a href="del_db" target="_blank"style="color:blue;">Delete</a></td>
 </tr>
 <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td  scope="row"class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
-                        <a href="{{url('edit_holiday')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                            <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
+    <td>3</td>
+    <td>08-01-2022</td>
+    <td>Saturday</td>
+    <td><a href="del_db" target="_blank"style="color:blue;">Delete</a></td>
 </tr>
-
+<tr>
+    <td>4</td>
+    <td>09-01-2022</td>
+    <td>Sunday</td>
+    <td><a href="del_db" target="_blank"style="color:blue;">Delete</a></td>
+</tr>
+<tr>
+    <td>5</td>
+    <td>15-01-2022</td>
+    <td>Saturday</td>
+    <td><a href="del_db" target="_blank"style="color:blue;">Delete</a></td>
+</tr>
+<tr>
+    <td>6</td>
+    <td>16-01-2022</td>
+    <td>Sunday</td>
+    <td><a href="del_db" target="_blank"style="color:blue;">Delete</a></td>
+</tr>
+<tr>
+    <td>7</td>
+    <td>22-01-2022</td>
+    <td>Saturday</td>
+    <td><a href="del_db" target="_blank"style="color:blue;">Delete</a></td>
+</tr>
 </table><br><br>
 </form>
-
     </body>
 </html>
 @endsection
