@@ -43,6 +43,10 @@ class Holidays extends Controller
     {
         return view('system-settings.holiday_2022');
     }
+    public function editholiday()
+    {
+        return view('system-settings.edit_holiday');
+    }
    
 
     /**
