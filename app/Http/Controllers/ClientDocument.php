@@ -45,7 +45,7 @@ class ClientDocument extends Controller
      */
     public function show()
     {
-        return view('')
+        return view('ClientDocument.client-document');
     }
 
     /**
