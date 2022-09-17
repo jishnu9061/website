@@ -1,22 +1,25 @@
 @extends('layouts.hmsmain')
 @section('content')
-<html>
-    <head>
-     
-      <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<style>
-     body
-        {
-          background-color: #f0e7ce;
-          /* font-family:  Arial, Helvetica, sans-serif; */
-        }
-    h2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Client</title>
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <link rel="stylesheet" href="public/assets/css/logo">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+  <h2>Other Configurations</h2>
+    <style>
+      body{
+      background-color: #f0e7ce;
+      }
+      h2
     {
-    /* font-family:  Arial, Helvetica, sans-serif; */
+  
     font-size:large;
     font-weight:bold;
     color:rgb(13, 1, 56); 
@@ -24,41 +27,27 @@
     padding:15px;
     
     }
-  
-a.btn.btn-primary{
-  color: rgb(238, 196, 105);
-  background-color:rgb(29, 2, 129);
-}
-button{
-  margin-left:200px;
-}
-
-
-</style>
+      </style>
 </head>
 <body>
- 
-<h2>Other Configurations</h2><br><br>
 
-<!-- <p><a href="#">Configurations</a> | <a href="#">Company Branch</a> | <a href="#">Template Category</a> | <a href="#">Letter Types</a> | <a href="#">Payment Items</a> | <a href="#">Courts</a> | <a href="#">Description Selection</a> | <a href="#">Tax Tables</a> | <a href="#">Notifications</a> </p> -->
 <div class="container-fluid">
   
+  <div class="row sm">
+    <div class="col-sm-4 " > <a><button type="button" class="btn btn-primary btn_align_btn" > Configurations</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('company_branch')}}"><button type="button" class="btn btn-primary btn_align_btn" > Company Branch</button></a></div>
+    <div class="col-sm-4 " > <a><button type="button" class="btn btn-primary btn_align_btn" >Template Category</button></a></div>
 
-<a href="#"  ><button type="button" class="btn btn-primary ">Configurations</button></a><br><br>
-<a href="{{url('company_branch')}}"><button type="button" class="btn btn-primary ">Company Branch</button></a><br><br>
-<a href="#"  ><button type="button" class="btn btn-primary ">Template Category</button></a><br><br>
-<a href="#"  ><button type="button" class="btn btn-primary ">Letter Types</button></a><br><br>
-<a href="#"  ><button type="button" class="btn btn-primary ">Payment Items</button></a><br><br>
-<a href="#"  ><button type="button" class="btn btn-primary ">Courts</button></a><br><br>
-<a href="#"  ><button type="button" class="btn btn-primary ">Description Selections</button></a><br><br>
-<a href="#"  ><button type="button" class="btn btn-primary ">Tax Tables</button></a><br><br>
-<a href="#"  ><button type="button" class="btn btn-primary ">Notifications</button></a><br><br>
+    <div class="col-sm-4 " > <a><button type="button" class="btn btn-primary btn_align_btn" > Letter Types</button></a></div>
+    <div class="col-sm-4 " > <a><button type="button" class="btn btn-primary btn_align_btn" > Payment Items</button></a></div>
+    <div class="col-sm-4 " > <a><button type="button" class="btn btn-primary btn_align_btn" > Courts</button></a></div>
 
+    <div class="col-sm-4" > <a><button type="button" class="btn btn-primary btn_align_btn" > Description Selections</button></a></div>
+    <div class="col-sm-4" > <a><button type="button" class="btn btn-primary btn_align_btn" > Tax Tables</button></a></div>
+    <div class="col-sm-4" > <a><button type="button" class="btn btn-primary btn_align_btn" > Notifications</button></a></div><br><br>
+   
+  </div>
 </div>
-<!-- <button type="button" class="btn btn-primary btn btn-block">Block level button</button>
-<button type="button" class="btn btn-primary btn btn-block">Block level button</button> -->
-
-
 
 </body>
 </html>

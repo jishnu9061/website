@@ -16,6 +16,7 @@ class OtherConfigtn extends Controller
     {
         return view('system-settings.other_confgn');
     }
+   
 
     public function branch()
     {
@@ -29,6 +30,7 @@ class OtherConfigtn extends Controller
     {
         return view('system-settings.edit_company_branch');
     }
+    
     
 
     /**

@@ -99,8 +99,7 @@
    <label> Company Name </label>
   <input type="text" id="name" name="name" value=""size="50"> <br><br>
   <label>Company Address</label>
-  <input type="text" id="address" name="address" value=""size="50">
-  <br><br>
+  <input type="text" id="address" name="address" value=""size="50"><br><br>
   <label>Town/City</label>
   <input type="text" id="city" name="city" value=""size="50"><br><br>
   <label>Company Website</label>
