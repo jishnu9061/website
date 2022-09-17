@@ -694,13 +694,6 @@ Route::any('add_company_details','SystemSetting@addcompany')->name('add_company_
 Route::any('edit_company_details','SystemSetting@editcompany')->name('edit_company_details');
 Route::any('view_company_details','SystemSetting@viewcompany')->name('view_company_details');
 
-Route::any('other_confgn','OtherConfigtn@index')->name('other_confgn');
-// Route::any('company_branch','OtherConfigtn@branch')->name('company_branch');
-// Route::any('add_company_branch','OtherConfigtn@addbranch')->name('add_company_branch');
-// Route::any('edit_company_branch','OtherConfigtn@editbranch')->name('edit_company_branch');
-// Route::any('edit_company_branch','OtherConfigtn@editbranch')->name('edit_company_branch');
-
-
 Route::any('weekend_holiday','Holidays@index')->name('weekend_holiday');
 Route::any('add_new_holiday','Holidays@addholiday')->name('add_new_holiday');
 Route::any('edit_holiday','Holidays@editholiday')->name('edit_holiday');
@@ -712,9 +705,21 @@ Route::any('holiday_2021','Holidays@holiday2021')->name('holiday_2021');
 Route::any('holiday_2022','Holidays@holiday2022')->name('holiday_2022');
 
 
+// Route::any('other_confgn','OtherConfigtn@index')->name('other_confgn');
+// Route::any('other_confgn','OtherConfigtn@index')->name('other_confgn')
+// Route::any('company_branch','OtherConfigtn@branch')->name('company_branch');
+// Route::any('add_company_branch','OtherConfigtn@addbranch')->name('add_company_branch');
+// Route::any('edit_company_branch','OtherConfigtn@editbranch')->name('edit_company_branch');
+Route::any('company_branch','CompanyBranch@index')->name('company_branch');
+Route::any('add_company_branch','CompanyBranch@addbranch')->name('add_company_branch');
+Route::any('edit_company_branch','CompanyBranch@editbranch')->name('edit_company_branch');
+Route::any('company_branch','CompanyBranch@index')->name('company_branch');
+
+Route::any('configu_ration','Configuration@index')->name('configu_ration');
 //Reshma
+
+
 //mugunth
-//Client-List
 Route::any('add_newclient',"ClientManagement@create")->name('add_newclient');
 Route::any('client_list','ClientManagement@view')->name('client_list');
 Route::any('edit_client','ClientManagement@edit')->name('edit_client');
