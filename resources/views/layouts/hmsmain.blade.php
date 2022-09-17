@@ -409,7 +409,12 @@
 
                                     <li class="submenu-item ">
                                         <a href="{{url('other_confgn')}}" class='sidebar-link'>
-                                            <span>Other Configurations</span>
+                                            <span>Configurations</span>
+                                        </a>
+                                    </li>
+                                    <li class="submenu-item ">
+                                        <a href="{{url('other_confgn')}}" class='sidebar-link'>
+                                            <span>Company Branch</span>
                                         </a>
                                     </li>
                                    
