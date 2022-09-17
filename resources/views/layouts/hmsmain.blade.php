@@ -379,7 +379,7 @@
                                 <li class="submenu-item " style="list-style:none;">
                                         <a href="{{url('client-index')}}" class='sidebar-link'>
                                         <i class="fa-regular fa-user"></i>
-                                            <span>Manage Client</span>
+                                            <span> Client Management</span>
                                         </a>
                                 </li>
                             @endif
