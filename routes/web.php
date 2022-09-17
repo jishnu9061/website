@@ -727,5 +727,13 @@ Route::any('client_list','ClientManagement@view')->name('client_list');
 Route::any('edit_client','ClientManagement@edit')->name('edit_client');
 Route::any('view-client','ClientManagement@show')->name('view-client');
 Route::any('client-index',"ClientManagement@index")->name('client-index');
+//Client-List
+
+//Client-Documents
+Route::any('client-document','ClientManagement@document')->name('client-document');
+Route::any('add-document','ClientManagement@addDocument')->name('add-document');
+Route::any('view-document','ClientManagement@viewDocument')->name('view-document');
+//Client-Documents
+
 //mugunth
 ?>
