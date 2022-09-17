@@ -15,7 +15,7 @@
 
 <body>
     <div class="container">
-        <h1  style="color: #070344; text-shadow: 1px 2px; text-align:center;"><b>Documents Deatials</b></h1>
+        <h1  style="color: #070344; text-shadow: 1px 2px; text-align:center;"><b>Documents Detials</b></h1>
         <hr class="mb-4">.
        <br>
      
