@@ -408,12 +408,12 @@
                                     </li>
 
                                     <li class="submenu-item ">
-                                        <a href="{{url('other_confgn')}}" class='sidebar-link'>
+                                        <a href="{{url('configu_ration')}}" class='sidebar-link'>
                                             <span>Configurations</span>
                                         </a>
                                     </li>
                                     <li class="submenu-item ">
-                                        <a href="{{url('other_confgn')}}" class='sidebar-link'>
+                                        <a href="{{url('company_branch')}}" class='sidebar-link'>
                                             <span>Company Branch</span>
                                         </a>
                                     </li>
