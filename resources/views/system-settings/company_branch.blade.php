@@ -79,8 +79,8 @@
     <th>Branch Code</th>
     <th>Branch Name</th>
     <th>Status</th>
-    <th>Edit</th>
-    <th></th>
+    <th>Action</th>
+  
   </tr>
   <tr>
     <td>1</td>
@@ -88,9 +88,10 @@
     <td>NBI</td>
     <td>Nairobi</td>
     <td style="color:green;font-weight:bold;">Active</td>
-    <td><a href="{{url('edit_company_branch')}}"style="color:blue;">Edit</a> 
-</td>
-    <td><input type="checkbox"></td>
+    <td  scope="row"class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
+                        <a href="{{url('edit_company_branch')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                            <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
+   
     </tr>
 
   <tr>
@@ -99,8 +100,10 @@
     <td>  </td>
     <td>   </td>
     <td style="color:red;font-weight:bold;">In-Active</td>
-    <td><a href="{{url('edit_company_branch')}}"style="color:blue;">Edit</a> 
-    <td><input type="checkbox"></td>
+    <td  scope="row"class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
+                        <a href="{{url('edit_company_branch')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                            <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
+
     </tr>
   
 </table><br><br>

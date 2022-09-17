@@ -692,6 +692,8 @@ Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents'])
 Route::any('company_details','SystemSetting@index')->name('company_details');
 Route::any('add_company_details','SystemSetting@addcompany')->name('add_company_details');
 Route::any('edit_company_details','SystemSetting@editcompany')->name('edit_company_details');
+Route::any('view_company_details','SystemSetting@viewcompany')->name('view_company_details');
+
 
 Route::any('other_confgn','OtherConfigtn@index')->name('other_confgn');
 Route::any('company_branch','OtherConfigtn@branch')->name('company_branch');
@@ -700,6 +702,7 @@ Route::any('edit_company_branch','OtherConfigtn@editbranch')->name('edit_company
 
 Route::any('weekend_holiday','Holidays@index')->name('weekend_holiday');
 Route::any('add_new_holiday','Holidays@addholiday')->name('add_new_holiday');
+Route::any('edit_holiday','Holidays@editholiday')->name('edit_holiday');
 Route::any('holiday_2017','Holidays@holiday2017')->name('holiday_2017');
 Route::any('holiday_2018','Holidays@holiday2018')->name('holiday_2018');
 Route::any('holiday_2019','Holidays@holiday2019')->name('holiday_2019');
