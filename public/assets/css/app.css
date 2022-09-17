@@ -333,10 +333,27 @@
                     color: rgb(238, 196, 105);
                     margin-top:-150px;
                 }
+
+                .search_btn{
+                    margin-bottom: -300px;
+                }
                 .country_btn{
                     width:10%;
                     margin-top:-150px;
                     margin-left: 7px;
+                }
+
+                .document{
+                    margin-right: 800px;
+                    background-color: white;
+                    color:rgb(6, 6, 58) ;
+                    border-radius: 10px;
+                    width:20%;
+                    border: 2px solid rgb(6, 6, 58);
+                }
+                .file_btn{
+                    color:rgb(6, 6, 58);
+                    margin-left: -12px;
                 }
 
                 .sub_btnn{
