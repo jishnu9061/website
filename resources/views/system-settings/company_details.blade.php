@@ -53,8 +53,8 @@
     <th>Company Address</th>
     <th>Town/City</th>
     <th>Logo</th>
-    <th>Edit</th>
-    <th></th>
+    <th>Action</th>
+  
   </tr>
   <tr>
     <td>1</td>
@@ -62,7 +62,11 @@
     <td>Stima Investment Plaza,3rd floor,Mushembi Rd,Parklands</td>
     <td>Nairobi,Keniya</td>
     <td style="color:green;font-weight:bold;"><img src=”https://www.pexels.com/photo/high-rise-buildings-443383/” ></td>
-    <td><a href="{{url('edit_company_details')}}"style="color:blue;">Edit</a>
+    <!-- <td><a href="{{url('edit_company_details')}}"style="color:blue;">Edit</a> -->
+    <td  scope="row"class="text-center"><a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i>
+                           <input type="hidden" value="" id="medicine_id_hidden" class="applicate" name="supplier_id_hidden">
+                            <a href="{{url('edit_company_details')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                            <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
 </td>
     <!-- <td><input type="checkbox"></td> -->
     </tr>

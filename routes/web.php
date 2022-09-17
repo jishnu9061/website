@@ -694,6 +694,8 @@ Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents'])
 Route::any('company_details','SystemSetting@index')->name('company_details');
 Route::any('add_company_details','SystemSetting@addcompany')->name('add_company_details');
 Route::any('edit_company_details','SystemSetting@editcompany')->name('edit_company_details');
+Route::any('view_company_details','SystemSetting@viewcompany')->name('view_company_details');
+
 
 Route::any('other_confgn','OtherConfigtn@index')->name('other_confgn');
 Route::any('company_branch','OtherConfigtn@branch')->name('company_branch');
