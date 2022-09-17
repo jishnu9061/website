@@ -1050,7 +1050,7 @@
                     z-index: 10;
                     overflow-y: auto;
                     /* background-image: linear-gradient(318deg, #3e699b, #1a3c62); */
-                    background-color: rgb(177, 127, 62);
+                    background-color: #D5BD94;
                     bottom: 0;
                     transition: left 0.5s ease-out;
                 }
@@ -1098,7 +1098,7 @@
                     transition: all 0.5s;
                     text-decoration: none;
 
-                    color: #ffffff;
+                    color: #1D1D50;
                 }
 
                 .sidebar-wrapper .menu .sidebar-link svg,
@@ -1111,7 +1111,7 @@
                 }
 
                 .sidebar-wrapper .menu .sidebar-link:hover {
-                    background-color: #7594b8;
+                    background-color: #F5E9D4;
                 }
 
                 .sidebar-wrapper .menu .sidebar-item {
