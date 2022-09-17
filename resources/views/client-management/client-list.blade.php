@@ -34,7 +34,10 @@
                         <th class="text-center">Email Address</th>
                         <th class="text-center">Services Offered</th>
                         <th class="text-center">Status</th>
-                        <th class="text-center">Action</th>
+                        <th class="text-center">Add Documents</th>
+                        <th class="text-center">VIew</th>
+                        <th class="text-center">Edit</th>
+                        <th class="text-center">Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -45,10 +48,12 @@
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row"class="text-center"><a href="{{url('view-client')}}"><i  style="color:black;" class="fa fa-eye" aria-hidden="true"></i>
-                           <input type="hidden" value="" id="medicine_id_hidden" class="applicate" name="supplier_id_hidden">
-                            <a href="{{url('edit_client')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
-                            <a  onClick="return myFunction();" href="" style="color:black;"><i class="fas fa-trash-alt"></i></a></td>
+                            <td  scope="row"class="text-center"><a href="{{url('view-client')}}">
+                            <a href="{{url('add-document')}}"><button class="btn btn-primary document_btn">Add Documents</button></a></td>
+                           <td><a href="{{url('view-client')}}"><i style="color:black;" class="fa fa-eye" aria-hidden="true"></i></td></a>
+                            <td><a href="{{url('edit_client')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td>
+                            <td><a href="{{url('edit_client')}}"><i style="color:black;" class="fa fa-trash" aria-hidden="true"></i></td>
+                            
                         </tr>
                 </tbody>
             </table>

@@ -15,25 +15,19 @@
 
 <body>
     <div class="container">
-        <h1  style="color: #070344; text-shadow: 1px 2px;"><b>Client Documents</b></h1>
+        <h1  style="color: #070344; text-shadow: 1px 2px; text-align:center;"><b>Documents Deatials</b></h1>
+        <hr class="mb-4">.
        <br>
-      
-       <div id="mydatatable_filter" class="dataTables_filter">
-        <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
-        <button type="submit" class="  document"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-text file_btn" viewBox="0 0 16 16">
-  <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1H5z"/>
-  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
-</svg><b>Upload Documents</b></button>
-
-       </div>
+     
       
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
             <table class="table table-bordered" id="new-item">
                 <thead>
                     <tr>
-                        <th class="text-center"> Description</th>
-                        <th class="text-center"> Date Added</th>
+                        <th class="text-center"> Client No</th>
+                        <th class="text-center"> Client Name</th>
+                        <th class="text-center"> Client Document</th>
                         <th class="text-center">Action</th>
                        
                     </tr>
@@ -41,10 +35,10 @@
                 <tbody>
                         <tr id="data">
                             <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row"class="text-center"><a href="{{url('view-client')}}"><i  style="color:black;" class="fa fa-eye" aria-hidden="true"></i>
+                            <td  scope="row"class="text-center"><a href="{{url('view-document')}}"><i  style="color:black;" class="fa fa-eye" aria-hidden="true"></i>
                            <input type="hidden" value="" id="medicine_id_hidden" class="applicate" name="supplier_id_hidden">
-                            <a href="{{url('edit_client')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
                             <a  onClick="return myFunction();" href="" style="color:black;"><i class="fas fa-trash-alt"></i></a></td>
                         </tr>
                 </tbody>
