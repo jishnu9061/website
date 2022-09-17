@@ -710,8 +710,6 @@ Route::any('holiday_2022','Holidays@holiday2022')->name('holiday_2022');
 // Route::any('company_branch','OtherConfigtn@branch')->name('company_branch');
 // Route::any('add_company_branch','OtherConfigtn@addbranch')->name('add_company_branch');
 // Route::any('edit_company_branch','OtherConfigtn@editbranch')->name('edit_company_branch');
-
-
 Route::any('company_branch','CompanyBranch@index')->name('company_branch');
 Route::any('add_company_branch','CompanyBranch@addbranch')->name('add_company_branch');
 Route::any('edit_company_branch','CompanyBranch@editbranch')->name('edit_company_branch');
