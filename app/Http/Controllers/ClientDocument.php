@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ClientManagement extends Controller
+class ClientDocument extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,12 +13,7 @@ class ClientManagement extends Controller
      */
     public function index()
     {
-        return view('client-management.client-index');
-    }
-
-    public function view(){
-
-        return view('client-management.client-list');
+        return view('client-management.client-document');
     }
 
     /**
@@ -28,7 +23,7 @@ class ClientManagement extends Controller
      */
     public function create()
     {
-        return view('client-management.add-newclient');
+        //
     }
 
     /**
@@ -50,7 +45,7 @@ class ClientManagement extends Controller
      */
     public function show()
     {
-        return view('client-management.view-client');
+        return view('')
     }
 
     /**
@@ -59,9 +54,9 @@ class ClientManagement extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($id)
     {
-        return view('client-management.edit_client');
+        //
     }
 
     /**
@@ -71,7 +66,6 @@ class ClientManagement extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-
     public function update(Request $request, $id)
     {
         //
