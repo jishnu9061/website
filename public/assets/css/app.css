@@ -305,9 +305,10 @@
 
                 .btn.btn-primary {
                     color: #fff;
-                    background: linear-gradient(0deg, rgb(177,127,62), rgb(177, 127, 62)), linear-gradient(102.78deg, rgba(55, 77, 109, 0.15) -1.58%, rgba(55, 77, 109, 0.15) 114.31%);
-                    color: rgb(238, 196, 105);
-                    background: linear-gradient(0deg, rgb(1, 1, 82), rgb(6, 6, 58)), linear-gradient(102.78deg, rgba(55, 77, 109, 0.15) -1.58%, rgba(55, 77, 109, 0.15) 114.31%);
+                    background: #FFFBF4;
+                    /* background: linear-gradient(0deg, rgb(177,127,62), rgb(177, 127, 62)), linear-gradient(102.78deg, rgba(55, 77, 109, 0.15) -1.58%, rgba(55, 77, 109, 0.15) 114.31%); */
+                    color: #1D1D50;
+                    /* background: linear-gradient(0deg, rgb(1, 1, 82), rgb(6, 6, 58)), linear-gradient(102.78deg, rgba(55, 77, 109, 0.15) -1.58%, rgba(55, 77, 109, 0.15) 114.31%); */
                     background-blend-mode: soft-light, normal;
                     border: 0.5px solid rgba(157, 168, 176, 0.4);
                     box-sizing: border-box;
@@ -326,6 +327,8 @@
                 }
 
 
+
+               
 
                 .client_btn{
                     width:17%;
@@ -1130,6 +1133,12 @@
                 .sidebar-wrapper .menu .sidebar-link:hover {
                     background-color: #F5E9D4;
                 }
+
+                .sidebar-wrapper .menu .sidebar-link:active {
+                    background-color: #ff00dd;
+                }
+
+                
 
                 .sidebar-wrapper .menu .sidebar-item {
                     list-style: none;
@@ -2060,6 +2069,8 @@
                     margin-top: -11px;
 
                 }
+
+               
 
 
                 /* vinu */

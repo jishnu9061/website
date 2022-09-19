@@ -49,3 +49,8 @@ if(typeof PerfectScrollbar == 'function') {
 
 // Scroll into active sidebar
 document.querySelector('.sidebar-item.active').scrollIntoView(false)
+
+$("a.sidebar-link").click(function(){
+    $("a.sidebar-link").css("background-color", "black");
+  $(this).css("background-color", "red");
+});
