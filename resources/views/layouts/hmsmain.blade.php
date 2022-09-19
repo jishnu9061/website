@@ -35,12 +35,20 @@
   
   <link rel="stylesheet" href="fonts/icomoon/style.css">
   
-  <link rel="stylesheet" type="text/css" href="resources/css/icon.css">
+  
 
 <!-- vinu -->
-{{-- <style> #icon {
-color: #c30147
-} </style> --}}
+<style> #icon {
+color: #1D1D50
+} 
+
+#subm {
+                    color: #070344;
+                }
+
+               
+              
+</style>
     
 </head>
 <body>
@@ -381,7 +389,7 @@ color: #c30147
                                 </ul>
                                 </li>
                                 <li class="submenu-item " style="list-style:none;">
-                                        <a href="{{url('client-index')}}" class='sidebar-link'>
+                                        <a id="sblm" href="{{url('client-index')}}" class='sidebar-link' >
                                         <i  class="fa-regular fa-user" id="icon"></i>
                                             <span > Client Management</span>
                                         </a>
@@ -394,31 +402,31 @@ color: #c30147
 
                                 <li class="sidebar-item  has-sub">
                                     <a href="" class='sidebar-link'>
-                                        <i class="fa fa-gear"></i>
+                                        <i class="fa fa-gear" id="icon"></i>
                                             <span>Settings</span>
                                     </a>
                                     <ul class="submenu">
                                    
                                     <li class="submenu-item ">
                                         <a href="{{url('company_details')}}" class='sidebar-link'>
-                                            <span>Company</span>
+                                            <span id="subm">Company</span>
                                         </a>
                                     </li>
                                     
                                     <li class="submenu-item ">
                                         <a href="{{url('weekend_holiday')}}" class='sidebar-link'>
-                                            <span>Holidays</span>
+                                            <span id="subm">Holidays</span>
                                         </a>
                                     </li>
 
                                     <li class="submenu-item ">
                                         <a href="{{url('configu_ration')}}" class='sidebar-link'>
-                                            <span>Configurations</span>
+                                            <span id="subm">Configurations</span>
                                         </a>
                                     </li>
                                     <li class="submenu-item ">
                                         <a href="{{url('company_branch')}}" class='sidebar-link'>
-                                            <span>Company Branch</span>
+                                            <span id="subm">Company Branch</span>
                                         </a>
                                     </li>
                                    
@@ -428,7 +436,7 @@ color: #c30147
 
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('home')}}" class='sidebar-link'>
-                                        <i class="bi bi-grid-fill" style="font-weight: 400;"></i>
+                                        <i class="bi bi-grid-fill" style="font-weight: 400;" id="icon"></i>
                                             <span>HR</span>
                                     </a>
                                     @if (in_array(request()->path(),$hr))
@@ -438,27 +446,27 @@ color: #c30147
                                     @endif
                                     <li class="submenu-item ">
                                         <a href="{{url('addallowance')}}" class='sidebar-link'>
-                                            <span>Settings</span>
+                                            <span id="subm">Settings</span>
                                         </a>
                                     </li>
                                     <li class="submenu-item ">
                                         <a href="{{url('addstaffs')}}" class='sidebar-link'>
-                                            <span>Add Staffs</span>
+                                            <span id="subm">Add Staffs</span>
                                         </a>
                                     </li>
                                     <li class="submenu-item ">
                                         <a href="{{url('staffs')}}" class='sidebar-link'>
-                                            <span>Manage Staffs</span>
+                                            <span id="subm">Manage Staffs</span>
                                         </a>
                                     </li>
                                     <li class="submenu-item ">
                                         <a href="{{url('loans')}}" class='sidebar-link'>
-                                            <span>Loans</span>
+                                            <span id="subm">Loans</span>
                                         </a>
                                     </li>
                                     <li class="submenu-item ">
                                         <a href="{{url('payslip')}}" class='sidebar-link'>
-                                            <span>Payslip(Bulk)</span>
+                                            <span id="subm">Payslip(Bulk)</span>
                                         </a>
                                     </li>
                                     {{-- <li class="submenu-item ">
@@ -468,12 +476,12 @@ color: #c30147
                                     </li> --}}
                                     <li class="submenu-item ">
                                         <a href="{{url('attendanceview')}}" class='sidebar-link'>
-                                            <span>Attendance(Manual)</span>
+                                            <span id="subm">Attendance(Manual)</span>
                                         </a>
                                     </li>
                                     <li class="submenu-item ">
                                         <a href="{{url('attendance')}}" class='sidebar-link'>
-                                            <span>Attendance(CSV Upload)</span>
+                                            <span id="subm">Attendance(CSV Upload)</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -485,7 +493,7 @@ color: #c30147
                                 @endphp
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('home')}}" class="sidebar-link">
-                                <i class="fa fa-chart-line" style="font-weight: 400;"></i>
+                                <i class="fa fa-chart-line" style="font-weight: 400;" id="icon"></i>
 
                                            <span>Accounts</span>
                                        </a>
@@ -572,7 +580,7 @@ color: #c30147
                                 @endphp
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('home')}}" class='sidebar-link'>
-                                        <i class="bi bi-shop"  ></i>
+                                        <i class="bi bi-shop" id="icon" ></i>
                                             <span>Inventory </span>
                                     </a>
                                     @if (in_array(request()->path(),$store))
@@ -857,6 +865,19 @@ color: #c30147
                  toastr.success(message, 'Event');
              }
          </script>
+
+         <script>$("a.sidebar-link").click(function(){
+            $("a.sidebar-link").css("background-color", "");
+          $(this).css("background-color", "#F5E9D4");
+        });</script>
+
+<script>
+
+const myElement = document.getElementById("subm");
+myElement.style.color = "red"
+
+
+</script>
 </body>
 
 
