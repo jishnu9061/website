@@ -27,5 +27,10 @@ class filemanagement extends Controller
         return view('file_management.add-new-file');
     }
 
+    public function template()
+    {
+        return view('file_management.template-category');
+    }
+
 
 }
