@@ -30,7 +30,13 @@
     <div class="col-sm-4" ><img class="logo_size" src="image\logo\icon-6.png" alt=""> <a href="{{url('client-document')}}"><button type="button" class="btn btn-primary btn_align_btn" > View Document Detials</button></a></div>
     <div class="col-sm-4" > <img class="logo_size" src="image\logo\icon-7.png" alt=""><a href="{{url('client_list')}}"><button type="button" class="btn btn-primary btn_align_btn" > Client List</button></a></div>
     <div class="col-sm-4" > <a><img class="logo_size" src="image\logo\icon-8.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > Client Pickup Reception</button></a></div>
-   
+    <div class="col-sm-4" > <a><img class="logo_size" src="image\logo\icon-8.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > Add a new client</button></a></div>
+    <div class="col-sm-4" > <a><img class="logo_size" src="image\logo\icon-8.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > Client Search</button></a></div>
+    <div class="col-sm-4" > <a><img class="logo_size" src="image\logo\icon-8.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > CRM</button></a></div>
+    <div class="col-sm-4" > <a><img class="logo_size" src="image\logo\icon-8.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > New Quoation</button></a></div>
+    <div class="col-sm-4" > <a><img class="logo_size" src="image\logo\icon-8.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > Customer follow up Report</button></a></div>
+    
+    
   </div>
 </div>
 
