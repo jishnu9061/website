@@ -27,10 +27,14 @@ class filemanagement extends Controller
         return view('file_management.add-new-file');
     }
 
+
+    //document temblates
     public function template()
     {
         return view('file_management.template-category');
     }
+
+    //document temblates
 
 
 }
