@@ -21,7 +21,7 @@
        <div id="mydatatable_filter" class="dataTables_filter">
         <label><b>Search:</b><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
        </div>
-       <a href=""><button class="btn btn-primary add-btn">Add File</button></a>
+       <a href="{{url('add-new-file')}}"><button class="btn btn-primary add-btn">Open New Client File</button></a>
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 

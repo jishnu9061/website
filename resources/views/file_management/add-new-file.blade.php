@@ -25,7 +25,7 @@ $('#price').prop('readonly', true);
 </script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
     <div>
-    <h2>Edit File</h2>
+    <h2>Open New Client File</h2>
     <hr class="mb-4">.
 </div>
   </div>
@@ -539,6 +539,26 @@ $('#price').prop('readonly', true);
 </table>
    </div>
 </div>
+
+<div class="modal" id="my">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div class="modal-body">
+                    <form action="">
+                      <div>
+                        <input type="text" name="type" class="form-control" placeholder="Country">
+                        <button class="btn btn-primary sub_btnn" type="submit" >submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
  $(function () {

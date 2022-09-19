@@ -22,7 +22,7 @@
     <div class="col-sm-4 " > <a href=""><img class="logo_size" src="assets\image\2.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >File Status Report</button></a></div>
     <div class="col-sm-4 " > <a href=""><img class="logo_size" src="assets\image\3.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >File Archive</button></a></div>
 
-    <div class="col-sm-4 " > <a href=""><img class="logo_size" src="assets\image\4.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" > File Reports</button></a></div>
+    <div class="col-sm-4 " > <a href=""><img class="logo_size" src="assets\image\4.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" > Filee Reports</button></a></div>
     <div class="col-sm-4 " > <a href=""><img class="logo_size" src="assets\image\5.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >File Notes</button></a></div>
     <div class="col-sm-4 " > <a href=""><img class="logo_size" src="assets\image\6.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >File Instructions</button></a></div>
  

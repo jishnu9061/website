@@ -22,5 +22,10 @@ class filemanagement extends Controller
         return view('file_management.edit-file');
     }
 
+    public function addnew()
+    {
+        return view('file_management.add-new-file');
+    }
+
 
 }

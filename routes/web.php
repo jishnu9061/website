@@ -727,7 +727,9 @@ Route::any('client-document','ClientDocument@index')->name('client-document');
 Route::any('file_managementindex',"filemanagement@index")->name('file_managementindex');
 Route::any('file-list',"filemanagement@view")->name('file-list');
 Route::any('edit-file',"filemanagement@edit")->name('edit-file');
+Route::any('add-new-file',"filemanagement@addnew")->name('add-new-file');
 //vinu
+
 
 
 
