@@ -383,12 +383,7 @@
                                         </a>
                                 </li>
 
-                                <li class="submenu-item " style="list-style:none;">
-                                        <a href="{{url('file_managementindex')}}" class='sidebar-link'>
-                                        <i class="fa-regular fa-user"></i>
-                                            <span>Manage Files</span>
-                                        </a>
-                                </li>
+    
 
                                
 
@@ -398,7 +393,7 @@
                             <li class="submenu-item" style="list-style:none;">
                                         <a href="{{url('file_managementindex')}}" class='sidebar-link'>
                                         <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
-                                            <span>File Management</span>
+                                            <span>Manage File</span>
                                         </a>
                                 </li>
                             @endif
