@@ -328,7 +328,7 @@
 
 
                 .client_btn{
-                    width:8%;
+                    width:17%;
                     background-color: rgb(6, 6, 58);
                     color: rgb(238, 196, 105);
                     margin-top:-150px;
@@ -338,18 +338,18 @@
                     margin-bottom: -300px;
                 }
                 .country_btn{
-                    width:10%;
+                    width:14%;
                     margin-top:-150px;
                     margin-left: 7px;
                 }
 
-                .document{
-                    margin-right: 800px;
-                    background-color: white;
-                    color:rgb(6, 6, 58) ;
-                    border-radius: 10px;
-                    width:20%;
-                    border: 2px solid rgb(6, 6, 58);
+                .document_btn{
+                    width: 85%;
+                    height:35px;
+                    margin-left: 20px;
+                }
+                .table_client{
+                    background-color:rgb(6, 6, 58) ;
                 }
                 .file_btn{
                     color:rgb(6, 6, 58);
@@ -1067,7 +1067,7 @@
                     z-index: 10;
                     overflow-y: auto;
                     /* background-image: linear-gradient(318deg, #3e699b, #1a3c62); */
-                    background-color: rgb(177, 127, 62);
+                    background-color: #D5BD94;
                     bottom: 0;
                     transition: left 0.5s ease-out;
                 }
@@ -1115,7 +1115,7 @@
                     transition: all 0.5s;
                     text-decoration: none;
 
-                    color: #ffffff;
+                    color: #1D1D50;
                 }
 
                 .sidebar-wrapper .menu .sidebar-link svg,
@@ -1128,7 +1128,7 @@
                 }
 
                 .sidebar-wrapper .menu .sidebar-link:hover {
-                    background-color: #7594b8;
+                    background-color: #F5E9D4;
                 }
 
                 .sidebar-wrapper .menu .sidebar-item {

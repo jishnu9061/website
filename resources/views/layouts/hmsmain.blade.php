@@ -379,7 +379,7 @@
                                 <li class="submenu-item " style="list-style:none;">
                                         <a href="{{url('client-index')}}" class='sidebar-link'>
                                         <i class="fa-regular fa-user"></i>
-                                            <span>Manage Client</span>
+                                            <span> Client Management</span>
                                         </a>
                                 </li>
 
@@ -422,8 +422,13 @@
                                     </li>
 
                                     <li class="submenu-item ">
-                                        <a href="{{url('other_confgn')}}" class='sidebar-link'>
-                                            <span>Other Configurations</span>
+                                        <a href="{{url('configu_ration')}}" class='sidebar-link'>
+                                            <span>Configurations</span>
+                                        </a>
+                                    </li>
+                                    <li class="submenu-item ">
+                                        <a href="{{url('company_branch')}}" class='sidebar-link'>
+                                            <span>Company Branch</span>
                                         </a>
                                     </li>
                                    

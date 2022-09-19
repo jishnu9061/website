@@ -133,10 +133,7 @@ a.button4{
                 <td>Day:</td>
                     <td><input type="text"  id="day" name="day"value=""></td>
                 </tr>
-                <tr>
-                <td>Year:</td>
-                    <td><input type="number"  id="year" name="year"value=""></td>
-                </tr>
+               
             </table><br><br> 
        
  <a href="something" class="button3">Save</a>
