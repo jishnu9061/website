@@ -52,7 +52,7 @@
                             <a href="{{url('add-document')}}"><button class="btn btn-primary document_btn">Add Documents</button></a></td>
                            <td><a href="{{url('view-client')}}"><i style="color:black;" class="fa fa-eye" aria-hidden="true"></i></td></a>
                             <td><a href="{{url('edit_client')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td>
-                            <td><a href="{{url('edit_client')}}"><i style="color:black;" class="fa fa-trash" aria-hidden="true"></i></td>
+                            <td><a href=""><i style="color:black;" class="fa fa-trash" aria-hidden="true"></i></td>
                             
                         </tr>
                 </tbody>
