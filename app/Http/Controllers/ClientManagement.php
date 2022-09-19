@@ -32,23 +32,6 @@ class ClientManagement extends Controller
         return view('client-management.add-newclient');
     }
 
-
-    public function document(){
-        
-        return view('client-management.client-document');
-    }
-
-
-    public function addDocument(){
-
-        return view('client-management.add-document');
-    }
-
-    public function viewDocument(){
-
-        return view('client-management.view-document');
-    }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -104,5 +87,25 @@ class ClientManagement extends Controller
     public function destroy($id)
     {
         //
+    }
+    
+    public function document(){
+        
+        return view('client-management.client-document');
+    }
+
+
+    public function addDocument(){
+
+        return view('client-management.add-document');
+    }
+
+    public function viewDocument(){
+
+        return view('client-management.view-document');
+    }
+
+    public function clientPickup(){
+        return view('client-management.client-pickup');
     }
 }
