@@ -335,6 +335,9 @@
                     height:35px;
                     margin-left: 20px;
                 }
+                .table_client{
+                    background-color:rgb(6, 6, 58) ;
+                }
                 .file_btn{
                     color:rgb(6, 6, 58);
                     margin-left: -12px;
