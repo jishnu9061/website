@@ -313,6 +313,19 @@
                     box-sizing: border-box;
                     border-radius: 4.58px;
                 }
+                .btn_margin{
+                    margin:20px;
+                }
+
+
+                .btn_p_btn{
+                    width: 55%;
+                    margin: 18px;
+                    height: 60px;
+                    padding-top: -20px;
+                }
+
+
 
                 .client_btn{
                     width:17%;
