@@ -1,0 +1,81 @@
+
+
+
+@extends('layouts.hmsmain')
+@section('content')
+<style>
+    .btn-width{
+        width:10%;
+    }
+</style>
+<div>
+
+
+</div>
+<br>
+<div class="container">
+    <h3 style="text-align:center">Pickup Client List</h3><br><br>
+    <table class="table table-hover" style="border: 1px solid">
+       
+        @csrf
+        <tbody >
+            <tr>
+                <th style="width:30%" >No</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td></td>
+            </tr>
+                <th>Client</th>
+                <td></td>
+            </tr>
+            </tr>
+                <th>File</th>
+                <td></td>
+            </tr>
+            </tr>
+                <th>Visitor</th>
+                <td></td>
+            </tr>
+             <tr>
+                <th>Mobile</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Time In</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Time Picked</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Time Taken</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Persion Picking</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Time Out</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Persion Handling</th>
+                <td></td>
+            </tr>
+
+
+
+
+
+
+        </tbody>
+    </table>
+</div>
+
+
+
+@endsection

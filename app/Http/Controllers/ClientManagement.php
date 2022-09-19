@@ -111,4 +111,8 @@ class ClientManagement extends Controller
     public function addPickup(){
         return view('client-management.add-pickup');
     }
+
+    public function viewPickup(){
+        return view('client-management.view-pickup');
+    }
 }
