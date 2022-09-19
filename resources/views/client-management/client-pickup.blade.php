@@ -61,7 +61,7 @@
                             <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center"></td>
                             <td  scope="row"class="text-center"></td>
-                           <td><a href="{{url('view-client')}}"><i style="color:black;" class="fa fa-eye" aria-hidden="true"></i></a>
+                           <td><a href="{{url('view-pickup')}}"><i style="color:black;" class="fa fa-eye" aria-hidden="true"></i></a>
                             <a href="{{url('edit_client')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
                         </tr>
                 </tbody>
