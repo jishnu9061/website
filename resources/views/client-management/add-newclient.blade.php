@@ -29,9 +29,8 @@ $('#price').prop('readonly', true);
 
 
   <div class="container mt-5">
-      <button type="button" class="btn btn-primary client_btn" data-bs-toggle="modal" data-bs-target="#mymodal">Type</button>
-      <button type="button" class="btn btn-primary country_btn
-      " data-bs-toggle="modal" data-bs-target="#my">Country</button>
+      <button type="button" class="btn btn-primary client_btn" data-bs-toggle="modal" data-bs-target="#mymodal">Add Client Type</button>
+      <button type="button" class="btn btn-primary country_btn" data-bs-toggle="modal" data-bs-target="#my">Add Country</button>
   </div>
 </div>
 </div>
