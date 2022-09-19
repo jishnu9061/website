@@ -682,12 +682,6 @@ Route::any('delete_surgery{id}', 'surgeryController@destroy')->name('delete_surg
 Route::get('calendar-event', 'CalenderController@index')->name('calendar-event');
 Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents']);
 
-//mugunth
-// Route::any('add_new_client','ClientManagement@index')->name('add_new_client');
-// Route::any('client_list','ClientList@index')->name('client_list');
-// Route::any('clients','clients@index')->name('clients');
-// Route::any('client_invoicing','client_invoicing@index')->name('client_invoicing');
-
 //Reshma
 Route::any('company_details','SystemSetting@index')->name('company_details');
 Route::any('add_company_details','SystemSetting@addcompany')->name('add_company_details');
@@ -737,4 +731,20 @@ Route::any('client-pickup','ClientManagement@clientPickup')->name('client-pickup
 //Client-Pickup
 
 //mugunth
+
+
+
+//vinu
+Route::any('file_managementindex',"filemanagement@index")->name('file_managementindex');
+Route::any('file-list',"filemanagement@view")->name('file-list');
+Route::any('edit-file',"filemanagement@edit")->name('edit-file');
+Route::any('add-new-file',"filemanagement@addnew")->name('add-new-file');
+//vinu
+
+
+
+
 ?>
+
+
+

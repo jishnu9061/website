@@ -1,0 +1,164 @@
+body {
+    background-color: rgb(231, 225, 216);
+}
+
+.nav_h_1 {
+    margin-left: 83px;
+    display: flex;
+
+    margin-top: 10px;
+}
+
+.b_rad {
+    background-color: rgb(236, 230, 212);
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    border-radius: 10px;
+}
+
+.arrow {
+    margin-top: 3px;
+    /* font-size: 1px; */
+    margin-left: -4px;
+}
+
+p {
+    margin-top: 4px;
+}
+
+.container {
+    background-color: rgb(240, 247, 245);
+    border: 1px solid rgb(241, 241, 237);
+    height: 254px;
+    width: 50rem;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 1px rgb(182, 178, 178);
+}
+
+.container_1 {
+
+    display: flex;
+    height: 200px;
+    width: 50rem;
+
+    justify-content: space-evenly;
+
+}
+
+.left {
+    display: inline-grid;
+}
+
+.right {
+    display: inline-grid;
+}
+
+#currency_name {
+    width: 14rem;
+    height: 30px;
+    border: 1px solid rgb(134, 131, 131);
+
+    border-radius: 4px;
+
+
+}
+
+.symbol {
+    width: 14rem;
+    height: 30px;
+    border: 1px solid rgb(134, 131, 131);
+    border-radius: 4px;
+
+
+}
+
+.lab {
+    color: #bebecd;
+    margin-block-start: auto;
+    font-size: 13px
+}
+
+.btn {
+    display: flex;
+    margin-left: 14.5%;
+}
+
+.btn_1 {
+    border: 0;
+    height: 28px;
+    width: 89px;
+    background-color: rgb(19, 7, 128);
+    color: white;
+    font-size: 10px;
+    border-radius: 6px;
+    box-shadow: 0.5px 0.5px rgb(83, 80, 80);
+}
+
+.btn_2 {
+    border: 1px solid rgb(88, 87, 87);
+    height: 28px;
+    width: 89px;
+    background-color: white;
+    color: rgb(19, 7, 128);
+    margin-left: 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    box-shadow: 0.5px 0.5px rgb(83, 80, 80);
+}
+
+.container_t {
+    background-color: rgb(240, 247, 245);
+    border: 1px solid rgb(241, 241, 237);
+    height: 127px;
+    width: 50rem;
+    margin-top: 33px;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 1px rgb(182, 178, 178);
+}
+
+.t_heading {
+    display: flex;
+    margin-right: 192px;
+    list-style: none;
+    margin-top: 10px;
+    color: #bebecd;
+    justify-content: space-between;
+    margin-left: 21px;
+    font-size: 15px;
+}
+
+.t_data {
+    display: flex;
+    margin-right: 192px;
+    list-style: none;
+    margin-top: 23px;
+    color: #bebecd;
+    justify-content: space-between;
+    margin-left: 21px;
+    font-size: 15px;
+}
+
+.d_bor {
+    margin-top: 10px;
+    margin-right: 18px;
+    margin-left: 18px;
+    border: 1px solid rgb(167, 162, 162);
+    border-radius: 8px;
+    height: 61px;
+    box-shadow: 1px 1px 3px 1px rgb(182, 178, 178);
+}
+
+.t_bor {
+    margin-right: 18px;
+    margin-left: 18px;
+}
+
+#s {
+    margin-left: 26px;
+}
