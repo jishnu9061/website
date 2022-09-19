@@ -23,7 +23,7 @@
         <label><b>Search:</b><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
        </div>
        <div class="container mt-5">
-       <a href="add-pickup"><button class="btn btn-primary add-btn" >New Client Pickup</button></a>
+       <a href="add-pickup"><button class="btn btn-primary add-btn" >Add New Client Pickup</button></a>
        </div>
        <hr class="mb-4">.
 <div class="tab-content" id="myTabContent">
