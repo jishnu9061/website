@@ -178,25 +178,25 @@
     <div class="col-sm">
     <h3>Mail Configuration:</h3>
     
-    <label for="mail_portal"style="color:rgb(13, 1, 56);margin-left:2px;font-size:x-small; width:150px;">Mail Protocol:</label>
+    <label for="mail_portal"style="color:black;margin-left:2px;font-size:x-small; width:150px;">Mail Protocol:</label>
     <select style="width:200px;height:20px;color:black;font-size:x-small;"type="text" value="" id="mportal" name="mportal">
     <option>Select</option>
      <option>STMP</option>
      </select>
 
-     <label for="server_address"style="color:rgb(13, 1, 56);margin-left:2px;font-size:x-small; width:150px;">SMPT Server Address:</label>
+     <label for="server_address"style="color:black;margin-left:2px;font-size:x-small; width:150px;">SMPT Server Address:</label>
      <input type="email"  id="seraddress" name="seraddres"value=""style="width:200px;height:20px;">
         
-     <label for="port_number"style="color:rgb(13, 1, 56);margin-left:2px;font-size:x-small; width:150px;">SMPT Port Number:</label>
+     <label for="port_number"style="color:black;margin-left:2px;font-size:x-small; width:150px;">SMPT Port Number:</label>
      <input type="number"  id="portnum" name="portnum"value=""style="width:200px;height:20px;">
      
-     <label for="authentication"style="color:rgb(13, 1, 56);margin-left:2px;font-size:x-small; width:150px;">STMP Authentication:</label>
+     <label for="authentication"style="color:black;margin-left:2px;font-size:x-small; width:150px;">STMP Authentication:</label>
      <select style="width:200px;height:20px;color:black;font-size:x-small;"type="text" value="" id="authentication" name="authentication">
      <option>Select</option>
      <option>True</option>
     </select>
     
-    <label for="Secure"style="color:rgb(13, 1, 56);margin-left:2px;font-size:x-small; width:150px;">SMTP Secure:</label>
+    <label for="Secure"style="color:black;margin-left:2px;font-size:x-small; width:150px;">SMTP Secure:</label>
     <select style="width:200px;height:20px;color:black;font-size:x-small;"type="text" value="" id="secure" name="secure">
     <option>Select</option>
     <option>TSL</option>
