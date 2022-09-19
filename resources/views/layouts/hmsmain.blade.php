@@ -34,9 +34,13 @@
 
   
   <link rel="stylesheet" href="fonts/icomoon/style.css">
+  
+  <link rel="stylesheet" type="text/css" href="resources/css/icon.css">
 
 <!-- vinu -->
-
+{{-- <style> #icon {
+color: #c30147
+} </style> --}}
     
 </head>
 <body>
@@ -378,8 +382,8 @@
                                 </li>
                                 <li class="submenu-item " style="list-style:none;">
                                         <a href="{{url('client-index')}}" class='sidebar-link'>
-                                        <i class="fa-regular fa-user"></i>
-                                            <span> Client Management</span>
+                                        <i  class="fa-regular fa-user" id="icon"></i>
+                                            <span > Client Management</span>
                                         </a>
                                 </li>
                             @endif
