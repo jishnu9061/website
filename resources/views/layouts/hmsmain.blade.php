@@ -394,20 +394,6 @@ color: #1D1D50
                                             <span > Client Management</span>
                                         </a>
                                 </li>
-
-    
-
-                               
-
-
-                            @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
-                            <li class="submenu-item" style="list-style:none;">
-                                        <a href="{{url('file_managementindex')}}" class='sidebar-link'>
-                                        <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
-                                            <span>File Management</span>
-                                        </a>
-                                </li>
                             @endif
                             @if(Auth::user()->role == 'hr' || Auth::user()->role == 'hospitaladmin')
                                 @php
@@ -501,7 +487,6 @@ color: #1D1D50
                                 </ul>
                                 </li>
                             @endif
-                            
                             @if(Auth::user()->role == 'account' || Auth::user()->role == 'hospitaladmin')
                                 @php
                                     $accounts = array("ledger_acount_categories", "ledger_acount_subcategories","ledger_budget_category", "ledger_acounts","expense_report","journal","ledger","trialbalance","profitandlossaccount","balancesheet","stock_section","stock_issue","store_ledger","stock_categories","stock_subcategories","stock_items");
@@ -726,175 +711,8 @@ color: #1D1D50
 
                                 
                             @endif
-
-                           
                     </ul>
-                    @if(Auth::user()->role == 'hr' || Auth::user()->role == 'hospitaladmin')
-                                @php
-                                    $hr = array("addallowance", "addstaffs", "staffs","loans","payslip","attendance","attendanceview","payslipbulk","generatepayslip","managestaff");
-                                @endphp
-                                <li class="sidebar-item  has-sub">
-                                    <a href="{{url('home')}}" class='sidebar-link'>
-                                        <i class="bi bi-grid-fill" style="font-weight: 400;"></i>
-                                            <span>Clint Invoicing</span>
-                                    </a>
-                                    @if (in_array(request()->path(),$hr))
-                                        <ul class="submenu" style="display: block;">
-                                        @else
-                                            <ul class="submenu" style="display: none;">
-                                    @endif
-                                    <li class="submenu-item ">
-                                        <a href="{{url('addallowance')}}" class='sidebar-link'>
-                                            <span>Settings</span>
-                                        </a>
-                                    </li>
-                                   
-                                </ul>
-                                </li>
-                            @endif
-                    @if(Auth::user()->role == 'hospitaladmin')
-                                <li class="sidebar-item  has-sub">
-                                    <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
-                                            <span>Client Deck</span>
-                                    </a>
-                                   
-                                    </li>
-                            @endif
-
-                            @if(Auth::user()->role == 'hospitaladmin')
-                                <li class="sidebar-item  has-sub">
-                                    <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
-                                            <span>Office Administrations</span>
-                                    </a>
-                                   
-                                    </li>
-                            @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
-                                <li class="sidebar-item  has-sub">
-                                    <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
-                                            <span>Accounting & Finance</span>
-                                    </a>
-                                   
-                                    </li>
-                            @endif
-
-                            @if(Auth::user()->role == 'hospitaladmin')
-                                <li class="sidebar-item  has-sub">
-                                    <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
-                                            <span>Tools & aDD ons</span>
-                                    </a>
-                                   
-                                    </li>
-                            @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
-                                <li class="sidebar-item  has-sub">
-                                    <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
-                                            <span>System Settings</span>
-                                    </a>
-                                   
-                                    </li>
-                            @endif
-
-                            @if(Auth::user()->role == 'hospitaladmin')
-                                <li class="sidebar-item  has-sub">
-                                    <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
-                                            <span>Report Generation</span>
-                                    </a>
-                                   
-                                    </li>
-                            @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
-                                <li class="sidebar-item  has-sub">
-                                    <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
-                                            <span>Practice Area</span>
-                                    </a>
-                                   
-                                    </li>
-                            @endif
-
-                            @if(Auth::user()->role == 'hospitaladmin')
-                                <li class="sidebar-item  has-sub">
-                                    <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
-                                            <span>Perfomance</span>
-                                    </a>
-                                   
-                                    </li>
-                            @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
-                                <li class="sidebar-item  has-sub">
-                                    <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
-                                            <span>Requirement</span>
-                                    </a>
-                                   
-                                    </li>
-                            @endif
-
-                            @if(Auth::user()->role == 'hospitaladmin')
-                                <li class="sidebar-item  has-sub">
-                                    <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
-                                            <span>Petty Cash</span>
-                                    </a>
-                                   
-                                    </li>
-                            @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
-                                <li class="sidebar-item  has-sub">
-                                    <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
-                                            <span>Store ,Inventory</span>
-                                    </a>
-                                   
-                                    </li>
-                            @endif
-
-                            @if(Auth::user()->role == 'hospitaladmin')
-                                <li class="sidebar-item  has-sub">
-                                    <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
-                                            <span>Fixed Asset</span>
-                                    </a>
-                                   
-                                    </li>
-                            @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
-                                <li class="sidebar-item  has-sub">
-                                    <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
-                                            <span>User Accounts</span>
-                                    </a>
-                                   
-                                    </li>
-                            @endif
-
-                            @if(Auth::user()->role == 'hospitaladmin')
-                                <li class="sidebar-item  has-sub">
-                                    <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
-                                            <span>LPO Management</span>
-                                    </a>
-                                   
-                                    </li>
-                            @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
-                                <li class="sidebar-item  has-sub">
-                                    <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
-                                            <span>E-Library</span>
-                                    </a>
-                                   
-                                    </li>
-                            @endif
-
+                    
                                     
                 </div>
                 <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
@@ -1058,7 +876,10 @@ color: #1D1D50
 const myElement = document.getElementById("subm");
 myElement.style.color = "red"
 
-
+$("a.sidebar-link").click(function(){
+    $("a.sidebar-link").css("background-color", "");
+  $(this).css("background-color", "#F5E9D4");
+});
 </script>
 </body>
 
