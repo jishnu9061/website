@@ -22,9 +22,8 @@
        <div id="mydatatable_filter" class="dataTables_filter">
         <label><b>Search:</b><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
        </div>
-       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
        <div class="container mt-5">
-       <button class="btn btn-primary add-btn" data-bs-target="#mymodal" data-bs-toggle="modal">New Client Pickup</button>
+       <a href="add-pickup"><button class="btn btn-primary add-btn" >New Client Pickup</button></a>
        </div>
        <hr class="mb-4">.
 <div class="tab-content" id="myTabContent">
@@ -68,40 +67,8 @@
                 </tbody>
             </table>
 
-            <div class="modal" id="mymodal">
-          <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <div class="modal-body">
-                    <form action="">
-                      <div>
-                        <input type="text" name="type" class="form-control" placeholder="Client">
-                        <br><br>
-                        <input type="text" name="type" class="form-control" placeholder="File">
-                        <br><br>
-                        <input type="text" name="type" class="form-control" placeholder="Mobile">
-                        <br><br>
-                        <input type="text" name="type" class="form-control" placeholder="Persion Handling">
-                        <br><br>
-                        <input type="text" name="type" class="form-control" placeholder="Client Name">
-                        <br><br>
-                        <input type="text" name="type" class="form-control" placeholder="E-mail">
-                        <br><br>
-                        <input type="text" name="type" class="form-control" placeholder="Persion Picking Handling">
-                        <br><br>
-                        <input type="text" name="type" class="form-control" placeholder="Reason">
-                        <br><br>
-                        <button class="btn btn-primary sub_btnn" type="submit" >submit</button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+          
+
            
 
  <!-- The Modal -->

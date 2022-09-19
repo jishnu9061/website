@@ -728,6 +728,7 @@ Route::any('view-document','ClientManagement@viewDocument')->name('view-document
 //Client-Documents
 //Client-Pickup
 Route::any('client-pickup','ClientManagement@clientPickup')->name('client-pickup');
+Route::any('add-pickup','ClientManagement@addPickup')->name('add-pickup');
 //Client-Pickup
 
 //mugunth
