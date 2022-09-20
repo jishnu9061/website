@@ -1649,7 +1649,7 @@ cli
                     background-color: #070344;
                     padding: 8px;
                     width: 50%;
-                    margin-left: 240px;
+                    /* margin-left: 240px; */
                     border-radius: 10px;
                 }
 
