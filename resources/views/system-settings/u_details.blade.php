@@ -21,7 +21,7 @@
         font-size:large;
         font-weight:bold;
         color:rgb(13, 1, 56);
-        background-color:rgb(177, 127, 62);
+        background-color: #D5BD94;
         padding:15px;
       }
       table {
@@ -33,55 +33,123 @@
             
         }
         td, th {
-            border: 1px solid rgb(240, 205, 10);
+            border: 1px solid rgb(255, 255, 255);
             text-align: left;
             padding: 8px;
          }
         th{
-             background-color:rgb(177, 127, 62);
-             color:rgb(13, 1, 56);
+             background-color: #D5BD94; 
          }
          td{
             color:rgb(13, 1, 56);
          }
+
+
+         
       </style>
-</head>
-<body>
-<h2>Company Details</h2>
-       
-  <a href="{{url('add_company_details')}}"  class="btn btn-primary"style="color:rgb(238, 196, 105);background-color:rgb(29, 2, 129);" >Add Company</a><br><br>
-  <table>
-   
-  <tr>
-    <th>Sl No</th>
-    <th>Comfdgdfhfghpany Name</th>
-    <th>Company Address</th>
-    <th>Town/City</th>
-    <th>Logo</th>
-    <th>Action</th>
-  
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>CRA</td>
-    <td>Stima Investment Plaza,3rd floor,Mushembi Rd,Parklands</td>
-    <td>Nairobi,Keniya</td>
-    <td style="color:green;font-weight:bold;"><img src=”https://www.pexels.com/photo/high-rise-buildings-443383/” ></td>
-    <!-- <td><a href="{{url('edit_company_details')}}"style="color:blue;">Edit</a> -->
-    <td  scope="row"class="text-center"><a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i>
-                           <input type="hidden" value="" id="medicine_id_hidden" class="applicate" name="supplier_id_hidden">
-                            <a href="{{url('edit_company_details')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                            <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
-</td>
-    <!-- <td><input type="checkbox"></td> -->
-    </tr>
 
-  
-  
-</table><br><br>
 
-  <!-- <a href="{{url('edit_company_details')}}"  class="btn btn-primary"style="color:rgb(238, 196, 105);background-color:rgb(29, 2, 129);" >Edit</a><br><br> -->
+
+
+
+
+        
    
+<div class="py-5 text-center">
+                    <h2>Add New User</h2>
+    <hr class="mb-4">
+</div>
+<h6>User Details</h6>
+<hr class="mb-4">
+    <div class="row">
+        <div class="col-md-12 order-md-1">
+            <form method="post" action="http://localhost/CRA/public/addthestaffs" id="form">
+              <input type="hidden" name="_token" value="ddpMUOg3SUr8CszFAIwbkc9qzJ5kC1beAhSW3XhM">                    <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">User Name</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                    <input type="text" class="form-control" name="name" id="username" placeholder="Name" required>
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Name is required.
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                                <label for="username">User Email</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                            <input type="email" class="form-control" name="email" id="username" placeholder="Email" required>
+                                                <div class="invalid-feedback" style="width: 100%;">
+                                                    Email is required.
+                                                </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-1">
+                                    <label for="username">Staff Phone number</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                                <input type="number" class="form-control" name="phoneno" id="username" placeholder="Phone no" required min="0" max="9999999999">
+                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                        Phone No: is required.
+                                                    </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                    <div class="col-md-4">
+                                    <div class="mb-1">
+                                        <label for="username">Age</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"></div>
+                                                    <input type="number" class="form-control" name="age" id="age" placeholder="Age" min="0" max="99">
+                                                        <div class="invalid-feedback" style="width: 100%;">
+                                                            Age is required.
+                                                        </div>
+                                            </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="mb-1">
+                                            <label for="username">Password</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"></div>
+                                                        <input type="password" class="form-control" name="password" id="password" placeholder="staff Password" required>
+                                                            <div class="invalid-feedback" style="width: 100%;">
+                                                                Passeord is required.
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="mb-1">
+                                                <label for="username">Confirm Password</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend"></div>
+                                                            <input type="password" class="form-control" name="password" id="confirm_password" placeholder="Confirm Password" required>
+                                                        <div class="invalid-feedback" style="width: 100%;">
+                                                        Password is required.
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                           <div id="test" style="height:20px;"></div>
+                                        </div>
+                                </div>
+                                <label for="username">Address</label>
+                                    <textarea class="form-control" name="address"></textarea>
+                                        <div id="test" style="height:20px;"></div>
+                                        <div class="row">
+                                        
+                                            
+                                               
+</body>
+
 </body>
 </html>
 @endsection

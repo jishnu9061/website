@@ -338,7 +338,7 @@
 
 
                
-
+cli
                 .client_btn{
                     width:17%;
                     background-color: rgb(6, 6, 58);
@@ -374,12 +374,12 @@
                     margin-left: 120px;
                 }
 
-                .btn_align_btn{
+                /* .btn_align_btn{
                     width:55%;
                     margin:18px;
                     height:60px;
-                    padding-top:-20px;
-                }
+                    padding-top:20px;
+                } */
                 .logo_size{
                     width:15%;
                 }
@@ -1653,13 +1653,7 @@
                     border-radius: 10px;
                 }
 
-                .btn_align {
-                    margin-left: -480px;
-                }
-
-                .btn_sumbit {
-                    margin-left: -100px;
-                }
+                
 
                 .box {
                     padding: 7px;

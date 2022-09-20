@@ -35,6 +35,10 @@ class filemanagement extends Controller
     }
 
     //document temblates
-
+    
+    public function u_details()
+    {
+        return view('system-settings.u_details');
+    }
 
 }

@@ -253,21 +253,11 @@ $('#price').prop('readonly', true);
             </select>
           </div>
         </div>
-        </div>
-
-      
-    
-
-          
-          
-   
-
-          
-          
+      </div>   
 
     </div>
-    <br>
-    <div class="container">
+    
+ 
   <div class="row">
     <div class="col-sm">
     
@@ -278,7 +268,7 @@ $('#price').prop('readonly', true);
     
     <button type="submit" class="btn btn-primary submit_btn btn_align">Back</button>
 
-    </div>
+    
   </div>
 </div>
      
@@ -286,14 +276,14 @@ $('#price').prop('readonly', true);
    
           </div>
 
-          
-
-
-
    </tbody>
 </table>
    </div>
 </div>
+
+
+
+
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
  $(function () {

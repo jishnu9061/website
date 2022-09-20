@@ -699,6 +699,8 @@ Route::any('holiday_2021','Holidays@holiday2021')->name('holiday_2021');
 Route::any('holiday_2022','Holidays@holiday2022')->name('holiday_2022');
 
 
+
+
 // Route::any('other_confgn','OtherConfigtn@index')->name('other_confgn');
 // Route::any('other_confgn','OtherConfigtn@index')->name('other_confgn')
 // Route::any('company_branch','OtherConfigtn@branch')->name('company_branch');
@@ -745,7 +747,11 @@ Route::any('add-new-file',"filemanagement@addnew")->name('add-new-file');
 Route::any('template-category',"filemanagement@template")->name('template-category');
 //vinu
 
+//beljin
 
+Route::any('/u_details',"filemanagement@u_details")->name('u_details');
+
+//beljin
 
 
 ?>
