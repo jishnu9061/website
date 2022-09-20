@@ -4,9 +4,9 @@
     .btn-width{
         width:10%;
     }
-    body{
+    /* body{
     background-color: #f0e7ce;
-    }
+    } */
 
     
         td, th {

@@ -12,11 +12,10 @@
       <title>Company Details</title>
       <!-- <link rel="stylesheet" href="assets/css/cstyle.css">  -->
       <style>
-        body
+        /* body
         {
           background-color: #f0e7ce;
-          /* font-family:"Nunito"; */
-        }
+        } */
         label
       {
        
