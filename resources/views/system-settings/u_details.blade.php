@@ -44,6 +44,8 @@
             color:rgb(13, 1, 56);
          }
 
+         
+
 
          
       </style>
@@ -91,7 +93,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="mb-1">
-                                    <label for="username">Staff Phone number</label>
+                                    <label for="username">Phone number</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend"></div>
                                                 <input type="number" class="form-control" name="phoneno" id="username" placeholder="Phone no" required min="0" max="9999999999">
@@ -105,12 +107,12 @@
                             <div class="row">
                                     <div class="col-md-4">
                                     <div class="mb-1">
-                                        <label for="username">Age</label>
+                                        <label for="username">User Code</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend"></div>
-                                                    <input type="number" class="form-control" name="age" id="age" placeholder="Age" min="0" max="99">
+                                                    <input type="number" class="form-control" name="Code" id="age" placeholder="Enter Your User Code" min="0" max="99">
                                                         <div class="invalid-feedback" style="width: 100%;">
-                                                            Age is required.
+                                                            User Code is required.
                                                         </div>
                                             </div>
                                     </div>
@@ -127,6 +129,7 @@
                                                     </div>
                                                 </div>
                                         </div>
+
                                         <div class="col-md-4">
                                             <div class="mb-1">
                                                 <label for="username">Confirm Password</label>
@@ -140,11 +143,95 @@
                                             </div>
                                            <div id="test" style="height:20px;"></div>
                                         </div>
+
+
+
+                                        <div class="col-md-4">
+                                          <div class="mb-1">
+                                              <label for="username">Department</label>
+                                                  <div class="input-group">
+                                                      <div class="input-group-prepend"></div>
+                                                          <input type="password" class="form-control" name="Department" id="confirm_password" placeholder="Enter Department" required>
+                                                      <div class="invalid-feedback" style="width: 100%;">
+                                                        Department
+                                                      </div>
+                                                  </div>
+                                          </div>
+                                         <div id="test" style="height:20px;"></div>
+                                      </div>
+                              
+        
+        
+                                        <div class="col-md-4">
+                                          <div class="mb-1">
+                                              <label for="username">Postal Code</label>
+                                                  <div class="input-group">
+                                                      <div class="input-group-prepend"></div>
+                                                          <input type="password" class="form-control" name="Post" id="confirm_password" placeholder="Enter Postal Code" required>
+                                                      <div class="invalid-feedback" style="width: 100%;">
+                                                      Postal Code.
+                                                      </div>
+                                                  </div>
+                                          </div>
+                                         <div id="test" style="height:20px;"></div>
+                                        </div>
+                              
+        
+        
+                              <div class="col-md-4">
+                                <div class="mb-1">
+                                    <label for="username">Town</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                                <input type="password" class="form-control" name="Town" id="confirm_password" placeholder="Enter Town" required>
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                              Town
+                                            </div>
+                                        </div>
                                 </div>
+                               <div id="test" style="height:20px;"></div>
+                            </div>
+                   
+        
+                    <div class="col-md-4">
+                      <div class="mb-1">
+                          <label for="username">User Group</label>
+                              <div class="input-group">
+                                  <div class="input-group-prepend"></div>
+                                      <input type="password" class="form-control" name="group" id="confirm_password" placeholder="User Group" required>
+                                  <div class="invalid-feedback" style="width: 100%;">
+                                    User Group
+                                  </div>
+                              </div>
+                      </div>
+                     <div id="test" style="height:20px;"></div>
+                  </div>
+
+
+                  <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
+      
+                    <button type="submit" class="btn  submit_btn">Add</button>
+                    <button type="button" class="btn btn-primary submit_btn">Cancel</button>
+                    
+                  </div>
+
+          </div>
+
+
+                                </div></div>
+
+
+                                
+                                
+
+
+
+
+{{--                                 
                                 <label for="username">Address</label>
                                     <textarea class="form-control" name="address"></textarea>
                                         <div id="test" style="height:20px;"></div>
-                                        <div class="row">
+                                        <div class="row"> --}}
                                         
                                             
                                                
