@@ -14,7 +14,7 @@
 </div>
 <br>
 <div class="container">
-    <h3 style="text-align:center">View Client List</h3><br><br>
+    <h3 style="text-align:center">View Pickup Reception</h3><br><br>
     <table class="table table-hover" style="border: 1px solid">
        
         @csrf
@@ -24,27 +24,47 @@
                 <td></td>
             </tr>
             <tr>
-                <th>Client No</th>
+                <th>Date</th>
                 <td></td>
             </tr>
                 <th>Client</th>
                 <td></td>
             </tr>
             </tr>
-                <th>Email Address</th>
+                <th>File</th>
                 <td></td>
             </tr>
             </tr>
-                <th></th>
+                <th>Visitor</th>
                 <td></td>
             </tr>
              <tr>
-                <th></th>
-                    <td></td>
+                <th>Mobile</th>
+                <td></td>
             </tr>
             <tr>
-                <th></th>
-                    <td></td>
+                <th>Time In</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Time Picked</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Time Taken</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Persion Picking Client</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Time Out</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Persion Handling</th>
+                <td></td>
             </tr>
 
 

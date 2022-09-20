@@ -9,60 +9,53 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 
   {{-- <div class="spacer" style="height:40px;margin-top: 30px;"> --}}
-  
 
 
 </head>
 
 <body>
     <div class="container">
-        <h3 class="text-center" style="color: #070344; text-shadow: 1px 2px;"><b>Client Pickup at Reception</b></h3>
+        <h1  style="color: #070344; text-shadow: 1px 2px; text-align:center;"><b>Customer Follow Up</b></h1>
+        <div class="container mt-5">
+        <a href="{{url('add-follow')}}"><button type="button" class="btn btn-primary complaint_btn" > Add Follow Up</button></a>
+        </div>
+        <hr class="mb-4">.
+        <h3  style="color: #070344; text-shadow: 1px 2px; text-align:center;"><b>List Of Follow Ups</b></h3>
        <br>
+     
       
-       <div id="mydatatable_filter" class="dataTables_filter">
-        <label><b>Search:</b><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
-       </div>
-       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-       <div class="container mt-5">
-       <a href="{{url('add-pickup')}}"><button class="btn btn-primary add-btn">New Client Pickup</button></a>
-       </div>
-       <hr class="mb-4">.
-<div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
-            <table class="table table-bordered " id="new-item">
+            <table class="table table-bordered" id="new-item">
                 <thead>
                     <tr>
-                        <th class="text-center"> No</th>
-                        <th class="text-center"> Date</th>
-                        <th class="text-center">Client</th>
-                        <th class="text-center">File Ref</th>
-                        <th class="text-center">Visitor</th>
-                        <th class="text-center">Mobile</th>
-                        <th class="text-center">Time In</th>
-                        <th class="text-center">Time Picked</th>
-                        <th class="text-center">Time Taken</th>
-                        <th class="text-center">Persion Picking Client</th>
-                        <th class="text-center">Time Out</th>
-                        <th class="text-center">Persion Handling</th>
+                        <th class="text-center">No</th>
+                        <th class="text-center">Follow Up date</th>
+                        <th class="text-center"> Follow Up Type</th>
+                        <th class="text-center">Customer Name</th>
+                        <th class="text-center">Description</th>
+                        <th class="text-center">Next BU Date</th>
+                        <th class="text-center">Alert Period</th>
+                        <th class="text-center">Responsible Staff</th>
+                        <th class="text-center">Registered By</th>
                         <th class="text-center">Action</th>
+                       
                     </tr>
                 </thead>
                 <tbody>
                         <tr id="data">
-                            <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row"class="text-center"></td>
-                           <td><a href="{{url('view-client')}}"><i style="color:black;" class="fa fa-eye" aria-hidden="true"></i></a></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td><a href=""><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i></a>
+                            <a href=""><i  style="color:black;" class="fa fa-trash" aria-hidden="true"></i></td>
+
                         </tr>
                 </tbody>
             </table>
