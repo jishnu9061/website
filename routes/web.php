@@ -746,18 +746,22 @@ Route::any('client_list','ClientManagement@view')->name('client_list');
 Route::any('edit_client','ClientManagement@edit')->name('edit_client');
 Route::any('view-client','ClientManagement@show')->name('view-client');
 Route::any('client-index',"ClientManagement@index")->name('client-index');
-//Client-List
+//end Client-List
 
 //Client-Documents
 Route::any('client-document','ClientManagement@document')->name('client-document');
 Route::any('add-document','ClientManagement@addDocument')->name('add-document');
 Route::any('view-document','ClientManagement@viewDocument')->name('view-document');
-//Client-Documents
+//end Client-Documents
 //Client-Pickup
 Route::any('client-pickup','ClientManagement@clientPickup')->name('client-pickup');
 Route::any('add-pickup','ClientManagement@addPickups')->name('add-pickup');
 Route::any('view-pickup','ClientManagement@viewPickups')->name('view-pickup');
 //Client-Pickup
+//complaint
+Route::any('complaint-list','ClientManagement@complaintList')->name('complaint-list');
+Route::any('add-Complaint','ClientManagement@addComplaint')->name('add-Complaint');
+//end complaint
 
 //mugunth
 

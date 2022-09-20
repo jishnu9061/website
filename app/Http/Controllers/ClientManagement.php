@@ -115,4 +115,12 @@ class ClientManagement extends Controller
     public function viewPickups(){
         return view('client-management.view-pickup');
     }
+
+    public function complaintList(){
+        return view('client-management.complaint-list');
+    }
+
+    public function addComplaint(){
+        return view('client-management.add-complaint');
+    }
 }
