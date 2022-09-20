@@ -22,6 +22,8 @@
         <label><b>Search:</b><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
        </div>
        <a href="{{('add_newclient')}}"><button class="btn btn-primary add-btn">Add Client</button></a>
+       <hr class="mb-4">.
+       
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
