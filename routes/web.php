@@ -741,6 +741,8 @@ Route::any('configu_ration','SystemSetup@Configtn')->name('configu_ration');
 
 
 //mugunth
+
+//Client-list
 Route::any('add_newclient',"ClientManagement@create")->name('add_newclient');
 Route::any('client_list','ClientManagement@view')->name('client_list');
 Route::any('edit_client','ClientManagement@edit')->name('edit_client');
@@ -753,6 +755,7 @@ Route::any('client-document','ClientManagement@document')->name('client-document
 Route::any('add-document','ClientManagement@addDocument')->name('add-document');
 Route::any('view-document','ClientManagement@viewDocument')->name('view-document');
 //end Client-Documents
+
 //Client-Pickup
 Route::any('client-pickup','ClientManagement@clientPickup')->name('client-pickup');
 Route::any('add-pickup','ClientManagement@addPickups')->name('add-pickup');
@@ -762,7 +765,11 @@ Route::any('view-pickup','ClientManagement@viewPickups')->name('view-pickup');
 Route::any('complaint-list','ClientManagement@complaintList')->name('complaint-list');
 Route::any('add-Complaint','ClientManagement@addComplaint')->name('add-Complaint');
 //end complaint
+Route::any('follow-up','ClientManagement@followup')->name('follow-up');
+Route::any('add-follow','ClientManagement@addFollow')->name('add-follow');
+//Follow Up
 
+//end Follow Up
 //mugunth
 
 
