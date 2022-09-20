@@ -729,6 +729,8 @@ Route::any('view-document','ClientManagement@viewDocument')->name('view-document
 //Client-Documents
 //Client-Pickup
 Route::any('client-pickup','ClientManagement@clientPickup')->name('client-pickup');
+Route::any('add-pickup','ClientManagement@addPickups')->name('add-pickup');
+Route::any('view-pickup','ClientManagement@viewPickups')->name('view-pickup');
 //Client-Pickup
 
 //mugunth
@@ -740,6 +742,8 @@ Route::any('file_managementindex',"filemanagement@index")->name('file_management
 Route::any('file-list',"filemanagement@view")->name('file-list');
 Route::any('edit-file',"filemanagement@edit")->name('edit-file');
 Route::any('add-new-file',"filemanagement@addnew")->name('add-new-file');
+
+Route::any('template-category',"filemanagement@template")->name('template-category');
 //vinu
 
 

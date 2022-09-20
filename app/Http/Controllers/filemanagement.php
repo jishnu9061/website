@@ -28,4 +28,13 @@ class filemanagement extends Controller
     }
 
 
+    //document temblates
+    public function template()
+    {
+        return view('file_management.template-category');
+    }
+
+    //document temblates
+
+
 }
