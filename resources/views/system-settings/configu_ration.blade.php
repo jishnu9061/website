@@ -31,7 +31,7 @@
          margin-left:0px;
          width:auto;
          border:1px solid black;
-         height:2000px;
+         height:100%;
          }
         
          .col-sm

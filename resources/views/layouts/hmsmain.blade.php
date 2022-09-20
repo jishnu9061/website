@@ -414,12 +414,20 @@ color: #1D1D50
                                     $hr = array("addallowance", "addstaffs", "staffs","loans","payslip","attendance","attendanceview","payslipbulk","generatepayslip","managestaff");
                                 @endphp
 
-                                <li class="sidebar-item  has-sub">
-                                    <a href="" class='sidebar-link'>
+                                <li class="submenu-item " style="list-style:none;">
+                                    <a href="{{url('system_setup')}}" class='sidebar-link'>
                                         <i class="fa fa-gear" id="icon"></i>
-                                            <span>Settings</span>
+                                            <span>System Setup</span>
                                     </a>
-                                    <ul class="submenu">
+                            </li>
+                                    <!-- <ul class="submenu">
+
+                                    <li class="submenu-item ">
+                                        <a href="{{url('system_setup')}}" class='sidebar-link'>
+                                            <span id="subm">Setup</span>
+                                        </a>
+                                    </li>
+
                                    
                                     <li class="submenu-item ">
                                         <a href="{{url('company_details')}}" class='sidebar-link'>
@@ -431,7 +439,7 @@ color: #1D1D50
                                         <a href="{{url('weekend_holiday')}}" class='sidebar-link'>
                                             <span id="subm">Holidays</span>
                                         </a>
-                                    </li>
+                                    </li> -->
 
                                     <!-- <li class="submenu-item ">
                                         <a href="{{url('configu_ration')}}" class='sidebar-link'>
@@ -439,11 +447,11 @@ color: #1D1D50
                                         </a>
                                     </li> -->
 
-                                     <li class="submenu-item ">
+                                     <!-- <li class="submenu-item ">
                                         <a href="{{url('other_confgn')}}" class='sidebar-link'>
                                             <span id="subm">Other Configurations</span>
                                         </a>
-                                    </li>
+                                    </li> -->
 
                                     <!-- <li class="submenu-item ">
                                         <a href="{{url('company_branch')}}" class='sidebar-link'>
@@ -451,8 +459,8 @@ color: #1D1D50
                                         </a>
                                     </li> -->
                                    
-                                    </ul>
-                                </li>
+                                    <!-- </ul>
+                                </li> -->
 
 
                                 <li class="sidebar-item  has-sub">

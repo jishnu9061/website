@@ -11,11 +11,11 @@
       <title>Company Details</title>
       <!-- <link rel="stylesheet" href="assets/css/cstyle.css">  -->
       <style>
-      
+/*       
           body
         {
           background-color: #f0e7ce;
-        }
+        } */
       h2
       {
         font-size:large;
