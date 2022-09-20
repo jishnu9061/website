@@ -68,16 +68,16 @@
             color:black;
 
            }
-li
-{
-    color:blue;
-}
+           li
+           {
+            color:blue;
+          }
            
        </style>
    </head>
    <body>
     <!-- <h2 class="text-center">Configuration Details</h2><br> -->
-    <div class="container">
+ 
         <div class="row">
             <div class="col-sm">
                 <h3> Company Details</h3>
@@ -208,7 +208,7 @@ li
         </div>
         
    
-        </div>
+    
         </body>
 </html>
   @endsection
