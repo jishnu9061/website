@@ -706,6 +706,9 @@ Route::any('company_branch','SystemSetup@branch')->name('company_branch');
 Route::any('add_company_branch','SystemSetup@addbranch')->name('add_company_branch');
 Route::any('edit_company_branch','SystemSetup@editbranch')->name('edit_company_branch');
 Route::any('configu_ration','SystemSetup@Configtn')->name('configu_ration');
+Route::any('courts','SystemSetup@courts')->name('courts');
+Route::any('add_court','SystemSetup@addcourt')->name('add_court');
+Route::any('edit_court','SystemSetup@editcourt')->name('edit_court');
 
 
 
