@@ -100,27 +100,56 @@ class ClientManagement extends Controller
         return view('client-management.add-document');
     }
 
+
     public function viewDocument(){
 
         return view('client-management.view-document');
     }
 
+
     public function clientPickup(){
         return view('client-management.client-pickup');
     }
+
+
     public function addPickups(){
         return view('client-management.add-pickup');
     }
+
 
     public function viewPickups(){
         return view('client-management.view-pickup');
     }
 
+
     public function complaintList(){
         return view('client-management.complaint-list');
     }
 
+
+
     public function addComplaint(){
         return view('client-management.add-complaint');
     }
+
+
+    public function followup(){
+        return view('client-management.follow-up');
+    }
+
+
+    public function addFollow(){
+        return view('client-management.add-followup');
+    }
+
+
+    public function service(){
+        return view('client-management.client-service');
+    }
+
+
+    public function addService(){
+        return view('client-management.new-client-service');
+    }
+
 }

@@ -23,7 +23,7 @@ $('#price').prop('readonly', true);
 </script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <div>
-    <h2 style="text-align:center; text-shadow: 2px 1px;"> New Complaint</h2>
+    <h2 style="text-align:center; text-shadow: 2px 1px;">Add Follow Up</h2>
     <hr class="mb-4">.
 </div>
 </div>
@@ -31,27 +31,28 @@ $('#price').prop('readonly', true);
             <div class="col-md-12 order-md-1">
                 <form method="post" action="" id="form">
 	                @csrf
+
                     <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
-                                <label for="username">Date</label>
+                                <label for="username">Follow Up Date</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend"></div>
-                                    <input type="date" class="form-control" name="date" id="username" value="" placeholder="Number" required>
+                                    <input type="text" class="form-control" name="date" id="username" value=""  required>
                                     <div class="invalid-feedback" style="width: 100%;">
-                                    Date is required.
+                                    Follow Up Date is required.
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="mb-1">
-                              <label for="username">Client</label>
+                              <label for="username">Customer</label>
                                 <div class="input-group">
                                   <div class="input-group-prepend">
 
                                   </div>
-                                  <select name="client" id="cars">
+                                  <select name="customer" id="cars">
                                   <option value="volvo"></option>
                                   </select>
                                 </div>
@@ -59,12 +60,12 @@ $('#price').prop('readonly', true);
                         </div>
                         <div class="col-md-4">
                           <div class="mb-1">
-                            <label for="username">Files</label>
+                            <label for="username">Follow Up Types</label>
                                 <div class="input-group">
                                       <div class="input-group-prepend">
 
                                       </div>
-                                      <select name="citizen" id="cars">
+                                      <select name="type" id="cars">
                                       <option value="volvo"></option>
                                       </select>
                                 </div>
@@ -75,19 +76,20 @@ $('#price').prop('readonly', true);
                     <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
-                                <label for="username">Customer Name</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="customer" id="age" value="" placeholder="" min="0" max="99">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                        Customer Name is required.
-                                        </div>
+                            <label for="username">Staff Responsible</label>
+                                  <div class="input-group">
+                                    <div class="input-group-prepend">
+
                                     </div>
+                                    <select name="responsible" id="cars">
+                                    <option value="volvo"></option>
+                                    </select>
+                                  </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="mb-1">
-                                <label for="username">Staff Handling</label>
+                                <label for="username">Send Remainder To</label>
                                   <div class="input-group">
                                     <div class="input-group-prepend">
 
@@ -100,15 +102,14 @@ $('#price').prop('readonly', true);
                         </div>
                         <div class="col-md-4">
                             <div class="mb-1">
-                            <label for="username">Complaint About</label>
-                                  <div class="input-group">
-                                    <div class="input-group-prepend">
-
+                            <label for="username">Next Bring Up Date</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="email" class="form-control" name="date" value="" id="password" placeholder="">
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                    Next Bring Up Date is required.
                                     </div>
-                                    <select name="complaint" id="cars">
-                                    <option value="volvo"></option>
-                                    </select>
-                                  </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -116,12 +117,12 @@ $('#price').prop('readonly', true);
                     <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
-                                <label for="username">Telephone No</label>
+                                <label for="username">Alert Period</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend"></div>
                                         <input type="text" class="form-control" name="telephone" id="age" value="" placeholder="" min="0" max="99">
                                         <div class="invalid-feedback" style="width: 100%;">
-                                        Telephone No is required.
+                                            Alert is required.
                                         </div>
                                     </div>
                             </div>
@@ -133,49 +134,23 @@ $('#price').prop('readonly', true);
                                     <div class="input-group-prepend"></div>
                                     <input type="email" class="form-control" name="email" value="" id="password" placeholder="">
                                     <div class="invalid-feedback" style="width: 100%;">
-                                    Email Address is required.
+                                        Email is required.
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="mb-1">
-                                <label for="username">others</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="others" value="" id="confirm_password" placeholder="">
-                                            <div class="invalid-feedback" style="width: 100%;">
-                                            others is required.
-                                            </div>
-                                    </div>
+                            <label for="username"> Description</label>
+                                <div class="input-group">                     
+                                  <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                  <div class="invalid-feedback" style="width: 100%;">
+                                     Description Address is required.
+                                  </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                            <label for="username">Action Plan</label>
-                                <div class="input-group">                     
-                                  <textarea class="form-control" id="form7Example7" rows="3"></textarea>
-                                  <div class="invalid-feedback" style="width: 100%;">
-                                  Action Plan is required.
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                          <div class="mb-1">
-                          <label for="username">Complaint Description</label>
-                                <div class="input-group">                     
-                                  <textarea class="form-control" id="form7Example7" rows="3"></textarea>
-                                  <div class="invalid-feedback" style="width: 100%;">
-                                  Complaint Description is required.
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>     
                     <br>
                     <div class="container">
                       <div class="row">
@@ -183,10 +158,10 @@ $('#price').prop('readonly', true);
                           
                         </div>
                           <div class="col-sm">
-                            <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Add Complaint</button>
+                            <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Add Follow Up</button>
 
                           
-                             <button type="submit" class="btn btn-primary submit_btn btn_align">Cancel</button>
+                             <button type="submit" class="btn btn-primary submit_btn btn_align">Delete</button>
 
                           </div>
                         </div>

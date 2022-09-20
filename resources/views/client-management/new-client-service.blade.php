@@ -23,8 +23,9 @@ $('#price').prop('readonly', true);
 </script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <div>
-    <h2 style="text-align:center; text-shadow: 2px 1px;"> New Complaint</h2>
+    <h2 style="text-align:center; text-shadow: 2px 1px;">New Client Services</h2>
     <hr class="mb-4">.
+
 </div>
 </div>
   <div class="row">
@@ -34,148 +35,109 @@ $('#price').prop('readonly', true);
                     <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
-                                <label for="username">Date</label>
+                                <label for="username">Receipt No</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend"></div>
-                                    <input type="date" class="form-control" name="date" id="username" value="" placeholder="Number" required>
+                                    <input type="text" class="form-control" name="receipt" id="username" value="" placeholder="Receipt No" required>
                                     <div class="invalid-feedback" style="width: 100%;">
-                                    Date is required.
+                                        Receipt No is required.
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="mb-1">
-                              <label for="username">Client</label>
+                            <label for="username">Name</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="text" class="form-control" name="name" id="username" value="" placeholder="Name" required>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Name is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="mb-1">
+                          <label for="username">Mobile</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="text" class="form-control" name="mobile" id="username" value="" placeholder="mobile" required>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Name is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                            <label for="username">Amount Paid</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="text" class="form-control" name="amount" id="username" value="" placeholder="Amount Paid" required>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Name is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                            <label for="username">Date</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="text" class="form-control" name="date" id="username" value="" placeholder="Date" required>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Name is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                            <label for="username">Email</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="text" class="form-control" name="email" id="username" value="" placeholder="email" required>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Name is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                            <label for="username">Code</label>
                                 <div class="input-group">
                                   <div class="input-group-prepend">
 
                                   </div>
-                                  <select name="client" id="cars">
+                                  <select name="code" id="cars">
                                   <option value="volvo"></option>
                                   </select>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                          <div class="mb-1">
-                            <label for="username">Files</label>
+                            <div class="mb-1">
+                            <label for="username">Payment Method</label>
                                 <div class="input-group">
-                                      <div class="input-group-prepend">
+                                  <div class="input-group-prepend">
 
-                                      </div>
-                                      <select name="citizen" id="cars">
-                                      <option value="volvo"></option>
-                                      </select>
+                                  </div>
+                                  <select name="payment" id="cars">
+                                  <option value="volvo"></option>
+                                  </select>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">Customer Name</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="customer" id="age" value="" placeholder="" min="0" max="99">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                        Customer Name is required.
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">Staff Handling</label>
-                                  <div class="input-group">
-                                    <div class="input-group-prepend">
-
-                                    </div>
-                                    <select name="country" id="cars">
-                                    <option value="volvo"></option>
-                                    </select>
-                                  </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                            <label for="username">Complaint About</label>
-                                  <div class="input-group">
-                                    <div class="input-group-prepend">
-
-                                    </div>
-                                    <select name="complaint" id="cars">
-                                    <option value="volvo"></option>
-                                    </select>
-                                  </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">Telephone No</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="telephone" id="age" value="" placeholder="" min="0" max="99">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                        Telephone No is required.
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">Email Address</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend"></div>
-                                    <input type="email" class="form-control" name="email" value="" id="password" placeholder="">
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                    Email Address is required.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">others</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="others" value="" id="confirm_password" placeholder="">
-                                            <div class="invalid-feedback" style="width: 100%;">
-                                            others is required.
-                                            </div>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                            <label for="username">Action Plan</label>
-                                <div class="input-group">                     
-                                  <textarea class="form-control" id="form7Example7" rows="3"></textarea>
-                                  <div class="invalid-feedback" style="width: 100%;">
-                                  Action Plan is required.
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                          <div class="mb-1">
-                          <label for="username">Complaint Description</label>
-                                <div class="input-group">                     
-                                  <textarea class="form-control" id="form7Example7" rows="3"></textarea>
-                                  <div class="invalid-feedback" style="width: 100%;">
-                                  Complaint Description is required.
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>     
                     <br>
                     <div class="container">
                       <div class="row">
@@ -183,7 +145,7 @@ $('#price').prop('readonly', true);
                           
                         </div>
                           <div class="col-sm">
-                            <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Add Complaint</button>
+                            <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Submit</button>
 
                           
                              <button type="submit" class="btn btn-primary submit_btn btn_align">Cancel</button>
