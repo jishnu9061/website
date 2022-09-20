@@ -433,16 +433,23 @@ color: #1D1D50
                                         </a>
                                     </li>
 
-                                    <li class="submenu-item ">
+                                    <!-- <li class="submenu-item ">
                                         <a href="{{url('configu_ration')}}" class='sidebar-link'>
                                             <span id="subm">Configurations</span>
                                         </a>
+                                    </li> -->
+
+                                     <li class="submenu-item ">
+                                        <a href="{{url('other_confgn')}}" class='sidebar-link'>
+                                            <span id="subm">Other Configurations</span>
+                                        </a>
                                     </li>
-                                    <li class="submenu-item ">
+
+                                    <!-- <li class="submenu-item ">
                                         <a href="{{url('company_branch')}}" class='sidebar-link'>
                                             <span id="subm">Company Branch</span>
                                         </a>
-                                    </li>
+                                    </li> -->
                                    
                                     </ul>
                                 </li>
