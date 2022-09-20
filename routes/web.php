@@ -765,11 +765,18 @@ Route::any('view-pickup','ClientManagement@viewPickups')->name('view-pickup');
 Route::any('complaint-list','ClientManagement@complaintList')->name('complaint-list');
 Route::any('add-Complaint','ClientManagement@addComplaint')->name('add-Complaint');
 //end complaint
+
+//Follow Up
 Route::any('follow-up','ClientManagement@followup')->name('follow-up');
 Route::any('add-follow','ClientManagement@addFollow')->name('add-follow');
-//Follow Up
-
 //end Follow Up
+
+//service
+Route::any('client-service','ClientManagement@service')->name('client-service');
+Route::any('add-service','ClientManagement@addService')->name('add-service');
+//end service
+
+
 //mugunth
 
 

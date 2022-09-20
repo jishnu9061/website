@@ -142,4 +142,14 @@ class ClientManagement extends Controller
         return view('client-management.add-followup');
     }
 
+
+    public function service(){
+        return view('client-management.client-service');
+    }
+
+
+    public function addService(){
+        return view('client-management.new-client-service');
+    }
+
 }
