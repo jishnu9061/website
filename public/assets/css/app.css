@@ -314,6 +314,13 @@
                     box-sizing: border-box;
                     border-radius: 4.58px;
                 }
+
+                .btn.btn-primary:hover {
+                    color: rgb(255, 255, 255);
+                  background-color : #1D1D50;
+                    
+                }
+
                 .btn_margin{
                     margin:20px;
                 }
@@ -325,6 +332,8 @@
                     height: 60px;
                     padding-top: -20px;
                 }
+
+                /* .fa-cog:before, .fa-gear:before { color: #00474d;} */
 
 
 
@@ -1121,6 +1130,8 @@
                     color: #1D1D50;
                 }
 
+                
+
                 .sidebar-wrapper .menu .sidebar-link svg,
                 .sidebar-wrapper .menu .sidebar-link i {
                     color: #f2f7ff;
@@ -1135,7 +1146,7 @@
                 }
 
                 .sidebar-wrapper .menu .sidebar-link:active {
-                    background-color: #ff00dd;
+                    background-color: #aeb3f8;
                 }
 
                 
@@ -2063,10 +2074,14 @@
                 }
 
                 #cr_logo {
+
+                    display: block;
                     width: 90px;
-                    margin-left: 23px;
-                    height: 90px;
+                    height: auto;
+                    margin-left: auto ;
+                    margin-right: auto ;
                     margin-top: -11px;
+                    align-items: center;
 
                 }
 
