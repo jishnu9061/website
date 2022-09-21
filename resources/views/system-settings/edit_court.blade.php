@@ -15,14 +15,14 @@
 "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
     </script>
     <style>
-         h2
+         /* h2
         {
             font-size:large;
             font-weight:bold;
              color:rgb(13, 1, 56); 
              background-color:rgb(177, 127, 62);
              padding:15px;
-            }
+            } */
             .container{
                 border:1px solid black;
          margin-left:0px;
@@ -46,8 +46,9 @@
         </style>
     </head>
     <body>
-    <h2 >Edit Court</h2><br>
-   
+    <!-- <h2 >Edit Court</h2><br> -->
+    <h2 style="text-align:center; text-shadow: 2px 1px;">Edit Court</h2>
+    <hr class="mb-4">.
     <table class="table">
     <tbody>
                         <tr>
