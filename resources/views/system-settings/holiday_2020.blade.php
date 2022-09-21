@@ -16,15 +16,15 @@
           background-color: #f0e7ce;
           /* font-family:  Arial, Helvetica, sans-serif; */
         }
-        h2
+        /* h2
         {
-            /* font-family:  Arial, Helvetica, sans-serif; */
+           
             font-size:large;
             font-weight:bold;
             color:rgb(13, 1, 56); 
             background-color:rgb(177, 127, 62);
             padding:15px;
-         }
+         } */
          table {
             /* font-family: arial, sans-serif; */
             border-collapse: collapse;
@@ -47,7 +47,9 @@
 </head>
 <body>
   <form>
-<h2>Weekend and Holidays</h2><br><br>
+<!-- <h2>Weekend and Holidays</h2><br><br> -->
+<h2 style="text-align:center; text-shadow: 2px 1px;">Weekend and Holidays</h2>
+  <hr class="mb-4">.
 <a href="{{url('add_new_holiday')}}"  class="btn btn-primary" style="margin-top:0px;">Add New Holiday / Weekend Date</a>
 <p style="color:black;"><a href="{{url('holiday_2017')}}"style="color:blue; font-size:x-small;">2017</a> | <a href="{{url('holiday_2018')}}"style="color:blue;font-size:x-small;">2018</a> | <a href="{{url('holiday_2019')}}"style="color:blue;font-size:x-small;">2019</a> | <a href="{{url('holiday_2020')}}"style="color:blue;font-size:x-small;">2020</a> | <a href="{{url('holiday_2021')}}"style="color:blue;font-size:x-small;">2021</a> | <a href="{{url('holiday_2022')}}"style="color:blue;font-size:x-small;">2022</a><br><br>
 <h3 style="color:rgb(177, 127, 62);font-size:large;font-weight:bold;text-align:center;">Weekend & Holiday Dates - 2020</h3>
