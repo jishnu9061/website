@@ -14,7 +14,8 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 </head>
 <body>
-
+  <h1 style="text-align:center"><b>Client Management</b></h1>
+  <hr class="mb-4">.
 <div class="container-fluid">
   
   <div class="row sm">

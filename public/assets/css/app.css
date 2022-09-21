@@ -2646,19 +2646,16 @@ background: #dee2e6;
                     margin:-100px;
                 }
 
-                .submit_btn {
+                .submit_btn_btn {
                     padding: 8px;
-                    width: 44%;
+                    width: 36%;
                     margin-left: 240px;
                     border-radius: 10px;
+                    margin-left: -200px;
                 }
 
                 .btn_align {
                     margin-left: -480px;
-                }
-
-                .btn_sumbit {
-                    margin-left: -100px;
                 }
 
                 .box {
