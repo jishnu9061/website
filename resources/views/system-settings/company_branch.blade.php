@@ -11,7 +11,7 @@
 <style>
      body
         {
-          background-color: #f0e7ce;
+      
           /* font-family:  Arial, Helvetica, sans-serif; */
           margin-left:10px;
           margin-right:10px;

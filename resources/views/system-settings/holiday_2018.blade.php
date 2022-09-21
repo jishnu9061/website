@@ -13,7 +13,7 @@
   <style>
      body
         {
-          background-color: #f0e7ce;
+        
           /* font-family:  Arial, Helvetica, sans-serif; */
         }
         /* h2
