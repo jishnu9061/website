@@ -37,7 +37,7 @@
   
   
 
-<!-- vinu -->
+<!-- b -->
 <style> #icon {
 color: #1D1D50
 } 
@@ -55,6 +55,9 @@ color: #1D1D50
     
 </head>
 <body>
+
+
+  <div><br></div>
 
  <!-- ======= Header ======= -->
  {{-- <header id="header" class="header fixed-top d-flex align-items-center"> --}}
@@ -315,7 +318,10 @@ color: #1D1D50
   </ul>
 </nav><!-- End Icons Navigation --> --}}
 
-</header><!-- End Header -->
+{{-- </header><!-- End Header --> --}}
+
+
+
     <div id="app">
         <div id="sidebar" class="active">
             <div class="sidebar-wrapper active">
@@ -395,7 +401,7 @@ color: #1D1D50
 
                                 <li class="submenu-item has-sub " style="list-style:none;">
                                         <a id="sblm" href="{{url('client-index')}}" class='sidebar-link' >
-                                        <i  class="fa-regular fa-user" id="icon"></i>
+                                        <i  class="fas fa-chalkboard-teacher" id="icon"></i>
                                             <span > Client Management</span>
                                         </a>
                                 </li>
@@ -411,7 +417,7 @@ color: #1D1D50
                             @if(Auth::user()->role == 'hospitaladmin')
                             <li class="submenu-item has-sub " style="list-style:none;">
                                         <a href="{{url('file_managementindex')}}" class='sidebar-link'>
-                                        <i class="fa-regular fa-user" id="icon" style="font-weight: 300;"></i>
+                                        <i class="far fa-folder-open" id="icon" style="font-weight: 300;"></i>
                                             <span>File Management</span>
                                         </a>
                                 </li>
@@ -735,7 +741,7 @@ color: #1D1D50
                     @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="fa-regular fa-user"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="	fas fa-user-graduate"  style="font-weight: 300;"></i>
                                             <span>Client Deck</span>
                                     </a>
                                    
@@ -745,7 +751,7 @@ color: #1D1D50
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="fa-regular fa-user"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="fas fa-user-cog"  style="font-weight: 300;"></i>
                                             <span>Office Administrations</span>
                                     </a>
                                    
@@ -754,7 +760,7 @@ color: #1D1D50
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="fa-regular fa-user"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="fas fa-file-invoice-dollar"  style="font-weight: 300;"></i>
                                             <span>Accounting & Finance</span>
                                     </a>
                                    
@@ -764,7 +770,7 @@ color: #1D1D50
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="fa-regular fa-user"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="fa fa-cogs"  style="font-weight: 300;"></i>
                                             <span>Tools & ad ons</span>
                                     </a>
                                    
@@ -773,7 +779,7 @@ color: #1D1D50
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="fa-regular fa-user"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="fa fa-cog"  style="font-weight: 300;"></i>
                                             <span>System Settings</span>
                                     </a>
                                    
@@ -783,7 +789,7 @@ color: #1D1D50
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="fa-regular fa-user"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="far fa-file-alt"  style="font-weight: 300;"></i>
                                             <span>Report Generation</span>
                                     </a>
                                    
@@ -792,7 +798,7 @@ color: #1D1D50
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="fa-regular fa-user"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="fab fa-playstation"  style="font-weight: 300;"></i>
                                             <span>Practice Area</span>
                                     </a>
                                    
@@ -802,7 +808,7 @@ color: #1D1D50
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="fa-regular fa-user"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="far fa-sun"  style="font-weight: 300;"></i>
                                             <span>Perfomance</span>
                                     </a>
                                    
@@ -811,7 +817,7 @@ color: #1D1D50
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="fa-regular fa-user"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="fas fa-hand-holding"  style="font-weight: 300;"></i>
                                             <span>Requirement</span>
                                     </a>
                                    
@@ -821,7 +827,7 @@ color: #1D1D50
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="fa-regular fa-user"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="fas fa-layer-group"  style="font-weight: 300;"></i>
                                             <span>Petty Cash</span>
                                     </a>
                                    
@@ -830,7 +836,7 @@ color: #1D1D50
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="fa-regular fa-user"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="fas fa-piggy-bank"  style="font-weight: 300;"></i>
                                             <span>Store ,Inventory</span>
                                     </a>
                                    
@@ -840,7 +846,7 @@ color: #1D1D50
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="fa-regular fa-user"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="fas fa-coins"  style="font-weight: 300;"></i>
                                             <span>Fixed Asset</span>
                                     </a>
                                    
@@ -849,7 +855,7 @@ color: #1D1D50
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="fa-regular fa-user"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="as fa-user-circle"  style="font-weight: 300;"></i>
                                             <span>User Accounts</span>
                                     </a>
                                    
@@ -859,7 +865,7 @@ color: #1D1D50
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="fa-regular fa-user"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="fas fa-chart-pie"  style="font-weight: 300;"></i>
                                             <span>LPO Management</span>
                                     </a>
                                    
@@ -868,7 +874,7 @@ color: #1D1D50
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="fa-regular fa-user"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="fas fa-atom"  style="font-weight: 300;"></i>
                                             <span>E-Library</span>
                                     </a>
                                    

@@ -7,6 +7,9 @@
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+  
+  
+ 
 
       <title>Company Details</title>
       <!-- <link rel="stylesheet" href="assets/css/cstyle.css">  -->
@@ -54,7 +57,43 @@
 
 
 
+<body>
+  {{-- <div class="container">
+    <h2>Dropdowns</h2>
+    <p>The .dropdown class is used to indicate a dropdown menu.</p>
+    <p>Use the .dropdown-menu class to actually build the dropdown menu.</p>
+    <p>To open the dropdown menu, use a button or a link with a class of .dropdown-toggle and data-toggle="dropdown".</p>                                          
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+      </ul>
+    </div>
+  </div> --}}
 
+  <ul class='nav'>
+    <li class='active'>Home</li>
+    <li class='dropdown'>
+      <a class="dropdown-toggle" data-toggle="dropdown" href='#'>Personal asset loans</a>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#">asds</a></li>
+        <li class="divider"></li>
+      </ul>
+    </li>
+    <li>Payday loans</li>
+    <li>About</li>
+    <li>Contact</li>
+  </ul>
+
+  <script type="text/javascript" src="js/bootstrap/bootstrap-dropdown.js"></script>
+<script>
+     $(document).ready(function(){
+        $('.dropdown-toggle').dropdown()
+    });
+</script>
         
    
 <div class="py-5 text-center">
@@ -151,7 +190,26 @@
                                               <label for="username">Department</label>
                                                   <div class="input-group">
                                                       <div class="input-group-prepend"></div>
-                                                          <input type="password" class="form-control" name="Department" id="confirm_password" placeholder="Enter Department" required>
+
+
+
+
+                                                      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div role="separator" class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+
+
+ 
+
+
+    
+
+                                                          {{-- <input type="password" class="form-control" name="Department" id="confirm_password" placeholder="Enter Department" required> --}}
                                                       <div class="invalid-feedback" style="width: 100%;">
                                                         Department
                                                       </div>
@@ -235,7 +293,7 @@
                                         
                                             
                                                
-</body>
+
 
 </body>
 </html>
