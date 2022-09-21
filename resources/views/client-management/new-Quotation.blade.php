@@ -255,10 +255,10 @@ $('#price').prop('readonly', true);
                           
                         </div>
                           <div class="col-sm">
-                            <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Submit</button>
+                            <button type="submit" class="btn btn-primary submit_btn_btn">Submit</button>
 
                           
-                             <a href="{{url('client-index')}}"><button  class="btn btn-primary submit_btn btn_align">Back</button></a>
+                             <a href="{{url('client-index')}}"><button  class="btn btn-primary submit_btn btn_align" style="width:33%; margin-left:20px">Back</button></a>
 
                           </div>
                         </div>
