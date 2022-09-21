@@ -71,7 +71,7 @@
                     <option>East Africa Court</option>
                     <option>Small Claim Court</option>
                     <option>Others</option>
-                                </select>
+        </select>
                             </td>
                          </tr>
 
