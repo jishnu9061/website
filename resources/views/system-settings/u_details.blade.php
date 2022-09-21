@@ -190,18 +190,26 @@
                                               <label for="username">Department</label>
                                                   <div class="input-group">
                                                       <div class="input-group-prepend"></div>
+                                                      <select class="form-control" name="department">
+                                                        <option>select</option>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        
+                                                      </select>
 
 
 
 
-                                                      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                                                      {{-- <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Action</a>
       <a class="dropdown-item" href="#">Another action</a>
       <a class="dropdown-item" href="#">Something else here</a>
       <div role="separator" class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
+      <a class="dropdown-item" href="#">Separated link</a> --}}
+    {{-- </div> --}}
 
 
  
