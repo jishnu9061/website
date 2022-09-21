@@ -12,11 +12,10 @@
       <title>Company Details</title>
       <!-- <link rel="stylesheet" href="assets/css/cstyle.css">  -->
       <style>
-        body
+        /* body
         {
           background-color: #f0e7ce;
-          /* font-family:"Nunito"; */
-        }
+         } */
         label
       {
        
@@ -67,15 +66,15 @@
     transition: all 0.2s;
     outline: auto;
   }
-  h2
+  /* h2
     {
-    /* font-family:  Arial, Helvetica, sans-serif; */
+    
     font-size:large;
     font-weight:bold;
     color:rgb(13, 1, 56); 
     background-color:rgb(177, 127, 62);
     padding:15px;
-    }
+    } */
   /* form{
     background-color: #f0e7ce;
     padding-left:1px;
@@ -86,8 +85,10 @@
 </style>
 </head>
 <body>
-<h2>Edit Company Details</h2>
-  <form ><br><br> 
+<!-- <h2>Edit Company Details</h2> -->
+<h2 style="text-align:center; text-shadow: 2px 1px;">Edit Company Details</h2>
+    <hr class="mb-4">.
+  <form >
   
   	<!-- <div class="container">
     <form class="form-horizontal" action="/action_page.php"> -->
@@ -134,6 +135,9 @@
     </div>
 </form>
 <!-- </div> -->
+<form>
+ <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
+</form>
 
    </body>
 </html>

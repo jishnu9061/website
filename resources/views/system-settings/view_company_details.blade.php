@@ -1,12 +1,14 @@
 @extends('layouts.hmsmain')
 @section('content')
+<html>
+    <head>
 <style>
     .btn-width{
         width:10%;
     }
-    body{
+    /* body{
     background-color: #f0e7ce;
-    }
+    } */
 
     
         td, th {
@@ -21,11 +23,13 @@
             color:rgb(13, 1, 56);
          }
 </style>
+        </head>
 <div>
 
 
 </div>
 <br>
+<body>
 <div class="container">
     <h3 style="text-align:center">View Company Details</h3><br><br>
     <table class="table table-hover" style="border: 1px solid;  border-collapse: collapse;width: 95%;margin-left:25px;">
@@ -65,7 +69,9 @@
         </tbody>
     </table>
 </div>
-
-
+        </body>
+        <form>
+ <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
+</form>
 
 @endsection

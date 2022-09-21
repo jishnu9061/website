@@ -11,7 +11,7 @@
 <style>
      body
         {
-          background-color: #f0e7ce;
+      
           /* font-family:  Arial, Helvetica, sans-serif; */
           margin-left:10px;
           margin-right:10px;
@@ -26,16 +26,16 @@
             border-collapse: collapse;
     
         }
-        h2
+        /* h2
     {
-    /* font-family:  Arial, Helvetica, sans-serif; */
+  
     font-size:large;
     font-weight:bold;
     color:rgb(13, 1, 56); 
     background-color:rgb(177, 127, 62);
     padding:15px;
     
-    }
+    } */
         p{
           margin-left:25px;
         }
@@ -66,10 +66,12 @@
     </head>
     <body>
   
-        <h2>Company Branch</h2>
-       
+        <!-- <h2 >Company Branch</h2> -->
+        <h2 style="text-align:center; text-shadow: 2px 1px;">Company Branch</h2>
+        <a href="{{('add_company_branch')}}"><button class="btn btn-primary add-btn">Add Branch </button></a>
+  <hr class="mb-4">.
 
-    <a href="{{url('add_company_branch')}}"  class="btn btn-primary"style="color:rgb(238, 196, 105);background-color:rgb(29, 2, 129);" >Add Branch</a><br><br>
+    <!-- <a href="{{url('add_company_branch')}}"  class="btn btn-primary"style="color:rgb(238, 196, 105);background-color:rgb(29, 2, 129);" >Add Branch</a><br><br> -->
     <p>Total Result: 2</p>
     <table>
    
@@ -116,6 +118,10 @@
 <button class="btn btn-primary" style="width:42px;height:35px;background-color:rgb(177, 127, 62); border: 1px solid rgb(240, 205, 10);margin-left:1250px;
             color:rgb(13, 1, 56);text-align: center; ">Go</button>
          -->
+
+         <form>
+ <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
+</form>
 </body>
     </html>
     @endsection

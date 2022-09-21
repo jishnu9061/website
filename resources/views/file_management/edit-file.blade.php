@@ -258,47 +258,46 @@ $('#price').prop('readonly', true);
             </select>
           </div>
         </div>
-        </div>
-
-      
-    
-
-          
-          
-   
-
-          
-          
+      </div>   
 
     </div>
-    <br>
-    <div class="container">
-  <div class="row">
-    <div class="col-sm">
     
-    </div>
-    <div class="col-sm">
-    <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Save Changes</button>
-
+ 
+  
     
-    <button type="submit" class="btn btn-primary submit_btn btn_align">Back</button>
+    
+    
+    {{-- <div class="pt-3 d-inline-flex row">
 
-    </div>
+      <div>
+    <button type="submit" class="btn btn-primary submit_btn " >Save Changes</button>
   </div>
-</div>
-     
-    
-   
-          </div>
+  <div>
+    <button type="submit" class="btn btn-primary submit_btn  ">Back</button>
+  </div></div> --}}
 
-          
+    {{-- <button type="button" class="btn btn-primary btn-lg">Large button</button>
+<button type="button" class="btn btn-secondary btn-lg">Large button</button> --}}
+    {{-- btn_sumbit
+    btn_align --}} 
+  
 
 
+    <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
+      
+      <button type="submit" class="btn  submit_btn">Save Changes</button>
+      <button type="button" class="btn btn-primary submit_btn">Back</button>
+      
+    </div>
 
    </tbody>
 </table>
    </div>
 </div>
+
+
+
+
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
  $(function () {

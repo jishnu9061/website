@@ -91,7 +91,7 @@
 <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
                                 <span>User Management</span>
                             </a>
-                            <ul class="submenu" style=";"
+                            <ul class="submenu" style=";">
                                 <span>Admin</span>
                             </a>
                             <ul class="submenu" style=";">

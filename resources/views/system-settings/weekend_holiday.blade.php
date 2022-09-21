@@ -13,18 +13,18 @@
   <style>
      body
         {
-          background-color: #f0e7ce;
+          /* background-color: #f0e7ce; */
           /* font-family:  Arial, Helvetica, sans-serif; */
         }
-        h2
+        /* h2
         {
-            /* font-family:  Arial, Helvetica, sans-serif; */
+           
             font-size:large;
             font-weight:bold;
             color:rgb(13, 1, 56); 
             background-color:rgb(177, 127, 62);
             padding:15px;
-         }
+         } */
          table {
             /* font-family: arial, sans-serif; */
             border-collapse: collapse;
@@ -47,9 +47,14 @@
 </head>
 <body>
   <form>
-<h2>Weekend and Holidays</h2><br><br>
+<!-- <h2>Weekend and Holidays</h2><br><br>
+<a href="{{url('add_new_holiday')}}"  class="btn btn-primary" style="margin-top:0px;">Add New Holiday / Weekend Date</a>
+<p><a href="{{url('holiday_2017')}}"style="color:blue; font-size:x-small;">2017</a> | <a href="{{url('holiday_2018')}}"style="color:blue;font-size:x-small;">2018</a> | <a href="{{url('holiday_2019')}}"style="color:blue;font-size:x-small;">2019</a> | <a href="{{url('holiday_2020')}}"style="color:blue;font-size:x-small;">2020</a> | <a href="{{url('holiday_2021')}}"style="color:blue;font-size:x-small;">2021</a> | <a href="{{url('holiday_2022')}}"style="color:blue;font-size:x-small;">2022</a><br><br> -->
+
+<h2 class="text-center" style="color: #070344; text-shadow: 1px 2px;"><b>Weekend and Holidays</b></h2>
 <a href="{{url('add_new_holiday')}}"  class="btn btn-primary" style="margin-top:0px;">Add New Holiday / Weekend Date</a>
 <p><a href="{{url('holiday_2017')}}"style="color:blue; font-size:x-small;">2017</a> | <a href="{{url('holiday_2018')}}"style="color:blue;font-size:x-small;">2018</a> | <a href="{{url('holiday_2019')}}"style="color:blue;font-size:x-small;">2019</a> | <a href="{{url('holiday_2020')}}"style="color:blue;font-size:x-small;">2020</a> | <a href="{{url('holiday_2021')}}"style="color:blue;font-size:x-small;">2021</a> | <a href="{{url('holiday_2022')}}"style="color:blue;font-size:x-small;">2022</a><br><br>
+<hr class="mb-4">.
 <h3 style="color:rgb(177, 127, 62);font-size:large;font-weight:bold;text-align:center;">Weekend & Holiday Dates - 2022</h3>
 <table>
     <tr>
@@ -85,7 +90,9 @@
 
 </table><br><br>
 </form>
-
+<form>
+ <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
+</form>
     </body>
 </html>
 @endsection

@@ -34,7 +34,7 @@ class filemanagement extends Controller
         return view('file_management.template-category');
     }
 
-    //document temblates
+    //document temblate
 
     //file progress
 
@@ -67,6 +67,10 @@ class filemanagement extends Controller
         return view('file_management.file-action-hours');
     }
     //file progress
-
+    
+    public function u_details()
+    {
+        return view('system-settings.u_details');
+    }
 
 }

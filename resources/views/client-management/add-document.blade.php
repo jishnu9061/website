@@ -51,7 +51,7 @@ $('#price').prop('readonly', true);
                                 <label for="username">File Upload</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend"></div>
-                                    <input type="text" class="form-control" name="number" id="username" value="" placeholder="File" required>
+                                    <input type="file" class="form-control" name="number" id="username" value="" placeholder="File" required>
                                     <div class="invalid-feedback" style="width: 100%;">
                                         Name is required.
                                     </div>
