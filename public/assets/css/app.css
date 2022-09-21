@@ -330,6 +330,7 @@
                     width:20%;
                 }
 
+              
                
 
                 .client_btn{
@@ -1635,11 +1636,15 @@
                     border-radius: 10px;
                 }
 
+                #btn-btn_btn{
+                    width:44%;
+                    padding:20px;
+                    margin:-100px;
+                }
+
                 .submit_btn {
-                    color: rgb(255, 255, 255);
-                    background-color: #070344;
                     padding: 8px;
-                    width: 50%;
+                    width: 44%;
                     margin-left: 240px;
                     border-radius: 10px;
                 }
