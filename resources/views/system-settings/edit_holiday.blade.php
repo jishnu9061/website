@@ -20,21 +20,21 @@
 <style>
      body
         {
-          background-color: #f0e7ce;
+    
           margin-left:10px;
           margin-right:10px;
           padding-top:10px;
         }
-        h2
+        /* h2
         {
-    /* font-family:  Arial, Helvetica, sans-serif; */
+   
     font-size:large;
     font-weight:bold;
     color:rgb(13, 1, 56); 
     background-color:rgb(177, 127, 62);
     padding:15px;
     
-    }
+    } */
         .container{
             padding-top:20px;
             margin-top: 50px;
@@ -106,7 +106,9 @@ a.button4{
 
 </head>
 <body>
-<h2>Edit Holidays</h2><br><br>
+<!-- <h2>Edit Holidays</h2><br><br> -->
+<h2 style="text-align:center; text-shadow: 2px 1px;">Edit Holidays / Weekend Date</h2>
+    <hr class="mb-4">.
 <!-- <div class="container">
         <form action="#">
             <div class="form-group">
@@ -134,9 +136,9 @@ a.button4{
                     <td><input type="text"  id="day" name="day"value=""></td>
                 </tr>
                 <tr>
-                <td>Year:</td>
+                <!-- <td>Year:</td>
                     <td><input type="number"  id="year" name="year"value=""></td>
-                </tr>
+                </tr> -->
             </table><br><br> 
        
  <a href="something" class="button3">Save</a>
@@ -145,7 +147,9 @@ a.button4{
     </div>
     </form>
 
-   
+    <form>
+ <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
+</form>
     
     </body>
 </html>

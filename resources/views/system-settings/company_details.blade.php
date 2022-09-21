@@ -16,14 +16,14 @@
         {
           background-color: #f0e7ce;
         } */
-      h2
+      /* h2
       {
         font-size:large;
         font-weight:bold;
         color:rgb(13, 1, 56);
         background-color:rgb(177, 127, 62);
         padding:15px;
-      }
+      } */
       table {
             /* font-family: arial, sans-serif; */
             border-collapse: collapse;
@@ -44,12 +44,17 @@
          td{
             color:rgb(13, 1, 56);
          }
+     
       </style>
+ 
 </head>
 <body>
-<h2>Company Details</h2>
-       
-  <a href="{{url('add_company_details')}}"  class="btn btn-primary"style="color:rgb(238, 196, 105);background-color:rgb(29, 2, 129);" >Add Company</a><br><br>
+
+<h2 class="text-center" style="color: #070344; text-shadow: 1px 2px;"><b>Company Details</b></h2>
+  <!-- <a href="{{('add_company_details')}}"><button class="btn btn-primary"  style="background: #FFFBF4; color: #1D1D50;" >Add Company</button></a><br><br>
+  <hr class="mb-4">. -->
+  <a href="{{('add_company_details')}}"><button class="btn btn-primary add-btn">Add Company </button></a>
+  <hr class="mb-4">.
   <table>
    
   <tr>
@@ -81,7 +86,11 @@
 </table><br><br>
 
   <!-- <a href="{{url('edit_company_details')}}"  class="btn btn-primary"style="color:rgb(238, 196, 105);background-color:rgb(29, 2, 129);" >Edit</a><br><br> -->
-   
+ 
+
+<form>
+ <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
+</form>
 </body>
 </html>
 @endsection

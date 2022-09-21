@@ -19,14 +19,14 @@
         {
           background-color: white;
         }
-        h2
+        /* h2
         {
             font-size:large;
             font-weight:bold;
              color:rgb(13, 1, 56); 
              background-color:rgb(177, 127, 62);
              padding:15px;
-            }
+            } */
          .container{
          margin-left:0px;
          width:auto;
@@ -71,7 +71,10 @@
        </style>
    </head>
    <body>
-    <h2 class="text-center">Configuration Details</h2><br>
+    <!-- <h2 class="text-center">Configuration Details</h2><br> -->
+    <h2 style="text-align:center; text-shadow: 2px 1px;">Configuration Details</h2>
+      
+  <hr class="mb-4">.
     <div class="container">
         <div class="row">
             <div class="col-sm">
@@ -303,6 +306,9 @@
   
   <input type="button"value="Cancel" name="cancel"style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105); ">
         </div>
+        <form>
+ <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
+</form>
         </body>
 </html>
   @endsection

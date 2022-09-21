@@ -706,7 +706,11 @@ Route::any('company_branch','SystemSetup@branch')->name('company_branch');
 Route::any('add_company_branch','SystemSetup@addbranch')->name('add_company_branch');
 Route::any('edit_company_branch','SystemSetup@editbranch')->name('edit_company_branch');
 Route::any('configu_ration','SystemSetup@Configtn')->name('configu_ration');
-
+Route::any('courts','SystemSetup@courts')->name('courts');
+Route::any('add_court','SystemSetup@addcourt')->name('add_court');
+Route::any('edit_court','SystemSetup@editcourt')->name('edit_court');
+Route::any('add_court_category','SystemSetup@addcourtcategory')->name('add_court_category');
+Route::any('letter_types','SystemSetup@lettertype')->name('letter_types');
 
 
 // Route::any('company_details','SystemSetting@index')->name('company_details');
@@ -723,6 +727,8 @@ Route::any('configu_ration','SystemSetup@Configtn')->name('configu_ration');
 // Route::any('holiday_2020','Holidays@holiday2020')->name('holiday_2020');
 // Route::any('holiday_2021','Holidays@holiday2021')->name('holiday_2021');
 // Route::any('holiday_2022','Holidays@holiday2022')->name('holiday_2022');
+
+
 
 // Route::any('other_confgn','OtherConfigtn@index')->name('other_confgn');
 // Route::any('company_branch','OtherConfigtn@branch')->name('company_branch');
@@ -794,7 +800,11 @@ Route::any('add-new-file',"filemanagement@addnew")->name('add-new-file');
 Route::any('template-category',"filemanagement@template")->name('template-category');
 //vinu
 
+//beljin
 
+Route::any('/u_details',"filemanagement@u_details")->name('u_details');
+
+//beljin
 
 
 ?>

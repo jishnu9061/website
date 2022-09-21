@@ -93,6 +93,26 @@ class SystemSetup extends Controller
     {
         return view('system-settings.configu_ration');
     }
+    public function Courts()
+    {
+        return view('system-settings.courts');
+    }
+    public function addcourt()
+    {
+        return view('system-settings.add_court');
+    }
+    public function editcourt()
+    {
+        return view('system-settings.edit_court');
+    }
+    public function addcourtcategory()
+    {
+        return view('system-settings.add_court_category');
+    }
+    public function lettertype()
+    {
+        return view('system-settings.letter_types');
+    }
 
    
 
