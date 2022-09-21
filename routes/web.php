@@ -792,12 +792,30 @@ Route::any('new-Quotation','ClientManagement@newQuotation')->name('new-Quotation
 
 
 //vinu
+
+//manage files
 Route::any('file_managementindex',"filemanagement@index")->name('file_managementindex');
 Route::any('file-list',"filemanagement@view")->name('file-list');
 Route::any('edit-file',"filemanagement@edit")->name('edit-file');
 Route::any('add-new-file',"filemanagement@addnew")->name('add-new-file');
+//manage files
 
+//document templates
 Route::any('template-category',"filemanagement@template")->name('template-category');
+//document templates
+
+//file progress
+Route::any('add-file-progress',"filemanagement@addprogress")->name('add-file-progress');
+Route::any('edit-file-progress',"filemanagement@editprogress")->name('edit-file-progress');
+Route::any('progress-bringup',"filemanagement@progressbringup")->name('progress-bringup');
+Route::any('add-new-bringup',"filemanagement@addbringup")->name('add-new-bringup');
+
+
+
+Route::any('new-instructions',"filemanagement@newinstruction")->name('new-instructions');
+
+Route::any('file-action-hours',"filemanagement@fileactionhours")->name('file-action-hours');
+//file progress
 //vinu
 
 //beljin

@@ -14,59 +14,142 @@
 </head>
 
 <body>
-    <p style="margin-bottom:4%;"> <b>Manage file/ File List</b> </p>
-    <div class="col-sm">
-    <a href="{{url('file_managementindex')}}"><button type="submit" style=" height: 3rem; margin-left: 0%; width: 17%; margin-bottom: 13%; background-color:#acacb9;" >Back</button></a>
-    
-
-  </div>
     <div class="container">
-        <h3 class="text-center" style="color: #070344;"><b>File List</b></h3>
+        <h3 class="text-center" style="color: #070344;"><b>File Action Hours</b></h3>
        <br>
       
-       <div id="mydatatable_filter" class="dataTables_filter">
-        <label><b>Search:</b><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
-       </div>
-       <a href="{{url('add-new-file')}}"><button class="btn btn-primary add-btn">Open New Client File</button></a>
+       
+       
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
             <table class="table table-bordered" id="new-item">
                 <thead>
                     <tr>
-                        <th class="text-center">No</th>
-                        <th class="text-center">File No</th>
-                        <th class="text-center">Client</th>
-                        <th class="text-center">FileName</th>
-                        <th class="text-center">Date</br>Opened</th>
-                        <th class="text-center">Responsible</br>Advocate</th>
-                        <th class="text-center">Most</br>Recent</br>Progress</th>
-                        <th class="text-center">Date</br>Closed</th>
-                        <th class="text-center">File&Fee</br>Balances</th>
-                        <th class="text-center">Status</th>
-                        <th class="text-center">Action</th>
+                        <th class="text-center">Sl.No</th>
+                        <th class="text-center">User</th>
+                        <th class="text-center">Time Hour</th>
+                        <th class="text-center">Time Minutes</th>
+                        <th class="text-center">Change Out Rate</th>
+                        <th class="text-center">Edit</th>
+                        <th class="text-center">Status <input type="checkbox" name="" id=""> </th>
+                        
                     </tr>
                 </thead>
                 <tbody>
                         <tr id="data">
+                            <td  scope="row" class="text-center" ></td>
                             <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center">Edit</td>
+                            <td  scope="row" class="text-center" id="medicine_name_1">Active <input type="checkbox" name="" id=""></td>
+                        </tr>
+                </tbody>
+                </table>
+
+                <table class="table table-bordered" id="new-item">
+                <tbody>
+                        <tr id="data">
+                            <td  scope="row" class="text-center" style="width:55%;" >Total Hours Spend</td>
+                            <td  scope="row" class="text-center" ></td>
                             <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row"class="text-center"><a href=""><i  style="color:black;" class="fa fa-eye" aria-hidden="true"></i>
-                           <input type="hidden" value="" id="medicine_id_hidden" class="applicate" name="supplier_id_hidden">
-                            <a href="{{url('edit-file')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
-                            <a  onClick="return myFunction();" href="" style="color:black;"><i class="fas fa-trash-alt"></i></a></td>
+                            
                         </tr>
                 </tbody>
             </table>
-           
+            <div class="row">
+          <div class="col-md-3">
+           <div class="mb-1">
+          
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <select name="country" id="cars">
+                <option value="volvo">Activate</option>
+            </select>
+            <div class="invalid-feedback" style="width: 100%;">
+            Incorporation is required
+            </div>
+          </div>
+        </div>
+          </div>
+            <a href="{{url('')}}"><button style="margin-top:3%;" class="btn btn-primary add-btn">Go</button>
+        </a>
+
+
+
+       <div style="margin-top:4%;">
+        <p>Time Taken :</p>
+
+        <div class="row">
+            
+        <div class="col-md-4">
+            <div class="mb-1">
+          <label for="username">Name</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <select name="country" id="cars">
+                <option value="volvo"></option>
+            </select>
+          </div>
+        </div>
+        </div>
+        
+          
+
+        <div class="col-md-4">
+            <div class="mb-1">
+          <label for="username">Time in Hours</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <select name="country" id="cars">
+                <option value="volvo"></option>
+            </select>
+          </div>
+        </div>
+        </div>
+          <div class="col-md-4">
+           <div class="mb-1">
+          <label for="username">Time in Minutes</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <select name="country" id="cars">
+                <option value="volvo"></option>
+            </select>
+            <div class="invalid-feedback" style="width: 100%;">
+              Number is required.
+            </div>
+          </div>
+        </div>
+          </div>
+
+        </div>
+
+       </div>
+
+       <div class="container"  style="margin-top:4%;">
+  <div class="row">
+    <div class="col-sm">
+    
+    </div>
+    <div class="col-sm">
+    <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Print</button>
+
+    
+    <button type="submit" class="btn btn-primary submit_btn btn_align">Cancel</button>
+
+    </div>
+  </div>
+</div>
 
  <!-- The Modal -->
  <div class="modal fade" id="editmed">
