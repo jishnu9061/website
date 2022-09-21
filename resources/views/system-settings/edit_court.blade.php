@@ -59,7 +59,7 @@
                                 <td style="width:30%">Court Category:</td>
                                 <td> 
                                     <select type="text" value="" id="" name="category"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
-                                    <option>Select</option>
+                                    <option>select</option>
                                    
                     <option>Supreme Court</option>
                     <option>Court Of Appeal</option>
