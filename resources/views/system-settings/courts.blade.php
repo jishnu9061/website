@@ -20,14 +20,14 @@
         {
           background-color: white;
         }
-        h2
+        /* h2
         {
             font-size:large;
             font-weight:bold;
              color:rgb(13, 1, 56); 
              background-color:rgb(177, 127, 62);
              padding:15px;
-            }
+            } */
        
         
      
@@ -47,8 +47,11 @@ td:nth-child(odd) {
             </style>
    </head>
    <body>
-    <!-- <h2 >Court List</h2><br> -->
-    <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br>
+    <!-- <h2 >Court List</h2><br>
+    <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
+    <h2 style="text-align:center; text-shadow: 2px 1px;">Court List</h2>
+        <a href="{{('add_court')}}"><button class="btn btn-primary add-btn">Add Court</button></a>
+  <hr class="mb-4">.
     <!-- <div class="container"> -->
       <div class="mydiv">
              <table class="table" >
