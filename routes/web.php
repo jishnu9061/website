@@ -709,7 +709,8 @@ Route::any('configu_ration','SystemSetup@Configtn')->name('configu_ration');
 Route::any('courts','SystemSetup@courts')->name('courts');
 Route::any('add_court','SystemSetup@addcourt')->name('add_court');
 Route::any('edit_court','SystemSetup@editcourt')->name('edit_court');
-
+Route::any('add_court_category','SystemSetup@addcourtcategory')->name('add_court_category');
+Route::any('letter_types','SystemSetup@lettertype')->name('letter_types');
 
 
 // Route::any('company_details','SystemSetting@index')->name('company_details');

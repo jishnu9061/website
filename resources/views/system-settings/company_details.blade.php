@@ -51,7 +51,9 @@
 <body>
 
 <h2 class="text-center" style="color: #070344; text-shadow: 1px 2px;"><b>Company Details</b></h2>
-<a href="{{('add_company_details')}}"><button class="btn btn-primary add-btn">Add Company </button></a>
+  <!-- <a href="{{('add_company_details')}}"><button class="btn btn-primary"  style="background: #FFFBF4; color: #1D1D50;" >Add Company</button></a><br><br>
+  <hr class="mb-4">. -->
+  <a href="{{('add_company_details')}}"><button class="btn btn-primary add-btn">Add Company </button></a>
   <hr class="mb-4">.
   <table>
    
