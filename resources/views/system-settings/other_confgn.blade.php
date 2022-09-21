@@ -12,12 +12,14 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-  <h2>Other Configurations</h2>
+  <!-- <h2>Other Configurations</h2> -->
+  <h2 style="text-align:center; text-shadow: 2px 1px;">Other Configurations</h2>
+    <hr class="mb-4">.
     <style>
       body{
       background-color: #f0e7ce;
       }
-      h2
+      /* h2
     {
   
     font-size:large;
@@ -26,7 +28,7 @@
     background-color:rgb(177, 127, 62);
     padding:15px;
     
-    }
+    } */
       </style>
 </head>
 <body>

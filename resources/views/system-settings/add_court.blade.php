@@ -82,8 +82,10 @@
                         </tr>
             </table>
             <div class="class"style="text-align:center;">
-            <input  type="submit"value="Save" name="submit"style="background-color:rgb(13, 1, 56);color: white; ">
+            <a href="something"><input type="submit"value="Save" name="submit"style="background-color:rgb(13, 1, 56);color: white; "> </a>
             <input type="button"value="Close" name="close"style="background-color:red;color: white; ">
+
+            
     </div>
 
   

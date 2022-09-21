@@ -47,7 +47,7 @@ td:nth-child(odd) {
             </style>
    </head>
    <body>
-    <h2 >Court List</h2><br>
+    <!-- <h2 >Court List</h2><br> -->
     <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br>
     <!-- <div class="container"> -->
       <div class="mydiv">

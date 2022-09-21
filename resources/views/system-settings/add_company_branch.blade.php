@@ -25,16 +25,16 @@
           margin-right:10px;
           padding-top:10px;
         }
-        h2
+        /* h2
         {
-    /* font-family:  Arial, Helvetica, sans-serif; */
+  
     font-size:large;
     font-weight:bold;
     color:rgb(13, 1, 56); 
     background-color:rgb(177, 127, 62);
     padding:15px;
     
-    }
+    } */
         .container{
             padding-top:20px;
             margin-top: 50px;
@@ -97,8 +97,9 @@ a.button4{
 
 </head>
 <body>
-<h2>Add Company Branch</h2>
-
+<!-- <h2>Add Company Branch</h2> -->
+<h2 style="text-align:center; text-shadow: 2px 1px;">Add Company Branch</h2>
+    <hr class="mb-4">.
 <div class="container">
         <form action="#">
             <div class="form-group">
