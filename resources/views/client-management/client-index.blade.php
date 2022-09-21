@@ -14,7 +14,8 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 </head>
 <body>
-
+  <h1 style="text-align:center"><b>Client Management</b></h1>
+  <hr class="mb-4">.
 <div class="container-fluid">
   
   <div class="row sm">
@@ -24,7 +25,7 @@
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-3.png" alt=""> <a href="complaint-list"><button type="button" class="btn btn-primary btn_align_btn" > Complaint Registration</button></a></div>
   <div class="col-sm-4 " ><a><img class="logo_size" src="image\logo\icon-4.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > CRM</button></a></div>
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-8.png" alt=""><a href="{{url('client-pickup')}}"><button type="button" class="btn btn-primary btn_align_btn" >New Client Pickup</button></a></div>
-  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-2.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > New Quoation</button></a></div>
+  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-2.png" alt=""><a href="{{url('Quotation')}}"><button type="button" class="btn btn-primary btn_align_btn" > New Quotation</button></a></div>
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-2.png" alt=""><a href="{{url('follow-up')}}"><button type="button" class="btn btn-primary btn_align_btn" >Follow up</button></a></div>
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-6.png" alt=""> <a href="{{url('client-document')}}"><button type="button" class="btn btn-primary btn_align_btn" > Document Detials</button></a></div>
   

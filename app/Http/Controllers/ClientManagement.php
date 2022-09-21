@@ -152,4 +152,14 @@ class ClientManagement extends Controller
         return view('client-management.new-client-service');
     }
 
+
+    public function Quotation(){
+        return view('client-management.Quotation');
+    }
+
+
+    public function newQuotation(){
+        return view('client-management.new-Quotation');
+    }
+
 }
