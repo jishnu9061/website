@@ -24,14 +24,8 @@ $('#price').prop('readonly', true);
 });
 </script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-
-<div class="col-sm">
-    <a href="{{url('file-list')}}"><button type="submit" style=" height: 3rem; margin-left: 0%; width: 17%; margin-bottom: 13%; background-color:#acacb9;" >Back</button></a>
-    
-
-  </div>
     <div>
-    <h2>Open New Client File</h2>
+    <h2 style="text-align:center;">Edit File Action Hours</h2>
     <hr class="mb-4">.
 </div>
   </div>
@@ -41,235 +35,41 @@ $('#price').prop('readonly', true);
 
      <form method="post" action="" id="form">
 	      @csrf
-            <div class="row">
-            <div class="col-md-12">
-            <div class="mb-1">
-          <label for="username">Associate Handling</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
-          </div>
-        </div>
-        </div>
-        <div class="col-md-4">
-            <div class="mb-1">
-          <label for="username">Client</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
-          </div>
-        </div>
-        </div>
-        
-          
-
-        <div class="col-md-4">
-            <div class="mb-1">
-          <label for="username">File Type</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
-          </div>
-        </div>
-        </div>
-          <div class="col-md-4">
-           <div class="mb-1">
-          <label for="username">Opening Date</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-              <input type="date" class="form-control" name="number" id="username" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Number is required.
-            </div>
-          </div>
-        </div>
-          </div>
-
-        </div>
-        <br>
           <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-6">
            <div class="mb-1">
-          <label for="username">Client Ref.No(or Case No.)</label>
+          <label for="username">New Bring-up Date</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-              <input type="text" class="form-control" name="incorporation" id="age" >
+              <input type="date" class="form-control" name="incorporation" id="age" >
             <div class="invalid-feedback" style="width: 100%;">
             Incorporation is required
             </div>
           </div>
         </div>
           </div>
-
-          <div class="col-md-4">
-           <div class="mb-1">
-          <label for="username">Our File Ref.Number</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-              <input type="text" class="form-control" name="incorporation" id="age" >
-            <div class="invalid-feedback" style="width: 100%;">
-            Incorporation is required
-            </div>
-          </div>
-        </div>
-          </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="mb-1">
-          <label for="username">File Name / Subject</label>
+          <label for="username">Reminder Period(Days)</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-            <input type="text" class="form-control" name="telephone" id="confirm_password" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Telephone Number is required.
-            </div>
+            <input type="text" class="form-control" name="incorporation" id="age" >
           </div>
+        </div>
         </div>
         
-           
-          </div>
-        </div>
-         <div id="test" style="height:20px;"></div>
-          </div>
-        </div>
-        <div class="row">
-        <div class="col-md-4">
-            <div class="mb-1">
-          <label for="username">Approval Partner</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
-          </div>
-        </div>
-        </div>
-
-          <div class="col-md-4">
-            <div class="mb-1">
-          <label for="username">Customer Name</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <input type="text" class="form-control" name="email" id="age" >
-            <div class="invalid-feedback" style="width: 100%;">
-            Incorporation is required
-            </div>
-          </div>
-        </div>
-        </div>
-        <div class="col-md-4">
-            <div class="mb-1">
-          <label for="username">Customer Address</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <input type="password" class="form-control" name="website" id="confirm_password" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Telephone Number is required.
-            </div>
-          </div>
+         
+        
+        <div class="" style ="margin-top:3%;">
+        <h6>New Bring-up Date:</h6>
+        <div > <p>Florence</p> <p>Princes</p> </div>  
         </div>
         
-           
-          </div>
-        </div>
-        <br>
-        <div class="row">
-        <div class="col-md-4">
-           <div class="mb-1">
-          <label for="username">Customer Tel</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-              <input type="text" class="form-control" name="number" id="username" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Number is required.
-            </div>
-          </div>
-        </div>
-          </div>
-
-          <div class="col-md-4">
-           <div class="mb-1">
-          <label for="username">Customer E-mail</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-              <input type="text" class="form-control" name="number" id="username" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Number is required.
-            </div>
-          </div>
-        </div>
-          </div>
-          <div class="col-md-4">
-           <div class="mb-1">
-          <label for="username">Amount</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-              <input type="text" class="form-control" name="number" id="username" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Number is required.
-            </div>
-          </div>
-        </div>
-          </div>
-         <div id="test" style="height:20px;"></div>
-          </div>
-        </div>
-        <br>
-        <div class="row">
-        <div class="col-md-4">
-            <div class="mb-1">
-          <label for="username">Workflow</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
-          </div>
-        </div>
-        </div>
-
-      
-    
-
-          
-          
-   
-
-          
-          
+       
 
     </div>
     <br>
@@ -279,10 +79,10 @@ $('#price').prop('readonly', true);
     
     </div>
     <div class="col-sm">
-    <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Save Changes</button>
+    <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Add New Bringup</button>
 
     
-    <button type="submit" class="btn btn-primary submit_btn btn_align">Back</button>
+    <button type="submit" class="btn btn-primary submit_btn btn_align">Cancel</button>
 
     </div>
   </div>
@@ -545,26 +345,6 @@ $('#price').prop('readonly', true);
 </table>
    </div>
 </div>
-
-<div class="modal" id="my">
-          <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <div class="modal-body">
-                    <form action="">
-                      <div>
-                        <input type="text" name="type" class="form-control" placeholder="Country">
-                        <button class="btn btn-primary sub_btnn" type="submit" >submit</button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
  $(function () {
