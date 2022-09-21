@@ -114,6 +114,11 @@
     <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > Useful Links</button></a></div>
         </div>
 </div>
+
+<form>
+ <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
+</form>
+
 </body>
 </html>
   @endsection

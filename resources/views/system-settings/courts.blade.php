@@ -218,7 +218,9 @@ td:nth-child(odd) {
     <br>
     <br>
     </div>
-   
+    <form>
+ <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
+</form>
         </body>
 </html>
   @endsection
