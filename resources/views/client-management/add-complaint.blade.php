@@ -183,11 +183,8 @@ $('#price').prop('readonly', true);
                           
                         </div>
                           <div class="col-sm">
-                            <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Add Complaint</button>
-
-                          
-                             <button type="submit" class="btn btn-primary submit_btn btn_align">Cancel</button>
-
+                            <button type="submit" class="btn btn-primary submit_btn_btn">Add Complaint</button>
+                            <a href="{{route('client-index')}}" type="button" class="btn btn-primary " style="width:30%">Cancel</a>
                           </div>
                         </div>
                       </div>  
