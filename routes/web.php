@@ -683,56 +683,104 @@ Route::get('calendar-event', 'CalenderController@index')->name('calendar-event')
 Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents']);
 
 //Reshma
-Route::any('company_details','SystemSetting@index')->name('company_details');
-Route::any('add_company_details','SystemSetting@addcompany')->name('add_company_details');
-Route::any('edit_company_details','SystemSetting@editcompany')->name('edit_company_details');
-Route::any('view_company_details','SystemSetting@viewcompany')->name('view_company_details');
 
-Route::any('weekend_holiday','Holidays@index')->name('weekend_holiday');
-Route::any('add_new_holiday','Holidays@addholiday')->name('add_new_holiday');
-Route::any('edit_holiday','Holidays@editholiday')->name('edit_holiday');
-Route::any('holiday_2017','Holidays@holiday2017')->name('holiday_2017');
-Route::any('holiday_2018','Holidays@holiday2018')->name('holiday_2018');
-Route::any('holiday_2019','Holidays@holiday2019')->name('holiday_2019');
-Route::any('holiday_2020','Holidays@holiday2020')->name('holiday_2020');
-Route::any('holiday_2021','Holidays@holiday2021')->name('holiday_2021');
-Route::any('holiday_2022','Holidays@holiday2022')->name('holiday_2022');
+Route::any('system_setup','SystemSetup@index')->name('system_setup');
 
+Route::any('company_details','SystemSetup@company')->name('company_details');
+Route::any('add_company_details','SystemSetup@addcompany')->name('add_company_details');
+Route::any('edit_company_details','SystemSetup@editcompany')->name('edit_company_details');
+Route::any('view_company_details','SystemSetup@viewcompany')->name('view_company_details');
+
+Route::any('weekend_holiday','SystemSetup@holiday')->name('weekend_holiday');
+Route::any('add_new_holiday','SystemSetup@addholiday')->name('add_new_holiday');
+Route::any('edit_holiday','SystemSetup@editholiday')->name('edit_holiday');
+Route::any('holiday_2017','SystemSetup@holiday2017')->name('holiday_2017');
+Route::any('holiday_2018','SystemSetup@holiday2018')->name('holiday_2018');
+Route::any('holiday_2019','SystemSetup@holiday2019')->name('holiday_2019');
+Route::any('holiday_2020','SystemSetup@holiday2020')->name('holiday_2020');
+Route::any('holiday_2021','SystemSetup@holiday2021')->name('holiday_2021');
+Route::any('holiday_2022','SystemSetup@holiday2022')->name('holiday_2022');
+
+Route::any('other_confgn','SystemSetup@othrconftn')->name('other_confgn');
+Route::any('company_branch','SystemSetup@branch')->name('company_branch');
+Route::any('add_company_branch','SystemSetup@addbranch')->name('add_company_branch');
+Route::any('edit_company_branch','SystemSetup@editbranch')->name('edit_company_branch');
+Route::any('configu_ration','SystemSetup@Configtn')->name('configu_ration');
+Route::any('courts','SystemSetup@courts')->name('courts');
+Route::any('add_court','SystemSetup@addcourt')->name('add_court');
+Route::any('edit_court','SystemSetup@editcourt')->name('edit_court');
+
+
+
+// Route::any('company_details','SystemSetting@index')->name('company_details');
+// Route::any('add_company_details','SystemSetting@addcompany')->name('add_company_details');
+// Route::any('edit_company_details','SystemSetting@editcompany')->name('edit_company_details');
+// Route::any('view_company_details','SystemSetting@viewcompany')->name('view_company_details');
+
+// Route::any('weekend_holiday','Holidays@index')->name('weekend_holiday');
+// Route::any('add_new_holiday','Holidays@addholiday')->name('add_new_holiday');
+// Route::any('edit_holiday','Holidays@editholiday')->name('edit_holiday');
+// Route::any('holiday_2017','Holidays@holiday2017')->name('holiday_2017');
+// Route::any('holiday_2018','Holidays@holiday2018')->name('holiday_2018');
+// Route::any('holiday_2019','Holidays@holiday2019')->name('holiday_2019');
+// Route::any('holiday_2020','Holidays@holiday2020')->name('holiday_2020');
+// Route::any('holiday_2021','Holidays@holiday2021')->name('holiday_2021');
+// Route::any('holiday_2022','Holidays@holiday2022')->name('holiday_2022');
 
 
 
 // Route::any('other_confgn','OtherConfigtn@index')->name('other_confgn');
-// Route::any('other_confgn','OtherConfigtn@index')->name('other_confgn')
 // Route::any('company_branch','OtherConfigtn@branch')->name('company_branch');
 // Route::any('add_company_branch','OtherConfigtn@addbranch')->name('add_company_branch');
 // Route::any('edit_company_branch','OtherConfigtn@editbranch')->name('edit_company_branch');
-Route::any('company_branch','CompanyBranch@index')->name('company_branch');
-Route::any('add_company_branch','CompanyBranch@addbranch')->name('add_company_branch');
-Route::any('edit_company_branch','CompanyBranch@editbranch')->name('edit_company_branch');
-Route::any('company_branch','CompanyBranch@index')->name('company_branch');
+// Route::any('configu_ration','OtherConfigtn@Configtn')->name('configu_ration');
 
-Route::any('configu_ration','Configuration@index')->name('configu_ration');
+// Route::any('company_branch','CompanyBranch@index')->name('company_branch');
+// Route::any('add_company_branch','CompanyBranch@addbranch')->name('add_company_branch');
+// Route::any('edit_company_branch','CompanyBranch@editbranch')->name('edit_company_branch');
+// Route::any('company_branch','CompanyBranch@index')->name('company_branch');
+
+//Route::any('configu_ration','Configuration@index')->name('configu_ration');
+
 //Reshma
 
 
 //mugunth
+
+//Client-list
 Route::any('add_newclient',"ClientManagement@create")->name('add_newclient');
 Route::any('client_list','ClientManagement@view')->name('client_list');
 Route::any('edit_client','ClientManagement@edit')->name('edit_client');
 Route::any('view-client','ClientManagement@show')->name('view-client');
 Route::any('client-index',"ClientManagement@index")->name('client-index');
-//Client-List
+//end Client-List
 
 //Client-Documents
 Route::any('client-document','ClientManagement@document')->name('client-document');
 Route::any('add-document','ClientManagement@addDocument')->name('add-document');
 Route::any('view-document','ClientManagement@viewDocument')->name('view-document');
-//Client-Documents
+//end Client-Documents
+
 //Client-Pickup
 Route::any('client-pickup','ClientManagement@clientPickup')->name('client-pickup');
 Route::any('add-pickup','ClientManagement@addPickups')->name('add-pickup');
 Route::any('view-pickup','ClientManagement@viewPickups')->name('view-pickup');
 //Client-Pickup
+//complaint
+Route::any('complaint-list','ClientManagement@complaintList')->name('complaint-list');
+Route::any('add-Complaint','ClientManagement@addComplaint')->name('add-Complaint');
+//end complaint
+
+//Follow Up
+Route::any('follow-up','ClientManagement@followup')->name('follow-up');
+Route::any('add-follow','ClientManagement@addFollow')->name('add-follow');
+//end Follow Up
+
+//service
+Route::any('client-service','ClientManagement@service')->name('client-service');
+Route::any('add-service','ClientManagement@addService')->name('add-service');
+//end service
+
 
 //mugunth
 

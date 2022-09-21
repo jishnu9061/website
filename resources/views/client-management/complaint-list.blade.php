@@ -15,47 +15,49 @@
 
 <body>
     <div class="container">
-        <h3 class="text-center" style="color: #070344; text-shadow: 1px 2px;"><b>Client List</b></h3>
+        <h1  style="color: #070344; text-shadow: 1px 2px; text-align:center;"><b>Complaint Register</b></h1>
+        <div class="container mt-5">
+        <a href="{{url('add-Complaint')}}"><button type="button" class="btn btn-primary complaint_btn" > Add New Complaint</button></a>
+        </div>
+        <hr class="mb-4">.
+        <h3  style="color: #070344; text-shadow: 1px 2px; text-align:center;"><b>Clients Complaint</b></h3>
        <br>
+     
       
-       <div id="mydatatable_filter" class="dataTables_filter">
-        <label><b>Search:</b><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
-       </div>
-       <a href="{{('add_newclient')}}"><button class="btn btn-primary add-btn">Add Client</button></a>
-       <hr class="mb-4">.
-       
-<div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
             <table class="table table-bordered" id="new-item">
                 <thead>
                     <tr>
-                        <th class="text-center"> No</th>
-                        <th class="text-center"> Client No</th>
-                        <th class="text-center">Client</th>
-                        <th class="text-center">Email Address</th>
-                        <th class="text-center">Services Offered</th>
+                        <th class="text-center">No</th>
+                        <th class="text-center">Registered Date</th>
+                        <th class="text-center"> Client</th>
+                        <th class="text-center">Files</th>
+                        <th class="text-center">Customer Institution</th>
+                        <th class="text-center">Contact</th>
+                        <th class="text-center">Complaint Description</th>
+                        <th class="text-center">Action Panel</th>
+                        <th class="text-center">advocate Handling</th>
                         <th class="text-center">Status</th>
-                        <th class="text-center">Add Documents</th>
-                        <th class="text-center">VIew</th>
-                        <th class="text-center">Edit</th>
-                        <th class="text-center">Delete</th>
+                        <th class="text-center">Action</th>
+                       
                     </tr>
                 </thead>
                 <tbody>
                         <tr id="data">
-                            <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row"class="text-center"><a href="{{url('view-client')}}">
-                            <a href="{{url('add-document')}}"><button class="btn btn-primary document_btn">Add Documents</button></a></td>
-                           <td><a href="{{url('view-client')}}"><i style="color:black;" class="fa fa-eye" aria-hidden="true"></i></td></a>
-                            <td><a href="{{url('edit_client')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td>
-                            <td><a href=""><i style="color:black;" class="fa fa-trash" aria-hidden="true"></i></td>
-                            
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row"class="text-center"><a href=""><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
+                           <input type="hidden" value="" id="medicine_id_hidden" class="applicate" name="supplier_id_hidden">
+
                         </tr>
                 </tbody>
             </table>

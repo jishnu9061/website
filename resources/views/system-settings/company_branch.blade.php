@@ -66,7 +66,7 @@
     </head>
     <body>
   
-        <h2>Company Branch</h2>
+        <h2 >Company Branch</h2>
        
 
     <a href="{{url('add_company_branch')}}"  class="btn btn-primary"style="color:rgb(238, 196, 105);background-color:rgb(29, 2, 129);" >Add Branch</a><br><br>

@@ -429,6 +429,53 @@ color: #1D1D50
 
                                 
 
+                                <li class="submenu-item " style="list-style:none;">
+                                    <a href="{{url('system_setup')}}" class='sidebar-link'>
+                                        <i class="fa fa-gear" id="icon"></i>
+                                            <span>System Setup</span>
+                                    </a>
+                            </li>
+                                    <!-- <ul class="submenu">
+
+                                    <li class="submenu-item ">
+                                        <a href="{{url('system_setup')}}" class='sidebar-link'>
+                                            <span id="subm">Setup</span>
+                                        </a>
+                                    </li>
+
+                                   
+                                    <li class="submenu-item ">
+                                        <a href="{{url('company_details')}}" class='sidebar-link'>
+                                            <span id="subm">Company</span>
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="submenu-item ">
+                                        <a href="{{url('weekend_holiday')}}" class='sidebar-link'>
+                                            <span id="subm">Holidays</span>
+                                        </a>
+                                    </li> -->
+
+                                    <!-- <li class="submenu-item ">
+                                        <a href="{{url('configu_ration')}}" class='sidebar-link'>
+                                            <span id="subm">Configurations</span>
+                                        </a>
+                                    </li> -->
+
+                                     <!-- <li class="submenu-item ">
+                                        <a href="{{url('other_confgn')}}" class='sidebar-link'>
+                                            <span id="subm">Other Configurations</span>
+                                        </a>
+                                    </li> -->
+
+                                    <!-- <li class="submenu-item ">
+                                        <a href="{{url('company_branch')}}" class='sidebar-link'>
+                                            <span id="subm">Company Branch</span>
+                                        </a>
+                                    </li> -->
+                                   
+                                    <!-- </ul>
+                                </li> -->
 
 
                                 <li class="sidebar-item  has-sub">

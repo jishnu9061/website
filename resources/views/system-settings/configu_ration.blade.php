@@ -31,37 +31,19 @@
          margin-left:0px;
          width:auto;
          border:1px solid black;
-         height:2000px;
+         height:100%;
          }
-         .container1{
-         margin-left:2px;
-         margin-top:6px;
-         width:400px;
-         background-color:#f0e7ce; 
-         height:400px;
-         }
+        
          .col-sm
          {
         margin-left:2px;
          margin-top:6px;
          width:400px;
-         background-color:#f0e7ce; 
-         height:300px;
+         /* background-color:#f0e7ce;  */
+         height:350px;
          }
-         .container2{
-        margin-left:500px;
-        margin-bottom:1000px;
-         width:400px;
-         background-color:#f0e7ce; 
-         height:400px;
-         }
-         .container3{
-        margin-left:500px;
-        margin-bottom:1000px;
-         width:400px;
-         background-color:#f0e7ce; 
-         height:250px;
-         }
+         
+         
          h3
         {
             font-size:small;
@@ -74,57 +56,270 @@
             form{
                 margin-left:4px;
             }
+            table{
+                background-color:#f0e7ce; 
+                border:hidden;
+                font-size:small;
+                color:black;
+            
+            }
+           th,td,tr{
+            border:hidden;
+            color:black;
+
+           }
        </style>
    </head>
    <body>
-    <h2>Configuration Details</h2>
-
+    <h2 class="text-center">Configuration Details</h2><br>
     <div class="container">
-  <div class="row">
-    <div class="col-sm">
-     <h3> Appearences:</h3>
-      <label for="logo_width"style=" color:black;margin-left:2px;font-size:x-small; width:150px;">Logo Width:</label>
-      <input type="text"  id="lwidth" name="lwidth"value=""style="width:150px;height:20px;">
-      
-      <label for="logo_height"style="color:black;margin-left:2px;font-size:x-small; width:150px;">Logo Height:</label>
-      <input type="text"  id="lheight" name="lheight"value=""style="width:150px;height:20px;">
-
-      <label for="c_stsmp_height"style="color:black;margin-left:2px;font-size:x-small; width:150px;">Company Stamp Height:</label>
-      <input type="text"  id="csheight" name="csheight"value=""style="width:150px;height:20px;">
-
-      <label for="c_stsmp_width"style="color:black;margin-left:2px;font-size:x-small; width:150px;">Company Stamp Width:</label>
-      <input type="text"  id="cswidth" name="cswidth"value=""style="width:150px;height:20px;">
-
-      <label for="c_stsmp_width"style="color:black;margin-left:2px;font-size:x-small; width:150px;">Company Stamp Width:</label>
-      <input type="text"  id="cswidth" name="cswidth"value=""style="width:150px;height:20px;">
-
-      <label for="background_color"style="color:black;margin-left:2px;font-size:x-small; width:150px;">Background Color:</label>
-      <input type="text"  id="bcolor" name="bcolor"value=""style="width:150px;height:20px;">
-
-      <label for="client_number_method"style="color:black;margin-left:2px;font-size:x-small; width:150px;">Client Numbering Method:</label>
-      <select style="width:150px;height:20px;color:black;font-size:x-small;"type="text" value="" id="cnummethd" name="cnummethd">
-      <option>Select</option>
-      <option>Auto Numbering</option>
-    </select>
-    
-    <label for="file_apprvl_method"style="color:black;margin-left:2px;font-size:x-small; width:150px;">File Approval Method:</label>
-    <select style="width:150px;height:20px;color:black;font-size:x-small;"type="text" value="" id="famethd" name="famethod">
+        <div class="row">
+            <div class="col-sm">
+                <h3> Appearences:</h3>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td style="width:30%">Logo Width:</td>
+                            <td><input type="text"  id="" name="lwidth"value=""style="width:100%"></td>
+                        </tr>
+                        <tr>
+                            <td style="width:30%">Logo Height:</td>
+                            <td> <input type="text"  id="" name="lheight"value=""style="width:100%"></td>
+                        </tr>
+                        <tr>
+                            <td style="width:30%">Company Stamp Height:</td>
+                            <td>  <input type="text"  id="" name="csheight"value=""style="width:100%"></td>
+                        </tr>
+                        <tr>
+                            <td style="width:30%">Company Stamp Width:</td>
+                             <td><input type="text"  id="" name="cswidth"value=""style="width:100%"></td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%">Background Color:</td>
+                                <td><input type="text"  id="" name="bcolor"value=""style="width:100%"></td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%">Client Numbering Method:</td>
+                                <td> 
+                                    <select type="text" value="" id="" name="cnmethod"style="width:100%">
+                                    <option>Select</option>
+                                    <option>Auto Numbering</option>
+                                    <option>...</option>
+                                </select>
+                            </td>
+                         </tr>
+                         <tr>
+                            <td style="width:30%">File Approval Method:</td>
+                            <td> 
+                                <select type="text" value="" id="" name="fam"style="width:100%">
+                                <option>Select</option>
+                                <option>Automatic Approval</option>
+                                <option>..</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:30%">Branch Option:</td>
+                        <td> 
+                            <select type="text" value="" id="" name="boptn"style="width:100%">
+                            <option>Select</option>
+                            <option>Branches Dependent</option>
+                            <option>...</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:30%">Instruction Approval Option:</td>
+                    <td> 
+                        <select type="text" value="" id="" name="iao"style="width:100%">
+                        <option>Select</option>
+                        <option>Approve All Instruction</option>
+                        <option>...</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="col-sm">
+     <h3>Client Portal:</h3>
+      <table class="table">
+        <tbody>
+          
+        <tr>
+            <td style="width:30%">Client Portal Logo Area Background Color:</td>
+            <td><input type="text"  id="" name="clbcolor"value=""style="width:100%"></td>
+        </tr>
+        
+        <tr>
+            <td style="width:30%">Client Portal Header Background Color:</td>
+            <td> <input type="text"  id="" name="chbcolor"value=""style="width:100%"></td>
+        </tr>
+        <tr>
+            <td style="width:30%">Show File Process (Client Portal):</td>
+            <td> 
+             <select type="text" value="" id="" name="fileprocess"style="width:100%">
     <option>Select</option>
-    <option>Automatic Approval</option>
-     </select>
-     <label for="branch_option"style="color:black;margin-left:2px;font-size:x-small; width:150px;">Branch Option:</label>
-     <select style="width:150px;height:20px;color:black;font-size:x-small;"type="text" value="" id="boption" name="boption">
-     <option>Select</option>
-     <option>Branches Dependent</option>
+    <option>Yes</option>
+    <option>No</option>
     </select>
-    <label for="instnappoptn"style="color:black;margin-left:2px;font-size:x-small; width:150px;">Instruction Approval Option:</label>
-    <select style="width:150px;height:20px;color:black;font-size:x-small;"type="text" value="" id="inappoptn" name="inappoptn">
+</td>
+        </tr>
+
+        <tr>
+            <td style="width:30%">Show Invoices (Client Portal):</td>
+            <td> 
+             <select type="text" value="" id="" name="invoices"style="width:100%">
     <option>Select</option>
-    <option>Approve All Instructions</option>
-</select>
+    <option>Yes</option>
+    <option>No</option>
+    </select>
+</td>
+        </tr>
+
+        <tr>
+            <td style="width:30%">Show Payments (Client Portal):</td>
+            <td> 
+             <select type="text" value="" id="" name="payment"style="width:100%">
+    <option>Select</option>
+    <option>Yes</option>
+    <option>No</option>
+    </select>
+</td>
+        </tr>
+
+        <tr>
+            <td style="width:30%">Show Documents (Client Portal):</td>
+            <td> 
+             <select type="text" value="" id="" name="documents"style="width:100%">
+    <option>Select</option>
+    <option>Yes</option>
+    <option>No</option>
+    </select>
+</td>
+        </tr>
+
+        <tr>
+            <td style="width:30%">Approve File Progress for Client Portal:</td>
+            <td> 
+             <select type="text" value="" id="" name="filecportal"style="width:100%">
+    <option>Select</option>
+    <option>Yes</option>
+    <option>No</option>
+    </select>
+</td>
+        </tr>
+
+        <tr>
+            <td style="width:30%">Show Other Associate Coloumn:</td>
+            <td> 
+             <select type="text" value="" id="" name="acoloumn"style="width:100%">
+    <option>Select</option>
+    <option>Yes</option>
+    <option>No</option>
+    </select>
+</td>
+        </tr>
+
+         </tbody>
+         
+      </table> 
+     
         </div>
 
-<div class="col-sm">
+        </div>
+
+<br>
+<br>
+<br>
+<br>        
+<br>
+<br>
+
+<div class="row">
+    <div class="col-sm">
+     <h3>Mail Configurations:</h3>
+     <table class="table">
+        <tbody>
+          
+        <tr>
+            <td style="width:30%">Mail Protocol:</td>
+            <td> <select type="text" value="" id="" name="mprotocol"style="width:100%">
+    <option>Select</option>
+    <option>STMP</option>
+    <option>...</option>
+    </select></td>
+        </tr>
+          
+        <tr>
+            <td style="width:30%">SMPT Server Address:</td>
+            <td><input type="text"  id="" name="saddress"value=""style="width:100%"></td>
+        </tr>
+
+          <tr>
+            <td style="width:30%">SMPT Port Number:</td>
+            <td><input type="number"  id="" name="pnum"value=""style="width:100%"></td>
+        </tr>
+          
+        <tr>
+            <td style="width:30%">STMP Authentication:</td>
+            <td>   <select type="text" value="" id="" name="sauthntictn"style="width:100%">
+    <option>Select</option>
+    <option>True</option>
+    <option>...</option>
+    </select></td>
+        </tr>
+            
+        <tr>
+            <td style="width:30%">SMTP Secure:</td>
+            <td>   <select type="text" value="" id="" name="ssecure"style="width:100%">
+    <option>Select</option>
+    <option>TSL</option>
+    <option>...</option>
+    </select></td>
+        </tr>
+
+       
+        </tbody>
+      </table>
+        </div>
+      <br>
+
+     
+      
+    <div class="col-sm">
+     <h3>Invoice:</h3>
+      <table class="table">
+        <tbody>
+          
+       
+    </tbody>
+      </table> 
+
+        </div>
+        </div>
+        
+        <input  type="submit"value="Update" name="Submit"style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105); ">
+  
+  <input type="button"value="Cancel" name="cancel"style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105); ">
+        </div>
+        </body>
+</html>
+  @endsection
+      
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--<div class="col-sm">
     <h3>Client Portal:</h3>
     <label for="cp_logo"style="color:black;margin-left:2px;font-size:x-small; width:200px;">Client Portal Logo Area Background Color:</label>
     <input type="text"  id="cplogo" name="cplogo"value=""style="width:150px;height:20px;">
@@ -146,14 +341,14 @@
     <option>No</option>
     </select>
 
-    <label for="payments"style="color:black;;margin-left:2px;font-size:x-small; width:200px;">Show Payments (Client Portal)</label>
+    <label for="payments"style="color:black;;margin-left:2px;font-size:x-small; width:200px;">Show Payments (Client Portal):</label>
     <select style="width:150px;height:20px;color:black;font-size:x-small;"type="text" value="" id="payments" name="payments">
     <option>Select</option>
     <option>Yes</option>
     <option>No</option>
     </select>
     
-    <label for="documents"style="color:black;margin-left:2px;font-size:x-small; width:200px;">Show Documents (Client Portal)</label>
+    <label for="documents"style="color:black;margin-left:2px;font-size:x-small; width:200px;">Show Documents (Client Portal):</label>
     <select style="width:150px;height:20px;color:black;font-size:x-small;"type="text" value="" id="documents" name="documents">
     <option>Select</option>
     <option>Yes</option>
@@ -173,9 +368,9 @@
     <option>Yes</option>
     <option>No</option>
     </select>
-</div>
+</div> 
 
-    <div class="col-sm">
+   <div class="col-sm">
     <h3>Mail Configuration:</h3>
     
     <label for="mail_portal"style="color:black;margin-left:2px;font-size:x-small; width:150px;">Mail Protocol:</label>
@@ -201,12 +396,39 @@
     <option>Select</option>
     <option>TSL</option>
 </select>
-</div>
+</div> 
   </div>
 
+  <div class="row">
+  <div class="col-sm">
+    <h3>Mail Configuration:</h3>
     
-   </body>
-</html>
-  @endsection
+    <label for="mail_portal"style="color:black;margin-left:2px;font-size:x-small; width:150px;">Mail Protocol:</label>
+    <select style="width:200px;height:20px;color:black;font-size:x-small;"type="text" value="" id="mportal" name="mportal">
+    <option>Select</option>
+     <option>STMP</option>
+     </select>
+
+     <label for="server_address"style="color:black;margin-left:2px;font-size:x-small; width:150px;">SMPT Server Address:</label>
+     <input type="email"  id="seraddress" name="seraddres"value=""style="width:200px;height:20px;">
+        
+     <label for="port_number"style="color:black;margin-left:2px;font-size:x-small; width:150px;">SMPT Port Number:</label>
+     <input type="number"  id="portnum" name="portnum"value=""style="width:200px;height:20px;">
+     
+     <label for="authentication"style="color:black;margin-left:2px;font-size:x-small; width:150px;">STMP Authentication:</label>
+     <select style="width:200px;height:20px;color:black;font-size:x-small;"type="text" value="" id="authentication" name="authentication">
+     <option>Select</option>
+     <option>True</option>
+    </select>
+    
+    <label for="Secure"style="color:black;margin-left:2px;font-size:x-small; width:150px;">SMTP Secure:</label>
+    <select style="width:200px;height:20px;color:black;font-size:x-small;"type="text" value="" id="secure" name="secure">
+    <option>Select</option>
+    <option>TSL</option>
+</select>
+</div> 
+  </div> -->
+    
+
 
    

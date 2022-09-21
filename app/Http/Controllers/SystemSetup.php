@@ -4,20 +4,79 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class OtherConfigtn extends Controller
+class SystemSetup extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
+ 
+        public function index()
+    {
+       return view('system-settings.system_setup');
+     
+    }
+    public function company()
+    {
+       return view('system-settings.company_details');
+     
+    }
+    public function addcompany()
+    {
+       return view('system-settings.add_company_details');
+     
+    }
+    public function editcompany()
+    {
+       return view('system-settings.edit_company_details');
+     
+    }
+    public function viewcompany()
+    {
+       return view('system-settings.view_company_details');
+     
+    }
+    public function holiday()
+    {
+        return view('system-settings.weekend_holiday');
+    }
+    public function addholiday()
+    {
+        return view('system-settings.add_new_holiday');
+    }
+    public function holiday2017()
+    {
+        return view('system-settings.holiday_2017');
+    }
+    public function holiday2018()
+    {
+        return view('system-settings.holiday_2018');
+    }
+    public function holiday2019()
+    {
+        return view('system-settings.holiday_2019');
+    }
+    public function holiday2020()
+    {
+        return view('system-settings.holiday_2020');
+    }
+    public function holiday2021()
+    {
+        return view('system-settings.holiday_2021');
+    }
+    public function holiday2022()
+    {
+        return view('system-settings.holiday_2022');
+    }
+    public function editholiday()
+    {
+        return view('system-settings.edit_holiday');
+    }
     public function othrconftn()
     {
         return view('system-settings.other_confgn');
     }
-   
-
     public function branch()
     {
         return view('system-settings.company_branch');
@@ -34,9 +93,22 @@ class OtherConfigtn extends Controller
     {
         return view('system-settings.configu_ration');
     }
+    public function Courts()
+    {
+        return view('system-settings.courts');
+    }
+    public function addcourt()
+    {
+        return view('system-settings.add_court');
+    }
+    public function editcourt()
+    {
+        return view('system-settings.edit_court');
+    }
 
-    
-    
+   
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -103,5 +175,4 @@ class OtherConfigtn extends Controller
     {
         //
     }
-
 }
