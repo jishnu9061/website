@@ -162,4 +162,9 @@ class ClientManagement extends Controller
         return view('client-management.new-Quotation');
     }
 
+
+    public function editQuotation(){
+        return view('client-management.edit-Quotation');
+    }
+
 }

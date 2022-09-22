@@ -785,6 +785,7 @@ Route::any('add-service','ClientManagement@addService')->name('add-service');
 //Quotation
 Route::any('Quotation','ClientManagement@Quotation')->name('Quotation');
 Route::any('new-Quotation','ClientManagement@newQuotation')->name('new-Quotation');
+Route::any('edit-Quotation','ClientManagement@editQuotation')->name('edit-Quotation');
 //end Quotation
 
 //mugunth
