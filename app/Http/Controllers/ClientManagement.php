@@ -133,6 +133,11 @@ class ClientManagement extends Controller
     }
 
 
+    public function editComplaint(){
+        return view('client-management.edit-complaint');
+    }
+
+
     public function followup(){
         return view('client-management.follow-up');
     }
@@ -140,6 +145,11 @@ class ClientManagement extends Controller
 
     public function addFollow(){
         return view('client-management.add-followup');
+    }
+
+
+    public function editFollow(){
+        return view('client-management.edit-followup');
     }
 
 
@@ -166,5 +176,21 @@ class ClientManagement extends Controller
     public function editQuotation(){
         return view('client-management.edit-Quotation');
     }
+
+
+    public function customer(){
+        return view('client-management.customer-registration');
+    }
+
+
+    public function addCustomer(){
+        return view('client-management.add-customer');
+    }
+
+
+    public function editCustomer(){
+        return view('client-management.edit-customer');
+    }
+
 
 }

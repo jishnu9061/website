@@ -770,11 +770,13 @@ Route::any('view-pickup','ClientManagement@viewPickups')->name('view-pickup');
 //complaint
 Route::any('complaint-list','ClientManagement@complaintList')->name('complaint-list');
 Route::any('add-Complaint','ClientManagement@addComplaint')->name('add-Complaint');
+Route::any('edit-Complaint','ClientManagement@editComplaint')->name('edit-Complaint');
 //end complaint
 
 //Follow Up
 Route::any('follow-up','ClientManagement@followup')->name('follow-up');
 Route::any('add-follow','ClientManagement@addFollow')->name('add-follow');
+Route::any('edit-follow','ClientManagement@editFollow')->name('edit-follow');
 //end Follow Up
 
 //service
@@ -787,6 +789,12 @@ Route::any('Quotation','ClientManagement@Quotation')->name('Quotation');
 Route::any('new-Quotation','ClientManagement@newQuotation')->name('new-Quotation');
 Route::any('edit-Quotation','ClientManagement@editQuotation')->name('edit-Quotation');
 //end Quotation
+
+//customer-registration
+Route::any('customer-registration','ClientManagement@customer')->name('customer-registration');
+Route::any('add-customer','ClientManagement@addCustomer')->name('add-customer');
+Route::any('edit-customer','ClientManagement@editCustomer')->name('edit-customer');
+//end customer-registration
 
 //mugunth
 
