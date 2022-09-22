@@ -14,48 +14,44 @@
 </head>
 
 <body>
+    <div>
+    <h6>Customer Registration/Register</h6>
+    </div>
     <div class="container">
-        <h1  style="color: #070344; text-shadow: 1px 2px; text-align:center;"><b>Customer Follow Up</b></h1>
-        <div class="container mt-5">
-        <a href="{{url('add-follow')}}"><button type="button" class="btn btn-primary complaint_btn" > Edit Follow Up</button></a>
-        </div>
-        <hr class="mb-4">.
-        <h3  style="color: #070344; text-shadow: 1px 2px; text-align:center;"><b>List Of Follow Ups</b></h3>
+        <h3 class="text-center" style="color: #070344; text-shadow: 1px 2px;"><b>Customer Registration</b></h3>
        <br>
-     
       
+       <div id="mydatatable_filter" class="dataTables_filter">
+        <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
+       </div>
+       <a href="{{url('add-customer')}}"><button class="btn btn-primary add-btn" style="width:18%">Register Customer</button></a>
+       <hr class="mb-4">.
+       <h4 style="text-align:center; padding:12px">Customer List</h4>
+       
+<div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
             <table class="table table-bordered" id="new-item">
                 <thead>
                     <tr>
-                        <th class="text-center">No</th>
-                        <th class="text-center">Follow Up date</th>
-                        <th class="text-center"> Follow Up Type</th>
-                        <th class="text-center">Customer Name</th>
-                        <th class="text-center">Description</th>
-                        <th class="text-center">Next BU Date</th>
-                        <th class="text-center">Alert Period</th>
-                        <th class="text-center">Responsible Staff</th>
-                        <th class="text-center">Registered By</th>
-                        <th class="text-center">Action</th>
-                       
+                        <th class="text-center"> No</th>
+                        <th class="text-center"> Client Name</th>
+                        <th class="text-center">Address</th>
+                        <th class="text-center">Contact</th>
+                        <th class="text-center">Physical Address</th>
+                        <th class="text-center">Registration Date</th>
+                        <th class="text-center">Action</th>   
                     </tr>
                 </thead>
                 <tbody>
                         <tr id="data">
+                            <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td><a href="{{url('edit-follow')}}"><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i></a>
-                            <a href=""><i  style="color:black;" class="fa fa-trash" aria-hidden="true"></i></td>
-
+                            <td><a href="{{url('edit-customer')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td> 
                         </tr>
                 </tbody>
             </table>
