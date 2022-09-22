@@ -73,4 +73,13 @@ class filemanagement extends Controller
         return view('system-settings.u_details');
     }
 
+    public function add_user()
+    {
+        return view('system-settings.User.add_user');
+    }
+    public function change_password()
+    {
+        return view('system-settings.User.change_password');
+    }
+
 }

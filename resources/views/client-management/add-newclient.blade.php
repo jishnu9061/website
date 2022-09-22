@@ -387,6 +387,12 @@ $('#price').prop('readonly', true);
                         <div class="col-sm">
                           
                         </div>
+                        <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
+      
+                          <button type="submit" class="btn btn-primary submit_btn">Save Changes</button>
+                          <button type="button" class="btn ">Back</button>
+                          
+                        </div>
                           <div class="col-sm">
                             <button type="submit" class="btn btn-primary submit_btn_btn  ">Submit</button>
                             <a href="{{route('client-index')}}" type="button" class="btn btn-primary " style="width:30%;  margin-top: 30px;">Back</a>
