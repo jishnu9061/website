@@ -280,7 +280,7 @@ $('#price').prop('readonly', true);
 
     <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
       
-      <button type="submit" class="btn">Save Changes</button>
+      <button type="submit" class="btn  submit_btn">Save Changes</button>
       <button type="button" class="btn btn-primary submit_btn">Back</button>
       
     </div>

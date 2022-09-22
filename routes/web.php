@@ -798,8 +798,7 @@ Route::any('template-category',"filemanagement@template")->name('template-catego
 //beljin
 
 Route::any('/u_details',"filemanagement@u_details")->name('u_details');
-Route::any('/add_user',"filemanagement@add_user")->name('add_user');
-Route::any('/change_password',"filemanagement@change_password")->name('change_password');
+
 //beljin
 
 

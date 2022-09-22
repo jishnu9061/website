@@ -321,40 +321,6 @@
     
 }
 
-.btn.btn-primary:focus {
-    color: rgb(255, 255, 255);
-  background-color : #1D1D50;
-    
-}
-
-.btn.btn-primary:active {
-    color: rgb(255, 255, 255);
-  background-color : #25d876;
-    
-}
-
-.btn.btn-primary:visited {
-    color: rgb(255, 255, 255);
-  background-color : #d82587;
-    
-}
-
-.btn.btn-primary:hover::after, .btn.btn-primary:focus::after {
-    color: rgb(255, 255, 255);
-  background-color : #c6d825;
-    
-}
-
-button, button
-
-
-/* .sidebar-wrapper .menu .sidebar-link:hover 
-{
-    color: rgb(255, 255, 255);
-  background-color : #25d876;
-    
-} */
-
 .btn_margin{
     margin:20px;
 }
@@ -366,8 +332,6 @@ button, button
     height: 60px;
     padding-top: -20px;
 }
-
-
 
 /* .fa-cog:before, .fa-gear:before { color: #00474d;} */
 
@@ -431,10 +395,6 @@ cli
 .btn.btn-primary ::after:focus {
     border: 2px solid #3e699b87;
 }
-
-/* .btn.btn-primary.btn_align_btn .onclick {
-    background-color: #00f175;
-} */
 
 .btn.btn-secondary {
     color: #fff;
@@ -2108,7 +2068,7 @@ background: #dee2e6;
 }
 
 .sidebar-wrapper {
-    width: 320px;
+    width: 260px;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -2182,7 +2142,7 @@ background: #dee2e6;
 }
 
 .sidebar-wrapper .menu .sidebar-link:active {
-    background-color: #f8e4ae;
+    background-color: #aeb3f8;
 }
 
 
@@ -2269,9 +2229,6 @@ display: block; */
 .nav-pills .nav-link.active {
     box-shadow: 0 2px 10px rgba(67, 94, 190, 0.5);
 }
-
-
-
 
 .nav-tabs {
     border: none;
@@ -3788,16 +3745,3 @@ h6 {
 }
 
 /* vinu */
-
-
-input, button, select, optgroup, textarea {
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    background: rgb(255, 255, 255);
-    color: #607080;
-    border: 0.5px solid rgba(3, 18, 29, 0.4);
-    border-radius: 3px;
-}
-
