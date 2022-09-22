@@ -49,41 +49,10 @@ color: #1D1D50
                     color: #000;
 
                 } */
-                /* <style> */
-/* Style the buttons */
-/* .bten {
-  border: none;
-  outline: none;
-  padding: 10px 16px;
-  background-color: #f1f1f1;
-  cursor: pointer;
-  font-size: 18px;
-} */
-
-/* Style the active class, and buttons on mouse-over */
- /* .bten:hover { */
-  /* background-color: #666; */
-  /* color: white;
-} */
-
-/* .activeq.bten {
-  border: none;
-  outline: none;
-  padding: 10px 16px;
-  background-color: #FFFBF4;
-  cursor: pointer;
-  font-size: 18px;
-} */
-
-/* Style the active class, and buttons on mouse-over */
- /* .activeq.bten:hover {
-  background-color: red;
-  color: white;
-} */
-                             
+               
+              
 </style>
-
-   
+    
 </head>
 <body>
 
@@ -398,14 +367,6 @@ color: #1D1D50
                                         <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
                                             <span>User Management</span>
                                     </a> -->
-                                    @if(Auth::user()->role == 'hospitaladmin')
-                                    <li class="submenu-item has-sub " style="list-style:none;">
-                                        <a id="sblm" href="{{url('client-index')}}" class='sidebar-link' >
-                                        <i  class="fas fa-chalkboard-teacher" id="icon"></i>
-                                            <span > Client Management</span>
-                                        </a>
-                                </li>
-                                    @endif
                                     @php
                                         $admin = array("usermanagement", "adddepartments","add_labdept","add_surgery_types","adddepartmentadmin","addroomstypes","addroomtypes","beds","Add_Ambulance_details");
                                         $lab = array("labcategory", "labtests", "labprofile","patlabtest","alllabtestsview");
@@ -591,34 +552,34 @@ color: #1D1D50
                                       @endif
                                            <li class="submenu-item  ">
                                                 <a href="{{ url('ledger_acount_categories') }}" class=" sidebar-link">
-                                                <span id="subm">Account Type</span></a>
+                                                <span>Account Type</span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('ledger_acount_subcategories') }}" class="sidebar-link">
-                                               <span id="subm">Groups</span></a>
+                                               <span>Groups</span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                 <a href="{{ url('ledger_budget_category') }}" class="sidebar-link">
-                                                <span id="subm">Budget Category</span></a>
+                                                <span>Budget Category</span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('ledger_acounts') }}" class=" sidebar-link">
-                                               <span id="subm">Ledger Account</span>
+                                               <span>Ledger Account</span>
                                            </a>
                                            </li>
                                            <li class="submenu-item ">
                                             <a href="{{ url('expense_report') }}" class=" sidebar-link">
-                                            <span id="subm">Expense Report</span>
+                                            <span>Expense Report</span>
                                         </a>
                                         </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('journal') }}" class=" sidebar-link" >
-                                               <span id="subm">Journal</span>
+                                               <span>Journal</span>
                                            </a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('ledger') }}" class=" sidebar-link">
-                                                   <span id="subm">Ledger </span></a>
+                                                   <span>Ledger </span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('trialbalance') }}" class=" sidebar-link">
@@ -1178,5 +1139,3 @@ color: #1D1D50
 <!-- Mirrored from zuramai.github.io/mazer/demo/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 14 Aug 2021 11:16:21 GMT -->
 
 </html>
-hmsmain.blade.php
-Displaying hmsmain.blade.php.
