@@ -3801,3 +3801,6 @@ input, button, select, optgroup, textarea {
     border-radius: 3px;
 }
 
+.submenu-item.sidebar-link {
+    color: #000;
+}

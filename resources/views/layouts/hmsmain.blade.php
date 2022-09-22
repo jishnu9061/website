@@ -566,72 +566,72 @@ color: #1D1D50
                                       @endif
                                            <li class="submenu-item  ">
                                                 <a href="{{ url('ledger_acount_categories') }}" class=" sidebar-link">
-                                                <span>Account Type</span></a>
+                                                <span id="subm">Account Type</span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('ledger_acount_subcategories') }}" class="sidebar-link">
-                                               <span>Groups</span></a>
+                                               <span id="subm">Groups</span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                 <a href="{{ url('ledger_budget_category') }}" class="sidebar-link">
-                                                <span>Budget Category</span></a>
+                                                <span id="subm">Budget Category</span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('ledger_acounts') }}" class=" sidebar-link">
-                                               <span>Ledger Account</span>
+                                               <span id="subm">Ledger Account</span>
                                            </a>
                                            </li>
                                            <li class="submenu-item ">
                                             <a href="{{ url('expense_report') }}" class=" sidebar-link">
-                                            <span>Expense Report</span>
+                                            <span id="subm">Expense Report</span>
                                         </a>
                                         </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('journal') }}" class=" sidebar-link" >
-                                               <span>Journal</span>
+                                               <span id="subm">Journal</span>
                                            </a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('ledger') }}" class=" sidebar-link">
-                                                   <span>Ledger </span></a>
+                                                   <span id="subm">Ledger </span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('trialbalance') }}" class=" sidebar-link">
-                                                   <span>Trial Balance </span></a>
+                                                   <span id="subm">Trial Balance </span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('profitandlossaccount') }}" class=" sidebar-link">
-                                                   <span>Profit And loss Account </span></a>
+                                                   <span id="subm">Profit And loss Account </span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('balancesheet') }}" class=" sidebar-link">
-                                                   <span>Balance Sheet </span></a>
+                                                   <span id="subm">Balance Sheet </span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('stock_section') }}" class=" sidebar-link">
-                                                   <span>Stock Reciept </span></a>
+                                                   <span id="subm">Stock Reciept </span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('stock_issue') }}" class=" sidebar-link">
-                                                   <span>Stock Issue </span></a>
+                                                   <span id="subm">Stock Issue </span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('store_ledger') }}" class=" sidebar-link">
-                                                   <span>Store Ledger </span></a>
+                                                   <span id="subm">Store Ledger </span></a>
                                            </li>
 
                                            <li class="submenu-item ">
                                                <a href="{{ url('stock_categories') }}" class=" sidebar-link">
-                                                   <span>Stock Categories </span></a>
+                                                   <span id="subm">Stock Categories </span></a>
                                            </li>
 
                                            <li class="submenu-item ">
                                                <a href="{{ url('stock_subcategories') }}" class=" sidebar-link">
-                                                   <span>Stock Sub Categories </span></a>
+                                                   <span id="subm">Stock Sub Categories </span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('stock_items') }}" class=" sidebar-link">
-                                                   <span>Stock Items </span></a>
+                                                   <span id="subm">Stock Items </span></a>
                                            </li>
                                        </ul>
                                    </li>
@@ -652,15 +652,15 @@ color: #1D1D50
                                     @endif
                                     <li class="submenu-item  ">
                                         <a href="{{url('addsuppliers')}}" class=" sidebar-link">
-                                            <span>Suppliers</span></a>
+                                            <span id="subm">Suppliers</span></a>
                                     </li>
                                     <li class="submenu-item ">
                                         <a href="{{url('view_manufacturers')}}" class=" sidebar-link">
-                                            <span>Manufacturers</span></a>
+                                            <span id="subm">Manufacturers</span></a>
                                     </li>
                                     <li class="submenu-item ">
                                         <a href="{{url('show_items_details')}}" class=" sidebar-link">
-                                            <span>Items</span>
+                                            <span id="subm">Items</span>
                                         </a>
                                     </li>
                                     
@@ -676,11 +676,11 @@ color: #1D1D50
                                     </li> -->
                                     <li class="submenu-item ">
                                         <a href="{{url('store_reorder')}}" class=" sidebar-link">
-                                            <span>Reorder Level</span></a>
+                                            <span id="subm">Reorder Level</span></a>
                                     </li>
                                     <li class="submenu-item ">
                                         <a href="{{url('empty_stock')}}" class=" sidebar-link">
-                                            <span>Empty Stock</span></a>
+                                            <span id="subm">Empty Stock</span></a>
                                     </li>
                                     <!-- <li class="submenu-item ">
                                         <a href="{{url('show_substore')}}" class=" sidebar-link">
@@ -696,19 +696,19 @@ color: #1D1D50
                                     </li> -->
                                     <li class="sidebar-item  has-sub">
                                         <a href="#" class="sidebar-link">
-                                            <i class="fa fa-purchase" style="font-weight: 400;"></i>
+                                            <i class="fa fa-purchase" ></i>
                                                 <span>Purchase</span>
                                         </a>
                                         <ul class="submenu" style="display: none;">
                                             <li class="submenu-item  ">
                                                 <a href="{{url('view_purchase')}}" class=" sidebar-link">
-                                                    <span>New Purchase</span>
+                                                    <span id="subm">New Purchase</span>
                                                 </a>
                                                 <a href="{{url('received_order_detailes')}}" class=" sidebar-link">
-                                                    <span>manage_purchase</span>
+                                                    <span id="subm">manage_purchase</span>
                                                 </a>
                                                 <a href="{{url('received_order_detailes')}}" class=" sidebar-link">
-                                                    <span>Purchase Return</span>
+                                                    <span id="subm">Purchase Return</span>
                                                 </a>
                                             </li>
                                         </ul>
@@ -724,11 +724,11 @@ color: #1D1D50
                                             </li>
                                         </ul>
                                     </li> --}}
-                                    <li class="sidebar-item  has-sub">
+                                    {{-- <li class="sidebar-item  has-sub">
                                         <a href="#" class="sidebar-link">
-                                            <i class="" style="font-weight: 400;"></i>
+                                            <i class="" ></i>
                                                 <span>Settings</span>
-                                        </a>
+                                        </a> --}}
 
 
 
