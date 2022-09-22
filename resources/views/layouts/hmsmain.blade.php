@@ -49,12 +49,68 @@ color: #1D1D50
                     color: #000;
 
                 } */
-               
-              
+                /* <style> */
+/* Style the buttons */
+/* .bten {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+} */
+
+/* Style the active class, and buttons on mouse-over */
+ /* .bten:hover { */
+  /* background-color: #666; */
+  /* color: white;
+} */
+
+/* .activeq.bten {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #FFFBF4;
+  cursor: pointer;
+  font-size: 18px;
+} */
+
+/* Style the active class, and buttons on mouse-over */
+ /* .activeq.bten:hover {
+  background-color: red;
+  color: white;
+} */
+                             
 </style>
+
     
 </head>
 <body>
+
+
+
+
+
+
+
+<script>
+// Add active class to the current button (highlight it)
+// var header = document.getElementById("myDIV");
+// var btnes = header.getElementsByClassName("bten");
+// for (var i = 0; i < btnes.length; i++) {
+//   btnes[i].addEventListener("click", function() {
+//   var current = document.getElementsByClassName("activeq");
+//   if (current.length > 0) { 
+//     current[0].className = current[0].className.replace(" activeq", "");
+//   }
+//   this.className += " activeq";
+//   });
+// }
+// </script>
+
+
+
+
 
 
   <div><br></div>
@@ -399,18 +455,14 @@ color: #1D1D50
                                 </ul>
                                 </li>
 
-                                <li class="submenu-item has-sub " style="list-style:none;">
-                                        <a id="sblm" href="{{url('client-index')}}" class='sidebar-link' >
-                                        <i  class="fas fa-chalkboard-teacher" id="icon"></i>
+                                <li class="submenu-item has-sub " style="list-style:none;" >
+                                        <a  type="button" id="sblm" href="{{url('client-index')}}" class='sidebar-link' id="myDIV">
+                                        <i  class="fas fa-building" id="icon"></i>
                                             <span > Client Management</span>
                                         </a>
                                 </li>
 
-    
 
-                              
-
-                             
 
 
                             @endif
@@ -435,47 +487,9 @@ color: #1D1D50
                                             <span>System Setup</span>
                                     </a>
                             </li>
-                                    <!-- <ul class="submenu">
-
-                                    <li class="submenu-item ">
-                                        <a href="{{url('system_setup')}}" class='sidebar-link'>
-                                            <span id="subm">Setup</span>
-                                        </a>
-                                    </li>
-
-                                   
-                                    <li class="submenu-item ">
-                                        <a href="{{url('company_details')}}" class='sidebar-link'>
-                                            <span id="subm">Company</span>
-                                        </a>
-                                    </li>
                                     
-                                    <li class="submenu-item ">
-                                        <a href="{{url('weekend_holiday')}}" class='sidebar-link'>
-                                            <span id="subm">Holidays</span>
-                                        </a>
-                                    </li> -->
 
-                                    <!-- <li class="submenu-item ">
-                                        <a href="{{url('configu_ration')}}" class='sidebar-link'>
-                                            <span id="subm">Configurations</span>
-                                        </a>
-                                    </li> -->
-
-                                     <!-- <li class="submenu-item ">
-                                        <a href="{{url('other_confgn')}}" class='sidebar-link'>
-                                            <span id="subm">Other Configurations</span>
-                                        </a>
-                                    </li> -->
-
-                                    <!-- <li class="submenu-item ">
-                                        <a href="{{url('company_branch')}}" class='sidebar-link'>
-                                            <span id="subm">Company Branch</span>
-                                        </a>
-                                    </li> -->
-                                   
-                                    <!-- </ul>
-                                </li> -->
+                    
 
 
                                 <li class="sidebar-item  has-sub">
@@ -798,7 +812,7 @@ color: #1D1D50
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="fas fa-user-cog"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="fas fa-user"  style="font-weight: 300;"></i>
                                             <span>Office Administrations</span>
                                     </a>
                                    
@@ -817,7 +831,7 @@ color: #1D1D50
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="fa fa-cogs"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="fas fa-qrcode"  style="font-weight: 300;"></i>
                                             <span>Tools & ad ons</span>
                                     </a>
                                    
@@ -884,7 +898,7 @@ color: #1D1D50
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i id="icon" class="fas fa-piggy-bank"  style="font-weight: 300;"></i>
-                                            <span>Store ,Inventory</span>
+                                            <span>Store & Inventory</span>
                                     </a>
                                    
                                     </li>
@@ -980,6 +994,10 @@ color: #1D1D50
                 </a> --}}
             </header>
             <div class="page-heading" >
+
+                {{-- <div><a href=""><i id="icon" class="fa fa-arrow-circle-left hBack pl-5"  style="font-size: 50px; color:#D5BD94"></i></a></div> --}}
+
+
                 {{-- <h3 style="color:#c30147;">{{Auth::user()->Hospital}}</h3> --}}
                 {{-- <h3 style="color:#c30147;">ERP Global</h3> --}}
             </div>
@@ -1121,10 +1139,52 @@ color: #1D1D50
              }
          </script>
 
-         <script>$("a.sidebar-link").click(function(){
+         <script>
+         
+         
+         $("a.sidebar-link")
+         .click(function(){
             $("a.sidebar-link").css("background-color", "");
           $(this).css("background-color", "#F5E9D4");
-        });</script>
+        });
+        
+        
+        
+        </script>
+
+{{-- <script>$(".hBack").on("click", function(e){
+    e.preventDefault();
+    window.history.back();
+});</script> --}}
+
+
+<script>
+    const btn = document.getElementById('sblm');
+
+btn.addEventListener('click', function onClick() {
+  btn.style.backgroundColor = '#F5E9D4';
+  btn.style.color = '';
+});
+
+
+
+  </script> 
+
+
+<script>
+    var count = 1;
+    function setColor(btn, color) {
+        var property = document.getElementById('sblm');
+        if (count == 0) {
+            property.style.backgroundColor = "#FFFFFF"
+            count = 1;        
+        }
+        else {
+            property.style.backgroundColor = "#7FFF00"
+            count = 0;
+        }
+    }
+</script>
 
 <script>
 

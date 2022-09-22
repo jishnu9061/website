@@ -320,13 +320,12 @@ $('#price').prop('readonly', true);
                         <div class="col-sm">
                           
                         </div>
-                          <div class="col-sm">
-                            <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Submit</button>
-
+                        <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
+      
+                          <button type="submit" class="btn btn-primary submit_btn">Save Changes</button>
+                          <button type="button" class="btn ">Back</button>
                           
-                             <button type="submit" class="btn btn-primary submit_btn btn_align">Back</button>
-
-                          </div>
+                        </div>
                         </div>
                       </div>  
                     </div>
