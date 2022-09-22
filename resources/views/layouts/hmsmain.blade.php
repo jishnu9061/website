@@ -983,7 +983,7 @@ color: #1D1D50
                 {{-- <h3 style="color:#c30147;">{{Auth::user()->Hospital}}</h3> --}}
                 {{-- <h3 style="color:#c30147;">ERP Global</h3> --}}
             </div>
-            {{-- <a href="javascript:history.back()"  class="btn btn-primary" style="margin-bottom:10px;">Back</a> --}}
+            <a href="javascript:history.back()"  class="btn btn-primary" style="margin-bottom:10px;">Back</a>
             <div style="margin-left: 83%;margin-top: -8%;">
                 <div class="avatar avatar-xl">
                     <img  style="margin-left: 28%;" src="assets/images/faces/CRAHqLogo.png" alt="Face 1">
