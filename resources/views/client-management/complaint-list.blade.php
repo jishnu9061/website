@@ -55,7 +55,7 @@
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row"class="text-center"><a href=""><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
+                            <td  scope="row"class="text-center"><a href="{{url('edit-Complaint')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
                            <input type="hidden" value="" id="medicine_id_hidden" class="applicate" name="supplier_id_hidden">
 
                         </tr>
