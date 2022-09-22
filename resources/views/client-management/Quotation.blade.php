@@ -47,7 +47,7 @@
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td><a href=""><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i></a></td>
+                            <td><a href="{{url('edit-Quotation')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i></a></td>
                           
                             
                         </tr>
