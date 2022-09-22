@@ -223,7 +223,7 @@ $('#price').prop('readonly', true);
                         </div>
                           <div class="col-sm">
                             <button type="submit" class="btn btn-primary submit_btn_btn">Update Customer</button>
-                            <a href="{{route('client-index')}}" type="button" class="btn btn-primary " style="width:30%">Cancel</a>
+                            <a href="{{route('client-index')}}" type="button" class="btn btn-primary " style="width:30%; margin-top:30px; padding:8px;">Cancel</a>
                           </div>
                         </div>
                       </div>  

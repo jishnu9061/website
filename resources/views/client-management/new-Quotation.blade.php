@@ -256,7 +256,7 @@ $('#price').prop('readonly', true);
                         </div>
                           <div class="col-sm">
                             <button type="submit" class="btn btn-primary submit_btn_btn">Submit</button>
-                            <a href="{{route('client-index')}}" type="button" class="btn btn-primary " style="width:30%">Back</a>
+                            <a href="{{route('client-index')}}" type="button" class="btn btn-primary " style="width:30%; margin-top:30px; padding:8px;">Back</a>
                           </div>
                         </div>
                       </div>  

@@ -14,11 +14,8 @@
 </head>
 
 <body>
-    <div>
-    <h6>Customer Registration/Register</h6>
-    </div>
     <div class="container">
-        <h3 class="text-center" style="color: #070344; text-shadow: 1px 2px;"><b>Customer Registration</b></h3>
+        <h3 class="text-center" style="color: #070344;"><b>Customer Registration</b></h3>
        <br>
       
        <div id="mydatatable_filter" class="dataTables_filter">

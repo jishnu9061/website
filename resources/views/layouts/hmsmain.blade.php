@@ -369,11 +369,11 @@ color: #1D1D50
                                     </a> -->
                                     @if(Auth::user()->role == 'superadmin')
                                     <li class="submenu-item has-sub " style="list-style:none;">
-                                                <a href="{{url('file_managementindex')}}" class='sidebar-link'>
-                                                <i class="far fa-folder-open" id="icon" style="font-weight: 300;"></i>
-                                                    <span>File Management</span>
-                                                </a>
-                                        </li>
+                                        <a id="sblm" href="{{url('client-index')}}" class='sidebar-link' >
+                                        <i  class="fas fa-chalkboard-teacher" id="icon"></i>
+                                            <span > Client Management</span>
+                                        </a>
+                                </li>
                                     @endif
                                     @php
                                         $admin = array("usermanagement", "adddepartments","add_labdept","add_surgery_types","adddepartmentadmin","addroomstypes","addroomtypes","beds","Add_Ambulance_details");
@@ -407,12 +407,7 @@ color: #1D1D50
                                 </ul>
                                 </li>
 
-                                <li class="submenu-item has-sub " style="list-style:none;">
-                                        <a id="sblm" href="{{url('client-index')}}" class='sidebar-link' >
-                                        <i  class="fas fa-chalkboard-teacher" id="icon"></i>
-                                            <span > Client Management</span>
-                                        </a>
-                                </li>
+                               
 
     
 
