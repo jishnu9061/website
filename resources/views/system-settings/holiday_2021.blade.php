@@ -13,7 +13,7 @@
   <style>
      body
         {
-          background-color: #f0e7ce;
+  
           /* font-family:  Arial, Helvetica, sans-serif; */
         }
         /* h2
@@ -68,7 +68,9 @@
 
 </table><br><br>
 </form>
-
+<form>
+ <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
+</form>
     </body>
 </html>
 @endsection

@@ -24,13 +24,8 @@ $('#price').prop('readonly', true);
 });
 </script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-<div class="col-sm">
-    <a href="{{url('file-list')}}"><button type="submit" style=" height: 3rem; margin-left: 0%; width: 17%; margin-bottom: 13%; background-color:#acacb9;" >Back</button></a>
-    
-
-  </div>
     <div>
-    <h2>Edit File</h2>
+    <h2 style="text-align:center;">Edit File Action Hours</h2>
     <hr class="mb-4">.
 </div>
   </div>
@@ -40,264 +35,71 @@ $('#price').prop('readonly', true);
 
      <form method="post" action="" id="form">
 	      @csrf
-            <div class="row">
-            <div class="col-md-12">
-            <div class="mb-1">
-          <label for="username">Associate Handling</label>
+          <div class="row">
+          <div class="col-md-6">
+           <div class="mb-1">
+          <label for="username">New Bring-up Date</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
+              <input type="date" class="form-control" name="incorporation" id="age" >
+            <div class="invalid-feedback" style="width: 100%;">
+            Incorporation is required
+            </div>
           </div>
         </div>
-        </div>
-        <div class="col-md-4">
+          </div>
+        <div class="col-md-6">
             <div class="mb-1">
-          <label for="username">Client</label>
+          <label for="username">Reminder Period(Days)</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
+            <input type="text" class="form-control" name="incorporation" id="age" >
           </div>
         </div>
         </div>
         
+         
+        
+        <div class="" style ="margin-top:3%;">
+        <h6>New Bring-up Date:</h6>
+        <div > <p>Florence</p> <p>Princes</p> </div>  
+        </div>
+        
+       
+
+    </div>
+    <br>
+    <div class="container">
+  <div class="row">
+    <div class="col-sm">
+    
+    </div>
+    <div class="col-sm">
+    <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Add New Bringup</button>
+
+    
+    <button type="submit" class="btn btn-primary submit_btn btn_align">Cancel</button>
+
+    </div>
+  </div>
+</div>
+     
+    
+   
+          </div>
+
           
 
-        <div class="col-md-4">
-            <div class="mb-1">
-          <label for="username">File Type</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
 
-            </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
-          </div>
-        </div>
-        </div>
-          <div class="col-md-4">
-           <div class="mb-1">
-          <label for="username">Opening Date</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-              <input type="date" class="form-control" name="number" id="username" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Number is required.
-            </div>
-          </div>
-        </div>
-          </div>
-
-        </div>
-        <br>
-          <div class="row">
-          <div class="col-md-4">
-           <div class="mb-1">
-          <label for="username">Client Ref.No(or Case No.)</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-              <input type="text" class="form-control" name="incorporation" id="age" >
-            <div class="invalid-feedback" style="width: 100%;">
-            Incorporation is required
-            </div>
-          </div>
-        </div>
-          </div>
-
-          <div class="col-md-4">
-           <div class="mb-1">
-          <label for="username">Our File Ref.Number</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-              <input type="text" class="form-control" name="incorporation" id="age" >
-            <div class="invalid-feedback" style="width: 100%;">
-            Incorporation is required
-            </div>
-          </div>
-        </div>
-          </div>
-        <div class="col-md-4">
-            <div class="mb-1">
-          <label for="username">File Name / Subject</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <input type="text" class="form-control" name="telephone" id="confirm_password" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Telephone Number is required.
-            </div>
-          </div>
-        </div>
-        
-           
-          </div>
-        </div>
-         <div id="test" style="height:20px;"></div>
-          </div>
-        </div>
-        <div class="row">
-        <div class="col-md-4">
-            <div class="mb-1">
-          <label for="username">Approval Partner</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
-          </div>
-        </div>
-        </div>
-
-          <div class="col-md-4">
-            <div class="mb-1">
-          <label for="username">Customer Name</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <input type="text" class="form-control" name="email" id="age" >
-            <div class="invalid-feedback" style="width: 100%;">
-            Incorporation is required
-            </div>
-          </div>
-        </div>
-        </div>
-        <div class="col-md-4">
-            <div class="mb-1">
-          <label for="username">Customer Address</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <input type="password" class="form-control" name="website" id="confirm_password" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Telephone Number is required.
-            </div>
-          </div>
-        </div>
-        
-           
-          </div>
-        </div>
-        <br>
-        <div class="row">
-        <div class="col-md-4">
-           <div class="mb-1">
-          <label for="username">Customer Tel</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-              <input type="text" class="form-control" name="number" id="username" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Number is required.
-            </div>
-          </div>
-        </div>
-          </div>
-
-          <div class="col-md-4">
-           <div class="mb-1">
-          <label for="username">Customer E-mail</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-              <input type="text" class="form-control" name="number" id="username" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Number is required.
-            </div>
-          </div>
-        </div>
-          </div>
-          <div class="col-md-4">
-           <div class="mb-1">
-          <label for="username">Amount</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-              <input type="text" class="form-control" name="number" id="username" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Number is required.
-            </div>
-          </div>
-        </div>
-          </div>
-         <div id="test" style="height:20px;"></div>
-          </div>
-        </div>
-        <br>
-        <div class="row">
-        <div class="col-md-4">
-            <div class="mb-1">
-          <label for="username">Workflow</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
-          </div>
-        </div>
-      </div>   
-
-    </div>
-    
- 
-  
-    
-    
-    
-    {{-- <div class="pt-3 d-inline-flex row">
-
-      <div>
-    <button type="submit" class="btn btn-primary submit_btn " >Save Changes</button>
-  </div>
-  <div>
-    <button type="submit" class="btn btn-primary submit_btn  ">Back</button>
-  </div></div> --}}
-
-    {{-- <button type="button" class="btn btn-primary btn-lg">Large button</button>
-<button type="button" class="btn btn-secondary btn-lg">Large button</button> --}}
-    {{-- btn_sumbit
-    btn_align --}} 
-  
-
-
-    <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
-      
-      <button type="submit" class="btn">Save Changes</button>
-      <button type="button" class="btn btn-primary submit_btn">Back</button>
-      
-    </div>
 
    </tbody>
 </table>
    </div>
 </div>
-
-
-
-
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
  $(function () {

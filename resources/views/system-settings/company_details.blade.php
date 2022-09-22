@@ -51,7 +51,9 @@
 <body>
 
 <h2 class="text-center" style="color: #070344; text-shadow: 1px 2px;"><b>Company Details</b></h2>
-<a href="{{('add_company_details')}}"><button class="btn btn-primary add-btn">Add Company </button></a>
+  <!-- <a href="{{('add_company_details')}}"><button class="btn btn-primary"  style="background: #FFFBF4; color: #1D1D50;" >Add Company</button></a><br><br>
+  <hr class="mb-4">. -->
+  <a href="{{('add_company_details')}}"><button class="btn btn-primary add-btn">Add Company </button></a>
   <hr class="mb-4">.
   <table>
    
@@ -84,7 +86,11 @@
 </table><br><br>
 
   <!-- <a href="{{url('edit_company_details')}}"  class="btn btn-primary"style="color:rgb(238, 196, 105);background-color:rgb(29, 2, 129);" >Edit</a><br><br> -->
-   
+ 
+
+<form>
+ <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
+</form>
 </body>
 </html>
 @endsection

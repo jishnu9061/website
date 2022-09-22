@@ -34,7 +34,39 @@ class filemanagement extends Controller
         return view('file_management.template-category');
     }
 
-    //document temblates
+    //document temblate
+
+    //file progress
+
+    public function progressbringup()
+    {
+        return view('file_management.progress-bringup');
+    }
+
+    public function addbringup()
+    {
+        return view('file_management.add-new-bringup');
+    }
+
+    public function addprogress()
+    {
+        return view('file_management.add-file-progress');
+    }
+
+    public function editprogress()
+    {
+        return view('file_management.edit-file-progress');
+    }
+    public function newinstruction()
+    {
+        return view('file_management.new-instructions');
+    }
+
+    public function fileactionhours()
+    {
+        return view('file_management.file-action-hours');
+    }
+    //file progress
     
     public function u_details()
     {

@@ -46,45 +46,25 @@
         </style>
     </head>
     <body>
-    <!-- <h2 >Edit Court</h2><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Edit Court</h2>
+    <!-- <h2 >Add Court</h2><br> -->
+    <h2 style="text-align:center; text-shadow: 2px 1px;">Add New Court Category</h2>
     <hr class="mb-4">.
     <table class="table">
     <tbody>
                         <tr>
-                            <td style="width:30%">Date:</td>
-                            <td><input type="Date"  id="" name="date"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
+                            <td style="width:30%"> Category No:</td>
+                            <td><input type="number"  id="" name="date"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
                         </tr>
-
                         <tr>
-                                <td style="width:30%">Court Category:</td>
-                                <td> 
-                                    <select type="text" value="" id="" name="category"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
-                                    <option>select</option>
-                                   
-                    <option>Supreme Court</option>
-                    <option>Court Of Appeal</option>
-                    <option>High Court</option>
-                    <option>Industrial Court</option>
-                    <option>Magistrate Court</option>
-                    <option>Islamic Court</option>
-                    <option>Labour Court</option>
-                    <option>East Africa Court</option>
-                    <option>Small Claim Court</option>
-                    <option>Others</option>
-        </select>
-                            </td>
-                         </tr>
-
-
-                         <tr>
-                            <td style="width:30%">Court Name:</td>
-                            <td><input type="text"  id="" name="name"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
+                            <td style="width:30%">Category Name:</td>
+                            <td><input type="text"  id="" name="date"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
                         </tr>
-            </table>
+              </table>
             <div class="class"style="text-align:center;">
-            <input  type="submit"value="Save" name="submit"style="background-color:rgb(13, 1, 56);color: white; ">
+            <a href="something"><input type="submit"value="Add" name="submit"style="background-color:rgb(13, 1, 56);color: white; "> </a>
             <input type="button"value="Close" name="close"style="background-color:red;color: white; ">
+
+            
     </div>
 
     <form>

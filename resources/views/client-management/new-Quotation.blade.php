@@ -23,7 +23,7 @@ $('#price').prop('readonly', true);
 </script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <div>
-    <h2 style="text-align:center; text-shadow: 2px 1px;"> New Complaint</h2>
+    <h2 style="text-align:center; text-shadow: 2px 1px;">New Quotation</h2>
     <hr class="mb-4">.
 </div>
 </div>
@@ -34,37 +34,37 @@ $('#price').prop('readonly', true);
                     <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
-                                <label for="username">Date</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend"></div>
-                                    <input type="date" class="form-control" name="date" id="username" value="" placeholder="Number" required>
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                    Date is required.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                              <label for="username">Client</label>
+                            <label for="username">Document Type</label>
                                 <div class="input-group">
                                   <div class="input-group-prepend">
 
                                   </div>
-                                  <select name="client" id="cars">
+                                  <select name="document" id="cars">
                                   <option value="volvo"></option>
                                   </select>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
+                            <div class="mb-1">
+                            <label for="username">Issue Date</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="date" class="form-control" name="issue" id="age" value="" placeholder="corporation" min="0" max="99">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Age is required.
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
                           <div class="mb-1">
-                            <label for="username">Files</label>
+                            <label for="username">Customer</label>
                                 <div class="input-group">
                                       <div class="input-group-prepend">
 
                                       </div>
-                                      <select name="citizen" id="cars">
+                                      <select name="customer" id="cars">
                                       <option value="volvo"></option>
                                       </select>
                                 </div>
@@ -75,24 +75,24 @@ $('#price').prop('readonly', true);
                     <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
-                                <label for="username">Customer Name</label>
+                                <label for="username">Client Ref No</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="customer" id="age" value="" placeholder="" min="0" max="99">
+                                        <input type="text" class="form-control" name="ref" id="age" value="" placeholder="" min="0" max="99">
                                         <div class="invalid-feedback" style="width: 100%;">
-                                        Customer Name is required.
+                                            Age is required.
                                         </div>
                                     </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="mb-1">
-                                <label for="username">Staff Handling</label>
+                                <label for="username">Currency</label>
                                   <div class="input-group">
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <select name="country" id="cars">
+                                    <select name="currency" id="cars">
                                     <option value="volvo"></option>
                                     </select>
                                   </div>
@@ -100,52 +100,12 @@ $('#price').prop('readonly', true);
                         </div>
                         <div class="col-md-4">
                             <div class="mb-1">
-                            <label for="username">Complaint About</label>
-                                  <div class="input-group">
-                                    <div class="input-group-prepend">
-
-                                    </div>
-                                    <select name="complaint" id="cars">
-                                    <option value="volvo"></option>
-                                    </select>
-                                  </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">Telephone No</label>
+                                <label for="username">Exchange Rate</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="telephone" id="age" value="" placeholder="" min="0" max="99">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                        Telephone No is required.
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">Email Address</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend"></div>
-                                    <input type="email" class="form-control" name="email" value="" id="password" placeholder="">
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                    Email Address is required.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">others</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="others" value="" id="confirm_password" placeholder="">
+                                        <input type="text" class="form-control" name="rate" value="" id="confirm_password" placeholder="">
                                             <div class="invalid-feedback" style="width: 100%;">
-                                            others is required.
+                                                Password is required.
                                             </div>
                                     </div>
                             </div>
@@ -155,27 +115,139 @@ $('#price').prop('readonly', true);
                     <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
-                            <label for="username">Action Plan</label>
-                                <div class="input-group">                     
-                                  <textarea class="form-control" id="form7Example7" rows="3"></textarea>
-                                  <div class="invalid-feedback" style="width: 100%;">
-                                  Action Plan is required.
+                            <label for="username">Approver</label>
+                                  <div class="input-group">
+                                    <div class="input-group-prepend">
+                                    </div>
+                                    <select name="approver" id="cars">
+                                    <option value="volvo"></option>
+                                    </select>
                                   </div>
-                                </div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                          <div class="mb-1">
-                          <label for="username">Complaint Description</label>
+                            <div class="mb-1">
+                            <label for="username">Bank Account</label>
+                                  <div class="input-group">
+                                    <div class="input-group-prepend">
+                                    </div>
+                                    <select name="account" id="cars">
+                                    <option value="volvo"></option>
+                                    </select>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                            <label for="username">Billing Information</label>
                                 <div class="input-group">                     
                                   <textarea class="form-control" id="form7Example7" rows="3"></textarea>
                                   <div class="invalid-feedback" style="width: 100%;">
-                                  Complaint Description is required.
+                                     Postal Address is required.
                                   </div>
                                 </div>
                             </div>
                         </div>
-                    </div>     
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-1">
+                            <label for="username">To The Attender Of</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control" name="attender" value="" id="confirm_password" placeholder="">
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Password is required.
+                                            </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="mb-1">
+                          <label for="username">Subject/Tittle</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control" name="subject" value="" id="confirm_password" placeholder="">
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Password is required.
+                                            </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <h2 style="text-align:center; text-shadow: 2px 1px;"> Quotation Items</h2>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-1">
+                            <label for="username">Type</label>
+                                  <div class="input-group">
+                                    <div class="input-group-prepend">
+
+                                    </div>
+                                    <select name="type" id="cars">
+                                    <option value="volvo"></option>
+                                    </select>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-1">
+                                <label for="username">Particulers Of Service Rendered</label>
+                                <div class="input-group">                     
+                                  <textarea class="form-control" id="form7Example7" rows="2"></textarea>
+                                  <div class="invalid-feedback" style="width: 100%;">
+                                     Postal Address is required.
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-1">
+                            <label for="username">Amount</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control" name="pin" id="age" value="" placeholder="" min="0" max="99">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Age is required.
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-1">
+                            <label for="username">V.A.T</label>
+                                  <div class="input-group">
+                                    <div class="input-group-prepend">
+
+                                    </div>
+                                    <select name="vat" id="cars">
+                                    <option value="volvo"></option>
+                                    </select>
+                                  </div>
+                            </div>
+                    </div>
+                    <br>
+                        
+                        <a href=""><button class="btn btn-primary " style="width:20%; margin-top:28px;">New Item</button></a>
+                        <a href=""><button class="btn btn-primary " style="width:20%; margin-left:510px; margin-top:-65px;">Delete Item</button></a>
+                        <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-1">
+                            <label for="username">Comments</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="text" class="form-control" name="comments" value="" id="password" placeholder="">
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                    Comments is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <br>
                     <div class="container">
                       <div class="row">
@@ -183,8 +255,8 @@ $('#price').prop('readonly', true);
                           
                         </div>
                           <div class="col-sm">
-                            <button type="submit" class="btn btn-primary submit_btn_btn">Add Complaint</button>
-                            <a href="{{route('client-index')}}" type="button" class="btn btn-primary " style="width:30%">Cancel</a>
+                            <button type="submit" class="btn btn-primary submit_btn_btn">Submit</button>
+                            <a href="{{route('client-index')}}" type="button" class="btn btn-primary " style="width:30%">Back</a>
                           </div>
                         </div>
                       </div>  
@@ -195,7 +267,9 @@ $('#price').prop('readonly', true);
 </div>
 
 </div> 
- 
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>

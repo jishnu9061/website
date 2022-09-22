@@ -22,6 +22,7 @@ $('#price').prop('readonly', true);
 });
 </script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
+<h6>Client/Add new Client</h6>
 <div>
     <h2 style="text-align:center; text-shadow: 2px 1px;">Add New Client</h2>
     <hr class="mb-4">.
@@ -44,7 +45,7 @@ $('#price').prop('readonly', true);
                                 <label for="username">Client Number</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend"></div>
-                                    <input type="text" class="form-control" name="number" id="username" value="" placeholder="Number" required>
+                                    <input type="text" class="form-control" name="number" id="username" value="" placeholder="Number" >
                                     <div class="invalid-feedback" style="width: 100%;">
                                         Name is required.
                                     </div>
@@ -59,7 +60,9 @@ $('#price').prop('readonly', true);
 
                                   </div>
                                   <select name="type" id="cars">
-                                  <option value="volvo"></option>
+                                  <option value="volvo">Select</option>
+                                  <option value="volvo">Corporate</option>
+                                  <option value="volvo">Individual</option>
                                   </select>
                                 </div>
                             </div>
@@ -72,7 +75,9 @@ $('#price').prop('readonly', true);
 
                                       </div>
                                       <select name="citizen" id="cars">
-                                      <option value="volvo"></option>
+                                      <option value="volvo">Select</option>
+                                      <option value="volvo">Residensial</option>
+                                      <option value="volvo">Non Residensial</option>
                                       </select>
                                 </div>
                             </div>
@@ -82,10 +87,10 @@ $('#price').prop('readonly', true);
                     <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
-                                <label for="username">Cert Of Incorporation</label>
+                                <label for="username">Certificate Of Incorporation</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="corporation" id="age" value="" placeholder="corporation" min="0" max="99">
+                                        <input type="text" class="form-control" name="corporation" id="age" value="" placeholder="Certificate" min="0" max="99">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Age is required.
                                         </div>
@@ -100,7 +105,11 @@ $('#price').prop('readonly', true);
 
                                     </div>
                                     <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                    <option value="volvo">Select</option>
+                                    <option value="volvo">Kenya</option>
+                                    <option value="volvo">South Africa</option>
+                                    <option value="volvo">India</option>
+                                    <option value="volvo">America</option>
                                     </select>
                                   </div>
                             </div>
@@ -192,7 +201,9 @@ $('#price').prop('readonly', true);
 
                                 </div>
                                 <select name="source" id="cars">
-                                <option value="volvo"></option>
+                                <option value="volvo">Select</option>
+                                <option value="volvo">Excisting Client</option>
+                                <option value="volvo">Online</option>
                                 </select>
                               </div>
                           </div>
@@ -232,7 +243,10 @@ $('#price').prop('readonly', true);
 
                                     </div>
                                     <select name="industry" id="cars">
-                                    <option value="volvo"></option>
+                                    <option value="volvo">Select</option>
+                                    <option value="volvo">Commerce</option>
+                                    <option value="volvo">Construction</option>
+                                    <option value="volvo">Education</option>
                                     </select>
                                   </div>
                             </div>
@@ -326,6 +340,10 @@ $('#price').prop('readonly', true);
                           <button type="button" class="btn ">Back</button>
                           
                         </div>
+                          <div class="col-sm">
+                            <button type="submit" class="btn btn-primary submit_btn_btn  ">Submit</button>
+                            <a href="{{route('client-index')}}" type="button" class="btn btn-primary " style="width:30%">Back</a>
+                          </div>
                         </div>
                       </div>  
                     </div>

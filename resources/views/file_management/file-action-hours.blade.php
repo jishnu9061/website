@@ -15,51 +15,141 @@
 
 <body>
     <div class="container">
-        <h1  style="color: #070344; text-shadow: 1px 2px; text-align:center;"><b>Customer Follow Up</b></h1>
-        <div class="container mt-5">
-        <a href="{{url('add-follow')}}"><button type="button" class="btn btn-primary complaint_btn" > Edit Follow Up</button></a>
-        </div>
-        <hr class="mb-4">.
-        <h3  style="color: #070344; text-shadow: 1px 2px; text-align:center;"><b>List Of Follow Ups</b></h3>
+        <h3 class="text-center" style="color: #070344;"><b>File Action Hours</b></h3>
        <br>
-     
       
+       
+       
+<div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
             <table class="table table-bordered" id="new-item">
                 <thead>
                     <tr>
-                        <th class="text-center">No</th>
-                        <th class="text-center">Follow Up date</th>
-                        <th class="text-center"> Follow Up Type</th>
-                        <th class="text-center">Customer Name</th>
-                        <th class="text-center">Description</th>
-                        <th class="text-center">Next BU Date</th>
-                        <th class="text-center">Alert Period</th>
-                        <th class="text-center">Responsible Staff</th>
-                        <th class="text-center">Registered By</th>
-                        <th class="text-center">Action</th>
-                       
+                        <th class="text-center">Sl.No</th>
+                        <th class="text-center">User</th>
+                        <th class="text-center">Time Hour</th>
+                        <th class="text-center">Time Minutes</th>
+                        <th class="text-center">Change Out Rate</th>
+                        <th class="text-center">Edit</th>
+                        <th class="text-center">Status <input type="checkbox" name="" id=""> </th>
+                        
                     </tr>
                 </thead>
                 <tbody>
                         <tr id="data">
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td><a href="{{url('edit-follow')}}"><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i></a>
-                            <a href=""><i  style="color:black;" class="fa fa-trash" aria-hidden="true"></i></td>
+                            <td  scope="row" class="text-center" ></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center">Edit</td>
+                            <td  scope="row" class="text-center" id="medicine_name_1">Active <input type="checkbox" name="" id=""></td>
+                        </tr>
+                </tbody>
+                </table>
 
+                <table class="table table-bordered" id="new-item">
+                <tbody>
+                        <tr id="data">
+                            <td  scope="row" class="text-center" style="width:55%;" >Total Hours Spend</td>
+                            <td  scope="row" class="text-center" ></td>
+                            <td  scope="row" class="text-center"></td>
+                            
                         </tr>
                 </tbody>
             </table>
-           
+            <div class="row">
+          <div class="col-md-3">
+           <div class="mb-1">
+          
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <select name="country" id="cars">
+                <option value="volvo">Activate</option>
+            </select>
+            <div class="invalid-feedback" style="width: 100%;">
+            Incorporation is required
+            </div>
+          </div>
+        </div>
+          </div>
+            <a href="{{url('')}}"><button style="margin-top:3%;" class="btn btn-primary add-btn">Go</button>
+        </a>
+
+
+
+       <div style="margin-top:4%;">
+        <p>Time Taken :</p>
+
+        <div class="row">
+            
+        <div class="col-md-4">
+            <div class="mb-1">
+          <label for="username">Name</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <select name="country" id="cars">
+                <option value="volvo"></option>
+            </select>
+          </div>
+        </div>
+        </div>
+        
+          
+
+        <div class="col-md-4">
+            <div class="mb-1">
+          <label for="username">Time in Hours</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <select name="country" id="cars">
+                <option value="volvo"></option>
+            </select>
+          </div>
+        </div>
+        </div>
+          <div class="col-md-4">
+           <div class="mb-1">
+          <label for="username">Time in Minutes</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <select name="country" id="cars">
+                <option value="volvo"></option>
+            </select>
+            <div class="invalid-feedback" style="width: 100%;">
+              Number is required.
+            </div>
+          </div>
+        </div>
+          </div>
+
+        </div>
+
+       </div>
+
+       <div class="container"  style="margin-top:4%;">
+  <div class="row">
+    <div class="col-sm">
+    
+    </div>
+    <div class="col-sm">
+    <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Print</button>
+
+    
+    <button type="submit" class="btn btn-primary submit_btn btn_align">Cancel</button>
+
+    </div>
+  </div>
+</div>
 
  <!-- The Modal -->
  <div class="modal fade" id="editmed">

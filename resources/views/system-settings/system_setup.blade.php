@@ -15,18 +15,8 @@
 "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
     </script>
       <style >
-          body
-        {
-          background-color: white;
-        }
-        h2
-        {
-            font-size:large;
-            font-weight:bold;
-             color:rgb(13, 1, 56); 
-             background-color:rgb(177, 127, 62);
-             padding:15px;
-            }
+     
+     
          .container{
          margin-left:0px;
          width:auto;
@@ -44,14 +34,7 @@
          }
          
          
-         h3
-        {
-            font-size:medium;
-            font-weight:bold;
-             color:white;
-             background-color:rgb(13, 1, 56);
-             padding:10px;
-            }
+     
      
             form{
                 margin-left:4px;
@@ -77,139 +60,66 @@
    </head>
    <body>
     <!-- <h2 class="text-center">Configuration Details</h2><br> -->
- 
-        <div class="row">
-            <div class="col-sm">
-                <h3> Company Details</h3>
-                <table class="table">
-                    <tbody>
-                        <ul>
-                        <tr>
-                            <td style="width:30%"><li ><a href="{{url('company_details')}}" >Company</li></a></td>
-                           </tr>
-                           <tr>
-                            <td style="width:30%"><li><a href="{{url('weekend_holiday')}}" >Weekends and Holidays</li></a></td>
-                           </tr>
-                           <tr>
-                            <td style="width:30%"><li><a href="{{url('other_confgn')}}" >Other Configurations</li></a></td>
-                           </tr>
-                           <tr>
-                            <td style="width:30%"><li><a href="{{url('')}}" >Paired Accounts</li></a></td>
-                           </tr>
-                           <tr>
-                            <td style="width:30%"><li><a href="{{url('')}}" >File Types</li></a></td>
-                           </tr>
-                           <tr>
-                            <td style="width:30%"><li><a href="{{url('')}}" >Invoice Items</li></a></td>
-                           </tr>
-                           <tr>
-                            <td style="width:30%"><li><a href="{{url('')}}" >Currency List</li></a></td>
-                           </tr>
-                        </ul>
-        </tbody>
-    </table>
+    <h4 style="text-align:center; text-shadow: 2px 1px;">Company Details</h4>
+    <hr class="mb-4">.
+    <div class="container-fluid">
+  
+  <div class="row sm">
+    <div class="col-sm-4 " ><a href="{{url('company_details')}}"><button type="button" class="btn btn-primary btn_align_btn" > Company</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('weekend_holiday')}}"><button type="button" class="btn btn-primary btn_align_btn" >Weekends &  Holidays</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('other_confgn')}}"><button type="button" class="btn btn-primary btn_align_btn" >Other Configurations</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('letter_types')}}"><button type="button" class="btn btn-primary btn_align_btn" > Paired Accounts</button></a></div>
+    <div class="col-sm-4 " > <a><button type="button" class="btn btn-primary btn_align_btn" > File Types</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > Invoice Items</button></a></div>
+    <div class="col-sm-4" > <a><button type="button" class="btn btn-primary btn_align_btn" > Currency List</button></a></div>
 </div>
-<div class="col-sm">
-     <h3>User Accounts</h3>
-      <table class="table">
-        <tbody>
-            <ul>
-                <tr>
-                    <td style="width:30%"><li ><a href="{{url('')}}" >Manage User Accounts</li></a></td>
-                           </tr>
-                           <tr>
-                            <td style="width:30%"><li><a href="{{url('')}}" >Change User Password</li></a></td>
-                           </tr>
-                           <tr>
-                            <td style="width:30%"><li><a href="{{url('')}}" >Manage User Groups</li></a></td>
-                           </tr>
-                           <tr>
-                            <td style="width:30%"><li><a href="{{url('')}}" >View Roles per User</li></a></td>
-                           </tr>
-                           <tr>
-                            <td style="width:30%"><li><a href="{{url('')}}" >Manage User Roles</li></a></td>
-                           </tr>
-                           <tr>
-                            <td style="width:30%"><li><a href="{{url('')}}" >Manage User Departments</li></a></td>
-                           </tr>
-                           <tr>
-                            <td style="width:30%"><li><a href="{{url('')}}" >Advocates Targets</li></a></td>
-                           </tr>
-                           
-                        </ul>
+</div>
 
-         </tbody>
-         
-      </table> 
-     
+<h4 style="text-align:center; text-shadow: 2px 1px;">User Accounts</h4>
+    <hr class="mb-4">.
+    <div class="container-fluid">
+  
+  <div class="row sm">
+    <div class="col-sm-4 " ><a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > Manage User Accounts</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > Change User Password</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" >Manage User Groups</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > View Roles per User</button></a></div>
+    <div class="col-sm-4 " > <a><button type="button" class="btn btn-primary btn_align_btn" > Manage User Roles</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > Manage User Departments</button></a></div>
+    <div class="col-sm-4" > <a><button type="button" class="btn btn-primary btn_align_btn" > Advocates Targets</button></a></div>
+</div>
+</div>
+
+<h4 style="text-align:center; text-shadow: 2px 1px;">Other Settings</h4>
+    <hr class="mb-4">.
+    <div class="container-fluid">
+  
+  <div class="row sm">
+    <div class="col-sm-4 " ><a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > Database Backup</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > Transport Zones</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" >Billable Activities</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > Bank Account Details</button></a></div>
+    <div class="col-sm-4 " > <a><button type="button" class="btn btn-primary btn_align_btn" > Leaves Days per Year</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > Hourly Rates</button></a></div>
+    <div class="col-sm-4" > <a><button type="button" class="btn btn-primary btn_align_btn" >Partner Revenue Share</button></a></div>
+</div>
+</div>
+
+<h4 style="text-align:center; text-shadow: 2px 1px;">System Menus</h4>
+    <hr class="mb-4">.
+    <div class="container-fluid">
+  
+  <div class="row sm">
+    <div class="col-sm-4 " ><a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > Menu Access Configuration</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > Useful Links</button></a></div>
         </div>
+</div>
 
-        </div>
+<form>
+ <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
+</form>
 
-<br>
-<br>
-<br>
-
-
-<div class="row">
-    <div class="col-sm">
-     <h3>Other Settings</h3>
-     <table class="table">
-        <tbody>
-        <ul>
-                <tr>
-                    <td style="width:30%"><li ><a href="{{url('')}}" >Database Backup</li></a></td>
-                           </tr>
-                           <tr>
-                            <td style="width:30%"><li><a href="{{url('')}}" >Transport Zones</li></a></td>
-                           </tr>
-                           <tr>
-                            <td style="width:30%"><li><a href="{{url('')}}" >Billable Activities</li></a></td>
-                           </tr>
-                           <tr>
-                            <td style="width:30%"><li><a href="{{url('')}}" >Bank Account Details</li></a></td>
-                           </tr>
-                           <tr>
-                            <td style="width:30%"><li><a href="{{url('')}}" >Leaves Days per Year</li></a></td>
-                           </tr>
-                           <tr>
-                            <td style="width:30%"><li><a href="{{url('')}}" >Hourly Rates</li></a></td>
-                           </tr>
-                           <tr>
-                            <td style="width:30%"><li><a href="{{url('')}}" >Partner Revenue Share</li></a></td>
-                           </tr>
-                           
-                        </ul>
-       
-        </tbody>
-      </table>
-
-        </div>
-      <br>
-
-     
-      
-    <div class="col-sm">
-     <h3>System Menus</h3>
-      <table class="table">
-        <tbody>
-              <ul>
-                <tr>
-                    <td style="width:30%"><li ><a href="{{url('')}}" >Menu Access Configuration</li></a></td>
-                           </tr>
-                           <tr>
-                            <td style="width:30%"><li><a href="{{url('')}}" >Useful Links</li></a></td>
-                           </tr>
-                          </ul>
-    </tbody>
-      </table> 
-
-        </div>
-        </div>
-        
-   
-    
-        </body>
+</body>
 </html>
   @endsection
       

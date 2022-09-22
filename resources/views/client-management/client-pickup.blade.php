@@ -20,11 +20,11 @@
        <br>
       
        <div id="mydatatable_filter" class="dataTables_filter">
-        <label><b>Search:</b><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
+        <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
        </div>
        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
        <div class="container mt-5">
-       <a href="{{url('add-pickup')}}"><button class="btn btn-primary add-btn">New Client Pickup</button></a>
+       <a href="{{url('add-pickup')}}"><button class="btn btn-primary add-btn" style="width:20%">New Client Pickup</button></a>
        </div>
        <hr class="mb-4">.
 <div class="tab-content" id="myTabContent">

@@ -14,6 +14,9 @@
 </head>
 
 <body>
+    <div>
+    <h6>Client/Add new Client</h6>
+    </div>
     <div class="container">
         <h3 class="text-center" style="color: #070344; text-shadow: 1px 2px;"><b>Client List</b></h3>
        <br>

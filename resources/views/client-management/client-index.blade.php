@@ -14,11 +14,13 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 </head>
 <body>
-
+  <h3 style="text-align:center"><b>Client Management</b></h3>
+  <hr class="mb-4">.
 <div class="container-fluid">
   
   <div class="row sm">
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-7.png" alt=""><a href="{{url('client_list')}}"><button type="button" class="btn btn-primary btn_align_btn" > Client List</button></a></div>
+  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-8.png" alt=""><a href="{{url('client-pickup')}}"><button type="button" class="btn btn-primary btn_align_btn" >New Client Pickup</button></a></div>
   <div class="col-sm-4 " ><a><img class="logo_size" src="image\logo\icon-1.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" >Client Search</button></a></div>
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-3.png" alt=""><a href="{{url('client-service')}}"><button type="button" class="btn btn-primary btn_align_btn" > Client Services Communication</button></a></div>
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-3.png" alt=""> <a href="complaint-list"><button type="button" class="btn btn-primary btn_align_btn" > Complaint Registration</button></a></div>
@@ -27,9 +29,19 @@
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-2.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > New Quotation</button></a></div>
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-2.png" alt=""><a href="{{url('follow-up')}}"><button type="button" class="btn btn-primary btn_align_btn" >Follow up</button></a></div>
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-6.png" alt=""> <a href="{{url('client-document')}}"><button type="button" class="btn btn-primary btn_align_btn" > Document Detials</button></a></div>
-  
-    
-
+  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-3.png" alt=""> <a href="complaint-list"><button type="button" class="btn btn-primary btn_align_btn" > Complaint Registration</button></a></div>
+  </div>
+  <br>
+  <hr class="mb-4">.
+  <h3 style="text-align:center"><b>Customer Relationship Manager</b></h3>
+  <br>
+  <hr class="mb-4">.
+ 
+  <div class="row sm">
+  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-7.png" alt=""><a href="{{url('customer-registration')}}"><button type="button" class="btn btn-primary btn_align_btn" > Customer Registration</button></a></div>
+  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-1.png" alt=""><a href="{{url('follow-up')}}"><button type="button" class="btn btn-primary btn_align_btn" >Customer Follow Up</button></a></div>
+  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-3.png" alt=""><a href=""><button type="button" class="btn btn-primary btn_align_btn" >Customer Follow Up Report</button></a></div>
+  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-3.png" alt=""><a href="{{url('Quotation')}}"><button type="button" class="btn btn-primary btn_align_btn" > Customer Quotation</button></a></div>
   </div>
 </div>
 
