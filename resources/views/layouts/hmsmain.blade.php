@@ -893,6 +893,7 @@ color: #1D1D50
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i id="icon" class="fas fa-piggy-bank"  style="font-weight: 300;"></i>
                                             <span>Inventory</span>
+                                            <span>Store ,Inventory</span>
                                     </a>
                                    
                                     </li>
