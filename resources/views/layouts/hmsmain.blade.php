@@ -83,34 +83,9 @@ color: #1D1D50
                              
 </style>
 
-    
+   
 </head>
 <body>
-
-
-
-
-
-
-
-<script>
-// Add active class to the current button (highlight it)
-// var header = document.getElementById("myDIV");
-// var btnes = header.getElementsByClassName("bten");
-// for (var i = 0; i < btnes.length; i++) {
-//   btnes[i].addEventListener("click", function() {
-//   var current = document.getElementsByClassName("activeq");
-//   if (current.length > 0) { 
-//     current[0].className = current[0].className.replace(" activeq", "");
-//   }
-//   this.className += " activeq";
-//   });
-// }
-// </script>
-
-
-
-
 
 
   <div><br></div>
@@ -463,8 +438,18 @@ color: #1D1D50
                                 </ul>
                                 </li>
 
+                                <li class="submenu-item has-sub " style="list-style:none;">
+                                        <a id="sblm" href="{{url('client-index')}}" class='sidebar-link' >
+                                        <i  class="fas fa-chalkboard-teacher" id="icon"></i>
+                                            <span > Client Management</span>
+                                        </a>
+                                </li>
 
+    
 
+                              
+
+                             
 
 
                             @endif
@@ -476,7 +461,7 @@ color: #1D1D50
                                         </a>
                                 </li>
                             @endif
-                            @if(Auth::user()->role == 'hr' || Auth::user()->role == 'superadmin')
+                            @if(Auth::user()->role == 'hr' || Auth::user()->role == 'hospitaladmin')
                                 @php
                                     $hr = array("addallowance", "addstaffs", "staffs","loans","payslip","attendance","attendanceview","payslipbulk","generatepayslip","managestaff");
                                 @endphp
@@ -489,9 +474,47 @@ color: #1D1D50
                                             <span>System Setup</span>
                                     </a>
                             </li>
-                                    
+                                    <!-- <ul class="submenu">
 
-                    
+                                    <li class="submenu-item ">
+                                        <a href="{{url('system_setup')}}" class='sidebar-link'>
+                                            <span id="subm">Setup</span>
+                                        </a>
+                                    </li>
+
+                                   
+                                    <li class="submenu-item ">
+                                        <a href="{{url('company_details')}}" class='sidebar-link'>
+                                            <span id="subm">Company</span>
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="submenu-item ">
+                                        <a href="{{url('weekend_holiday')}}" class='sidebar-link'>
+                                            <span id="subm">Holidays</span>
+                                        </a>
+                                    </li> -->
+
+                                    <!-- <li class="submenu-item ">
+                                        <a href="{{url('configu_ration')}}" class='sidebar-link'>
+                                            <span id="subm">Configurations</span>
+                                        </a>
+                                    </li> -->
+
+                                     <!-- <li class="submenu-item ">
+                                        <a href="{{url('other_confgn')}}" class='sidebar-link'>
+                                            <span id="subm">Other Configurations</span>
+                                        </a>
+                                    </li> -->
+
+                                    <!-- <li class="submenu-item ">
+                                        <a href="{{url('company_branch')}}" class='sidebar-link'>
+                                            <span id="subm">Company Branch</span>
+                                        </a>
+                                    </li> -->
+                                   
+                                    <!-- </ul>
+                                </li> -->
 
 
                                 <li class="sidebar-item  has-sub">
@@ -599,41 +622,41 @@ color: #1D1D50
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('trialbalance') }}" class=" sidebar-link">
-                                                   <span id="subm">Trial Balance </span></a>
+                                                   <span>Trial Balance </span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('profitandlossaccount') }}" class=" sidebar-link">
-                                                   <span id="subm">Profit And loss Account </span></a>
+                                                   <span>Profit And loss Account </span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('balancesheet') }}" class=" sidebar-link">
-                                                   <span id="subm">Balance Sheet </span></a>
+                                                   <span>Balance Sheet </span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('stock_section') }}" class=" sidebar-link">
-                                                   <span id="subm">Stock Reciept </span></a>
+                                                   <span>Stock Reciept </span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('stock_issue') }}" class=" sidebar-link">
-                                                   <span id="subm">Stock Issue </span></a>
+                                                   <span>Stock Issue </span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('store_ledger') }}" class=" sidebar-link">
-                                                   <span id="subm">Store Ledger </span></a>
+                                                   <span>Store Ledger </span></a>
                                            </li>
 
                                            <li class="submenu-item ">
                                                <a href="{{ url('stock_categories') }}" class=" sidebar-link">
-                                                   <span id="subm">Stock Categories </span></a>
+                                                   <span>Stock Categories </span></a>
                                            </li>
 
                                            <li class="submenu-item ">
                                                <a href="{{ url('stock_subcategories') }}" class=" sidebar-link">
-                                                   <span id="subm">Stock Sub Categories </span></a>
+                                                   <span>Stock Sub Categories </span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('stock_items') }}" class=" sidebar-link">
-                                                   <span id="subm">Stock Items </span></a>
+                                                   <span>Stock Items </span></a>
                                            </li>
                                        </ul>
                                    </li>
@@ -654,15 +677,15 @@ color: #1D1D50
                                     @endif
                                     <li class="submenu-item  ">
                                         <a href="{{url('addsuppliers')}}" class=" sidebar-link">
-                                            <span id="subm">Suppliers</span></a>
+                                            <span>Suppliers</span></a>
                                     </li>
                                     <li class="submenu-item ">
                                         <a href="{{url('view_manufacturers')}}" class=" sidebar-link">
-                                            <span id="subm">Manufacturers</span></a>
+                                            <span>Manufacturers</span></a>
                                     </li>
                                     <li class="submenu-item ">
                                         <a href="{{url('show_items_details')}}" class=" sidebar-link">
-                                            <span id="subm">Items</span>
+                                            <span>Items</span>
                                         </a>
                                     </li>
                                     
@@ -678,11 +701,11 @@ color: #1D1D50
                                     </li> -->
                                     <li class="submenu-item ">
                                         <a href="{{url('store_reorder')}}" class=" sidebar-link">
-                                            <span id="subm">Reorder Level</span></a>
+                                            <span>Reorder Level</span></a>
                                     </li>
                                     <li class="submenu-item ">
                                         <a href="{{url('empty_stock')}}" class=" sidebar-link">
-                                            <span id="subm">Empty Stock</span></a>
+                                            <span>Empty Stock</span></a>
                                     </li>
                                     <!-- <li class="submenu-item ">
                                         <a href="{{url('show_substore')}}" class=" sidebar-link">
@@ -698,19 +721,19 @@ color: #1D1D50
                                     </li> -->
                                     <li class="sidebar-item  has-sub">
                                         <a href="#" class="sidebar-link">
-                                            <i class="fa fa-purchase" ></i>
+                                            <i class="fa fa-purchase" style="font-weight: 400;"></i>
                                                 <span>Purchase</span>
                                         </a>
                                         <ul class="submenu" style="display: none;">
                                             <li class="submenu-item  ">
                                                 <a href="{{url('view_purchase')}}" class=" sidebar-link">
-                                                    <span id="subm">New Purchase</span>
+                                                    <span>New Purchase</span>
                                                 </a>
                                                 <a href="{{url('received_order_detailes')}}" class=" sidebar-link">
-                                                    <span id="subm">manage_purchase</span>
+                                                    <span>manage_purchase</span>
                                                 </a>
                                                 <a href="{{url('received_order_detailes')}}" class=" sidebar-link">
-                                                    <span id="subm">Purchase Return</span>
+                                                    <span>Purchase Return</span>
                                                 </a>
                                             </li>
                                         </ul>
@@ -726,11 +749,11 @@ color: #1D1D50
                                             </li>
                                         </ul>
                                     </li> --}}
-                                    {{-- <li class="sidebar-item  has-sub">
+                                    <li class="sidebar-item  has-sub">
                                         <a href="#" class="sidebar-link">
-                                            <i class="" ></i>
+                                            <i class="" style="font-weight: 400;"></i>
                                                 <span>Settings</span>
-                                        </a> --}}
+                                        </a>
 
 
 
@@ -814,7 +837,7 @@ color: #1D1D50
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="fas fa-user"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="fas fa-user-cog"  style="font-weight: 300;"></i>
                                             <span>Office Administrations</span>
                                     </a>
                                    
@@ -833,7 +856,7 @@ color: #1D1D50
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="fas fa-qrcode"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="fa fa-cogs"  style="font-weight: 300;"></i>
                                             <span>Tools & ad ons</span>
                                     </a>
                                    
@@ -900,8 +923,7 @@ color: #1D1D50
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i id="icon" class="fas fa-piggy-bank"  style="font-weight: 300;"></i>
-                                            <span>Store & Inventory</span>
-                                            <span>Inventory</span>
+                                            <span>Store ,Inventory</span>
                                     </a>
                                    
                                     </li>
@@ -997,20 +1019,16 @@ color: #1D1D50
                 </a> --}}
             </header>
             <div class="page-heading" >
-
-                {{-- <div><a href=""><i id="icon" class="fa fa-arrow-circle-left hBack pl-5"  style="font-size: 50px; color:#D5BD94"></i></a></div> --}}
-
-
                 {{-- <h3 style="color:#c30147;">{{Auth::user()->Hospital}}</h3> --}}
                 {{-- <h3 style="color:#c30147;">ERP Global</h3> --}}
             </div>
-            <a href="javascript:history.back()"  class="btn btn-primary" style="width:15%">Back</a>
+            {{-- <a href="javascript:history.back()"  class="btn btn-primary" style="margin-bottom:10px;">Back</a> --}}
             <div style="margin-left: 83%;margin-top: -8%;">
                 <div class="avatar avatar-xl">
-                    <img  style="width:50%;height:50%;" src="assets/images/faces/law1.png" alt="Face 1">
+                    <img  style="margin-left: 28%;" src="assets/images/faces/CRAHqLogo.png" alt="Face 1">
                 </div>
-                <h5 class="font-bold" style="color:#1D1D50"> {{ Auth::user()->name }}</h5>
-                <h6 class="" style="color:#1D1D50"><a href="{{url('logt')}}">logout</a></h6>
+                <h5 class="font-bold"> {{ Auth::user()->name }}</h5>
+                <h6 class="text-muted mb-0"><a href="{{url('logt')}}">logout</a></h6>
                 <div>
                     <p></p>
                 </div>
@@ -1034,33 +1052,6 @@ color: #1D1D50
             </footer>
         </div>
     </div>
-    <style>
-        .fc .fc-button-group > * {
-    float: left;
-    margin: 0 0 0 -1px;
-    /* border: solid red 1px; */
-    width: 33%;
-}
-
-.fc-toolbar .fc-left {
-    float: left;
-    width: 30%;
-}
-
-
-.fc-toolbar .fc-right {
-    /* float: left; */
-    width: 40%;
-}
-
-.fc-toolbar .fc-center {
-    display: inline-block;
-    width: 30%;
-}
-       </style>
-
-
-
     <script src="{{asset('/')}}assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="{{asset('/')}}assets/js/bootstrap.bundle.min.js"></script>
 
@@ -1169,52 +1160,10 @@ color: #1D1D50
              }
          </script>
 
-         <script>
-         
-         
-         $("a.sidebar-link")
-         .click(function(){
+         <script>$("a.sidebar-link").click(function(){
             $("a.sidebar-link").css("background-color", "");
           $(this).css("background-color", "#F5E9D4");
-        });
-        
-        
-        
-        </script>
-
-{{-- <script>$(".hBack").on("click", function(e){
-    e.preventDefault();
-    window.history.back();
-});</script> --}}
-
-
-<script>
-    const btn = document.getElementById('sblm');
-
-btn.addEventListener('click', function onClick() {
-  btn.style.backgroundColor = '#F5E9D4';
-  btn.style.color = '';
-});
-
-
-
-  </script> 
-
-
-<script>
-    var count = 1;
-    function setColor(btn, color) {
-        var property = document.getElementById('sblm');
-        if (count == 0) {
-            property.style.backgroundColor = "#FFFFFF"
-            count = 1;        
-        }
-        else {
-            property.style.backgroundColor = "#7FFF00"
-            count = 0;
-        }
-    }
-</script>
+        });</script>
 
 <script>
 
@@ -1229,3 +1178,5 @@ btn.addEventListener('click', function onClick() {
 <!-- Mirrored from zuramai.github.io/mazer/demo/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 14 Aug 2021 11:16:21 GMT -->
 
 </html>
+hmsmain.blade.php
+Displaying hmsmain.blade.php.
