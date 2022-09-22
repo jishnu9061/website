@@ -22,9 +22,9 @@ $('#price').prop('readonly', true);
 });
 </script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-<h6>Client/Add new Client</h6>
+
 <div>
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Add New Client</h2>
+    <h2 style="text-align:center;">Add New Client</h2>
     <hr class="mb-4">.
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -329,6 +329,59 @@ $('#price').prop('readonly', true);
                         </div>
                     </div>
                     <br>
+                    <h1 style="text-align:center;">Contact Person</h1>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="mb-1">
+                            <label for="username">Names</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control" name="name" id="age" value="" placeholder="" min="0" max="99">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                      
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-1">
+                            <label for="username">Designation</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control" name="Mobile" id="age" value="" placeholder="" min="0" max="99">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                        Mobile No is required.
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    
+                    <div class="col-md-3">
+                            <div class="mb-1">
+                            <label for="username">Mobile No</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control" name="no" id="age" value="" placeholder="" min="0" max="99">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                        Mobile No
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-1">
+                            <label for="username">Email</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control" name="email" id="age" value="" placeholder="" min="0" max="99">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                     
+                                        </div>
+                                    </div>
+                            </div>
+                    </div>
+                    <br>
                     <div class="container">
                       <div class="row">
                         <div class="col-sm">
@@ -342,7 +395,7 @@ $('#price').prop('readonly', true);
                         </div>
                           <div class="col-sm">
                             <button type="submit" class="btn btn-primary submit_btn_btn  ">Submit</button>
-                            <a href="{{route('client-index')}}" type="button" class="btn btn-primary " style="width:30%">Back</a>
+                            <a href="{{route('client-index')}}" type="button" class="btn btn-primary " style="width:30%;  margin-top: 30px;">Back</a>
                           </div>
                         </div>
                       </div>  
