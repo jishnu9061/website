@@ -39,7 +39,8 @@
                 <label for="client_type">Client Type :</label>
                 <Select class="client_type" id="client_type">
                     <option>Corporate</option>                    
-                </seLect></br></br>
+                </seLect>
+            </br></br>
 
                 <label for="citizen_status">Citizen Status :</label>
                 <Select class="citizen_status" id="citizen_status">
