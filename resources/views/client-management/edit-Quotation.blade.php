@@ -23,7 +23,7 @@ $('#price').prop('readonly', true);
 </script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <div>
-    <h2 style="text-align:center; text-shadow: 2px 1px;">New Quotation</h2>
+    <h2 style="text-align:center; text-shadow: 2px 1px;">Edit Quotation</h2>
     <hr class="mb-4">.
 </div>
 </div>
@@ -256,7 +256,7 @@ $('#price').prop('readonly', true);
                         </div>
                           <div class="col-sm">
                             <button type="submit" class="btn btn-primary submit_btn_btn">Submit</button>
-                            <a href="{{route('client-index')}}" type="button" class="btn btn-primary " style="width:30%">Back</a>
+                            <a href="{{route('client-index')}}" type="button" class="btn btn-primary " style="width:30%; margin-top: 30px; padding:8px;">Back</a>
                           </div>
                         </div>
                       </div>  

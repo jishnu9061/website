@@ -14,15 +14,12 @@
 </head>
 
 <body>
-    <div>
-    <h6>Client/Add new Client</h6>
-    </div>
     <div class="container">
-        <h3 class="text-center" style="color: #070344; text-shadow: 1px 2px;"><b>Client List</b></h3>
+        <h3 class="text-center" style="color: #070344;"><b>Client List</b></h3>
        <br>
       
        <div id="mydatatable_filter" class="dataTables_filter">
-        <label><b>Search:</b><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
+        <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
        </div>
        <a href="{{('add_newclient')}}"><button class="btn btn-primary add-btn">Add Client</button></a>
        <hr class="mb-4">.
@@ -54,7 +51,7 @@
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row"class="text-center"><a href="{{url('view-client')}}">
-                            <a href="{{url('add-document')}}"><button class="btn btn-primary document_btn">Add Documents</button></a></td>
+                            <a href="{{url('add-document')}}"><button class="btn btn-primary document_btn" style="width:90%; margin-top:-8px;" >Add Documents</button></a></td>
                            <td><a href="{{url('view-client')}}"><i style="color:black;" class="fa fa-eye" aria-hidden="true"></i></td></a>
                             <td><a href="{{url('edit_client')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td>
                             <td><a href=""><i style="color:black;" class="fa fa-trash" aria-hidden="true"></i></td>
