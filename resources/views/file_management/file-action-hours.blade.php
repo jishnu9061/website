@@ -15,14 +15,10 @@
 
 <body>
     <div class="container">
-        <h3 class="text-center" style="color: #070344;"><b>Client List</b></h3>
+        <h3 class="text-center" style="color: #070344;"><b>File Action Hours</b></h3>
        <br>
       
-       <div id="mydatatable_filter" class="dataTables_filter">
-        <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
-       </div>
-       <a href="{{('add_newclient')}}"><button class="btn btn-primary add-btn">Add Client</button></a>
-       <hr class="mb-4">.
+       
        
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -30,36 +26,130 @@
             <table class="table table-bordered" id="new-item">
                 <thead>
                     <tr>
-                        <th class="text-center"> No</th>
-                        <th class="text-center"> Client No</th>
-                        <th class="text-center">Client</th>
-                        <th class="text-center">Email Address</th>
-                        <th class="text-center">Services Offered</th>
-                        <th class="text-center">Status</th>
-                        <th class="text-center">Add Documents</th>
-                        <th class="text-center">VIew</th>
+                        <th class="text-center">Sl.No</th>
+                        <th class="text-center">User</th>
+                        <th class="text-center">Time Hour</th>
+                        <th class="text-center">Time Minutes</th>
+                        <th class="text-center">Change Out Rate</th>
                         <th class="text-center">Edit</th>
-                        <th class="text-center">Delete</th>
+                        <th class="text-center">Status <input type="checkbox" name="" id=""> </th>
+                        
                     </tr>
                 </thead>
                 <tbody>
                         <tr id="data">
+                            <td  scope="row" class="text-center" ></td>
                             <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row"class="text-center"><a href="{{url('view-client')}}">
-                            <a href="{{url('add-document')}}"><button class="btn btn-primary document_btn" style="width:90%; margin-top:-8px;" >Add Documents</button></a></td>
-                           <td><a href="{{url('view-client')}}"><i style="color:black;" class="fa fa-eye" aria-hidden="true"></i></td></a>
-                            <td><a href="{{url('edit_client')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td>
-                            <td><a href=""><i style="color:black;" class="fa fa-trash" aria-hidden="true"></i></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center">Edit</td>
+                            <td  scope="row" class="text-center" id="medicine_name_1">Active <input type="checkbox" name="" id=""></td>
+                        </tr>
+                </tbody>
+                </table>
+
+                <table class="table table-bordered" id="new-item">
+                <tbody>
+                        <tr id="data">
+                            <td  scope="row" class="text-center" style="width:55%;" >Total Hours Spend</td>
+                            <td  scope="row" class="text-center" ></td>
+                            <td  scope="row" class="text-center"></td>
                             
                         </tr>
                 </tbody>
             </table>
-           
+            <div class="row">
+          <div class="col-md-3">
+           <div class="mb-1">
+          
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <select name="country" id="cars">
+                <option value="volvo">Activate</option>
+            </select>
+            <div class="invalid-feedback" style="width: 100%;">
+            Incorporation is required
+            </div>
+          </div>
+        </div>
+          </div>
+            <a href="{{url('')}}"><button style="margin-top:3%;" class="btn btn-primary add-btn">Go</button>
+        </a>
+
+
+
+       <div style="margin-top:4%;">
+        <p>Time Taken :</p>
+
+        <div class="row">
+            
+        <div class="col-md-4">
+            <div class="mb-1">
+          <label for="username">Name</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <select name="country" id="cars">
+                <option value="volvo"></option>
+            </select>
+          </div>
+        </div>
+        </div>
+        
+          
+
+        <div class="col-md-4">
+            <div class="mb-1">
+          <label for="username">Time in Hours</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <select name="country" id="cars">
+                <option value="volvo"></option>
+            </select>
+          </div>
+        </div>
+        </div>
+          <div class="col-md-4">
+           <div class="mb-1">
+          <label for="username">Time in Minutes</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <select name="country" id="cars">
+                <option value="volvo"></option>
+            </select>
+            <div class="invalid-feedback" style="width: 100%;">
+              Number is required.
+            </div>
+          </div>
+        </div>
+          </div>
+
+        </div>
+
+       </div>
+
+       <div class="container"  style="margin-top:4%;">
+  <div class="row">
+    <div class="col-sm">
+    
+    </div>
+    <div class="col-sm">
+    <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Print</button>
+
+    
+    <button type="submit" class="btn btn-primary submit_btn btn_align">Cancel</button>
+
+    </div>
+  </div>
+</div>
 
  <!-- The Modal -->
  <div class="modal fade" id="editmed">

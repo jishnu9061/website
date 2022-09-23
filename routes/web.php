@@ -709,7 +709,8 @@ Route::any('configu_ration','SystemSetup@Configtn')->name('configu_ration');
 Route::any('courts','SystemSetup@courts')->name('courts');
 Route::any('add_court','SystemSetup@addcourt')->name('add_court');
 Route::any('edit_court','SystemSetup@editcourt')->name('edit_court');
-
+Route::any('add_court_category','SystemSetup@addcourtcategory')->name('add_court_category');
+Route::any('letter_types','SystemSetup@lettertype')->name('letter_types');
 
 
 // Route::any('company_details','SystemSetting@index')->name('company_details');
@@ -769,11 +770,13 @@ Route::any('view-pickup','ClientManagement@viewPickups')->name('view-pickup');
 //complaint
 Route::any('complaint-list','ClientManagement@complaintList')->name('complaint-list');
 Route::any('add-Complaint','ClientManagement@addComplaint')->name('add-Complaint');
+Route::any('edit-Complaint','ClientManagement@editComplaint')->name('edit-Complaint');
 //end complaint
 
 //Follow Up
 Route::any('follow-up','ClientManagement@followup')->name('follow-up');
 Route::any('add-follow','ClientManagement@addFollow')->name('add-follow');
+Route::any('edit-follow','ClientManagement@editFollow')->name('edit-follow');
 //end Follow Up
 
 //service
@@ -781,24 +784,54 @@ Route::any('client-service','ClientManagement@service')->name('client-service');
 Route::any('add-service','ClientManagement@addService')->name('add-service');
 //end service
 
+//Quotation
+Route::any('Quotation','ClientManagement@Quotation')->name('Quotation');
+Route::any('new-Quotation','ClientManagement@newQuotation')->name('new-Quotation');
+Route::any('edit-Quotation','ClientManagement@editQuotation')->name('edit-Quotation');
+//end Quotation
+
+//customer-registration
+Route::any('customer-registration','ClientManagement@customer')->name('customer-registration');
+Route::any('add-customer','ClientManagement@addCustomer')->name('add-customer');
+Route::any('edit-customer','ClientManagement@editCustomer')->name('edit-customer');
+//end customer-registration
 
 //mugunth
 
 
 
 //vinu
+
+//manage files
 Route::any('file_managementindex',"filemanagement@index")->name('file_managementindex');
 Route::any('file-list',"filemanagement@view")->name('file-list');
 Route::any('edit-file',"filemanagement@edit")->name('edit-file');
 Route::any('add-new-file',"filemanagement@addnew")->name('add-new-file');
+//manage files
 
+//document templates
 Route::any('template-category',"filemanagement@template")->name('template-category');
+//document templates
+
+//file progress
+Route::any('add-file-progress',"filemanagement@addprogress")->name('add-file-progress');
+Route::any('edit-file-progress',"filemanagement@editprogress")->name('edit-file-progress');
+Route::any('progress-bringup',"filemanagement@progressbringup")->name('progress-bringup');
+Route::any('add-new-bringup',"filemanagement@addbringup")->name('add-new-bringup');
+
+
+
+Route::any('new-instructions',"filemanagement@newinstruction")->name('new-instructions');
+
+Route::any('file-action-hours',"filemanagement@fileactionhours")->name('file-action-hours');
+//file progress
 //vinu
 
 //beljin
 
 Route::any('/u_details',"filemanagement@u_details")->name('u_details');
-
+Route::any('/add_user',"filemanagement@add_user")->name('add_user');
+Route::any('/change_password',"filemanagement@change_password")->name('change_password');
 //beljin
 
 

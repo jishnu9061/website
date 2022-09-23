@@ -15,14 +15,15 @@
 
 <body>
     <div class="container">
-        <h3 class="text-center" style="color: #070344;"><b>Client List</b></h3>
+        <h3 class="text-center" style="color: #070344;"><b>Customer Registration</b></h3>
        <br>
       
        <div id="mydatatable_filter" class="dataTables_filter">
         <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
        </div>
-       <a href="{{('add_newclient')}}"><button class="btn btn-primary add-btn">Add Client</button></a>
+       <a href="{{url('add-customer')}}"><button class="btn btn-primary add-btn" style="width:18%">Register Customer</button></a>
        <hr class="mb-4">.
+       <h4 style="text-align:center; padding:12px">Customer List</h4>
        
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -31,15 +32,12 @@
                 <thead>
                     <tr>
                         <th class="text-center"> No</th>
-                        <th class="text-center"> Client No</th>
-                        <th class="text-center">Client</th>
-                        <th class="text-center">Email Address</th>
-                        <th class="text-center">Services Offered</th>
-                        <th class="text-center">Status</th>
-                        <th class="text-center">Add Documents</th>
-                        <th class="text-center">VIew</th>
-                        <th class="text-center">Edit</th>
-                        <th class="text-center">Delete</th>
+                        <th class="text-center"> Client Name</th>
+                        <th class="text-center">Address</th>
+                        <th class="text-center">Contact</th>
+                        <th class="text-center">Physical Address</th>
+                        <th class="text-center">Registration Date</th>
+                        <th class="text-center">Action</th>   
                     </tr>
                 </thead>
                 <tbody>
@@ -50,12 +48,7 @@
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row"class="text-center"><a href="{{url('view-client')}}">
-                            <a href="{{url('add-document')}}"><button class="btn btn-primary document_btn" style="width:90%; margin-top:-8px;" >Add Documents</button></a></td>
-                           <td><a href="{{url('view-client')}}"><i style="color:black;" class="fa fa-eye" aria-hidden="true"></i></td></a>
-                            <td><a href="{{url('edit_client')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td>
-                            <td><a href=""><i style="color:black;" class="fa fa-trash" aria-hidden="true"></i></td>
-                            
+                            <td><a href="{{url('edit-customer')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td> 
                         </tr>
                 </tbody>
             </table>

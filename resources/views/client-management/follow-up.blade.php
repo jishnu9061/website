@@ -53,7 +53,7 @@
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td><a href=""><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i></a>
+                            <td><a href="{{url('edit-follow')}}"><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i></a>
                             <a href=""><i  style="color:black;" class="fa fa-trash" aria-hidden="true"></i></td>
 
                         </tr>

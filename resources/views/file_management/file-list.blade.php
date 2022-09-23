@@ -14,6 +14,12 @@
 </head>
 
 <body>
+    <p style="margin-bottom:4%;"> <b>Manage file/ File List</b> </p>
+    <div class="col-sm">
+    <a href="{{url('file_managementindex')}}"><button type="submit" style=" height: 3rem; margin-left: 0%; width: 17%; margin-bottom: 13%; background-color:#acacb9;" >Back</button></a>
+    
+
+  </div>
     <div class="container">
         <h3 class="text-center" style="color: #070344;"><b>File List</b></h3>
        <br>
@@ -35,7 +41,7 @@
                         <th class="text-center">Date</br>Opened</th>
                         <th class="text-center">Responsible</br>Advocate</th>
                         <th class="text-center">Most</br>Recent</br>Progress</th>
-                        <th class="text-center">Data</br>Closed</th>
+                        <th class="text-center">Date</br>Closed</th>
                         <th class="text-center">File&Fee</br>Balances</th>
                         <th class="text-center">Status</th>
                         <th class="text-center">Action</th>

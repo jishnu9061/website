@@ -11,7 +11,7 @@
 <style>
      body
         {
-          background-color: #f0e7ce;
+      
           /* font-family:  Arial, Helvetica, sans-serif; */
           margin-left:10px;
           margin-right:10px;
@@ -118,6 +118,10 @@
 <button class="btn btn-primary" style="width:42px;height:35px;background-color:rgb(177, 127, 62); border: 1px solid rgb(240, 205, 10);margin-left:1250px;
             color:rgb(13, 1, 56);text-align: center; ">Go</button>
          -->
+
+         <form>
+ <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
+</form>
 </body>
     </html>
     @endsection
