@@ -49,68 +49,12 @@ color: #1D1D50
                     color: #000;
 
                 } */
-                /* <style> */
-/* Style the buttons */
-/* .bten {
-  border: none;
-  outline: none;
-  padding: 10px 16px;
-  background-color: #f1f1f1;
-  cursor: pointer;
-  font-size: 18px;
-} */
-
-/* Style the active class, and buttons on mouse-over */
- /* .bten:hover { */
-  /* background-color: #666; */
-  /* color: white;
-} */
-
-/* .activeq.bten {
-  border: none;
-  outline: none;
-  padding: 10px 16px;
-  background-color: #FFFBF4;
-  cursor: pointer;
-  font-size: 18px;
-} */
-
-/* Style the active class, and buttons on mouse-over */
- /* .activeq.bten:hover {
-  background-color: red;
-  color: white;
-} */
-                             
+               
+              
 </style>
-
     
 </head>
 <body>
-
-
-
-
-
-
-
-<script>
-// Add active class to the current button (highlight it)
-// var header = document.getElementById("myDIV");
-// var btnes = header.getElementsByClassName("bten");
-// for (var i = 0; i < btnes.length; i++) {
-//   btnes[i].addEventListener("click", function() {
-//   var current = document.getElementsByClassName("activeq");
-//   if (current.length > 0) { 
-//     current[0].className = current[0].className.replace(" activeq", "");
-//   }
-//   this.className += " activeq";
-//   });
-// }
-// </script>
-
-
-
-
 
 
   <div><br></div>
@@ -417,20 +361,12 @@ color: #1D1D50
                                     </ul>
                                 </li>
                             @endif --}}
-                            @if(Auth::user()->role == 'superadmin')
+                            @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <!-- <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
                                             <span>User Management</span>
                                     </a> -->
-                                    @if(Auth::user()->role == 'superadmin')
-                                    <li class="submenu-item has-sub " style="list-style:none;">
-                                        <a id="sblm" href="{{url('client-index')}}" class='sidebar-link' >
-                                        <i  class="fas fa-chalkboard-teacher" id="icon"></i>
-                                            <span > Client Management</span>
-                                        </a>
-                                </li>
-                                    @endif
                                     @php
                                         $admin = array("usermanagement", "adddepartments","add_labdept","add_surgery_types","adddepartmentadmin","addroomstypes","addroomtypes","beds","Add_Ambulance_details");
                                         $lab = array("labcategory", "labtests", "labprofile","patlabtest","alllabtestsview");
@@ -463,13 +399,22 @@ color: #1D1D50
                                 </ul>
                                 </li>
 
-                               
+                                <li class="submenu-item has-sub " style="list-style:none;">
+                                        <a id="sblm" href="{{url('client-index')}}" class='sidebar-link' >
+                                        <i  class="fas fa-chalkboard-teacher" id="icon"></i>
+                                            <span > Client Management</span>
+                                        </a>
+                                </li>
 
+    
 
+                              
+
+                             
 
 
                             @endif
-                            @if(Auth::user()->role == 'superadmin')
+                            @if(Auth::user()->role == 'hospitaladmin')
                             <li class="submenu-item has-sub " style="list-style:none;">
                                         <a href="{{url('file_managementindex')}}" class='sidebar-link'>
                                         <i class="far fa-folder-open" id="icon" style="font-weight: 300;"></i>
@@ -477,7 +422,7 @@ color: #1D1D50
                                         </a>
                                 </li>
                             @endif
-                            @if(Auth::user()->role == 'hr' || Auth::user()->role == 'superadmin')
+                            @if(Auth::user()->role == 'hr' || Auth::user()->role == 'hospitaladmin')
                                 @php
                                     $hr = array("addallowance", "addstaffs", "staffs","loans","payslip","attendance","attendanceview","payslipbulk","generatepayslip","managestaff");
                                 @endphp
@@ -490,9 +435,47 @@ color: #1D1D50
                                             <span>System Setup</span>
                                     </a>
                             </li>
-                                    
+                                    <!-- <ul class="submenu">
 
-                    
+                                    <li class="submenu-item ">
+                                        <a href="{{url('system_setup')}}" class='sidebar-link'>
+                                            <span id="subm">Setup</span>
+                                        </a>
+                                    </li>
+
+                                   
+                                    <li class="submenu-item ">
+                                        <a href="{{url('company_details')}}" class='sidebar-link'>
+                                            <span id="subm">Company</span>
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="submenu-item ">
+                                        <a href="{{url('weekend_holiday')}}" class='sidebar-link'>
+                                            <span id="subm">Holidays</span>
+                                        </a>
+                                    </li> -->
+
+                                    <!-- <li class="submenu-item ">
+                                        <a href="{{url('configu_ration')}}" class='sidebar-link'>
+                                            <span id="subm">Configurations</span>
+                                        </a>
+                                    </li> -->
+
+                                     <!-- <li class="submenu-item ">
+                                        <a href="{{url('other_confgn')}}" class='sidebar-link'>
+                                            <span id="subm">Other Configurations</span>
+                                        </a>
+                                    </li> -->
+
+                                    <!-- <li class="submenu-item ">
+                                        <a href="{{url('company_branch')}}" class='sidebar-link'>
+                                            <span id="subm">Company Branch</span>
+                                        </a>
+                                    </li> -->
+                                   
+                                    <!-- </ul>
+                                </li> -->
 
 
                                 <li class="sidebar-item  has-sub">
@@ -549,7 +532,7 @@ color: #1D1D50
                                 </li>
                             @endif
                             
-                            @if(Auth::user()->role == 'account' || Auth::user()->role == 'superadmin')
+                            @if(Auth::user()->role == 'account' || Auth::user()->role == 'hospitaladmin')
                                 @php
                                     $accounts = array("ledger_acount_categories", "ledger_acount_subcategories","ledger_budget_category", "ledger_acounts","expense_report","journal","ledger","trialbalance","profitandlossaccount","balancesheet","stock_section","stock_issue","store_ledger","stock_categories","stock_subcategories","stock_items");
                                 @endphp
@@ -569,85 +552,85 @@ color: #1D1D50
                                       @endif
                                            <li class="submenu-item  ">
                                                 <a href="{{ url('ledger_acount_categories') }}" class=" sidebar-link">
-                                                <span id="subm">Account Type</span></a>
+                                                <span  id="subm">Account Type</span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('ledger_acount_subcategories') }}" class="sidebar-link">
-                                               <span id="subm">Groups</span></a>
+                                               <span  id="subm">Groups</span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                 <a href="{{ url('ledger_budget_category') }}" class="sidebar-link">
-                                                <span id="subm">Budget Category</span></a>
+                                                <span  id="subm">Budget Category</span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('ledger_acounts') }}" class=" sidebar-link">
-                                               <span id="subm">Ledger Account</span>
+                                               <span  id="subm">Ledger Account</span>
                                            </a>
                                            </li>
                                            <li class="submenu-item ">
                                             <a href="{{ url('expense_report') }}" class=" sidebar-link">
-                                            <span id="subm">Expense Report</span>
+                                            <span  id="subm">Expense Report</span>
                                         </a>
                                         </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('journal') }}" class=" sidebar-link" >
-                                               <span id="subm">Journal</span>
+                                               <span  id="subm">Journal</span>
                                            </a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('ledger') }}" class=" sidebar-link">
-                                                   <span id="subm">Ledger </span></a>
+                                                   <span  id="subm">Ledger </span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('trialbalance') }}" class=" sidebar-link">
-                                                   <span id="subm">Trial Balance </span></a>
+                                                   <span  id="subm">Trial Balance </span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('profitandlossaccount') }}" class=" sidebar-link">
-                                                   <span id="subm">Profit And loss Account </span></a>
+                                                   <span  id="subm">Profit And loss Account </span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('balancesheet') }}" class=" sidebar-link">
-                                                   <span id="subm">Balance Sheet </span></a>
+                                                   <span  id="subm">Balance Sheet </span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('stock_section') }}" class=" sidebar-link">
-                                                   <span id="subm">Stock Reciept </span></a>
+                                                   <span  id="subm">Stock Reciept </span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('stock_issue') }}" class=" sidebar-link">
-                                                   <span id="subm">Stock Issue </span></a>
+                                                   <span  id="subm">Stock Issue </span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('store_ledger') }}" class=" sidebar-link">
-                                                   <span id="subm">Store Ledger </span></a>
+                                                   <span  id="subm">Store Ledger </span></a>
                                            </li>
 
                                            <li class="submenu-item ">
                                                <a href="{{ url('stock_categories') }}" class=" sidebar-link">
-                                                   <span id="subm">Stock Categories </span></a>
+                                                   <span  id="subm">Stock Categories </span></a>
                                            </li>
 
                                            <li class="submenu-item ">
                                                <a href="{{ url('stock_subcategories') }}" class=" sidebar-link">
-                                                   <span id="subm">Stock Sub Categories </span></a>
+                                                   <span  id="subm">Stock Sub Categories </span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('stock_items') }}" class=" sidebar-link">
-                                                   <span id="subm">Stock Items </span></a>
+                                                   <span  id="subm">Stock Items </span></a>
                                            </li>
                                        </ul>
                                    </li>
                                    @endif
-                            @if(Auth::user()->role == 'store' || Auth::user()->role == 'superadmin')
+                            @if(Auth::user()->role == 'store' || Auth::user()->role == 'hospitaladmin')
                                 @php
                                     $store=array("addsuppliers", "view_manufacturers","view_medicine", "view_medicine_category","view_medicine_type","view_unit","view_medicine_group","view_brand_name","view_generic_name","reorder","view_purchase","stock_details","accounting_method","payment_type");
                                 @endphp
                                 <li class="sidebar-item  has-sub">
-                                    <a href="{{url('home')}}" class='sidebar-link'>
+                                    {{-- <a href="{{url('home')}}" class='sidebar-link'>
                                         <i class="bi bi-shop" id="icon" ></i>
                                             <span>Inventory </span>
-                                    </a>
+                                    </a> --}}
                                     @if (in_array(request()->path(),$store))
                                         <ul class="submenu" style="display: block;">
                                             @else
@@ -655,15 +638,15 @@ color: #1D1D50
                                     @endif
                                     <li class="submenu-item  ">
                                         <a href="{{url('addsuppliers')}}" class=" sidebar-link">
-                                            <span id="subm">Suppliers</span></a>
+                                            <span>Suppliers</span></a>
                                     </li>
                                     <li class="submenu-item ">
                                         <a href="{{url('view_manufacturers')}}" class=" sidebar-link">
-                                            <span id="subm">Manufacturers</span></a>
+                                            <span>Manufacturers</span></a>
                                     </li>
                                     <li class="submenu-item ">
                                         <a href="{{url('show_items_details')}}" class=" sidebar-link">
-                                            <span id="subm">Items</span>
+                                            <span>Items</span>
                                         </a>
                                     </li>
                                     
@@ -679,11 +662,11 @@ color: #1D1D50
                                     </li> -->
                                     <li class="submenu-item ">
                                         <a href="{{url('store_reorder')}}" class=" sidebar-link">
-                                            <span id="subm">Reorder Level</span></a>
+                                            <span>Reorder Level</span></a>
                                     </li>
                                     <li class="submenu-item ">
                                         <a href="{{url('empty_stock')}}" class=" sidebar-link">
-                                            <span id="subm">Empty Stock</span></a>
+                                            <span>Empty Stock</span></a>
                                     </li>
                                     <!-- <li class="submenu-item ">
                                         <a href="{{url('show_substore')}}" class=" sidebar-link">
@@ -699,19 +682,19 @@ color: #1D1D50
                                     </li> -->
                                     <li class="sidebar-item  has-sub">
                                         <a href="#" class="sidebar-link">
-                                            <i class="fa fa-purchase" ></i>
+                                            <i class="fa fa-purchase" style="font-weight: 400;"></i>
                                                 <span>Purchase</span>
                                         </a>
                                         <ul class="submenu" style="display: none;">
                                             <li class="submenu-item  ">
                                                 <a href="{{url('view_purchase')}}" class=" sidebar-link">
-                                                    <span id="subm">New Purchase</span>
+                                                    <span>New Purchase</span>
                                                 </a>
                                                 <a href="{{url('received_order_detailes')}}" class=" sidebar-link">
-                                                    <span id="subm">manage_purchase</span>
+                                                    <span>manage_purchase</span>
                                                 </a>
                                                 <a href="{{url('received_order_detailes')}}" class=" sidebar-link">
-                                                    <span id="subm">Purchase Return</span>
+                                                    <span>Purchase Return</span>
                                                 </a>
                                             </li>
                                         </ul>
@@ -727,11 +710,11 @@ color: #1D1D50
                                             </li>
                                         </ul>
                                     </li> --}}
-                                    {{-- <li class="sidebar-item  has-sub">
+                                    <li class="sidebar-item  has-sub">
                                         <a href="#" class="sidebar-link">
-                                            <i class="" ></i>
+                                            <i class="" style="font-weight: 400;"></i>
                                                 <span>Settings</span>
-                                        </a> --}}
+                                        </a>
 
 
 
@@ -779,7 +762,7 @@ color: #1D1D50
 
                            
                     </ul>
-                    @if(Auth::user()->role == 'hr' || Auth::user()->role == 'superadmin')
+                    @if(Auth::user()->role == 'hr' || Auth::user()->role == 'hospitaladmin')
                                 @php
                                     $hr = array("addallowance", "addstaffs", "staffs","loans","payslip","attendance","attendanceview","payslipbulk","generatepayslip","managestaff");
                                 @endphp
@@ -802,7 +785,7 @@ color: #1D1D50
                                 </ul>
                                 </li>
                             @endif
-                    @if(Auth::user()->role == 'superadmin')
+                    @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i id="icon" class="	fas fa-user-graduate"  style="font-weight: 300;"></i>
@@ -812,16 +795,16 @@ color: #1D1D50
                                     </li>
                             @endif
 
-                            @if(Auth::user()->role == 'superadmin')
+                            @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="fas fa-user"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="fas fa-user-cog"  style="font-weight: 300;"></i>
                                             <span>Office Administrations</span>
                                     </a>
                                    
                                     </li>
                             @endif
-                            @if(Auth::user()->role == 'superadmin')
+                            @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i id="icon" class="fas fa-file-invoice-dollar"  style="font-weight: 300;"></i>
@@ -831,16 +814,16 @@ color: #1D1D50
                                     </li>
                             @endif
 
-                            @if(Auth::user()->role == 'superadmin')
+                            @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="fas fa-qrcode"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="fa fa-cogs"  style="font-weight: 300;"></i>
                                             <span>Tools & ad ons</span>
                                     </a>
                                    
                                     </li>
                             @endif
-                            @if(Auth::user()->role == 'superadmin')
+                            @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i id="icon" class="fa fa-cog"  style="font-weight: 300;"></i>
@@ -850,7 +833,7 @@ color: #1D1D50
                                     </li>
                             @endif
 
-                            @if(Auth::user()->role == 'superadmin')
+                            @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i id="icon" class="far fa-file-alt"  style="font-weight: 300;"></i>
@@ -859,7 +842,7 @@ color: #1D1D50
                                    
                                     </li>
                             @endif
-                            @if(Auth::user()->role == 'superadmin')
+                            @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i id="icon" class="fab fa-playstation"  style="font-weight: 300;"></i>
@@ -869,7 +852,7 @@ color: #1D1D50
                                     </li>
                             @endif
 
-                            @if(Auth::user()->role == 'superadmin')
+                            @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i id="icon" class="far fa-sun"  style="font-weight: 300;"></i>
@@ -878,7 +861,7 @@ color: #1D1D50
                                    
                                     </li>
                             @endif
-                            @if(Auth::user()->role == 'superadmin')
+                            @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i id="icon" class="fas fa-hand-holding"  style="font-weight: 300;"></i>
@@ -888,7 +871,7 @@ color: #1D1D50
                                     </li>
                             @endif
 
-                            @if(Auth::user()->role == 'superadmin')
+                            @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i id="icon" class="fas fa-layer-group"  style="font-weight: 300;"></i>
@@ -897,18 +880,17 @@ color: #1D1D50
                                    
                                     </li>
                             @endif
-                            @if(Auth::user()->role == 'superadmin')
+                            @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i id="icon" class="fas fa-piggy-bank"  style="font-weight: 300;"></i>
-                                            <span>Store & Inventory</span>
-                                            <span>Inventory</span>
+                                            <span>Store ,Inventory</span>
                                     </a>
                                    
                                     </li>
                             @endif
 
-                            @if(Auth::user()->role == 'superadmin')
+                            @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i id="icon" class="fas fa-coins"  style="font-weight: 300;"></i>
@@ -917,7 +899,7 @@ color: #1D1D50
                                    
                                     </li>
                             @endif
-                            @if(Auth::user()->role == 'superadmin')
+                            @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i id="icon" class="as fa-user-circle"  style="font-weight: 300;"></i>
@@ -927,7 +909,7 @@ color: #1D1D50
                                     </li>
                             @endif
 
-                            @if(Auth::user()->role == 'superadmin')
+                            @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i id="icon" class="fas fa-chart-pie"  style="font-weight: 300;"></i>
@@ -936,7 +918,7 @@ color: #1D1D50
                                    
                                     </li>
                             @endif
-                            @if(Auth::user()->role == 'superadmin')
+                            @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i id="icon" class="fas fa-atom"  style="font-weight: 300;"></i>
@@ -998,20 +980,16 @@ color: #1D1D50
                 </a> --}}
             </header>
             <div class="page-heading" >
-
-                {{-- <div><a href=""><i id="icon" class="fa fa-arrow-circle-left hBack pl-5"  style="font-size: 50px; color:#D5BD94"></i></a></div> --}}
-
-
                 {{-- <h3 style="color:#c30147;">{{Auth::user()->Hospital}}</h3> --}}
                 {{-- <h3 style="color:#c30147;">ERP Global</h3> --}}
             </div>
-            <a href="javascript:history.back()"  class="btn btn-primary" style="width:15%">Back</a>
+            <a href="javascript:history.back()"  class="btn btn-primary" style="margin-bottom:10px;">Back</a>
             <div style="margin-left: 83%;margin-top: -8%;">
                 <div class="avatar avatar-xl">
-                    <img  style="width:100%;height:100%;" src="assets/images/faces/law.jpg" alt="Face 1">
+                    <img  style="margin-left: 28%;" src="assets/images/faces/CRAHqLogo.png" alt="Face 1">
                 </div>
-                <h5 class="font-bold" style="color:#1D1D50"> {{ Auth::user()->name }}</h5>
-                <h6 class="" style="color:#1D1D50"><a href="{{url('logt')}}">logout</a></h6>
+                <h5 class="font-bold"> {{ Auth::user()->name }}</h5>
+                <h6 class="text-muted mb-0"><a href="{{url('logt')}}">logout</a></h6>
                 <div>
                     <p></p>
                 </div>
@@ -1035,33 +1013,6 @@ color: #1D1D50
             </footer>
         </div>
     </div>
-    <style>
-        .fc .fc-button-group > * {
-    float: left;
-    margin: 0 0 0 -1px;
-    /* border: solid red 1px; */
-    width: 33%;
-}
-
-.fc-toolbar .fc-left {
-    float: left;
-    width: 30%;
-}
-
-
-.fc-toolbar .fc-right {
-    /* float: left; */
-    width: 40%;
-}
-
-.fc-toolbar .fc-center {
-    display: inline-block;
-    width: 30%;
-}
-       </style>
-
-
-
     <script src="{{asset('/')}}assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="{{asset('/')}}assets/js/bootstrap.bundle.min.js"></script>
 
@@ -1170,52 +1121,10 @@ color: #1D1D50
              }
          </script>
 
-         <script>
-         
-         
-         $("a.sidebar-link")
-         .click(function(){
+         <script>$("a.sidebar-link").click(function(){
             $("a.sidebar-link").css("background-color", "");
           $(this).css("background-color", "#F5E9D4");
-        });
-        
-        
-        
-        </script>
-
-{{-- <script>$(".hBack").on("click", function(e){
-    e.preventDefault();
-    window.history.back();
-});</script> --}}
-
-
-<script>
-    const btn = document.getElementById('sblm');
-
-btn.addEventListener('click', function onClick() {
-  btn.style.backgroundColor = '#F5E9D4';
-  btn.style.color = '';
-});
-
-
-
-  </script> 
-
-
-<script>
-    var count = 1;
-    function setColor(btn, color) {
-        var property = document.getElementById('sblm');
-        if (count == 0) {
-            property.style.backgroundColor = "#FFFFFF"
-            count = 1;        
-        }
-        else {
-            property.style.backgroundColor = "#7FFF00"
-            count = 0;
-        }
-    }
-</script>
+        });</script>
 
 <script>
 
