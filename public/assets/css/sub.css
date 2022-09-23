@@ -1,0 +1,22 @@
+#backbutton {
+
+    width: 10px;
+
+}
+
+#backbuttonst {
+
+    font-size: 40px;
+    color: rgb(143, 96, 40);
+    padding-left: 10%;
+
+}
+
+#logout {
+    font-size: 20px;
+    color: rgb(143, 96, 40);
+    padding-left: 10%;
+    align-items: center;
+
+
+}
