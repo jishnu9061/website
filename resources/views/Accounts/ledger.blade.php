@@ -27,8 +27,8 @@
 
       <div class="table-responsive">
           <br>
-          {{-- <table class="table table-striped table" style="background-color:rgb(177, 127, 62);color:white;"> --}}
-          <table class="table table-striped table">
+          <table class="table table-striped table" style="background-color:rgb(177, 127, 62);color:white;">
+          {{-- <table class="table table-striped table"> --}}
               <tr>
                   <form method="post" action="{{ url("ledger")}}">
                       @csrf
