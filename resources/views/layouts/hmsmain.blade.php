@@ -35,7 +35,8 @@
   
   <link rel="stylesheet" href="fonts/icomoon/style.css">
   
-  
+  <link rel="stylesheet" href="{{asset('/') }}assets/css/sub.css">
+  <link rel="stylesheet" href="{{asset('/') }}assets/css/c.css">
 
 <!-- b -->
 <style> #icon {
@@ -57,7 +58,7 @@ color: #1D1D50
 <body>
 
 
-  <div><br></div>
+ 
 
  <!-- ======= Header ======= -->
  {{-- <header id="header" class="header fixed-top d-flex align-items-center"> --}}
@@ -330,6 +331,7 @@ color: #1D1D50
                         <div class="logo">
                             <a href="{{ url('home') }}">
                                 <!-- {{-- <img src="assets/images/logo/logo.png" alt="Logo" srcset=""> --}} -->
+                                
                             <img  id="cr_logo" src="assets/images/Logo cra.png"  alt="CRA">
                                 
                             </a>
@@ -552,7 +554,7 @@ color: #1D1D50
                                       @endif
                                            <li class="submenu-item  ">
                                                 <a href="{{ url('ledger_acount_categories') }}" class=" sidebar-link">
-                                                <span>Account Type</span></a>
+                                                <span id="subm">Account Type</span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('ledger_acount_subcategories') }}" class="sidebar-link">
@@ -713,7 +715,7 @@ color: #1D1D50
                                     <li class="sidebar-item  has-sub">
                                         <a href="#" class="sidebar-link">
                                             <i class="" style="font-weight: 400;"></i>
-                                                <span>Settings</span>
+                                                <span >Settings</span>
                                         </a>
 
 
@@ -974,26 +976,61 @@ color: #1D1D50
             </div>
         </div>
         <div id="main">
-            <header class="mb-3">
+
+            <header >
+                
+             {{-- <header class="mb-3"> --}}
                 {{-- <a href="#" class="burger-btn d-block d-xl-none">
                     <i class="bi bi-justify fs-3"></i>
                 </a> --}}
-            </header>
-            <div class="page-heading" >
+             {{-- </header> --}}
+             {{-- <div class="page-heading" > --}}
                 {{-- <h3 style="color:#c30147;">{{Auth::user()->Hospital}}</h3> --}}
                 {{-- <h3 style="color:#c30147;">ERP Global</h3> --}}
+             {{-- </div> --}}
+
+<div class="container">
+
+    
+    
+    {{-- <nav  class=" navbar navbar-light bg-light" id="ff">
+        <a class="navbar-brand" href="#">Fixed top</a>
+      </nav> --}}
+
+
+
+             <nav class="navbar navbar-light  justify-content-between" >
+                <a id="backbtn" href="javascript:history.back()"  ><i class="far fa-arrow-alt-circle-left"></i></a>
+
+                <div id="navr" style="margin-top: -10%;"   >
+
+                   
+                        <ul style="text-align: center; text-decoration: none; list-style:none;">
+                            <li style="align-items: center" class="avatar avatar-xl" style="margin-left: 28%;"> 
+                                <img   src="assets/images/faces/lawemb.png" alt="Face 1">
+                            </li>
+                            
+                    <li><a style="text-align: center" class="font-bold text-uppercase"> {{ Auth::user()->name }}</a></li>
+                    <li><a style="text-align: center" class="text-muted mb-0" href="{{url('logt')}}"> <i class="fas fa-sign-out-alt"></i> Log Out</a></li>
+                  </ul>
+                 
+                </div>
+              </nav>
+             
             </div>
-            <a href="javascript:history.back()"  class="btn btn-primary" style="margin-bottom:10px;">Back</a>
-            <div style="margin-left: 83%;margin-top: -8%;">
+             {{-- <a href="javascript:history.back()"  class="btn btn-primary" >Back</a>
+             <div style="margin-left: 83%;margin-top: -8%;">
                 <div class="avatar avatar-xl">
                     <img  style="margin-left: 28%;" src="assets/images/faces/CRAHqLogo.png" alt="Face 1">
                 </div>
                 <h5 class="font-bold"> {{ Auth::user()->name }}</h5>
-                <h6 class="text-muted mb-0"><a href="{{url('logt')}}">logout</a></h6>
-                <div>
-                    <p></p>
-                </div>
-            </div>
+                <h6 class="text-muted mb-0"><a href="{{url('logt')}}"> <i class="fas fa-sign-out-alt"></i> </i> Log Out</a></h6>
+               
+             </div> --}}
+
+            </header>
+
+
             <div class="page-content">
                 <section class="row">
                     <div class="col-12 col-lg-12">

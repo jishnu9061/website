@@ -7,6 +7,8 @@
 */
                 /**
 
+                
+
 ====== TABLE OF CONTENTS =======
 1. Bootstrap & Variables Inside
 2. Bootstrap Components Override
@@ -35,6 +37,9 @@
 
 
 */
+
+
+
 
 .alert {
     border: none;
@@ -3108,13 +3113,7 @@ a {
     border-radius: 10px;
 }
 
-#cr_logo {
-    width: 90px;
-    margin-left: 23px;
-    height: 90px;
-    margin-top: -11px;
 
-}
 
 
 
@@ -4816,17 +4815,6 @@ a {
     border-radius: 10px;
 }
 
-#cr_logo {
-
-    display: block;
-    width: 90px;
-    height: auto;
-    margin-left: auto ;
-    margin-right: auto ;
-    margin-top: -11px;
-    align-items: center;
-
-}
 
 
 
@@ -5500,14 +5488,18 @@ h6 {
 /* vinu */
 
 
-input, button, select, optgroup, textarea {
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    background: rgb(255, 255, 255);
-    color: #607080;
-    border: 0.5px solid rgba(3, 18, 29, 0.4);
-    border-radius: 3px;
+.fc th {
+    padding: 10px !important;
+    background: #D5BD94;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.button {
+    border-radius: 5px;
+    background-color: #aed3ff;
+    color: #377dcc;
+    width: 20%;
+    border: 1px solid;
 }
 

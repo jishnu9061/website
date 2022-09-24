@@ -354,7 +354,7 @@ button {
     border-radius: 5px;
     background-color: #aed3ff;
     color: #377dcc;
-    width: 50%;
+    /* width: 50%; */
     border: 1px solid;
 }
 

@@ -20,3 +20,39 @@
 
 
 }
+
+/* #navr{
+    
+   align-items: center;
+  } */
+
+  #ff {
+    overflow: hidden;
+  background-color: rgb(124, 124, 124);
+  position: fixed;
+  top: 0;
+  width: 100%;
+    z-index: 1030;
+    height: 100px;
+}
+
+#cr_logo {
+
+    display: block;
+    width: 90px;
+    height: auto;
+    margin-left: auto ;
+    margin-right: auto ;
+    margin-top: -11px;
+    align-items: center;
+    padding-top: -49px;
+
+}
+
+#backbtn {
+
+    color: #070344;
+    font-size: 50px;
+
+}
+
