@@ -50,7 +50,7 @@ td:nth-child(odd) {
     <!-- <h2 >Court List</h2><br>
     <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
     <h2 style="text-align:center; text-shadow: 2px 1px;">Letter Category</h2>
-        <a href="{{('add_court')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Letter Category</button></a>
+        <a href="{{('add_letter_category')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Letter Category</button></a>
         <hr class="mb-4">.
     <!-- <div class="container"> -->
       <div class="mydiv">
@@ -221,9 +221,9 @@ td:nth-child(odd) {
     <br>
     <br>
     </div>
-    <form>
+    <!-- <form>
  <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
-</form>
+</form> -->
         </body>
 </html>
   @endsection

@@ -27,12 +27,12 @@
              background-color:rgb(177, 127, 62);
              padding:15px;
             } */
-         .container{
+         /* .container{
          margin-left:0px;
          width:auto;
          border:1px solid black;
          height:100%;
-         }
+         } */
         
          .col-sm
          {
@@ -306,9 +306,9 @@
   
   <input type="button"value="Cancel" name="cancel"style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105); ">
         </div>
-        <form>
+        <!-- <form>
  <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
-</form>
+</form> -->
         </body>
 </html>
   @endsection

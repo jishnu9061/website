@@ -88,9 +88,9 @@
   <!-- <a href="{{url('edit_company_details')}}"  class="btn btn-primary"style="color:rgb(238, 196, 105);background-color:rgb(29, 2, 129);" >Edit</a><br><br> -->
  
 
-<form>
+<!-- <form>
  <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
-</form>
+</form> -->
 </body>
 </html>
 @endsection
