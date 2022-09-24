@@ -558,7 +558,7 @@ color: #1D1D50
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('ledger_acount_subcategories') }}" class="sidebar-link">
-                                               <span  id="subm">Groups</span></a>
+                                               <span  id="">Groups</span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                 <a href="{{ url('ledger_budget_category') }}" class="sidebar-link">
