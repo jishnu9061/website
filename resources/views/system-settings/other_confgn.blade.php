@@ -17,16 +17,7 @@
     <hr class="mb-4">.
     <style>
      
-      h2
-    {
-  
-    font-size:large;
-    font-weight:bold;
-    color:rgb(13, 1, 56); 
-    background-color:rgb(177, 127, 62);
-    padding:15px;
-    
-    }
+   
       </style>
 </head>
 <body>
@@ -48,9 +39,9 @@
    
   </div>
 </div>
-<form>
+<!-- <form>
  <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
-</form>
+</form> -->
 </body>
 </html>
 @endsection

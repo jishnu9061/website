@@ -113,6 +113,15 @@ class SystemSetup extends Controller
     {
         return view('system-settings.letter_types');
     }
+    public function addlettercategory()
+    {
+        return view('system-settings.add_letter_category');
+    }
+    public function documentlettercategory()
+    {
+        return view('system-settings.document_letter_category');
+    }
+
 
    
 

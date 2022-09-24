@@ -23,13 +23,7 @@
              background-color:rgb(177, 127, 62);
              padding:15px;
             } */
-            .container{
-                border:1px solid black;
-         margin-left:0px;
-         width:auto;
-         height:100%;
-         width:40%;
-         }
+       
 
          table{
               
@@ -71,9 +65,9 @@
             
     </div>
 
-    <form>
+    <!-- <form>
  <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
-</form>
+</form> -->
             
 </body>
 </html>

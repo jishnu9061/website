@@ -70,8 +70,8 @@
     </table>
 </div>
         </body>
-        <form>
+        <!-- <form>
  <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
-</form>
+</form> -->
 
 @endsection
