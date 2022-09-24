@@ -835,6 +835,9 @@ Route::any('/change_password',"filemanagement@change_password")->name('change_pa
 //beljin
 
 
+//Anandhu
+Route::any('/office_instructions',"filemanagement@new_instructions")->name('new_instruction');
+
 ?>
 
 
