@@ -171,9 +171,9 @@
 					<th>
 						Percent
 					</th>
-                    <th>
-                        Edit
-                    </th>
+          <th>
+            Edit
+          </th>
 					<th>
 						Delete
 					</th>

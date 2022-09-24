@@ -1,0 +1,58 @@
+/* #backbutton {
+
+    width: 50%;
+
+} */
+
+#backbuttonst {
+
+    font-size: 40px;
+    color: rgb(143, 96, 40);
+    padding-left: 10%;
+
+}
+
+#logout {
+    font-size: 20px;
+    color: rgb(143, 96, 40);
+    padding-left: 10%;
+    align-items: center;
+
+
+}
+
+/* #navr{
+    
+   align-items: center;
+  } */
+
+  #ff {
+    overflow: hidden;
+  background-color: rgb(124, 124, 124);
+  position: fixed;
+  top: 0;
+  width: 100%;
+    z-index: 1030;
+    height: 100px;
+}
+
+#cr_logo {
+
+    display: block;
+    width: 90px;
+    height: auto;
+    margin-left: auto ;
+    margin-right: auto ;
+    margin-top: -11px;
+    align-items: center;
+    padding-top: -49px;
+
+}
+
+#backbtn {
+
+    color: #070344;
+    font-size: 50px;
+
+}
+

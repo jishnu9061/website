@@ -480,6 +480,35 @@
       </li><!-- End Tables Nav -->
 
       <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-layout-text-window-reverse"></i><span>Management</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+            <a href="{{url('add_new_client')}}">
+              <i class="bi bi-circle"></i><span>Add New Client</span>
+            </a>
+           <li>
+           <li>
+            <a href="{{('client_list')}}">
+              <i class="bi bi-circle"></i><span>Client List</span>
+            </a>
+          </li>
+            <a href="{{('clients')}}">
+              <i class="bi bi-circle"></i><span>Clients</span>
+            </a>
+          </li>
+          <li>
+            <a href="tables-data.html">
+              <i class="bi bi-circle"></i><span>Data Tables</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Tables Nav -->
+
+
+
+      <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-bar-chart"></i><span>File Management</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
@@ -554,6 +583,7 @@
           <span>Tools & Add one</span>
         </a>
       </li><!-- End Register Page Nav -->
+      
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-login.html">

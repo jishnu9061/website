@@ -1,0 +1,43 @@
+
+
+
+
+a.button1{
+  display : inline-block;
+  padding:0.35em 1.2em;
+  background-color:rgb(198, 195, 211); 
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-weight:300;
+  color:rgb(240, 205, 10);
+  text-align:center;
+  transition: all 0.2s;
+ 
+  }
+ 
+
+  a.button2{
+    display : inline-block;
+    padding:0.35em 1.2em;
+    background-color:#f0e7ce; 
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    border-color:
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight:300;
+    color:rgb(29, 2, 129);
+    text-align:center;
+    transition: all 0.2s;
+    outline: auto;
+    color: rgb(238, 196, 105);
+    background-color:rgb(177, 127, 62);
+
+    color:rgb(1, 1, 82)
+    }
+
+  
+
+

@@ -13,7 +13,13 @@ class ClientManagement extends Controller
      */
     public function index()
     {
-        return view('client.add_new_client');
+        return view('client-management.client-index');
+    }
+
+
+    public function view(){
+
+        return view('client-management.client-list');
     }
 
     /**
@@ -23,7 +29,7 @@ class ClientManagement extends Controller
      */
     public function create()
     {
-        //
+        return view('client-management.add-newclient');
     }
 
     /**
@@ -43,9 +49,9 @@ class ClientManagement extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        return view('client-management.view-client');
     }
 
     /**
@@ -54,9 +60,9 @@ class ClientManagement extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-        //
+        return view('client-management.edit_client');
     }
 
     /**
@@ -66,6 +72,7 @@ class ClientManagement extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function update(Request $request, $id)
     {
         //
@@ -81,4 +88,109 @@ class ClientManagement extends Controller
     {
         //
     }
+    
+    public function document(){
+        
+        return view('client-management.client-document');
+    }
+
+
+    public function addDocument(){
+
+        return view('client-management.add-document');
+    }
+
+
+    public function viewDocument(){
+
+        return view('client-management.view-document');
+    }
+
+
+    public function clientPickup(){
+        return view('client-management.client-pickup');
+    }
+
+
+    public function addPickups(){
+        return view('client-management.add-pickup');
+    }
+
+
+    public function viewPickups(){
+        return view('client-management.view-pickup');
+    }
+
+
+    public function complaintList(){
+        return view('client-management.complaint-list');
+    }
+
+
+
+    public function addComplaint(){
+        return view('client-management.add-complaint');
+    }
+
+
+    public function editComplaint(){
+        return view('client-management.edit-complaint');
+    }
+
+
+    public function followup(){
+        return view('client-management.follow-up');
+    }
+
+
+    public function addFollow(){
+        return view('client-management.add-followup');
+    }
+
+
+    public function editFollow(){
+        return view('client-management.edit-followup');
+    }
+
+
+    public function service(){
+        return view('client-management.client-service');
+    }
+
+
+    public function addService(){
+        return view('client-management.new-client-service');
+    }
+
+
+    public function Quotation(){
+        return view('client-management.Quotation');
+    }
+
+
+    public function newQuotation(){
+        return view('client-management.new-Quotation');
+    }
+
+
+    public function editQuotation(){
+        return view('client-management.edit-Quotation');
+    }
+
+
+    public function customer(){
+        return view('client-management.customer-registration');
+    }
+
+
+    public function addCustomer(){
+        return view('client-management.add-customer');
+    }
+
+
+    public function editCustomer(){
+        return view('client-management.edit-customer');
+    }
+
+
 }
