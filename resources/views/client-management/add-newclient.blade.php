@@ -396,6 +396,12 @@ $('#price').prop('readonly', true);
                           <div class="col-sm">
                             <button type="submit" class="btn btn-primary submit_btn_btn  ">Submit</button>
                             <a href="{{route('client-index')}}" type="button" class="btn btn-primary " style="width:30%;  margin-top: 30px;">Back</a>
+                            <a href="{{route('client-index')}}" type="button" class="btn btn-primary " style="width:30%">Back</a>
+                            <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Submit</button>
+
+                          
+                             <button type="submit" class="btn btn-primary submit_btn btn_align">Back</button>
+
                           </div>
                         </div>
                       </div>  
