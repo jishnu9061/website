@@ -33,7 +33,7 @@
   <hr class="mb-4">.
  
   <div class="row sm">
-  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-7.png" alt=""><a href="{{url('customer-registration')}}"><button type="button" class="btn btn-primary btn_align_btn" > Customer Registration</button></a></div>
+  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-7.png" alt=""><a href="{{url('view-registration')}}"><button type="button" class="btn btn-primary btn_align_btn" > Customer Registration</button></a></div>
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-1.png" alt=""><a href="{{url('follow-up')}}"><button type="button" class="btn btn-primary btn_align_btn" >Customer Follow Up</button></a></div>
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-3.png" alt=""><a href=""><button type="button" class="btn btn-primary btn_align_btn" >Customer Follow Up Report</button></a></div>
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-3.png" alt=""><a href="{{url('Quotation')}}"><button type="button" class="btn btn-primary btn_align_btn" > Customer Quotation</button></a></div>

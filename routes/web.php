@@ -775,6 +775,10 @@ Route::any('Quotation','ClientManagement@Quotation')->name('Quotation');
 Route::any('new-Quotation','ClientManagement@newQuotation')->name('new-Quotation');
 Route::any('edit-Quotation','ClientManagement@editQuotation')->name('edit-Quotation');
 //end Quotation
+//Registration
+Route::any('view-registration','ClientManagement@viewRegistration')->name('view-registration');
+Route::any('add-registration','ClientManagement@addRegistration')->name('add-registration');
+//end registration
 
 //mugunthan
 

@@ -14,55 +14,45 @@
 </head>
 
 <body>
-    <p style="margin-bottom:4%;"> <b>Manage file/ File List</b> </p>
-    <div class="col-sm">
-   
-    
-
-  </div>
     <div class="container">
-        <h3 class="text-center" style="color: #070344;"><b>File List</b></h3>
-       <br>
-      
-       <div id="mydatatable_filter" class="dataTables_filter">
-        <label><b>Search:</b><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
+        <h2  style="color: #070344; text-shadow: 1px 2px; text-align:center;"><b>Customer Registration</b></h2>
+        <div class="container mt-5">
+        <a href="{{url('add-registration')}}"><button type="button" class="btn btn-primary complaint_btn" >Register Customer</button></a>
+        <div id="mydatatable_filter" class="dataTables_filter">
+        <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
        </div>
-       <a href="{{url('add-new-file')}}"><button class="btn btn-primary add-btn" style="width: 20%; margin-bottom:5%;" >Open New Client File</button></a>
-<div class="tab-content" id="myTabContent">
+        </div>
+        <hr class="mb-4">.
+        <h3  style="color: #070344; text-shadow: 1px 2px; text-align:center;"><b>Customer List</b></h3>
+       <br>
+     
+      
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
             <table class="table table-bordered" id="new-item">
                 <thead>
                     <tr>
                         <th class="text-center">No</th>
-                        <th class="text-center">File No</th>
-                        <th class="text-center">Client</th>
-                        <th class="text-center">FileName</th>
-                        <th class="text-center">Date</br>Opened</th>
-                        <th class="text-center">Responsible</br>Advocate</th>
-                        <th class="text-center">Most</br>Recent</br>Progress</th>
-                        <th class="text-center">Date</br>Closed</th>
-                        <th class="text-center">File&Fee</br>Balances</th>
-                        <th class="text-center">Status</th>
+                        <th class="text-center">Client Name</th>
+                        <th class="text-center"> Address</th>
+                        <th class="text-center">Contact</th>
+                        <th class="text-center">Physical Address</th>
+                        <th class="text-center">Registration Date</th>
                         <th class="text-center">Action</th>
+                       
                     </tr>
                 </thead>
                 <tbody>
                         <tr id="data">
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row"class="text-center"><a href=""><i  style="color:black;" class="fa fa-eye" aria-hidden="true"></i>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row"class="text-center"><a href="{{url('edit-Complaint')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
                            <input type="hidden" value="" id="medicine_id_hidden" class="applicate" name="supplier_id_hidden">
-                            <a href="{{url('edit-file')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
-                            <a  onClick="return myFunction();" href="" style="color:black;"><i class="fas fa-trash-alt"></i></a></td>
+
                         </tr>
                 </tbody>
             </table>
