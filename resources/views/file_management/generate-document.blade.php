@@ -31,7 +31,7 @@ $('#price').prop('readonly', true);
 
   </div>
     <div>
-    <h2 style="text-align:center;">Upload Documents </h2>
+    <h2 style="text-align:center;">Generate Documents </h2>
     <hr class="mb-4">.
 </div>
   </div>
@@ -57,20 +57,10 @@ $('#price').prop('readonly', true);
         </div>
         </div>
 
+       
         <div class="col-md-4">
             <div class="mb-1">
           <label for="username">File</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <input type="text" class="form-control" name="website" id="confirm_password" required>
-          </div>
-        </div>
-        </div>
-        <div class="col-md-4">
-            <div class="mb-1">
-          <label for="username">Other Files</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
@@ -169,7 +159,7 @@ $('#price').prop('readonly', true);
 
           <div class="col-md-3">
            <div class="mb-1">
-          <label for="username">Final Aggrement</label>
+          <label for="username">Viewer</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
@@ -187,30 +177,17 @@ $('#price').prop('readonly', true);
 
 
         <div class="row">
-        <div class="col-md-3">
-           <div class="mb-1">
-          <label for="username">Documet To Upload</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <input type="file" class="form-control" name="website" id="confirm_password" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Number is required.
-            </div>
-          </div>
-        </div>
-          </div>
+        
 
 
           <div class="col-md-3">
            <div class="mb-1">
-          <label for="username">Folder To Upload </label>
+          <label for="username">Document Template</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-            <input type="file" class="form-control" name="website" id="confirm_password" required>
+            <input type="text" class="form-control" name="website" id="confirm_password" required>
             <div class="invalid-feedback" style="width: 100%;">
               Number is required.
             </div>
@@ -234,7 +211,7 @@ $('#price').prop('readonly', true);
     </div>
     <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
       
-      <button type="submit" class="btn btn-primary submit_btn">Upload</button>
+      <button type="submit" class="btn btn-primary submit_btn">Generate</button>
       <button type="button" class="btn ">Close</button>
       
     </div>

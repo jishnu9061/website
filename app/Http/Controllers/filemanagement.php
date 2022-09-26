@@ -34,6 +34,11 @@ class filemanagement extends Controller
         return view('file_management.template-category');
     }
 
+    public function addtemplate()
+    {
+        return view('file_management.add-template');
+    }
+
 
     //document temblates
 
@@ -58,11 +63,8 @@ class filemanagement extends Controller
     {
         return view('file_management.edit-file-progress');
     }
-    public function newinstruction()
-    {
-        return view('file_management.new-instructions');
-    }
 
+    
     public function fileactionhours()
     {
         return view('file_management.file-action-hours');
@@ -124,6 +126,16 @@ class filemanagement extends Controller
     //file progress
 
 
+    //monthly file status report
+
+
+
+    //monthly file status report
+     public function clientmonthlystatus()
+     {
+         return view('file_management.client-monthly-file-status');
+     }
+
      //document manager
 
      public function documentmanager()
@@ -135,8 +147,16 @@ class filemanagement extends Controller
      {
          return view('file_management.upload-document');
      }
+
+     public function generatedocument()
+     {
+         return view('file_management.generate-document');
+     }
  
        //document manager
+
+
+
     
     public function u_details()
     {
@@ -152,7 +172,10 @@ class filemanagement extends Controller
         return view('system-settings.User.change_password');
     }
 
-
+    public function new_instructions()
+    {
+        return view('file_management.office_instructions');
+    }
 
    
 
