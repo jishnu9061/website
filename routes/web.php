@@ -722,7 +722,7 @@ Route::any('payment_items','SystemSetup@paymentitem')->name('payment_items');
 //RESHMA
 
 
-//mugunth
+//mugunthan
 
 //Client-list
 Route::any('add_newclient',"ClientManagement@create")->name('add_newclient');
@@ -764,7 +764,7 @@ Route::any('new-Quotation','ClientManagement@newQuotation')->name('new-Quotation
 Route::any('edit-Quotation','ClientManagement@editQuotation')->name('edit-Quotation');
 //end Quotation
 
-//mugunth
+//mugunthan
 
 
 
