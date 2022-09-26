@@ -717,10 +717,12 @@ Route::any('add_court_category','SystemSetup@addcourtcategory')->name('add_court
 Route::any('letter_types','SystemSetup@lettertype')->name('letter_types');
 Route::any('add_letter_category','SystemSetup@addlettercategory')->name('add_letter_category');
 Route::any('document_letter_category','SystemSetup@documentlettercategory')->name('document_letter_category');
+//payment items
+Route::any('payment_items','SystemSetup@paymentitem')->name('payment_items');
 //RESHMA
 
 
-//mugunth
+//mugunthan
 
 //Client-list
 Route::any('add_newclient',"ClientManagement@create")->name('add_newclient');
@@ -762,7 +764,7 @@ Route::any('new-Quotation','ClientManagement@newQuotation')->name('new-Quotation
 Route::any('edit-Quotation','ClientManagement@editQuotation')->name('edit-Quotation');
 //end Quotation
 
-//mugunth
+//mugunthan
 
 
 
@@ -777,7 +779,15 @@ Route::any('add-new-file',"filemanagement@addnew")->name('add-new-file');
 
 //document templates
 Route::any('template-category',"filemanagement@template")->name('template-category');
+Route::any('add-template',"filemanagement@addtemplate")->name('add-template');
 //document templates
+
+//client mionthly status report
+Route::any('client-monthly-file-status','filemanagement@clientmonthlystatus')->name('client-monthly-file-status');
+//client mionthly status report
+
+
+
 
 //file progress
 Route::any('add-file-progress',"filemanagement@addprogress")->name('add-file-progress');
@@ -785,12 +795,22 @@ Route::any('edit-file-progress',"filemanagement@editprogress")->name('edit-file-
 Route::any('progress-bringup',"filemanagement@progressbringup")->name('progress-bringup');
 Route::any('add-new-bringup',"filemanagement@addbringup")->name('add-new-bringup');
 
-
-
-Route::any('new-instructions',"filemanagement@newinstruction")->name('new-instructions');
-
 Route::any('file-action-hours',"filemanagement@fileactionhours")->name('file-action-hours');
-//file progress
+Route::any('add-file-progress-action',"filemanagement@addfileprogressaction")->name('add-file-progress-action');
+Route::any('add-file-bringup-reminder',"filemanagement@addfilebringupreminder")->name('add-file-bringupreminder');
+Route::any('book-court',"filemanagement@bookcourt")->name('book-court');
+Route::any('court-attendance-sheet',"filemanagement@courtattendance")->name('court-attendance-sheet');
+Route::any('arbiration-sheet',"filemanagement@arbirationsheet")->name('arbiration-sheet');
+Route::any('conveyance-sheet',"filemanagement@conveyance")->name('conveyance-sheet');
+Route::any('file-progress-list',"filemanagement@fileprogresslist")->name('file-progress-list');
+Route::any('file-list-progress-report',"filemanagement@filelistprogressreport")->name('file-list-progress-report');
+Route::any('staff-monthly-status-report',"filemanagement@staffmonthlystatusreport")->name('staff-monthly-status-report');
+
+//document manager
+Route::any('document-manager',"filemanagement@documentmanager")->name('document-manager');
+Route::any('upload-document',"filemanagement@uploaddocument")->name('upload-document');
+Route::any('generate-document',"filemanagement@generatedocument")->name('generate-document');
+//document manager
 //vinu
 
 //beljin

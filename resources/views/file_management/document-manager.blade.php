@@ -14,144 +14,56 @@
 </head>
 
 <body>
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" style="width:20%; background-color: rgb(177, 127, 62);" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Upload Document
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="{{url('upload-document')}}">Upload Document</a>
+    <a class="dropdown-item" href="{{url('generate-document')}}">Generate Document</a>
+  </div>
+</div>
+ 
     <div class="container">
-        <h3 class="text-center" style="color: #070344;"><b>Template Category</b></h3>
+        <h3 class="text-center" style="color: #070344;"><b>Document Manager(DMS)</b></h3>
        <br>
-      
-       
-       <a href="{{url('add-template')}}"><button class="btn btn-primary add-btn">Add Template</button></a>
+   
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-    <p style="margin-top:2%;">Total Results:</p>
-            <table class="table table-bordered" id="new-item">
-                <thead>
+
+            <table class="table table-bordered" id="new-item"   >
+                <thead style="font-size:11px">
                     <tr>
-                        <th class="text-center">No</th>
-                        <th class="text-center">Template Category</th>
-                        <th class="text-center">Status</th>
-                        <th class="text-center">Edit</th>
-                        <th class="text-center"><input type="radio"></th>
-                        
+                        <th class="text-center">*</th>
+                        <th class="text-center">Type</th>
+                        <th class="text-center">Description</t>  
+                        <th class="text-center">Action</th>
+                       
                     </tr>
                 </thead>
+        
+                <tbody  >
+                   
+                        <tr id="data"  >
+                            
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row"   class="text-center"></td>
+                            
+                            <td  scope="row"class="text-center">
+                                Action
+                           <select name="" id=""> <option value=""> <a href=""></a> </option> 
+                           <option value=""> <a href=""></a> </option></select>
+                            </td>
+                        </tr>
 
-                </table>
-
-                <p>Business Formation:</p>
-                <table class="table table-bordered" id="new-item">   
-                <tbody>
-                        <tr id="data">
-                            <td  scope="row" class="text-center">1</td>
-                            
-                            <td  scope="row" class="text-center">Employment Agent</td>
-                            <td  scope="row" class="text-center">Active</td>
-                            <td  scope="row" class="text-center">Edit</td>
-                            <td  scope="row" class="text-center"><input type="radio"></td>
-                            
+                        
+                        
                 </tbody>
-            </table>
-            <p>Business Operation:</p>
-            <table class="table table-bordered" id="new-item">   
-                <tbody>
-                        <tr id="data">
-                            <td  scope="row" class="text-center">1</td>
-                            
-                            <td  scope="row" class="text-center">Employment Agent</td>
-                            <td  scope="row" class="text-center">Active</td>
-                            <td  scope="row" class="text-center">Edit</td>
-                            <td  scope="row" class="text-center"><input type="radio"></td>
-                            
-                            
-                </tbody>
-                </table>
-                <p>Business Property:</p>
-            <table class="table table-bordered" id="new-item">   
-                <tbody>
-                        <tr id="data">
-                            <td  scope="row" class="text-center">1</td>
-                            
-                            <td  scope="row" class="text-center">Employment Agent</td>
-                            <td  scope="row" class="text-center">Active</td>
-                            <td  scope="row" class="text-center">Edit</td>
-                            <td  scope="row" class="text-center"><input type="radio"></td>
-                            
-                            
-                </tbody>
-                </table>
-                <p>Employment:</p>
-            <table class="table table-bordered" id="new-item">   
-                <tbody>
-                        <tr id="data">
-                            <td  scope="row" class="text-center">1</td>
-                            
-                            <td  scope="row" class="text-center">Employment Agent</td>
-                            <td  scope="row" class="text-center">Active</td>
-                            <td  scope="row" class="text-center">Edit</td>
-                            <td  scope="row" class="text-center"><input type="radio"></td>
-                            
-                            
-                </tbody>
-                </table>
-                <p>Financial:</p>
-            <table class="table table-bordered" id="new-item">   
-                <tbody>
-                        <tr id="data">
-                            <td  scope="row" class="text-center">1</td>
-                            
-                            <td  scope="row" class="text-center">Employment Agent</td>
-                            <td  scope="row" class="text-center">Active</td>
-                            <td  scope="row" class="text-center">Edit</td>
-                            <td  scope="row" class="text-center"><input type="radio"></td>
-                            
-                            
-                </tbody>
-                </table>
-                <p>Personal & Family:</p>
-            <table class="table table-bordered" id="new-item">   
-                <tbody>
-                        <tr id="data">
-                            <td  scope="row" class="text-center">1</td>
-                           
-                            <td  scope="row" class="text-center">Employment Agent</td>
-                            <td  scope="row" class="text-center">Active</td>
-                            <td  scope="row" class="text-center">Edit</td>
-                            <td  scope="row" class="text-center"><input type="radio"></td>
-                            
-                            
-                </tbody>
-                </table>
-                <p>Real Estate:</p>
-            <table class="table table-bordered" id="new-item">   
-                <tbody>
-                        <tr id="data">
-                            <td  scope="row" class="text-center">1</td>
-                            
-                            <td  scope="row" class="text-center">Employment Agent</td>
-                            <td  scope="row" class="text-center">Active</td>
-                            <td  scope="row" class="text-center">Edit</td>
-                            <td  scope="row" class="text-center"><input type="radio"></td>
-                            
-                            
-                </tbody>
-                </table>
-                <p>Will& Estate Planning:</p>
-            <table class="table table-bordered" id="new-item">   
-                <tbody>
-                        <tr id="data">
-                            <td  scope="row" class="text-center">1</td>
-                            
-                            <td  scope="row" class="text-center">Employment Agent</td>
-                            <td  scope="row" class="text-center">Active</td>
-                            <td  scope="row" class="text-center">Edit</td>
-                            <td  scope="row" class="text-center"><input type="radio"></td>
-                            
-                            
-                </tbody>
-                </table>
                 
-            
-           
-
+                </table>
+             
  <!-- The Modal -->
  <div class="modal fade" id="editmed">
     <div class="modal-dialog modal-xl">

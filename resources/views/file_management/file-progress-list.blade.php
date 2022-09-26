@@ -14,144 +14,85 @@
 </head>
 
 <body>
+   
+<div style="display:flex; margin-bottom: 10%; margin-top: -4%;">
+    <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" style="width:97%; background-color: rgb(177, 127, 62);" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Add New Progress
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="{{url('add-file-progress')}}">Add  File Progress</a>
+    <a class="dropdown-item" href="{{url('add-file-progress-action')}}">Add  File Progress/Action</a>
+    <a class="dropdown-item" href="{{url('add-file-bringup-reminder')}}">Add File Bringup/Reminder</a>
+    <a class="dropdown-item" href="{{url('book-court')}}">Book a Court Date</a>
+    
+  </div>
+</div>
+
+<div class="dropdown" style="margin-left:10px;">
+  <button class="btn btn-secondary dropdown-toggle" type="button" style="width:97%; background-color: rgb(177, 127, 62);" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dispute Resolution forms
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="{{url('court-attendance-sheet')}}">Fill Court Attendance Sheet</a>
+    <a class="dropdown-item" href="{{url('arbiration-sheet')}}">Fill New Arbiration Form</a>
+    <a class="dropdown-item" href="{{url('conveyance-sheet')}}">Fill New Conveyence Form</a>
+  </div>
+</div>
+</div>
+
     <div class="container">
-        <h3 class="text-center" style="color: #070344;"><b>Template Category</b></h3>
+        <h3 class="text-center" style="color: #070344;"><b>List of File Progress</b></h3>
        <br>
-      
-       
-       <a href="{{url('add-template')}}"><button class="btn btn-primary add-btn">Add Template</button></a>
+   
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-    <p style="margin-top:2%;">Total Results:</p>
-            <table class="table table-bordered" id="new-item">
-                <thead>
+
+            <table class="table table-bordered" id="new-item"   >
+                <thead style="font-size:11px">
                     <tr>
-                        <th class="text-center">No</th>
-                        <th class="text-center">Template Category</th>
-                        <th class="text-center">Status</th>
+                        <th class="text-center">*</th>
+                        <th class="text-center">Action </br>Type</th>
+                        <th class="text-center">Progress </br>Data</th>
+                        <th class="text-center">Client</th>
+                        <th class="text-center">FileName</th>
+                        <th class="text-center">Description</th>
+                        <th class="text-center">Time</br>Taken</th>
+                        <th class="text-center">Charge</br>Out</br>Rate</th>
+                        <th class="text-center">Way Action</br>(Way Forward)</th>
+                        <th class="text-center">RGD</br>By</th>
+                        <th class="text-center">Action</th>
+                        <th class="text-center"><input type="checkbox" name="" id=""></th>
                         <th class="text-center">Edit</th>
-                        <th class="text-center"><input type="radio"></th>
-                        
                     </tr>
                 </thead>
+        
+                <tbody  >
+                   
+                        <tr id="data"  >
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row"   class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"><input type="checkbox" name="" id=""></td>
+                            <td  scope="row"class="text-center">
+                            <a href="{{url('edit-file-progress')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
+                            </td>
+                        </tr>
 
-                </table>
-
-                <p>Business Formation:</p>
-                <table class="table table-bordered" id="new-item">   
-                <tbody>
-                        <tr id="data">
-                            <td  scope="row" class="text-center">1</td>
-                            
-                            <td  scope="row" class="text-center">Employment Agent</td>
-                            <td  scope="row" class="text-center">Active</td>
-                            <td  scope="row" class="text-center">Edit</td>
-                            <td  scope="row" class="text-center"><input type="radio"></td>
-                            
+                        
+                        
                 </tbody>
-            </table>
-            <p>Business Operation:</p>
-            <table class="table table-bordered" id="new-item">   
-                <tbody>
-                        <tr id="data">
-                            <td  scope="row" class="text-center">1</td>
-                            
-                            <td  scope="row" class="text-center">Employment Agent</td>
-                            <td  scope="row" class="text-center">Active</td>
-                            <td  scope="row" class="text-center">Edit</td>
-                            <td  scope="row" class="text-center"><input type="radio"></td>
-                            
-                            
-                </tbody>
-                </table>
-                <p>Business Property:</p>
-            <table class="table table-bordered" id="new-item">   
-                <tbody>
-                        <tr id="data">
-                            <td  scope="row" class="text-center">1</td>
-                            
-                            <td  scope="row" class="text-center">Employment Agent</td>
-                            <td  scope="row" class="text-center">Active</td>
-                            <td  scope="row" class="text-center">Edit</td>
-                            <td  scope="row" class="text-center"><input type="radio"></td>
-                            
-                            
-                </tbody>
-                </table>
-                <p>Employment:</p>
-            <table class="table table-bordered" id="new-item">   
-                <tbody>
-                        <tr id="data">
-                            <td  scope="row" class="text-center">1</td>
-                            
-                            <td  scope="row" class="text-center">Employment Agent</td>
-                            <td  scope="row" class="text-center">Active</td>
-                            <td  scope="row" class="text-center">Edit</td>
-                            <td  scope="row" class="text-center"><input type="radio"></td>
-                            
-                            
-                </tbody>
-                </table>
-                <p>Financial:</p>
-            <table class="table table-bordered" id="new-item">   
-                <tbody>
-                        <tr id="data">
-                            <td  scope="row" class="text-center">1</td>
-                            
-                            <td  scope="row" class="text-center">Employment Agent</td>
-                            <td  scope="row" class="text-center">Active</td>
-                            <td  scope="row" class="text-center">Edit</td>
-                            <td  scope="row" class="text-center"><input type="radio"></td>
-                            
-                            
-                </tbody>
-                </table>
-                <p>Personal & Family:</p>
-            <table class="table table-bordered" id="new-item">   
-                <tbody>
-                        <tr id="data">
-                            <td  scope="row" class="text-center">1</td>
-                           
-                            <td  scope="row" class="text-center">Employment Agent</td>
-                            <td  scope="row" class="text-center">Active</td>
-                            <td  scope="row" class="text-center">Edit</td>
-                            <td  scope="row" class="text-center"><input type="radio"></td>
-                            
-                            
-                </tbody>
-                </table>
-                <p>Real Estate:</p>
-            <table class="table table-bordered" id="new-item">   
-                <tbody>
-                        <tr id="data">
-                            <td  scope="row" class="text-center">1</td>
-                            
-                            <td  scope="row" class="text-center">Employment Agent</td>
-                            <td  scope="row" class="text-center">Active</td>
-                            <td  scope="row" class="text-center">Edit</td>
-                            <td  scope="row" class="text-center"><input type="radio"></td>
-                            
-                            
-                </tbody>
-                </table>
-                <p>Will& Estate Planning:</p>
-            <table class="table table-bordered" id="new-item">   
-                <tbody>
-                        <tr id="data">
-                            <td  scope="row" class="text-center">1</td>
-                            
-                            <td  scope="row" class="text-center">Employment Agent</td>
-                            <td  scope="row" class="text-center">Active</td>
-                            <td  scope="row" class="text-center">Edit</td>
-                            <td  scope="row" class="text-center"><input type="radio"></td>
-                            
-                            
-                </tbody>
-                </table>
                 
-            
-           
-
+                </table>
+             
  <!-- The Modal -->
  <div class="modal fade" id="editmed">
     <div class="modal-dialog modal-xl">
