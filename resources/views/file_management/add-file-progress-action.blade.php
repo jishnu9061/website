@@ -15,7 +15,7 @@
 
  <style>
 
-.col-md-3 {
+/* .col-md-3 {
     flex: 0 0 auto;
     width: 40%;
     margin-left: 64px;
@@ -24,7 +24,7 @@
 .al_ign{
   
   margin-left:22%;
-}
+} */
 </style> 
 
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
@@ -40,7 +40,7 @@ $('#price').prop('readonly', true);
 </script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
     <div>
-    <h2 style="text-align:center;">Add File Progress</h2>
+    <h2 style="text-align:center;">Add File Progress/Action</h2>
     <hr class="mb-4">.
 </div>
   </div>
@@ -52,7 +52,7 @@ $('#price').prop('readonly', true);
 	      @csrf
           
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-4">
            <div class="mb-1">
           <label for="username">Date of Progress</label>
           <div class="input-group">
@@ -66,7 +66,7 @@ $('#price').prop('readonly', true);
           </div>
         </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-4">
            <div class="mb-1">
           <label for="username">Client</label>
           <div class="input-group">
@@ -82,7 +82,7 @@ $('#price').prop('readonly', true);
           </div>
         </div>
           </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="mb-1">
           <label for="username">File</label>
           <div class="input-group">
@@ -100,9 +100,22 @@ $('#price').prop('readonly', true);
         </div>
         </div>
         
-          
+        <div class="col-md-4">
+           <div class="mb-1">
+          <label for="username">Time Taken(Hours)</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
 
-        <div class="col-md-3">
+            </div>
+              <input type="date" class="form-control" name="incorporation" id="age" >
+            <div class="invalid-feedback" style="width: 100%;">
+            Incorporation is required
+            </div>
+          </div>
+        </div>
+          </div>
+
+        <div class="col-md-4">
             <div class="mb-1">
           <label for="username">Action Type</label>
           <div class="input-group">
@@ -122,21 +135,8 @@ $('#price').prop('readonly', true);
 
 
         <div class="row">
-          <div class="col-md-3">
-           <div class="mb-1">
-          <label for="username">Time Taken(Hours)</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-              <input type="date" class="form-control" name="incorporation" id="age" >
-            <div class="invalid-feedback" style="width: 100%;">
-            Incorporation is required
-            </div>
-          </div>
-        </div>
-          </div>
-          <div class="col-md-3">
+          
+          <div class="col-md-4">
            <div class="mb-1">
           <label for="username">Time Taken(Minutes)</label>
           <div class="input-group">
@@ -150,29 +150,13 @@ $('#price').prop('readonly', true);
           </div>
         </div>
           </div>
-        <div class="col-md-3">
-            <div class="mb-1">
-          <label for="username">Next Bring Up Date</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
-            <!-- <textarea class="form-control" id="form7Example7" rows="3"></textarea> -->
-            <!-- <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select> -->
-          </div>
-        </div>
-        </div>
+        
         
           
 
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="mb-1">
-          <label for="username">Reminder Period Days</label>
+          <label for="username">Send Noitification To</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
@@ -191,27 +175,13 @@ $('#price').prop('readonly', true);
         <div class="row">
           
           
-        <div class="col-md-3">
-            <div class="mb-1">
-          <label for="username">Next Bring Up Date</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <textarea class="form-control" id="form7Example7" rows="3"></textarea>
-            <!-- <textarea class="form-control" id="form7Example7" rows="3"></textarea> -->
-            <!-- <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select> -->
-          </div>
-        </div>
-        </div>
+        
         
           
 
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="mb-1">
-          <label for="username">Reminder Period Days</label>
+          <label for="username">Action Description</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
@@ -224,107 +194,16 @@ $('#price').prop('readonly', true);
         </div>
         </div>
 
-         
-
-        <p style="text-align:center;">Send Reminder To:</p>
-        
         <div>
      <h4 style=" margin-left:28%;">Send To  Billing ?</h4>
-        <div class="row al_ign">
-          
-          
-        <div class="col-md-3">
-            <div class="mb-1">
-          <label for="username">Item Type</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
-            <!-- <textarea class="form-control" id="form7Example7" rows="3"></textarea> -->
-            <!-- <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select> -->
-          </div>
-        </div>
-        </div>
         
-          
-
-        <div class="col-md-3">
-            <div class="mb-1">
-          <label for="username">Reminder Period Days</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <input type="text" class="form-control" name="incorporation" id="age" >
-          </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
 
         </div>  
 
 
         <div>
      <h4 style=" margin-left:28%;">Send To  Timesheet ?</h4>
-        <div class="row al_ign">
-          
-          <div class="col-md-3">
-           <div class="mb-1">
-          <label for="username">Start Time</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-              <input type="date" class="form-control" name="incorporation" id="age" >
-            <div class="invalid-feedback" style="width: 100%;">
-            Incorporation is required
-            </div>
-          </div>
-        </div>
-          </div>
-        <div class="col-md-3">
-            <div class="mb-1">
-          <label for="username">Activity Type</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
-            <!-- <textarea class="form-control" id="form7Example7" rows="3"></textarea> -->
-            <!-- <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select> -->
-          </div>
-        </div>
-        </div>
         
-          
-
-        <div class="col-md-3">
-            <div class="mb-1">
-          <label for="username">Activity Item</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
-          </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
 
         </div> 
      

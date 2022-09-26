@@ -792,7 +792,20 @@ Route::any('add-new-bringup',"filemanagement@addbringup")->name('add-new-bringup
 Route::any('new-instructions',"filemanagement@newinstruction")->name('new-instructions');
 
 Route::any('file-action-hours',"filemanagement@fileactionhours")->name('file-action-hours');
-//file progress
+Route::any('add-file-progress-action',"filemanagement@addfileprogressaction")->name('add-file-progress-action');
+Route::any('add-file-bringup-reminder',"filemanagement@addfilebringupreminder")->name('add-file-bringupreminder');
+Route::any('book-court',"filemanagement@bookcourt")->name('book-court');
+Route::any('court-attendance-sheet',"filemanagement@courtattendance")->name('court-attendance-sheet');
+Route::any('arbiration-sheet',"filemanagement@arbirationsheet")->name('arbiration-sheet');
+Route::any('conveyance-sheet',"filemanagement@conveyance")->name('conveyance-sheet');
+Route::any('file-progress-list',"filemanagement@fileprogresslist")->name('file-progress-list');
+Route::any('file-list-progress-report',"filemanagement@filelistprogressreport")->name('file-list-progress-report');
+Route::any('staff-monthly-status-report',"filemanagement@staffmonthlystatusreport")->name('staff-monthly-status-report');
+
+//document manager
+Route::any('document-manager',"filemanagement@documentmanager")->name('document-manager');
+Route::any('upload-document',"filemanagement@uploaddocument")->name('upload-document');
+//document manager
 //vinu
 
 //beljin
