@@ -34,7 +34,8 @@ class filemanagement extends Controller
         return view('file_management.template-category');
     }
 
-    //document temblate
+
+    //document temblates
 
     //file progress
 
@@ -65,8 +66,77 @@ class filemanagement extends Controller
     public function fileactionhours()
     {
         return view('file_management.file-action-hours');
+
     }
+
+    public function fileprogresslist()
+    {
+        return view('file_management.file-progress-list');
+        
+    }
+
+    public function addfileprogressaction()
+    {
+        return view('file_management.add-file-progress-action');
+        
+    }
+
+
+    public function addfilebringupreminder()
+    {
+        return view('file_management.add-file-bringup-reminder');
+        
+    }
+
+    public function bookcourt()
+    {
+        return view('file_management.book-court');
+        
+    }
+
+    public function courtattendance()
+    {
+        return view('file_management.court-attendance-sheet');
+        
+    }
+    public function arbirationsheet()
+    {
+        return view('file_management.arbiration-sheet');
+        
+    }
+    public function conveyance()
+    {
+        return view('file_management.conveyance-sheet');
+        
+    }
+    public function filelistprogressreport()
+    {
+        return view('file_management.file-list-progress-report');
+        
+    }
+
+    public function staffmonthlystatusreport()
+    {
+        return view('file_management.staff-monthly-status-report');
+        
+    }
+
     //file progress
+
+
+     //document manager
+
+     public function documentmanager()
+     {
+         return view('file_management.document-manager');
+     }
+
+     public function uploaddocument()
+     {
+         return view('file_management.upload-document');
+     }
+ 
+       //document manager
     
     public function u_details()
     {
@@ -82,11 +152,8 @@ class filemanagement extends Controller
         return view('system-settings.User.change_password');
     }
 
-//file management
 
-public function new_instructions()
-{
-    return view('file_management.office_instructions');
-}
+
+   
 
 }

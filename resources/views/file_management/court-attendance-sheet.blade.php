@@ -12,21 +12,6 @@
 <div style="height: 50px;">
 
 </div>
-
- <style>
-
-.col-md-3 {
-    flex: 0 0 auto;
-    width: 40%;
-    margin-left: 64px;
-}
-
-.al_ign{
-  
-  margin-left:22%;
-}
-</style> 
-
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
 	  $(document).on('input','#price',function(){
@@ -39,8 +24,14 @@ $('#price').prop('readonly', true);
 });
 </script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
+
+<div class="col-sm">
+    <a href="{{url('file-list')}}"><button type="submit" style=" height: 3rem; margin-left: 0%; width: 17%; margin-bottom: 13%; background-color:#acacb9;" >Back</button></a>
+    
+
+  </div>
     <div>
-    <h2 style="text-align:center;">Add File Progress</h2>
+    <h2 style="text-align:center;">Court Attendance Sheet </h2>
     <hr class="mb-4">.
 </div>
   </div>
@@ -50,24 +41,21 @@ $('#price').prop('readonly', true);
 
      <form method="post" action="" id="form">
 	      @csrf
-          
-        <div class="row">
-          <div class="col-md-3">
-           <div class="mb-1">
-          <label for="username">Date of Progress</label>
+            <div class="row">
+            <div class="col-md-3">
+            <div class="mb-1">
+          <label for="username">Date Of Attendance</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-              <input type="date" class="form-control" name="incorporation" id="age" >
-            <div class="invalid-feedback" style="width: 100%;">
-            Incorporation is required
-            </div>
+            <input type="date" class="form-control" name="website" id="confirm_password" required>
           </div>
         </div>
-          </div>
-          <div class="col-md-3">
-           <div class="mb-1">
+        </div>
+        
+        <div class="col-md-3">
+            <div class="mb-1">
           <label for="username">Client</label>
           <div class="input-group">
             <div class="input-group-prepend">
@@ -76,12 +64,12 @@ $('#price').prop('readonly', true);
             <select name="country" id="cars">
                 <option value="volvo"></option>
             </select>
-            <div class="invalid-feedback" style="width: 100%;">
-            Incorporation is required
-            </div>
           </div>
         </div>
-          </div>
+        </div>
+        
+          
+
         <div class="col-md-3">
             <div class="mb-1">
           <label for="username">File</label>
@@ -92,19 +80,103 @@ $('#price').prop('readonly', true);
             <select name="country" id="cars">
                 <option value="volvo"></option>
             </select>
-            <!-- <textarea class="form-control" id="form7Example7" rows="3"></textarea> -->
-            <!-- <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select> -->
           </div>
         </div>
         </div>
-        
-          
+          <div class="col-md-3">
+           <div class="mb-1">
+          <label for="username">Other File</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
 
+            </div>
+            <select name="country" id="cars">
+                <option value="volvo"></option>
+            </select>
+            <div class="invalid-feedback" style="width: 100%;">
+              Number is required.
+            </div>
+          </div>
+        </div>
+          </div>
+
+        </div>
+
+        <!--  -->
+
+
+       
+        <div class="row">
         <div class="col-md-3">
             <div class="mb-1">
-          <label for="username">Action Type</label>
+          <label for="username">Court</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <input type="text" class="form-control" name="website" id="confirm_password" required>
+          </div>
+        </div>
+        </div>
+        <div class="col-md-3">
+            <div class="mb-1">
+          <label for="username">Judical Officer</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <input type="text" class="form-control" name="website" id="confirm_password" required>
+          </div>
+        </div>
+        </div>
+        <div class="col-md-3">
+            <div class="mb-1">
+          <label for="username">Case No</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <input type="text" class="form-control" name="website" id="confirm_password" required>
+          </div>
+        </div>
+        </div>
+
+          
+        <div class="col-md-3">
+            <div class="mb-1">
+          <label for="username">Parties</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <input type="text" class="form-control" name="website" id="confirm_password" required>
+            <div class="invalid-feedback" style="width: 100%;">
+              Telephone Number is required.
+            </div>
+          </div>
+        </div>
+        
+           
+          </div>
+        </div>
+
+
+
+        <div class="row">
+        <div class="col-md-3">
+            <div class="mb-1">
+          <label for="username">Acting For</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <input type="text" class="form-control" name="website" id="confirm_password" required>
+          </div>
+        </div>
+        </div>
+        <div class="col-md-3">
+            <div class="mb-1">
+          <label for="username">Person Dealing</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
@@ -115,241 +187,189 @@ $('#price').prop('readonly', true);
           </div>
         </div>
         </div>
-        </div>
-        </div>
-        </div>
+        
 
+        <div class="col-md-3">
+            <div class="mb-1">
+          <label for="username">Instructions</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
 
-
+            </div>
+            <input type="text" class="form-control" name="website" id="confirm_password" required>
+            <div class="invalid-feedback" style="width: 100%;">
+              Telephone Number is required.
+            </div>
+          </div>
+        </div>
+        
+           
+          </div>
+        </div>
+        <br>
         <div class="row">
-          <div class="col-md-3">
+        <div class="col-md-4">
+           <div class="mb-1">
+          <label for="username">What Transpired In Court</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+            <div class="invalid-feedback" style="width: 100%;">
+              Number is required.
+            </div>
+          </div>
+        </div>
+          </div>
+
+          <div class="col-md-4">
+           <div class="mb-1">
+          <label for="username">Remarks</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+            <div class="invalid-feedback" style="width: 100%;">
+              Number is required.
+            </div>
+          </div>
+        </div>
+          </div>
+
+          <div class="col-md-4">
+           <div class="mb-1">
+          <label for="username">Notes</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+            <div class="invalid-feedback" style="width: 100%;">
+              Number is required.
+            </div>
+          </div>
+        </div>
+          </div>
+
+          
+          <div class="col-md-4">
+           <div class="mb-1">
+          <label for="username">Person Dealing</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <input type="text" class="form-control" name="website" id="confirm_password" required>
+            <div class="invalid-feedback" style="width: 100%;">
+              Number is required.
+            </div>
+          </div>
+        </div>
+          </div>
+
+
+          <div class="col-md-4">
            <div class="mb-1">
           <label for="username">Time Taken(Hours)</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-              <input type="date" class="form-control" name="incorporation" id="age" >
+            <input type="text" class="form-control" name="website" id="confirm_password" required>
             <div class="invalid-feedback" style="width: 100%;">
-            Incorporation is required
+              Number is required.
             </div>
           </div>
         </div>
           </div>
-          <div class="col-md-3">
+
+          <div class="col-md-4">
            <div class="mb-1">
           <label for="username">Time Taken(Minutes)</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-              <input type="date" class="form-control" name="incorporation" id="age" >
+            <input type="text" class="form-control" name="website" id="confirm_password" required>
             <div class="invalid-feedback" style="width: 100%;">
-            Incorporation is required
+              Number is required.
             </div>
           </div>
         </div>
           </div>
-        <div class="col-md-3">
-            <div class="mb-1">
-          <label for="username">Next Bring Up Date</label>
+          <div class="col-md-4">
+           <div class="mb-1">
+          <label for="username">Bring Up Date</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
-            <!-- <textarea class="form-control" id="form7Example7" rows="3"></textarea> -->
-            <!-- <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select> -->
+            <input type="date" class="form-control" name="website" id="confirm_password" required>
+            <div class="invalid-feedback" style="width: 100%;">
+              Number is required.
+            </div>
           </div>
         </div>
-        </div>
-        
-          
-
-        <div class="col-md-3">
-            <div class="mb-1">
+          </div>
+          <div class="col-md-4">
+           <div class="mb-1">
           <label for="username">Reminder Period Days</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
+            <input type="text" class="form-control" name="website" id="confirm_password" required>
+            <div class="invalid-feedback" style="width: 100%;">
+              Number is required.
+            </div>
           </div>
         </div>
-        </div>
-        </div>
-        </div>
-        </div>
-
-
-        <div class="row">
-          
-          
-        <div class="col-md-3">
-            <div class="mb-1">
-          <label for="username">Next Bring Up Date</label>
+          </div>
+          <div class="col-md-4">
+           <div class="mb-1">
+          <label for="username">Send Reminder To</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-            <textarea class="form-control" id="form7Example7" rows="3"></textarea>
-            <!-- <textarea class="form-control" id="form7Example7" rows="3"></textarea> -->
-            <!-- <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select> -->
-          </div>
-        </div>
-        </div>
-        
-          
-
-        <div class="col-md-3">
-            <div class="mb-1">
-          <label for="username">Reminder Period Days</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
+            <input type="text" class="form-control" name="website" id="confirm_password" required>
+            <div class="invalid-feedback" style="width: 100%;">
+              Number is required.
             </div>
-            <textarea class="form-control" id="form7Example7" rows="3"></textarea>
           </div>
         </div>
-        </div>
-        </div>
-        </div>
-        </div>
+          </div>
 
          
 
-        <p style="text-align:center;">Send Reminder To:</p>
         
-        <div>
-     <h4 style=" margin-left:28%;">Send To  Billing ?</h4>
-        <div class="row al_ign">
-          
-          
-        <div class="col-md-3">
-            <div class="mb-1">
-          <label for="username">Item Type</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
-            <!-- <textarea class="form-control" id="form7Example7" rows="3"></textarea> -->
-            <!-- <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select> -->
-          </div>
-        </div>
-        </div>
+        <br>
         
-          
-
-        <div class="col-md-3">
-            <div class="mb-1">
-          <label for="username">Reminder Period Days</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <input type="text" class="form-control" name="incorporation" id="age" >
-          </div>
-        </div>
-        </div>
-        </div>
         </div>
         </div>
 
-        </div>  
-
-
-        <div>
-     <h4 style=" margin-left:28%;">Send To  Timesheet ?</h4>
-        <div class="row al_ign">
-          
-          <div class="col-md-3">
-           <div class="mb-1">
-          <label for="username">Start Time</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-              <input type="date" class="form-control" name="incorporation" id="age" >
-            <div class="invalid-feedback" style="width: 100%;">
-            Incorporation is required
-            </div>
-          </div>
-        </div>
-          </div>
-        <div class="col-md-3">
-            <div class="mb-1">
-          <label for="username">Activity Type</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
-            <!-- <textarea class="form-control" id="form7Example7" rows="3"></textarea> -->
-            <!-- <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select> -->
-          </div>
-        </div>
-        </div>
-        
-          
-
-        <div class="col-md-3">
-            <div class="mb-1">
-          <label for="username">Activity Item</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
-          </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-
-        </div> 
      
-          
-          
-
     </div>
     <br>
-    <div class="">
-              <div class="row">
-            <div class="col-sm">
+    <div class="container">
+  <div class="row">
+    <div class="col-sm">
     
-          </div>
-                      <div class="col-sm">
-                      <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Add File Progress</button>
-
-
-                      <button type="submit" class="btn btn-primary submit_btn btn_align">Close</button>
-
-                      </div>
+    </div>
+    <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
+      
+      <button type="submit" class="btn btn-primary submit_btn">Save</button>
+      <button type="button" class="btn ">Close</button>
+      
+    </div>
   </div>
 </div>
-</div>
-
-
+     
+    
+   
+          </div>
 
           
 
@@ -604,6 +624,26 @@ $('#price').prop('readonly', true);
 </table>
    </div>
 </div>
+
+<div class="modal" id="my">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div class="modal-body">
+                    <form action="">
+                      <div>
+                        <input type="text" name="type" class="form-control" placeholder="Country">
+                        <button class="btn btn-primary sub_btnn" type="submit" >submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
  $(function () {
