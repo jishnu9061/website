@@ -171,7 +171,10 @@ class filemanagement extends Controller
     {
         return view('system-settings.User.change_password');
     }
-
+    public function new_instructions()
+    {
+        return view('file_management.office_instructions');
+    }
  
 
 public function add_new_instructions()
