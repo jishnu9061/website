@@ -162,6 +162,11 @@ class SystemSetup extends Controller
     {
         return view('system-settings.add_tax_wht-vat');
     }
+    
+    public function notifications()
+    {
+        return view('system-settings.notifications');
+    }
 
    
 
