@@ -30,7 +30,7 @@
     <div class="col-sm-4 " > <a><button type="button" class="btn btn-primary btn_align_btn" >Template Category</button></a></div>
 
     <div class="col-sm-4 " > <a href="{{url('letter_types')}}"><button type="button" class="btn btn-primary btn_align_btn" > Letter Types</button></a></div>
-    <div class="col-sm-4 " > <a><button type="button" class="btn btn-primary btn_align_btn" > Payment Items</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('payment_items')}}"><button type="button" class="btn btn-primary btn_align_btn" > Payment Items</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('courts')}}"><button type="button" class="btn btn-primary btn_align_btn" > Courts</button></a></div>
 
     <div class="col-sm-4" > <a><button type="button" class="btn btn-primary btn_align_btn" > Description Selections</button></a></div>
