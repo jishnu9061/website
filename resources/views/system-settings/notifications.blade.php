@@ -118,7 +118,8 @@ table{
                      </tr>
                     
                             </table><br>
-                          
+                            <input type="button"value="Update" name="update"style="background-color:rgb(13, 1, 56);color: white; margin-left:50%;">
+               
         </body>
 </html>
 
