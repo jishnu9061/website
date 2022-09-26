@@ -717,6 +717,8 @@ Route::any('add_court_category','SystemSetup@addcourtcategory')->name('add_court
 Route::any('letter_types','SystemSetup@lettertype')->name('letter_types');
 Route::any('add_letter_category','SystemSetup@addlettercategory')->name('add_letter_category');
 Route::any('document_letter_category','SystemSetup@documentlettercategory')->name('document_letter_category');
+//payment items
+Route::any('payment_items','SystemSetup@paymentitem')->name('payment_items');
 //RESHMA
 
 

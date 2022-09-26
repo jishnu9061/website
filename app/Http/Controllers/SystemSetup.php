@@ -121,6 +121,10 @@ class SystemSetup extends Controller
     {
         return view('system-settings.document_letter_category');
     }
+    public function paymentitem()
+    {
+        return view('system-settings.payment_items');
+    }
 
 
    
