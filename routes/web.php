@@ -730,6 +730,7 @@ Route::any('add_tax_excise','SystemSetup@addtaxexcise')->name('add_tax_excise');
 Route::any('add_tax_vat','SystemSetup@addtaxvat')->name('add_tax_vat');
 Route::any('add_tax_wht','SystemSetup@addtaxwht')->name('add_tax_wht');
 Route::any('add_tax_wht-vat','SystemSetup@addtaxwhtvat')->name('add_tax_wht-vat');
+Route::any('notifications','SystemSetup@notifications')->name('notifications');
 //RESHMA
 
 
