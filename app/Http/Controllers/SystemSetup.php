@@ -125,7 +125,43 @@ class SystemSetup extends Controller
     {
         return view('system-settings.payment_items');
     }
+    public function addpaymentitem()
+    {
+        return view('system-settings.add_payment_item');
+    }
+    public function descriptionselection()
+    {
+        return view('system-settings.description_selectn');
+    }
+    public function descsel()
+    {
+        return view('system-settings.add_desc_sel');
+    }
+    public function taxchart()
+    {
+        return view('system-settings.tax_chart');
+    }
+    public function addtaxchart()
+    {
+        return view('system-settings.add_tax_chart');
+    }
+    public function addtaxexcise()
+    {
+        return view('system-settings.add_tax_excise');
+    }
+    public function addtaxvat()
+    {
+        return view('system-settings.add_tax_vat');
+    }
+    public function addtaxwht()
+    {
+        return view('system-settings.add_tax_wht');
+    }
 
+    public function addtaxwhtvat()
+    {
+        return view('system-settings.add_tax_wht-vat');
+    }
 
    
 

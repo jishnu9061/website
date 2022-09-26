@@ -719,6 +719,17 @@ Route::any('add_letter_category','SystemSetup@addlettercategory')->name('add_let
 Route::any('document_letter_category','SystemSetup@documentlettercategory')->name('document_letter_category');
 //payment items
 Route::any('payment_items','SystemSetup@paymentitem')->name('payment_items');
+Route::any('add_payment_item','SystemSetup@addpaymentitem')->name('add_payment_item');
+//description selection
+Route::any('description_selectn','SystemSetup@descriptionselection')->name('description_selectn');
+Route::any('add_desc_sel','SystemSetup@descsel')->name('add_desc_sel');
+//tax chart
+Route::any('tax_chart','SystemSetup@taxchart')->name('tax_chart');
+Route::any('add_tax_chart','SystemSetup@addtaxchart')->name('add_tax_chart');
+Route::any('add_tax_excise','SystemSetup@addtaxexcise')->name('add_tax_excise');
+Route::any('add_tax_vat','SystemSetup@addtaxvat')->name('add_tax_vat');
+Route::any('add_tax_wht','SystemSetup@addtaxwht')->name('add_tax_wht');
+Route::any('add_tax_wht-vat','SystemSetup@addtaxwhtvat')->name('add_tax_wht-vat');
 //RESHMA
 
 
@@ -826,6 +837,10 @@ Route::any('/u_details',"filemanagement@u_details")->name('u_details');
 
 //Anandhu
 Route::any('/office_instructions',"filemanagement@new_instructions")->name('new_instruction');
+
+Route::any('/new_office_instructions',"filemanagement@add_new_instructions")->name('add_new_instructions');
+
+Route::any('/instructions_report',"filemanagement@view_new_instructions")->name('view_new_instructions');
 
 ?>
 

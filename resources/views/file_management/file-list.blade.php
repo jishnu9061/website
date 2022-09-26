@@ -16,7 +16,7 @@
 <body>
     <p style="margin-bottom:4%;"> <b>Manage file/ File List</b> </p>
     <div class="col-sm">
-    <a href="{{url('file_managementindex')}}"><button type="submit" style=" height: 3rem; margin-left: 0%; width: 17%; margin-bottom: 13%; background-color:#acacb9;" >Back</button></a>
+   
     
 
   </div>
@@ -27,7 +27,7 @@
        <div id="mydatatable_filter" class="dataTables_filter">
         <label><b>Search:</b><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
        </div>
-       <a href="{{url('add-new-file')}}"><button class="btn btn-primary add-btn">Open New Client File</button></a>
+       <a href="{{url('add-new-file')}}"><button class="btn btn-primary add-btn" style="width: 20%; margin-bottom:5%;" >Open New Client File</button></a>
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
