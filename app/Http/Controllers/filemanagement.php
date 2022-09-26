@@ -82,4 +82,11 @@ class filemanagement extends Controller
         return view('system-settings.User.change_password');
     }
 
+//file management
+
+public function new_instructions()
+{
+    return view('file_management.office_instructions');
+}
+
 }

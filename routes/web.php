@@ -802,6 +802,9 @@ Route::any('/u_details',"filemanagement@u_details")->name('u_details');
 //beljin
 
 
+//Anandhu
+Route::any('/office_instructions',"filemanagement@new_instructions")->name('new_instruction');
+
 ?>
 
 
