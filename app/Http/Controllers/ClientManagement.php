@@ -205,4 +205,9 @@ class ClientManagement extends Controller
     }
 
 
+
+    public function editRegistration(){
+        return view('client-management.edit-registration');
+    }
+
 }

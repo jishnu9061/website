@@ -86,63 +86,49 @@ $('#price').prop('readonly', true);
                         </div>
                         <div class="col-md-4">
                             <div class="mb-1">
-                                <label for="username">Staff Handling</label>
-                                  <div class="input-group">
-                                    <div class="input-group-prepend">
-
-                                    </div>
-                                    <select name="country" id="cars">
-                                    <option value="volvo"></option>
-                                    </select>
-                                  </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                            <label for="username">Complaint About</label>
-                                  <div class="input-group">
-                                    <div class="input-group-prepend">
-
-                                    </div>
-                                    <select name="complaint" id="cars">
-                                    <option value="volvo"></option>
-                                    </select>
-                                  </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">Telephone No</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="telephone" id="age" value="" placeholder="" min="0" max="99">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                        Telephone No is required.
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">Email Address</label>
+                            <label for="username">Telephone No</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend"></div>
-                                    <input type="email" class="form-control" name="email" value="" id="password" placeholder="">
+                                    <input type="text" class="form-control" name="telephone" id="username" value="" placeholder="Telephone" required>
                                     <div class="invalid-feedback" style="width: 100%;">
-                                    Email Address is required.
+                                    Date is required.
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="mb-1">
-                                <label for="username">others</label>
+                            <label for="username">Email Address</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="text" class="form-control" name="email" id="username" value="" placeholder="Email" required>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                    Date is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-1">
+                                <label for="username">Mobile No</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="others" value="" id="confirm_password" placeholder="">
+                                        <input type="text" class="form-control" name="mobile" id="age" value="" placeholder="Mobile No" min="0" max="99">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                        Telephone No is required.
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-1">
+                                <label for="username">Web site</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control" name="website" value="" id="confirm_password" placeholder="Web Site">
                                             <div class="invalid-feedback" style="width: 100%;">
                                             others is required.
                                             </div>
@@ -152,29 +138,82 @@ $('#price').prop('readonly', true);
                     </div>
                     <br>
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="mb-1">
-                            <label for="username">Action Plan</label>
+                            <label for="username">Customer Address</label>
                                 <div class="input-group">                     
-                                  <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                  <textarea class="form-control" id="form7Example7" rows="2"></textarea>
                                   <div class="invalid-feedback" style="width: 100%;">
                                   Action Plan is required.
                                   </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                           <div class="mb-1">
-                          <label for="username">Complaint Description</label>
+                          <label for="username">Physical Address</label>
                                 <div class="input-group">                     
-                                  <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                  <textarea class="form-control" id="form7Example7" rows="2"></textarea>
                                   <div class="invalid-feedback" style="width: 100%;">
                                   Complaint Description is required.
                                   </div>
                                 </div>
                             </div>
                         </div>
-                    </div>     
+                    </div> 
+                    <br>
+                    <h4 style="text-align:center">Contact Persons</h4>  
+                    <br>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="mb-1">
+                                <label for="username"> Name</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="text" class="form-control" name="" id="username" value="" placeholder="" required>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                    Date is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-1">
+                            <label for="username">Designation</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="text" class="form-control" name="" id="username" value="" placeholder="" required>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                    Date is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="mb-1">
+                          <label for="username">Mobile No</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="text" class="form-control" name="" id="username" value="" placeholder="" required>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                    Date is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="mb-1">
+                          <label for="username">Email</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="text" class="form-control" name="" id="username" value="" placeholder="" required>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                    Date is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
                     <br>
                     <div class="container">
                       <div class="row">
@@ -182,7 +221,7 @@ $('#price').prop('readonly', true);
                           
                         </div>
                           <div class="col-sm">
-                            <button type="submit" class="btn btn-primary submit_btn_btn">Add Complaint</button>
+                            <button type="submit" class="btn btn-primary submit_btn_btn">Add Registration</button>
                             <a href="{{route('client-index')}}" type="button" class="btn btn-primary " style="width:30%;  margin-top: 30px; padding:8px">Cancel</a>
                           </div>
                         </div>
