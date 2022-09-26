@@ -34,7 +34,13 @@ class filemanagement extends Controller
         return view('file_management.template-category');
     }
 
-    //document temblate
+    public function addtemplate()
+    {
+        return view('file_management.add-template');
+    }
+
+
+    //document temblates
 
     //file progress
 
@@ -57,16 +63,100 @@ class filemanagement extends Controller
     {
         return view('file_management.edit-file-progress');
     }
-    public function newinstruction()
-    {
-        return view('file_management.new-instructions');
-    }
 
+    
     public function fileactionhours()
     {
         return view('file_management.file-action-hours');
+
     }
+
+    public function fileprogresslist()
+    {
+        return view('file_management.file-progress-list');
+        
+    }
+
+    public function addfileprogressaction()
+    {
+        return view('file_management.add-file-progress-action');
+        
+    }
+
+
+    public function addfilebringupreminder()
+    {
+        return view('file_management.add-file-bringup-reminder');
+        
+    }
+
+    public function bookcourt()
+    {
+        return view('file_management.book-court');
+        
+    }
+
+    public function courtattendance()
+    {
+        return view('file_management.court-attendance-sheet');
+        
+    }
+    public function arbirationsheet()
+    {
+        return view('file_management.arbiration-sheet');
+        
+    }
+    public function conveyance()
+    {
+        return view('file_management.conveyance-sheet');
+        
+    }
+    public function filelistprogressreport()
+    {
+        return view('file_management.file-list-progress-report');
+        
+    }
+
+    public function staffmonthlystatusreport()
+    {
+        return view('file_management.staff-monthly-status-report');
+        
+    }
+
     //file progress
+
+
+    //monthly file status report
+
+
+
+    //monthly file status report
+     public function clientmonthlystatus()
+     {
+         return view('file_management.client-monthly-file-status');
+     }
+
+     //document manager
+
+     public function documentmanager()
+     {
+         return view('file_management.document-manager');
+     }
+
+     public function uploaddocument()
+     {
+         return view('file_management.upload-document');
+     }
+
+     public function generatedocument()
+     {
+         return view('file_management.generate-document');
+     }
+ 
+       //document manager
+
+
+
     
     public function u_details()
     {
@@ -81,12 +171,20 @@ class filemanagement extends Controller
     {
         return view('system-settings.User.change_password');
     }
+    public function new_instructions()
+    {
+        return view('file_management.office_instructions');
+    }
+ 
 
-//file management
-
-public function new_instructions()
+public function add_new_instructions()
 {
-    return view('file_management.office_instructions');
+    return view('file_management.new_office_instructions');
+}
+
+public function view_new_instructions()
+{
+    return view('file_management.instructions_report');
 }
 
 }

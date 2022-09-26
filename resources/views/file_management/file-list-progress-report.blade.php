@@ -14,65 +14,55 @@
 </head>
 
 <body>
-    <p style="margin-bottom:4%;"> <b>  Office Instructions</b> </p>
-    <div class="col-sm">
-   
-
-  </div>
+ 
     <div class="container">
-        <h3 class="text-center" style="color: #070344;"><b>Office Instructions</b></h3>
+        <h3 class="text-center" style="color: #070344;"><b>List of File Progress</b></h3>
        <br>
-      
-       <div id="mydatatable_filter" class="dataTables_filter">
-        <label ><b>Search:</b><input type="search" class="box" placeholder="search" aria-controls="mydatatable" ></label>
-       </div>
-       <a href="{{url('new_office_instructions')}}"><button class="btn btn-primary add-btn" Style="width:200px;">Add New Instructions</button></a>
-<div class="tab-content" id="myTabContent" >
+   
+<div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
-            <table class="table table-bordered" id="new-item" style="width:100%;">
-                <thead>
+            <table class="table table-bordered" id="new-item"   >
+                <thead style="font-size:11px">
                     <tr>
-                        <th class="text-center">Execute</th>
-                        <th class="text-center">ID</th>
-                        <th class="text-center">Post Date</th>
-                        <th class="text-center">Sender</th>
-                        <th class="text-center">Receiver</th>
-                        <th class="text-center">Details</th>
-                        <th class="text-center">Amount</th>
-                        <th class="text-center">Checked By</th>
-                        <th class="text-center">Accepted By</th>
-                        <th class="text-center">Completed By</th>
-                        <th class="text-center">Declined By</th>
-                        <th class="text-center">Faild By</th>
-                        <th class="text-center">TAT DATE</th>
-                        <th class="text-center">Status</th>
+                        <th class="text-center">*</th>
+                        <th class="text-center">Client</th>
+                        <th class="text-center">File No& Name</th>
+                        <th class="text-center">Date Opened</th>
+                        <th class="text-center">Responsible Advocate</th>
+                        <th class="text-center">Most Recent Progress</th>
+                        <th class="text-center">Next Progress</th>
+                        <th class="text-center">Status</th>     
                         <th class="text-center">Action</th>
+                       
                     </tr>
                 </thead>
-                <tbody>
-                        <tr id="data">
+        
+                <tbody  >
+                   
+                        <tr id="data"  >
+                            
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row"   class="text-center"></td>
                             <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row"class="text-center"><a href=""><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
-                            <a  onClick="return myFunction();" href="" style="color:black;"><i class="fas fa-trash-alt"></i></a></td>
+                            <td  scope="row"class="text-center">
+                                Action
+                           <select name="" id=""> <option value=""> <a href=""></a> </option> 
+                           <option value=""> <a href=""></a> </option></select>
+                            </td>
                         </tr>
-                </tbody>
-            </table>
-           
 
+                        
+                        
+                </tbody>
+                
+                </table>
+             
  <!-- The Modal -->
  <div class="modal fade" id="editmed">
     <div class="modal-dialog modal-xl">
