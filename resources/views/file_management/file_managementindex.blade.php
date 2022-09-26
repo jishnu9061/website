@@ -45,7 +45,7 @@
     <div class="row sm">
     <div class="col-sm-4" >  <a href=""><img class="logo_size" src="assets\image\6.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >File Instructions</button></a></div>
     <div class="col-sm-4" >  <a href="{{url('office_instructions')}}"><img class="logo_size" src="assets\image\5.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Office Instructions</button></a></div>
-    <div class="col-sm-4" >  <a href=""><img class="logo_size" src="assets\image\9.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Instructions Report</button></a></div>
+    <div class="col-sm-4" >  <a href="{{url('instructions_report')}}"><img class="logo_size" src="assets\image\9.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Instructions Report</button></a></div>
     </div>
    
 </div>

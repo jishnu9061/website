@@ -803,6 +803,10 @@ Route::any('/u_details',"filemanagement@u_details")->name('u_details');
 //Anandhu
 Route::any('/office_instructions',"filemanagement@new_instructions")->name('new_instruction');
 
+Route::any('/new_office_instructions',"filemanagement@add_new_instructions")->name('add_new_instructions');
+
+Route::any('/instructions_report',"filemanagement@view_new_instructions")->name('view_new_instructions');
+
 ?>
 
 

@@ -1,4 +1,4 @@
-<h1>hiii</h1>@extends('layouts.hmsmain')
+@extends('layouts.hmsmain')
 @section('content')
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -16,8 +16,7 @@
 <body>
     <p style="margin-bottom:4%;"> <b>  Office Instructions</b> </p>
     <div class="col-sm">
-    <a href="{{url('file_managementindex')}}"><button type="submit" style=" height: 3rem; margin-left: 0%; width: 17%; margin-bottom: 13%; background-color:#acacb9;" >Back</button></a>
-    
+   
 
   </div>
     <div class="container">
@@ -25,10 +24,10 @@
        <br>
       
        <div id="mydatatable_filter" class="dataTables_filter">
-        <label><b>Search:</b><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
+        <label ><b>Search:</b><input type="search" class="box" placeholder="search" aria-controls="mydatatable" ></label>
        </div>
-       <a href=""><button class="btn btn-primary add-btn">Add New Instructions</button></a>
-<div class="tab-content" id="myTabContent">
+       <a href="{{url('new_office_instructions')}}"><button class="btn btn-primary add-btn" Style="width:200px;">Add New Instructions</button></a>
+<div class="tab-content" id="myTabContent" >
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
             <table class="table table-bordered" id="new-item" style="width:100%;">
@@ -39,7 +38,7 @@
                         <th class="text-center">Post Date</th>
                         <th class="text-center">Sender</th>
                         <th class="text-center">Receiver</th>
-                        <th class="text-center">>Details</th>
+                        <th class="text-center">Details</th>
                         <th class="text-center">Amount</th>
                         <th class="text-center">Checked By</th>
                         <th class="text-center">Accepted By</th>
