@@ -24,14 +24,8 @@ $('#price').prop('readonly', true);
 });
 </script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-
-<div class="col-sm">
-    <a href="{{url('file-list')}}"><button type="submit" style=" height: 3rem; margin-left: 0%; width: 17%; margin-bottom: 13%; background-color:#acacb9;" >Back</button></a>
-    
-
-  </div>
     <div>
-    <h2 style="text-align:center;">Upload Documents </h2>
+    <h2 style="text-align:center;">Client Monthly Status Report</h2>
     <hr class="mb-4">.
 </div>
   </div>
@@ -41,117 +35,10 @@ $('#price').prop('readonly', true);
 
      <form method="post" action="" id="form">
 	      @csrf
-          
-
-       
-        <div class="row">
-        <div class="col-md-4">
-            <div class="mb-1">
-          <label for="username">Client</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <input type="text" class="form-control" name="website" id="confirm_password" required>
-          </div>
-        </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="mb-1">
-          <label for="username">File</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <input type="text" class="form-control" name="website" id="confirm_password" required>
-          </div>
-        </div>
-        </div>
-        <div class="col-md-4">
-            <div class="mb-1">
-          <label for="username">Other Files</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <input type="text" class="form-control" name="website" id="confirm_password" required>
-          </div>
-        </div>
-        </div>
-        <div class="col-md-4">
-            <div class="mb-1">
-          <label for="username">Document Category</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <input type="text" class="form-control" name="website" id="confirm_password" required>
-          </div>
-        </div>
-        </div>
-       
-        <div class="col-md-4">
-            <div class="mb-1">
-          <label for="username">Document Title</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <input type="text" class="form-control" name="website" id="confirm_password" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Telephone Number is required.
-            </div>
-          </div>
-        </div>
-        
-           
-          </div>
-        </div>
-        
-
-</br>
-
-
-        <div class="row">
-        <div class="col-md-6">
-            <div class="mb-1">
-          <label for="username">Nature Of Document</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <textarea class="form-control" id="form7Example7" rows="3"></textarea>
-          </div>
-        </div>
-        </div>
-        
-        
-        <div class="col-md-6">
-            <div class="mb-1">
-          <label for="username">Keyword Search/ Tags</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <textarea class="form-control" id="form7Example7" rows="3"></textarea>
-          </div>
-        </div>
-        </div>
-        
-        </div>
-        
-           
-          </div>
-        </div>
-        <br>
-
- 
-
-        <div class="row">
-        <div class="col-md-3">
+          <div class="row">
+          <div class="col-md-4">
            <div class="mb-1">
-          <label for="username">Documet Owner</label>
+          <label for="username">Report Type</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
@@ -160,71 +47,64 @@ $('#price').prop('readonly', true);
                 <option value="volvo"></option>
             </select>
             <div class="invalid-feedback" style="width: 100%;">
-              Number is required.
+            Incorporation is required
             </div>
           </div>
         </div>
           </div>
-
-
-          <div class="col-md-3">
-           <div class="mb-1">
-          <label for="username">Final Aggrement</label>
+    
+        <div class="col-md-4">
+            <div class="mb-1">
+          <label for="username">Client</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-            <input type="text" class="form-control" name="website" id="confirm_password" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Number is required.
-            </div>
-          </div>
-        </div>
-          </div>
-          </div>
-
-        <br>
-
-
-        <div class="row">
-        <div class="col-md-3">
-           <div class="mb-1">
-          <label for="username">Documet To Upload</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <input type="file" class="form-control" name="website" id="confirm_password" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Number is required.
-            </div>
-          </div>
-        </div>
-          </div>
-
-
-          <div class="col-md-3">
-           <div class="mb-1">
-          <label for="username">Folder To Upload </label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <input type="file" class="form-control" name="website" id="confirm_password" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Number is required.
-            </div>
-          </div>
-        </div>
-          </div>
+            <select name="country" id="cars">
+                <option value="volvo"></option>
+            </select>
           </div>
         </div>
         </div>
         
 
 
+        <div class="row">
+         
+          
+        <div class="col-md-3">
+            <div class="mb-1">
+          <label for="username">Month</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
 
-     
+            </div>
+            <input type="date" class="form-control" name="website" id="confirm_password" required>
+          </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="row">
+          
+         
+        <div class="col-md-3">
+            <div class="mb-1">
+          <label for="username">Year</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <input type="date" class="form-control" name="website" id="confirm_password" required>
+          </div>
+        </div>
+        </div>
+        </div>
+        
+    
+        
+       
+
     </div>
     <br>
     <div class="container">
@@ -232,11 +112,13 @@ $('#price').prop('readonly', true);
     <div class="col-sm">
     
     </div>
-    <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
-      
-      <button type="submit" class="btn btn-primary submit_btn">Upload</button>
-      <button type="button" class="btn ">Close</button>
-      
+    <div class="col-sm">
+   
+    <button type="submit" class="btn btn-primary submit_btn btn_align">Cancel</button>
+    <button type="submit" class="btn btn-primary submit_btn btn_sumbit">View Report</button>
+
+    
+
     </div>
   </div>
 </div>
@@ -498,26 +380,6 @@ $('#price').prop('readonly', true);
 </table>
    </div>
 </div>
-
-<div class="modal" id="my">
-          <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <div class="modal-body">
-                    <form action="">
-                      <div>
-                        <input type="text" name="type" class="form-control" placeholder="Country">
-                        <button class="btn btn-primary sub_btnn" type="submit" >submit</button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
  $(function () {
