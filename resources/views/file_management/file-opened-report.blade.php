@@ -16,7 +16,7 @@
 <body>
  
     <div class="container">
-        <h3 class="text-center" style="color: #070344;"><b>List of File Progress</b></h3>
+        <h3 class="text-center" style="color: #070344;"><b>Files Opened Report</b></h3>
        <br>
    
 <div class="tab-content" id="myTabContent">
@@ -27,12 +27,12 @@
                     <tr>
                         <th class="text-center">*</th>
                         <th class="text-center">Client</th>
-                        <th class="text-center">File No& Name</th>
-                        <th class="text-center">Date Opened</th>
-                        <th class="text-center">Responsible Advocate</th>
-                        <th class="text-center">Most Recent Progress</th>
-                        <th class="text-center">Next Progress</th>
-                        <th class="text-center">Status</th>     
+                        <th class="text-center">File No</th>
+                        <th class="text-center">File Name</th>
+                        <th class="text-center">File Type</th>
+                        <th class="text-center">Responsible </br>Advocate</th>
+                        <th class="text-center">Partner </br>in Charged</th>
+                        <th class="text-center">Date</br> Opened</th>     
                         <th class="text-center">Action</th>
                        
                     </tr>

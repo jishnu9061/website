@@ -35,7 +35,7 @@
 
     <h3>Notes</h3>
     <div class="row sm">
-    <div class="col-sm-4" >  <a href=""><img class="logo_size" src="assets\image\10.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Dairy Management</button></a></div>
+    <div class="col-sm-4" >  <a href="{{url('diary-management')}}"><img class="logo_size" src="assets\image\10.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Diary Management</button></a></div>
     <div class="col-sm-4" >  <a href=""><img class="logo_size" src="assets\image\11.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Workflow Management</button></a></div>
     <div class="col-sm-4" >  <a href="{{url('template-category')}}"><img class="logo_size" src="assets\image\13.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Document Templates</button></a></div>
     <div class="col-sm-4" >  <a href="{{url('document-manager')}}"><img class="logo_size" src="assets\image\14.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Document Manager (DMS)</button></a></div>
@@ -53,11 +53,11 @@
  <h3>File Reports</h3>
     <div class="row sm">
     <div class="col-sm-4" >  <a href="{{url('file-report')}}"><img class="logo_size" src="assets\image\10.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Files Reports</button></a></div>
-    <div class="col-sm-4" >  <a href=""><img class="logo_size" src="assets\image\11.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Files Opened Report</button></a></div>
-    <div class="col-sm-4" >  <a href="{{url('')}}"><img class="logo_size" src="assets\image\13.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Files Closed Report</button></a></div>
-    <div class="col-sm-4" >  <a href="{{url('')}}"><img class="logo_size" src="assets\image\14.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Files Pending Closure</button></a></div>
-    <div class="col-sm-4" >  <a href=""><img class="logo_size" src="assets\image\11.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Files Pending Approval</button></a></div>
-    <div class="col-sm-4" >  <a href="{{url('')}}"><img class="logo_size" src="assets\image\13.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Instructions Past TAT</button></a></div>
+    <div class="col-sm-4" >  <a href="{{url('file-opened-report')}}"><img class="logo_size" src="assets\image\11.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Files Opened Report</button></a></div>
+    <div class="col-sm-4" >  <a href="{{url('file-closed-report')}}"><img class="logo_size" src="assets\image\13.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Files Closed Report</button></a></div>
+    <div class="col-sm-4" >  <a href="{{url('file-pending')}}"><img class="logo_size" src="assets\image\14.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Files Pending Closure</button></a></div>
+    <div class="col-sm-4" >  <a href="{{url('file-pending-approval')}}"><img class="logo_size" src="assets\image\11.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Files Pending Approval</button></a></div>
+    <div class="col-sm-4" >  <a href="{{url('instructions-past')}}"><img class="logo_size" src="assets\image\13.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Instructions Past TAT</button></a></div>
     <div class="col-sm-4" >  <a href="{{url('')}}"><img class="logo_size" src="assets\image\14.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Unallocated Files Report</button></a></div>
    
   </div>
@@ -66,10 +66,10 @@
     <div class="col-sm-4" >  <a href="{{url('Safe_management')}}"><img class="logo_size" src="assets\image\10.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Safe Management</button></a></div>
     <div class="col-sm-4" >  <a href="{{url('Request_staff_item')}}"><img class="logo_size" src="assets\image\11.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Request Safe Item</button></a></div>
     <div class="col-sm-4" >  <a href="{{url('Process_Request')}}"><img class="logo_size" src="assets\image\13.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Process Request</button></a></div>
-    <div class="col-sm-4" >  <a href="{{url('')}}"><img class="logo_size" src="assets\image\14.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Outgoing Letters</button></a></div>
-    <div class="col-sm-4" >  <a href=""><img class="logo_size" src="assets\image\11.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Incomming Letters</button></a></div>
-    <div class="col-sm-4" >  <a href="{{url('')}}"><img class="logo_size" src="assets\image\13.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Safe Register Report</button></a></div>
-    <div class="col-sm-4" >  <a href="{{url('')}}"><img class="logo_size" src="assets\image\14.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Safe Item Request Report</button></a></div>
+    <div class="col-sm-4" >  <a href="{{url('outgoing-letters')}}"><img class="logo_size" src="assets\image\14.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Outgoing Letters</button></a></div>
+    <div class="col-sm-4" >  <a href="{{url('incomming-letters')}}"><img class="logo_size" src="assets\image\11.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Incomming Letters</button></a></div>
+    <div class="col-sm-4" >  <a href="{{url('safe-register-report')}}"><img class="logo_size" src="assets\image\13.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Safe Register Report</button></a></div>
+    <div class="col-sm-4" >  <a href="{{url('safe-item-request')}}"><img class="logo_size" src="assets\image\14.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Safe Item Request Report</button></a></div>
    
   </div>
   </div>

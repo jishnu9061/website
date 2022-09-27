@@ -138,6 +138,16 @@ class filemanagement extends Controller
 
      //document manager
 
+     public function diarymanagement()
+     {
+         return view('file_management.diary-management');
+     }
+
+     public function addevent()
+     {
+         return view('file_management.add-event');
+     }
+
      public function documentmanager()
      {
          return view('file_management.document-manager');
@@ -167,7 +177,67 @@ class filemanagement extends Controller
        {
            return view('file_management.file-report');
        }
+
+       public function fileopenreport()
+       {
+           return view('file_management.file-opened-report');
+       }
+
+       public function fileclosedreport()
+       {
+           return view('file_management.file-closed-report');
+       }
+
+       public function filepending()
+       {
+           return view('file_management.file-pending');
+       }
+
+       public function filependingapproval()
+       {
+           return view('file_management.file-pending-approval');
+       }
+
+       public function instructionspast()
+       {
+           return view('file_management.instructions-past');
+       }
        //File Reports
+
+
+       //add ons
+        public function outgoingletter()
+        {
+             return view('file_management.outgoing-letters');
+        }
+
+        public function addoutgoingletters()
+        {
+             return view('file_management.add-outgoing-letters');
+        }
+
+
+        public function incommingletters()
+        {
+             return view('file_management.incomming-letters');
+        }
+
+        public function addincommingletters()
+        {
+             return view('file_management.add-incomming-letters');
+        }
+
+        public function safeitemrequest()
+        {
+             return view('file_management.safe-item-request');
+        }
+
+        public function saferegisterreport()
+        {
+             return view('file_management.safe-register-report');
+        }
+       //add ons
+       
 
 
 
