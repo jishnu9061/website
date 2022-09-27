@@ -876,6 +876,22 @@ Route::any('/new_office_instructions',"filemanagement@add_new_instructions")->na
 
 Route::any('/instructions_report',"filemanagement@view_new_instructions")->name('view_new_instructions');
 
+Route::any('/file_instruction',"filemanagement@new_file_instructions")->name('new_file_instructions');
+
+Route::any('/file_new_instruction',"filemanagement@add_new_file_instructions")->name('add_new_file_instructions');
+
+Route::any('/Safe_management',"filemanagement@safe_management_list")->name('safe_management_list');
+
+Route::any('/new_Safe_management',"filemanagement@new_safe_management_list")->name('new_safe_management_list');
+
+Route::any('/Request_staff_item',"filemanagement@Request_staff_item_list")->name('Request_staff_item_list');
+
+Route::any('/new_Request_staff_item',"filemanagement@add_Request_staff_item_list")->name('add_Request_staff_item_list');
+
+Route::any('/Process_Request',"filemanagement@Process_Request_list")->name('Process_Request_list');
+
+
+
 ?>
 
 

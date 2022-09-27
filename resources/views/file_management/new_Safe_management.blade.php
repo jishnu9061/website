@@ -30,8 +30,13 @@
 
     </div>
     <div>
-        <h2>Add New Instruction</h2>
+    <h3 class="text-center" style="color: #070344;"><b>Register Documents In Safe</b></h3>
+        
+        <br>
+
         <hr class="mb-4">.
+
+
     </div>
 </div>
 
@@ -48,6 +53,8 @@
 
             <div class="row">
 
+
+
                 <div class="col-md-4">
                     <div class="mb-1">
                         <label for="username"> Date</label>
@@ -63,9 +70,11 @@
                     </div>
                 </div>
 
+
+
                 <div class="col-md-4">
                     <div class="mb-1">
-                        <label for="username">Instruction Type</label>
+                        <label for="username">Client</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
 
@@ -77,11 +86,9 @@
                     </div>
                 </div>
 
-
-
                 <div class="col-md-4">
                     <div class="mb-1">
-                        <label for="username">Instruction Category</label>
+                        <label for="username">File</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
 
@@ -99,9 +106,25 @@
 </div>
 <br>
 <div class="row">
+
+
     <div class="col-md-4">
         <div class="mb-1">
-            <label for="username">Receiver</label>
+            <label for="username">Safe Name</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+
+                </div>
+                <select name="country" id="cars">
+                    <option value="volvo"></option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="mb-1">
+            <label for="username">Ref No.In Safe</label>
             <div class="input-group">
                 <div class="input-group-prepend">
 
@@ -116,7 +139,7 @@
 
     <div class="col-md-4">
         <div class="mb-1">
-            <label for="username">Currency</label>
+            <label for="username">Approver</label>
             <div class="input-group">
                 <div class="input-group-prepend">
 
@@ -126,131 +149,108 @@
                 </select>
             </div>
         </div>
-    </div>
-    <div class="col-md-4">
-        <div class="mb-1">
-            <label for="username">Exchange Rate</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
-
-                </div>
-                <input type="text" class="form-control" name="telephone" id="confirm_password" required>
-                <div class="invalid-feedback" style="width: 100%;">
-                    Telephone Number is required.
-                </div>
-            </div>
-        </div>
-
-
     </div>
 </div>
 <div id="test" style="height:20px;"></div>
 </div>
 </div>
 
+
+
+<hr class="mb-4">
+
+<h3 class="text-center" style="color: #070344;"><b>Documents</b></h3>
+        <br>
+
+
+
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+        <table class="table table-bordered" id="new-item">
+            <thead style="font-size:15px; width:100%;">
+                <tr>
+                    <th class="text-center">Doc No:</th>
+                    <th class="text-center">Category</th>
+                    <th class="text-center">Document</th>
+                    <th class="text-center">Condition</th>
+
+
+
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr id="data">
+
+
+                    <td scope="row" class="text-center">
+                        <div class="mb-1">
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="incorporation" style="width: 40%;">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+
+                    </td>
+                    <td scope="row" class="text-center">
+                        <div class="mb-1">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </td>
+                    <td scope="row" class="text-center">
+                        <div class="mb-1">
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="incorporation" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td scope="row" class="text-center"><button class="btn btn-light"
+                            style="color:blue;">Action</button></td>
+
+                </tr>
+
+
+
+            </tbody>
+
+        </table>
+    </div>
+</div>
+<div>
 <div class="row">
     <div class="col-md-4">
         <div class="mb-1">
-            <label for="username">Expense Category</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
-
-                </div>
-                <select name="country" id="cars">
-                    <option value="volvo"></option>
-                </select>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="mb-1">
-            <label for="username">Turn-Around Time(TAT)</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
-
-                </div>
-                <select name="country" id="cars">
-                    <option value="volvo"></option>
-                </select>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="mb-1">
-            <label for="username">Priority</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
-
-                </div>
-                <select name="country" id="cars">
-                    <option value="volvo"></option>
-                </select>
-            </div>
-        </div>
-    </div>
-
-</div>
-<br>
-<div class="row">
-    <div class="col-md-4">
-        <div class="mb-1">
-            <label for="username">Amount</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
-
-                </div>
-                <input type="text" class="form-control" name="number" id="username" required>
-                <div class="invalid-feedback" style="width: 100%;">
-                    Number is required.
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="mb-1">
-            <label for="username">Details</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
-
-                </div>
-                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
-            </div>
-        </div>
-    </div>
-
-
-
-</div>
-
-<hr class="mb-4">.
-
-
-<div class="row">
-    <div class="col-md-4">
-        <div class="mb-1">
-            <label for="username">Send Notification To</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
-
-                </div>
-                <select name="country" id="cars">
-                    <option value="volvo"></option>
-                </select>
-            </div>
+            <button type="submit" class="btn btn-primary submit_btn" style=" margin-left:0px; width:200px;">New Document</button>
         </div>
     </div>
 </div>
-
-
-
 </div>
 
 
 </div>
-
 
 
 <div>
@@ -261,8 +261,8 @@
             </div>
             <div class="btn-group pt-3 " role="group" aria-label="Basic example" style="margin-left: 150px;">
 
-                <button type="submit" class="btn btn-primary submit_btn">Send Instruction</button>
-                <button type="submit" class="btn btn-primary submit_btn">Cancel</button>
+                <button type="submit" class="btn btn-primary submit_btn">Add Documents</button>
+                <button type="submit" class="btn btn-primary submit_btn">Close</button>
 
             </div>
         </div>
@@ -445,9 +445,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Salary is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -474,9 +474,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Years of experience is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -499,9 +499,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 dob is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 /div>
 
             {
@@ -533,9 +533,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Bank Name is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -561,9 +561,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Account number is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -586,9 +586,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 IFSC Code is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-12" >
                 <
                 div class = "mb-1" >
@@ -629,7 +629,7 @@ $(document).on('input', '#percent', function() {
 
                 <
                 /tr> < /
-                table > {
+            table > {
                     {
                         -- < input type = "text"
                         class = "form-control"
@@ -646,7 +646,7 @@ $(document).on('input', '#percent', function() {
                         -- < /div> --}} < /
                         div > <
                             /div> < /
-                            div >
+                        div >
 
                             <
                             /div> <
@@ -688,9 +688,9 @@ $(document).on('input', '#percent', function() {
 
                             <
                             /tbody> < /
-                            table > <
+                        table > <
                             /div> < /
-                            div >
+                        div >
 
                             <
                             div class = "modal"
@@ -715,13 +715,13 @@ $(document).on('input', '#percent', function() {
                             <
                             button class = "btn btn-primary sub_btnn"
                         type = "submit" > submit < /button> < /
-                            div > <
+                        div > <
                             /form> < /
-                            div > <
+                        div > <
                             /div> < /
-                            div > <
+                        div > <
                             /div> < /
-                            div > <
+                        div > <
                             /div>
 
                             <
