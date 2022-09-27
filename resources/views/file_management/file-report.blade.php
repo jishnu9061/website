@@ -9,7 +9,9 @@
 @endif
 
 </div>
-<div style="height: 50px;"></div>
+<div style="height: 50px;">
+
+</div>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
 	  $(document).on('input','#price',function(){
@@ -22,221 +24,129 @@ $('#price').prop('readonly', true);
 });
 </script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-<div>
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Edit Customer Details</h2>
+    <div>
+  
     <hr class="mb-4">.
 </div>
-</div>
-  <div class="row">
-            <div class="col-md-12 order-md-1">
-                <form method="post" action="" id="form">
-	                @csrf
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="mb-1">
-                                <label for="username">Customer Name</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend"></div>
-                                    <input type="text" class="form-control" name="Name" id="username" value="" placeholder="" required>
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                    Date is required.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="mb-1">
-                            <label for="username">Postal Code</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend"></div>
-                                    <input type="text" class="form-control" name="code" id="username" value="" placeholder="" required>
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                    Date is required.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                          <div class="mb-1">
-                          <label for="username">Town</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend"></div>
-                                    <input type="text" class="form-control" name="town" id="username" value="" placeholder="" required>
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                    Town is required.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                            <label for="username">Country</label>
-                                  <div class="input-group">
-                                    <div class="input-group-prepend">
+  </div>
 
-                                    </div>
-                                    <select name="Country" id="cars">
-                                    <option value="volvo">select</option>
-                                    <option value="volvo">Kenya</option>
-                                    </select>
-                                  </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                            <label for="username">Telephone No</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend"></div>
-                                    <input type="text" class="form-control" name="telephone" id="username" value="" placeholder="" required>
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                    Telephone is required.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                            <label for="username">Email Address</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend"></div>
-                                    <input type="text" class="form-control" name="Address" id="username" value="" placeholder="" required>
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                    Address is required.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="mb-1">
-                                <label for="username">Mobile No</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="Mobile" id="age" value="" placeholder="" min="0" max="99">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                        Mobile No is required.
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="mb-1">
-                                <label for="username">Website</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend"></div>
-                                    <input type="email" class="form-control" name="Website" value="" id="password" placeholder="">
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                    Website Address is required.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="mb-1">
-                            <label for="username">Customer Address</label>
-                                <div class="input-group">                     
-                                  <textarea class="form-control" id="form7Example7" rows="2"></textarea>
-                                  <div class="invalid-feedback" style="width: 100%;">
-                                  Customer Address is required.
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="mb-1">
-                          <label for="username">Physical Address</label>
-                                <div class="input-group">                     
-                                  <textarea class="form-control" id="form7Example7" rows="2"></textarea>
-                                  <div class="invalid-feedback" style="width: 100%;">
-                                  Physical Address is required.
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>     
-                    <br>
-                    <h4 style="text-align:center; text-shadow: 2px 1px;">Contact Person</h4>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="mb-1">
-                            <label for="username">Name</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="name" id="age" value="" placeholder="" min="0" max="99">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                      
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="mb-1">
-                            <label for="username">Designation</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="Mobile" id="age" value="" placeholder="" min="0" max="99">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                        Mobile No is required.
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-                    
-                    <div class="col-md-3">
-                            <div class="mb-1">
-                            <label for="username">Mobile No</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="no" id="age" value="" placeholder="" min="0" max="99">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                        Mobile No
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="mb-1">
-                            <label for="username">Email</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="email" id="age" value="" placeholder="" min="0" max="99">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                     
-                                        </div>
-                                    </div>
-                            </div>
-                    </div>
-                    <br>
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-sm">
-                          
-                        </div>
-                          <div class="col-sm">
-                            <button type="submit" class="btn btn-primary submit_btn_btn">Update Customer</button>
-                            <a href="{{route('client-index')}}" type="button" class="btn btn-primary " style="width:30%; margin-top:30px; padding:8px;">Cancel</a>
-                          </div>
-                        </div>
-                      </div>  
-                    </div>
-                </form>
+  <div>
+        <br>
+        <div style="margin-left: 150px;">
+        <input class="btn btn-primary" type="button" value="Today" >
+        <input class="btn btn-primary" type="button" value="This Week">
+        <input class="btn btn-primary" type="button" value="Last Week">
+        <input class="btn btn-primary" type="button" value="This Month(MTD)">
+        <input class="btn btn-primary" type="button" value="Last Month">
+        <input class="btn btn-primary" type="button" value="This Quater">
+        <input class="btn btn-primary" type="button" value="Last Quater">
+        <input class="btn btn-primary" type="button" value="This Year(YTD)">
+        <input class="btn btn-primary" type="button" value="Last Year">
+        </div>
+        <br>
+        <hr class="mb-4">.
+
+        
+    </div>
+</div>
+
+<h2 style="text-align:center; margin-left: 6%;">File Reports</h2>
+
+
+  <div class="row" style="margin-left:30%;">
+
+    <div class="col-md-12 order-md-1">
+
+     <form method="post" action="" id="form">
+	      @csrf
+          <div class="row">
+         
+          
+          
+        <div class="col-md-6">
+            <div class="mb-1">
+          <label for="username">Responsible Advocate</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
             </div>
+            <select name="country" id="cars">
+                <option value="volvo"></option>
+            </select>
+          </div>
+        </div>
+        </div>
+        </div>
+
+<br>
+
+
+
+
+        <div class="row">
+          <div class="col-md-3">
+           <div class="mb-1">
+          <label for="username">Date (From)</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <input type="date" class="form-control" name="website" id="confirm_password" required>
+            <div class="invalid-feedback" style="width: 100%;">
+            Incorporation is required
+            </div>
+          </div>
+        </div>
+          </div>
+         
+        <div class="col-md-3">
+            <div class="mb-1">
+          <label for="username">Date (To)</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <input type="date" class="form-control" name="website" id="confirm_password" required>
+          </div>
+        </div>
+        </div>
+        
+         
+        
+    
+        
+       
+
+    </div>
+    <br>
+    <div class="container"  style="text-align:center; margin-left: -28%;">
+  <div class="row">
+    <div class="col-sm">
+    
+    </div>
+    <div class="col-sm">
+   
+    <button type="submit" class="btn btn-primary submit_btn btn_align">Cancel</button>
+    <button type="submit" class="btn btn-primary submit_btn btn_sumbit">View Report</button>
+
+    
+
+    </div>
   </div>
 </div>
+     
+    
+   
+          </div>
 
-</div> 
- 
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+          
+
+
+
+   </tbody>
+</table>
+   </div>
+</div>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
  $(function () {

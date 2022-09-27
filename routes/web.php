@@ -730,6 +730,7 @@ Route::any('add_tax_excise','SystemSetup@addtaxexcise')->name('add_tax_excise');
 Route::any('add_tax_vat','SystemSetup@addtaxvat')->name('add_tax_vat');
 Route::any('add_tax_wht','SystemSetup@addtaxwht')->name('add_tax_wht');
 Route::any('add_tax_wht-vat','SystemSetup@addtaxwhtvat')->name('add_tax_wht-vat');
+Route::any('notifications','SystemSetup@notifications')->name('notifications');
 //RESHMA
 
 
@@ -777,6 +778,7 @@ Route::any('edit-Quotation','ClientManagement@editQuotation')->name('edit-Quotat
 //Registration
 Route::any('view-registration','ClientManagement@viewRegistration')->name('view-registration');
 Route::any('add-registration','ClientManagement@addRegistration')->name('add-registration');
+Route::any('edit-registration','ClientManagement@editRegistration')->name('edit-registration');
 //end registration
 
 //mugunthan
@@ -826,6 +828,18 @@ Route::any('document-manager',"filemanagement@documentmanager")->name('document-
 Route::any('upload-document',"filemanagement@uploaddocument")->name('upload-document');
 Route::any('generate-document',"filemanagement@generatedocument")->name('generate-document');
 //document manager
+//vinu
+
+//file status report
+Route::any('bringup',"filemanagement@bringup")->name('bringup');
+//file status report
+
+
+//file report
+Route::any('file-report',"filemanagement@filereport")->name('file-report');
+//file report
+
+
 //vinu
 
 //beljin

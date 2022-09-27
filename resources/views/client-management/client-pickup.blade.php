@@ -19,12 +19,12 @@
         <h3 class="text-center" style="color: #070344; text-shadow: 1px 2px;"><b>Client Pickup at Reception</b></h3>
        <br>
       
+      
+       <div class="container mt-5">
+       <a href="{{url('add-pickup')}}"><button class="btn btn-primary add-btn" style="width:20%">New Client Pickup</button></a>
        <div id="mydatatable_filter" class="dataTables_filter">
         <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
        </div>
-       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-       <div class="container mt-5">
-       <a href="{{url('add-pickup')}}"><button class="btn btn-primary add-btn" style="width:20%">New Client Pickup</button></a>
        </div>
        <hr class="mb-4">.
 <div class="tab-content" id="myTabContent">
