@@ -35,7 +35,7 @@
 
     <div class="col-sm-4" > <a href="{{url('description_selectn')}}"><button type="button" class="btn btn-primary btn_align_btn" > Description Selections</button></a></div>
     <div class="col-sm-4" > <a href="{{url('tax_chart')}}"><button type="button" class="btn btn-primary btn_align_btn" > Tax Tables</button></a></div>
-    <div class="col-sm-4" > <a><button type="button" class="btn btn-primary btn_align_btn" > Notifications</button></a></div><br><br>
+    <div class="col-sm-4" > <a href="{{url('notifications')}}"><button type="button" class="btn btn-primary btn_align_btn" > Notifications</button></a></div><br><br>
    
   </div>
 </div>

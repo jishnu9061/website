@@ -95,7 +95,7 @@
 
     <!-- <a href="#" class="btn btn-primary" style="margin-left:50px;background-color:rgb(13, 1, 56);color: rgb(238, 196, 105); font-weight: bold;width: 90%;">Add Company</a><br><br> -->
  
-    <a href="#"  class="btn btn-seconday" style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105);margin-bottom:25px;float:right;margin-right:100px;">ADD LOGO</a><br><br><br>
+    <a href="#"  class="btn btn-seconday" style="background-color:rgb(13, 1, 56);color:white;margin-bottom:25px;float:right;margin-right:100px;">ADD LOGO</a><br><br><br>
   <div class = "company">
    <label> Company Name </label>
   <input type="text" id="name" name="name" value=""size="50"> <br><br>
@@ -127,9 +127,9 @@
   <label>NSSF Number</label>
   <input type="number" id="nnum" name="nnum" value=""size="50"><br><br> <br>
 
-  <input  type="submit"value="Save" name="Submit"style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105); ">
+  <input  type="submit"value="Save" name="Submit"style="background-color:rgb(13, 1, 56);color: white ">
   
-  <input type="button"value="Cancel" name="cancel"style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105); ">
+  <input type="button"value="Cancel" name="cancel"style="background-color:rgb(13, 1, 56);color: white ">
 <!-- <a href="something" class="button1"style="margin-left:50px;">Save</a>
 <a href="something" class="button2">Cancel</a><br><br> -->
 
