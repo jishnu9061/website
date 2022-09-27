@@ -830,6 +830,18 @@ Route::any('generate-document',"filemanagement@generatedocument")->name('generat
 //document manager
 //vinu
 
+//file status report
+Route::any('bringup',"filemanagement@bringup")->name('bringup');
+//file status report
+
+
+//file report
+Route::any('file-report',"filemanagement@filereport")->name('file-report');
+//file report
+
+
+//vinu
+
 //beljin
 
 Route::any('/u_details',"filemanagement@u_details")->name('u_details');
