@@ -50,10 +50,10 @@ $('#price').prop('readonly', true);
     </div>
 </div>
 
-<h2 style="text-align:center; margin-left: 6%;">File Reports</h2>
+<h2 style="text-align:center; margin-left: 4%;">File Reports</h2>
 
 
-  <div class="row" style="margin-left:30%;">
+  <div class="row" style="margin-left:25%;">
 
     <div class="col-md-12 order-md-1">
 
@@ -119,7 +119,7 @@ $('#price').prop('readonly', true);
 
     </div>
     <br>
-    <div class="container"  style="text-align:center; margin-left: -28%;">
+    <div class="container"  style="text-align:center; margin-left: -25%;">
   <div class="row">
     <div class="col-sm">
     

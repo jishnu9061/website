@@ -16,7 +16,9 @@
 <body>
  
     <div class="container">
-        <h3 class="text-center" style="color: #070344;"><b>List of File Progress</b></h3>
+        <h3 class="text-center" style="color: #070344;"><b>Diary(Calender Events)</b></h3>
+
+        <a href="{{url('add-event')}}"><button class="btn btn-primary add-btn" style="width: 20%; margin-bottom:5%;" >Add Event</button></a>
        <br>
    
 <div class="tab-content" id="myTabContent">
@@ -26,13 +28,14 @@
                 <thead style="font-size:11px">
                     <tr>
                         <th class="text-center">*</th>
+                        <th class="text-center">Title</th>
                         <th class="text-center">Client</th>
-                        <th class="text-center">File No& Name</th>
-                        <th class="text-center">Date Opened</th>
-                        <th class="text-center">Responsible Advocate</th>
-                        <th class="text-center">Most Recent Progress</th>
-                        <th class="text-center">Next Progress</th>
-                        <th class="text-center">Status</th>     
+                        <th class="text-center">File No</th>
+                        <th class="text-center">File Name</th>
+                        <th class="text-center">Start</th>
+                        <th class="text-center">End</th>
+                        <th class="text-center">Submitted </br>By</th>
+                     
                         <th class="text-center">Action</th>
                        
                     </tr>
