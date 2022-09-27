@@ -18,7 +18,7 @@
 <div class="container-fluid">
         <h3 class="text-center" style="color: #070344;"><b>File Instructions</b></h3>
        <br>
-       <a href=""><button class="btn btn-primary add-btn" Style="width:200px;">Add New Instructions</button></a>
+       <a href="{{url('file_new_instruction')}}"><button class="btn btn-primary add-btn" Style="width:200px;">Add New Instructions</button></a>
        <br>
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">

@@ -48,9 +48,9 @@
     <div class="col-sm-4" >  <a href="{{url('instructions_report')}}"><img class="logo_size" src="assets\image\9.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Instructions Report</button></a></div>
     </div>
    
-</div>
 
-<h3>File Reports</h3>
+
+ <h3>File Reports</h3>
     <div class="row sm">
     <div class="col-sm-4" >  <a href="{{url('file-report')}}"><img class="logo_size" src="assets\image\10.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Files Reports</button></a></div>
     <div class="col-sm-4" >  <a href=""><img class="logo_size" src="assets\image\11.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Files Opened Report</button></a></div>
@@ -63,16 +63,16 @@
   </div>
   <h3>ADD-Ons</h3>
     <div class="row sm">
-    <div class="col-sm-4" >  <a href=""><img class="logo_size" src="assets\image\10.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Safe Management</button></a></div>
-    <div class="col-sm-4" >  <a href=""><img class="logo_size" src="assets\image\11.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Request Safe Item</button></a></div>
-    <div class="col-sm-4" >  <a href="{{url('')}}"><img class="logo_size" src="assets\image\13.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Process Request</button></a></div>
+    <div class="col-sm-4" >  <a href="{{url('Safe_management')}}"><img class="logo_size" src="assets\image\10.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Safe Management</button></a></div>
+    <div class="col-sm-4" >  <a href="{{url('Request_staff_item')}}"><img class="logo_size" src="assets\image\11.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Request Safe Item</button></a></div>
+    <div class="col-sm-4" >  <a href="{{url('Process_Request')}}"><img class="logo_size" src="assets\image\13.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Process Request</button></a></div>
     <div class="col-sm-4" >  <a href="{{url('')}}"><img class="logo_size" src="assets\image\14.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Outgoing Letters</button></a></div>
     <div class="col-sm-4" >  <a href=""><img class="logo_size" src="assets\image\11.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Incomming Letters</button></a></div>
     <div class="col-sm-4" >  <a href="{{url('')}}"><img class="logo_size" src="assets\image\13.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Safe Register Report</button></a></div>
     <div class="col-sm-4" >  <a href="{{url('')}}"><img class="logo_size" src="assets\image\14.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Safe Item Request Report</button></a></div>
    
   </div>
-
+  </div>
 
 </body>
 </html>

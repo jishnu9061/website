@@ -206,4 +206,37 @@ public function new_file_instructions()
     return view('file_management.file_instruction');
 }
 
+public function add_new_file_instructions()
+{
+    return view('file_management.file_new_instruction');                                                             
 }
+
+public function safe_management_list()
+{
+    return view('file_management.Safe_management');                                                             
+}
+
+public function new_safe_management_list()
+{
+    return view('file_management.new_Safe_management');                                                             
+}
+
+public function Request_staff_item_list()
+{
+    return view('file_management.Request_staff_item');                                                             
+}
+
+public function add_Request_staff_item_list()
+{
+    return view('file_management.new_Request_staff_item');                                                             
+}
+
+public function Process_Request_list()
+{
+    return view('file_management.Process_Request');                                                             
+}
+
+}
+
+
+
