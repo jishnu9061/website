@@ -153,7 +153,21 @@ class filemanagement extends Controller
          return view('file_management.generate-document');
      }
  
+
+
+     public function bringup()
+     {
+         return view('file_management.bringup');
+     }
        //document manager
+
+
+       //File Reports
+       public function filereport()
+       {
+           return view('file_management.file-report');
+       }
+       //File Reports
 
 
 
