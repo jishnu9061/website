@@ -825,7 +825,7 @@ color: #1D1D50
                                    
                                     </li>
                             @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            <!-- @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i id="icon" class="fa fa-cog"  style="font-weight: 300;"></i>
@@ -833,7 +833,7 @@ color: #1D1D50
                                     </a>
                                    
                                     </li>
-                            @endif
+                            @endif -->
 
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
