@@ -758,11 +758,13 @@ Route::any('view-pickup','ClientManagement@viewPickups')->name('view-pickup');
 //complaint
 Route::any('complaint-list','ClientManagement@complaintList')->name('complaint-list');
 Route::any('add-Complaint','ClientManagement@addComplaint')->name('add-Complaint');
+Route::any('edit-Complaint','ClientManagement@editComplaint')->name('edit-Complaint');
 //end complaint
 
 //Follow Up
 Route::any('follow-up','ClientManagement@followup')->name('follow-up');
 Route::any('add-follow','ClientManagement@addFollow')->name('add-follow');
+Route::any('edit-follow','ClientManagement@editFollow')->name('edit-follow');
 //end Follow Up
 
 //service
@@ -780,6 +782,11 @@ Route::any('view-registration','ClientManagement@viewRegistration')->name('view-
 Route::any('add-registration','ClientManagement@addRegistration')->name('add-registration');
 Route::any('edit-registration','ClientManagement@editRegistration')->name('edit-registration');
 //end registration
+//communication
+Route::any('communication-list','ClientManagement@listCommunication')->name('communication-list');
+Route::any('add-communication','ClientManagement@addCommunication')->name('add-communication');
+Route::any('edit-communication','ClientManagement@editCommunication')->name('edit-communication');
+//end communication
 
 //mugunthan
 

@@ -15,15 +15,12 @@
 
 <body>
     <div class="container">
-        <h2  style="color: #070344; text-shadow: 1px 2px; text-align:center;"><b>Customer Registration</b></h2>
+        <h2 style="color: #070344; text-shadow: 1px 2px; text-align:center;"><b>Client Conversations</b></h2>
         <div class="container mt-5">
-        <a href="{{url('add-registration')}}"><button type="button" class="btn btn-primary complaint_btn btn " >Register Customer</button></a>
-        <div id="mydatatable_filter" class="dataTables_filter">
-        <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
-       </div>
+        <a href="{{url('add-communication')}}"><button type="button" class="btn btn-primary complaint_btn" > Add Communication</button></a>
         </div>
         <hr class="mb-4">.
-        <h3  style="color: #070344; text-shadow: 1px 2px; text-align:center;"><b>Customer List</b></h3>
+        <h4  style="color: #070344; text-align:center;"><b>Clients Communications</b></h4>
        <br>
      
       
@@ -32,14 +29,17 @@
             <table class="table table-bordered" id="new-item">
                 <thead>
                     <tr>
-                        <th class="text-center">No</th>
-                        <th class="text-center">Client Name</th>
-                        <th class="text-center"> Address</th>
-                        <th class="text-center">Contact</th>
-                        <th class="text-center">Physical Address</th>
-                        <th class="text-center">Registration Date</th>
-                        <th class="text-center">Action</th>
-                       
+                        <th class="text-center">Date</th>
+                        <th class="text-center">Time</th>
+                        <th class="text-center">Client</th>
+                        <th class="text-center">File Ref</th>
+                        <th class="text-center">Telephone No</th>
+                        <th class="text-center">Mode</th>
+                        <th class="text-center">Communicated With</th>
+                        <th class="text-center">Nature of Communication</th>
+                        <th class="text-center">Person Handling</th>
+                        <th class="text-center">Status</th>
+                        <th class="text-center">Action</th> 
                     </tr>
                 </thead>
                 <tbody>
@@ -50,8 +50,12 @@
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row"class="text-center"><a href="{{url('edit-registration')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
-                           <input type="hidden" value="" id="medicine_id_hidden" class="applicate" name="supplier_id_hidden">
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td><a href="{{url('edit-communication')}}"><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i></a>
+                            <a href=""><i  style="color:black;" class="fa fa-trash" aria-hidden="true"></i></td>
 
                         </tr>
                 </tbody>

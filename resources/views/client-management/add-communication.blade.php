@@ -23,7 +23,7 @@ $('#price').prop('readonly', true);
 </script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <div>
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Add Follow Up</h2>
+    <h2 style="text-align:center; text-shadow: 2px 1px;">New Communication</h2>
     <hr class="mb-4">.
 </div>
 </div>
@@ -31,114 +31,202 @@ $('#price').prop('readonly', true);
             <div class="col-md-12 order-md-1">
                 <form method="post" action="" id="form">
 	                @csrf
-
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="mb-1">
-                                <label for="username">Follow Up Date</label>
+                                <label for="username">Communication Date</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend"></div>
-                                    <input type="text" class="form-control" name="date" id="username" value=""  required>
+                                    <input type="text" class="form-control" name="" id="username" value="" placeholder="" required>
                                     <div class="invalid-feedback" style="width: 100%;">
-                                    Follow Up Date is required.
+                                    Date is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-1">
+                            <label for="username">Client</label>
+                                  <div class="input-group">
+                                    <div class="input-group-prepend">
+
+                                    </div>
+                                    <select name="" id="cars">
+                                    <option value="volvo"></option>
+                                    </select>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="mb-1">
+                          <label for="username">File</label>
+                                  <div class="input-group">
+                                    <div class="input-group-prepend">
+
+                                    </div>
+                                    <select name="" id="cars">
+                                    <option value="volvo"></option>
+                                    </select>
+                                  </div>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-1">
+                                <label for="username">Customer</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="text" class="form-control" name="" id="username" value="" placeholder="" required>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                    Date is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="mb-1">
+                            <label for="username">Telephone No</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="text" class="form-control" name="" id="username" value="" placeholder="" required>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                    Date is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-1">
+                            <label for="username">Email Address</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="text" class="form-control" name="" id="username" value="" placeholder="" required>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                    Date is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-1">
+                            <label for="username">Communication Sources</label>
+                                  <div class="input-group">
+                                    <div class="input-group-prepend">
+
+                                    </div>
+                                    <select name="" id="cars">
+                                    <option value="volvo"></option>
+                                    </select>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-1">
+                            <label for="username">Mode of Communication</label>
+                                  <div class="input-group">
+                                    <div class="input-group-prepend">
+
+                                    </div>
+                                    <select name="" id="cars">
+                                    <option value="volvo"></option>
+                                    </select>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="mb-1">
+                            <label for="username">Communicated with(Internal)</label>
+                                  <div class="input-group">
+                                    <div class="input-group-prepend">
+
+                                    </div>
+                                    <select name="" id="cars">
+                                    <option value="volvo"></option>
+                                    </select>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-1">
+                            <label for="username">Duration</label>
+                                  <div class="input-group">
+                                    <div class="input-group-prepend">
+
+                                    </div>
+                                    <select name="" id="cars">
+                                    <option value="volvo"></option>
+                                    </select>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-1">
+                            <label for="username">Person Handling</label>
+                                  <div class="input-group">
+                                    <div class="input-group-prepend">
+
+                                    </div>
+                                    <select name="" id="cars">
+                                    <option value="volvo"></option>
+                                    </select>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-1">
+                            <label for="username">Timer</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="time" class="form-control" name="" id="username" value="" placeholder="" required>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                    Date is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                    <div class="col-md-4">
+                            <div class="mb-1">
+                                <label for="username">Others</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="text" class="form-control" name="" id="username" value="" placeholder=""  required>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                    Date is required.
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="mb-1">
-                              <label for="username">Customer</label>
-                                <div class="input-group">
-                                  <div class="input-group-prepend">
-
+                            <label for="username">Communicated Description</label>
+                                <div class="input-group">                     
+                                  <textarea class="form-control" id="form7Example7" rows="2"></textarea>
+                                  <div class="invalid-feedback" style="width: 100%;">
+                                  Complaint Description is required.
                                   </div>
-                                  <select name="customer" id="cars">
-                                  <option value="volvo"></option>
-                                  </select>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                           <div class="mb-1">
-                            <label for="username">Follow Up Types</label>
-                                <div class="input-group">
-                                      <div class="input-group-prepend">
-
-                                      </div>
-                                      <select name="type" id="cars">
-                                      <option value="volvo"></option>
-                                      </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                            <label for="username">Staff Responsible</label>
-                                  <div class="input-group">
-                                    <div class="input-group-prepend">
-
-                                    </div>
-                                    <select name="responsible" id="cars">
-                                    <option value="volvo"></option>
-                                    </select>
-                                  </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">Send Remainder To</label>
-                                  <div class="input-group">
-                                    <div class="input-group-prepend">
-
-                                    </div>
-                                    <select name="country" id="cars">
-                                    <option value="volvo"></option>
-                                    </select>
-                                  </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                            <label for="username">Next Bring Up Date</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend"></div>
-                                    <input type="email" class="form-control" name="date" value="" id="password" placeholder="">
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                    Next Bring Up Date is required.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">Alert Period</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="telephone" id="age" value="" placeholder="" min="0" max="99">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                            Alert is required.
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                            <label for="username"> Description</label>
+                          <label for="username">Action Plan</label>
                                 <div class="input-group">                     
-                                  <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                  <textarea class="form-control" id="form7Example7" rows="2"></textarea>
                                   <div class="invalid-feedback" style="width: 100%;">
-                                     Description Address is required.
+                                  Complaint Description is required.
                                   </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> 
                     <br>
                     <div class="container">
                       <div class="row">
@@ -146,11 +234,8 @@ $('#price').prop('readonly', true);
                           
                         </div>
                           <div class="col-sm">
-                            <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Add Follow Up</button>
-
-                          
-                             <button type="submit" class="btn btn-primary submit_btn btn_align">Delete</button>
-
+                            <button type="submit" class="btn btn-primary submit_btn_btn">Submit</button>
+                            <a href="{{route('client-index')}}" type="button" class="btn btn-primary " style="width:30%;  margin-top: 30px; padding:8px">Cancel</a>
                           </div>
                         </div>
                       </div>  
