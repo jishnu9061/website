@@ -16,7 +16,7 @@
 <body>
  
     <div class="container">
-        <h3 class="text-center" style="color: #070344;"><b>List of File Progress</b></h3>
+        <h3 class="text-center" style="color: #070344;"><b>Files Pending Approval</b></h3>
        <br>
    
 <div class="tab-content" id="myTabContent">
@@ -27,13 +27,13 @@
                     <tr>
                         <th class="text-center">*</th>
                         <th class="text-center">Client</th>
-                        <th class="text-center">File No& Name</th>
-                        <th class="text-center">Date Opened</th>
-                        <th class="text-center">Responsible Advocate</th>
-                        <th class="text-center">Most Recent Progress</th>
-                        <th class="text-center">Next Progress</th>
-                        <th class="text-center">Status</th>     
+                        <th class="text-center">File No</th>
+                        <th class="text-center">File Name</th>
+                        <th class="text-center">File Type</th>
+                        <th class="text-center">Responsible </br>Advocate</th>
+                        <th class="text-center">Date </br>Opened</th>  
                         <th class="text-center">Action</th>
+                        <th class="text-center"> <input type="checkbox" name="" id=""> </th>
                        
                     </tr>
                 </thead>
@@ -41,7 +41,7 @@
                 <tbody  >
                    
                         <tr id="data"  >
-                            
+                           
                             <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center"></td>
                             <td  scope="row"   class="text-center"></td>
@@ -49,11 +49,11 @@
                             <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row"class="text-center">
-                            <select name="" id=""> <option value=""> <a href="">Action</a> </option> 
+                            <td  scope="row" class="text-center">
+                                <select name="" id=""> <option value=""> <a href="">Action</a> </option> 
                            <option value=""> <a href=""></a> </option></select>
                             </td>
+                            <td  scope="row"class="text-center"> <input type="checkbox" name="" id=""></td>
                         </tr>
 
                         

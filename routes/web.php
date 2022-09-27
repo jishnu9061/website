@@ -806,13 +806,6 @@ Route::any('template-category',"filemanagement@template")->name('template-catego
 Route::any('add-template',"filemanagement@addtemplate")->name('add-template');
 //document templates
 
-//client mionthly status report
-Route::any('client-monthly-file-status','filemanagement@clientmonthlystatus')->name('client-monthly-file-status');
-//client mionthly status report
-
-
-
-
 //file progress
 Route::any('add-file-progress',"filemanagement@addprogress")->name('add-file-progress');
 Route::any('edit-file-progress',"filemanagement@editprogress")->name('edit-file-progress');
@@ -827,9 +820,11 @@ Route::any('court-attendance-sheet',"filemanagement@courtattendance")->name('cou
 Route::any('arbiration-sheet',"filemanagement@arbirationsheet")->name('arbiration-sheet');
 Route::any('conveyance-sheet',"filemanagement@conveyance")->name('conveyance-sheet');
 Route::any('file-progress-list',"filemanagement@fileprogresslist")->name('file-progress-list');
-Route::any('file-list-progress-report',"filemanagement@filelistprogressreport")->name('file-list-progress-report');
-Route::any('staff-monthly-status-report',"filemanagement@staffmonthlystatusreport")->name('staff-monthly-status-report');
 
+
+//notes
+Route::any('diary-management',"filemanagement@diarymanagement")->name('diary-management');
+Route::any('add-event',"filemanagement@addevent")->name('add-event');
 //document manager
 Route::any('document-manager',"filemanagement@documentmanager")->name('document-manager');
 Route::any('upload-document',"filemanagement@uploaddocument")->name('upload-document');
@@ -838,13 +833,31 @@ Route::any('generate-document',"filemanagement@generatedocument")->name('generat
 //vinu
 
 //file status report
+Route::any('client-monthly-file-status','filemanagement@clientmonthlystatus')->name('client-monthly-file-status');
+Route::any('staff-monthly-status-report',"filemanagement@staffmonthlystatusreport")->name('staff-monthly-status-report');
+Route::any('file-list-progress-report',"filemanagement@filelistprogressreport")->name('file-list-progress-report');
 Route::any('bringup',"filemanagement@bringup")->name('bringup');
 //file status report
 
 
 //file report
 Route::any('file-report',"filemanagement@filereport")->name('file-report');
+Route::any('file-opened-report',"filemanagement@fileopenreport")->name('file-opened-report');
+Route::any('file-closed-report',"filemanagement@fileclosedreport")->name('file-closed-report');
+Route::any('file-pending',"filemanagement@filepending")->name('file-pending');
+Route::any('file-pending-approval',"filemanagement@filependingapproval")->name('file-pending-approval');
+Route::any('instructions-past',"filemanagement@instructionspast")->name('instructions-past');
 //file report
+
+//add ons
+Route::any('outgoing-letters',"filemanagement@outgoingletter")->name('outgoing-letters');
+Route::any('add-outgoing-letters',"filemanagement@addoutgoingletters")->name('add-outgoing-letters');
+Route::any('incomming-letters',"filemanagement@incommingletters")->name('incomming-letters');
+Route::any('add-incomming-letters',"filemanagement@addincommingletters")->name('add-incomming-letters');
+Route::any('safe-item-request',"filemanagement@safeitemrequest")->name('safe-item-request');
+
+Route::any('safe-register-report',"filemanagement@saferegisterreport")->name('safe-register-report');
+//add ons
 
 
 //vinu
