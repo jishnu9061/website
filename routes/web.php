@@ -842,6 +842,9 @@ Route::any('/new_office_instructions',"filemanagement@add_new_instructions")->na
 
 Route::any('/instructions_report',"filemanagement@view_new_instructions")->name('view_new_instructions');
 
+Route::any('/file_instruction',"filemanagement@new_file_instructions")->name('new_file_instructions');
+
+
 ?>
 
 

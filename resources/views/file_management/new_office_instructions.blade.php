@@ -37,7 +37,7 @@
 
 
 <div class="row">
-    
+
 
     <div class="col-md-12 order-md-1">
 
@@ -339,8 +339,8 @@ $(document).on('click', '#testing', function() {
                                     div class = "invalid-feedback"
                                     style = "width: 100%;" >
                                     <
-                                    /div> <
-                                    /div> <
+                                    /div> < /
+                                    div > <
                                     /div>
 
                                     <
@@ -360,8 +360,8 @@ $(document).on('click', '#testing', function() {
                                     label class = "form-check-label"
                                     for = "flexRadioDefault1" >
                                     Male <
-                                    /label> <
-                                    /div> <
+                                    /label> < /
+                                    div > <
                                     div class = "form-check" >
                                     <
                                     input class = "form-check-input"
@@ -373,8 +373,8 @@ $(document).on('click', '#testing', function() {
                                     label class = "form-check-label"
                                     for = "flexRadioDefault1" >
                                     Female <
-                                    /label> <
-                                    /div> <
+                                    /label> < /
+                                    div > <
                                     div class = "form-check" >
                                     <
                                     input class = "form-check-input"
@@ -386,12 +386,12 @@ $(document).on('click', '#testing', function() {
                                     label class = "form-check-label"
                                     for = "flexRadioDefault1" >
                                     Others <
-                                    /label> <
-                                    /div>
+                                    /label> < /
+                                    div >
 
                                     <
-                                    /div> <
-                                    /div> <
+                                    /div> < /
+                                    div > <
                                     /div>
 
                                     <
@@ -428,13 +428,13 @@ $(document).on('input', '#percent', function() {
                 <
                 label
             for = "username" > Salary < /label> <
-                div class = "input-group" >
+            div class = "input-group" >
                 <
                 div class = "input-group-prepend" >
 
                 <
                 /div> <
-                input type = "number"
+            input type = "number"
             class = "form-control"
             name = "salary"
             id = "username"
@@ -444,10 +444,10 @@ $(document).on('input', '#percent', function() {
                 div class = "invalid-feedback"
             style = "width: 100%;" >
                 Salary is required. <
-                /div> <
-                /div> <
-                /div> <
-                /div>
+                /div> < /
+                div > <
+                /div> < /
+                div >
 
                 <
                 div class = "col-md-4" >
@@ -456,13 +456,13 @@ $(document).on('input', '#percent', function() {
                 <
                 label
             for = "username" > Years of experience < /label> <
-                div class = "input-group" >
+            div class = "input-group" >
                 <
                 div class = "input-group-prepend" >
 
                 <
                 /div> <
-                input type = "number"
+            input type = "number"
             class = "form-control"
             name = "yearsexp"
             id = "username"
@@ -473,23 +473,23 @@ $(document).on('input', '#percent', function() {
                 div class = "invalid-feedback"
             style = "width: 100%;" >
                 Years of experience is required. <
-                /div> <
-                /div> <
-                /div> <
-                /div> <
+                /div> < /
+                div > <
+                /div> < /
+                div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
                 <
                 label
             for = "username" > D.O.B < /label> <
-                div class = "input-group" >
+            div class = "input-group" >
                 <
                 div class = "input-group-prepend" >
 
                 <
                 /div> <
-                input type = "date"
+            input type = "date"
             class = "form-control"
             name = "dob"
             id = "username"
@@ -498,10 +498,10 @@ $(document).on('input', '#percent', function() {
                 div class = "invalid-feedback"
             style = "width: 100%;" >
                 dob is required. <
-                /div> <
-                /div> <
-                /div> <
-                /div> <
+                /div> < /
+                div > <
+                /div> < /
+                div > <
                 /div>
 
             {
@@ -517,13 +517,13 @@ $(document).on('input', '#percent', function() {
                 <
                 label
             for = "username" > Bank Name < /label> <
-                div class = "input-group" >
+            div class = "input-group" >
                 <
                 div class = "input-group-prepend" >
 
                 <
                 /div> <
-                input type = "text"
+            input type = "text"
             class = "form-control"
             name = "bankname"
             id = "username"
@@ -532,10 +532,10 @@ $(document).on('input', '#percent', function() {
                 div class = "invalid-feedback"
             style = "width: 100%;" >
                 Bank Name is required. <
-                /div> <
-                /div> <
-                /div> <
-                /div>
+                /div> < /
+                div > <
+                /div> < /
+                div >
 
                 <
                 div class = "col-md-4" >
@@ -544,13 +544,13 @@ $(document).on('input', '#percent', function() {
                 <
                 label
             for = "username" > Account Number < /label> <
-                div class = "input-group" >
+            div class = "input-group" >
                 <
                 div class = "input-group-prepend" >
 
                 <
                 /div> <
-                input type = "number"
+            input type = "number"
             class = "form-control"
             name = "accountnumber"
             id = "username"
@@ -560,23 +560,23 @@ $(document).on('input', '#percent', function() {
                 div class = "invalid-feedback"
             style = "width: 100%;" >
                 Account number is required. <
-                /div> <
-                /div> <
-                /div> <
-                /div> <
+                /div> < /
+                div > <
+                /div> < /
+                div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
                 <
                 label
             for = "username" > IFSC code < /label> <
-                div class = "input-group" >
+            div class = "input-group" >
                 <
                 div class = "input-group-prepend" >
 
                 <
                 /div> <
-                input type = "text"
+            input type = "text"
             class = "form-control"
             name = "isfc"
             id = "username"
@@ -585,10 +585,10 @@ $(document).on('input', '#percent', function() {
                 div class = "invalid-feedback"
             style = "width: 100%;" >
                 IFSC Code is required. <
-                /div> <
-                /div> <
-                /div> <
-                /div> <
+                /div> < /
+                div > <
+                /div> < /
+                div > <
                 div class = "col-md-12" >
                 <
                 div class = "mb-1" >
@@ -604,7 +604,7 @@ $(document).on('input', '#percent', function() {
                 div class = "input-group-prepend" >
                 <
                 /div> <
-                table class = "table" >
+            table class = "table" >
                 <
                 tr >
 
@@ -617,7 +617,7 @@ $(document).on('input', '#percent', function() {
                 input type = "hidden"
             name = "leave_type[]"
             value = "" > < /td> <
-                td > < input type = "number"
+            td > < input type = "number"
             class = "form-control"
             name = "leaves[]"
             value = ""
@@ -628,8 +628,8 @@ $(document).on('input', '#percent', function() {
 
 
                 <
-                /tr> <
-                /table> {
+                /tr> < /
+                table > {
                     {
                         -- < input type = "text"
                         class = "form-control"
@@ -643,18 +643,18 @@ $(document).on('input', '#percent', function() {
                     }
                 } {
                     {
-                        -- < /div> --}} <
-                        /div> <
-                        /div> <
-                        /div>
+                        -- < /div> --}} < /
+                        div > <
+                            /div> < /
+                            div >
 
-                        <
-                        /div> <
+                            <
+                            /div> <
                         div style = "height: 50px;" >
 
                             <
                             /div> <
-                            div class = "row" >
+                        div class = "row" >
 
                             <
                             div class = "col-md-4 col-lg-4" >
@@ -672,7 +672,7 @@ $(document).on('input', '#percent', function() {
 
                             <
                             td > < /td> <
-                            input type = "hidden"
+                        input type = "hidden"
                         name = ""
                         value = "" >
                             <
@@ -687,10 +687,10 @@ $(document).on('input', '#percent', function() {
 
 
                             <
-                            /tbody> <
-                            /table> <
-                            /div> <
-                            /div>
+                            /tbody> < /
+                            table > <
+                            /div> < /
+                            div >
 
                             <
                             div class = "modal"
@@ -714,14 +714,14 @@ $(document).on('input', '#percent', function() {
                         placeholder = "Country" >
                             <
                             button class = "btn btn-primary sub_btnn"
-                        type = "submit" > submit < /button> <
-                            /div> <
-                            /form> <
-                            /div> <
-                            /div> <
-                            /div> <
-                            /div> <
-                            /div> <
+                        type = "submit" > submit < /button> < /
+                            div > <
+                            /form> < /
+                            div > <
+                            /div> < /
+                            div > <
+                            /div> < /
+                            div > <
                             /div>
 
                             <
@@ -799,8 +799,8 @@ $(document).on('click', '#testing1', function() {
 
 
                                     <
-                                    /tbody> <
-                                    /table> <
+                                    /tbody> < /
+                                    table > <
                                     /div>
 
                                     <
@@ -834,8 +834,8 @@ $(document).on('click', '#testing1', function() {
 
 
                                     <
-                                    /tbody> <
-                                    /table> <
+                                    /tbody> < /
+                                    table > <
                                     /div>
 
                                     <
@@ -866,12 +866,12 @@ $(document).on('click', '#testing1', function() {
                                     div class = "invalid-feedback"
                                     style = "width: 100%;" >
                                     <
-                                    /div> <
-                                    /select> <
-                                    /div> <
-                                    /div> <
-                                    /div> <
-                                    /div> <
+                                    /div> < /
+                                    select > <
+                                    /div> < /
+                                    div > <
+                                    /div> < /
+                                    div > <
                                     hr class = "mb-4" >
 
                                     <
@@ -880,10 +880,10 @@ $(document).on('click', '#testing1', function() {
                                     type = "submit" > Add staffs < /button>
 
                                     <
-                                    /div> <
-                                    /div> <
-                                    /form> <
-                                    /div> <
+                                    /div> < /
+                                    div > <
+                                    /form> < /
+                                    div > <
                                     script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
 </script>
 <script type="text/javascript">

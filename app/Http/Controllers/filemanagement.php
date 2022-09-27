@@ -187,4 +187,9 @@ public function view_new_instructions()
     return view('file_management.instructions_report');
 }
 
+public function new_file_instructions()
+{
+    return view('file_management.file_instruction');
+}
+
 }
