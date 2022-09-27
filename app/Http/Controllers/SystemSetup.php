@@ -167,6 +167,23 @@ class SystemSetup extends Controller
     {
         return view('system-settings.notifications');
     }
+    public function templatecategory()
+    {
+        return view('system-settings.template_category');
+    }
+    public function addtemplatecategory()
+    {
+        return view('system-settings.add_template_category');
+    }
+    public function documenttemplatecategory()
+    {
+        return view('system-settings.document_template_category');
+    }
+    public function edittemplatecategory()
+    {
+        return view('system-settings.edit_template_category');
+    }
+
 
    
 

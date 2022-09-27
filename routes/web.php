@@ -730,7 +730,14 @@ Route::any('add_tax_excise','SystemSetup@addtaxexcise')->name('add_tax_excise');
 Route::any('add_tax_vat','SystemSetup@addtaxvat')->name('add_tax_vat');
 Route::any('add_tax_wht','SystemSetup@addtaxwht')->name('add_tax_wht');
 Route::any('add_tax_wht-vat','SystemSetup@addtaxwhtvat')->name('add_tax_wht-vat');
+//notifications
 Route::any('notifications','SystemSetup@notifications')->name('notifications');
+//template category
+Route::any('template_category','SystemSetup@templatecategory')->name('template_category');
+Route::any('add_template_category','SystemSetup@addtemplatecategory')->name('add_template_category');
+Route::any('document_template_category','SystemSetup@documenttemplatecategory')->name('document_template_category');
+Route::any('edit_template_category','SystemSetup@edittemplatecategory')->name('edit_template_category');
+
 //RESHMA
 
 

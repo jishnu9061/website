@@ -47,7 +47,7 @@
     </head>
     <body>
     <!-- <h2 >Add Court</h2><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Document Letter Categories </h2>
+    <h2 style="text-align:center; text-shadow: 2px 1px;">Document Templates Categories </h2>
     <hr class="mb-4">.
    
 
@@ -62,58 +62,87 @@
       <table class="table table-bordered table-responsive-md table-striped text-center">
         <thead>
           <tr>
-            <th class="text-center"style="background-color:rgb(13, 1, 56);">No</th>
-            <th class="text-center"style="background-color:rgb(13, 1, 56);">Code</th>
+            <th class="text-center"style=" background-color:rgb(13, 1, 56);">No</th>
+            <th class="text-center"style=" background-color:rgb(13, 1, 56);">Code</th>
             <!-- <th class="text-center">Edit</th> -->
-            <th class="text-center"style="background-color:rgb(13, 1, 56);">Action</th>
+            <th class="text-center"style=" background-color:rgb(13, 1, 56);">Action</th>
          
           </tr>
         </thead>
         <tbody>
           <tr>
             <td class="pt-3-half" contenteditable="true">1</td>
-            <td class="pt-3-half"style="text-align:left;" contenteditable="true">Client</td>
+            <td class="pt-3-half"style="text-align:left;" contenteditable="true">Business Formation</td>
             <!-- <td  class="pt-3-half" ><a href="{{url('#')}}">Edit</td> -->
             <td  scope="row"class="text-center">
-                        <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                       
                         <a  href="{{url('#')}}" onClick="return myFunction();"  style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a>
                     </td>
-           
+        </tr>
        
           <tr>
             <td class="pt-3-half" contenteditable="true">2</td>
-            <td class="pt-3-half"style="text-align:left;"  contenteditable="true">Supplier</td>
+            <td class="pt-3-half"style="text-align:left;"  contenteditable="true">Business Operations</td>
             <!-- <td  class="pt-3-half" ><a href="{{url('#')}}">Edit</td> -->
             <td  scope="row"class="text-center">
-                        <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                       
                         <a  href="{{url('#')}}" onClick="return myFunction();"  style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a>
                     </td>
+            </tr>
             <tr>
             <td class="pt-3-half" contenteditable="true">3</td>
-            <td class="pt-3-half" style="text-align:left;" contenteditable="true">Staff</td>
+            <td class="pt-3-half" style="text-align:left;" contenteditable="true">Business Property</td>
             <!-- <td  class="pt-3-half" ><a href="{{url('#')}}">Edit</td> -->
             <td  scope="row"class="text-center">
-                        <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                     
                         <a  href="{{url('#')}}" onClick="return myFunction();"  style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a>
                     </td>
-
+            </tr>
             <tr>
             <td class="pt-3-half" contenteditable="true">4</td>
-            <td class="pt-3-half"style="text-align:left;"  contenteditable="true">Office</td>
+            <td class="pt-3-half"style="text-align:left;"  contenteditable="true">Employment</td>
             <!-- <td  class="pt-3-half" ><a href="{{url('#')}}">Edit</td> -->
             <td  scope="row"class="text-center">
-                        <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                      
                         <a  href="{{url('#')}}" onClick="return myFunction();"  style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a>
                     </td>
+            </tr>
             <tr>
             <td class="pt-3-half" contenteditable="true">5</td>
-            <td class="pt-3-half" style="text-align:left;" contenteditable="true">Customers</td>
+            <td class="pt-3-half" style="text-align:left;" contenteditable="true">Financial</td>
             <!-- <td  class="pt-3-half" ><a href="{{url('#')}}">Edit</td> -->
             <td  scope="row"class="text-center">
-                        <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        
                         <a  href="{{url('#')}}" onClick="return myFunction();"  style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a>
                     </td>
-           
+            </tr>
+            <tr>
+            <td class="pt-3-half" contenteditable="true">6</td>
+            <td class="pt-3-half" style="text-align:left;" contenteditable="true">Personal & Family</td>
+            <!-- <td  class="pt-3-half" ><a href="{{url('#')}}">Edit</td> -->
+            <td  scope="row"class="text-center">
+                        
+                        <a  href="{{url('#')}}" onClick="return myFunction();"  style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+            </tr>
+            <tr>
+            <td class="pt-3-half" contenteditable="true">7</td>
+            <td class="pt-3-half" style="text-align:left;" contenteditable="true">Real Estate</td>
+            <!-- <td  class="pt-3-half" ><a href="{{url('#')}}">Edit</td> -->
+            <td  scope="row"class="text-center">
+                       
+                        <a  href="{{url('#')}}" onClick="return myFunction();"  style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+            </tr>
+            <tr>
+            <td class="pt-3-half" contenteditable="true">8</td>
+            <td class="pt-3-half" style="text-align:left;" contenteditable="true">Will & Estate Planning</td>
+            <!-- <td  class="pt-3-half" ><a href="{{url('#')}}">Edit</td> -->
+            <td  scope="row"class="text-center">
+                        
+                        <a  href="{{url('#')}}" onClick="return myFunction();"  style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+            </tr>
         </tbody>
       </table>
     </div>
