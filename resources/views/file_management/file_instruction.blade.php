@@ -15,25 +15,33 @@
 
 <body>
  
-    <div class="container">
-        <h3 class="text-center" style="color: #070344;"><b>List of File Progress</b></h3>
+<div class="container-fluid">
+        <h3 class="text-center" style="color: #070344;"><b>File Instructions</b></h3>
        <br>
-   
+       <a href="{{url('file_new_instruction')}}"><button class="btn btn-primary add-btn" Style="width:200px;">Add New Instructions</button></a>
+       <br>
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
             <table class="table table-bordered" id="new-item"   >
-                <thead style="font-size:11px">
+                <thead style="font-size:15px; width:100%;" >
                     <tr>
                         <th class="text-center">*</th>
+                        <th class="text-center">Execute</th>
+                        <th class="text-center">ID</th>
+                        <th class="text-center">Post Date</th>
+                        <th class="text-center">Sender</th>
+                        <th class="text-center">Receiver</th>
+                        <th class="text-center">Details</th>
+                        <th class="text-center">Amount</th>
                         <th class="text-center">Client</th>
-                        <th class="text-center">File No& Name</th>
-                        <th class="text-center">Date Opened</th>
-                        <th class="text-center">Responsible Advocate</th>
-                        <th class="text-center">Most Recent Progress</th>
-                        <th class="text-center">Next Progress</th>
-                        <th class="text-center">Status</th>     
-                        <th class="text-center">Action</th>
+                        <th class="text-center">File</th>
+                        <th class="text-center">Checked By</th>
+                        <th class="text-center">Approved/<br>Rejected By</th>     
+                        <th class="text-center">Accepted By</th>
+                        <th class="text-center">Completed By</th>
+                        <th class="text-center">TAT Date</th>
+                        <th class="text-center">Status </th>
                        
                     </tr>
                 </thead>
@@ -44,16 +52,21 @@
                             
                             <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center"></td>
-                            <td  scope="row"   class="text-center"></td>
                             <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center"></td>
-                            <td  scope="row"class="text-center">
-                            <select name="" id=""> <option value=""> <a href="">Action</a> </option> 
-                           <option value=""> <a href=""></a> </option></select>
-                            </td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                          
+                            <td  scope="row" class="text-center" ><button class="btn btn-light" style="color:blue;">Not<br> Checked</button></td>
                         </tr>
 
                         

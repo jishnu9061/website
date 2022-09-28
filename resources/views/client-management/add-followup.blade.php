@@ -129,18 +129,6 @@ $('#price').prop('readonly', true);
                         </div>
                         <div class="col-md-4">
                             <div class="mb-1">
-                                <label for="username">Email Address</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend"></div>
-                                    <input type="email" class="form-control" name="email" value="" id="password" placeholder="">
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                        Email is required.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
                             <label for="username"> Description</label>
                                 <div class="input-group">                     
                                   <textarea class="form-control" id="form7Example7" rows="3"></textarea>

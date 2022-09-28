@@ -31,7 +31,7 @@ $('#price').prop('readonly', true);
 
   </div>
     <div>
-    <h2>Open New Client File</h2>
+    <h2 style="text-align:center;">Add Outgoing Letter </h2>
     <hr class="mb-4">.
 </div>
   </div>
@@ -41,21 +41,24 @@ $('#price').prop('readonly', true);
 
      <form method="post" action="" id="form">
 	      @csrf
-            <div class="row">
-            <div class="col-md-12">
+          
+
+       
+        <div class="row">
+        <div class="col-md-3">
             <div class="mb-1">
-          <label for="username">Associate Handling</label>
+          <label for="username">Letter Date</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
+            <input type="date" class="form-control" name="website" id="confirm_password" required>
           </div>
         </div>
         </div>
-        <div class="col-md-4">
+
+       
+        <div class="col-md-6">
             <div class="mb-1">
           <label for="username">Client</label>
           <div class="input-group">
@@ -68,12 +71,9 @@ $('#price').prop('readonly', true);
           </div>
         </div>
         </div>
-        
-          
-
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="mb-1">
-          <label for="username">File Type</label>
+          <label for="username">File</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
@@ -84,61 +84,15 @@ $('#price').prop('readonly', true);
           </div>
         </div>
         </div>
-          <div class="col-md-4">
-           <div class="mb-1">
-          <label for="username">Opening Date</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-              <input type="date" class="form-control" name="number" id="username" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Number is required.
-            </div>
-          </div>
-        </div>
-          </div>
-
-        </div>
-        <br>
-          <div class="row">
-          <div class="col-md-4">
-           <div class="mb-1">
-          <label for="username">Client Ref.No(or Case No.)</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-              <input type="text" class="form-control" name="incorporation" id="age" >
-            <div class="invalid-feedback" style="width: 100%;">
-            Incorporation is required
-            </div>
-          </div>
-        </div>
-          </div>
-
-          <div class="col-md-4">
-           <div class="mb-1">
-          <label for="username">Our File Ref.Number</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-              <input type="text" class="form-control" name="incorporation" id="age" >
-            <div class="invalid-feedback" style="width: 100%;">
-            Incorporation is required
-            </div>
-          </div>
-        </div>
-          </div>
-        <div class="col-md-4">
+       
+        <div class="col-md-6">
             <div class="mb-1">
-          <label for="username">File Name / Subject</label>
+          <label for="username">Delivered To</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-            <input type="text" class="form-control" name="telephone" id="confirm_password" required>
+            <input type="text" class="form-control" name="website" id="confirm_password" required>
             <div class="invalid-feedback" style="width: 100%;">
               Telephone Number is required.
             </div>
@@ -148,13 +102,15 @@ $('#price').prop('readonly', true);
            
           </div>
         </div>
-         <div id="test" style="height:20px;"></div>
-          </div>
-        </div>
+        
+
+</br>
+
+
         <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="mb-1">
-          <label for="username">Approval Partner</label>
+          <label for="username">Document Category</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
@@ -165,91 +121,45 @@ $('#price').prop('readonly', true);
           </div>
         </div>
         </div>
-
-          <div class="col-md-4">
+        <div class="col-md-6">
             <div class="mb-1">
-          <label for="username">Customer Name</label>
+          <label for="username">Letter Name</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-            <input type="text" class="form-control" name="email" id="age" >
-            <div class="invalid-feedback" style="width: 100%;">
-            Incorporation is required
-            </div>
+            <input type="text" class="form-control" name="website" id="confirm_password" required>
           </div>
         </div>
         </div>
-        <div class="col-md-4">
+        
+        <div class="col-md-6">
             <div class="mb-1">
-          <label for="username">Customer Address</label>
+          <label for="username">Originator</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-            <input type="password" class="form-control" name="website" id="confirm_password" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Telephone Number is required.
-            </div>
+            <select name="country" id="cars">
+                <option value="volvo"></option>
+            </select>
           </div>
+        </div>
+        </div>
+        
         </div>
         
            
           </div>
         </div>
         <br>
+
+ 
+
         <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-3">
            <div class="mb-1">
-          <label for="username">Customer Tel</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-              <input type="text" class="form-control" name="number" id="username" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Number is required.
-            </div>
-          </div>
-        </div>
-          </div>
-
-          <div class="col-md-4">
-           <div class="mb-1">
-          <label for="username">Customer E-mail</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-              <input type="text" class="form-control" name="number" id="username" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Number is required.
-            </div>
-          </div>
-        </div>
-          </div>
-          <div class="col-md-4">
-           <div class="mb-1">
-          <label for="username">Amount</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-              <input type="text" class="form-control" name="number" id="username" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Number is required.
-            </div>
-          </div>
-        </div>
-          </div>
-         <div id="test" style="height:20px;"></div>
-          </div>
-        </div>
-        <br>
-        <div class="row">
-        <div class="col-md-4">
-            <div class="mb-1">
-          <label for="username">Workflow</label>
+          <label for="username">Viewer(s)</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
@@ -257,20 +167,34 @@ $('#price').prop('readonly', true);
             <select name="country" id="cars">
                 <option value="volvo"></option>
             </select>
+            <div class="invalid-feedback" style="width: 100%;">
+              Number is required.
+            </div>
           </div>
         </div>
+          </div>
+
+
+          <div class="col-md-3">
+           <div class="mb-1">
+          <label for="username">Upload a Copy</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <input type="file" class="form-control" name="website" id="confirm_password" required>
+            <div class="invalid-feedback" style="width: 100%;">
+              Number is required.
+            </div>
+          </div>
         </div>
-
-      
-    
-
           
-          
-   
+        </div>
+        
 
-          
-          
 
+
+     
     </div>
     <br>
     <div>
@@ -281,8 +205,8 @@ $('#price').prop('readonly', true);
             </div>
             <div class="btn-group pt-3 " role="group" aria-label="Basic example" style="margin-left: 50px;">
 
-                <button type="submit" class="btn btn-primary submit_btn">Save Changes</button>
-                <button type="submit" class="btn btn-primary submit_btn">Back</button>
+                <button type="submit" class="btn btn-primary submit_btn">Save</button>
+                <button type="submit" class="btn btn-primary submit_btn">Cancel</button>
 
             </div>
         </div>

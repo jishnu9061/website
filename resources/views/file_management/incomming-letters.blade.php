@@ -16,7 +16,9 @@
 <body>
  
     <div class="container">
-        <h3 class="text-center" style="color: #070344;"><b>List of File Progress</b></h3>
+        <h3 class="text-center" style="color: #070344;"><b>Clients Incomming Letters</b></h3>
+
+        <a href="{{url('add-incomming-letters')}}"><button class="btn btn-primary add-btn" style="width: 20%; margin-bottom:5%;" >Add Incomming Letter</button></a>
        <br>
    
 <div class="tab-content" id="myTabContent">
@@ -26,14 +28,15 @@
                 <thead style="font-size:11px">
                     <tr>
                         <th class="text-center">*</th>
+                        <th class="text-center">Date</th> 
                         <th class="text-center">Client</th>
-                        <th class="text-center">File No& Name</th>
-                        <th class="text-center">Date Opened</th>
-                        <th class="text-center">Responsible Advocate</th>
-                        <th class="text-center">Most Recent Progress</th>
-                        <th class="text-center">Next Progress</th>
-                        <th class="text-center">Status</th>     
+                        <th class="text-center">File No.</th>
+                        <th class="text-center">Received From</th>
+                        <th class="text-center">Category</th>
+                        <th class="text-center">Letter Name</th>
+                        <th class="text-center">Delivered To</th>
                         <th class="text-center">Action</th>
+                        <th class="text-center"> <input type="checkbox" name="" id=""> </th>
                        
                     </tr>
                 </thead>
@@ -41,19 +44,20 @@
                 <tbody  >
                    
                         <tr id="data"  >
-                            
+                           
+                            <td  scope="row"   class="text-center"></td>
                             <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center"></td>
                             <td  scope="row"   class="text-center"></td>
                             <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>                           
                             <td  scope="row"class="text-center">
                             <select name="" id=""> <option value=""> <a href="">Action</a> </option> 
                            <option value=""> <a href=""></a> </option></select>
                             </td>
+                            <td  scope="row" class="text-center"><input type="checkbox" name="" id=""></td>
                         </tr>
 
                         

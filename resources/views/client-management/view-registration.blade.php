@@ -17,7 +17,7 @@
     <div class="container">
         <h2  style="color: #070344; text-shadow: 1px 2px; text-align:center;"><b>Customer Registration</b></h2>
         <div class="container mt-5">
-        <a href="{{url('add-registration')}}"><button type="button" class="btn btn-primary complaint_btn" >Register Customer</button></a>
+        <a href="{{url('add-registration')}}"><button type="button" class="btn btn-primary complaint_btn btn " >Register Customer</button></a>
         <div id="mydatatable_filter" class="dataTables_filter">
         <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
        </div>

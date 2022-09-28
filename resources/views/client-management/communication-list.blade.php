@@ -14,54 +14,54 @@
 </head>
 
 <body>
- 
     <div class="container">
-        <h3 class="text-center" style="color: #070344;"><b>List of File Progress</b></h3>
+        <h2 style="color: #070344; text-shadow: 1px 2px; text-align:center;"><b>Client Conversations</b></h2>
+        <div class="container mt-5">
+        <a href="{{url('add-communication')}}"><button type="button" class="btn btn-primary complaint_btn" > Add Communication</button></a>
+        </div>
+        <hr class="mb-4">.
+        <h4  style="color: #070344; text-align:center;"><b>Clients Communications</b></h4>
        <br>
-   
-<div class="tab-content" id="myTabContent">
+     
+      
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
-            <table class="table table-bordered" id="new-item"   >
-                <thead style="font-size:11px">
+            <table class="table table-bordered" id="new-item">
+                <thead>
                     <tr>
-                        <th class="text-center">*</th>
+                        <th class="text-center">Date</th>
+                        <th class="text-center">Time</th>
                         <th class="text-center">Client</th>
-                        <th class="text-center">File No& Name</th>
-                        <th class="text-center">Date Opened</th>
-                        <th class="text-center">Responsible Advocate</th>
-                        <th class="text-center">Most Recent Progress</th>
-                        <th class="text-center">Next Progress</th>
-                        <th class="text-center">Status</th>     
-                        <th class="text-center">Action</th>
-                       
+                        <th class="text-center">File Ref</th>
+                        <th class="text-center">Telephone No</th>
+                        <th class="text-center">Mode</th>
+                        <th class="text-center">Communicated With</th>
+                        <th class="text-center">Nature of Communication</th>
+                        <th class="text-center">Person Handling</th>
+                        <th class="text-center">Status</th>
+                        <th class="text-center">Action</th> 
                     </tr>
                 </thead>
-        
-                <tbody  >
-                   
-                        <tr id="data"  >
-                            
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row"   class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row"class="text-center">
-                            <select name="" id=""> <option value=""> <a href="">Action</a> </option> 
-                           <option value=""> <a href=""></a> </option></select>
-                            </td>
-                        </tr>
+                <tbody>
+                        <tr id="data">
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td><a href="{{url('edit-communication')}}"><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i></a>
+                            <a href=""><i  style="color:black;" class="fa fa-trash" aria-hidden="true"></i></td>
 
-                        
-                        
+                        </tr>
                 </tbody>
-                
-                </table>
-             
+            </table>
+           
+
  <!-- The Modal -->
  <div class="modal fade" id="editmed">
     <div class="modal-dialog modal-xl">
