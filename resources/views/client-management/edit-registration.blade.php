@@ -2,11 +2,6 @@
 @section('content')
 <div class="container">
   <div class="py-5 text-center">
- @if(Session::has('staffregistered'))
-   <div class="alert alert-dark" role="alert">
-   {{ Session::get('staffregistered')}}
-   </div>
-@endif
 
 </div>
 <div style="height: 50px;"></div>

@@ -159,7 +159,7 @@ class ClientManagement extends Controller
 
 
     public function addService(){
-        return view('client-management.new-client-service');
+        return view('client-management.add-client-service');
     }
 
 
