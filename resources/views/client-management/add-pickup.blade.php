@@ -23,7 +23,7 @@ $('#price').prop('readonly', true);
 </script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <div>
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Add Pickup Client</h2>
+    <h2 style="text-align:center;">Add Pickup Client</h2>
     <hr class="mb-4">.
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </div>
@@ -142,10 +142,13 @@ $('#price').prop('readonly', true);
                         <div class="col-sm">
                           
                         </div>
-                          <div class="col-sm">
-                            <button type="submit" class="btn btn-primary submit_btn_btn">Submit</button>
-                            <a href="{{route('client-index')}}" type="button" class="btn btn-primary " style="width:30%;  margin-top: 30px;">Back</a>
+                        <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
+      
+                          <button type="submit" class="btn btn-primary col-md-6">Save Changes</button>
+                          <a href="{{route('client-index')}}" type="button" class="btn  submit_btn col-md-6">Back</a>
+                          
                           </div>
+                         
                         </div>
                       </div>  
                     </div>

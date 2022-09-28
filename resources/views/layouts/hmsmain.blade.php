@@ -50,7 +50,7 @@ color: #1D1D50
                     color: #000;
 
                 } */
-               
+                        
               
 </style>
     
@@ -403,7 +403,7 @@ color: #1D1D50
 
                                 <li class="submenu-item has-sub " style="list-style:none;">
                                         <a id="sblm" href="{{url('client-index')}}" class='sidebar-link' >
-                                        <i  class="fas fa-chalkboard-teacher" id="icon"></i>
+                                        <i  class="fa fa-university" id="icon"></i>
                                             <span > Client Management</span>
                                         </a>
                                 </li>
@@ -419,7 +419,7 @@ color: #1D1D50
                             @if(Auth::user()->role == 'hospitaladmin')
                             <li class="submenu-item has-sub " style="list-style:none;">
                                         <a href="{{url('file_managementindex')}}" class='sidebar-link'>
-                                        <i class="far fa-folder-open" id="icon" style="font-weight: 300;"></i>
+                                        <i class="far fa-folder" id="icon" style="font-weight: 300;"></i>
                                             <span>File Management</span>
                                         </a>
                                 </li>
@@ -770,8 +770,8 @@ color: #1D1D50
                                 @endphp
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('home')}}" class='sidebar-link'>
-                                        <i id="icon" class="bi bi-grid-fill" style="font-weight: 400;"></i>
-                                            <span>Client Invoicing</span>
+                                        <i id="icon" class="fa fa-newspaper" style="font-weight: 400;"></i>
+                                            <span >Client Invoicing</span>
                                     </a>
                                     @if (in_array(request()->path(),$hr))
                                         <ul class="submenu" style="display: block;">
@@ -780,7 +780,7 @@ color: #1D1D50
                                     @endif
                                     <li class="submenu-item ">
                                         <a href="{{url('addallowance')}}" class='sidebar-link'>
-                                            <span>Settings</span>
+                                            <span id="subm" >Settings</span>
                                         </a>
                                     </li>
                                    
@@ -800,7 +800,7 @@ color: #1D1D50
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="fas fa-user-cog"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="fa fa-shield"  style="font-weight: 300;"></i>
                                             <span>Office Administrations</span>
                                     </a>
                                    
@@ -819,7 +819,7 @@ color: #1D1D50
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="fa fa-cogs"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="fa fa-sliders"  style="font-weight: 300;"></i>
                                             <span>Tools & ad ons</span>
                                     </a>
                                    
@@ -886,8 +886,8 @@ color: #1D1D50
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i id="icon" class="fas fa-piggy-bank"  style="font-weight: 300;"></i>
-                                            <span>Inventory</span>
-                                            <span>Store ,Inventory</span>
+                                            
+                                            <span>Store, Inventory</span>
                                     </a>
                                    
                                     </li>
@@ -905,7 +905,7 @@ color: #1D1D50
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="as fa-user-circle"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="fa fa-user-circle"  style="font-weight: 300;"></i>
                                             <span>User Accounts</span>
                                     </a>
                                    
@@ -915,7 +915,7 @@ color: #1D1D50
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
-                                        <i id="icon" class="fas fa-chart-pie"  style="font-weight: 300;"></i>
+                                        <i id="icon" class="fab fa-cloudscale"  style="font-weight: 300;"></i>
                                             <span>LPO Management</span>
                                     </a>
                                    
@@ -976,6 +976,9 @@ color: #1D1D50
                 <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
             </div>
         </div>
+
+
+
         <div id="main">
 
             <header >
@@ -990,18 +993,18 @@ color: #1D1D50
                 {{-- <h3 style="color:#c30147;">ERP Global</h3> --}}
              {{-- </div> --}}
 
-<div class="container">
+             <div class="container" style="border: none">
 
     
     
-    {{-- <nav  class=" navbar navbar-light bg-light" id="ff">
-        <a class="navbar-brand" href="#">Fixed top</a>
-      </nav> --}}
+               {{-- <nav  class=" navbar navbar-light bg-light" id="ff">
+              <a class="navbar-brand" href="#">Fixed top</a>
+              </nav> --}}
 
 
 
              <nav class="navbar navbar-light  justify-content-between" >
-                <a id="backbtn" href="javascript:history.back()"  ><i class="far fa-arrow-alt-circle-left"></i></a>
+                <a id="backbtn" href="javascript:history.back()"  ><i id="bkbtnicon" class="far fa-arrow-alt-circle-left"></i></a>
 
                 <div id="navr" style="margin-top: -10%;"   >
 
@@ -1018,20 +1021,20 @@ color: #1D1D50
                 </div>
               </nav>
              
-            </div>
-             {{-- <a href="javascript:history.back()"  class="btn btn-primary" >Back</a>
-             <div style="margin-left: 83%;margin-top: -8%;">
+             </div>
+                   {{-- <a href="javascript:history.back()"  class="btn btn-primary" >Back</a>
+                <div style="margin-left: 83%;margin-top: -8%;">
                 <div class="avatar avatar-xl">
                     <img  style="margin-left: 28%;" src="assets/images/faces/CRAHqLogo.png" alt="Face 1">
                 </div>
                 <h5 class="font-bold"> {{ Auth::user()->name }}</h5>
                 <h6 class="text-muted mb-0"><a href="{{url('logt')}}"> <i class="fas fa-sign-out-alt"></i> </i> Log Out</a></h6>
                
-             </div> --}}
+              </div> --}}
 
             </header>
 
-
+<section class="container-fluid">
             <div class="page-content">
                 <section class="row">
                     <div class="col-12 col-lg-12">
@@ -1039,6 +1042,7 @@ color: #1D1D50
                     </div>
                 </section>
             </div>
+
             <footer>
                 <div class="footer clearfix mb-0 text-muted">
                     <div class="float-start">
@@ -1051,6 +1055,9 @@ color: #1D1D50
             </footer>
         </div>
     </div>
+
+</section>
+
     <script src="{{asset('/')}}assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="{{asset('/')}}assets/js/bootstrap.bundle.min.js"></script>
 
@@ -1067,6 +1074,7 @@ color: #1D1D50
          <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+
          <script>
              $(document).ready(function () {
                  var SITEURL = "{{ url('/') }}";
@@ -1157,20 +1165,20 @@ color: #1D1D50
              function displayMessage(message) {
                  toastr.success(message, 'Event');
              }
-         </script>
+            </script>
 
          <script>$("a.sidebar-link").click(function(){
             $("a.sidebar-link").css("background-color", "");
           $(this).css("background-color", "#F5E9D4");
         });</script>
 
-<script>
+  {{-- <script> --}}
 
-// const myElement = document.getElementById("subm");
-// myElement.style.color = "red"
+            {{-- // const myElement = document.getElementById("subm");
+            // myElement.style.color = "red" --}}
 
 
-</script>
+{{-- </script> --}}
 </body>
 
 
