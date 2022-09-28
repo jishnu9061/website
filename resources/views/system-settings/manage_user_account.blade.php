@@ -25,10 +25,11 @@
 table{
     outline: 1px solid  gray;
 }
- tr:nth-child(odd)
+ /* tr:nth-child(odd)
 {
     background-color:rgb(198, 195, 211);
-}            </style>
+}   */
+          </style>
    </head>
    <body>
     <!-- <h2 >Court List</h2><br>
@@ -38,22 +39,24 @@ table{
 
 
 
-  <table class="table" >
+    <table class="table table-bordered" id="new-item">
+      <thead>
 
                         <tr>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">User Code</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Name</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">User Name</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">User Group</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">E mail</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Telephone</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Log Status</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">IP Address</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Last Logout Time</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Status</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Action</th>
+                        <th class="text-center" >User Code</th>
+                        <th class="text-center" >Name</th>
+                        <th class="text-center" >User Name</th>
+                        <th class="text-center" >User Group</th>
+                        <th class="text-center" >E mail</th>
+                        <th class="text-center" >Telephone</th>
+                        <th class="text-center" >Log Status</th>
+                        <th class="text-center" >IP Address</th>
+                        <th class="text-center" >Last Logout Time</th>
+                        <th class="text-center" >Status</th>
+                        <th class="text-center" >Action</th>
                     </tr>
-             
+</thead>
+             <tbody>
             
                     <tr>
                         <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
@@ -66,7 +69,7 @@ table{
                         <td class="text-center"style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center"style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-
+                        <td class="text-center"style="color:rgb(13, 1, 56);">
                         <!-- <td  class="text-center">
                             <select name="" id=""> <option value=""> <a href="">Action</a> </option> 
                            <option value=""> <a href="user_edit">Edit</a> </option>
@@ -77,9 +80,8 @@ table{
                             </td> -->
 
 
-                        <td class="text-center"style="color:rgb(13, 1, 56);">
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button style="background-color:#FFFBF4;"class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                Action
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -93,7 +95,7 @@ table{
 
                        </td>
                      </tr>
-
+                     </tbody>
                     
 
                      
