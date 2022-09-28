@@ -16,6 +16,9 @@
 }
     </style>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+   
+
+    
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
     <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#allowances" role="tab" aria-controls="home" aria-selected="true">Allowances</a>
@@ -26,21 +29,26 @@
   <li class="nav-item" role="presentation">
     <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#leavecategories" role="tab" aria-controls="profile" aria-selected="false">Leave Categories</a>
   </li>
-
+  <div  class="tab-content" id="myTabContent">
+    <div  class="tab-pane fade show active" id="allowances" role="tabpanel" aria-labelledby="home-tab">
+       <button  style="margin: 0%" type="button" class="btn-primary btn-sm"  data-toggle="modal" data-bs-toggle="modal"
+       data-bs-target="#addallowance" >Add New Allowance</button>
+    <div style="height: 50px;">
+   
+   </div>
 </ul>
+
+
+  
+
+
 
 
 </head>
 
 <body>
 
-<div class="tab-content" id="myTabContent">
- <div class="tab-pane fade show active" id="allowances" role="tabpanel" aria-labelledby="home-tab">
-    <button type="button" class="btn-primary btn-sm"  data-toggle="modal" data-bs-toggle="modal"
-    data-bs-target="#addallowance" style="float:right; width:150px;">Add New Allowance</button>
- <div style="height: 50px;">
 
-</div>
 
 
 <div class="row">
@@ -55,7 +63,7 @@
 			<thead>
 				<tr>
 					<th>
-						Allowance Name
+						Allowance
 					</th>
 					<th>
 						Amount
@@ -91,8 +99,8 @@
 
 			</tbody>
 		</table>
-	</div>
-	<div class="col-md-6 col-lg-6">
+	 </div>
+	 <div class="col-md-6 col-lg-6">
 
 
 		<h4>Non-Fixed Allowances</h4>
@@ -108,9 +116,9 @@
 					<th>
 						Allowance Name
 					</th>
-                    <!-- <th>
+                    <th>
 						Amount
-					</th> -->
+					</th> 
 					<th>
 						Edit
 					</th>

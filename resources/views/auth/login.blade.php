@@ -19,7 +19,7 @@
 <body>
     <div id="auth">
         <div class="row h-100">
-    <div class="col-lg-5 col-12">
+    <div class="col-lg-6 ">
         <div id="auth-left">
             <div class="auth-logo">
                 <img  id="cr_logo" src="assets/images/Logo cra.png" alt="" style="width:50%;height:50%">
@@ -73,8 +73,9 @@
         </div>
     </div>
     {{ Session::forget('errors')}}
-    <div class="col-lg-7 d-none d-lg-block">
+    <div class="col-lg-6 d-none d-lg-block">
         <div id="auth-right">
+            <img src="../../images/bg/cralog.svg" style="height: 100px" class="img-fluid" alt="Responsive image">
 
         </div>
     </div>

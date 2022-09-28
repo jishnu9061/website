@@ -332,7 +332,7 @@ $('#price').prop('readonly', true);
                     <h1 style="text-align:center;">Contact Person</h1>
                     <br>
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-6">
                             <div class="mb-1">
                             <label for="username">Names</label>
                                     <div class="input-group">
@@ -344,7 +344,7 @@ $('#price').prop('readonly', true);
                                     </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-6">
                             <div class="mb-1">
                             <label for="username">Designation</label>
                                     <div class="input-group">
@@ -357,7 +357,7 @@ $('#price').prop('readonly', true);
                             </div>
                         </div>
                     
-                    <div class="col-md-3">
+                     <div class="col-md-6">
                             <div class="mb-1">
                             <label for="username">Mobile No</label>
                                     <div class="input-group">
@@ -369,42 +369,32 @@ $('#price').prop('readonly', true);
                                     </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-6">
                             <div class="mb-1">
                             <label for="username">Email</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend"></div>
                                         <input type="text" class="form-control" name="email" id="age" value="" placeholder="" min="0" max="99">
                                         <div class="invalid-feedback" style="width: 100%;">
+                                          
                                      
                                         </div>
+                                        
                                     </div>
+
+                                    
                             </div>
+
+                          
                     </div>
-                    <br>
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-sm">
-                          
-                        </div>
-                        <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
+                  
+                      <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
       
-                          <button type="submit" class="btn btn-primary submit_btn">Save Changes</button>
-                          <button type="button" class="btn ">Back</button>
-                          
-                        </div>
-                          <div class="col-sm">
-                            <button type="submit" class="btn btn-primary submit_btn_btn  ">Submit</button>
-                            <a href="{{route('client-index')}}" type="button" class="btn btn-primary " style="width:30%;  margin-top: 30px;">Back</a>
-                            <a href="{{route('client-index')}}" type="button" class="btn btn-primary " style="width:30%">Back</a>
-                            <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Submit</button>
+                      <button type="submit" class="btn btn-primary col-md-6">Save Changes</button>
+                      <button type="button" class="btn  submit_btn col-md-6">Back</button>
+                      
+                      </div>
 
-                          
-                             <button type="submit" class="btn btn-primary submit_btn btn_align">Back</button>
-
-                          </div>
-                        </div>
-                      </div>  
                     </div>
                 </form>
             </div>
