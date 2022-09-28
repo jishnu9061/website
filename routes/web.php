@@ -794,6 +794,10 @@ Route::any('communication-list','ClientManagement@listCommunication')->name('com
 Route::any('add-communication','ClientManagement@addCommunication')->name('add-communication');
 Route::any('edit-communication','ClientManagement@editCommunication')->name('edit-communication');
 //end communication
+//search list
+Route::any('search-list','ClientManagement@listSearch')->name('search-list');
+Route::any('register-client','ClientManagement@registerClient')->name('register-client');
+//end search list
 
 //mugunthan
 
