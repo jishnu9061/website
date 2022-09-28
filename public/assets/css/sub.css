@@ -41,11 +41,11 @@
     display: block;
     width: 90px;
     height: auto;
-    margin-left: auto ;
-    margin-right: auto ;
-    margin-top: -11px;
+    margin-left: auto;
+    margin-right: auto;
+    
     align-items: center;
-    padding-top: -49px;
+    
 
 }
 
@@ -54,5 +54,11 @@
     color: #070344;
     font-size: 50px;
 
+}
+
+.h4 {
+
+text-align: center;
+text-shadow: 2px 1px;
 }
 

@@ -7,7 +7,7 @@ for(var i = 0; i < sidebarItems.length; i++) {
         e.preventDefault();
         
         let submenu = sidebarItem.querySelector('.submenu');
-        if( submenu.classList.contains('active') ) submenu.style.display = "block"
+        if( submenu.classList.contains('active') ) submenu.style.display = ""
 
         if( submenu.style.display == "none" ) submenu.classList.add('active')
         else submenu.classList.remove('active')
@@ -43,7 +43,7 @@ document.querySelector('.sidebar-hide').addEventListener('click', () => {
 if(typeof PerfectScrollbar == 'function') {
     const container = document.querySelector(".sidebar-wrapper");
     const ps = new PerfectScrollbar(container, {
-        wheelPropagation: false
+        wheelPropagation: true
     });
 }
 
@@ -54,3 +54,5 @@ $("a.sidebar-link").click(function(){
     $("a.sidebar-link").css("background-color", "black");
   $(this).css("background-color", "red");
 });
+
+

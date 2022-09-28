@@ -60,7 +60,7 @@
    </head>
    <body>
     <!-- <h2 class="text-center">Configuration Details</h2><br> -->
-    <h4 style="text-align:center; text-shadow: 2px 1px;">Company Details</h4>
+    <h4 style="text-align:center;">Company Details</h4>
     <hr class="mb-4">.
     <div class="container-fluid">
   
@@ -75,7 +75,7 @@
 </div>
 </div>
 
-<h4 style="text-align:center; text-shadow: 2px 1px;">User Accounts</h4>
+<h4 style="text-align:center; ">User Accounts</h4>
     <hr class="mb-4">.
     <div class="container-fluid">
   
@@ -90,7 +90,7 @@
 </div>
 </div>
 
-<h4 style="text-align:center; text-shadow: 2px 1px;">Other Settings</h4>
+<h4 style="text-align:center;">Other Settings</h4>
     <hr class="mb-4">.
     <div class="container-fluid">
   
@@ -105,7 +105,7 @@
 </div>
 </div>
 
-<h4 style="text-align:center; text-shadow: 2px 1px;">System Menus</h4>
+<h4 style="text-align:center;">System Menus</h4>
     <hr class="mb-4">.
     <div class="container-fluid">
   
