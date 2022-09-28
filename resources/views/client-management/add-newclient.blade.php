@@ -2,26 +2,7 @@
 @section('content')
 <div class="container">
   <div class="py-5 text-center">
- @if(Session::has('staffregistered'))
-   <div class="alert alert-dark" role="alert">
-   {{ Session::get('staffregistered')}}
-   </div>
-@endif
 
-</div>
-<div style="height: 50px;"></div>
-<script src="{{ url('assets/js') }}/jquery.min.js"></script>
-<script type="text/javascript">
-	  $(document).on('input','#price',function(){
-$('#percent').prop('readonly', true);
-
-});
-	    $(document).on('input','#percent',function(){
-$('#price').prop('readonly', true);
-
-});
-</script>
-<script src="{{ url('assets/js') }}/jquery.min.js"></script>
 
 <div>
     <h2 style="text-align:center;">Add New Client</h2>
@@ -332,7 +313,7 @@ $('#price').prop('readonly', true);
                     <h1 style="text-align:center;">Contact Person</h1>
                     <br>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <div class="mb-1">
                             <label for="username">Names</label>
                                     <div class="input-group">
@@ -344,7 +325,7 @@ $('#price').prop('readonly', true);
                                     </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <div class="mb-1">
                             <label for="username">Designation</label>
                                     <div class="input-group">
@@ -356,8 +337,7 @@ $('#price').prop('readonly', true);
                                     </div>
                             </div>
                         </div>
-                    
-                     <div class="col-md-6">
+                     <div class="col-md-3">
                             <div class="mb-1">
                             <label for="username">Mobile No</label>
                                     <div class="input-group">
@@ -369,7 +349,7 @@ $('#price').prop('readonly', true);
                                     </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <div class="mb-1">
                             <label for="username">Email</label>
                                     <div class="input-group">
