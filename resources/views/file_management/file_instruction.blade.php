@@ -8,17 +8,31 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 
-  {{-- <div class="spacer" style="height:40px;margin-top: 30px;"> --}}
+  
 
 
 </head>
 
 <body>
- 
-<div class="container-fluid">
+    
+<div class="container">
+    <div class="py-5 text-center">
+        @if(Session::has('staffregistered'))
+            <div class="alert alert-dark" role="alert">
+                {{ Session::get('staffregistered')}}
+            </div>
+        @endif
+        @if(Session::has('leavevalidat'))
+            <div class="alert alert-dark" role="alert">
+                {{ Session::get('leavevalidat')}}
+            </div>
+        @endif
+        {{-- <div class="spacer" style="height:40px;margin-top: 30px;"> --}}
         <h3 class="text-center" style="color: #070344;"><b>File Instructions</b></h3>
        <br>
-       <a href="{{url('file_new_instruction')}}"><button class="btn btn-primary add-btn" Style="width:200px;">Add New Instructions</button></a>
+       <div>
+       <a href="{{url('file_new_instruction')}}"><button class="btn btn-primary add-btn" Style="width:200px;margin-left:-56rem;">Add New Instructions</button></a>
+</div>
        <br>
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
