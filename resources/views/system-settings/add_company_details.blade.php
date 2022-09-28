@@ -127,11 +127,12 @@
   <label>NSSF Number</label>
   <input type="number" id="nnum" name="nnum" value=""size="50"><br><br> <br>
 
+  <div class="class"style="text-align:center;">
   <input  type="submit"value="Save" name="Submit"style="background-color:rgb(13, 1, 56);color: white ">
   
   <input type="button"value="Cancel" name="cancel"style="background-color:rgb(13, 1, 56);color: white ">
-<!-- <a href="something" class="button1"style="margin-left:50px;">Save</a>
-<a href="something" class="button2">Cancel</a><br><br> -->
+
+  </div>
 
     </div>
 </form>

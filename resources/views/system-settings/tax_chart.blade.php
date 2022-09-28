@@ -71,19 +71,8 @@ table{
              
             
                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">1</td>
-                        <td class="text-center" style="color:rgb(13, 1, 56);">A</td>
-                        <td  style="color:rgb(13, 1, 56);">0.00</td>
-                        <td  style="color:rgb(13, 1, 56);">424554</td>
-                        <td  style="color:rgb(13, 1, 56);">10.0</td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
-                        <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                            <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
-                        </tr>
-                        <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">2</td>
-                        <td  class="text-center"style="color:rgb(13, 1, 56);"></td>
+                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
+                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
                         <td  style="color:rgb(13, 1, 56);"></td>
                         <td  style="color:rgb(13, 1, 56);"></td>
                         <td  style="color:rgb(13, 1, 56);"></td>
@@ -92,16 +81,7 @@ table{
                         <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                             <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
                         </tr>
-                        <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">3</td>
-                        <td  class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
-                        <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                            <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
+                       
                         </table><br>
                         
                         <table class="table" >
@@ -114,7 +94,7 @@ table{
                                 <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Action</th>
                             </tr>
                             <tr>
-                                <td  class="text-center" style="color:rgb(13, 1, 56);">1</td>
+                                <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
                                 <td class="text-center" style="color:rgb(13, 1, 56);"></td>
                                 <td  style="color:rgb(13, 1, 56);"></td>
                                 <td  style="color:rgb(13, 1, 56);"></td>
@@ -123,26 +103,7 @@ table{
                                 <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
                             </tr>
 
-                        <tr>
-                            <td  class="text-center" style="color:rgb(13, 1, 56);">2</td>
-                            <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                            <td  style="color:rgb(13, 1, 56);"></td>
-                            <td  style="color:rgb(13, 1, 56);"></td>
-                            <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
-                              <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                              <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
-                        </tr>
-
-                        <tr>
-                            <td  class="text-center" style="color:rgb(13, 1, 56);">3</td>
-                            <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                            <td  style="color:rgb(13, 1, 56);"></td>
-                            <td  style="color:rgb(13, 1, 56);"></td>
-                            <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
-                              <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                            <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
-                        </tr>
-                        
+                     
                         </table><br>
 
                         <table class="table" >
@@ -156,7 +117,7 @@ table{
                                 <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Action</th>
                             </tr>
                             <tr>
-                                <td  class="text-center" style="color:rgb(13, 1, 56);">1</td>
+                                <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
                                 <td class="text-center" style="color:rgb(13, 1, 56);"></td>
                                 <td  style="color:rgb(13, 1, 56);"></td>
                                 <td  style="color:rgb(13, 1, 56);"></td>
@@ -166,28 +127,7 @@ table{
                                 <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
                             </tr>
 
-                        <tr>
-                            <td  class="text-center" style="color:rgb(13, 1, 56);">2</td>
-                            <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                            <td  style="color:rgb(13, 1, 56);"></td>
-                            <td  style="color:rgb(13, 1, 56);"></td>
-                            <td  style="color:rgb(13, 1, 56);"></td>
-                            <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
-                              <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                              <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
-                        </tr>
-
-                       
-                        <tr>
-                            <td  class="text-center" style="color:rgb(13, 1, 56);">4</td>
-                            <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                            <td  style="color:rgb(13, 1, 56);"></td>
-                            <td  style="color:rgb(13, 1, 56);"></td>
-                            <td  style="color:rgb(13, 1, 56);"></td>
-                            <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
-                               <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                               <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
-                        </tr>
+                      
 </table><br>
                         <table class="table" >
                             <h6 style="text-align:center;color:rgb(13, 1, 56);"><span class="border "style="background-color:rgb(198, 195, 211); "> Tax WHT</span></h6><br>
@@ -221,7 +161,7 @@ table{
                                 <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Action</th>
                             </tr>
                             <tr>
-                                <td  class="text-center" style="color:rgb(13, 1, 56);">1</td>
+                                <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
                                 <td class="text-center" style="color:rgb(13, 1, 56);"></td>
                                 <td  style="color:rgb(13, 1, 56);"></td>
                       

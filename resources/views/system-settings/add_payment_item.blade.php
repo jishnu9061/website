@@ -77,7 +77,7 @@
                         </tr>
             </table>
             <div class="class"style="text-align:center;">
-            <!-- <button>Submit</button> -->
+    
             <a href="something"><input type="submit"value="Submit" name="submit"style="background-color:rgb(13, 1, 56);color: white; "> </a>
             <input type="button"value="Close" name="close"style="background-color:red;color: white; ">
 

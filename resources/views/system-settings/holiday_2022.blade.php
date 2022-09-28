@@ -61,52 +61,20 @@
     <th>Delete</th>
 </tr>
   <tr>
-    <td>1</td>
-    <td>01-01-2022</td>
-    <td>Saturday</td>
-    <td><a href="del_db" target="_blank"style="color:blue;">Delete</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><a href="del_db" target="_blank"style="color:blue;"></a></td>
 </tr>
-<tr>
-    <td>2</td>
-    <td>02-01-2022</td>
-    <td>Sunday</td>
-    <td><a href="del_db" target="_blank"style="color:blue;">Delete</a></td>
-</tr>
-<tr>
-    <td>3</td>
-    <td>08-01-2022</td>
-    <td>Saturday</td>
-    <td><a href="del_db" target="_blank"style="color:blue;">Delete</a></td>
-</tr>
-<tr>
-    <td>4</td>
-    <td>09-01-2022</td>
-    <td>Sunday</td>
-    <td><a href="del_db" target="_blank"style="color:blue;">Delete</a></td>
-</tr>
-<tr>
-    <td>5</td>
-    <td>15-01-2022</td>
-    <td>Saturday</td>
-    <td><a href="del_db" target="_blank"style="color:blue;">Delete</a></td>
-</tr>
-<tr>
-    <td>6</td>
-    <td>16-01-2022</td>
-    <td>Sunday</td>
-    <td><a href="del_db" target="_blank"style="color:blue;">Delete</a></td>
-</tr>
-<tr>
-    <td>7</td>
-    <td>22-01-2022</td>
-    <td>Saturday</td>
-    <td><a href="del_db" target="_blank"style="color:blue;">Delete</a></td>
-</tr>
+
+
+
+
+
+
 </table><br><br>
 </form>
-<form>
- <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
-</form>
+
 <!-- <form>
  <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
 </form> -->

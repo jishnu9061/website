@@ -54,16 +54,7 @@ td:nth-child(odd) {
                         <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;"class="text-center"><input type="radio"></th>
                     </tr>
                     <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">1</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('#')}}"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
-                    </tr>
-                    <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">2</td>
+                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>

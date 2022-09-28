@@ -85,43 +85,22 @@
   
   </tr>
   <tr>
-    <td>1</td>
-    <td>02</td>
-    <td>NBI</td>
-    <td>Nairobi</td>
-    <td style="color:green;font-weight:bold;">Active</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td style="color:green;font-weight:bold;"></td>
     <td  scope="row"class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
                         <a href="{{url('edit_company_branch')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                             <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
    
     </tr>
 
-  <tr>
-    <td>  </td>
-    <td>  </td>
-    <td>  </td>
-    <td>   </td>
-    <td style="color:red;font-weight:bold;">In-Active</td>
-    <td  scope="row"class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
-                        <a href="{{url('edit_company_branch')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                            <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
-
-    </tr>
+  
   
 </table><br><br>
 
-<!-- <select style="width:200px;height: 30px;background-color:#f0e7ce; border: 1px solid rgb(177, 127, 62);padding-right:10px;margin-left:1250px;">
-    <option>  Activate Category </option>
-    <option>De-Activate Category</option>
-    <option>Delete Category</option>
-</select>
-<button class="btn btn-primary" style="width:42px;height:35px;background-color:rgb(177, 127, 62); border: 1px solid rgb(240, 205, 10);margin-left:1250px;
-            color:rgb(13, 1, 56);text-align: center; ">Go</button>
-         -->
 
-         <!-- <form>
- <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
-</form> -->
 </body>
     </html>
     @endsection

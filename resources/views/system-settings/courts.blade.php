@@ -68,8 +68,8 @@ td:nth-child(odd) {
                         <td colspan="4"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Supreme Court :</td>
                     </tr>
                     <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">1</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);">Supreme Court of Keniya</td>
+                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></td>
+                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_court')}}">Edit</td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></td>
                     </tr>
@@ -78,135 +78,85 @@ td:nth-child(odd) {
                         <td colspan="4"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Court Of Appeal :</td>
                     </tr>
                     <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">1</th>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);">Court Of Appeal at Busia </th>
+                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></th>
+                        <td  style="background-color:white;color:rgb(13, 1, 56);"> </th>
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_court')}}">Edit</td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
                     </tr>
-                    <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">2</th>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);">Court Of Appeal at Eldoret </th>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_court')}}">Edit</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
-                    </tr>
-                    <tr>
-                        <td class="text-center"  style="background-color:white;color:rgb(13, 1, 56);">3</th>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);">Court Of Appeal at Kissi </th>
-                        <td class="text-center"  style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_court')}}">Edit</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
-                    </tr>
+                 
 
                     <tr>
                         <td colspan="4"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">High Court :</td>
                     </tr>
                     <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">1</th>
+                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></th>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"> </th>
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_court')}}">Edit</td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
                     </tr>
-                    <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">2</th>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"> </th>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_court')}}">Edit</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
-                    </tr>
-
+                   
                     <tr>
                         <td colspan="4"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Industrial Court :</td>
                     </tr>
                     <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">1</th>
+                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></th>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"> </th>
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_court')}}">Edit</td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
                     </tr>
-                    <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">2</th>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"> </th>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_court')}}">Edit</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
-                    </tr>
-
+                    
                     <tr>
                         <td colspan="4"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Magistrate Court :</td>
                     </tr>
                     <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">1</th>
+                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></th>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"> </th>
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_court')}}">Edit</td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
                     </tr>
-                    <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">2</th>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"> </th>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_court')}}">Edit</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
-                    </tr>
+                   
 
                     <tr>
                         <td colspan="4"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Labours Court :</td>
                     </tr>
                     <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">1</th>
+                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></th>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"> </th>
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_court')}}">Edit</td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
                     </tr>
-                    <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">2</th>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"> </th>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_court')}}">Edit</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
-                    </tr>
-
+                   
                     <tr>
                         <td colspan="4"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">East Africa Court :</td>
                     </tr>
                     <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">1</th>
+                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></th>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"> </th>
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_court')}}">Edit</td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
                     </tr>
-                    <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">2</th>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"> </th>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_court')}}">Edit</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
-                    </tr>
+                   
 
                     <tr>
                         <td colspan="4"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Others :</td>
                     </tr>
                     <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">1</th>
+                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></th>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"> </th>
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_court')}}">Edit</td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
                     </tr>
-                    <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">2</th>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"> </th>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_court')}}">Edit</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
-                    </tr>
-
+                   
                     <tr>
                         <td colspan="4"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Small Claims Court:</td>
                     </tr>
                     <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">1</th>
+                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></th>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"> </th>
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_court')}}">Edit</td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
                     </tr>
-                    <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">2</th>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"> </th>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_court')}}">Edit</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
-                    </tr>
+                   
                 </table>
                 <div class="class"style="text-align:right;">
                 <select style="width:10%;height:100%;color:white;font-size:small;background-color:rgb(13, 1, 56);"type="text" value="" name="type">

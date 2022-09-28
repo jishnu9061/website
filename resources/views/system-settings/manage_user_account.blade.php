@@ -56,16 +56,27 @@ table{
              
             
                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">1</td>
-                        <td  class="text-center"style="color:rgb(13, 1, 56);">Princess</td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);">Princess</td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);">Partner </td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);">carole@cradvocateslip.com </td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);">56567675</td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);">In</td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);">22846037.50</td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);">22-9-2022</td>
-                        <td class="text-center"style="color:green;">Active</td>
+                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
+                        <td  class="text-center"style="color:rgb(13, 1, 56);"></td>
+                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
+                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
+                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
+                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
+                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
+                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
+                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
+                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
+
+                        <!-- <td  class="text-center">
+                            <select name="" id=""> <option value=""> <a href="">Action</a> </option> 
+                           <option value=""> <a href="user_edit">Edit</a> </option>
+                           <option value=""> <a href="user_view">View</a> </option>
+                           <option value=""> <a href="user_attachment">Attachment</a> </option>
+                           <option value=""> <a href="user_comments">Comments</a> </option>
+                        </select>
+                            </td> -->
+
+
                         <td class="text-center"style="color:rgb(13, 1, 56);">
                         <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -78,108 +89,21 @@ table{
                                 <a href="user_comments" style="color:rgb(13, 1, 56);"class="dropdown-item" >Comments</a>
                              
                             </div>
-                        </div>
+                        </div> 
 
-                        </td>
+                       </td>
                      </tr>
 
-                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">   </td>
-                        <td  class="text-center"style="color:rgb(13, 1, 56);">   </td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);">   </td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);">  </td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"> </td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);">   </td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);">  </td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);">   </td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);">   </td>
-                        <td class="text-center"style="color:green;"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                     </tr>
+                    
 
-                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"> </td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:green;"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                     </tr>
+                     
 
-                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"> </td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:green;"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                     </tr>
 
-                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"> </td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:green;"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                     </tr>
 
-                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"> </td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:green;"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                     </tr>
+                  
 
-                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"> </td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:green;"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                     </tr>
-
-                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"> </td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:green;"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                     </tr>
+                    
+                    
                     </table><br>
                            
         </body>

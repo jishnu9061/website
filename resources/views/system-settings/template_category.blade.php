@@ -16,26 +16,23 @@
 "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
     </script>
       <style >
-          body
-        {
-          background-color: white;
-        }
+       
 
              th, td ,tr{
                border: 1px solid  gray ;
                 border-collapse: collapse;
 }
+th{
+    color:white;
+}
 table{
     outline: 1px solid  gray ;
 }
-tr:nth-child(odd) {
+
+/* tr:nth-child(odd) {
             background-color:rgb(198, 195, 211); 
-        }
-        /* tr:nth-child(even)
-        {
-            background-color: rgb(233, 231, 238);
         } */
-          
+      
             </style>
    </head>
    <body>
@@ -49,43 +46,18 @@ tr:nth-child(odd) {
              <table class="table" >
                   
                         <tr>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">No</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Template Category</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Status</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Edit</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);">  <input type="checkbox" ></th>
+                        <th class="text-center" style= "background-color:rgb(177, 127, 62);">No</th>
+                        <th class="text-center" style= "background-color:rgb(177, 127, 62);">Template Category</th>
+                        <th class="text-center" style= "background-color:rgb(177, 127, 62);">Status</th>
+                        <th class="text-center" style= "background-color:rgb(177, 127, 62);">Edit</th>
+                        <th class="text-center" style= "background-color:rgb(177, 127, 62);">  <input type="checkbox" ></th>
                     </tr>
 
                     <tr>
                         <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Business Formation:</td>
                     </tr>
                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">1</td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
-                        <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
-                    </tr>
-                    <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">2</td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
-                        <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
-                    </tr>
-
-                    <tr>
-                        <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Business Operations:</td>
-                    </tr>
-                    <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">1</td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
-                        <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
-                    </tr>
-                    <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">2</td>
+                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
                         <td  style="color:rgb(13, 1, 56);"></td>
                         <td  style="color:rgb(13, 1, 56);"></td>
                         <td  class="text-center" style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
@@ -94,40 +66,41 @@ tr:nth-child(odd) {
                    
 
                     <tr>
-                        <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Business Property:</td>
+                        <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Business Operations:</td>
                     </tr>
                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">1</td>
+                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
                         <td  style="color:rgb(13, 1, 56);"></td>
                         <td  style="color:rgb(13, 1, 56);"></td>
                         <td  class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
                         <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
                     </tr>
+                  
+                   
+
                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">2</td>
+                        <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Business Property:</td>
+                    </tr>
+                    <tr>
+                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
                         <td  style="color:rgb(13, 1, 56);"></td>
                         <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
+                        <td  class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
                         <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
                     </tr>
+                   
 
                     <tr>
                         <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Employment:</td>
                     </tr>
                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">1</td>
+                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
                         <td  style="color:rgb(13, 1, 56);"></td>
                         <td  style="color:rgb(13, 1, 56);"></td>
                         <td  class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
                         <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
                     </tr>
-                    <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">2</td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
-                        <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
-                    </tr>
+                   
                     
 
                     <tr>
@@ -135,38 +108,26 @@ tr:nth-child(odd) {
                     </tr>
                   
                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">1</td>
+                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
                         <td  style="color:rgb(13, 1, 56);"></td>
                         <td  style="color:rgb(13, 1, 56);"></td>
                         <td  class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
                          <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
                     </tr>
-                    <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">2</td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
-                        <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
-                    </tr>
+               
                     
                     <tr>
                         <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Personal & Family:</td>
                     </tr>
                   
                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">1</td>
+                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
                         <td  style="color:rgb(13, 1, 56);"></td>
                         <td  style="color:rgb(13, 1, 56);"></td>
                         <td  class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
                         <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
                     </tr>
-                    <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">2</td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
-                        <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
-                    </tr>
+                 
 
                     
                     <tr>
@@ -174,37 +135,25 @@ tr:nth-child(odd) {
                     </tr>
                   
                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">1</td>
+                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
                         <td  style="color:rgb(13, 1, 56);"></td>
                         <td  style="color:rgb(13, 1, 56);"></td>
                         <td  class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
                         <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
                     </tr>
-                    <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">2</td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
-                        <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
-                    </tr>
+                    
                     <tr>
                         <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Will & Estate Planning:</td>
                     </tr>
                   
                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">1</td>
+                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
                         <td  style="color:rgb(13, 1, 56);"></td>
                         <td  style="color:rgb(13, 1, 56);"></td>
                         <td  class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
                         <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
                     </tr>
-                    <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">2</td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
-                        <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
-                    </tr>
+               
                    
                   
                   
