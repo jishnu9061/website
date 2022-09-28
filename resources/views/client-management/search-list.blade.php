@@ -8,87 +8,51 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 
-  
+  {{-- <div class="spacer" style="height:40px;margin-top: 30px;"> --}}
 
 
 </head>
 
 <body>
-    
-<div class="container">
-    <div class="py-5 text-center">
-        @if(Session::has('staffregistered'))
-            <div class="alert alert-dark" role="alert">
-                {{ Session::get('staffregistered')}}
-            </div>
-        @endif
-        @if(Session::has('leavevalidat'))
-            <div class="alert alert-dark" role="alert">
-                {{ Session::get('leavevalidat')}}
-            </div>
-        @endif
-        {{-- <div class="spacer" style="height:40px;margin-top: 30px;"> --}}
-        <h3 class="text-center" style="color: #070344;"><b>File Instructions</b></h3>
+    <div class="container">
+        <h3 class="text-center" style="color: #070344;"><b>Client List</b></h3>
        <br>
-       <div>
-       <a href="{{url('file_new_instruction')}}"><button class="btn btn-primary add-btn" Style="width:200px;margin-left:-56rem;">Add New Instructions</button></a>
-</div>
-       <br>
+      
+       <div id="mydatatable_filter" class="dataTables_filter">
+        <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
+       </div>
+       <a href="{{url('register-client')}}"><button class="btn btn-primary add-btn">Register Client</button></a>
+       <hr class="mb-4">.
+       
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
-            <table class="table table-bordered" id="new-item"   >
-                <thead style="font-size:15px; width:100%;" >
+            <table class="table table-bordered" id="new-item">
+                <thead>
                     <tr>
-                        <th class="text-center">*</th>
-                        <th class="text-center">Execute</th>
-                        <th class="text-center">ID</th>
-                        <th class="text-center">Post Date</th>
-                        <th class="text-center">Sender</th>
-                        <th class="text-center">Receiver</th>
-                        <th class="text-center">Details</th>
-                        <th class="text-center">Amount</th>
-                        <th class="text-center">Client</th>
-                        <th class="text-center">File</th>
-                        <th class="text-center">Checked By</th>
-                        <th class="text-center">Approved/<br>Rejected By</th>     
-                        <th class="text-center">Accepted By</th>
-                        <th class="text-center">Completed By</th>
-                        <th class="text-center">TAT Date</th>
-                        <th class="text-center">Status </th>
-                       
+                        <th class="text-center"> No</th>
+                        <th class="text-center"> Client Type</th>
+                        <th class="text-center">Client Category</th>
+                        <th class="text-center">File Type</th>
+                        <th class="text-center">Country</th>
+                        <th class="text-center">Status</th>
+                        <th class="text-center">Registration Date</th>
                     </tr>
                 </thead>
-        
-                <tbody  >
-                   
-                        <tr id="data"  >
+                <tbody>
+                        <tr id="data">
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center"></td>
-                          
-                            <td  scope="row" class="text-center" ><button class="btn btn-light" style="color:blue;">Not<br> Checked</button></td>
                         </tr>
-
-                        
-                        
                 </tbody>
-                
-                </table>
-             
+            </table>
+           
+
  <!-- The Modal -->
  <div class="modal fade" id="editmed">
     <div class="modal-dialog modal-xl">
