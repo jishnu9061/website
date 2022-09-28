@@ -19,7 +19,7 @@
        <br>
       
        
-       <a href="{{url('')}}"><button class="btn btn-primary add-btn">Add Template Category</button></a>
+       <a href="{{url('add-template')}}"><button class="btn btn-primary add-btn">Add Template</button></a>
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
     <p style="margin-top:2%;">Total Results:</p>

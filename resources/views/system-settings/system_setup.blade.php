@@ -1,62 +1,19 @@
 @extends('layouts.hmsmain')
 @section('content')
-<html>
-   <head>
-   <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
-    <script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-    </script>
-    <script src=
-"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
-    </script>
-    <script src=
-"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
-    </script>
-      <style >
-     
-     
-         .container{
-         margin-left:0px;
-         width:auto;
-         border:1px solid black;
-         height:100%;
-         }
-        
-         .col-sm
-         {
-        margin-left:2px;
-         margin-top:6px;
-         width:400px;
-         /* background-color:#f0e7ce; */
-         height:350px;
-         }
-         
-         
-     
-     
-            form{
-                margin-left:4px;
-            }
-            table{
-                background-color:#f0e7ce; 
-                border:hidden;
-                font-size:medium;
-                color:black;
-            
-            }
-           th,td,tr{
-            border:hidden;
-            color:black;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Company</title>
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <link rel="stylesheet" href="public/assets/css/logo">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+</head>
 
-           }
-           li
-           {
-            color:blue;
-          }
-           
-       </style>
    </head>
    <body>
     <!-- <h2 class="text-center">Configuration Details</h2><br> -->
@@ -68,7 +25,7 @@
     <div class="col-sm-4 " ><a href="{{url('company_details')}}"><button type="button" class="btn btn-primary btn_align_btn" > Company</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('weekend_holiday')}}"><button type="button" class="btn btn-primary btn_align_btn" >Weekends &  Holidays</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('other_confgn')}}"><button type="button" class="btn btn-primary btn_align_btn" >Other Configurations</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('letter_types')}}"><button type="button" class="btn btn-primary btn_align_btn" > Paired Accounts</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > Paired Accounts</button></a></div>
     <div class="col-sm-4 " > <a><button type="button" class="btn btn-primary btn_align_btn" > File Types</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > Invoice Items</button></a></div>
     <div class="col-sm-4" > <a><button type="button" class="btn btn-primary btn_align_btn" > Currency List</button></a></div>
@@ -115,9 +72,9 @@
         </div>
 </div>
 
-<form>
+<!-- <form>
  <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
-</form>
+</form> -->
 
 </body>
 </html>

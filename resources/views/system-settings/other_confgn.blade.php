@@ -17,16 +17,7 @@
     <hr class="mb-4">.
     <style>
      
-      h2
-    {
-  
-    font-size:large;
-    font-weight:bold;
-    color:rgb(13, 1, 56); 
-    background-color:rgb(177, 127, 62);
-    padding:15px;
-    
-    }
+   
       </style>
 </head>
 <body>
@@ -36,21 +27,21 @@
   <div class="row sm">
     <div class="col-sm-4 " ><a href="{{url('configu_ration')}}"><button type="button" class="btn btn-primary btn_align_btn" > Configurations</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('company_branch')}}"><button type="button" class="btn btn-primary btn_align_btn" > Company Branch</button></a></div>
-    <div class="col-sm-4 " > <a><button type="button" class="btn btn-primary btn_align_btn" >Template Category</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('template_category')}}"><button type="button" class="btn btn-primary btn_align_btn" >Template Category</button></a></div>
 
     <div class="col-sm-4 " > <a href="{{url('letter_types')}}"><button type="button" class="btn btn-primary btn_align_btn" > Letter Types</button></a></div>
-    <div class="col-sm-4 " > <a><button type="button" class="btn btn-primary btn_align_btn" > Payment Items</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('payment_items')}}"><button type="button" class="btn btn-primary btn_align_btn" > Payment Items</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('courts')}}"><button type="button" class="btn btn-primary btn_align_btn" > Courts</button></a></div>
 
-    <div class="col-sm-4" > <a><button type="button" class="btn btn-primary btn_align_btn" > Description Selections</button></a></div>
-    <div class="col-sm-4" > <a><button type="button" class="btn btn-primary btn_align_btn" > Tax Tables</button></a></div>
-    <div class="col-sm-4" > <a><button type="button" class="btn btn-primary btn_align_btn" > Notifications</button></a></div><br><br>
+    <div class="col-sm-4" > <a href="{{url('description_selectn')}}"><button type="button" class="btn btn-primary btn_align_btn" > Description Selections</button></a></div>
+    <div class="col-sm-4" > <a href="{{url('tax_chart')}}"><button type="button" class="btn btn-primary btn_align_btn" > Tax Tables</button></a></div>
+    <div class="col-sm-4" > <a href="{{url('notifications')}}"><button type="button" class="btn btn-primary btn_align_btn" > Notifications</button></a></div><br><br>
    
   </div>
 </div>
-<form>
+<!-- <form>
  <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
-</form>
+</form> -->
 </body>
 </html>
 @endsection

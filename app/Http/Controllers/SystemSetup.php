@@ -113,6 +113,77 @@ class SystemSetup extends Controller
     {
         return view('system-settings.letter_types');
     }
+    public function addlettercategory()
+    {
+        return view('system-settings.add_letter_category');
+    }
+    public function documentlettercategory()
+    {
+        return view('system-settings.document_letter_category');
+    }
+    public function paymentitem()
+    {
+        return view('system-settings.payment_items');
+    }
+    public function addpaymentitem()
+    {
+        return view('system-settings.add_payment_item');
+    }
+    public function descriptionselection()
+    {
+        return view('system-settings.description_selectn');
+    }
+    public function descsel()
+    {
+        return view('system-settings.add_desc_sel');
+    }
+    public function taxchart()
+    {
+        return view('system-settings.tax_chart');
+    }
+    public function addtaxchart()
+    {
+        return view('system-settings.add_tax_chart');
+    }
+    public function addtaxexcise()
+    {
+        return view('system-settings.add_tax_excise');
+    }
+    public function addtaxvat()
+    {
+        return view('system-settings.add_tax_vat');
+    }
+    public function addtaxwht()
+    {
+        return view('system-settings.add_tax_wht');
+    }
+
+    public function addtaxwhtvat()
+    {
+        return view('system-settings.add_tax_wht-vat');
+    }
+    
+    public function notifications()
+    {
+        return view('system-settings.notifications');
+    }
+    public function templatecategory()
+    {
+        return view('system-settings.template_category');
+    }
+    public function addtemplatecategory()
+    {
+        return view('system-settings.add_template_category');
+    }
+    public function documenttemplatecategory()
+    {
+        return view('system-settings.document_template_category');
+    }
+    public function edittemplatecategory()
+    {
+        return view('system-settings.edit_template_category');
+    }
+
 
    
 

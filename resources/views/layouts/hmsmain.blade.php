@@ -554,11 +554,11 @@ color: #1D1D50
                                       @endif
                                            <li class="submenu-item  ">
                                                 <a href="{{ url('ledger_acount_categories') }}" class=" sidebar-link">
-                                                <span id="subm">Account Type</span></a>
+                                                <span  id="subm">Account Type</span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('ledger_acount_subcategories') }}" class="sidebar-link">
-                                               <span  id="subm">Groups</span></a>
+                                               <span  id="">Groups</span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                 <a href="{{ url('ledger_budget_category') }}" class="sidebar-link">
@@ -825,7 +825,7 @@ color: #1D1D50
                                    
                                     </li>
                             @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            <!-- @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i id="icon" class="fa fa-cog"  style="font-weight: 300;"></i>
@@ -833,7 +833,7 @@ color: #1D1D50
                                     </a>
                                    
                                     </li>
-                            @endif
+                            @endif -->
 
                             @if(Auth::user()->role == 'hospitaladmin')
                                 <li class="sidebar-item  has-sub">

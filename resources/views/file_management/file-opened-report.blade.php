@@ -14,46 +14,54 @@
 </head>
 
 <body>
+ 
     <div class="container">
-        <h3 class="text-center" style="color: #070344;"><b>Customer Registration</b></h3>
+        <h3 class="text-center" style="color: #070344;"><b>Files Opened Report</b></h3>
        <br>
-      
-       <div id="mydatatable_filter" class="dataTables_filter">
-        <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
-       </div>
-       <a href="{{url('add-customer')}}"><button class="btn btn-primary add-btn" style="width:18%">Register Customer</button></a>
-       <hr class="mb-4">.
-       <h4 style="text-align:center; padding:12px">Customer List</h4>
-       
+   
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
-            <table class="table table-bordered" id="new-item">
-                <thead>
+            <table class="table table-bordered" id="new-item"   >
+                <thead style="font-size:11px">
                     <tr>
-                        <th class="text-center"> No</th>
-                        <th class="text-center"> Client Name</th>
-                        <th class="text-center">Address</th>
-                        <th class="text-center">Contact</th>
-                        <th class="text-center">Physical Address</th>
-                        <th class="text-center">Registration Date</th>
-                        <th class="text-center">Action</th>   
+                        <th class="text-center">*</th>
+                        <th class="text-center">Client</th>
+                        <th class="text-center">File No</th>
+                        <th class="text-center">File Name</th>
+                        <th class="text-center">File Type</th>
+                        <th class="text-center">Responsible </br>Advocate</th>
+                        <th class="text-center">Partner </br>in Charged</th>
+                        <th class="text-center">Date</br> Opened</th>     
+                        <th class="text-center">Action</th>
+                       
                     </tr>
                 </thead>
-                <tbody>
-                        <tr id="data">
+        
+                <tbody  >
+                   
+                        <tr id="data"  >
+                            
                             <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td><a href="{{url('edit-customer')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td> 
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row"   class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row"class="text-center">
+                            <select name="" id=""> <option value=""> <a href="">Action</a> </option> 
+                           <option value=""> <a href=""></a> </option></select>
+                            </td>
                         </tr>
-                </tbody>
-            </table>
-           
 
+                        
+                        
+                </tbody>
+                
+                </table>
+             
  <!-- The Modal -->
  <div class="modal fade" id="editmed">
     <div class="modal-dialog modal-xl">

@@ -25,7 +25,7 @@ $('#price').prop('readonly', true);
 </script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <div class="col-sm">
-    <a href="{{url('file-list')}}"><button type="submit" style=" height: 3rem; margin-left: 0%; width: 17%; margin-bottom: 13%; background-color:#acacb9;" >Back</button></a>
+   
     
 
   </div>
@@ -283,13 +283,21 @@ $('#price').prop('readonly', true);
   
 
 
-    <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
-      
-      <button type="submit" class="btn">Save Changes</button>
-      <button type="button" class="btn btn-primary submit_btn">Back</button>
-      
-    </div>
+    <div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
 
+            </div>
+            <div class="btn-group pt-3 " role="group" aria-label="Basic example" style="margin-left: 50px;">
+
+                <button type="submit" class="btn btn-primary submit_btn">Save Changes</button>
+                <button type="submit" class="btn btn-primary submit_btn">Back</button>
+
+            </div>
+        </div>
+    </div>
+</div>
    </tbody>
 </table>
    </div>

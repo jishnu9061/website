@@ -682,15 +682,15 @@ Route::any('delete_surgery{id}', 'surgeryController@destroy')->name('delete_surg
 Route::get('calendar-event', 'CalenderController@index')->name('calendar-event');
 Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents']);
 
-//Reshma
-
+//RESHMA
+// system setup index
 Route::any('system_setup','SystemSetup@index')->name('system_setup');
-
+//company_details
 Route::any('company_details','SystemSetup@company')->name('company_details');
 Route::any('add_company_details','SystemSetup@addcompany')->name('add_company_details');
 Route::any('edit_company_details','SystemSetup@editcompany')->name('edit_company_details');
 Route::any('view_company_details','SystemSetup@viewcompany')->name('view_company_details');
-
+//weekend and holiday
 Route::any('weekend_holiday','SystemSetup@holiday')->name('weekend_holiday');
 Route::any('add_new_holiday','SystemSetup@addholiday')->name('add_new_holiday');
 Route::any('edit_holiday','SystemSetup@editholiday')->name('edit_holiday');
@@ -700,53 +700,48 @@ Route::any('holiday_2019','SystemSetup@holiday2019')->name('holiday_2019');
 Route::any('holiday_2020','SystemSetup@holiday2020')->name('holiday_2020');
 Route::any('holiday_2021','SystemSetup@holiday2021')->name('holiday_2021');
 Route::any('holiday_2022','SystemSetup@holiday2022')->name('holiday_2022');
-
+//Other Configuration
 Route::any('other_confgn','SystemSetup@othrconftn')->name('other_confgn');
+//Company branch
 Route::any('company_branch','SystemSetup@branch')->name('company_branch');
 Route::any('add_company_branch','SystemSetup@addbranch')->name('add_company_branch');
 Route::any('edit_company_branch','SystemSetup@editbranch')->name('edit_company_branch');
+//configurations
 Route::any('configu_ration','SystemSetup@Configtn')->name('configu_ration');
+//courts
 Route::any('courts','SystemSetup@courts')->name('courts');
 Route::any('add_court','SystemSetup@addcourt')->name('add_court');
 Route::any('edit_court','SystemSetup@editcourt')->name('edit_court');
 Route::any('add_court_category','SystemSetup@addcourtcategory')->name('add_court_category');
+//letter types
 Route::any('letter_types','SystemSetup@lettertype')->name('letter_types');
+Route::any('add_letter_category','SystemSetup@addlettercategory')->name('add_letter_category');
+Route::any('document_letter_category','SystemSetup@documentlettercategory')->name('document_letter_category');
+//payment items
+Route::any('payment_items','SystemSetup@paymentitem')->name('payment_items');
+Route::any('add_payment_item','SystemSetup@addpaymentitem')->name('add_payment_item');
+//description selection
+Route::any('description_selectn','SystemSetup@descriptionselection')->name('description_selectn');
+Route::any('add_desc_sel','SystemSetup@descsel')->name('add_desc_sel');
+//tax chart
+Route::any('tax_chart','SystemSetup@taxchart')->name('tax_chart');
+Route::any('add_tax_chart','SystemSetup@addtaxchart')->name('add_tax_chart');
+Route::any('add_tax_excise','SystemSetup@addtaxexcise')->name('add_tax_excise');
+Route::any('add_tax_vat','SystemSetup@addtaxvat')->name('add_tax_vat');
+Route::any('add_tax_wht','SystemSetup@addtaxwht')->name('add_tax_wht');
+Route::any('add_tax_wht-vat','SystemSetup@addtaxwhtvat')->name('add_tax_wht-vat');
+//notifications
+Route::any('notifications','SystemSetup@notifications')->name('notifications');
+//template category
+Route::any('template_category','SystemSetup@templatecategory')->name('template_category');
+Route::any('add_template_category','SystemSetup@addtemplatecategory')->name('add_template_category');
+Route::any('document_template_category','SystemSetup@documenttemplatecategory')->name('document_template_category');
+Route::any('edit_template_category','SystemSetup@edittemplatecategory')->name('edit_template_category');
+
+//RESHMA
 
 
-// Route::any('company_details','SystemSetting@index')->name('company_details');
-// Route::any('add_company_details','SystemSetting@addcompany')->name('add_company_details');
-// Route::any('edit_company_details','SystemSetting@editcompany')->name('edit_company_details');
-// Route::any('view_company_details','SystemSetting@viewcompany')->name('view_company_details');
-
-// Route::any('weekend_holiday','Holidays@index')->name('weekend_holiday');
-// Route::any('add_new_holiday','Holidays@addholiday')->name('add_new_holiday');
-// Route::any('edit_holiday','Holidays@editholiday')->name('edit_holiday');
-// Route::any('holiday_2017','Holidays@holiday2017')->name('holiday_2017');
-// Route::any('holiday_2018','Holidays@holiday2018')->name('holiday_2018');
-// Route::any('holiday_2019','Holidays@holiday2019')->name('holiday_2019');
-// Route::any('holiday_2020','Holidays@holiday2020')->name('holiday_2020');
-// Route::any('holiday_2021','Holidays@holiday2021')->name('holiday_2021');
-// Route::any('holiday_2022','Holidays@holiday2022')->name('holiday_2022');
-
-
-
-// Route::any('other_confgn','OtherConfigtn@index')->name('other_confgn');
-// Route::any('company_branch','OtherConfigtn@branch')->name('company_branch');
-// Route::any('add_company_branch','OtherConfigtn@addbranch')->name('add_company_branch');
-// Route::any('edit_company_branch','OtherConfigtn@editbranch')->name('edit_company_branch');
-// Route::any('configu_ration','OtherConfigtn@Configtn')->name('configu_ration');
-
-// Route::any('company_branch','CompanyBranch@index')->name('company_branch');
-// Route::any('add_company_branch','CompanyBranch@addbranch')->name('add_company_branch');
-// Route::any('edit_company_branch','CompanyBranch@editbranch')->name('edit_company_branch');
-// Route::any('company_branch','CompanyBranch@index')->name('company_branch');
-
-//Route::any('configu_ration','Configuration@index')->name('configu_ration');
-
-//Reshma
-
-
-//mugunth
+//mugunthan
 
 //Client-list
 Route::any('add_newclient',"ClientManagement@create")->name('add_newclient');
@@ -789,14 +784,18 @@ Route::any('Quotation','ClientManagement@Quotation')->name('Quotation');
 Route::any('new-Quotation','ClientManagement@newQuotation')->name('new-Quotation');
 Route::any('edit-Quotation','ClientManagement@editQuotation')->name('edit-Quotation');
 //end Quotation
+//Registration
+Route::any('view-registration','ClientManagement@viewRegistration')->name('view-registration');
+Route::any('add-registration','ClientManagement@addRegistration')->name('add-registration');
+Route::any('edit-registration','ClientManagement@editRegistration')->name('edit-registration');
+//end registration
+//communication
+Route::any('communication-list','ClientManagement@listCommunication')->name('communication-list');
+Route::any('add-communication','ClientManagement@addCommunication')->name('add-communication');
+Route::any('edit-communication','ClientManagement@editCommunication')->name('edit-communication');
+//end communication
 
-//customer-registration
-Route::any('customer-registration','ClientManagement@customer')->name('customer-registration');
-Route::any('add-customer','ClientManagement@addCustomer')->name('add-customer');
-Route::any('edit-customer','ClientManagement@editCustomer')->name('edit-customer');
-//end customer-registration
-
-//mugunth
+//mugunthan
 
 
 
@@ -811,6 +810,7 @@ Route::any('add-new-file',"filemanagement@addnew")->name('add-new-file');
 
 //document templates
 Route::any('template-category',"filemanagement@template")->name('template-category');
+Route::any('add-template',"filemanagement@addtemplate")->name('add-template');
 //document templates
 
 //file progress
@@ -819,20 +819,84 @@ Route::any('edit-file-progress',"filemanagement@editprogress")->name('edit-file-
 Route::any('progress-bringup',"filemanagement@progressbringup")->name('progress-bringup');
 Route::any('add-new-bringup',"filemanagement@addbringup")->name('add-new-bringup');
 
-
-
-Route::any('new-instructions',"filemanagement@newinstruction")->name('new-instructions');
-
 Route::any('file-action-hours',"filemanagement@fileactionhours")->name('file-action-hours');
-//file progress
+Route::any('add-file-progress-action',"filemanagement@addfileprogressaction")->name('add-file-progress-action');
+Route::any('add-file-bringup-reminder',"filemanagement@addfilebringupreminder")->name('add-file-bringupreminder');
+Route::any('book-court',"filemanagement@bookcourt")->name('book-court');
+Route::any('court-attendance-sheet',"filemanagement@courtattendance")->name('court-attendance-sheet');
+Route::any('arbiration-sheet',"filemanagement@arbirationsheet")->name('arbiration-sheet');
+Route::any('conveyance-sheet',"filemanagement@conveyance")->name('conveyance-sheet');
+Route::any('file-progress-list',"filemanagement@fileprogresslist")->name('file-progress-list');
+
+
+//notes
+Route::any('diary-management',"filemanagement@diarymanagement")->name('diary-management');
+Route::any('add-event',"filemanagement@addevent")->name('add-event');
+//document manager
+Route::any('document-manager',"filemanagement@documentmanager")->name('document-manager');
+Route::any('upload-document',"filemanagement@uploaddocument")->name('upload-document');
+Route::any('generate-document',"filemanagement@generatedocument")->name('generate-document');
+//document manager
+//vinu
+
+//file status report
+Route::any('client-monthly-file-status','filemanagement@clientmonthlystatus')->name('client-monthly-file-status');
+Route::any('staff-monthly-status-report',"filemanagement@staffmonthlystatusreport")->name('staff-monthly-status-report');
+Route::any('file-list-progress-report',"filemanagement@filelistprogressreport")->name('file-list-progress-report');
+Route::any('bringup',"filemanagement@bringup")->name('bringup');
+//file status report
+
+
+//file report
+Route::any('file-report',"filemanagement@filereport")->name('file-report');
+Route::any('file-opened-report',"filemanagement@fileopenreport")->name('file-opened-report');
+Route::any('file-closed-report',"filemanagement@fileclosedreport")->name('file-closed-report');
+Route::any('file-pending',"filemanagement@filepending")->name('file-pending');
+Route::any('file-pending-approval',"filemanagement@filependingapproval")->name('file-pending-approval');
+Route::any('instructions-past',"filemanagement@instructionspast")->name('instructions-past');
+//file report
+
+//add ons
+Route::any('outgoing-letters',"filemanagement@outgoingletter")->name('outgoing-letters');
+Route::any('add-outgoing-letters',"filemanagement@addoutgoingletters")->name('add-outgoing-letters');
+Route::any('incomming-letters',"filemanagement@incommingletters")->name('incomming-letters');
+Route::any('add-incomming-letters',"filemanagement@addincommingletters")->name('add-incomming-letters');
+Route::any('safe-item-request',"filemanagement@safeitemrequest")->name('safe-item-request');
+
+Route::any('safe-register-report',"filemanagement@saferegisterreport")->name('safe-register-report');
+//add ons
+
+
 //vinu
 
 //beljin
 
 Route::any('/u_details',"filemanagement@u_details")->name('u_details');
-Route::any('/add_user',"filemanagement@add_user")->name('add_user');
-Route::any('/change_password',"filemanagement@change_password")->name('change_password');
+
 //beljin
+
+
+//Anandhu
+Route::any('/office_instructions',"filemanagement@new_instructions")->name('new_instruction');
+
+Route::any('/new_office_instructions',"filemanagement@add_new_instructions")->name('add_new_instructions');
+
+Route::any('/instructions_report',"filemanagement@view_new_instructions")->name('view_new_instructions');
+
+Route::any('/file_instruction',"filemanagement@new_file_instructions")->name('new_file_instructions');
+
+Route::any('/file_new_instruction',"filemanagement@add_new_file_instructions")->name('add_new_file_instructions');
+
+Route::any('/Safe_management',"filemanagement@safe_management_list")->name('safe_management_list');
+
+Route::any('/new_Safe_management',"filemanagement@new_safe_management_list")->name('new_safe_management_list');
+
+Route::any('/Request_staff_item',"filemanagement@Request_staff_item_list")->name('Request_staff_item_list');
+
+Route::any('/new_Request_staff_item',"filemanagement@add_Request_staff_item_list")->name('add_Request_staff_item_list');
+
+Route::any('/Process_Request',"filemanagement@Process_Request_list")->name('Process_Request_list');
+
 
 
 ?>

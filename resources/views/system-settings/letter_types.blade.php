@@ -50,7 +50,7 @@ td:nth-child(odd) {
     <!-- <h2 >Court List</h2><br>
     <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
     <h2 style="text-align:center; text-shadow: 2px 1px;">Letter Category</h2>
-        <a href="{{('add_court')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Letter Category</button></a>
+        <a href="{{('add_letter_category')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Letter Category</button></a>
         <hr class="mb-4">.
     <!-- <div class="container"> -->
       <div class="mydiv">
@@ -65,7 +65,7 @@ td:nth-child(odd) {
                     </tr>
 
                     <tr>
-                        <td colspan="4"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Business:</td>
+                        <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Business:</td>
                     </tr>
                     <tr>
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></td>
@@ -76,7 +76,7 @@ td:nth-child(odd) {
                     </tr>
 
                     <tr>
-                        <td colspan="4"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Financial :</td>
+                        <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Financial :</td>
                     </tr>
                     <tr>
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></th>
@@ -101,7 +101,7 @@ td:nth-child(odd) {
                     </tr>
 
                     <tr>
-                        <td colspan="4"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Personal & Family:</td>
+                        <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Personal & Family:</td>
                     </tr>
                     <tr>
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></th>
@@ -119,7 +119,7 @@ td:nth-child(odd) {
                     </tr>
 
                     <tr>
-                        <td colspan="4"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Real Estate:</td>
+                        <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Real Estate:</td>
                     </tr>
                     <tr>
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></th>
@@ -137,7 +137,7 @@ td:nth-child(odd) {
                     </tr>
 
                     <tr>
-                        <td colspan="4"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Will & Estate Planning :</td>
+                        <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Will & Estate Planning :</td>
                     </tr>
                     <tr>
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></th>
@@ -155,7 +155,7 @@ td:nth-child(odd) {
                     </tr>
 
                     <tr>
-                        <td colspan="4"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Procurement Documents:</td>
+                        <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Procurement Documents:</td>
                     </tr>
                     <tr>
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></th>
@@ -173,7 +173,7 @@ td:nth-child(odd) {
                     </tr>
 
                     <tr>
-                        <td colspan="4"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Human Resource :</td>
+                        <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Human Resource :</td>
                     </tr>
                     <tr>
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></th>
@@ -191,7 +191,7 @@ td:nth-child(odd) {
                     </tr>
 
                     <tr>
-                        <td colspan="4"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Administration:</td>
+                        <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Administration:</td>
                     </tr>
                     <tr>
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></th>
@@ -221,9 +221,9 @@ td:nth-child(odd) {
     <br>
     <br>
     </div>
-    <form>
+    <!-- <form>
  <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
-</form>
+</form> -->
         </body>
 </html>
   @endsection

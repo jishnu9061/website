@@ -158,15 +158,15 @@ a.button4{
             </div>
 
         
-            <input  type="submit"value="Save" name="Submit"style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105); ">
+            <input  type="submit"value="Save" name="Submit"style="background-color:rgb(13, 1, 56);color: white ">
   
-  <input type="button"value="Close" name="close"style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105); ">
+  <input type="button"value="Close" name="close"style="background-color:rgb(13, 1, 56);color: white">
 
     </div>
     </form>
-    <form>
+    <!-- <form>
  <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
-</form>
+</form> -->
    
     
     </body>
