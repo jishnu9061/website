@@ -3,37 +3,35 @@
 @section('content')
 <html>
    <head>
-   <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
-    <script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-    </script>
-    <script src=
-"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
-    </script>
-    <script src=
-"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
-    </script>
-      <style >
-       
-
-             th, td ,tr{
-               border: 1px solid  gray ;
-                border-collapse: collapse;
-}
-th{
-    color:white;
-}
-table{
-    outline: 1px solid  gray ;
-}
+   <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+      
+      <style>
+      th, td ,tr
+      {
+        border: 1px solid  gray ;
+        border-collapse: collapse;
+    }
+    th
+    {
+        color:white;
+    }
+    table
+    {
+         outline: 1px solid  gray ;
+        }
 
 /* tr:nth-child(odd) {
             background-color:rgb(198, 195, 211); 
         } */
       
-            </style>
+</style>
    </head>
    <body>
     <!-- <h2 >Court List</h2><br>
@@ -43,17 +41,18 @@ table{
         <hr class="mb-4">.
     <!-- <div class="container"> -->
       <div class="mydiv">
-             <table class="table" >
-                  
+      <table class="table table-bordered" id="new-item">
+        <thead>
                         <tr>
-                        <th class="text-center" style= "background-color:rgb(177, 127, 62);">No</th>
-                        <th class="text-center" style= "background-color:rgb(177, 127, 62);">Template Category</th>
-                        <th class="text-center" style= "background-color:rgb(177, 127, 62);">Status</th>
-                        <th class="text-center" style= "background-color:rgb(177, 127, 62);">Edit</th>
-                        <th class="text-center" style= "background-color:rgb(177, 127, 62);">  <input type="checkbox" ></th>
+                        <th class="text-center" >No</th>
+                        <th class="text-center" >Template Category</th>
+                        <th class="text-center" >Status</th>
+                        <th class="text-center" >Edit</th>
+                        <th class="text-center" >  <input type="checkbox" ></th>
                     </tr>
-
-                    <tr>
+     </thead>
+     <tbody>
+        <tr>
                         <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Business Formation:</td>
                     </tr>
                     <tr>
@@ -153,7 +152,7 @@ table{
                         <td  class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
                         <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
                     </tr>
-               
+    </tbody>
                    
                   
                   

@@ -3,35 +3,20 @@
 @section('content')
 <html>
    <head>
-   <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
-    <script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-    </script>
-    <script src=
-"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
-    </script>
-    <script src=
-"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
-    </script>
+   <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
       <style >
           body
         {
           background-color: white;
         }
-        /* h2
-        {
-            font-size:large;
-            font-weight:bold;
-             color:rgb(13, 1, 56); 
-             background-color:rgb(177, 127, 62);
-             padding:15px;
-            } */
-       
-        
-     
-         /* background-color:#f0e7ce;  */
+      
       
              th, td ,tr{
                border: 1px solid  gray ;
@@ -40,9 +25,9 @@
 table{
     outline: 1px solid  gray ;
 }
-td:nth-child(odd) {
+/* td:nth-child(odd) {
             background-color:rgb(198, 195, 211); 
-        }
+        } */
           
             </style>
    </head>
@@ -53,17 +38,19 @@ td:nth-child(odd) {
         <a href="{{('add_court')}}"><button class="btn btn-primary add-btn">Add Court</button></a>
         <a href="{{('add_court_category')}}"><button class="btn btn-primary add-btn">Add New Court Category</button></a>
   <hr class="mb-4">.
+  
     <!-- <div class="container"> -->
       <div class="mydiv">
-             <table class="table" >
-                  
+      <table class="table table-bordered" id="new-item">
+                  <thead>
                         <tr>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">No</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Court Name</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Edit</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;"class="text-center"><input type="radio"></th>
+                        <th class="text-center" >No</th>
+                        <th class="text-center" >Court Name</th>
+                        <th class="text-center" >Edit</th>
+                        <th class="text-center"><input type="radio"></th>
                     </tr>
-
+    </thead>
+    <tbody>
                     <tr>
                         <td colspan="4"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Supreme Court :</td>
                     </tr>
@@ -156,7 +143,7 @@ td:nth-child(odd) {
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_court')}}">Edit</td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
                     </tr>
-                   
+    </tbody>
                 </table>
                 <div class="class"style="text-align:right;">
                 <select style="width:10%;height:100%;color:white;font-size:small;background-color:rgb(13, 1, 56);"type="text" value="" name="type">

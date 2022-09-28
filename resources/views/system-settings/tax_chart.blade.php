@@ -3,18 +3,14 @@
 @section('content')
 <html>
    <head>
-   <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
-    <script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-    </script>
-    <script src=
-"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
-    </script>
-    <script src=
-"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
-    </script>
+   <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
       <style >
           body
         {
@@ -28,10 +24,11 @@
 table{
     outline: 1px solid  gray;
 }
- tr:nth-child(odd)
+ /* tr:nth-child(odd)
 {
     background-color:rgb(198, 195, 211);
-}            </style>
+}            */
+ </style>
    </head>
    <body>
     <!-- <h2 >Court List</h2><br>
@@ -54,21 +51,23 @@ table{
   </button></a>
   </div>
   <hr class="mb-4">.
-  <table class="table" >
+  <table class="table table-bordered" id="new-item">
+    <thead>
   <h6 style="text-align:center;color:rgb(13, 1, 56);"><span class="border "style="background-color:rgb(198, 195, 211); "> Tax Chart</span></h6><br>
             
                  
                         <tr>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">No</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Tax Brand</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Lower Limit</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Upper Limit</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Rate(%)</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Status</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Action</th>
+                        <th class="text-center" >No</th>
+                        <th class="text-center" >Tax Brand</th>
+                        <th class="text-center" >Lower Limit</th>
+                        <th class="text-center">Upper Limit</th>
+                        <th class="text-center" >Rate(%)</th>
+                        <th class="text-center" >Status</th>
+                        <th class="text-center">Action</th>
                        
                     </tr>
-             
+                </thead>
+                <tbody>
             
                     <tr>
                         <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
@@ -81,18 +80,20 @@ table{
                         <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                             <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
                         </tr>
-                       
+                    </tbody>  
                         </table><br>
-                        
-                        <table class="table" >
+                        <table class="table table-bordered" id="new-item">
+                            <thead>
                             <h6 style="text-align:center;color:rgb(13, 1, 56);"><span class="border "style="background-color:rgb(198, 195, 211); "> Tax Excise</span></h6><br>
                             <tr>
-                                <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">No</th>
-                                <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Tax Name</th>
-                                <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Tax Value(%)</th>
-                                <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Status</th>
-                                <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Action</th>
+                                <th class="text-center" >No</th>
+                                <th class="text-center" >Tax Name</th>
+                                <th class="text-center" >Tax Value(%)</th>
+                                <th class="text-center" >Status</th>
+                                <th class="text-center" >Action</th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr>
                                 <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
                                 <td class="text-center" style="color:rgb(13, 1, 56);"></td>
@@ -102,20 +103,24 @@ table{
                                  <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                                 <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
                             </tr>
+                        </tbody>
 
                      
                         </table><br>
 
-                        <table class="table" >
+                        <table class="table table-bordered" id="new-item">
+                            <thead>
                             <h6 style="text-align:center;color:rgb(13, 1, 56);"><span class="border "style="background-color:rgb(198, 195, 211); "> Tax VAT</span></h6><br>
                             <tr>
-                                <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">No</th>
-                                <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Tax Name</th>
-                                <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Tax Value(%)</th>
-                                <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Tax Ordering</th>
-                                <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Status</th>
-                                <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Action</th>
+                                <th class="text-center" >No</th>
+                                <th class="text-center" >Tax Name</th>
+                                <th class="text-center">Tax Value(%)</th>
+                                <th class="text-center" >Tax Ordering</th>
+                                <th class="text-center" >Status</th>
+                                <th class="text-center" >Action</th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr>
                                 <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
                                 <td class="text-center" style="color:rgb(13, 1, 56);"></td>
@@ -126,19 +131,22 @@ table{
                                  <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                                 <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
                             </tr>
+                        </tbody>
+                    </table><br>
 
-                      
-</table><br>
-                        <table class="table" >
+                    <table class="table table-bordered" id="new-item">
+                        <thead>
                             <h6 style="text-align:center;color:rgb(13, 1, 56);"><span class="border "style="background-color:rgb(198, 195, 211); "> Tax WHT</span></h6><br>
                             <tr>
-                                <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">No</th>
-                                <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Tax Name</th>
-                                <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Tax Value(%)</th>
+                                <th class="text-center" >No</th>
+                                <th class="text-center" >Tax Name</th>
+                                <th class="text-center" >Tax Value(%)</th>
 
-                                <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Status</th>
-                                <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Action</th>
+                                <th class="text-center" >Status</th>
+                                <th class="text-center" >Action</th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr>
                                 <td  class="text-center" style="color:rgb(13, 1, 56);">1</td>
                                 <td class="text-center" style="color:rgb(13, 1, 56);"></td>
@@ -149,17 +157,21 @@ table{
                                  <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                                 <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
                             </tr>
-</table><br>
-                            <table class="table" >
+                        </tbody>
+                    </table><br>
+                    <table class="table table-bordered" id="new-item">
+                        <thead>
                             <h6 style="text-align:center;color:rgb(13, 1, 56);"><span class="border "style="background-color:rgb(198, 195, 211); "> Tax VAT-WHT</span></h6><br>
                             <tr>
-                                <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">No</th>
-                                <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Tax Name</th>
-                                <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Tax Value(%)</th>
+                                <th class="text-center" >No</th>
+                                <th class="text-center" >Tax Name</th>
+                                <th class="text-center" >Tax Value(%)</th>
 
-                                <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Status</th>
-                                <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Action</th>
+                                <th class="text-center" >Status</th>
+                                <th class="text-center">Action</th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr>
                                 <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
                                 <td class="text-center" style="color:rgb(13, 1, 56);"></td>
@@ -170,6 +182,7 @@ table{
                                  <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                                 <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
                             </tr>
+                        </tbody>
                             </table><br>
                           
 
