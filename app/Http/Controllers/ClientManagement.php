@@ -225,4 +225,13 @@ class ClientManagement extends Controller
         return view('client-management.edit-communication');
     }
 
+
+    public function listSearch(){
+        return view('client-management.search-list');
+    }
+
+
+    public function registerClient(){
+        return view('client-management.register-client');
+    }
 }
