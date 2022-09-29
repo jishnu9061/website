@@ -15,6 +15,9 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 </head>
 <body>
+  <button class="btn btn-primary"
+  style="width:100%;background-color:#d6ba8a;color:white;border:1px solid gold;font-width:150%"><span class="font-size-lg">Client Management Details</span></button><br><br><br>
+  <br>
   <button class="btn btn-primary float-left" style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Client Management</button><br><br><br>
 <div class="container-fluid">
   
