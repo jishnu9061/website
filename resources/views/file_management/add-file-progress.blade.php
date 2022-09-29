@@ -295,19 +295,20 @@
     </div>
     <br>
     <div class="container">
-  <div class="row">
-    <div class="col-sm">
-    
-    </div>
-    <div class="col-sm">
-    <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Edit File Progress</button>
+        <div class="row">
+            <div class="col-sm">
 
-    
-    <button type="submit" class="btn btn-primary submit_btn btn_align">Close</button>
+            </div>
+            <div class="btn-group pt-3 " role="group" aria-label="Basic example" style="margin-left: 50px;">
 
+                <button type="submit" class="btn btn-primary submit_btn">Edit File Progress</button>
+                <button type="submit" class="btn btn-primary submit_btn">Close</button>
+
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+</div>   
+   
      
     
    
