@@ -18,7 +18,7 @@ $('#price').prop('readonly', true);
 </script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <div>
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Edit Customer Detials</h2>
+    <h2 style="text-align:center;">Edit Customer Detials</h2>
     <hr class="mb-4">.
 </div>
 </div>
