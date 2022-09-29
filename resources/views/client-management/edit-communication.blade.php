@@ -4,7 +4,7 @@
   <div class="py-5 text-center">
 
 <div>
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Edit Communication</h2>
+    <h2 style="text-align:center; ">Edit Communication</h2>
     <hr class="mb-4">.
 </div>
 </div>

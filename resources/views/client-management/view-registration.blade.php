@@ -15,7 +15,7 @@
 
 <body>
     <div class="container">
-        <h2  style="color: #070344; text-shadow: 1px 2px; text-align:center;"><b>Customer Registration</b></h2>
+        <h2  style="color: #070344;  text-align:center;"><b>Customer Registration</b></h2>
         <div class="container mt-5">
         <a href="{{url('add-registration')}}"><button type="button" class="btn btn-primary complaint_btn btn " >Register Customer</button></a>
         <div id="mydatatable_filter" class="dataTables_filter">
@@ -23,7 +23,7 @@
        </div>
         </div>
         <hr class="mb-4">.
-        <h3  style="color: #070344; text-shadow: 1px 2px; text-align:center;"><b>Customer List</b></h3>
+        <h3  style="color: #070344;  text-align:center;"><b>Customer List</b></h3>
        <br>
      
       

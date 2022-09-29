@@ -20,6 +20,7 @@
 <div class="container-fluid">
   
   <div class="row sm">
+<<<<<<< Updated upstream
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-7.png" alt=""><a href ="{{url('client_list')}}"><button type="button" class="btn btn-primary btn_align_btn" > Client List</button></a></div>
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-8.png" alt=""><a href ="{{url('client-pickup')}}"><button type="button" class="btn btn-primary btn_align_btn" >Client Pickup At Reception</button></a></div>
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-1.png" alt=""><a href ="{{url('search-list')}}"><button type="button" class="btn btn-primary btn_align_btn" >Client Search</button></a></div>
@@ -27,6 +28,24 @@
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-6.png" alt=""> <a href ="{{url('client-document')}}"><button type="button" class="btn btn-primary btn_align_btn" > Document Detials</button></a></div>
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-3.png" alt=""><a href ="{{url('communication-list')}}"><button type="button" class="btn btn-primary btn_align_btn" > Client Conversations</button></a></div>
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-3.png" alt=""> <a href ="complaint-list"><button type="button" class="btn btn-primary btn_align_btn" > Complaint Register</button></a></div>
+=======
+  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-7.png" alt=""><a href="{{url('client_list')}}"><button type="button" class="btn btn-primary btn_align_btn" > Client List</button></a></div>
+  
+  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-1.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" >Client Search</button></a></div>
+  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-3.png" alt=""><a href="{{url('client-service')}}"><button type="button" class="btn btn-primary btn_align_btn" > Client Services Communication</button></a></div>
+  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-3.png" alt=""> <a href="complaint-list"><button type="button" class="btn btn-primary btn_align_btn" > Complaint Registration</button></a></div>
+  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-4.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > CRM</button></a></div>
+  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-8.png" alt=""><a href="{{url('client-pickup')}}"><button type="button" class="btn btn-primary btn_align_btn" >New Client Pickup</button></a></div>
+  
+  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-2.png" alt=""><button type="button" class="btn btn-primary btn_align_btn" > New Quoation</button></a></div>
+  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-2.png" alt=""><a href="{{url('follow-up')}}"><button type="button" class="btn btn-primary btn_align_btn" >Follow up</button></a></div>
+  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-8.png" alt=""><a href="{{url('client-pickup')}}"><button type="button" class="btn btn-primary btn_align_btn" >Client Pickup At Reception</button></a></div>
+  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-1.png" alt=""><a><button type="button" class="btn btn-primary btn_align_btn" >Client Search</button></a></div>
+  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-3.png" alt=""><a href="{{url('client-service')}}"><button type="button" class="btn btn-primary btn_align_btn" > Client Services At Reception</button></a></div>
+  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-6.png" alt=""> <a href="{{url('client-document')}}"><button type="button" class="btn btn-primary btn_align_btn" > Document Detials</button></a></div>
+  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-3.png" alt=""><a href="{{url('communication-list')}}"><button type="button" class="btn btn-primary btn_align_btn" > Client Conversations</button></a></div>
+  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-3.png" alt=""> <a href="complaint-list"><button type="button" class="btn btn-primary btn_align_btn" > Complaint Register</button></a></div>
+>>>>>>> Stashed changes
   </div>
   <br>
   <h3 style="text-align:center"><b>Customer Relationship Manager</b></h3>

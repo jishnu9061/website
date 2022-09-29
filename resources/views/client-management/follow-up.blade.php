@@ -15,12 +15,12 @@
 
 <body>
     <div class="container">
-        <h1  style="color: #070344; text-shadow: 1px 2px; text-align:center;"><b>Customer Follow Up</b></h1>
+        <h1  style="color: #070344;  text-align:center;"><b>Customer Follow Up</b></h1>
         <div class="container mt-5">
         <a href="{{url('add-follow')}}"><button type="button" class="btn btn-primary complaint_btn" > Add Follow Up</button></a>
         </div>
         <hr class="mb-4">.
-        <h3  style="color: #070344; text-shadow: 1px 2px; text-align:center;"><b>List Of Follow Ups</b></h3>
+        <h3  style="color: #070344;  text-align:center;"><b>List Of Follow Ups</b></h3>
        <br>
      
       
