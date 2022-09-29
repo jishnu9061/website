@@ -17,7 +17,7 @@
    
 <div style="display:flex; margin-bottom: 10%; margin-top: -4%;">
     <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" style="width:97%; background-color: rgb(177, 127, 62);" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn btn-primary add-btn" type="button" style="width:97%;" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Add New Progress
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -30,7 +30,7 @@
 </div>
 
 <div class="dropdown" style="margin-left:10px;">
-  <button class="btn btn-secondary dropdown-toggle" type="button" style="width:97%; background-color: rgb(177, 127, 62);" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn btn-primary add-btn" type="button" style="width:97%;" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Dispute Resolution forms
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">

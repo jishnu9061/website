@@ -2,6 +2,7 @@
 @section('content')
 <!DOCTYPE html>
 <html lang="en">
+  <div class="container">
 <head>
   <title>Client</title>
   <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -75,5 +76,6 @@
   </div>
 
 </body>
+</div>
 </html>
 @endsection
