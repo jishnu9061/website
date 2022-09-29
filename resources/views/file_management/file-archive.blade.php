@@ -14,56 +14,60 @@
 </head>
 
 <body>
-
-<div class="dropdown">
-<button class="btn btn-primary add-btn" type="button" style="width:20%;" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Upload Document
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="{{url('upload-document')}}">File Upload</a>
-    <a class="dropdown-item" href="{{url('generate-document')}}">Generate Document</a>
-  </div>
-</div>
- 
-    <div class="container">
-        <h3 class="text-center" style="color: #070344;"><b>Document Manager(DMS)</b></h3>
-       <br>
    
+    <div class="col-sm">
+   
+    
+
+  </div>
+    <div class="container">
+        <h3 class="text-center" style="color: #070344;"><b>File Archive</b></h3>
+       <br>
+      
+       <div id="mydatatable_filter" class="dataTables_filter">
+        <label><b>Search:</b><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
+       </div>
+       <a href="{{url('add-box-no')}}"><button class="btn btn-primary add-btn" style="width: 15%; margin-bottom:5%;" >Add Box No</button></a>
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
-            <table class="table table-bordered" id="new-item"   >
-                <thead style="font-size:11px">
+            <table class="table table-bordered" id="new-item">
+                <thead>
                     <tr>
                         <th class="text-center">*</th>
-                        <th class="text-center">Type</th>
-                        <th class="text-center">Description</t>  
-                        <th class="text-center">Action</th>
-                       
+                        <th class="text-center">Archive No</th>
+                        <th class="text-center">Archive Date</th>
+                        <th class="text-center">Client Name</th>
+                        <th class="text-center">File Number</th>
+                        <th class="text-center">File Name</th>
+                        <th class="text-center">File Closed</br>Number</th>
+                        <th class="text-center">Date Closed</th>
+                        <th class="text-center">Edit</th>
+                        <th class="text-center">View</th>
+                        <th class="text-center">Actions</th>
                     </tr>
                 </thead>
-        
-                <tbody  >
-                   
-                        <tr id="data"  >
-                            
+                <tbody>
+                        <tr id="data">
                             <td  scope="row" class="text-center"></td>
                             <td  scope="row" class="text-center"></td>
-                            <td  scope="row"   class="text-center"></td>
-                            
-                            <td  scope="row"class="text-center">
-                                Action
-                           <select name="" id=""> <option value=""> <a href=""></a> </option> 
-                           <option value=""> <a href=""></a> </option></select>
-                            </td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row"class="text-center"><a href=""><i  style="color:black;" class="fa fa-eye" aria-hidden="true"></i>
+                           <input type="hidden" value="" id="medicine_id_hidden" class="applicate" name="supplier_id_hidden">
+                            <a href="{{url('edit-box-no')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
+                            <a  onClick="return myFunction();" href="" style="color:black;"><i class="fas fa-trash-alt"></i></a></td>
                         </tr>
-
-                        
-                        
                 </tbody>
-                
-                </table>
-             
+            </table>
+           
+
  <!-- The Modal -->
  <div class="modal fade" id="editmed">
     <div class="modal-dialog modal-xl">
