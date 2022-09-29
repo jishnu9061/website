@@ -6,39 +6,12 @@
    <div class="alert alert-dark" role="alert">
    {{ Session::get('staffregistered')}}
    </div>
-@endif
-
-</div>
-<div style="height: 50px;">
-
-</div>
-
- <style>
-
-/* .col-md-3 {
-    flex: 0 0 auto;
-    width: 40%;
-    margin-left: 64px;
-}
-
-.al_ign{
-  
-  margin-left:22%;
-} */
-</style> 
-
-<script src="{{ url('assets/js') }}/jquery.min.js"></script>
-<script type="text/javascript">
-	  $(document).on('input','#price',function(){
-$('#percent').prop('readonly', true);
-
-});
-	    $(document).on('input','#percent',function(){
-$('#price').prop('readonly', true);
-
-});
-</script>
-<script src="{{ url('assets/js') }}/jquery.min.js"></script>
+   @endif
+        @if(Session::has('leavevalidat'))
+            <div class="alert alert-dark" role="alert">
+                {{ Session::get('leavevalidat')}}
+            </div>
+        @endif
     <div>
     <h2 style="text-align:center;">Add File Progress/Action</h2>
     <hr class="mb-4">.
@@ -168,8 +141,7 @@ $('#price').prop('readonly', true);
         </div>
         </div>
         </div>
-        </div>
-        </div>
+      
 
 
         <div class="row">
@@ -191,18 +163,17 @@ $('#price').prop('readonly', true);
         </div>
         </div>
         </div>
-        </div>
-        </div>
+        <br>
 
         <div>
-     <h4 style=" margin-left:28%;">Send To  Billing ?</h4>
+     <h4 style=" margin-left:0;">Send To  Billing ?</h4>
         
 
         </div>  
 
 
         <div>
-     <h4 style=" margin-left:28%;">Send To  Timesheet ?</h4>
+     <h4 style=" margin-left:0;">Send To  Timesheet ?</h4>
         
 
         </div> 
@@ -210,7 +181,7 @@ $('#price').prop('readonly', true);
           
           
 
-    </div>
+    
     <br>
     <div class="">
               <div class="row">
@@ -218,15 +189,15 @@ $('#price').prop('readonly', true);
     
           </div>
                       <div class="col-sm">
-                      <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Add File Progress</button>
+                      <button type="submit"  style=" margin-left:-90%;" class="btn btn-primary submit_btn btn_sumbit">Add File Progress</button>
 
 
-                      <button type="submit" class="btn btn-primary submit_btn btn_align">Close</button>
+                      <button type="submit"  style=" margin-left:1%;"  class="btn btn-primary submit_btn btn_align">Close</button>
 
                       </div>
   </div>
 </div>
-</div>
+
 
 
 

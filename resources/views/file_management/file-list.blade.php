@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <p style="margin-bottom:4%;"> <b>Manage file/ File List</b> </p>
+   
     <div class="col-sm">
    
     

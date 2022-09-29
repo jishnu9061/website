@@ -6,30 +6,13 @@
    <div class="alert alert-dark" role="alert">
    {{ Session::get('staffregistered')}}
    </div>
-@endif
+   @endif
+        @if(Session::has('leavevalidat'))
+            <div class="alert alert-dark" role="alert">
+                {{ Session::get('leavevalidat')}}
+            </div>
+        @endif
 
-</div>
-<div style="height: 50px;">
-
-</div>
-<script src="{{ url('assets/js') }}/jquery.min.js"></script>
-<script type="text/javascript">
-	  $(document).on('input','#price',function(){
-$('#percent').prop('readonly', true);
-
-});
-	    $(document).on('input','#percent',function(){
-$('#price').prop('readonly', true);
-
-});
-</script>
-<script src="{{ url('assets/js') }}/jquery.min.js"></script>
-
-<div class="col-sm">
-    <a href="{{url('file-list')}}"><button type="submit" style=" height: 3rem; margin-left: 0%; width: 17%; margin-bottom: 13%; background-color:#acacb9;" >Back</button></a>
-    
-
-  </div>
     <div>
     <h2 style="text-align:center;">Book A Court Date </h2>
     <hr class="mb-4">.
@@ -245,44 +228,33 @@ $('#price').prop('readonly', true);
         </div>
         </div>
 
-      
-    
 
-          
-          
-   
-
-          
+              </div>
           
 
     </div>
     <br>
     <div class="container">
-  <div class="row">
-    <div class="col-sm">
-    
+        <div class="row">
+            <div class="col-sm">
+
+            </div>
+            <div class="btn-group pt-3 " role="group" aria-label="Basic example" style="margin-left: 50px;">
+
+                <button type="submit" class="btn btn-primary submit_btn">Save</button>
+                <button type="submit" class="btn btn-primary submit_btn">Cancel</button>
+
+            </div>
+        </div>
     </div>
-    <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
-      
-      <button type="submit" class="btn btn-primary submit_btn">Submit</button>
-      <button type="button" class="btn ">Close</button>
-      
-    </div>
-  </div>
-</div>
-     
-    
+</div>   
    
           </div>
 
-          
+      
 
 
 
-   </tbody>
-</table>
-   </div>
-</div>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
  $(function () {

@@ -7,23 +7,11 @@
             {{ Session::get('staffregistered')}}
         </div>
         @endif
-
-    </div>
-    <div style="height: 50px;">
-
-    </div>
-    <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-    <script type="text/javascript">
-    $(document).on('input', '#price', function() {
-        $('#percent').prop('readonly', true);
-
-    });
-    $(document).on('input', '#percent', function() {
-        $('#price').prop('readonly', true);
-
-    });
-    </script>
-    <script src="{{ url('assets/js') }}/jquery.min.js"></script>
+        @if(Session::has('leavevalidat'))
+            <div class="alert alert-dark" role="alert">
+                {{ Session::get('leavevalidat')}}
+            </div>
+        @endif
 
     <div class="col-sm">
 
@@ -144,11 +132,9 @@
 
     </div>
 </div>
-<div id="test" style="height:20px;"></div>
-</div>
-</div>
 
 <div class="row">
+
     <div class="col-md-4">
         <div class="mb-1">
             <label for="username">Expense Category</label>
@@ -177,6 +163,7 @@
         </div>
     </div>
 
+   
     <div class="col-md-4">
         <div class="mb-1">
             <label for="username">Priority</label>
@@ -194,6 +181,7 @@
 </div>
 <br>
 <div class="row">
+    
     <div class="col-md-4">
         <div class="mb-1">
             <label for="username">Amount</label>
