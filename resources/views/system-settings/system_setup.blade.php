@@ -17,8 +17,8 @@
    </head>
    <body>
     <!-- <h2 class="text-center">Configuration Details</h2><br> -->
-    <h4 style="text-align:center;">Company Details</h4>
-    <hr class="mb-4">.
+    <h3 style="text-align:center"><b>Company Details</b></h3>
+    <hr>
     <div class="container-fluid">
   
   <div class="row sm">
@@ -32,8 +32,8 @@
 </div>
 </div>
 
-<h4 style="text-align:center; ">User Accounts</h4>
-    <hr class="mb-4">.
+<h3 style="text-align:center; "><b>User Accounts</b></h3>
+    <hr>
     <div class="container-fluid">
   
   <div class="row sm">
@@ -47,8 +47,8 @@
 </div>
 </div>
 
-<h4 style="text-align:center;">Other Settings</h4>
-    <hr class="mb-4">.
+<h3 style="text-align:center;"><b>Other Settings</b></h3>
+    <hr>
     <div class="container-fluid">
   
   <div class="row sm">
@@ -62,8 +62,8 @@
 </div>
 </div>
 
-<h4 style="text-align:center;">System Menus</h4>
-    <hr class="mb-4">.
+<h3 style="text-align:center;"><b>System Menus</b></h3>
+    <hr>
     <div class="container-fluid">
   
   <div class="row sm">

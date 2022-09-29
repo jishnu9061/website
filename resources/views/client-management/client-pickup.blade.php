@@ -16,7 +16,7 @@
 
 <body>
     <div class="container">
-        <h3 class="text-center" style="color: #070344; text-shadow: 1px 2px;"><b>Client Pickup at Reception</b></h3>
+        <h3 class="text-center" style="color: #070344;"><b>Client Pickup at Reception</b></h3>
        <br>
       
       

@@ -16,7 +16,7 @@
 
 <body>
 
-    <div class="container-fluid">
+    <div class="container">
         <h3 class="text-center" style="color: #070344;"><b>Process Request</b></h3>
         <br>
        

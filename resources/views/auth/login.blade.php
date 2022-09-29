@@ -37,7 +37,8 @@
             </div>
 
             <div class="" style="text-align: center">   <h5 style="font-size: 200%" class="auth-title">Log in.</h5>
-            <p class="auth-subtitle mb-4">Log in with your data that you entered during registration.</p> </div>
+            {{-- <p class="auth-subtitle mb-4">Log in with your data that you entered during registration.</p>  --}}
+        </div>
 
         <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -96,7 +97,7 @@
         <div class="align-items-center col-lg-7  d-flex justify-content-center">
             <div class="vl"></div>
          
-              <img  id="auth-right" src="images/bg/loginimage.jpg" style="border-radius: 50px; " class="  mx-auto d-block" alt="Responsive image">
+              <img  id="auth-right" src="assets/images/bg/loginimage.jpg" style="border-radius: 50px; " class="  mx-auto d-block" alt="Responsive image">
 
             
         </div>

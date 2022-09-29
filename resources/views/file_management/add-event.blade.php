@@ -46,18 +46,18 @@
         </div>
 
        
-        <div class="col-md-4">
+        <div class="col-md-1">
             <div class="mb-1">
-          <label for="username">File</label>
+          <label for="username"></label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-            <input type="text" class="form-control" name="website" id="confirm_password" required>
+         <a href="{{url('diary-management')}}"> <i class="fa fa-plus" style="font-size:24px"></i></a>
           </div>
         </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="mb-1">
           <label for="username">Document Category</label>
           <div class="input-group">
@@ -190,25 +190,21 @@
 
 
      
-    </div>
-    <br>
+        <div>
     <div class="container">
-  <div class="row">
-    <div class="col-sm">
-    
+        <div class="row">
+            <div class="col-sm">
+
+            </div>
+            <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
+
+                <button type="submit" class="btn btn-primary submit_btn">Generat</button>
+                <button type="submit" class="btn btn-primary submit_btn">Close</button>
+
+            </div>
+        </div>
     </div>
-    <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
-      
-      <button type="submit" class="btn btn-primary submit_btn">Generate</button>
-      <button type="button" class="btn ">Close</button>
-      
-    </div>
-  </div>
 </div>
-     
-    
-   
-          </div>
 
           
 

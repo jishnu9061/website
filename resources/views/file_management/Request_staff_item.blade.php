@@ -16,11 +16,12 @@
 
 <body>
 
-    <div class="container-fluid">
+    <div class="container">
         <h3 class="text-center" style="color: #070344;"><b>Request Safe Item</b></h3>
         <br>
         <a href="{{url('new_Request_staff_item')}}"><button class="btn btn-primary add-btn" Style="width:200px;">Register
                 Safe Item</button></a>
+        <br>
         <br>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">

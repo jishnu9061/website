@@ -15,12 +15,27 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 </head>
 <body>
-  <h3 style="text-align:center"><b>Client Management</b></h3>
-  <hr class="mb-4">.
+  <button class="btn btn-primary"
+  style="width:100%;background-color:#d6ba8a;color:white;border:1px solid gold;font-width:150%"><span class="font-size-lg">Client Management Details</span></button><br><br><br>
+  <br>
+  <button class="btn btn-primary float-left" style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Client Management</button><br><br><br>
 <div class="container-fluid">
   
   <div class="row sm">
-  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-7.png" alt=""><a href ="{{url('client_list')}}"><button type="button" class="btn btn-primary btn_align_btn" > Client List</button></a></div>
+
+  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-7.png"  style="      margin-left: -4px;" alt=""><div class="dropdown">
+  <button class="btn btn-primary btn_align_btn btn_align_client" style=" margin-top: -25px;     margin-left: 60px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Client list
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="{{url('corporate-list')}}">  Corporate Client</a>
+    <a class="dropdown-item" href="{{url('client_list')}}">indudial Client</a>
+  </div>
+</div>
+</div>
+
+
+
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-8.png" alt=""><a href ="{{url('client-pickup')}}"><button type="button" class="btn btn-primary btn_align_btn" >Client Pickup At Reception</button></a></div>
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-1.png" alt=""><a href ="{{url('search-list')}}"><button type="button" class="btn btn-primary btn_align_btn" >Client Search</button></a></div>
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-3.png" alt=""><a href ="{{url('client-service')}}"><button type="button" class="btn btn-primary btn_align_btn" > Client Services At Reception</button></a></div>
@@ -29,10 +44,8 @@
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-3.png" alt=""> <a href ="complaint-list"><button type="button" class="btn btn-primary btn_align_btn" > Complaint Register</button></a></div>
   </div>
   <br>
-  <hr class="mb-4">.
-  <h3 style="text-align:center"><b>Customer Relationship Manager</b></h3>
-  <br>
-  <hr class="mb-4">.
+  <button class="btn btn-primary float-left" style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Customer Relationship </button><br><br><br>
+  
  
   <div class="row sm">
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-7.png" alt=""><a href ="{{url('view-registration')}}"><button type="button" class="btn btn-primary btn_align_btn" > Customer Registration</button></a></div>

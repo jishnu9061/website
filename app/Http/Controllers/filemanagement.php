@@ -42,6 +42,23 @@ class filemanagement extends Controller
 
     //document temblates
 
+    //manage files
+    public function filearchive()
+    {
+        return view('file_management.file-archive');
+    }
+
+    public function addboxno()
+    {
+        return view('file_management.add-box-no');
+    }
+
+    public function editboxno()
+    {
+        return view('file_management.edit-box-no');
+    }
+    //manage files
+
     //file progress
 
     public function progressbringup()
@@ -135,6 +152,28 @@ class filemanagement extends Controller
      {
          return view('file_management.client-monthly-file-status');
      }
+
+     public function fileprogressreport()
+     {
+         return view('file_management.file-progress-report');
+     }
+
+     public function filestatussummary()
+     {
+         return view('file_management.file-status-summary');
+     }
+
+
+     public function workflow()
+     {
+         return view('file_management.work-flow');
+     }
+
+     public function newworkflow()
+     {
+         return view('file_management.new-workflow');
+     }
+
 
      //document manager
 
