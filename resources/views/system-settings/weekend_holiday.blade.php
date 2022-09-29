@@ -60,15 +60,15 @@
 <a href="{{url('add_new_holiday')}}"  class="btn btn-primary" style="margin-top:0px;">Add New Holiday / Weekend Date</a>
 <p><a href="{{url('holiday_2017')}}"style="color:blue; font-size:x-small;">2017</a> | <a href="{{url('holiday_2018')}}"style="color:blue;font-size:x-small;">2018</a> | <a href="{{url('holiday_2019')}}"style="color:blue;font-size:x-small;">2019</a> | <a href="{{url('holiday_2020')}}"style="color:blue;font-size:x-small;">2020</a> | <a href="{{url('holiday_2021')}}"style="color:blue;font-size:x-small;">2021</a> | <a href="{{url('holiday_2022')}}"style="color:blue;font-size:x-small;">2022</a><br><br> -->
 
-<h2 class="text-center" style="color:rgb(13, 1, 56); text-shadow: 1px 2px;"><b>Weekend and Holidays</b></h2>
+<h3 class="text-center" style="color:rgb(13, 1, 56);"><b><u>Weekend and Holidays</u></b></h3><br>
  <!-- <a href="{{url('add_new_holiday')}}"  class="btn btn-primary" style="margin-top:0px;">Add New Holiday / Weekend Date</a>  -->
- <a href="{{url('add_new_holiday')}}"><button type="button" class="btn btn-primary add-btn" > Add New Holiday / Weekend Date</button></a>
+ <a href="{{url('add_new_holiday')}}"><button type="button" class="btn btn-primary add-btn" style="width:30%" > Add New Holiday / Weekend Date</button></a>
 <p><a href="{{url('holiday_2017')}}"style="color:blue; font-size:x-small;">2017</a> | <a href="{{url('holiday_2018')}}"style="color:blue;font-size:x-small;">2018</a> | <a href="{{url('holiday_2019')}}"style="color:blue;font-size:x-small;">2019</a> | <a href="{{url('holiday_2020')}}"style="color:blue;font-size:x-small;">2020</a> | <a href="{{url('holiday_2021')}}"style="color:blue;font-size:x-small;">2021</a> | <a href="{{url('holiday_2022')}}"style="color:blue;font-size:x-small;">2022</a><br><br>
-<hr class="mb-4">.
 <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Weekend & Holiday Dates - 2022</h3>
 <table class="table table-bordered" id="new-item">
   <thead>
     <tr>
+
     <th>Sl No:</th>
     <th>Date</th>
     <th>Day</th>
