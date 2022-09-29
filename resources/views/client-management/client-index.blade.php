@@ -15,8 +15,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 </head>
 <body>
-  <h3 style="text-align:center"><b>Client Management</b></h3>
-  <hr>
+  <button class="btn btn-primary float-left" style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Client Management</button><br><br><br>
 <div class="container-fluid">
   
   <div class="row sm">
@@ -42,8 +41,8 @@
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-3.png" alt=""> <a href ="complaint-list"><button type="button" class="btn btn-primary btn_align_btn" > Complaint Register</button></a></div>
   </div>
   <br>
-  <h3 style="text-align:center"><b>Customer Relationship Manager</b></h3>
-  <hr>
+  <button class="btn btn-primary float-left" style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Customer Relationship </button><br><br><br>
+  
  
   <div class="row sm">
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-7.png" alt=""><a href ="{{url('view-registration')}}"><button type="button" class="btn btn-primary btn_align_btn" > Customer Registration</button></a></div>
