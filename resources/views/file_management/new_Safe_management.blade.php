@@ -89,9 +89,7 @@
                 </div>
 
             </div>
-    </div>
-
-</div>
+  
 <br>
 <div class="row">
 
@@ -151,83 +149,50 @@
         <br>
 
 
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
-<div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
-        <table class="table table-bordered" id="new-item">
-            <thead style="font-size:15px; width:100%;">
-                <tr>
-                    <th class="text-center">Doc No:</th>
-                    <th class="text-center">Category</th>
-                    <th class="text-center">Document</th>
-                    <th class="text-center">Condition</th>
-
-
-
-                </tr>
-            </thead>
-
-            <tbody>
-
-                <tr id="data">
+                <table class="table table-bordered" id="new-item">
+                    <thead style="font-size:15px; width:100%;">
+                        <tr>
+                            <th class="text-center">Doc No</th>
+                            <th class="text-center">Catrgory</th>
+                            <th class="text-center">Document</th>
+                            <th class="text-center">Action</th>
+                            
+                            
+                            </th>
 
 
-                    <td scope="row" class="text-center">
-                        <div class="mb-1">
+                        </tr>
+                    </thead>
 
-                            <div class="input-group">
-                                <div class="input-group-prepend">
+                    <tbody>
 
-                                </div>
-                                <input type="text" class="form-control" name="incorporation" style="width: 40%;">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Incorporation is required
-                                </div>
-                            </div>
-                        </div>
+                        <tr id="data">
 
-                    </td>
-                    <td scope="row" class="text-center">
-                        <div class="mb-1">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
+                            <td scope="row" class="text-center" style="width:100px;"><input type="text" id="age"></td>
 
-                                </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
-                                </select>
-                            </div>
-                        </div>
-                    </td>
-                    <td scope="row" class="text-center">
-                        <div class="mb-1">
+                            <td scope="row"   >
+                            <select style="width:100%;"  >
+                            <option value="volvo">select</option>
+                            </select>
+                            </td>
 
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="text" class="form-control" name="incorporation" id="age">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Incorporation is required
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-
-                    <td scope="row" class="text-center"><button class="btn btn-light"
-                            style="color:blue;">Action</button></td>
-
-                </tr>
+                           
+                            <td scope="row" class="text-center" style="width:40%;" ><input type="text"  style="width:100%;"></td>
+                            <td scope="row" class="text-center"><a href=""><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></td>
+                            
+                        </tr>
 
 
 
-            </tbody>
+                    </tbody>
 
-        </table>
-    </div>
-</div>
-<div>
+                </table>
+      
+
+    
 <div class="row">
     <div class="col-md-4">
         <div class="mb-1">
@@ -247,7 +212,7 @@
             <div class="col-sm">
 
             </div>
-            <div class="btn-group pt-3 " role="group" aria-label="Basic example" style="margin-left: 150px;">
+            <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
 
                 <button type="submit" class="btn btn-primary submit_btn">Add Documents</button>
                 <button type="submit" class="btn btn-primary submit_btn">Close</button>
