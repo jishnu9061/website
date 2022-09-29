@@ -234,4 +234,14 @@ class ClientManagement extends Controller
     public function registerClient(){
         return view('client-management.register-client');
     }
+
+
+    public function addCorporate(){
+        return view('client-management.add-corporate');
+    }
+
+
+    public function listCorporate(){
+        return view('client-management.corporate-list');
+    }
 }
