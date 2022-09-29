@@ -6,39 +6,12 @@
    <div class="alert alert-dark" role="alert">
    {{ Session::get('staffregistered')}}
    </div>
-@endif
-
-</div>
-<div style="height: 50px;">
-
-</div>
-
- <style>
-
-/* .col-md-3 {
-    flex: 0 0 auto;
-    width: 40%;
-    margin-left: 64px;
-}
-
-.al_ign{
-  
-  margin-left:22%;
-} */
-</style> 
-
-<script src="{{ url('assets/js') }}/jquery.min.js"></script>
-<script type="text/javascript">
-	  $(document).on('input','#price',function(){
-$('#percent').prop('readonly', true);
-
-});
-	    $(document).on('input','#percent',function(){
-$('#price').prop('readonly', true);
-
-});
-</script>
-<script src="{{ url('assets/js') }}/jquery.min.js"></script>
+   @endif
+        @if(Session::has('leavevalidat'))
+            <div class="alert alert-dark" role="alert">
+                {{ Session::get('leavevalidat')}}
+            </div>
+        @endif
     <div>
     <h2 style="text-align:center;">Add File Bringup/Reminder</h2>
     <hr class="mb-4">.
@@ -179,20 +152,21 @@ $('#price').prop('readonly', true);
       
     </div>
     <br>
-    <div class="">
-              <div class="row">
+    <div class="container">
+        <div class="row">
             <div class="col-sm">
-    
-          </div>
-                      <div class="col-sm">
-                      <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Add File Progress</button>
 
+            </div>
+            <div class="btn-group pt-3 " role="group" aria-label="Basic example" style="margin-left: 50px;">
 
-                      <button type="submit" class="btn btn-primary submit_btn btn_align">Close</button>
+                <button type="submit" class="btn btn-primary submit_btn">Add File Progress</button>
+                <button type="submit" class="btn btn-primary submit_btn">Close</button>
 
-                      </div>
-  </div>
-</div>
+            </div>
+        </div>
+    </div>
+</div>   
+   </div>
 </div>
 
 

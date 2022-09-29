@@ -1,5 +1,6 @@
 @extends('layouts.hmsmain')
 @section('content')
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
@@ -14,10 +15,13 @@
 </head>
 
 <body>
-   
-<div style="display:flex; margin-bottom: 10%; margin-top: -4%;">
-    <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" style="width:97%; background-color: rgb(177, 127, 62);" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<div class="container"> 
+
+<h3 class="text-center" style="color: #070344;"><b>List of File Progress</b></h3>
+       <br>
+<div style="display:flex; margin-bottom: 2%;  margin-top: 3%;">
+    <div class="dropdown" style="width:20%;">
+  <button class="btn btn-primary add-btn" type="button" style="width:97%;" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Add New Progress
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -29,8 +33,8 @@
   </div>
 </div>
 
-<div class="dropdown" style="margin-left:10px;">
-  <button class="btn btn-secondary dropdown-toggle" type="button" style="width:97%; background-color: rgb(177, 127, 62);" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<div class="dropdown" style="width:20%;" style="margin-left:10px;">
+  <button class="btn btn-primary add-btn" type="button" style="width:97%;" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Dispute Resolution forms
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -41,9 +45,8 @@
 </div>
 </div>
 
-    <div class="container">
-        <h3 class="text-center" style="color: #070344;"><b>List of File Progress</b></h3>
-       <br>
+    
+      
    
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">

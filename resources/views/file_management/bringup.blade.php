@@ -7,23 +7,11 @@
    {{ Session::get('staffregistered')}}
    </div>
 @endif
-
-</div>
-<div style="height: 50px;">
-
-</div>
-<script src="{{ url('assets/js') }}/jquery.min.js"></script>
-<script type="text/javascript">
-	  $(document).on('input','#price',function(){
-$('#percent').prop('readonly', true);
-
-});
-	    $(document).on('input','#percent',function(){
-$('#price').prop('readonly', true);
-
-});
-</script>
-<script src="{{ url('assets/js') }}/jquery.min.js"></script>
+        @if(Session::has('leavevalidat'))
+            <div class="alert alert-dark" role="alert">
+                {{ Session::get('leavevalidat')}}
+            </div>
+        @endif
     <div>
     <h2 style="text-align:center;">Search</h2>
     <hr class="mb-4">.
@@ -179,7 +167,7 @@ $('#price').prop('readonly', true);
     </div>
   </div>
 </div>
-     
+ </div>     
     
    
           </div>

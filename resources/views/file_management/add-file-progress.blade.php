@@ -7,28 +7,17 @@
    {{ Session::get('staffregistered')}}
    </div>
 @endif
-
-</div>
-<div style="height: 50px;">
-
-</div>
-<script src="{{ url('assets/js') }}/jquery.min.js"></script>
-<script type="text/javascript">
-	  $(document).on('input','#price',function(){
-$('#percent').prop('readonly', true);
-
-});
-	    $(document).on('input','#percent',function(){
-$('#price').prop('readonly', true);
-
-});
-</script>
-<script src="{{ url('assets/js') }}/jquery.min.js"></script>
+        @if(Session::has('leavevalidat'))
+            <div class="alert alert-dark" role="alert">
+                {{ Session::get('leavevalidat')}}
+            </div>
+        @endif
     <div>
     <h2 style="text-align:center;">Add File Progress</h2>
     <hr class="mb-4">.
 </div>
   </div>
+  <div>
   <div class="row">
 
     <div class="col-md-12 order-md-1">
@@ -306,19 +295,20 @@ $('#price').prop('readonly', true);
     </div>
     <br>
     <div class="container">
-  <div class="row">
-    <div class="col-sm">
-    
-    </div>
-    <div class="col-sm">
-    <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Edit File Progress</button>
+        <div class="row">
+            <div class="col-sm">
 
-    
-    <button type="submit" class="btn btn-primary submit_btn btn_align">Close</button>
+            </div>
+            <div class="btn-group pt-3 " role="group" aria-label="Basic example" style="margin-left: 50px;">
 
+                <button type="submit" class="btn btn-primary submit_btn">Edit File Progress</button>
+                <button type="submit" class="btn btn-primary submit_btn">Close</button>
+
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+</div>   
+   
      
     
    

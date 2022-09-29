@@ -6,24 +6,12 @@
    <div class="alert alert-dark" role="alert">
    {{ Session::get('staffregistered')}}
    </div>
-@endif
-
-</div>
-<div style="height: 50px;">
-
-</div>
-<script src="{{ url('assets/js') }}/jquery.min.js"></script>
-<script type="text/javascript">
-	  $(document).on('input','#price',function(){
-$('#percent').prop('readonly', true);
-
-});
-	    $(document).on('input','#percent',function(){
-$('#price').prop('readonly', true);
-
-});
-</script>
-<script src="{{ url('assets/js') }}/jquery.min.js"></script>
+   @endif
+        @if(Session::has('leavevalidat'))
+            <div class="alert alert-dark" role="alert">
+                {{ Session::get('leavevalidat')}}
+            </div>
+        @endif
     <div>
   
     <hr class="mb-4">.
@@ -117,7 +105,7 @@ $('#price').prop('readonly', true);
         
        
 
-    </div>
+   
     <br>
     <div class="container"  style="text-align:center; margin-left: -25%;">
   <div class="row">
@@ -130,7 +118,7 @@ $('#price').prop('readonly', true);
     <button type="submit" class="btn btn-primary submit_btn btn_sumbit">View Report</button>
 
     
-
+    </div>
     </div>
   </div>
 </div>
