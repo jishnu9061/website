@@ -21,15 +21,15 @@
   <div class="row sm">
     <div class="col-sm-4 " > <a href="{{url('file-list')}}"><img class="logo_size" src="assets\image\2.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" >Manage Files</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('file-progress-list')}}"><img class="logo_size" src="assets\image\2.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >File Progress/Bringups</button></a></div>
-    <div class="col-sm-4 " > <a href=""><img class="logo_size" src="assets\image\3.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >File Archive</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('file-archive')}}"><img class="logo_size" src="assets\image\3.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >File Archive</button></a></div>
     </div>
 
     <h3>File Status Reports</h3>
     <div class="row sm">
     <div class="col-sm-4 " > <a href="{{url('file-list-progress-report')}}"><img class="logo_size" src="assets\image\4.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" > File List Progress Report</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('bringup')}}"><img class="logo_size" src="assets\image\5.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Bringup Report</button></a></div>
-    <div class="col-sm-4 " > <a href=""><img class="logo_size" src="assets\image\6.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >File Progress Report</button></a></div>
-    <div class="col-sm-4" >  <a href=""><img class="logo_size" src="assets\image\7.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >File Status Report</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('file-progress-report')}}"><img class="logo_size" src="assets\image\6.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >File Progress Report</button></a></div>
+    <div class="col-sm-4" >  <a href=""><img class="logo_size" src="assets\image\7.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >File Status Report Summary</button></a></div>
     <div class="col-sm-4" >  <a href="{{url('client-monthly-file-status')}}"><img class="logo_size" src="assets\image\8.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Monthly File Status Report</button></a></div>
     <div class="col-sm-4" >  <a href="{{url('staff-monthly-status-report')}}"><img class="logo_size" src="assets\image\9.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Monthly Staff Status Report</button></a></div>
     </div>
@@ -59,7 +59,7 @@
     <div class="col-sm-4" >  <a href="{{url('file-pending')}}"><img class="logo_size" src="assets\image\14.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Files Pending Closure</button></a></div>
     <div class="col-sm-4" >  <a href="{{url('file-pending-approval')}}"><img class="logo_size" src="assets\image\11.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Files Pending Approval</button></a></div>
     <div class="col-sm-4" >  <a href="{{url('instructions-past')}}"><img class="logo_size" src="assets\image\13.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Instructions Past TAT</button></a></div>
-    <div class="col-sm-4" >  <a href="{{url('')}}"><img class="logo_size" src="assets\image\14.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Unallocated Files Report</button></a></div>
+    <div class="col-sm-4" >  <a href=""><img class="logo_size" src="assets\image\14.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Unallocated Files Report</button></a></div>
    
   </div>
   <h3>ADD-Ons</h3>
