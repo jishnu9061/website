@@ -20,7 +20,7 @@
 
     <div>
         <br>
-        <div style="margin-left: 150px;">
+        <div style="margin-left: 70px;">
             <input class="btn btn-primary" type="button" value="Today">
             <input class="btn btn-primary" type="button" value="This Week">
             <input class="btn btn-primary" type="button" value="Last Week">
@@ -32,35 +32,10 @@
             <input class="btn btn-primary" type="button" value="Last Year">
         </div>
         <br>
-        <hr class="mb-4">.
+     <br>
 
 
     </div>
-<<<<<<< HEAD
-=======
-    <br>
-    <div class="container">
-  <div class="row">
-    <div class="col-sm">
-    
-    </div>
-    <div class="col-sm">
-   
-    <button type="submit" class="btn btn-primary submit_btn btn_align">Cancel</button>
-    <button type="submit" class="btn btn-primary submit_btn btn_sumbit">View Report</button>
-
-    
-
-    </div>
-  </div>
-</div>
- </div>     
-    
-   
-          </div>
-
-          
->>>>>>> c801a902e8c4ca3c491d06632ffa7643c620b94d
 
 
 
@@ -178,24 +153,21 @@
             </div>
             <br>
            
-                <div class="row">
-                    <div class="col-sm">
+            <div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
 
-                    </div>
-                    <div class="col-sm">
-
-                        <button type="submit" class="btn btn-primary submit_btn btn_align">Cancel</button>
-                        <button type="submit" class="btn btn-primary submit_btn btn_sumbit">View Report</button>
-
-
-
-                    </div>
-                </div>
             </div>
+            <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
 
+                <button type="submit" class="btn btn-primary submit_btn">Cancel</button>
+                <button type="submit" class="btn btn-primary submit_btn">View Report</button>
 
-
+            </div>
+        </div>
     </div>
+</div>
 
 
 
