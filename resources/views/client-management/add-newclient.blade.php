@@ -12,7 +12,7 @@
 
   <div class="container mt-5">
       <button type="button" class="btn btn-primary client_btn" data-bs-toggle="modal" data-bs-target="#mymodal">Add Client Type</button>
-      <button type="button" class="btn btn-primary country_btn" data-bs-toggle="modal" data-bs-target="#my">Add Country</button>
+      <!-- <button type="button" class="btn btn-primary country_btn" data-bs-toggle="modal" data-bs-target="#my">Add Country</button> -->
   </div>
 </div>
 </div>
@@ -66,18 +66,7 @@
                     </div>
                     <br>
                     <div class="row">
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">Certificate Of Incorporation</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="corporation" id="age" value="" placeholder="Certificate" min="0" max="99">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                            Age is required.
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
+                        
                         <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="username">Country</label>
@@ -107,9 +96,6 @@
                                     </div>
                             </div>
                         </div>
-                    </div>
-                    <br>
-                    <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="username">Fax No</label>
@@ -122,6 +108,10 @@
                                     </div>
                             </div>
                         </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        
                         <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="username">Email Address</label>
@@ -134,21 +124,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">Web Site</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="conpassword" value="" id="confirm_password" placeholder="website">
-                                            <div class="invalid-feedback" style="width: 100%;">
-                                                Password is required.
-                                            </div>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="username">Brought In By</label>
@@ -174,6 +149,9 @@
                               </div>
                             </div>
                         </div>
+                    </div>
+                    <br>
+                    <div class="row">
                         <div class="col-md-4">
                           <div class="mb-1">
                             <label for="username">Client Source</label>
@@ -189,9 +167,6 @@
                               </div>
                           </div>
                         </div>
-                    </div>
-                    <br>
-                    <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="username">Client Source Narration</label>
@@ -216,6 +191,9 @@
                                     </div>
                             </div>
                         </div>
+                    </div>
+                    <br>
+                    <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
                             <label for="username">Client Industry</label>
@@ -232,9 +210,6 @@
                                   </div>
                             </div>
                         </div>
-                    </div>
-                    <br>
-                    <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="username">Pin No</label>
@@ -259,6 +234,9 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <br>
+                    <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="username">Postal Code</label>
@@ -271,9 +249,6 @@
                                     </div>
                             </div>
                         </div>
-                    </div>
-                    <br>
-                    <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="username">Town</label>
@@ -297,6 +272,9 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+      
+                    <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
                               <label for="username">Notes</label>
@@ -310,66 +288,8 @@
                         </div>
                     </div>
                     <br>
-                    <h1 style="text-align:center;">Contact Person</h1>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="mb-1">
-                            <label for="username">Names</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="name" id="age" value="" placeholder="" min="0" max="99">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                      
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="mb-1">
-                            <label for="username">Designation</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="Mobile" id="age" value="" placeholder="" min="0" max="99">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                        Mobile No is required.
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-                     <div class="col-md-3">
-                            <div class="mb-1">
-                            <label for="username">Mobile No</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="no" id="age" value="" placeholder="" min="0" max="99">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                        Mobile No
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="mb-1">
-                            <label for="username">Email</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="email" id="age" value="" placeholder="" min="0" max="99">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                          
-                                     
-                                        </div>
-                                        
-                                    </div>
-
-                                    
-                            </div>
-
-                          
-                    </div>
+ 
                   
-                      <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
-      
                       <button type="submit" class="btn btn-primary col-md-6">Save Changes</button>
                       <button type="button" class="btn  submit_btn col-md-6">Back</button>
                       

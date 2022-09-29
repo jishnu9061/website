@@ -19,7 +19,7 @@
        <br>
       
        <div id="mydatatable_filter" class="dataTables_filter">
-        <label><b>Search:</b><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
+        <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
        </div>
        <a href="{{('new-Quotation')}}"><button class="btn btn-primary add-btn">Add Quotation</button></a>
        <hr class="mb-4">.
