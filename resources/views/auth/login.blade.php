@@ -37,7 +37,8 @@
             </div>
 
             <div class="" style="text-align: center">   <h5 style="font-size: 200%" class="auth-title">Log in.</h5>
-            <p class="auth-subtitle mb-4">Log in with your data that you entered during registration.</p> </div>
+            {{-- <p class="auth-subtitle mb-4">Log in with your data that you entered during registration.</p>  --}}
+        </div>
 
         <form method="POST" action="{{ route('login') }}">
                         @csrf

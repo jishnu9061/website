@@ -67,14 +67,6 @@
    
     </div>
     <br>
-
-
-  <h3 style="text-align:center"><b>Add-Ons</b></h3>
-  <hr>
-
-  
-  
-
   <h3 style="text-align:center"><b>Add-Ons</b></h3>
   <hr>
     <div class="row sm">
