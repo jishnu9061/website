@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-  
+</head>
       <style>
    
  
@@ -70,7 +70,8 @@
                <div class="row">
                   <div class="col-md-5">
                     <div class="mb-1">
-                        <input type="text" class="form-control" name="name" id="username" style="height:100px;width:100px;" >
+                  
+                        <input type="file" class="form-control" name="name" id="customFile" style="height:100px;width:100px;" >
                         <label style="text-align:center;">Signature</label>
                     </div> 
                 </div> 
@@ -224,31 +225,23 @@
                         <label for="username">User Roles:</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
+                            
+
+    
                             <input type="text" class="form-control" name="name" id="ucode"style="height:100px;width:100px; ">
+                            
                         </div>
                     </div>
                 </div>
              
             </div>
-                   
-          
+            <div class="class"style="text-align:center;">
+            <!-- <input  type="submit"value="Save" name="Submit"style="background-color:rgb(13, 1, 56);color: white "> -->
+    <input type="submit"value="Save" name="submit"style="background-color:rgb(13, 1, 56);color: white; "> 
+    <input type="button"value="Close" name="close"style="background-color:red;color: white; ">
 
-        
-
-
-
-              
-        
-        
-        
-        
-
-
-   
-                                            
-                                               
-
-
+    
+</div>    
 </body>
 </html>
 @endsection

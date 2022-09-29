@@ -25,10 +25,10 @@
     <div class="col-sm-4 " ><a href="{{url('company_details')}}"><button type="button" class="btn btn-primary btn_align_btn" > Company</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('weekend_holiday')}}"><button type="button" class="btn btn-primary btn_align_btn" >Weekends &  Holidays</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('other_confgn')}}"><button type="button" class="btn btn-primary btn_align_btn" >Other Configurations</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > Paired Accounts</button></a></div>
-    <div class="col-sm-4 " > <a><button type="button" class="btn btn-primary btn_align_btn" > File Types</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > Invoice Items</button></a></div>
-    <div class="col-sm-4" > <a><button type="button" class="btn btn-primary btn_align_btn" > Currency List</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('paired_account')}}"><button type="button" class="btn btn-primary btn_align_btn" > Paired Accounts</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('file_types')}}"><button type="button" class="btn btn-primary btn_align_btn" > File Types</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('invoice_items')}}"><button type="button" class="btn btn-primary btn_align_btn" > Invoice Items</button></a></div>
+    <div class="col-sm-4" > <a href="{{url('currency_list')}}"><button type="button" class="btn btn-primary btn_align_btn" > Currency List</button></a></div>
 </div>
 </div>
 
