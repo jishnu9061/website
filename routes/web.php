@@ -842,6 +842,8 @@ Route::any('file-progress-list',"filemanagement@fileprogresslist")->name('file-p
 //notes
 Route::any('diary-management',"filemanagement@diarymanagement")->name('diary-management');
 Route::any('add-event',"filemanagement@addevent")->name('add-event');
+Route::any('work-flow',"filemanagement@workflow")->name('work-flow');
+Route::any('new-workflow',"filemanagement@newworkflow")->name('new-workflow');
 //document manager
 Route::any('document-manager',"filemanagement@documentmanager")->name('document-manager');
 Route::any('upload-document',"filemanagement@uploaddocument")->name('upload-document');
@@ -855,6 +857,7 @@ Route::any('staff-monthly-status-report',"filemanagement@staffmonthlystatusrepor
 Route::any('file-list-progress-report',"filemanagement@filelistprogressreport")->name('file-list-progress-report');
 Route::any('bringup',"filemanagement@bringup")->name('bringup');
 Route::any('file-progress-report',"filemanagement@fileprogressreport")->name('file-progress-report');
+Route::any('file-status-summary',"filemanagement@filestatussummary")->name('file-status-summary');
 //file status report
 
 

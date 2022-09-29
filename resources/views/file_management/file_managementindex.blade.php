@@ -31,7 +31,7 @@
     <div class="col-sm-4 " > <a href="{{url('file-list-progress-report')}}"><img class="logo_size" src="assets\image\4.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" > File List Progress Report</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('bringup')}}"><img class="logo_size" src="assets\image\5.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Bringup Report</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('file-progress-report')}}"><img class="logo_size" src="assets\image\6.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >File Progress Report</button></a></div>
-    <div class="col-sm-4" >  <a href=""><img class="logo_size" src="assets\image\7.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >File Status Report Summary</button></a></div>
+    <div class="col-sm-4" >  <a href="{{url('file-status-summary')}}"><img class="logo_size" src="assets\image\7.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >File Status Report Summary</button></a></div>
     <div class="col-sm-4" >  <a href="{{url('client-monthly-file-status')}}"><img class="logo_size" src="assets\image\8.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Monthly File Status Report</button></a></div>
     <div class="col-sm-4" >  <a href="{{url('staff-monthly-status-report')}}"><img class="logo_size" src="assets\image\9.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Monthly Staff Status Report</button></a></div>
     </div>
@@ -40,7 +40,7 @@
     <hr>
     <div class="row sm">
     <div class="col-sm-4" >  <a href="{{url('diary-management')}}"><img class="logo_size" src="assets\image\10.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Diary Management</button></a></div>
-    <div class="col-sm-4" >  <a href=""><img class="logo_size" src="assets\image\11.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Workflow Management</button></a></div>
+    <div class="col-sm-4" >  <a href="{{url('work-flow')}}"><img class="logo_size" src="assets\image\11.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Workflow Management</button></a></div>
     <div class="col-sm-4" >  <a href="{{url('template-category')}}"><img class="logo_size" src="assets\image\13.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Document Templates</button></a></div>
     <div class="col-sm-4" >  <a href="{{url('document-manager')}}"><img class="logo_size" src="assets\image\14.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Document Manager (DMS)</button></a></div>
   </div>
