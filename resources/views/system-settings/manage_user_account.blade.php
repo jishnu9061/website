@@ -35,10 +35,11 @@ table{
     <!-- <h2 >Court List</h2><br>
     <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
     <h2 style="text-align:center; text-shadow: 2px 1px;">Manage User Accounts </h2>
+    <a href="{{('reg_new_user')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Register New User</button></a>
     <hr class="mb-4">.
 
 
-
+    <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">List Of System Users</h3>
     <table class="table table-bordered" id="new-item">
       <thead>
 
@@ -88,7 +89,7 @@ table{
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a href="user_edit" style="color:rgb(13, 1, 56);"class="dropdown-item" >Edit</a>
                                 <a href="user_view" style="color:rgb(13, 1, 56);"class="dropdown-item" >View</a>
-                                <a href="user_attachment" style="color:rgb(13, 1, 56);"class="dropdown-item" >Attachment</a>
+                                <a href="user_attachments" style="color:rgb(13, 1, 56);"class="dropdown-item" >Attachment</a>
                                 <a href="user_comments" style="color:rgb(13, 1, 56);"class="dropdown-item" >Comments</a>
                              
                             </div>
