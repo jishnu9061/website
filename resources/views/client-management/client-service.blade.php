@@ -15,7 +15,7 @@
 
 <body>
     <div class="container">
-        <h3 class="text-center" style="color: #070344; text-shadow: 1px 2px;"><b>Client service at Reception</b></h3>
+        <h3 class="text-center" style="color: #070344;"><b>Client service at Reception</b></h3>
        <br>
        <a href="{{('add-service')}}"><button class="btn btn-primary add-btn" style="width:21%">New Client Service</button></a>
        <div id="mydatatable_filter" class="dataTables_filter">

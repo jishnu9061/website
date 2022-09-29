@@ -221,15 +221,7 @@
         </div>
     </div>
 </div>
-
-
-
 </div>
-
-
-
-
-
 </div>
 </div>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>

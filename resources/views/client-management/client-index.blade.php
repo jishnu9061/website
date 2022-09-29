@@ -20,7 +20,20 @@
 <div class="container-fluid">
   
   <div class="row sm">
-  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-7.png" alt=""><a href ="{{url('client_list')}}"><button type="button" class="btn btn-primary btn_align_btn" > Client List</button></a></div>
+
+  <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-7.png"  style="      margin-left: -4px;" alt=""><div class="dropdown">
+  <button class="btn btn-primary btn_align_btn btn_align_client" style=" margin-top: -25px;     margin-left: 60px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Client list
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="{{url('corporate-list')}}">  Corporate Client</a>
+    <a class="dropdown-item" href="{{url('client_list')}}">indudial Client</a>
+  </div>
+</div>
+</div>
+
+
+
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-8.png" alt=""><a href ="{{url('client-pickup')}}"><button type="button" class="btn btn-primary btn_align_btn" >Client Pickup At Reception</button></a></div>
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-1.png" alt=""><a href ="{{url('search-list')}}"><button type="button" class="btn btn-primary btn_align_btn" >Client Search</button></a></div>
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-3.png" alt=""><a href ="{{url('client-service')}}"><button type="button" class="btn btn-primary btn_align_btn" > Client Services At Reception</button></a></div>

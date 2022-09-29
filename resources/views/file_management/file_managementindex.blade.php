@@ -67,7 +67,7 @@
    
     </div>
     <br>
-  <h3 style="text-align:center"><b>ADD-Ons</b></h3>
+  <h3 style="text-align:center"><b>Add-Ons</b></h3>
   <hr>
     <div class="row sm">
     <div class="col-sm-4" >  <a href="{{url('Safe_management')}}"><img class="logo_size" src="assets\image\10.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Safe Management</button></a></div>

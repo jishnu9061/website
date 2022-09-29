@@ -801,6 +801,10 @@ Route::any('edit-communication','ClientManagement@editCommunication')->name('edi
 Route::any('search-list','ClientManagement@listSearch')->name('search-list');
 Route::any('register-client','ClientManagement@registerClient')->name('register-client');
 //end search list
+//coporate
+Route::any('add-corporate','ClientManagement@addCorporate')->name('add-corporate');
+Route::any('corporate-list','ClientManagement@listCorporate')->name('corporate-list');
+//end corporate
 
 //mugunthan
 
