@@ -6,30 +6,101 @@ body {
   height: 100vh;
   overflow-x: hidden;
 }
-#auth #auth-right {
+/* #auth #auth-right {
   height: 100%;
   background: url(../../images/bg/4853433.jpg),linear-gradient(90deg, rgb(13, 1, 56),#fd7e14);
-}
+} */
 #auth #auth-left {
-  padding: 5rem 8rem;
+  padding: 2rem 8rem;
 }
 #auth #auth-left .auth-title {
   font-size: 4rem;
   margin-bottom: 1rem;
 }
 #auth #auth-left .auth-subtitle {
-  font-size: 1.7rem;
-  line-height: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   color: #a8aebb;
 }
 #auth #auth-left .auth-logo {
-  margin-bottom: 7rem;
+  margin: 1rem;
 }
 #auth #auth-left .auth-logo img {
-  height: 2rem;
+  height: 3rem;
 }
 @media screen and (max-width: 767px) {
   #auth #auth-left {
     padding: 5rem;
   }
 }
+
+#auth-right {
+  height: 700px;
+  padding: 9px;
+  border: 4px solid black;
+  /* border-color: #2aa567; */
+  /* border-radius: 5%; */
+  border-image: 20px;
+  /* box-shadow: 5px 5px 5px 5px rgb(47, 50, 51); */
+  /* box-shadow: inset 0 0 10px #000000; */
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.34),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.34),
+  0 12.5px 10px rgba(0, 0, 0, 0.34),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.34),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.34),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+  
+  
+  
+}
+
+.rounded {
+  border-radius: 5rem !important;
+}
+
+.form-group[class*="has-icon-"] .form-control.form-control-xl~.form-control-icon i:before {
+  color: #1D1D50;
+}
+
+.form-group[class*="has-icon-"] .form-control.form-control-xl {
+  border: 1px solid black;
+
+}
+
+.form-group[class*="has-icon-"].has-icon-left .form-control {
+  padding-left: 2.5rem;
+  border: 1px solid black;
+}
+
+.form-check.form-check-lg .form-check-input {
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 1px solid black;
+  /* margin-top: 0.3em; */
+}
+
+.form-control.form-control-xl {
+  
+  font-size: 1.2rem;
+}
+
+.form-control {
+
+  font-size: 1.2rem;
+  padding: 0.85rem 1rem;
+ 
+}
+
+input, button, select, optgroup, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  background: rgb(227 237 249);
+  color: #607080;
+  border: 0.5px solid rgba(157, 168, 176, 0.4);
+  border-radius: 3px;
+  
+}
+
