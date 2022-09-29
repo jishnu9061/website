@@ -17,7 +17,7 @@
 
     </div>
     <div>
-    <h3 class="text-center" style="color: #070344;"><b>Search</b></h3>
+    <h3 class="text-center" style="color: #070344;"><b>File Status Report Summary </b></h3>
        
         <br>
         <div style="margin-left: 120px;">
@@ -53,7 +53,7 @@
 
             <div class="col-md-6">
                     <div class="mb-1">
-                        <label for="username">Client</label>
+                        <label for="username"> Date(to)</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
 
@@ -84,32 +84,67 @@
                     </div>
                 </div>
 
-               
-
            
 
 </div>
 <br>
+<div class="row">
+    
+
+    
+    <div class="col-md-6">
+        <div class="mb-1">
+            <label for="username">Instruction Category</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+
+                </div>
+                <select name="country" id="cars">
+                    <option value="volvo"></option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+                <div class="col-md-6">
+        <div class="mb-1">
+            <label for="username">Receiver</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+
+                </div>
+                <select name="country" id="cars">
+                    <option value="volvo"></option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="test" style="height:20px;"></div>
+</div>
+</div>
 
 
 
 <div class="row">
     
 
-    <div class="col-md-4">
+    <div class="col-md-2">
         <div class="mb-1">
-            <label for="username">Progress Date(From)</label>
+            <label for="username">Currency</label>
             <div class="input-group">
                 <div class="input-group-prepend">
 
                 </div>
-                <input type="date" class="form-control" name="incorporation" id="age">
+                <select name="country" id="cars">
+                    <option value="volvo"></option>
+                </select>
             </div>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-2">
         <div class="mb-1">
-            <label for="username">To</label>
+            <label for="username">Exchangr Rate</label>
             <div class="input-group">
                 <div class="input-group-prepend">
 
@@ -125,6 +160,64 @@
              
 </div>
 <br>
+
+<div class="row">
+    
+
+    <div class="col-md-2">
+        <div class="mb-1">
+            <label for="username">Turn-Around Time(TAT)</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+
+                </div>
+                <select name="country" id="cars">
+                    <option value="volvo"></option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="mb-1">
+            <label for="username">Priority</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+
+                </div>
+                <select name="country" id="cars">
+                    <option value="volvo"></option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+             
+</div>
+
+<br>
+
+<div class="row">
+    
+
+
+    <div class="col-md-6">
+        <div class="mb-1">
+            <label for="username">Details</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+
+                </div>
+                <select name="country" id="cars">
+                    <option value="volvo"></option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+             
+</div>
+<hr class="mb-4">.
+
 
 
 
@@ -149,8 +242,8 @@
             </div>
             <div class="btn-group pt-3 " role="group" aria-label="Basic example" style="margin-left: 150px;">
 
-                <button type="submit" class="btn btn-primary submit_btn">Search</button>
-               
+                <button type="submit" class="btn btn-primary submit_btn">View Report</button>
+                <button type="submit" class="btn btn-primary submit_btn">Cancel</button>
 
             </div>
         </div>

@@ -158,6 +158,23 @@ class filemanagement extends Controller
          return view('file_management.file-progress-report');
      }
 
+     public function filestatussummary()
+     {
+         return view('file_management.file-status-summary');
+     }
+
+
+     public function workflow()
+     {
+         return view('file_management.work-flow');
+     }
+
+     public function newworkflow()
+     {
+         return view('file_management.new-workflow');
+     }
+
+
      //document manager
 
      public function diarymanagement()
