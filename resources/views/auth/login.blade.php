@@ -96,7 +96,7 @@
         <div class="align-items-center col-lg-7  d-flex justify-content-center">
             <div class="vl"></div>
          
-              <img  id="auth-right" src="images/bg/loginimage.jpg" style="border-radius: 50px; " class="  mx-auto d-block" alt="Responsive image">
+              <img  id="auth-right" src="assets/images/bg/loginimage.jpg" style="border-radius: 50px; " class="  mx-auto d-block" alt="Responsive image">
 
             
         </div>
