@@ -16,7 +16,7 @@
 </head>
 <body>
   <h3 style="text-align:center"><b>Client Management</b></h3>
-  <hr class="mb-4">.
+  <hr>
 <div class="container-fluid">
   
   <div class="row sm">
@@ -29,10 +29,8 @@
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-3.png" alt=""> <a href ="complaint-list"><button type="button" class="btn btn-primary btn_align_btn" > Complaint Register</button></a></div>
   </div>
   <br>
-  <hr class="mb-4">.
   <h3 style="text-align:center"><b>Customer Relationship Manager</b></h3>
-  <br>
-  <hr class="mb-4">.
+  <hr>
  
   <div class="row sm">
   <div class="col-sm-4 " ><img class="logo_size" src="image\logo\icon-7.png" alt=""><a href ="{{url('view-registration')}}"><button type="button" class="btn btn-primary btn_align_btn" > Customer Registration</button></a></div>

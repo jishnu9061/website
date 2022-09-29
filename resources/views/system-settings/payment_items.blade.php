@@ -3,18 +3,14 @@
 @section('content')
 <html>
    <head>
-   <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
-    <script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-    </script>
-    <script src=
-"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
-    </script>
-    <script src=
-"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
-    </script>
+   <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
       <style >
           body
         {
@@ -28,9 +24,9 @@
 table{
     outline: 1px solid  gray ;
 }
-td:nth-child(odd) {
+/* td:nth-child(odd) {
             background-color:rgb(198, 195, 211); 
-        }
+        } */
           
             </style>
    </head>
@@ -42,25 +38,26 @@ td:nth-child(odd) {
         <hr class="mb-4">.
     <!-- <div class="container"> -->
       <div class="mydiv">
-             <table class="table" >
-                  
+      <table class="table table-bordered" id="new-item">
+                  <thead>
                         <tr>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">No</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Item Code</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Item Name</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Item Comments</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Item Short Names</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Status</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Edit</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;"class="text-center"><input type="radio"></th>
+                        <th class="text-center" >No</th>
+                        <th class="text-center">Item Code</th>
+                        <th class="text-center" >Item Name</th>
+                        <th class="text-center" >Item Comments</th>
+                        <th class="text-center" >Item Short Names</th>
+                        <th class="text-center" >Status</th>
+                        <th class="text-center">Edit</th>
+                        <th class="text-center" ><input type="radio"></th>
                     </tr>
-
+    </thead>
+    <tbody>
                     <tr>
                         <td colspan="8"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">01-Legal Fees:</td>
                     </tr>
                     <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">1</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);">01</td>
+                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></td>
+                        <td  style="background-color:white;color:rgb(13, 1, 56);"</td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
@@ -74,8 +71,8 @@ td:nth-child(odd) {
                         <td colspan="8"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">03-Client Funds:</td>
                     </tr>
                     <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">2</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);">03</td>
+                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></td>
+                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
@@ -89,8 +86,8 @@ td:nth-child(odd) {
                         <td colspan="8"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">99-VAT Amount:</td>
                     </tr>
                     <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">1</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);">99</td>
+                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></td>
+                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
@@ -104,18 +101,8 @@ td:nth-child(odd) {
                         <td colspan="8"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">02-Vatable Disbursement(Telephone,Postage,Transport etc)</td>
                     </tr>
                     <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">1</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);">02</td>
+                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('#')}}"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
-                    </tr>
-                    <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">2</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);">021</td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
@@ -123,54 +110,14 @@ td:nth-child(odd) {
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('#')}}"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
                     </tr>
-                    <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">3</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);">022</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('#')}}"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
-                    </tr>
-                    <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">4</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);">023</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('#')}}"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
-                    </tr>
-                    <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">5</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);">024</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('#')}}"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
-                    </tr>
-                  
+                 
 
                     <tr>
                         <td colspan="8"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">04-Non-Vatable Disbursement(Stamp Duty,Registration Fees etc)  </td>
                     </tr>
                     <tr>
-                    <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">1</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);">04</td>
+                    <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('#')}}"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
-                    </tr>
-                    <tr>
-                    <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">2</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);">043</td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
@@ -178,15 +125,7 @@ td:nth-child(odd) {
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('#')}}"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
                     </tr>
-                    <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">3</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);">041</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('#')}}"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
-                    </tr>
+    </tbody>
 
                    
                 </table>

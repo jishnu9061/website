@@ -37,7 +37,7 @@
     <div class="container-fluid">
   
   <div class="row sm">
-    <div class="col-sm-4 " ><a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > Manage User Accounts</button></a></div>
+    <div class="col-sm-4 " ><a href="{{url('manage_user_account')}}"><button type="button" class="btn btn-primary btn_align_btn" > Manage User Accounts</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > Change User Password</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" >Manage User Groups</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > View Roles per User</button></a></div>

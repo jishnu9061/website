@@ -737,7 +737,10 @@ Route::any('template_category','SystemSetup@templatecategory')->name('template_c
 Route::any('add_template_category','SystemSetup@addtemplatecategory')->name('add_template_category');
 Route::any('document_template_category','SystemSetup@documenttemplatecategory')->name('document_template_category');
 Route::any('edit_template_category','SystemSetup@edittemplatecategory')->name('edit_template_category');
-
+//USER details
+//manage user accounts
+Route::any('manage_user_account','SystemSetup@manageuseraccount')->name('manage_user_account');
+Route::any('user_edit','SystemSetup@useredit')->name('user_edit');
 //RESHMA
 
 

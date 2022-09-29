@@ -8,6 +8,13 @@
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 <style>
      body
         {
@@ -73,8 +80,8 @@
 
     <!-- <a href="{{url('add_company_branch')}}"  class="btn btn-primary"style="color:rgb(238, 196, 105);background-color:rgb(29, 2, 129);" >Add Branch</a><br><br> -->
     <p>Total Result: 2</p>
-    <table>
-   
+    <table class="table table-bordered" id="new-item">
+   <thead>
   <tr>
     <th>Sl No</th>
     <th>Branch No</th>
@@ -82,46 +89,26 @@
     <th>Branch Name</th>
     <th>Status</th>
     <th>Action</th>
-  
+        </thead>
   </tr>
+  <tbody>
   <tr>
-    <td>1</td>
-    <td>02</td>
-    <td>NBI</td>
-    <td>Nairobi</td>
-    <td style="color:green;font-weight:bold;">Active</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td style="color:green;font-weight:bold;"></td>
     <td  scope="row"class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
                         <a href="{{url('edit_company_branch')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                             <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
    
     </tr>
-
-  <tr>
-    <td>  </td>
-    <td>  </td>
-    <td>  </td>
-    <td>   </td>
-    <td style="color:red;font-weight:bold;">In-Active</td>
-    <td  scope="row"class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
-                        <a href="{{url('edit_company_branch')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                            <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
-
-    </tr>
+        </tbody>
+  
   
 </table><br><br>
 
-<!-- <select style="width:200px;height: 30px;background-color:#f0e7ce; border: 1px solid rgb(177, 127, 62);padding-right:10px;margin-left:1250px;">
-    <option>  Activate Category </option>
-    <option>De-Activate Category</option>
-    <option>Delete Category</option>
-</select>
-<button class="btn btn-primary" style="width:42px;height:35px;background-color:rgb(177, 127, 62); border: 1px solid rgb(240, 205, 10);margin-left:1250px;
-            color:rgb(13, 1, 56);text-align: center; ">Go</button>
-         -->
 
-         <!-- <form>
- <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
-</form> -->
 </body>
     </html>
     @endsection

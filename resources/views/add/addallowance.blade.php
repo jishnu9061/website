@@ -14,6 +14,12 @@
   display: flex;
   flex-direction: column;
 }
+
+.form-control {
+    display: block;
+    width: auto;
+   
+}
     </style>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
    

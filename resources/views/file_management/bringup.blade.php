@@ -36,6 +36,31 @@
 
 
     </div>
+<<<<<<< HEAD
+=======
+    <br>
+    <div class="container">
+  <div class="row">
+    <div class="col-sm">
+    
+    </div>
+    <div class="col-sm">
+   
+    <button type="submit" class="btn btn-primary submit_btn btn_align">Cancel</button>
+    <button type="submit" class="btn btn-primary submit_btn btn_sumbit">View Report</button>
+
+    
+
+    </div>
+  </div>
+</div>
+ </div>     
+    
+   
+          </div>
+
+          
+>>>>>>> c801a902e8c4ca3c491d06632ffa7643c620b94d
 
 
 
