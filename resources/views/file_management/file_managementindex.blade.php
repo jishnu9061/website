@@ -15,18 +15,18 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 </head>
 <body>
-
+<br>
 <div class="container-fluid">
-  <h3 style="text-align:center"><b>Maintenance</b></h3>
-  <hr>
+  <h3 style="float:left"><u><b>Maintenance</b></u></h3>
+  <br><br>
   <div class="row sm">
     <div class="col-sm-4 " > <a href="{{url('file-list')}}"><img class="logo_size" src="assets\image\2.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" >Manage Files</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('file-progress-list')}}"><img class="logo_size" src="assets\image\2.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >File Progress/Bringups</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('file-archive')}}"><img class="logo_size" src="assets\image\3.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >File Archive</button></a></div>
     </div>
     <br>
-    <h3 style="text-align:center"><b>File Status Reports</b></h3>
-  <hr>
+    <h3 style="float:left"><b><u>File Status Reports</u></b></h3>
+  <br><br>
     <div class="row sm">
     <div class="col-sm-4 " > <a href="{{url('file-list-progress-report')}}"><img class="logo_size" src="assets\image\4.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" > File List Progress Report</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('bringup')}}"><img class="logo_size" src="assets\image\5.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Bringup Report</button></a></div>
@@ -36,8 +36,8 @@
     <div class="col-sm-4" >  <a href="{{url('staff-monthly-status-report')}}"><img class="logo_size" src="assets\image\9.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Monthly Staff Status Report</button></a></div>
     </div>
     <br>
-    <h3 style="text-align:center"><b>Notes</b></h3>
-    <hr>
+    <h3 style="flot:left"><b><u>Notes</u></b></h3>
+    <br>
     <div class="row sm">
     <div class="col-sm-4" >  <a href="{{url('diary-management')}}"><img class="logo_size" src="assets\image\10.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Diary Management</button></a></div>
     <div class="col-sm-4" >  <a href="{{url('work-flow')}}"><img class="logo_size" src="assets\image\11.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Workflow Management</button></a></div>
@@ -45,17 +45,17 @@
     <div class="col-sm-4" >  <a href="{{url('document-manager')}}"><img class="logo_size" src="assets\image\14.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Document Manager (DMS)</button></a></div>
   </div>
   <div>
-
-  <h3 style="text-align:center"><b>Instruction</b></h3>
-  <hr>
+  <br>
+  <h3 style="float:left"><b><u>Instruction</u></b></h3>
+  <br><br>
     <div class="row sm">
     <div class="col-sm-4" >  <a href="{{url('file_instruction')}}"><img class="logo_size" src="assets\image\6.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >File Instructions</button></a></div>
     <div class="col-sm-4" >  <a href="{{url('office_instructions')}}"><img class="logo_size" src="assets\image\5.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Office Instructions</button></a></div>
     <div class="col-sm-4" >  <a href="{{url('instructions_report')}}"><img class="logo_size" src="assets\image\9.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Instructions Report</button></a></div>
     </div>
   <br> 
- <h3 style="text-align:center"><b>File Reports</b></h3>
-  <hr>
+ <h3 style="float:left"><b><u>File Reports</u></b></h3>
+  <br><br>
     <div class="row sm">
     <div class="col-sm-4" >  <a href="{{url('file-report')}}"><img class="logo_size" src="assets\image\10.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Files Reports</button></a></div>
     <div class="col-sm-4" >  <a href="{{url('file-opened-report')}}"><img class="logo_size" src="assets\image\11.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Files Opened Report</button></a></div>
@@ -67,8 +67,8 @@
    
     </div>
     <br>
-  <h3 style="text-align:center"><b>Add-Ons</b></h3>
-  <hr>
+  <h3 style="flot:left"><b><u>Add-Ons</u></b></h3>
+  <br>
     <div class="row sm">
     <div class="col-sm-4" >  <a href="{{url('Safe_management')}}"><img class="logo_size" src="assets\image\10.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Safe Management</button></a></div>
     <div class="col-sm-4" >  <a href="{{url('Request_staff_item')}}"><img class="logo_size" src="assets\image\11.png" alt=""><button type="button" style="width:70%;"  class="btn btn-primary btn_align_btn" >Request Safe Item</button></a></div>
