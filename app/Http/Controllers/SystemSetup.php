@@ -183,6 +183,15 @@ class SystemSetup extends Controller
     {
         return view('system-settings.edit_template_category');
     }
+    public function manageuseraccount()
+    {
+        return view('system-settings.manage_user_account');
+    }
+    public function useredit()
+    {
+        return view('system-settings.user_edit');
+    }
+
 
 
    
