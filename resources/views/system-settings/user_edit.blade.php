@@ -33,6 +33,12 @@
          td{
             color:rgb(13, 1, 56);
          }
+         .row{
+            column-gap: 100px;
+         }
+         select{
+            background-color:white;
+         }
 
         </style>
 
@@ -53,192 +59,185 @@
 </script>
         
    
-<div class="py-5 text-center">
+
 <h2 style="text-align:center; ">Edit User Details </h2>
-    <hr class="mb-4">.
-  
-</div>
+    <hr class="mb-4"><br>
 
-
-    <div class="row">
+<div class="row">
         <div class="col-md-12 order-md-1">
             <form method="post" action="http://localhost/CRA/public/addthestaffs" id="form">
-              <input type="hidden" name="_token" value="ddpMUOg3SUr8CszFAIwbkc9qzJ5kC1beAhSW3XhM">
-              <div class="row">
-                
-              <div class="col-md-4">
-                <input type="text" class="form-control" name="name" id="username" style="height:100px;width:100px;" >
-                <label style="text-align:center;">Signature</label>
+              <!-- <input type="hidden" name="_token" value="ddpMUOg3SUr8CszFAIwbkc9qzJ5kC1beAhSW3XhM"> -->
+               <div class="row">
+                  <div class="col-md-5">
+                    <div class="mb-1">
+                        <input type="text" class="form-control" name="name" id="username" style="height:100px;width:100px;" >
+                        <label style="text-align:center;">Signature</label>
+                    </div> 
+                </div> 
+                <!-- <div class="col-md-5">
+                    <div class="mb-1">
+                        <label for="username">ddddddddddd</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="name" id="ucode" >
+                        </div>
+                    </div> -->
+                </div> 
 
-            </div> 
 
-    
-    
-    <div class="col-md-4">
-        <div class="mb-1">
-            <label for="username">Password</label>
-                <div class="input-group">
-                    <div class="input-group-prepend"></div>
-                        <input type="email" class="form-control" name="email" id="username" >
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Email is required.
-                            </div>
+
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="mb-1">
+                        <label for="username">User Code:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="name" id="ucode" >
+                        </div>
                     </div>
                 </div>
-        </div>
-       
-        </div>
+                <div class="col-md-5">
+                    <div class="mb-1">
+                        <label for="username">Name:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="name" id="ucode" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="mb-1">
+                        <label for="username">Initials:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="name" id="ucode" >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="mb-1">
+                        <label for="username">Postal:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="name" id="ucode" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="mb-1">
+                        <label for="username">User Name:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="name" id="ucode" >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="mb-1">
+                        <label for="username">Password:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="name" id="ucode" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="mb-1">
+                        <label for="username">Town:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="name" id="ucode" >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="mb-1">
+                        <label for="username">Mobile:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="name" id="ucode" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="mb-1">
+                        <label for="username">Email:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="name" id="ucode" >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="mb-1">
+                        <label for="username">Department:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="name" id="ucode" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="mb-1">
+                        <label for="username">User Group:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="name" id="ucode" >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="mb-1">
+                        <label for="username">G/L Account:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                        <select type="text" value="" name="type">
+                        <option>  </option>
+                            <option>Caroline Ratemo</option>
+                            <option>Petty Cash Account-Office</option>
+                            <option>Mpesa Cash Account-771804</option>
+                            <option>Office Mpesa A/C-0724708999</option>
+                            
+                        </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="mb-1">
+                        <label for="username">User Roles:</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="name" id="ucode"style="height:100px;width:100px; ">
+                        </div>
+                    </div>
+                </div>
+             
+            </div>
+                   
+          
+
         
 
-        
 
 
-
-              <div class="row">
-
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">User Code</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                    <input type="text" class="form-control" name="name" id="username" >
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                            Name is required.
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">Password</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                            <input type="email" class="form-control" name="email" id="username" >
-                                                <div class="invalid-feedback" style="width: 100%;">
-                                                    Email is required.
-                                                </div>
-                                        </div>
-                                    </div>
-                            </div>
-                           
-                            </div>
-
-                            <div class="row">
-
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Initials</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                    <input type="text" class="form-control" name="name" id="username" >
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                            Name is required.
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">Mobile</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                            <input type="email" class="form-control" name="email" id="username" >
-                                                <div class="invalid-feedback" style="width: 100%;">
-                                                    Email is required.
-                                                </div>
-                                        </div>
-                                    </div>
-                            </div>
-                           
-                            </div>
-
-                            <div class="row">
-
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">User Name</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                    <input type="text" class="form-control" name="name" id="username" >
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                            Name is required.
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">Department</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                            <input type="email" class="form-control" name="email" id="username" >
-                                                <div class="invalid-feedback" style="width: 100%;">
-                                                    Email is required.
-                                                </div>
-                                        </div>
-                                    </div>
-                            </div>
-                           
-                            </div>
-
-                            <div class="row">
-
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Town</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                    <input type="text" class="form-control" name="name" id="username" >
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                            Name is required.
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">G/L Account</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                            <input type="email" class="form-control" name="email" id="username" >
-                                                <div class="invalid-feedback" style="width: 100%;">
-                                                    Email is required.
-                                                </div>
-                                        </div>
-                                    </div>
-                            </div>
-                           
-                            </div>
-
-                            <div class="row">
-
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">E mail</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                    <input type="text" class="form-control" name="name" id="username" >
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                            Name is required.
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">User Roles</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                            <input type="email" class="form-control" name="email" id="username" >
-                                                <div class="invalid-feedback" style="width: 100%;">
-                                                    Email is required.
-                                                </div>
-                                        </div>
-                                    </div>
-                            </div>
-                           
-                            </div>
-        
+              
         
         
         

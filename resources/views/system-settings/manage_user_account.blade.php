@@ -54,6 +54,7 @@ table{
                         <th class="text-center" >Last Logout Time</th>
                         <th class="text-center" >Status</th>
                         <th class="text-center" >Action</th>
+                        <th class="text-center"><input type="checkbox"></th>
                     </tr>
 </thead>
              <tbody>
@@ -94,6 +95,7 @@ table{
                         </div> 
 
                        </td>
+                       <td class="text-center"><input type="checkbox"></td>
                      </tr>
                      </tbody>
                     
