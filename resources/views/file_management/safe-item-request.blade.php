@@ -28,7 +28,8 @@
     <div class="col-sm">
 
 
-    </div>
+   
+    <h2 style="text-align:center;">Safe Register Report</h2></br></br>
     <div>
         
         <br>
@@ -49,7 +50,7 @@
         
     </div>
 </div>
-<h2 style="text-align:center;">Safe Register Report</h2></br></br>
+
 
 <div class="row">
     
@@ -107,14 +108,14 @@
        </div>
    </div>
 
-</div>
-</div>
+
 
 </div>
 <br>
 
             <div class="row">
-                <div class="col-md-6">
+
+                <div class="col-md-4">
                     <div class="mb-1">
                         <label for="username">Safe Name</label>
                         <div class="input-group">
@@ -128,7 +129,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="mb-1">
                         <label for="username">Approver</label>
                         <div class="input-group">
@@ -143,14 +144,12 @@
                 </div>
 
             </div>
-    </div>
-
-</div>
+   
 <br>
 <div class="row">
     
 
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="mb-1">
             <label for="username">Requested By</label>
             <div class="input-group">
@@ -164,7 +163,7 @@
         </div>
     </div>
     
-    <div class="col-md-3">
+    <div class="col-md-4">
                     <div class="mb-1">
                         <label for="username">Date</label>
                         <div class="input-group">
@@ -178,7 +177,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="mb-1">
                         <label for="username">and</label>
                         <div class="input-group">
@@ -228,40 +227,35 @@
                 </div>
 </div>
 <div id="test" style="height:20px;"></div>
-</div>
-</div>
-
-
-
-<!-- <hr class="mb-4">.
 
 
 
 
 
 
-</div> -->
+
+
+</div> 
 
 
 </div>
 
 
 
-<div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
+<div class="container">
+                    <div class="row">
+                        <div class="col-sm">
 
+                        </div>
+                        <div class="btn-group pt-3 " role="group" aria-label="Basic example">
+
+                            <button type="submit" class="btn btn-primary submit_btn">View Report</button>
+                            <button type="submit" class="btn btn-primary submit_btn">Close</button>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="btn-group pt-3 " role="group" aria-label="Basic example" style="margin-left: 150px;">
-
-                <button type="submit" class="btn btn-primary submit_btn">View Report</button>
-                <button type="submit" class="btn btn-primary submit_btn">Cancel</button>
-
-            </div>
-        </div>
-    </div>
-</div>
 
 
 
@@ -271,7 +265,7 @@
 
 
 
-</div>
+
 </div>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
