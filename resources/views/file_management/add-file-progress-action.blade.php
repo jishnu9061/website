@@ -183,21 +183,21 @@
 
     
     <br>
-    <div class="">
-              <div class="row">
+    <div>
+    <div class="container">
+        <div class="row">
             <div class="col-sm">
-    
-          </div>
-                      <div class="col-sm">
-                      <button type="submit"  style=" margin-left:-90%;" class="btn btn-primary submit_btn btn_sumbit">Add File Progress</button>
 
+            </div>
+            <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
 
-                      <button type="submit"  style=" margin-left:1%;"  class="btn btn-primary submit_btn btn_align">Close</button>
+                <button type="submit" class="btn btn-primary submit_btn">Add File Progress</button>
+                <button type="submit" class="btn btn-primary submit_btn">Close</button>
 
-                      </div>
-  </div>
+            </div>
+        </div>
+    </div>
 </div>
-
 
 
 

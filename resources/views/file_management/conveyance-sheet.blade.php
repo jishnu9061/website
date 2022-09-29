@@ -13,11 +13,7 @@
             </div>
         @endif
 
-<div class="col-sm">
-    <a href="{{url('file-list')}}"><button type="submit" style=" height: 3rem; margin-left: 0%; width: 17%; margin-bottom: 13%; background-color:#acacb9;" >Back</button></a>
-    
 
-  </div>
     <div>
     <h2 style="text-align:center;">Conveyance Sheet</h2>
     <hr class="mb-4">.
@@ -418,8 +414,6 @@
         
         <br>
         
-        </div>
-        </div>
         
 
 
@@ -427,18 +421,20 @@
      
     </div>
     <br>
+    <div>
     <div class="container">
-  <div class="row">
-    <div class="col-sm">
-    
+        <div class="row">
+            <div class="col-sm">
+
+            </div>
+            <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
+
+                <button type="submit" class="btn btn-primary submit_btn">Save</button>
+                <button type="submit" class="btn btn-primary submit_btn">Close</button>
+
+            </div>
+        </div>
     </div>
-    <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
-      
-      <button type="submit" class="btn btn-primary submit_btn">Save</button>
-      <button type="button" class="btn ">Close</button>
-      
-    </div>
-  </div>
 </div>
      
     

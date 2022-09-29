@@ -192,18 +192,20 @@
      
     </div>
     <br>
+    <div>
     <div class="container">
-  <div class="row">
-    <div class="col-sm">
-    
+        <div class="row">
+            <div class="col-sm">
+
+            </div>
+            <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
+
+                <button type="submit" class="btn btn-primary submit_btn">Generate</button>
+                <button type="submit" class="btn btn-primary submit_btn">Close</button>
+
+            </div>
+        </div>
     </div>
-    <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
-      
-      <button type="submit" class="btn btn-primary submit_btn">Generate</button>
-      <button type="button" class="btn ">Close</button>
-      
-    </div>
-  </div>
 </div>
      
     
