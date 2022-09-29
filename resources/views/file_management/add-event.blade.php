@@ -19,7 +19,7 @@
 
   </div>
     <div>
-    <h2 style="text-align:center;">Generate Documents </h2>
+    <h2>Add Event</h2>
     <hr class="mb-4">.
 </div>
   </div>
@@ -29,107 +29,243 @@
 
      <form method="post" action="" id="form">
 	      @csrf
-          
-
-       
-        <div class="row">
-        <div class="col-md-4">
+            <div class="row">
+            <div class="col-md-6">
             <div class="mb-1">
-          <label for="username">Client</label>
+          <label for="username">Title</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-            <input type="text" class="form-control" name="website" id="confirm_password" required>
+            <input type="text" class="form-control" name="number" id="username" required>
+            <br>
           </div>
         </div>
         </div>
+        <div class="col-md-6">
+            <div class="mb-1">
+          <label for="username">Event Type</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
 
-       
-        <div class="col-md-1">
+            </div>
+            <select name="country" id="cars">
+                <option value="volvo"></option>
+            </select>
+            <br>
+          </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+            <div class="mb-1">
+          <label for="username">Meeting Room</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <select name="country" id="cars">
+                <option value="volvo"></option>
+            </select>
+
+          </div>
+        </div>
+        </div>
+        
+          
+
+        <div class="col-md-2">
             <div class="mb-1">
           <label for="username"></label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-         <a href="{{url('diary-management')}}"> <i class="fa fa-plus" style="font-size:24px"></i></a>
+            <a href="{{url('meeting-rooms')}}"> <i class="fa fa-plus" style="font-size:24px"></i></a>
+           
           </div>
         </div>
         </div>
-        <div class="col-md-6">
-            <div class="mb-1">
-          <label for="username">Document Category</label>
+          <div class="col-md-4">
+           <div class="mb-1">
+          <label for="username">Location</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-            <input type="text" class="form-control" name="website" id="confirm_password" required>
+              <input type="date" class="form-control" name="number" id="username" required>
+            <div class="invalid-feedback" style="width: 100%;">
+              Number is required.
+            </div>
           </div>
         </div>
+          </div>
+
         </div>
-       
+        <br>
+          <div class="row">
+          <div class="col-md-4">
+           <div class="mb-1">
+          <label for="username">Start Date</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+              <input type="date" class="form-control" name="incorporation" id="age" >
+            <div class="invalid-feedback" style="width: 100%;">
+            Incorporation is required
+            </div>
+          </div>
+        </div>
+          </div>
+
         <div class="col-md-4">
             <div class="mb-1">
-          <label for="username">Document Title</label>
+          <label for="username">Time</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-            <input type="text" class="form-control" name="website" id="confirm_password" required>
+            <input type="time" class="form-control" name="telephone" id="confirm_password" required>
             <div class="invalid-feedback" style="width: 100%;">
               Telephone Number is required.
             </div>
           </div>
         </div>
-        
-           
           </div>
         </div>
-        
+         <div id="test" style="height:20px;"></div>
+          </div>
+        </div>
 
-</br>
 
 
         <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="mb-1">
-          <label for="username">Nature Of Document</label>
+          <label for="username">End Date</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-            <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+            <input type="date" class="form-control" name="website" id="confirm_password" required>
           </div>
         </div>
         </div>
-        
-        
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="mb-1">
-          <label for="username">Keyword Search/ Tags</label>
+          <label for="username">Time</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-            <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+            <input type="time" class="form-control" name="website" id="confirm_password" required>
+            <div class="invalid-feedback" style="width: 100%;">
+              Telephone Number is required.
+            </div>
           </div>
         </div>
-        </div>
-        
-        </div>
-        
-           
           </div>
         </div>
         <br>
 
- 
 
         <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-4">
+            <div class="mb-1">
+          <label for="username">Event Booked For?</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <select name="country" id="cars">
+                <option value="volvo"></option>
+            </select>
+          </div>
+        </div>
+        </div>
+
+          <div class="col-md-4">
+            <div class="mb-1">
+          <label for="username">User Invited</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <input type="text" class="form-control" name="email" id="age" >
+            <div class="invalid-feedback" style="width: 100%;">
+            Incorporation is required
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+            <div class="mb-1">
+          <label for="username">Other Invites[Email Addresses,Seperated By Commas(,)]</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+            <div class="invalid-feedback" style="width: 100%;">
+              Telephone Number is required.
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+        <div class="col-md-4">
+            <div class="mb-1">
+          <label for="username">Client </label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <select name="country" id="cars">
+                <option value="volvo"></option>
+            </select>
+          </div>
+        </div>
+        </div>
+
+          <div class="col-md-4">
+            <div class="mb-1">
+          <label for="username">File</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <select name="country" id="cars">
+                <option value="volvo"></option>
+            </select>
+            <div class="invalid-feedback" style="width: 100%;">
+            Incorporation is required
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+            <div class="mb-1">
+          <label for="username">Notes</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <input type="password" class="form-control" name="website" id="confirm_password" required>
+            <div class="invalid-feedback" style="width: 100%;">
+              Telephone Number is required.
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+        <br>
+
+        <div class="row">
+        <div class="col-md-4">
            <div class="mb-1">
-          <label for="username">Documet Owner</label>
+          <label for="username">Set Repetition</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
@@ -144,66 +280,72 @@
         </div>
           </div>
 
-
-          <div class="col-md-3">
+          <div class="col-md-4">
            <div class="mb-1">
-          <label for="username">Viewer</label>
+          <label for="username">Repetition End</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-            <input type="text" class="form-control" name="website" id="confirm_password" required>
+              <input type="date" class="form-control" name="number" id="username" required>
             <div class="invalid-feedback" style="width: 100%;">
               Number is required.
             </div>
           </div>
         </div>
           </div>
-          </div>
+          
+          <div class="col-md-4">
+           <div class="mb-1">
+          <label for="username">Set Reminder</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
 
+            </div>
+            <select name="country" id="cars">
+                <option value="volvo"></option>
+            </select>
+            <div class="invalid-feedback" style="width: 100%;">
+              Number is required.
+            </div>
+          </div>
+        </div>
+          </div>
+         <div id="test" style="height:20px;"></div>
+          </div>
+        </div>
         <br>
-
-
-        <div class="row">
-        
-
-
-          <div class="col-md-3">
-           <div class="mb-1">
-          <label for="username">Document Template</label>
+        <!-- <div class="row">
+        <div class="col-md-4">
+            <div class="mb-1">
+          <label for="username">Workflow</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-            <input type="text" class="form-control" name="website" id="confirm_password" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Number is required.
-            </div>
+            <select name="country" id="cars">
+                <option value="volvo"></option>
+            </select>
           </div>
         </div>
-          </div>
-          </div>
-        </div>
-        </div>
-        
-
-
-
      
-    </div>
-    <br>
+    </div> -->
+
+  
+    <div>
     <div class="container">
-  <div class="row">
-    <div class="col-sm">
-    
+        <div class="row">
+            <div class="col-sm">
+
+            </div>
+            <div class="btn-group pt-3 " role="group" aria-label="Basic example" style="margin-left: 50px;">
+
+                <button type="submit" class="btn btn-primary submit_btn">Submit</button>
+                <button type="submit" class="btn btn-primary submit_btn">Close</button>
+
+            </div>
+        </div>
     </div>
-    <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
-      
-      <button type="submit" class="btn btn-primary submit_btn">Generate</button>
-      <button type="button" class="btn ">Close</button>
-      
-    </div>
-  </div>
 </div>
      
     

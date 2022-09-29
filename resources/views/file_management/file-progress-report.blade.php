@@ -20,17 +20,21 @@
     <h3 class="text-center" style="color: #070344;"><b>Search</b></h3>
        
         <br>
-        <div style="margin-left: 120px;">
-        <input class="btn btn-primary" type="button" value="View File Statement" >
-        <input class="btn btn-primary" type="button" value="View File Details">
-        <input class="btn btn-primary" type="button" value="Previous Instructions">
-        <input class="btn btn-primary" type="button" value="Post File Progress">
-        <input class="btn btn-primary" type="button" value="Post File Progress Only">
-        <input class="btn btn-primary" type="button" value="Post File Bring-Up Only">
-        
+        <div style="margin-left: 150px;">
+        <input class="btn btn-primary" type="button" value="Today" >
+        <input class="btn btn-primary" type="button" value="This Week">
+        <input class="btn btn-primary" type="button" value="Last Week">
+        <input class="btn btn-primary" type="button" value="This Month(MTD)">
+        <input class="btn btn-primary" type="button" value="Last Month">
+        <input class="btn btn-primary" type="button" value="This Quater">
+        <input class="btn btn-primary" type="button" value="Last Quater">
+        <input class="btn btn-primary" type="button" value="This Year(YTD)">
+        <input class="btn btn-primary" type="button" value="Last Year">
         </div>
         <br>
         <hr class="mb-4">.
+
+       
 
         
     </div>

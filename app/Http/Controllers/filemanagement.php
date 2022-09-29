@@ -187,6 +187,11 @@ class filemanagement extends Controller
          return view('file_management.add-event');
      }
 
+     public function meetingrooms()
+     {
+         return view('file_management.meeting-rooms');
+     }
+
      public function documentmanager()
      {
          return view('file_management.document-manager');
