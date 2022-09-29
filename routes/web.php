@@ -737,7 +737,10 @@ Route::any('template_category','SystemSetup@templatecategory')->name('template_c
 Route::any('add_template_category','SystemSetup@addtemplatecategory')->name('add_template_category');
 Route::any('document_template_category','SystemSetup@documenttemplatecategory')->name('document_template_category');
 Route::any('edit_template_category','SystemSetup@edittemplatecategory')->name('edit_template_category');
-
+//USER details
+//manage user accounts
+Route::any('manage_user_account','SystemSetup@manageuseraccount')->name('manage_user_account');
+Route::any('user_edit','SystemSetup@useredit')->name('user_edit');
 //RESHMA
 
 
@@ -814,6 +817,9 @@ Route::any('file_managementindex',"filemanagement@index")->name('file_management
 Route::any('file-list',"filemanagement@view")->name('file-list');
 Route::any('edit-file',"filemanagement@edit")->name('edit-file');
 Route::any('add-new-file',"filemanagement@addnew")->name('add-new-file');
+Route::any('file-archive',"filemanagement@filearchive")->name('file-archive');
+Route::any('add-box-no',"filemanagement@addboxno")->name('add-box-no');
+Route::any('edit-box-no',"filemanagement@editboxno")->name('edit-box-no');
 //manage files
 
 //document templates
@@ -852,6 +858,7 @@ Route::any('client-monthly-file-status','filemanagement@clientmonthlystatus')->n
 Route::any('staff-monthly-status-report',"filemanagement@staffmonthlystatusreport")->name('staff-monthly-status-report');
 Route::any('file-list-progress-report',"filemanagement@filelistprogressreport")->name('file-list-progress-report');
 Route::any('bringup',"filemanagement@bringup")->name('bringup');
+Route::any('file-progress-report',"filemanagement@fileprogressreport")->name('file-progress-report');
 //file status report
 
 

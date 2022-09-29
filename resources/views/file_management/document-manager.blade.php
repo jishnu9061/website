@@ -14,20 +14,22 @@
 </head>
 
 <body>
+<div class="container">
+        <h3 class="text-center" style="color: #070344;"><b>Document Manager(DMS)</b></h3>
+       <br>
 
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" style="width:20%; background-color: rgb(177, 127, 62);" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<button class="btn btn-primary add-btn" type="button" style="width:20%;" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Upload Document
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="{{url('upload-document')}}">Upload Document</a>
+    <a class="dropdown-item" href="{{url('upload-document')}}">File Upload</a>
     <a class="dropdown-item" href="{{url('generate-document')}}">Generate Document</a>
   </div>
 </div>
+<br>
  
-    <div class="container">
-        <h3 class="text-center" style="color: #070344;"><b>Document Manager(DMS)</b></h3>
-       <br>
+    
    
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">

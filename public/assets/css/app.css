@@ -335,19 +335,19 @@
 
 .btn.btn-primary:active {
     color: rgb(255, 255, 255);
-  background-color : #25d876;
+  background-color : #1D1D50;
     
 }
 
 .btn.btn-primary:visited {
     color: rgb(255, 255, 255);
-  background-color : #d82587;
+  background-color : #1D1D50;
     
 }
 
 .btn.btn-primary:hover::after, .btn.btn-primary:focus::after {
     color: rgb(255, 255, 255);
-  background-color : #c6d825;
+  background-color : #1D1D50;
     
 }
 

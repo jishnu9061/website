@@ -2,34 +2,16 @@
 @section('content')
 <html>
    <head>
-   <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
-    <script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-    </script>
-    <script src=
-"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
-    </script>
-    <script src=
-"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
-    </script>
+   <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <style>
-         /* h2
-        {
-            font-size:large;
-            font-weight:bold;
-             color:rgb(13, 1, 56); 
-             background-color:rgb(177, 127, 62);
-             padding:15px;
-            } */
-            /* .container{
-                border:1px solid black;
-         margin-left:0px;
-         width:auto;
-         height:100%;
-         width:40%;
-         } */
+        
 
          table{
               
@@ -46,9 +28,12 @@
         </style>
     </head>
     <body>
+      
     <!-- <h2 >Add Court</h2><br> -->
     <h2 style="text-align:center; text-shadow: 2px 1px;">Document Templates Categories </h2>
     <hr class="mb-4">.
+   
+   
    
 
 <div class="card">
@@ -59,13 +44,13 @@
         ><a href="#!" class="text-primary"
           ><i class="fas fa-plus fa-2x" aria-hidden="true"style=" color:rgb(13, 1, 56);"></i></a
       ></span>
-      <table class="table table-bordered table-responsive-md table-striped text-center">
+      <table class="table table-bordered" id="new-item">
         <thead>
           <tr>
-            <th class="text-center"style=" background-color:rgb(13, 1, 56);">No</th>
-            <th class="text-center"style=" background-color:rgb(13, 1, 56);">Code</th>
+            <th class="text-center">No</th>
+            <th class="text-center">Code</th>
             <!-- <th class="text-center">Edit</th> -->
-            <th class="text-center"style=" background-color:rgb(13, 1, 56);">Action</th>
+            <th class="text-center">Action</th>
          
           </tr>
         </thead>

@@ -3,18 +3,14 @@
 @section('content')
 <html>
    <head>
-   <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
-    <script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-    </script>
-    <script src=
-"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
-    </script>
-    <script src=
-"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
-    </script>
+   <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
       <style >
           body
         {
@@ -49,75 +45,12 @@ table{
              
             
                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">1</td>
-                        <td  style="color:rgb(13, 1, 56);">Leave Application Process</td>
+                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
+                        <td  style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center">  <input type="checkbox" id="emailnotfn" name="emailnotfn"></td>
                         <td class="text-center">  <input type="checkbox" id="smsnotfn" name="smsnotfn" ></td>
                      </tr>
-                     
-            
-                    <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">2</td>
-                        <td  style="color:rgb(13, 1, 56);">Staff Advance</td>
-                        <td class="text-center">  <input type="checkbox" id="emailnotfn" name="emailnotfn"></td>
-                        <td class="text-center">  <input type="checkbox" id="smsnotfn" name="smsnotfn" ></td>
-                     </tr>
-                     
-            
-                    <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">3</td>
-                        <td  style="color:rgb(13, 1, 56);">Staff Loan</td>
-                        <td class="text-center">  <input type="checkbox" id="emailnotfn" name="emailnotfn"></td>
-                        <td class="text-center">  <input type="checkbox" id="smsnotfn" name="smsnotfn" ></td>
-                     </tr>
-                     
-            
-                    <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">4</td>
-                        <td style="color:rgb(13, 1, 56);">File Instructions Notification</td>
-                        <td class="text-center">  <input type="checkbox" id="emailnotfn" name="emailnotfn"></td>
-                        <td class="text-center">  <input type="checkbox" id="smsnotfn" name="smsnotfn" ></td>
-                     </tr>
-                     
-            
-                    <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">5</td>
-                        <td  style="color:rgb(13, 1, 56);">Office Instructions Notification</td>
-                        <td class="text-center">  <input type="checkbox" id="emailnotfn" name="emailnotfn"></td>
-                        <td class="text-center">  <input type="checkbox" id="smsnotfn" name="smsnotfn" ></td>
-                     </tr>
-                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">6</td>
-                        <td  style="color:rgb(13, 1, 56);">File Notifications</td>
-                        <td class="text-center">  <input type="checkbox" id="emailnotfn" name="emailnotfn"></td>
-                        <td class="text-center">  <input type="checkbox" id="smsnotfn" name="smsnotfn" ></td>
-                     </tr>
-                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">7</td>
-                        <td  style="color:rgb(13, 1, 56);">Invoice Notifications</td>
-                        <td class="text-center">  <input type="checkbox" id="emailnotfn" name="emailnotfn"></td>
-                        <td class="text-center">  <input type="checkbox" id="smsnotfn" name="smsnotfn" ></td>
-                     </tr>
-                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">8</td>
-                        <td  style="color:rgb(13, 1, 56);">Credit Note notifications</td>
-                        <td class="text-center">  <input type="checkbox" id="emailnotfn" name="emailnotfn"></td>
-                        <td class="text-center">  <input type="checkbox" id="smsnotfn" name="smsnotfn" ></td>
-                     </tr>
-                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">9</td>
-                        <td  style="color:rgb(13, 1, 56);">Quatation Notifications</td>
-                        <td class="text-center">  <input type="checkbox" id="emailnotfn" name="emailnotfn"></td>
-                        <td class="text-center">  <input type="checkbox" id="smsnotfn" name="smsnotfn" ></td>
-                     </tr>
-                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);">10</td>
-                        <td  style="color:rgb(13, 1, 56);">Supplier Invoice Notifications</td>
-                        <td class="text-center">  <input type="checkbox" id="emailnotfn" name="emailnotfn"></td>
-                        <td class="text-center">  <input type="checkbox" id="smsnotfn" name="smsnotfn" ></td>
-                     </tr>
-                    
-                            </table><br>
+                    </table><br>
                             <input type="button"value="Update" name="update"style="background-color:rgb(13, 1, 56);color: white; margin-left:50%;">
                
         </body>

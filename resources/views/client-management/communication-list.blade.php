@@ -15,7 +15,7 @@
 
 <body>
     <div class="container">
-        <h2 style="color: #070344; text-shadow: 1px 2px; text-align:center;"><b>Client Conversations</b></h2>
+        <h2 style="color: #070344;  text-align:center;"><b>Client Conversations</b></h2>
         <div class="container mt-5">
         <a href="{{url('add-communication')}}"><button type="button" class="btn btn-primary complaint_btn" > Add Communication</button></a>
         </div>

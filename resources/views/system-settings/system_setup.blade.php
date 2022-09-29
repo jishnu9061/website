@@ -17,8 +17,8 @@
    </head>
    <body>
     <!-- <h2 class="text-center">Configuration Details</h2><br> -->
-    <h4 style="text-align:center;">Company Details</h4>
-    <hr class="mb-4">.
+    <h3 style="text-align:center"><b>Company Details</b></h3>
+    <hr>
     <div class="container-fluid">
   
   <div class="row sm">
@@ -32,12 +32,12 @@
 </div>
 </div>
 
-<h4 style="text-align:center; ">User Accounts</h4>
-    <hr class="mb-4">.
+<h3 style="text-align:center; "><b>User Accounts</b></h3>
+    <hr>
     <div class="container-fluid">
   
   <div class="row sm">
-    <div class="col-sm-4 " ><a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > Manage User Accounts</button></a></div>
+    <div class="col-sm-4 " ><a href="{{url('manage_user_account')}}"><button type="button" class="btn btn-primary btn_align_btn" > Manage User Accounts</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > Change User Password</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" >Manage User Groups</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > View Roles per User</button></a></div>
@@ -47,8 +47,8 @@
 </div>
 </div>
 
-<h4 style="text-align:center;">Other Settings</h4>
-    <hr class="mb-4">.
+<h3 style="text-align:center;"><b>Other Settings</b></h3>
+    <hr>
     <div class="container-fluid">
   
   <div class="row sm">
@@ -62,8 +62,8 @@
 </div>
 </div>
 
-<h4 style="text-align:center;">System Menus</h4>
-    <hr class="mb-4">.
+<h3 style="text-align:center;"><b>System Menus</b></h3>
+    <hr>
     <div class="container-fluid">
   
   <div class="row sm">

@@ -16,7 +16,7 @@
 
 <body>
 
-    <div class="container-fluid">
+    <div class="container">
         <h3 class="text-center" style="color: #070344;"><b>Safe Manangement</b></h3>
         <br>
         <a href="{{url('new_Safe_management')}}"><button class="btn btn-primary add-btn" Style="width:200px;">Register

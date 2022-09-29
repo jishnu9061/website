@@ -5,18 +5,13 @@
 <html lang="en">
 <head>
     
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
-    <script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-    </script>
-    <script src=
-"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
-    </script>
-    <script src=
-"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
-    </script>
+<meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 <style>
      body
         {
@@ -89,8 +84,8 @@ a.button4{
  
   }
   table{
-            color:white;
-            background-color:rgb(177,127,62);
+            color:rgb(13, 1, 56);
+            background-color: #D5BD94;
             border collapse:collapse;
             font-size:16px;
             padding:5px;
@@ -109,6 +104,7 @@ a.button4{
 <!-- <h2>Add New Holiday / Weekend Date</h2><br><br> -->
 <h2 style="text-align:center; text-shadow: 2px 1px;">Add New Holiday / Weekend Date</h2>
     <hr class="mb-4">.
+    
 <!-- <div class="container">
         <form action="#">
             <div class="form-group">
@@ -126,7 +122,7 @@ a.button4{
                 <input type="text"  id="bname" name="bname"value=""size="50"><br><br>
             </div> -->
 
-           <table >
+            <table >
                 <tr>
                 <td>Date:</td>
                     <td><input type="date"  id="date" name="date"value=""></td>
@@ -135,7 +131,7 @@ a.button4{
                 <td>Day:</td>
                     <td><input type="text"  id="day" name="day"value=""></td>
                 </tr>
-               
+    
             </table><br><br> 
        
  <a href="something" class="button3">Save</a>

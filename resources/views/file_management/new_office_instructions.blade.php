@@ -132,11 +132,9 @@
 
     </div>
 </div>
-<div id="test" style="height:20px;"></div>
-</div>
-</div>
 
 <div class="row">
+
     <div class="col-md-4">
         <div class="mb-1">
             <label for="username">Expense Category</label>
@@ -165,6 +163,7 @@
         </div>
     </div>
 
+   
     <div class="col-md-4">
         <div class="mb-1">
             <label for="username">Priority</label>
@@ -182,6 +181,7 @@
 </div>
 <br>
 <div class="row">
+    
     <div class="col-md-4">
         <div class="mb-1">
             <label for="username">Amount</label>
@@ -247,10 +247,10 @@
             <div class="col-sm">
 
             </div>
-            <div class="btn-group pt-3 " role="group" aria-label="Basic example" style="margin-left: 150px;">
+            <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
 
                 <button type="submit" class="btn btn-primary submit_btn">Send Instruction</button>
-                <button type="submit" class="btn btn-primary submit_btn">Cancel</button>
+                <button type="submit" class="btn btn-primary submit_btn">Close</button>
 
             </div>
         </div>
