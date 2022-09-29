@@ -22,6 +22,7 @@
         <a href="{{url('new_Safe_management')}}"><button class="btn btn-primary add-btn" Style="width:200px;">Register
                 Safe Item</button></a>
         <br>
+        <br>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 

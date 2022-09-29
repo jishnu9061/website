@@ -737,10 +737,29 @@ Route::any('template_category','SystemSetup@templatecategory')->name('template_c
 Route::any('add_template_category','SystemSetup@addtemplatecategory')->name('add_template_category');
 Route::any('document_template_category','SystemSetup@documenttemplatecategory')->name('document_template_category');
 Route::any('edit_template_category','SystemSetup@edittemplatecategory')->name('edit_template_category');
+//paired accounts
+Route::any('paired_account','SystemSetup@pairedaccount')->name('paired_account');
+Route::any('add_account_pairs','SystemSetup@addaccountpairs')->name('add_account_pairs');
+Route::any('edit_account_pairs','SystemSetup@editaccountpairs')->name('edit_account_pairs');
+//file types
+Route::any('file_types','SystemSetup@filetypes')->name('file_types');
+Route::any('add_file_types','SystemSetup@addfiletypes')->name('add_file_types');
+Route::any('edit_file_types','SystemSetup@editfiletypes')->name('edit_file_types');
+//invoice_items
+Route::any('invoice_items','SystemSetup@invoiceitems')->name('invoice_items');
+Route::any('add_invoice_item','SystemSetup@addinvoiceitem')->name('add_invoice_item');
+Route::any('add_gl_account','SystemSetup@addglaccount')->name('add_gl_account');
+//currency_list
+Route::any('currency_list','SystemSetup@currencylist')->name('currency_list');
+Route::any('add_currency','SystemSetup@addcurrency')->name('add_currency');
+Route::any('edit_currency','SystemSetup@editcurrency')->name('edit_currency');
 //USER details
 //manage user accounts
 Route::any('manage_user_account','SystemSetup@manageuseraccount')->name('manage_user_account');
+Route::any('reg_new_user','SystemSetup@regnewuser')->name('reg_new_user');
 Route::any('user_edit','SystemSetup@useredit')->name('user_edit');
+Route::any('user_attachments','SystemSetup@attachments')->name('user_attachments');
+
 //RESHMA
 
 
@@ -846,6 +865,8 @@ Route::any('file-progress-list',"filemanagement@fileprogresslist")->name('file-p
 //notes
 Route::any('diary-management',"filemanagement@diarymanagement")->name('diary-management');
 Route::any('add-event',"filemanagement@addevent")->name('add-event');
+Route::any('work-flow',"filemanagement@workflow")->name('work-flow');
+Route::any('new-workflow',"filemanagement@newworkflow")->name('new-workflow');
 //document manager
 Route::any('document-manager',"filemanagement@documentmanager")->name('document-manager');
 Route::any('upload-document',"filemanagement@uploaddocument")->name('upload-document');
@@ -859,6 +880,7 @@ Route::any('staff-monthly-status-report',"filemanagement@staffmonthlystatusrepor
 Route::any('file-list-progress-report',"filemanagement@filelistprogressreport")->name('file-list-progress-report');
 Route::any('bringup',"filemanagement@bringup")->name('bringup');
 Route::any('file-progress-report',"filemanagement@fileprogressreport")->name('file-progress-report');
+Route::any('file-status-summary',"filemanagement@filestatussummary")->name('file-status-summary');
 //file status report
 
 

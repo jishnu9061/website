@@ -7,42 +7,27 @@
             {{ Session::get('staffregistered')}}
         </div>
         @endif
-
-    </div>
-    <div style="height: 50px;">
-
-    </div>
-    <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-    <script type="text/javascript">
-    $(document).on('input', '#price', function() {
-        $('#percent').prop('readonly', true);
-
-    });
-    $(document).on('input', '#percent', function() {
-        $('#price').prop('readonly', true);
-
-    });
-    </script>
-    <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-
+        @if(Session::has('leavevalidat'))
+            <div class="alert alert-dark" role="alert">
+                {{ Session::get('leavevalidat')}}
+            </div>
+        @endif
     <div class="col-sm">
 
 
-   
-    <h2 style="text-align:center;">Safe Register Report</h2></br></br>
+    </div>
     <div>
-        
+    <h3 class="text-center" style="color: #070344;"><b>File Status Report Summary </b></h3>
+       
         <br>
-        <div style="margin-left: 150px;">
-        <input class="btn btn-primary" type="button" value="Today" >
-        <input class="btn btn-primary" type="button" value="This Week">
-        <input class="btn btn-primary" type="button" value="Last Week">
-        <input class="btn btn-primary" type="button" value="This Month(MTD)">
-        <input class="btn btn-primary" type="button" value="Last Month">
-        <input class="btn btn-primary" type="button" value="This Quater">
-        <input class="btn btn-primary" type="button" value="Last Quater">
-        <input class="btn btn-primary" type="button" value="This Year(YTD)">
-        <input class="btn btn-primary" type="button" value="Last Year">
+        <div style="margin-left: 120px;">
+        <input class="btn btn-primary" type="button" value="View File Statement" >
+        <input class="btn btn-primary" type="button" value="View File Details">
+        <input class="btn btn-primary" type="button" value="Previous Instructions">
+        <input class="btn btn-primary" type="button" value="Post File Progress">
+        <input class="btn btn-primary" type="button" value="Post File Progress Only">
+        <input class="btn btn-primary" type="button" value="Post File Bring-Up Only">
+        
         </div>
         <br>
         <hr class="mb-4">.
@@ -60,98 +45,56 @@
         <form method="post" action="" id="form">
             @csrf
 
+
+
             <div class="row">
 
               
 
-<div class="col-md-4">
-       <div class="mb-1">
-           <label for="username">Client</label>
-           <div class="input-group">
-               <div class="input-group-prepend">
+            <div class="col-md-6">
+                    <div class="mb-1">
+                        <label for="username"> Date(to)</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
 
-               </div>
-               <select name="country" id="cars">
-                   <option value="volvo"></option>
-               </select>
-           </div>
-       </div>
-   </div>
-
-
-
-   <div class="col-md-4">
-       <div class="mb-1">
-           <label for="username">File</label>
-           <div class="input-group">
-               <div class="input-group-prepend">
-
-               </div>
-               <select name="country" id="cars">
-                   <option value="volvo"></option>
-               </select>
-           </div>
-       </div>
-   </div>
-
-   <div class="col-md-4">
-       <div class="mb-1">
-           <label for="username">Document Type</label>
-           <div class="input-group">
-               <div class="input-group-prepend">
-
-               </div>
-               <select name="country" id="cars">
-                   <option value="volvo"></option>
-               </select>
-           </div>
-       </div>
-   </div>
+                            </div>
+                            <select name="country" id="cars">
+                                <option value="volvo"></option>
+                            </select>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Number is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
+
+                <div class="col-md-6">
+                    <div class="mb-1">
+                        <label for="username">File</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+
+                            </div>
+                            <select name="country" id="cars">
+                                <option value="volvo"></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+           
 
 </div>
-<br>
-
-            <div class="row">
-
-                <div class="col-md-4">
-                    <div class="mb-1">
-                        <label for="username">Safe Name</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-
-                            </div>
-                            <select name="country" id="cars">
-                                <option value="volvo"></option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="mb-1">
-                        <label for="username">Approver</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-
-                            </div>
-                            <select name="country" id="cars">
-                                <option value="volvo"></option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-   
 <br>
 <div class="row">
     
 
-    <div class="col-md-4">
+    
+    <div class="col-md-6">
         <div class="mb-1">
-            <label for="username">Requested By</label>
+            <label for="username">Instruction Category</label>
             <div class="input-group">
                 <div class="input-group-prepend">
 
@@ -162,100 +105,150 @@
             </div>
         </div>
     </div>
-    
-    <div class="col-md-4">
-                    <div class="mb-1">
-                        <label for="username">Date</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
 
-                            </div>
-                            <input type="date" class="form-control" name="number" id="username" required>
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Number is required.
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-md-6">
+        <div class="mb-1">
+            <label for="username">Receiver</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+
                 </div>
-                <div class="col-md-4">
-                    <div class="mb-1">
-                        <label for="username">and</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-
-                            </div>
-                            <input type="text" class="form-control" name="number" id="username" required>
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Number is required.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="mb-1">
-                        <label for="username"> Distributed By</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-
-                            </div>
-                            <select name="country" id="cars">
-                                <option value="volvo"></option>
-                            </select>
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Number is required.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="mb-1">
-                        <label for="username">Status</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-
-                            </div>
-                            <select name="country" id="cars">
-                                <option value="volvo"></option>
-                            </select>
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Number is required.
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <select name="country" id="cars">
+                    <option value="volvo"></option>
+                </select>
+            </div>
+        </div>
+    </div>
 </div>
 <div id="test" style="height:20px;"></div>
-
-
-
-
-
-
-
-
-</div> 
-
-
+</div>
 </div>
 
 
 
-<div class="container">
-                    <div class="row">
-                        <div class="col-sm">
+<div class="row">
+    
 
-                        </div>
-                        <div class="btn-group pt-3 " role="group" aria-label="Basic example">
+    <div class="col-md-2">
+        <div class="mb-1">
+            <label for="username">Currency</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
 
-                            <button type="submit" class="btn btn-primary submit_btn">View Report</button>
-                            <button type="submit" class="btn btn-primary submit_btn">Close</button>
+                </div>
+                <select name="country" id="cars">
+                    <option value="volvo"></option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="mb-1">
+            <label for="username">Exchangr Rate</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
 
-                        </div>
-                    </div>
+                </div>
+                <input type="text" class="form-control" name="incorporation" id="age">
+                <div class="invalid-feedback" style="width: 100%;">
+                    Incorporation is required
                 </div>
             </div>
+        </div>
+    </div>
+
+             
+</div>
+<br>
+
+<div class="row">
+    
+
+    <div class="col-md-2">
+        <div class="mb-1">
+            <label for="username">Turn-Around Time(TAT)</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+
+                </div>
+                <select name="country" id="cars">
+                    <option value="volvo"></option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="mb-1">
+            <label for="username">Priority</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+
+                </div>
+                <select name="country" id="cars">
+                    <option value="volvo"></option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+             
+</div>
+
+<br>
+
+<div class="row">
+    
+
+
+    <div class="col-md-6">
+        <div class="mb-1">
+            <label for="username">Details</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+
+                </div>
+                <select name="country" id="cars">
+                    <option value="volvo"></option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+             
+</div>
+<hr class="mb-4">.
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+
+            </div>
+            <div class="btn-group pt-3 " role="group" aria-label="Basic example" style="margin-left: 150px;">
+
+                <button type="submit" class="btn btn-primary submit_btn">View Report</button>
+                <button type="submit" class="btn btn-primary submit_btn">Cancel</button>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
@@ -265,7 +258,7 @@
 
 
 
-
+</div>
 </div>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">

@@ -13,8 +13,13 @@
             </div>
         @endif
 
+<div class="col-sm">
+    
+    
+
+  </div>
     <div>
-    <h2 style="text-align:center;">Book A Court Date </h2>
+    <h2 style="text-align:center;">New Workflow</h2>
     <hr class="mb-4">.
 </div>
   </div>
@@ -24,74 +29,34 @@
 
      <form method="post" action="" id="form">
 	      @csrf
-            <div class="row">
-            <div class="col-md-6">
-            <div class="mb-1">
-          <label for="username">Court Event Type</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
-          </div>
-        </div>
-        </div>
-        <div class="col-md-6">
-            <div class="mb-1">
-          <label for="username">Client</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
-          </div>
-        </div>
-        </div>
-        
           
 
-        <div class="col-md-6">
-            <div class="mb-1">
-          <label for="username">File</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
-          </div>
-        </div>
-        </div>
-          <div class="col-md-6">
-           <div class="mb-1">
-          <label for="username">court</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
-            <div class="invalid-feedback" style="width: 100%;">
-              Number is required.
-            </div>
-          </div>
-        </div>
-          </div>
-
-        </div>
-
-        <!--  -->
-
-
-        <br>
+       
         <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-4">
+            <div class="mb-1">
+          <label for="username">Date Created</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <input type="date" class="form-control" name="website" id="confirm_password" required>
+          </div>
+        </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="mb-1">
+          <label for="username">Workflow Name</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <input type="text" class="form-control" name="website" id="confirm_password" required>
+          </div>
+        </div>
+        </div>
+        <div class="col-md-4">
             <div class="mb-1">
           <label for="username">Start Date</label>
           <div class="input-group">
@@ -102,161 +67,80 @@
           </div>
         </div>
         </div>
-
-          
-        <div class="col-md-3">
-            <div class="mb-1">
-          <label for="username">Time</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <input type="time" class="form-control" name="website" id="confirm_password" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Telephone Number is required.
-            </div>
-          </div>
-        </div>
-        
-           
-          </div>
-        </div>
-
-
-
-        <div class="row">
-        <div class="col-md-3">
-            <div class="mb-1">
-          <label for="username">End Date</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <input type="date" class="form-control" name="website" id="confirm_password" required>
-          </div>
-        </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="mb-1">
-          <label for="username">Time</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <input type="time" class="form-control" name="website" id="confirm_password" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Telephone Number is required.
-            </div>
-          </div>
-        </div>
-        
-           
-          </div>
-        </div>
-        <br>
-        <div class="row">
         <div class="col-md-4">
-           <div class="mb-1">
-          <label for="username">User Assigned</label>
+            <div class="mb-1">
+          <label for="username">Duration(Days)</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
-            <div class="invalid-feedback" style="width: 100%;">
-              Number is required.
-            </div>
+            <input type="text" class="form-control" name="website" id="confirm_password" required>
           </div>
         </div>
-          </div>
-
-          <div class="col-md-4">
-           <div class="mb-1">
-          <label for="username">Sent Notification To</label>
+        </div>
+       
+        <div class="col-md-4">
+            <div class="mb-1">
+          <label for="username">Workflow Comments</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
+            <textarea class="form-control" id="edit_medicine_details1" name="medicine_detailss"  rows="3" placeholder="" ></textarea>
             <div class="invalid-feedback" style="width: 100%;">
-              Number is required.
+              Telephone Number is required.
             </div>
           </div>
         </div>
+        
+           
           </div>
+        </div>
+        
 
-          <div class="col-md-4">
-           <div class="mb-1">
-          <label for="username">Set Reminder</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
+</br>
 
-            </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
-            <div class="invalid-feedback" style="width: 100%;">
-              Number is required.
-            </div>
-          </div>
-        </div>
-          </div>
-          <div class="col-md-4">
-           <div class="mb-1">
-          <label for="username">Notes</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
+        
 
-            </div>
-            <textarea class="form-control" id="form7Example7" rows="3"></textarea>
-            <div class="invalid-feedback" style="width: 100%;">
-              Number is required.
-            </div>
-          </div>
-        </div>
-          </div>
-         <div id="test" style="height:20px;"></div>
-          </div>
-        </div>
         <br>
+
+
         
         </div>
         </div>
+        
 
 
-              </div>
-          
 
+     
     </div>
     <br>
-    <div>
     <div class="container">
         <div class="row">
             <div class="col-sm">
 
             </div>
-            <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
+            <div class="btn-group pt-3 " role="group" aria-label="Basic example" style="margin-left: 50px;">
 
-                <button type="submit" class="btn btn-primary submit_btn">Save</button>
+                <button type="submit" class="btn btn-primary submit_btn">Save Workflow</button>
                 <button type="submit" class="btn btn-primary submit_btn">Close</button>
 
             </div>
         </div>
     </div>
-</div>
-</div>   
+     
+    
    
           </div>
 
-      
+          
 
 
 
+   </tbody>
+</table>
+   </div>
+</div>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
  $(function () {

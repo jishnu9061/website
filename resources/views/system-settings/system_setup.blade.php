@@ -16,24 +16,26 @@
 
    </head>
    <body>
+    <button class="btn btn-primary"
+          style="width:100%;background-color:#d6ba8a;color:white;border:1px solid gold;font-width:150%"><span class="font-size-lg">System Setup</span></button><br><br><br>
     <!-- <h2 class="text-center">Configuration Details</h2><br> -->
-    <h3 style="text-align:center"><b>Company Details</b></h3>
-    <hr>
+    <button class="btn btn-primary float-left"
+                    style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Company Details</button><br><br><br>
     <div class="container-fluid">
   
   <div class="row sm">
     <div class="col-sm-4 " ><a href="{{url('company_details')}}"><button type="button" class="btn btn-primary btn_align_btn" > Company</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('weekend_holiday')}}"><button type="button" class="btn btn-primary btn_align_btn" >Weekends &  Holidays</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('other_confgn')}}"><button type="button" class="btn btn-primary btn_align_btn" >Other Configurations</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > Paired Accounts</button></a></div>
-    <div class="col-sm-4 " > <a><button type="button" class="btn btn-primary btn_align_btn" > File Types</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > Invoice Items</button></a></div>
-    <div class="col-sm-4" > <a><button type="button" class="btn btn-primary btn_align_btn" > Currency List</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('paired_account')}}"><button type="button" class="btn btn-primary btn_align_btn" > Paired Accounts</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('file_types')}}"><button type="button" class="btn btn-primary btn_align_btn" > File Types</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('invoice_items')}}"><button type="button" class="btn btn-primary btn_align_btn" > Invoice Items</button></a></div>
+    <div class="col-sm-4" > <a href="{{url('currency_list')}}"><button type="button" class="btn btn-primary btn_align_btn" > Currency List</button></a></div>
 </div>
 </div>
-
-<h3 style="text-align:center; "><b>User Accounts</b></h3>
-    <hr>
+<br>
+<button class="btn btn-primary float-left"
+style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">User Accounts</button><br><br><br>
     <div class="container-fluid">
   
   <div class="row sm">
@@ -46,12 +48,10 @@
     <div class="col-sm-4" > <a><button type="button" class="btn btn-primary btn_align_btn" > Advocates Targets</button></a></div>
 </div>
 </div>
-
-<h3 style="text-align:center;"><b>Other Settings</b></h3>
-    <hr>
-    <div class="container-fluid">
-  
-  <div class="row sm">
+<br>
+<button class="btn btn-primary float-left"
+style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Other Settings</button><br><br><br>
+<div class="row sm">
     <div class="col-sm-4 " ><a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > Database Backup</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > Transport Zones</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" >Billable Activities</button></a></div>
@@ -60,10 +60,12 @@
     <div class="col-sm-4 " > <a href="{{url('')}}"><button type="button" class="btn btn-primary btn_align_btn" > Hourly Rates</button></a></div>
     <div class="col-sm-4" > <a><button type="button" class="btn btn-primary btn_align_btn" >Partner Revenue Share</button></a></div>
 </div>
-</div>
+<br>
+<button class="btn btn-primary float-left"
+style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">System Menus</button><br><br><br>
 
-<h3 style="text-align:center;"><b>System Menus</b></h3>
-    <hr>
+
+
     <div class="container-fluid">
   
   <div class="row sm">

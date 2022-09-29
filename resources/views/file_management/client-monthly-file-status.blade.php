@@ -95,20 +95,20 @@
 
     </div>
     <br>
+    <div>
     <div class="container">
-  <div class="row">
-    <div class="col-sm">
-    
-    </div>
-    <div class="col-sm">
-   
-    <button type="submit" class="btn btn-primary submit_btn btn_align">Cancel</button>
-    <button type="submit" class="btn btn-primary submit_btn btn_sumbit">View Report</button>
+        <div class="row">
+            <div class="col-sm">
 
-    
+            </div>
+            <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
 
+                <button type="submit" class="btn btn-primary submit_btn">View Report</button>
+                <button type="submit" class="btn btn-primary submit_btn">Close</button>
+
+            </div>
+        </div>
     </div>
-  </div>
 </div>
      
     
