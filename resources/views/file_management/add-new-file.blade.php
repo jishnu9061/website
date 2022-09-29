@@ -6,24 +6,12 @@
    <div class="alert alert-dark" role="alert">
    {{ Session::get('staffregistered')}}
    </div>
-@endif
-
-</div>
-<div style="height: 50px;">
-
-</div>
-<script src="{{ url('assets/js') }}/jquery.min.js"></script>
-<script type="text/javascript">
-	  $(document).on('input','#price',function(){
-$('#percent').prop('readonly', true);
-
-});
-	    $(document).on('input','#percent',function(){
-$('#price').prop('readonly', true);
-
-});
-</script>
-<script src="{{ url('assets/js') }}/jquery.min.js"></script>
+   @endif
+        @if(Session::has('leavevalidat'))
+            <div class="alert alert-dark" role="alert">
+                {{ Session::get('leavevalidat')}}
+            </div>
+        @endif
 
 <div class="col-sm">
    
@@ -42,7 +30,7 @@ $('#price').prop('readonly', true);
      <form method="post" action="" id="form">
 	      @csrf
             <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-4">
             <div class="mb-1">
           <label for="username">Associate Handling</label>
           <div class="input-group">
@@ -52,6 +40,7 @@ $('#price').prop('readonly', true);
             <select name="country" id="cars">
                 <option value="volvo"></option>
             </select>
+            <br>
           </div>
         </div>
         </div>
@@ -65,6 +54,7 @@ $('#price').prop('readonly', true);
             <select name="country" id="cars">
                 <option value="volvo"></option>
             </select>
+
           </div>
         </div>
         </div>
@@ -236,6 +226,24 @@ $('#price').prop('readonly', true);
 
             </div>
               <input type="text" class="form-control" name="number" id="username" required>
+              <br>
+            <div class="invalid-feedback" style="width: 100%;">
+              Number is required.
+            </div>
+          </div>
+        </div>
+          </div>
+        
+          <div class="col-md-4">
+           <div class="mb-1">
+          <label for="username">Workflow</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <select name="country" id="cars">
+                <option value="volvo"></option>
+            </select>
             <div class="invalid-feedback" style="width: 100%;">
               Number is required.
             </div>
@@ -246,7 +254,7 @@ $('#price').prop('readonly', true);
           </div>
         </div>
         <br>
-        <div class="row">
+        <!-- <div class="row">
         <div class="col-md-4">
             <div class="mb-1">
           <label for="username">Workflow</label>
@@ -259,20 +267,10 @@ $('#price').prop('readonly', true);
             </select>
           </div>
         </div>
-        </div>
+     
+    </div> -->
 
-      
-    
-
-          
-          
-   
-
-          
-          
-
-    </div>
-    <br>
+  
     <div>
     <div class="container">
         <div class="row">
