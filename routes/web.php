@@ -845,7 +845,7 @@ Route::any('file-progress-list',"filemanagement@fileprogresslist")->name('file-p
 
 //notes
 Route::any('diary-management',"filemanagement@diarymanagement")->name('diary-management');
-Route::any('meeting-roomst',"filemanagement@meetingrooms")->name('meeting-rooms');
+Route::any('meeting-rooms',"filemanagement@meetingrooms")->name('meeting-rooms');
 Route::any('add-event',"filemanagement@addevent")->name('add-event');
 Route::any('work-flow',"filemanagement@workflow")->name('work-flow');
 Route::any('new-workflow',"filemanagement@newworkflow")->name('new-workflow');
