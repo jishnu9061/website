@@ -6,8 +6,7 @@
 
         <div>
             <button class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-width:150%"><span
-                    class="font-size-lg"><b>Add New Corporate Client</b></span></button><br>
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Add New Corporate Client</u></b></span></button><br>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous">
@@ -320,8 +319,7 @@
                 </div>
                 <br>
                 <button class="btn btn-primary"
-                    style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-width:150%"><span
-                        class="font-size-lg"><b>Contact Person</b></span></button><br>
+                    style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Contact Person</u></b></span></button><br>
                 <br>
                 <div class="row">
                     <div class="col-md-3">
@@ -389,7 +387,7 @@
                         </div>
                         <div class="col-sm">
                             <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:40%;">Back</button>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:40%;">Close</button>
                             <button type="button" class="btn btn-primary float:left" Style="width:50%;">Save</button>
                         </div>
                     </div>
