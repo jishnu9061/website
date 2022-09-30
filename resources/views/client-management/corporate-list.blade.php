@@ -15,15 +15,14 @@
 
 <body>
     <div class="container">
-        <br>
-        <button class="btn btn-primary"
-        style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-width:150%"><span class="font-size-lg"><b>Corporate Client List</b></span></button><br><br>
+        <h3 class="text-center" style="color: #070344;"><b>Client List</b></h3>
        <br>
       
        <div id="mydatatable_filter" class="dataTables_filter">
         <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
        </div>
        <a href="{{('add-corporate')}}"><button class="btn btn-primary add-btn">Add Corporate</button></a>
+       <hr class="mb-4">.
        
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
