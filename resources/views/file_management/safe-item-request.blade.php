@@ -33,15 +33,15 @@
     <div>
         
         <br>
-        <div style="margin-left: 150px;">
+        <div>
         <input class="btn btn-primary" type="button" value="Today" >
         <input class="btn btn-primary" type="button" value="This Week">
         <input class="btn btn-primary" type="button" value="Last Week">
-        <input class="btn btn-primary" type="button" value="This Month(MTD)">
+        <input class="btn btn-primary" type="button" value="This Month">
         <input class="btn btn-primary" type="button" value="Last Month">
-        <input class="btn btn-primary" type="button" value="This Quater">
-        <input class="btn btn-primary" type="button" value="Last Quater">
-        <input class="btn btn-primary" type="button" value="This Year(YTD)">
+        <input class="btn btn-primary" type="button" style="width:11%;" value="This Quater ">
+        <input class="btn btn-primary" type="button" style="width:11%;" value="Last Quater">
+        <input class="btn btn-primary" type="button" value="This Year">
         <input class="btn btn-primary" type="button" value="Last Year">
         </div>
         <br>
@@ -64,7 +64,7 @@
 
               
 
-<div class="col-md-4">
+<div class="col-md-6">
        <div class="mb-1">
            <label for="username">Client</label>
            <div class="input-group">
@@ -80,7 +80,7 @@
 
 
 
-   <div class="col-md-4">
+   <div class="col-md-6">
        <div class="mb-1">
            <label for="username">File</label>
            <div class="input-group">
@@ -94,7 +94,7 @@
        </div>
    </div>
 
-   <div class="col-md-4">
+   <div class="col-md-6">
        <div class="mb-1">
            <label for="username">Document Type</label>
            <div class="input-group">
@@ -110,12 +110,12 @@
 
 
 
-</div>
+<!-- </div>
 <br>
 
-            <div class="row">
+            <div class="row"> -->
 
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="mb-1">
                         <label for="username">Safe Name</label>
                         <div class="input-group">
@@ -129,7 +129,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="mb-1">
                         <label for="username">Approver</label>
                         <div class="input-group">
@@ -143,13 +143,13 @@
                     </div>
                 </div>
 
-            </div>
+            <!-- </div>
    
 <br>
-<div class="row">
+<div class="row"> -->
     
 
-    <div class="col-md-4">
+    <div class="col-md-6">
         <div class="mb-1">
             <label for="username">Requested By</label>
             <div class="input-group">
@@ -163,7 +163,7 @@
         </div>
     </div>
     
-    <div class="col-md-4">
+    <div class="col-md-6">
                     <div class="mb-1">
                         <label for="username">Date</label>
                         <div class="input-group">
@@ -177,7 +177,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="mb-1">
                         <label for="username">and</label>
                         <div class="input-group">
@@ -192,7 +192,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="mb-1">
                         <label for="username"> Distributed By</label>
                         <div class="input-group">
@@ -209,7 +209,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="mb-1">
                         <label for="username">Status</label>
                         <div class="input-group">
