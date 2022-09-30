@@ -779,8 +779,9 @@ Route::any('user_attachments','SystemSetup@attachments')->name('user_attachments
 Route::any('user_comments','SystemSetup@comments')->name('user_comments');
 //change password
 Route::any('change_user_password','SystemSetup@changepassword')->name('change_user_password');
-
-
+//manage user group
+Route::any('manage_user_group','SystemSetup@manageusergrp')->name('manage_user_group');
+Route::any('add_new_user_grp','SystemSetup@addnewusergrp')->name('add_new_user_grp');
 //RESHMA--------------------------------------
 
 
