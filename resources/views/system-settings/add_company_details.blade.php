@@ -93,7 +93,7 @@
                 <br>
                 <div class="row">
                     <div class="col">
-                        <label>Town/city</label>
+                        <label>Town/City</label>
                         <input type="text" id="name" name="name" value=""size="50"> <br>
                     </div>
                     <div class="col">
@@ -109,7 +109,7 @@
                     </div>
                     <div class="col-md-6">
                         <label>Company Type</label><br>
-                        <select value="" style="width:100%" name="type">
+                        <select value="" style="width:83%;height:50%" name="type">
                             <option> select </option>
                             <option>Partnership</option>
                             <option>Sole partership</option>
