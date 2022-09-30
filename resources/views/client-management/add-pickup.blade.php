@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
-                            <label for="username">Client Name</label>
+                            <label for="username">Client</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="client" id="username" value=""
