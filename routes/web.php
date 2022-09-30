@@ -784,6 +784,17 @@ Route::any('manage_user_group','SystemSetup@manageusergrp')->name('manage_user_g
 Route::any('add_new_user_grp','SystemSetup@addnewusergrp')->name('add_new_user_grp');
 //view roles per user
 Route::any('view_roles_per_user','SystemSetup@rolesperuser')->name('view_roles_per_user');
+// Route::any('roles_edit','SystemSetup@rolesedit')->name('roles_edit');
+//manage user roles
+Route::any('manage_user_roles','SystemSetup@manageuserroles')->name('manage_user_roles');
+Route::any('add_user_roles','SystemSetup@adduserrole')->name('add_user_roles');
+Route::any('edit_user_roles','SystemSetup@edituserrole')->name('edit_user_roles');
+//manage user department
+Route::any('manage_user_department','SystemSetup@manageuserdepartment')->name('manage_user_department');
+Route::any('add_user_department','SystemSetup@adduserdepartment')->name('add_user_department');
+//advocate targets
+Route::any('advocates_target','SystemSetup@advocatestarget')->name('advocates_target');
+Route::any('add_new_entry','SystemSetup@addnew')->name('add_new_entry');
 //RESHMA--------------------------------------
 
 

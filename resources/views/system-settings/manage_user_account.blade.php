@@ -40,7 +40,7 @@ table{
 
 
     <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">List Of System Users</h3>
-    <table class="table table-bordered" id="new-item">
+    <table class="table table-responsive" id="new-item">
       
       <thead>
 

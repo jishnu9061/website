@@ -34,23 +34,24 @@ table{
    <body>
     <!-- <h2 >Court List</h2><br>
     <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">View Roles per User </h2>
-    <!-- <a href="{{('add_new_user_grp')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add New User Group</button></a> -->
+    <h2 style="text-align:center; text-shadow: 2px 1px;">Manage User Departments </h2>
+    <a href="{{('add_user_department')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Department</button></a>
     <hr class="mb-4">
 
 
-    <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Roles per User</h3>
+    <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">User Departments</h3>
     <table class="table table-bordered" id="new-item">
       
       <thead>
 
                         <tr>
-                        <th class="text-center" >User ID</th>
-                        <th class="text-center" >Full Name</th>
-                        <th class="text-center" >User Group</th>
-                        <th class="text-center" >User Roles</th>
+                        <th class="text-center" >No</th>
+                        <th class="text-center" >Department Code</th>
+                        <th class="text-center" >Department Name</th>
+                        <th class="text-center" >H.O.D</th>
                         <th class="text-center" >Edit</th>
-                        
+                        <th class="text-center"><input type="checkbox"></th>
+                   
                     </tr>
 </thead>
              <tbody>
@@ -60,8 +61,9 @@ table{
                         <td  class="text-center"style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center"style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"> <a href="">Edit</a></td>
-                    
+                        <td class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('edit_user_roles')}}">Edit</a></td>
+                       
+                         <td class="text-center"><input type="checkbox"></td>
                      </tr>
                      </tbody>
         
