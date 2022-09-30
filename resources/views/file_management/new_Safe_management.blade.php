@@ -8,219 +8,222 @@
         </div>
         @endif
         @if(Session::has('leavevalidat'))
-            <div class="alert alert-dark" role="alert">
-                {{ Session::get('leavevalidat')}}
-            </div>
+        <div class="alert alert-dark" role="alert">
+            {{ Session::get('leavevalidat')}}
+        </div>
         @endif
 
-    <div class="col-sm">
+        <div class="col-sm">
 
 
+        </div>
+        <div>
+            <h3 class="text-center" style="color: #070344;"><b>Register Documents In Safe</b></h3>
+
+            <br>
+
+            <hr class="mb-4">.
+
+
+        </div>
     </div>
-    <div>
-    <h3 class="text-center" style="color: #070344;"><b>Register Documents In Safe</b></h3>
-        
-        <br>
-
-        <hr class="mb-4">.
 
 
+    <div class="row">
+
+
+        <div class="col-md-12 order-md-1">
+
+            <form method="post" action="" id="form">
+                @csrf
+
+
+
+                <div class="row">
+
+
+
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username"> Date</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="date" class="form-control" name="number" id="username" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Number is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Client</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">File</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <br>
+                <div class="row">
+
+
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Safe Name</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Ref No.In Safe</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="incorporation" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Approver</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="test" style="height:20px;"></div>
+        </div>
     </div>
-</div>
 
 
-<div class="row">
+
+    <hr class="mb-4">
+
+    <h3 class="text-center" style="color: #070344;"><b>Documents</b></h3>
+    <br>
 
 
-    <div class="col-md-12 order-md-1">
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
-        <form method="post" action="" id="form">
-            @csrf
+            <table class="table table-bordered" id="new-item">
+                <thead style="font-size:15px; width:100%;">
+                    <tr>
+                        <th class="text-center">Doc No</th>
+                        <th class="text-center">Catrgory</th>
+                        <th class="text-center">Document</th>
+                        <th class="text-center">Action</th>
+
+
+                        </th>
+
+
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr id="data">
+
+                        <td scope="row" class="text-center" style="width:100px;"><input type="text" id="age"></td>
+
+                        <td scope="row">
+                            <select style="width:100%;">
+                                <option value="volvo">select</option>
+                            </select>
+                        </td>
+
+
+                        <td scope="row" class="text-center" style="width:40%;"><input type="text" style="width:100%;">
+                        </td>
+                        <td scope="row" class="text-center"><a href=""><i style="color:black;" class="fa fa-edit"
+                                    aria-hidden="true"></td>
+
+                    </tr>
+
+
+
+                </tbody>
+
+            </table>
 
 
 
             <div class="row">
-
-
-
                 <div class="col-md-4">
                     <div class="mb-1">
-                        <label for="username"> Date</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-
-                            </div>
-                            <input type="date" class="form-control" name="number" id="username" required>
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Number is required.
-                            </div>
-                        </div>
+                        <button type="submit" class="btn btn-primary submit_btn"
+                            style=" margin-left:0px; width:200px;">New Document</button>
                     </div>
                 </div>
-
-
-
-                <div class="col-md-4">
-                    <div class="mb-1">
-                        <label for="username">Client</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-
-                            </div>
-                            <select name="country" id="cars">
-                                <option value="volvo"></option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="mb-1">
-                        <label for="username">File</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-
-                            </div>
-                            <select name="country" id="cars">
-                                <option value="volvo"></option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-  
-<br>
-<div class="row">
-
-
-    <div class="col-md-4">
-        <div class="mb-1">
-            <label for="username">Safe Name</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
-
-                </div>
-                <select name="country" id="cars">
-                    <option value="volvo"></option>
-                </select>
             </div>
         </div>
+
+
     </div>
 
-    <div class="col-md-4">
-        <div class="mb-1">
-            <label for="username">Ref No.In Safe</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
+
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
 
                 </div>
-                <input type="text" class="form-control" name="incorporation" id="age">
-                <div class="invalid-feedback" style="width: 100%;">
-                    Incorporation is required
+                <div class="btn-group pt-3 " role="group" aria-label="Basic example">
+
+                    <button type="submit" class="btn btn-primary submit_btn">Add Documents</button>
+                    <button type="submit" class="btn btn-primary submit_btn">Close</button>
+
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="col-md-4">
-        <div class="mb-1">
-            <label for="username">Approver</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
-
-                </div>
-                <select name="country" id="cars">
-                    <option value="volvo"></option>
-                </select>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="test" style="height:20px;"></div>
-</div>
-</div>
-
-
-
-<hr class="mb-4">
-
-<h3 class="text-center" style="color: #070344;"><b>Documents</b></h3>
-        <br>
-
-
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
-                <table class="table table-bordered" id="new-item">
-                    <thead style="font-size:15px; width:100%;">
-                        <tr>
-                            <th class="text-center">Doc No</th>
-                            <th class="text-center">Catrgory</th>
-                            <th class="text-center">Document</th>
-                            <th class="text-center">Action</th>
-                            
-                            
-                            </th>
-
-
-                        </tr>
-                    </thead>
-
-                    <tbody>
-
-                        <tr id="data">
-
-                            <td scope="row" class="text-center" style="width:100px;"><input type="text" id="age"></td>
-
-                            <td scope="row"   >
-                            <select style="width:100%;"  >
-                            <option value="volvo">select</option>
-                            </select>
-                            </td>
-
-                           
-                            <td scope="row" class="text-center" style="width:40%;" ><input type="text"  style="width:100%;"></td>
-                            <td scope="row" class="text-center"><a href=""><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></td>
-                            
-                        </tr>
-
-
-
-                    </tbody>
-
-                </table>
-      
-
-    
-<div class="row">
-    <div class="col-md-4">
-        <div class="mb-1">
-            <button type="submit" class="btn btn-primary submit_btn" style=" margin-left:0px; width:200px;">New Document</button>
-        </div>
-    </div>
-</div>
-</div>
-
-
-</div>
-
-
-<div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-
-            </div>
-            <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
-
-                <button type="submit" class="btn btn-primary submit_btn">Add Documents</button>
-                <button type="submit" class="btn btn-primary submit_btn">Close</button>
-
-            </div>
-        </div>
-    </div>
-</div>
 </div>
 </div>
 </div>

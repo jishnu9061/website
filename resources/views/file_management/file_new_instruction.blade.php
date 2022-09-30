@@ -180,14 +180,7 @@
                 </div>
             </div>
         </div>
-
-
-    </div>
-    <br>
-
-    <div class="row">
-
-
+        
         <div class="col-md-2">
             <div class="mb-1">
                 <label for="username">Turn-Around Time(TAT)</label>
@@ -214,15 +207,7 @@
                 </div>
             </div>
         </div>
-
-
-    </div>
-
-    <br>
-
-    <div class="row">
-
-
+        
         <div class="col-md-4">
             <div class="mb-1">
                 <label for="username">Amount</label>
@@ -485,9 +470,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Salary is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -514,9 +499,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Years of experience is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -539,9 +524,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 dob is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 /div>
 
             {
@@ -573,9 +558,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Bank Name is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -601,9 +586,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Account number is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -626,9 +611,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 IFSC Code is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-12" >
                 <
                 div class = "mb-1" >
@@ -669,7 +654,7 @@ $(document).on('input', '#percent', function() {
 
                 <
                 /tr> < /
-                table > {
+            table > {
                     {
                         -- < input type = "text"
                         class = "form-control"
@@ -686,7 +671,7 @@ $(document).on('input', '#percent', function() {
                         -- < /div> --}} < /
                         div > <
                             /div> < /
-                            div >
+                        div >
 
                             <
                             /div> <
@@ -728,9 +713,9 @@ $(document).on('input', '#percent', function() {
 
                             <
                             /tbody> < /
-                            table > <
+                        table > <
                             /div> < /
-                            div >
+                        div >
 
                             <
                             div class = "modal"
@@ -755,13 +740,13 @@ $(document).on('input', '#percent', function() {
                             <
                             button class = "btn btn-primary sub_btnn"
                         type = "submit" > submit < /button> < /
-                            div > <
+                        div > <
                             /form> < /
-                            div > <
+                        div > <
                             /div> < /
-                            div > <
+                        div > <
                             /div> < /
-                            div > <
+                        div > <
                             /div>
 
                             <
