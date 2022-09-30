@@ -34,25 +34,23 @@ table{
    <body>
     <!-- <h2 >Court List</h2><br>
     <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Manage User Groups </h2>
-    <a href="{{('add_new_user_grp')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add New User Group</button></a>
+    <h2 style="text-align:center; text-shadow: 2px 1px;">View Roles per User </h2>
+    <!-- <a href="{{('add_new_user_grp')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add New User Group</button></a> -->
     <hr class="mb-4">
 
 
-    <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">User Groups</h3>
+    <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Roles per User</h3>
     <table class="table table-bordered" id="new-item">
       
       <thead>
 
                         <tr>
-                        <th class="text-center" >Group ID</th>
-                        <th class="text-center" >Group Code</th>
-                        <th class="text-center" >Group Name</th>
-                        <th class="text-center" >Group Roles</th>
-                        <th class="text-center" >Group Users</th>
-                        <th class="text-center" >Group Status</th>
+                        <th class="text-center" >User ID</th>
+                        <th class="text-center" >Full Name</th>
+                        <th class="text-center" >User Group</th>
+                        <th class="text-center" >User Roles</th>
                         <th class="text-center" >Edit</th>
-                        <th class="text-center"><input type="checkbox"></th>
+                        
                     </tr>
 </thead>
              <tbody>
@@ -62,10 +60,8 @@ table{
                         <td  class="text-center"style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center"style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                         <td class="text-center"><input type="checkbox"></td>
+                        <td class="text-center"style="color:rgb(13, 1, 56);"> <a href="user_edit"></a>Edit</td>
+                    
                      </tr>
                      </tbody>
         

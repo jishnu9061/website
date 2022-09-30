@@ -27,61 +27,57 @@
     </head>
     <body>
     <!-- <h2 >Add Court</h2><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Add Invoice Item</h2>
+    <h2 style="text-align:center; text-shadow: 2px 1px;">Add New User Group</h2>
     <hr class="mb-4">.
     <form>
     <table class="table">
     <tbody>
                        
                         <tr>
-                                <td style="width:30%">Type Name:</td>
-                                <td><input type="text"  id="" name="typename"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
+                                <td style="width:30%">Group Code:</td>
+                                <td><input type="text"  id="" name="code"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
 
 
                          <tr>
-                            <td style="width:30%">Comments:</td>
-                            <td><input type="text"  id="" name="comments"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
+                            <td style="width:30%">Group Name:</td>
+                            <td><input type="text"  id="" name="name"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
                         </tr>
                         <tr>
-                            <td style="width:30%">Item Category:</td>
+                            <td style="width:30%">Default Menu:</td>
                             <td> 
-                                <select type="text" value="" id="" name="category"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
+                                <select type="text" value="" id="" name="menu"style="width:50%;color:rgb(13, 1, 56);background-color:white;">
                                 <option>---select---</option>
-                                <option>Fees</option>
-                                <option>Disbursements w/VAT</option>
-                                <option>Disbursements w/o VAT</option>
+                                <option>Dashboard</option>
+                                <option>Client Management</option>
+                                <option>File Management</option>
+                                <option>Client Invoicing</option>
+                                <option>Office Administration</option>
+                                <option>Accounting and Finance</option>
+                                <option>HR & Payroll</option>
+                                <option>Tools & Addons</option>
+                                <option>System Setup</option>
                             </select>
                             </td>
                         </tr>
                         <tr>
-                            <td style="width:30%">Sales Tax Code:</td>
+                            <td style="width:30%">Group Roles:</td>
+                           
                             <td> 
-                                <select type="text" value="" id="" name="code"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
-                                <option>---select---</option>
-                                <option>Non-Taxable</option>
-                                <option>Taxable</option>
+                                <select type="text" value="" id="" name="menu"style="width:50%;color:rgb(13, 1, 56);background-color:white;">
+                                <option>select group roles</option>
+                                <option></option>
+                                <option></option>
+                                <option></option>
+                      
                             </select>
                             </td>
+                             
                         </tr>
-                        <tr>
-                            <td style="width:30%">Income Account:</td>
-                            <td> 
-                                <select type="text" value="" id="" name="account"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
-                                <option>---select---</option>
-                                <option>1000====Income from Legal Fees</option>
-                                <option>1100====Other Income</option>
-                                <option>1101====Other Income - Vatable Disbursements</option>
-                                <option>1102====Other Income - Miscellaneous Income</option>
-                                <option>1103====Other Income - Interest Earned</option>
-                                <option>1104====Other Income - Loan Administration Fees</option>
-                                <option>9500====Other Income - Client gets Account Payable - Cooperative Bank</option>
-                                </select><a href="{{('add_gl_account')}}">  <i style="color:rgb(13, 1, 56);"class="bi bi-plus-circle-fill"> </i></a></td>
-                         
-                        </tr>
+                       
             </table>
             <div class="class"style="text-align:center;">
     
-            <a href="something"><input type="submit"value="Submit" name="submit"style="background-color:rgb(13, 1, 56);color: white; "> </a>
+            <a href="something"><input type="submit"value="Add" name="submit"style="background-color:rgb(13, 1, 56);color: white; "> </a>
             <input type="button"value="Close" name="close"style="background-color:red;color: white; ">
 
             

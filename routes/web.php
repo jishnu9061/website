@@ -782,6 +782,8 @@ Route::any('change_user_password','SystemSetup@changepassword')->name('change_us
 //manage user group
 Route::any('manage_user_group','SystemSetup@manageusergrp')->name('manage_user_group');
 Route::any('add_new_user_grp','SystemSetup@addnewusergrp')->name('add_new_user_grp');
+//view roles per user
+Route::any('view_roles_per_user','SystemSetup@rolesperuser')->name('view_roles_per_user');
 //RESHMA--------------------------------------
 
 

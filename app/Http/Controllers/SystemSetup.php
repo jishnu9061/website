@@ -264,6 +264,10 @@ class SystemSetup extends Controller
     {
         return view('system-settings.add_new_user_grp');
     }
+    public function rolesperuser()
+    {
+        return view('system-settings.view_roles_per_user');
+    }
 
 
 
