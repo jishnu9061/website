@@ -37,13 +37,15 @@
     <body>
     <!-- <h2 >Add Court</h2><br> -->
     <h2 style="text-align:center; text-shadow: 2px 1px;">Change User Password</h2>
+    <p style="color:red;text-align:center;"> Password must be atleast 8 character long, Contain atleast 1 capital letter,<br> atleast 1 numeric character and atleast 1 special character</p>
     <hr class="mb-4">
+   
     <form>
     <table class="table">
     <tbody>
                        
                         <tr>
-                                <td style="width:30%">User's Name:</td>
+                                <td style="width:30%;text-align:center;">User's Name:</td>
                                 <td>
                                 <select type="text" value="" id="" name="name"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
                                 <option>Princess Caroline(caroline)</option>
@@ -55,16 +57,16 @@
                             </td>
 
                          <tr>
-                            <td style="width:30%">Old Password:</td>
+                            <td style="width:30%;text-align:center;">Old Password:</td>
                             <td><input type="password"  id="" name="password"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
                         </tr>
                      
                         <tr>
-                            <td style="width:30%">New Password:</td>
+                            <td style="width:30%;text-align:center;">New Password:</td>
                             <td><input type="password"  id="" name="password"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
                         </tr>
                         <tr>
-                            <td style="width:30%">Confirm Password:</td>
+                            <td style="width:30%;text-align:center;">Confirm Password:</td>
                             <td><input type="password"  id="" name="password"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
                           
                         </tr>

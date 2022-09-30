@@ -14,22 +14,24 @@
       <title></title>
       <!-- <link rel="stylesheet" href="assets/css/cstyle.css">  -->
       <style>
-       
+        .container{
+            padding-top:20px;
+            margin-top: 50px;
+            
+        } 
         label
       {
        
         font-size:medium;
         width:200px;
         display:inline-block;
-        color: rgb(13, 1, 56); 
-        margin-left:50px;
-     
+        /* font-family: monospace; */
+      
         }
         input
         {
-          width: 450px;
+          width: 400px;
           height:30px;
-          color:black;
 
         }
         a.button1{
@@ -83,33 +85,58 @@
 
    
   <div class = "container">
-   <label> User Code:</label>
+  <div class="form-group">
+   <label style="color:rgb(13, 1, 56);"> User Code:</label>
   <input type="text" id="name" name="name" value=""size="50"> <br><br>
-  <label>First Name:</label>
+  </div>
+  <div class="form-group">
+  <label style="color:rgb(13, 1, 56);">First Name:</label>
   <input type="text" id="address" name="address" value=""size="50"><br><br>
-  <label>Last Name:</label>
+  </div>
+  <div class="form-group">
+  <label style="color:rgb(13, 1, 56);">Last Name:</label>
   <input type="text" id="city" name="city" value=""size="50"><br><br>
-  <label>Initials:</label>
+  </div>
+  <div class="form-group">
+  <label style="color:rgb(13, 1, 56);">Initials:</label>
   <input type="text" id="website" name="website" value=""size="50"><br><br>
-  <label>User Name:</label>
+  </div>
+  <div class="form-group">
+  <label style="color:rgb(13, 1, 56);">User Name:</label>
   <input type="text" id="email" name="email" value=""size="50"><br><br>
-  <label>Password:</label>
+  </div>
+  <div class="form-group">
+  <label style="color:rgb(13, 1, 56);">Password:</label>
   <input type="password" id="pin" name="pin" value=""size="50"><br><br>
-  <label>Re-type Password:</label>
+  </div>
+  <div class="form-group">
+  <label style="color:rgb(13, 1, 56);">Re-type Password:</label>
   <input type="password" id="pin" name="pin" value=""size="50"><br><br>
-  <label>Postal Address:</label>
+  </div>
+  <div class="form-group">
+  <label style="color:rgb(13, 1, 56);">Postal Address:</label>
   <input type="text" id="vatno" name="vatno" value=""size="50"><br><br>
-  <label>Town/City:</label>
+  </div>
+  <div class="form-group">
+  <label style="color:rgb(13, 1, 56);">Town/City:</label>
   <input type="text" id="ncode" name="ncode" value=""size="50"><br><br>
-  <label>Telephone No:</label>
+  </div>
+  <div class="form-group">
+  <label style="color:rgb(13, 1, 56);">Telephone No:</label>
   <input type="number" id="nnum" name="nnum" value=""size="50"><br><br>
-  <label>Mobile No:</label>
+  </div>
+  <div class="form-group">
+  <label style="color:rgb(13, 1, 56);">Mobile No:</label>
   <input type="number" id="nnum" name="nnum" value=""size="50"><br><br> 
-  <label>E mail Address:</label>
+  </div>
+  <div class="form-group">
+  <label style="color:rgb(13, 1, 56);">E mail Address:</label>
   <input type="email" id="nnum" name="nnum" value=""size="50"><br><br> 
-  <label>Department:</label>
+  </div>
+  <div class="form-group">
+  <label style="color:rgb(13, 1, 56);">Department:</label>
   
-  <select style="width:450px;height: 30px;color:black"type="text" value="" name="type">
+  <select style="width:400px;height: 30px;color:black"type="text" value="" name="type">
      <option>select  </option>
      <option>Administration</option>
      <option>Business & Commercial Law Services</option>
@@ -125,11 +152,15 @@
      <option>Marketing & Business Development</option>
      <option>Propery & Conveyancing Law Services</option>
  </select><br><br>
- <label>Signature to Upload:</label>
+ </div>
+ <div class="form-group">
+ <label style="color:rgb(13, 1, 56);">Signature to Upload:</label>
  <input type="file"  id="customFile" size="50"><br><br>
-  <label>User Group:</label>
+ </div>
+ <div class="form-group">
+  <label style="color:rgb(13, 1, 56);">User Group:</label>
   
-  <select style="width:450px;height: 30px;color:black"type="text" value="" name="type">
+  <select style="width:400px;height: 30px;color:black"type="text" value="" name="type">
      <option>  </option>
      <option>Administrator</option>
      <option>Partner</option>
@@ -150,15 +181,17 @@
      <option>ICT & Data Management</option>
      <option>Office Admin</option>
  </select><br><br>
- <label>User Role:</label>
+ </div>
+ <div class="form-group">
+ <label style="color:rgb(13, 1, 56);">User Role:</label>
   <input type="text" id="nnum" name="nnum" value=""size="50"><br><br>
-  
-  <div class="class"style="text-align:center;">
+  </div>
+ 
   <input  type="submit"value="Save" name="Submit"style="background-color:rgb(13, 1, 56);color: white ">
   
   <input type="button"value="Cancel" name="cancel"style="background-color:rgb(13, 1, 56);color: white ">
 
-  </div>
+ 
 
     </div>
 </form>

@@ -256,6 +256,15 @@ class SystemSetup extends Controller
     {
         return view('system-settings.change_user_password');
     }
+    public function manageusergrp()
+    {
+        return view('system-settings.manage_user_group');
+    }
+    public function addnewusergrp()
+    {
+        return view('system-settings.add_new_user_grp');
+    }
+
 
 
 
