@@ -18,12 +18,11 @@
     </head>
 
     <body>
-        <button class="btn btn-primary"
-            style="width:100%;background-color:#d6ba8a;color:white;border:1px solid gold;font-width:150%"><span
-                class="font-size-lg">Client Management Details</span></button><br><br><br>
+        <button class="btn btn-primary d-grid gap-2"
+            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Client Management Details</u></b></button><br>
         <br>
         <button class="btn btn-primary float-left"
-            style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Client
+            style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;font-size:20px;">Client
             Management</button><br><br><br>
         <div class="container-fluid">
 
@@ -67,7 +66,7 @@
             </div>
             <br>
             <button class="btn btn-primary float-left"
-                style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Customer Relationship
+                style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;font-size:20px">Customer Relationship
             </button><br><br><br>
 
 
