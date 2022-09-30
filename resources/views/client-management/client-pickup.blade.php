@@ -17,10 +17,8 @@
 
 <body>
     <div class="container">
-        <h3 class="text-center" style="color: #070344;"><b>Client Pickup at Reception</b></h3>
-        <br>
-
-
+        <button class="btn btn-primary"
+            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Client Pickup Reception</u></b></button><br>
         <div class="container mt-5">
             <a href="{{url('add-pickup')}}"><button class="btn btn-primary add-btn" style="width:20%">New Client
                     Pickup</button></a>
@@ -28,7 +26,6 @@
                 <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
             </div>
         </div>
-        <hr class="mb-4">.
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
@@ -38,15 +35,15 @@
                             <th class="text-center"> No</th>
                             <th class="text-center"> Date</th>
                             <th class="text-center">Client</th>
-                            <th class="text-center">File Ref</th>
+                            <th class="text-center">File Refference</th>
                             <th class="text-center">Visitor</th>
                             <th class="text-center">Mobile</th>
                             <th class="text-center">Time In</th>
-                            <th class="text-center">Time Picked</th>
-                            <th class="text-center">Time Taken</th>
-                            <th class="text-center">Persion Picking Client</th>
+                            {{-- <th class="text-center">Time Picked</th> --}}
+                            {{-- <th class="text-center">Time Taken</th> --}}
+                            {{-- <th class="text-center">Persion Picking Client</th> --}}
                             <th class="text-center">Time Out</th>
-                            <th class="text-center">Persion Handling</th>
+                            {{-- <th class="text-center">Persion Handling</th> --}}
                             <th class="text-center">Action</th>
                         </tr>
                     </thead>
@@ -60,11 +57,11 @@
                             <td scope="row" class="text-center" id="medicine_name_1"></td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
+                            {{-- <td scope="row" class="text-center"></td> --}}
+                            {{-- <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td><a href="{{url('view-client')}}"><i style="color:black;" class="fa fa-eye"
+                            <td scope="row" class="text-center"></td> --}}
+                            <td><a href="{{url('view-client')}}"><i style="color:black;align:centre" class="fa fa-eye"
                                         aria-hidden="true"></i></a></td>
                         </tr>
                     </tbody>
