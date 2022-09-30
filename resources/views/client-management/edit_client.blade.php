@@ -2,9 +2,18 @@
 @section('content')
 <div class="container">
   <div class="py-5 text-center">
+
+
 <div>
-    <h2 style="text-align:center; ">Edit New Client</h2>
+    <h2 style="text-align:center;">Add New Client</h2>
     <hr class="mb-4">.
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+  <div class="container mt-5">
+      <button type="button" class="btn btn-primary client_btn" data-bs-toggle="modal" data-bs-target="#mymodal">Add Client Type</button>
+      <!-- <button type="button" class="btn btn-primary country_btn" data-bs-toggle="modal" data-bs-target="#my">Add Country</button> -->
+  </div>
 </div>
 </div>
   <div class="row">
@@ -17,7 +26,7 @@
                                 <label for="username">Client Number</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend"></div>
-                                    <input type="text" class="form-control" name="number" id="username" value="" placeholder="Number" required>
+                                    <input type="text" class="form-control" name="number" id="username" value="" placeholder="Number" >
                                     <div class="invalid-feedback" style="width: 100%;">
                                         Name is required.
                                     </div>
@@ -32,7 +41,9 @@
 
                                   </div>
                                   <select name="type" id="cars">
-                                  <option value="volvo"></option>
+                                  <option value="volvo">Select</option>
+                                  <option value="volvo">Corporate</option>
+                                  <option value="volvo">Individual</option>
                                   </select>
                                 </div>
                             </div>
@@ -45,7 +56,9 @@
 
                                       </div>
                                       <select name="citizen" id="cars">
-                                      <option value="volvo"></option>
+                                      <option value="volvo">Select</option>
+                                      <option value="volvo">Residensial</option>
+                                      <option value="volvo">Non Residensial</option>
                                       </select>
                                 </div>
                             </div>
@@ -53,18 +66,7 @@
                     </div>
                     <br>
                     <div class="row">
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">Cert Of Incorporation</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="corporation" id="age" value="" placeholder="corporation" min="0" max="99">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                            Age is required.
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
+                        
                         <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="username">Country</label>
@@ -73,7 +75,11 @@
 
                                     </div>
                                     <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                    <option value="volvo">Select</option>
+                                    <option value="volvo">Kenya</option>
+                                    <option value="volvo">South Africa</option>
+                                    <option value="volvo">India</option>
+                                    <option value="volvo">America</option>
                                     </select>
                                   </div>
                             </div>
@@ -90,9 +96,6 @@
                                     </div>
                             </div>
                         </div>
-                    </div>
-                    <br>
-                    <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="username">Fax No</label>
@@ -105,6 +108,10 @@
                                     </div>
                             </div>
                         </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        
                         <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="username">Email Address</label>
@@ -117,21 +124,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">Web Site</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="conpassword" value="" id="confirm_password" placeholder="website">
-                                            <div class="invalid-feedback" style="width: 100%;">
-                                                Password is required.
-                                            </div>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="username">Brought In By</label>
@@ -157,6 +149,9 @@
                               </div>
                             </div>
                         </div>
+                    </div>
+                    <br>
+                    <div class="row">
                         <div class="col-md-4">
                           <div class="mb-1">
                             <label for="username">Client Source</label>
@@ -165,14 +160,13 @@
 
                                 </div>
                                 <select name="source" id="cars">
-                                <option value="volvo"></option>
+                                <option value="volvo">Select</option>
+                                <option value="volvo">Excisting Client</option>
+                                <option value="volvo">Online</option>
                                 </select>
                               </div>
                           </div>
                         </div>
-                    </div>
-                    <br>
-                    <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="username">Client Source Narration</label>
@@ -197,6 +191,9 @@
                                     </div>
                             </div>
                         </div>
+                    </div>
+                    <br>
+                    <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
                             <label for="username">Client Industry</label>
@@ -205,14 +202,14 @@
 
                                     </div>
                                     <select name="industry" id="cars">
-                                    <option value="volvo"></option>
+                                    <option value="volvo">Select</option>
+                                    <option value="volvo">Commerce</option>
+                                    <option value="volvo">Construction</option>
+                                    <option value="volvo">Education</option>
                                     </select>
                                   </div>
                             </div>
                         </div>
-                    </div>
-                    <br>
-                    <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="username">Pin No</label>
@@ -237,6 +234,9 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <br>
+                    <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="username">Postal Code</label>
@@ -249,9 +249,6 @@
                                     </div>
                             </div>
                         </div>
-                    </div>
-                    <br>
-                    <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="username">Town</label>
@@ -275,6 +272,9 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <br>
+                    <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
                               <label for="username">Notes</label>
@@ -288,20 +288,13 @@
                         </div>
                     </div>
                     <br>
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-sm">
-                          
-                        </div>
-                          <div class="col-sm">
-                            <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Submit</button>
+ 
+                  
+                      <button type="submit" class="btn btn-primary col-md-6">Save Changes</button>
+                      <button type="button" class="btn  submit_btn col-md-6">Back</button>
+                      
+                      </div>
 
-                          
-                             <button type="submit" class="btn btn-primary submit_btn btn_align">Back</button>
-
-                          </div>
-                        </div>
-                      </div>  
                     </div>
                 </form>
             </div>
@@ -309,8 +302,40 @@
 </div>
 
 </div> 
- 
- 
+  <div class="modal" id="mymodal">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div class="modal-body">
+                    <form action="">
+                      <div>
+                        <input type="text" name="type" class="form-control" placeholder="Client Type">
+                        <button class="btn btn-primary sub_btnn" type="submit" >submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="modal" id="my">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div class="modal-body">
+                    <form action="">
+                      <div>
+                        <input type="text" name="type" class="form-control" placeholder="Country">
+                        <button class="btn btn-primary sub_btnn" type="submit" >submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   

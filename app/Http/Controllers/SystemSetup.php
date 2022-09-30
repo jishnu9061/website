@@ -191,6 +191,65 @@ class SystemSetup extends Controller
     {
         return view('system-settings.user_edit');
     }
+    public function regnewuser()
+    {
+        return view('system-settings.reg_new_user');
+    }
+    public function attachments()
+    {
+        return view('system-settings.user_attachments');
+    }
+    public function pairedaccount()
+    {
+        return view('system-settings.paired_account');
+    }
+    public function addaccountpairs()
+    {
+        return view('system-settings.add_account_pairs');
+    }
+    public function editaccountpairs()
+    {
+        return view('system-settings.edit_account_pairs');
+    }
+    public function filetypes()
+    {
+        return view('system-settings.file_types');
+    }
+    public function addfiletypes()
+    {
+        return view('system-settings.add_file_types');
+    }
+    public function editfiletypes()
+    {
+        return view('system-settings.edit_file_types');
+    }
+    public function invoiceitems()
+    {
+        return view('system-settings.invoice_items');
+    }
+    public function addinvoiceitem()
+    {
+        return view('system-settings.add_invoice_item');
+    }
+    public function addglaccount()
+    {
+        return view('system-settings.add_gl_account');
+    }
+    public function currencylist()
+    {
+        return view('system-settings.currency_list');
+    }
+    public function addcurrency()
+    {
+        return view('system-settings.add_currency');
+    }
+    public function editcurrency()
+    {
+        return view('system-settings.edit_currency');
+    }
+
+
+
 
 
 
