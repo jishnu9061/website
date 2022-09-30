@@ -71,7 +71,7 @@
     <body>
         <!-- <h2>Add Company Details</h2> -->
         <button class="btn btn-primary"
-        style="width:100%;background-color:#d6ba8a;color:white;border:1px solid gold;font-width:150%"><span class="font-size-lg">Edit Company Details</span></button><br><br><br>
+        style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-width:150%"><span class="font-size-lg">Edit Company Details</span></button><br><br><br>
         {{-- <h3 style="text-align:center;"><u><b>Edit Company Details</b></u></h3><br> --}}
         <a href=""><button class="btn btn-primary add-btn">Add Logo</button></a><br><br><br>
 
