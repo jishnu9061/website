@@ -14,36 +14,29 @@
       <title></title>
       <!-- <link rel="stylesheet" href="assets/css/cstyle.css">  -->
       <style>
-       
-        label
+       .attachments
       {
-       
-        font-size:medium;
-        width:200px;
-        display:inline-block;
-        color: rgb(13, 1, 56); 
-        margin-left:50px;
-     
-        }
-        input
-        {
-          width: 450px;
-          height:30px;
-          color:black;
+        border: 2px solid rgb(13, 1, 56);
+        margin: 20px;
+        padding: 20px;
 
-        }
+      }
    
  
 </style>
 </head>
 <body>
     <!-- <h2>Add Company Details</h2> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">New User Registration</h2>
+    <h2 style="text-align:center; text-shadow: 2px 1px;">Attachments</h2>
     <hr class="mb-4">.
-    
-  <form > 
-  
-  	
+    <form> 
+      <div class="attachments">
+    <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Documents to Upload</h3><br><br>
+    <p style="text-align:center;"> Select a file or drop it here </p>
+<!-- <button><input type="file" class="form-control" name="name" id="customFile" style="height:100px;width:100px;" >Select a File</button> -->
+    <input type="file"value="Select a File" name="submit"style="background-color:rgb(13, 1, 56);color: white; margin-left:38%;"> 
+      </div>
+      </form>
    </body>
 </html>
 @endsection
