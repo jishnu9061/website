@@ -19,7 +19,7 @@
     <div class="container">
         <h3 class="text-center" style="color: #070344;"><b>Process Request</b></h3>
         <br>
-       
+
         <br>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -35,7 +35,7 @@
                             <th class="text-center">Documents</th>
                             <th class="text-center">Approved By</th>
                             <th class="text-center">Action</th>
-                            
+
                             </th>
 
 
@@ -54,8 +54,8 @@
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
-                           
-                            
+
+
                         </tr>
 
 
