@@ -1,24 +1,22 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container">
-    <div class="py-5 text-center">
-
+    <div>
         <div>
-            <h2 style="text-align:center;">Add Pickup Client</h2>
-            <hr class="mb-4">.
+            <button class="btn btn-primary"
+            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Add Pickup Client</u></b></button><br><br>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous">
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12 order-md-1">
             <form method="post" action="" id="form">
                 @csrf
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
-                            <label for="username">Client</label>
+                            <label for="username">Client Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="client" id="username" value=""
@@ -29,9 +27,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
-                            <label for="username">File</label>
+                            <label for="username">File Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="file" id="username" value=""
@@ -42,7 +40,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Mobile</label>
                             <div class="input-group">
@@ -55,10 +57,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Persion Handling</label>
                             <div class="input-group">
@@ -71,20 +70,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Client Name</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="name" id="username" value=""
-                                    placeholder="clientname" required>
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Name is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
+                        <br>
                         <div class="mb-1">
                             <label for="username">Email</label>
                             <div class="input-group">
@@ -97,10 +84,24 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-6">
+                        <br>
+                        <div class="mb-1">
+                            <label for="username">Client Name</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="name" id="username" value=""
+                                    placeholder="clientname" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <br>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Persion Picking Handling</label>
                             <div class="input-group">
@@ -113,7 +114,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Reason</label>
                             <div class="input-group">
@@ -130,19 +131,17 @@
                 <br>
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="btn-group pt-3 " role="group" aria-label="Basic example">
-
-                            <button type="submit" class="btn btn-primary col-md-6">Save Changes</button>
-                            <a href="{{route('client-index')}}" type="button" class="btn  submit_btn col-md-6">Back</a>
-
-                        </div>
-
+                      <div class="col-sm">
+                      </div>
+                      <div class="col-sm">
+                      </div>
+                      <div class="col-sm">
+                        <button type="submit" class="btn btn-primary float:right" style="width:45%">Save</button>
+                        <button type="submit" class="btn btn-primary float:left"style="width:45%">Close</button>
+                      </div>
                     </div>
-                </div>
-        </div>
+                  </div>
+                
         </form>
     </div>
 </div>
