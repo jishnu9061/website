@@ -25,7 +25,7 @@
 	      @csrf
           
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-6">
            <div class="mb-1">
           <label for="username">Date of Progress</label>
           <div class="input-group">
@@ -39,7 +39,7 @@
           </div>
         </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
            <div class="mb-1">
           <label for="username">Client</label>
           <div class="input-group">
@@ -55,7 +55,7 @@
           </div>
         </div>
           </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="mb-1">
           <label for="username">File</label>
           <div class="input-group">
@@ -65,15 +65,12 @@
             <select name="country" id="cars">
                 <option value="volvo"></option>
             </select>
-            <!-- <textarea class="form-control" id="form7Example7" rows="3"></textarea> -->
-            <!-- <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select> -->
+            
           </div>
         </div>
         </div>
         
-        <div class="col-md-4">
+        <div class="col-md-6">
            <div class="mb-1">
           <label for="username">Time Taken(Hours)</label>
           <div class="input-group">
@@ -88,7 +85,7 @@
         </div>
           </div>
 
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="mb-1">
           <label for="username">Action Type</label>
           <div class="input-group">
@@ -101,15 +98,13 @@
           </div>
         </div>
         </div>
-        </div>
-        </div>
-        </div>
+       
+       
 
 
-
-        <div class="row">
+      
           
-          <div class="col-md-4">
+          <div class="col-md-6">
            <div class="mb-1">
           <label for="username">Time Taken(Minutes)</label>
           <div class="input-group">
@@ -127,7 +122,7 @@
         
           
 
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="mb-1">
           <label for="username">Send Noitification To</label>
           <div class="input-group">
@@ -140,25 +135,15 @@
           </div>
         </div>
         </div>
-        </div>
-      
-
-
-        <div class="row">
-          
-          
-        
-        
-          
-
-        <div class="col-md-4">
+       
+        <div class="col-md-6">
             <div class="mb-1">
           <label for="username">Action Description</label>
           <div class="input-group">
             <div class="input-group-prepend">
 
             </div>
-            <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+         
           </div>
         </div>
         </div>

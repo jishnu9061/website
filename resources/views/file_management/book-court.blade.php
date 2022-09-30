@@ -86,12 +86,9 @@
 
         </div>
 
-        <!--  -->
 
-
-        <br>
         <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-6">
             <div class="mb-1">
           <label for="username">Start Date</label>
           <div class="input-group">
@@ -104,7 +101,7 @@
         </div>
 
           
-        <div class="col-md-3">
+        <div class="col-md-6">
             <div class="mb-1">
           <label for="username">Time</label>
           <div class="input-group">
@@ -125,7 +122,7 @@
 
 
         <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-6">
             <div class="mb-1">
           <label for="username">End Date</label>
           <div class="input-group">
@@ -137,7 +134,7 @@
         </div>
         </div>
 
-        <div class="col-md-3">
+        <div class="col-md-6">
             <div class="mb-1">
           <label for="username">Time</label>
           <div class="input-group">
@@ -149,14 +146,13 @@
               Telephone Number is required.
             </div>
           </div>
+        </div> </div>
         </div>
+       
+
         
-           
-          </div>
-        </div>
-        <br>
         <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6">
            <div class="mb-1">
           <label for="username">User Assigned</label>
           <div class="input-group">
@@ -173,7 +169,7 @@
         </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-6">
            <div class="mb-1">
           <label for="username">Sent Notification To</label>
           <div class="input-group">
@@ -190,7 +186,7 @@
         </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-6">
            <div class="mb-1">
           <label for="username">Set Reminder</label>
           <div class="input-group">
@@ -206,7 +202,7 @@
           </div>
         </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
            <div class="mb-1">
           <label for="username">Notes</label>
           <div class="input-group">

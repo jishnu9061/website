@@ -25,7 +25,7 @@
                 @csrf
 
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Date of Progress</label>
                             <div class="input-group">
@@ -39,7 +39,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Client</label>
                             <div class="input-group">
@@ -55,7 +55,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Send Noitification To</label>
                             <div class="input-group">
@@ -73,7 +73,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Files</label>
                             <div class="input-group">
@@ -88,7 +88,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Next Bring Up Days</label>
                             <div class="input-group">
@@ -101,15 +101,23 @@
                             </div>
                         </div>
                     </div>
+                
+        <div class="col-md-6">
+            <div class="mb-1">
+                <label for="username">Reminder Period (Days)</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+
+                    <input type="text" class="form-control" name="incorporation" id="age">
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Incorporation is required
+                    </div>
                 </div>
-        </div>
-    </div>
-
-
-
-    <div class="row">
-
-        <div class="col-md-4">
+            </div>
+            </div>
+            <div class="col-md-6">
             <div class="mb-1">
                 <label for="username">Reason</label>
                 <div class="input-group">
@@ -123,31 +131,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-
-
-
-        <div class="col-md-4">
-            <div class="mb-1">
-                <label for="username">Reminder Period (Days)</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
-                    </div>
-                    <input type="text" class="form-control" name="incorporation" id="age">
-                </div>
             </div>
-        </div>
-    </div>
-</div>
-</div>
-
-
-
-
-
-
 </div>
 <br>
 <div>
@@ -166,8 +150,7 @@
     </div>
 </div>
 </div>
-</div>
-</div>
+
 
 
 

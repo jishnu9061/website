@@ -85,7 +85,7 @@
           </div>
         </div>
         </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
            <div class="mb-1">
           <label for="username">Location</label>
           <div class="input-group">
@@ -103,7 +103,7 @@
         </div>
         <br>
           <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-6">
            <div class="mb-1">
           <label for="username">Start Date</label>
           <div class="input-group">
@@ -118,7 +118,7 @@
         </div>
           </div>
 
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="mb-1">
           <label for="username">Time</label>
           <div class="input-group">
@@ -140,7 +140,7 @@
 
 
         <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="mb-1">
           <label for="username">End Date</label>
           <div class="input-group">
@@ -151,7 +151,7 @@
           </div>
         </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="mb-1">
           <label for="username">Time</label>
           <div class="input-group">

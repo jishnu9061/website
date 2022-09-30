@@ -67,7 +67,7 @@
           </div>
         </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="mb-1">
           <label for="username">Document Category</label>
           <div class="input-group">
@@ -79,7 +79,7 @@
         </div>
         </div>
        
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="mb-1">
           <label for="username">Document Title</label>
           <div class="input-group">
@@ -137,7 +137,7 @@
  
 
         <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-6">
            <div class="mb-1">
           <label for="username">Documet Owner</label>
           <div class="input-group">
@@ -155,7 +155,7 @@
           </div>
 
 
-          <div class="col-md-3">
+          <div class="col-md-6">
            <div class="mb-1">
           <label for="username">Final Aggrement</label>
           <div class="input-group">
@@ -169,13 +169,10 @@
           </div>
         </div>
           </div>
-          </div>
-
+          <!-- </div>
         <br>
-
-
-        <div class="row">
-        <div class="col-md-3">
+        <div class="row"> -->
+        <div class="col-md-6">
            <div class="mb-1">
           <label for="username">Documet To Upload</label>
           <div class="input-group">
@@ -191,7 +188,7 @@
           </div>
 
 
-          <div class="col-md-3">
+          <div class="col-md-6">
            <div class="mb-1">
           <label for="username">Folder To Upload </label>
           <div class="input-group">

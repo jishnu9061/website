@@ -13,30 +13,30 @@
         </div>
         @endif
         <div>
-
+        <h2 style="text-align:center; margin-left: 4%;">File Reports</h2>
             <hr class="mb-4">.
         </div>
     </div>
+    
 
     <div>
         <br>
-        <div style="margin-left: 150px;">
-            <input class="btn btn-primary" type="button" value="Today">
-            <input class="btn btn-primary" type="button" value="This Week">
-            <input class="btn btn-primary" type="button" value="Last Week">
-            <input class="btn btn-primary" type="button" value="This Month(MTD)">
-            <input class="btn btn-primary" type="button" value="Last Month">
-            <input class="btn btn-primary" type="button" value="This Quater">
-            <input class="btn btn-primary" type="button" value="Last Quater">
-            <input class="btn btn-primary" type="button" value="This Year(YTD)">
-            <input class="btn btn-primary" type="button" value="Last Year">
+        <div>
+        <input class="btn btn-primary" type="button"  style="width:65px;"  value="Today" >
+        <input class="btn btn-primary" type="button" value="This Week">
+        <input class="btn btn-primary" type="button" value="Last Week">
+        <input class="btn btn-primary" type="button" value="This Month">
+        <input class="btn btn-primary" type="button" value="Last Month">
+        <input class="btn btn-primary" type="button" style="width:105px;" value="This Quater ">
+        <input class="btn btn-primary" type="button"  value="Last Quater">
+        <input class="btn btn-primary" type="button" value="This Year">
+        <input class="btn btn-primary" type="button" value="Last Year">
         </div>
         <br>
         <hr class="mb-4">.
 
 
 
-<h2 style="text-align:center; margin-left: 4%;">File Reports</h2>
 
 
 <div class="row">
@@ -62,14 +62,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        <!-- </div>
 
         <br>
-
-
-
-
-        <div class="row">
+        <div class="row"> -->
             <div class="col-md-4">
                 <div class="mb-1">
                     <label for="username">Date (From)</label>

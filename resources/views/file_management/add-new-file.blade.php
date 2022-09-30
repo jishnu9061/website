@@ -30,7 +30,8 @@
      <form method="post" action="" id="form">
 	      @csrf
             <div class="row">
-            <div class="col-md-4">
+
+            <div class="col-md-6">
             <div class="mb-1">
           <label for="username">Associate Handling</label>
           <div class="input-group">
@@ -44,7 +45,8 @@
           </div>
         </div>
         </div>
-        <div class="col-md-4">
+
+        <div class="col-md-6">
             <div class="mb-1">
           <label for="username">Client</label>
           <div class="input-group">
@@ -54,14 +56,13 @@
             <select name="country" id="cars">
                 <option value="volvo"></option>
             </select>
-
           </div>
         </div>
         </div>
         
           
 
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="mb-1">
           <label for="username">File Type</label>
           <div class="input-group">
@@ -74,7 +75,8 @@
           </div>
         </div>
         </div>
-          <div class="col-md-4">
+
+          <div class="col-md-6">
            <div class="mb-1">
           <label for="username">Opening Date</label>
           <div class="input-group">
@@ -89,10 +91,10 @@
         </div>
           </div>
 
-        </div>
-        <br>
-          <div class="row">
-          <div class="col-md-4">
+        <!-- </div>
+        
+          <div class="row"> -->
+          <div class="col-md-6">
            <div class="mb-1">
           <label for="username">Client Ref.No(or Case No.)</label>
           <div class="input-group">
@@ -107,7 +109,7 @@
         </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-6">
            <div class="mb-1">
           <label for="username">Our File Ref.Number</label>
           <div class="input-group">
@@ -121,7 +123,8 @@
           </div>
         </div>
           </div>
-        <div class="col-md-4">
+          
+        <div class="col-md-6">
             <div class="mb-1">
           <label for="username">File Name / Subject</label>
           <div class="input-group">
@@ -134,15 +137,15 @@
             </div>
           </div>
         </div>
-        
-           
-          </div>
-        </div>
-         <div id="test" style="height:20px;"></div>
-          </div>
-        </div>
-        <div class="row">
-        <div class="col-md-4">
+       </div>
+      
+
+          <!-- </div>
+        </div> -->
+
+
+       
+        <div class="col-md-6">
             <div class="mb-1">
           <label for="username">Approval Partner</label>
           <div class="input-group">
@@ -156,7 +159,7 @@
         </div>
         </div>
 
-          <div class="col-md-4">
+          <div class="col-md-6">
             <div class="mb-1">
           <label for="username">Customer Name</label>
           <div class="input-group">
@@ -170,7 +173,7 @@
           </div>
         </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="mb-1">
           <label for="username">Customer Address</label>
           <div class="input-group">
@@ -183,13 +186,11 @@
             </div>
           </div>
         </div>
-        
-           
-          </div>
-        </div>
-        <br>
-        <div class="row">
-        <div class="col-md-4">
+      </div>
+        <!-- </div>
+     
+        <div class="row"> -->
+        <div class="col-md-6">
            <div class="mb-1">
           <label for="username">Customer Tel</label>
           <div class="input-group">
@@ -204,7 +205,7 @@
         </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-6">
            <div class="mb-1">
           <label for="username">Customer E-mail</label>
           <div class="input-group">
@@ -218,7 +219,7 @@
           </div>
         </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
            <div class="mb-1">
           <label for="username">Amount</label>
           <div class="input-group">
@@ -234,7 +235,7 @@
         </div>
           </div>
         
-          <div class="col-md-4">
+          <div class="col-md-6">
            <div class="mb-1">
           <label for="username">Workflow</label>
           <div class="input-group">
@@ -250,8 +251,7 @@
           </div>
         </div>
           </div>
-         <div id="test" style="height:20px;"></div>
-          </div>
+        
         </div>
         <br>
         <!-- <div class="row">
@@ -278,7 +278,7 @@
                                 </div>
                                 <div class="btn-group pt-3 " role="group" aria-label="Basic example">
 
-                                    <button type="submit" class="btn btn-primary submit_btn">Save Change</button>
+                                    <button type="submit" class="btn btn-primary submit_btn">Open File</button>
                                     <button type="submit" class="btn btn-primary submit_btn">Cancel</button>
 
                                 </div>

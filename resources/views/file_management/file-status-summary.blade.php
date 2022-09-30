@@ -20,7 +20,7 @@
     <h3 class="text-center" style="color: #070344;"><b>File Status Report Summary </b></h3>
        
         <br>
-        <div style="margin-left: 120px;">
+        <div>
         <input class="btn btn-primary" type="button" value="View File Statement" >
         <input class="btn btn-primary" type="button" value="View File Details">
         <input class="btn btn-primary" type="button" value="Previous Instructions">
@@ -129,7 +129,7 @@
 <div class="row">
     
 
-    <div class="col-md-2">
+    <div class="col-md-6">
         <div class="mb-1">
             <label for="username">Currency</label>
             <div class="input-group">
@@ -142,7 +142,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-2">
+    <div class="col-md-6">
         <div class="mb-1">
             <label for="username">Exchangr Rate</label>
             <div class="input-group">
@@ -164,7 +164,7 @@
 <div class="row">
     
 
-    <div class="col-md-2">
+    <div class="col-md-6">
         <div class="mb-1">
             <label for="username">Turn-Around Time(TAT)</label>
             <div class="input-group">
@@ -177,7 +177,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-2">
+    <div class="col-md-6">
         <div class="mb-1">
             <label for="username">Priority</label>
             <div class="input-group">
