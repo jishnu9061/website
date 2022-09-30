@@ -682,14 +682,16 @@ Route::any('delete_surgery{id}', 'surgeryController@destroy')->name('delete_surg
 Route::get('calendar-event', 'CalenderController@index')->name('calendar-event');
 Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents']);
 
-//RESHMA
+//RESHMA--------------------------------
 // system setup index
 Route::any('system_setup','SystemSetup@index')->name('system_setup');
+//end
 //company_details
 Route::any('company_details','SystemSetup@company')->name('company_details');
 Route::any('add_company_details','SystemSetup@addcompany')->name('add_company_details');
 Route::any('edit_company_details','SystemSetup@editcompany')->name('edit_company_details');
 Route::any('view_company_details','SystemSetup@viewcompany')->name('view_company_details');
+//end
 //weekend and holiday
 Route::any('weekend_holiday','SystemSetup@holiday')->name('weekend_holiday');
 Route::any('add_new_holiday','SystemSetup@addholiday')->name('add_new_holiday');
@@ -700,29 +702,37 @@ Route::any('holiday_2019','SystemSetup@holiday2019')->name('holiday_2019');
 Route::any('holiday_2020','SystemSetup@holiday2020')->name('holiday_2020');
 Route::any('holiday_2021','SystemSetup@holiday2021')->name('holiday_2021');
 Route::any('holiday_2022','SystemSetup@holiday2022')->name('holiday_2022');
+//end
 //Other Configuration
 Route::any('other_confgn','SystemSetup@othrconftn')->name('other_confgn');
+//end
 //Company branch
 Route::any('company_branch','SystemSetup@branch')->name('company_branch');
 Route::any('add_company_branch','SystemSetup@addbranch')->name('add_company_branch');
 Route::any('edit_company_branch','SystemSetup@editbranch')->name('edit_company_branch');
+//end
 //configurations
 Route::any('configu_ration','SystemSetup@Configtn')->name('configu_ration');
+//end
 //courts
 Route::any('courts','SystemSetup@courts')->name('courts');
 Route::any('add_court','SystemSetup@addcourt')->name('add_court');
 Route::any('edit_court','SystemSetup@editcourt')->name('edit_court');
 Route::any('add_court_category','SystemSetup@addcourtcategory')->name('add_court_category');
+//end
 //letter types
 Route::any('letter_types','SystemSetup@lettertype')->name('letter_types');
 Route::any('add_letter_category','SystemSetup@addlettercategory')->name('add_letter_category');
 Route::any('document_letter_category','SystemSetup@documentlettercategory')->name('document_letter_category');
+//end
 //payment items
 Route::any('payment_items','SystemSetup@paymentitem')->name('payment_items');
 Route::any('add_payment_item','SystemSetup@addpaymentitem')->name('add_payment_item');
+//end
 //description selection
 Route::any('description_selectn','SystemSetup@descriptionselection')->name('description_selectn');
 Route::any('add_desc_sel','SystemSetup@descsel')->name('add_desc_sel');
+//end
 //tax chart
 Route::any('tax_chart','SystemSetup@taxchart')->name('tax_chart');
 Route::any('add_tax_chart','SystemSetup@addtaxchart')->name('add_tax_chart');
@@ -730,37 +740,48 @@ Route::any('add_tax_excise','SystemSetup@addtaxexcise')->name('add_tax_excise');
 Route::any('add_tax_vat','SystemSetup@addtaxvat')->name('add_tax_vat');
 Route::any('add_tax_wht','SystemSetup@addtaxwht')->name('add_tax_wht');
 Route::any('add_tax_wht-vat','SystemSetup@addtaxwhtvat')->name('add_tax_wht-vat');
+//end
 //notifications
 Route::any('notifications','SystemSetup@notifications')->name('notifications');
+//end
 //template category
 Route::any('template_category','SystemSetup@templatecategory')->name('template_category');
 Route::any('add_template_category','SystemSetup@addtemplatecategory')->name('add_template_category');
 Route::any('document_template_category','SystemSetup@documenttemplatecategory')->name('document_template_category');
 Route::any('edit_template_category','SystemSetup@edittemplatecategory')->name('edit_template_category');
+//end
 //paired accounts
 Route::any('paired_account','SystemSetup@pairedaccount')->name('paired_account');
 Route::any('add_account_pairs','SystemSetup@addaccountpairs')->name('add_account_pairs');
 Route::any('edit_account_pairs','SystemSetup@editaccountpairs')->name('edit_account_pairs');
+//end
 //file types
 Route::any('file_types','SystemSetup@filetypes')->name('file_types');
 Route::any('add_file_types','SystemSetup@addfiletypes')->name('add_file_types');
 Route::any('edit_file_types','SystemSetup@editfiletypes')->name('edit_file_types');
+//end
 //invoice_items
 Route::any('invoice_items','SystemSetup@invoiceitems')->name('invoice_items');
 Route::any('add_invoice_item','SystemSetup@addinvoiceitem')->name('add_invoice_item');
 Route::any('add_gl_account','SystemSetup@addglaccount')->name('add_gl_account');
+//end
 //currency_list
 Route::any('currency_list','SystemSetup@currencylist')->name('currency_list');
 Route::any('add_currency','SystemSetup@addcurrency')->name('add_currency');
 Route::any('edit_currency','SystemSetup@editcurrency')->name('edit_currency');
+//end
 //USER details
 //manage user accounts
 Route::any('manage_user_account','SystemSetup@manageuseraccount')->name('manage_user_account');
 Route::any('reg_new_user','SystemSetup@regnewuser')->name('reg_new_user');
 Route::any('user_edit','SystemSetup@useredit')->name('user_edit');
 Route::any('user_attachments','SystemSetup@attachments')->name('user_attachments');
+Route::any('user_comments','SystemSetup@comments')->name('user_comments');
+//change password
+Route::any('change_user_password','SystemSetup@changepassword')->name('change_user_password');
 
-//RESHMA
+
+//RESHMA--------------------------------------
 
 
 //mugunthan

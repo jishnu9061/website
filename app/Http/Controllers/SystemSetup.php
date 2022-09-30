@@ -183,22 +183,7 @@ class SystemSetup extends Controller
     {
         return view('system-settings.edit_template_category');
     }
-    public function manageuseraccount()
-    {
-        return view('system-settings.manage_user_account');
-    }
-    public function useredit()
-    {
-        return view('system-settings.user_edit');
-    }
-    public function regnewuser()
-    {
-        return view('system-settings.reg_new_user');
-    }
-    public function attachments()
-    {
-        return view('system-settings.user_attachments');
-    }
+   
     public function pairedaccount()
     {
         return view('system-settings.paired_account');
@@ -247,7 +232,30 @@ class SystemSetup extends Controller
     {
         return view('system-settings.edit_currency');
     }
-
+    public function manageuseraccount()
+    {
+        return view('system-settings.manage_user_account');
+    }
+    public function useredit()
+    {
+        return view('system-settings.user_edit');
+    }
+    public function regnewuser()
+    {
+        return view('system-settings.reg_new_user');
+    }
+    public function attachments()
+    {
+        return view('system-settings.user_attachments');
+    }
+    public function comments()
+    {
+        return view('system-settings.user_comments');
+    }
+    public function changepassword()
+    {
+        return view('system-settings.change_user_password');
+    }
 
 
 
