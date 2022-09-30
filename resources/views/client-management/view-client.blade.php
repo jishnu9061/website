@@ -1,12 +1,9 @@
-
-
-
 @extends('layouts.hmsmain')
 @section('content')
 <style>
-    .btn-width{
-        width:10%;
-    }
+.btn-width {
+    width: 10%;
+}
 </style>
 <div>
 
@@ -16,29 +13,29 @@
 <div class="container">
     <h3 style="text-align:center">View Pickup Reception</h3><br><br>
     <table class="table table-hover" style="border: 1px solid">
-       
+
         @csrf
-        <tbody >
+        <tbody>
             <tr>
-                <th style="width:30%" >No</th>
+                <th style="width:30%">No</th>
                 <td></td>
             </tr>
             <tr>
                 <th>Date</th>
                 <td></td>
             </tr>
-                <th>Client</th>
-                <td></td>
+            <th>Client</th>
+            <td></td>
             </tr>
             </tr>
-                <th>File</th>
-                <td></td>
+            <th>File</th>
+            <td></td>
             </tr>
             </tr>
-                <th>Visitor</th>
-                <td></td>
+            <th>Visitor</th>
+            <td></td>
             </tr>
-             <tr>
+            <tr>
                 <th>Mobile</th>
                 <td></td>
             </tr>
