@@ -5,15 +5,16 @@
 
 
 <div>
-    <h2 style="text-align:center;">Add New Client</h2>
-    <hr class="mb-4">.
+  <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;color;border:1px solid gold;font-width:150%"><span
+                    class="font-size-lg"><b>Add New Client</b></span></button>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
-  <div class="container mt-5">
+  {{-- <div class="container mt-5">
       <button type="button" class="btn btn-primary client_btn" data-bs-toggle="modal" data-bs-target="#mymodal">Add Client Type</button>
       <!-- <button type="button" class="btn btn-primary country_btn" data-bs-toggle="modal" data-bs-target="#my">Add Country</button> -->
-  </div>
+  </div> --}}
 </div>
 </div>
   <div class="row">
@@ -36,18 +37,9 @@
                         <div class="col-md-4">
                             <div class="mb-1">
                               <label for="username">Client Type</label>
-                                <div class="input-group">
-                                  <div class="input-group-prepend">
-
-                                  </div>
-                                  <select name="type" id="cars">
-                                  <option value="volvo">Select</option>
-                                  <option value="volvo">Corporate</option>
-                                  <option value="volvo">Individual</option>
-                                  </select>
-                                </div>
-                            </div>
+                              <input type="text" class="form-control" name="number" id="username" value="Individual" placeholder="Number" disabled>
                         </div>
+                      </div>
                         <div class="col-md-4">
                           <div class="mb-1">
                             <label for="username">Citizen Status</label>
@@ -131,7 +123,9 @@
                                     <div class="input-group-prepend">
                                     </div>
                                     <select name="brought" id="cars">
-                                    <option value="volvo"></option>
+                                      <option value="volvo">Select</option>
+                                    <option value="volvo">Staff</option>
+                                    <option value="volvo">Agent</option>
                                     </select>
                                   </div>
                             </div>
@@ -144,7 +138,13 @@
 
                                 </div>
                                 <select name="status" id="cars">
-                                <option value="volvo"></option>
+                                <option value="volvo">Select</option>
+                                <option value="volvo">Monday</option>
+                                <option value="volvo">Tuesday</option>
+                                <option value="volvo">Wednesday</option>
+                                <option value="volvo">Thursday</option>
+                                <option value="volvo">Friday</option>
+                                <option value="volvo">Saturday</option>
                                 </select>
                               </div>
                             </div>
@@ -237,7 +237,7 @@
                     </div>
                     <br>
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="mb-1">
                                 <label for="username">Postal Code</label>
                                     <div class="input-group">
@@ -249,7 +249,7 @@
                                     </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="mb-1">
                                 <label for="username">Town</label>
                                     <div class="input-group">
@@ -261,37 +261,49 @@
                                     </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <div class="input-group">     
-                                    <label for="cars"> Physical Address</label>
-                                      <textarea class="form-control" id="form7Example7" rows="3"></textarea>
-                                      <div class="invalid-feedback" style="width: 100%;">
-                                          Postal Address is required.
-                                      </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-      
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                              <label for="username">Notes</label>
-                                <div class="input-group">                     
-                                  <textarea class="form-control" id="form7Example7" rows="3"></textarea>
-                                  <div class="invalid-feedback" style="width: 100%;">
-                                     Postal Address is required.
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
+                       
                     </div>
                     <br>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="mb-1">
+                            <div class="input-group">     
+                                <label for="cars"> Physical Address</label>
+                                  <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                  <div class="invalid-feedback" style="width: 100%;">
+                                      Postal Address is required.
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="mb-1">
+                          <div class="input-group">     
+                              <label for="cars">Notes</label>
+                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Postal Address is required.
+                                </div>
+                          </div>
+                      </div>
+                  </div>
+                    </div>
+                    <br>
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-sm">
+                        </div>
+                        <div class="col-sm">
+                        </div>
+                        <div class="col-sm">
+                          <button type="submit" class="btn btn-primary float:right" style="width:40%">Close</button>
+                          <button type="button" class="btn btn-primary float:left" style="width:40%">Save</button>
+                        </div>
+                      </div>
+                    </div>
  
                   
-                      <button type="submit" class="btn btn-primary col-md-6">Save Changes</button>
-                      <button type="button" class="btn  submit_btn col-md-6">Back</button>
+                     
                       
                       </div>
 
