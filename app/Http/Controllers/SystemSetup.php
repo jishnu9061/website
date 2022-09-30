@@ -264,7 +264,43 @@ class SystemSetup extends Controller
     {
         return view('system-settings.add_new_user_grp');
     }
+    public function rolesperuser()
+    {
+        return view('system-settings.view_roles_per_user');
+    }
+    // public function rolesedit()
+    // {
+    //     return view('system-settings.roles_edit');
+    // }
 
+    public function manageuserroles()
+    {
+        return view('system-settings.manage_user_roles');
+    }
+    public function adduserrole()
+    {
+        return view('system-settings.add_user_roles');
+    }
+    public function edituserrole()
+    {
+        return view('system-settings.edit_user_roles');
+    }
+    public function manageuserdepartment()
+    {
+        return view('system-settings.manage_user_department');
+    }
+    public function adduserdepartment()
+    {
+        return view('system-settings.add_user_department');
+    }
+    public function advocatestarget()
+    {
+        return view('system-settings.advocates_target');
+    }
+    public function addnew()
+    {
+        return view('system-settings.add_new_entry');
+    }
 
 
 

@@ -12,7 +12,9 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 </head>
       <style>
-   
+   .container{
+    
+   }
  
       table {
             /* font-family: arial, sans-serif; */
@@ -62,7 +64,8 @@
 
 <h2 style="text-align:center; ">Edit User Details </h2>
     <hr class="mb-4"><br>
-
+    <form>
+    <table class="table">
 <div class="row">
         <div class="col-md-12 order-md-1">
             <form method="post" action="http://localhost/CRA/public/addthestaffs" id="form">
@@ -75,14 +78,7 @@
                         <label style="text-align:center;">Signature</label>
                     </div> 
                 </div> 
-                <!-- <div class="col-md-5">
-                    <div class="mb-1">
-                        <label for="username">ddddddddddd</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend"></div>
-                            <input type="text" class="form-control" name="name" id="ucode" >
-                        </div>
-                    </div> -->
+                
                 </div> 
 
 
@@ -235,13 +231,16 @@
                 </div>
              
             </div>
+            </table>
+            </form>
             <div class="class"style="text-align:center;">
             <!-- <input  type="submit"value="Save" name="Submit"style="background-color:rgb(13, 1, 56);color: white "> -->
     <input type="submit"value="Save" name="submit"style="background-color:rgb(13, 1, 56);color: white; "> 
     <input type="button"value="Close" name="close"style="background-color:red;color: white; ">
 
     
-</div>    
+</div>   
+            </div> 
 </body>
 </html>
 @endsection
