@@ -25,10 +25,8 @@
  
 </head>
 <body>
-  <button class="btn btn-primary"
-        style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-width:150%"><span class="font-size-lg"><b>Edit Company Details</b></span></button><br><br>
-  {{-- <h3 style="text-align:center"><b><u>Company Details</u></b></h3> --}}
-  <!-- <a href=""><button class="btn btn-primary"  style="background: #FFFBF4; color: #1D1D50;" >Add Company</button></a><br><br>
+  <h3 style="text-align:center"><b><u>Company Details</u></b></h3>
+  <!-- <a href="{{('add_company_details')}}"><button class="btn btn-primary"  style="background: #FFFBF4; color: #1D1D50;" >Add Company</button></a><br><br>
   <hr class="mb-4">. -->
   <a href="{{('add_company_details')}}"><button class="btn btn-primary add-btn">Edit Company </button></a><br><br>
   
