@@ -14,42 +14,38 @@
 </head>
 
 <body>
+   
+    <div class="col-sm">
+   
+    
+
+  </div>
     <div class="container">
-        <h3 class="text-center" style="color: #070344; "><b>New Quotation</b></h3>
+        <h3 class="text-center" style="color: #070344;"><b>Meeting Rooms [<i class="fa fa-plus" style="font-size:24px"></i>]</b></h3>
        <br>
       
-       <div id="mydatatable_filter" class="dataTables_filter">
-        <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
-       </div>
-       <a href="{{('new-Quotation')}}"><button class="btn btn-primary add-btn">Add Quotation</button></a>
-       <hr class="mb-4">.
-       
+      
+      
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
             <table class="table table-bordered" id="new-item">
                 <thead>
                     <tr>
-                        <th class="text-center"> No</th>
-                        <th class="text-center"> Issue Date</th>
-                        <th class="text-center">Document No</th>
-                        <th class="text-center">Customer</th>
-                        <th class="text-center">Amount</th>
-                        <th class="text-center">Posted By</th>
+                        <th class="text-center">*</th>
+                        <th class="text-center">Code</th>
                         <th class="text-center">Action</th>
+                       
                     </tr>
                 </thead>
                 <tbody>
                         <tr id="data">
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td><a href="{{url('edit-Quotation')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i></a></td>
-                          
-                            
+                     
+                            <td  scope="row" class="text-center" > </td>
+                            <td  scope="row" class="text-center" ><input type="text"  style="width:100%;"> </td>
+                            <td  scope="row"class="text-center"><a href="">
+                            <a href="{{url('')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
+                            <a  onClick="return myFunction();" href="" style="color:black;"><i class="fas fa-trash-alt"></i></a></td>
                         </tr>
                 </tbody>
             </table>

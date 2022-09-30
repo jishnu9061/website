@@ -67,6 +67,9 @@
           </div>
         </div>
         </div>
+</div>
+        <br>
+        <div class="row">
         <div class="col-md-4">
             <div class="mb-1">
           <label for="username">Duration(Days)</label>
@@ -97,6 +100,7 @@
           </div>
         </div>
         
+        
 
 </br>
 
@@ -115,19 +119,22 @@
      
     </div>
     <br>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
+    <div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm">
 
-            </div>
-            <div class="btn-group pt-3 " role="group" aria-label="Basic example" style="margin-left: 50px;">
+                                </div>
+                                <div class="btn-group pt-3 " role="group" aria-label="Basic example">
 
-                <button type="submit" class="btn btn-primary submit_btn">Save Workflow</button>
-                <button type="submit" class="btn btn-primary submit_btn">Close</button>
+                                    <button type="submit" class="btn btn-primary submit_btn">Save Workflow</button>
+                                    <button type="submit" class="btn btn-primary submit_btn">Cancel</button>
 
-            </div>
-        </div>
-    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
      
     
    
