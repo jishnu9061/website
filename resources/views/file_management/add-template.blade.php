@@ -24,7 +24,7 @@
      <form method="post" action="" id="form">
 	      @csrf
           <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-4">
            <div class="mb-1">
           <label for="username">Document Type</label>
           <div class="input-group">
@@ -40,7 +40,7 @@
           </div>
         </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-4">
            <div class="mb-1">
           <label for="username">Template Title</label>
           <div class="input-group">
@@ -54,7 +54,7 @@
           </div>
         </div>
           </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="mb-1">
           <label for="username">Template To Upload</label>
           <div class="input-group">

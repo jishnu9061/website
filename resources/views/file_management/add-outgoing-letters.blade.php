@@ -32,7 +32,7 @@
 
        
         <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="mb-1">
           <label for="username">Letter Date</label>
           <div class="input-group">
@@ -45,7 +45,7 @@
         </div>
 
        
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="mb-1">
           <label for="username">Client</label>
           <div class="input-group">
@@ -58,7 +58,7 @@
           </div>
         </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="mb-1">
           <label for="username">File</label>
           <div class="input-group">
@@ -72,7 +72,7 @@
         </div>
         </div>
        
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="mb-1">
           <label for="username">Delivered To</label>
           <div class="input-group">
@@ -88,14 +88,14 @@
         
            
           </div>
-        </div>
+        <!-- </div>
         
 
 </br>
 
 
-        <div class="row">
-        <div class="col-md-6">
+        <div class="row"> -->
+        <div class="col-md-4">
             <div class="mb-1">
           <label for="username">Document Category</label>
           <div class="input-group">
@@ -108,7 +108,7 @@
           </div>
         </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="mb-1">
           <label for="username">Letter Name</label>
           <div class="input-group">
@@ -120,7 +120,7 @@
         </div>
         </div>
         
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="mb-1">
           <label for="username">Originator</label>
           <div class="input-group">
@@ -134,17 +134,13 @@
         </div>
         </div>
         
-        </div>
-        
-           
-          </div>
-        </div>
-        <br>
+      
+        <!-- <br>
 
  
 
-        <div class="row">
-        <div class="col-md-3">
+        <div class="row"> -->
+        <div class="col-md-4">
            <div class="mb-1">
           <label for="username">Viewer(s)</label>
           <div class="input-group">
@@ -162,7 +158,7 @@
           </div>
 
 
-          <div class="col-md-3">
+          <div class="col-md-4">
            <div class="mb-1">
           <label for="username">Upload a Copy</label>
           <div class="input-group">
