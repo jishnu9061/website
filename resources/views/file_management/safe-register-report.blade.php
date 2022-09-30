@@ -34,14 +34,14 @@
         
         <br>
         <div style="margin-left: 150px;">
-        <input class="btn btn-primary" type="button" value="Today" >
+        <input class="btn btn-primary" type="button" value="Today" style="margin-left: -152px;" >
         <input class="btn btn-primary" type="button" value="This Week">
         <input class="btn btn-primary" type="button" value="Last Week">
-        <input class="btn btn-primary" type="button" value="This Month(MTD)">
-        <input class="btn btn-primary" type="button" value="Last Month">
+        <input class="btn btn-primary" type="button" value="This Month">
+        <input class="btn btn-primary" type="button" value="Last Month" >
         <input class="btn btn-primary" type="button" value="This Quater">
         <input class="btn btn-primary" type="button" value="Last Quater">
-        <input class="btn btn-primary" type="button" value="This Year(YTD)">
+        <input class="btn btn-primary" type="button" value="This Year">
         <input class="btn btn-primary" type="button" value="Last Year">
         </div>
         <br>
@@ -159,7 +159,7 @@
 <div class="row">
     
 
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="mb-1">
             <label for="username">Requested By</label>
             <div class="input-group">
@@ -173,7 +173,7 @@
         </div>
     </div>
     
-    <div class="col-md-3">
+    <div class="col-md-4">
                     <div class="mb-1">
                         <label for="username">Date</label>
                         <div class="input-group">
@@ -187,7 +187,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="mb-1">
                         <label for="username">and</label>
                         <div class="input-group">
@@ -202,7 +202,7 @@
                     </div>
                 </div>
 </div>
-
+<br>
 <div class="row">
                 <div class="col-md-4">
                     <div class="mb-1">
@@ -222,7 +222,7 @@
                 </div>
 
 
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="mb-1">
                         <label for="username">Status</label>
                         <div class="input-group">
@@ -239,10 +239,6 @@
                     </div>
                 </div>
 </div>
-
-
-
-
 <br>
 <div>
                 <div class="container">

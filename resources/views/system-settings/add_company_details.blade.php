@@ -70,7 +70,9 @@
 
     <body>
         <!-- <h2>Add Company Details</h2> -->
-        <h3 style="text-align:center;"><u><b>Edit Company Details</b></u></h3><br>
+        <button class="btn btn-primary"
+        style="width:100%;background-color:#d6ba8a;color:white;border:1px solid gold;font-width:150%"><span class="font-size-lg">Edit Company Details</span></button><br><br><br>
+        {{-- <h3 style="text-align:center;"><u><b>Edit Company Details</b></u></h3><br> --}}
         <a href=""><button class="btn btn-primary add-btn">Add Logo</button></a><br><br><br>
 
         <form>
@@ -107,7 +109,7 @@
                         <label>Company Email</label>
                         <input type="text" id="name" name="name" value=""size="50"> <br>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col">
                         <label>Company Type</label><br>
                         <select value="" style="width:83%;height:50%" name="type">
                             <option> select </option>
