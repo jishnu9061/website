@@ -85,8 +85,8 @@ a.button4{
  
   }
   table{
-            color:white;
-            background-color:rgb(177,127,62);
+            color:rgb(13, 1, 56);
+            background-color: #D5BD94;
             border collapse:collapse;
             font-size:16px;
             padding:5px;

@@ -24,33 +24,37 @@
 table{
     outline: 1px solid  gray;
 }
- tr:nth-child(odd)
+ /* tr:nth-child(odd)
 {
     background-color:rgb(198, 195, 211);
-}            </style>
+}             */
+</style>
    </head>
    <body>
     <!-- <h2 >Court List</h2><br>
     <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
     <h2 style="text-align:center; text-shadow: 2px 1px;">WakiliCMS Notification Config </h2>
     <hr class="mb-4">.
-  <table class="table" >
-
+    <table class="table table-bordered" id="new-item">
+<thead>
                         <tr>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">No</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Item</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">Email Notification</th>
-                        <th class="text-center" style="background-color:rgb(13, 1, 56);color:white;">SMS Notification</th>
+                        <th class="text-center" >No</th>
+                        <th class="text-center" >Item</th>
+                        <th class="text-center" >Email Notification</th>
+                        <th class="text-center" >SMS Notification</th>
                     </tr>
              
-            
+</thead>
+<tbody>
                     <tr>
                         <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
                         <td  style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center">  <input type="checkbox" id="emailnotfn" name="emailnotfn"></td>
                         <td class="text-center">  <input type="checkbox" id="smsnotfn" name="smsnotfn" ></td>
                      </tr>
-                    </table><br>
+</tbody>
+                    </table>
+                    <br>
                             <input type="button"value="Update" name="update"style="background-color:rgb(13, 1, 56);color: white; margin-left:50%;">
                
         </body>

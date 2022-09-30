@@ -87,10 +87,10 @@ table{
                                Action
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a href="user_edit" style="color:rgb(13, 1, 56);"class="dropdown-item" >Edit</a>
-                                <a href="user_view" style="color:rgb(13, 1, 56);"class="dropdown-item" >View</a>
-                                <a href="user_attachments" style="color:rgb(13, 1, 56);"class="dropdown-item" >Attachment</a>
-                                <a href="user_comments" style="color:rgb(13, 1, 56);"class="dropdown-item" >Comments</a>
+                                <a href="user_edit" class="dropdown-item" >Edit</a>
+                                <a href="user_view" class="dropdown-item" >View</a>
+                                <a href="user_attachments"class="dropdown-item" >Attachment</a>
+                                <a href="user_comments" class="dropdown-item" >Comments</a>
                              
                             </div>
                         </div> 

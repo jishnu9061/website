@@ -13,34 +13,20 @@
 
       <title></title>
       <!-- <link rel="stylesheet" href="assets/css/cstyle.css">  -->
-      <style>
-       .attachments
-      {
-        border: 2px solid rgb(13, 1, 56);
-        margin: 20px;
-        padding: 20px;
+    
 
-      }
-   
- 
-</style>
 </head>
 <body>
-    <!-- <h2>Add Company Details</h2> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Attachments</h2>
-    <hr class="mb-4">.
+   
+    <h2 style="text-align:center; text-shadow: 2px 1px;">Comments</h2>
+    <hr class="mb-4">
     <form> 
-      <div class="attachments">
-    <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Documents to Upload</h3><br>
-    <i class="fa-solid fa-download"style="margin-left:50%;"></i>
-    <p style="text-align:center;"> Select a file or drop it here</p>
-
-
-
-    <!-- <button><input type="file" class="form-control" name="name" id="customFile" style="height:100px;width:100px;" >Select a File</button> -->
-    <input type="file"value="Select a File" name="submit"style="background-color:rgb(13, 1, 56);color: white; margin-left:38%;"> 
-      </div>
+      
+        <input type="text" class="form-control" id="" style="border: 1px solid rgb(13, 1, 56);" placeholder="Write your comments here...."><br><br>
+   
+    <a href="something"><input type="submit"value="Post" name="submit"style="background-color:green;color: white; "> </a>
+     
       </form>
    </body>
-</html>
+</html><br><br>
 @endsection

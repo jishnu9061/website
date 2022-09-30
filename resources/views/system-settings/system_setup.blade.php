@@ -41,7 +41,7 @@ style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Us
   
   <div class="row sm">
     <div class="col-sm-4 " ><a href="{{url('manage_user_account')}}"><img class="logo_size"src="assets\image\4.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" > Manage User Accounts</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('')}}"><img class="logo_size"src="assets\image\4.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" > Change User Password</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('change_user_password')}}"><img class="logo_size"src="assets\image\4.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" > Change User Password</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('')}}"><img class="logo_size"src="assets\image\4.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Manage User Groups</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('')}}"><img class="logo_size"src="assets\image\4.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" > View Roles per User</button></a></div>
     <div class="col-sm-4 " > <a><img class="logo_size"src="assets\image\4.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" > Manage User Roles</button></a></div>
