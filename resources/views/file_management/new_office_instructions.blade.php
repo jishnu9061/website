@@ -8,229 +8,229 @@
         </div>
         @endif
         @if(Session::has('leavevalidat'))
-            <div class="alert alert-dark" role="alert">
-                {{ Session::get('leavevalidat')}}
-            </div>
+        <div class="alert alert-dark" role="alert">
+            {{ Session::get('leavevalidat')}}
+        </div>
         @endif
 
-    <div class="col-sm">
+        <div class="col-sm">
 
 
+        </div>
+        <div>
+            <h2>Add New Instruction</h2>
+            <hr class="mb-4">.
+        </div>
     </div>
-    <div>
-        <h2>Add New Instruction</h2>
-        <hr class="mb-4">.
-    </div>
-</div>
 
 
-<div class="row">
+    <div class="row">
 
 
-    <div class="col-md-12 order-md-1">
+        <div class="col-md-12 order-md-1">
 
-        <form method="post" action="" id="form">
-            @csrf
+            <form method="post" action="" id="form">
+                @csrf
 
 
 
-            <div class="row">
+                <div class="row">
 
-                <div class="col-md-4">
-                    <div class="mb-1">
-                        <label for="username"> Date</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username"> Date</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
-                            </div>
-                            <input type="date" class="form-control" name="number" id="username" required>
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Number is required.
+                                </div>
+                                <input type="date" class="form-control" name="number" id="username" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Number is required.
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-md-4">
-                    <div class="mb-1">
-                        <label for="username">Instruction Type</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Instruction Type</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
+                                </div>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
+                                </select>
                             </div>
-                            <select name="country" id="cars">
-                                <option value="volvo"></option>
-                            </select>
                         </div>
                     </div>
-                </div>
 
 
 
-                <div class="col-md-4">
-                    <div class="mb-1">
-                        <label for="username">Instruction Category</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Instruction Category</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
+                                </div>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
+                                </select>
                             </div>
-                            <select name="country" id="cars">
-                                <option value="volvo"></option>
-                            </select>
                         </div>
                     </div>
-                </div>
-
-            </div>
-    </div>
-
-</div>
-<br>
-<div class="row">
-    <div class="col-md-4">
-        <div class="mb-1">
-            <label for="username">Receiver</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
 
                 </div>
-                <input type="text" class="form-control" name="incorporation" id="age">
-                <div class="invalid-feedback" style="width: 100%;">
-                    Incorporation is required
-                </div>
-            </div>
         </div>
+
     </div>
+    <br>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="mb-1">
+                <label for="username">Receiver</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
 
-    <div class="col-md-4">
-        <div class="mb-1">
-            <label for="username">Currency</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
-
-                </div>
-                <select name="country" id="cars">
-                    <option value="volvo"></option>
-                </select>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="mb-1">
-            <label for="username">Exchange Rate</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
-
-                </div>
-                <input type="text" class="form-control" name="telephone" id="confirm_password" required>
-                <div class="invalid-feedback" style="width: 100%;">
-                    Telephone Number is required.
+                    </div>
+                    <input type="text" class="form-control" name="incorporation" id="age">
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Incorporation is required
+                    </div>
                 </div>
             </div>
         </div>
 
+        <div class="col-md-4">
+            <div class="mb-1">
+                <label for="username">Currency</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
 
-    </div>
-</div>
-
-<div class="row">
-
-    <div class="col-md-4">
-        <div class="mb-1">
-            <label for="username">Expense Category</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
-
-                </div>
-                <select name="country" id="cars">
-                    <option value="volvo"></option>
-                </select>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="mb-1">
-            <label for="username">Turn-Around Time(TAT)</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
-
-                </div>
-                <select name="country" id="cars">
-                    <option value="volvo"></option>
-                </select>
-            </div>
-        </div>
-    </div>
-
-   
-    <div class="col-md-4">
-        <div class="mb-1">
-            <label for="username">Priority</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
-
-                </div>
-                <select name="country" id="cars">
-                    <option value="volvo"></option>
-                </select>
-            </div>
-        </div>
-    </div>
-
-</div>
-<br>
-<div class="row">
-    
-    <div class="col-md-4">
-        <div class="mb-1">
-            <label for="username">Amount</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
-
-                </div>
-                <input type="text" class="form-control" name="number" id="username" required>
-                <div class="invalid-feedback" style="width: 100%;">
-                    Number is required.
+                    </div>
+                    <select name="country" id="cars">
+                        <option value="volvo"></option>
+                    </select>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="col-md-4">
+            <div class="mb-1">
+                <label for="username">Exchange Rate</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
 
-    <div class="col-md-4">
-        <div class="mb-1">
-            <label for="username">Details</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
-
+                    </div>
+                    <input type="text" class="form-control" name="telephone" id="confirm_password" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Telephone Number is required.
+                    </div>
                 </div>
-                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
             </div>
+
+
         </div>
     </div>
 
+    <div class="row">
 
+        <div class="col-md-4">
+            <div class="mb-1">
+                <label for="username">Expense Category</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
 
-</div>
-
-<hr class="mb-4">.
-
-
-<div class="row">
-    <div class="col-md-4">
-        <div class="mb-1">
-            <label for="username">Send Notification To</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
-
+                    </div>
+                    <select name="country" id="cars">
+                        <option value="volvo"></option>
+                    </select>
                 </div>
-                <select name="country" id="cars">
-                    <option value="volvo"></option>
-                </select>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="mb-1">
+                <label for="username">Turn-Around Time(TAT)</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <select name="country" id="cars">
+                        <option value="volvo"></option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="mb-1">
+                <label for="username">Priority</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <select name="country" id="cars">
+                        <option value="volvo"></option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <br>
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="mb-1">
+                <label for="username">Amount</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <input type="text" class="form-control" name="number" id="username" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Number is required.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="mb-1">
+                <label for="username">Details</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <hr class="mb-4">.
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="mb-1">
+                <label for="username">Send Notification To</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <select name="country" id="cars">
+                        <option value="volvo"></option>
+                    </select>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
 
@@ -247,7 +247,7 @@
             <div class="col-sm">
 
             </div>
-            <div class="btn-group pt-3 " role="group" aria-label="Basic example" >
+            <div class="btn-group pt-3 " role="group" aria-label="Basic example">
 
                 <button type="submit" class="btn btn-primary submit_btn">Send Instruction</button>
                 <button type="submit" class="btn btn-primary submit_btn">Close</button>
@@ -433,9 +433,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Salary is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -462,9 +462,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Years of experience is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -487,9 +487,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 dob is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 /div>
 
             {
@@ -521,9 +521,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Bank Name is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -549,9 +549,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Account number is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -574,9 +574,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 IFSC Code is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-12" >
                 <
                 div class = "mb-1" >
@@ -617,7 +617,7 @@ $(document).on('input', '#percent', function() {
 
                 <
                 /tr> < /
-                table > {
+            table > {
                     {
                         -- < input type = "text"
                         class = "form-control"
@@ -634,7 +634,7 @@ $(document).on('input', '#percent', function() {
                         -- < /div> --}} < /
                         div > <
                             /div> < /
-                            div >
+                        div >
 
                             <
                             /div> <
@@ -676,9 +676,9 @@ $(document).on('input', '#percent', function() {
 
                             <
                             /tbody> < /
-                            table > <
+                        table > <
                             /div> < /
-                            div >
+                        div >
 
                             <
                             div class = "modal"
@@ -703,13 +703,13 @@ $(document).on('input', '#percent', function() {
                             <
                             button class = "btn btn-primary sub_btnn"
                         type = "submit" > submit < /button> < /
-                            div > <
+                        div > <
                             /form> < /
-                            div > <
+                        div > <
                             /div> < /
-                            div > <
+                        div > <
                             /div> < /
-                            div > <
+                        div > <
                             /div>
 
                             <
