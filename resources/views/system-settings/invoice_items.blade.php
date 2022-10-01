@@ -65,7 +65,7 @@ table{
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{('edit_invoice_items')}}">Edit</td></a>
+                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{('edit_invoice_item')}}">Edit</td></a>
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{('delete_invoice_items')}}">Delete</td></a>
                       
                       

@@ -32,29 +32,26 @@
    <body>
     <!-- <h2 >Court List</h2><br>
     <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Manage User Accounts </h2>
-    <a href="{{('reg_new_user')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Register New User</button></a>
+    <h2 style="text-align:center; text-shadow: 2px 1px;">Billable Activities </h2>
+    <a href="{{('add_billable_activities')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Register New User</button></a>
     <hr class="mb-4">.
 
 
-    <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">List Of System Users</h3>
+    <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">List Of Billable / Non Billable Activities</h3>
     <div class="table-responsive">    
     <table class="table table-bordered" id="new-item">
       
       <thead>
 
                         <tr>
-                        <th class="text-center" >User Code</th>
-                        <th class="text-center" >Name</th>
-                        <th class="text-center" >User Name</th>
-                        <th class="text-center" >User Group</th>
-                        <th class="text-center" >E mail</th>
-                        <th class="text-center" >Telephone</th>
-                        <th class="text-center" >Log Status</th>
-                        <th class="text-center" >IP Address</th>
-                        <th class="text-center" >Last Logout Time</th>
+                        <th class="text-center" >No</th>
+                        <th class="text-center" >Type</th>
+                        <th class="text-center" >Code</th>
+                        <th class="text-center" >Activity Name</th>
+                        <th class="text-center" >Cost(Kshs)</th>
                         <th class="text-center" >Status</th>
-                        <th class="text-center" >Action</th>
+                        <th class="text-center" >Edit</th>
+                        
                         <th class="text-center"><input type="checkbox"></th>
                     </tr>
 </thead>

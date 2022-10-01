@@ -121,6 +121,10 @@ class SystemSetup extends Controller
     {
         return view('system-settings.document_letter_category');
     }
+    public function editlettertype()
+    {
+        return view('system-settings.edit_letter_type');
+    }
     public function paymentitem()
     {
         return view('system-settings.payment_items');
@@ -129,13 +133,21 @@ class SystemSetup extends Controller
     {
         return view('system-settings.add_payment_item');
     }
+    public function editpaymentitem()
+    {
+        return view('system-settings.edit_payment_item');
+    }
     public function descriptionselection()
     {
         return view('system-settings.description_selectn');
     }
-    public function descsel()
+    public function adddescsel()
     {
         return view('system-settings.add_desc_sel');
+    }
+    public function editdescsel()
+    {
+        return view('system-settings.edit_desc_sel');
     }
     public function taxchart()
     {
@@ -161,6 +173,27 @@ class SystemSetup extends Controller
     public function addtaxwhtvat()
     {
         return view('system-settings.add_tax_wht-vat');
+    }
+    public function edittaxchart()
+    {
+        return view('system-settings.edit_tax_chart');
+    }
+    public function edittaxexcise()
+    {
+        return view('system-settings.edit_tax_excise');
+    }
+    public function edittaxvat()
+    {
+        return view('system-settings.edit_tax_vat');
+    }
+    public function edittaxwht()
+    {
+        return view('system-settings.edit_tax_wht');
+    }
+
+    public function edittaxwhtvat()
+    {
+        return view('system-settings.edit_tax_wht-vat');
     }
     
     public function notifications()
@@ -216,6 +249,10 @@ class SystemSetup extends Controller
     {
         return view('system-settings.add_invoice_item');
     }
+    public function editinvoiceitem()
+    {
+        return view('system-settings.edit_invoice_item');
+    }
     public function addglaccount()
     {
         return view('system-settings.add_gl_account');
@@ -268,10 +305,7 @@ class SystemSetup extends Controller
     {
         return view('system-settings.view_roles_per_user');
     }
-    // public function rolesedit()
-    // {
-    //     return view('system-settings.roles_edit');
-    // }
+    
 
     public function manageuserroles()
     {
@@ -301,6 +335,24 @@ class SystemSetup extends Controller
     {
         return view('system-settings.add_new_entry');
     }
+    public function databasebackup()
+    {
+        return view('system-settings.database_backup');
+    }
+  
+    public function transportzone()
+    {
+        return view('system-settings.transport_zones');
+    }
+    public function addtransportzone()
+    {
+        return view('system-settings.add_transport_zone');
+    }
+    public function edittransportzone()
+    {
+        return view('system-settings.edit_transport_zone');
+    }
+  
 
 
 

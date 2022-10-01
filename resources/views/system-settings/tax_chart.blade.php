@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-  
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
@@ -16,8 +15,7 @@
         {
           background-color: white;
         }
-
-             th, td ,tr{
+  th, td ,tr{
                border: 1px solid  gray ;
                 border-collapse: collapse;
 }
@@ -64,8 +62,7 @@ table{
                         <th class="text-center" >Rate(%)</th>
                         <th class="text-center" >Status</th>
                         <th class="text-center">Action</th>
-                       
-                    </tr>
+                 </tr>
                 </thead>
                 <tbody>
             
@@ -77,7 +74,7 @@ table{
                         <td  style="color:rgb(13, 1, 56);"></td>
                         <td  style="color:rgb(13, 1, 56);"></td>
                         <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
-                        <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <a href="{{url('edit_tax_chart')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                             <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
                         </tr>
                     </tbody>  
@@ -100,7 +97,7 @@ table{
                                 <td  style="color:rgb(13, 1, 56);"></td>
                                 <td  style="color:rgb(13, 1, 56);"></td>
                                 <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
-                                 <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                                 <a href="{{url('edit_tax_excise')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                                 <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
                             </tr>
                         </tbody>
@@ -128,7 +125,7 @@ table{
                                 <td  style="color:rgb(13, 1, 56);"></td>
                                 <td  style="color:rgb(13, 1, 56);"></td>
                                 <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
-                                 <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                                 <a href="{{url('edit_tax_vat')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                                 <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
                             </tr>
                         </tbody>
@@ -151,10 +148,9 @@ table{
                                 <td  class="text-center" style="color:rgb(13, 1, 56);">1</td>
                                 <td class="text-center" style="color:rgb(13, 1, 56);"></td>
                                 <td  style="color:rgb(13, 1, 56);"></td>
-                    
                                 <td  style="color:rgb(13, 1, 56);"></td>
                                 <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
-                                 <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                                 <a href="{{url('edit_tax_wht')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                                 <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
                             </tr>
                         </tbody>
@@ -166,7 +162,6 @@ table{
                                 <th class="text-center" >No</th>
                                 <th class="text-center" >Tax Name</th>
                                 <th class="text-center" >Tax Value(%)</th>
-
                                 <th class="text-center" >Status</th>
                                 <th class="text-center">Action</th>
                             </tr>
@@ -179,7 +174,7 @@ table{
                       
                                 <td  style="color:rgb(13, 1, 56);"></td>
                                 <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
-                                 <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                                 <a href="{{url('edit_tax_wht-vat')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                                 <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
                             </tr>
                         </tbody>

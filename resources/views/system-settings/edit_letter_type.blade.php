@@ -10,7 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <style>
-        
+    
+
          table{
               
                 border:hidden;
@@ -20,37 +21,48 @@
             }
            th,td,tr{
             border:hidden;
-            color:black;
+            color:rgb(13, 1, 56);
 
            }
+           
         </style>
     </head>
     <body>
     <!-- <h2 >Add Court</h2><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Edit User Role</h2>
+    <h2 style="text-align:center; text-shadow: 2px 1px;">Edit Letter Category</h2>
     <hr class="mb-4">.
     <form>
     <table class="table">
     <tbody>
-                       
                         <tr>
-                                <td style="width:30%">Edit Role Name:</td>
-                                <td><input type="text"  id="" name="name"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
-
-
-                         <tr>
-                         
-                       
-            </table>
+                            <td style="width:30%"> Letter Category:</td>
+                            <td><select type="text" value="" name="type"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
+                            <option>Client</option>
+                            <option>Supplier</option>
+                            <option>Staff</option>
+                            <option>Office</option>
+                            <option>Customers</option>
+                   
+                        </tr>
+                        <tr>
+                            <td style="width:30%">Letter Types:</td>
+                           <td><input type="number"  id="" name="date"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td> 
+                          
+                        </tr>
+                        <tr>
+                            <td style="width:30%">Letter Type Name:</td>
+                            <td><input type="text"  id="" name="date"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
+                        </tr>
+        </tbody>
+              </table>
             <div class="class"style="text-align:center;">
-    
             <a href="something"><input type="submit"value="Update" name="submit"style="background-color:rgb(13, 1, 56);color: white; "> </a>
             <input type="button"value="Close" name="close"style="background-color:red;color: white; ">
 
             
     </div>
-        </form>
 
+        </form>
             
 </body>
 </html>

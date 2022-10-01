@@ -86,7 +86,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="mb-1">
-                        <label for="username">Client Number</label>
+                        <label for="username">Company Name</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
                             <input type="text" id="address" name="number" value="" size="10"><br>

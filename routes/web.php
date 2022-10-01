@@ -723,15 +723,18 @@ Route::any('add_court_category','SystemSetup@addcourtcategory')->name('add_court
 //letter types
 Route::any('letter_types','SystemSetup@lettertype')->name('letter_types');
 Route::any('add_letter_category','SystemSetup@addlettercategory')->name('add_letter_category');
+Route::any('edit_letter_type','SystemSetup@editlettertype')->name('edit_letter_type');
 Route::any('document_letter_category','SystemSetup@documentlettercategory')->name('document_letter_category');
 //end
 //payment items
 Route::any('payment_items','SystemSetup@paymentitem')->name('payment_items');
 Route::any('add_payment_item','SystemSetup@addpaymentitem')->name('add_payment_item');
+Route::any('edit_payment_item','SystemSetup@editpaymentitem')->name('edit_payment_item');
 //end
 //description selection
 Route::any('description_selectn','SystemSetup@descriptionselection')->name('description_selectn');
-Route::any('add_desc_sel','SystemSetup@descsel')->name('add_desc_sel');
+Route::any('add_desc_sel','SystemSetup@adddescsel')->name('add_desc_sel');
+Route::any('edit_desc_sel','SystemSetup@editdescsel')->name('edit_desc_sel');
 //end
 //tax chart
 Route::any('tax_chart','SystemSetup@taxchart')->name('tax_chart');
@@ -740,6 +743,11 @@ Route::any('add_tax_excise','SystemSetup@addtaxexcise')->name('add_tax_excise');
 Route::any('add_tax_vat','SystemSetup@addtaxvat')->name('add_tax_vat');
 Route::any('add_tax_wht','SystemSetup@addtaxwht')->name('add_tax_wht');
 Route::any('add_tax_wht-vat','SystemSetup@addtaxwhtvat')->name('add_tax_wht-vat');
+Route::any('edit_tax_chart','SystemSetup@edittaxchart')->name('edit_tax_chart');
+Route::any('edit_tax_excise','SystemSetup@edittaxexcise')->name('edit_tax_excise');
+Route::any('edit_tax_vat','SystemSetup@edittaxvat')->name('edit_tax_vat');
+Route::any('edit_tax_wht','SystemSetup@edittaxwht')->name('edit_tax_wht');
+Route::any('edit_tax_wht-vat','SystemSetup@edittaxwhtvat')->name('edit_tax_wht-vat');
 //end
 //notifications
 Route::any('notifications','SystemSetup@notifications')->name('notifications');
@@ -763,6 +771,7 @@ Route::any('edit_file_types','SystemSetup@editfiletypes')->name('edit_file_types
 //invoice_items
 Route::any('invoice_items','SystemSetup@invoiceitems')->name('invoice_items');
 Route::any('add_invoice_item','SystemSetup@addinvoiceitem')->name('add_invoice_item');
+Route::any('edit_invoice_item','SystemSetup@editinvoiceitem')->name('edit_invoice_item');
 Route::any('add_gl_account','SystemSetup@addglaccount')->name('add_gl_account');
 //end
 //currency_list
@@ -795,6 +804,12 @@ Route::any('add_user_department','SystemSetup@adduserdepartment')->name('add_use
 //advocate targets
 Route::any('advocates_target','SystemSetup@advocatestarget')->name('advocates_target');
 Route::any('add_new_entry','SystemSetup@addnew')->name('add_new_entry');
+//OTHER SETTINGS
+//database backups
+Route::any('database_backup','SystemSetup@databasebackup')->name('database_backup');
+Route::any('transport_zones','SystemSetup@transportzone')->name('transport_zones');
+Route::any('add_transport_zone','SystemSetup@addtransportzone')->name('add_transport_zone');
+Route::any('edit_transport_zone','SystemSetup@edittransportzone')->name('edit_transport_zone');
 //RESHMA--------------------------------------
 
 

@@ -28,7 +28,7 @@
     <!-- <h2 >Add Court</h2><br> -->
     <h2 style="text-align:center; text-shadow: 2px 1px;">Add Tax WHT</h2>
     <hr class="mb-4">.
-    
+    <form>
     <table class="table">
     <tbody>
                        
@@ -53,7 +53,7 @@
             
     </div>
 
-
+        </form>
             
 </body>
 </html>
