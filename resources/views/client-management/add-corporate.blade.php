@@ -23,8 +23,7 @@
                             <label for="username">Client Number</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="number" id="username" value=""
-                                    placeholder="Number">
+                                <input type="text" class="form-control" name="number" id="username" value="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -68,8 +67,7 @@
                             <label for="username">Certificate Of Incorporation</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="corporation" id="age" value=""
-                                    placeholder="Certificate" min="0" max="99">
+                                <input type="text" class="form-control" name="corporation" id="age" value="" min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
                                 </div>
@@ -99,7 +97,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="password" class="form-control" name="telephone" value=""
-                                    id="confirm_password" placeholder="telephone">
+                                    id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -115,7 +113,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="faxno" id="age" value=""
-                                    placeholder="Fax no" min="0" max="99">
+                                 min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
                                 </div>
@@ -127,8 +125,7 @@
                             <label for="username">Email Address</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="email" class="form-control" name="email" value="" id="password"
-                                    placeholder="Email">
+                                <input type="email" class="form-control" name="email" value="" id="password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -141,7 +138,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="conpassword" value=""
-                                    id="confirm_password" placeholder="website">
+                                    id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -207,7 +204,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="narration" class="form-control" name="conpassword" value=""
-                                    id="confirm_password" placeholder="Narration">
+                                    id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -219,8 +216,7 @@
                             <label for="username">Client Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="name" value="" id="confirm_password"
-                                    placeholder="Name">
+                                <input type="text" class="form-control" name="name" value="" id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -251,8 +247,7 @@
                             <label for="username">Pin No</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="pin" id="age" value=""
-                                    placeholder="Pin No" min="0" max="99">
+                                <input type="text" class="form-control" name="pin" id="age" value="" min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
                                 </div>
@@ -264,8 +259,7 @@
                             <label for="username">Postal Address</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="address" value="" id="password"
-                                    placeholder="Address">
+                                <input type="text" class="form-control" name="address" value="" id="password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -277,8 +271,7 @@
                             <label for="username">Postal Code</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="code" value="" id="confirm_password"
-                                    placeholder="Postal Code">
+                                <input type="text" class="form-control" name="code" value="" id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -293,7 +286,7 @@
                             <label for="username">Town</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="town" id="age" value="" placeholder="Town"
+                                <input type="text" class="form-control" name="town" id="age" value="" 
                                     min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
@@ -394,8 +387,8 @@
                         </div>
                         <div class="col-sm">
                             <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:40%;">Close</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:50%;">Save</button>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Close</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Save</button>
                         </div>
                     </div>
                 </div>
