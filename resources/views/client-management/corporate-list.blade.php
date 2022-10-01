@@ -46,7 +46,7 @@
                             <td scope="row" class="text-center" id="medicine_name_1"></td>
                             <td scope="row" class="text-center" id="medicine_name_1"></td>
                             <td scope="row" class="text-center" id="medicine_name_1">
-                                <a href="{{url('edit_client')}}"><i style="color:black;" class="fa fa-edit"
+                                <a href="{{url('edit_corporate')}}"><i style="color:black;" class="fa fa-edit"
                                         aria-hidden="true"></i>
                                     <a href=""><i style="color:black;" class="fa fa-trash" aria-hidden="true"></i>
                             </td>
