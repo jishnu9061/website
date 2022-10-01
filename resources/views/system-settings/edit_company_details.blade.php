@@ -98,8 +98,10 @@
 <a href="#"  class="btn btn-seconday" style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105);margin-bottom:25px;float:right;margin-right:100px;">ADD LOGO</a><br><br><br>
   
 <div class = "company">
-   <label> Company Name </label>
+  <label> Company Name </label>
+  <div class="col-md-2">
   <input type="text" id="name" name="name" value=""size="50"> <br><br>
+  </div>
   <label>Company Address</label>
   <input type="text" id="address" name="address" value=""size="50">
   <br><br>
