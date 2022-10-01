@@ -36,7 +36,7 @@
     </head>
     <body>
     <!-- <h2 >Add Court</h2><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Add Activity</h2>
+    <h2 style="text-align:center; text-shadow: 2px 1px;">Edit Activity</h2>
     <hr class="mb-4">.
     <form>
     <table class="table">
@@ -68,7 +68,7 @@
             </table>
             <div class="class"style="text-align:center;">
     
-            <a href="something"><input type="submit"value="Save" name="submit"style="background-color:rgb(13, 1, 56);color: white; "> </a>
+            <a href="something"><input type="submit"value="Update" name="submit"style="background-color:rgb(13, 1, 56);color: white; "> </a>
             <input type="button"value="Close" name="close"style="background-color:red;color: white; ">
 
             

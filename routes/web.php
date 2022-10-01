@@ -807,9 +807,18 @@ Route::any('add_new_entry','SystemSetup@addnew')->name('add_new_entry');
 //OTHER SETTINGS
 //database backups
 Route::any('database_backup','SystemSetup@databasebackup')->name('database_backup');
+//tansport zone
 Route::any('transport_zones','SystemSetup@transportzone')->name('transport_zones');
 Route::any('add_transport_zone','SystemSetup@addtransportzone')->name('add_transport_zone');
 Route::any('edit_transport_zone','SystemSetup@edittransportzone')->name('edit_transport_zone');
+//billable activities
+Route::any('billable_activities','SystemSetup@billableactivities')->name('billable_activities');
+Route::any('add_billable_activities','SystemSetup@addbillableactivities')->name('add_billable_activities');
+Route::any('edit_billable_activities','SystemSetup@editbillableactivities')->name('edit_billable_activities');
+//bank account details
+Route::any('bank_details','SystemSetup@bankdetails')->name('bank_details');
+Route::any('add_bank_account','SystemSetup@addbankaccount')->name('add_bank_account');
+Route::any('edit_bank_account','SystemSetup@editbankaccount')->name('edit_bank_account');
 //RESHMA--------------------------------------
 
 

@@ -18,7 +18,13 @@
              background-color:rgb(177, 127, 62);
              padding:15px;
             } */
-         
+            /* .container{
+                border:1px solid black;
+         margin-left:0px;
+         width:auto;
+         height:100%;
+         width:40%;
+         } */
 
          table{
               
@@ -29,54 +35,43 @@
             }
            th,td,tr{
             border:hidden;
-            color:black;
+            color:rgb(13, 1, 56);
 
            }
+           
         </style>
     </head>
     <body>
     <!-- <h2 >Add Court</h2><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Add Activity</h2>
+    <h2 style="text-align:center; text-shadow: 2px 1px;">Edit Transport Zone</h2>
     <hr class="mb-4">.
     <form>
     <table class="table">
     <tbody>
-         <tr>
-                            <td style="width:30%">Activity Type:</td>
-                            <td> 
-                                <select type="text" value="" id="" name="type"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
-                                <option>--Select---</option>
-                                <option></option>
-                                <option></option>
-                                <option></option>
-                                <option></option>
-                                <option></option>
-                            </select>
-                            </td>
+                        <tr>
+                            <td style="width:30%"> Zone Name:</td>
+                            <td><input type="text"  id="" name="name"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td> 
+                           
                         </tr>
                         <tr>
-                            <td style="width:30%">Activity Name:</td>
-                            <td><input type="text"  id="" name="name"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
-                         
-                         </tr>
-                         <tr>
+                            <td style="width:30%">Zone Areas:</td>
+                           <td><textarea name="area"id=""style="width:30%;"></textarea></td> 
+                          
+                        </tr>
+                        <tr>
                             <td style="width:30%">Cost(Kshs):</td>
                             <td><input type="number"  id="" name="cost"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
-                         
-                         </tr>
-                       
-            </table>
+                        </tr>
+        </tbody>
+              </table>
             <div class="class"style="text-align:center;">
-    
-            <a href="something"><input type="submit"value="Save" name="submit"style="background-color:rgb(13, 1, 56);color: white; "> </a>
+            <a href="something"><input type="submit"value="Update" name="submit"style="background-color:rgb(13, 1, 56);color: white; "> </a>
             <input type="button"value="Close" name="close"style="background-color:red;color: white; ">
 
             
     </div>
+
         </form>
-    <!-- <form>
- <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
-</form> -->
             
 </body>
 </html>

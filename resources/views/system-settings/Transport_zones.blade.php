@@ -63,7 +63,7 @@ table{
                         <td class="text-center"style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center"style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('')}}">Edit</a></td>
+                        <td class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('edit_transport_zone')}}">Edit</a></td>
                        
                          <td class="text-center"><input type="checkbox"></td>
                      </tr>
