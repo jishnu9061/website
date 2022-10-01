@@ -6,7 +6,7 @@
 
         <div>
             <button class="btn btn-primary"
-            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Edit Corporate Client</u></b></span></button><br>
+            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Edit Individual Client</u></b></span></button><br>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous">
@@ -302,66 +302,6 @@
                     </div>
                 </div>
                 <br>
-                <button class="btn btn-primary"
-                    style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Contact Person</u></b></span></button><br>
-                <br>
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="mb-1">
-                            <label for="username">Names</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="name" id="age" value="" placeholder=""
-                                    min="0" max="99">
-                                <div class="invalid-feedback" style="width: 100%;">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="mb-1">
-                            <label for="username">Designation</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="Mobile" id="age" value="" placeholder=""
-                                    min="0" max="99">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Mobile No is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="mb-1">
-                            <label for="username">Mobile No</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="no" id="age" value="" placeholder=""
-                                    min="0" max="99">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Mobile No
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="mb-1">
-                            <label for="username">Email</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="email" id="age" value="" placeholder=""
-                                    min="0" max="99">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                </div>
-
-                            </div>
-
-
-                        </div>
-
-
-                    </div>
                 <div class="row">
                     <div class="col-sm">
 
@@ -370,7 +310,6 @@
 
                     </div>
                     <div class="col-sm">
-                        <br>
                         <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Close</button>
                         <button type="button" class="btn btn-primary float:left" Style="width:45%;">Update</button>
                     </div>

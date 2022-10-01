@@ -818,7 +818,8 @@ Route::any('edit_transport_zone','SystemSetup@edittransportzone')->name('edit_tr
 //Client-list
 Route::any('add_newclient',"ClientManagement@create")->name('add_newclient');
 Route::any('client_list','ClientManagement@view')->name('client_list');
-Route::any('edit_client','ClientManagement@edit')->name('edit_client');
+Route::any('edit_corporate','ClientManagement@edit_corporate')->name('edit_corporate');
+Route::any('edit_person','ClientManagement@edit_person')->name('edit_person');
 Route::any('view-client','ClientManagement@show')->name('view-client');
 Route::any('client-index',"ClientManagement@index")->name('client-index');
 //end Client-List
