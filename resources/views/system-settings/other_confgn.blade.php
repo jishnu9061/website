@@ -25,17 +25,17 @@
 <div class="container-fluid">
   
   <div class="row sm">
-    <div class="col-sm-4 " ><a href="{{url('configu_ration')}}"><button type="button" class="btn btn-primary btn_align_btn" > Configurations</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('company_branch')}}"><button type="button" class="btn btn-primary btn_align_btn" > Company Branch</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('template_category')}}"><button type="button" class="btn btn-primary btn_align_btn" >Template Category</button></a></div>
+    <div class="col-sm-4 " ><a href="{{url('configu_ration')}}"><img class="logo_size"src="assets\image\Company.png" alt=""><button type="button"  style="width:70%;" class="btn btn-primary btn_align_btn" > Configurations</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('company_branch')}}"><img class="logo_size"src="assets\image\Company.png" alt=""><button type="button"style="width:70%;" class="btn btn-primary btn_align_btn" > Company Branch</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('template_category')}}"><img class="logo_size"src="assets\image\Company.png" alt=""><button type="button"style="width:70%;" class="btn btn-primary btn_align_btn" >Template Category</button></a></div>
 
-    <div class="col-sm-4 " > <a href="{{url('letter_types')}}"><button type="button" class="btn btn-primary btn_align_btn" > Letter Types</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('payment_items')}}"><button type="button" class="btn btn-primary btn_align_btn" > Payment Items</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('courts')}}"><button type="button" class="btn btn-primary btn_align_btn" > Courts</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('letter_types')}}"><img class="logo_size"src="assets\image\Company.png" alt=""><button type="button"style="width:70%;" class="btn btn-primary btn_align_btn" > Letter Types</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('payment_items')}}"><img class="logo_size"src="assets\image\Company.png" alt=""><button type="button"style="width:70%;" class="btn btn-primary btn_align_btn" > Payment Items</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('courts')}}"><img class="logo_size"src="assets\image\Company.png" alt=""><button type="button"style="width:70%;" class="btn btn-primary btn_align_btn" > Courts</button></a></div>
 
-    <div class="col-sm-4" > <a href="{{url('description_selectn')}}"><button type="button" class="btn btn-primary btn_align_btn" > Description Selections</button></a></div>
-    <div class="col-sm-4" > <a href="{{url('tax_chart')}}"><button type="button" class="btn btn-primary btn_align_btn" > Tax Tables</button></a></div>
-    <div class="col-sm-4" > <a href="{{url('notifications')}}"><button type="button" class="btn btn-primary btn_align_btn" > Notifications</button></a></div><br><br>
+    <div class="col-sm-4" > <a href="{{url('description_selectn')}}"><img class="logo_size"src="assets\image\Company.png" alt=""><button type="button"style="width:70%;" class="btn btn-primary btn_align_btn" > Description Selections</button></a></div>
+    <div class="col-sm-4" > <a href="{{url('tax_chart')}}"><img class="logo_size"src="assets\image\Company.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" > Tax Tables</button></a></div>
+    <div class="col-sm-4" > <a href="{{url('notifications')}}"><img class="logo_size"src="assets\image\Company.png" alt=""> <button type="button"style="width:70%;" class="btn btn-primary btn_align_btn" > Notifications</button></a></div><br><br>
    
   </div>
 </div>
