@@ -28,7 +28,7 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
-                    <table class="table table-bordered" id="new-item">
+                    <table class="table table-responsive" id="new-item" style="width:100%">
                         <thead>
                             <tr>
                                 <th class="text-center">Branch</th>
@@ -36,29 +36,29 @@
                                 <th class="text-center">Phone</th>
                                 <th class="text-center">Service</th>
                                 <th class="text-center">Description</th>
-                                {{-- <th class="text-center">Persion Handling</th>
+                                <th class="text-center">Handling</th>
                                 <th class="text-center">Amount</th>
-                                <th class="text-center">RCPT No</th>
+                                <th class="text-center">RCPT</th>
                                 <th class="text-center">Mode</th>
-                                <th class="text-center">Registered by</th> --}}
+                                <th class="text-center">Registered</th>
                                 <th class="text-center">Action</th>
 
                             </tr>
                         </thead>
                         <tbody>
                             <tr id="data">
-                                <td scope="row" class="text-center"></td>
-                                <td scope="row" class="text-center" id="medicine_name_1"></td>
-                                <td scope="row" class="text-center" id="medicine_name_1"></td>
-                                <td scope="row" class="text-center" id="medicine_name_1"></td>
-                                <td scope="row" class="text-center" id="medicine_name_1"></td>
-                                <td scope="row" class="text-center" id="medicine_name_1"></td>
-                                {{-- <td scope="row" class="text-center" id="medicine_name_1"></td>
-                                <td scope="row" class="text-center" id="medicine_name_1"></td>  --}}
-                                {{-- <td scope="row" class="text-center" id="medicine_name_1"></td>
-                                <td scope="row" class="text-center" id="medicine_name_1"></td>
-                                <td scope="row" class="text-center" id="medicine_name_1"></td>
-                                <td scope="row" class="text-center" id="medicine_name_1"></td> --}} 
+                                <td class="text-center"></td>
+                                <td class="text-center" id="medicine_name_1"></td>
+                                <td class="text-center" id="medicine_name_1"></td>
+                                <td class="text-center" id="medicine_name_1"></td>
+                                <td class="text-center" id="medicine_name_1"></td>
+                                <td style="width:15%" class="text-center" id="medicine_name_1"></td>
+                                <td class="text-center" id="medicine_name_1"></td>
+                                <td class="text-center" id="medicine_name_1"></td>
+                                <td class="text-center" id="medicine_name_1"></td>
+                                <td class="text-center" id="medicine_name_1"></td>
+                                <td class="text-center" id="medicine_name_1"></td>
+                                {{-- <td scope="row" class="text-center" id="medicine_name_1"></td>  --}}
 
                             </tr>
                         </tbody>
