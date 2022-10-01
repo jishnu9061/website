@@ -16,16 +16,15 @@
 
 <body>
     <div class="container">
-        <h3 class="text-center" style="color: #070344;"><b>Client List</b></h3>
-        <br>
+        <button class="btn btn-primary"
+            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Client List</u></b></button><br><br>
+        
 
         <div id="mydatatable_filter" class="dataTables_filter">
             <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
         </div>
         <a href="{{url('register-client')}}"><button class="btn btn-primary add-btn">Register Client</button></a>
-        <hr class="mb-4">.
-
-        <div class="tab-content" id="myTabContent">
+            <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
                 <table class="table table-bordered" id="new-item">
@@ -178,6 +177,7 @@
             </div>
 
             <br>
+            
             <!-- Supplier modal Edit End -->
 
             <!-- Delete  confirmation Message -->
