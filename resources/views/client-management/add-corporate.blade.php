@@ -157,8 +157,10 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <select name="brought" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="brought">
+                                    <option value="volvo">Select</option>
+                                    <option value="volvo">Agent</option>
+                                    <option value="volvo">Staff</option>
                                 </select>
                             </div>
                         </div>
@@ -171,7 +173,12 @@
 
                                 </div>
                                 <select name="status" id="cars">
-                                    <option value="volvo"></option>
+                                    <option value="">Select</option>
+                                    <option value="">Monday</option>
+                                    <option value="">Tuesday</option>
+                                    <option value="">Wednesday</option>
+                                    <option value="">Thursday</option>
+                                    <option value="">Friday</option>
                                 </select>
                             </div>
                         </div>
