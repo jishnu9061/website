@@ -11,7 +11,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-      <style >
+   <style>
+
           body
         {
           background-color: white;
@@ -27,37 +28,50 @@ table{
  /* tr:nth-child(odd)
 {
     background-color:rgb(198, 195, 211);
-}             */
-</style>
+}   */
+          </style>
    </head>
    <body>
     <!-- <h2 >Court List</h2><br>
     <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">WakiliCMS Notification Config </h2>
-    <hr class="mb-4">.
-    <div class="table-responsive">   
+    <h2 style="text-align:center; text-shadow: 2px 1px;">Transport Zones </h2>
+    <a href="{{('add_transport_zone')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Transport Zone</button></a>
+    <hr class="mb-4">
+
+
+    <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">List of Transport Zones</h3>
     <table class="table table-bordered" id="new-item">
-<thead>
+      
+      <thead>
+
                         <tr>
                         <th class="text-center" >No</th>
-                        <th class="text-center" >Item</th>
-                        <th class="text-center" >Email Notification</th>
-                        <th class="text-center" >SMS Notification</th>
+                        <th class="text-center" >Zone Name</th>
+                        <th class="text-center" >Zone Area</th>
+                        <th class="text-center" >Cost(Kshs)</th>
+                        <th class="text-center" >Status</th>
+                        <th class="text-center" >Edit</th>
+                        <th class="text-center"><input type="checkbox"></th>
+                   
                     </tr>
-             
 </thead>
-<tbody>
+             <tbody>
+            
                     <tr>
                         <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center">  <input type="checkbox" id="emailnotfn" name="emailnotfn"></td>
-                        <td class="text-center">  <input type="checkbox" id="smsnotfn" name="smsnotfn" ></td>
+                        <td  class="text-center"style="color:rgb(13, 1, 56);"></td>
+                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
+                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
+                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
+                        <td class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('')}}">Edit</a></td>
+                       
+                         <td class="text-center"><input type="checkbox"></td>
                      </tr>
-</tbody>
-                    </table>
-                    <br>
-                            <input type="button"value="Update" name="update"style="background-color:rgb(13, 1, 56);color: white; margin-left:50%;">
-</div >   
+                     </tbody>
+        
+                    
+                    </table><br>
+       
         </body>
 </html>
 

@@ -57,13 +57,13 @@ table{
                     </tr>
                     <tr>
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"</td>
+                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                       
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></td>
+                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_payment_item')}}">Edit</a></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></td>
                     </tr>
 

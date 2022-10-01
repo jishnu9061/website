@@ -40,6 +40,7 @@ table{
 
 
     <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Roles per User</h3>
+    <div class="table-responsive">   
     <table class="table table-bordered" id="new-item">
       
       <thead>
@@ -67,7 +68,7 @@ table{
         
                     
                     </table><br>
-       
+</div >   
         </body>
 </html>
 

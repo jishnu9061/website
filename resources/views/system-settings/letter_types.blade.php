@@ -57,7 +57,7 @@ table{
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_court')}}"></td>
+                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_letter_type')}}">Edit</a></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></td>
                     </tr>
 

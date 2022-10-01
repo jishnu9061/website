@@ -38,7 +38,8 @@
     <body>
     <!-- <h2 >Edit Court</h2><br> -->
     <h2 style="text-align:center; text-shadow: 2px 1px;">Edit Court</h2>
-    <hr class="mb-4">.
+    <hr class="mb-4">
+    <form>
     <table class="table">
     <tbody>
                         <tr>
@@ -73,10 +74,10 @@
                         </tr>
             </table>
             <div class="class"style="text-align:center;">
-            <input  type="submit"value="Save" name="submit"style="background-color:rgb(13, 1, 56);color: white; ">
+            <input  type="submit"value="Update" name="submit"style="background-color:rgb(13, 1, 56);color: white; ">
             <input type="button"value="Close" name="close"style="background-color:red;color: white; ">
     </div>
-
+        </form>
     <!-- <form>
  <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
 </form> -->

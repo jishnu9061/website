@@ -46,6 +46,7 @@
     <!-- <h2 >Add Court</h2><br> -->
     <h2 style="text-align:center; text-shadow: 2px 1px;">Update Category Details</h2>
     <hr class="mb-4">.
+    <form>
     <table class="table">
     <tbody>
                         <tr>
@@ -80,7 +81,7 @@
     </div>
 
 
-            
+        </form>
 </body>
 </html>
 @endsection

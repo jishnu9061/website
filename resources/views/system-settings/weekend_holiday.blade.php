@@ -46,7 +46,7 @@
             padding: 8px;
          }
         th{
-             background-color:rgb(177, 127, 62);
+            
              color:rgb(13, 1, 56);
          }
          td{
@@ -65,7 +65,9 @@
  <a href="{{url('add_new_holiday')}}"><button type="button" class="btn btn-primary add-btn" style="width:30%" > Add New Holiday / Weekend Date</button></a>
 <p><a href="{{url('holiday_2017')}}"style="color:blue; font-size:x-small;">2017</a> | <a href="{{url('holiday_2018')}}"style="color:blue;font-size:x-small;">2018</a> | <a href="{{url('holiday_2019')}}"style="color:blue;font-size:x-small;">2019</a> | <a href="{{url('holiday_2020')}}"style="color:blue;font-size:x-small;">2020</a> | <a href="{{url('holiday_2021')}}"style="color:blue;font-size:x-small;">2021</a> | <a href="{{url('holiday_2022')}}"style="color:blue;font-size:x-small;">2022</a><br><br>
 <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Weekend & Holiday Dates - 2022</h3>
+
 <table class="table table-bordered" id="new-item">
+
   <thead>
     <tr>
 
@@ -85,12 +87,15 @@
                             <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
 </tr>
         </tbody>
+        
 
 
 
 
 </table><br><br>
+       
 </form>
+
 <!-- <form>
  <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
 </form> -->
