@@ -352,6 +352,31 @@ class SystemSetup extends Controller
     {
         return view('system-settings.edit_transport_zone');
     }
+    public function billableactivities()
+    {
+        return view('system-settings.billable_activities');
+    }
+    public function addbillableactivities()
+    {
+        return view('system-settings.add_billable_activities');
+    }
+    public function editbillableactivities()
+    {
+        return view('system-settings.edit_billable_activities');
+    }
+    public function bankdetails()
+    {
+        return view('system-settings.bank_details');
+    }
+    public function addbankaccount()
+    {
+        return view('system-settings.add_bank_account');
+    }
+    public function editbankaccount()
+    {
+        return view('system-settings.edit_bank_account');
+    }
+  
   
 
 
