@@ -786,24 +786,29 @@ Route::any('reg_new_user','SystemSetup@regnewuser')->name('reg_new_user');
 Route::any('user_edit','SystemSetup@useredit')->name('user_edit');
 Route::any('user_attachments','SystemSetup@attachments')->name('user_attachments');
 Route::any('user_comments','SystemSetup@comments')->name('user_comments');
+//end
 //change password
 Route::any('change_user_password','SystemSetup@changepassword')->name('change_user_password');
+//end
 //manage user group
 Route::any('manage_user_group','SystemSetup@manageusergrp')->name('manage_user_group');
 Route::any('add_new_user_grp','SystemSetup@addnewusergrp')->name('add_new_user_grp');
 Route::any('edit_new_user_grp','SystemSetup@editnewusergrp')->name('edit_new_user_grp');
+//end
 //view roles per user
 Route::any('view_roles_per_user','SystemSetup@rolesperuser')->name('view_roles_per_user');
 Route::any('edit_view_roles','SystemSetup@editviewroles')->name('edit_view_roles');
-// Route::any('roles_edit','SystemSetup@rolesedit')->name('roles_edit');
+//end
 //manage user roles
 Route::any('manage_user_roles','SystemSetup@manageuserroles')->name('manage_user_roles');
 Route::any('add_user_roles','SystemSetup@adduserrole')->name('add_user_roles');
 Route::any('edit_user_roles','SystemSetup@edituserrole')->name('edit_user_roles');
+//end
 //manage user department
 Route::any('manage_user_department','SystemSetup@manageuserdepartment')->name('manage_user_department');
 Route::any('add_user_department','SystemSetup@adduserdepartment')->name('add_user_department');
 Route::any('edit_user_department','SystemSetup@edituserdepartment')->name('edit_user_department');
+//end
 //advocate targets
 Route::any('advocates_target','SystemSetup@advocatestarget')->name('advocates_target');
 Route::any('add_new_entry','SystemSetup@addnew')->name('add_new_entry');
@@ -814,22 +819,40 @@ Route::any('advocates_target_2023','SystemSetup@advocatestarget2023')->name('adv
 Route::any('advocates_target_2024','SystemSetup@advocatestarget2024')->name('advocates_target_2024');
 Route::any('advocates_target_2025','SystemSetup@advocatestarget2025')->name('advocates_target_2025');
 Route::any('advocates_target_2026','SystemSetup@advocatestarget2026')->name('advocates_target_2026');
+//end
 //OTHER SETTINGS
 //database backups
 Route::any('database_backup','SystemSetup@databasebackup')->name('database_backup');
+//end
 //tansport zone
 Route::any('transport_zones','SystemSetup@transportzone')->name('transport_zones');
 Route::any('add_transport_zone','SystemSetup@addtransportzone')->name('add_transport_zone');
 Route::any('edit_transport_zone','SystemSetup@edittransportzone')->name('edit_transport_zone');
+//end
 //billable activities
 Route::any('billable_activities','SystemSetup@billableactivities')->name('billable_activities');
 Route::any('add_billable_activities','SystemSetup@addbillableactivities')->name('add_billable_activities');
 Route::any('edit_billable_activities','SystemSetup@editbillableactivities')->name('edit_billable_activities');
+//end
 //bank account details
 Route::any('bank_details','SystemSetup@bankdetails')->name('bank_details');
 Route::any('add_bank_account','SystemSetup@addbankaccount')->name('add_bank_account');
 Route::any('edit_bank_account','SystemSetup@editbankaccount')->name('edit_bank_account');
 Route::any('add_bank_document','SystemSetup@bankdocument')->name('add_bank_document');
+//end
+//leave days per year
+Route::any('leave_days_year','SystemSetup@leavedays')->name('leave_days_year');
+Route::any('add_leave_days','SystemSetup@addleavedays')->name('add_leave_days');
+Route::any('edit_leave_days','SystemSetup@editleavedays')->name('edit_leave_days');
+//end
+//hourly rates
+Route::any('hourly_rates','SystemSetup@hourlyrates')->name('hourly_rates');
+Route::any('add_hourly_rates','SystemSetup@addhourlyrates')->name('add_hourly_rates');
+Route::any('edit_hourly_rates','SystemSetup@edithourlyrates')->name('edit_hourly_rates');
+//end
+//partner revenue share
+Route::any('partner_revenue_share','SystemSetup@partnerrevenueshare')->name('partner_revenue_share');
+Route::any('add_partner_revenue','SystemSetup@addpartnerrevenue')->name('add_partner_revenue');
 //RESHMA--------------------------------------
 
 
