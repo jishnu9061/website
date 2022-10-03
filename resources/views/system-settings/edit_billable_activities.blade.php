@@ -46,11 +46,8 @@
                             <td> 
                                 <select type="text" value="" id="" name="type"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
                                 <option>--Select---</option>
-                                <option></option>
-                                <option></option>
-                                <option></option>
-                                <option></option>
-                                <option></option>
+                                <option>Billable Activity</option>
+                                <option>Non-Billable Activity</option>
                             </select>
                             </td>
                         </tr>

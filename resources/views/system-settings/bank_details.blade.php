@@ -75,18 +75,7 @@
                         <td class="text-center"style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('edit_bank_account')}}">Edit</a></td>
                         <td class="text-center"><input type="checkbox"></td>
-                        <!-- <td  class="text-center">
-                            <select name="" id=""> <option value=""> <a href="">Action</a> </option> 
-                           <option value=""> <a href="user_edit">Edit</a> </option>
-                           <option value=""> <a href="user_view">View</a> </option>
-                           <option value=""> <a href="user_attachment">Attachment</a> </option>
-                           <option value=""> <a href="user_comments">Comments</a> </option>
-                        </select>
-                            </td> -->
-
-
-                       
-
+                     
                      </tr>
                      </tbody>
                

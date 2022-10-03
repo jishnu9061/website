@@ -62,7 +62,7 @@ table{
                         <td  class="text-center"style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center"style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('')}}">Edit</a></td>
+                        <td class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('edit_user_department')}}">Edit</a></td>
                        
                          <td class="text-center"><input type="checkbox"></td>
                      </tr>

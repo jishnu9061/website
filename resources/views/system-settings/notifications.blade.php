@@ -35,6 +35,7 @@ table{
     <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
     <h2 style="text-align:center; text-shadow: 2px 1px;">WakiliCMS Notification Config </h2>
     <hr class="mb-4">.
+    <form>
     <div class="table-responsive">   
     <table class="table table-bordered" id="new-item">
 <thead>
@@ -56,9 +57,13 @@ table{
 </tbody>
                     </table>
                     <br>
-                            <input type="button"value="Update" name="update"style="background-color:rgb(13, 1, 56);color: white; margin-left:50%;">
+                    <div class="class"style="text-align:center;">
+                    <input type="submit"value="Update" name="submit"style="background-color:rgb(13, 1, 56);color: white; ">
+</div > 
 </div >   
+</form>
         </body>
+
 </html>
 
   @endsection

@@ -63,7 +63,7 @@
                         </tr>
                         <tr>
                             <td style="width:30%">Letter Types:</td>
-                           <td><input type="number"  id="" name="date"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td> 
+                           <td><input type="text"  id="" name="date"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td> 
                           
                         </tr>
                         <tr>

@@ -61,7 +61,7 @@ table{
                         <td  class="text-center"style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center"style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"> <a href="">Edit</a></td>
+                        <td class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('edit_view_roles')}}">Edit</a></td>
                     
                      </tr>
                      </tbody>

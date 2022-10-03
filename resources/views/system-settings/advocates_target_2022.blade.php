@@ -12,7 +12,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
    <style>
-    
   </head>
   <style>
  
@@ -45,15 +44,14 @@
 
  <a href="{{url('add_new_entry')}}"><button type="button" class="btn btn-primary add-btn" style="width:30%" > Add New Entry</button></a>
 <p>
-
 <a href="{{url('advocates_target_2026')}}"style="color:blue;font-size:small;">2026</a> |
 <a href="{{url('advocates_target_2025')}}"style="color:blue;font-size:small;">2025</a> |
 <a href="{{url('advocates_target_2024')}}"style="color:blue;font-size:small;">2024</a> |
 <a href="{{url('advocates_target_2023')}}"style="color:blue;font-size:small;">2023</a> |
 <a href="{{url('advocates_target_2022')}}"style="color:blue; font-size:small;">2022</a> | 
-<a href="{{url('advocates_target_2021')}}"style="color:blue; font-size:small;">2021</a>  <br><br>
+<a href="{{url('advocates_target_2021')}}"style="color:blue; font-size:small;">2021</a> <br><br>
 <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Advocate Targets - 2022</h3>
-<div class="table-responsive">  
+
 <table class="table table-bordered" id="new-item">
   <thead>
     <tr>
@@ -118,8 +116,8 @@
 
 </table><br><br>
 
-</div> 
-       
+
+
     </body>
 </html>
 @endsection
