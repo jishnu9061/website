@@ -64,7 +64,7 @@
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
                 <table class="table table-bordered" id="new-item">
-                    <thead style="font-size:11px">
+                    <thead>
                         <tr>
                             <th class="text-center">*</th>
                             <th class="text-center">Action </br>Type</th>
