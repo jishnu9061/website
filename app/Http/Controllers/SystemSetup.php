@@ -454,7 +454,14 @@ class SystemSetup extends Controller
     {
         return view('system-settings.add_partner_revenue');
     }
-
+    public function menuaccess()
+    {
+        return view('system-settings.menu_access_configuration');
+    }
+    public function usefullinks()
+    {
+        return view('system-settings.useful_links');
+    }
 
 
    

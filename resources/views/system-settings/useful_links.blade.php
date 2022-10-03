@@ -35,21 +35,20 @@ table{
     </form>
     <!-- <h2 >Court List</h2><br>
     <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Partner Revenue Share</h2>
-        <a href="{{('add_partner_revenue')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add New Entry</button></a>
+    <h2 style="text-align:center; text-shadow: 2px 1px;">Useful Links</h2>
+       
         <hr class="mb-4">.
         
-    <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Partner Revenue Share</h3>
+    <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Useful Links</h3>
     <!-- <div class="container"> -->
     <div class="table-responsive"> 
       <table class="table table-bordered" id="new-item">
                   <thead>
                         <tr>
                         <th class="text-center" >*</th>
-                        <th class="text-center">Year</th>
-                        <th class="text-center" >Princess</th>
-                        <th class="text-center" >Total</th>
-                       
+                        <th class="text-center">Link</th>
+                        <th class="text-center" >Action</th>
+                        
                     </tr>
 <thead>
     <tbody>
@@ -57,8 +56,6 @@ table{
                         <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
                         <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
                         <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                       
                     </tr>
 
     </tbody>

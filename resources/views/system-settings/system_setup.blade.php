@@ -71,8 +71,8 @@ style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Sy
     <div class="container-fluid">
   
   <div class="row sm">
-    <div class="col-sm-4 " ><a href="{{url('')}}"><img class="logo_size"src="assets\image\Menu access configuration.png" alt=""><button type="button"style="width:70%;" class="btn btn-primary btn_align_btn" > Menu Access Configuration</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('')}}"><img class="logo_size"src="assets\image\Useful links.png" alt=""><button type="button"style="width:70%;" class="btn btn-primary btn_align_btn" > Useful Links</button></a></div>
+    <div class="col-sm-4 " ><a href="{{url('menu_access_configuration')}}"><img class="logo_size"src="assets\image\Menu access configuration.png" alt=""><button type="button"style="width:70%;" class="btn btn-primary btn_align_btn" > Menu Access Configuration</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('useful_links')}}"><img class="logo_size"src="assets\image\Useful links.png" alt=""><button type="button"style="width:70%;" class="btn btn-primary btn_align_btn" > Useful Links</button></a></div>
         </div>
 </div>
 

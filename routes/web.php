@@ -853,6 +853,12 @@ Route::any('edit_hourly_rates','SystemSetup@edithourlyrates')->name('edit_hourly
 //partner revenue share
 Route::any('partner_revenue_share','SystemSetup@partnerrevenueshare')->name('partner_revenue_share');
 Route::any('add_partner_revenue','SystemSetup@addpartnerrevenue')->name('add_partner_revenue');
+//end
+//menu access configuration
+Route::any('menu_access_configuration','SystemSetup@menuaccess')->name('menu_access_configuration');
+//end
+//usefullinks
+Route::any('useful_links','SystemSetup@usefullinks')->name('useful_links');
 //RESHMA--------------------------------------
 
 
