@@ -16,16 +16,12 @@
 
 <body>
     <div class="container">
-        <h2 style="color: #070344;  text-align:center;"><b>Client Conversations</b></h2>
-        <div class="container mt-5">
+        <button class="btn btn-primary"
+        style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Client Conversation</u></b></button><br><br>
+        <div class="">
             <a href="{{url('add-communication')}}"><button type="button" class="btn btn-primary complaint_btn"> Add
                     Communication</button></a>
-        </div>
-        <hr class="mb-4">.
-        <h4 style="color: #070344; text-align:center;"><b>Clients Communications</b></h4>
-        <br>
-
-
+        </div><br>
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
             <table class="table table-bordered" id="new-item">
@@ -34,12 +30,12 @@
                         <th class="text-center">Date</th>
                         <th class="text-center">Time</th>
                         <th class="text-center">Client</th>
-                        <th class="text-center">File Ref</th>
-                        <th class="text-center">Telephone No</th>
+                        <th class="text-center">File</th>
+                        <th class="text-center">Telephone</th>
                         <th class="text-center">Mode</th>
-                        <th class="text-center">Communicated With</th>
-                        <th class="text-center">Nature of Communication</th>
-                        <th class="text-center">Person Handling</th>
+                        <th class="text-center">Communicated</th>
+                        <th class="text-center">Nature</th>
+                        <th class="text-center">Person</th>
                         <th class="text-center">Status</th>
                         <th class="text-center">Action</th>
                     </tr>
