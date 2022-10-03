@@ -57,7 +57,7 @@
                                 <td class="text-center" id="medicine_name_1"></td>
                                 <td class="text-center" id="medicine_name_1"></td>
                                 <td class="text-center" id="medicine_name_1"></td>
-                                <td class="text-center" id="medicine_name_1"></td>
+                                <td class="text-center" id="medicine_name_1"></td> 
                                 {{-- <td scope="row" class="text-center" id="medicine_name_1"></td>  --}}
 
                             </tr>

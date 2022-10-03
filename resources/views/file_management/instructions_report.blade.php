@@ -18,7 +18,13 @@
 
         </div>
         <div>
-            <h2>Instruction Report</h2>
+        <div>
+            <button class="btn btn-primary"
+            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Instruction Report</u></b></button><br><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+        </div>
             <br>
             <div style="margin-left: 150px;">
                 <input class="btn btn-primary" type="button" value="Today">
@@ -168,21 +174,18 @@
 
 
 
-<div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-
-            </div>
-            <div class="btn-group pt-3 " role="group" aria-label="Basic example" style="margin-left: 150px;">
-
-                <button type="submit" class="btn btn-primary submit_btn">View Report</button>
-                <button type="submit" class="btn btn-primary submit_btn">Cancel</button>
-
-            </div>
-        </div>
-    </div>
-</div>
+<div class="container">
+                    <div class="row">
+                      <div class="col-sm">
+                      </div>
+                      <div class="col-sm">
+                      </div>
+                      <div class="col-sm">
+                        <button type="submit" class="btn btn-primary float:right" style="width:45%">View Report</button>
+                        <button type="submit" class="btn btn-primary float:left"style="width:45%">Cancel</button>
+                      </div>
+                    </div>
+                  </div>
 
 
 

@@ -60,13 +60,13 @@ class ClientManagement extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit_corporate()
+    public function edit()
     {
         return view('client-management.edit_client');
     }
-    public function edit_person()
+    public function edit_individual()
     {
-        return view('client-management.edit_person');
+        return view('client-management.edit_individual');
     }
 
     /**

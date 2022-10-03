@@ -15,25 +15,37 @@
 </head>
 
 <body>
-    <p style="margin-bottom:4%;"> <b> Office Instructions</b> </p>
+    
     <div class="col-sm">
 
 
     </div>
     <div class="container">
-        <h3 class="text-center" style="color: #070344;"><b>Office Instructions</b></h3>
+    <div>
+        
+        <button class="btn btn-primary"
+        style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Office Instructions</u></b></button><br><br>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+    </div>
+     
         <br>
 
         <div id="mydatatable_filter" class="dataTables_filter">
             <label><b>Search:</b><input type="search" class="box" placeholder="search"
                     aria-controls="mydatatable"></label>
+                    
         </div>
         <a href="{{url('new_office_instructions')}}"><button class="btn btn-primary add-btn" Style="width:200px;">Add
                 New Instructions</button></a>
+                
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
-                <table class="table table-bordered" id="new-item" style="width:100%;">
+                
+            <br>
+            <table class="table table-bordered" id="new-item" style="width:100%;">
                     <thead>
                         <tr>
                             <th class="text-center">Execute</th>

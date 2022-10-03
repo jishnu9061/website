@@ -23,7 +23,7 @@
         <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
        </div>
        <a href="{{('add_newclient')}}"><button class="btn btn-primary add-btn">Add Client</button></a>
-       <hr class="mb-4">.
+       
        
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -54,7 +54,7 @@
                             <td  scope="row"class="text-center"><a href="{{url('view-client')}}">
                             <a href="{{url('add-document')}}"><button class="btn btn-primary document_btn" style="width:90%; margin-top:-8px;" >Add Documents</button></a></td>
                            <td><a href="{{url('view-client')}}"><i style="color:black;" class="fa fa-eye" aria-hidden="true"></i></td></a>
-                            <td><a href="{{url('edit_client')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td>
+                            <td><a href="{{url('edit_person')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td>
                             <td><a href=""><i style="color:black;" class="fa fa-trash" aria-hidden="true"></i></td>
                             
                         </tr>

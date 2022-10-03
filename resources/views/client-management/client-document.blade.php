@@ -16,9 +16,8 @@
 
 <body>
     <div class="container">
-        <h1 style="color: #070344;  text-align:center;"><b>Documents Detials</b></h1>
-        <hr class="mb-4">.
-        <br>
+        <button class="btn btn-primary"
+            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Document Details</u></b></button><br><br>
 
 
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">

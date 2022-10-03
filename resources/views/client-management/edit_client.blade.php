@@ -1,20 +1,20 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container">
-    <div class="py-5 text-center">
+    <div class="">
 
 
         <div>
-            <h2 style="text-align:center;">Add New Client</h2>
-            <hr class="mb-4">.
+            <button class="btn btn-primary"
+            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Edit Corporate Client</u></b></span></button><br>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous">
 
 
             <div class="container mt-5">
-                <button type="button" class="btn btn-primary client_btn" data-bs-toggle="modal"
-                    data-bs-target="#mymodal">Add Client Type</button>
+                {{-- <button type="button" class="btn btn-primary client_btn" data-bs-toggle="modal"
+                    data-bs-target="#mymodal">Add Client Type</button> --}}
                 <!-- <button type="button" class="btn btn-primary country_btn" data-bs-toggle="modal" data-bs-target="#my">Add Country</button> -->
             </div>
         </div>
@@ -44,9 +44,9 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="type" id="cars">
-                                    <option value="volvo">Select</option>
+                                <select name="type" id="cars"disabled>
                                     <option value="volvo">Corporate</option>
+                                    <option value="volvo">Select</option>
                                     <option value="volvo">Individual</option>
                                 </select>
                             </div>
@@ -94,7 +94,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="password" class="form-control" name="telephone" value=""
-                                    id="confirm_password" placeholder="telephone">
+                                    id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -107,7 +107,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="faxno" id="age" value=""
-                                    placeholder="Fax no" min="0" max="99">
+                                 min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
                                 </div>
@@ -124,7 +124,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="email" class="form-control" name="email" value="" id="password"
-                                    placeholder="Email">
+                                >
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -180,7 +180,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="narration" class="form-control" name="conpassword" value=""
-                                    id="confirm_password" placeholder="Narration">
+                                    id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -193,7 +193,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="name" value="" id="confirm_password"
-                                    placeholder="Name">
+                                >
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -225,7 +225,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="pin" id="age" value=""
-                                    placeholder="Pin No" min="0" max="99">
+                                 min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
                                 </div>
@@ -238,7 +238,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="address" value="" id="password"
-                                    placeholder="Address">
+                                >
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -248,25 +248,25 @@
                 </div>
                 <br>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Postal Code</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="code" value="" id="confirm_password"
-                                    placeholder="Postal Code">
+                                >
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Town</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="town" id="age" value="" placeholder="Town"
+                                <input type="text" class="form-control" name="town" id="age" value=""
                                     min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
@@ -274,7 +274,22 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    {{--  --}}
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Notes</label>
+                            <div class="input-group">
+                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Postal Address is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <div class="input-group">
                                 <label for="cars"> Physical Address</label>
@@ -287,24 +302,81 @@
                     </div>
                 </div>
                 <br>
+                <button class="btn btn-primary"
+                    style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Contact Person</u></b></span></button><br>
+                <br>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="mb-1">
-                            <label for="username">Notes</label>
+                            <label for="username">Names</label>
                             <div class="input-group">
-                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="name" id="age" value="" placeholder=""
+                                    min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
-                                    Postal Address is required.
+
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label for="username">Designation</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="Mobile" id="age" value="" placeholder=""
+                                    min="0" max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Mobile No is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label for="username">Mobile No</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="no" id="age" value="" placeholder=""
+                                    min="0" max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Mobile No
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label for="username">Email</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="email" id="age" value="" placeholder=""
+                                    min="0" max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                <div class="row">
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+                        <br>
+                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Close</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;">Update</button>
+                    </div>
                 </div>
-                <br>
 
 
-                <button type="submit" class="btn btn-primary col-md-6">Save Changes</button>
-                <button type="button" class="btn  submit_btn col-md-6">Back</button>
 
         </div>
 

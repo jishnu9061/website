@@ -17,9 +17,14 @@
 
 
         </div>
+        
         <div>
-            <h2>Add New Instruction</h2>
-            <hr class="mb-4">.
+        
+            <button class="btn btn-primary"
+            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Add New Instruction</u></b></button><br><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
         </div>
     </div>
 
@@ -82,9 +87,7 @@
                     </div>
 
                 </div>
-        </div>
-
-    </div>
+      
     <br>
     <div class="row">
         <div class="col-md-4">
@@ -182,7 +185,7 @@
     <br>
     <div class="row">
 
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="mb-1">
                 <label for="username">Amount</label>
                 <div class="input-group">
@@ -197,7 +200,7 @@
             </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="mb-1">
                 <label for="username">Details</label>
                 <div class="input-group">
@@ -213,11 +216,11 @@
 
     </div>
 
-    <hr class="mb-4">.
+    <hr class="mb-4">
 
 
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="mb-1">
                 <label for="username">Send Notification To</label>
                 <div class="input-group">
@@ -232,35 +235,28 @@
         </div>
     </div>
 
+<br>
 
-
-</div>
-
-
-</div>
-
-
-
-<div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-
-            </div>
-            <div class="btn-group pt-3 " role="group" aria-label="Basic example">
-
-                <button type="submit" class="btn btn-primary submit_btn">Send Instruction</button>
-                <button type="submit" class="btn btn-primary submit_btn">Close</button>
-
-            </div>
-        </div>
-    </div>
-</div>
+<div class="container">
+                    <div class="row">
+                      <div class="col-sm">
+                      </div>
+                      <div class="col-sm">
+                      </div>
+                      <div class="col-sm">
+                        <button type="submit" class="btn btn-primary float:right" style="width:45%">Send Instruction</button>
+                        <button type="submit" class="btn btn-primary float:left"style="width:45%">Close</button>
+                      </div>
+                    </div>
+                  </div>
 
 
 
 </div>
 
+</form>
+</div>
+</div>
 
 
 
