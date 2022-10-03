@@ -1,6 +1,6 @@
 @extends('layouts.hmsmain')
 @section('content')
-<div class="container" style="border-style: solid; border-width: 2px; border-radius: 20px; ">
+<div class="container" >
     <div class="py-5 text-center">
         @if(Session::has('staffregistered'))
         <div class="alert alert-dark" role="alert">
@@ -13,7 +13,16 @@
         </div>
         @endif
         <div>
-            <h2>Add Box No</h2>
+            <!-- <h2>Add Box No</h2> -->
+            <div>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Add Box No</u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+
+        
+            </div>
 
         </div>
     </div>
@@ -23,7 +32,7 @@
 
             <form method="post" action="" id="form">
                 @csrf
-                <div class="row" style="margin-left:24rem;">
+                <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Box Type</label>
@@ -41,9 +50,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <br>
-                <div class="row" style="margin-left:24rem;">
+               
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Box No</label>
@@ -59,7 +66,7 @@
 
                 </div>
                 <br>
-                <div>
+                <!-- <div>
                     <div class="container">
                         <div class="row">
                             <div class="col-sm">
@@ -71,6 +78,20 @@
                                 <button type="submit" class="btn btn-primary submit_btn">View Report</button>
 
                             </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="row">
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Cancel</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">View Report</button>
                         </div>
                     </div>
                 </div>

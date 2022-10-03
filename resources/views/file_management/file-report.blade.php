@@ -30,7 +30,7 @@
 
     <div>
         <br>
-        <div >
+        <div style="margin-left:135px;">
             <input class="btn btn-primary" type="button" style="width:65px;" value="Today">
             <input class="btn btn-primary" type="button" value="This Week">
             <input class="btn btn-primary" type="button" value="Last Week">

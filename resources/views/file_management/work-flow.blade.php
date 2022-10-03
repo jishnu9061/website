@@ -39,7 +39,7 @@
                     aria-controls="mydatatable"></label>
         </div>
         <a href="{{url('new-workflow')}}"><button class="btn btn-primary add-btn"
-                style="width: 15%; margin-bottom:5%;">Add Workflow</button></a>
+                style="width: 15%; margin-bottom:2%;">Add Workflow</button></a>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
