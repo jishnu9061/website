@@ -60,7 +60,7 @@
 
                         <tr id="data">
 
-                            <td scope="row" class="text-center">1</td>
+                            <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
