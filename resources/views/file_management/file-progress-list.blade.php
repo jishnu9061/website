@@ -44,7 +44,7 @@
                 </div>
             </div>
 
-            <div class="dropdown" style="width:20%;" style="margin-left:10px;">
+            <div class="dropdown" style="width:25%;" style="margin-left:10px;">
                 <button class="btn btn-primary add-btn" type="button" style="width:97%;" id="dropdownMenuButton"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Dispute Resolution forms
