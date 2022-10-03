@@ -14,8 +14,17 @@
         @endif
 
         <div>
-            <h2 style="text-align:center;">Arbiration Sheet </h2>
-            <hr class="mb-4">.
+            <!-- <h2 style="text-align:center;">Arbiration Sheet </h2>
+            <hr class="mb-4">. -->
+            <div>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Arbiration Sheet </u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+
+        
+            </div>
         </div>
     </div>
     <div class="row">
@@ -73,6 +82,7 @@
                 <!--  -->
 
                 <h5><u>PLAINTFF</u> </h5>
+                <br>
 
                 <div class="row">
                     <div class="col-md-4">
@@ -143,6 +153,7 @@
                 </br>
 
                 <h5><u>DEFENDANT</u> </h5>
+                <br>
 
                 <div class="row">
                     <div class="col-md-4">
@@ -203,6 +214,7 @@
                 <br>
 
                 <h5><u>DISPUTE RESOLUTION DETAILS</u> </h5>
+                <br>
 
                 <div class="row">
                     <div class="col-md-6">
@@ -234,8 +246,10 @@
                             </div>
                         </div>
                     </div>
+</div>
+<br>
 
-
+                <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Dispute Solving Process</label>
@@ -265,10 +279,10 @@
                             </div>
                         </div>
                     </div>
-
-
-
-                    <div class="col-md-4">
+</div>
+<br>
+        <div class="row">
+            <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Person Dealing</label>
                             <div class="input-group">
@@ -283,8 +297,7 @@
                         </div>
                     </div>
 
-
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Time Taken(Hours)</label>
                             <div class="input-group">
@@ -298,8 +311,10 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-md-4">
+</div>
+<br>
+            <div class="row">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Time Taken(Minutes)</label>
                             <div class="input-group">
@@ -313,7 +328,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Bring Up Date</label>
                             <div class="input-group">
@@ -327,7 +342,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+</div>
+<br>
+                <div class="row">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Reminder Period Days</label>
                             <div class="input-group">
@@ -341,7 +359,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Send Reminder To</label>
                             <div class="input-group">
@@ -355,8 +373,11 @@
                             </div>
                         </div>
                     </div>
+</div>
+<br>
+<div class="row">
 
-                    <div class="col-md-4">
+                    <div class="col-md-12">
                         <div class="mb-1">
                             <label for="username">Next Action</label>
                             <div class="input-group">
@@ -370,23 +391,9 @@
                             </div>
                         </div>
                     </div>
-                    <div id="test" style="height:20px;"></div>
-                </div>
-        </div>
-
-
-        <br>
-
-    </div>
-</div>
-
-
-
-
-
-</div>
+                  
 <br>
-<div>
+<!-- <div>
     <div class="container">
         <div class="row">
             <div class="col-sm">
@@ -400,7 +407,21 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+<div class="row">
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
+                        </div>
+                    </div>
+                </div>
 
 
 

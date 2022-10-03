@@ -18,7 +18,16 @@
 <body>
     <div class="container">
 
-        <h3 class="text-center" style="color: #070344;"><b>List of File Progress</b></h3>
+        <!-- <h3 class="text-center" style="color: #070344;"><b>List of File Progress</b></h3> -->
+        <div>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>List of File Progress</u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+
+        
+            </div>
         <br>
         <div style="display:flex; margin-bottom: 2%;  margin-top: 3%;">
             <div class="dropdown" style="width:20%;">
@@ -35,7 +44,7 @@
                 </div>
             </div>
 
-            <div class="dropdown" style="width:20%;" style="margin-left:10px;">
+            <div class="dropdown" style="width:25%;" style="margin-left:10px;">
                 <button class="btn btn-primary add-btn" type="button" style="width:97%;" id="dropdownMenuButton"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Dispute Resolution forms
@@ -55,7 +64,7 @@
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
                 <table class="table table-bordered" id="new-item">
-                    <thead style="font-size:11px">
+                    <thead>
                         <tr>
                             <th class="text-center">*</th>
                             <th class="text-center">Action </br>Type</th>

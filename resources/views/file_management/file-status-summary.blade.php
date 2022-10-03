@@ -17,7 +17,17 @@
 
         </div>
         <div>
-            <h3 class="text-center" style="color: #070344;"><b>File Status Report Summary </b></h3>
+            <!-- <h3 class="text-center" style="color: #070344;"><b>File Status Report Summary </b></h3> -->
+            <div>
+                <button class="btn btn-primary"
+                    style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>File
+                            Status Report Summary</u></b></span></button><br>
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                    crossorigin="anonymous">
+
+
+            </div>
 
             <br>
             <div>
@@ -29,8 +39,8 @@
                 <input class="btn btn-primary" type="button" value="Post File Bring-Up Only">
 
             </div>
-            <br>
-            <hr class="mb-4">.
+            
+
 
 
         </div>
@@ -51,7 +61,7 @@
 
 
 
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username"> Date(to)</label>
                             <div class="input-group">
@@ -70,7 +80,7 @@
 
 
 
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">File</label>
                             <div class="input-group">
@@ -83,16 +93,7 @@
                             </div>
                         </div>
                     </div>
-
-
-
-                </div>
-                <br>
-                <div class="row">
-
-
-
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Instruction Category</label>
                             <div class="input-group">
@@ -106,7 +107,16 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6">
+
+                </div>
+                <br>
+                <div class="row">
+
+
+
+                   
+
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Receiver</label>
                             <div class="input-group">
@@ -119,17 +129,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div id="test" style="height:20px;"></div>
-        </div>
-    </div>
-
-
-
-    <div class="row">
-
-
-        <div class="col-md-6">
+                    <div class="col-md-4">
             <div class="mb-1">
                 <label for="username">Currency</label>
                 <div class="input-group">
@@ -142,7 +142,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="mb-1">
                 <label for="username">Exchangr Rate</label>
                 <div class="input-group">
@@ -157,14 +157,25 @@
             </div>
         </div>
 
-
+                </div>
+                <div id="test" style="height:20px;"></div>
+        </div>
     </div>
-    <br>
+
+
 
     <div class="row">
 
 
-        <div class="col-md-6">
+        
+
+    </div>
+    
+
+    <div class="row">
+
+
+        <div class="col-md-4">
             <div class="mb-1">
                 <label for="username">Turn-Around Time(TAT)</label>
                 <div class="input-group">
@@ -177,7 +188,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="mb-1">
                 <label for="username">Priority</label>
                 <div class="input-group">
@@ -190,17 +201,7 @@
                 </div>
             </div>
         </div>
-
-
-    </div>
-
-    <br>
-
-    <div class="row">
-
-
-
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="mb-1">
                 <label for="username">Details</label>
                 <div class="input-group">
@@ -216,39 +217,24 @@
 
 
     </div>
-    <hr class="mb-4">.
 
 
+<br>
+<div class="row">
+                        <div class="col-sm">
 
+                        </div>
+                        <div class="col-sm">
 
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">View Report</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                        </div>
+                    </div>
+                </div>
 
-
-
-
-
-
-</div>
-
-
-</div>
-
-
-
-<div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-
-            </div>
-            <div class="btn-group pt-3 " role="group" aria-label="Basic example">
-
-                <button type="submit" class="btn btn-primary submit_btn">View Report</button>
-                <button type="submit" class="btn btn-primary submit_btn">Cancel</button>
-
-            </div>
-        </div>
-    </div>
-</div>
 
 
 
@@ -426,9 +412,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Salary is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -455,9 +441,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Years of experience is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -480,9 +466,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 dob is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 /div>
 
             {
@@ -514,9 +500,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Bank Name is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -542,9 +528,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Account number is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -567,9 +553,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 IFSC Code is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-12" >
                 <
                 div class = "mb-1" >
@@ -610,7 +596,7 @@ $(document).on('input', '#percent', function() {
 
                 <
                 /tr> < /
-                table > {
+            table > {
                     {
                         -- < input type = "text"
                         class = "form-control"
@@ -627,7 +613,7 @@ $(document).on('input', '#percent', function() {
                         -- < /div> --}} < /
                         div > <
                             /div> < /
-                            div >
+                        div >
 
                             <
                             /div> <
@@ -669,9 +655,9 @@ $(document).on('input', '#percent', function() {
 
                             <
                             /tbody> < /
-                            table > <
+                        table > <
                             /div> < /
-                            div >
+                        div >
 
                             <
                             div class = "modal"
@@ -696,13 +682,13 @@ $(document).on('input', '#percent', function() {
                             <
                             button class = "btn btn-primary sub_btnn"
                         type = "submit" > submit < /button> < /
-                            div > <
+                        div > <
                             /form> < /
-                            div > <
+                        div > <
                             /div> < /
-                            div > <
+                        div > <
                             /div> < /
-                            div > <
+                        div > <
                             /div>
 
                             <
