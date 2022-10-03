@@ -42,7 +42,7 @@
     <div>
 
         <br>
-        <div style="margin-left:130px;">
+        <div>
             <input class="btn btn-primary" type="button" value="Today">
             <input class="btn btn-primary" type="button" value="This Week">
             <input class="btn btn-primary" type="button" value="Last Week">
@@ -51,7 +51,7 @@
             <input class="btn btn-primary" type="button" value="This Quater">
             <input class="btn btn-primary" type="button" value="Last Quater">
             <input class="btn btn-primary" type="button" value="This Year">
-            <input class="btn btn-primary" type="button" value="Last Year">
+            <input class="btn btn-primary" type="button" value="Last Year" style="width:12%">
         </div>
         <br>
        
