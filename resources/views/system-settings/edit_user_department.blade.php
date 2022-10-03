@@ -36,30 +36,28 @@
     </head>
     <body>
     <!-- <h2 >Add Court</h2><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Edit File Type</h2>
+    <h2 style="text-align:center; text-shadow: 2px 1px;">Edit User Department</h2>
     <hr class="mb-4">.
     <form>
     <table class="table">
     <tbody>
                        
                         <tr>
-                                <td style="width:30%">File Type Name:</td>
-                                <td><input type="text"  id="" name="name"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
+                                <td style="width:30%">Department Code:</td>
+                                <td><input type="text"  id="" name="code"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
 
 
                          <tr>
-                            <td style="width:30%">Short Names:</td>
-                            <td><input type="text"  id="" name="shortname"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
-                        </tr>
+                            <td style="width:30%">Department Name:</td>
+                            <td><input type="text"  id="" name="name"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
+                         
+                         </tr>
+                        
                         <tr>
-                            <td style="width:30%">Retainer Period(Years):</td>
-                            <td><input type="number"  id="" name="year"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
-                        </tr>
-                        <tr>
-                            <td style="width:30%">Approver(s):</td>
+                            <td style="width:30%">Head of Department:</td>
                             <td> 
-                                <select type="text" value="" id="" name="approver"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
-                                <option>Choose Approver...</option>
+                                <select type="text" value="" id="" name="department"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
+                                <option>--Select---</option>
                                 <option>Alekeen W Benson</option>
                                 <option>Cedric Opara</option>
                                 <option>Corrine Auma</option>
@@ -79,15 +77,25 @@
                                 <option>Sarah Gladys</option>
                                 <option>Thagichu Nyaga</option>
                                 <option>Wambua Musyoka</option>
-                           
+                             
                             </select>
                             </td>
                         </tr>
-
+                        <tr>
+                            <td style="width:30%">Appear in Performance Report:</td>
+                            <td> 
+                                <select type="text" value="" id="" name="report"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
+                                <option>--Select---</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                                
+                            </select>
+                            </td>
+                        </tr>
             </table>
             <div class="class"style="text-align:center;">
     
-            <a href="something"><input type="submit"value="Update" name="submit"style="background-color:rgb(13, 1, 56);color: white; "> </a>
+            <a href="something"><input type="submit"value="Add" name="submit"style="background-color:rgb(13, 1, 56);color: white; "> </a>
             <input type="button"value="Close" name="close"style="background-color:red;color: white; ">
 
             

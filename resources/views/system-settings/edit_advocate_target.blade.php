@@ -37,7 +37,7 @@
     </head>
     <body>
     <!-- <h2 >Add Court</h2><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Advocate Target - Monthly</h2>
+    <h2 style="text-align:center; text-shadow: 2px 1px;">Edit Advocate Target</h2>
     <hr class="mb-4">.
     <form>
     <table class="table">
@@ -48,7 +48,6 @@
                                 <td> 
                                 <select type="text" value="" id="" name="department"style="width:100%;color:rgb(13, 1, 56);background-color:white;">
                                 <option>--Select---</option>
-                                <option>Alekeen W Benson</option>
                                 <option>Corrine Auma</option>
                                 <option>Gichui Kirogo</option>
                                 <option>Hillary Wamunyolo Casmir</option>

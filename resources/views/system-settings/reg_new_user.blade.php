@@ -137,7 +137,7 @@
   <label style="color:rgb(13, 1, 56);">Department:</label>
   
   <select style="width:400px;height: 30px;color:black"type="text" value="" name="type">
-     <option>select  </option>
+     <option>---Select---  </option>
      <option>Administration</option>
      <option>Business & Commercial Law Services</option>
      <option>Clerical & Related Works</option>

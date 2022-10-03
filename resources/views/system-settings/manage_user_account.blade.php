@@ -96,7 +96,7 @@
                         </div> 
 
                        </td>
-                       <td class="text-center"><input type="checkbox"></td>
+                     
                      </tr>
                      </tbody>
                

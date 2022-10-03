@@ -791,8 +791,10 @@ Route::any('change_user_password','SystemSetup@changepassword')->name('change_us
 //manage user group
 Route::any('manage_user_group','SystemSetup@manageusergrp')->name('manage_user_group');
 Route::any('add_new_user_grp','SystemSetup@addnewusergrp')->name('add_new_user_grp');
+Route::any('edit_new_user_grp','SystemSetup@editnewusergrp')->name('edit_new_user_grp');
 //view roles per user
 Route::any('view_roles_per_user','SystemSetup@rolesperuser')->name('view_roles_per_user');
+Route::any('edit_view_roles','SystemSetup@editviewroles')->name('edit_view_roles');
 // Route::any('roles_edit','SystemSetup@rolesedit')->name('roles_edit');
 //manage user roles
 Route::any('manage_user_roles','SystemSetup@manageuserroles')->name('manage_user_roles');
@@ -801,9 +803,17 @@ Route::any('edit_user_roles','SystemSetup@edituserrole')->name('edit_user_roles'
 //manage user department
 Route::any('manage_user_department','SystemSetup@manageuserdepartment')->name('manage_user_department');
 Route::any('add_user_department','SystemSetup@adduserdepartment')->name('add_user_department');
+Route::any('edit_user_department','SystemSetup@edituserdepartment')->name('edit_user_department');
 //advocate targets
 Route::any('advocates_target','SystemSetup@advocatestarget')->name('advocates_target');
 Route::any('add_new_entry','SystemSetup@addnew')->name('add_new_entry');
+Route::any('edit_advocate_target','SystemSetup@editadvocatetarget')->name('edit_advocate_target');
+Route::any('advocates_target_2021','SystemSetup@advocatestarget2021')->name('advocates_target_2021');
+Route::any('advocates_target_2022','SystemSetup@advocatestarget2022')->name('advocates_target_2022');
+Route::any('advocates_target_2023','SystemSetup@advocatestarget2023')->name('advocates_target_2023');
+Route::any('advocates_target_2024','SystemSetup@advocatestarget2024')->name('advocates_target_2024');
+Route::any('advocates_target_2025','SystemSetup@advocatestarget2025')->name('advocates_target_2025');
+Route::any('advocates_target_2026','SystemSetup@advocatestarget2026')->name('advocates_target_2026');
 //OTHER SETTINGS
 //database backups
 Route::any('database_backup','SystemSetup@databasebackup')->name('database_backup');

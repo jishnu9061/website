@@ -301,9 +301,17 @@ class SystemSetup extends Controller
     {
         return view('system-settings.add_new_user_grp');
     }
+    public function editnewusergrp()
+    {
+        return view('system-settings.edit_new_user_grp');
+    }
     public function rolesperuser()
     {
         return view('system-settings.view_roles_per_user');
+    }
+    public function editviewroles()
+    {
+        return view('system-settings.edit_view_roles');
     }
     
 
@@ -327,6 +335,10 @@ class SystemSetup extends Controller
     {
         return view('system-settings.add_user_department');
     }
+    public function edituserdepartment()
+    {
+        return view('system-settings.edit_user_department');
+    }
     public function advocatestarget()
     {
         return view('system-settings.advocates_target');
@@ -334,6 +346,34 @@ class SystemSetup extends Controller
     public function addnew()
     {
         return view('system-settings.add_new_entry');
+    }
+    public function editadvocatetarget()
+    {
+        return view('system-settings.edit_advocate_target');
+    }
+    public function advocatestarget2021()
+    {
+        return view('system-settings.advocates_target_2021');
+    }
+    public function advocatestarget2022()
+    {
+        return view('system-settings.advocates_target_2022');
+    }
+    public function advocatestarget2023()
+    {
+        return view('system-settings.advocates_target_2023');
+    }
+    public function advocatestarget2024()
+    {
+        return view('system-settings.advocates_target_2024');
+    }
+    public function advocatestarget2025()
+    {
+        return view('system-settings.advocates_target_2025');
+    }
+    public function advocatestarget2026()
+    {
+        return view('system-settings.advocates_target_2026');
     }
     public function databasebackup()
     {

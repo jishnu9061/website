@@ -35,12 +35,41 @@
     <tbody>
                         <tr>
                             <td style="width:30%"> Bank:</td>
-                            <td><select type="text" value="" name="bank"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
-                            <option>select</option>
+                            <td><select type="text" value="" name="bank"style="width:50%;color:rgb(13, 1, 56);background-color:white;">
+                            <option>---Select---</option>
+                            <option>AFRICAN BANKING CORP LTD</option>
+                            <option>AKIBA BANK LTD</option>
+                            <option>BANK OF AFRICA LTD</option>
+                            <option>BANK OF BARODA</option>
+                            <option>BANK OF INDIA</option>
+                            <option>BARCLAYS BANK</option>
+                            <option>CENTRAL BANK OF KENYA</option>
+                            <option>CFC BANK</option>
+                            <option>CHASE BANK (K) LTD</option>
+                            <option>CITI BANK</option>
+                            <option>CO-OPERATIVE BANK</option>
+                            <option>COMMERCIAL BANK OF AFRICA</option>
+                            <option>CONSOLIDATED BANK</option>
+                            <option>CREDIT BANK LTD</option>
+                            <option>DEVELOPMENT BANK OF KENYA LIMITED</option>
+                            <option>DIAMOND TRUST BANK KENYA LIMITED</option>
+                            <option>DIRECT MPESA</option>
+                            <option>DUBAI BANK OF KENYA</option>
+                            <option>EQUITORIAL COMMERCIAL BANK LTD</option>
                             <option></option>
                             <option></option>
                             <option></option>
                             <option></option>
+                            <option></option>
+                            <option></option>
+                            <option></option>
+                            <option></option>
+                            <option></option>
+                            <option></option>
+                            <option></option>
+
+                            
+
                          
 
                         </select><a href="{{('document_bank')}}">  <i style="color:rgb(13, 1, 56);"class="bi bi-plus-circle-fill"> </i></a></td>
@@ -48,37 +77,37 @@
                         </tr>
                         <tr>
                             <td style="width:30%">Branch:</td>
-                           <td><input type="text"  id="" name="branch"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td> 
+                           <td><input type="text"  id="" name="branch"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td> 
                           
                         </tr>
                         <tr>
                             <td style="width:30%">Account Name:</td>
-                            <td><input type="text"  id="" name="date"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
+                            <td><input type="text"  id="" name="date"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
                         </tr>
                         <tr>
                             <td style="width:30%">Account Number:</td>
-                            <td><input type="number"  id="" name="number"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
+                            <td><input type="number"  id="" name="number"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
                         </tr>
                         <tr>
                             <td style="width:30%">Bank Code:</td>
-                            <td><input type="number"  id="" name="code"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
+                            <td><input type="number"  id="" name="code"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
                         </tr>
                         <tr>
                             <td style="width:30%">Branch Code:</td>
-                            <td><input type="number"  id="" name="bcode"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
+                            <td><input type="number"  id="" name="bcode"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
                         </tr>
                         <tr>
                             <td style="width:30%">Swift Code:</td>
-                            <td><input type="text"  id="" name="date"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
+                            <td><input type="text"  id="" name="date"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
                         </tr>
                         <tr>
                             <td style="width:30%">Mpesa No:</td>
-                            <td><input type="text"  id="" name="date"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
+                            <td><input type="text"  id="" name="date"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
                         </tr>
                         
                         <tr>
                             <td style="width:30%"> Bank G/L Account:</td>
-                            <td><select type="text" value="" name="type"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
+                            <td><select type="text" value="" name="type"style="width:50%;color:rgb(13, 1, 56);background-color:white;">
                             <option>select</option>
                             <option></option>
                             <option></option>

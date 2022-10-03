@@ -15,27 +15,14 @@
         {
           background-color: white;
         }
-        /* h2
-        {
-            font-size:large;
-            font-weight:bold;
-             color:rgb(13, 1, 56); 
-             background-color:rgb(177, 127, 62);
-             padding:15px;
-            } */
-         /* .container{
-         margin-left:0px;
-         width:auto;
-         border:1px solid black;
-         height:100%;
-         } */
+    
         
          .col-sm
          {
         margin-left:2px;
          margin-top:6px;
          width:400px;
-         /* background-color:#f0e7ce;  */
+      
          height:350px;
          }
          
@@ -67,7 +54,7 @@
        </style>
    </head>
    <body>
-    <!-- <h2 class="text-center">Configuration Details</h2><br> -->
+
     <h2 style="text-align:center; text-shadow: 2px 1px;">Configuration Details</h2>
       
   <hr class="mb-4">.
@@ -102,9 +89,9 @@
                                 <td style="width:30%">Client Numbering Method:</td>
                                 <td> 
                                     <select type="text" value="" id="" name="cnmethod"style="width:100%">
-                                    <option>Select</option>
+                                    <option>---Select---</option>
                                     <option>Auto Numbering</option>
-                                    <option>...</option>
+                                    <option>Alpha Numeric Code</option>
                                 </select>
                             </td>
                          </tr>
@@ -112,9 +99,9 @@
                             <td style="width:30%">File Approval Method:</td>
                             <td> 
                                 <select type="text" value="" id="" name="fam"style="width:100%">
-                                <option>Select</option>
+                                <option>---Select---</option>
                                 <option>Automatic Approval</option>
-                                <option>..</option>
+                                <option>2nd Phase aApproval</option>
                             </select>
                         </td>
                     </tr>
@@ -122,9 +109,9 @@
                         <td style="width:30%">Branch Option:</td>
                         <td> 
                             <select type="text" value="" id="" name="boptn"style="width:100%">
-                            <option>Select</option>
+                            <option>---Select---</option>
                             <option>Branches Dependent</option>
-                            <option>...</option>
+                            <option>Branches Inependent</option>
                         </select>
                     </td>
                 </tr>
@@ -132,9 +119,9 @@
                     <td style="width:30%">Instruction Approval Option:</td>
                     <td> 
                         <select type="text" value="" id="" name="iao"style="width:100%">
-                        <option>Select</option>
+                        <option>---Select---</option>
                         <option>Approve All Instruction</option>
-                        <option>...</option>
+                        <option>Amount Greater Than Balance</option>
                     </select>
                 </td>
             </tr>
@@ -159,7 +146,7 @@
             <td style="width:30%">Show File Process (Client Portal):</td>
             <td> 
              <select type="text" value="" id="" name="fileprocess"style="width:100%">
-    <option>Select</option>
+    <option>---Select---</option>
     <option>Yes</option>
     <option>No</option>
     </select>
@@ -170,7 +157,7 @@
             <td style="width:30%">Show Invoices (Client Portal):</td>
             <td> 
              <select type="text" value="" id="" name="invoices"style="width:100%">
-    <option>Select</option>
+    <option>---Select---</option>
     <option>Yes</option>
     <option>No</option>
     </select>
@@ -181,7 +168,7 @@
             <td style="width:30%">Show Payments (Client Portal):</td>
             <td> 
              <select type="text" value="" id="" name="payment"style="width:100%">
-    <option>Select</option>
+    <option>---Select---</option>
     <option>Yes</option>
     <option>No</option>
     </select>
@@ -192,7 +179,7 @@
             <td style="width:30%">Show Documents (Client Portal):</td>
             <td> 
              <select type="text" value="" id="" name="documents"style="width:100%">
-    <option>Select</option>
+    <option>---Select---</option>
     <option>Yes</option>
     <option>No</option>
     </select>
@@ -203,7 +190,7 @@
             <td style="width:30%">Approve File Progress for Client Portal:</td>
             <td> 
              <select type="text" value="" id="" name="filecportal"style="width:100%">
-    <option>Select</option>
+    <option>---Select---</option>
     <option>Yes</option>
     <option>No</option>
     </select>
@@ -214,7 +201,7 @@
             <td style="width:30%">Show Other Associate Coloumn:</td>
             <td> 
              <select type="text" value="" id="" name="acoloumn"style="width:100%">
-    <option>Select</option>
+    <option>---Select---</option>
     <option>Yes</option>
     <option>No</option>
     </select>
@@ -245,7 +232,7 @@
         <tr>
             <td style="width:30%">Mail Protocol:</td>
             <td> <select type="text" value="" id="" name="mprotocol"style="width:100%">
-    <option>Select</option>
+    <option>---Select---</option>
     <option>STMP</option>
     <option>...</option>
     </select></td>
@@ -264,7 +251,7 @@
         <tr>
             <td style="width:30%">STMP Authentication:</td>
             <td>   <select type="text" value="" id="" name="sauthntictn"style="width:100%">
-    <option>Select</option>
+    <option>---Select---</option>
     <option>True</option>
     <option>...</option>
     </select></td>
@@ -273,9 +260,9 @@
         <tr>
             <td style="width:30%">SMTP Secure:</td>
             <td>   <select type="text" value="" id="" name="ssecure"style="width:100%">
-    <option>Select</option>
+    <option>---Select---</option>
     <option>TSL</option>
-    <option>...</option>
+    <option>SSL</option>
     </select></td>
         </tr>
 

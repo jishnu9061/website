@@ -58,13 +58,29 @@
                         <tr>
                             <td style="width:30%">Approver(s):</td>
                             <td> 
-                                <select type="text" value="" id="" name="category"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
+                                <select type="text" value="" id="" name="approver"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
                                 <option>Choose Approver...</option>
-                                <option></option>
-                                <option></option>
-                                <option></option>
-                                <option></option>
-                                <option></option>
+                                <option>Alekeen W Benson</option>
+                                <option>Cedric Opara</option>
+                                <option>Corrine Auma</option>
+                                <option>Evans Munene</option>
+                                <option>Florance Muthama</option>
+                                <option>George Njoroge</option>
+                                <option>Gichui Kirogo</option>
+                                <option>Hillary Wamunyolo Casmir</option>
+                                <option>Jackline Ogwemo</option>
+                                <option>John Wachira</option>
+                                <option>Jukius Mburu</option>
+                                <option>Kevin Kavila</option>
+                                <option>Martin Kyalo</option>
+                                <option>Mike Ogutu </option>
+                                <option>Owino PH Onyango</option>
+                                <option>Princess Caroline</option>
+                                <option>Sarah Gladys</option>
+                                <option>Thagichu Nyaga</option>
+                                <option>Wambua Musyoka</option>
+                             
+
                             </select>
                             </td>
                         </tr>
