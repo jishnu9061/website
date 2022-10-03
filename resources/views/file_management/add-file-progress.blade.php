@@ -13,8 +13,17 @@
         </div>
         @endif
         <div>
-            <h2 style="text-align:center;">Add File Progress</h2>
-            <hr class="mb-4">.
+            <!-- <h2 style="text-align:center;">Add File Progress</h2> -->
+            <div>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Add File Progress</u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+
+        
+            </div>
+           
         </div>
     </div>
     <div>
@@ -115,6 +124,9 @@
                                 </div>
                             </div>
                         </div>
+</div>
+                        <br>
+                        <div class="row">
                         <div class="col-md-6">
                             <div class="mb-1">
                                 <label for="username">Action Type</label>
@@ -157,14 +169,16 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <input type="text" class="form-control" name="email" id="age">
+                        <input type="time" class="form-control" name="email" id="age">
                         <div class="invalid-feedback" style="width: 100%;">
                             Incorporation is required
                         </div>
                     </div>
                 </div>
             </div>
+</div>
             <br>
+            <div class="row">
             <div class="col-md-6">
                 <div class="mb-1">
                     <label for="username">Time Taken(Minutes)</label>
@@ -172,7 +186,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <input type="password" class="form-control" name="website" id="confirm_password" required>
+                        <input type="time" class="form-control" name="website" id="confirm_password" required>
                         <div class="invalid-feedback" style="width: 100%;">
                             Telephone Number is required.
                         </div>
@@ -191,7 +205,17 @@
             </div>
         </div>
 
-        <h4 style="text-align:center;">Send Billing</h4>
+        <!-- <h4 style="text-align:center;">Send Billing</h4> -->
+        <div>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Send Billing</u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+
+        
+            </div>
+            <br>
         <div class="row">
             <div class="col-md-4">
                 <div class="mb-1">
@@ -244,7 +268,17 @@
         </div>
     </div>
     <br>
-    <h4 style="text-align:center;">Send To Timesheet</h4>
+    <!-- <h4 style="text-align:center;">Send To Timesheet</h4> -->
+    <div>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Send To Timesheet</u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+
+        
+            </div>
+            <br>
     <div class="row">
         <div class="col-md-4">
             <div class="mb-1">
@@ -296,21 +330,20 @@
 
 
     </div>
-    <br>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
+    <div class="row">
+                        <div class="col-sm">
 
-            </div>
-            <div class="btn-group pt-3 " role="group" aria-label="Basic example" style="margin-left: 50px;">
+                        </div>
+                        <div class="col-sm">
 
-                <button type="submit" class="btn btn-primary submit_btn">Edit File Progress</button>
-                <button type="submit" class="btn btn-primary submit_btn">Close</button>
-
-            </div>
-        </div>
-    </div>
-</div>
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Close</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Save</button>
+                        </div>
+                    </div>
+                </div>
 
 
 

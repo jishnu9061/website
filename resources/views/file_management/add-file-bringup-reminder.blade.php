@@ -13,8 +13,17 @@
         </div>
         @endif
         <div>
-            <h2 style="text-align:center;">Add File Bringup/Reminder</h2>
-            <hr class="mb-4">.
+            <!-- <h2 style="text-align:center;">Add File Bringup/Reminder</h2>
+            <hr class="mb-4">. -->
+            <div>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Add File Bringup/Reminder</u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+
+        
+            </div>
         </div>
     </div>
     <div class="row">
@@ -55,6 +64,10 @@
                             </div>
                         </div>
                     </div>
+</div>
+<br>
+<div class="row">
+
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Send Noitification To</label>
@@ -87,7 +100,9 @@
                             </div>
                         </div>
                     </div>
-
+</div>
+<br>
+                <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Next Bring Up Days</label>
@@ -117,7 +132,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+</div>
+<br>
+                <div class="row">
+                    <div class="col-md-12">
                         <div class="mb-1">
                             <label for="username">Reason</label>
                             <div class="input-group">
@@ -134,24 +152,25 @@
                     </div>
                 </div>
                 <br>
-                <div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm">
+              
 
-                            </div>
-                            <div class="btn-group pt-3 " role="group" aria-label="Basic example">
+                <div class="row">
+                        <div class="col-sm">
 
-                                <button type="submit" class="btn btn-primary submit_btn">Add</button>
-                                <button type="submit" class="btn btn-primary submit_btn">Close</button>
+                        </div>
+                        <div class="col-sm">
 
-                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Add</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
                         </div>
                     </div>
                 </div>
         </div>
 
-
+</form>
 
 
 

@@ -13,8 +13,17 @@
         </div>
         @endif
         <div>
-            <h2 style="text-align:center;">Add File Progress/Action</h2>
-            <hr class="mb-4">.
+            <!-- <h2 style="text-align:center;">Add File Progress/Action</h2> -->
+            <div>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Add File Progress/Action</u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+
+        
+            </div>
+            
         </div>
     </div>
     <div class="row">
@@ -25,7 +34,7 @@
                 @csrf
 
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Date of Progress</label>
                             <div class="input-group">
@@ -39,7 +48,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Client</label>
                             <div class="input-group">
@@ -55,7 +64,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">File</label>
                             <div class="input-group">
@@ -69,7 +78,9 @@
                             </div>
                         </div>
                     </div>
-
+</div>
+<br>
+                <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Time Taken(Hours)</label>
@@ -77,13 +88,14 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="incorporation" id="age">
+                                <input type="text" class="form-control" name="incorporation" id="age">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
                             </div>
                         </div>
-                    </div>
+</div>
+                    
 
                     <div class="col-md-6">
                         <div class="mb-1">
@@ -93,17 +105,19 @@
 
                                 </div>
                                 <select name="country" id="cars">
+                                    
                                     <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
                     </div>
+</div>
+<br>
 
 
 
 
-
-
+                <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Time Taken(Minutes)</label>
@@ -111,7 +125,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="incorporation" id="age">
+                                <input type="text" class="form-control" name="incorporation" id="age">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
@@ -134,19 +148,16 @@
                                 </select>
                             </div>
                         </div>
+                        <br>
                     </div>
+                   
+                    <div>
+                    <h5 style=" margin-left:0;">Action Description</h5>
 
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Action Description</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
 
-                                </div>
+                </div>
 
-                            </div>
-                        </div>
-                    </div>
+                   
                 </div>
                 <br>
 
@@ -168,18 +179,18 @@
 
 
                 <br>
-                <div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm">
+                
+                <div class="row">
+                        <div class="col-sm">
 
-                            </div>
-                            <div class="btn-group pt-3 " role="group" aria-label="Basic example">
+                        </div>
+                        <div class="col-sm">
 
-                                <button type="submit" class="btn btn-primary submit_btn">Add File Progress</button>
-                                <button type="submit" class="btn btn-primary submit_btn">Close</button>
-
-                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Add File Progress</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
                         </div>
                     </div>
                 </div>
