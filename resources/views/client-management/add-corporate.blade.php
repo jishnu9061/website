@@ -11,11 +11,12 @@
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous">
 
-        </div>
+        
+            </div>
     </div>
     <div class="row">
         <div class="col-md-12">
-            <form method="post" action="" id="form">
+            <form method="post" action="" id="form">  
                 @csrf
                 <div class="row">
                     <div class="col-md-4">

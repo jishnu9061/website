@@ -40,7 +40,7 @@
             <br>
             <div>
                 <a href="{{url('file_new_instruction')}}"><button class="btn btn-primary add-btn"
-                        Style="width:200px;margin-left:-67rem;">Add New Instructions</button></a>
+                        Style="width:200px;margin-left:-60rem;">Add New Instructions</button></a>
             </div>
             <br>
             <div class="tab-content" id="myTabContent">

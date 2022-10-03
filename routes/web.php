@@ -857,7 +857,7 @@ Route::any('view-pickup','ClientManagement@viewPickups')->name('view-pickup');
 //complaint
 Route::any('complaint-list','ClientManagement@complaintList')->name('complaint-list');
 Route::any('add-Complaint','ClientManagement@addComplaint')->name('add-Complaint');
-Route::any('edit-Complaint','ClientManagement@editComplaint')->name('edit-Complaint');
+Route::any('edit_complaint','ClientManagement@editComplaint')->name('edit-Complaint');
 //end complaint
 
 //Follow Up
