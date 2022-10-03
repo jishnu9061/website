@@ -29,12 +29,21 @@
 
 
     </div>
-    <h2 style="text-align:center;">Safe Register Report</h2></br></br>
+    <!-- <h2 style="text-align:center;">Safe Register Report</h2></br></br> -->
+    <div>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Safe Register Report</u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+
+        
+            </div>
     <div>
 
         <br>
-        <div style="margin-left: 150px;">
-            <input class="btn btn-primary" type="button" value="Today" style="margin-left: -152px;">
+        <div style="margin-left:130px;">
+            <input class="btn btn-primary" type="button" value="Today">
             <input class="btn btn-primary" type="button" value="This Week">
             <input class="btn btn-primary" type="button" value="Last Week">
             <input class="btn btn-primary" type="button" value="This Month">
@@ -45,7 +54,7 @@
             <input class="btn btn-primary" type="button" value="Last Year">
         </div>
         <br>
-        <hr class="mb-4">.
+       
 
 
     </div>
@@ -240,7 +249,7 @@
                     </div>
                 </div>
                 <br>
-                <div>
+                <!-- <div>
                     <div class="container">
                         <div class="row">
                             <div class="col-sm">
@@ -252,6 +261,20 @@
                                 <button type="submit" class="btn btn-primary submit_btn">Close</button>
 
                             </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="row">
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">View</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
                         </div>
                     </div>
                 </div>
