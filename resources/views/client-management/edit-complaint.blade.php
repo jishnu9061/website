@@ -2,23 +2,19 @@
 @section('content')
 <div class="container">
     <div class="py-5 text-center">
-        @if(Session::has('staffregistered'))
-        <div class="alert alert-dark" role="alert">
-            {{ Session::get('staffregistered')}}
-        </div>
-        @endif
-        @if(Session::has('leavevalidat'))
-        <div class="alert alert-dark" role="alert">
-            {{ Session::get('leavevalidat')}}
-        </div>
-        @endif
+
+
         <div>
-            <h2 style="text-align:center; "> Edit Complaint</h2>
-            <hr class="mb-4">.
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Edit Complaint</u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12 order-md-1">
+        <div class="col-md-12">
             <form method="post" action="" id="form">
                 @csrf
                 <div class="row">
@@ -27,23 +23,23 @@
                             <label for="username">Date</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="date" id="username" value=""
-                                    placeholder="Number" required>
+                                <input type="date" class="form-control" name="number" id="username" value="">
                                 <div class="invalid-feedback" style="width: 100%;">
-                                    Date is required.
+                                    Name is required.
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Client</label>
+                            <label for="username">Client Type</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-
                                 </div>
-                                <select name="client" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="type" id="cars" >
+                                    <option value="volvo">Select</option>
+                                    <option value="volvo">Corporate</option>
+                                    <option value="volvo">Individual</option>
                                 </select>
                             </div>
                         </div>
@@ -56,7 +52,9 @@
 
                                 </div>
                                 <select name="citizen" id="cars">
-                                    <option value="volvo"></option>
+                                    <option value="volvo">Select</option>
+                                    <option value="volvo">File 1</option>
+                                    <option value="volvo">File 2</option>
                                 </select>
                             </div>
                         </div>
@@ -69,10 +67,9 @@
                             <label for="username">Customer Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="customer" id="age" value="" placeholder=""
-                                    min="0" max="99">
+                                <input type="text" class="form-control" name="corporation" id="age" value="" min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
-                                    Customer Name is required.
+                                    Age is required.
                                 </div>
                             </div>
                         </div>
@@ -85,7 +82,11 @@
 
                                 </div>
                                 <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                    <option value="volvo">Select</option>
+                                    <option value="volvo">Staff 1</option>
+                                    <option value="volvo">Staff 2</option>
+                                    <option value="volvo">Staff 3</option>
+                                    <option value="volvo">Staff 4</option>
                                 </select>
                             </div>
                         </div>
@@ -97,8 +98,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="complaint" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="country" id="cars">
+                                    <option value="volvo">Select</option>
+                                    <option value="volvo">Person</option>
+                                    <option value="volvo">Company</option>
                                 </select>
                             </div>
                         </div>
@@ -111,10 +114,10 @@
                             <label for="username">Telephone No</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="telephone" id="age" value=""
-                                    placeholder="" min="0" max="99">
+                                <input type="text" class="form-control" name="faxno" id="age" value=""
+                                 min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
-                                    Telephone No is required.
+                                    Age is required.
                                 </div>
                             </div>
                         </div>
@@ -124,23 +127,22 @@
                             <label for="username">Email Address</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="email" class="form-control" name="email" value="" id="password"
-                                    placeholder="">
+                                <input type="email" class="form-control" name="email" value="" id="password">
                                 <div class="invalid-feedback" style="width: 100%;">
-                                    Email Address is required.
+                                    Password is required.
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">others</label>
+                            <label for="username">Others</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="others" value="" id="confirm_password"
-                                    placeholder="">
+                                <input type="text" class="form-control" name="conpassword" value=""
+                                    id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
-                                    others is required.
+                                    Password is required.
                                 </div>
                             </div>
                         </div>
@@ -148,7 +150,7 @@
                 </div>
                 <br>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Action Plan</label>
                             <div class="input-group">
@@ -159,7 +161,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Complaint Description</label>
                             <div class="input-group">
@@ -170,28 +172,66 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                    
                 <br>
-                <div class="container">
-                    <div class="row">
+                <div class="row">
                         <div class="col-sm">
 
                         </div>
                         <div class="col-sm">
-                            <button type="submit" class="btn btn-primary submit_btn_btn">Add Complaint</button>
-                            <a href="{{route('client-index')}}" type="button" class="btn btn-primary "
-                                style="width:30%;  margin-top: 30px; padding:8px">Cancel</a>
+
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Close</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Update</button>
                         </div>
                     </div>
                 </div>
+            </form>
         </div>
-        </form>
+    </div>
+</div>
+
+</div>
+<div class="modal" id="mymodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-body">
+                    <form action="">
+                        <div>
+                            <input type="text" name="type" class="form-control" placeholder="Client Type">
+                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="modal" id="my">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-body">
+                    <form action="">
+                        <div>
+                            <input type="text" name="type" class="form-control" placeholder="Country">
+                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </div>
 
-</div>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
@@ -222,7 +262,7 @@ $(document).on('click', '#testing', function() {
                                     method: "POST",
                                     url: "/allowancetostaff",
                                     data: {
-                                        "_token": "{{ csrf_token()}}",
+                                        "_token": "{{ csrf_token() }}",
                                         'allowanceid': allowanceid,
                                         'staffid': staffid,
                                         'status': 'allowance',
@@ -256,8 +296,8 @@ $(document).on('click', '#testing', function() {
                                     div class = "invalid-feedback"
                                     style = "width: 100%;" >
                                     <
-                                    /div> <
-                                    /div> <
+                                    /div> < /
+                                    div > <
                                     /div>
 
                                     <
@@ -277,8 +317,8 @@ $(document).on('click', '#testing', function() {
                                     label class = "form-check-label"
                                     for = "flexRadioDefault1" >
                                     Male <
-                                    /label> <
-                                    /div> <
+                                    /label> < /
+                                    div > <
                                     div class = "form-check" >
                                     <
                                     input class = "form-check-input"
@@ -290,8 +330,8 @@ $(document).on('click', '#testing', function() {
                                     label class = "form-check-label"
                                     for = "flexRadioDefault1" >
                                     Female <
-                                    /label> <
-                                    /div> <
+                                    /label> < /
+                                    div > <
                                     div class = "form-check" >
                                     <
                                     input class = "form-check-input"
@@ -303,12 +343,12 @@ $(document).on('click', '#testing', function() {
                                     label class = "form-check-label"
                                     for = "flexRadioDefault1" >
                                     Others <
-                                    /label> <
-                                    /div>
+                                    /label> < /
+                                    div >
 
                                     <
-                                    /div> <
-                                    /div> <
+                                    /div> < /
+                                    div > <
                                     /div>
 
                                     <
@@ -345,13 +385,13 @@ $(document).on('input', '#percent', function() {
                 <
                 label
             for = "username" > Salary < /label> <
-                div class = "input-group" >
+            div class = "input-group" >
                 <
                 div class = "input-group-prepend" >
 
                 <
                 /div> <
-                input type = "number"
+            input type = "number"
             class = "form-control"
             name = "salary"
             id = "username"
@@ -361,10 +401,10 @@ $(document).on('input', '#percent', function() {
                 div class = "invalid-feedback"
             style = "width: 100%;" >
                 Salary is required. <
-                /div> <
-                /div> <
-                /div> <
-                /div>
+                /div> < /
+                div > <
+                /div> < /
+                div >
 
                 <
                 div class = "col-md-4" >
@@ -373,13 +413,13 @@ $(document).on('input', '#percent', function() {
                 <
                 label
             for = "username" > Years of experience < /label> <
-                div class = "input-group" >
+            div class = "input-group" >
                 <
                 div class = "input-group-prepend" >
 
                 <
                 /div> <
-                input type = "number"
+            input type = "number"
             class = "form-control"
             name = "yearsexp"
             id = "username"
@@ -390,23 +430,23 @@ $(document).on('input', '#percent', function() {
                 div class = "invalid-feedback"
             style = "width: 100%;" >
                 Years of experience is required. <
-                /div> <
-                /div> <
-                /div> <
-                /div> <
+                /div> < /
+                div > <
+                /div> < /
+                div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
                 <
                 label
             for = "username" > D.O.B < /label> <
-                div class = "input-group" >
+            div class = "input-group" >
                 <
                 div class = "input-group-prepend" >
 
                 <
                 /div> <
-                input type = "date"
+            input type = "date"
             class = "form-control"
             name = "dob"
             id = "username"
@@ -415,10 +455,10 @@ $(document).on('input', '#percent', function() {
                 div class = "invalid-feedback"
             style = "width: 100%;" >
                 dob is required. <
-                /div> <
-                /div> <
-                /div> <
-                /div> <
+                /div> < /
+                div > <
+                /div> < /
+                div > <
                 /div>
 
             {
@@ -434,13 +474,13 @@ $(document).on('input', '#percent', function() {
                 <
                 label
             for = "username" > Bank Name < /label> <
-                div class = "input-group" >
+            div class = "input-group" >
                 <
                 div class = "input-group-prepend" >
 
                 <
                 /div> <
-                input type = "text"
+            input type = "text"
             class = "form-control"
             name = "bankname"
             id = "username"
@@ -449,10 +489,10 @@ $(document).on('input', '#percent', function() {
                 div class = "invalid-feedback"
             style = "width: 100%;" >
                 Bank Name is required. <
-                /div> <
-                /div> <
-                /div> <
-                /div>
+                /div> < /
+                div > <
+                /div> < /
+                div >
 
                 <
                 div class = "col-md-4" >
@@ -461,13 +501,13 @@ $(document).on('input', '#percent', function() {
                 <
                 label
             for = "username" > Account Number < /label> <
-                div class = "input-group" >
+            div class = "input-group" >
                 <
                 div class = "input-group-prepend" >
 
                 <
                 /div> <
-                input type = "number"
+            input type = "number"
             class = "form-control"
             name = "accountnumber"
             id = "username"
@@ -477,23 +517,23 @@ $(document).on('input', '#percent', function() {
                 div class = "invalid-feedback"
             style = "width: 100%;" >
                 Account number is required. <
-                /div> <
-                /div> <
-                /div> <
-                /div> <
+                /div> < /
+                div > <
+                /div> < /
+                div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
                 <
                 label
             for = "username" > IFSC code < /label> <
-                div class = "input-group" >
+            div class = "input-group" >
                 <
                 div class = "input-group-prepend" >
 
                 <
                 /div> <
-                input type = "text"
+            input type = "text"
             class = "form-control"
             name = "isfc"
             id = "username"
@@ -502,10 +542,10 @@ $(document).on('input', '#percent', function() {
                 div class = "invalid-feedback"
             style = "width: 100%;" >
                 IFSC Code is required. <
-                /div> <
-                /div> <
-                /div> <
-                /div> <
+                /div> < /
+                div > <
+                /div> < /
+                div > <
                 div class = "col-md-12" >
                 <
                 div class = "mb-1" >
@@ -521,7 +561,7 @@ $(document).on('input', '#percent', function() {
                 div class = "input-group-prepend" >
                 <
                 /div> <
-                table class = "table" >
+            table class = "table" >
                 <
                 tr >
 
@@ -534,7 +574,7 @@ $(document).on('input', '#percent', function() {
                 input type = "hidden"
             name = "leave_type[]"
             value = "" > < /td> <
-                td > < input type = "number"
+            td > < input type = "number"
             class = "form-control"
             name = "leaves[]"
             value = ""
@@ -545,8 +585,8 @@ $(document).on('input', '#percent', function() {
 
 
                 <
-                /tr> <
-                /table> {
+                /tr> < /
+                table > {
                     {
                         -- < input type = "text"
                         class = "form-control"
@@ -561,17 +601,17 @@ $(document).on('input', '#percent', function() {
                 } {
                     {
                         -- < /div> --}} <
-                        /div> <
-                        /div> <
-                        /div>
+                        /div> < /
+                        div > <
+                            /div>
 
-                        <
-                        /div> <
+                            <
+                            /div> <
                         div style = "height: 50px;" >
 
                             <
                             /div> <
-                            div class = "row" >
+                        div class = "row" >
 
                             <
                             div class = "col-md-4 col-lg-4" >
@@ -589,7 +629,7 @@ $(document).on('input', '#percent', function() {
 
                             <
                             td > < /td> <
-                            input type = "hidden"
+                        input type = "hidden"
                         name = ""
                         value = "" >
                             <
@@ -604,10 +644,10 @@ $(document).on('input', '#percent', function() {
 
 
                             <
-                            /tbody> <
-                            /table> <
-                            /div> <
-                            /div> <
+                            /tbody> < /
+                            table > <
+                            /div> < /
+                            div > <
                             script src = "{{ url('assets/js') }}/jquery.min.js" >
 </script>
 <script type="text/javascript">
@@ -635,7 +675,7 @@ $(document).on('click', '#testing1', function() {
                                     method: "POST",
                                     url: "/allowancetostaff",
                                     data: {
-                                        "_token": "{{ csrf_token()}}",
+                                        "_token": "{{ csrf_token() }}",
                                         'allowanceid': allowanceid,
                                         'staffid': staffid,
                                         'status': 'reduction',
@@ -679,8 +719,8 @@ $(document).on('click', '#testing1', function() {
 
 
                                     <
-                                    /tbody> <
-                                    /table> <
+                                    /tbody> < /
+                                    table > <
                                     /div>
 
                                     <
@@ -714,8 +754,8 @@ $(document).on('click', '#testing1', function() {
 
 
                                     <
-                                    /tbody> <
-                                    /table> <
+                                    /tbody> < /
+                                    table > <
                                     /div>
 
                                     <
@@ -746,12 +786,12 @@ $(document).on('click', '#testing1', function() {
                                     div class = "invalid-feedback"
                                     style = "width: 100%;" >
                                     <
-                                    /div> <
-                                    /select> <
-                                    /div> <
-                                    /div> <
-                                    /div> <
-                                    /div> <
+                                    /div> < /
+                                    select > <
+                                    /div> < /
+                                    div > <
+                                    /div> < /
+                                    div > <
                                     hr class = "mb-4" >
 
                                     <
@@ -760,11 +800,12 @@ $(document).on('click', '#testing1', function() {
                                     type = "submit" > Add staffs < /button>
 
                                     <
-                                    /div> <
-                                    /div> <
-                                    /form> <
-                                    /div> <
-                                    script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
+                                    /div> < /
+                                    div > <
+                                    /form> < /
+                                    div > <
+                                    script src =
+                                    "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
 </script>
 <script type="text/javascript">
 $('#password, #confirm_password').on('keyup', function() {
