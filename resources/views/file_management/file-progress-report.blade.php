@@ -12,141 +12,134 @@
             {{ Session::get('leavevalidat')}}
         </div>
         @endif
-        <div class="col-sm">
+        <!-- <div class="col-sm"> -->
         </div>
         <div>
-            <h3 class="text-center" style="color: #070344;"><b>Search</b></h3>
+            <!-- <h3 class="text-center" style="color: #070344;"><b>Search</b></h3> -->
+
+            <div>
+                <button class="btn btn-primary"
+                    style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Search</u></b></span></button><br>
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                    crossorigin="anonymous">
+
+
+            </div>
 
             <br>
             <div>
-                <input class="btn btn-primary" type="button" style="width:65px;" value="Today">
+                <input class="btn btn-primary" type="button" value="Today">
                 <input class="btn btn-primary" type="button" value="This Week">
                 <input class="btn btn-primary" type="button" value="Last Week">
                 <input class="btn btn-primary" type="button" value="This Month">
                 <input class="btn btn-primary" type="button" value="Last Month">
-                <input class="btn btn-primary" type="button" style="width:105px;" value="This Quater ">
+                <input class="btn btn-primary" type="button" value="This Quater ">
                 <input class="btn btn-primary" type="button" value="Last Quater">
                 <input class="btn btn-primary" type="button" value="This Year">
                 <input class="btn btn-primary" type="button" value="Last Year">
             </div>
 
         </div>
-        <br><br>
-
-
-        <div class="row">
-
-
-            <div class="col-md-12 order-md-1">
-
-                <form method="post" action="" id="form">
-                    @csrf
-
-
-
-                    <div class="row">
-
-
-
-                        <div class="col-md-6">
-                            <div class="mb-1">
-                                <label for="username">Client</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-
-                                    </div>
-                                    <select name="country" id="cars">
-                                        <option value="volvo"></option>
-                                    </select>
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                        Number is required.
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="col-md-6">
-                            <div class="mb-1">
-                                <label for="username">File</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-
-                                    </div>
-                                    <select name="country" id="cars">
-                                        <option value="volvo"></option>
-                                    </select><br>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="mb-1">
-                                <label for="username">Progress Date(From)</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-
-                                    </div>
-                                    <input type="date" class="form-control" name="incorporation" id="age">
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-6">
-                            <div class="mb-1">
-                                <label for="username">To</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-
-                                    </div>
-                                    <input type="text" class="form-control" name="incorporation" id="age">
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                        Incorporation is required
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <br>
-
-
-
-
-
-
-
-
-
-            </div>
-
-
-        </div>
+        <br>
 
 
 
         <div>
-            <div class="container">
+            <form method="post" action="" id="form">
+                @csrf
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Client</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
+                                </select>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Number is required.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">File</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
+                                </select><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Progress Date(From)</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="date" class="form-control" name="incorporation" id="age">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">To</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="incorporation" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <br>
+
                 <div class="row">
                     <div class="col-sm">
 
                     </div>
-                    <div class="btn-group pt-3 " role="group" aria-label="Basic example">
+                    <div class="col-sm">
 
-                        <button type="submit" class="btn btn-primary submit_btn">Search</button>
-
+                    </div>
+                    <div class="col-sm">
+                        <br>
+                        <button type="submit" class="btn btn-primary"
+                            Style="width:45%; margin-right:0px;">Search</button>
 
                     </div>
                 </div>
-            </div>
+
+
+
         </div>
-
-
-
     </div>
+
+
+</div>
 
 
 

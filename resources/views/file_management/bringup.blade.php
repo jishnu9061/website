@@ -13,14 +13,23 @@
         </div>
         @endif
         <div>
-            <h2 style="text-align:center;">Search</h2>
-            <hr class="mb-4">.
+            <!-- <h2 style="text-align:center;">Search</h2>
+            <hr class="mb-4">. -->
+            <div>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Search</u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+
+        
+            </div>
         </div>
     </div>
 
     <div>
         <br>
-        <div>
+        <div style="margin-left:130px;">
             <input class="btn btn-primary" type="button" style="width:65px;" value="Today">
             <input class="btn btn-primary" type="button" value="This Week">
             <input class="btn btn-primary" type="button" value="Last Week">
@@ -112,14 +121,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- </div>
-
-            <br>
-
-        
-
-
-            <div class="row"> -->
+</div>
+<br>
+            <div class="row"> 
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Next Date (Form)</label>
@@ -147,42 +151,40 @@
                                     Incorporation is required
                                 </div>
                             </div>
+                            <br>
                         </div>
+                        
                     </div>
+                    
+</div>
                     <div>
 
-            </form>
+           
 
 
 
 
 
-            <br>
+           
 
-            <div>
-                <div class="container">
-                    <div class="row">
+ 
+
+            <div class="row">
                         <div class="col-sm">
 
                         </div>
-                        <div class="btn-group pt-3 " role="group" aria-label="Basic example">
+                        <div class="col-sm">
 
-                            <button type="submit" class="btn btn-primary submit_btn">Cancel</button>
-                            <button type="submit" class="btn btn-primary submit_btn">View Report</button>
-
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Cancel</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">View Report</button>
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
-            </div>
         </div>
+        </form>
 
     </div>
     <script src="{{ url('assets/js') }}/jquery.min.js"></script>
