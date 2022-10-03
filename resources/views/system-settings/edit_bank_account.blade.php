@@ -35,54 +35,104 @@
     <tbody>
                         <tr>
                             <td style="width:30%"> Bank:</td>
-                            <td><select type="text" value="" name="bank"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
-                            <option>select</option>
-                            <option></option>
-                            <option></option>
-                            <option></option>
-                            <option></option>
-                     </select><a href="{{('document_bank')}}">  <i style="color:rgb(13, 1, 56);"class="bi bi-plus-circle-fill"> </i></a></td>
+                            <td><select type="text" value="" name="bank"style="width:50%;color:rgb(13, 1, 56);background-color:white;">
+                            <option>---Select---</option>
+                            <option>AFRICAN BANKING CORP LTD</option>
+                            <option>AKIBA BANK LTD</option>
+                            <option>BANK OF AFRICA LTD</option>
+                            <option>BANK OF BARODA</option>
+                            <option>BANK OF INDIA</option>
+                            <option>BARCLAYS BANK</option>
+                            <option>CENTRAL BANK OF KENYA</option>
+                            <option>CFC BANK</option>
+                            <option>CHASE BANK (K) LTD</option>
+                            <option>CITI BANK</option>
+                            <option>CO-OPERATIVE BANK</option>
+                            <option>COMMERCIAL BANK OF AFRICA</option>
+                            <option>CONSOLIDATED BANK</option>
+                            <option>CREDIT BANK LTD</option>
+                            <option>DEVELOPMENT BANK OF KENYA LIMITED</option>
+                            <option>DIAMOND TRUST BANK KENYA LIMITED</option>
+                            <option>DIRECT MPESA</option>
+                            <option>DUBAI BANK OF KENYA</option>
+                            <option>EQUITORIAL COMMERCIAL BANK LTD</option>
+                            <option>EQUITY BANK</option>
+                            <option>FAMILY BANK LTD</option>
+                            <option>FIDELITY BANK</option>
+                            <option>FINA BANK LTD</option>
+                            <option>GIRO BANK BANDA STREET</option>
+                            <option>GUARDIAN BANK</option>
+                            <option>HABIB BANK LTD</option>
+                            <option>HFCK</option>
+                            <option>I & M BANK</option>
+                            <option>IMPERIAL BANK</option>
+                            <option>KENYA COMMERCIAL BANK</option>
+                            <option>MIDDLE EAST BANK</option>
+                            <option>MWITO SACCO SOCIETY LTD</option>
+                            <option>NATIONAL BANK OF KENYA</option>
+                            <option>NIC BANK</option>
+                            <option>ORIENTAL COMMERCIAL BANK</option>
+                            <option>PARAMOUNT / UNIVERSAL BANK</option>
+                            <option>PAYPAL</option>
+                            <option>POST BANK</option>
+                            <option>PRIME BANK LTD</option>
+                            <option>SIDIAN BANK</option>
+                            <option>SOUTHERN CREDIT BANKING CORPORATION</option>
+                            <option>STANBIC BANK KENYA LTD</option>
+                            <option>STANDARD CHARTERED BANK</option>
+                            <option>STIMA DT SACCO SOCIETY LIMITED</option>
+                            <option>TRANS-NATIONAL BANK</option>
+                            <option>VICTORIA COMMERCIAL BANK</option>
+                         
+
+                        </select></td>
                            
                         </tr>
                         <tr>
                             <td style="width:30%">Branch:</td>
-                           <td><input type="text"  id="" name="branch"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td> 
+                           <td><input type="text"  id="" name="branch"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td> 
                           
                         </tr>
                         <tr>
                             <td style="width:30%">Account Name:</td>
-                            <td><input type="text"  id="" name="date"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
+                            <td><input type="text"  id="" name="date"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
                         </tr>
                         <tr>
                             <td style="width:30%">Account Number:</td>
-                            <td><input type="number"  id="" name="number"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
+                            <td><input type="number"  id="" name="number"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
                         </tr>
                         <tr>
                             <td style="width:30%">Bank Code:</td>
-                            <td><input type="number"  id="" name="code"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
+                            <td><input type="number"  id="" name="code"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
                         </tr>
                         <tr>
                             <td style="width:30%">Branch Code:</td>
-                            <td><input type="number"  id="" name="bcode"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
+                            <td><input type="number"  id="" name="bcode"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
                         </tr>
                         <tr>
                             <td style="width:30%">Swift Code:</td>
-                            <td><input type="text"  id="" name="date"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
+                            <td><input type="text"  id="" name="date"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
                         </tr>
                         <tr>
                             <td style="width:30%">Mpesa No:</td>
-                            <td><input type="text"  id="" name="date"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
+                            <td><input type="text"  id="" name="date"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
                         </tr>
                         
                         <tr>
                             <td style="width:30%"> Bank G/L Account:</td>
-                            <td><select type="text" value="" name="type"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
-                            <option>select</option>
-                            <option></option>
-                            <option></option>
-                            <option></option>
-                            <option></option>
-                         
+                            <td><select type="text" value="" name="type"style="width:50%;color:rgb(13, 1, 56);background-color:white;">
+                            <option>---Select---</option>
+                            <option>8004==> Client A/C Sidian Bank</option>
+                            <option>8000==>Client Account - Cooperative Bank</option>
+                            <option>8008==>Client Account - Cooperative Bank (USD)</option>
+                            <option>8003==>Client Account - DTB Bank</option>
+                            <option>8006==>Client Account - Equity Bank</option>
+                            <option>8009==>Client Account - PayPal</option>
+                            <option>8001==>Office Account - Cooperative Bank</option>
+                            <option>8010==>Office Account - DIRECT MPESA</option>
+                            <option>8002==>Office Account - DIRECT MPESA</option>
+                            <option>8010==>Office Account - Stima Sacco Society Ltd</option>
+                            <option>8005==>Office Account - Sidian Bank</option>
 
                         </select>
         </tr>
@@ -90,7 +140,7 @@
         </tbody>
               </table>
             <div class="class"style="text-align:center;">
-            <a href="something"><input type="submit"value="Save" name="submit"style="background-color:rgb(13, 1, 56);color: white; "> </a>
+            <a href="something"><input type="submit"value="Update" name="submit"style="background-color:rgb(13, 1, 56);color: white; "> </a>
             <input type="button"value="Close" name="close"style="background-color:red;color: white; ">
 
             

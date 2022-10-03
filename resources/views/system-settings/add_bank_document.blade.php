@@ -28,7 +28,7 @@
     </head>
     <body>
     <!-- <h2 >Add Court</h2><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Document Letter Categories </h2>
+    <h2 style="text-align:center; text-shadow: 2px 1px;">Add Bank </h2>
     <hr class="mb-4">.
    
 
@@ -53,7 +53,7 @@
         <tbody>
           <tr>
             <td class="pt-3-half" contenteditable="true">1</td>
-            <td class="pt-3-half"style="text-align:left;" contenteditable="true">Client</td>
+            <td class="pt-3-half"style="text-align:left;" contenteditable="true">AKIBA BANK LTD</td>
             <!-- <td  class="pt-3-half" ><a href="{{url('#')}}">Edit</td> -->
             <td  scope="row"class="text-center">
                         <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
@@ -61,40 +61,7 @@
                     </td>
            
        
-          <tr>
-            <td class="pt-3-half" contenteditable="true">2</td>
-            <td class="pt-3-half"style="text-align:left;"  contenteditable="true">Supplier</td>
-            <!-- <td  class="pt-3-half" ><a href="{{url('#')}}">Edit</td> -->
-            <td  scope="row"class="text-center">
-                        <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                        <a  href="{{url('#')}}" onClick="return myFunction();"  style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a>
-                    </td>
-            <tr>
-            <td class="pt-3-half" contenteditable="true">3</td>
-            <td class="pt-3-half" style="text-align:left;" contenteditable="true">Staff</td>
-            <!-- <td  class="pt-3-half" ><a href="{{url('#')}}">Edit</td> -->
-            <td  scope="row"class="text-center">
-                        <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                        <a  href="{{url('#')}}" onClick="return myFunction();"  style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a>
-                    </td>
-
-            <tr>
-            <td class="pt-3-half" contenteditable="true">4</td>
-            <td class="pt-3-half"style="text-align:left;"  contenteditable="true">Office</td>
-            <!-- <td  class="pt-3-half" ><a href="{{url('#')}}">Edit</td> -->
-            <td  scope="row"class="text-center">
-                        <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                        <a  href="{{url('#')}}" onClick="return myFunction();"  style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a>
-                    </td>
-            <tr>
-            <td class="pt-3-half" contenteditable="true">5</td>
-            <td class="pt-3-half" style="text-align:left;" contenteditable="true">Customers</td>
-            <!-- <td  class="pt-3-half" ><a href="{{url('#')}}">Edit</td> -->
-            <td  scope="row"class="text-center">
-                        <a href="{{url('#')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                        <a  href="{{url('#')}}" onClick="return myFunction();"  style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a>
-                    </td>
-           
+        
         </tbody>
       </table>
     </div>

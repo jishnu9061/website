@@ -56,23 +56,36 @@
                             <option>DIRECT MPESA</option>
                             <option>DUBAI BANK OF KENYA</option>
                             <option>EQUITORIAL COMMERCIAL BANK LTD</option>
-                            <option></option>
-                            <option></option>
-                            <option></option>
-                            <option></option>
-                            <option></option>
-                            <option></option>
-                            <option></option>
-                            <option></option>
-                            <option></option>
-                            <option></option>
-                            <option></option>
-
-                            
-
+                            <option>EQUITY BANK</option>
+                            <option>FAMILY BANK LTD</option>
+                            <option>FIDELITY BANK</option>
+                            <option>FINA BANK LTD</option>
+                            <option>GIRO BANK BANDA STREET</option>
+                            <option>GUARDIAN BANK</option>
+                            <option>HABIB BANK LTD</option>
+                            <option>HFCK</option>
+                            <option>I & M BANK</option>
+                            <option>IMPERIAL BANK</option>
+                            <option>KENYA COMMERCIAL BANK</option>
+                            <option>MIDDLE EAST BANK</option>
+                            <option>MWITO SACCO SOCIETY LTD</option>
+                            <option>NATIONAL BANK OF KENYA</option>
+                            <option>NIC BANK</option>
+                            <option>ORIENTAL COMMERCIAL BANK</option>
+                            <option>PARAMOUNT / UNIVERSAL BANK</option>
+                            <option>PAYPAL</option>
+                            <option>POST BANK</option>
+                            <option>PRIME BANK LTD</option>
+                            <option>SIDIAN BANK</option>
+                            <option>SOUTHERN CREDIT BANKING CORPORATION</option>
+                            <option>STANBIC BANK KENYA LTD</option>
+                            <option>STANDARD CHARTERED BANK</option>
+                            <option>STIMA DT SACCO SOCIETY LIMITED</option>
+                            <option>TRANS-NATIONAL BANK</option>
+                            <option>VICTORIA COMMERCIAL BANK</option>
                          
 
-                        </select><a href="{{('document_bank')}}">  <i style="color:rgb(13, 1, 56);"class="bi bi-plus-circle-fill"> </i></a></td>
+                        </select><a href="{{('add_bank_document')}}">  <i style="color:rgb(13, 1, 56);"class="bi bi-plus-circle-fill"> </i></a></td>
                            
                         </tr>
                         <tr>
@@ -108,12 +121,18 @@
                         <tr>
                             <td style="width:30%"> Bank G/L Account:</td>
                             <td><select type="text" value="" name="type"style="width:50%;color:rgb(13, 1, 56);background-color:white;">
-                            <option>select</option>
-                            <option></option>
-                            <option></option>
-                            <option></option>
-                            <option></option>
-                         
+                            <option>---Select---</option>
+                            <option>8004==> Client A/C Sidian Bank</option>
+                            <option>8000==>Client Account - Cooperative Bank</option>
+                            <option>8008==>Client Account - Cooperative Bank (USD)</option>
+                            <option>8003==>Client Account - DTB Bank</option>
+                            <option>8006==>Client Account - Equity Bank</option>
+                            <option>8009==>Client Account - PayPal</option>
+                            <option>8001==>Office Account - Cooperative Bank</option>
+                            <option>8010==>Office Account - DIRECT MPESA</option>
+                            <option>8002==>Office Account - DIRECT MPESA</option>
+                            <option>8010==>Office Account - Stima Sacco Society Ltd</option>
+                            <option>8005==>Office Account - Sidian Bank</option>
 
                         </select>
         </tr>

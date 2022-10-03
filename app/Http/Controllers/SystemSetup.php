@@ -416,6 +416,10 @@ class SystemSetup extends Controller
     {
         return view('system-settings.edit_bank_account');
     }
+    public function bankdocument()
+    {
+        return view('system-settings.add_bank_document');
+    }
   
   
 

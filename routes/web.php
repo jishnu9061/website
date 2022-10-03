@@ -829,6 +829,7 @@ Route::any('edit_billable_activities','SystemSetup@editbillableactivities')->nam
 Route::any('bank_details','SystemSetup@bankdetails')->name('bank_details');
 Route::any('add_bank_account','SystemSetup@addbankaccount')->name('add_bank_account');
 Route::any('edit_bank_account','SystemSetup@editbankaccount')->name('edit_bank_account');
+Route::any('add_bank_document','SystemSetup@bankdocument')->name('add_bank_document');
 //RESHMA--------------------------------------
 
 
