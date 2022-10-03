@@ -18,11 +18,21 @@
 
         </div>
         <div>
-            <h3 class="text-center" style="color: #070344;"><b>Register Documents In Safe</b></h3>
+            <!-- <h3 class="text-center" style="color: #070344;"><b>Register Documents In Safe</b></h3> -->
+            
+            <div>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Register Documents In Safe</u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+
+        
+            </div>
 
             <br>
 
-            <hr class="mb-4">.
+          
 
 
         </div>
@@ -143,11 +153,20 @@
 
 
 
-    <hr class="mb-4">
+   <br>
+    <!-- <h3 class="text-center" style="color: #070344;"><b>Documents</b></h3> -->
 
-    <h3 class="text-center" style="color: #070344;"><b>Documents</b></h3>
+    <div>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Documents</u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+
+        
+            </div>
     <br>
-
+<br>
 
     <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -192,7 +211,7 @@
                 </tbody>
 
             </table>
-
+            <br>
 
 
             <div class="row">
@@ -209,21 +228,22 @@
     </div>
 
 
-    <div>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
+    <div class="row">
+                        <div class="col-sm">
 
+                        </div>
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Add Documents</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="btn-group pt-3 " role="group" aria-label="Basic example">
+</form>
 
-                    <button type="submit" class="btn btn-primary submit_btn">Add Documents</button>
-                    <button type="submit" class="btn btn-primary submit_btn">Close</button>
-
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 </div>
 </div>
