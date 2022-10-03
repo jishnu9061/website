@@ -213,7 +213,7 @@
                 </div>
                 <br>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Document Condition</label>
                             <div class="input-group">
@@ -231,7 +231,7 @@
                     </div>
 
 
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Status</label>
                             <div class="input-group">
