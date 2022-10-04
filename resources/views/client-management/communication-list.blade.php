@@ -16,8 +16,8 @@
 
 <body>
     <div class="container">
-        <button class="btn btn-primary"
-        style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Client Conversation</u></b></button><br><br>
+        <div class="btn btn-primary"
+        style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Client Conversation</u></b></div><br><br>
         <div class="">
             <a href="{{url('add-communication')}}"><button type="button" class="btn btn-primary complaint_btn"> Add
                     Communication</button></a>

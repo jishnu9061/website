@@ -15,12 +15,21 @@
 
 <body>
     <div class="container">
-        <h1  style="color: #070344;  text-align:center;"><b>Customer Follow Up</b></h1>
-        <div class="container mt-5">
+        <!-- <h1  style="color: #070344;  text-align:center;"><b>Customer Follow Up</b></h1> -->
+        <div>
+            <div class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Customer Follow Up</u></b></span></div><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+
+        </div>
+        <br>
+        <div >
         <a href="{{url('add-follow')}}"><button type="button" class="btn btn-primary complaint_btn" > Add Follow Up</button></a>
         </div>
-        <hr class="mb-4">.
-        <h3  style="color: #070344;  text-align:center;"><b>List Of Follow Ups</b></h3>
+       
+        
        <br>
      
       

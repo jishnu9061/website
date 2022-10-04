@@ -4,8 +4,16 @@
     <div class="py-5 text-center">
 
         <div>
-            <h2 style="text-align:center;">Add Follow Up</h2>
-            <hr class="mb-4">.
+            <!-- <h2 style="text-align:center;">Add Follow Up</h2>
+            <hr class="mb-4">. -->
+            <div>
+            <div class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Add Follow Up</u></b></span></div><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+
+        </div>
         </div>
     </div>
     <div class="row">
@@ -112,6 +120,19 @@
                     </div>
                     <div class="col-md-4">
                         <div class="mb-1">
+                            <label for="username">Email Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="email" class="form-control" name="email" value="" id="password"
+                                    placeholder="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Email is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
                             <label for="username"> Description</label>
                             <div class="input-group">
                                 <textarea class="form-control" id="form7Example7" rows="3"></textarea>
@@ -123,21 +144,37 @@
                     </div>
                 </div>
                 <br>
-                <div class="container">
+                <!-- <div class="container">
                     <div class="row">
                         <div class="col-sm">
 
                         </div>
                         <div class="col-sm">
-                            <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Add Follow Up</button>
+                            <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Add Registration</button>
 
 
-                            <button type="submit" class="btn btn-primary submit_btn btn_align">Delete</button>
+                            <button type="submit" class="btn btn-primary submit_btn btn_align">Cancel</button>
 
                         </div>
                     </div>
                 </div>
-        </div>
+        </div> -->
+        <div class="col-sm">
+
+        <div class="row">
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:50%;">Add Registration</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                        </div>
+                    </div>
+                </div>
         </form>
     </div>
 </div>

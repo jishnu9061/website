@@ -13,19 +13,27 @@
 
 
 </head>
-
+<!-- <br> -->
 <body>
     <div class="container">
-        <h2 style="color: #070344;  text-align:center;"><b>Customer Registration</b></h2>
-        <div class="container mt-5">
+        <!-- <h2 style="color: #070344;  text-align:center;"><b>Customer Registration</b></h2> -->
+        <div>
+            <div class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Customer Registration</u></b></span></div><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+
+        </div>
+<br>
+        <div>
             <a href="{{url('add-registration')}}"><button type="button"
                     class="btn btn-primary complaint_btn btn ">Register Customer</button></a>
             <div id="mydatatable_filter" class="dataTables_filter">
                 <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
             </div>
         </div>
-        <hr class="mb-4">.
-        <h3 style="color: #070344;  text-align:center;"><b>Customer List</b></h3>
+       
         <br>
 
 
