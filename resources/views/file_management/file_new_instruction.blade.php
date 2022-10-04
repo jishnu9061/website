@@ -27,7 +27,7 @@
         
 
             <br>
-            <div style="margin-left: 120px;">
+            <div >
                 <input class="btn btn-primary" type="button" value="View File Statement">
                 <input class="btn btn-primary" type="button" value="View File Details">
                 <input class="btn btn-primary" type="button" value="Previous Instructions">
