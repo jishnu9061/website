@@ -5,7 +5,7 @@
 <div class="container">
 
 <head>
-    <title>Client</title>
+    <title>Company</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css"
@@ -15,6 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+   
 </head>
 <body>
 <div>
@@ -23,13 +24,10 @@
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous">
-     
-            </div>
+     </div>
             <br>
-        <br>
       
-  <!-- <a href="{{('add_company_details')}}"><button class="btn btn-primary"  style="background: #FFFBF4; color: #1D1D50;" >Add Company</button></a><br><br>
-  <hr class="mb-4">. -->
+ 
   <a href="{{('add_company_details')}}"><button class="btn btn-primary add-btn" style="width:20%;">Edit Company </button></a><br><br>
   
   <table class="table table-bordered" id="new-item">
