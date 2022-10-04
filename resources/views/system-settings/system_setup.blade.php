@@ -2,8 +2,9 @@
 @section('content')
 <!DOCTYPE html>
 <html lang="en">
+<div class="container">
 <head>
-<title>Company</title>
+
 <meta name="csrf-token" content="{{ csrf_token() }}">
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
             <link rel="stylesheet" type="text/css"
@@ -17,8 +18,14 @@
 
    </head>
    <body>
-    <button class="btn btn-primary"
-          style="width:100%;background-color:#d6ba8a;color:white;border:1px solid gold;font-width:150%"><span class="font-size-lg">System Setup</span></button><br><br><br>
+   <div>
+        
+        <button class="btn btn-primary"
+        style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>System Setup</u></b></button><br><br>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+    </div>
     <!-- <h2 class="text-center">Configuration Details</h2><br> -->
     <button class="btn btn-primary float-left"
                     style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Company Details</button><br><br><br>
@@ -82,6 +89,7 @@ style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Sy
 </form> -->
 
 </body>
+</div>
 </html>
   @endsection
       

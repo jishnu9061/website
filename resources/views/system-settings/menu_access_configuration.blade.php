@@ -2,6 +2,7 @@
 @extends('layouts.hmsmain')
 @section('content')
 <html>
+  
    <head>
    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -29,13 +30,16 @@ table{
  </style>
    </head>
    <body>
+   <div class="container">
     <!-- <h2 >Court List</h2><br>
     <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
     <h2 style="text-align:center; text-shadow: 2px 1px;">Menu Access Configuration</h2>
  <hr class="mb-4">.
+
 <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">WakiliCMS Menu Configuration</h3>
+<form>
 <div class="table-responsive"> 
-            <form>
+           
     <table class="table table-bordered" id="new-item">
     <thead>          
                         <tr>
@@ -148,23 +152,10 @@ table{
 
 
 </div>
+</div>
         </body>
+
 </html>
 
   @endsection
       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
