@@ -16,8 +16,8 @@
             <!-- <h2 style="text-align:center;">Search</h2>
             <hr class="mb-4">. -->
             <div>
-            <div class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Search</u></b></span></div><br>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Search</u></b></span></button><br>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous">
@@ -29,13 +29,13 @@
 
     <div>
         <br>
-        <div >
-            <input class="btn btn-primary" type="button" value="Today">
+        <div>
+            <input class="btn btn-primary" type="button" style="width:65px;" value="Today">
             <input class="btn btn-primary" type="button" value="This Week">
             <input class="btn btn-primary" type="button" value="Last Week">
             <input class="btn btn-primary" type="button" value="This Month">
-            <input class="btn btn-primary" type="button" value="Last Month">
-            <input class="btn btn-primary" type="button" value="This Quater">
+            <input class="btn btn-primary" type="button" style="width:12%;" value="Last Month">
+            <input class="btn btn-primary" type="button" style="width:12%;" value="This Quater ">
             <input class="btn btn-primary" type="button" value="Last Quater">
             <input class="btn btn-primary" type="button" value="This Year">
             <input class="btn btn-primary" type="button" value="Last Year">
