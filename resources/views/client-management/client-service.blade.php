@@ -16,8 +16,8 @@
 
     <body>
         <div class="container">
-            <button class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Client Reception</u></b></span></button><br><br>
+            <div class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Client Reception</u></b></span></div><br><br>
             <a href="{{ 'add-service' }}"><button class="btn btn-primary add-btn" style="width:21%">New Client
                     Service</button></a>
             <div id="mydatatable_filter" class="dataTables_filter">

@@ -9,7 +9,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 
-{{-- <div class="spacer" style="height:40px;margin-top: 30px;"> --}}
 
 
 
@@ -17,9 +16,10 @@
 
 <body>
     <div class="container">
-        <button class="btn btn-primary"
-            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Client Pickup Reception</u></b></button><br>
-        <div class="container mt-5">
+        <div class="btn btn-primary"
+            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Client Pickup Reception</u></b></div><br>
+        <div>
+            <br>
             <a href="{{url('add-pickup')}}"><button class="btn btn-primary add-btn" style="width:20%">New Client
                     Pickup</button></a>
             <div id="mydatatable_filter" class="dataTables_filter">
