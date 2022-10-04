@@ -47,20 +47,15 @@
                 <table class="table table-bordered" id="new-item">
                     <thead>
                         <tr>
-                          
-                            <th class="text-center">Execute</th>
-                            <th class="text-center">ID</th>
-                            <th class="text-center">Post Date</th>
-                            <th class="text-center">Sender</th>
-                            <th class="text-center">Receiver</th>
-                            <th class="text-center">Details</th>
-                            <th class="text-center">Amount</th>
-                            <th class="text-center">Checked By</th>
-                            <th class="text-center">Accepted By</th>
-                            <th class="text-center">Completed By</th>
-                            <th class="text-center">Declined By</th>
-                            <th class="text-center">Faild By</th>
-                            <th class="text-center">TAT DATE</th>
+                        <th class="text-center">No</th>
+                            <th class="text-center">File No</th>
+                            <th class="text-center">Client</th>
+                            <th class="text-center">FileName</th>
+                            <th class="text-center">Date</br>Opened</th>
+                            <th class="text-center">Responsible</br>Advocate</th>
+                            <th class="text-center">Most</br>Recent</br>Progress</th>
+                            <th class="text-center">Date</br>Closed</th>
+                            <th class="text-center">File&Fee</br>Balances</th>
                             <th class="text-center">Status</th>
                             <th class="text-center">Action</th>
                         </tr>
