@@ -30,11 +30,18 @@
           </style>
    </head>
    <body>
-    <!-- <h2 >Court List</h2><br>
-    <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Manage User Accounts </h2>
-    <a href="{{('reg_new_user')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Register New User</button></a>
-    <hr class="mb-4">.
+ <div>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Manage User Accounts</u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+     </div>
+            <br>
+            <br>
+    <a href="{{('reg_new_user')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Register New User</button></a> <br>
+            <br>
+    
 
 
     <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">List Of System Users</h3>
@@ -72,25 +79,16 @@
                         <td class="text-center"style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center"style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center"style="color:rgb(13, 1, 56);">
-                        <!-- <td  class="text-center">
-                            <select name="" id=""> <option value=""> <a href="">Action</a> </option> 
-                           <option value=""> <a href="user_edit">Edit</a> </option>
-                           <option value=""> <a href="user_view">View</a> </option>
-                           <option value=""> <a href="user_attachment">Attachment</a> </option>
-                           <option value=""> <a href="user_comments">Comments</a> </option>
-                        </select>
-                            </td> -->
-
-
-                        <div class="dropdown">
+                      <div class="dropdown">
                             <button style="background-color:#FFFBF4;"class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                Action
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a href="user_edit" class="dropdown-item" >Edit</a>
-                                <a href="user_view" class="dropdown-item" >View</a>
+                                <!-- <a href="user_view" class="dropdown-item" >View</a> -->
                                 <a href="user_attachments"class="dropdown-item" >Attachment</a>
                                 <a href="user_comments" class="dropdown-item" >Comments</a>
+                              
                              
                             </div>
                         </div> 
