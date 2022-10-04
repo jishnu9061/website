@@ -27,12 +27,12 @@
          }
          
          
-         h3
+         h6
         {
             font-size:small;
             font-weight:bold;
              color:white;
-             background-color:rgb(13, 1, 56);
+             background-color:#d6ba8a;
              padding:10px;
             }
      
@@ -40,7 +40,7 @@
                 margin-left:4px;
             }
             table{
-                background-color:#f0e7ce; 
+                
                 border:hidden;
                 font-size:small;
                 color:black;
@@ -55,14 +55,19 @@
    </head>
    <body>
 
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Configuration Details</h2>
-      
-  <hr class="mb-4">.
+   <div>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Configuration Details</u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+     </div>
+            <br> <br>
   
     <div class="container">
         <div class="row">
             <div class="col-sm">
-                <h3> Appearences:</h3>
+                <h6> Appearences:</h6>
                 <table class="table">
                     <tbody>
                         <tr>
@@ -128,8 +133,14 @@
         </tbody>
     </table>
 </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+  <div class="row">
 <div class="col-sm">
-     <h3>Client Portal:</h3>
+     <h6>Client Portal:</h6>
       <table class="table">
         <tbody>
           
@@ -220,12 +231,9 @@
 <br>
 <br>
 <br>        
-<br>
-<br>
-
 <div class="row">
     <div class="col-sm">
-     <h3>Mail Configurations:</h3>
+     <h6>Mail Configurations:</h6>
      <table class="table">
         <tbody>
           
@@ -270,29 +278,23 @@
         </tbody>
       </table>
         </div>
-      <br>
+        </div>
+</div>
+     <div class="row">
+         <div class="col-sm">
 
-     
-      
-    <div class="col-sm">
-     <h3>Invoice:</h3>
-      <table class="table">
-        <tbody>
-          
-       
-    </tbody>
-      </table> 
+                        </div>
+                        <div class="col-sm">
 
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                        </div>
+                    </div>>
         </div>
-        </div>
-        
-        <input  type="submit"value="Update" name="Submit"style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105); ">
-  
-  <input type="button"value="Cancel" name="cancel"style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105); ">
-        </div>
-        <!-- <form>
- <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
-</form> -->
+    
         </body>
 </html>
   @endsection
@@ -309,115 +311,6 @@
 
 
 
-        <!--<div class="col-sm">
-    <h3>Client Portal:</h3>
-    <label for="cp_logo"style="color:black;margin-left:2px;font-size:x-small; width:200px;">Client Portal Logo Area Background Color:</label>
-    <input type="text"  id="cplogo" name="cplogo"value=""style="width:150px;height:20px;">
-    
-    <label for="cp_header"style="color:black;margin-left:2px;font-size:x-small; width:200px;">Client Portal Header Background Color:</label>
-    <input type="text"  id="cpheader" name="cpheader"value=""style="width:150px;height:20px;">
-    
-    <label for="file_process"style="color:black;margin-left:2px;font-size:x-small; width:200px;">Show File Process (Client Portal):</label>
-    <select style="width:150px;height:20px;color:black;font-size:x-small;"type="text" value="" id="fileprocess" name="fileprocess">
-    <option>Select</option>
-    <option>Yes</option>
-    <option>No</option>
-    </select>
-
-    <label for="invoices"style="color:black;margin-left:2px;font-size:x-small; width:200px;">Show Invoices (Client Portal):</label>
-    <select style="width:150px;height:20px;color:black;font-size:x-small;"type="text" value="" id="invoices" name="invoices">
-    <option>Select</option>
-    <option>Yes</option>
-    <option>No</option>
-    </select>
-
-    <label for="payments"style="color:black;;margin-left:2px;font-size:x-small; width:200px;">Show Payments (Client Portal):</label>
-    <select style="width:150px;height:20px;color:black;font-size:x-small;"type="text" value="" id="payments" name="payments">
-    <option>Select</option>
-    <option>Yes</option>
-    <option>No</option>
-    </select>
-    
-    <label for="documents"style="color:black;margin-left:2px;font-size:x-small; width:200px;">Show Documents (Client Portal):</label>
-    <select style="width:150px;height:20px;color:black;font-size:x-small;"type="text" value="" id="documents" name="documents">
-    <option>Select</option>
-    <option>Yes</option>
-    <option>No</option>
-    </select>
-    
-    <label for="file_progress"style="color:black;margin-left:2px;font-size:x-small; width:200px;">Approve File Progress for Client Portal:</label>
-    <select style="width:150px;height:20px;color:black;font-size:x-small;"type="text" value="" id="fprogress" name="fprogress">
-    <option>Select</option>
-    <option>Yes</option>
-    <option>No</option>
-    </select>
-
-    <label for="other_associate"style="color:black;margin-left:2px;font-size:x-small; width:200px;">Show Other Associate Coloumn:</label>
-    <select style="width:150px;height:20px;color:black;font-size:x-small;"type="text" value="" id="otherassociate" name="otherassociat">
-    <option>Select</option>
-    <option>Yes</option>
-    <option>No</option>
-    </select>
-</div> 
-
-   <div class="col-sm">
-    <h3>Mail Configuration:</h3>
-    
-    <label for="mail_portal"style="color:black;margin-left:2px;font-size:x-small; width:150px;">Mail Protocol:</label>
-    <select style="width:200px;height:20px;color:black;font-size:x-small;"type="text" value="" id="mportal" name="mportal">
-    <option>Select</option>
-     <option>STMP</option>
-     </select>
-
-     <label for="server_address"style="color:black;margin-left:2px;font-size:x-small; width:150px;">SMPT Server Address:</label>
-     <input type="email"  id="seraddress" name="seraddres"value=""style="width:200px;height:20px;">
-        
-     <label for="port_number"style="color:black;margin-left:2px;font-size:x-small; width:150px;">SMPT Port Number:</label>
-     <input type="number"  id="portnum" name="portnum"value=""style="width:200px;height:20px;">
-     
-     <label for="authentication"style="color:black;margin-left:2px;font-size:x-small; width:150px;">STMP Authentication:</label>
-     <select style="width:200px;height:20px;color:black;font-size:x-small;"type="text" value="" id="authentication" name="authentication">
-     <option>Select</option>
-     <option>True</option>
-    </select>
-    
-    <label for="Secure"style="color:black;margin-left:2px;font-size:x-small; width:150px;">SMTP Secure:</label>
-    <select style="width:200px;height:20px;color:black;font-size:x-small;"type="text" value="" id="secure" name="secure">
-    <option>Select</option>
-    <option>TSL</option>
-</select>
-</div> 
-  </div>
-
-  <div class="row">
-  <div class="col-sm">
-    <h3>Mail Configuration:</h3>
-    
-    <label for="mail_portal"style="color:black;margin-left:2px;font-size:x-small; width:150px;">Mail Protocol:</label>
-    <select style="width:200px;height:20px;color:black;font-size:x-small;"type="text" value="" id="mportal" name="mportal">
-    <option>Select</option>
-     <option>STMP</option>
-     </select>
-
-     <label for="server_address"style="color:black;margin-left:2px;font-size:x-small; width:150px;">SMPT Server Address:</label>
-     <input type="email"  id="seraddress" name="seraddres"value=""style="width:200px;height:20px;">
-        
-     <label for="port_number"style="color:black;margin-left:2px;font-size:x-small; width:150px;">SMPT Port Number:</label>
-     <input type="number"  id="portnum" name="portnum"value=""style="width:200px;height:20px;">
-     
-     <label for="authentication"style="color:black;margin-left:2px;font-size:x-small; width:150px;">STMP Authentication:</label>
-     <select style="width:200px;height:20px;color:black;font-size:x-small;"type="text" value="" id="authentication" name="authentication">
-     <option>Select</option>
-     <option>True</option>
-    </select>
-    
-    <label for="Secure"style="color:black;margin-left:2px;font-size:x-small; width:150px;">SMTP Secure:</label>
-    <select style="width:200px;height:20px;color:black;font-size:x-small;"type="text" value="" id="secure" name="secure">
-    <option>Select</option>
-    <option>TSL</option>
-</select>
-</div> 
-  </div> -->
     
 
 

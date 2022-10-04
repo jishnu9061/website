@@ -1,6 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
 <html>
+<div class="container">
     <head>
      
       <meta charset="utf-8">
@@ -15,71 +16,21 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-<style>
-     body
-        {
-      
-          /* font-family:  Arial, Helvetica, sans-serif; */
-          margin-left:10px;
-          margin-right:10px;
-        }
-        a.btn.btn-primary
-        {
-          background-color:rgb(29, 2, 129);
-            color: rgb(238, 196, 105)
-            margin-top:30px;
-            margin-left:25px;
-            border: 1px solid rgb(240, 205, 10);
-            border-collapse: collapse;
-    
-        }
-        /* h2
-    {
-  
-    font-size:large;
-    font-weight:bold;
-    color:rgb(13, 1, 56); 
-    background-color:rgb(177, 127, 62);
-    padding:15px;
-    
-    } */
-        p{
-          margin-left:25px;
-        }
-        table {
-            /* font-family: arial, sans-serif; */
-            border-collapse: collapse;
-            width: 95%;
-            margin-left:25px;
-     
-            
-        }
-        td, th {
-            border: 1px solid rgb(240, 205, 10);
-            text-align: left;
-            padding: 8px;
-         }
-        th{
-             background-color:rgb(177, 127, 62);
-             color:rgb(13, 1, 56);
-         }
-         td{
-            color:rgb(13, 1, 56);
-         }
 
-        
-       
-</style>
     </head>
     <body>
   
-        <!-- <h2 >Company Branch</h2> -->
-        <h2 style="text-align:center; text-shadow: 2px 1px;">Company Branch</h2>
-        <a href="{{('add_company_branch')}}"><button class="btn btn-primary add-btn">Add Branch </button></a>
-  <hr class="mb-4">.
+    <div>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Company Branch</u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+     </div>
+            <br>
 
-    <!-- <a href="{{url('add_company_branch')}}"  class="btn btn-primary"style="color:rgb(238, 196, 105);background-color:rgb(29, 2, 129);" >Add Branch</a><br><br> -->
-    <p>Total Result: 2</p>
+        <a href="{{('add_company_branch')}}"><button class="btn btn-primary add-btn">Add Branch </button></a><br><br>
+
     <table class="table table-bordered" id="new-item">
    <thead>
   <tr>
