@@ -32,8 +32,8 @@
         <br>
 
         <div class="container-fluid">
-            <button class="btn btn-primary float-left"
-                style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Maintenance</button><br><br><br>
+            <div class="btn btn-primary float-left"
+                style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Maintenance</div><br><br><br>
             <div class="row sm">
                 <div class="col-sm-4 "> <a href="{{ url('file-list') }}"><img class="logo_size" src="assets\image\Manage file.png"
                             alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn">Manage
@@ -46,9 +46,9 @@
                             class="btn btn-primary btn_align_btn">File Archive</button></a></div>
             </div>
             <br>
-            <button class="btn btn-primary float-left"
+            <div class="btn btn-primary float-left"
                 style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">File Status
-                Reports</button><br><br><br>
+                Reports</div><br><br><br>
             <div class="row sm">
                 <div class="col-sm-4 "> <a href="{{ url('file-list-progress-report') }}"><img class="logo_size"
                             src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
@@ -70,8 +70,8 @@
                             class="btn btn-primary btn_align_btn">Monthly Staff Status Report</button></a></div>
             </div>
             <br>
-            <button class="btn btn-primary float-left"
-                style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Notes</button><br><br><br>
+            <div class="btn btn-primary float-left"
+                style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Notes</div><br><br><br>
             <div class="row sm">
                 <div class="col-sm-4"> <a href="{{ url('diary-management') }}"><img class="logo_size"
                             src="assets\image\Diary management.png" alt=""><button type="button" style="width:70%;"
@@ -88,8 +88,8 @@
             </div>
             <div>
                 <br>
-                <button class="btn btn-primary float-left"
-                    style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Instructions</button><br><br><br>
+                <div class="btn btn-primary float-left"
+                    style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Instructions</div><br><br><br>
                 <div class="row sm">
                     <div class="col-sm-4"> <a href="{{ url('file_instruction') }}"><img class="logo_size"
                                 src="assets\image\File instruction.png" alt=""><button type="button" style="width:70%;"
@@ -102,9 +102,9 @@
                                 class="btn btn-primary btn_align_btn">Instructions Report</button></a></div>
                 </div>
                 <br>
-                <button class="btn btn-primary float-left"
+                <div class="btn btn-primary float-left"
                     style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">File
-                    Reports</button><br><br><br>
+                    Reports</div><br><br><br>
                 <div class="row sm">
                     <div class="col-sm-4"> <a href="{{ url('file-report') }}"><img class="logo_size"
                                 src="assets\image\file report.png" alt=""><button type="button" style="width:70%;"
@@ -130,9 +130,9 @@
 
                 </div>
                 <br>
-                <button class="btn btn-primary float-left"
+                <div class="btn btn-primary float-left"
                     style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Add
-                    Ons</button><br><br><br>
+                    Ons</div><br><br><br>
                 <div class="row sm">
                     <div class="col-sm-4"> <a href="{{ url('Safe_management') }}"><img class="logo_size"
                                 src="assets\image\Safe management.png" alt=""><button type="button" style="width:70%;"
