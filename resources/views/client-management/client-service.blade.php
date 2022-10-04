@@ -46,12 +46,12 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr id="data">
+                            <tr id="data" style="width:100%;">
                                 <td class="text-center"></td>
                                 <td class="text-center" id="medicine_name_1"></td>
                                 <td class="text-center" id="medicine_name_1"></td>
                                 <td class="text-center" id="medicine_name_1"></td>
-                                <td class="text-center" id="medicine_name_1"></td>
+                                <td style="width:30%"class="text-center" id="medicine_name_1"></td>
                                 <td style="width:15%" class="text-center" id="medicine_name_1"></td>
                                 <td class="text-center" id="medicine_name_1"></td>
                                 <td class="text-center" id="medicine_name_1"></td>
