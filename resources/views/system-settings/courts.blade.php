@@ -40,6 +40,7 @@ table{
                 crossorigin="anonymous">
      </div>
             <br>
+            <br>
         <a href="{{('add_court')}}"><button class="btn btn-primary add-btn">Add Court</button></a>
         <a href="{{('add_court_category')}}"><button class="btn btn-primary add-btn">Add New Court Category</button></a><br><br>
 
