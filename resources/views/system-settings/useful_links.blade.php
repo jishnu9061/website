@@ -35,7 +35,7 @@ table{
     </form>
     <!-- <h2 >Court List</h2><br>
     <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Useful Links</h2>
+    <h2 style="text-align:center; text-shadow: 2px 1px;">Useful Link</h2>
        
         <hr class="mb-4">.
         
