@@ -24,8 +24,8 @@
     <div class="container">
         <!-- <h3 class="text-center" style="color: #070344;"><b>File List</b></h3> -->
         <div>
-            <button class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>File List</u></b></span></button><br>
+            <div class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>File List</u></b></span></div><br>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous">
@@ -47,15 +47,20 @@
                 <table class="table table-bordered" id="new-item">
                     <thead>
                         <tr>
-                            <th class="text-center">No</th>
-                            <th class="text-center">File No</th>
-                            <th class="text-center">Client</th>
-                            <th class="text-center">FileName</th>
-                            <th class="text-center">Date</br>Opened</th>
-                            <th class="text-center">Responsible</br>Advocate</th>
-                            <th class="text-center">Most</br>Recent</br>Progress</th>
-                            <th class="text-center">Date</br>Closed</th>
-                            <th class="text-center">File&Fee</br>Balances</th>
+                          
+                            <th class="text-center">Execute</th>
+                            <th class="text-center">ID</th>
+                            <th class="text-center">Post Date</th>
+                            <th class="text-center">Sender</th>
+                            <th class="text-center">Receiver</th>
+                            <th class="text-center">Details</th>
+                            <th class="text-center">Amount</th>
+                            <th class="text-center">Checked By</th>
+                            <th class="text-center">Accepted By</th>
+                            <th class="text-center">Completed By</th>
+                            <th class="text-center">Declined By</th>
+                            <th class="text-center">Faild By</th>
+                            <th class="text-center">TAT DATE</th>
                             <th class="text-center">Status</th>
                             <th class="text-center">Action</th>
                         </tr>
