@@ -30,17 +30,29 @@ table{
  </style>
    </head>
    <body>
+    <div>
    <div class="container">
     <!-- <h2 >Court List</h2><br>
     <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Menu Access Configuration</h2>
- <hr class="mb-4">.
+    <!-- <h2 style="text-align:center; text-shadow: 2px 1px;">Menu Access Configuration</h2>
+ <hr class="mb-4">. -->
+ <div>
+            <div class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Menu Access Configuration</u></b></span></div><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+
+        
+            </div>
+            <br>
 
 <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">WakiliCMS Menu Configuration</h3>
+<br>
 <form>
 <div class="table-responsive"> 
            
-    <table class="table table-bordered" id="new-item">
+  <table class="table table-bordered" id="new-item">
     <thead>          
                         <tr>
                         <th class="text-center" >*</th>
@@ -69,32 +81,32 @@ table{
                 <tbody>
             
                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                     <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
+                        <td  class="text-center" >1</td>
+                        <td class="text-center" ></td>
+                        <td  class="text-center" ></td>
+                        <td class="text-center" ></td>
+                        <td  class="text-center" ></td>
+                        <td class="text-center" ></td>
+                        <td  class="text-center"></td>
+                        <td class="text-center" ></td>
+                        <td  class="text-center" ></td>
+                        <td class="text-center" ></td>
+                        <td  class="text-center" ></td>
+                        <td class="text-center" ></td>
+                        <td  class="text-center" ></td>
+                        <td class="text-center"></td>
+                     <td  class="text-center" ></td>
+                        <td class="text-center" ></td>
+                        <td  class="text-center"></td>
+                        <td class="text-center" ></td>
                         </tr>
                    </tbody>  
                     </table>
-                    <input type="submit"value="Update" name="submit"style="background-color:rgb(13, 1, 56);color: white;margin-left:50%;"> 
+                    <!-- <input type="submit"value="Update" name="submit"style="background-color:rgb(13, 1, 56);color: white;margin-left:50%;">  -->
                 </form><br>
                
                 <form>
-    <table class="table table-bordered" id="new-item">
+    <!-- <table class="table table-bordered" id="new-item">
 
     <thead>          
              <tr>
@@ -148,14 +160,19 @@ table{
                    </tbody>  
                     </table>
                     <input type="submit"value="Update" name="submit"style="background-color:rgb(13, 1, 56);color: white;margin-left:50%;"> 
-                </form>
+                </form> -->
 
 
 </div>
+<br>
+<input type="submit"value="Update" name="submit" class="btn btn-primary float:right;" style="background-color:rgb(13, 1, 56);color: white;margin-left:90%;"> 
+
 </div>
-        </body>
+<br>
+</div>  
+</body>
 
 </html>
-
+<br>
   @endsection
       
