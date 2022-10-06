@@ -32,66 +32,67 @@
 {
     background-color:rgb(198, 195, 211);
 }   */
-
     </style>
 </head>
 
 <body>
     <!-- <h2 >Court List</h2><br>
     <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">View Roles per User </h2>
+    <!-- <h2 style="text-align:center; text-shadow: 2px 1px;">View Roles per User </h2> -->
     <!-- <a href="{{('add_new_user_grp')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add New User Group</button></a> -->
-    <hr class="mb-4">
 
-          </style>
-   </head>
-   <body>
-   <div>
+
+    </style>
+    </head>
+
+    <body>
+        <div>
             <button class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>View Roles per User</u></b></span></button><br>
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>View
+                        Roles per User</u></b></span></button><br>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous">
-     </div>
-            <br>
-            <br>
-  
+        </div>
+        <hr class="mb-4">
+        <br>
+        <br>
 
 
 
-    <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Roles per User</h3>
-    <div class="table-responsive">
-        <table class="table table-bordered" id="new-item">
 
-            <thead>
+        <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Roles per User</h3>
+        <div class="table-responsive">
+            <table class="table table-bordered" id="new-item">
 
-                <tr>
-                    <th class="text-center">User ID</th>
-                    <th class="text-center">Full Name</th>
-                    <th class="text-center">User Group</th>
-                    <th class="text-center">User Roles</th>
-                    <th class="text-center">Edit</th>
+                <thead>
 
-                </tr>
-            </thead>
-            <tbody>
+                    <tr>
+                        <th class="text-center">User ID</th>
+                        <th class="text-center">Full Name</th>
+                        <th class="text-center">User Group</th>
+                        <th class="text-center">User Roles</th>
+                        <th class="text-center">Edit</th>
 
-                <tr>
-                    <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                    <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                    <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                    <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                    <td><a href="{{url('edit_view_roles')}}"><i style="color:black;" class="fa fa-edit"
-                                aria-hidden="true"></i></td>
+                    </tr>
+                </thead>
+                <tbody>
 
-
-                </tr>
-            </tbody>
+                    <tr>
+                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
+                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
+                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
+                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
+                        <td><a href="{{url('edit_view_roles')}}"><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td>
 
 
-        </table><br>
-    </div>
-</body>
+                    </tr>
+                </tbody>
+
+
+            </table><br>
+        </div>
+    </body>
 
 </html>
 

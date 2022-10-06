@@ -60,9 +60,8 @@ table{
                         <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
                         <td  class="text-center"style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('edit_user_roles')}}">Edit</a></td>
-                       
-                         <td class="text-center"><input type="checkbox"></td>
+                        <td><a href="{{url('edit_user_roles')}}"><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td>
+                        <td class="text-center"><input type="checkbox"></td>
                      </tr>
                      </tbody>
         
