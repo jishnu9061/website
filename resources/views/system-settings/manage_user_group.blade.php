@@ -42,10 +42,10 @@ table{
      <br>
      <br>
            
-    <a href="{{('add_new_user_grp')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add New User Group</button></a> <br>
+    <a href="{{('add_new_user_grp')}}"><button class="btn btn-primary"style="width:18%">Add New User Group</button></a> <br>
             <br>
    
-    <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">User Groups</h3>
+    <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;"><b>User Groups</b></h3>
     <div class="table-responsive">   
     <table class="table table-bordered" id="new-item">
       
@@ -71,7 +71,7 @@ table{
                         <td class="text-center"style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center"style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('edit_new_user_grp')}}">Edit</a></td>
+                        <td><a href="{{url('edit_new_user_grp')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td>
                          <td class="text-center"><input type="checkbox"></td>
                      </tr>
                      </tbody>

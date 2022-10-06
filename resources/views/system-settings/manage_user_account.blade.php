@@ -39,12 +39,12 @@
      </div>
             <br>
             <br>
-    <a href="{{('reg_new_user')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Register New User</button></a> <br>
+    <a href="{{('reg_new_user')}}"><button class="btn btn-primary add-btn" style="width=10%;height=100%;">Register New User</button></a> <br>
             <br>
     
 
 
-    <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">List Of System Users</h3>
+    <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;"><b>List Of System Users</b></h3>
     <div class="table-responsive">    
     <table class="table table-bordered" id="new-item">
       

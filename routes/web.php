@@ -1035,7 +1035,9 @@ Route::any('/new_Request_staff_item',"filemanagement@add_Request_staff_item_list
 
 Route::any('/Process_Request',"filemanagement@Process_Request_list")->name('Process_Request_list');
 
+Route::any('/edit_file_instruction',"filemanagement@edit_file_instruction_list")->name('Process_Request_list');
 
+Route::any('/edit_office_instruction',"filemanagement@edit_office_instruction_list")->name('edit_office_instruction_list');
 
 ?>
 

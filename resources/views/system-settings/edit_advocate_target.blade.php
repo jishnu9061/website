@@ -1,156 +1,257 @@
 @extends('layouts.hmsmain')
 @section('content')
-<html>
-   <head>
-   <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-    <style>
-         /* h2
-        {
-            font-size:large;
-            font-weight:bold;
-             color:rgb(13, 1, 56); 
-             background-color:rgb(177, 127, 62);
-             padding:15px;
-            } */
-         
+<div class="container">
+    <div class="">
 
-         table{
-              
-                border:hidden;
-                font-size:medium;
-                color:black;
-            
-            }
-           th,td,tr{
-            border:hidden;
-            color:black;
 
-           }
-         
-        </style>
-    </head>
-    <body>
-    <!-- <h2 >Add Court</h2><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Edit Advocate Target</h2>
-    <hr class="mb-4">.
-    <form>
-    <table class="table">
-    <tbody>
-                       
-                        <tr>
-                                <td style="width:30%">Advocate:</td>
-                                <td> 
-                                <select type="text" value="" id="" name="department"style="width:100%;color:rgb(13, 1, 56);background-color:white;">
-                                <option>--Select---</option>
-                                <option>Corrine Auma</option>
-                                <option>Gichui Kirogo</option>
-                                <option>Hillary Wamunyolo Casmir</option>
-                                <option>Princess Caroline</option>
-                          
-                            </select>
-                            </td>
+        <div>
+            <div class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>
+                        Edit Advocate Target</u></b></span></div><br><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
 
-                         <tr>
-                            <td style="width:30%">Year:</td>
-                            <td> 
-                                <select type="text" value="" id="" name="department"style="width:50%;color:rgb(13, 1, 56);background-color:white;">
-                                <option>--Select---</option>
-                                <option>2017</option>
-                                <option>2018</option>
-                                <option>2019</option>
-                                <option>2020</option>
-                                <option>2021</option>
-                                <option>2022</option>
-                                <option>2023</option>
-                                <option>2024</option>
-                                <option>2025</option>
-                                <option>2026</option>
-                            
-                            </select>
-                            </td>
-                         
-                         </tr>
-                        
-                        <tr>
-                            <td style="width:30%">January:</td>
-                            <td><input type="number"  id="" name="code"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
-
-                        </tr>
-                        <tr>
-                            <td style="width:30%">February:</td>
-                            <td><input type="number"  id="" name="code"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
-
-                        </tr>
-                        <tr>
-                            <td style="width:30%">March:</td>
-                            <td><input type="number"  id="" name="code"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
-
-                        </tr>
-                        <tr>
-                            <td style="width:30%">April:</td>
-                            <td><input type="number"  id="" name="code"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
-
-                        </tr>
-                        <tr>
-                            <td style="width:30%">May:</td>
-                            <td><input type="number"  id="" name="code"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
-
-                        </tr>
-                        <tr>
-                            <td style="width:30%">June:</td>
-                            <td><input type="number"  id="" name="code"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
-
-                        </tr>
-                        <tr>
-                            <td style="width:30%">July:</td>
-                            <td><input type="number"  id="" name="code"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
-
-                        </tr>
-                        <tr>
-                            <td style="width:30%">August:</td>
-                            <td><input type="number"  id="" name="code"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
-
-                        </tr>
-                        <tr>
-                            <td style="width:30%">September:</td>
-                            <td><input type="number"  id="" name="code"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
-
-                        </tr>
-                        <tr>
-                            <td style="width:30%">October:</td>
-                            <td><input type="number"  id="" name="code"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
-
-                        </tr>
-                        <tr>
-                            <td style="width:30%">November:</td>
-                            <td><input type="number"  id="" name="code"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
-
-                        </tr>
-                        <tr>
-                            <td style="width:30%">December:</td>
-                            <td><input type="number"  id="" name="code"value=""style="width:50%;color:rgb(13, 1, 56);background-color:white;"></td>
-
-                        </tr>
-                  
-            </table>
-            <div class="class"style="text-align:center;">
-    
-            <a href="something"><input type="submit"value="Save" name="submit"style="background-color:rgb(13, 1, 56);color: white; "> </a>
-            <input type="button"value="Close" name="close"style="background-color:red;color: white; ">
-
-            
+        </div>
     </div>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <form method="post" action="" id="form">
+                @csrf
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="mb-1">
+                            <label for="username">advocate</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                </div>
+                                <select name="code" id="cars">
+                                    <option>---select---</option>
+                                    <option>2017</option>
+                                    <option>2018</option>
+                                    <option>2019</option>
+                                    <option>2020</option>
+                                    <option>2021</option>
+                                    <option>2022</option>
+                                    <option>2023</option>
+                                    <option>2024</option>
+                                    <option>2025</option>
+                                    <option>2026</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="mb-1">
+                            <label for="username">Year</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                </div>
+                                <select name="code" id="cars">
+                                    <option>---select---</option>
+                                    <option>Alekeen W Benson</option>
+                                    <option>Corrine Auma</option>
+                                    <option>Gichui Kirogo</option>
+                                    <option>Hillary Wamunyolo Casmir</option>
+                                    <option>Princess Caroline</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">January</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="number" class="form-control" name="" id="username" value="" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">February</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="number" class="form-control" name="" id="username" value="" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">March</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="number" class="form-control" name="" id="username" value="" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">April</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="number" class="form-control" name="" id="username" value="" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">May</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="number" class="form-control" name="" id="username" value="" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">June</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="number" class="form-control" name="" id="username" value="" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">July</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="number" class="form-control" name="" id="username" value="" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">August</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="number" class="form-control" name="" id="username" value="" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">September</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="number" class="form-control" name="" id="username" value="" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">October</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="number" class="form-control" name="" id="username" value="" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">November</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="number" class="form-control" name="" id="username" value="" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">December</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="number" class="form-control" name="" id="username" value="" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="row">
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+                        <br>
+                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
+                    </div>
+                </div>
+        </div>
         </form>
-    <!-- <form>
- <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
-</form> -->
-            
-</body>
-</html>
+    </div>
+</div>
+</div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
+<script src="{{ url('assets/js') }}/jquery.min.js"></script>
+
 @endsection
