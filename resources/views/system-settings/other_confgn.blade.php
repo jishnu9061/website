@@ -2,6 +2,7 @@
 @section('content')
 <!DOCTYPE html>
 <html lang="en">
+  <div class="container">
 <head>
   <title>Company</title>
   <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -13,8 +14,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Other Configurations</h2>
-    <hr class="mb-4">.
+    
+    <div>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Other Configurations</u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+     </div>
+            <br>
     <style>
      
    
@@ -42,5 +50,6 @@
  <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
 </form> -->
 </body>
+</div>
 </html>
 @endsection
