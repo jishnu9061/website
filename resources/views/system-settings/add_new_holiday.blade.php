@@ -3,6 +3,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+<div class="container">
 <head>
     
 <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -26,10 +27,10 @@
           </div>
           <br>
           <form method="post" action="" id="form">  
-
+          @csrf
         <div class="row">
        
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label >Date:</label>
                             <div class="input-group">
@@ -41,7 +42,7 @@
                             </div>
                         </div>
                     </div>
-             <div class="col-md-4">
+             <div class="col-md-6">
                         <div class="mb-1">
                             <label>Day:</label>
                             <div class="input-group">
@@ -72,7 +73,7 @@
     <!-- <form>
  <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
 </form> -->
-   
+</div>
     
     </body>
 </html>

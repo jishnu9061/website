@@ -28,6 +28,7 @@
         crossorigin="anonymous">
     </div>
     <br>
+    <br>
     <div class="row">
         <div class="col-md-12">
             <form method="post" action="" id="form">  

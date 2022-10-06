@@ -110,7 +110,7 @@
                             <label for="username">Company Type</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <select name="type" id="type"style=width>
+                                <select name="type" id="type"style="width:100%;">
                                 <option>---Select--- </option>
                                 <option>Partnership</option>
                                 <option>Sole partership</option>
