@@ -44,15 +44,16 @@
                 crossorigin="anonymous">
      </div>
             <br>
-    <form> 
-    <table class="table">
-    <tbody>
-                       
-                        <tr>
-                                <td style="width:30%">Item Group:</td>
-                                <td> 
-                                    <select type="text" value="" id="" name="category"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
-                                    <option>Select</option>
+            <form method="post" action="" id="form">  
+       @csrf
+            <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                        <label >Item Group:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <select type="text" value="" id="" name="igroup"style="width:100%;">
+                                    <option>---Select---</option>
                                    
                     <option>01-Legal Fees</option>
                     <option>02-Vatable Disbursement(Telephone,Postage,Transport etc)</option>
@@ -61,35 +62,73 @@
                     <option>04-Non-Vatable Disbursement(Stamp Duty,Registration Fees etc)</option>
                     
                                 </select>
-                            </td>
-                         </tr>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label>Item Name:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="iname" id="" value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                        <label >Item Comments:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="icomments" id="" value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label>Item Short Name:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="ishortname" id="" value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>
+                    <div class="row">
+         <div class="col-sm">
 
+                        </div>
+                        <div class="col-sm">
 
-                         <tr>
-                            <td style="width:30%">Item Name:</td>
-                            <td><input type="text"  id="" name="name"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
-                        </tr>
-                        <tr>
-                            <td style="width:30%">Item Comments:</td>
-                            <td><input type="text"  id="" name="name"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
-                        </tr>
-                        <tr>
-                            <td style="width:30%">Item Short Name:</td>
-                            <td><input type="text"  id="" name="name"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
-                        </tr>
-            </table>
-            <div class="class"style="text-align:center;">
-    
-            <a href="something"><input type="submit"value="Update" name="submit"style="background-color:rgb(13, 1, 56);color: white; "> </a>
-            <input type="button"value="Close" name="close"style="background-color:red;color: white; ">
-
-            
-    </div>
-        </form>
-    <!-- <form>
- <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
-</form> -->
-            
-</body>
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+        </div>
+</form>
+        </body>
+</div>
 </html>
-@endsection
+  @endsection
+      
+
+ 
+    
