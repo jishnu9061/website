@@ -22,7 +22,7 @@
 
 
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
+        <div class="table-responsive"> 
             <table class="table table-bordered" id="new-item">
                 <thead>
                     <tr>
@@ -42,7 +42,7 @@
                     </tr>
                 </tbody>
             </table>
-
+</div>
 
            
         <br>

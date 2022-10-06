@@ -19,11 +19,11 @@
         <div class="btn btn-primary"
         style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Client Conversation</u></b></div><br><br>
         <div class="">
-            <a href="{{url('add-communication')}}"><button type="button" class="btn btn-primary complaint_btn"> Add
+            <a href="{{url('add-communication')}}"><button type="button" class="btn btn-primary complaint_btn" style="width:27%;"> Add
                     Communication</button></a>
         </div><br>
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
+        <div class="table-responsive">
             <table class="table table-bordered" id="new-item">
                 <thead>
                     <tr>
