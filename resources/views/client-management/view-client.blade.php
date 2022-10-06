@@ -19,6 +19,7 @@
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous">
         </div>
+        <div class="table-responsive"> 
     <table class="table table-hover" style="border: 1px solid">
 
         @csrf
@@ -74,6 +75,7 @@
 
         </tbody>
     </table>
+</div>
 </div>
 
 

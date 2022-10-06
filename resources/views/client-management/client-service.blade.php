@@ -27,7 +27,7 @@
 
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
+                <div class="table-responsive"> 
                     <table class="table table-responsive" id="new-item" style="width:100%">
                         <thead>
                             <tr>
@@ -63,6 +63,7 @@
                             </tr>
                         </tbody>
                     </table>
+</div>
 
 
                     <!-- The Modal -->
