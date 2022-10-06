@@ -350,6 +350,16 @@ public function Process_Request_list()
     return view('file_management.Process_Request');                                                             
 }
 
+public function edit_file_instruction_list()
+{
+    return view('file_management.edit_file_instruction');                                                             
+}
+
+public function edit_office_instruction_list()
+{
+    return view('file_management.edit_office_instruction');                                                             
+}
+
 }
 
 
