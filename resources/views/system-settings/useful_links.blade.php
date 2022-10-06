@@ -35,12 +35,21 @@ table{
     </form>
     <!-- <h2 >Court List</h2><br>
     <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Useful Link</h2>
+    <!-- <h2 style="text-align:center; text-shadow: 2px 1px;">Useful Link</h2>
        
-        <hr class="mb-4">.
+        <hr class="mb-4">. -->
+        <div>
+            <div class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Useful Link</u></b></span></div><br><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+
+        </div>
         
     <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Useful Links</h3>
     <!-- <div class="container"> -->
+      <br>
     <div class="table-responsive"> 
       <table class="table table-bordered" id="new-item">
                   <thead>
@@ -53,9 +62,9 @@ table{
 <thead>
     <tbody>
                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
+                        <td  class="text-center" ></td>
+                        <td  class="text-center" ></td>
+                        <td  class="text-center"></td>
                     </tr>
 
     </tbody>
