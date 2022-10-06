@@ -23,6 +23,7 @@
      </div>
             <br> <br>
        <form method="post" action="" id="form">  
+       @csrf
             <button class="btn btn-primary float-left"
                     style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Appearences:</button><br><br><br>
                     

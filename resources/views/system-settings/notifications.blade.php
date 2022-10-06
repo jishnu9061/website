@@ -63,7 +63,7 @@ table{
                     </table>
                     <br>
                     <div class="class"style="text-align:center;">
-                    <input type="submit"value="Update" name="submit"style="background-color:rgb(13, 1, 56);color: white; ">
+                    <button type="submit" class="btn btn-primary float:right;" Style="width:10%;">Update</button>
 </div > 
 </div >   
 </form>

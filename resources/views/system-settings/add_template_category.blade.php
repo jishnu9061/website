@@ -90,12 +90,4 @@
 </body>
 </html>
 
-
-
-
-
-
-
-
-
 @endsection
