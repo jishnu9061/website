@@ -37,8 +37,7 @@
 
             </div>
             <br>
-            <hr class="mb-4">.
-
+          
 
         </div>
     </div>
@@ -190,7 +189,7 @@
         
         <div class="col-md-2">
             <div class="mb-1">
-                <label for="username">Turn-Around Time(TAT)</label>
+                <label for="username">Turn-Around Time</label>
                 <div class="input-group">
                     <div class="input-group-prepend">
 
@@ -229,6 +228,8 @@
                 </div>
             </div>
         </div>
+</div>
+<div class="row">
         <div class="col-md-12">
             <div class="mb-1">
                 <label for="username">Details</label>
