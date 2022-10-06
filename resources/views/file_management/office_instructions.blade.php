@@ -24,10 +24,10 @@
     <div>
         
         <div class="btn btn-primary"
-        style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Office Instructions</u></b></div><br><br>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Office Instructions</u></b></div><br>
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-            crossorigin="anonymous">
+            crossorigin="anonymous"> -->
     </div>
      
         <br>
@@ -45,6 +45,7 @@
 
                 
             <br>
+            <div class="table-responsive">
             <table class="table table-bordered" id="new-item">
                     <thead>
                         <tr>
@@ -60,7 +61,7 @@
                             <!-- <th class="text-center">Completed By</th>
                             <th class="text-center">Declined By</th>
                             <th class="text-center">Faild By</th> -->
-                            <th class="text-center">TAT DATE</th>
+                            <th class="text-center">TAT Date</th>
                             <th class="text-center">Status</th>
                             <th class="text-center">Action</th>
                         </tr>
@@ -81,7 +82,7 @@
                             <td scope="row" class="text-center" id="medicine_name_1"></td>
                             <td scope="row" class="text-center" id="medicine_name_1"></td>
                             <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center"><a href=""><i style="color:black;" class="fa fa-edit"
+                            <td scope="row" class="text-center"><a href="edit_office_instruction"><i style="color:black;" class="fa fa-edit"
                                         aria-hidden="true"></i>
                                     <a onClick="return myFunction();" href="" style="color:black;"><i
                                             class="fas fa-trash-alt"></i></a></td>
