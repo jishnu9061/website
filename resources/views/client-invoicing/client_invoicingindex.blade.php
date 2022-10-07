@@ -29,26 +29,25 @@
     <!-- <h2 class="text-center">Configuration Details</h2><br> -->
     <div class="btn btn-primary float-left"
                     style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Billable Items</div><br><br><br>
-    <div class="container-fluid">
+   
   
   <div class="row sm">
     <div class="col-sm-4 " ><a href="{{url('capture_billable_items')}}"><img class="logo_size"src="assets\image\Company.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" > Capture Billable Item</button></a></div>
-    <div class="col-sm-4 " ><a href="{{url('')}}"><img class="logo_size"src="assets\image\Weekend and Holidays.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" >View Billable Item</button></a></div>
+    <div class="col-sm-4 " ><a href="{{url('view_bill')}}"><img class="logo_size"src="assets\image\Weekend and Holidays.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" >View Billable Item</button></a></div>
    
-</div>
+
 </div>
 <br>
 <div class="btn btn-primary float-left"
 style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Fee Notes & Credit</div><br><br><br>
-    <div class="container-fluid">
-  
+
   <div class="row sm">
-    <div class="col-sm-4 " ><a href="{{url('')}}"><img class="logo_size"src="assets\image\Manage User Accounts.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Fee Notes / DRN / Interim Fee Notes</button></a></div>
+    <div class="col-sm-4 " ><a href="{{url('fee_notes')}}"><img class="logo_size"src="assets\image\Manage User Accounts.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Fee Notes / DRN / Interim Fee Notes</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('')}}"><img class="logo_size"src="assets\image\Change user password.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" > Credit Notes</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('')}}"><img class="logo_size"src="assets\image\Manage user group.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Qutation / Perfoma Fee Notes</button></a></div>
     
     
-</div>
+
 </div>
 <br>
 <div class="btn btn-primary float-left"
@@ -66,7 +65,7 @@ style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Re
 
 
 
-    <div class="container-fluid">
+    
   
   <div class="row sm">
     <div class="col-sm-4 " ><a href="{{url('debtors_aging_report')}}"><img class="logo_size"src="assets\image\Menu access configuration.png" alt=""><button type="button"style="width:70%;" class="btn btn-primary btn_align_btn" >Debtors Aging Reports</button></a></div>
@@ -76,10 +75,10 @@ style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Re
     <div class="col-sm-4 " > <a href="{{url('fee_note_report')}}"><img class="logo_size"src="assets\image\Billable activity.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Outstanding Fee Note Report</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('other_reports')}}"><img class="logo_size"src="assets\image\Bank account detail.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Other Reports</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('quotation_item_report')}}"><img class="logo_size"src="assets\image\Billable activity.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Quotation Item Reportt</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('')}}"><img class="logo_size"src="assets\image\Bank account detail.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Fee Expected Per Advocate</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('fee_expected_advocate')}}"><img class="logo_size"src="assets\image\Bank account detail.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Fee Expected Per Advocate</button></a></div>
     
     
- </div>
+ 
 </div>
 
 

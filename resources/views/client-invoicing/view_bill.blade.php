@@ -19,7 +19,7 @@
         <div>
         <div>
             <div class="btn btn-primary"
-            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Capture Billable Items</u></b></div><br><br>
+            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>View Billable Items</u></b></div><br><br>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous">
@@ -27,8 +27,16 @@
         
 
             <br>
-            <div >
-                <input class="btn btn-primary" type="button" value="View File Details">
+            <div style="padding:1px;">
+                <input class="btn btn-primary" type="button" value="Today">
+                <input class="btn btn-primary" type="button" value="This Week">
+                <input class="btn btn-primary" type="button" value="Last week">
+                <input class="btn btn-primary" type="button" value="This Month">
+                <input class="btn btn-primary" type="button" value="Last Month">
+                <input class="btn btn-primary" type="button" value="This Quarter">
+                <input class="btn btn-primary" type="button" value="Last Quarter">
+                <input class="btn btn-primary" type="button" value="This Year">
+                <input class="btn btn-primary" type="button" value="Last Year">
                
 
             </div>
@@ -52,25 +60,7 @@
                 <div class="row">
 
 
-
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username"> Date</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="date" class="form-control" name="number" id="username" required>
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Number is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-md-6">
+                <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Client</label>
                             <div class="input-group">
@@ -83,16 +73,7 @@
                             </div>
                         </div>
                     </div>
-
-                    
-
-
-
-                </div>
-                <br>
-                <div class="row">
-
-                <div class="col-md-6">
+                <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">File</label>
                             <div class="input-group">
@@ -105,68 +86,12 @@
                             </div>
                         </div>
                     </div>
-
-
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Item Type</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-</div>
-                <div id="test" style="height:20px;"></div>
-        </div>
-    </div>
-
-
-
-    
-<div class="row">
-        <div class="col-md-12">
-            <div class="mb-1">
-                <label for="username">Details</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
-                    </div>
-                    <textarea class="form-control" id="form7Example7" rows="3"></textarea>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-    <br>
-
-    <div class="row">
-
-
-        <div class="col-md-6">
-            <div class="mb-1">
-                <label for="username">Currency To</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
-                    </div>
-                    <select name="country" id="cars">
-                        <option value="volvo">KES</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Amount</label>
+                            <label for="username">Transaction Period</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="name" value="" id="confirm_password">
+                                <input type="date" class="form-control" name="name" value="" id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -174,6 +99,10 @@
                         </div>
                     </div>
     </div>
+
+               
+                <br>
+               
 
 
 
@@ -202,7 +131,7 @@
                       <div class="col-sm">
                       </div>
                       <div class="col-sm">
-                        <button type="submit" class="btn btn-primary float:right" style="width:45%">Submit</button>
+                        <button type="submit" class="btn btn-primary float:right" style="width:45%">Save</button>
                         <button type="submit" class="btn btn-primary float:left"style="width:45%">Close</button>
                       </div>
                     </div>
