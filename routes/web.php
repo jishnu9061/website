@@ -1045,6 +1045,11 @@ Route::any('/edit_office_instruction',"filemanagement@edit_office_instruction_li
 Route::any('client_invoicingindex',"clientinvoicing@index")->name('client_invoicingindex');
 //vinu
 
+//anandhu
+Route::any('capture_billable_items',"clientinvoicing@billable_items")->name('billable_items');
+//anandhu
+
+
 //client invoicing
 
 ?>

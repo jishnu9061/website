@@ -33,9 +33,9 @@
 
             <div class="row sm">
 
-                <div class="col-sm-4 "><img class="logo_size" src="image\logo\Client list.png"
-                       alt="">
-                    <div class="dropdown">
+                <div class="col-sm-4 "><img class="logo_size" src="image\logo\Client list.png" alt="">
+                    <div class="dropdown" >
+                        
                         <button class="btn btn-primary btn_align_btn btn_align_client"
                             style=" width:70%; margin-top: -25px; margin-left: 60px    " type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

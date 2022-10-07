@@ -10,4 +10,10 @@ class clientinvoicing extends Controller
     {
         return view('client-invoicing.client_invoicingindex');
     }
+
+    public function billable_items()
+    {
+        return view('client-invoicing.capture_billable_items');
+    }
+
 }
