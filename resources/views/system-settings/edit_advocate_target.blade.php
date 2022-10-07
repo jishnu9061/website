@@ -20,7 +20,7 @@
             <form method="post" action="" id="form">
                 @csrf
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">advocate</label>
                             <div class="input-group">
@@ -43,7 +43,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Year</label>
                             <div class="input-group">
