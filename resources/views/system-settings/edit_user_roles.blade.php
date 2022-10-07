@@ -51,6 +51,7 @@
 
 
         </table>
+        <br>
         <div class="class" style="text-align:center;">
             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
             <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
