@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
 <html>
-
+<div class="container">
 <head>
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -120,6 +120,6 @@
     </div>
 
 </body>
-
+</div >
 </html>
 @endsection

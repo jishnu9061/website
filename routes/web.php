@@ -1039,11 +1039,20 @@ Route::any('/edit_file_instruction',"filemanagement@edit_file_instruction_list")
 
 Route::any('/edit_office_instruction',"filemanagement@edit_office_instruction_list")->name('edit_office_instruction_list');
 
+
+
 //client invoicing
 
-//vinu
+//Report
 Route::any('client_invoicingindex',"clientinvoicing@index")->name('client_invoicingindex');
-//vinu
+Route::any('debtors_aging_report',"clientinvoicing@deptorsaggingreport")->name('debtors_aging_report');
+Route::any('debtors_list',"clientinvoicing@deptorslist")->name('debtors_list');
+Route::any('fee_note_items_billed',"clientinvoicing@filenoteitembilled")->name('fee_note_items_billed');
+Route::any('fee_note_items_received',"clientinvoicing@filenoteitemreceived")->name('fee_note_items_received');
+Route::any('fee_note_report',"clientinvoicing@feenotereport")->name('fee_note_report');
+Route::any('other_reports',"clientinvoicing@otherreport")->name('other_reports');
+Route::any('quotation_item_report',"clientinvoicing@quotationitemreport")->name('quotation_item_report');
+//Report
 
 //anandhu
 Route::any('capture_billable_items',"clientinvoicing@billable_items")->name('billable_items');
@@ -1054,5 +1063,5 @@ Route::any('capture_billable_items',"clientinvoicing@billable_items")->name('bil
 
 ?>
 
-
+quotation_item_report
 

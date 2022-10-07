@@ -106,66 +106,31 @@ table{
                 </form><br>
                
                 <form>
-    <!-- <table class="table table-bordered" id="new-item">
-
-    <thead>          
-             <tr>
-                        <th class="text-center" >*</th>
-                        <th class="text-center" >Description</th>
-                        <th class="text-center" >ADM</th>
-                        <th class="text-center">PTN</th>
-                        <th class="text-center" >ADV</th>
-                        <th class="text-center" >ACC</th>
-                        <th class="text-center">BDM</th>
-                        <th class="text-center" >HRM</th>
-                        <th class="text-center">SEC</th>
-                        <th class="text-center" >PPL</th>
-                        <th class="text-center" >INT</th>
-                        <th class="text-center">CLK</th>
-                        <th class="text-center" >LA</th>
-                        <th class="text-center">SADV</th>
-                        <th class="text-center" >ASSADV</th>
-                        <th class="text-center" >RCPT</th>
-                        <th class="text-center">SPT</th>
-                        <th class="text-center" >PA</th>
-                        <th class="text-center">ICT</th>
-                        <th class="text-center" >OA</th>
-                       
-                 </tr>
-                </thead>
-                <tbody>
-                <td colspan="20"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Clent Management -> Clent Management ID 1:</td>
-                    <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                     <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        </tr>
-                   </tbody>  
-                    </table>
-                    <input type="submit"value="Update" name="submit"style="background-color:rgb(13, 1, 56);color: white;margin-left:50%;"> 
-                </form> -->
-
-
+ 
 </div>
-<br>
-<input type="submit"value="Update" name="submit" class="btn btn-primary float:right;" style="background-color:rgb(13, 1, 56);color: white;margin-left:90%;"> 
+
+<div class="row">
+         <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+                          
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
+                        
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+        </div>
 
 </div>
 <br>
