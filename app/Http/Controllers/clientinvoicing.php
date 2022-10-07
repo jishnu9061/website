@@ -76,10 +76,9 @@ class clientinvoicing extends Controller
         return view('client-invoicing.quotation_item_report');
     }
 
+   
 
-
-
-    // reshma
+// reshma
     public function fee_notes()
     {
         return view('client-invoicing.view_bill');

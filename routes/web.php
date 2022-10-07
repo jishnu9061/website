@@ -1085,5 +1085,3 @@ Route::any('view_bill',"clientinvoicing@view_bill_item")->name('view_bill_item')
 
 ?>
 
-
-
