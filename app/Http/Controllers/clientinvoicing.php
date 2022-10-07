@@ -11,12 +11,26 @@ class clientinvoicing extends Controller
         return view('client-invoicing.client_invoicingindex');
     }
 
-
+//mugu
     public function receiptReport()
     {
 
         return view('client-invoicing.receipt-report');
     }
+
+    public function reverseReport(){
+
+        return view('client-invoicing.reverse_receipt');
+
+    }
+
+    public function receiptReprint(){
+
+        return view('client-invoicing.receipt-reprint');
+
+    }
+
+//mugu
 
 
     public function billable_items()
