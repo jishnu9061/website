@@ -46,9 +46,31 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
-                                </select></br>
+                                <select type="text" value="" name="type"style="width:100%;">
+                            <option>--Select---</option>
+                                <option>Alekeen W Benson</option>
+                                <option>Cedric Opara</option>
+                                <option>Corrine Auma</option>
+                                <option>Evans Munene</option>
+                                <option>Florance Muthama</option>
+                                <option>George Njoroge</option>
+                                <option>Gichui Kirogo</option>
+                                <option>Hillary Wamunyolo Casmir</option>
+                                <option>Jackline Ogwemo</option>
+                                <option>John Wachira</option>
+                                <option>Jukius Mburu</option>
+                                <option>Kevin Kavila</option>
+                                <option>Martin Kyalo</option>
+                                <option>Mike Ogutu </option>
+                                <option>Owino PH Onyango</option>
+                                <option>Princess Caroline</option>
+                                <option>Sarah Gladys</option>
+                                <option>Thagichu Nyaga</option>
+                                <option>Wambua Musyoka</option>
+                          
+                         
+
+                        </select></br>
                                 
                             </div>
                         </div>
@@ -60,9 +82,21 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
-                                </select>
+                                <select type="text" value="" name="type"style="width:100%;">
+                            <option>---Select---</option>
+                            <option>KES</option>
+                            <option>USD</option>
+                            <option>EUR</option>
+                            <option>GBP</option>
+                            <option>AUD</option>
+                            <option>CAD</option>
+                            <option>SEK</option>
+                            <option>DKK</option>
+                            <option>JPY</option>
+                            <option>CHF</option>
+                            <option>HKD</option>
+                          
+                        </select>
                                
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.

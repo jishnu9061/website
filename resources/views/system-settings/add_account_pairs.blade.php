@@ -32,10 +32,22 @@
                                 <div class="input-group-prepend"></div>
                                 <select type="text" value="" id="" name="acnum">
                    <option>Choose an account...</option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
+                   <optgroup label="INCOME">
+        <option>Income from Legal Fees(1000)</option>
+      
+    <optgroup label="OTHER INCOME">
+        <option>Other Income(1100)</option>
+        <option>Other Income-Interest Earned (1103)</option>
+        <option>Other Income-Miscellaneous Income(1102)</option>
+        <option>Other Income-Vatable Disbursements (1101)</option>
+        <option>Other Income-Loan Administration Fee(1104)</option>
+    </optgroup>
+    <optgroup label="Expense">
+        <option>Agency Fees(2575)</option>
+        <option>Annual Subscriptions(2566)</option>
+        <option>Audit Fees(2511)</option>
+        <option>Bad Debit Expense(2512)</option>
+    </optgroup>
                     
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">

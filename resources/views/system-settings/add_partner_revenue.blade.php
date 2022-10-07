@@ -41,28 +41,39 @@
                 <div class="row">
                 <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Partner</label>
+                            <label for="username">Partner:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
-                                </select></br>
+                                <select type="text" value="" name="partner"style="width:100%;">
+                                <option>--Select---</option>
+                                <option>Princess Caroline</option>
+                       
+                        </select>
                                 
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Year</label>
+                            <label for="username">Year:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
-                                </select>
+                                <select type="year" value="" name="type"style="width:100%;">
+                            <option>---Select---</option>
+                            <option>2026</option>
+                            <option>2025</option>
+                            <option>2024</option>
+                            <option>2023</option>
+                            <option>2022</option>
+                            <option>2021</option>
+                            <option>2020</option>
+                            <option>2019</option>
+                            <option>2018</option>
+                            </select>
                                
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
@@ -74,7 +85,7 @@
 
         <div class="col-md-4">
             <div class="mb-1">
-                <label for="username">Percentage</label>
+                <label for="username">Percentage:</label>
                 <div class="input-group">
                     <div class="input-group-prepend">
 
