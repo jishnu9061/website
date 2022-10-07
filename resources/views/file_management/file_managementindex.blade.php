@@ -24,9 +24,9 @@
         <div class="btn btn-primary"
         style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;margin-left: -8px; ">
         <b><u>File Management Details</u></b></div><br><br>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-            crossorigin="anonymous">
+            crossorigin="anonymous"> -->
     </div>
 
         
@@ -34,7 +34,7 @@
 
         <div class="container-fluid">
             <div class="btn btn-primary float-left"
-                style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold; font-size:20px; margin-left: -30px;">Maintenance
+                style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold; font-size:15px; ">Maintenance
             </div><br><br><br>
             <div class="row sm">
                 <div class="col-sm-4 "> <a href="{{ url('file-list') }}"><img class="logo_size" src="assets\image\Manage file.png"
@@ -49,7 +49,7 @@
             </div>
             <br>
             <div class="btn btn-primary float-left"
-                style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold; font-size:20px; margin-left: -30px;">File Status
+                style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold; font-size:15px; ">File Status
                 Reports</div><br><br><br>
             <div class="row sm">
                 <div class="col-sm-4 "> <a href="{{ url('file-list-progress-report') }}"><img class="logo_size"
@@ -73,7 +73,7 @@
             </div>
             <br>
             <div class="btn btn-primary float-left"
-                style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold; font-size:20px; margin-left: -30px;">Notes</div><br><br><br>
+                style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold; font-size:15px; ">Notes</div><br><br><br>
             <div class="row sm">
                 <div class="col-sm-4"> <a href="{{ url('diary-management') }}"><img class="logo_size"
                             src="assets\image\Diary management.png" alt=""><button type="button" style="width:70%;"
@@ -91,7 +91,7 @@
             <div>
                 <br>
                 <div class="btn btn-primary float-left"
-                    style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold; font-size:20px; margin-left: -30px;">Instructions</div><br><br><br>
+                    style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold; font-size:15px; ">Instructions</div><br><br><br>
                 <div class="row sm">
                     <div class="col-sm-4"> <a href="{{ url('file_instruction') }}"><img class="logo_size"
                                 src="assets\image\File instruction.png" alt=""><button type="button" style="width:70%;"
@@ -105,7 +105,7 @@
                 </div>
                 <br>
                 <div class="btn btn-primary float-left"
-                    style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold; font-size:20px; margin-left: -30px;">File
+                    style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold; font-size:15px; ">File
                     Reports</div><br><br><br>
                 <div class="row sm">
                     <div class="col-sm-4"> <a href="{{ url('file-report') }}"><img class="logo_size"
@@ -133,7 +133,7 @@
                 </div>
                 <br>
                 <div class="btn btn-primary float-left"
-                    style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold; font-size:20px; margin-left: -30px;">Add
+                    style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold; font-size:15px; ">Add
                     Ons</div><br><br><br>
                 <div class="row sm">
                     <div class="col-sm-4"> <a href="{{ url('Safe_management') }}"><img class="logo_size"

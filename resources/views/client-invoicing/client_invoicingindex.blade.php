@@ -39,7 +39,7 @@
 </div>
 <br>
 <div class="btn btn-primary float-left"
-style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Free Notes,Credit Notes</div><br><br><br>
+style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Fee Notes & Credit</div><br><br><br>
     <div class="container-fluid">
   
   <div class="row sm">
