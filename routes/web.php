@@ -1056,10 +1056,12 @@ Route::any('fee_note_items_received',"clientinvoicing@filenoteitemreceived")->na
 Route::any('fee_note_report',"clientinvoicing@feenotereport")->name('fee_note_report');
 Route::any('other_reports',"clientinvoicing@otherreport")->name('other_reports');
 Route::any('quotation_item_report',"clientinvoicing@quotationitemreport")->name('quotation_item_report');
+Route::any('fee_expected_advocate',"clientinvoicing@feeexpectedadvocate")->name('fee_expected_advocate');
 //Report
 
 //anandhu
 Route::any('capture_billable_items',"clientinvoicing@billable_items")->name('billable_items');
+Route::any('view_bill',"clientinvoicing@view_bill_item")->name('view_bill_item');
 //anandhu
 
 
