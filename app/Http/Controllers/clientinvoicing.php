@@ -61,6 +61,11 @@ class clientinvoicing extends Controller
     {
         return view('client-invoicing.quotation_item_report');
     }
+    public function feenotes()
+    {
+        return view('client-invoicing.fee_notes');
+    }
+    
     
 
 }
