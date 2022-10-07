@@ -935,6 +935,8 @@ Route::any('corporate-list','ClientManagement@listCorporate')->name('corporate-l
 
 //client invoicing
 Route::any('receipt-report','clientinvoicing@receiptReport')->name('receipt-report');
+Route::any('reverse-receipt','clientinvoicing@reverseReport')->name('reverse-receipt');
+Route::any('receipt-reprint','clientinvoicing@receiptReprint')->name('receipt-reprint');
 //end client invoicing
 
 //mugunthan
