@@ -80,6 +80,8 @@
                     </tbody>
                 </table>
 
+</div></div>
+
 
                 <!-- The Modal -->
                 <div class="modal fade" id="editmed">

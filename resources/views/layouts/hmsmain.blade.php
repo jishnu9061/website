@@ -768,23 +768,12 @@ color: #1D1D50
                                 @php
                                     $hr = array("addallowance", "addstaffs", "staffs","loans","payslip","attendance","attendanceview","payslipbulk","generatepayslip","managestaff");
                                 @endphp
-                                <li class="sidebar-item  has-sub">
-                                    <a href="{{url('home')}}" class='sidebar-link'>
-                                        <i id="icon" class="fa fa-newspaper" style="font-weight: 400;"></i>
-                                            <span >Client Invoicing</span>
-                                    </a>
-                                    @if (in_array(request()->path(),$hr))
-                                        <ul class="submenu" style="display: block;">
-                                        @else
-                                            <ul class="submenu" style="display: none;">
-                                    @endif
-                                    <li class="submenu-item ">
-                                        <a href="{{url('addallowance')}}" class='sidebar-link'>
-                                            <span id="subm" >Settings</span>
+                              
+                                <li class="submenu-item has-sub " style="list-style:none;">
+                                        <a id="sblm" href="{{url('client_invoicingindex')}}" class='sidebar-link' >
+                                        <i  class="fa fa-newspaper" id="icon"></i>
+                                            <span > Client Invoicing</span>
                                         </a>
-                                    </li>
-                                   
-                                </ul>
                                 </li>
                             @endif
                     @if(Auth::user()->role == 'hospitaladmin')
