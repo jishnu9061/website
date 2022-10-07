@@ -25,7 +25,7 @@
 
 
         
-        <div class="container-fluid">
+       
 
         <div class="btn btn-primary float-left"
             style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;font-size:15px;">Client
@@ -89,7 +89,7 @@
                         href="{{url('Quotation')}}"><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn">
                             Customer Quotation</button></a></div>
             </div>
-        </div>
+        
 
     </body>
 </div>
