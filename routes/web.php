@@ -1054,6 +1054,11 @@ Route::any('other_reports',"clientinvoicing@otherreport")->name('other_reports')
 Route::any('quotation_item_report',"clientinvoicing@quotationitemreport")->name('quotation_item_report');
 //Report
 
+//anandhu
+Route::any('capture_billable_items',"clientinvoicing@billable_items")->name('billable_items');
+//anandhu
+
+
 //client invoicing
 
 ?>

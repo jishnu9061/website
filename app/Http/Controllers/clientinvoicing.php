@@ -12,7 +12,14 @@ class clientinvoicing extends Controller
     }
 
 
-    //Reports
+    public function billable_items()
+    {
+        return view('client-invoicing.capture_billable_items');
+    }
+
+
+
+    
     public function deptorsaggingreport()
     {
         return view('client-invoicing.debtors_aging_report');
@@ -47,5 +54,6 @@ class clientinvoicing extends Controller
     {
         return view('client-invoicing.quotation_item_report');
     }
-    //Reports
+    
+
 }

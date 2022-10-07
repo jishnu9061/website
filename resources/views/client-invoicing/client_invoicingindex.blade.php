@@ -32,8 +32,8 @@
     <div class="container-fluid">
   
   <div class="row sm">
-    <div class="col-sm-4 " ><a href="{{url('')}}"><img class="logo_size"src="assets\image\Company.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" > Capture Billable Item</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('')}}"><img class="logo_size"src="assets\image\Weekend and Holidays.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" >View Billable Item</button></a></div>
+    <div class="col-sm-4 " ><a href="{{url('capture_billable_items')}}"><img class="logo_size"src="assets\image\Company.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" > Capture Billable Item</button></a></div>
+    <div class="col-sm-4 " ><a href="{{url('')}}"><img class="logo_size"src="assets\image\Weekend and Holidays.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" >View Billable Item</button></a></div>
    
 </div>
 </div>
