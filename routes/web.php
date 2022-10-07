@@ -925,6 +925,10 @@ Route::any('add-corporate','ClientManagement@addCorporate')->name('add-corporate
 Route::any('corporate-list','ClientManagement@listCorporate')->name('corporate-list');
 //end corporate
 
+//client invoicing
+Route::any('receipt-report','clientinvoicing@receiptReport')->name('receipt-report');
+//end client invoicing
+
 //mugunthan
 
 
@@ -1054,6 +1058,11 @@ Route::any('other_reports',"clientinvoicing@otherreport")->name('other_reports')
 Route::any('quotation_item_report',"clientinvoicing@quotationitemreport")->name('quotation_item_report');
 Route::any('fee_expected_advocate',"clientinvoicing@feeexpectedadvocate")->name('fee_expected_advocate');
 //Report
+
+//anandhu
+Route::any('capture_billable_items',"clientinvoicing@billable_items")->name('billable_items');
+//anandhu
+
 
 //client invoicing
 

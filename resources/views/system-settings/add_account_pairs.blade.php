@@ -47,6 +47,11 @@
         <option>Annual Subscriptions(2566)</option>
         <option>Audit Fees(2511)</option>
         <option>Bad Debit Expense(2512)</option>
+        <option>Bank Charges(2513)</option>
+        <option>Book Keeping Costs(2553)</option>
+        <option>Business Development & Marketing(2514)</option>
+        <option>Business Trading Licence(2524)</option>
+        <option>Client Disbursements(2506)</option>
     </optgroup>
                     
                                 </select>
