@@ -1061,6 +1061,7 @@ Route::any('fee_expected_advocate',"clientinvoicing@feeexpectedadvocate")->name(
 
 //anandhu
 Route::any('capture_billable_items',"clientinvoicing@billable_items")->name('billable_items');
+Route::any('view_bill',"clientinvoicing@view_bill_item")->name('view_bill_item');
 //anandhu
 
 
