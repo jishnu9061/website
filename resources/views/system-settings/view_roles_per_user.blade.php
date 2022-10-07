@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
 <html>
-
+<div class="container">
 <head>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -35,15 +35,7 @@
     </style>
 </head>
 
-<body>
-    <!-- <h2 >Court List</h2><br>
-    <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
-    <!-- <h2 style="text-align:center; text-shadow: 2px 1px;">View Roles per User </h2> -->
-    <!-- <a href="{{('add_new_user_grp')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add New User Group</button></a> -->
 
-
-    </style>
-    </head>
 
     <body>
         <div>
@@ -54,7 +46,7 @@
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous">
         </div>
-        <hr class="mb-4">
+     
         <br>
         <br>
 
@@ -83,7 +75,7 @@
                         <td class="text-center" style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center" style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td><a href="{{url('edit_view_roles')}}"><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td>
+                        <td class="text-center"><a href="{{url('edit_view_roles')}}"><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td>
 
 
                     </tr>
@@ -93,7 +85,7 @@
             </table><br>
         </div>
     </body>
-
+</div>
 </html>
 
 @endsection

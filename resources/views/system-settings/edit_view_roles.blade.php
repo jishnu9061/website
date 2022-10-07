@@ -169,7 +169,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">user Group</label>
+                            <label for="username">User Group</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
@@ -217,11 +217,14 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <select name="" id="cars">
-                                    <option>---Select--- </option>
-                                    <option></option>
-                                    <option></option>
-                                </select>
+                                <select type="text" value="" name="type"style="width:100%;height:100%;">
+                        <option> ---Select--- </option>
+                            <option>Caroline Ratemo</option>
+                            <option>Petty Cash Account-Office</option>
+                            <option>Mpesa Cash Account-771804</option>
+                            <option>Office Mpesa A/C-0724708999</option>
+                            
+                        </select>
                             </div>
                         </div>
                     </div>
