@@ -47,5 +47,11 @@ class clientinvoicing extends Controller
     {
         return view('client-invoicing.quotation_item_report');
     }
+
+    
+    public function feeexpectedadvocate()
+    {
+        return view('client-invoicing.fee_expected_advocate');
+    }
     //Reports
 }
