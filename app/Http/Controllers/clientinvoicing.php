@@ -63,6 +63,15 @@ class clientinvoicing extends Controller
     }
     public function feenotes()
     {
+        return view('client-invoicing.view_bill');
+
+    }
+    public function feeexpectedadvocate()
+    {
+        return view('client-invoicing.fee_expected_advocate');
+    }
+
+    //Reports
         return view('client-invoicing.fee_notes');
     }
     
