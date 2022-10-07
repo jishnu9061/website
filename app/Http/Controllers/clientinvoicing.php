@@ -79,7 +79,7 @@ class clientinvoicing extends Controller
    
 
 // reshma
-    public function fee_notes()
+    public function view_bill_item()
     {
         return view('client-invoicing.view_bill');
 
@@ -89,8 +89,12 @@ class clientinvoicing extends Controller
         return view('client-invoicing.fee_expected_advocate');
     }
    
+    public function feenote()
+    {
+        return view('client-invoicing.fee_note');
     }
-    public function newfee_note()
+
+    public function newfeenote()
     {
         return view('client-invoicing.new_fee_note');
     }
