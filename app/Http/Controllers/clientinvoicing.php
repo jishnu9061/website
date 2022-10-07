@@ -71,9 +71,7 @@ class clientinvoicing extends Controller
         return view('client-invoicing.fee_expected_advocate');
     }
 
-    //Reports
-        return view('client-invoicing.fee_notes');
-    }
+
     
     
 
