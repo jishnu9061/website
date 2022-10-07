@@ -69,13 +69,13 @@ style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Re
     <div class="container-fluid">
   
   <div class="row sm">
-    <div class="col-sm-4 " ><a href="{{url('')}}"><img class="logo_size"src="assets\image\Menu access configuration.png" alt=""><button type="button"style="width:70%;" class="btn btn-primary btn_align_btn" >Debtors Aging Reports</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('')}}"><img class="logo_size"src="assets\image\Useful links.png" alt=""><button type="button"style="width:70%;" class="btn btn-primary btn_align_btn" >Debtors List</button></a></div>
-    <div class="col-sm-4 " ><a href="{{url('')}}"><img class="logo_size"src="assets\image\Database backup.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Fee Note Item Billed</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('')}}"><img class="logo_size"src="assets\image\Transport zones.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Fee Note Item Received</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('')}}"><img class="logo_size"src="assets\image\Billable activity.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Outstanding Fee Note Report</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('')}}"><img class="logo_size"src="assets\image\Bank account detail.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Other Reports</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('')}}"><img class="logo_size"src="assets\image\Billable activity.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Quotation Item Receipt</button></a></div>
+    <div class="col-sm-4 " ><a href="{{url('debtors_aging_report')}}"><img class="logo_size"src="assets\image\Menu access configuration.png" alt=""><button type="button"style="width:70%;" class="btn btn-primary btn_align_btn" >Debtors Aging Reports</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('debtors_list')}}"><img class="logo_size"src="assets\image\Useful links.png" alt=""><button type="button"style="width:70%;" class="btn btn-primary btn_align_btn" >Debtors List</button></a></div>
+    <div class="col-sm-4 " ><a href="{{url('fee_note_items_billed')}}"><img class="logo_size"src="assets\image\Database backup.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Fee Note Item Billed</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('fee_note_items_received')}}"><img class="logo_size"src="assets\image\Transport zones.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Fee Note Item Received</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('fee_note_report')}}"><img class="logo_size"src="assets\image\Billable activity.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Outstanding Fee Note Report</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('other_reports')}}"><img class="logo_size"src="assets\image\Bank account detail.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Other Reports</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('quotation_item_report')}}"><img class="logo_size"src="assets\image\Billable activity.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Quotation Item Reportt</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('')}}"><img class="logo_size"src="assets\image\Bank account detail.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Fee Expected Per Advocate</button></a></div>
     
     
