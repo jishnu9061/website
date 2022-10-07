@@ -24,15 +24,15 @@
         <div class="btn btn-primary"
         style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;margin-left: -8px; ">
         <b><u>File Management Details</u></b></div><br><br>
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-            crossorigin="anonymous"> -->
+            crossorigin="anonymous">
     </div>
 
         
         <br>
 
-        <div class="container-fluid">
+
             <div class="btn btn-primary float-left"
                 style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold; font-size:15px; ">Maintenance
             </div><br><br><br>
@@ -88,7 +88,7 @@
                             src="assets\image\Document manager(DMS).png" alt=""><button type="button" style="width:70%;"
                             class="btn btn-primary btn_align_btn">Document Manager (DMS)</button></a></div>
             </div>
-            <div>
+           
                 <br>
                 <div class="btn btn-primary float-left"
                     style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold; font-size:15px; ">Instructions</div><br><br><br>
@@ -159,7 +159,7 @@
                                 class="btn btn-primary btn_align_btn">Safe Item Request Report</button></a></div>
 
                 </div>
-            </div>
+           
 
     </body>
 </div>
