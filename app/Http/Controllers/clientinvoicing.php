@@ -65,11 +65,12 @@ class clientinvoicing extends Controller
     {
         return view('client-invoicing.view_bill');
 
-    
+    }
     public function feeexpectedadvocate()
     {
         return view('client-invoicing.fee_expected_advocate');
     }
+
     //Reports
     
 
