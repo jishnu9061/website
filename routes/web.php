@@ -1039,6 +1039,14 @@ Route::any('/edit_file_instruction',"filemanagement@edit_file_instruction_list")
 
 Route::any('/edit_office_instruction',"filemanagement@edit_office_instruction_list")->name('edit_office_instruction_list');
 
+//client invoicing
+
+//vinu
+Route::any('client_invoicingindex',"clientinvoicing@index")->name('client_invoicingindex');
+//vinu
+
+//client invoicing
+
 ?>
 
 
