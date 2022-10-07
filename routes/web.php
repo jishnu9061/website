@@ -1066,6 +1066,9 @@ Route::any('view_bill',"clientinvoicing@view_bill_item")->name('view_bill_item')
 
 
 //client invoicing
+//reshma
+//fee notes and credit
+Route::any('fee_notes',"clientinvoicing@feenotes")->name('fee_notes');
 
 ?>
 
