@@ -50,9 +50,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-1">
+                <!-- <div class="col-md-1">
                     <a href="{{url('document_template_category')}}"> <i style="font-size:20px; color:rgb(13, 1, 56);" class="bi bi-plus-circle-fill"> </i></a>
-                </div>
+                </div> -->
             </div>
             
             <div class="row">

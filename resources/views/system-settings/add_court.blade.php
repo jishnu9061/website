@@ -1,6 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
 <html>
+<div class="container">
    <head>
    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,30 +22,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-    <style>
-         /* h2
-        {
-            font-size:large;
-            font-weight:bold;
-             color:rgb(13, 1, 56); 
-             background-color:rgb(177, 127, 62);
-             padding:15px;
-            } */
-         
 
-         table{
-              
-                border:hidden;
-                font-size:medium;
-                color:black;
-            
-            }
-           th,td,tr{
-            border:hidden;
-            color:black;
-
-           }
-        </style>
     </head>
     <body>
 <div>
@@ -55,18 +33,27 @@
                 crossorigin="anonymous">
      </div>
             <br>
-    <form>
-    <table class="table">
-    <tbody>
-                        <tr>
-                            <td style="width:30%">Date:</td>
-                            <td><input type="Date"  id="" name="date"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
-                        </tr>
-
-                        <tr>
-                                <td style="width:30%">Court Category:</td>
-                                <td> 
-                                    <select type="text" value="" id="" name="category"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
+            <form method="post" action="" id="form">  
+       @csrf
+            <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                        <label >Date:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="Date" class="form-control" id="" name="date"value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label>Court Category:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <select type="text" value="" id="" name="category">
                                     <option>Select</option>
                                    
                     <option>Supreme Court</option>
@@ -80,26 +67,49 @@
                     <option>Small Claim Court</option>
                     <option>Others</option>
                                 </select>
-                            </td>
-                         </tr>
+                              <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="mb-1">
+                            <label>Court Name:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text"  id="" name="courtname"value=""class="form-control">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>    
+                    <div class="row">
+         <div class="col-sm">
 
+                        </div>
+                        <div class="col-sm">
 
-                         <tr>
-                            <td style="width:30%">Court Name:</td>
-                            <td><input type="text"  id="" name="name"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
-                        </tr>
-            </table>
-            <div class="class"style="text-align:center;">
-            <a href="something"><input type="submit"value="Save" name="submit"style="background-color:rgb(13, 1, 56);color: white; "> </a>
-            <input type="button"value="Close" name="close"style="background-color:red;color: white; ">
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Submit</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+        </div>
+</form>
+        </body>
+        </div>
 
-            
-    </div>
-        </form>
-    <!-- <form>
- <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
-</form> -->
-            
-</body>
 </html>
+
+
+
+
+   
 @endsection

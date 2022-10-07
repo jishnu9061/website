@@ -2,6 +2,7 @@
 @extends('layouts.hmsmain')
 @section('content')
 <html>
+    <div class="container">
    <head>
    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -22,15 +23,10 @@
 table{
     outline: 1px solid  gray;
 }
- /* tr:nth-child(odd)
-{
-    background-color:rgb(198, 195, 211);
-}            */
  </style>
    </head>
    <body>
-    <!-- <h2 >Court List</h2><br>
-    <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
+   
     <div>
             <button class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Tax Chart</u></b></span></button><br>
@@ -195,6 +191,7 @@ table{
  <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
 </form> -->
         </body>
+</div>
 </html>
 
   @endsection

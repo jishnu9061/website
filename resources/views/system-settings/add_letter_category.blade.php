@@ -1,6 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
 <html>
+    <div class="container">
    <head>
    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -10,22 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <style>
-         /* h2
-        {
-            font-size:large;
-            font-weight:bold;
-             color:rgb(13, 1, 56); 
-             background-color:rgb(177, 127, 62);
-             padding:15px;
-            } */
-            /* .container{
-                border:1px solid black;
-         margin-left:0px;
-         width:auto;
-         height:100%;
-         width:40%;
-         } */
-
+      
          table{
               
                 border:hidden;
@@ -52,42 +38,94 @@
      </div>
             <br>
 
-    <form>
-    <table class="table">
-    <tbody>
-                        <tr>
-                            <td style="width:30%"> Letter Category:</td>
-                            <td><select type="text" value="" name="type"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
-                            <option>Client</option>
+
+            <div class="row">
+        <div class="col-md-12 ">
+
+            <form method="post" action="" id="form">  
+            @csrf
+            <div class="row">
+                <div class="col-lg-6 col-md-6 offset-md-3" >
+                    <label >Letter Category:</label>
+                    <div class="row">
+                        <div class="col-md-11">
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                            <select type="text" value="" id="" name="temcategory"style="width:100%;">
+                                <option>---Select---</option>
+                                <option>Client</option>
                             <option>Supplier</option>
                             <option>Staff</option>
                             <option>Office</option>
                             <option>Customers</option>
-                         
-
-                        </select><a href="{{('document_letter_category')}}">  <i style="color:rgb(13, 1, 56);"class="bi bi-plus-circle-fill"> </i></a></td>
-                           
-                        </tr>
-                        <tr>
-                            <td style="width:30%">Letter Types:</td>
-                           <td><input type="text"  id="" name="date"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td> 
-                          
-                        </tr>
-                        <tr>
-                            <td style="width:30%">Letter Type Name:</td>
-                            <td><input type="text"  id="" name="date"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
-                        </tr>
-        </tbody>
-              </table>
-            <div class="class"style="text-align:center;">
-            <a href="something"><input type="submit"value="Submit" name="submit"style="background-color:rgb(13, 1, 56);color: white; "> </a>
-            <input type="button"value="Close" name="close"style="background-color:red;color: white; ">
-
+                            </select>
+                            <div class="invalid-feedback" style="width: 100%;">
+                            Required Field.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <a href="{{url('document_letter_category')}}"> <i style="font-size:20px; color:rgb(13, 1, 56);" class="bi bi-plus-circle-fill"> </i></a>
+                </div>
+            </div>
             
+            <div class="row">
+                <div class="col-md-11">
+                <label >Letter Types:</label>
+                <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <input type="text" class="form-control" name="cattype" id="" value="">
+                    <div class="invalid-feedback" style="width: 100%;">
+                    Required Field.
+                </div>
+            </div>
+        </div>
+       
+                <div class="col-md-11">
+                <label >Letter Type Name:</label>
+                <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <input type="text" class="form-control" name="cattype" id="" value="">
+                    <div class="invalid-feedback" style="width: 100%;">
+                    Required Field.
+                </div>
+            </div>
+        </div>
     </div>
+    </div>
+</div>
 
+<div class="row">
+    <div class="col-sm">
 
-    <form>
+    </div>
+    <div class="col-sm">
+
+    </div>
+    <div class="col-sm">
+         <br>
+         <br>
+         <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Submit</button>
+         <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+        </div>
+    </div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
 </body>
 </html>
-@endsection
+
+  @endsection
+
+
+
+
+
+
+
+
+
+    
