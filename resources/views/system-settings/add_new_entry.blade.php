@@ -33,10 +33,7 @@
                                     <option>Gichui Kirogo</option>
                                     <option>Hillary Wamunyolo Casmir</option>
                                     <option>Princess Caroline</option>
-                                   
-                                
-
-                                </select>
+                              </select>
                             </div>
                         </div>
                     </div>
