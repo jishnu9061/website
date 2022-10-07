@@ -925,6 +925,10 @@ Route::any('add-corporate','ClientManagement@addCorporate')->name('add-corporate
 Route::any('corporate-list','ClientManagement@listCorporate')->name('corporate-list');
 //end corporate
 
+//client invoicing
+Route::any('receipt-report','clientinvoicing@receiptReport')->name('receipt-report');
+//end client invoicing
+
 //mugunthan
 
 
