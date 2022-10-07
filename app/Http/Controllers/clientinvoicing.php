@@ -11,12 +11,26 @@ class clientinvoicing extends Controller
         return view('client-invoicing.client_invoicingindex');
     }
 
-
+//mugu
     public function receiptReport()
     {
 
         return view('client-invoicing.receipt-report');
     }
+
+    public function reverseReport(){
+
+        return view('client-invoicing.reverse_receipt');
+
+    }
+
+    public function receiptReprint(){
+
+        return view('client-invoicing.receipt-reprint');
+
+    }
+
+//mugu
 
 
     public function billable_items()
@@ -61,7 +75,12 @@ class clientinvoicing extends Controller
     {
         return view('client-invoicing.quotation_item_report');
     }
-    public function feenotes()
+
+
+
+
+    // reshma
+    public function fee_notes()
     {
         return view('client-invoicing.view_bill');
 
@@ -70,9 +89,13 @@ class clientinvoicing extends Controller
     {
         return view('client-invoicing.fee_expected_advocate');
     }
-
-
-    
+   
+    }
+    public function newfee_note()
+    {
+        return view('client-invoicing.new_fee_note');
+    }
+   
     
 
 
