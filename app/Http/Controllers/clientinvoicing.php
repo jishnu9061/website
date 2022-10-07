@@ -10,4 +10,10 @@ class clientinvoicing extends Controller
     {
         return view('client-invoicing.client_invoicingindex');
     }
+
+    public function receiptReport()
+    {
+
+        return view('client-invoicing.receipt-report');
+    }
 }

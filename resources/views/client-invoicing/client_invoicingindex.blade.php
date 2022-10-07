@@ -57,7 +57,7 @@ style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Re
     <div class="col-sm-4 " ><a href="{{url('')}}"><img class="logo_size"src="assets\image\Database backup.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Issue Client Receipt</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('')}}"><img class="logo_size"src="assets\image\Transport zones.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Receipt Re-Print</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('')}}"><img class="logo_size"src="assets\image\Billable activity.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Reverce Receipt</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('')}}"><img class="logo_size"src="assets\image\Bank account detail.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Receipts Report</button></a></div>
+    <div class="col-sm-4 " ><img class="logo_size"src="assets\image\Bank account detail.png" alt=""> <a href="{{url('receipt-report')}}"><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Receipts Report</button></a></div>
     
 </div>
 <br>
