@@ -27,17 +27,14 @@
                                 <div class="input-group-prepend">
                                 </div>
                                 <select name="code" id="cars">
-                                    <option>---select---</option>
-                                    <option>2017</option>
-                                    <option>2018</option>
-                                    <option>2019</option>
-                                    <option>2020</option>
-                                    <option>2021</option>
-                                    <option>2022</option>
-                                    <option>2023</option>
-                                    <option>2024</option>
-                                    <option>2025</option>
-                                    <option>2026</option>
+                                <option>---select---</option>
+                                    <option>Alekeen W Benson</option>
+                                    <option>Corrine Auma</option>
+                                    <option>Gichui Kirogo</option>
+                                    <option>Hillary Wamunyolo Casmir</option>
+                                    <option>Princess Caroline</option>
+                                   
+                                
 
                                 </select>
                             </div>
@@ -50,12 +47,17 @@
                                 <div class="input-group-prepend">
                                 </div>
                                 <select name="code" id="cars">
-                                    <option>---select---</option>
-                                    <option>Alekeen W Benson</option>
-                                    <option>Corrine Auma</option>
-                                    <option>Gichui Kirogo</option>
-                                    <option>Hillary Wamunyolo Casmir</option>
-                                    <option>Princess Caroline</option>
+                                <option>---select---</option>
+                                <option>2017</option>
+                                    <option>2018</option>
+                                    <option>2019</option>
+                                    <option>2020</option>
+                                    <option>2021</option>
+                                    <option>2022</option>
+                                    <option>2023</option>
+                                    <option>2024</option>
+                                    <option>2025</option>
+                                    <option>2026</option>
 
                                 </select>
                             </div>
