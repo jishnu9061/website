@@ -12,109 +12,148 @@
             {{ Session::get('leavevalidat')}}
         </div>
         @endif
-
-        <div class="col-sm">
-
-
-        </div>
         <div>
-        <div>
-            <div class="btn btn-primary"
-            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Debtors List</u></b></div><br><br>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous">
-        </div>
-            <br>
-            <div >
-                <input class="btn btn-primary" type="button" value="Today">
-                <input class="btn btn-primary" type="button" value="This Week">
-                <input class="btn btn-primary" type="button" value="Last Week">
-                <input class="btn btn-primary" type="button" value="This Month">
-                <input class="btn btn-primary" type="button" value="Last Month">
-                <input class="btn btn-primary" type="button" value="This Quater">
-                <input class="btn btn-primary" type="button" value="Last Quater">
-                <input class="btn btn-primary" type="button" value="This Year">
-                <input class="btn btn-primary" type="button" value="Last Year">
+            <!-- <h2 style="text-align:center; margin-left: 4%;">File Reports</h2>
+            <hr class="mb-4">. -->
+            <div>
+                <div class="btn btn-primary"
+                    style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
+                    <b><u>Receipt Report</u></b></span>
+                </div><br>
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                    crossorigin="anonymous">
+
+
             </div>
-            <!-- <br> -->
-           
-
         </div>
     </div>
 
 
-    <div class="row">
+    <div>
 
+        <div>
+            <input class="btn btn-primary" type="button" value="Today" style="width:6.4%;">
+            <input class="btn btn-primary" type="button" value="This Week">
+            <input class="btn btn-primary" type="button" value="Last Week">
+            <input class="btn btn-primary" type="button" value="This Month(MTD)">
+            <input class="btn btn-primary" type="button" value="Last Month">
+            <input class="btn btn-primary" type="button" style="width:11%;" value="This Quater ">
+            <input class="btn btn-primary" type="button" style="width:11%;" value="Last Quater">
+            <input class="btn btn-primary" type="button" value="This Year">
+            <input class="btn btn-primary" type="button" value="Last Year">
+        </div>
+        <br>
+      
 
-        <div class="col-md-12 order-md-1">
-
+        <h4 style="text-align:center">Receipt Report</h4>
+        <hr class="mb-4">.
+        <div class="row">
             <form method="post" action="" id="form">
                 @csrf
-
-
-
                 <div class="row">
-
-
-
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Date Options</label>
+                            <label for="username">Mode Of Receipt</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
+                                <select name="" id="cars">
                                     <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
                     </div>
-
-
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Date (As At)</label>
+                            <label for="username">Item Type</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="number" id="username" required>
+                                <select name="" id="cars">
+                                    <option value="volvo"></option>
+                                </select>
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Bank Account</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
+                                </div>
+                                <select name="" id="cars">
+                                    <option value="volvo"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Currency</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="" id="cars">
+                                    <option value="volvo"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Transaction Period</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="date" class="form-control" name="" id="username" value="">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">To</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="date" class="form-control" name="" id="username" value="">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+                        <br>
+                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Submit</button>
+
+                    </div>
                 </div>
         </div>
 
+
+
     </div>
 
-</div>
-
-
-
-<div class="container">
-                    <div class="row">
-                      <div class="col-sm">
-                      </div>
-                      <div class="col-sm">
-                      </div>
-                      <div class="col-sm">
-                        <button type="submit" class="btn btn-primary float:right" style="width:45%">View Report</button>
-                        <button type="submit" class="btn btn-primary float:left"style="width:45%">Cancel</button>
-                      </div>
-                    </div>
-                  </div>
-
-
-
-</div>
 
 
 
 
-
+    </tbody>
+    </table>
 </div>
 </div>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
@@ -283,9 +322,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Salary is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -312,9 +351,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Years of experience is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -337,9 +376,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 dob is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 /div>
 
             {
@@ -371,9 +410,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Bank Name is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -399,9 +438,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Account number is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -424,9 +463,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 IFSC Code is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-12" >
                 <
                 div class = "mb-1" >
@@ -467,7 +506,7 @@ $(document).on('input', '#percent', function() {
 
                 <
                 /tr> < /
-                table > {
+            table > {
                     {
                         -- < input type = "text"
                         class = "form-control"
@@ -484,7 +523,7 @@ $(document).on('input', '#percent', function() {
                         -- < /div> --}} < /
                         div > <
                             /div> < /
-                            div >
+                        div >
 
                             <
                             /div> <
@@ -526,48 +565,11 @@ $(document).on('input', '#percent', function() {
 
                             <
                             /tbody> < /
-                            table > <
+                        table > <
                             /div> < /
-                            div >
-
-                            <
-                            div class = "modal"
-                        id = "my" >
-                            <
-                            div class = "modal-dialog" >
-                            <
-                            div class = "modal-content" >
-                            <
-                            div class = "modal-header" >
-                            <
-                            div class = "modal-body" >
-                            <
-                            form action = "" >
-                            <
-                            div >
-                            <
-                            input type = "text"
-                        name = "type"
-                        class = "form-control"
-                        placeholder = "Country" >
-                            <
-                            button class = "btn btn-primary sub_btnn"
-                        type = "submit" > submit < /button> < /
-                            div > <
-                            /form> < /
-                            div > <
-                            /div> < /
-                            div > <
-                            /div> < /
-                            div > <
-                            /div>
-
-                            <
-                            script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-                        integrity = "sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-                        crossorigin = "anonymous" >
+                        div > <
+                            script src = "{{ url('assets/js') }}/jquery.min.js" >
 </script>
-<script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
 $(function() {
     $('[data-toggle="popover"]').popover()
@@ -722,7 +724,8 @@ $(document).on('click', '#testing1', function() {
                                     div > <
                                     /form> < /
                                     div > <
-                                    script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
+                                    script src =
+                                    "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
 </script>
 <script type="text/javascript">
 $('#password, #confirm_password').on('keyup', function() {

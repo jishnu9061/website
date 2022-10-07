@@ -20,7 +20,7 @@
         <div>
         <div>
             <div class="btn btn-primary"
-            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Debtors List</u></b></div><br><br>
+            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Fee Expected Per Advocate</u></b></div><br><br>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous">
@@ -58,7 +58,23 @@
 
 
 
-                    <div class="col-md-6">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Responsible Advocate</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Date Options</label>
                             <div class="input-group">
@@ -72,8 +88,7 @@
                         </div>
                     </div>
 
-
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Date (As At)</label>
                             <div class="input-group">
@@ -89,7 +104,7 @@
         </div>
 
     </div>
-
+  <br><br>
 </div>
 
 
