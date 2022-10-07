@@ -75,10 +75,24 @@ class clientinvoicing extends Controller
     {
         return view('client-invoicing.quotation_item_report');
     }
+
+
+   
+
+// reshma
+    public function view_bill_item()
+    {
+        return view('client-invoicing.view_bill');
+
+    }
+
+
     public function feeexpectedadvocate()
     {
         return view('client-invoicing.fee_expected_advocate');
     }
+   
+
    
    
 
@@ -89,6 +103,7 @@ class clientinvoicing extends Controller
     }
  
     
+
     public function newfeenote()
     {
         return view('client-invoicing.new_fee_note');
