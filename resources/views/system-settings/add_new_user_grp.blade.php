@@ -3,9 +3,6 @@
 <div class="container">
     <div class="">
 
-        <div>
-            <h2 style="padding:20px;"><b>Add Court</b></h2>
-        </div>
 
         <div>
             <button class="btn btn-primary"
@@ -75,15 +72,11 @@
                                 </div>
                                 <select name="" id="cars">
                                     <option>--select group roles--</option>
-                                    <option>Dashboard</option>
-                                    <option>Client Management</option>
-                                    <option>File Management</option>
-                                    <option>Client Invoicing</option>
-                                    <option>Office Administration</option>
-                                    <option>Accounting and Finance</option>
-                                    <option>HR & Payroll</option>
-                                    <option>Tools & Addons</option>
-                                    <option>System Setup</option>
+                                    <option></option>
+                                    <option></option>
+                                    <option></option>
+                                    <option></option>
+                                   
                                 </select>
                             </div>
                         </div>
