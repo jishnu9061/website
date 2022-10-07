@@ -309,12 +309,12 @@
                             <label for="username">To the attention of:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <input type="text" class="form-control" name=""    id="username" value="" required >
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                     <div class="col-md-12">
