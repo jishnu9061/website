@@ -682,7 +682,7 @@ Route::any('delete_surgery{id}', 'surgeryController@destroy')->name('delete_surg
 Route::get('calendar-event', 'CalenderController@index')->name('calendar-event');
 Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents']);
 
-//RESHMA--------------------------------
+//---------------------------RESHMA--------------------------------
 // system setup index
 Route::any('system_setup','SystemSetup@index')->name('system_setup');
 //end
@@ -859,7 +859,15 @@ Route::any('menu_access_configuration','SystemSetup@menuaccess')->name('menu_acc
 //end
 //usefullinks
 Route::any('useful_links','SystemSetup@usefullinks')->name('useful_links');
-//RESHMA--------------------------------------
+
+//client invoicing
+//reshma
+//fee notes and credit
+Route::any('fee_notes',"clientinvoicing@feenotes")->name('fee_notes');
+Route::any('new_fee_note',"clientinvoicing@newfeenote")->name('new_fee_note');
+//reshma
+
+//---------------------RESHMA--------------------------------------
 
 
 //mugunthan
@@ -1065,12 +1073,15 @@ Route::any('view_bill',"clientinvoicing@view_bill_item")->name('view_bill_item')
 //anandhu
 
 
-//client invoicing
-//reshma
-//fee notes and credit
-Route::any('fee_notes',"clientinvoicing@feenotes")->name('fee_notes');
+
+
+
+
+
+
+
 
 ?>
 
-quotation_item_report
+
 
