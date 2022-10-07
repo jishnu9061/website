@@ -89,14 +89,14 @@ class clientinvoicing extends Controller
         return view('client-invoicing.fee_expected_advocate');
     }
    
-    public function feenote()
+    public function fee_notes()
     {
-        return view('client-invoicing.fee_note');
+        return view('client-invoicing.fee_notes');
     }
 
-    public function newfeenote()
+    public function newfee_note()
     {
-        return view('client-invoicing.new_fee_note');
+        return view('client-invoicing.newfee_note');
     }
    
     
