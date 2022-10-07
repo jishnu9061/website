@@ -41,9 +41,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
-                                </select>
+                                <select type="text" value="" id="" name="type"style="width:100%;">
+                                <option>--Select---</option>
+                                <option>Billable Activity</option>
+                                <option>Non-Billable Activity</option>
+                                
+                            </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>

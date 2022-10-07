@@ -46,9 +46,19 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
-                                </select></br>
+                                <select type="year" value="" name="type"style="width:100%;">
+                            <option>---Select---</option>
+                            <option>2025</option>
+                            <option>2024</option>
+                            <option>2023</option>
+                            <option>2022</option>
+                            <option>2021</option>
+                            <option>2020</option>
+                            <option>2019</option>
+                            <option>2018</option>
+                         
+
+                        </select></br>
                                 
                             </div>
                         </div>
@@ -75,9 +85,13 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
-                    </select>
+                    <select type="text" value="" name="type"style="width:100%;">
+                            <option>---Select---</option>
+                            <option>Not a Working Day</option>
+                            <option>Yes (Half Day)</option>
+                            <option>Yes (Full Day)</option>
+                          
+                        </select>
                 </div>
             </div>
         </div>
@@ -88,9 +102,13 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
-                    </select>
+                    <select type="text" value="" name="type"style="width:100%;">
+                            <option>---Select---</option>
+                            <option>Monthly</option>
+                            <option>Quarterly</option>
+                            <option>Bi Annual</option>
+                            <option>Annual</option>
+                        </select>
                     <div class="invalid-feedback" style="width: 100%;">
                         Telephone Number is required.
                     </div>
