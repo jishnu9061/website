@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class SystemSetup extends Controller
 {
@@ -11,6 +12,12 @@ class SystemSetup extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+
+
+
+
  
         public function index()
     {
@@ -81,9 +88,38 @@ class SystemSetup extends Controller
     {
         return view('system-settings.company_branch');
     }
-    public function addbranch()
+    public function addbranch(Request $Request)
     {
-        return view('system-settings.add_company_branch');
+      
+        
+        
+        $branch_no = $Request['bnum'];
+        $branch_code = $Request['bcodes'];
+        $branch_name = $Request['bname'];
+        $address = $Request['paddress'];
+        $telephone = $Request['tel'];
+        $mobile = $Request['mobile'];
+        $fax = $Request['fax'];
+        $town = $Request['town'];
+         $email = $Request['email'];
+        $website = $Request['website'];
+        $physical_address = $Request['physicaladd'];
+       
+DB::table('cra_company_branch_details')->insert([
+            'branch_no' => $branch_no,
+            'branch_code' => $branch_code,
+            'branch_name' => $branch_name,
+            'address' => $address,
+            'telephone' => $telephone,
+            'mobile' => $mobile,
+            'fax' => $fax,
+            'town' => $town,
+            'email' => $email,
+            'website' => $website,
+            'physical_address' => $physical_address,
+        ]);
+
+     return view('system-settings.add_company_branch');
     }
     public function editbranch()
     {

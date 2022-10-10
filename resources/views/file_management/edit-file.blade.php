@@ -40,20 +40,7 @@
                 @csrf
                 <div class="row">
 
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Associate Handling</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
-                                </select>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
+                    
 
                     <div class="col-md-6">
                         <div class="mb-1">
@@ -68,12 +55,9 @@
                             </div>
                         </div>
                     </div>
-
-
-
                     <div class="col-md-6">
                         <div class="mb-1">
-                            <label for="username">File Type</label>
+                            <label for="username">Associate Handling</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
@@ -81,11 +65,18 @@
                                 <select name="country" id="cars">
                                     <option value="volvo"></option>
                                 </select>
+                                <br>
                             </div>
                         </div>
                     </div>
+</div>
+<br>
+<div class="row">
 
-                    <div class="col-md-6">
+
+                  
+
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Opening Date</label>
                             <div class="input-group">
@@ -103,9 +94,9 @@
                     <!-- </div>
         
           <div class="row"> -->
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Client Ref.No(or Case No.)</label>
+                            <label for="username">Client Ref.No or(Case No.)</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
@@ -118,7 +109,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Our File Ref.Number</label>
                             <div class="input-group">
@@ -132,8 +123,11 @@
                             </div>
                         </div>
                     </div>
+</div>
+<br>
+<div class="row">
 
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">File Name / Subject</label>
                             <div class="input-group">
@@ -154,7 +148,7 @@
 
 
 
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Approval Partner</label>
                             <div class="input-group">
@@ -168,7 +162,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Customer Name</label>
                             <div class="input-group">
@@ -182,6 +176,9 @@
                             </div>
                         </div>
                     </div>
+</div>
+<br>
+<div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Customer Address</label>
@@ -214,8 +211,11 @@
                             </div>
                         </div>
                     </div>
+</div>
+<br>\
+                    <div class="row">
 
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Customer E-mail</label>
                             <div class="input-group">
@@ -229,7 +229,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Amount</label>
                             <div class="input-group">
@@ -245,7 +245,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Workflow</label>
                             <div class="input-group">
@@ -261,8 +261,8 @@
                             </div>
                         </div>
                     </div>
-
-                </div>
+</div>
+              
                 <br>
                 <!-- <div class="row">
         <div class="col-md-4">

@@ -33,7 +33,7 @@
                 style="width: 15%; margin-bottom:5%;">Add Box No</button></a>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
+            <div class="table-responsive">
                 <table class="table table-bordered" id="new-item">
                     <thead>
                         <tr>

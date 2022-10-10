@@ -59,7 +59,9 @@
                                 </div>
                             </div>
                         </div>
-
+</div>
+<br>
+<div class="row">
 
 
                         <div class="col-md-6">
@@ -169,7 +171,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <input type="time" class="form-control" name="email" id="age">
+                        <input type="text" class="form-control" name="email" id="age">
                         <div class="invalid-feedback" style="width: 100%;">
                             Incorporation is required
                         </div>
@@ -186,7 +188,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <input type="time" class="form-control" name="website" id="confirm_password" required>
+                        <input type="text" class="form-control" name="website" id="confirm_password" required>
                         <div class="invalid-feedback" style="width: 100%;">
                             Telephone Number is required.
                         </div>

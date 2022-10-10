@@ -126,7 +126,7 @@
             <div class="row"> 
                     <div class="col-md-6">
                         <div class="mb-1">
-                            <label for="username">Next Date (Form)</label>
+                            <label for="username">Date (Form)</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 

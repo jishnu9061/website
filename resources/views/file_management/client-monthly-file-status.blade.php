@@ -78,7 +78,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="website" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -91,7 +91,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="website" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
