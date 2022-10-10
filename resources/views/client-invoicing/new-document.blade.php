@@ -108,11 +108,11 @@
                 <hr class="mb-4">.
                 <br>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="mb-1">
                             <label for="username">Billing Information</label>
                             <div class="input-group">
-                                <textarea class="form-control" id="form7Example7" rows="5"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="4"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Postal Address is required.
                                 </div>
