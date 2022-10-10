@@ -30,6 +30,11 @@ class clientinvoicing extends Controller
 
     }
 
+    public function issuceReceipt(){
+
+        return view('client-invoicing.issue-client-receipt');
+    }
+
 //mugu
 
 
@@ -80,6 +85,10 @@ class clientinvoicing extends Controller
    
 
 
+
+    // reshma
+
+
     public function view_bill_item()
     {
         return view('client-invoicing.view_bill');
@@ -92,12 +101,22 @@ class clientinvoicing extends Controller
         return view('client-invoicing.fee_expected_advocate');
     }
 
+
+    //Reports
+
+    //     // return view('client-invoicing.fee_notes');
+    
+
+
+   
+
     //reshma
     public function drnfee()
     {
         return view('client-invoicing.drn_fee_notes');
     }
     public function newdrnfee()
+
     {
         return view('client-invoicing.new_drn_fee_notes');
     }
