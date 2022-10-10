@@ -43,7 +43,7 @@
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="{{url('corporate-list')}}"> Corporate Client</a>
-                            <a class="dropdown-item" href="{{url('client_list')}}">indudial Client</a>
+                            <a class="dropdown-item" href="{{url('client_list')}}">Individual Client</a>
                         </div>
                     </div>
                 </div>
