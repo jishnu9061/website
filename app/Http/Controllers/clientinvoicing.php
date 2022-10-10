@@ -91,6 +91,19 @@ class clientinvoicing extends Controller
     {
         return view('client-invoicing.fee_expected_advocate');
     }
+
+    //reshma
+    public function drnfee()
+    {
+        return view('client-invoicing.drn_fee_notes');
+    }
+    public function newdrnfee()
+    {
+        return view('client-invoicing.new_drn_fee_notes');
+    }
+
+
+    //reshma
   
 
 
