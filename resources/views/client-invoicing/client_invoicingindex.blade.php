@@ -43,8 +43,13 @@ style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Fe
 
   <div class="row sm">
     <div class="col-sm-4 " ><a href="{{url('drn_fee_notes')}}"><img class="logo_size"src="assets\image\Manage User Accounts.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Fee Notes / DRN / Interim Fee Notes</button></a></div>
+
     <div class="col-sm-4 " > <a href="{{url('credit_notes')}}"><img class="logo_size"src="assets\image\Change user password.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" > Credit Notes</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('')}}"><img class="logo_size"src="assets\image\Manage user group.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Qutation / Perfoma Fee Notes</button></a></div>
+
+    <div class="col-sm-4 " > <a href="{{url('')}}"><img class="logo_size"src="assets\image\Change user password.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" > Credit Notes</button></a></div>
+    <div class="col-sm-4 " ><img class="logo_size"src="assets\image\Manage user group.png" alt=""><a href="{{url('quotation')}}"><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Qutation / Perfoma Fee Notes</button></a></div>
+
     
     
 
