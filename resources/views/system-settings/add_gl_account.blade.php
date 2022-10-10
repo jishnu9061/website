@@ -118,7 +118,7 @@
                                 <option>Partner Drawings</option>
                                 <option>Supplier Accounts</option>
                                 <option>Financial Accounts</option>
-                                <option>Income Accounts</option>
+                                <option>Income Account</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
