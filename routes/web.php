@@ -939,6 +939,7 @@ Route::any('receipt-reprint','clientinvoicing@receiptReprint')->name('receipt-re
 Route::any('issue-receipt','clientinvoicing@issuceReceipt')->name('issue-receipt');
 Route::any('quotation','clientinvoicing@Quotation')->name('quotation');
 Route::any('new-document','clientinvoicing@newDocumnet')->name('new-document');
+Route::any('edit-document','clientinvoicing@editDocument')->name('edit-document');
 //end client invoicing
 
 //Mugunthan

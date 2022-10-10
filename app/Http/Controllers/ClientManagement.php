@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class ClientManagement extends Controller
 {
@@ -240,7 +241,61 @@ class ClientManagement extends Controller
     }
 
 
-    public function addCorporate(){
+    public function addCorporate(Request $Request){
+
+        $number = $Request['number'];
+        $client_type = $Request['type'];
+        $citizen_status = $Request['citizen'];
+        $corporation = $Request['corporation'];
+        $country = $Request['country'];
+        $telephone = $Request['telephone'];
+        $fax_no = $Request['faxno'];
+        $email = $Request['email'];
+        $website = $Request['website'];
+        $brought = $Request['brought'];
+        $status = $Request['status'];
+        $source = $Request['source'];
+        $client_narration = $Request['narration'];
+        $client_name = $Request['name'];
+        $industry = $Request['industry'];
+        $pin_no = $Request['pin'];
+        $address = $Request['address'];
+        $postal_code = $Request['code'];
+        $town = $Request['town'];
+        $physical_address = $Request['physicaladdress'];
+        $Notes = $Request['notes'];
+        $Person_Name = $Request['person'];
+        $Designation = $Request['Designation'];
+        $mobile_no = $Request['no'];
+        $person_email = $Request['person_email'];
+
+        DB::table('cra_corporate_client_details')->insert([
+            'Client_no' => $number,
+            'Client_type' =>  $client_type,
+            'Cityzen_status' => $citizen_status,
+            'Certificate_of_incorporation' =>  $corporation,
+            'Country' =>  $country,
+            'Telephone_No' =>   $telephone,
+            'Fax_no' =>  $fax_no,
+            'Email_address' =>  $email,
+            'Website' =>  $website ,
+            'Brought_in _By' =>  $brought,
+            'Status_reporting_day' =>  $status,
+            'Client_source' => $source,
+            'Client_source_naration' =>  $client_narration,
+            'Client_name' =>    $client_name,
+            'Client_industry' =>   $industry,
+            'Pin_no' =>    $pin_no,
+            'postal_address' =>   $address,
+            'postal_code' =>  $postal_code ,
+            'town' =>      $town ,
+            'physical_address' =>   $physical_address,
+            'notes' => $Notes,
+            'contact_person' => $Person_Name ,
+            'designation' =>  $Designation,
+            'Mobile_no' => $mobile_no,
+            'email' =>$person_email,
+        ]);
         return view('client-management.add-corporate');
     }
 
