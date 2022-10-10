@@ -37,7 +37,7 @@
                             <label >Branch No:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input  class="form-control" type="number"  id="bnum" name="bnum" value="">
+                                <input  class="form-control" type="bnumber"  id="bnum" name="bnum" value="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -78,7 +78,8 @@
                             <label for="username">Postal Address:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input id="padd" name="padd" class="form-control" value="" >
+                               
+                                <textarea rows="4" cols="50" name="paddress" form=""class="form-control"  type="text"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -175,7 +176,8 @@
                             <label for="username">Physical Address:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" id="phadd" name="phadd"  class="form-control"  value="" >
+                                <textarea rows="4" cols="50" name="physicaladd" form=""class="form-control"  type="text"></textarea>
+                             
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
