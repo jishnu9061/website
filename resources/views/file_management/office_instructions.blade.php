@@ -82,6 +82,7 @@
                             <td scope="row" class="text-center" id="medicine_name_1"></td>
                             <td scope="row" class="text-center" id="medicine_name_1"></td>
                             <td scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td scope="row" class="text-center" id="medicine_name_1"></td>
                             <td scope="row" class="text-center"><a href="edit_office_instruction"><i style="color:black;" class="fa fa-edit"
                                         aria-hidden="true"></i>
                                     <a onClick="return myFunction();" href="" style="color:black;"><i

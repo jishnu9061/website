@@ -79,7 +79,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="mb-1">
-                            <label for="username">court</label>
+                            <label for="username">Court</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 

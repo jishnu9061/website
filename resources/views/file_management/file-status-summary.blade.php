@@ -61,23 +61,20 @@
 
 
 
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username"> Date(to)</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
+                <div class="col-md-4">
+            <div class="mb-1">
+                <label for="username">Date to</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
 
-                                </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
-                                </select>
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Number is required.
-                                </div>
-                            </div>
-                        </div>
                     </div>
-
+                    <input type="date" class="form-control" name="incorporation" id="age">
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Incorporation is required
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
                     <div class="col-md-4">
@@ -208,9 +205,10 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
-                    </select>
+                    <input type="text" class="form-control" name="incorporation" id="age">
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Incorporation is required
+                    </div>
                 </div>
             </div>
         </div>
