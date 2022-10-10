@@ -937,6 +937,8 @@ Route::any('receipt-report','clientinvoicing@receiptReport')->name('receipt-repo
 Route::any('reverse-receipt','clientinvoicing@reverseReport')->name('reverse-receipt');
 Route::any('receipt-reprint','clientinvoicing@receiptReprint')->name('receipt-reprint');
 Route::any('issue-receipt','clientinvoicing@issuceReceipt')->name('issue-receipt');
+Route::any('quotation','clientinvoicing@Quotation')->name('quotation');
+Route::any('new-document','clientinvoicing@newDocumnet')->name('new-document');
 //end client invoicing
 
 //Mugunthan
@@ -1067,6 +1069,8 @@ Route::any('fee_note_report',"clientinvoicing@feenotereport")->name('fee_note_re
 Route::any('other_reports',"clientinvoicing@otherreport")->name('other_reports');
 Route::any('quotation_item_report',"clientinvoicing@quotationitemreport")->name('quotation_item_report');
 Route::any('fee_expected_advocate',"clientinvoicing@feeexpectedadvocate")->name('fee_expected_advocate');
+Route::any('credit_notes',"clientinvoicing@creditnotes")->name('credit_notes');
+Route::any('new_credit_notes',"clientinvoicing@newcreditnotes")->name('new_credit_notes');
 //Report
 
 //anandhu

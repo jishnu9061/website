@@ -2,53 +2,68 @@
 @section('content')
 <div class="container">
     <div class="py-5 text-center">
-        @if(Session::has('staffregistered'))
-        <div class="alert alert-dark" role="alert">
-            {{ Session::get('staffregistered')}}
-        </div>
-        @endif
-        @if(Session::has('leavevalidat'))
-        <div class="alert alert-dark" role="alert">
-            {{ Session::get('leavevalidat')}}
-        </div>
-        @endif
+
         <div>
-            <!-- <h2 style="text-align:center; margin-left: 4%;">File Reports</h2>
-            <hr class="mb-4">. -->
             <div>
                 <div class="btn btn-primary"
                     style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
-                    <b><u>Issue Client Receipt</u></b></span>
+                    <b><u>
+                            New Document</u></b></span>
                 </div><br>
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                     crossorigin="anonymous">
 
-
             </div>
         </div>
     </div>
-
-
-    <div>
-
-
-        <h4 style="text-align:center"><b>Client Receipt</b></h4>
-        <hr class="mb-4">
-        <div class="row">
+    <div class="row">
+        <div class="col-md-12 order-md-1">
             <form method="post" action="" id="form">
                 @csrf
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Transaction Date</label>
+                            <label for="username">Document Type</label>
                             <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="" id="username" value="">
-                            </div>
+                                <div class="input-group-prepend">
 
+                                </div>
+                                <select name="" id="cars">
+                                    <option value="volvo">performa fee note</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Document No</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="" id="age" value="" placeholder="" min="0"
+                                    max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Age is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Issue Date</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="" id="age" value="" placeholder="" min="0"
+                                    max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Age is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Client</label>
@@ -57,7 +72,7 @@
 
                                 </div>
                                 <select name="" id="cars">
-                                    <option value="volvo">Choose a Client</option>
+                                    <option value="volvo">choose a client</option>
                                 </select>
                             </div>
                         </div>
@@ -69,9 +84,81 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="" id="cars">
-                                    <option value="volvo">Choose a file</option>
+                                <select name="currency" id="cars">
+                                    <option value="volvo">choose a file</option>
                                 </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Send Document To</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="" id="cars">
+                                    <option value="volvo"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <hr class="mb-4">
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-1">
+                            <label for="username">Billing Information</label>
+                            <div class="input-group">
+                                <textarea class="form-control" id="form7Example7" rows="4"></textarea>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Postal Address is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <hr class="mb-4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username"> Date Due</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="" id="age" value="" placeholder="" min="0"
+                                    max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Age is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Currency</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="currency" id="cars">
+                                    <option value="volvo">KES</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Exchange Rate</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="" id="age" value="" placeholder="" min="0"
+                                    max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Age is required.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -80,49 +167,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Branch</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <select name="" id="cars">
-                                    <option value="volvo">Nairobi</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Mode Of Receipt</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <select name="" id="cars">
-                                    <option value="volvo">Select receipt mode</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Amount Type</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <select name="" id="cars">
-                                    <option value="volvo">---select---</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Account to Allocate to</label>
+                            <label for="username">User Assigned</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
@@ -135,25 +180,28 @@
                     </div>
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Currency</label>
+                            <label for="username">Partner To Approve</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="" id="cars">
-                                    <option value="volvo">KES</option>
+                                <select name="currency" id="cars">
+                                    <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Exchange Rate</label>
+                            <label for="username">Bank Account</label>
                             <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="">
-                            </div>
+                                <div class="input-group-prepend">
 
+                                </div>
+                                <select name="" id="cars">
+                                    <option value="volvo">Pay by Cheque</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -161,74 +209,190 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Next Receipt No</label>
+                            <label for="username">Mode of Devlivery</label>
                             <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="">
-                            </div>
+                                <div class="input-group-prepend">
 
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Received From</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="">
+                                </div>
+                                <select name="" id="cars">
+                                    <option value="volvo"></option>
+                                </select>
                             </div>
-
                         </div>
                     </div>
                 </div>
                 <br>
-                <table class="table table-bordered" id="new-item">
-                <thead>
-                    <tr>
-                        <th class="text-center">Items</th>
-                        <th class="text-center">Description</th>
-                        <th class="text-center">Amount</th>
-                        <th class="text-center"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                        <tr id="data">
-                            <td  scope="row" class="text-center" id="medicine_name_1"> <input type="text" class="form-control" name="" id="username" value=""></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"> <input type="text" class="form-control" name="" id="username" value=""></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"> <input type="text" class="form-control" name="" id="username" value=""></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"> <button type="submit" class="btn btn-primary float:right;" Style="width:100%;">Add</button></td>
-                        </tr>
-                </tbody>
-            </table>
-
-
+                <hr class="mb-4">
+                <br>
                 <div class="row">
-                    <div class="col-sm">
-
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">To the Attention To</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="" id="age" value="" placeholder="" min="0"
+                                    max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Age is required.
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-sm">
-
-                    </div>
-                    <div class="col-sm">
-                        <br>
-                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Submit</button>
-                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Cancel</button>
-
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Subject/Title</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="" id="age" value="" placeholder="" min="0"
+                                    max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Age is required.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <br>
+                <hr class="md-4">
+                <!-- <h2 style="text-align:center;"> Quotation Items</h2> -->
+                <div>
+                    <h3 style="text-align:center"><b>Document Items</b></h3>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label for="username">Item Type</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="type" id="cars">
+                                    <option value="volvo"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label for="username">Item Category</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="type" id="cars">
+                                    <option value="volvo"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label for="username">Amount</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="" id="age" value="" placeholder="" min="0"
+                                    max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Age is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label for="username">V.A.T</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="vat" id="cars">
+                                    <option value="volvo"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Particulers Of Service Rendered</label>
+                            <div class="input-group">
+                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Postal Address is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <a href=""><button class="btn btn-primary ">New
+                            Item</button></a>
+                    <a href=""><button class="btn btn-primary ">Delete Item</button></a>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="mb-1">
+                            <label for="username">Notes</label>
+                            <div class="input-group">
+                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Postal Address is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!-- <div class="container">
+                        <div class="row">
+                            <div class="col-sm">
+
+                            </div>
+                            <div class="col-sm">
+                                <button type="submit" class="btn btn-primary submit_btn_btn">Submit</button>
+                                <a href="{{route('client-index')}}" type="button" class="btn btn-primary "
+                                    style="width:30%; margin-top:30px; padding:8px;">Back</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col-sm">
+
+                    <div class="row">
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;"
+                                Style="width:50%;">Save Document</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
-
-
-
     </div>
+</div>
 
-
-
-
-
-    </tbody>
-    </table>
 </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
 $(function() {
@@ -797,8 +961,7 @@ $(document).on('click', '#testing1', function() {
                                     div > <
                                     /form> < /
                                     div > <
-                                    script src =
-                                    "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
+                                    script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
 </script>
 <script type="text/javascript">
 $('#password, #confirm_password').on('keyup', function() {
