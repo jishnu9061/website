@@ -861,6 +861,10 @@ Route::any('menu_access_configuration','SystemSetup@menuaccess')->name('menu_acc
 Route::any('useful_links','SystemSetup@usefullinks')->name('useful_links');
 
 
+//client invoicing
+// fee_notes/drn/interim notes
+Route::any('drn_fee_notes','clientinvoicing@drnfee')->name('drn_fee_notes');
+Route::any('new_drn_fee_notes','clientinvoicing@newdrnfee')->name('new_drn_fee_notes');
 
 //---------------------RESHMA--------------------------------------
 
