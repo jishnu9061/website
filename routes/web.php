@@ -860,12 +860,7 @@ Route::any('menu_access_configuration','SystemSetup@menuaccess')->name('menu_acc
 //usefullinks
 Route::any('useful_links','SystemSetup@usefullinks')->name('useful_links');
 
-//client invoicing
-//reshma
-//fee notes and credit
-Route::any('fee_notes',"clientinvoicing@feenotes")->name('fee_notes');
-Route::any('new_fee_note',"clientinvoicing@newfeenote")->name('new_fee_note');
-//reshma
+
 
 //---------------------RESHMA--------------------------------------
 
