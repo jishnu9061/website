@@ -128,6 +128,10 @@
                             </div>
                         </div>
                     </div>
+</div>
+<br>
+<div class="row">
+
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Email Address</label>
@@ -212,6 +216,9 @@
                             </div>
                         </div>
                     </div>
+</div>
+<br>
+<div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Email Address</label>
@@ -219,7 +226,19 @@
                                 <div class="input-group-prepend">
 
                                 </div>
+                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Mobile Number</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="website" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
                                 </div>

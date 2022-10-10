@@ -118,6 +118,9 @@
                             </div>
                         </div>
                     </div>
+</div>
+<br>
+<div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Mobile No</label>
@@ -147,6 +150,7 @@
 
                     </div>
                 </div>
+               
 
                 </br>
 
@@ -190,6 +194,9 @@
                             </div>
                         </div>
                     </div>
+</div>
+<br>
+<div class="row">
 
                     <div class="col-md-4">
                         <div class="mb-1">
@@ -208,6 +215,7 @@
 
         </div>
     </div>
+    <hr class="mb-4">
     <br>
 
 
@@ -246,6 +254,9 @@
                 </div>
             </div>
         </div>
+</div>
+<br>
+<div class="row">
         <div class="col-md-4">
             <div class="mb-1">
                 <label for="username">Mobile Number</label>
@@ -311,7 +322,9 @@
                 </div>
             </div>
         </div>
-
+</div>
+<br>
+<div class="row">
 
 
         <div class="col-md-4">
@@ -359,6 +372,9 @@
                 </div>
             </div>
         </div>
+</div>
+<br>
+<div class="row">
         <div class="col-md-4">
             <div class="mb-1">
                 <label for="username">Bring Up Date</label>
@@ -401,6 +417,9 @@
                 </div>
             </div>
         </div>
+        <div>
+            <br>
+            <div class="row">
 
         <div class="col-md-4">
             <div class="mb-1">

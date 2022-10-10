@@ -40,7 +40,7 @@
                     aria-controls="mydatatable"></label>
         </div>
         <a href="{{url('add-new-file')}}"><button class="btn btn-primary add-btn"
-                style="width: 20%; margin-bottom:5%;">Open New Client File</button></a>
+                style="width: 20%; margin-bottom:5%;">Open New File</button></a>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="table-responsive">
