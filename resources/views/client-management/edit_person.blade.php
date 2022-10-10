@@ -70,6 +70,19 @@
                 </div>
                 <br>
                 <div class="row">
+                <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Certificate Of Incorpotation</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="number" id="username" value=""
+                                    placeholder="Number">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="col-md-4">
                         <div class="mb-1">
@@ -101,7 +114,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    
+                </div>
+                <br>
+                <div class="row">
+                <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Fax No</label>
                             <div class="input-group">
@@ -114,9 +131,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <br>
-                <div class="row">
 
                     <div class="col-md-4">
                         <div class="mb-1">
@@ -133,6 +147,25 @@
                     </div>
                     <div class="col-md-4">
                         <div class="mb-1">
+                            <label for="username">Web site</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="email" class="form-control" name="email" value="" id="password"
+                                >
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                </div>
+               
+                   
+                    
+                </div>
+                <br>
+                <div class="row">
+                <div class="col-md-4">
+                        <div class="mb-1">
                             <label for="username">Brought In By</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
@@ -143,7 +176,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Status Reporting Day</label>
                             <div class="input-group">
@@ -156,9 +189,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <br>
-                <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Client Source</label>
@@ -174,7 +204,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                  
+               
+                </div>
+                <br>
+                <div class="row">
+                <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Client Source Narration</label>
                             <div class="input-group">
@@ -187,7 +222,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Client Name</label>
                             <div class="input-group">
@@ -200,9 +235,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <br>
-                <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Client Industry</label>
@@ -219,7 +251,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                   
+                  
+                </div>
+                <br>
+                <div class="row">
+                <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Pin No</label>
                             <div class="input-group">
@@ -232,7 +269,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Postal Address</label>
                             <div class="input-group">
@@ -245,10 +282,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Postal Code</label>
                             <div class="input-group">
@@ -261,7 +295,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+               
+                   
+                   
+                    {{--  --}}
+                </div>
+                <br>
+                <div class="row">
+               
+                <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Town</label>
                             <div class="input-group">
@@ -274,13 +316,9 @@
                             </div>
                         </div>
                     </div>
-                    {{--  --}}
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Notes</label>
+                            <label for="username">Physical Address</label>
                             <div class="input-group">
                                 <textarea class="form-control" id="form7Example7" rows="3"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
@@ -289,10 +327,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <div class="input-group">
-                                <label for="cars"> Physical Address</label>
+                                <label for="cars"> Notes</label>
                                 <textarea class="form-control" id="form7Example7" rows="3"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Postal Address is required.
