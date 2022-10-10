@@ -38,6 +38,7 @@
 
                                 </div>
                                 <select name="type" id="cars" disabled>
+
                                     <option value="volvo">Individual</option>
                                     <option value="volvo">Corporate</option>
                                 </select>
