@@ -98,10 +98,7 @@ class clientinvoicing extends Controller
 
 
     //Reports
-    //     // return view('client-invoicing.fee_notes');
-    // }
-    public function newfee_note()
-
+   
     //reshma
     public function drnfee()
     {
