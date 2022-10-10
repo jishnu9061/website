@@ -34,7 +34,7 @@
 
 
         <h4 style="text-align:center"><b>Client Receipt</b></h4>
-        <hr class="mb-4">.
+        <hr class="mb-4">
         <div class="row">
             <form method="post" action="" id="form">
                 @csrf
@@ -195,7 +195,7 @@
                             <td  scope="row" class="text-center" id="medicine_name_1"> <input type="text" class="form-control" name="" id="username" value=""></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"> <input type="text" class="form-control" name="" id="username" value=""></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"> <input type="text" class="form-control" name="" id="username" value=""></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"> <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Add</button></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1"> <button type="submit" class="btn btn-primary float:right;" Style="width:100%;">Add</button></td>
                         </tr>
                 </tbody>
             </table>
