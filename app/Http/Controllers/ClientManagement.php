@@ -301,6 +301,7 @@ class ClientManagement extends Controller
 
 
     public function listCorporate(){
-        return view('client-management.corporate-list');
+        $corporate_list=DB::table('cra_corporate_client_details')->get();
+        return view('client-management.corporate-list',compact('corporate_list'));
     }
 }
