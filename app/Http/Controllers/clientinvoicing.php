@@ -35,6 +35,17 @@ class clientinvoicing extends Controller
         return view('client-invoicing.issue-client-receipt');
     }
 
+    public function Quotation(){
+
+
+        return view('client-invoicing.quotation');
+
+    }
+    public function newDocumnet(){
+
+        return view('client-invoicing.new-document');
+    }
+
 //mugu
 
 
@@ -80,9 +91,6 @@ class clientinvoicing extends Controller
     {
         return view('client-invoicing.quotation_item_report');
     }
-
-
-   
 
 
 
