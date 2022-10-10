@@ -91,7 +91,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="name" id="username" value=""
-                                    placeholder="clientname" required>
+                                    placeholder="client name" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
