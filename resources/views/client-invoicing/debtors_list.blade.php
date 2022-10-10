@@ -80,17 +80,17 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="number" id="username" required>
+                                <input type="date" class="form-control" name="number" id="username" required></br></br>
                             </div>
                         </div>
                     </div>
 
                 </div>
-        </div>
+        <!-- </div>
 
     </div>
 
-</div>
+</div> -->
 
 
 
