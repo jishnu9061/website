@@ -21,7 +21,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <form method="post" action="" id="form">  
+            <form method="post" action="{{url('add-corporate')}}" id="form">  
                 @csrf
                 <div class="row">
                     <div class="col-md-4">
@@ -44,8 +44,8 @@
 
                                 </div>
                                 <select name="type" id="cars" disabled>
-                                    <option value="volvo">Corporate</option>
-                                    <option value="volvo">Individual</option>
+                                    <option value="Corporate">Corporate</option>
+                                    <option value="Individual">Individual</option>
                                 </select>
                             </div>
                         </div>
@@ -59,8 +59,8 @@
                                 </div>
                                 <select name="citizen" id="cars">
                                     <option value="volvo">Select</option>
-                                    <option value="volvo">Residensial</option>
-                                    <option value="volvo">Non Residensial</option>
+                                    <option value="Residensial">Residensial</option>
+                                    <option value="Non Residensial">Non Residensial</option>
                                 </select>
                             </div>
                         </div>
@@ -89,10 +89,10 @@
                                 </div>
                                 <select name="country" id="cars">
                                     <option value="volvo">Select</option>
-                                    <option value="volvo">Kenya</option>
-                                    <option value="volvo">South Africa</option>
-                                    <option value="volvo">India</option>
-                                    <option value="volvo">America</option>
+                                    <option value="Kenya">Kenya</option>
+                                    <option value="South Africa">South Africa</option>
+                                    <option value="India">India</option>
+                                    <option value="America">America</option>
                                 </select>
                             </div>
                         </div>
@@ -102,7 +102,7 @@
                             <label for="username">Telephone No</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="password" class="form-control" name="telephone" value=""
+                                <input type="text" class="form-control" name="telephone" value=""
                                     id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
@@ -143,7 +143,7 @@
                             <label for="username">Web Site</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="conpassword" value=""
+                                <input type="text" class="form-control" name="website" value=""
                                     id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
@@ -162,8 +162,8 @@
                                 </div>
                                 <select name="brought">
                                     <option value="volvo">Select</option>
-                                    <option value="volvo">Agent</option>
-                                    <option value="volvo">Staff</option>
+                                    <option value="Agent">Agent</option>
+                                    <option value="Staff">Staff</option>
                                 </select>
                             </div>
                         </div>
@@ -177,11 +177,11 @@
                                 </div>
                                 <select name="status" id="cars">
                                     <option value="">Select</option>
-                                    <option value="">Monday</option>
-                                    <option value="">Tuesday</option>
-                                    <option value="">Wednesday</option>
-                                    <option value="">Thursday</option>
-                                    <option value="">Friday</option>
+                                    <option value="Monday">Monday</option>
+                                    <option value="Tuesday">Tuesday</option>
+                                    <option value="Wednesday">Wednesday</option>
+                                    <option value="Thursday">Thursday</option>
+                                    <option value="Friday">Friday</option>
                                 </select>
                             </div>
                         </div>
@@ -195,8 +195,8 @@
                                 </div>
                                 <select name="source" id="cars">
                                     <option value="volvo">Select</option>
-                                    <option value="volvo">Excisting Client</option>
-                                    <option value="volvo">Online</option>
+                                    <option value="Excisting">Excisting Client</option>
+                                    <option value="Online">Online</option>
                                 </select>
                             </div>
                         </div>
@@ -209,7 +209,7 @@
                             <label for="username">Client Source Narration</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="narration" class="form-control" name="conpassword" value=""
+                                <input type="narration" class="form-control" name="narration" value=""
                                     id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
@@ -238,9 +238,9 @@
                                 </div>
                                 <select name="industry" id="cars">
                                     <option value="volvo">Select</option>
-                                    <option value="volvo">Commerce</option>
-                                    <option value="volvo">Construction</option>
-                                    <option value="volvo">Education</option>
+                                    <option value="Commerce">Commerce</option>
+                                    <option value="Construction">Construction</option>
+                                    <option value="Education">Education</option>
                                 </select>
                             </div>
                         </div>
@@ -304,7 +304,7 @@
                         <div class="mb-1">
                             <label for="username">Physical Address</label>
                             <div class="input-group">
-                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="physicaladdress"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Postal Address is required.
                                 </div>
@@ -315,7 +315,7 @@
                         <div class="mb-1">
                             <label for="username">Notes</label>
                             <div class="input-group">
-                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="notes"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Postal Address is required.
                                 </div>
@@ -330,10 +330,10 @@
                 <div class="row">
                     <div class="col-md-3">
                         <div class="mb-1">
-                            <label for="username">Names</label>
+                            <label for="username">Person Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="name" id="age" value="" placeholder=""
+                                <input type="text" class="form-control" name="person" id="age" value="" placeholder=""
                                     min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
 
@@ -346,7 +346,7 @@
                             <label for="username">Designation</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="Mobile" id="age" value="" placeholder=""
+                                <input type="text" class="form-control" name="Designation" id="age" value="" placeholder=""
                                     min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Mobile No is required.
@@ -369,10 +369,10 @@
                     </div>
                     <div class="col-md-3">
                         <div class="mb-1">
-                            <label for="username">Email</label>
+                            <label for="username">Contact Person Email</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="email" id="age" value="" placeholder=""
+                                <input type="text" class="form-control" name="person_email" id="age" value="" placeholder=""
                                     min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 </div>
@@ -394,7 +394,7 @@
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Close</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Save</button>
+                            <button type="submit" class="btn btn-primary float:left" Style="width:45%;">Save</button>
                         </div>
                     </div>
                 </div>
