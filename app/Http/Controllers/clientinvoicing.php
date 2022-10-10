@@ -46,6 +46,10 @@ class clientinvoicing extends Controller
         return view('client-invoicing.new-document');
     }
 
+    public function editDocument(){
+        return view('client-invoicing.edit-new-document');
+    }
+
 //mugu
 
 

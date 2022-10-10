@@ -88,7 +88,7 @@
                         <td class="text-center" style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center" style="color:rgb(13, 1, 56);"></td>
                         <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"><a href=""><i style="color:black;" class="fa fa-edit"
+                        <td class="text-center"><a href="{{url('edit-document')}}"><i style="color:black;" class="fa fa-edit"
                                     aria-hidden="true"></i>
                                     <a href=""><i style="color:black;" class="fa fa-trash"
                                     aria-hidden="true"></i>
