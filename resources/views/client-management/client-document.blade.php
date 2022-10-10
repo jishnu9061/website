@@ -16,12 +16,12 @@
 
 <body>
     <div class="container">
-        <button class="btn btn-primary"
-            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Document Details</u></b></button><br><br>
+        <div class="btn btn-primary"
+            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Document Details</u></b></div><br><br>
 
 
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
+        <div class="table-responsive"> 
             <table class="table table-bordered" id="new-item">
                 <thead>
                     <tr>
@@ -46,6 +46,7 @@
                     </tr>
                 </tbody>
             </table>
+</div>
 
 
             <!-- The Modal -->

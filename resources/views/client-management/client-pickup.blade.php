@@ -9,7 +9,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 
-{{-- <div class="spacer" style="height:40px;margin-top: 30px;"> --}}
 
 
 
@@ -17,18 +16,26 @@
 
 <body>
     <div class="container">
-        <button class="btn btn-primary"
-            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Client Pickup Reception</u></b></button><br>
-        <div class="container mt-5">
+        <div class="btn btn-primary"
+            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Client Pickup Reception</u></b></div><br>
+        <div>
+        <!-- <div class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px" width ><b><u>Client Pickup Reception</u></b></span></div><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous"> -->
+
+
+            <br>
             <a href="{{url('add-pickup')}}"><button class="btn btn-primary add-btn" style="width:20%">New Client
                     Pickup</button></a>
             <div id="mydatatable_filter" class="dataTables_filter">
                 <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
-            </div>
+            
         </div>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
+            <div class="table-responsive"> 
                 <table class="table table-bordered " id="new-item">
                     <thead>
                         <tr>
@@ -66,6 +73,7 @@
                         </tr>
                     </tbody>
                 </table>
+                            </div>
 
 
                 <!-- The Modal -->

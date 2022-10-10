@@ -380,7 +380,7 @@ button, button
 
 
 
-cli
+
 .client_btn{
     width:17%;
     background-color: rgb(6, 6, 58);
@@ -1378,8 +1378,14 @@ background: #dee2e6;
                 .complaint_btn{
                     width:20%;
                 }
-
-               
+/* 
+               .cls_btn_btn{
+                border:1px solid rgb(187, 169, 169);
+                padding:17px;
+                border-radius: 15px;
+                box-shadow: 1px 1px 1px 1px #888888;
+                
+               } */
 
                 .client_btn{
                     width:17%;
@@ -1426,7 +1432,7 @@ background: #dee2e6;
                     width:15%;
                 }
                 .add-btn{
-                    width:15%;
+                    width:16%;
                     color:yellow;
                 }
                 .clr{

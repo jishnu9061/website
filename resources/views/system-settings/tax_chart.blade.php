@@ -2,6 +2,7 @@
 @extends('layouts.hmsmain')
 @section('content')
 <html>
+    <div class="container">
    <head>
    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -22,16 +23,18 @@
 table{
     outline: 1px solid  gray;
 }
- /* tr:nth-child(odd)
-{
-    background-color:rgb(198, 195, 211);
-}            */
  </style>
    </head>
    <body>
-    <!-- <h2 >Court List</h2><br>
-    <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Tax Chart</h2>
+   
+    <div>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Tax Chart</u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+     </div>
+            <br>
     <div class="dropdown">
   <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Settings
@@ -48,7 +51,7 @@ table{
     Print
   </button></a>
   </div>
-  <hr class="mb-4">.
+ 
   <table class="table table-bordered" id="new-item">
     <thead>
   <h6 style="text-align:center;color:rgb(13, 1, 56);"><span class="border "style="background-color:rgb(198, 195, 211); "> Tax Chart</span></h6><br>
@@ -188,6 +191,7 @@ table{
  <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
 </form> -->
         </body>
+</div>
 </html>
 
   @endsection

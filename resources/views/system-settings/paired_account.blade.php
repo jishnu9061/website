@@ -2,6 +2,7 @@
 @extends('layouts.hmsmain')
 @section('content')
 <html>
+<div class="container">
    <head>
    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -31,12 +32,16 @@ table{
             </style>
    </head>
    <body>
-    <!-- <h2 >Court List</h2><br>
-    <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Paired Accounts</h2>
-        <a href="{{('add_account_pairs')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Account Pair</button></a>
-        <hr class="mb-4">.
-        <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">List Of Paired Accounts</h3>
+<div>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Paired Accounts</u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+     </div>
+            <br>
+        <a href="{{('add_account_pairs')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Account Pair</button></a> <br> <br>
+<h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">List Of Paired Accounts</h3>
     <!-- <div class="container"> -->
       <div class="mydiv">
       <table class="table table-bordered" id="new-item">
@@ -84,6 +89,7 @@ table{
  <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
 </form> -->
         </body>
+    </div>
 </html>
   @endsection
       

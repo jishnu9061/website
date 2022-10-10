@@ -1,299 +1,398 @@
 @extends('layouts.hmsmain')
 @section('content')
 <html>
+<div class="container">
    <head>
    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-  
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-      <style >
-          body
-        {
-          background-color: white;
-        }
-    
-        
-         .col-sm
-         {
-        margin-left:2px;
-         margin-top:6px;
-         width:400px;
-      
-         height:350px;
-         }
-         
-         
-         h3
-        {
-            font-size:small;
-            font-weight:bold;
-             color:white;
-             background-color:rgb(13, 1, 56);
-             padding:10px;
-            }
-     
-            form{
-                margin-left:4px;
-            }
-            table{
-                background-color:#f0e7ce; 
-                border:hidden;
-                font-size:small;
-                color:black;
-            
-            }
-           th,td,tr{
-            border:hidden;
-            color:black;
-
-           }
-       </style>
+   
    </head>
    <body>
 
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Configuration Details</h2>
-      
-  <hr class="mb-4">.
-  
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                <h3> Appearences:</h3>
-                <table class="table">
-                    <tbody>
-                        <tr>
-                            <td style="width:30%">Logo Width:</td>
-                            <td><input type="text"  id="" name="lwidth"value=""style="width:100%"></td>
-                        </tr>
-                        <tr>
-                            <td style="width:30%">Logo Height:</td>
-                            <td> <input type="text"  id="" name="lheight"value=""style="width:100%"></td>
-                        </tr>
-                        <tr>
-                            <td style="width:30%">Company Stamp Height:</td>
-                            <td>  <input type="text"  id="" name="csheight"value=""style="width:100%"></td>
-                        </tr>
-                        <tr>
-                            <td style="width:30%">Company Stamp Width:</td>
-                             <td><input type="text"  id="" name="cswidth"value=""style="width:100%"></td>
-                            </tr>
-                            <tr>
-                                <td style="width:30%">Background Color:</td>
-                                <td><input type="text"  id="" name="bcolor"value=""style="width:100%"></td>
-                            </tr>
-                            <tr>
-                                <td style="width:30%">Client Numbering Method:</td>
-                                <td> 
-                                    <select type="text" value="" id="" name="cnmethod"style="width:100%">
+   <div>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Configuration Details</u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+     </div>
+            <br> <br>
+       <form method="post" action="" id="form">  
+       @csrf
+            <button class="btn btn-primary float-left"
+                    style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Appearences:</button><br><br><br>
+                    
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                        <label >Logo Width:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="lwidth" id="" value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label>Logo Height:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="lheight" id="" value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="mb-1">
+                            <label>Company Stamp Height:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="csheight" id="" value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                        <label >Company Stamp Width:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="cswidth" id="" value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label>Background Color:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="bgcolor" id="" value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="mb-1">
+                            <label>Client Numbering Method:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <select type="text" value="" id="" name="cnmethod"style="width:100%;">
                                     <option>---Select---</option>
                                     <option>Auto Numbering</option>
                                     <option>Alpha Numeric Code</option>
                                 </select>
-                            </td>
-                         </tr>
-                         <tr>
-                            <td style="width:30%">File Approval Method:</td>
-                            <td> 
+                              <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>
+            
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                        <label >File Approval Method:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
                                 <select type="text" value="" id="" name="fam"style="width:100%">
                                 <option>---Select---</option>
                                 <option>Automatic Approval</option>
                                 <option>2nd Phase aApproval</option>
                             </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width:30%">Branch Option:</td>
-                        <td> 
-                            <select type="text" value="" id="" name="boptn"style="width:100%">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label>Branch Option:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <select type="text" value="" id="" name="boptn"style="width:100%">
                             <option>---Select---</option>
                             <option>Branches Dependent</option>
                             <option>Branches Inependent</option>
                         </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width:30%">Instruction Approval Option:</td>
-                    <td> 
-                        <select type="text" value="" id="" name="iao"style="width:100%">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="mb-1">
+                            <label>Instruction Approval Option:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <select type="text" value="" id="" name="iao"style="width:100%">
                         <option>---Select---</option>
                         <option>Approve All Instruction</option>
                         <option>Amount Greater Than Balance</option>
                     </select>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-<div class="col-sm">
-     <h3>Client Portal:</h3>
-      <table class="table">
-        <tbody>
-          
-        <tr>
-            <td style="width:30%">Client Portal Logo Area Background Color:</td>
-            <td><input type="text"  id="" name="clbcolor"value=""style="width:100%"></td>
-        </tr>
-        
-        <tr>
-            <td style="width:30%">Client Portal Header Background Color:</td>
-            <td> <input type="text"  id="" name="chbcolor"value=""style="width:100%"></td>
-        </tr>
-        <tr>
-            <td style="width:30%">Show File Process (Client Portal):</td>
-            <td> 
-             <select type="text" value="" id="" name="fileprocess"style="width:100%">
-    <option>---Select---</option>
-    <option>Yes</option>
-    <option>No</option>
-    </select>
-</td>
-        </tr>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <button class="btn btn-primary float-left"
+                    style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Client Portal:</button><br><br><br>
+                    <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                        <label >Client Portal Logo Area Background Color:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="cplogocolor" id="" value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label>Client Portal Header Background Color:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="cpheadcolor" id="" value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                        <label >Show File Process (Client Portal):</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <select type="text" value="" id="" name="fileprocess"style="width:100%">
+                                <option>---Select---</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label>Show Invoices (Client Portal):</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <select type="text" value="" id="" name="invoices"style="width:100%">
+                                <option>---Select---</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                             </select>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                        <label >Show Payments (Client Portal):</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <select type="text" value="" id="" name="fileprocess"style="width:100%">
+                                <option>---Select---</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label>Show Documents (Client Portal):</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <select type="text" value="" id="" name="documents"style="width:100%">
+                                <option>---Select---</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                             </select>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                        <label >Approve File Progress for Client Portal:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <select type="text" value="" id="" name="fileprogress"style="width:100%">
+                                <option>---Select---</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label>Show Other Associate Coloumn:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <select type="text" value="" id="" name="associate"style="width:100%">
+                                <option>---Select---</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                             </select>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <button class="btn btn-primary float-left"
+                    style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Mail Configurations:</button><br><br><br> 
+                    <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                        <label >Mail Protocol:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <select type="text" value="" id="" name="mprotocol"style="width:100%">
+                                <option>---Select---</option>
+                                <option>STMP</option>
+                                <option>...</option>
+                            </select>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label>SMPT Server Address:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="smptaddress" id="" value="">
+                              <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="mb-1">
+                            <label>SMPT Port Number:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="smptnum" id="" value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>    
+                    <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                        <label >STMP Authentication:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <select type="text" value="" id="" name="stmpauthn"style="width:100%">
+                                <option>---Select---</option>
+                                <option>True</option>
+                                <option>...</option>
+                            </select>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label>SMTP Secure:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <select type="text" value="" id="" name="ssecure"style="width:100%">
+                                <option>---Select---</option>
+                                <option>TSL</option>
+                                <option>SSL</option>
+                            </select>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div> 
+                    <div class="row">
+         <div class="col-sm">
 
-        <tr>
-            <td style="width:30%">Show Invoices (Client Portal):</td>
-            <td> 
-             <select type="text" value="" id="" name="invoices"style="width:100%">
-    <option>---Select---</option>
-    <option>Yes</option>
-    <option>No</option>
-    </select>
-</td>
-        </tr>
+                        </div>
+                        <div class="col-sm">
 
-        <tr>
-            <td style="width:30%">Show Payments (Client Portal):</td>
-            <td> 
-             <select type="text" value="" id="" name="payment"style="width:100%">
-    <option>---Select---</option>
-    <option>Yes</option>
-    <option>No</option>
-    </select>
-</td>
-        </tr>
-
-        <tr>
-            <td style="width:30%">Show Documents (Client Portal):</td>
-            <td> 
-             <select type="text" value="" id="" name="documents"style="width:100%">
-    <option>---Select---</option>
-    <option>Yes</option>
-    <option>No</option>
-    </select>
-</td>
-        </tr>
-
-        <tr>
-            <td style="width:30%">Approve File Progress for Client Portal:</td>
-            <td> 
-             <select type="text" value="" id="" name="filecportal"style="width:100%">
-    <option>---Select---</option>
-    <option>Yes</option>
-    <option>No</option>
-    </select>
-</td>
-        </tr>
-
-        <tr>
-            <td style="width:30%">Show Other Associate Coloumn:</td>
-            <td> 
-             <select type="text" value="" id="" name="acoloumn"style="width:100%">
-    <option>---Select---</option>
-    <option>Yes</option>
-    <option>No</option>
-    </select>
-</td>
-        </tr>
-
-         </tbody>
-         
-      </table> 
-     
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
         </div>
-
-        </div>
-
-<br>
-<br>
-<br>
-<br>        
-<br>
-<br>
-
-<div class="row">
-    <div class="col-sm">
-     <h3>Mail Configurations:</h3>
-     <table class="table">
-        <tbody>
-          
-        <tr>
-            <td style="width:30%">Mail Protocol:</td>
-            <td> <select type="text" value="" id="" name="mprotocol"style="width:100%">
-    <option>---Select---</option>
-    <option>STMP</option>
-    <option>...</option>
-    </select></td>
-        </tr>
-          
-        <tr>
-            <td style="width:30%">SMPT Server Address:</td>
-            <td><input type="text"  id="" name="saddress"value=""style="width:100%"></td>
-        </tr>
-
-          <tr>
-            <td style="width:30%">SMPT Port Number:</td>
-            <td><input type="number"  id="" name="pnum"value=""style="width:100%"></td>
-        </tr>
-          
-        <tr>
-            <td style="width:30%">STMP Authentication:</td>
-            <td>   <select type="text" value="" id="" name="sauthntictn"style="width:100%">
-    <option>---Select---</option>
-    <option>True</option>
-    <option>...</option>
-    </select></td>
-        </tr>
-            
-        <tr>
-            <td style="width:30%">SMTP Secure:</td>
-            <td>   <select type="text" value="" id="" name="ssecure"style="width:100%">
-    <option>---Select---</option>
-    <option>TSL</option>
-    <option>SSL</option>
-    </select></td>
-        </tr>
-
-       
-        </tbody>
-      </table>
-        </div>
-      <br>
-
-     
-      
-    <div class="col-sm">
-     <h3>Invoice:</h3>
-      <table class="table">
-        <tbody>
-          
-       
-    </tbody>
-      </table> 
-
-        </div>
-        </div>
-        
-        <input  type="submit"value="Update" name="Submit"style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105); ">
-  
-  <input type="button"value="Cancel" name="cancel"style="background-color:rgb(13, 1, 56);color: rgb(238, 196, 105); ">
-        </div>
-        <!-- <form>
- <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
-</form> -->
+</form>
         </body>
+
 </html>
   @endsection
       
@@ -309,115 +408,6 @@
 
 
 
-        <!--<div class="col-sm">
-    <h3>Client Portal:</h3>
-    <label for="cp_logo"style="color:black;margin-left:2px;font-size:x-small; width:200px;">Client Portal Logo Area Background Color:</label>
-    <input type="text"  id="cplogo" name="cplogo"value=""style="width:150px;height:20px;">
-    
-    <label for="cp_header"style="color:black;margin-left:2px;font-size:x-small; width:200px;">Client Portal Header Background Color:</label>
-    <input type="text"  id="cpheader" name="cpheader"value=""style="width:150px;height:20px;">
-    
-    <label for="file_process"style="color:black;margin-left:2px;font-size:x-small; width:200px;">Show File Process (Client Portal):</label>
-    <select style="width:150px;height:20px;color:black;font-size:x-small;"type="text" value="" id="fileprocess" name="fileprocess">
-    <option>Select</option>
-    <option>Yes</option>
-    <option>No</option>
-    </select>
-
-    <label for="invoices"style="color:black;margin-left:2px;font-size:x-small; width:200px;">Show Invoices (Client Portal):</label>
-    <select style="width:150px;height:20px;color:black;font-size:x-small;"type="text" value="" id="invoices" name="invoices">
-    <option>Select</option>
-    <option>Yes</option>
-    <option>No</option>
-    </select>
-
-    <label for="payments"style="color:black;;margin-left:2px;font-size:x-small; width:200px;">Show Payments (Client Portal):</label>
-    <select style="width:150px;height:20px;color:black;font-size:x-small;"type="text" value="" id="payments" name="payments">
-    <option>Select</option>
-    <option>Yes</option>
-    <option>No</option>
-    </select>
-    
-    <label for="documents"style="color:black;margin-left:2px;font-size:x-small; width:200px;">Show Documents (Client Portal):</label>
-    <select style="width:150px;height:20px;color:black;font-size:x-small;"type="text" value="" id="documents" name="documents">
-    <option>Select</option>
-    <option>Yes</option>
-    <option>No</option>
-    </select>
-    
-    <label for="file_progress"style="color:black;margin-left:2px;font-size:x-small; width:200px;">Approve File Progress for Client Portal:</label>
-    <select style="width:150px;height:20px;color:black;font-size:x-small;"type="text" value="" id="fprogress" name="fprogress">
-    <option>Select</option>
-    <option>Yes</option>
-    <option>No</option>
-    </select>
-
-    <label for="other_associate"style="color:black;margin-left:2px;font-size:x-small; width:200px;">Show Other Associate Coloumn:</label>
-    <select style="width:150px;height:20px;color:black;font-size:x-small;"type="text" value="" id="otherassociate" name="otherassociat">
-    <option>Select</option>
-    <option>Yes</option>
-    <option>No</option>
-    </select>
-</div> 
-
-   <div class="col-sm">
-    <h3>Mail Configuration:</h3>
-    
-    <label for="mail_portal"style="color:black;margin-left:2px;font-size:x-small; width:150px;">Mail Protocol:</label>
-    <select style="width:200px;height:20px;color:black;font-size:x-small;"type="text" value="" id="mportal" name="mportal">
-    <option>Select</option>
-     <option>STMP</option>
-     </select>
-
-     <label for="server_address"style="color:black;margin-left:2px;font-size:x-small; width:150px;">SMPT Server Address:</label>
-     <input type="email"  id="seraddress" name="seraddres"value=""style="width:200px;height:20px;">
-        
-     <label for="port_number"style="color:black;margin-left:2px;font-size:x-small; width:150px;">SMPT Port Number:</label>
-     <input type="number"  id="portnum" name="portnum"value=""style="width:200px;height:20px;">
-     
-     <label for="authentication"style="color:black;margin-left:2px;font-size:x-small; width:150px;">STMP Authentication:</label>
-     <select style="width:200px;height:20px;color:black;font-size:x-small;"type="text" value="" id="authentication" name="authentication">
-     <option>Select</option>
-     <option>True</option>
-    </select>
-    
-    <label for="Secure"style="color:black;margin-left:2px;font-size:x-small; width:150px;">SMTP Secure:</label>
-    <select style="width:200px;height:20px;color:black;font-size:x-small;"type="text" value="" id="secure" name="secure">
-    <option>Select</option>
-    <option>TSL</option>
-</select>
-</div> 
-  </div>
-
-  <div class="row">
-  <div class="col-sm">
-    <h3>Mail Configuration:</h3>
-    
-    <label for="mail_portal"style="color:black;margin-left:2px;font-size:x-small; width:150px;">Mail Protocol:</label>
-    <select style="width:200px;height:20px;color:black;font-size:x-small;"type="text" value="" id="mportal" name="mportal">
-    <option>Select</option>
-     <option>STMP</option>
-     </select>
-
-     <label for="server_address"style="color:black;margin-left:2px;font-size:x-small; width:150px;">SMPT Server Address:</label>
-     <input type="email"  id="seraddress" name="seraddres"value=""style="width:200px;height:20px;">
-        
-     <label for="port_number"style="color:black;margin-left:2px;font-size:x-small; width:150px;">SMPT Port Number:</label>
-     <input type="number"  id="portnum" name="portnum"value=""style="width:200px;height:20px;">
-     
-     <label for="authentication"style="color:black;margin-left:2px;font-size:x-small; width:150px;">STMP Authentication:</label>
-     <select style="width:200px;height:20px;color:black;font-size:x-small;"type="text" value="" id="authentication" name="authentication">
-     <option>Select</option>
-     <option>True</option>
-    </select>
-    
-    <label for="Secure"style="color:black;margin-left:2px;font-size:x-small; width:150px;">SMTP Secure:</label>
-    <select style="width:200px;height:20px;color:black;font-size:x-small;"type="text" value="" id="secure" name="secure">
-    <option>Select</option>
-    <option>TSL</option>
-</select>
-</div> 
-  </div> -->
     
 
 

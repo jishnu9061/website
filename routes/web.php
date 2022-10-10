@@ -682,7 +682,7 @@ Route::any('delete_surgery{id}', 'surgeryController@destroy')->name('delete_surg
 Route::get('calendar-event', 'CalenderController@index')->name('calendar-event');
 Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents']);
 
-//RESHMA--------------------------------
+//---------------------------RESHMA--------------------------------
 // system setup index
 Route::any('system_setup','SystemSetup@index')->name('system_setup');
 //end
@@ -786,24 +786,29 @@ Route::any('reg_new_user','SystemSetup@regnewuser')->name('reg_new_user');
 Route::any('user_edit','SystemSetup@useredit')->name('user_edit');
 Route::any('user_attachments','SystemSetup@attachments')->name('user_attachments');
 Route::any('user_comments','SystemSetup@comments')->name('user_comments');
+//end
 //change password
 Route::any('change_user_password','SystemSetup@changepassword')->name('change_user_password');
+//end
 //manage user group
 Route::any('manage_user_group','SystemSetup@manageusergrp')->name('manage_user_group');
 Route::any('add_new_user_grp','SystemSetup@addnewusergrp')->name('add_new_user_grp');
 Route::any('edit_new_user_grp','SystemSetup@editnewusergrp')->name('edit_new_user_grp');
+//end
 //view roles per user
 Route::any('view_roles_per_user','SystemSetup@rolesperuser')->name('view_roles_per_user');
 Route::any('edit_view_roles','SystemSetup@editviewroles')->name('edit_view_roles');
-// Route::any('roles_edit','SystemSetup@rolesedit')->name('roles_edit');
+//end
 //manage user roles
 Route::any('manage_user_roles','SystemSetup@manageuserroles')->name('manage_user_roles');
 Route::any('add_user_roles','SystemSetup@adduserrole')->name('add_user_roles');
 Route::any('edit_user_roles','SystemSetup@edituserrole')->name('edit_user_roles');
+//end
 //manage user department
 Route::any('manage_user_department','SystemSetup@manageuserdepartment')->name('manage_user_department');
 Route::any('add_user_department','SystemSetup@adduserdepartment')->name('add_user_department');
 Route::any('edit_user_department','SystemSetup@edituserdepartment')->name('edit_user_department');
+//end
 //advocate targets
 Route::any('advocates_target','SystemSetup@advocatestarget')->name('advocates_target');
 Route::any('add_new_entry','SystemSetup@addnew')->name('add_new_entry');
@@ -814,26 +819,57 @@ Route::any('advocates_target_2023','SystemSetup@advocatestarget2023')->name('adv
 Route::any('advocates_target_2024','SystemSetup@advocatestarget2024')->name('advocates_target_2024');
 Route::any('advocates_target_2025','SystemSetup@advocatestarget2025')->name('advocates_target_2025');
 Route::any('advocates_target_2026','SystemSetup@advocatestarget2026')->name('advocates_target_2026');
+//end
 //OTHER SETTINGS
 //database backups
 Route::any('database_backup','SystemSetup@databasebackup')->name('database_backup');
+//end
 //tansport zone
 Route::any('transport_zones','SystemSetup@transportzone')->name('transport_zones');
 Route::any('add_transport_zone','SystemSetup@addtransportzone')->name('add_transport_zone');
 Route::any('edit_transport_zone','SystemSetup@edittransportzone')->name('edit_transport_zone');
+//end
 //billable activities
 Route::any('billable_activities','SystemSetup@billableactivities')->name('billable_activities');
 Route::any('add_billable_activities','SystemSetup@addbillableactivities')->name('add_billable_activities');
 Route::any('edit_billable_activities','SystemSetup@editbillableactivities')->name('edit_billable_activities');
+//end
 //bank account details
 Route::any('bank_details','SystemSetup@bankdetails')->name('bank_details');
 Route::any('add_bank_account','SystemSetup@addbankaccount')->name('add_bank_account');
 Route::any('edit_bank_account','SystemSetup@editbankaccount')->name('edit_bank_account');
 Route::any('add_bank_document','SystemSetup@bankdocument')->name('add_bank_document');
-//RESHMA--------------------------------------
+//end
+//leave days per year
+Route::any('leave_days_year','SystemSetup@leavedays')->name('leave_days_year');
+Route::any('add_leave_days','SystemSetup@addleavedays')->name('add_leave_days');
+Route::any('edit_leave_days','SystemSetup@editleavedays')->name('edit_leave_days');
+//end
+//hourly rates
+Route::any('hourly_rates','SystemSetup@hourlyrates')->name('hourly_rates');
+Route::any('add_hourly_rates','SystemSetup@addhourlyrates')->name('add_hourly_rates');
+Route::any('edit_hourly_rates','SystemSetup@edithourlyrates')->name('edit_hourly_rates');
+//end
+//partner revenue share
+Route::any('partner_revenue_share','SystemSetup@partnerrevenueshare')->name('partner_revenue_share');
+Route::any('add_partner_revenue','SystemSetup@addpartnerrevenue')->name('add_partner_revenue');
+//end
+//menu access configuration
+Route::any('menu_access_configuration','SystemSetup@menuaccess')->name('menu_access_configuration');
+//end
+//usefullinks
+Route::any('useful_links','SystemSetup@usefullinks')->name('useful_links');
 
 
-//mugunthan
+//client invoicing
+// fee_notes/drn/interim notes
+Route::any('drn_fee_notes','clientinvoicing@drnfee')->name('drn_fee_notes');
+Route::any('new_drn_fee_notes','clientinvoicing@newdrnfee')->name('new_drn_fee_notes');
+
+//---------------------RESHMA--------------------------------------
+
+
+//Mugunthan
 
 //Client-list
 Route::any('add_newclient',"ClientManagement@create")->name('add_newclient');
@@ -896,7 +932,16 @@ Route::any('add-corporate','ClientManagement@addCorporate')->name('add-corporate
 Route::any('corporate-list','ClientManagement@listCorporate')->name('corporate-list');
 //end corporate
 
-//mugunthan
+//client invoicing
+Route::any('receipt-report','clientinvoicing@receiptReport')->name('receipt-report');
+Route::any('reverse-receipt','clientinvoicing@reverseReport')->name('reverse-receipt');
+Route::any('receipt-reprint','clientinvoicing@receiptReprint')->name('receipt-reprint');
+Route::any('issue-receipt','clientinvoicing@issuceReceipt')->name('issue-receipt');
+Route::any('quotation','clientinvoicing@Quotation')->name('quotation');
+Route::any('new-document','clientinvoicing@newDocumnet')->name('new-document');
+//end client invoicing
+
+//Mugunthan
 
 
 
@@ -1006,9 +1051,39 @@ Route::any('/new_Request_staff_item',"filemanagement@add_Request_staff_item_list
 
 Route::any('/Process_Request',"filemanagement@Process_Request_list")->name('Process_Request_list');
 
+Route::any('/edit_file_instruction',"filemanagement@edit_file_instruction_list")->name('Process_Request_list');
+
+Route::any('/edit_office_instruction',"filemanagement@edit_office_instruction_list")->name('edit_office_instruction_list');
+
+
+
+//client invoicing
+
+//Report
+Route::any('client_invoicingindex',"clientinvoicing@index")->name('client_invoicingindex');
+Route::any('debtors_aging_report',"clientinvoicing@deptorsaggingreport")->name('debtors_aging_report');
+Route::any('debtors_list',"clientinvoicing@deptorslist")->name('debtors_list');
+Route::any('fee_note_items_billed',"clientinvoicing@filenoteitembilled")->name('fee_note_items_billed');
+Route::any('fee_note_items_received',"clientinvoicing@filenoteitemreceived")->name('fee_note_items_received');
+Route::any('fee_note_report',"clientinvoicing@feenotereport")->name('fee_note_report');
+Route::any('other_reports',"clientinvoicing@otherreport")->name('other_reports');
+Route::any('quotation_item_report',"clientinvoicing@quotationitemreport")->name('quotation_item_report');
+Route::any('fee_expected_advocate',"clientinvoicing@feeexpectedadvocate")->name('fee_expected_advocate');
+//Report
+
+//anandhu
+Route::any('capture_billable_items',"clientinvoicing@billable_items")->name('billable_items');
+Route::any('view_bill',"clientinvoicing@view_bill_item")->name('view_bill_item');
+//anandhu
+
+
+
+
+
+
+
+
 
 
 ?>
-
-
 

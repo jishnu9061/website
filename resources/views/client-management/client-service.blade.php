@@ -16,8 +16,8 @@
 
     <body>
         <div class="container">
-            <button class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Client Reception</u></b></span></button><br><br>
+            <div class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Client Reception</u></b></span></div><br><br>
             <a href="{{ 'add-service' }}"><button class="btn btn-primary add-btn" style="width:21%">New Client
                     Service</button></a>
             <div id="mydatatable_filter" class="dataTables_filter">
@@ -27,7 +27,7 @@
 
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
+                <div class="table-responsive"> 
                     <table class="table table-responsive" id="new-item" style="width:100%">
                         <thead>
                             <tr>
@@ -46,12 +46,12 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr id="data">
+                            <tr id="data" style="width:100%;">
                                 <td class="text-center"></td>
                                 <td class="text-center" id="medicine_name_1"></td>
                                 <td class="text-center" id="medicine_name_1"></td>
                                 <td class="text-center" id="medicine_name_1"></td>
-                                <td class="text-center" id="medicine_name_1"></td>
+                                <td style="width:30%"class="text-center" id="medicine_name_1"></td>
                                 <td style="width:15%" class="text-center" id="medicine_name_1"></td>
                                 <td class="text-center" id="medicine_name_1"></td>
                                 <td class="text-center" id="medicine_name_1"></td>
@@ -63,6 +63,7 @@
                             </tr>
                         </tbody>
                     </table>
+</div>
 
 
                     <!-- The Modal -->

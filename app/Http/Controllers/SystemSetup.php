@@ -421,10 +421,47 @@ class SystemSetup extends Controller
         return view('system-settings.add_bank_document');
     }
   
+    public function leavedays()
+    {
+        return view('system-settings.leave_days_year');
+    }
   
-
-
-
+    public function addleavedays()
+    {
+        return view('system-settings.add_leave_days');
+    }
+    public function editleavedays()
+    {
+        return view('system-settings.edit_leave_days');
+    }
+    public function hourlyrates()
+    {
+        return view('system-settings.hourly_rates');
+    }
+    public function addhourlyrates()
+    {
+        return view('system-settings.add_hourly_rates');
+    }
+    public function edithourlyrates()
+    {
+        return view('system-settings.edit_hourly_rates');
+    }
+    public function partnerrevenueshare()
+    {
+        return view('system-settings.partner_revenue_share');
+    }
+    public function addpartnerrevenue()
+    {
+        return view('system-settings.add_partner_revenue');
+    }
+    public function menuaccess()
+    {
+        return view('system-settings.menu_access_configuration');
+    }
+    public function usefullinks()
+    {
+        return view('system-settings.useful_links');
+    }
 
 
    

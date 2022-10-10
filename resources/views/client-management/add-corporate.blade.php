@@ -1,18 +1,23 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container">
-    <div class="py-5 text-center">
+    <div class="">
 
 
         <div>
-            <button class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Add New Corporate Client</u></b></span></button><br>
+            <div class="btn btn-primary"
+            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Add Corporate Client</u></b></span></div><br>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous">
 
-        
+
+            <div class="container mt-5">
+                {{-- <button type="button" class="btn btn-primary client_btn" data-bs-toggle="modal"
+                    data-bs-target="#mymodal">Add Client Type</button> --}}
+                <!-- <button type="button" class="btn btn-primary country_btn" data-bs-toggle="modal" data-bs-target="#my">Add Country</button> -->
             </div>
+        </div>
     </div>
     <div class="row">
         <div class="col-md-12">
@@ -319,8 +324,8 @@
                     </div>
                 </div>
                 <br>
-                <button class="btn btn-primary"
-                    style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Contact Person</u></b></span></button><br>
+                <div class="btn btn-primary"
+                    style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Contact Person</u></b></span></div><br>
                 <br>
                 <div class="row">
                     <div class="col-md-3">

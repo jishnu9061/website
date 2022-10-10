@@ -4,8 +4,15 @@
     <div class="py-5 text-center">
 
         <div>
-            <h2 style="text-align:center; ">New Quotation</h2>
-            <hr class="mb-4">.
+        <div>
+                <div class="btn btn-primary"
+                    style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Add
+                            Quotation</u></b></span></div><br>
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                    crossorigin="anonymous">
+
+            </div>
         </div>
     </div>
     <div class="row">
@@ -163,7 +170,15 @@
                     </div>
                 </div>
                 <br>
-                <h2 style="text-align:center;"> Quotation Items</h2>
+                <!-- <h2 style="text-align:center;"> Quotation Items</h2> -->
+                <div>
+                <div class="btn btn-primary"
+                    style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u> Quotation Items</u></b></span></div><br>
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                    crossorigin="anonymous">
+
+            </div>
                 <br>
                 <div class="row">
                     <div class="col-md-6">
@@ -216,12 +231,14 @@
                             </div>
                         </div>
                     </div>
+</div>
                     <br>
-
-                    <a href=""><button class="btn btn-primary " style="width:20%; margin-top:28px;">New
+<div>
+                    <a href=""><button class="btn btn-primary " >New
                             Item</button></a>
                     <a href=""><button class="btn btn-primary "
-                            style="width:20%; margin-left:510px; margin-top:-65px;">Delete Item</button></a>
+                          >Delete Item</button></a>
+</div>
                     <br>
                     <div class="row">
                         <div class="col-md-6">
@@ -239,7 +256,7 @@
                         </div>
                     </div>
                     <br>
-                    <div class="container">
+                    <!-- <div class="container">
                         <div class="row">
                             <div class="col-sm">
 
@@ -251,7 +268,24 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
+                <div class="col-sm">
+
+<div class="row">
+    <div class="col-sm">
+
+    </div>
+    <div class="col-sm">
+
+    </div>
+    <div class="col-sm">
+        <br>
+        <button type="submit" class="btn btn-primary float:right;"
+            Style="width:50%;">Submit</button>
+        <button type="button" class="btn btn-primary float:left" Style="width:45%;">Back</button>
+    </div>
+</div>
+</div>
             </form>
         </div>
     </div>

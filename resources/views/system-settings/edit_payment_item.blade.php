@@ -1,6 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
 <html>
+    <div class="container">
    <head>
    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -35,18 +36,25 @@
         </style>
     </head>
     <body>
-    <!-- <h2 >Add Court</h2><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Edit Payment Item</h2>
-    <hr class="mb-4">.
-    <form> 
-    <table class="table">
-    <tbody>
-                       
-                        <tr>
-                                <td style="width:30%">Item Group:</td>
-                                <td> 
-                                    <select type="text" value="" id="" name="category"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
-                                    <option>Select</option>
+
+    <div>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Edit Payment Item</u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+     </div>
+            <br>
+            <form method="post" action="" id="form">  
+       @csrf
+            <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                        <label >Item Group:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <select type="text" value="" id="" name="igroup"style="width:100%;">
+                                    <option>---Select---</option>
                                    
                     <option>01-Legal Fees</option>
                     <option>02-Vatable Disbursement(Telephone,Postage,Transport etc)</option>
@@ -55,35 +63,73 @@
                     <option>04-Non-Vatable Disbursement(Stamp Duty,Registration Fees etc)</option>
                     
                                 </select>
-                            </td>
-                         </tr>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label>Item Name:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="iname" id="" value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                        <label >Item Comments:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="icomments" id="" value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label>Item Short Name:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="ishortname" id="" value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>
+                    <div class="row">
+         <div class="col-sm">
 
+                        </div>
+                        <div class="col-sm">
 
-                         <tr>
-                            <td style="width:30%">Item Name:</td>
-                            <td><input type="text"  id="" name="name"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
-                        </tr>
-                        <tr>
-                            <td style="width:30%">Item Comments:</td>
-                            <td><input type="text"  id="" name="name"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
-                        </tr>
-                        <tr>
-                            <td style="width:30%">Item Short Name:</td>
-                            <td><input type="text"  id="" name="name"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
-                        </tr>
-            </table>
-            <div class="class"style="text-align:center;">
-    
-            <a href="something"><input type="submit"value="Update" name="submit"style="background-color:rgb(13, 1, 56);color: white; "> </a>
-            <input type="button"value="Close" name="close"style="background-color:red;color: white; ">
-
-            
-    </div>
-        </form>
-    <!-- <form>
- <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
-</form> -->
-            
-</body>
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+        </div>
+</form>
+        </body>
+</div>
 </html>
-@endsection
+  @endsection
+      
+
+ 
+    

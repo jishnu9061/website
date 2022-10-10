@@ -2,6 +2,7 @@
 @extends('layouts.hmsmain')
 @section('content')
 <html>
+  <div class="container">
    <head>
    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -31,10 +32,15 @@ table{
 </style>
    </head>
    <body>
-    <!-- <h2 >Court List</h2><br>
-    <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">WakiliCMS Notification Config </h2>
-    <hr class="mb-4">.
+<div>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>WakiliCMS Notification Config</u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+     </div>
+            <br>
+            <br>
     <form>
     <div class="table-responsive">   
     <table class="table table-bordered" id="new-item">
@@ -58,12 +64,12 @@ table{
                     </table>
                     <br>
                     <div class="class"style="text-align:center;">
-                    <input type="submit"value="Update" name="submit"style="background-color:rgb(13, 1, 56);color: white; ">
+                    <button type="submit" class="btn btn-primary float:right;" Style="width:10%;">Update</button>
 </div > 
 </div >   
 </form>
         </body>
-
+        </div >   
 </html>
 
   @endsection

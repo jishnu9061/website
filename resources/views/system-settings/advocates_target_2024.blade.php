@@ -1,6 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
 <html>
+<div class="container">
     <head>
      
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -39,8 +40,15 @@
 <body>
 
 
-
-<h3 class="text-center" style="color:rgb(13, 1, 56);"><b><u>Advocate Targets</u></b></h3><br>
+<div>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Advocate Targets</u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+     </div>
+     <br>
+     <br>
 
  <a href="{{url('add_new_entry')}}"><button type="button" class="btn btn-primary add-btn" style="width:30%" > Add New Entry</button></a>
 <p>
@@ -119,5 +127,6 @@
 
 
     </body>
+        </div >
 </html>
 @endsection

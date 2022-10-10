@@ -13,8 +13,17 @@
         </div>
         @endif
         <div>
-            <h2 style="text-align:center;">Edit File Progress</h2>
-            <hr class="mb-4">.
+            <!-- <h2 style="text-align:center;">Edit File Progress</h2>
+            <hr class="mb-4">. -->
+            <div>
+            <div class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Edit File Progress</u></b></span></div><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+
+        
+            </div>
         </div>
     </div>
     <div>
@@ -25,6 +34,20 @@
                 <form method="post" action="" id="form">
                     @csrf
                     <div class="row">
+                    <div class="col-md-6">
+                            <div class="mb-1">
+                                <label for="username">Client</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+
+                                    </div>
+                                    <select name="country" id="cars">
+                                        <option value="volvo"></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="col-md-6">
                             <div class="mb-1">
                                 <label for="username">Date of progress</label>
@@ -39,7 +62,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        </div>
+<br>
+<div class="row">
+
+                        <div class="col-md-12">
                             <div class="mb-1">
                                 <label for="username">Next Action(Way Forward)</label>
                                 <div class="input-group">
@@ -50,23 +77,14 @@
                                 </div>
                             </div>
                         </div>
+</div>
+</div>
 
-
-
-                        <div class="col-md-6">
-                            <div class="mb-1">
-                                <label for="username">Client</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-
-                                    </div>
-                                    <select name="country" id="cars">
-                                        <option value="volvo"></option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
+                       
+</div>
+<br>
+<div class="row">
+                        <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="username">New Bringup Date</label>
                                 <div class="input-group">
@@ -81,10 +99,8 @@
                             </div>
                         </div>
 
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-6">
+                 
+                        <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="username">File</label>
                                 <div class="input-group">
@@ -101,7 +117,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="username">Reminder period(Days)</label>
                                 <div class="input-group">
@@ -115,7 +131,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+</div>
+<br>
+<div class="row">
+                        <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="username">Action Type</label>
                                 <div class="input-group">
@@ -130,27 +149,8 @@
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
-                    </div>
-                    <div id="test" style="height:20px;"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="mb-1">
-                    <label for="username">Action Description</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-
-                        </div>
-                        <textarea class="form-control" id="form7Example7" rows="3"></textarea>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6">
+                        <div class="col-md-4">
                 <div class="mb-1">
                     <label for="username">Time Taken(Hours)</label>
                     <div class="input-group">
@@ -164,8 +164,8 @@
                     </div>
                 </div>
             </div>
-            <br>
-            <div class="col-md-6">
+            
+            <div class="col-md-4">
                 <div class="mb-1">
                     <label for="username">Time Taken(Minutes)</label>
                     <div class="input-group">
@@ -178,8 +178,21 @@
                         </div>
                     </div>
                 </div>
+            </div>
+</div>        
+<br>
 
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mb-1">
+                    <label for="username">Action Description</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
 
+                        </div>
+                        <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                    </div>
+                </div>
             </div>
         </div>
         <br>
@@ -192,7 +205,9 @@
         </div>
 
         <h4 style="text-align:center;">Send Billing</h4>
+
         <div class="row">
+
             <div class="col-md-4">
                 <div class="mb-1">
                     <label for="username">Item Type</label>
@@ -240,11 +255,12 @@
                     </div>
                 </div>
             </div>
+</div>
+<br>
             <div id="test" style="height:20px;"></div>
-        </div>
-    </div>
-    <br>
+        
     <h4 style="text-align:center;">Send To Timesheet</h4>
+
     <div class="row">
         <div class="col-md-4">
             <div class="mb-1">
@@ -283,21 +299,9 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
+</div>
     <br>
-    <div class="container">
+    <!-- <div class="container">
         <div class="row">
             <div class="col-sm">
 
@@ -310,7 +314,21 @@
 
             </div>
         </div>
-    </div>
+    </div> -->
+    <div class="row">
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Edit File Progress</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
+                        </div>
+                    </div>
+                </div>
 
 
 

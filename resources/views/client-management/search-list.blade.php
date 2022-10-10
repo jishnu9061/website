@@ -16,17 +16,22 @@
 
 <body>
     <div class="container">
-        <button class="btn btn-primary"
-            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Client List</u></b></button><br><br>
-        
+        <div class="btn btn-primary"
+            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Client List</u></b></div><br><br>
+            <!-- <div class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px" width ><b><u>Client List</u></b></span></div><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous"> -->
+<br>
 
         <div id="mydatatable_filter" class="dataTables_filter">
             <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
         </div>
-        <a href="{{url('register-client')}}"><button class="btn btn-primary add-btn">Register Client</button></a>
+        <a href="{{url('register-client')}}"><button class="btn btn-primary add-btn" >Register Client</button></a>
             <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
+            <div class="table-responsive"> 
                 <table class="table table-bordered" id="new-item">
                     <thead>
                         <tr>
@@ -41,7 +46,7 @@
                     </thead>
                     <tbody>
                         <tr id="data">
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">1</td>
                             <td scope="row" class="text-center" id="medicine_name_1"></td>
                             <td scope="row" class="text-center" id="medicine_name_1"></td>
                             <td scope="row" class="text-center" id="medicine_name_1"></td>
@@ -51,6 +56,7 @@
                         </tr>
                     </tbody>
                 </table>
+</div>
 
 
                 <!-- The Modal -->

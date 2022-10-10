@@ -15,9 +15,18 @@
 
 <body>
     <div class="container">
-        <button class="btn btn-primary"
-            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Complaint Register</u></b></button><br>
-       <br>
+        <div class="btn btn-primary"
+            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Complaint Register</u></b></div><br>
+            <!-- <div>
+            <div class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Complaint Register</u></b></span></div><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+
+        </div> -->
+
+            <br>
       
        <div id="mydatatable_filter" class="dataTables_filter">
         <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
@@ -27,7 +36,7 @@
        
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
+    <div class="table-responsive"> 
             <table class="table table-bordered" id="new-item">
                 <thead>
                     <tr>
@@ -52,14 +61,14 @@
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
                             <td  scope="row"class="text-center"></td>
-                           <td><a href="{{url('view-client')}}"><i style="color:black;" class="fa fa-eye" aria-hidden="true"></i></td></a>
+                           <td><a href="{{url('')}}"><i style="color:black;" class="fa fa-eye" aria-hidden="true"></i></td></a>
                             <td><a href="{{url('edit_complaint')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td>
                             <td><a href=""><i style="color:black;" class="fa fa-trash" aria-hidden="true"></i></td>
                             
                         </tr>
                 </tbody>
             </table>
-           
+</div>
 
  <!-- The Modal -->
  

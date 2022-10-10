@@ -1,57 +1,60 @@
 @extends('layouts.hmsmain')
 @section('content')
 <html>
+<div class="container">
    <head>
-   <meta name="csrf-token" content="{{ csrf_token() }}">
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+    </script>
+    <script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    </script>
+     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-  
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-    <style>
-         /* h2
-        {
-            font-size:large;
-            font-weight:bold;
-             color:rgb(13, 1, 56); 
-             background-color:rgb(177, 127, 62);
-             padding:15px;
-            } */
-       
-
-         table{
-              
-                border:hidden;
-                font-size:medium;
-                color:black;
-            
-            }
-           th,td,tr{
-            border:hidden;
-            color:black;
-
-           }
-        </style>
+   
     </head>
     <body>
-    <!-- <h2 >Edit Court</h2><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Edit Court</h2>
-    <hr class="mb-4">
-    <form>
-    <table class="table">
-    <tbody>
-                        <tr>
-                            <td style="width:30%">Date:</td>
-                            <td><input type="Date"  id="" name="date"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
-                        </tr>
-
-                        <tr>
-                                <td style="width:30%">Court Category:</td>
-                                <td> 
-                                    <select type="text" value="" id="" name="category"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
-                                    <option>select</option>
+<div>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Edit Court</u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+     </div>
+            <br>
+            <form method="post" action="" id="form">  
+       @csrf
+            <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                        <label >Date:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="Date" class="form-control" id="" name="date"value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label>Court Category:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <select type="text" value="" id="" name="category">
+                                    <option>Select</option>
                                    
                     <option>Supreme Court</option>
                     <option>Court Of Appeal</option>
@@ -63,25 +66,50 @@
                     <option>East Africa Court</option>
                     <option>Small Claim Court</option>
                     <option>Others</option>
-        </select>
-                            </td>
-                         </tr>
+                                </select>
+                              <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="mb-1">
+                            <label>Court Name:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text"  id="" name="courtname"value=""class="form-control">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>    
+                    <div class="row">
+         <div class="col-sm">
 
+                        </div>
+                        <div class="col-sm">
 
-                         <tr>
-                            <td style="width:30%">Court Name:</td>
-                            <td><input type="text"  id="" name="name"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
-                        </tr>
-            </table>
-            <div class="class"style="text-align:center;">
-            <input  type="submit"value="Update" name="submit"style="background-color:rgb(13, 1, 56);color: white; ">
-            <input type="button"value="Close" name="close"style="background-color:red;color: white; ">
-    </div>
-        </form>
-    <!-- <form>
- <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
-</form> -->
-            
-</body>
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+        </div>
+</form>
+        </body>
+        </div>
+
 </html>
+
+
+
+
+   
 @endsection

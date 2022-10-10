@@ -3,6 +3,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+<div class="container">
 <head>
     
 <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -12,137 +13,67 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-<style>
-     body
-        {
-         
-          margin-left:10px;
-          margin-right:10px;
-          padding-top:10px;
-        }
-        /* h2
-        {
 
-    font-size:large;
-    font-weight:bold;
-    color:rgb(13, 1, 56); 
-    background-color:rgb(177, 127, 62);
-    padding:15px;
-    
-    } */
-        .container{
-            padding-top:20px;
-            margin-top: 50px;
-            
-        } 
-        label
-      {
-       
-        font-size:large;
-        width:200px;
-        display:inline-block;
-        /* font-family: monospace; */
-      
-        }
-        input
-        {
-          width: 400px;
-          height:30px;
-
-        }
-
-        a.button3{
-            display : inline-block;
-            padding:0.35em 1.2em;
-            background-color:rgb(13, 1, 56); 
-            margin:0 0.3em 0.3em 0;
-            border-radius:0.12em;
-            box-sizing: border-box;
-            text-decoration:none;
-            font-weight:300;
-            color:rgb(240, 205, 10);
-            text-align:center;
-            transition: all 0.2s;
-        }
-
-
-a.button4{
-  display : inline-block;
-  padding:0.35em 1.2em;
-  background-color:#f0e7ce; 
-  margin:0 0.3em 0.3em 0;
-  border-radius:0.12em;
-  border-color: rgb(13, 1, 56); 
-  box-sizing: border-box;
-  text-decoration:none;
-  /* font-family:monospace; */
-  font-weight:300;
-  color:rgb(13, 1, 56);
-  text-align:center;
-  transition: all 0.2s;
-  outline: auto;
- 
-  }
-  table{
-            color:rgb(13, 1, 56);
-            background-color: #D5BD94;
-            border collapse:collapse;
-            font-size:16px;
-            padding:5px;
-            border:5px solid white;
-            text-align:center;
-        }
-        td{
-            color:rgb(13, 1, 56);
-         }
-
-      
-        </style>
 
 </head>
 <body>
-<!-- <h2>Add New Holiday / Weekend Date</h2><br><br> -->
-<h2 style="text-align:center; text-shadow: 2px 1px;">Add New Holiday / Weekend Date</h2>
-    <hr class="mb-4">.
-    
-<!-- <div class="container">
-        <form action="#">
-            <div class="form-group">
-                <label for="Branch No"style="color:rgb(13, 1, 56);">Date:</label>
-                <input type="number"  id="bnum" name="bnum"value=""size="50"><br><br>
-            </div>
 
-            <div class="form-group">
-                <label for="Branch Code"style="color:rgb(13, 1, 56);">Day:</label>
-                <input type="text"  id="bcode" name="bcodes"value=""size="50"><br><br>
-            </div>
-
-            <div class="form-group">
-                <label for="Branch Name"style="color:rgb(13, 1, 56);">Year:</label>
-                <input type="text"  id="bname" name="bname"value=""size="50"><br><br>
-            </div> -->
-            <form>
-            <table >
-                <tr>
-                <td>Date:</td>
-                    <td><input type="date"  id="date" name="date"value=""></td>
-                </tr>
-                <tr>
-                <td>Day:</td>
-                    <td><input type="text"  id="day" name="day"value=""></td>
-                </tr>
-    
-            </table><br><br> 
+    <div>
+    <button class="btn btn-primary"
+    style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Add New Holiday / Weekend Date</u></b></button>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+          </div>
+          <br>
+          <form method="post" action="" id="form">  
+          @csrf
+        <div class="row">
        
- <a href="something" class="button3">Save</a>
-<a href="something" class="button4">Close</a>
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label >Date:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="date" class="form-control" name="date" id="date" value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+             <div class="col-md-6">
+                        <div class="mb-1">
+                            <label>Day:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="day" class="form-control" name="day" id="day" value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>
+                   
+ 
+                    <div class="row">
+                        <div class="col-sm">
 
-    </div>
-    </form>
+                        </div>
+                       
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
     <!-- <form>
  <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
 </form> -->
-   
+</div>
     
     </body>
 </html>

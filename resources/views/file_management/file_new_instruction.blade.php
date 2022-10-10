@@ -18,8 +18,8 @@
         </div>
         <div>
         <div>
-            <button class="btn btn-primary"
-            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>New Instruction</u></b></button><br><br>
+            <div class="btn btn-primary"
+            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>New Instruction</u></b></div><br><br>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous">
@@ -27,7 +27,7 @@
         
 
             <br>
-            <div style="margin-left: 120px;">
+            <div >
                 <input class="btn btn-primary" type="button" value="View File Statement">
                 <input class="btn btn-primary" type="button" value="View File Details">
                 <input class="btn btn-primary" type="button" value="Previous Instructions">
@@ -37,8 +37,7 @@
 
             </div>
             <br>
-            <hr class="mb-4">.
-
+          
 
         </div>
     </div>
@@ -190,7 +189,7 @@
         
         <div class="col-md-2">
             <div class="mb-1">
-                <label for="username">Turn-Around Time(TAT)</label>
+                <label for="username">Turn-Around Time</label>
                 <div class="input-group">
                     <div class="input-group-prepend">
 
@@ -229,6 +228,8 @@
                 </div>
             </div>
         </div>
+</div>
+<div class="row">
         <div class="col-md-12">
             <div class="mb-1">
                 <label for="username">Details</label>

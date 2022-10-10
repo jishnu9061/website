@@ -24,11 +24,11 @@
     <div class="container">
         <!-- <h3 class="text-center" style="color: #070344;"><b>File List</b></h3> -->
         <div>
-            <button class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>File List</u></b></span></button><br>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            <div class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>File List</u></b></span></div><br>
+            <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous">
+                crossorigin="anonymous"> -->
 
         
             </div>
@@ -43,11 +43,11 @@
                 style="width: 20%; margin-bottom:5%;">Open New Client File</button></a>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
+            <div class="table-responsive">
                 <table class="table table-bordered" id="new-item">
                     <thead>
                         <tr>
-                            <th class="text-center">No</th>
+                        <th class="text-center">No</th>
                             <th class="text-center">File No</th>
                             <th class="text-center">Client</th>
                             <th class="text-center">FileName</th>
