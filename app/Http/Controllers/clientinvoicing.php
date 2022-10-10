@@ -77,28 +77,45 @@ class clientinvoicing extends Controller
     }
 
 
+   
+
 
 
     // reshma
+
+
     public function view_bill_item()
     {
         return view('client-invoicing.view_bill');
 
     }
+
+
     public function feeexpectedadvocate()
     {
         return view('client-invoicing.fee_expected_advocate');
     }
 
+
     //Reports
     //     // return view('client-invoicing.fee_notes');
     // }
     public function newfee_note()
+
+    //reshma
+    public function drnfee()
     {
-        return view('client-invoicing.new_fee_note');
+        return view('client-invoicing.drn_fee_notes');
     }
-     // reshma
-    
+    public function newdrnfee()
+
+    {
+        return view('client-invoicing.new_drn_fee_notes');
+    }
+
+
+    //reshma
+  
 
 
 }

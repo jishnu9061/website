@@ -37,7 +37,7 @@
      </div>
             <br>
             <br>
-    <a href="{{('new_fee_note')}}"><button class="btn btn-primary add-btn" style="width=10%;height=100%;">New Fee Note</button></a> <br>
+    <a href="{{('new_drn_fee_notes')}}"><button class="btn btn-primary add-btn" style="width=10%;height=100%;">New Fee Note</button></a> <br>
             <br>
     
 
