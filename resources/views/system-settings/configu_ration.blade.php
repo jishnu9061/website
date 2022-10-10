@@ -277,7 +277,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="mb-1">
-                            <label>Show Other Associate Coloumn:</label>
+                            <label>Show Other Associate Column:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <select type="text" value="" id="" name="associate"style="width:100%">
