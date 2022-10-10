@@ -94,6 +94,19 @@ class clientinvoicing extends Controller
 
 
 
+    public function creditnotes()
+    {
+        return view('client-invoicing.credit_notes');
+    }
+
+    public function newcreditnotes()
+    {
+        return view('client-invoicing.new_credit_notes');
+    }
+
+
+
+
     // reshma
 
 
