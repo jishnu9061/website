@@ -30,96 +30,10 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
-                        <label >Logo Width:</label>
+                        <label >Account Type:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="lwidth" id="" value="">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                Required Field.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label>Logo Height:</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="lheight" id="" value="">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Required Field.
-                                </div>
-                            </div>
-                        </div>
-                     </div>
-                     <div class="col-md-4">
-                        <div class="mb-1">
-                            <label>Company Stamp Height:</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="csheight" id="" value="">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Required Field.
-                                </div>
-                            </div>
-                        </div>
-                     </div>
-                    </div>
-                    <div class="row">
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                        <label >Company Stamp Width:</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="cswidth" id="" value="">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                Required Field.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label>Background Color:</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="bgcolor" id="" value="">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Required Field.
-                                </div>
-                            </div>
-                        </div>
-                     </div>
-                     <div class="col-md-4">
-                        <div class="mb-1">
-                            <label>Client Numbering Method:</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <select type="text" value="" id="" name="cnmethod"style="width:100%;">
-                                    <option>---Select---</option>
-                                    <option>Auto Numbering</option>
-                                    <option>Alpha Numeric Code</option>
-                                </select>
-                              <div class="invalid-feedback" style="width: 100%;">
-                                    Required Field.
-                                </div>
-                            </div>
-                        </div>
-                     </div>
-                    </div>
-
-
-
-
-
-
-<form>
-    <table class="table">
-    <tbody>
-                       
-                        <tr>
-                                <td style="width:30%">Account Type:</td>
-                                <td> <select type="text" value="" id="" name="type"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
+                                <select type="text" value="" id="" name="type">
                                 <option>---select---</option>
                                 <option>Accounts Payable</option>
                                 <option>Accounts Receivable</option>
@@ -136,21 +50,45 @@
                                 <option>Other Current Liability</option>
                                 <option>Other Expense</option>
                                 <option>Other Income</option>
-                                </select></td>
-
-
-                         <tr>
-                            <td style="width:30%">Account Name</td>
-                            <td><input type="text"  id="" name="name"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
-                        </tr>
-                        <tr>
-                            <td style="width:30%">Account Description</td>
-                            <td><input type="text"  id="" name="description"value=""style="width:30%;color:rgb(13, 1, 56);background-color:white;"></td>
-                               
-                        </tr>
-                        <tr>
-                            <td style="width:30%">Sub Account of(?):</td>
-                            <td> <select type="text" value="" id="" name="account"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
+                                </select>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label>Account Name:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control"  id="" name="name"value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="mb-1">
+                            <label>Account Description:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" id="" name="description"value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                        <label >Sub Account of(?):</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <select type="text" value="" id="" name="account">
                                 <option>---select---</option>
                                 <option></option>
                                 <option></option>
@@ -159,14 +97,19 @@
                                 <option></option>
                                 <option></option>
                                 <option></option>
-                                </select></td>
-                               
-                            
-                        </tr>
-                        <tr>
-                            <td style="width:30%">Account Category:</td>
-                            <td> 
-                                <select type="text" value="" id="" name="category"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
+                                </select>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label>Account Category:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <select type="text" value="" id="" name="category">
                                 <option>---select---</option>
                                 <option>Client Bank Accounts</option>
                                 <option>Cash Accounts</option>
@@ -177,13 +120,18 @@
                                 <option>Financial Accounts</option>
                                 <option>Income Accounts</option>
                                 </select>
-                            </td>
-                         
-                        </tr>
-                        <tr>
-                            <td style="width:30%">Default Currency</td>
-                            <td> 
-                                <select type="text" value="" id="" name="currency"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="mb-1">
+                            <label>Default Currency:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <select type="text" value="" id="" name="currency">
                                 <option>---select---</option>
                                 <option>KES</option>
                                 <option>USD</option>
@@ -197,13 +145,21 @@
                                 <option>CHF</option>
                                 <option>HKD</option>
                                 </select>
-                            </td>
+                              <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>
                          
-                        </tr>
-                        <tr>
-                            <td style="width:30%">Budget Grouping:</td>
-                            <td> 
-                                <select type="text" value="" id="" name="budget"style="width:30%;color:rgb(13, 1, 56);background-color:white;">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                        <label >Budget Grouping:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <select type="text" value="" id="" name="budget">
                                 <option>None</option>
                                 <option>Receipts</option>
                                 <option>Staff Salaries and Bonuses</option>
@@ -220,22 +176,32 @@
                                 <option>Projected taxes</option>
                                 <option>TeleCommunication Costs</option>
                                 </select>
-                            </td>
-                         
-                        </tr>
-            </table>
-            <div class="class"style="text-align:center;">
-    
-            <a href="something"><input type="submit"value="Submit" name="submit"style="background-color:rgb(13, 1, 56);color: white; "> </a>
-            <input type="button"value="Close" name="close"style="background-color:red;color: white; ">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+<div class="row">
+         <div class="col-sm">
 
-            
-    </div>
-        </form>
-    <!-- <form>
- <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
-</form> -->
-            
+                        </div>
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+        </div>
+</form>
+
 </body>
+</div>
 </html>
 @endsection
