@@ -107,7 +107,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="number" id="username" required>
+                                <input type="text" class="form-control" name="number" id="username" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
