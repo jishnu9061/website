@@ -126,7 +126,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
-                            <label for="username">PIN NO</label>
+                            <label for="username">PIN No</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="pinnum" id="pinnum" value="">
@@ -138,7 +138,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="mb-1">
-                            <label for="username">VAT NO</label>
+                            <label for="username">VAT No</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="vatnum" id="vatnum" value="">
