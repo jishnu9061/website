@@ -43,7 +43,7 @@
                                 <input type="text" class="form-control" name="" id="age" value="" placeholder="" min="0"
                                     max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
-                                    Age is required.
+                                    Age is required
                                 </div>
                             </div>
                         </div>
@@ -56,7 +56,7 @@
                                 <input type="text" class="form-control" name="" id="age" value="" placeholder="" min="0"
                                     max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
-                                    Age is required.
+                                    Age is required
                                 </div>
                             </div>
                         </div>
@@ -105,7 +105,7 @@
                     </div>
                 </div>
                 <br>
-                <hr class="mb-4">.
+                <hr class="mb-4">
                 <br>
                 <div class="row">
                     <div class="col-md-12">
@@ -121,7 +121,7 @@
                     </div>
                 </div>
                 <br>
-                <hr class="mb-4">.
+                <hr class="mb-4">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
@@ -222,7 +222,7 @@
                     </div>
                 </div>
                 <br>
-                <hr class="mb-4">.
+                <hr class="mb-4">
                 <br>
                 <div class="row">
                     <div class="col-md-6">
