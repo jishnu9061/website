@@ -30,6 +30,11 @@ class clientinvoicing extends Controller
 
     }
 
+    public function issuceReceipt(){
+
+        return view('client-invoicing.issue-client-receipt');
+    }
+
 //mugu
 
 

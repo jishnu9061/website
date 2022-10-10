@@ -870,7 +870,7 @@ Route::any('new_fee_note',"clientinvoicing@newfeenote")->name('new_fee_note');
 //---------------------RESHMA--------------------------------------
 
 
-//mugunthan
+//Mugunthan
 
 //Client-list
 Route::any('add_newclient',"ClientManagement@create")->name('add_newclient');
@@ -937,9 +937,10 @@ Route::any('corporate-list','ClientManagement@listCorporate')->name('corporate-l
 Route::any('receipt-report','clientinvoicing@receiptReport')->name('receipt-report');
 Route::any('reverse-receipt','clientinvoicing@reverseReport')->name('reverse-receipt');
 Route::any('receipt-reprint','clientinvoicing@receiptReprint')->name('receipt-reprint');
+Route::any('issue-receipt','clientinvoicing@issuceReceipt')->name('issue-receipt');
 //end client invoicing
 
-//mugunthan
+//Mugunthan
 
 
 
