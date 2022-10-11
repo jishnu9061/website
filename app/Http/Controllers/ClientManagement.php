@@ -61,10 +61,6 @@ class ClientManagement extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit_corporate()
-    {
-        return view('client-management.edit_client');
-    }
     public function edit_person()
     {
         return view('client-management.edit_person');
@@ -279,7 +275,7 @@ class ClientManagement extends Controller
             'Fax_no' =>  $fax_no,
             'Email_address' =>  $email,
             'Website' =>  $website ,
-            'Brought_in _By' =>  $brought,
+            'Brought_in_by' =>  $brought,
             'Status_reporting_day' =>  $status,
             'Client_source' => $source,
             'Client_source_naration' =>  $client_narration,
@@ -297,11 +293,95 @@ class ClientManagement extends Controller
             'email' =>$person_email,
         ]);
         return view('client-management.add-corporate');
+
     }
 
 
     public function listCorporate(){
+
         $corporate_list=DB::table('cra_corporate_client_details')->get();
         return view('client-management.corporate-list',compact('corporate_list'));
     }
+
+    public function edit_corporate($id)
+    {
+        $corporate_details= DB::table('cra_corporate_client_details')->where('id',$id)->first();
+        return view('client-management.edit_client',compact('corporate_details','id'));
+    }
+
+    public function Update_corporate(Request $Request){
+        $id     = $Request['id'];
+        $number = $Request['number'];
+        $client_type = $Request['type'];
+        $citizen_status = $Request['citizen'];
+        $corporation = $Request['corporation'];
+        $country = $Request['country'];
+        $telephone = $Request['telephone'];
+        $fax_no = $Request['faxno'];
+        $email = $Request['email'];
+        $website = $Request['website'];
+        $brought = $Request['brought'];
+        $status = $Request['status'];
+        $source = $Request['source'];
+        $client_narration = $Request['narration'];
+        $client_name = $Request['name'];
+        $industry = $Request['industry'];
+        $pin_no = $Request['pin'];
+        $address = $Request['address'];
+        $postal_code = $Request['code'];
+        $town = $Request['town'];
+        $physical_address = $Request['physicaladdress'];
+        $Notes = $Request['notes'];
+        $Person_Name = $Request['person'];
+        $Designation = $Request['Designation'];
+        $mobile_no = $Request['no'];
+        $person_email = $Request['person_email'];
+
+        $update_corporate = array(
+            'Client_no' => $number,
+            'Client_type' =>  $client_type,
+            'Cityzen_status' => $citizen_status,
+            'Certificate_of_incorporation' =>  $corporation,
+            'Country' =>  $country,
+            'Telephone_No' =>   $telephone,
+            'Fax_no' =>  $fax_no,
+            'Email_address' =>  $email,
+            'Website' =>  $website ,
+            'Brought_in_by' =>  $brought,
+            'Status_reporting_day' =>  $status,
+            'Client_source' => $source,
+            'Client_source_naration' =>  $client_narration,
+            'Client_name' =>    $client_name,
+            'Client_industry' =>   $industry,
+            'Pin_no' =>    $pin_no,
+            'postal_address' =>   $address,
+            'postal_code' =>  $postal_code ,
+            'town' =>      $town ,
+            'physical_address' =>   $physical_address,
+            'notes' => $Notes,
+            'contact_person' => $Person_Name ,
+            'designation' =>  $Designation,
+            'Mobile_no' => $mobile_no,
+            'email' =>$person_email,
+        );
+        DB::table('cra_corporate_client_details')->where('id', $id)->update( $update_corporate );
+        return redirect('/corporate-list');
+    }
+
+
+    public function Corporate_destroy($id){
+        DB::table('cra_corporate_client_details')->where('id',$id)->delete();
+        return redirect('/corporate-list');
+    }
+    // public function update_corporate(Request $Request){
+    //     $id=$Request['item_id'];
+    //     $brand_name=$Request['brand_name'];
+    //     $new_item=$Request['item_name'];
+    //     $profit_percentage=$Request['profit_percentage'];
+
+    //     $editdata=array('brand_name'=>$brand_name,'Item_name'=> $new_item,'profit_percentage'=> $profit_percentage );
+
+    //     DB::table('medicines')->where('id',$id)->update($editdata);
+    //     return back()->withInput();
+    // }
 }
