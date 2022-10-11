@@ -43,22 +43,33 @@
         </thead>
   </tr>
   <tbody>
+  @foreach($branch_details as $branch)
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+  <td>{{$branch->id}}</td>
+    <td>{{$branch->branch_no}}</td>
+    <td>{{$branch->branch_code}}</td>
+    <td>{{$branch->branch_name}}</td>
     <td style="color:green;font-weight:bold;"></td>
     <td  scope="row"class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
                         <a href="{{url('edit_company_branch')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                             <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
-   
+    @endforeach
     </tr>
         </tbody>
-  
+ 
   
 </table><br><br>
-
+<div class="class"style="text-align:right;">
+                <select style="width:10%;height:100%;color:rgb(13, 1, 56);font-size:small;background-color:#FFFBF4;"type="text" value="" >
+    <option>Activate Category</option>
+    <option>De-Activate Category</option>
+    <option>Delete Category</option>
+</select>
+<input type="button"value="Go" name="close"style="background-color:#FFFBF4;color: rgb(13, 1, 56); ">
+    </div>
+    <br>
+    <br>
+    </div>
 
 </body>
     </html>

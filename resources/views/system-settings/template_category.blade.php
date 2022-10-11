@@ -59,116 +59,32 @@
                     </tr>
      </thead>
      <tbody>
-        <tr>
-                        <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Business Formation:</td>
-                    </tr>
-                    <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
+     @foreach($template_category as $category)
+      <tr>
+                        <td>  {{$category->id}}</td>
+                        <td>{{$category->Template_Category}}</td>
+                        <!-- <td>{{$category->Category_Type	}}</td> -->
+                        <td></td>
                         <td  class="text-center" style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
                         <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
+                        @endforeach
                     </tr>
+</tbody>
                    
-
-                    <tr>
-                        <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Business Operations:</td>
-                    </tr>
-                    <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
-                        <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
-                    </tr>
-                  
-                   
-
-                    <tr>
-                        <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Business Property:</td>
-                    </tr>
-                    <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
-                        <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
-                    </tr>
-                   
-
-                    <tr>
-                        <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Employment:</td>
-                    </tr>
-                    <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
-                        <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
-                    </tr>
-                   
-                    
-
-                    <tr>
-                        <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Financial:</td>
-                    </tr>
-                  
-                    <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
-                         <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
-                    </tr>
-               
-                    
-                    <tr>
-                        <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Personal & Family:</td>
-                    </tr>
-                  
-                    <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
-                        <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
-                    </tr>
-                 
-
-                    
-                    <tr>
-                        <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Real Estate:</td>
-                    </tr>
-                  
-                    <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
-                        <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
-                    </tr>
-                    
-                    <tr>
-                        <td colspan="5"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Will & Estate Planning:</td>
-                    </tr>
-                  
-                    <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center"style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
-                        <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
-                    </tr>
-    </tbody>
-                   
-                  
-                  
-                    
-                   
-                </table>
+ </table>
                
     <br>
     <br>
+    <div class="class"style="text-align:right;">
+                <select style="width:10%;height:100%;color:rgb(13, 1, 56);font-size:small;background-color:#FFFBF4;"type="text" value="" >
+    <option>Activate Category</option>
+    <option>De-Activate Category</option>
+    <option>Delete Category</option>
+</select>
+<input type="button"value="Go" name="close"style="background-color:#FFFBF4;color: rgb(13, 1, 56); ">
+    </div>
+
+    </div>
     </div>
 
     <!-- <form>
