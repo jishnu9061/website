@@ -71,12 +71,12 @@ td:nth-child(odd) {
                    
                 </table>
                 <div class="class"style="text-align:right;">
-                <select style="width:10%;height:100%;color:white;font-size:small;background-color:rgb(13, 1, 56);"type="text" value="" name="type">
-    <option>Active Category</option>
-    <option>De-Active Category</option>
- 
+                <select style="width:10%;height:100%;color:rgb(13, 1, 56);font-size:small;background-color:#FFFBF4;"type="text" value="" >
+    <option>Activate Category</option>
+    <option>De-Activate Category</option>
+   
 </select>
-<input type="button"value="Go" name="close"style="background-color:rgb(13, 1, 56);color: white; ">
+<input type="button"value="Go" name="close"style="background-color:#FFFBF4;color: rgb(13, 1, 56); ">
     </div>
     <br>
     <br>
