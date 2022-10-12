@@ -36,7 +36,7 @@
 
         <div class="col-md-12 order-md-1">
 
-            <form method="post" action="" id="form">
+            <form method="post" action="{{url('')}}" id="form">
                 @csrf
                 <div class="row">
                 <div class="col-md-3">
@@ -46,7 +46,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select type="text" value="" name="bank"style="width:100%;">
+                                <select type="text" value="" name="bank" style="width:100%;">
                             <option>---Select---</option>
                             <option>AFRICAN BANKING CORP LTD</option>
                             <option>AKIBA BANK LTD</option>
@@ -121,7 +121,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="number" id="username" required>
+                                <input type="text" class="form-control" name="branch" id="username" required>
                                 
                             </div>
                         </div>
@@ -134,13 +134,14 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="number" id="username" required>
+                                <input type="text" class="form-control" name="account_name" id="username" required>
 
                             </div>
                         </div>
                     </div>
-
-
+</div>
+<br>
+<div class="row">
 
                    
                     <div class="col-md-4">
@@ -150,7 +151,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="number" id="username" required></br>
+                                <input type="text" class="form-control" name="account_no" id="username" required></br>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -165,7 +166,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="incorporation" id="age">
+                                <input type="text" class="form-control" name="bank_code" id="age">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
@@ -180,7 +181,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="telephone" id="confirm_password" required>
+                                <input type="text" class="form-control" name="branch_code" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
                                 </div>
@@ -195,7 +196,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="text" class="form-control" name="swift_code" id="confirm_password" required>
                 </div>
             </div>
         </div>
@@ -206,7 +207,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="text" class="form-control" name="mpesa_no" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Telephone Number is required.
                     </div>
@@ -221,7 +222,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select type="text" value="" name="type"style="width:100%;">
+                    <select type="text" value="" name="bank_gl_ac"style="width:100%;">
                             <option>---Select---</option>
                             <option>8004==> Client A/C Sidian Bank</option>
                             <option>8000==>Client Account - Cooperative Bank</option>

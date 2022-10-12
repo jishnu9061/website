@@ -36,10 +36,12 @@
         <br>
 
        
-        <a href="{{url('add_transport_zone')}}"><button class="btn btn-primary add-btn"
+        <!-- <a href="{{url('add_transport_zone')}}" type="button">Add Transport Zone</a>
+        <div class="tab-content" id="myTabContent"> -->
+            
+        <a href="{{url('add_transport_zone')}}"><button 
                 style="width: 20%; margin-bottom:5%;">Add Transport Zone</button></a>
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <!-- <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"> -->
 
             <h5 style="text-align:center; ">List of Transport Zones</h5>
 
@@ -57,17 +59,19 @@
                         </tr>
                     </thead>
                     <tbody>
+                    @foreach($transportzone as $detail)
                         <tr id="data">
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{ $detail->id }}</td>
+                            <td scope="row" class="text-center">{{ $detail->zone_name }}</td>
+                            <td scope="row" class="text-center">{{ $detail->zone_areas }}</td>
+                            <td scope="row" class="text-center">{{ $detail->cost }}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"> <a href="{{url('edit_transport_zone')}}">Edit</a> </td>
                             <td scope="row" class="text-center"><input type="checkbox" name="" id=""></td>
                            
                         </tr>
                     </tbody>
+                    @endforeach
                 </table>
 
 
