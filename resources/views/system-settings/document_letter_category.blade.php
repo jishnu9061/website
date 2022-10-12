@@ -1,6 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
 <html>
+  <div class="container">
    <head>
    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -27,9 +28,16 @@
         </style>
     </head>
     <body>
-    <!-- <h2 >Add Court</h2><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;">Document Letter Categories </h2>
-    <hr class="mb-4">.
+ 
+    
+    <div>
+            <button class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Document Letter Categories </u></b></span></button><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+     </div>
+            <br>
    
 
 <div class="card">
@@ -178,5 +186,6 @@ $BTN.on('click', () => {
 </form> -->
             
 </body>
+</div>
 </html>
 @endsection

@@ -162,11 +162,19 @@
                             </div>
                         </div>
                     </div>
+
                     
                 </div>
                 <br>
                 <div class="row">
                 <div class="col-md-4">
+
+</div>
+<br>
+                    <div class="row">
+
+                    <div class="col-md-4">
+
                         <div class="mb-1">
                             <label for="username">Customer E-mail</label>
                             <div class="input-group">

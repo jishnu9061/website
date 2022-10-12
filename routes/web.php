@@ -874,10 +874,16 @@ Route::any('new_drn_fee_notes','clientinvoicing@newdrnfee')->name('new_drn_fee_n
 //Client-list
 Route::any('add_newclient',"ClientManagement@create")->name('add_newclient');
 Route::any('client_list','ClientManagement@view')->name('client_list');
-Route::any('edit_corporate','ClientManagement@edit_corporate')->name('edit_corporate');
 Route::any('edit_person','ClientManagement@edit_person')->name('edit_person');
 Route::any('view-client','ClientManagement@show')->name('view-client');
 Route::any('client-index',"ClientManagement@index")->name('client-index');
+//coporate
+Route::any('add-corporate','ClientManagement@addCorporate')->name('add-corporate');
+Route::any('corporate-list','ClientManagement@listCorporate')->name('corporate-list');
+Route::any('/edit_client/{id}','ClientManagement@edit_corporate')->name('edit_client');
+Route::any('/update_corporate','ClientManagement@Update_corporate')->name('update_corporate');
+Route::any('/delete_client/{id}','ClientManagement@Corporate_destroy')->name('delete_client');
+//end corporate
 //end Client-List
 
 //Client-Documents
@@ -927,10 +933,7 @@ Route::any('edit-communication','ClientManagement@editCommunication')->name('edi
 Route::any('search-list','ClientManagement@listSearch')->name('search-list');
 Route::any('register-client','ClientManagement@registerClient')->name('register-client');
 //end search list
-//coporate
-Route::any('add-corporate','ClientManagement@addCorporate')->name('add-corporate');
-Route::any('corporate-list','ClientManagement@listCorporate')->name('corporate-list');
-//end corporate
+
 
 //client invoicing
 Route::any('receipt-report','clientinvoicing@receiptReport')->name('receipt-report');

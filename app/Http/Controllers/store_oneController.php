@@ -100,7 +100,7 @@ class store_oneController extends Controller
                 // $item_details=medicines::find($id)->get();
                 $item_details=DB::table('medicines')->where('id',$id)->get();
 
-                $brands=DB::table('brand_names')->select('id as brands_id','brand_name')->get();
+                $brands=DB::table('brand_names')->select('id as brands_id0','brand_name')->get();
                 $generic1_name=DB::table('generic_names')->select('id as generic_id','generic_name')->get();
                 $medicine_categories=DB::table('categories')->select('id as categories_id','category_name')->get();
                 $medicine_groups=DB::table('medicine_groups')->get();
