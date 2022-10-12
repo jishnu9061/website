@@ -448,12 +448,27 @@ DB::table('cra_company_branch_details')->insert([
   
     public function transportzone()
     {
-        return view('system-settings.transport_zones');
+        $transportzone=DB::table('cra_transport_zone')->get();
+
+        return view('system-settings.transport_zones',compact('transportzone'));
     }
-    public function addtransportzone()
+
+    public function addtransportzone(Request $Request)
     {
-        return view('system-settings.add_transport_zone');
+        $zone_name = $Request['zone_name'];
+        $zone_areas = $Request['zone_areas'];
+        $cost = $Request['cost'];
+
+        DB::table('cra_transport_zone')->insert([
+            'zone_name' => $zone_name,
+            'zone_areas' =>  $zone_areas,
+            'cost' =>  $cost,
+        ]);
+
+       return view('system-settings.add_transport_zone');
     }
+
+
     public function edittransportzone()
     {
         return view('system-settings.edit_transport_zone');
@@ -470,14 +485,45 @@ DB::table('cra_company_branch_details')->insert([
     {
         return view('system-settings.edit_billable_activities');
     }
+
     public function bankdetails()
     {
-        return view('system-settings.bank_details');
+        
+        $bank_details=DB::table('cra_bank_details')->get();
+        
+        return view('system-settings.bank_details',compact('bank_details'));
     }
-    public function addbankaccount()
+
+
+    public function addbankaccount(Request $Request)
     {
+        $bank = $Request['bank'];
+        $branch = $Request['branch'];
+        $account_name = $Request['account_name'];
+        $account_no = $Request['account_no'];
+        $bank_code = $Request['bank_code'];
+        $branch_code = $Request['branch_code'];
+        $swift_code = $Request['swift_code'];
+        $mpesa_no = $Request['mpesa_no'];
+        $bank_gl_ac = $Request['bank_gl_ac'];
+
+        DB::table('cra_bank_details')->insert([
+            'bank' => $bank,
+            'branch' => $branch,
+            'account_name' => $account_name,
+            'account_number' => $account_no,
+            'bank_code' =>  $bank_code,
+            'branch_code' => $branch_code,
+            'swift_code' => $swift_code,
+            'mpesa_code' =>$mpesa_no,
+            'bank_gl_ac' =>$bank_gl_ac,
+           
+        ]);
+  
+
         return view('system-settings.add_bank_account');
     }
+    
     public function editbankaccount()
     {
         return view('system-settings.edit_bank_account');
