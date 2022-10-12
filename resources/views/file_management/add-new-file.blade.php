@@ -28,10 +28,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="citizen" id="cars">
-                                    <option value="volvo">Select</option>
-                                    <option value="volvo">Residensial</option>
-                                    <option value="volvo">Non Residensial</option>
+                                <select name="client_type" id="cars">
+                                    <option>Select</option>
+                                    <option>Accord University</option>
+                                    <option>Accounts And Books</option>
                                 </select>
                             </div>
                         </div>
@@ -44,9 +44,9 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="type" id="cars" disabled>
-                                    <option value="volvo">Corporate</option>
-                                    <option value="volvo">Individual</option>
+                                <select name="associate_handling" id="cars" disabled>
+                                    <option >Corporate</option>
+                                    <option >Individual</option>
                                 </select>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                             <label for="username">Opening Date</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="corporation" id="age" value="" min="0" max="99">
+                                <input type="date" class="form-control" name="opening_date" id="age" value="" min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
                                 </div>
@@ -72,7 +72,7 @@
                             <label for="username">Client Ref.No or(Case No)</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="corporation" id="age" value="" min="0" max="99">
+                                <input type="text" class="form-control" name="client_ref_no" id="age" value="" min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
                                 </div>
@@ -84,7 +84,7 @@
                             <label for="username">Our File Ref No</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="password" class="form-control" name="telephone" value=""
+                                <input type="text" class="form-control" name="our_file_ref_no" value=""
                                     id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
@@ -100,7 +100,7 @@
                             <label for="username">File Name/Subject</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="faxno" id="age" value=""
+                                <input type="text" class="form-control" name="file_name" id="age" value=""
                                  min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
@@ -115,10 +115,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="citizen" id="cars">
-                                    <option value="volvo">Select</option>
-                                    <option value="volvo">Residensial</option>
-                                    <option value="volvo">Non Residensial</option>
+                                <select name="approval_partner" id="cars">
+                                    <option >Select</option>
+                                    <option >Residensial</option>
+                                    <option >Non Residensial</option>
                                 </select>
                             </div>
                         </div>
@@ -128,7 +128,7 @@
                             <label for="username">Customer Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="conpassword" value=""
+                                <input type="text" class="form-control" name="customer_name" value=""
                                     id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
@@ -144,7 +144,7 @@
                             <label for="username">Customer Address</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="conpassword" value=""
+                                <input type="text" class="form-control" name="address" value=""
                                     id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
@@ -157,7 +157,7 @@
                             <label for="username">Customer Tel</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="conpassword" value=""
+                                <input type="text" class="form-control" name="telephone" value=""
                                     id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
@@ -174,7 +174,7 @@
                             <label for="username">Customer E-mail</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="conpassword" value=""
+                                <input type="email" class="form-control" name="email" value=""
                                     id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
@@ -187,7 +187,7 @@
                             <label for="username">Amount</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="narration" class="form-control" name="conpassword" value=""
+                                <input type="narration" class="form-control" name="amount" value=""
                                     id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
@@ -202,10 +202,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="citizen" id="cars">
-                                    <option value="volvo">Select</option>
-                                    <option value="volvo">Residensial</option>
-                                    <option value="volvo">Non Residensial</option>
+                                <select name="workflow" id="cars">
+                                    <option >Select</option>
+                                    <option >Residensial</option>
+                                    <option >Non Residensial</option>
                                 </select>
                             </div>
                         </div>

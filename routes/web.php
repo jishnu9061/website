@@ -951,7 +951,10 @@ Route::any('edit-document','clientinvoicing@editDocument')->name('edit-document'
 //manage files
 Route::any('file_managementindex',"filemanagement@index")->name('file_managementindex');
 Route::any('file-list',"filemanagement@view")->name('file-list');
-Route::any('edit-file',"filemanagement@edit")->name('edit-file');
+Route::any('/edit-file/{id}',"filemanagement@edit")->name('edit-file');
+
+Route::any('/file_destroy/{id}',"filemanagement@file_destroy")->name('file_destroy');
+
 Route::any('add-new-file',"filemanagement@addnew")->name('add-new-file');
 Route::any('file-archive',"filemanagement@filearchive")->name('file-archive');
 Route::any('add-box-no',"filemanagement@addboxno")->name('add-box-no');

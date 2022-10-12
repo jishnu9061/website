@@ -2,25 +2,9 @@
 @section('content')
 <div class="container">
     <div class="py-5 text-center">
-        @if(Session::has('staffregistered'))
-        <div class="alert alert-dark" role="alert">
-            {{ Session::get('staffregistered')}}
-        </div>
-        @endif
-        @if(Session::has('leavevalidat'))
-        <div class="alert alert-dark" role="alert">
-            {{ Session::get('leavevalidat')}}
-        </div>
-        @endif
-
-        <div class="col-sm">
 
 
-
-        </div>
         <div>
-            <!-- <h2>Edit File</h2> -->
-            <div>
             <div class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Edit File</u></b></span></div><br>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -29,19 +13,14 @@
 
         
             </div>
-            
-        </div>
     </div>
     <div class="row">
-
-        <div class="col-md-12 order-md-1">
-
-            <form method="post" action="" id="form">
+        <div class="col-md-12">
+            <form method="post" action="" id="form">  
                 @csrf
                 <div class="row">
-
-                    
-
+                   
+                   
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Client</label>
@@ -49,105 +28,84 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="client_type" id="cars">
+                                    <option>{{ $edit->Client_type}}</option>
                                 </select>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                
+                <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Associate Handling</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="associate_handling" id="cars" disabled>
+                                    <option >{{ $edit->Associate_handling}}</option>
+                              
                                 </select>
-                                <br>
                             </div>
                         </div>
                     </div>
 </div>
 <br>
-<div class="row">
 
-
-                  
-
+                <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Opening Date</label>
                             <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="date" class="form-control" name="number" id="username" required>
+                                <div class="input-group-prepend"></div>
+                                <input type="date" class="form-control" name="opening_date" id="age" value="{{ $edit->opening_date}}" min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
-                                    Number is required.
+                                    Age is required.
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- </div>
-        
-          <div class="row"> -->
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Client Ref.No or(Case No.)</label>
+                            <label for="username">Client Ref.No or(Case No)</label>
                             <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="text" class="form-control" name="incorporation" id="age">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="client_ref_no" id="age" value="{{ $edit->Client_ref_no}}" min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
-                                    Incorporation is required
+                                    Age is required.
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Our File Ref.Number</label>
+                            <label for="username">Our File Ref No</label>
                             <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="text" class="form-control" name="incorporation" id="age">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="our_file_ref_no" value="{{ $edit->our_file_reference_no}}"
+                                    id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
-                                    Incorporation is required
+                                    Password is required.
                                 </div>
                             </div>
                         </div>
                     </div>
-</div>
-<br>
-<div class="row">
-
+                </div>
+                <br>
+                <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">File Name / Subject</label>
+                            <label for="username">File Name/Subject</label>
                             <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="text" class="form-control" name="telephone" id="confirm_password" required>
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="file_name" id="age" value="{{ $edit->File_name}}"
+                                 min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
-                                    Telephone Number is required.
+                                    Age is required.
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
-                    <!-- </div>
-        </div> -->
-
-
-
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Approval Partner</label>
@@ -155,76 +113,68 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="approval_partner" id="cars">
+                                    <option >{{ $edit->Approval_partner}}</option>
+                                    
                                 </select>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Customer Name</label>
                             <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="text" class="form-control" name="email" id="age">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="customer_name" value="{{ $edit->Customer_name}}"
+                                    id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
-                                    Incorporation is required
+                                    Password is required.
                                 </div>
                             </div>
                         </div>
                     </div>
-</div>
-<br>
-<div class="row">
-                    <div class="col-md-6">
+                </div>
+                <br>
+                <div class="row">
+                <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Customer Address</label>
                             <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="password" class="form-control" name="website" id="confirm_password"
-                                    required>
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="address" value="{{ $edit->Address}}"
+                                    id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
-                                    Telephone Number is required.
+                                    Password is required.
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- </div>
-     
-        <div class="row"> -->
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Customer Tel</label>
                             <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="text" class="form-control" name="number" id="username" required>
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="telephone" value="{{ $edit->Telephone}}"
+                                    id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
-                                    Number is required.
+                                    Password is required.
                                 </div>
                             </div>
                         </div>
                     </div>
-</div>
-<br>
-                    <div class="row">
-
-                    <div class="col-md-4">
+                    
+                </div>
+                <br>
+                <div class="row">
+                <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Customer E-mail</label>
                             <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="text" class="form-control" name="number" id="username" required>
+                                <div class="input-group-prepend"></div>
+                                <input type="email" class="form-control" name="email" value="{{ $edit->email}}"
+                                    id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
-                                    Number is required.
+                                    Password is required.
                                 </div>
                             </div>
                         </div>
@@ -233,18 +183,15 @@
                         <div class="mb-1">
                             <label for="username">Amount</label>
                             <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="text" class="form-control" name="number" id="username" required>
-                                <br>
+                                <div class="input-group-prepend"></div>
+                                <input type="narration" class="form-control" name="amount" value="{{ $edit->amount}}"
+                                    id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
-                                    Number is required.
+                                    Password is required.
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Workflow</label>
@@ -252,50 +199,18 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="workflow" id="cars">
+                                    <option >{{ $edit->workflow}}</option>
+                                   
                                 </select>
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Number is required.
-                                </div>
                             </div>
                         </div>
                     </div>
-</div>
-              
-                <br>
-                <!-- <div class="row">
-        <div class="col-md-4">
-            <div class="mb-1">
-          <label for="username">Workflow</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-
-            </div>
-            <select name="country" id="cars">
-                <option value="volvo"></option>
-            </select>
-          </div>
-        </div>
-     
-    </div> -->
-
-
-                <!-- <div class="container">
-                    <div class="row">
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="btn-group pt-3 " role="group" aria-label="Basic example">
-
-                            <button type="submit" class="btn btn-primary submit_btn">Save Changes</button>
-                            <button type="submit" class="btn btn-primary submit_btn">Cancel</button>
-
-                        </div>
-                    </div>
+                    
                 </div>
-        </div> -->
-        <div class="row">
+                <br>
+               
+                    <div class="row">
                         <div class="col-sm">
 
                         </div>
@@ -304,25 +219,59 @@
                         </div>
                         <div class="col-sm">
                             <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save Changes</button>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
                             <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
                         </div>
                     </div>
                 </div>
-
-
-
-
+            </form>
+        </div>
     </div>
+</div>
 
-
-
-
-
-    </tbody>
-    </table>
+</div>
+<div class="modal" id="mymodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-body">
+                    <form action="">
+                        <div>
+                            <input type="text" name="type" class="form-control" placeholder="Client Type">
+                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </div>
+<div class="modal" id="my">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-body">
+                    <form action="">
+                        <div>
+                            <input type="text" name="type" class="form-control" placeholder="Country">
+                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
 $(function() {
@@ -349,7 +298,7 @@ $(document).on('click', '#testing', function() {
                                     method: "POST",
                                     url: "/allowancetostaff",
                                     data: {
-                                        "_token": "{{ csrf_token()}}",
+                                        "_token": "{{ csrf_token() }}",
                                         'allowanceid': allowanceid,
                                         'staffid': staffid,
                                         'status': 'allowance',
@@ -687,10 +636,10 @@ $(document).on('input', '#percent', function() {
                     }
                 } {
                     {
-                        -- < /div> --}} < /
+                        -- < /div> --}} <
+                        /div> < /
                         div > <
-                            /div> < /
-                            div >
+                            /div>
 
                             <
                             /div> <
@@ -734,46 +683,9 @@ $(document).on('input', '#percent', function() {
                             /tbody> < /
                             table > <
                             /div> < /
-                            div >
-
-                            <
-                            div class = "modal"
-                        id = "my" >
-                            <
-                            div class = "modal-dialog" >
-                            <
-                            div class = "modal-content" >
-                            <
-                            div class = "modal-header" >
-                            <
-                            div class = "modal-body" >
-                            <
-                            form action = "" >
-                            <
-                            div >
-                            <
-                            input type = "text"
-                        name = "type"
-                        class = "form-control"
-                        placeholder = "Country" >
-                            <
-                            button class = "btn btn-primary sub_btnn"
-                        type = "submit" > submit < /button> < /
                             div > <
-                            /form> < /
-                            div > <
-                            /div> < /
-                            div > <
-                            /div> < /
-                            div > <
-                            /div>
-
-                            <
-                            script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-                        integrity = "sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-                        crossorigin = "anonymous" >
+                            script src = "{{ url('assets/js') }}/jquery.min.js" >
 </script>
-<script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
 $(function() {
     $('[data-toggle="popover"]').popover()
@@ -799,7 +711,7 @@ $(document).on('click', '#testing1', function() {
                                     method: "POST",
                                     url: "/allowancetostaff",
                                     data: {
-                                        "_token": "{{ csrf_token()}}",
+                                        "_token": "{{ csrf_token() }}",
                                         'allowanceid': allowanceid,
                                         'staffid': staffid,
                                         'status': 'reduction',
@@ -928,7 +840,8 @@ $(document).on('click', '#testing1', function() {
                                     div > <
                                     /form> < /
                                     div > <
-                                    script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
+                                    script src =
+                                    "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
 </script>
 <script type="text/javascript">
 $('#password, #confirm_password').on('keyup', function() {

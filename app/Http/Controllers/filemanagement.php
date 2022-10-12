@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class filemanagement extends Controller
 {
@@ -14,16 +15,58 @@ class filemanagement extends Controller
 
     public function view()
     {
-        return view('file_management.file-list');
+        $file_list=DB::table('cra_open_new_file_details')->get();
+        return view('file_management.file-list',compact('file_list'));
     }
 
-    public function edit()
+    public function edit($id)
     {
-        return view('file_management.edit-file');
+
+
+        $edit =DB::table('cra_open_new_file_details')->where('id',$id)->first();
+        return view('file_management.edit-file',compact('edit','id'));
     }
 
-    public function addnew()
+    public function file_destroy($id)
     {
+        $edit =DB::table('cra_open_new_file_details')->where('id',$id)->delete();
+        return redirect ('/file-list');
+    }
+
+    public function addnew(Request $request)
+    {
+
+        $Associate_handling=$request['associate_handling'];
+        $Client_type=$request['client_type'];
+        $opening_date=$request['opening_date'];
+        $Client_ref_no=$request['client_ref_no'];
+        $our_file_reference_no=$request['our_file_ref_no'];
+        $File_name=$request['file_name'];
+        $Approval_partner=$request['approval_partner'];
+        $Customer_name=$request['customer_name'];
+        $Address=$request['address'];
+        $Telephone=$request['telephone'];
+        $email=$request['email'];
+        $amount=$request['amount'];
+        $workflow=$request['workflow'];
+
+        DB::table('cra_open_new_file_details')->insert([
+            
+            'Associate_handling' => $Associate_handling,
+            'Client_type' => $Client_type,
+            'opening_date' => $opening_date,
+            'Client_ref_no' => $Client_ref_no,
+            'our_file_reference_no' => $our_file_reference_no,
+            'File_name' => $File_name,
+            'Approval_partner' => $Approval_partner,
+            'Customer_name' => $Customer_name,
+            'Address' => $Address,
+            'Telephone' => $Telephone,
+            'email' => $email,
+            'amount' => $amount,
+            'workflow' => $workflow,
+        ]);
+        // return back()->withInput();
         return view('file_management.add-new-file');
     }
 
