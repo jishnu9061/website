@@ -292,7 +292,7 @@ class ClientManagement extends Controller
             'Mobile_no' => $mobile_no,
             'email' =>$person_email,
         ]);
-        return view('client-management.add-corporate');
+        return redirect('/corporate-list');
 
     }
 
