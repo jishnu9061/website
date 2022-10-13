@@ -709,7 +709,9 @@ Route::any('other_confgn','SystemSetup@othrconftn')->name('other_confgn');
 //Company branch
 Route::any('company_branch','SystemSetup@branch')->name('company_branch');
 Route::any('add_company_branch','SystemSetup@addbranch')->name('add_company_branch');
-Route::any('edit_company_branch','SystemSetup@editbranch')->name('edit_company_branch');
+Route::any('/edit_company_branch/{id}','SystemSetup@editbranch')->name('edit_company_branch');
+Route::any('/update_company_branch','SystemSetup@updatebranch')->name('update_company_branch');
+Route::any('/delete_company_branch/{id}','SystemSetup@deletebranch')->name('delete_company_branch');
 //end
 //configurations
 Route::any('configu_ration','SystemSetup@Configtn')->name('configu_ration');
@@ -873,12 +875,16 @@ Route::any('new_drn_fee_notes','clientinvoicing@newdrnfee')->name('new_drn_fee_n
 
 //Client-list
 Route::any('add_newclient',"ClientManagement@addNewclient")->name('add_newclient');
+Route::any('store-client',"ClientManagement@storeClient")->name('store-client');
 Route::any('client_list','ClientManagement@view')->name('client_list');
 Route::any('/edit_person/{id}','ClientManagement@edit_person')->name('edit_person');
-Route::any('view-client','ClientManagement@show')->name('view-client');
+Route::any('show-client/{id}','ClientManagement@show')->name('show-client');
 Route::any('client-index',"ClientManagement@index")->name('client-index');
+Route::any('update-client',"ClientManagement@updateClient")->name('update-client');
+Route::any('delete-client/{id}',"ClientManagement@deleteClient")->name('delete-client');
 //coporate
 Route::any('add-corporate','ClientManagement@addCorporate')->name('add-corporate');
+Route::any('store-corporate','ClientManagement@storeCorporate')->name('store-corporate');
 Route::any('corporate-list','ClientManagement@listCorporate')->name('corporate-list');
 Route::any('/edit_client/{id}','ClientManagement@edit_corporate')->name('edit_client');
 Route::any('/update-corporate','ClientManagement@Update_corporate')->name('update-corporate');
