@@ -150,7 +150,7 @@
                                 <div class="input-group-prepend">
                                 </div>
                                 <select name="brought">
-                                    <option value="volvo">{{$corporate_details->Brought_in_by}}</option>
+                                    <option value="volvo">{{$corporate_details->Brought_in_By}}</option>
                                 </select>
                             </div>
                         </div>

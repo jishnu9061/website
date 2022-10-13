@@ -131,6 +131,7 @@ DB::table('cra_company_branch_details')->insert([
 
     public function editbranch($id)
     {
+        
         $company_branch_details= DB::table('cra_company_branch_details')->where('id',$id)->first();
         return view('system-settings.edit_company_branch',compact('company_branch_details','id'));
     
@@ -166,6 +167,10 @@ DB::table('cra_company_branch_details')->insert([
             
         );
         DB::table('cra_company_branch_details')->where('id', $id)->update( $update_company_branch );
+        return redirect('/company_branch');
+    }
+    public function deletebranch($id){
+        DB::table('cra_company_branch_details')->where('id',$id)->delete();
         return redirect('/company_branch');
     }
 

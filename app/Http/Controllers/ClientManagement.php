@@ -275,7 +275,8 @@ class ClientManagement extends Controller
             'Fax_no' =>  $fax_no,
             'Email_address' =>  $email,
             'Website' =>  $website ,
-            'Brought_in_by' =>  $brought,
+            'Brought_in_B
+            y' =>  $brought,
             'Status_reporting_day' =>  $status,
             'Client_source' => $source,
             'Client_source_naration' =>  $client_narration,
@@ -347,7 +348,7 @@ class ClientManagement extends Controller
             'Fax_no' =>  $fax_no,
             'Email_address' =>  $email,
             'Website' =>  $website ,
-            'Brought_in_by' =>  $brought,
+            'Brought_in_By' =>  $brought,
             'Status_reporting_day' =>  $status,
             'Client_source' => $source,
             'Client_source_naration' =>  $client_narration,

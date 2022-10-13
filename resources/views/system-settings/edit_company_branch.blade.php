@@ -29,9 +29,12 @@
     </div>
     <br>
     <br>
+
     <div class="row">
         <div class="col-md-12">
             <form method="post" action="{{url('update_company_branch')}}" id="form">  
+               
+            <input type="hidden" name="id" value="{{$company_branch_details->id}}">
                 @csrf
                 <!-- <input type="text" class="form-control" name="number" id="username" value="{{$company_branch_details->id}}"> -->
                 <div class="row">
