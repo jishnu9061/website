@@ -84,6 +84,8 @@ class SystemSetup extends Controller
     {
         return view('system-settings.other_confgn');
     }
+
+
     public function branch()
     {
         $branch_details=DB::table('cra_company_branch_details')->get();
@@ -123,10 +125,52 @@ DB::table('cra_company_branch_details')->insert([
 
      return view('system-settings.add_company_branch');
     }
-    public function editbranch()
+
+
+
+
+    public function editbranch($id)
     {
-        return view('system-settings.edit_company_branch');
+        $company_branch_details= DB::table('cra_company_branch_details')->where('id',$id)->first();
+        return view('system-settings.edit_company_branch',compact('company_branch_details','id'));
+    
     }
+    public function updatebranch(Request $Request){
+        $id     = $Request['id'];
+        $branch_no = $Request['bnum'];
+      
+        $branch_code = $Request['bcodes'];
+        $branch_name = $Request['bname'];
+        $address = $Request['paddress'];
+        $physical_address = $Request['physicaladd'];
+        $telephone = $Request['tel'];
+        $mobile = $Request['mobile'];
+        $fax = $Request['fax'];
+        $town = $Request['town'];
+        $email = $Request['email'];
+        $website = $Request['website'];
+     
+
+        $update_company_branch = array(
+            'branch_no' => $branch_no,
+            'branch_code' =>  $branch_code,
+            'branch_name' => $branch_name,
+            'address' =>  $address,
+            'physical_address' =>  $physical_address,
+            'telephone' =>  $telephone,
+            'mobile' =>   $mobile,
+            'fax' =>  $fax,
+            'town' =>  $town,
+            'email' =>  $email ,
+            'website' =>  $website,
+            
+        );
+        DB::table('cra_company_branch_details')->where('id', $id)->update( $update_company_branch );
+        return redirect('/company_branch');
+    }
+
+
+
     public function Configtn()
     {
         return view('system-settings.configu_ration');
