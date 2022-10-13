@@ -709,7 +709,9 @@ Route::any('other_confgn','SystemSetup@othrconftn')->name('other_confgn');
 //Company branch
 Route::any('company_branch','SystemSetup@branch')->name('company_branch');
 Route::any('add_company_branch','SystemSetup@addbranch')->name('add_company_branch');
-Route::any('edit_company_branch','SystemSetup@editbranch')->name('edit_company_branch');
+Route::any('/edit_company_branch/{id}','SystemSetup@editbranch')->name('edit_company_branch');
+Route::any('/update_company_branch','SystemSetup@updatebranch')->name('update_company_branch');
+Route::any('/delete_company_branch/{id}','SystemSetup@deletebranch')->name('delete_company_branch');
 //end
 //configurations
 Route::any('configu_ration','SystemSetup@Configtn')->name('configu_ration');
@@ -959,6 +961,7 @@ Route::any('edit-document','clientinvoicing@editDocument')->name('edit-document'
 Route::any('file_managementindex',"filemanagement@index")->name('file_managementindex');
 Route::any('file-list',"filemanagement@view")->name('file-list');
 Route::any('/edit-file/{id}',"filemanagement@edit")->name('edit-file');
+Route::any('/update',"filemanagement@update")->name('update');
 
 Route::any('/file_destroy/{id}',"filemanagement@file_destroy")->name('file_destroy');
 

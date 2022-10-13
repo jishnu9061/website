@@ -403,9 +403,8 @@ class ClientManagement extends Controller
             'Mobile_no' => $mobile_no,
             'email' =>$person_email,
         ]);
-        
-        return redirect("/corporate-list");
 
+        return redirect("/corporate-list");
     }
 
 
@@ -485,15 +484,5 @@ class ClientManagement extends Controller
         DB::table('cra_corporate_client_details')->where('id',$id)->delete();
         return redirect('/corporate-list');
     }
-    // public function update_corporate(Request $Request){
-    //     $id=$Request['item_id'];
-    //     $brand_name=$Request['brand_name'];
-    //     $new_item=$Request['item_name'];
-    //     $profit_percentage=$Request['profit_percentage'];
-
-    //     $editdata=array('brand_name'=>$brand_name,'Item_name'=> $new_item,'profit_percentage'=> $profit_percentage );
-
-    //     DB::table('medicines')->where('id',$id)->update($editdata);
-    //     return back()->withInput();
-    // }
+   
 }
