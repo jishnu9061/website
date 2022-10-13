@@ -86,37 +86,39 @@ class SystemSetup extends Controller
     }
     public function branch()
     {
-        return view('system-settings.company_branch');
+        $branch_details=DB::table('cra_company_branch_details')->get();
+        return view('system-settings.company_branch',compact('branch_details'));
     }
+
+
     public function addbranch(Request $Request)
     {
-      
-        
-        
-        $branch_no = $Request['bnum'];
+         $branch_no = $Request['bnum'];
         $branch_code = $Request['bcodes'];
         $branch_name = $Request['bname'];
         $address = $Request['paddress'];
+        $physical_address = $Request['physicaladd'];
         $telephone = $Request['tel'];
         $mobile = $Request['mobile'];
         $fax = $Request['fax'];
         $town = $Request['town'];
          $email = $Request['email'];
         $website = $Request['website'];
-        $physical_address = $Request['physicaladd'];
+   
        
 DB::table('cra_company_branch_details')->insert([
             'branch_no' => $branch_no,
             'branch_code' => $branch_code,
             'branch_name' => $branch_name,
             'address' => $address,
+            'physical_address' => $physical_address,
             'telephone' => $telephone,
             'mobile' => $mobile,
             'fax' => $fax,
             'town' => $town,
             'email' => $email,
             'website' => $website,
-            'physical_address' => $physical_address,
+           
         ]);
 
      return view('system-settings.add_company_branch');
@@ -236,23 +238,51 @@ DB::table('cra_company_branch_details')->insert([
     {
         return view('system-settings.notifications');
     }
+
     public function templatecategory()
     {
-        return view('system-settings.template_category');
+
+        $template_category=DB::table('cra_template_category')->get();
+        return view('system-settings.template_category',compact('template_category'));
     }
-    public function addtemplatecategory()
+
+    public function addtemplatecategory(Request $Request)
     {
+        $Template_Category = $Request['temcategory'];
+            $Category_Type	 = $Request['cattype'];
+         
+    DB::table('cra_template_category')->insert([
+                'Template_Category' => $Template_Category,
+                'Category_Type' => $Category_Type,
+                
+            ]);
+    
         return view('system-settings.add_template_category');
     }
     public function documenttemplatecategory()
     {
         return view('system-settings.document_template_category');
     }
-    public function edittemplatecategory()
+
+
+
+    public function edittemplatecategory($id)
     {
-        return view('system-settings.edit_template_category');
+        $template=DB::table('cra_template_category')->where('id',$id)->get();
+        return view('system-settings.edit_template_category',compact('template','id'));
     }
-   
+
+    public function update_template_category(Request $Request){
+  
+        $Template_Category=$Request['temcategory'];
+        $Category_Type=$Request['cattype'];
+        $edittemplate=array('temcategory'=>$Template_Category,'cattype'=> $Category_Type);
+        DB::table('cra_template_category')->where('id',$id)->update($edittemplate);
+        return back()->withInput();
+    }
+
+
+
     public function pairedaccount()
     {
         return view('system-settings.paired_account');
@@ -418,12 +448,27 @@ DB::table('cra_company_branch_details')->insert([
   
     public function transportzone()
     {
-        return view('system-settings.transport_zones');
+        $transportzone=DB::table('cra_transport_zone')->get();
+
+        return view('system-settings.transport_zones',compact('transportzone'));
     }
-    public function addtransportzone()
+
+    public function addtransportzone(Request $Request)
     {
-        return view('system-settings.add_transport_zone');
+        $zone_name = $Request['zone_name'];
+        $zone_areas = $Request['zone_areas'];
+        $cost = $Request['cost'];
+
+        DB::table('cra_transport_zone')->insert([
+            'zone_name' => $zone_name,
+            'zone_areas' =>  $zone_areas,
+            'cost' =>  $cost,
+        ]);
+
+       return view('system-settings.add_transport_zone');
     }
+
+
     public function edittransportzone()
     {
         return view('system-settings.edit_transport_zone');
@@ -440,14 +485,45 @@ DB::table('cra_company_branch_details')->insert([
     {
         return view('system-settings.edit_billable_activities');
     }
+
     public function bankdetails()
     {
-        return view('system-settings.bank_details');
+        
+        $bank_details=DB::table('cra_bank_details')->get();
+        
+        return view('system-settings.bank_details',compact('bank_details'));
     }
-    public function addbankaccount()
+
+
+    public function addbankaccount(Request $Request)
     {
+        $bank = $Request['bank'];
+        $branch = $Request['branch'];
+        $account_name = $Request['account_name'];
+        $account_no = $Request['account_no'];
+        $bank_code = $Request['bank_code'];
+        $branch_code = $Request['branch_code'];
+        $swift_code = $Request['swift_code'];
+        $mpesa_no = $Request['mpesa_no'];
+        $bank_gl_ac = $Request['bank_gl_ac'];
+
+        DB::table('cra_bank_details')->insert([
+            'bank' => $bank,
+            'branch' => $branch,
+            'account_name' => $account_name,
+            'account_number' => $account_no,
+            'bank_code' =>  $bank_code,
+            'branch_code' => $branch_code,
+            'swift_code' => $swift_code,
+            'mpesa_code' =>$mpesa_no,
+            'bank_gl_ac' =>$bank_gl_ac,
+           
+        ]);
+  
+
         return view('system-settings.add_bank_account');
     }
+    
     public function editbankaccount()
     {
         return view('system-settings.edit_bank_account');

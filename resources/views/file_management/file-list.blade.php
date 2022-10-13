@@ -39,12 +39,13 @@
             <label><b>Search:</b><input type="search" class="box" placeholder="search"
                     aria-controls="mydatatable"></label>
         </div>
-        <a href="{{url('add-new-file')}}"><button class="btn btn-primary add-btn"
-                style="width: 20%; margin-bottom:5%;">Open New File</button></a>
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <!-- <a href="{{url('add-new-file')}}" type="button" >Open New File</a> -->
+         <a href="{{url('add-new-file')}}"><button class="btn btn-primary add-btn"
+                style="width: 20%; margin-bottom:5%;">Open New File</button></a> 
+        <div>
+            <div class="" id="home" role="" aria-labelledby="">
             <div class="table-responsive">
-                <table class="table table-bordered" id="new-item">
+                <table class="table table-bordered" id="">
                     <thead>
                         <tr>
                         <th class="text-center">No</th>
@@ -61,26 +62,28 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr id="data">
+                       @foreach( $file_list as $file)
+                        <tr id="data" style="font-size:11.5px;">
+                            <td scope="row" class="text-center">{{$file->our_file_reference_no}}</td>
+                            <td scope="row" class="text-center">{{$file->Client_type}}</td>
+                            <td scope="row" class="text-center">{{$file->File_name}}</td>
+                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$file->opening_date}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
                             <td scope="row" class="text-center"><a href=""><i style="color:black;" class="fa fa-eye"
                                         aria-hidden="true"></i>
-                                    <input type="hidden" value="" id="medicine_id_hidden" class="applicate"
-                                        name="supplier_id_hidden">
-                                    <a href="{{url('edit-file')}}"><i style="color:black;" class="fa fa-edit"
+                                    <!-- <input type="hidden" value="" id="medicine_id_hidden" class="applicate"
+                                        name="supplier_id_hidden"> -->
+                                    <a href="{{url('edit-file',$file->id)}}"><i style="color:black;" class="fa fa-edit"
                                             aria-hidden="true"></i>
-                                        <a onClick="return myFunction();" href="" style="color:black;"><i
+                                        <a onClick="" href="{{url('file_destroy',$file->id)}}" style="color:black;"><i
                                                 class="fas fa-trash-alt"></i></a></td>
                         </tr>
+                        @endforeach;
                     </tbody>
                 </table>
 
