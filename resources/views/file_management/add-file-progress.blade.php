@@ -13,7 +13,8 @@
         </div>
         @endif
         <div>
-            <!-- <h2 style="text-align:center;">Add File Progress</h2> -->
+            <!-- <h2 style="text-align:center;">Edit File Progress</h2>
+            <hr class="mb-4">. -->
             <div>
             <div class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Add File Progress</u></b></span></div><br>
@@ -23,7 +24,6 @@
 
         
             </div>
-           
         </div>
     </div>
     <div>
@@ -34,13 +34,16 @@
                 <form method="post" action="" id="form">
                     @csrf
                     <div class="row">
-                        <div class="col-md-6">
+                    <div class="col-md-6">
                             <div class="mb-1">
-                                <label for="username">Date of progress</label>
+                                <label for="username">Client</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
 
                                     </div>
+                                    <select name="client_name" id="cars">
+                                        <option ></option>
+                                    </select>
                                     <input type="date" class="form-control" name="incorporation" id="age">
                                     <div class="invalid-feedback" style="width: 100%;">
                                         Incorporation is required
@@ -48,36 +51,48 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-md-6">
+                            <div class="mb-1">
+                                <label for="username">Date of progress</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+
+                                    </div>
+                                    <input type="date" class="form-control" name="date_progress" id="age">
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Incorporation is required
+                                    </div>
+                                    <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+<br>
+<div class="row">
+
+                        <div class="col-md-12">
                             <div class="mb-1">
                                 <label for="username">Next Action(Way Forward)</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <textarea class="form-control" id="form7Example7" rows="3"></textarea>
-                                </div>
-                            </div>
-                        </div>
-</div>
-<br>
-<div class="row">
-
-
-                        <div class="col-md-6">
-                            <div class="mb-1">
-                                <label for="username">Client</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-
-                                    </div>
+                                    <textarea class="form-control" id="form7Example7" rows="3" name="next_action"></textarea>
                                     <select name="country" id="cars">
                                         <option value="volvo"></option>
                                     </select>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+</div>
+</div>
+
+                       
+</div>
+<br>
+<div class="row">
+                        <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="username">New Bringup Date</label>
                                 <div class="input-group">
@@ -92,10 +107,8 @@
                             </div>
                         </div>
 
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-6">
+                 
+                        <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="username">File</label>
                                 <div class="input-group">
@@ -112,7 +125,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="username">Reminder period(Days)</label>
                                 <div class="input-group">
@@ -127,9 +140,9 @@
                             </div>
                         </div>
 </div>
-                        <br>
-                        <div class="row">
-                        <div class="col-md-6">
+<br>
+<div class="row">
+                        <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="username">Action Type</label>
                                 <div class="input-group">
@@ -144,9 +157,8 @@
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
+                        <div class="col-md-4">
                     </div>
                     <div id="test" style="height:20px;"></div>
             </div>
@@ -171,6 +183,7 @@
                         <div class="input-group-prepend">
 
                         </div>
+                        <input type="time" class="form-control" name="time_taken_hours" id="age">
                         <input type="text" class="form-control" name="email" id="age">
                         <div class="invalid-feedback" style="width: 100%;">
                             Incorporation is required
@@ -178,24 +191,36 @@
                     </div>
                 </div>
             </div>
-</div>
-            <br>
-            <div class="row">
-            <div class="col-md-6">
+            
+            <div class="col-md-4">
                 <div class="mb-1">
                     <label for="username">Time Taken(Minutes)</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
 
                         </div>
+                        <input type="time" class="form-control" name="time_taken_minutes" id="" required>
                         <input type="text" class="form-control" name="website" id="confirm_password" required>
                         <div class="invalid-feedback" style="width: 100%;">
                             Telephone Number is required.
                         </div>
                     </div>
                 </div>
+            </div>
+</div>        
+<br>
 
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mb-1">
+                    <label for="username">Action Description</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
 
+                        </div>
+                        <textarea class="form-control" id="form7Example7" rows="3" name="action_description"></textarea>
+                    </div>
+                </div>
             </div>
         </div>
         <br>
@@ -207,18 +232,10 @@
             </div>
         </div>
 
-        <!-- <h4 style="text-align:center;">Send Billing</h4> -->
-        <div>
-            <div class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Send Billing</u></b></span></div><br>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous">
+        <h4 style="text-align:center;">Send Billing</h4>
 
-        
-            </div>
-            <br>
         <div class="row">
+
             <div class="col-md-4">
                 <div class="mb-1">
                     <label for="username">Item Type</label>
@@ -226,6 +243,8 @@
                         <div class="input-group-prepend">
 
                         </div>
+                        <select name="item_type" id="cars">
+                            <option ></option>
                         <select name="country" id="cars">
                             <option value="volvo"></option>
                         </select>
@@ -243,6 +262,8 @@
                         <div class="input-group-prepend">
 
                         </div>
+                        <select name="currency" id="cars">
+                            <option ></option>
                         <select name="country" id="cars">
                             <option value="volvo"></option>
                         </select>
@@ -266,21 +287,12 @@
                     </div>
                 </div>
             </div>
+</div>
+<br>
             <div id="test" style="height:20px;"></div>
-        </div>
-    </div>
-    <br>
-    <!-- <h4 style="text-align:center;">Send To Timesheet</h4> -->
-    <div>
-            <div class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Send To Timesheet</u></b></span></div><br>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous">
-
         
-            </div>
-            <br>
+    <h4 style="text-align:center;">Send To Timesheet</h4>
+
     <div class="row">
         <div class="col-md-4">
             <div class="mb-1">
@@ -289,6 +301,7 @@
                     <div class="input-group-prepend">
 
                     </div>
+                    <input type="time" class="form-control" name="start_time" id="username" required>
                     <select name="country" id="cars">
                         <option value="volvo"></option>
                     </select>
@@ -302,8 +315,13 @@
                     <div class="input-group-prepend">
 
                     </div>
+
+                    <select name="activity_type" id="cars">
+                        <option ></option>
+
                     <select name="country" id="cars">
                         <option value="volvo"></option>
+
                     </select>
                 </div>
             </div>
@@ -319,19 +337,22 @@
                 </div>
             </div>
         </div>
+</div>
+    <br>
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-sm">
+
+            </div>
+            <div class="col-sm">
+                <button type="submit" class="btn btn-primary submit_btn btn_sumbit">Edit File Progress</button>
 
 
+                <button type="submit" class="btn btn-primary submit_btn btn_align">Close</button>
 
-
-
-
-
-
-
-
-
-
-    </div>
+            </div>
+        </div>
+    </div> -->
     <div class="row">
                         <div class="col-sm">
 
@@ -346,7 +367,6 @@
                         </div>
                     </div>
                 </div>
-
 
 
 
