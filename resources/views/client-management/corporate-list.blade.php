@@ -43,7 +43,7 @@
                                     <th class="text-center">Client_name</th>
                                     <th class="text-center">Designation</th>
                                     <th class="text-center">Mobile No</th>
-                                    <th class="text-center">Email Address</th>
+                                    <th class="text-center">Contact Person Email</th>
                                     <th class="text-center">Action</th>
                                 </tr>
                             </thead>

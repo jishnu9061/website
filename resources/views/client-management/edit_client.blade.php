@@ -10,29 +10,21 @@
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous">
-
-
-            <div class="container mt-5">
-                {{-- <button type="button" class="btn btn-primary client_btn" data-bs-toggle="modal"
-                    data-bs-target="#mymodal">Add Client Type</button> --}}
-                <!-- <button type="button" class="btn btn-primary country_btn" data-bs-toggle="modal" data-bs-target="#my">Add Country</button> -->
-            </div>
         </div>
+        <br>
     </div>
     <div class="row">
-        <div class="col-md-12 order-md-1">
-            <form method="post" action="{{url('update_corporate')}}" id="form">
+        <div class="col-md-12">
+            <form method="post" action="{{url('update-corporate')}}" id="form">  
                 @csrf
-                <input type="text" class="form-control" name="number" id="username" value="{{$corporate_details->id}}"
-                                    >
+                <input type="hidden" name="id" value="{{$corporate_details->id}}">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Client Number</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="number" id="username" value="{{$corporate_details->Client_no}}"
-                                    placeholder="Number">
+                                <input type="text" class="form-control" name="number" id="username" value="{{$corporate_details->Client_no}}" >
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -46,9 +38,9 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="type" id="cars"disabled>
+
+                                <select name="type" id="cars">
                                     <option value="Corporate">{{$corporate_details->Client_type}}</option>
-                                   
                                 </select>
                             </div>
                         </div>
@@ -61,7 +53,7 @@
 
                                 </div>
                                 <select name="citizen" id="cars">
-                                    <option value="Residensial">{{$corporate_details->Cityzen_status}}</option>
+                                    <option value="volvo">{{$corporate_details->Cityzen_status}}</option>
                                 </select>
                             </div>
                         </div>
@@ -69,21 +61,18 @@
                 </div>
                 <br>
                 <div class="row">
-
-                <div class="col-md-4">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Certificate Of Incorporation</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="number" id="username" value="{{$corporate_details->Certificate_of_incorporation}}"
-                                    placeholder="Number">
+                                <input type="text" class="form-control" name="corporation" id="age" value="{{$corporate_details->Certificate_of_incorporation}}" min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
-                                    Name is required.
+                                    Age is required.
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Country</label>
@@ -92,7 +81,7 @@
 
                                 </div>
                                 <select name="country" id="cars">
-                                    <option>{{$corporate_details->Country}}</option>
+                                    <option value="volvo">{{$corporate_details->Country}}</option>
                                 </select>
                             </div>
                         </div>
@@ -110,11 +99,10 @@
                             </div>
                         </div>
                     </div>
-                   
                 </div>
                 <br>
                 <div class="row">
-                <div class="col-md-4">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Fax No</label>
                             <div class="input-group">
@@ -127,14 +115,12 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Email Address</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="email" class="form-control" name="email" value="{{$corporate_details->Email_address}}" id="password"
-                                >
+                                <input type="email" class="form-control" name="email" value="{{$corporate_details->Email_address}}" id="password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -146,32 +132,30 @@
                             <label for="username">Web Site</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="email" value="{{$corporate_details->Website}}" id="password"
-                                >
+                                <input type="text" class="form-control" name="website" value="{{$corporate_details->Website}}"
+                                    id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
                             </div>
                         </div>
                     </div>
-                 
-                 
                 </div>
                 <br>
                 <div class="row">
-                <div class="col-md-4">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Brought In By</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <select name="brought" id="cars">
-                                    <option>{{$corporate_details->Brought_in_by}}</option>
+                                <select name="brought">
+                                    <option value="volvo">{{$corporate_details->Brought_in_by}}</option>
                                 </select>
                             </div>
                         </div>
                     </div>
-                <div class="col-md-4">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Status Reporting Day</label>
                             <div class="input-group">
@@ -179,7 +163,7 @@
 
                                 </div>
                                 <select name="status" id="cars">
-                                    <option>{{$corporate_details->Status_reporting_day}}</option>
+                                    <option value="">{{$corporate_details->Status_reporting_day}}</option>
                                 </select>
                             </div>
                         </div>
@@ -192,22 +176,20 @@
 
                                 </div>
                                 <select name="source" id="cars">
-                                    <option>{{$corporate_details->Client_source}}</option>
+                                    <option value="volvo">{{$corporate_details->Client_source}}</option>
                                 </select>
                             </div>
                         </div>
                     </div>
-                   
-               
                 </div>
                 <br>
                 <div class="row">
-                <div class="col-md-4">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Client Source Narration</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="narration" class="form-control" name="conpassword" value="{{$corporate_details->Client_source_naration}}"
+                                <input type="narration" class="form-control" name="narration" value="{{$corporate_details->Client_source_naration}}"
                                     id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
@@ -215,13 +197,12 @@
                             </div>
                         </div>
                     </div>
-                     <div class="col-md-4">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Client Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="name" value="{{$corporate_details->Client_name}}" id="confirm_password"
-                                >
+                                <input type="text" class="form-control" name="name" value="{{$corporate_details->Client_name}}" id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -236,36 +217,32 @@
 
                                 </div>
                                 <select name="industry" id="cars">
-                                    <option >{{$corporate_details->Client_industry}}</option>
+                                    <option value="volvo">{{$corporate_details->Client_industry}}</option>
                                 </select>
                             </div>
                         </div>
                     </div>
-             
-                    
                 </div>
                 <br>
                 <div class="row">
-                <div class="col-md-4">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Pin No</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="pin" id="age" value="{{$corporate_details->Pin_no}}"
-                                 min="0" max="99">
+                                <input type="text" class="form-control" name="pin" id="age" value="{{$corporate_details->Pin_no}}" min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
                                 </div>
                             </div>
                         </div>
                     </div>
-                <div class="col-md-4">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Postal Address</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="address" value="{{$corporate_details->postal_address}}" id="password"
-                                >
+                                <input type="text" class="form-control" name="address" value="{{$corporate_details->postal_address}}" id="password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -277,24 +254,34 @@
                             <label for="username">Postal Code</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="code" value="{{$corporate_details->postal_code}}" id="confirm_password"
-                                >
+                                <input type="text" class="form-control" name="code" value="{{$corporate_details->postal_code}}" id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
                             </div>
                         </div>
                     </div>
-                   
-                    {{--  --}}
                 </div>
                 <br>
                 <div class="row">
-                <div class="col-md-4">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Town</label>
                             <div class="input-group">
-                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="town" id="age" value="{{$corporate_details->town}}" 
+                                    min="0" max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Age is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Physical Address</label>
+                            <div class="input-group">
+                                <textarea class="form-control" id="form7Example7" rows="3" name="physicaladdress"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Postal Address is required.
                                 </div>
@@ -305,18 +292,7 @@
                         <div class="mb-1">
                             <label for="username">Notes</label>
                             <div class="input-group">
-                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Postal Address is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <div class="input-group">
-                                <label for="cars"> Physical Address</label>
-                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="notes"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Postal Address is required.
                                 </div>
@@ -325,8 +301,8 @@
                     </div>
                 </div>
                 <br>
-                <button class="btn btn-primary"
-                    style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Contact Person</u></b></span></button><br>
+                <div class="btn btn-primary"
+                    style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Contact Person</u></b></span></div><br>
                 <br>
                 <div class="row">
                     <div class="col-md-3">
@@ -334,7 +310,7 @@
                             <label for="username">Person Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="name" id="age" value="{{$corporate_details->contact_person}}" placeholder=""
+                                <input type="text" class="form-control" name="person" id="age" value="{{$corporate_details->contact_person}}" placeholder=""
                                     min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
 
@@ -347,7 +323,7 @@
                             <label for="username">Designation</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="Mobile" id="age" value="{{$corporate_details->designation}}" placeholder=""
+                                <input type="text" class="form-control" name="Designation" id="age" value="{{$corporate_details->designation}}" placeholder=""
                                     min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Mobile No is required.
@@ -370,10 +346,10 @@
                     </div>
                     <div class="col-md-3">
                         <div class="mb-1">
-                            <label for="username">Email</label>
+                            <label for="username">Contact Person Email</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="email" id="age" value="{{$corporate_details->email}}" placeholder=""
+                                <input type="text" class="form-control" name="person_email" id="age" value="{{$corporate_details->email}}" placeholder=""
                                     min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 </div>
@@ -385,34 +361,59 @@
 
 
                     </div>
-                <div class="row">
-                    <div class="col-sm">
+                    <div class="row">
+                        <div class="col-sm">
 
-                    </div>
-                    <div class="col-sm">
+                        </div>
+                        <div class="col-sm">
 
-                    </div>
-                    <div class="col-sm">
-                        <br>
-                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Close</button>
-                        <button type="submit" class="btn btn-primary float:left" Style="width:45%;">Update</button>
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Close</button>
+                            <button type="submit" class="btn btn-primary float:left" Style="width:45%;">Save</button>
+                        </div>
                     </div>
                 </div>
-
-
-
+            </form>
         </div>
-
     </div>
-    </form>
-</div>
-</div>
 </div>
 
 </div>
-
+<div class="modal" id="mymodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-body">
+                    <form action="">
+                        <div>
+                            <input type="text" name="type" class="form-control" placeholder="Client Type">
+                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
+</div>
+<div class="modal" id="my">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-body">
+                    <form action="">
+                        <div>
+                            <input type="text" name="type" class="form-control" placeholder="Country">
+                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -448,7 +449,7 @@ $(document).on('click', '#testing', function() {
                                     method: "POST",
                                     url: "/allowancetostaff",
                                     data: {
-                                        "_token": "{{ csrf_token()}}",
+                                        "_token": "{{ csrf_token() }}",
                                         'allowanceid': allowanceid,
                                         'staffid': staffid,
                                         'status': 'allowance',
@@ -786,10 +787,10 @@ $(document).on('input', '#percent', function() {
                     }
                 } {
                     {
-                        -- < /div> --}} < /
+                        -- < /div> --}} <
+                        /div> < /
                         div > <
-                            /div> < /
-                            div >
+                            /div>
 
                             <
                             /div> <
@@ -861,7 +862,7 @@ $(document).on('click', '#testing1', function() {
                                     method: "POST",
                                     url: "/allowancetostaff",
                                     data: {
-                                        "_token": "{{ csrf_token()}}",
+                                        "_token": "{{ csrf_token() }}",
                                         'allowanceid': allowanceid,
                                         'staffid': staffid,
                                         'status': 'reduction',
@@ -990,7 +991,8 @@ $(document).on('click', '#testing1', function() {
                                     div > <
                                     /form> < /
                                     div > <
-                                    script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
+                                    script src =
+                                    "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
 </script>
 <script type="text/javascript">
 $('#password, #confirm_password').on('keyup', function() {
