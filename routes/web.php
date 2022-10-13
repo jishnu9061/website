@@ -709,7 +709,9 @@ Route::any('other_confgn','SystemSetup@othrconftn')->name('other_confgn');
 //Company branch
 Route::any('company_branch','SystemSetup@branch')->name('company_branch');
 Route::any('add_company_branch','SystemSetup@addbranch')->name('add_company_branch');
-Route::any('edit_company_branch','SystemSetup@editbranch')->name('edit_company_branch');
+Route::any('/edit_company_branch/{id}','SystemSetup@editbranch')->name('edit_company_branch');
+Route::any('/update_company_branch','SystemSetup@updatebranch')->name('update_company_branch');
+Route::any('/delete_company_branch/{id}','SystemSetup@deletebranch')->name('delete_company_branch');
 //end
 //configurations
 Route::any('configu_ration','SystemSetup@Configtn')->name('configu_ration');
@@ -872,16 +874,16 @@ Route::any('new_drn_fee_notes','clientinvoicing@newdrnfee')->name('new_drn_fee_n
 //Mugunthan
 
 //Client-list
-Route::any('add_newclient',"ClientManagement@create")->name('add_newclient');
+Route::any('add_newclient',"ClientManagement@addNewclient")->name('add_newclient');
 Route::any('client_list','ClientManagement@view')->name('client_list');
-Route::any('edit_person','ClientManagement@edit_person')->name('edit_person');
+Route::any('/edit_person/{id}','ClientManagement@edit_person')->name('edit_person');
 Route::any('view-client','ClientManagement@show')->name('view-client');
 Route::any('client-index',"ClientManagement@index")->name('client-index');
 //coporate
 Route::any('add-corporate','ClientManagement@addCorporate')->name('add-corporate');
 Route::any('corporate-list','ClientManagement@listCorporate')->name('corporate-list');
 Route::any('/edit_client/{id}','ClientManagement@edit_corporate')->name('edit_client');
-Route::any('/update_corporate','ClientManagement@Update_corporate')->name('update_corporate');
+Route::any('/update-corporate','ClientManagement@Update_corporate')->name('update-corporate');
 Route::any('/delete_client/{id}','ClientManagement@Corporate_destroy')->name('delete_client');
 //end corporate
 //end Client-List
@@ -955,6 +957,7 @@ Route::any('edit-document','clientinvoicing@editDocument')->name('edit-document'
 Route::any('file_managementindex',"filemanagement@index")->name('file_managementindex');
 Route::any('file-list',"filemanagement@view")->name('file-list');
 Route::any('/edit-file/{id}',"filemanagement@edit")->name('edit-file');
+Route::any('/update',"filemanagement@update")->name('update');
 
 Route::any('/file_destroy/{id}',"filemanagement@file_destroy")->name('file_destroy');
 
