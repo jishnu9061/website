@@ -68,7 +68,7 @@
                         <tr>
                             <th class="text-center">*</th>
                             <th class="text-center">Action </br>Type</th>
-                            <th class="text-center">Progress </br>Data</th>
+                            <th class="text-center">Progress </br>Date</th>
                             <th class="text-center">Client</th>
                             <th class="text-center">FileName</th>
                             <th class="text-center">Description</th>
@@ -83,27 +83,27 @@
                     </thead>
 
                     <tbody>
-
-                        <tr id="data">
+                        @foreach($file_progress_list as $list)
+                    <tr id="data">
+                            <td scope="row" class="text-center">{{$list->id}}</td>
+                            <td scope="row" class="text-center">{{$list->action_type}}</td>
+                            <td scope="row" class="text-center">{{$list->progress_date}}</td>
+                            <td scope="row" class="text-center">{{$list->client_name}}</td>
+                            <td scope="row" class="text-center">{{$list->file_name}}</td>
+                            <td scope="row" class="text-center">{{$list->action_description}}</td>
+                            <td scope="row" class="text-center">{{$list->time_taken_hours}}</td>
                             <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$list->next_action}}</td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$list->activity}}</td>
                             <td scope="row" class="text-center"><input type="checkbox" name="" id=""></td>
                             <td scope="row" class="text-center">
-                                <a href="{{url('edit-file-progress')}}"><i style="color:black;" class="fa fa-edit"
+                                <a href="{{url('edit-file-progress',$list->id)}}"><i style="color:black;" class="fa fa-edit"
                                         aria-hidden="true"></i>
                             </td>
                         </tr>
 
-
+                          @endforeach;
 
                     </tbody>
 
