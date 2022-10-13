@@ -873,12 +873,16 @@ Route::any('new_drn_fee_notes','clientinvoicing@newdrnfee')->name('new_drn_fee_n
 
 //Client-list
 Route::any('add_newclient',"ClientManagement@addNewclient")->name('add_newclient');
+Route::any('store-client',"ClientManagement@storeClient")->name('store-client');
 Route::any('client_list','ClientManagement@view')->name('client_list');
 Route::any('/edit_person/{id}','ClientManagement@edit_person')->name('edit_person');
-Route::any('view-client','ClientManagement@show')->name('view-client');
+Route::any('show-client/{id}','ClientManagement@show')->name('show-client');
 Route::any('client-index',"ClientManagement@index")->name('client-index');
+Route::any('update-client',"ClientManagement@updateClient")->name('update-client');
+Route::any('delete-client/{id}',"ClientManagement@deleteClient")->name('delete-client');
 //coporate
 Route::any('add-corporate','ClientManagement@addCorporate')->name('add-corporate');
+Route::any('store-corporate','ClientManagement@storeCorporate')->name('store-corporate');
 Route::any('corporate-list','ClientManagement@listCorporate')->name('corporate-list');
 Route::any('/edit_client/{id}','ClientManagement@edit_corporate')->name('edit_client');
 Route::any('/update-corporate','ClientManagement@Update_corporate')->name('update-corporate');
