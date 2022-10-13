@@ -35,7 +35,7 @@ class filemanagement extends Controller
 
     public function addnew(Request $request)
     {
-        $id =$request['id'];
+
         $Associate_handling=$request['associate_handling'];
         $Client_type=$request['client_type'];
         $opening_date=$request['opening_date'];
@@ -67,79 +67,6 @@ class filemanagement extends Controller
             'workflow' => $workflow,
         ]);
         return redirect('/file-list');
-    }
-
-    public function update(Request $request)
-    {
-        $id =$request['id'];
-        $Associate_handling=$request['associate_handling'];
-        $Client_type=$request['client_type'];
-        $opening_date=$request['opening_date'];
-        $Client_ref_no=$request['client_ref_no'];
-        $our_file_reference_no=$request['our_file_ref_no'];
-        $File_name=$request['file_name'];
-        $Approval_partner=$request['approval_partner'];
-        $Customer_name=$request['customer_name'];
-        $Address=$request['address'];
-        $Telephone=$request['telephone'];
-        $email=$request['email'];
-        $amount=$request['amount'];
-        $workflow=$request['workflow'];
-
-        $responsible_advocate=$request['responsibleadvocate'];
-        $recent_progress=$request['recentprogress'];
-        $closing_date=$request['closedate'];
-        $file_balance=$request['filebalance'];
-        $paid_amount=$request['paidamount'];
-        $balance_fee=$request['feebalance'];
-        $status=$request['status'];
-
-        // $update_new_file= array(
-        
-        //     'Associate_handling' => $Associate_handling,
-        //     'Client_type' => $Client_type,
-        //     'opening_date' => $opening_date,
-        //     'Client_ref_no' => $Client_ref_no,
-        //     'our_file_reference_no' => $our_file_reference_no,
-        //     'File_name' => $File_name,
-        //     'Approval_partner' => $Approval_partner,
-        //     'Customer_name' => $Customer_name,
-        //     'Address' => $Address,
-        //     'Telephone' => $Telephone,
-        //     'email' => $email,
-        //     'amount' => $amount,
-        //     'workflow' => $workflow,
-        // );
-
-        DB::table('cra_open_new_file_details')->where('id',$id)->update([
-            'Associate_handling' => $Associate_handling,
-            'Client_type' => $Client_type,
-            'opening_date' => $opening_date,
-            'Client_ref_no' => $Client_ref_no,
-            'our_file_reference_no' => $our_file_reference_no,
-            'File_name' => $File_name,
-            'Approval_partner' => $Approval_partner,
-            'Customer_name' => $Customer_name,
-            'Address' => $Address,
-            'Telephone' => $Telephone,
-            'email' => $email,
-            'amount' => $amount,
-            'workflow' => $workflow,
-
-            'responsible_advocate' => $responsible_advocate,
-            'recent_progress' => $recent_progress,
-            'closing_date' => $closing_date,
-            'file_balance' => $file_balance,
-            'paid_amount' => $paid_amount,
-            'balance_fee' => $balance_fee,
-            'status' => $status,
-
-
-        ]);
-
-        return redirect('/file-list');
-
-        // return view('file_management.template-category');
     }
 
 
@@ -186,60 +113,10 @@ class filemanagement extends Controller
         return view('file_management.add-new-bringup');
     }
 
-
-
-
-
-    public function addprogress(Request $request )
-
-    { 
-        $id =$request['id'];
-        $progress_date=$request['date_progress'];
-        $next_action=$request['next_action'];
-        $client_name=$request['client_name'];
-        $bringup_date=$request['bringup_date'];
-        $file_name=$request['file_name'];
-        $reminder_period=$request['reminder_period'];
-        $action_type=$request['action_type'];
-        $action_description=$request['action_description'];
-        $time_taken_hours=$request['time_taken_hours'];
-        $time_taken_minutes=$request['time_taken_minutes'];
-        $item_type=$request['item_type'];
-        $currency=$request['currency'];
-        $amount=$request['amount'];
-        $start_time=$request['start_time'];
-        $activity_type=$request['activity_type'];
-        $activity=$request['activity'];
-
-
-
-        DB::table('cra_add_file_progress')->insert([
-            
-            'progress_date' => $progress_date,
-            'next_action' => $next_action,
-            'client_name' => $client_name,
-            'bringup_date' => $bringup_date,
-            'file_name' => $file_name,
-            'reminder_period' => $reminder_period,
-            'action_type' => $action_type,
-            'action_description' => $action_description,
-            'time_taken_hours' => $time_taken_hours,
-            'time_taken_minutes' => $time_taken_minutes,
-            'iten_type' => $item_type,
-            'currency' => $currency,
-            'amount' => $amount,
-            'start_time' => $start_time,
-            'activity_type' => $activity_type,
-            'activity' => $activity,
-        ]);
-        // return back()->withInput();
-        // return view('file_management.add-new-file');
+    public function addprogress()
+    {
         return view('file_management.add-file-progress');
     }
-
-
-
-
 
     public function editprogress()
     {

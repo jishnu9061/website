@@ -16,7 +16,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <form method="post" action="{{url('add_newclient')}}">
+            <form method="post" action="{{url('store-client')}}">
                 @csrf
                 <div class="row">
                     <div class="col-md-4">
@@ -39,8 +39,7 @@
 
                                 </div>
                                 <select name="type" id="cars">
-                                    <option value="Residensial">Individual</option>
-                                    <option value="Non Residensial">Corporate</option>
+                                    <option value="Individual">Individual</option>
                                 </select>
                             </div>
                         </div>
@@ -53,7 +52,6 @@
 
                                 </div>
                                 <select name="citizen" id="cars">
-                                    <option>Select</option>
                                     <option value="Residensial">Residensial</option>
                                     <option value="Non Residensial">Non Residensial</option>
                                 </select>
@@ -84,7 +82,6 @@
 
                                 </div>
                                 <select name="country" id="cars">
-                                    <option>Select</option>
                                     <option value="Kenya">Kenya</option>
                                     <option value="volvo">South Africa</option>
                                     <option value="India">India</option>
@@ -156,7 +153,6 @@
                                 <div class="input-group-prepend">
                                 </div>
                                 <select name="brought">
-                                    <option>Select</option>
                                     <option value="Agent">Agent</option>
                                     <option value="Staff">Staff</option>
                                 </select>
@@ -171,7 +167,6 @@
 
                                 </div>
                                 <select name="status" id="cars">
-                                    <option>Select</option>
                                     <option value="Monday">Monday</option>
                                     <option value="Tuesday">Tuesday</option>
                                     <option value="Wednesday">Wednesday</option>
@@ -189,7 +184,6 @@
 
                                 </div>
                                 <select name="source" id="cars">
-                                    <option>Select</option>
                                     <option value="Excisting Client">Excisting Client</option>
                                     <option value="Online">Online</option>
                                 </select>
@@ -232,7 +226,6 @@
 
                                 </div>
                                 <select name="industry" id="cars">
-                                    <option>Select</option>
                                     <option value="Commerce">Commerce</option>
                                     <option value="Construction">Construction</option>
                                     <option value="Education">Education</option>

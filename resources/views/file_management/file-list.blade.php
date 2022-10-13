@@ -147,6 +147,43 @@
             <br>
         <br>
 
+
+      
+
+
+                <!-- The Modal -->
+                <div class="modal fade" id="editmed">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header" style="background-color:#435ebe">
+                                <h4 class="text-white">Edit Medicine</h4>
+
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class="container">
+                                    <form method="post" action="{{url('update_medicine')}}"
+                                        enctype="multipart/form-data">
+                                        @csrf
+                                        <h4 class="text-center"><b>Medicine Details</b></h4><br>
+                                        <div class="row">
+                                            <div class="col-sm">
+                                                <label for="">Brand Name</label>
+
+                                            </div>
+                                            <div class="col-sm">
+                                                <label for="">Medicine Name</label>
+                                                <input type="text" id="edit_medicine_name" name="medicine_name"
+                                                    class="form-control" required><br>
+                                            </div>
+                                            <div class="col-sm">
+                                                <div class="col-sm">
+                                                    <label for="">Medicine Group</label>
+
+
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-md-4">

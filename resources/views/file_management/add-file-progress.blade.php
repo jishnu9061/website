@@ -41,7 +41,7 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <input type="date" class="form-control" name="date_progress" id="age">
+                                    <input type="date" class="form-control" name="incorporation" id="age">
                                     <div class="invalid-feedback" style="width: 100%;">
                                         Incorporation is required
                                     </div>
@@ -55,7 +55,7 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <textarea class="form-control" id="form7Example7" rows="3" name="next_action"></textarea>
+                                    <textarea class="form-control" id="form7Example7" rows="3"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -71,8 +71,8 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <select name="client_name" id="cars">
-                                        <option ></option>
+                                    <select name="country" id="cars">
+                                        <option value="volvo"></option>
                                     </select>
                                 </div>
                             </div>
@@ -84,7 +84,7 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <input type="date" class="form-control" name="bringup_date" id="age">
+                                    <input type="date" class="form-control" name="incorporation" id="age">
                                     <div class="invalid-feedback" style="width: 100%;">
                                         Number is required.
                                     </div>
@@ -102,8 +102,8 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <select name="file_name" id="cars">
-                                        <option ></option>
+                                    <select name="country" id="cars">
+                                        <option value="volvo"></option>
                                     </select>
                                     <div class="invalid-feedback" style="width: 100%;">
                                         Incorporation is required
@@ -119,7 +119,7 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <input type="text" class="form-control" name="reminder_period" id="age">
+                                    <input type="text" class="form-control" name="incorporation" id="age">
                                     <div class="invalid-feedback" style="width: 100%;">
                                         Incorporation is required
                                     </div>
@@ -136,8 +136,8 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <select name="action_type" id="cars">
-                                        <option ></option>
+                                    <select name="country" id="cars">
+                                        <option value="volvo"></option>
                                     </select>
                                     <div class="invalid-feedback" style="width: 100%;">
                                         Telephone Number is required.
@@ -159,7 +159,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <textarea class="form-control" id="form7Example7" rows="3" name="action_description"></textarea>
+                        <textarea class="form-control" id="form7Example7" rows="3"></textarea>
                     </div>
                 </div>
             </div>
@@ -171,7 +171,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <input type="text" class="form-control" name="time_taken_hours" id="age">
+                        <input type="text" class="form-control" name="email" id="age">
                         <div class="invalid-feedback" style="width: 100%;">
                             Incorporation is required
                         </div>
@@ -188,7 +188,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <input type="text" class="form-control" name="time_taken_minutes" id="confirm_password" required>
+                        <input type="text" class="form-control" name="website" id="confirm_password" required>
                         <div class="invalid-feedback" style="width: 100%;">
                             Telephone Number is required.
                         </div>
@@ -226,8 +226,8 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <select name="item_type" id="cars">
-                            <option></option>
+                        <select name="country" id="cars">
+                            <option value="volvo"></option>
                         </select>
                         <div class="invalid-feedback" style="width: 100%;">
                             Number is required.
@@ -243,8 +243,8 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <select name="currency" id="cars">
-                            <option></option>
+                        <select name="country" id="cars">
+                            <option value="volvo"></option>
                         </select>
                         <div class="invalid-feedback" style="width: 100%;">
                             Number is required.
@@ -259,7 +259,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <input type="text" class="form-control" name="amount" id="username" required>
+                        <input type="text" class="form-control" name="number" id="username" required>
                         <div class="invalid-feedback" style="width: 100%;">
                             Number is required.
                         </div>
@@ -289,8 +289,9 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    
-                    <input type="time" class="form-control"  name="start_time" id="username" required>
+                    <select name="country" id="cars">
+                        <option value="volvo"></option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -301,8 +302,9 @@
                     <div class="input-group-prepend">
 
                     </div>
-                   
-                    <input type="text" class="form-control" name="activity_type" id="username" required>
+                    <select name="country" id="cars">
+                        <option value="volvo"></option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -313,7 +315,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="activity" id="username" required>
+                    <input type="text" class="form-control" name="number" id="username" required>
                 </div>
             </div>
         </div>
@@ -339,8 +341,8 @@
                         </div>
                         <div class="col-sm">
                             <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Close</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Save</button>
                         </div>
                     </div>
                 </div>
