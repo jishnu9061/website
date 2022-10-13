@@ -34,7 +34,7 @@
             <form method="post" action="" id="form">  
                 @csrf
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label >Branch No:</label>
                             <div class="input-group">
@@ -46,7 +46,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label>Branch Code:</label>
                             <div class="input-group">
@@ -58,11 +58,7 @@
                             </div>
                         </div>
                      </div>
-                    </div>
-
-
-                    <div class="row">
-                    <div class="col-md-6">
+                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Branch Name:</label>
                             <div class="input-group">
@@ -74,23 +70,38 @@
                             </div>
                         </div>
                     </div>
-                    <br>
-                     <div class="col-md-6">
+                    </div>
+
+
+                    <div class="row">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Postal Address:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input id="padd" name="padd" class="form-control" value="" >
+                                <textarea rows="4" cols="50" name="paddress" class="form-control"  type="text"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
                             </div>
                         </div>
                     </div>
-               
+                    <br>
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Physical Address:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <textarea rows="4" cols="50" name="physicaladd" class="form-control"  type="text"></textarea>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
  <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                         <label for="username">Tel:</label>
                             <div class="input-group">
@@ -103,7 +114,7 @@
                         </div>
                     </div>
                     <br>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                         <label for="username">Mobile:</label>
                             <div class="input-group">
@@ -115,9 +126,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Fax:</label>
                             <div class="input-group">
@@ -129,7 +138,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                </div>
+                <div class="row">
+                <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Town:</label>
                             <div class="input-group">
@@ -141,10 +152,7 @@
                             </div>
                         </div>
                      </div>
-                    </div>
-
- <div class="row">
-                    <div class="col-md-6">
+                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Email:</label>
                             <div class="input-group">
@@ -156,8 +164,8 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-md-6">
+                   
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Website:</label>
                             <div class="input-group">
@@ -170,21 +178,7 @@
                         </div>
                     </div>
                     </div>
-                     
- <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Physical Address:</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" id="phadd" name="phadd"  class="form-control"  value="" >
-                                <div class="invalid-feedback" style="width: 100%;">
-                                Required Field.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
   <div class="row">
                         <div class="col-sm">
 
