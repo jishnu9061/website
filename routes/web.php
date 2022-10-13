@@ -881,7 +881,7 @@ Route::any('client-index',"ClientManagement@index")->name('client-index');
 Route::any('add-corporate','ClientManagement@addCorporate')->name('add-corporate');
 Route::any('corporate-list','ClientManagement@listCorporate')->name('corporate-list');
 Route::any('/edit_client/{id}','ClientManagement@edit_corporate')->name('edit_client');
-Route::any('/update_corporate','ClientManagement@Update_corporate')->name('update_corporate');
+Route::any('/update-corporate','ClientManagement@Update_corporate')->name('update-corporate');
 Route::any('/delete_client/{id}','ClientManagement@Corporate_destroy')->name('delete_client');
 //end corporate
 //end Client-List

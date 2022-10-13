@@ -337,7 +337,7 @@ class ClientManagement extends Controller
         $mobile_no = $Request['no'];
         $person_email = $Request['person_email'];
 
-        $update_corporate = array(
+        DB::table('cra_corporate_client_details')->where('id',$id)->update([
             'Client_no' => $number,
             'Client_type' =>  $client_type,
             'Cityzen_status' => $citizen_status,
@@ -363,9 +363,9 @@ class ClientManagement extends Controller
             'designation' =>  $Designation,
             'Mobile_no' => $mobile_no,
             'email' =>$person_email,
-        );
-        DB::table('cra_corporate_client_details')->where('id', $id)->update( $update_corporate );
-        return redirect('/corporate-list');
+        ]);
+
+        return redirect("/corporate-list");
     }
 
 
