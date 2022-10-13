@@ -66,8 +66,7 @@ class filemanagement extends Controller
             'amount' => $amount,
             'workflow' => $workflow,
         ]);
-        // return back()->withInput();
-        return view('file_management.add-new-file');
+        return redirect('/file-list');
     }
 
     public function update(Request $request)
