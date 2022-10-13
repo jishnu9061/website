@@ -874,9 +874,9 @@ Route::any('new_drn_fee_notes','clientinvoicing@newdrnfee')->name('new_drn_fee_n
 //Mugunthan
 
 //Client-list
-Route::any('add_newclient',"ClientManagement@create")->name('add_newclient');
+Route::any('add_newclient',"ClientManagement@addNewclient")->name('add_newclient');
 Route::any('client_list','ClientManagement@view')->name('client_list');
-Route::any('edit_person','ClientManagement@edit_person')->name('edit_person');
+Route::any('/edit_person/{id}','ClientManagement@edit_person')->name('edit_person');
 Route::any('view-client','ClientManagement@show')->name('view-client');
 Route::any('client-index',"ClientManagement@index")->name('client-index');
 //coporate
@@ -957,6 +957,7 @@ Route::any('edit-document','clientinvoicing@editDocument')->name('edit-document'
 Route::any('file_managementindex',"filemanagement@index")->name('file_managementindex');
 Route::any('file-list',"filemanagement@view")->name('file-list');
 Route::any('/edit-file/{id}',"filemanagement@edit")->name('edit-file');
+Route::any('/update',"filemanagement@update")->name('update');
 
 Route::any('/file_destroy/{id}',"filemanagement@file_destroy")->name('file_destroy');
 

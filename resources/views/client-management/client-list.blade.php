@@ -31,8 +31,6 @@
         <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
        </div>
        <a href="{{('add_newclient')}}"><button class="btn btn-primary add-btn">Add Client</button></a>
-       
-       
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
     <div class="table-responsive"> 
@@ -41,7 +39,7 @@
                     <tr>
                         <th class="text-center"> No</th>
                         <th class="text-center"> Client No</th>
-                        <th class="text-center">Client</th>
+                        <th class="text-center">Client Name</th>
                         <th class="text-center">Email Address</th>
                         <th class="text-center">Services Offered</th>
                         <th class="text-center">Status</th>
@@ -52,20 +50,22 @@
                     </tr>
                 </thead>
                 <tbody>
+                        @foreach( $client_list as $list_client)
                         <tr id="data">
-                            <td  scope="row" class="text-center"></td>
+                            <td  scope="row" class="text-center">{{$list_client->id}}</td>
+                            <td  scope="row" class="text-center" id="medicine_name_1">{{$list_client->client_number}}</td>
+                            <td  scope="row" class="text-center" id="medicine_name_1">{{$list_client->client_name}}</td>
+                            <td  scope="row" class="text-center" id="medicine_name_1">{{$list_client->email_address}}</td>
                             <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1">{{$list_client->client_type}}</td>
                             <td  scope="row"class="text-center"><a href="{{url('view-client')}}">
                             <a href="{{url('add-document')}}"><button  style="width:90%; " >Add Documents</button></a></td>
                            <td><a href="{{url('view-client')}}"><i style="color:black;" class="fa fa-eye" aria-hidden="true"></i></td></a>
-                            <td><a href="{{url('edit_person')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td>
+                            <td><a href="{{url('edit_person',$list_client->id)}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td>
                             <td><a href=""><i style="color:black;" class="fa fa-trash" aria-hidden="true"></i></td>
                             
                         </tr>
+                        @endforeach;
                 </tbody>
             </table>
 </div>

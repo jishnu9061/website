@@ -19,8 +19,8 @@ class ClientManagement extends Controller
 
 
     public function view(){
-
-        return view('client-management.client-list');
+        $client_list = DB::table('cra_individual_client_details')->get();
+        return view('client-management.client-list',compact('client_list'));
     }
 
     /**
@@ -28,8 +28,55 @@ class ClientManagement extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function addNewclient(Request $Request)
     {
+        $number = $Request['number'];
+        $client_type = $Request['type'];
+        $citizen_status = $Request['citizen'];
+        $incorporation = $Request['incorporation'];
+        $country = $Request['country'];
+        $telephone = $Request['telephone'];
+        $fax_no = $Request['faxno'];
+        $email = $Request['email'];
+        $website = $Request['website'];
+        $brought = $Request['brought'];
+        $status = $Request['status'];
+        $source = $Request['source'];
+        $client_narration = $Request['narration'];
+        $client_name = $Request['name'];
+        $industry = $Request['industry'];
+        $pin_no = $Request['pin'];
+        $address = $Request['address'];
+        $postal_code = $Request['code'];
+        $town = $Request['town'];
+        $physical_address = $Request['physical'];
+        $Notes = $Request['notes'];
+
+        
+        DB::table('cra_individual_client_details')->insert([
+            'client_number' => $number,
+            'client_type' =>  $client_type,
+            'citizen_status' => $citizen_status,
+            'certificate_of_incorporation' => $incorporation ,
+            'country' =>  $country,
+            'telephone_no' =>   $telephone,
+            'fax_no' =>  $fax_no,
+            'email_address' =>  $email,
+            'website' =>  $website ,
+            'brought_in_by' =>  $brought,
+            'reporting_day' =>  $status,
+            'client_source' => $source,
+            'client_source_narration' =>  $client_narration,
+            'client_name' =>    $client_name,
+            'client_industry' =>   $industry,
+            'pin_no' =>    $pin_no,
+            'postal_address' =>   $address,
+            'postal_code' =>  $postal_code ,
+            'town' =>      $town ,
+            'physical_address' =>   $physical_address,
+            'notes' => $Notes,
+        ]);
+        
         return view('client-management.add-newclient');
     }
 
@@ -51,7 +98,7 @@ class ClientManagement extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show()
-    {
+    {   
         return view('client-management.view-client');
     }
 
@@ -61,9 +108,10 @@ class ClientManagement extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit_person()
+    public function edit_person($id)
     {
-        return view('client-management.edit_person');
+        $edit_client = DB::table('cra_individual_client_details')->where('id',$id)->first();
+        return view('client-management.edit_person',compact('edit_client','id'));
     }
 
     /**
@@ -275,8 +323,7 @@ class ClientManagement extends Controller
             'Fax_no' =>  $fax_no,
             'Email_address' =>  $email,
             'Website' =>  $website ,
-            'Brought_in_B
-            y' =>  $brought,
+            'Brought_in_by' =>  $brought,
             'Status_reporting_day' =>  $status,
             'Client_source' => $source,
             'Client_source_naration' =>  $client_narration,
@@ -293,7 +340,7 @@ class ClientManagement extends Controller
             'Mobile_no' => $mobile_no,
             'email' =>$person_email,
         ]);
-        return view('client-management.add-corporate');
+        return redirect('/corporate-list');
 
     }
 
@@ -348,7 +395,7 @@ class ClientManagement extends Controller
             'Fax_no' =>  $fax_no,
             'Email_address' =>  $email,
             'Website' =>  $website ,
-            'Brought_in_By' =>  $brought,
+            'Brought_in_by' =>  $brought,
             'Status_reporting_day' =>  $status,
             'Client_source' => $source,
             'Client_source_naration' =>  $client_narration,
