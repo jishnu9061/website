@@ -48,7 +48,7 @@
                 <table class="table table-bordered" id="">
                     <thead>
                         <tr>
-                        <th class="text-center">No</th>
+                             <th class="text-center">No</th>
                             <th class="text-center">File No</th>
                             <th class="text-center">Client</th>
                             <th class="text-center">FileName</th>
@@ -63,17 +63,17 @@
                     </thead>
                     <tbody>
                        @foreach( $file_list as $file)
-                        <tr id="data" style="font-size:11.5px;">
+                            <tr id="data" style="font-size:11.5px;">
+                            <td scope="row" class="text-center">{{$file->id}}</td>
                             <td scope="row" class="text-center">{{$file->our_file_reference_no}}</td>
                             <td scope="row" class="text-center">{{$file->Client_type}}</td>
-                            <td scope="row" class="text-center">{{$file->File_name}}</td>
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$file->File_name}}</td>                            
                             <td scope="row" class="text-center">{{$file->opening_date}}</td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$file->responsible_advocate}}</td>
+                            <td scope="row" class="text-center">{{$file->recent_progress}}</td>
+                            <td scope="row" class="text-center">{{$file->closing_date}}</td>
+                            <td scope="row" class="text-center">{{$file->file_balance}}</td>
+                            <td scope="row" class="text-center">{{$file->status}}</td>                       
                             <td scope="row" class="text-center"><a href=""><i style="color:black;" class="fa fa-eye"
                                         aria-hidden="true"></i>
                                     <!-- <input type="hidden" value="" id="medicine_id_hidden" class="applicate"
