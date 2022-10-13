@@ -43,9 +43,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <!-- <select name="type" id="cars">
-                                    <option value="Corporate">Corporate</option>
-                                </select> -->
+
                                 <select name="type" id="cars">
                                     <option value="Corporate">Corporate</option>
                                 </select>
