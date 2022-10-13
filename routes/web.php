@@ -872,9 +872,9 @@ Route::any('new_drn_fee_notes','clientinvoicing@newdrnfee')->name('new_drn_fee_n
 //Mugunthan
 
 //Client-list
-Route::any('add_newclient',"ClientManagement@create")->name('add_newclient');
+Route::any('add_newclient',"ClientManagement@addNewclient")->name('add_newclient');
 Route::any('client_list','ClientManagement@view')->name('client_list');
-Route::any('edit_person','ClientManagement@edit_person')->name('edit_person');
+Route::any('/edit_person/{id}','ClientManagement@edit_person')->name('edit_person');
 Route::any('view-client','ClientManagement@show')->name('view-client');
 Route::any('client-index',"ClientManagement@index")->name('client-index');
 //coporate
