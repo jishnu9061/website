@@ -86,6 +86,7 @@ class store_oneController extends Controller
 
     return back()->withInput();
     }
+
     public function view_new_items($id){
             $brands=DB::table('brand_names')->get();
             $medicine_groups=DB::table('medicine_groups')->get();

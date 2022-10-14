@@ -26,30 +26,148 @@ class SystemSetup extends Controller
     }
     public function company()
     {
-       return view('system-settings.company_details');
+        $company_details=DB::table('cra_company_details')->get();
+        return view('system-settings.company_details',compact('company_details'));
+     
      
     }
-    public function addcompany()
+    public function addcompany(Request $Request)
     {
+        $company_name= $Request['name'];
+        $address = $Request['address'];
+        $town_city = $Request['city'];
+        $company_website = $Request['website'];
+        $email= $Request['email'];
+        $company_type= $Request['type'];
+        $pin_no = $Request['pinnum'];
+        $vat_no = $Request['vatnum'];
+        $NHIF= $Request['nhifcode'];
+        $NSSF_no = $Request['nnum'];
+       
+///////////////////////////////////////////////////////////////////
+        $Add_Logo = $Request['image'];
+        // $image=$request->input('image');
+        if(!empty($Request->file('image'))){
+            $this->validate($request, [
+                'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            ]);}
+            $input = $Request->all();
+
+            if ($image = $Request->file('image')) {
+
+                $destinationPath = 'image/company_details/';
+                $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+                $image->move($destinationPath, $profileImage);
+                $paths = $profileImage;
+
+            }else{
+                $paths = '';
+            }
+////////////////////////////////////////////////////////////////////
+        DB::table('cra_company_details')->insert([
+            'company_name' => $company_name,
+            'address' => $address,
+            'town_city' => $town_city,
+            'company_website' => $company_website,
+            'email' => $email,
+            'company_type' => $company_type,
+            'pin_no' => $pin_no,
+            'vat_no' => $vat_no,
+            'NHIF' => $NHIF,
+            'NSSF_no' => $NSSF_no,
+            'Add_Logo' => $Add_Logo,
+        ]);
+   
        return view('system-settings.add_company_details');
      
     }
-    public function editcompany()
+    public function editcompany($id)
     {
-       return view('system-settings.edit_company_details');
+     $company_details= DB::table('cra_company_details')->where('id',$id)->first();
+       return view('system-settings.edit_company_details',compact('company_details','id'));
      
+    }
+    public function updatecompany(Request $Request){
+        $id     = $Request['id'];
+        $company_name = $Request['name'];
+        $address = $Request['address'];
+        $town_city = $Request['city'];
+        $company_website = $Request['website'];
+        $email = $Request['email'];
+        $company_type = $Request['type'];
+        $pin_no = $Request['pinnum'];
+        $vat_no = $Request['vatnum'];
+        $NHIF = $Request['nhifcode'];
+        $NSSF_no = $Request['nnum'];
+//////////////////////////////////////////////////////////////////////////////////////////////
+        $Add_Logo = $Request['image'];
+        if(!empty($Request->file('image'))){
+            $this->validate($Request, [
+
+                'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+
+            ]);}
+            $input = $Request->all();
+
+            if ($image = $Request->file('image')) {
+
+                $destinationPath = 'image/medicine/';
+                $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+                $image->move($destinationPath, $profileImage);
+                $paths = $profileImage;
+            }
+
+            else{
+                $filtheimage=DB::table('cra_company_details')->where('id',$id)->first();
+                $fetchimage=$filtheimage->upload_image;
+                $paths=$fetchimage;
+                 }
+/////////////////////////////////////////////////////////////////////////////////////////////////
+ $update_company_details = array(
+            'company_name' => $company_name,
+            'address' =>  $address,
+            'town_city' => $town_city,
+            'company_website' =>  $company_website,
+            'email' =>  $email,
+            'company_type' =>  $company_type,
+            'pin_no' =>   $pin_no,
+            'vat_no' =>  $vat_no,
+            'NHIF' =>  $NHIF,
+            'NSSF_no' =>  $NSSF_no ,
+            'Add_Logo' =>  $Add_Logo,
+            
+        );
+        DB::table('cra_company_details')->where('id', $id)->update( $update_company_details );
+        return redirect('/company_details');
+
+
+      
     }
     public function viewcompany()
     {
        return view('system-settings.view_company_details');
      
     }
+
+
+
     public function holiday()
     {
-        return view('system-settings.weekend_holiday');
+        $holiday_details=DB::table('cra_weekend_and_holiday')->get();
+        return view('system-settings.weekend_holiday',compact('holiday_details'));
     }
-    public function addholiday()
+  
+    public function addholiday(Request $Request)
     {
+        
+        $Date = $Request['date'];
+        $Day = $Request['day'];
+     
+        DB::table('cra_weekend_and_holiday')->insert([
+            'Date' => $Date,
+            'Day' => $Day,
+        ]);
+        
         return view('system-settings.add_new_holiday');
     }
     public function holiday2017()
