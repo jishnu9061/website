@@ -214,20 +214,60 @@ class ClientManagement extends Controller
         return view('client-management.view-document');
     }
 
+    //Pickup-client
 
     public function clientPickup(){
-        return view('client-management.client-pickup');
+        $client_pickup = DB::table('cra_client_pickup_reception')->get();
+        return view('client-management.client-pickup',compact('client_pickup'));
     }
 
 
-    public function addPickups(){
+    public function formPickup(){
         return view('client-management.add-pickup');
     }
 
 
-    public function viewPickups(){
-        return view('client-management.view-pickup');
+    public function storePickup(Request $Request){
+
+        $client = $Request['client'];
+        $file_name = $Request['file'];
+        $mobile = $Request['mobile'];
+        $persion_handling = $Request['persion'];
+        $email = $Request['email'];
+        $client_name = $Request['name'];
+        $persion_picking_handling = $Request['handling'];
+        $reason = $Request['reason'];
+        $visitors = $Request['visitors'];
+        $time_in = $Request['time-in'];
+        $time_out = $Request['time-out'];
+
+        DB::table('cra_client_pickup_reception')->insert([
+            'client' =>  $client,
+            'file_name' =>   $file_name,
+            'mobile' => $mobile,
+            'persion_handling' =>$persion_handling,
+            'email' =>  $email,
+            'client_name' =>  $client_name,
+            'persion_picking_handling' =>  $persion_picking_handling,
+            'reason' =>  $reason,
+            'visitors' =>  $visitors ,
+            'time_in' => $time_in,
+            'time_out' =>  $time_out,
+        ]);
+        return redirect('/client-pickup');
     }
+
+    public function viewPickups($id){
+        $view_pickup = DB::table('cra_client_pickup_reception')->where('id',$id)->first();
+        return view('client-management.view-pickup',compact('view_pickup','id'));
+    }
+
+    public function deletePickup($id){
+        DB::table('cra_client_pickup_reception')->where('id',$id)->delete();
+        return redirect('/client-pickup');
+    }
+
+    //end pickup
 
 
     public function complaintList(){
