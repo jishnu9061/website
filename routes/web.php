@@ -900,8 +900,10 @@ Route::any('view-document','ClientManagement@viewDocument')->name('view-document
 
 //Client-Pickup
 Route::any('client-pickup','ClientManagement@clientPickup')->name('client-pickup');
-Route::any('add-pickup','ClientManagement@addPickups')->name('add-pickup');
-Route::any('view-pickup','ClientManagement@viewPickups')->name('view-pickup');
+Route::any('add-pickup','ClientManagement@formPickup')->name('add-pickup');
+Route::any('store-pickup','ClientManagement@storePickup')->name('store-pickup');
+Route::any('/view-pickup/{id}','ClientManagement@viewPickups')->name('view-pickup');
+Route::any('/delete-pickup/{id}','ClientManagement@deletePickup')->name('delete-pickup');
 //Client-Pickup
 //complaint
 Route::any('complaint-list','ClientManagement@complaintList')->name('complaint-list');
