@@ -980,7 +980,8 @@ Route::any('add-template',"filemanagement@addtemplate")->name('add-template');
 
 //file progress
 Route::any('add-file-progress',"filemanagement@addprogress")->name('add-file-progress');
-Route::any('edit-file-progress',"filemanagement@editprogress")->name('edit-file-progress');
+Route::any('/edit-file-progress/{id}',"filemanagement@editprogress")->name('edit-file-progress');
+Route::any('/update_progress',"filemanagement@update_progress")->name('update_progress');
 Route::any('progress-bringup',"filemanagement@progressbringup")->name('progress-bringup');
 Route::any('add-new-bringup',"filemanagement@addbringup")->name('add-new-bringup');
 

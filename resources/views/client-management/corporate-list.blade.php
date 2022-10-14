@@ -16,64 +16,7 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="btn btn-primary"
-            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;">
-            <b><u>Corporate Client List</u></b></div><br><br>
-        <div>
-            <!-- <div class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Corporate Client List</u></b></span></div><br>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous">
-
-        </div> -->
-
-            <div id="mydatatable_filter" class="dataTables_filter">
-                <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
-            </div>
-            {{-- <a href="{{('add-corporate')}}"><button class="btn btn-primary">Add Corporate</button></a> --}}
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Corporate</button>
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <div class="table-responsive">
-                        <table class="table table-bordered" id="new-item">
-                            <thead>
-                                <tr>
-                                    <th class="text-center"> No</th>
-                                    <th class="text-center">Client_name</th>
-                                    <th class="text-center">Designation</th>
-                                    <th class="text-center">Mobile No</th>
-                                    <th class="text-center">Contact Person Email</th>
-                                    <th class="text-center">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($corporate_list as $list)
-                                <tr id="data">
-                                    <td scope="row" class="text-center">{{$list->Client_no}}</td>
-                                    <td scope="row" class="text-center" id="medicine_name_1">{{$list->Client_name}}</td>
-                                    <td scope="row" class="text-center" id="medicine_name_1">{{$list->designation}}</td>
-                                    <td scope="row" class="text-center" id="medicine_name_1">{{$list->Mobile_no}}</td>
-                                    <td scope="row" class="text-center" id="medicine_name_1">{{$list->email}}</td>
-                                    <td scope="row" class="text-center" id="medicine_name_1">
-                                        <a href="{{url('edit_client',$list->id)}}"><i style="color:black;" class="fa fa-edit"
-                                                aria-hidden="true"></i>
-                                            <a href="{{url('delete_client',$list->id)}}"><i style="color:black;" class="fa fa-trash"
-                                                    aria-hidden="true"></i>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-
-    {{-- <div class="spacer" style="height:40px;margin-top: 30px;"> --}}
-
-
-    </head>
-
-    <body>
+   
         <div class="container">
             <div class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;">
