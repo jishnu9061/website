@@ -350,7 +350,7 @@ class ClientManagement extends Controller
 
     public function storeCorporate(Request $Request){
 
-        $number = $Request['number'];
+        $number = $Request['number'];123
         $client_type = $Request['type'];
         $citizen_status = $Request['citizen'];
         $corporation = $Request['corporation'];
