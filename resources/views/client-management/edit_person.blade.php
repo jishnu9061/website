@@ -16,8 +16,9 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <form method="post" action="">
+            <form method="post" action="{{url('update-client')}}">
                 @csrf
+                <input type="hidden" name="id" value ="{{$edit_client->id}}">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
@@ -52,9 +53,7 @@
 
                                 </div>
                                 <select name="citizen" id="cars">
-                                    <option>Select</option>
-                                    <option value="Residensial">Residensial</option>
-                                    <option value="Non Residensial">Non Residensial</option>
+                                    <option value="Residensial">{{$edit_client->citizen_status}}</option>
                                 </select>
                             </div>
                         </div>
@@ -67,7 +66,7 @@
                             <label for="username">Certificate Of Incorporation</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="incorporation" id="age" value="" min="0"
+                                <input type="text" class="form-control" name="incorporation" id="age" value="{{$edit_client->certificate_of_incorporation}}" min="0"
                                     max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
@@ -83,11 +82,7 @@
 
                                 </div>
                                 <select name="country" id="cars">
-                                    <option>Select</option>
-                                    <option value="Kenya">Kenya</option>
-                                    <option value="volvo">South Africa</option>
-                                    <option value="India">India</option>
-                                    <option value="America">America</option>
+                                    <option>{{$edit_client->country}}</option>
                                 </select>
                             </div>
                         </div>
@@ -97,7 +92,7 @@
                             <label for="username">Telephone No</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="telephone" value=""
+                                <input type="text" class="form-control" name="telephone" value="{{$edit_client->telephone_no}}"
                                     id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
@@ -113,7 +108,7 @@
                             <label for="username">Fax No</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="faxno" id="age" value="" min="0" max="99">
+                                <input type="text" class="form-control" name="faxno" id="age" value="{{$edit_client->fax_no}}" min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
                                 </div>
@@ -125,7 +120,7 @@
                             <label for="username">Email Address</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="email" class="form-control" name="email" value="" id="password">
+                                <input type="email" class="form-control" name="email" value="{{$edit_client->email_address}}" id="password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -137,7 +132,7 @@
                             <label for="username">Web Site</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="website" value=""
+                                <input type="text" class="form-control" name="website" value="{{$edit_client->website}}"
                                     id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
@@ -155,9 +150,7 @@
                                 <div class="input-group-prepend">
                                 </div>
                                 <select name="brought">
-                                    <option>Select</option>
-                                    <option value="Agent">Agent</option>
-                                    <option value="Staff">Staff</option>
+                                    <option>{{$edit_client->brought_in_by}}</option>
                                 </select>
                             </div>
                         </div>
@@ -170,12 +163,7 @@
 
                                 </div>
                                 <select name="status" id="cars">
-                                    <option>Select</option>
-                                    <option value="Monday">Monday</option>
-                                    <option value="Tuesday">Tuesday</option>
-                                    <option value="Wednesday">Wednesday</option>
-                                    <option value="Thursday">Thursday</option>
-                                    <option value="Friday">Friday</option>
+                                    <option>{{$edit_client->reporting_day}}</option>
                                 </select>
                             </div>
                         </div>
@@ -188,9 +176,7 @@
 
                                 </div>
                                 <select name="source" id="cars">
-                                    <option>Select</option>
-                                    <option value="Excisting Client">Excisting Client</option>
-                                    <option value="Online">Online</option>
+                                    <option>{{$edit_client->client_source}}</option>
                                 </select>
                             </div>
                         </div>
@@ -203,7 +189,7 @@
                             <label for="username">Client Source Narration</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="narration" value=""
+                                <input type="text" class="form-control" name="narration" value="{{$edit_client->client_source_narration}}"
                                     id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
@@ -216,7 +202,7 @@
                             <label for="username">Client Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="name" value="" id="confirm_password">
+                                <input type="text" class="form-control" name="name" value="{{$edit_client->client_name}}" id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -231,10 +217,7 @@
 
                                 </div>
                                 <select name="industry" id="cars">
-                                    <option>Select</option>
-                                    <option value="Commerce">Commerce</option>
-                                    <option value="Construction">Construction</option>
-                                    <option value="Education">Education</option>
+                                    <option>{{$edit_client->client_industry}}</option>
                                 </select>
                             </div>
                         </div>
@@ -247,7 +230,7 @@
                             <label for="username">Pin No</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="pin" id="age" value="" min="0" max="99">
+                                <input type="text" class="form-control" name="pin" id="age" value="{{$edit_client->pin_no}}" min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
                                 </div>
@@ -259,7 +242,7 @@
                             <label for="username">Postal Address</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="address" value="" id="password">
+                                <input type="text" class="form-control" name="address" value="{{$edit_client->postal_address}}" id="password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -271,7 +254,7 @@
                             <label for="username">Postal Code</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="code" value="" id="confirm_password">
+                                <input type="text" class="form-control" name="code" value="{{$edit_client->postal_code}}" id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -286,7 +269,7 @@
                             <label for="username">Town</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="town" id="age" value="" min="0" max="99">
+                                <input type="text" class="form-control" name="town" id="age" value="{{$edit_client->town}}" min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
                                 </div>

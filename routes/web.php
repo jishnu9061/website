@@ -881,12 +881,16 @@ Route::any('new_drn_fee_notes','clientinvoicing@newdrnfee')->name('new_drn_fee_n
 
 //Client-list
 Route::any('add_newclient',"ClientManagement@addNewclient")->name('add_newclient');
+Route::any('store-client',"ClientManagement@storeClient")->name('store-client');
 Route::any('client_list','ClientManagement@view')->name('client_list');
 Route::any('/edit_person/{id}','ClientManagement@edit_person')->name('edit_person');
-Route::any('view-client','ClientManagement@show')->name('view-client');
+Route::any('show-client/{id}','ClientManagement@show')->name('show-client');
 Route::any('client-index',"ClientManagement@index")->name('client-index');
+Route::any('update-client',"ClientManagement@updateClient")->name('update-client');
+Route::any('delete-client/{id}',"ClientManagement@deleteClient")->name('delete-client');
 //coporate
 Route::any('add-corporate','ClientManagement@addCorporate')->name('add-corporate');
+Route::any('store-corporate','ClientManagement@storeCorporate')->name('store-corporate');
 Route::any('corporate-list','ClientManagement@listCorporate')->name('corporate-list');
 Route::any('/edit_client/{id}','ClientManagement@edit_corporate')->name('edit_client');
 Route::any('/update-corporate','ClientManagement@Update_corporate')->name('update-corporate');
@@ -902,8 +906,10 @@ Route::any('view-document','ClientManagement@viewDocument')->name('view-document
 
 //Client-Pickup
 Route::any('client-pickup','ClientManagement@clientPickup')->name('client-pickup');
-Route::any('add-pickup','ClientManagement@addPickups')->name('add-pickup');
-Route::any('view-pickup','ClientManagement@viewPickups')->name('view-pickup');
+Route::any('add-pickup','ClientManagement@formPickup')->name('add-pickup');
+Route::any('store-pickup','ClientManagement@storePickup')->name('store-pickup');
+Route::any('/view-pickup/{id}','ClientManagement@viewPickups')->name('view-pickup');
+Route::any('/delete-pickup/{id}','ClientManagement@deletePickup')->name('delete-pickup');
 //Client-Pickup
 //complaint
 Route::any('complaint-list','ClientManagement@complaintList')->name('complaint-list');
@@ -980,7 +986,8 @@ Route::any('add-template',"filemanagement@addtemplate")->name('add-template');
 
 //file progress
 Route::any('add-file-progress',"filemanagement@addprogress")->name('add-file-progress');
-Route::any('edit-file-progress',"filemanagement@editprogress")->name('edit-file-progress');
+Route::any('/edit-file-progress/{id}',"filemanagement@editprogress")->name('edit-file-progress');
+Route::any('/update_progress',"filemanagement@update_progress")->name('update_progress');
 Route::any('progress-bringup',"filemanagement@progressbringup")->name('progress-bringup');
 Route::any('add-new-bringup',"filemanagement@addbringup")->name('add-new-bringup');
 

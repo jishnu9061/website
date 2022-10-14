@@ -12,6 +12,7 @@ class ClientManagement extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    //individual
     public function index()
     {
         return view('client-management.client-index');
@@ -28,7 +29,12 @@ class ClientManagement extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function addNewclient(Request $Request)
+
+    public function addNewclient(){
+
+        return view('client-management.add-newclient');
+    }
+    public function storeClient(Request $Request)
     {
         $number = $Request['number'];
         $client_type = $Request['type'];
@@ -77,7 +83,8 @@ class ClientManagement extends Controller
             'notes' => $Notes,
         ]);
         
-        return view('client-management.add-newclient');
+        return redirect('/client_list');
+
     }
 
     /**
@@ -97,9 +104,10 @@ class ClientManagement extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {   
-        return view('client-management.view-client');
+        $client_individual = DB::table('cra_individual_client_details')->where('id',$id)->first();
+        return view('client-management.view-client',compact('client_individual','id'));
     }
 
     /**
@@ -122,9 +130,57 @@ class ClientManagement extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function update(Request $request, $id)
+    public function updateClient(Request $Request)
     {
-        //
+        $id     = $Request['id'];
+        $number = $Request['number'];
+        $client_type = $Request['type'];
+        $citizen_status = $Request['citizen'];
+        $incorporation = $Request['incorporation'];
+        $country = $Request['country'];
+        $telephone = $Request['telephone'];
+        $fax_no = $Request['faxno'];
+        $email = $Request['email'];
+        $website = $Request['website'];
+        $brought = $Request['brought'];
+        $status = $Request['status'];
+        $source = $Request['source'];
+        $client_narration = $Request['narration'];
+        $client_name = $Request['name'];
+        $industry = $Request['industry'];
+        $pin_no = $Request['pin'];
+        $address = $Request['address'];
+        $postal_code = $Request['code'];
+        $town = $Request['town'];
+        $physical_address = $Request['physical'];
+        $Notes = $Request['notes'];
+
+         
+        DB::table('cra_individual_client_details')->where('id',$id)->insert([
+            'client_number' => $number,
+            'client_type' =>  $client_type,
+            'citizen_status' => $citizen_status,
+            'certificate_of_incorporation' => $incorporation ,
+            'country' =>  $country,
+            'telephone_no' =>   $telephone,
+            'fax_no' =>  $fax_no,
+            'email_address' =>  $email,
+            'website' =>  $website ,
+            'brought_in_by' =>  $brought,
+            'reporting_day' =>  $status,
+            'client_source' => $source,
+            'client_source_narration' =>  $client_narration,
+            'client_name' =>    $client_name,
+            'client_industry' =>   $industry,
+            'pin_no' =>    $pin_no,
+            'postal_address' =>   $address,
+            'postal_code' =>  $postal_code ,
+            'town' =>      $town ,
+            'physical_address' =>   $physical_address,
+            'notes' => $Notes,
+        ]);
+
+        return redirect('/client_list');
     }
 
     /**
@@ -133,10 +189,13 @@ class ClientManagement extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function deleteClient($id)
     {
-        //
+        DB::table('cra_individual_client_details')->where('id',$id)->delete();
+        return redirect('/client_list');
     }
+
+    // end individual
     
     public function document(){
         
@@ -155,20 +214,60 @@ class ClientManagement extends Controller
         return view('client-management.view-document');
     }
 
+    //Pickup-client
 
     public function clientPickup(){
-        return view('client-management.client-pickup');
+        $client_pickup = DB::table('cra_client_pickup_reception')->get();
+        return view('client-management.client-pickup',compact('client_pickup'));
     }
 
 
-    public function addPickups(){
+    public function formPickup(){
         return view('client-management.add-pickup');
     }
 
 
-    public function viewPickups(){
-        return view('client-management.view-pickup');
+    public function storePickup(Request $Request){
+
+        $client = $Request['client'];
+        $file_name = $Request['file'];
+        $mobile = $Request['mobile'];
+        $persion_handling = $Request['persion'];
+        $email = $Request['email'];
+        $client_name = $Request['name'];
+        $persion_picking_handling = $Request['handling'];
+        $reason = $Request['reason'];
+        $visitors = $Request['visitors'];
+        $time_in = $Request['time-in'];
+        $time_out = $Request['time-out'];
+
+        DB::table('cra_client_pickup_reception')->insert([
+            'client' =>  $client,
+            'file_name' =>   $file_name,
+            'mobile' => $mobile,
+            'persion_handling' =>$persion_handling,
+            'email' =>  $email,
+            'client_name' =>  $client_name,
+            'persion_picking_handling' =>  $persion_picking_handling,
+            'reason' =>  $reason,
+            'visitors' =>  $visitors ,
+            'time_in' => $time_in,
+            'time_out' =>  $time_out,
+        ]);
+        return redirect('/client-pickup');
     }
+
+    public function viewPickups($id){
+        $view_pickup = DB::table('cra_client_pickup_reception')->where('id',$id)->first();
+        return view('client-management.view-pickup',compact('view_pickup','id'));
+    }
+
+    public function deletePickup($id){
+        DB::table('cra_client_pickup_reception')->where('id',$id)->delete();
+        return redirect('/client-pickup');
+    }
+
+    //end pickup
 
 
     public function complaintList(){
@@ -284,8 +383,12 @@ class ClientManagement extends Controller
         return view('client-management.register-client');
     }
 
+    public function addCorporate(){
 
-    public function addCorporate(Request $Request){
+        return view('client-management.add-corporate');
+    }
+
+    public function storeCorporate(Request $Request){
 
         $number = $Request['number'];
         $client_type = $Request['type'];
@@ -340,8 +443,8 @@ class ClientManagement extends Controller
             'Mobile_no' => $mobile_no,
             'email' =>$person_email,
         ]);
-        return redirect('/corporate-list');
 
+        return redirect("/corporate-list");
     }
 
 
@@ -421,15 +524,5 @@ class ClientManagement extends Controller
         DB::table('cra_corporate_client_details')->where('id',$id)->delete();
         return redirect('/corporate-list');
     }
-    // public function update_corporate(Request $Request){
-    //     $id=$Request['item_id'];
-    //     $brand_name=$Request['brand_name'];
-    //     $new_item=$Request['item_name'];
-    //     $profit_percentage=$Request['profit_percentage'];
-
-    //     $editdata=array('brand_name'=>$brand_name,'Item_name'=> $new_item,'profit_percentage'=> $profit_percentage );
-
-    //     DB::table('medicines')->where('id',$id)->update($editdata);
-    //     return back()->withInput();
-    // }
+   
 }

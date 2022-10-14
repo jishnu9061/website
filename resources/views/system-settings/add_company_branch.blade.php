@@ -37,7 +37,7 @@
                             <label >Branch No:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input  class="form-control" type="text"  id="bnum" name="bnum" value="">
+                                <input  class="form-control" type="bnumber"  id="bnum" name="bnum" value="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>

@@ -31,8 +31,9 @@
 
             <div class="col-md-12 order-md-1">
 
-                <form method="post" action="" id="form">
+                <form method="post" action="{{url('update_progress')}}" id="form">
                     @csrf
+                    <input type="hidden" value="{{$id}}" name="id">
                     <div class="row">
                     <div class="col-md-6">
                             <div class="mb-1">
@@ -41,8 +42,8 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <select name="country" id="cars">
-                                        <option value="volvo"></option>
+                                    <select name="client_name" id="cars">
+                                        <option >{{ $edit_progress->client_name}}</option>
                                     </select>
                                 </div>
                             </div>
@@ -55,7 +56,7 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <input type="date" class="form-control" name="incorporation" id="age">
+                                    <input type="date" class="form-control" name="date_progress" value="{{ $edit_progress->progress_date}}">
                                     <div class="invalid-feedback" style="width: 100%;">
                                         Incorporation is required
                                     </div>
@@ -73,7 +74,7 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                    <textarea class="form-control" id="form7Example7" rows="3" name="next_action" value="{{ $edit_progress->next_action}}"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -91,7 +92,7 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <input type="date" class="form-control" name="incorporation" id="age">
+                                    <input type="date" class="form-control" name="bringup_date" value="{{ $edit_progress->bringup_date}}">
                                     <div class="invalid-feedback" style="width: 100%;">
                                         Number is required.
                                     </div>
@@ -107,8 +108,8 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <select name="country" id="cars">
-                                        <option value="volvo"></option>
+                                    <select name="file_name" id="cars">
+                                        <option >{{ $edit_progress->file_name}}</option>
                                     </select>
                                     <div class="invalid-feedback" style="width: 100%;">
                                         Incorporation is required
@@ -124,7 +125,7 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <input type="text" class="form-control" name="incorporation" id="age">
+                                    <input type="text" class="form-control" name="reminder_period" value="{{ $edit_progress->reminder_period}}">
                                     <div class="invalid-feedback" style="width: 100%;">
                                         Incorporation is required
                                     </div>
@@ -141,8 +142,8 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <select name="country" id="cars">
-                                        <option value="volvo"></option>
+                                    <select name="action_type" id="cars">
+                                        <option >{{ $edit_progress->action_type}}</option>
                                     </select>
                                     <div class="invalid-feedback" style="width: 100%;">
                                         Telephone Number is required.
@@ -157,7 +158,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <input type="text" class="form-control" name="email" id="age">
+                        <input type="time" class="form-control" name="time_taken_hours" value="{{ $edit_progress->time_taken_hours}}">
                         <div class="invalid-feedback" style="width: 100%;">
                             Incorporation is required
                         </div>
@@ -172,7 +173,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <input type="password" class="form-control" name="website" id="confirm_password" required>
+                        <input type="time" class="form-control" name="time_taken_minutes" value="{{ $edit_progress->time_taken_minutes}}" required>
                         <div class="invalid-feedback" style="width: 100%;">
                             Telephone Number is required.
                         </div>
@@ -190,7 +191,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                        <textarea class="form-control" id="form7Example7" rows="3" name="action_description" value="{{ $edit_progress->action_description}}"></textarea>
                     </div>
                 </div>
             </div>
@@ -215,8 +216,8 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <select name="country" id="cars">
-                            <option value="volvo"></option>
+                        <select name="item_type" id="cars">
+                            <option >{{ $edit_progress->item_type}}</option>
                         </select>
                         <div class="invalid-feedback" style="width: 100%;">
                             Number is required.
@@ -232,8 +233,8 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <select name="country" id="cars">
-                            <option value="volvo"></option>
+                        <select name="currency" id="cars">
+                            <option >{{ $edit_progress->currency}}</option>
                         </select>
                         <div class="invalid-feedback" style="width: 100%;">
                             Number is required.
@@ -248,7 +249,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <input type="text" class="form-control" name="number" id="username" required>
+                        <input type="text" class="form-control" name="amount" value="{{ $edit_progress->amount}}" required>
                         <div class="invalid-feedback" style="width: 100%;">
                             Number is required.
                         </div>
@@ -269,9 +270,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
-                    </select>
+                    <input type="time" class="form-control" name="start_time" value="{{ $edit_progress->start_time}}" >
                 </div>
             </div>
         </div>
@@ -282,8 +281,8 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
+                    <select name="activity_type" id="cars">
+                        <option >{{ $edit_progress->activity_type}}</option>
                     </select>
                 </div>
             </div>
@@ -295,7 +294,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="number" id="username" required>
+                    <input type="text" class="form-control" name="activity" value="{{ $edit_progress->activity}}" required>
                 </div>
             </div>
         </div>

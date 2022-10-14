@@ -16,9 +16,8 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <form method="post" action="{{url('update')}}" id="form">  
+            <form method="post" action="" id="form">  
                 @csrf
-                <input type="hidden" value="{{$id}}" name="id">
                 <div class="row">
                    
                    
@@ -31,10 +30,6 @@
                                 </div>
                                 <select name="client_type" id="cars">
                                     <option>{{ $edit->Client_type}}</option>
-                                    <option>Accord University</option>
-                                    <option>Accounts And Books</option>
-                                    <option>University</option>
-                                    <option>Accounts </option>
                                 </select>
                             </div>
                         </div>
@@ -141,7 +136,7 @@
                 </div>
                 <br>
                 <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Customer Address</label>
                             <div class="input-group">
@@ -154,13 +149,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Customer Tel</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="telephone" value="{{ $edit->Telephone}}"
-                                    id="confirm_password"><br>
+                                    id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -168,11 +163,15 @@
                         </div>
                     </div>
 
-<!--                     
+                    
                 </div>
                 <br>
-               
-                    <div class="row"> -->
+                <div class="row">
+                <div class="col-md-4">
+
+</div>
+<br>
+                    <div class="row">
 
                     <div class="col-md-4">
 
@@ -193,7 +192,7 @@
                             <label for="username">Amount</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="amount" value="{{ $edit->amount}}"
+                                <input type="narration" class="form-control" name="amount" value="{{ $edit->amount}}"
                                     id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
@@ -211,103 +210,10 @@
                                 <select name="workflow" id="cars">
                                     <option >{{ $edit->workflow}}</option>
                                    
-                                </select><br>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Responsible Advocate</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="text" class="form-control" name="responsibleadvocate" value="{{ $edit->responsible_advocate}}">
-                                   
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Most Recent Progress</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="text" class="form-control" name="recentprogress" value="{{ $edit->recent_progress}}">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Date Closed</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="date" class="form-control" name="closedate" value="{{ $edit->closing_date}}"><br>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">File Balance</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="text" class="form-control" name="filebalance" value="{{ $edit->file_balance}}"><br>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Paid Amount</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="text" class="form-control" name="paidamount" value="{{ $edit->paid_amount}}">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Fee Balance</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="text" class="form-control" name="feebalance" value="{{ $edit->balance_fee}}">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Status</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <select name="status" id="cars" >
-                                    <option >{{ $edit->status}}</option>
-                                    <option >Active</option>
-                                    <option >In Active</option>
-                                   
                                 </select>
                             </div>
                         </div>
                     </div>
-
-
-
                     
                 </div>
                 <br>
