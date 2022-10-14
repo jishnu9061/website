@@ -12,24 +12,37 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-
 </head>
 <body>
+    <!-- <style>
+    #upload_button input[type=file] 
+    {
+        display:none;
+    }
+        </style> -->
+ 
     <div>
         <button class="btn btn-primary"
-        style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Edit Company Details</u></b></span></button><br>
+        style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Add Company Details</u></b></span></button><br>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
         crossorigin="anonymous">
     </div>
     <br>
     <br>
-  
-   
-    <a href=""><button class="btn btn-primary add-btn">Add Logo</button></a><br><br><br>
+    <div id="upload_button">
+    <label>
+      <input type="file" name="image" ngf-select ng-model="new_files" ng-change="fs.uploadFiles(new_files)" multiple>
+      <span class="btn btn-primary"> <span class="fa fa-plus"></span>&nbsp;&nbsp;ADD LOGO</span>
+    </label>
+  </div>
+ <br><br>
+ 
+
+   <!-- <input type="file" id="img" name="img" value="ADD LOGO" ><br><br> -->
     <div class="row">
         <div class="col-md-12">
-            <form method="post" action="" id="form">  
+            <form method="post" action="{{url('add_company_details')}}" id="form">  
                 @csrf
                 <div class="row">
                     <div class="col-md-6">
@@ -57,9 +70,7 @@
                         </div>
                      </div>
                     </div>
-
-
-                    <div class="row">
+ <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Town/City</label>
@@ -87,11 +98,7 @@
                     </div>
                
             </div>
-
-
-
-            
-            <div class="row">
+<div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
                         <label for="username">Company Email</label>

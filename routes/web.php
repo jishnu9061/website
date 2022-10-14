@@ -689,12 +689,18 @@ Route::any('system_setup','SystemSetup@index')->name('system_setup');
 //company_details
 Route::any('company_details','SystemSetup@company')->name('company_details');
 Route::any('add_company_details','SystemSetup@addcompany')->name('add_company_details');
-Route::any('edit_company_details','SystemSetup@editcompany')->name('edit_company_details');
+Route::any('edit_company_details/{id}','SystemSetup@editcompany')->name('edit_company_details');
+Route::any('/update_company_details','SystemSetup@updatecompany')->name('update_company_details');
 Route::any('view_company_details','SystemSetup@viewcompany')->name('view_company_details');
+
+
 //end
 //weekend and holiday
 Route::any('weekend_holiday','SystemSetup@holiday')->name('weekend_holiday');
 Route::any('add_new_holiday','SystemSetup@addholiday')->name('add_new_holiday');
+Route::any('/edit_holiday/{id}','SystemSetup@editholiday')->name('edit_holiday');
+Route::any('/update_holiday','SystemSetup@updateholiday')->name('update_holiday');
+Route::any('/delete_holiday/{id}','SystemSetup@deleteholiday')->name('delete_holiday');
 Route::any('edit_holiday','SystemSetup@editholiday')->name('edit_holiday');
 Route::any('holiday_2017','SystemSetup@holiday2017')->name('holiday_2017');
 Route::any('holiday_2018','SystemSetup@holiday2018')->name('holiday_2018');
