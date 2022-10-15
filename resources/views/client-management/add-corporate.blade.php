@@ -18,7 +18,7 @@
                 <!-- <button type="button" class="btn btn-primary country_btn" data-bs-toggle="modal" data-bs-target="#my">Add Country</button> -->
             </div>
         </div>
-    </div>
+    </div>zzzz
     <div class="row">
         <div class="col-md-12">
             <form method="post" action="{{url('store-corporate')}}" id="form">  

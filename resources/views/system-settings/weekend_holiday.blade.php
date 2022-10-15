@@ -42,14 +42,18 @@
               </tr>
             </thead>
             <tbody>
+            @foreach($holiday_details as $holiday)
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+              <td>{{$holiday->id}}</td>
+    <td>{{$holiday->Date}}</td>
+    <td>{{$holiday->Day}}</td>
+ 
                 <td  scope="row"class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
                         <a href="{{url('edit_holiday')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                            <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
+                        <a href="{{url('delete_holiday')}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
+                        
              </tr>
+             @endforeach
            </tbody>
 </table><br><br>
 </div >
