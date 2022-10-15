@@ -53,7 +53,7 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <input type="date" class="form-control" name="number" id="username" required>
+                                    <input type="date" class="form-control" name="date" id="username" required>
                                     <div class="invalid-feedback" style="width: 100%;">
                                         Number is required.
                                     </div>
@@ -70,7 +70,7 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <select name="country" id="cars">
+                                    <select name="client" id="cars">
                                         <option value="volvo"></option>
                                     </select>
                                 </div>
@@ -84,7 +84,7 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <select name="country" id="cars">
+                                    <select name="file" id="cars">
                                         <option value="volvo"></option>
                                     </select>
                                 </div>
@@ -106,7 +106,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <select name="country" id="cars">
+                        <select name="instruction_to" id="cars">
                             <option value="volvo"></option>
                         </select>
                     </div>
@@ -119,7 +119,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <select name="country" id="cars">
+                        <select name="approver" id="cars">
                             <option value="volvo"></option>
                         </select>
                     </div>
@@ -148,21 +148,7 @@
 
 
 
-<!-- <div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
 
-            </div>
-            <div class="btn-group pt-3 " role="group" aria-label="Basic example">
-
-                <button type="submit" class="btn btn-primary submit_btn">Requst Doc</button>
-                <button type="submit" class="btn btn-primary submit_btn">Close</button>
-
-            </div>
-        </div>
-    </div>
-</div> -->
 <div>
     <div class="container">
 <div class="row">

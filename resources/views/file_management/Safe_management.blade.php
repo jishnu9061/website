@@ -31,7 +31,7 @@
         <!-- <a href="{{url('new_Safe_management')}}"><button class="btn btn-primary add-btn" Style="width:200px;">Register
                 Safe Item</button></a> -->
 
-                {{-- <a href="{{('new_Safe_management')}}"><button class="btn btn-primary">Register
+                {{-- <a href="{{('')}}"><button class="btn btn-primary">Register
                 Safe Item</button></a> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Register
                 Safe Item</button>     
