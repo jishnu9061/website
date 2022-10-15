@@ -68,20 +68,26 @@ table{
                  </tr>
                 </thead>
                 <tbody>
+                    @foreach($tax_chart as $chart_tax)
             
                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  style="color:rgb(13, 1, 56);"></td>
-                        <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
+                        <td>{{$chart_tax->id}}</td>
+                        <td>{{$chart_tax->tax_brand}}</td>
+                        <td>{{$chart_tax->lower_limit}}</td>
+                        <td>{{$chart_tax->upper_limit}}</td>
+                        <td>{{$chart_tax->rate}}</td>
+                        <td>{{$chart_tax->status}}</td>
+                        <td  scope="row"class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
                         <a href="{{url('edit_tax_chart')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                            <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
+                        <a href="{{url('delete_tax_chart')}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
+                  
                         </tr>
+                        @endforeach
                     </tbody>  
+                
                         </table><br>
+
+
                         <table class="table table-bordered" id="new-item">
                             <thead>
                             <h6 style="text-align:center;color:rgb(13, 1, 56);"><span class="border "style="background-color:rgb(198, 195, 211); "> Tax Excise</span></h6><br>
@@ -131,58 +137,11 @@ table{
                                  <a href="{{url('edit_tax_vat')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                                 <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
                             </tr>
+                       
                         </tbody>
                     </table><br>
 
-                    <table class="table table-bordered" id="new-item">
-                        <thead>
-                            <h6 style="text-align:center;color:rgb(13, 1, 56);"><span class="border "style="background-color:rgb(198, 195, 211); "> Tax WHT</span></h6><br>
-                            <tr>
-                                <th class="text-center" >No</th>
-                                <th class="text-center" >Tax Name</th>
-                                <th class="text-center" >Tax Value(%)</th>
-
-                                <th class="text-center" >Status</th>
-                                <th class="text-center" >Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td  class="text-center" style="color:rgb(13, 1, 56);">1</td>
-                                <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                                <td  style="color:rgb(13, 1, 56);"></td>
-                                <td  style="color:rgb(13, 1, 56);"></td>
-                                <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
-                                 <a href="{{url('edit_tax_wht')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                                <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
-                            </tr>
-                        </tbody>
-                    </table><br>
-                    <table class="table table-bordered" id="new-item">
-                        <thead>
-                            <h6 style="text-align:center;color:rgb(13, 1, 56);"><span class="border "style="background-color:rgb(198, 195, 211); "> Tax VAT-WHT</span></h6><br>
-                            <tr>
-                                <th class="text-center" >No</th>
-                                <th class="text-center" >Tax Name</th>
-                                <th class="text-center" >Tax Value(%)</th>
-                                <th class="text-center" >Status</th>
-                                <th class="text-center">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                                <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                                <td  style="color:rgb(13, 1, 56);"></td>
-                      
-                                <td  style="color:rgb(13, 1, 56);"></td>
-                                <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
-                                 <a href="{{url('edit_tax_wht-vat')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                                <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
-                            </tr>
-                        </tbody>
-                            </table><br>
-                          
+                   
 
 
 

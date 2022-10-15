@@ -17,8 +17,6 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
    
 </head>
-  
-</head>
 <body>
   <div>
     <button class="btn btn-primary"
@@ -49,8 +47,8 @@
     <td>{{$holiday->Day}}</td>
  
                 <td  scope="row"class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
-                        <a href="{{url('edit_holiday')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                        <a href="{{url('delete_holiday')}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
+                        <a href="{{url('edit_holiday',$holiday->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <a href="{{url('delete_holiday',$holiday->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
                         
              </tr>
              @endforeach
