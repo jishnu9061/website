@@ -95,7 +95,7 @@
                                     <!-- Modal body -->
                                     <div class="modal-body" style="background-color:white">
                                         <div class="container">
-                                            <form method="post" action="{{ url('add-corporate') }}"
+                                            <form method="post" action="{{ url('file-archive') }}"
                                                 enctype="multipart/form-data">
                                                 @csrf
 
