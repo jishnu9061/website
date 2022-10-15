@@ -22,7 +22,7 @@
      </div>
             <br>
             <br> <br>
-       <form method="post" action="" id="form">  
+       <form method="post" action="{{url('add_tax_chart')}}" id="form">  
        @csrf
             
  <div class="row">
