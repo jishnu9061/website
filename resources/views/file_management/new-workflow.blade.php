@@ -49,7 +49,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="website" id="confirm_password" required>
+                                <input type="date" class="form-control" name="date" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="flow_name" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="website" id="confirm_password" required>
+                                <input type="date" class="form-control" name="start_date" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -86,7 +86,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="Duration" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -98,7 +98,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <textarea class="form-control" id="edit_medicine_details1" name="medicine_detailss"
+                                <textarea class="form-control" id="edit_medicine_details1" name="flow_comments"
                                     rows="3" placeholder=""></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
@@ -133,7 +133,7 @@
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save Workflow</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                            <button type="button" class="btn btn-primary float:right;" data-dismiss="modal">Cancel</button>
                         </div>
                     </div>
                 </div>
