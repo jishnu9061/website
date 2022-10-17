@@ -42,24 +42,9 @@
 
 </div>
 <br>
-<button class="btn btn-primary float-left"
-style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">User Accounts</button><br><br><br>
-    
-  
-  <div class="row sm">
-    <div class="col-sm-4 " ><a href="{{url('manage_user_account')}}"><img class="logo_size"src="assets\image\Manage User Accounts.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" > Manage User Accounts</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('change_user_password')}}"><img class="logo_size"src="assets\image\Change user password.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" > Change User Password</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('manage_user_group')}}"><img class="logo_size"src="assets\image\Manage user group.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Manage User Groups</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('view_roles_per_user')}}"><img class="logo_size"src="assets\image\View roles per user.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" > View Roles per User</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('manage_user_roles')}}"><img class="logo_size"src="assets\image\Manage user role.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" > Manage User Roles</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('manage_user_department')}}"><img class="logo_size"src="assets\image\Manage user Department.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" > Manage User Departments</button></a></div>
-    <div class="col-sm-4" > <a href="{{url('advocates_target')}}"><img class="logo_size"src="assets\image\Advocate target.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" > Advocates Targets</button></a></div>
-    
 
-</div>
-<br>
 <button class="btn btn-primary float-left"
-style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Other Settings</button><br><br><br>
+style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">More Setups</button><br><br><br>
 <div class="row sm">
     <div class="col-sm-4 " ><a href="{{url('database_backup')}}"><img class="logo_size"src="assets\image\Database backup.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" > Database Backup</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('transport_zones')}}"><img class="logo_size"src="assets\image\Transport zones.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" > Transport Zones</button></a></div>
