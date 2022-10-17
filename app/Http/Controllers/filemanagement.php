@@ -167,6 +167,7 @@ class filemanagement extends Controller
 
 
 
+
     // public function editprogress($id)
     
     // {
@@ -174,6 +175,7 @@ class filemanagement extends Controller
     // }
 
     public function editprogress($id)
+
     {
         $edit_progress =DB::table('cra_add_file_progress')->where('id',$id)->first();
         return view('file_management.edit-file-progress',compact('edit_progress','id'));
