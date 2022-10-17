@@ -952,6 +952,8 @@ Route::any('communication-list','ClientManagement@listCommunication')->name('com
 Route::any('index-communication','ClientManagement@indexCommunication')->name('index-communication');
 Route::any('add-communication','ClientManagement@addCommunication')->name('add-communication');
 Route::any('edit-communication/{id}','ClientManagement@editCommunication')->name('edit-communication');
+Route::any('/update-communication','ClientManagement@updateCommunication')->name('update-communication');
+Route::any('/delete-communication/{id}','ClientManagement@deleteCommunication')->name('delete-communication');
 //end communication
 //search list
 Route::any('search-list','ClientManagement@listSearch')->name('search-list');
