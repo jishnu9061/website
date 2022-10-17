@@ -49,7 +49,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="date " id="confirm_password" required>
+                                <input type="date" class="form-control" name="website" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -62,13 +62,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="client" id="cars">
-                                    <option> client 1</option>
-                                    <option> client 2</option>
-                                    <option> client 3</option>
-
-
-
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
@@ -80,13 +75,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="file" id="cars">
-                                <option> file 1</option>
-                                <option> file 2</option>
-                                <option> file 3</option>
-
-
-
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
@@ -101,7 +91,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="delivered" id="confirm_password" required>
+                                <input type="text" class="form-control" name="website" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
                                 </div>
@@ -118,10 +108,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="category" id="cars">
-                                    <option> category 1</option>
-                                    <option> category 2</option>
-                                    <option> category 3</option>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
@@ -133,7 +121,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="name" id="confirm_password" required>
+                                <input type="text" class="form-control" name="website" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -147,10 +135,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="originator" id="cars">
-                                    <option> demo 1</option>
-                                    <option> demo 2</option>
-                                    <option> demo 3</option>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
@@ -164,10 +150,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="viewer" id="cars">
-                                    <option>demo 1</option>
-                                    <option>demo 2</option> 
-                                    <option>demo 3</option>              
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
@@ -184,7 +168,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="file" class="form-control" name="upload_copy" id="confirm_password" required>
+                                <input type="file" class="form-control" name="website" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -199,7 +183,22 @@
 
                 </div>
                 <br>
-               
+                <!-- <div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm">
+
+                            </div>
+                            <div class="btn-group pt-3 " role="group" aria-label="Basic example"
+                                style="margin-left: 50px;">
+
+                                <button type="submit" class="btn btn-primary submit_btn">Save</button>
+                                <button type="submit" class="btn btn-primary submit_btn">Cancel</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
                 <div class="row">
                         <div class="col-sm">
 

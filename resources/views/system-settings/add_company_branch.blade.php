@@ -85,12 +85,14 @@
                         </div>
                     </div>
                     <br>
+
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Physical Address:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <textarea rows="4" cols="50" name="physicaladd" class="form-control"  type="text"></textarea>
+                             
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>

@@ -949,12 +949,14 @@ Route::any('edit-registration','ClientManagement@editRegistration')->name('edit-
 //end registration
 //communication
 Route::any('communication-list','ClientManagement@listCommunication')->name('communication-list');
+Route::any('index-communication','ClientManagement@indexCommunication')->name('index-communication');
 Route::any('add-communication','ClientManagement@addCommunication')->name('add-communication');
-Route::any('edit-communication','ClientManagement@editCommunication')->name('edit-communication');
+Route::any('edit-communication/{id}','ClientManagement@editCommunication')->name('edit-communication');
 //end communication
 //search list
 Route::any('search-list','ClientManagement@listSearch')->name('search-list');
 Route::any('register-client','ClientManagement@registerClient')->name('register-client');
+Route::any('add-register','ClientManagement@addRegister')->name('add-register');
 //end search list
 
 

@@ -30,7 +30,7 @@
             <div class="row">
         <div class="col-md-12 ">
 
-            <form method="post" action="{{url('add_desc_sel')}}" id="form">  
+            <form method="post" action="" id="form">  
             @csrf
 <div class="row">
                     <div class="col-md-6">

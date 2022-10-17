@@ -40,12 +40,11 @@ td:nth-child(odd) {
                 crossorigin="anonymous">
      </div>
             <br>
-            
         <a href="{{('add_desc_sel')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Description Selection</button></a><br><br>
- 
+
         
     <!-- <div class="container"> -->
- 
+      <div class="mydiv">
       <table class="table table-bordered" id="new-item">
                   <thead>
                         <tr>
@@ -53,24 +52,21 @@ td:nth-child(odd) {
                         <th class="text-center">Description Selection Name</th>
                         <th class="text-center" >Selection Description</th>
                         <th class="text-center" >Status</th>
-                        <th class="text-center" >Action</th>
+                        <th class="text-center" >Edit</th>
                       
+                        <th class="text-center" ><input type="radio"></th>
       </thead>
       <tbody>
-      @foreach($description_selection as $description)
-      
                     </tr>
                     <tr>
-                        <td>  {{$description->id}}</td>
-                        <td>{{$description->Description_Selection_Name}}</td>
-                        <td >{{$description->Selection_Description}}</td>
+                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></td>
+                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
+                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         
-                        <td  scope="row"class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
-                        <a href="{{url('edit_desc_sel',$description->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                        <a href="{{url('delete_desc_sel',$description->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
+                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_desc_sel')}}">Edit</a></td>
+                        <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
                     </tr>
-                    @endforeach
       </tbody>
                    
                 </table>
@@ -89,7 +85,6 @@ td:nth-child(odd) {
     <!-- <form>
  <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
 </form> -->
-
         </body>
         </div>
 </html>

@@ -22,9 +22,8 @@
      </div>
             <br>
             <br> <br>
-            <form method="post" action="{{url('update_tax_chart')}}" id="form">  
-            <input type="hidden" name="id" value="{{$tax_chart->id}}">
-            @csrf
+       <form method="post" action="" id="form">  
+       @csrf
             
  <div class="row">
                     <div class="col-md-4">
@@ -32,7 +31,7 @@
                         <label >Tax Brand:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text"  id="" name="taxband"value="{{$tax_chart->tax_brand}}" class="form-control">
+                                <input type="text"  id="" name="taxband"value="" class="form-control">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -44,7 +43,7 @@
                             <label>Lower Limit:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="number"  id="" name="limit"value="{{$tax_chart->lower_limit}}" class="form-control" >
+                                <input type="number"  id="" name="limit"value="" class="form-control" >
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -56,7 +55,7 @@
                             <label>Upper Limit:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="number"  id="" name="ulimit"value="{{$tax_chart->upper_limit}}"class="form-control">
+                                <input type="number"  id="" name="ulimit"value=""class="form-control">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -70,7 +69,7 @@
                         <label >Rate(%):</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="number"  id="" name="rate"value="{{$tax_chart->rate}}"class="form-control">
+                                <input type="number"  id="" name="rate"value=""class="form-control">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -83,7 +82,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <select type="text" value="" id="" name="withhousing">
-                                    <option>{{$tax_chart->factor_with_housing}}</option>
+                                    <option>Select</option>
                                  <option>Yes</option>
                                <option>No</option>
                              </select>
@@ -99,7 +98,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <select type="text" value="" id="" name="wouthousing">
-                                    <option>{{$tax_chart->factor_without_housing}}</option>
+                                    <option>Select</option>
                                    
                     <option>Yes</option>
                     <option>No</option>

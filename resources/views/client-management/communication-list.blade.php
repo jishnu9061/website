@@ -19,7 +19,7 @@
         <div class="btn btn-primary"
         style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Client Conversation</u></b></div><br><br>
         <div class="">
-            <a href="{{url('add-communication')}}"><button type="button" class="btn btn-primary complaint_btn" style="width:27%;"> Add
+            <a href="{{url('index-communication')}}"><button type="button" class="btn btn-primary complaint_btn" style="width:27%;"> Add
                     Communication</button></a>
         </div><br>
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -41,23 +41,25 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach($list_communication as $communication)
                     <tr id="data">
-                        <td scope="row" class="text-center" id="medicine_name_1"></td>
-                        <td scope="row" class="text-center" id="medicine_name_1"></td>
-                        <td scope="row" class="text-center" id="medicine_name_1"></td>
-                        <td scope="row" class="text-center" id="medicine_name_1"></td>
-                        <td scope="row" class="text-center" id="medicine_name_1"></td>
-                        <td scope="row" class="text-center" id="medicine_name_1"></td>
-                        <td scope="row" class="text-center" id="medicine_name_1"></td>
-                        <td scope="row" class="text-center" id="medicine_name_1"></td>
-                        <td scope="row" class="text-center" id="medicine_name_1"></td>
-                        <td scope="row" class="text-center" id="medicine_name_1"></td>
-                        <td><a href="{{url('edit-communication')}}"><i style="color:black;" class="fa fa-edit"
+                        <td scope="row" class="text-center" id="medicine_name_1">{{$communication->	communication_date}}</td>
+                        <td scope="row" class="text-center" id="medicine_name_1">{{$communication->	time}}</td>
+                        <td scope="row" class="text-center" id="medicine_name_1">{{$communication->	client}}</td>
+                        <td scope="row" class="text-center" id="medicine_name_1">{{$communication->	file}}</td>
+                        <td scope="row" class="text-center" id="medicine_name_1">{{$communication->	telephone_no}}</td>
+                        <td scope="row" class="text-center" id="medicine_name_1">{{$communication->	mode_of_communication}}</td>
+                        <td scope="row" class="text-center" id="medicine_name_1">{{$communication->	communicated}}</td>
+                        <td scope="row" class="text-center" id="medicine_name_1">{{$communication->	communication_date}}</td>
+                        <td scope="row" class="text-center" id="medicine_name_1">{{$communication->	person_handling}}</td>
+                        <td scope="row" class="text-center" id="medicine_name_1">Active</td>
+                        <td><a href="{{url('edit-communication',$communication->id)}}"><i style="color:black;" class="fa fa-edit"
                                     aria-hidden="true"></i></a>
                             <a href=""><i style="color:black;" class="fa fa-trash" aria-hidden="true"></i>
                         </td>
 
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
 
