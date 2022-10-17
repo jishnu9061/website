@@ -45,15 +45,18 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($list_search  as $search)
                         <tr id="data">
-                            <td scope="row" class="text-center">1</td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
+                            <td scope="row" class="text-center">{{$search->id}}</td>
+                            <td scope="row" class="text-center" id="medicine_name_1">{{$search->client_type}}</td>
+                            <td scope="row" class="text-center" id="medicine_name_1">{{$search->client_category}}</td>
+                            <td scope="row" class="text-center" id="medicine_name_1">{{$search->file_type}}</td>
+                            <td scope="row" class="text-center" id="medicine_name_1">{{$search->country}}</td>
+                            <td scope="row" class="text-center" id="medicine_name_1">{{$search->status}}</td>
+                            <td scope="row" class="text-center" id="medicine_name_1">{{$search->registration_date}}</td>
 
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
 </div>

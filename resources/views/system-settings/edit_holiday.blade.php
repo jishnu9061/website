@@ -27,9 +27,8 @@
             crossorigin="anonymous">
           </div>
           <br>
-          <form method="post"action="{{url('update_holiday')}}"id="form">  
-          <input type="hidden" name="id" value="{{$weekend_and_holiday->id}}">
-          @csrf
+          <form method="post" action="" id="form">  
+
         <div class="row">
        
                     <div class="col-md-6">
@@ -37,7 +36,7 @@
                             <label >Date:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="date" id="date"  value="{{$weekend_and_holiday->Date}}">
+                                <input type="date" class="form-control" name="date" id="date" value="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -49,7 +48,7 @@
                             <label>Day:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="day" class="form-control" name="day" id="day"  value="{{$weekend_and_holiday->Day}}">
+                                <input type="day" class="form-control" name="day" id="day" value="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -66,7 +65,7 @@
                        
                         <div class="col-sm">
                             <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
                             <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
                         </div>
                     </div>

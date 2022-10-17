@@ -41,10 +41,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="doc_type" id="cars">
-                                    <option value="volvo">type 1</option>
-                                    <option value="volvo">type 2</option>
-                                    <option value="volvo">type 3</option>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -59,7 +57,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="title" id="confirm_password" required>
+                                <input type="text" class="form-control" name="website" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
@@ -73,7 +71,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="file" class="form-control" name="to_upload" id="confirm_password" required>
+                                <input type="file" class="form-control" name="website" id="confirm_password" required>
                             </div>
                         </div>
                     </div>

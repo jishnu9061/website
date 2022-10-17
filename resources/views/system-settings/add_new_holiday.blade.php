@@ -17,25 +17,16 @@
 
 </head>
 <body>
-<div>
-        <div class="btn btn-primary"
+
+    <div>
+    <button class="btn btn-primary"
     style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Add New Holiday / Weekend Date</u></b></button>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
             crossorigin="anonymous">
-
-
-
-            <div class="container mt-5">
-                {{-- <button type="button" class="btn btn-primary holidayt_btn" data-bs-toggle="modal"
-                    data-bs-target="#mymodal">Add New Holiday/Weekend Date</button> --}}
-               
-            </div>
-        </div>
-    </div>
-
+          </div>
           <br>
-          <form method="post" action="{{url('add_new_holiday')}}"  id="form">  
+          <form method="post" action="" id="form">  
           @csrf
         <div class="row">
        
@@ -79,10 +70,9 @@
                     </div>
                 </div>
             </form>
-            </div>
-    </div>
-</div>
-</div>
+    <!-- <form>
+ <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
+</form> -->
 </div>
     
     </body>

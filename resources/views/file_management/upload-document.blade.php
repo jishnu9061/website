@@ -50,7 +50,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="client" id="confirm_password" required>
+                                <input type="text" class="form-control" name="website" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="file" id="confirm_password" required>
+                                <input type="text" class="form-control" name="website" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -73,7 +73,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="other-files" id="confirm_password" required>
+                                <input type="text" class="form-control" name="website" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -87,7 +87,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="doc_category" id="confirm_password" required>
+                                <input type="text" class="form-control" name="website" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -99,7 +99,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="doc_title" id="confirm_password" required>
+                                <input type="text" class="form-control" name="website" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
                                 </div>
@@ -122,7 +122,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <textarea class="form-control" id="form7Example7" name="nature_of_doc" rows="3"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
                             </div>
                         </div>
                     </div>
@@ -135,7 +135,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <textarea class="form-control" id="form7Example7"  name="keyword" rows="3"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
                             </div>
                         </div>
                     </div>
@@ -157,10 +157,8 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="doc_owner" id="cars">
-                        <option > document 1</option>
-                        <option>document 2</option>
-                        <option >document 3</option>
+                    <select name="country" id="cars">
+                        <option value="volvo"></option>
                     </select>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
@@ -177,7 +175,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="final_aggrement" id="confirm_password" required>
+                    <input type="text" class="form-control" name="website" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -195,7 +193,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="file" class="form-control" name="doc_to_upload" id="confirm_password" required>
+                    <input type="file" class="form-control" name="website" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -211,7 +209,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="file" class="form-control" name="folder_to_upload" id="confirm_password" required>
+                    <input type="file" class="form-control" name="website" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
