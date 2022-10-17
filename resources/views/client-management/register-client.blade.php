@@ -15,7 +15,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <form method="post" action="" id="form">
+            <form method="post" action="{{url('add-register')}}" id="form">
                 @csrf
                 <div class="row">
                     <div class="col-md-6">
@@ -26,9 +26,9 @@
                 
                                 </div>
                                 <select name="type" id="cars">
-                                    <option value="volvo">Select</option>
-                                    <option value="volvo">Corporate</option>
-                                    <option value="volvo">Individual</option>
+                                    <option >Select</option>
+                                    <option value="Corporate">Corporate</option>
+                                    <option value="Individual">Individual</option>
                                 </select>
                             </div>
                         </div>
@@ -40,10 +40,10 @@
                                 <div class="input-group-prepend">
                 
                                 </div>
-                                <select name="type" id="cars">
-                                    <option value="volvo">Select</option>
-                                    <option value="volvo">Client Category1</option>
-                                    <option value="volvo">Client Category2</option>
+                                <select name="Category" id="cars">
+                                    <option >Select</option>
+                                    <option value="Client Category1">Client Category1</option>
+                                    <option value="Client Category2">Client Category2</option>
                                 </select>
                             </div>
                         </div>
@@ -58,10 +58,10 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <select name="type" id="cars">
-                                    <option value="volvo">Select</option>
-                                    <option value="volvo">Type 1</option>
-                                    <option value="volvo">Type 2</option>
+                                <select name="File" id="cars">
+                                    <option>Select</option>
+                                    <option value="Type 1">Type 1</option>
+                                    <option value="Type 2">Type 2</option>
                                 </select>
                             </div>
                         </div>
@@ -74,11 +74,11 @@
 
                                 </div>
                                 <select name="country" id="cars">
-                                    <option value="volvo">Select</option>
-                                    <option value="volvo">Kenya</option>
-                                    <option value="volvo">South Africa</option>
-                                    <option value="volvo">India</option>
-                                    <option value="volvo">America</option>
+                                    <option >Select</option>
+                                    <option value="Kenya">Kenya</option>
+                                    <option value="South Africa">South Africa</option>
+                                    <option value="India">India</option>
+                                    <option value="America">America</option>
                                 </select>
                             </div>
                         </div>
@@ -87,28 +87,28 @@
                 </div>
                 <br>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Status</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo">Select</option>
-                                    <option value="volvo">Process</option>
-                                    <option value="volvo">Pending </option>
-                                    <option value="volvo">Closed</option>
+                                <select name="Status" id="cars">
+                                    <option >Select</option>
+                                    <option value="Process">Process</option>
+                                    <option value="Pending">Pending </option>
+                                    <option value="Closed">Closed</option>
                                 </select>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Registration Date(From)</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="" placeholder=""
+                                <input type="date" class="form-control" name="date" id="username" value="" placeholder=""
                                     required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Date is required.
@@ -116,19 +116,7 @@
                             </div>
                         </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="mb-1">
-                        <label for="username">To</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend"></div>
-                            <input type="text" class="form-control" name="" id="username" value="" placeholder=""
-                                required>
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Date is required.
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            
                 <br>
                 <div class="row">
                     <div class="col-sm">
@@ -139,46 +127,14 @@
                     </div>
                     <div class="col-sm">
                         <br>
-                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Close</button>
-                        <button type="button" class="btn btn-primary float:left" Style="width:45%;">Search</button>
+                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Search</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;">close</button>
                     </div>
                 </div>
                
 </div>
 <br>
-<div class="modal" id="mymodal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-body">
-                    <form action="">
-                        <div>
-                            <input type="text" name="type" class="form-control" placeholder="Client Type">
-                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<div class="modal" id="my">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-body">
-                    <form action="">
-                        <div>
-                            <input type="text" name="type" class="form-control" placeholder="Country">
-                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
