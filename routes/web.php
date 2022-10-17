@@ -836,13 +836,13 @@ Route::any('menu_access_configuration','SystemSetup@menuaccess')->name('menu_acc
 //end
 //usefullinks
 Route::any('useful_links','SystemSetup@usefullinks')->name('useful_links');
-
+// end system setup
 
 //client invoicing
 // fee_notes/drn/interim notes
 Route::any('drn_fee_notes','clientinvoicing@drnfee')->name('drn_fee_notes');
 Route::any('new_drn_fee_notes','clientinvoicing@newdrnfee')->name('new_drn_fee_notes');
-
+//end
 
 //user management
 Route::any('user_management','UserManagement@index')->name('user_management');
@@ -886,8 +886,8 @@ Route::any('advocates_target_2023','UserManagement@advocatestarget2023')->name('
 Route::any('advocates_target_2024','UserManagement@advocatestarget2024')->name('advocates_target_2024');
 Route::any('advocates_target_2025','UserManagement@advocatestarget2025')->name('advocates_target_2025');
 Route::any('advocates_target_2026','UserManagement@advocatestarget2026')->name('advocates_target_2026');
-//end
-//end
+
+//end user management
 //---------------------RESHMA--------------------------------------
 
 

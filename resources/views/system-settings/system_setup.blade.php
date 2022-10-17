@@ -44,7 +44,7 @@
 <br>
 
 <button class="btn btn-primary float-left"
-style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">Other Settings</button><br><br><br>
+style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">More Setups</button><br><br><br>
 <div class="row sm">
     <div class="col-sm-4 " ><a href="{{url('database_backup')}}"><img class="logo_size"src="assets\image\Database backup.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" > Database Backup</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('transport_zones')}}"><img class="logo_size"src="assets\image\Transport zones.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" > Transport Zones</button></a></div>
