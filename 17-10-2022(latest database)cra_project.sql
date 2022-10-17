@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 27, 2022 at 09:20 AM
+-- Generation Time: Oct 17, 2022 at 08:18 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -437,6 +437,354 @@ CREATE TABLE `categories` (
 
 INSERT INTO `categories` (`id`, `category_name`, `created_at`, `updated_at`) VALUES
 (1, 'cat1', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_add_file_progress`
+--
+
+CREATE TABLE `cra_add_file_progress` (
+  `id` int(11) NOT NULL,
+  `progress_date` date DEFAULT NULL,
+  `next_action` varchar(255) DEFAULT NULL,
+  `client_name` varchar(255) DEFAULT NULL,
+  `bringup_date` date DEFAULT NULL,
+  `file_name` varchar(255) DEFAULT NULL,
+  `reminder_period` int(11) DEFAULT NULL,
+  `action_type` varchar(255) DEFAULT NULL,
+  `action_description` varchar(255) DEFAULT NULL,
+  `time_taken_hours` time DEFAULT NULL,
+  `time_taken_minutes` time DEFAULT NULL,
+  `item_type` varchar(255) DEFAULT NULL,
+  `currency` varchar(255) DEFAULT NULL,
+  `amount` double DEFAULT NULL,
+  `start_time` timestamp NULL DEFAULT NULL,
+  `activity_type` varchar(255) DEFAULT NULL,
+  `activity` varchar(255) DEFAULT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  `branch_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_add_file_progress`
+--
+
+INSERT INTO `cra_add_file_progress` (`id`, `progress_date`, `next_action`, `client_name`, `bringup_date`, `file_name`, `reminder_period`, `action_type`, `action_description`, `time_taken_hours`, `time_taken_minutes`, `item_type`, `currency`, `amount`, `start_time`, `activity_type`, `activity`, `company_id`, `branch_id`) VALUES
+(1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(2, '2022-10-08', 'khgjkhkljvdx', 'volvo', '2022-10-21', 'volvo', 52, 'volvo', 'sdfg', '00:00:10', '00:00:44', 'volvo', 'volvo', 4444, '0000-00-00 00:00:00', 'volvo', '4444', NULL, NULL),
+(3, '2022-10-08', 'khgjkhkljvdx', 'volvo', '2022-10-21', 'volvo', 52, 'volvo', 'sdfg', '00:00:10', '00:00:44', 'volvo', 'volvo', 4444, '0000-00-00 00:00:00', 'volvo', '4444', NULL, NULL),
+(7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(8, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(9, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(10, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(11, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(12, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(13, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(14, '2022-10-26', 'egsgsghdf', NULL, '2022-10-28', NULL, 444, NULL, 'fgxcb', '00:00:04', '00:00:52', NULL, NULL, 741, NULL, NULL, 'gfjgjf', NULL, NULL),
+(15, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(16, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(17, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(18, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(19, '2022-10-25', 'fgjjasgdsdfh', NULL, '2022-10-08', NULL, 41, NULL, 'dfhshdhh', '20:47:00', '00:41:00', NULL, NULL, 789, '0000-00-00 00:00:00', NULL, '75358', NULL, NULL),
+(20, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_bank_details`
+--
+
+CREATE TABLE `cra_bank_details` (
+  `id` int(11) NOT NULL,
+  `bank` varchar(255) DEFAULT NULL,
+  `branch` varchar(255) DEFAULT NULL,
+  `account_name` varchar(255) DEFAULT NULL,
+  `account_number` varchar(255) DEFAULT NULL,
+  `bank_code` varchar(255) DEFAULT NULL,
+  `branch_code` varchar(255) DEFAULT NULL,
+  `swift_code` varchar(255) DEFAULT NULL,
+  `mpesa_code` varchar(255) DEFAULT NULL,
+  `bank_gl_ac` varchar(255) DEFAULT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  `branch_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_bank_details`
+--
+
+INSERT INTO `cra_bank_details` (`id`, `bank`, `branch`, `account_name`, `account_number`, `bank_code`, `branch_code`, `swift_code`, `mpesa_code`, `bank_gl_ac`, `company_id`, `branch_id`) VALUES
+(38, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(39, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(40, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(41, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_client_pickup_reception`
+--
+
+CREATE TABLE `cra_client_pickup_reception` (
+  `id` int(11) NOT NULL,
+  `client` varchar(255) DEFAULT NULL,
+  `file_name` varchar(255) DEFAULT NULL,
+  `mobile` int(11) DEFAULT NULL,
+  `persion_handling` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `client_name` varchar(255) DEFAULT NULL,
+  `persion_picking_handling` varchar(255) DEFAULT NULL,
+  `reason` varchar(255) DEFAULT NULL,
+  `visitors` varchar(255) DEFAULT NULL,
+  `time_in` timestamp NULL DEFAULT NULL,
+  `time_out` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_client_pickup_reception`
+--
+
+INSERT INTO `cra_client_pickup_reception` (`id`, `client`, `file_name`, `mobile`, `persion_handling`, `email`, `client_name`, `persion_picking_handling`, `reason`, `visitors`, `time_in`, `time_out`) VALUES
+(1, 'hlo', 'hi', 987654321, 'gh', 'mk@gmail.com', 'dnj', 'ggg', 'hhh', 'hhhh', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_company_branch_details`
+--
+
+CREATE TABLE `cra_company_branch_details` (
+  `id` int(11) NOT NULL,
+  `branch_no` int(11) DEFAULT NULL,
+  `branch_code` varchar(255) DEFAULT NULL,
+  `branch_name` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `telephone` int(11) DEFAULT NULL,
+  `mobile` int(11) DEFAULT NULL,
+  `fax` int(11) DEFAULT NULL,
+  `town` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `website` varchar(255) DEFAULT NULL,
+  `physical_address` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_company_branch_details`
+--
+
+INSERT INTO `cra_company_branch_details` (`id`, `branch_no`, `branch_code`, `branch_name`, `address`, `telephone`, `mobile`, `fax`, `town`, `email`, `website`, `physical_address`) VALUES
+(1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_conversations`
+--
+
+CREATE TABLE `cra_conversations` (
+  `id` int(11) NOT NULL,
+  `communication_date` date DEFAULT NULL,
+  `client` varchar(255) DEFAULT NULL,
+  `file` varchar(255) DEFAULT NULL,
+  `customer` varchar(255) DEFAULT NULL,
+  `telephone_no` int(11) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `communication_source` varchar(255) DEFAULT NULL,
+  `mode_of_communication` varchar(255) DEFAULT NULL,
+  `communicated` varchar(255) DEFAULT NULL,
+  `duration` varchar(200) DEFAULT NULL,
+  `person_handling` varchar(255) DEFAULT NULL,
+  `time` time DEFAULT NULL,
+  `others` varchar(255) DEFAULT NULL,
+  `communicated_description` varchar(255) DEFAULT NULL,
+  `action_plan` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_conversations`
+--
+
+INSERT INTO `cra_conversations` (`id`, `communication_date`, `client`, `file`, `customer`, `telephone_no`, `email`, `communication_source`, `mode_of_communication`, `communicated`, `duration`, `person_handling`, `time`, `others`, `communicated_description`, `action_plan`) VALUES
+(1, '2022-10-01', 'Corporate', 'Type 1', 'hii', 987654321, 'm@gmail.com', 'Vedio Conference', 'Mode 1', 'Clerical Staff', 'Half Hour', 'Person 2', '16:23:00', 'gg', 'ggg', 'ggg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_corporate_client_details`
+--
+
+CREATE TABLE `cra_corporate_client_details` (
+  `id` int(11) NOT NULL,
+  `Client_no` varchar(255) DEFAULT NULL,
+  `Client_type` varchar(255) DEFAULT NULL,
+  `Cityzen_status` varchar(255) DEFAULT NULL,
+  `Certificate_of_incorporation` varchar(255) DEFAULT NULL,
+  `Country` varchar(255) DEFAULT NULL,
+  `Telephone_No` varchar(255) DEFAULT NULL,
+  `Fax_no` varchar(255) DEFAULT NULL,
+  `Email_address` varchar(255) DEFAULT NULL,
+  `Website` varchar(255) DEFAULT NULL,
+  `Brought_in_By` varchar(255) DEFAULT NULL,
+  `Status_reporting_day` varchar(255) DEFAULT NULL,
+  `Client_source` varchar(255) DEFAULT NULL,
+  `Client_source_naration` varchar(255) DEFAULT NULL,
+  `Client_name` varchar(255) DEFAULT NULL,
+  `Client_industry` varchar(255) DEFAULT NULL,
+  `Pin_no` varchar(255) DEFAULT NULL,
+  `postal_address` varchar(255) DEFAULT NULL,
+  `postal_code` int(11) DEFAULT NULL,
+  `town` varchar(255) DEFAULT NULL,
+  `physical_address` varchar(255) DEFAULT NULL,
+  `notes` varchar(255) DEFAULT NULL,
+  `contact_person` varchar(255) DEFAULT NULL,
+  `designation` varchar(255) DEFAULT NULL,
+  `Mobile_no` int(11) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  `branch_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_corporate_client_details`
+--
+
+INSERT INTO `cra_corporate_client_details` (`id`, `Client_no`, `Client_type`, `Cityzen_status`, `Certificate_of_incorporation`, `Country`, `Telephone_No`, `Fax_no`, `Email_address`, `Website`, `Brought_in_By`, `Status_reporting_day`, `Client_source`, `Client_source_naration`, `Client_name`, `Client_industry`, `Pin_no`, `postal_address`, `postal_code`, `town`, `physical_address`, `notes`, `contact_person`, `designation`, `Mobile_no`, `email`, `company_id`, `branch_id`) VALUES
+(3, '1234', 'Corporate', 'Residensial', 'dgfd', 'Kenya', '1425369870', '123456789', 'test@gmail.com', 'test.com', 'Agent', 'Monday', 'Excisting', 'tets', 'hghgjg', 'Commerce', '789456', 'nyutew', 159753, 'nairobi', 'test address', 'tets notes', 'test1', 'test destination', 789456123, 'test@gmail.com', NULL, NULL),
+(10, '1234', 'Corporate', 'Residensial', NULL, 'volvo', NULL, NULL, NULL, NULL, 'volvo', NULL, 'volvo', NULL, NULL, 'volvo', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_open_new_file_details`
+--
+
+CREATE TABLE `cra_open_new_file_details` (
+  `id` int(11) NOT NULL,
+  `Associate_handling` varchar(255) DEFAULT NULL,
+  `Client_type` varchar(255) DEFAULT NULL,
+  `opening_date` date DEFAULT NULL,
+  `Client_ref_no` varchar(255) DEFAULT NULL,
+  `our_file_reference_no` varchar(255) DEFAULT NULL,
+  `File_name` varchar(255) DEFAULT NULL,
+  `Approval_partner` varchar(255) DEFAULT NULL,
+  `Customer_name` varchar(255) DEFAULT NULL,
+  `Address` varchar(255) DEFAULT NULL,
+  `Telephone` int(11) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `amount` float DEFAULT NULL,
+  `workflow` varchar(255) DEFAULT NULL,
+  `responsible_advocate` varchar(255) DEFAULT NULL,
+  `recent_progress` varchar(255) DEFAULT NULL,
+  `closing_date` date DEFAULT NULL,
+  `file_balance` double DEFAULT NULL,
+  `paid_amount` double DEFAULT NULL,
+  `balance_fee` double DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_open_new_file_details`
+--
+
+INSERT INTO `cra_open_new_file_details` (`id`, `Associate_handling`, `Client_type`, `opening_date`, `Client_ref_no`, `our_file_reference_no`, `File_name`, `Approval_partner`, `Customer_name`, `Address`, `Telephone`, `email`, `amount`, `workflow`, `responsible_advocate`, `recent_progress`, `closing_date`, `file_balance`, `paid_amount`, `balance_fee`, `status`) VALUES
+(35, NULL, 'University', '2022-10-29', '123/cra/1244', '123/cra12/44', 'vinu', 'Residensial', 'cra2', 'cr advocayes', 2147483647, 'asd@gmail.com', 45698, 'Residensial', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(44, NULL, 'Accord University', '2022-10-28', '123/qwe/15', '147/qwe/123', 'cra project', 'Residensial', 'cra2', 'RGGDFHDH', 2147483647, 'awse@gmail.com', 45557, 'Residensial', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(63, NULL, 'Accord University', '2022-10-13', 'f258555', 'DFHF', 'DFHDFHFD', 'Residensial', 'FDHDHFD', 'RGGDFHDH', 2147483647, 'asd@gmail.com', 45557, 'Residensial', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(124, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(125, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(126, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_template_category`
+--
+
+CREATE TABLE `cra_template_category` (
+  `id` int(11) NOT NULL,
+  `Template_Category` varchar(255) DEFAULT NULL,
+  `Category_Type` varchar(255) DEFAULT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  `branch_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_template_category`
+--
+
+INSERT INTO `cra_template_category` (`id`, `Template_Category`, `Category_Type`, `company_id`, `branch_id`) VALUES
+(157, 'Employment', 'zcZXC', NULL, NULL),
+(163, 'Business Property', 'dfsfsf', NULL, NULL),
+(164, 'Business Property', 'dfsfsf', NULL, NULL),
+(167, NULL, NULL, NULL, NULL),
+(187, NULL, NULL, NULL, NULL),
+(188, 'Business Property', 'bjbjb', NULL, NULL),
+(189, NULL, NULL, NULL, NULL),
+(190, NULL, NULL, NULL, NULL),
+(191, 'Employment', '2222', NULL, NULL),
+(192, NULL, NULL, NULL, NULL),
+(193, NULL, NULL, NULL, NULL),
+(194, NULL, NULL, NULL, NULL),
+(195, NULL, NULL, NULL, NULL),
+(196, NULL, NULL, NULL, NULL),
+(197, NULL, NULL, NULL, NULL),
+(198, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_transport_zone`
+--
+
+CREATE TABLE `cra_transport_zone` (
+  `id` int(11) NOT NULL,
+  `zone_name` varchar(225) DEFAULT NULL,
+  `zone_areas` varchar(225) DEFAULT NULL,
+  `cost` varchar(225) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_transport_zone`
+--
+
+INSERT INTO `cra_transport_zone` (`id`, `zone_name`, `zone_areas`, `cost`) VALUES
+(23, NULL, NULL, NULL),
+(24, NULL, NULL, NULL),
+(25, NULL, NULL, NULL),
+(26, NULL, NULL, NULL),
+(27, NULL, NULL, NULL),
+(28, NULL, NULL, NULL),
+(29, NULL, NULL, NULL),
+(30, NULL, NULL, NULL),
+(31, NULL, NULL, NULL),
+(32, NULL, NULL, NULL),
+(33, NULL, NULL, NULL),
+(34, NULL, NULL, NULL),
+(35, NULL, NULL, NULL),
+(36, NULL, NULL, NULL),
+(37, NULL, NULL, NULL),
+(38, NULL, NULL, NULL),
+(39, NULL, NULL, NULL),
+(40, NULL, NULL, NULL),
+(41, NULL, NULL, NULL),
+(42, NULL, NULL, NULL),
+(43, NULL, NULL, NULL),
+(44, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_weekend_and_holiday`
+--
+
+CREATE TABLE `cra_weekend_and_holiday` (
+  `id` int(255) NOT NULL,
+  `Date` date NOT NULL,
+  `Day` varchar(255) NOT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  `branch_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -6929,6 +7277,66 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cra_add_file_progress`
+--
+ALTER TABLE `cra_add_file_progress`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_bank_details`
+--
+ALTER TABLE `cra_bank_details`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_client_pickup_reception`
+--
+ALTER TABLE `cra_client_pickup_reception`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_company_branch_details`
+--
+ALTER TABLE `cra_company_branch_details`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_conversations`
+--
+ALTER TABLE `cra_conversations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_corporate_client_details`
+--
+ALTER TABLE `cra_corporate_client_details`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_open_new_file_details`
+--
+ALTER TABLE `cra_open_new_file_details`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_template_category`
+--
+ALTER TABLE `cra_template_category`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_transport_zone`
+--
+ALTER TABLE `cra_transport_zone`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_weekend_and_holiday`
+--
+ALTER TABLE `cra_weekend_and_holiday`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `dailyattendances`
 --
 ALTER TABLE `dailyattendances`
@@ -7466,6 +7874,66 @@ ALTER TABLE `callambulance`
 --
 ALTER TABLE `categories`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `cra_add_file_progress`
+--
+ALTER TABLE `cra_add_file_progress`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT for table `cra_bank_details`
+--
+ALTER TABLE `cra_bank_details`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+
+--
+-- AUTO_INCREMENT for table `cra_client_pickup_reception`
+--
+ALTER TABLE `cra_client_pickup_reception`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `cra_company_branch_details`
+--
+ALTER TABLE `cra_company_branch_details`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `cra_conversations`
+--
+ALTER TABLE `cra_conversations`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `cra_corporate_client_details`
+--
+ALTER TABLE `cra_corporate_client_details`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `cra_open_new_file_details`
+--
+ALTER TABLE `cra_open_new_file_details`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=127;
+
+--
+-- AUTO_INCREMENT for table `cra_template_category`
+--
+ALTER TABLE `cra_template_category`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=199;
+
+--
+-- AUTO_INCREMENT for table `cra_transport_zone`
+--
+ALTER TABLE `cra_transport_zone`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+
+--
+-- AUTO_INCREMENT for table `cra_weekend_and_holiday`
+--
+ALTER TABLE `cra_weekend_and_holiday`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `dailyattendances`
