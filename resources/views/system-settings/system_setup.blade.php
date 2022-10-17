@@ -21,7 +21,7 @@
    <p style="text-align:right;">
 
 <a href="{{url('Knowledge_Base')}}"style="color:#1D1D50;">Knowledge Base</a> |
-<a href="{{url('Referral_Program')}}"style="color:#1D1D50;">ReferralnProgram</a> |
+<a href="{{url('Referral_Program')}}"style="color:#1D1D50;">Referral Program</a> |
 <a href="{{url('Write_us_Review')}}"style="color:#1D1D50;">Write us a Review</a> |
 <a href="{{url('Send_Memo')}}"style="color:#1D1D50;">Send Memo</a> |
 <a href="{{url('Calendar')}}"style="color:#1D1D50;">Calendar</a> |
