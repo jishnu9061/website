@@ -611,112 +611,7 @@ public function edittaxexcise()
     {
         return view('system-settings.edit_currency');
     }
-    public function manageuseraccount()
-    {
-        return view('system-settings.manage_user_account');
-    }
-    public function useredit()
-    {
-        return view('system-settings.user_edit');
-    }
-    public function regnewuser()
-    {
-        return view('system-settings.reg_new_user');
-    }
-    public function attachments()
-    {
-        return view('system-settings.user_attachments');
-    }
-    public function comments()
-    {
-        return view('system-settings.user_comments');
-    }
-    public function changepassword()
-    {
-        return view('system-settings.change_user_password');
-    }
-    public function manageusergrp()
-    {
-        return view('system-settings.manage_user_group');
-    }
-    public function addnewusergrp()
-    {
-        return view('system-settings.add_new_user_grp');
-    }
-    public function editnewusergrp()
-    {
-        return view('system-settings.edit_new_user_grp');
-    }
-    public function rolesperuser()
-    {
-        return view('system-settings.view_roles_per_user');
-    }
-    public function editviewroles()
-    {
-        return view('system-settings.edit_view_roles');
-    }
     
-
-    public function manageuserroles()
-    {
-        return view('system-settings.manage_user_roles');
-    }
-    public function adduserrole()
-    {
-        return view('system-settings.add_user_roles');
-    }
-    public function edituserrole()
-    {
-        return view('system-settings.edit_user_roles');
-    }
-    public function manageuserdepartment()
-    {
-        return view('system-settings.manage_user_department');
-    }
-    public function adduserdepartment()
-    {
-        return view('system-settings.add_user_department');
-    }
-    public function edituserdepartment()
-    {
-        return view('system-settings.edit_user_department');
-    }
-    public function advocatestarget()
-    {
-        return view('system-settings.advocates_target');
-    }
-    public function addnew()
-    {
-        return view('system-settings.add_new_entry');
-    }
-    public function editadvocatetarget()
-    {
-        return view('system-settings.edit_advocate_target');
-    }
-    public function advocatestarget2021()
-    {
-        return view('system-settings.advocates_target_2021');
-    }
-    public function advocatestarget2022()
-    {
-        return view('system-settings.advocates_target_2022');
-    }
-    public function advocatestarget2023()
-    {
-        return view('system-settings.advocates_target_2023');
-    }
-    public function advocatestarget2024()
-    {
-        return view('system-settings.advocates_target_2024');
-    }
-    public function advocatestarget2025()
-    {
-        return view('system-settings.advocates_target_2025');
-    }
-    public function advocatestarget2026()
-    {
-        return view('system-settings.advocates_target_2026');
-    }
     public function databasebackup()
     {
         return view('system-settings.database_backup');
@@ -851,7 +746,7 @@ public function edittaxexcise()
         return view('system-settings.useful_links');
     }
 
-
+ 
    
 
 

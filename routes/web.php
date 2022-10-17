@@ -796,47 +796,7 @@ Route::any('currency_list','SystemSetup@currencylist')->name('currency_list');
 Route::any('add_currency','SystemSetup@addcurrency')->name('add_currency');
 Route::any('edit_currency','SystemSetup@editcurrency')->name('edit_currency');
 //end
-//USER details
-//manage user accounts
-Route::any('manage_user_account','SystemSetup@manageuseraccount')->name('manage_user_account');
-Route::any('reg_new_user','SystemSetup@regnewuser')->name('reg_new_user');
-Route::any('user_edit','SystemSetup@useredit')->name('user_edit');
-Route::any('user_attachments','SystemSetup@attachments')->name('user_attachments');
-Route::any('user_comments','SystemSetup@comments')->name('user_comments');
-//end
-//change password
-Route::any('change_user_password','SystemSetup@changepassword')->name('change_user_password');
-//end
-//manage user group
-Route::any('manage_user_group','SystemSetup@manageusergrp')->name('manage_user_group');
-Route::any('add_new_user_grp','SystemSetup@addnewusergrp')->name('add_new_user_grp');
-Route::any('edit_new_user_grp','SystemSetup@editnewusergrp')->name('edit_new_user_grp');
-//end
-//view roles per user
-Route::any('view_roles_per_user','SystemSetup@rolesperuser')->name('view_roles_per_user');
-Route::any('edit_view_roles','SystemSetup@editviewroles')->name('edit_view_roles');
-//end
-//manage user roles
-Route::any('manage_user_roles','SystemSetup@manageuserroles')->name('manage_user_roles');
-Route::any('add_user_roles','SystemSetup@adduserrole')->name('add_user_roles');
-Route::any('edit_user_roles','SystemSetup@edituserrole')->name('edit_user_roles');
-//end
-//manage user department
-Route::any('manage_user_department','SystemSetup@manageuserdepartment')->name('manage_user_department');
-Route::any('add_user_department','SystemSetup@adduserdepartment')->name('add_user_department');
-Route::any('edit_user_department','SystemSetup@edituserdepartment')->name('edit_user_department');
-//end
-//advocate targets
-Route::any('advocates_target','SystemSetup@advocatestarget')->name('advocates_target');
-Route::any('add_new_entry','SystemSetup@addnew')->name('add_new_entry');
-Route::any('edit_advocate_target','SystemSetup@editadvocatetarget')->name('edit_advocate_target');
-Route::any('advocates_target_2021','SystemSetup@advocatestarget2021')->name('advocates_target_2021');
-Route::any('advocates_target_2022','SystemSetup@advocatestarget2022')->name('advocates_target_2022');
-Route::any('advocates_target_2023','SystemSetup@advocatestarget2023')->name('advocates_target_2023');
-Route::any('advocates_target_2024','SystemSetup@advocatestarget2024')->name('advocates_target_2024');
-Route::any('advocates_target_2025','SystemSetup@advocatestarget2025')->name('advocates_target_2025');
-Route::any('advocates_target_2026','SystemSetup@advocatestarget2026')->name('advocates_target_2026');
-//end
+
 //OTHER SETTINGS
 //database backups
 Route::any('database_backup','SystemSetup@databasebackup')->name('database_backup');
@@ -883,6 +843,51 @@ Route::any('useful_links','SystemSetup@usefullinks')->name('useful_links');
 Route::any('drn_fee_notes','clientinvoicing@drnfee')->name('drn_fee_notes');
 Route::any('new_drn_fee_notes','clientinvoicing@newdrnfee')->name('new_drn_fee_notes');
 
+
+//user management
+Route::any('user_management','UserManagement@index')->name('user_management');
+//USER details
+//manage user accounts
+Route::any('manage_user_account','UserManagement@manageuseraccount')->name('manage_user_account');
+Route::any('reg_new_user','UserManagement@regnewuser')->name('reg_new_user');
+Route::any('user_edit','UserManagement@useredit')->name('user_edit');
+Route::any('user_attachments','UserManagement@attachments')->name('user_attachments');
+Route::any('user_comments','UserManagement@comments')->name('user_comments');
+//end
+//change password
+Route::any('change_user_password','UserManagement@changepassword')->name('change_user_password');
+//end
+//manage user group
+Route::any('manage_user_group','UserManagement@manageusergrp')->name('manage_user_group');
+Route::any('add_new_user_grp','UserManagement@addnewusergrp')->name('add_new_user_grp');
+Route::any('edit_new_user_grp','UserManagement@editnewusergrp')->name('edit_new_user_grp');
+//end
+//view roles per user
+Route::any('view_roles_per_user','UserManagement@rolesperuser')->name('view_roles_per_user');
+Route::any('edit_view_roles','UserManagement@editviewroles')->name('edit_view_roles');
+//end
+//manage user roles
+Route::any('manage_user_roles','UserManagement@manageuserroles')->name('manage_user_roles');
+Route::any('add_user_roles','UserManagement@adduserrole')->name('add_user_roles');
+Route::any('edit_user_roles','UserManagement@edituserrole')->name('edit_user_roles');
+//end
+//manage user department
+Route::any('manage_user_department','UserManagement@manageuserdepartment')->name('manage_user_department');
+Route::any('add_user_department','UserManagement@adduserdepartment')->name('add_user_department');
+Route::any('edit_user_department','UserManagement@edituserdepartment')->name('edit_user_department');
+//end
+//advocate targets
+Route::any('advocates_target','UserManagement@advocatestarget')->name('advocates_target');
+Route::any('add_new_entry','UserManagement@addnew')->name('add_new_entry');
+Route::any('edit_advocate_target','UserManagement@editadvocatetarget')->name('edit_advocate_target');
+Route::any('advocates_target_2021','UserManagement@advocatestarget2021')->name('advocates_target_2021');
+Route::any('advocates_target_2022','UserManagement@advocatestarget2022')->name('advocates_target_2022');
+Route::any('advocates_target_2023','UserManagement@advocatestarget2023')->name('advocates_target_2023');
+Route::any('advocates_target_2024','UserManagement@advocatestarget2024')->name('advocates_target_2024');
+Route::any('advocates_target_2025','UserManagement@advocatestarget2025')->name('advocates_target_2025');
+Route::any('advocates_target_2026','UserManagement@advocatestarget2026')->name('advocates_target_2026');
+//end
+//end
 //---------------------RESHMA--------------------------------------
 
 
