@@ -29,7 +29,7 @@
     <!-- <h2 class="text-center">Configuration Details</h2><br> -->
     <button class="btn btn-primary float-left"
 
-style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">User Accounts</button><br><br><br>
+style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;">User Account</button><br><br><br>
     
   
   <div class="row sm">

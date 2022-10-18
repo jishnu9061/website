@@ -749,6 +749,7 @@ Route::any('/delete_desc_sel/{id}','SystemSetup@deletedescsel')->name('delete_de
 
 //end
 //tax chart
+Route::any('tax_chart_main','SystemSetup@taxchartmain')->name('tax_chart_main');
 Route::any('tax_chart','SystemSetup@taxchart')->name('tax_chart');
 Route::any('add_tax_chart','SystemSetup@addtaxchart')->name('add_tax_chart');
 Route::any('edit_tax_chart/{id}','SystemSetup@edittaxchart')->name('edit_tax_chart');
@@ -796,7 +797,47 @@ Route::any('currency_list','SystemSetup@currencylist')->name('currency_list');
 Route::any('add_currency','SystemSetup@addcurrency')->name('add_currency');
 Route::any('edit_currency','SystemSetup@editcurrency')->name('edit_currency');
 //end
-
+//USER details
+//manage user accounts
+Route::any('manage_user_account','SystemSetup@manageuseraccount')->name('manage_user_account');
+Route::any('reg_new_user','SystemSetup@regnewuser')->name('reg_new_user');
+Route::any('user_edit','SystemSetup@useredit')->name('user_edit');
+Route::any('user_attachments','SystemSetup@attachments')->name('user_attachments');
+Route::any('user_comments','SystemSetup@comments')->name('user_comments');
+//end
+//change password
+Route::any('change_user_password','SystemSetup@changepassword')->name('change_user_password');
+//end
+//manage user group
+Route::any('manage_user_group','SystemSetup@manageusergrp')->name('manage_user_group');
+Route::any('add_new_user_grp','SystemSetup@addnewusergrp')->name('add_new_user_grp');
+Route::any('edit_new_user_grp','SystemSetup@editnewusergrp')->name('edit_new_user_grp');
+//end
+//view roles per user
+Route::any('view_roles_per_user','SystemSetup@rolesperuser')->name('view_roles_per_user');
+Route::any('edit_view_roles','SystemSetup@editviewroles')->name('edit_view_roles');
+//end
+//manage user roles
+Route::any('manage_user_roles','SystemSetup@manageuserroles')->name('manage_user_roles');
+Route::any('add_user_roles','SystemSetup@adduserrole')->name('add_user_roles');
+Route::any('edit_user_roles','SystemSetup@edituserrole')->name('edit_user_roles');
+//end
+//manage user department
+Route::any('manage_user_department','SystemSetup@manageuserdepartment')->name('manage_user_department');
+Route::any('add_user_department','SystemSetup@adduserdepartment')->name('add_user_department');
+Route::any('edit_user_department','SystemSetup@edituserdepartment')->name('edit_user_department');
+//end
+//advocate targets
+Route::any('advocates_target','SystemSetup@advocatestarget')->name('advocates_target');
+Route::any('add_new_entry','SystemSetup@addnew')->name('add_new_entry');
+Route::any('edit_advocate_target','SystemSetup@editadvocatetarget')->name('edit_advocate_target');
+Route::any('advocates_target_2021','SystemSetup@advocatestarget2021')->name('advocates_target_2021');
+Route::any('advocates_target_2022','SystemSetup@advocatestarget2022')->name('advocates_target_2022');
+Route::any('advocates_target_2023','SystemSetup@advocatestarget2023')->name('advocates_target_2023');
+Route::any('advocates_target_2024','SystemSetup@advocatestarget2024')->name('advocates_target_2024');
+Route::any('advocates_target_2025','SystemSetup@advocatestarget2025')->name('advocates_target_2025');
+Route::any('advocates_target_2026','SystemSetup@advocatestarget2026')->name('advocates_target_2026');
+//end
 //OTHER SETTINGS
 //database backups
 Route::any('database_backup','SystemSetup@databasebackup')->name('database_backup');
@@ -836,13 +877,12 @@ Route::any('menu_access_configuration','SystemSetup@menuaccess')->name('menu_acc
 //end
 //usefullinks
 Route::any('useful_links','SystemSetup@usefullinks')->name('useful_links');
-// end system setup
+
 
 //client invoicing
 // fee_notes/drn/interim notes
 Route::any('drn_fee_notes','clientinvoicing@drnfee')->name('drn_fee_notes');
 Route::any('new_drn_fee_notes','clientinvoicing@newdrnfee')->name('new_drn_fee_notes');
-//end
 
 //user management
 Route::any('user_management','UserManagement@index')->name('user_management');
@@ -889,6 +929,9 @@ Route::any('advocates_target_2026','UserManagement@advocatestarget2026')->name('
 
 //end user management
 //---------------------RESHMA--------------------------------------
+
+
+
 
 
 //Mugunthan
@@ -954,14 +997,12 @@ Route::any('edit-registration','ClientManagement@editRegistration')->name('edit-
 //end registration
 //communication
 Route::any('communication-list','ClientManagement@listCommunication')->name('communication-list');
-Route::any('index-communication','ClientManagement@indexCommunication')->name('index-communication');
 Route::any('add-communication','ClientManagement@addCommunication')->name('add-communication');
-Route::any('edit-communication/{id}','ClientManagement@editCommunication')->name('edit-communication');
+Route::any('edit-communication','ClientManagement@editCommunication')->name('edit-communication');
 //end communication
 //search list
 Route::any('search-list','ClientManagement@listSearch')->name('search-list');
 Route::any('register-client','ClientManagement@registerClient')->name('register-client');
-Route::any('add-register','ClientManagement@addRegister')->name('add-register');
 //end search list
 
 
