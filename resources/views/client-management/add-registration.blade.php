@@ -49,7 +49,7 @@
                             <input type="text" class="form-control" name="name" id="username" value=""
                                 placeholder="Customer name" required>
                             <div class="invalid-feedback" style="width: 100%;">
-                                Date is required.
+                            Customer Name is required.
                             </div>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                             <input type="text" class="form-control" name="Code" id="username" value=""
                                 placeholder="Postal Code" required>
                             <div class="invalid-feedback" style="width: 100%;">
-                                Date is required.
+                            Postal Code is required.
                             </div>
                         </div>
                     </div>
@@ -75,7 +75,7 @@
                             <input type="text" class="form-control" name="town" id="username" value=""
                                 placeholder="Town" required>
                             <div class="invalid-feedback" style="width: 100%;">
-                                Date is required.
+                            Town is required.
                             </div>
                         </div>
                     </div>
@@ -104,7 +104,7 @@
                             <input type="text" class="form-control" name="telephone" id="username" value=""
                                 placeholder="Telephone" required>
                             <div class="invalid-feedback" style="width: 100%;">
-                                Date is required.
+                            Telephone No is required.
                             </div>
                         </div>
                     </div>
@@ -117,7 +117,7 @@
                             <input type="text" class="form-control" name="email" id="username" value=""
                                 placeholder="Email" required>
                             <div class="invalid-feedback" style="width: 100%;">
-                                Date is required.
+                            Email Address is required.
                             </div>
                         </div>
                     </div>
@@ -125,7 +125,7 @@
             </div>
             <br>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="mb-1">
                         <label for="username">Mobile No</label>
                         <div class="input-group">
@@ -133,12 +133,12 @@
                             <input type="text" class="form-control" name="mobile" id="age" value=""
                                 placeholder="Mobile No" min="0" max="99">
                             <div class="invalid-feedback" style="width: 100%;">
-                                Telephone No is required.
+                            Mobile No is required.
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="mb-1">
                         <label for="username">Web site</label>
                         <div class="input-group">
@@ -146,7 +146,20 @@
                             <input type="text" class="form-control" name="website" value="" id="confirm_password"
                                 placeholder="Web Site">
                             <div class="invalid-feedback" style="width: 100%;">
-                                others is required.
+                            Web site is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-1">
+                        <label for="username">Registration Date</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="date" class="form-control" name="Date" value="" id="confirm_password"
+                                placeholder="Web Site">
+                            <div class="invalid-feedback" style="width: 100%;">
+                            Registration Date
                             </div>
                         </div>
                     </div>
@@ -160,7 +173,7 @@
                         <div class="input-group">
                             <textarea class="form-control" id="form7Example7" rows="2"></textarea>
                             <div class="invalid-feedback" style="width: 100%;">
-                                Action Plan is required.
+                          
                             </div>
                         </div>
                     </div>
@@ -171,7 +184,7 @@
                         <div class="input-group">
                             <textarea class="form-control" id="form7Example7" rows="2"></textarea>
                             <div class="invalid-feedback" style="width: 100%;">
-                                Complaint Description is required.
+                               
                             </div>
                         </div>
                     </div>

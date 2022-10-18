@@ -272,18 +272,92 @@ class ClientManagement extends Controller
     //complaint
 
     public function complaintList(){
-        return view('client-management.complaint-list');
+        $complaint_list = DB::table('cra_complaint_register')->get();
+        return view('client-management.complaint-list',compact('complaint_list'));
     }
 
 
 
-    public function addComplaint(){
+    public function createComplaint(){
         return view('client-management.add-complaint');
     }
 
+    public function addComplaint(Request $Request){
 
-    public function editComplaint(){
-        return view('client-management.edit-complaint');
+        $date = $Request['date'];
+        $client_type = $Request['type'];
+        $files = $Request['files'];
+        $customer_name = $Request['name'];
+        $staff_handling = $Request['Staff'];
+        $complaint_about = $Request['Complaint'];
+        $telephone_no = $Request['Telephone'];
+        $email = $Request['email'];
+        $others = $Request['Others'];
+        $action_plan = $Request['plan'];
+        $complaint_description = $Request['Description'];
+
+        DB::table('cra_complaint_register')->insert([
+            'date' =>  $date,
+            'client_type' =>  $client_type,
+            'files' => $files,
+            'customer_name' =>$customer_name,
+            'staff_handling' => $staff_handling,
+            'complaint_about' =>  $complaint_about,
+            'telephone_no' =>  $telephone_no,
+            'email' =>   $email,
+            'others' =>   $others ,
+            'action_plan' => $action_plan,
+            'complaint_description' => $complaint_description,
+        ]);
+
+        return redirect('/complaint-list');
+    }
+
+
+    public function editComplaint($id){
+        $edit_complaint = DB::table('cra_complaint_register')->where('id',$id)->first();
+        return view('client-management.edit-complaint',compact('edit_complaint','id'));
+    }
+
+    public function updateComplaint(Request $Request){   
+        $id   = $Request['id'];
+        $date = $Request['date'];
+        $client_type = $Request['type'];
+        $files = $Request['files'];
+        $customer_name = $Request['name'];
+        $staff_handling = $Request['Staff'];
+        $complaint_about = $Request['Complaint'];
+        $telephone_no = $Request['Telephone'];
+        $email = $Request['email'];
+        $others = $Request['Others'];
+        $action_plan = $Request['plan'];
+        $complaint_description = $Request['Description'];
+
+        DB::table('cra_complaint_register')->where('id',$id)->update([
+            'date' =>  $date,
+            'client_type' =>  $client_type,
+            'files' => $files,
+            'customer_name' =>$customer_name,
+            'staff_handling' => $staff_handling,
+            'complaint_about' =>  $complaint_about,
+            'telephone_no' =>  $telephone_no,
+            'email' =>   $email,
+            'others' =>   $others ,
+            'action_plan' => $action_plan,
+            'complaint_description' => $complaint_description,
+        ]);
+
+        return redirect('/complaint-list');
+    }
+
+    public function viewComplaint($id){
+        $view_complaint = DB::table('cra_complaint_register')->where('id',$id)->first();
+        return view('client-management.view-complaint',compact('view_complaint','id'));
+    }
+
+    public function deleteComplaint($id){
+        $delete_complaint = DB::table('cra_complaint_register')->where('id',$id)->delete();
+        return redirect('/complaint-list');
     }
 
     //end complaint

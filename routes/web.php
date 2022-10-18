@@ -922,8 +922,12 @@ Route::any('/delete-pickup/{id}','ClientManagement@deletePickup')->name('delete-
 //Client-Pickup
 //complaint
 Route::any('complaint-list','ClientManagement@complaintList')->name('complaint-list');
+Route::any('create-Complaint','ClientManagement@createComplaint')->name('create-Complaint');
 Route::any('add-Complaint','ClientManagement@addComplaint')->name('add-Complaint');
-Route::any('edit_complaint','ClientManagement@editComplaint')->name('edit-Complaint');
+Route::any('edit_complaint/{id}','ClientManagement@editComplaint')->name('edit-Complaint');
+Route::any('update-Complaint','ClientManagement@updateComplaint')->name('update-Complaint');
+Route::any('view-Complaint/{id}','ClientManagement@viewComplaint')->name('view-Complaint');
+Route::any('delete-Complaint/{id}','ClientManagement@deleteComplaint')->name('delete-Complaint');
 //end complaint
 
 //Follow Up
