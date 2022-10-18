@@ -23,7 +23,7 @@
         </div>
         <br>
         <div >
-        <a href="{{url('add-follow')}}"><button type="button" class="btn btn-primary complaint_btn" > Add Follow Up</button></a>
+        <a href="{{url('create-follow')}}"><button type="button" class="btn btn-primary complaint_btn" > Add Follow Up</button></a>
         </div>
        
         
@@ -49,20 +49,22 @@
                     </tr>
                 </thead>
                 <tbody>
+                        @foreach( $followup as $list)
                         <tr id="data">
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td><a href="{{url('edit-follow')}}"><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i></a>
-                            <a href=""><i  style="color:black;" class="fa fa-trash" aria-hidden="true"></i></td>
+                            <td  scope="row" class="text-center" id="medicine_name_1">{{$list->id}}</td>
+                            <td  scope="row" class="text-center" id="medicine_name_1">{{$list->followup_date}}</td>
+                            <td  scope="row" class="text-center" id="medicine_name_1">{{$list->followup_type}}</td>
+                            <td  scope="row" class="text-center" id="medicine_name_1">{{$list->customer}}</td>
+                            <td  scope="row" class="text-center" id="medicine_name_1">{{$list->description}}</td>
+                            <td  scope="row" class="text-center" id="medicine_name_1">{{$list->next_bringup_date}}</td>
+                            <td  scope="row" class="text-center" id="medicine_name_1">{{$list->alert_period}}</td>
+                            <td  scope="row" class="text-center" id="medicine_name_1">{{$list->staff_responsible}}</td>
+                            <td  scope="row" class="text-center" id="medicine_name_1">{{$list->registered_by}}</td>
+                            <td><a href="{{url('edit-follow',$list->id)}}"><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i></a>
+                            <a href="{{url('delete-follow',$list->id)}}"><i  style="color:black;" class="fa fa-trash" aria-hidden="true"></i></td>
 
                         </tr>
+                        @endforeach
                 </tbody>
             </table>
            
