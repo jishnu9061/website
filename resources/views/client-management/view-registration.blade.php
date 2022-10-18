@@ -22,7 +22,7 @@
         </div>
 <br>
         <div>
-            <a href="{{url('add-registration')}}"><button type="button"
+            <a href="{{url('create-registration')}}"><button type="button"
                     class="btn btn-primary complaint_btn btn ">Register Customer</button></a>
             <div id="mydatatable_filter" class="dataTables_filter">
                 <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
@@ -49,19 +49,22 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach($view_registration as $view)
                     <tr id="data">
-                        <td scope="row" class="text-center" id="medicine_name_1"></td>
-                        <td scope="row" class="text-center" id="medicine_name_1"></td>
-                        <td scope="row" class="text-center" id="medicine_name_1"></td>
-                        <td scope="row" class="text-center" id="medicine_name_1"></td>
-                        <td scope="row" class="text-center" id="medicine_name_1"></td>
-                        <td scope="row" class="text-center" id="medicine_name_1"></td>
-                        <td scope="row" class="text-center"><a href="{{url('edit-registration')}}"><i
+                        <td scope="row" class="text-center" id="medicine_name_1">{{$view->id}}</td>
+                        <td scope="row" class="text-center" id="medicine_name_1">{{$view->customer_name}}</td>
+                        <td scope="row" class="text-center" id="medicine_name_1">{{$view->customer_address}}</td>
+                        <td scope="row" class="text-center" id="medicine_name_1">E:<b style='color:blue;'>{{$view->email}}</b><br>
+                            W:<b style='color:blue;'>{{$view->web_site}}</b></td>
+                        <td scope="row" class="text-center" id="medicine_name_1">{{$view->physical_address}}</td>
+                        <td scope="row" class="text-center" id="medicine_name_1">{{$view->registration_date}}</td>
+                        <td scope="row" class="text-center"><a href="{{url('edit-registration',$view->id)}}"><i
                                     style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
                                 <input type="hidden" value="" id="medicine_id_hidden" class="applicate"
                                     name="supplier_id_hidden">
 
                     </tr>
+                    @endforeach
                 </tbody>
 
             </table>

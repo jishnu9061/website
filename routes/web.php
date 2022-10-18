@@ -980,8 +980,11 @@ Route::any('delete-Complaint/{id}','ClientManagement@deleteComplaint')->name('de
 
 //Follow Up
 Route::any('follow-up','ClientManagement@followup')->name('follow-up');
-Route::any('add-follow','ClientManagement@addFollow')->name('add-follow');
-Route::any('edit-follow','ClientManagement@editFollow')->name('edit-follow');
+Route::any('create-follow','ClientManagement@createFollow')->name('create-follow');
+Route::any('add-follow','ClientManagement@addFollowup')->name('add-follow');
+Route::any('edit-follow/{id}','ClientManagement@editFollow')->name('edit-follow');
+Route::any('update-follow','ClientManagement@updateFollow')->name('update-follow');
+Route::any('delete-follow/{id}','ClientManagement@deleteFollow')->name('delete-follow');
 //end Follow Up
 
 //service
@@ -996,8 +999,10 @@ Route::any('edit-Quotation','ClientManagement@editQuotation')->name('edit-Quotat
 //end Quotation
 //Registration
 Route::any('view-registration','ClientManagement@viewRegistration')->name('view-registration');
+Route::any('create-registration','ClientManagement@createRegistration')->name('create-registration');
 Route::any('add-registration','ClientManagement@addRegistration')->name('add-registration');
-Route::any('edit-registration','ClientManagement@editRegistration')->name('edit-registration');
+Route::any('edit-registration/{id}','ClientManagement@editRegistration')->name('edit-registration');
+Route::any('update-registration','ClientManagement@updateRegistration')->name('update-registration');
 //end registration
 //communication
 Route::any('communication-list','ClientManagement@listCommunication')->name('communication-list');
