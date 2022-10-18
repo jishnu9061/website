@@ -269,22 +269,98 @@ class ClientManagement extends Controller
 
     //end pickup
 
+    //complaint
 
     public function complaintList(){
-        return view('client-management.complaint-list');
+        $complaint_list = DB::table('cra_complaint_register')->get();
+        return view('client-management.complaint-list',compact('complaint_list'));
     }
 
 
 
-    public function addComplaint(){
+    public function createComplaint(){
         return view('client-management.add-complaint');
     }
 
+    public function addComplaint(Request $Request){
 
-    public function editComplaint(){
-        return view('client-management.edit-complaint');
+        $date = $Request['date'];
+        $client_type = $Request['type'];
+        $files = $Request['files'];
+        $customer_name = $Request['name'];
+        $staff_handling = $Request['Staff'];
+        $complaint_about = $Request['Complaint'];
+        $telephone_no = $Request['Telephone'];
+        $email = $Request['email'];
+        $others = $Request['Others'];
+        $action_plan = $Request['plan'];
+        $complaint_description = $Request['Description'];
+
+        DB::table('cra_complaint_register')->insert([
+            'date' =>  $date,
+            'client_type' =>  $client_type,
+            'files' => $files,
+            'customer_name' =>$customer_name,
+            'staff_handling' => $staff_handling,
+            'complaint_about' =>  $complaint_about,
+            'telephone_no' =>  $telephone_no,
+            'email' =>   $email,
+            'others' =>   $others ,
+            'action_plan' => $action_plan,
+            'complaint_description' => $complaint_description,
+        ]);
+
+        return redirect('/complaint-list');
     }
 
+
+    public function editComplaint($id){
+        $edit_complaint = DB::table('cra_complaint_register')->where('id',$id)->first();
+        return view('client-management.edit-complaint',compact('edit_complaint','id'));
+    }
+
+    public function updateComplaint(Request $Request){   
+        $id   = $Request['id'];
+        $date = $Request['date'];
+        $client_type = $Request['type'];
+        $files = $Request['files'];
+        $customer_name = $Request['name'];
+        $staff_handling = $Request['Staff'];
+        $complaint_about = $Request['Complaint'];
+        $telephone_no = $Request['Telephone'];
+        $email = $Request['email'];
+        $others = $Request['Others'];
+        $action_plan = $Request['plan'];
+        $complaint_description = $Request['Description'];
+
+        DB::table('cra_complaint_register')->where('id',$id)->update([
+            'date' =>  $date,
+            'client_type' =>  $client_type,
+            'files' => $files,
+            'customer_name' =>$customer_name,
+            'staff_handling' => $staff_handling,
+            'complaint_about' =>  $complaint_about,
+            'telephone_no' =>  $telephone_no,
+            'email' =>   $email,
+            'others' =>   $others ,
+            'action_plan' => $action_plan,
+            'complaint_description' => $complaint_description,
+        ]);
+
+        return redirect('/complaint-list');
+    }
+
+    public function viewComplaint($id){
+        $view_complaint = DB::table('cra_complaint_register')->where('id',$id)->first();
+        return view('client-management.view-complaint',compact('view_complaint','id'));
+    }
+
+    public function deleteComplaint($id){
+        $delete_complaint = DB::table('cra_complaint_register')->where('id',$id)->delete();
+        return redirect('/complaint-list');
+    }
+
+    //end complaint
 
     public function followup(){
         return view('client-management.follow-up');
@@ -412,6 +488,52 @@ class ClientManagement extends Controller
     public function editCommunication($id){
         $edit = DB::table('cra_conversations')->where('id',$id)->first();
         return view('client-management.edit-communication',compact('edit','id'));
+    }
+
+    public function updateCommunication(Request $Request){
+
+        $id                 = $Request['id'];
+        $communication_date = $Request['date'];
+        $client = $Request['Client'];
+        $file = $Request['File'];
+        $customer = $Request['Customer'];
+        $telephone_no = $Request['telephone'];
+        $email = $Request['Email'];
+        $communication_source = $Request['Sources'];
+        $mode_of_communication = $Request['Communication'];
+        $communicated = $Request['Communicated'];
+        $duration = $Request['Duration'];
+        $person_handling = $Request['Handling'];
+        $time = $Request['Timer'];
+        $others = $Request['Others'];
+        $communicated_description = $Request['Description'];
+        $action_plan = $Request['Action'];
+
+        
+        DB::table('cra_conversations')->where('id',$id)->update([
+            'communication_date' => $communication_date,
+            'client' =>   $client,
+            'file' => $file,
+            'customer' =>$customer,
+            'telephone_no' => $telephone_no,
+            'email' =>  $email,
+            'communication_source' =>  $communication_source,
+            'mode_of_communication' =>  $mode_of_communication,
+            'communicated' => $communicated ,
+            'duration' => $duration,
+            'person_handling' =>  $person_handling,
+            'time' =>  $time,
+            'others' => $others ,
+            'communicated_description' =>  $communicated_description,
+            'action_plan' =>  $action_plan,
+        ]);
+
+        return redirect('/communication-list');
+    }
+
+    public function deleteCommunication($id){
+        $del_communication = DB::table('cra_conversations')->where('id',$id)->delete();
+        return redirect('/communication-list');
     }
 
     //end communication

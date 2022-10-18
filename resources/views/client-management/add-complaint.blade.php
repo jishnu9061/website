@@ -15,7 +15,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <form method="post" action="" id="form">
+            <form method="post" action="{{url('add-Complaint')}}" id="form">
                 @csrf
                 <div class="row">
                     <div class="col-md-4">
@@ -23,7 +23,7 @@
                             <label for="username">Date</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="number" id="username" value="">
+                                <input type="date" class="form-control" name="date" id="username" value="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -37,9 +37,9 @@
                                 <div class="input-group-prepend">
                                 </div>
                                 <select name="type" id="cars" >
-                                    <option value="volvo">Select</option>
-                                    <option value="volvo">Corporate</option>
-                                    <option value="volvo">Individual</option>
+                                    <option >Select</option>
+                                    <option >Corporate</option>
+                                    <option >Individual</option>
                                 </select>
                             </div>
                         </div>
@@ -51,10 +51,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="citizen" id="cars">
-                                    <option value="volvo">Select</option>
-                                    <option value="volvo">File 1</option>
-                                    <option value="volvo">File 2</option>
+                                <select name="files" id="cars">
+                                    <option >Select</option>
+                                    <option >File 1</option>
+                                    <option >File 2</option>
                                 </select>
                             </div>
                         </div>
@@ -67,7 +67,7 @@
                             <label for="username">Customer Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="corporation" id="age" value="" min="0" max="99">
+                                <input type="text" class="form-control" name="name" id="age" value="" min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
                                 </div>
@@ -81,12 +81,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo">Select</option>
-                                    <option value="volvo">Staff 1</option>
-                                    <option value="volvo">Staff 2</option>
-                                    <option value="volvo">Staff 3</option>
-                                    <option value="volvo">Staff 4</option>
+                                <select name="Staff" id="cars">
+                                    <option >Select</option>
+                                    <option >Staff 1</option>
+                                    <option >Staff 2</option>
+                                    <option >Staff 3</option>
+                                    <option >Staff 4</option>
                                 </select>
                             </div>
                         </div>
@@ -98,10 +98,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo">Select</option>
-                                    <option value="volvo">Person</option>
-                                    <option value="volvo">Company</option>
+                                <select name="Complaint" id="cars">
+                                    <option >Select</option>
+                                    <option >Person</option>
+                                    <option >Company</option>
                                 </select>
                             </div>
                         </div>
@@ -114,7 +114,7 @@
                             <label for="username">Telephone No</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="faxno" id="age" value=""
+                                <input type="text" class="form-control" name="Telephone" id="age" value=""
                                  min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
@@ -139,7 +139,7 @@
                             <label for="username">Others</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="conpassword" value=""
+                                <input type="text" class="form-control" name="Others" value=""
                                     id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
@@ -154,7 +154,7 @@
                         <div class="mb-1">
                             <label for="username">Action Plan</label>
                             <div class="input-group">
-                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="plan"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Action Plan is required.
                                 </div>
@@ -165,7 +165,7 @@
                         <div class="mb-1">
                             <label for="username">Complaint Description</label>
                             <div class="input-group">
-                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="Description"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Complaint Description is required.
                                 </div>
@@ -183,8 +183,8 @@
                         </div>
                         <div class="col-sm">
                             <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Close</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Save</button>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Submit</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
                         </div>
                     </div>
                 </div>
