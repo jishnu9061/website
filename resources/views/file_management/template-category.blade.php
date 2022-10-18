@@ -193,9 +193,9 @@
 
                                 </div>
                                 <select name="doc_type" id="cars">
-                                    <option value="volvo">type 1</option>
-                                    <option value="volvo">type 2</option>
-                                    <option value="volvo">type 3</option>
+                                <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required

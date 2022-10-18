@@ -31,7 +31,7 @@
 
         <!-- <a href="{{url('add-incomming-letters')}}"><button class="btn btn-primary add-btn"
                 style="width: 20%;">Add Incomming Letter</button></a> -->
-                {{-- <a href="{{('')}}"><button class="btn btn-primary">Add Incomming Letter</button></a> --}}
+                {{-- <a href="{{('add-corporate')}}"><button class="btn btn-primary">Add Incomming Letter</button></a> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Incomming Letter</button>
         <br>
 
@@ -83,9 +83,8 @@
 
                 </table>
 
-               
-                        <!-- The Modal -->
-                        <div class="modal fade" id="myModal">
+               <!-- The Modal -->
+               <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content" style="background-color:#d6ba8a">
 
@@ -98,10 +97,12 @@
                                     <!-- Modal body -->
                                     <div class="modal-body" style="background-color:white">
                                         <div class="container">
-                                            <form method="post" action="{{ url('') }}"
+                                            <form method="post" action="{{ url('add-corporate') }}"
                                                 enctype="multipart/form-data">
-                                        @csrf
-                                        <div class="row">
+                                                @csrf
+
+
+                                         <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Letter Date</label>
@@ -109,7 +110,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="date" id="confirm_password" required>
+                                <input type="date" class="form-control" name="letter_date" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -123,9 +124,10 @@
 
                                 </div>
                                 <select name="client" id="cars">
-                                    <option> client 1</option>
-                                    <option> client 2</option>
-                                    <option> client 3</option>
+                                <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
+
                                 </select>
                             </div>
                         </div>
@@ -138,9 +140,10 @@
 
                                 </div>
                                 <select name="file" id="cars">
-                                    <option>file 1</option>
-                                    <option>file 2</option>
-                                    <option>file 3</option>
+                                <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
+
 
                                 </select>
                             </div>
@@ -157,7 +160,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="received" id="confirm_password" required>
+                                <input type="text" class="form-control" name="received_form" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
                                 </div>
@@ -174,10 +177,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="doc_category" id="cars">
-                                    <option >category 1</option>
-                                    <option >category 2</option>
-                                    <option >category 3</option>
+                                <select name="category" id="cars">
+                                <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                                 </select>
                             </div>
                         </div>
@@ -203,11 +206,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="delivered_by" id="cars">
-                                    <option >demo 1</option>
-                                    <option >demo 2</option>
-                                     <option >demo 3</option>
-
+                                <select name="delivered" id="cars">
+                                <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                                 </select>
                             </div>
                         </div>
@@ -231,10 +233,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="delivered_to" id="cars">
-                                    <option>demo 1</option>
-                                    <option>demo 2</option>
-                                    <option>demo 3</option>
+                                <select name="delivered" id="cars">
+                                <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                                 </select>
                             </div>
                         </div>
@@ -243,7 +245,8 @@
                 </div>
 
 
-       
+     >
+    <br>
 
 
 
@@ -256,10 +259,9 @@
 
                     </div>
                     <select name="viewer" id="cars">
-                        <option>demo 1</option>
-                        <option>demo 2</option>
-                         <option>demo 3</option>
-
+                    <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                     </select>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
@@ -284,10 +286,15 @@
             </div>
 
         </div>
- </div>
+
+
+
+
+
+    </div>
     <br>
     
-    <div class="row">
+    <!-- <div class="row">
                         <div class="col-sm">
 
                         </div>
@@ -297,58 +304,79 @@
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
-                            <button type="submit" class="btn btn-primary float:left" Style="width:45%;">Close</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
                         </div>
                     </div>
                 </div>
-            </form>
-        </div>
-    </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</tbody>
+</table>
+</div>
+</div> -->
+<br> <div class="row">
+                       <div class="col-sm">
+
+                       </div>
+                       <div class="col-sm">
+
+                       </div>
+                       <div class="col-sm">
+                           <br>
+                           <button type="submit" class="btn btn-primary float:right;" Style="width:60%;">Save</button>
+                           <button type="button" class="btn btn-primary float:right;" data-dismiss="modal">Cancel</button>
+                       </div>
+                   </div>
+               </div>
+           </form>
+       </div>
+   </div>
 </div>
 
 </div>
 <div class="modal" id="mymodal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-body">
-                    <form action="">
-                        <div>
-                            <input type="text" name="type" class="form-control" placeholder="Client Type">
-                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+   <div class="modal-dialog">
+       <div class="modal-content">
+           <div class="modal-header">
+               <div class="modal-body">
+                   <form action="">
+                       <div>
+                           <input type="text" name="type" class="form-control" placeholder="Client Type">
+                           <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                       </div>
+                   </form>
+               </div>
+           </div>
+       </div>
+   </div>
 </div>
 </div>
 <div class="modal" id="my">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-body">
-                    <form action="">
-                        <div>
-                            <input type="text" name="type" class="form-control" placeholder="Country">
-                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+   <div class="modal-dialog">
+       <div class="modal-content">
+           <div class="modal-header">
+               <div class="modal-body">
+                   <form action="">
+                       <div>
+                           <input type="text" name="type" class="form-control" placeholder="Country">
+                           <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                       </div>
+                   </form>
+               </div>
+           </div>
+       </div>
+   </div>
 </div>
 </div>
-
-            <br>
-            <!-- Supplier modal Edit End -->
-
-            <!-- Delete  confirmation Message -->
-
-            <!-- End delete confirmation message -->
-        </div>
         <script>
         function myFunction() {
             if (!confirm("Are you sure to delete this"))

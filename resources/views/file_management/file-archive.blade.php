@@ -88,7 +88,7 @@
 
                                     <!-- Modal Header -->
                                     <div class="modal-header" style="background-color:#d6ba8a">
-                                        <h2 class="text-center"><b>Add Corporate Client</b></h2>
+                                        <h2 class="text-center"><b>Add Box No</b></h2>
 
                                     </div>
 
@@ -109,9 +109,9 @@
 
                                 </div>
                                 <select name="country" id="cars">
-                                <option value="volvo"> type 1</option>
-                                    <option value="car"> type 2</option> 
-                                     <option value="bus"> type 3</option>
+                                <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required

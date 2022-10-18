@@ -60,7 +60,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="date" id="username" required>
+                                <input type="date" class="form-control" name="number" id="username" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -77,10 +77,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="client" id="cars">
-                                    <option >client 1</option>
-                                    <option >client 2</option>
-                                    <option >client 3</option>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
@@ -93,11 +91,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="file" id="cars">
-                                    <option >file 1</option>
-                                    <option >file 2</option>
-                                    <option >file 3</option>
-
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
@@ -116,12 +111,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="safe name" id="cars">
-                           <option >name 1</option>
-                           <option >name 2</option>
-                            <option >name 3</option>
-
-
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
@@ -134,7 +125,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="ref_no" id="age">
+                                <input type="text" class="form-control" name="incorporation" id="age">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
@@ -149,10 +140,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="approver" id="cars">
-                                    <option >approver 1</option>
-                                    <option >approver 2</option>
-                                    <option >approver 3</option>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
@@ -205,9 +194,7 @@
 
                         <td scope="row">
                             <select style="width:100%;">
-                                <option >select</option>
-                                <option >category 1</option>
-                                <option >category 2</option>
+                                <option value="volvo">select</option>
                             </select>
                         </td>
 
@@ -250,7 +237,7 @@
                         </div>
                         <div class="col-sm">
                             <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:50%;">Add Documents</button>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Add Documents</button>
                             <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
                         </div>
                     </div>

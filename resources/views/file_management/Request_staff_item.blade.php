@@ -33,11 +33,9 @@
         <!-- <a href="{{url('new_Request_staff_item')}}"><button class="btn btn-primary add-btn"
                 Style="width:200px;">Register
                 Safe Item</button></a> -->
-        {{-- <a href="{{('')}}"><button class="btn btn-primary">Register
-            Safe Item</button></a> --}}
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Register
-            Safe Item</button>
-
+        {{-- <a href="{{('add-corporate')}}"><button class="btn btn-primary">Register Safe Item</button></a> --}}
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Register Safe
+            Item</button>
         <br>
         <br>
         <div class="tab-content" id="myTabContent">
@@ -98,14 +96,9 @@
                                 <!-- Modal body -->
                                 <div class="modal-body" style="background-color:white">
                                     <div class="container">
-                                        <form method="post" action="{{ url('') }}" enctype="multipart/form-data">
-
-
+                                        <form method="post" action="{{ url('add-corporate') }}"
+                                            enctype="multipart/form-data">
                                             @csrf
-
-
-
-
                                             <div class="row">
 
 
@@ -136,9 +129,9 @@
 
                                                             </div>
                                                             <select name="client" id="cars">
-                                                                <option>client 1</option>
-                                                                 <option>client 2</option>
-                                                                <option>client  3</option>
+                                                            <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -152,17 +145,16 @@
 
                                                             </div>
                                                             <select name="file" id="cars">
-                                                            <option>file 1</option>
-                                                            <option>file 2</option>
-                                                            <option>file 3</option>
-                                                            
+                                                            <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                                                             </select>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                             </div>
-                              
+                                 
                                 <br>
                                 <div class="row">
 
@@ -174,12 +166,10 @@
                                                 <div class="input-group-prepend">
 
                                                 </div>
-                                                <select name="instruction_to" id="cars">
-                                                <option>name 1</option>
-                                                <option>name 2</option>
-                                                <option>name 3</option>
-
-                                                   
+                                                <select name="send_instruction" id="cars">
+                                                <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -192,11 +182,9 @@
 
                                                 </div>
                                                 <select name="approver" id="cars">
-                                                <option>approver 1</option>
-                                                <option>approver 2</option>
-                                                <option>approver 3</option>
-
-                                                   
+                                                <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -205,73 +193,97 @@
 
                                 </div>
                                 <div id="test" style="height:20px;"></div>
-                         
+                            </div>
+                       
+     
+                <div>
+                    <div class="container">
+                    <br> <div class="row">
+                       <div class="col-sm">
 
+                       </div>
+                       <div class="col-sm">
 
-
-
-               
-    <div class="row">
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-                            <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:51%;">Requst Doc</button>
-                            <button type="submit" class="btn btn-primary float:left" Style="width:45%;">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
+                       </div>
+                       <div class="col-sm">
+                           <br>
+                           <button type="submit" class="btn btn-primary float:right;" Style="width:60%;">Request
+                                    Doc</button>
+                           <button type="button" class="btn btn-primary float:right;" data-dismiss="modal">Cancel</button>
+                       </div>
+                   </div>
+               </div>
+           </form>
+       </div>
+   </div>
 </div>
 
 </div>
 <div class="modal" id="mymodal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-body">
-                    <form action="">
-                        <div>
-                            <input type="text" name="type" class="form-control" placeholder="Client Type">
-                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+   <div class="modal-dialog">
+       <div class="modal-content">
+           <div class="modal-header">
+               <div class="modal-body">
+                   <form action="">
+                       <div>
+                           <input type="text" name="type" class="form-control" placeholder="Client Type">
+                           <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                       </div>
+                   </form>
+               </div>
+           </div>
+       </div>
+   </div>
 </div>
 </div>
 <div class="modal" id="my">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-body">
-                    <form action="">
-                        <div>
-                            <input type="text" name="type" class="form-control" placeholder="Country">
-                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+   <div class="modal-dialog">
+       <div class="modal-content">
+           <div class="modal-header">
+               <div class="modal-body">
+                   <form action="">
+                       <div>
+                           <input type="text" name="type" class="form-control" placeholder="Country">
+                           <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                       </div>
+                   </form>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+</div>
+
+                        <!-- <div class="row">
+                            <div class="col-sm">
+
+                            </div>
+                            <div class="col-sm">
+
+                            </div>
+                            <div class="col-sm">
+                                <br>
+                                <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Request
+                                    Doc</button>
+                                <button type="button" class="btn btn-primary float:left"
+                                    Style="width:45%;">Close</button>
+                            </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
+            </form>
+
+
+
         </div>
-    </div>
-</div>
-</div>
-    <br>
-    <!-- Supplier modal Edit End -->
 
-    <!-- Delete  confirmation Message -->
 
-    <!-- End delete confirmation message -->
+
+
+
     </div>
+    </div> -->
     <script>
     function myFunction() {
         if (!confirm("Are you sure to delete this"))
@@ -315,9 +327,11 @@
         var medicine_name = $(this).closest('#data').find('#medicine_name_1').val();
         var medicine_brand_name = $(this).closest('#data').find('#medicine_brand_name').val();
         var medicine_group = $(this).closest('#data').find('#medicine_group').val();
-        var medicicine_category_name = $(this).closest('#data').find('#medicine_category_name1').val();
+        var medicicine_category_name = $(this).closest('#data').find('#medicine_category_name1')
+            .val();
         var medicine_generic_name = $(this).closest('#data').find('#medicine_generic_name').val();
-        var medicine_manufactuure_name = $(this).closest('#data').find('#medicine_manufactuure_name').val();
+        var medicine_manufactuure_name = $(this).closest('#data').find(
+            '#medicine_manufactuure_name').val();
         var medicine_supplier_name = $(this).closest('#data').find('#medicine_supplier_name').val();
         var medicine_minimum_level = $(this).closest('#data').find('#medicine_minimum_level').val();
         var medicine_reorder_level = $(this).closest('#data').find('#medicine_reorder_level').val();

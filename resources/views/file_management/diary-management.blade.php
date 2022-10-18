@@ -109,9 +109,9 @@
 
                                 </div>
                                 <select name="event" id="cars">
-                                    <option value="volvo">type 1</option>
-                                    <option value="car">type 2</option>
-                                    <option value="bus">type 3</option>
+                                <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                                 </select>
                                 
                             </div>
@@ -142,9 +142,9 @@
 
                                 </div>
                                 <select name="room" id="cars">
-                                    <option value="volvo">room 1</option>
-                                    <option value="car">room 2</option>
-                                    <option value="bus">room 3</option>
+                                <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                                 </select>
 
                             </div>
@@ -259,9 +259,9 @@
 
                     </div>
                     <select name="event" id="cars">
-                        <option value="volvo">event 1</option>
-                        <option value="car">event 2</option>
-                        <option value="bus">event 3</option>
+                    <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                     </select>
                 </div>
             </div>
@@ -310,9 +310,9 @@
 
                     </div>
                     <select name="client" id="cars">
-                        <option value="2">client 1</option>
-                        <option value="3">client 2</option>
-                        <option value="4">client 3</option>
+                    <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                     </select>
                 </div>
             </div>
@@ -326,9 +326,9 @@
 
                     </div>
                     <select name="file" id="cars">
-                        <option value="volvo">file 1</option>
-                        <option value="car">file 2</option>
-                        <option value="bus">file 3</option>
+                    <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                     </select>
                     <div class="invalid-feedback" style="width: 100%;">
                         Incorporation is required
@@ -362,9 +362,9 @@
 
                     </div>
                     <select name="repetition" id="cars">
-                        <option value="volvo">demo 1</option>
-                        <option value="car">semo 2</option>
-                        <option value="bus">demo 3</option>
+                    <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                     </select>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
@@ -396,9 +396,9 @@
 
                     </div>
                     <select name="reminder" id="cars">
-                        <option value="volvo">demo</option>
-                        <option value="car">demo</option>
-                        <option value="bus">demo</option>
+                    <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                     </select>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
