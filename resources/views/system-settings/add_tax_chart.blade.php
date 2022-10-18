@@ -43,7 +43,7 @@
                             <label>Lower Limit:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="number"  id="" name="limit"value="" class="form-control" >
+                                <input type="text"  id="" name="limit"value="" class="form-control" >
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -55,7 +55,7 @@
                             <label>Upper Limit:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="number"  id="" name="ulimit"value=""class="form-control">
+                                <input type="text"  id="" name="ulimit"value=""class="form-control">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -69,7 +69,7 @@
                         <label >Rate(%):</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="number"  id="" name="rate"value=""class="form-control">
+                                <input type="text"  id="" name="rate"value=""class="form-control">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>

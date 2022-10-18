@@ -29,45 +29,61 @@
     </div>
     <br>
     <br>
+
     <div class="row">
         <div class="col-md-12">
-            <form method="post" action="" id="form">  
+            <form method="post" action="{{url('update_company_branch')}}" id="form">  
+               
+            <input type="hidden" name="id" value="{{$company_branch_details->id}}">
                 @csrf
+                <!-- <input type="text" class="form-control" name="number" id="username" value="{{$company_branch_details->id}}"> -->
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label >Branch No:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input  class="form-control" type="number"  id="bnum" name="bnum" value="">
+                                <input  class="form-control" type="text"  id="bnum" name="bnum"  value="{{$company_branch_details->branch_no}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label>Branch Code:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text"  id="bcode" name="bcodes" class="form-control" value="">
+                                <input type="text"  id="bcode" name="bcodes" class="form-control" value="{{$company_branch_details->branch_code}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
                             </div>
                         </div>
                      </div>
+                     <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Branch Name:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text"  id="bname" name="bname"class="form-control"  value="{{$company_branch_details->branch_name}}">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     </div>
 
 
                     <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
-                            <label for="username">Branch Name:</label>
+                            <label for="username">Postal Address:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text"  id="bname" name="bname"class="form-control"  value="">
+                                <textarea rows="4" cols="50" name="paddress" class="form-control" value="{{$company_branch_details->address}}" type="text"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -75,27 +91,26 @@
                         </div>
                     </div>
                     <br>
-                     <div class="col-md-6">
+                    <div class="col-md-6">
                         <div class="mb-1">
-                            <label for="username">Postal Address:</label>
+                            <label for="username">Physical Address:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input id="padd" name="padd" class="form-control" value="" >
+                                <textarea rows="4" cols="50" name="physicaladd" class="form-control"  value="{{$company_branch_details->physical_address}}" type="text"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
                             </div>
                         </div>
                     </div>
-               
             </div>
  <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                         <label for="username">Tel:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="number"  id="tel" name="tel" class="form-control"  value="">
+                                <input type="number"  id="tel" name="tel" class="form-control"  value="{{$company_branch_details->telephone}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -103,12 +118,24 @@
                         </div>
                     </div>
                     <br>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                         <label for="username">Mobile:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="number"  id="mobile" name="mobile" class="form-control"  value="">
+                                <input type="number"  id="mobile" name="mobile" class="form-control"  value="{{$company_branch_details->mobile}}">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Fax:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text"  id="fax" name="fax" class="form-control"  value="{{$company_branch_details->fax}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -117,52 +144,37 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Fax:</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text"  id="fax" name="fax" class="form-control"  value="">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                Required Field.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
+                <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Town:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" id="town" name="town" class="form-control" value="">
+                                <input type="text" id="town" name="town" class="form-control" value="{{$company_branch_details->town}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
                             </div>
                         </div>
                      </div>
-                    </div>
-
- <div class="row">
-                    <div class="col-md-6">
+                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Email:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="email"  id="email" name="email"class="form-control"  value="" >
+                                <input type="email"  id="email" name="email"class="form-control" value="{{$company_branch_details->email}}" >
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-md-6">
+                   
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Website:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" id="website" name="website" class="form-control" >
+                                <input type="text" id="website" name="website" class="form-control" value="{{$company_branch_details->website}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -170,21 +182,7 @@
                         </div>
                     </div>
                     </div>
-                     
- <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Physical Address:</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" id="phadd" name="phadd"  class="form-control"  value="" >
-                                <div class="invalid-feedback" style="width: 100%;">
-                                Required Field.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
   <div class="row">
                         <div class="col-sm">
 
@@ -194,7 +192,7 @@
                         </div>
                         <div class="col-sm">
                             <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
                             <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
                         </div>
                     </div>

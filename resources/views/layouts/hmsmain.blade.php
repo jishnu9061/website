@@ -401,6 +401,14 @@ color: #1D1D50
                                 </ul>
                                 </li>
 
+                                <li class="submenu-item  " style="list-style:none;">
+                                <a href="{{url('user_management')}}" class='sidebar-link'>
+                                    <i  class="fa-regular fa-user" id="icon"></i>
+                                            <span > User Management</span>
+                                        </a>
+                                </li>
+                                
+
                                 <li class="submenu-item has-sub " style="list-style:none;">
                                         <a id="sblm" href="{{url('client-index')}}" class='sidebar-link' >
                                         <i  class="fa fa-university" id="icon"></i>
@@ -428,8 +436,7 @@ color: #1D1D50
                                 @php
                                     $hr = array("addallowance", "addstaffs", "staffs","loans","payslip","attendance","attendanceview","payslipbulk","generatepayslip","managestaff");
                                 @endphp
-
-                                
+                              
 
                                 <li class="submenu-item " style="list-style:none;">
                                     <a href="{{url('system_setup')}}" class='sidebar-link'>
@@ -437,6 +444,8 @@ color: #1D1D50
                                             <span>System Setup</span>
                                     </a>
                             </li>
+                        
+
                                     <!-- <ul class="submenu">
 
                                     <li class="submenu-item ">

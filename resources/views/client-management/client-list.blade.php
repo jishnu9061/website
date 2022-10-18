@@ -65,7 +65,7 @@
                             <td><a href="{{url('delete-client',$list_client->id)}}"><i style="color:black;" class="fa fa-trash" aria-hidden="true"></i></td>
                             
                         </tr>
-                        @endforeach;
+                        @endforeach
                 </tbody>
             </table>
 </div>

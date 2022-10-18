@@ -15,15 +15,16 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <form method="post" action="" id="form">
+            <form method="post" action="{{url('update-communication')}}" id="form">
                 @csrf
+                <input type="hidden" name="id" value="{{ $edit->id}}">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Communication Date</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="number" id="username" value="">
+                                <input type="date" class="form-control" name="date" id="username" value="{{ $edit->communication_date}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -37,10 +38,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="type" id="cars">
-                                    <option value="volvo">Select</option>
-                                    <option value="volvo">Corporate</option>
-                                    <option value="volvo">Individual</option>
+                                <select name="Client" id="cars">
+                                    <option >{{ $edit->client}}</option>
                                 </select>
                             </div>
                         </div>
@@ -52,10 +51,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="citizen" id="cars">
-                                    <option value="volvo">Select</option>
-                                    <option value="volvo">Type 1</option>
-                                    <option value="volvo">Type 2</option>
+                                <select name="File" id="cars">
+                                    <option >{{ $edit->file}}</option>
                                 </select>
                             </div>
                         </div>
@@ -68,7 +65,7 @@
                             <label for="username">Customer</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="corporation" id="age" value="" min="0" max="99">
+                                <input type="text" class="form-control" name="Customer" id="age" value="{{ $edit->customer}}" min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
                                 </div>
@@ -80,7 +77,7 @@
                             <label for="username">Telephone No</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="password" class="form-control" name="telephone" value=""
+                                <input type="text" class="form-control" name="telephone" value="{{ $edit->telephone_no}}"
                                     id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
@@ -93,7 +90,7 @@
                             <label for="username">Email</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="email" class="form-control" name="telephone" value=""
+                                <input type="email" class="form-control" name="Email" value="{{ $edit->email}}"
                                     id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
@@ -112,12 +109,8 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <select name="brought">
-                                    <option value="volvo">Select</option>
-                                    <option value="volvo">Direct</option>
-                                    <option value="volvo">Vedio Conference</option>
-                                    <option value="volvo">Email</option>
-                                    <option value="volvo">Letter</option>
+                                <select name="Sources">
+                                    <option>{{ $edit->communication_source}}</option>
                                 </select>
                             </div>
                         </div>
@@ -128,12 +121,8 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <select name="brought">
-                                    <option value="volvo">Select</option>
-                                    <option value="volvo">Mode 1</option>
-                                    <option value="volvo">Mode 2</option>
-                                    <option value="volvo">Mode 3</option>
-                                    <option value="volvo">Mode 4</option>
+                                <select name="Communication">
+                                    <option >{{ $edit->mode_of_communication}}</option>
                                 </select>
                             </div>
                         </div>
@@ -144,11 +133,8 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <select name="brought">
-                                    <option value="volvo">Select</option>
-                                    <option value="volvo">Advocate</option>
-                                    <option value="volvo">Clerical Staff</option>
-                                    <option value="volvo">Receptionist</option>
+                                <select name="Communicated">
+                                    <option >{{ $edit->communicated}}</option>
                                 </select>
                             </div>
                         </div>
@@ -162,12 +148,8 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <select name="brought">
-                                    <option value="volvo">Select</option>
-                                    <option value="volvo">Half Hour</option>
-                                    <option value="volvo">One Hour</option>
-                                    <option value="volvo">One and Half Hour</option>
-                                    <option value="volvo">Two Hour</option>
+                                <select name="Duration">
+                                    <option >{{ $edit->duration}}</option>
                                 </select>
                             </div>
                         </div>
@@ -178,11 +160,8 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <select name="" id="cars">
-                                    <option value="volvo">Select</option>
-                                    <option value="volvo">Person 1</option>
-                                    <option value="volvo">Person 2</option>
-                                    <option value="volvo">Person 3</option>
+                                <select name="Handling" id="cars">
+                                    <option>{{ $edit->person_handling}}</option>
                                 </select>
                             </div>
                         </div>
@@ -192,7 +171,7 @@
                             <label for="username">Timer</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="time" class="form-control" name="" id="username" value="" placeholder=""
+                                <input type="time" class="form-control" name="Timer" id="username" value="{{ $edit->time}}" placeholder=""
                                     required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Date is required.
@@ -208,7 +187,7 @@
                             <label for="username">Others</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="" placeholder=""
+                                <input type="text" class="form-control" name="Others" id="username" value="{{$edit->others}}" placeholder=""
                                     required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Date is required.
@@ -220,7 +199,7 @@
                         <div class="mb-1">
                             <label for="username">Communicated Description</label>
                             <div class="input-group">
-                                <textarea class="form-control" id="form7Example7" rows="2"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="2" name="Description"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Complaint Description is required.
                                 </div>
@@ -231,7 +210,7 @@
                         <div class="mb-1">
                             <label for="username">Action Plan</label>
                             <div class="input-group">
-                                <textarea class="form-control" id="form7Example7" rows="2"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="2" name="Action"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Complaint Description is required.
                                 </div>
@@ -248,8 +227,8 @@
 
                         </div>
                         <div class="col-sm">
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Close</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Update</button>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">close</button>
                         </div>
                     </div>
                 </div>
@@ -259,39 +238,8 @@
 </div>
 
 </div>
-<div class="modal" id="mymodal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-body">
-                    <form action="">
-                        <div>
-                            <input type="text" name="type" class="form-control" placeholder="Client Type">
-                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<div class="modal" id="my">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-body">
-                    <form action="">
-                        <div>
-                            <input type="text" name="type" class="form-control" placeholder="Country">
-                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

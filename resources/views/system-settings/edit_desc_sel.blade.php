@@ -30,7 +30,8 @@
             <div class="row">
         <div class="col-md-12 ">
 
-            <form method="post" action="" id="form">  
+            <form method="post" action="{{url('update_desc_sel')}}" id="form">  
+            <input type="hidden" name="id" value="{{$description_selection->id}}">
             @csrf
 <div class="row">
                     <div class="col-md-6">
@@ -38,7 +39,7 @@
                         <label >Description Selection Name:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text"  id="" name="desselname"value=""class="form-control">
+                                <input type="text"  id="" name="desselname"class="form-control"value="{{$description_selection->Description_Selection_Name}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -50,7 +51,7 @@
                             <label>Selection Description:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="seldes" id="" value="">
+                                <input type="text" class="form-control" name="seldes" id="" value="{{$description_selection->Selection_Description}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
