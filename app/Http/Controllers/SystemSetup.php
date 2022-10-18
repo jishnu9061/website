@@ -24,32 +24,113 @@ class SystemSetup extends Controller
        return view('system-settings.system_setup');
      
     }
+    
+////////////////////////COMPANY_DETAILS///////////////////////////////////
     public function company()
     {
-       return view('system-settings.company_details');
+        $company_details=DB::table('cra_company_details')->get();
+        return view('system-settings.company_details',compact('company_details'));
+     
      
     }
-    public function addcompany()
+    public function addcompany(Request $Request)
     {
+        $company_name= $Request['name'];
+        $address = $Request['address'];
+        $town_city = $Request['city'];
+        $company_website = $Request['website'];
+        $email= $Request['email'];
+        $company_type= $Request['type'];
+        $pin_no = $Request['pinnum'];
+        $vat_no = $Request['vatnum'];
+        $NHIF= $Request['nhifcode'];
+        $NSSF_no = $Request['nnum'];
+       
+///////////////////////////////////////////////////////////////////
+      
+////////////////////////////////////////////////////////////////////
+        DB::table('cra_company_details')->insert([
+            'company_name' => $company_name,
+            'address' => $address,
+            'town_city' => $town_city,
+            'company_website' => $company_website,
+            'email' => $email,
+            'company_type' => $company_type,
+            'pin_no' => $pin_no,
+            'vat_no' => $vat_no,
+            'NHIF' => $NHIF,
+            'NSSF_no' => $NSSF_no,
+            // 'Add_Logo' => $Add_Logo,
+        ]);
+   
        return view('system-settings.add_company_details');
      
     }
-    public function editcompany()
+    public function editcompany($id)
     {
-       return view('system-settings.edit_company_details');
+     $company_details= DB::table('cra_company_details')->where('id',$id)->first();
+       return view('system-settings.edit_company_details',compact('company_details','id'));
      
+    }
+    public function updatecompany(Request $Request){
+        $id     = $Request['id'];
+        $company_name = $Request['name'];
+        $address = $Request['address'];
+        $town_city = $Request['city'];
+        $company_website = $Request['website'];
+        $email = $Request['email'];
+        $company_type = $Request['type'];
+        $pin_no = $Request['pinnum'];
+        $vat_no = $Request['vatnum'];
+        $NHIF = $Request['nhifcode'];
+        $NSSF_no = $Request['nnum'];
+//////////////////////////////////////////////////////////////////////////////////////////////
+      
+/////////////////////////////////////////////////////////////////////////////////////////////////
+ $update_company_details = array(
+            'company_name' => $company_name,
+            'address' =>  $address,
+            'town_city' => $town_city,
+            'company_website' =>  $company_website,
+            'email' =>  $email,
+            'company_type' =>  $company_type,
+            'pin_no' =>   $pin_no,
+            'vat_no' =>  $vat_no,
+            'NHIF' =>  $NHIF,
+            'NSSF_no' =>  $NSSF_no ,
+            // 'Add_Logo' =>  $Add_Logo,
+            
+        );
+        DB::table('cra_company_details')->where('id', $id)->update( $update_company_details );
+        return redirect('/company_details');
+
     }
     public function viewcompany()
     {
        return view('system-settings.view_company_details');
      
     }
+    ////////////////////////END COMPANY_DETAILS///////////////////////////////////
+
+////////////////////////WEEKEND & HOLIDAY///////////////////////////////////
+
     public function holiday()
     {
-        return view('system-settings.weekend_holiday');
+        $holiday_details=DB::table('cra_weekend_and_holiday')->get();
+        return view('system-settings.weekend_holiday',compact('holiday_details'));
     }
-    public function addholiday()
+  
+    public function addholiday(Request $Request)
     {
+        
+        $Date = $Request['date'];
+        $Day = $Request['day'];
+     
+        DB::table('cra_weekend_and_holiday')->insert([
+            'Date' => $Date,
+            'Day' => $Day,
+        ]);
+        
         return view('system-settings.add_new_holiday');
     }
     public function holiday2017()
@@ -76,14 +157,39 @@ class SystemSetup extends Controller
     {
         return view('system-settings.holiday_2022');
     }
-    public function editholiday()
+    public function editholiday($id)
     {
-        return view('system-settings.edit_holiday');
+         $weekend_and_holiday=DB::table('cra_weekend_and_holiday')->where('id',$id)->first();
+        return view('system-settings.edit_holiday',compact('weekend_and_holiday','id'));
+        
+    } 
+  
+
+    public function updateholiday(Request $Request)
+    {
+        $id = $Request['id'];
+        $Date = $Request['date'];
+        $Day = $Request['day'];
+        
+        $update_holiday = array(
+            'Date' => $Date,
+            'Day' =>  $Day,
+        );
+        DB::table('cra_weekend_and_holiday')->where('id', $id)->update( $update_holiday );
+        return redirect('/weekend_holiday');
     }
+    public function deleteholiday($id)
+    {
+        DB::table('cra_weekend_and_holiday')->where('id',$id)->delete();
+        return redirect('/weekend_holiday');
+    }
+    ////////////////////////END WEEKEND & HOLIDAY///////////////////////////////////
+    
     public function othrconftn()
     {
         return view('system-settings.other_confgn');
     }
+        //////////////////////// COMPANY_BRANCH///////////////////////////////////
     public function branch()
     {
         $branch_details=DB::table('cra_company_branch_details')->get();
@@ -123,10 +229,58 @@ DB::table('cra_company_branch_details')->insert([
 
      return view('system-settings.add_company_branch');
     }
-    public function editbranch()
+
+
+
+
+    public function editbranch($id)
     {
-        return view('system-settings.edit_company_branch');
+        
+        $company_branch_details= DB::table('cra_company_branch_details')->where('id',$id)->first();
+        return view('system-settings.edit_company_branch',compact('company_branch_details','id'));
+     
     }
+  
+
+    public function updatebranch(Request $Request){
+        $id     = $Request['id'];
+        $branch_no = $Request['bnum'];
+      
+        $branch_code = $Request['bcodes'];
+        $branch_name = $Request['bname'];
+        $address = $Request['paddress'];
+        $physical_address = $Request['physicaladd'];
+        $telephone = $Request['tel'];
+        $mobile = $Request['mobile'];
+        $fax = $Request['fax'];
+        $town = $Request['town'];
+        $email = $Request['email'];
+        $website = $Request['website'];
+     
+
+        $update_company_branch = array(
+            'branch_no' => $branch_no,
+            'branch_code' =>  $branch_code,
+            'branch_name' => $branch_name,
+            'address' =>  $address,
+            'physical_address' =>  $physical_address,
+            'telephone' =>  $telephone,
+            'mobile' =>   $mobile,
+            'fax' =>  $fax,
+            'town' =>  $town,
+            'email' =>  $email ,
+            'website' =>  $website,
+            
+        );
+        DB::table('cra_company_branch_details')->where('id', $id)->update( $update_company_branch );
+        return redirect('/company_branch');
+    }
+    public function deletebranch($id){
+        DB::table('cra_company_branch_details')->where('id',$id)->delete();
+        return redirect('/company_branch');
+    }
+       //////////////////////// END COMPANY_BRANCH///////////////////////////////////
+
     public function Configtn()
     {
         return view('system-settings.configu_ration');
@@ -175,26 +329,120 @@ DB::table('cra_company_branch_details')->insert([
     {
         return view('system-settings.edit_payment_item');
     }
+    ///////////////////////DESCRIPTION SELECTION//////////////////////////////////
     public function descriptionselection()
     {
-        return view('system-settings.description_selectn');
-    }
-    public function adddescsel()
+        $description_selection=DB::table('cra_description_selection')->get();
+        return view('system-settings.description_selectn',compact('description_selection'));
+     }
+    public function adddescsel(Request $Request)
     {
+        $Description_Selection_Name = $Request['desselname'];
+        $Selection_Description = $Request['seldes'];
+        
+        DB::table('cra_description_selection')->insert([
+            'Description_Selection_Name' => $Description_Selection_Name,
+            'Selection_Description' => $Selection_Description,
+        ]);
         return view('system-settings.add_desc_sel');
+        
     }
-    public function editdescsel()
+
+    public function editdescsel($id)
     {
-        return view('system-settings.edit_desc_sel');
+        $description_selection=DB::table('cra_description_selection')->where('id',$id)->first();
+        return view('system-settings.edit_desc_sel',compact('description_selection','id'));
+    }
+
+public function updatedescsel(Request $Request)
+    {
+        $id = $Request['id'];
+        $Description_Selection_Name = $Request['desselname'];
+        $Selection_Description = $Request['seldes'];
+        
+        $update_descsel = array(
+            'Description_Selection_Name' => $Description_Selection_Name,
+            'Selection_Description' =>  $Selection_Description,
+        );
+        DB::table('cra_description_selection')->where('id', $id)->update( $update_descsel );
+        return redirect('/description_selectn');
+    }
+    public function deletedescsel($id)
+    {
+        DB::table('cra_description_selection')->where('id',$id)->delete();
+        return redirect('/description_selectn');
+    }
+        ///////////////////////END DESCRIPTION SELECTION//////////////////////////////////
+
+        //////////////////tax chart//////////////////////////////
+             
+    public function taxchartmain()
+    {
+        
+        return view('system-settings.tax_chart_main');
     }
     public function taxchart()
     {
-        return view('system-settings.tax_chart');
+        $tax_chart=DB::table('cra_tax_chart')->get();
+        return view('system-settings.tax_chart',compact('tax_chart'));
     }
-    public function addtaxchart()
+   
+    public function addtaxchart(Request $Request)
     {
+        $tax_brand=$Request['taxband'];
+        $lower_limit=$Request['limit'];
+        $upper_limit=$Request['ulimit'];
+        $rate=$Request['rate'];
+        $status=$Request['status'];
+        $factor_with_housing=$Request['withhousing'];
+        $factor_without_housing=$Request['wouthousing'];
+        DB::table('cra_tax_chart')->insert([
+            'tax_brand' => $tax_brand,
+            'lower_limit' => $lower_limit,
+            'upper_limit' => $upper_limit,
+            'rate' => $rate,
+            'status' => $status,
+            'factor_with_housing' => $factor_with_housing,
+            'factor_without_housing' => $factor_without_housing,
+            
+        ]);
         return view('system-settings.add_tax_chart');
     }
+    public function edittaxchart($id)
+    {
+        $tax_chart=DB::table('cra_tax_chart')->where('id',$id)->first();
+        return view('system-settings.edit_tax_chart',compact('tax_chart','id'));
+    }
+
+public function updatetaxchart(Request $Request)
+    {
+        $id = $Request['id'];
+        $tax_brand=$Request['taxband'];
+        $lower_limit=$Request['limit'];
+        $upper_limit=$Request['ulimit'];
+        $rate=$Request['rate'];
+        $status=$Request['status'];
+        $factor_with_housing=$Request['withhousing'];
+        $factor_without_housing=$Request['wouthousing'];
+        $update_taxchart = array(
+            'tax_brand' => $tax_brand,
+            'lower_limit' => $lower_limit,
+            'upper_limit' => $upper_limit,
+            'rate' => $rate,
+            'status' => $status,
+            'factor_with_housing' => $withhousing,
+            'factor_without_housing' => $factor_without_housing,
+            
+        );
+        DB::table('cra_tax_chart')->where('id', $id)->update( $update_taxchart );
+        return redirect('/tax_chart');
+    }
+    public function deletetaxchart($id)
+    {
+        DB::table('cra_tax_chart')->where('id',$id)->delete();
+        return redirect('/tax_chart');
+    }
+     /////////////////////////end tax chart//////////////////////////
     public function addtaxexcise()
     {
         return view('system-settings.add_tax_excise');
@@ -212,11 +460,8 @@ DB::table('cra_company_branch_details')->insert([
     {
         return view('system-settings.add_tax_wht-vat');
     }
-    public function edittaxchart()
-    {
-        return view('system-settings.edit_tax_chart');
-    }
-    public function edittaxexcise()
+ 
+public function edittaxexcise()
     {
         return view('system-settings.edit_tax_excise');
     }
