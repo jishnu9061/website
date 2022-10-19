@@ -42,9 +42,7 @@
 
                                 </div>
                                 <select name="country" id="cars">
-                                    <option value="volvo"> type 1</option>
-                                    <option value="car"> type 2</option> 
-                                     <option value="bus"> type 3</option>
+                                    <option value="volvo"></option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -92,50 +90,23 @@
                         </div>
                         <div class="col-sm">
                             <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">View</button>
-                            <button type="button" class="btn btn-primary float:right;" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Cancel</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">View Report</button>
                         </div>
                     </div>
                 </div>
-            </form>
-        </div>
-    </div>
-</div>
 
-</div>
-<div class="modal" id="mode_1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-body">
-                    <form action="">
-                        <div>
-                            <input type="text" name="type" class="form-control" placeholder="Client Type">
-                            <button class="btn btn-primary sub_btnn" type="submit " >submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+
+
         </div>
+
+
+
+
+
+        </tbody>
+        </table>
     </div>
-</div>
-</div>
-<div class="modal" id="my">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-body">
-                    <form action="">
-                        <div>
-                            <input type="text" name="type" class="form-control" placeholder="Country">
-                            <button class="btn btn-primary sub_btnn" type="submit" >submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 </div>
 <br>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
