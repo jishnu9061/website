@@ -31,7 +31,7 @@
        <div id="mydatatable_filter" class="dataTables_filter">
         <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
        </div>
-       <a href="{{('add-Complaint')}}"><button class="btn btn-primary add-btn" Style="width:20%">Add New Complaint</button></a>
+       <a href="{{('create-Complaint')}}"><button class="btn btn-primary add-btn" Style="width:20%">Add New Complaint</button></a>
        
        
 <div class="tab-content" id="myTabContent">
@@ -53,19 +53,21 @@
                     </tr>
                 </thead>
                 <tbody>
+                        @foreach( $complaint_list as  $list)
                         <tr id="data">
-                            <td  scope="row" class="text-center"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td  scope="row"class="text-center"></td>
-                           <td><a href="{{url('')}}"><i style="color:black;" class="fa fa-eye" aria-hidden="true"></i></td></a>
-                            <td><a href="{{url('edit_complaint')}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td>
-                            <td><a href=""><i style="color:black;" class="fa fa-trash" aria-hidden="true"></i></td>
+                            <td  scope="row" class="text-center">{{$list->id}}</td>
+                            <td  scope="row" class="text-center" id="medicine_name_1">{{$list->date}}</td>
+                            <td  scope="row" class="text-center" id="medicine_name_1">{{$list->client_type}}</td>
+                            <td  scope="row" class="text-center" id="medicine_name_1">{{$list->files}}</td>
+                            <td  scope="row" class="text-center" id="medicine_name_1">{{$list->customer_name}}</td>
+                            <td  scope="row" class="text-center" id="medicine_name_1">{{$list->telephone_no}}</td>
+                            <td  scope="row"class="text-center">{{$list->complaint_description}}</td>
+                           <td><a href="{{url('view-Complaint',$list->id)}}"><i style="color:black;" class="fa fa-eye" aria-hidden="true"></i></td></a>
+                            <td><a href="{{url('edit_complaint',$list->id)}}"><i  style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td>
+                            <td><a href="{{url('delete-Complaint',$list->id)}}"><i style="color:black;" class="fa fa-trash" aria-hidden="true"></i></td>
                             
                         </tr>
+                        @endforeach
                 </tbody>
             </table>
 </div>

@@ -156,7 +156,7 @@ class ClientManagement extends Controller
         $Notes = $Request['notes'];
 
          
-        DB::table('cra_individual_client_details')->where('id',$id)->insert([
+        DB::table('cra_individual_client_details')->where('id',$id)->update([
             'client_number' => $number,
             'client_type' =>  $client_type,
             'citizen_status' => $citizen_status,
@@ -269,37 +269,179 @@ class ClientManagement extends Controller
 
     //end pickup
 
+    //complaint
 
     public function complaintList(){
-        return view('client-management.complaint-list');
+        $complaint_list = DB::table('cra_complaint_register')->get();
+        return view('client-management.complaint-list',compact('complaint_list'));
     }
 
 
 
-    public function addComplaint(){
+    public function createComplaint(){
         return view('client-management.add-complaint');
     }
 
+    public function addComplaint(Request $Request){
 
-    public function editComplaint(){
-        return view('client-management.edit-complaint');
+        $date = $Request['date'];
+        $client_type = $Request['type'];
+        $files = $Request['files'];
+        $customer_name = $Request['name'];
+        $staff_handling = $Request['Staff'];
+        $complaint_about = $Request['Complaint'];
+        $telephone_no = $Request['Telephone'];
+        $email = $Request['email'];
+        $others = $Request['Others'];
+        $action_plan = $Request['plan'];
+        $complaint_description = $Request['Description'];
+
+        DB::table('cra_complaint_register')->insert([
+            'date' =>  $date,
+            'client_type' =>  $client_type,
+            'files' => $files,
+            'customer_name' =>$customer_name,
+            'staff_handling' => $staff_handling,
+            'complaint_about' =>  $complaint_about,
+            'telephone_no' =>  $telephone_no,
+            'email' =>   $email,
+            'others' =>   $others ,
+            'action_plan' => $action_plan,
+            'complaint_description' => $complaint_description,
+        ]);
+
+        return redirect('/complaint-list');
     }
 
 
+    public function editComplaint($id){
+        $edit_complaint = DB::table('cra_complaint_register')->where('id',$id)->first();
+        return view('client-management.edit-complaint',compact('edit_complaint','id'));
+    }
+
+    public function updateComplaint(Request $Request){   
+        $id   = $Request['id'];
+        $date = $Request['date'];
+        $client_type = $Request['type'];
+        $files = $Request['files'];
+        $customer_name = $Request['name'];
+        $staff_handling = $Request['Staff'];
+        $complaint_about = $Request['Complaint'];
+        $telephone_no = $Request['Telephone'];
+        $email = $Request['email'];
+        $others = $Request['Others'];
+        $action_plan = $Request['plan'];
+        $complaint_description = $Request['Description'];
+
+        DB::table('cra_complaint_register')->where('id',$id)->update([
+            'date' =>  $date,
+            'client_type' =>  $client_type,
+            'files' => $files,
+            'customer_name' =>$customer_name,
+            'staff_handling' => $staff_handling,
+            'complaint_about' =>  $complaint_about,
+            'telephone_no' =>  $telephone_no,
+            'email' =>   $email,
+            'others' =>   $others ,
+            'action_plan' => $action_plan,
+            'complaint_description' => $complaint_description,
+        ]);
+
+        return redirect('/complaint-list');
+    }
+
+    public function viewComplaint($id){
+        $view_complaint = DB::table('cra_complaint_register')->where('id',$id)->first();
+        return view('client-management.view-complaint',compact('view_complaint','id'));
+    }
+
+    public function deleteComplaint($id){
+        $delete_complaint = DB::table('cra_complaint_register')->where('id',$id)->delete();
+        return redirect('/complaint-list');
+    }
+
+    //end complaint
+
+    //customer Followup
     public function followup(){
-        return view('client-management.follow-up');
+        $followup = DB::table('cra_customer_followup')->get();
+        return view('client-management.follow-up',compact('followup'));
     }
 
 
-    public function addFollow(){
+    public function createFollow(){
         return view('client-management.add-followup');
     }
 
-
-    public function editFollow(){
-        return view('client-management.edit-followup');
+    public function addFollowup(Request $Request){
+        
+        $followup_date = $Request['date'];
+        $customer = $Request['customer'];
+        $followup_type = $Request['type'];
+        $staff_responsible = $Request['responsible'];
+        $send_remainder_to = $Request['Remainder'];
+        $next_bringup_date = $Request['Bring'];
+        $alert_period = $Request['Alert'];
+        $email = $Request['email'];
+        $registered_by = $Request['Registered'];
+        $description = $Request['Description'];
+        
+        DB::table('cra_customer_followup')->insert([
+            'followup_date' => $followup_date ,
+            'customer' =>  $customer,
+            'followup_type' => $followup_type,
+            'staff_responsible' =>$staff_responsible,
+            'send_remainder_to' => $send_remainder_to,
+            'next_bringup_date' =>  $next_bringup_date,
+            'alert_period' =>  $alert_period,
+            'email' =>   $email,
+            'registered_by' =>  $registered_by,
+            'description' => $description,
+        ]);
+        return redirect('/follow-up');
     }
 
+
+    public function editFollow($id){
+        $edit_follow = DB::table('cra_customer_followup')->where('id',$id)->first();
+        return view('client-management.edit-followup',compact('edit_follow','id'));
+    }
+
+    public function updateFollow(Request $Request){
+
+        $id            = $Request['id'];
+        $followup_date = $Request['date'];
+        $customer = $Request['customer'];
+        $followup_type = $Request['type'];
+        $staff_responsible = $Request['responsible'];
+        $send_remainder_to = $Request['Remainder'];
+        $next_bringup_date = $Request['Bring'];
+        $alert_period = $Request['Alert'];
+        $email = $Request['email'];
+        $registered_by = $Request['Registered'];
+        $description = $Request['Description'];
+        
+        DB::table('cra_customer_followup')->where('id',$id)->update([
+            'followup_date' => $followup_date ,
+            'customer' =>  $customer,
+            'followup_type' => $followup_type,
+            'staff_responsible' =>$staff_responsible,
+            'send_remainder_to' => $send_remainder_to,
+            'next_bringup_date' =>  $next_bringup_date,
+            'alert_period' =>  $alert_period,
+            'email' =>   $email,
+            'registered_by' =>  $registered_by,
+            'description' => $description,
+        ]);
+        return redirect('/follow-up');
+    }
+
+    public function deleteFollow($id){
+        $delete_follow = DB::table('cra_customer_followup')->where('id',$id)->delete();
+        return redirect('/follow-up');
+    }
+
+    //end customer Followup
 
     public function service(){
         return view('client-management.client-service');
@@ -341,22 +483,88 @@ class ClientManagement extends Controller
     }
 
 
+    //Registration
 
     public function viewRegistration(){
-        return view('client-management.view-registration');
+        $view_registration = DB::table('cra_customer_registration')->get();
+        return view('client-management.view-registration',compact('view_registration'));
     }
 
 
 
-    public function addRegistration(){
+    public function createRegistration(){
         return view('client-management.add-registration');
     }
 
+    
+    public function addRegistration(Request $Request){
 
+        $customer_name = $Request['name'];
+        $postal_code = $Request['Code'];
+        $town = $Request['town'];
+        $country = $Request['country'];
+        $telephone_no = $Request['telephone'];
+        $email = $Request['email'];
+        $mobile_no = $Request['mobile'];
+        $web_site = $Request['website'];
+        $registration_date = $Request['Date'];
+        $customer_address = $Request['caddress'];
+        $physical_address = $Request['paddress'];
 
-    public function editRegistration(){
-        return view('client-management.edit-registration');
+        DB::table('cra_customer_registration')->insert([
+            'customer_name' =>  $customer_name ,
+            'postal_code' =>   $postal_code ,
+            'town' => $town,
+            'country' =>$country,
+            'telephone_no' => $telephone_no,
+            'email' =>  $email,
+            'mobile_no' =>   $mobile_no,
+            'web_site' =>   $web_site,
+            'registration_date' =>   $registration_date,
+            'customer_address' => $customer_address,
+            'physical_address' => $physical_address,
+        ]);
+
+        return redirect('/view-registration');
     }
+
+
+    public function editRegistration($id){
+        $edit_registration = DB::table('cra_customer_registration')->where('id',$id)->first();
+        return view('client-management.edit-registration',compact('edit_registration','id'));
+    }
+
+    public function updateRegistration(Request $Request){
+        $id            = $Request['id'];
+        $customer_name = $Request['name'];
+        $postal_code = $Request['Code'];
+        $town = $Request['town'];
+        $country = $Request['country'];
+        $telephone_no = $Request['telephone'];
+        $email = $Request['email'];
+        $mobile_no = $Request['mobile'];
+        $web_site = $Request['website'];
+        $registration_date = $Request['Date'];
+        $customer_address = $Request['caddress'];
+        $physical_address = $Request['paddress'];
+
+        DB::table('cra_customer_registration')->where('id',$id)->update([
+            'customer_name' =>  $customer_name ,
+            'postal_code' =>   $postal_code ,
+            'town' => $town,
+            'country' =>$country,
+            'telephone_no' => $telephone_no,
+            'email' =>  $email,
+            'mobile_no' =>   $mobile_no,
+            'web_site' =>   $web_site,
+            'registration_date' =>   $registration_date,
+            'customer_address' => $customer_address,
+            'physical_address' => $physical_address,
+        ]);
+
+        return redirect('/view-registration');
+    }
+    //end Registration
 
     //communication
 
@@ -412,6 +620,52 @@ class ClientManagement extends Controller
     public function editCommunication($id){
         $edit = DB::table('cra_conversations')->where('id',$id)->first();
         return view('client-management.edit-communication',compact('edit','id'));
+    }
+
+    public function updateCommunication(Request $Request){
+
+        $id                 = $Request['id'];
+        $communication_date = $Request['date'];
+        $client = $Request['Client'];
+        $file = $Request['File'];
+        $customer = $Request['Customer'];
+        $telephone_no = $Request['telephone'];
+        $email = $Request['Email'];
+        $communication_source = $Request['Sources'];
+        $mode_of_communication = $Request['Communication'];
+        $communicated = $Request['Communicated'];
+        $duration = $Request['Duration'];
+        $person_handling = $Request['Handling'];
+        $time = $Request['Timer'];
+        $others = $Request['Others'];
+        $communicated_description = $Request['Description'];
+        $action_plan = $Request['Action'];
+
+        
+        DB::table('cra_conversations')->where('id',$id)->update([
+            'communication_date' => $communication_date,
+            'client' =>   $client,
+            'file' => $file,
+            'customer' =>$customer,
+            'telephone_no' => $telephone_no,
+            'email' =>  $email,
+            'communication_source' =>  $communication_source,
+            'mode_of_communication' =>  $mode_of_communication,
+            'communicated' => $communicated ,
+            'duration' => $duration,
+            'person_handling' =>  $person_handling,
+            'time' =>  $time,
+            'others' => $others ,
+            'communicated_description' =>  $communicated_description,
+            'action_plan' =>  $action_plan,
+        ]);
+
+        return redirect('/communication-list');
+    }
+
+    public function deleteCommunication($id){
+        $del_communication = DB::table('cra_conversations')->where('id',$id)->delete();
+        return redirect('/communication-list');
     }
 
     //end communication
