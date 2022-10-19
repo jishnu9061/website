@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use ClientController;
 use DB;
 
 class filemanagement extends Controller
@@ -84,10 +85,21 @@ class filemanagement extends Controller
     //document temblates
 
     //manage files
-    public function filearchive()
+    public function filearchive(Request $request)
     {
+        
+        $Box_type=$request['box_type'];
+        $Box_number=$request['box_no'];
+
+        DB::table('cra_add_box')->insert([
+            'type' =>  $Box_type,
+            'number' =>  $Box_number,
+
+        ]);
+
         return view('file_management.file-archive');
     }
+
 
     public function addboxno()
     {
@@ -104,16 +116,17 @@ class filemanagement extends Controller
 
     public function progressbringup()
     {
+        
         return view('file_management.progress-bringup');
     }
 
-    public function addbringup()
+    public function addbringup(Request $request)
     {
+       
+
+
         return view('file_management.add-new-bringup');
     }
-
-
-
 
 
     public function addprogress(Request $request )
@@ -278,8 +291,21 @@ class filemanagement extends Controller
         
     }
 
-    public function staffmonthlystatusreport()
+    public function staffmonthlystatusreport(Request $request)
     {
+        $id =$request['id'];
+        $Department =$request['department'];
+        $Month =$request['month'];
+        $Year =$request['year'];
+
+        DB::table('cra_staff_monthly_status_report')->insert([
+
+            'id' =>  $id,
+            'Department' =>  $Department,
+            'Month' =>  $Month,
+            'Year' =>  $Year,
+
+        ]);
         return view('file_management.staff-monthly-status-report');
         
     }
@@ -292,18 +318,72 @@ class filemanagement extends Controller
 
 
     //monthly file status report
-     public function clientmonthlystatus()
+     public function clientmonthlystatus(Request $request)
      {
+        $id =$request['id'];
+        $Report_type =$request['report_type'];
+        $Client =$request['client'];
+        $Month =$request['month'];
+        $Year =$request['year'];
+        DB::table('cra_client_monthly_file_status_report')->insert([
+
+            'id' =>  $id,
+            'Report_Type' => $Report_type,
+            'Client' =>   $Client,
+            'Month' =>  $Month,
+            'year' =>  $Year,
+
+        ]);
          return view('file_management.client-monthly-file-status');
      }
 
-     public function fileprogressreport()
+     public function fileprogressreport(Request $request)
      {
+        $id =$request['id'];
+        $Client =$request['client'];
+        $File =$request['file'];
+        $Date_from =$request['date_from'];
+        $Date_to =$request['date_to'];
+        
+        DB::table('cra_file_progress_report')->insert([
+
+            'id' =>  $id,
+            'Client' =>  $Client,
+            'File' =>   $File,
+            'Progress_Date_From' =>   $Date_from,
+            'Progress_Date_To' =>   $Date_to,
+
+        ]);
          return view('file_management.file-progress-report');
      }
 
-     public function filestatussummary()
+     public function filestatussummary(Request $request)
      {
+        $id =$request['id']; 
+        $Date_To =$request['date_to'];
+        $File =$request['file'];
+        $Instruction_Category =$request['category'];
+        $Receiver =$request['receiver'];
+        $Currency =$request['currency'];
+        $Exchange_Rate =$request['exchange_rate'];
+        $Turn_Around_Time =$request['turn_around_time'];
+        $Priority =$request['priority'];
+        $Details =$request['details'];
+
+        DB::table('cra_file_status_summary')->insert([
+
+            'id' =>  $id,
+            'Date_to' =>  $Date_To,
+            'File' =>   $File,
+            'Instruction_Category' =>   $Instruction_Category,
+            'Receiver' =>  $Receiver,
+            'Currency' =>  $Currency,
+            'Exchange_Rate' =>  $Exchange_Rate,
+            'Turn_Around_Time' =>  $Turn_Around_Time,
+            'Priority' =>  $Priority,
+            'Details' =>  $Details 
+
+        ]);
          return view('file_management.file-status-summary');
      }
 
@@ -353,16 +433,48 @@ class filemanagement extends Controller
  
 
 
-     public function bringup()
+     public function bringup(Request $request)
      {
+        $id =$request['id'];
+        $Client =$request['client'];
+        $File =$request['file'];
+        $Registered_by =$request['registered_by'];
+        $Responsible =$request['responsible'];
+        $Data_from =$request['data_from'];
+        $Data_to =$request['date_to'];
+
+        DB::table('cra_bringup')->insert([
+
+            'id' => $id,
+            'Client' => $Client,
+            'File' =>  $File,
+            'Registered_By' => $Registered_by,
+            'Responsible_Advocate' => $Responsible,
+            'Date_From' => $Data_from,
+            'Date_To' => $Data_to,
+
+        ]);
          return view('file_management.bringup');
      }
        //document manager
 
 
        //File Reports
-       public function filereport()
+       public function filereport(Request $request)
        {
+        $id =$request['id'];
+        $Resposible_advocate =$request['resposible_advocate'];
+        $Data_from =$request['data_from'];
+        $Date_to =$request['date_to'];
+
+        DB::table('cra_file_report')->insert([
+
+            'id' => $id,
+            'Responsible_Advocate' => $Resposible_advocate,
+            'Date_From' => $Data_from,
+            'Date_To' => $Date_to,
+
+        ]);
            return view('file_management.file-report');
        }
 
@@ -420,8 +532,40 @@ class filemanagement extends Controller
              return view('file_management.safe-item-request');
         }
 
-        public function saferegisterreport()
+        public function saferegisterreport(Request $request)
         {
+           $id =$request['id'];
+           $Client =$request['client'];
+           $File =$request['file'];
+           $Document_type =$request['document_type'];
+           $Safe_name =$request['safe_name'];
+           $Approver =$request['approver'];
+           $Given_to =$request['given_to'];
+           $Requsted_by =$request['requsted_by'];
+            $Date =$request['date'];
+           $And =$request['and'];
+           $Document_condition =$request['document_condition'];
+           $Status =$request['status'];
+
+
+           DB::table('cra_safe_register_report')->insert([
+
+            'id' => $id,
+            'Client' =>  $Client,
+            'File' =>  $File,
+            'Document_Type' => $Document_type,
+            'Safe_Name' => $Safe_name,
+            'Approver' => $Approver,
+            'Given_To' => $Given_to,
+            'Requested_By' => $Requsted_by,
+            'Date' => $Date,
+            'and' => $And,
+            'Document_Condition' => $Document_condition,
+            'Status' =>  $Status,
+
+        ]);
+
+
              return view('file_management.safe-register-report');
         }
        //add ons
@@ -454,8 +598,27 @@ public function add_new_instructions()
     return view('file_management.new_office_instructions');
 }
 
-public function view_new_instructions()
+public function view_new_instructions(Request $request)
 {
+   $id =$request['id'];
+   $Report_category =$request['report_category'];
+   $Instruction_type =$request['instruction_type'];
+   $Expense_category =$request['expense_category'];
+   $Report_type =$request['report_type'];
+   $Date_from =$request['date_from'];
+   $Date_to =$request['date_to'];
+
+   DB::table('cra_instructions_report')->insert([
+
+    'id' => $id,
+    'Report_Category' => $Report_category,
+    'Instruction_Type' => $Instruction_type,
+    'Expense_Category' => $Expense_category,
+    'Report_Type' => $Report_type,
+    'Date_From' =>  $Date_from,
+    'Date_To' =>   $Date_to,
+]);
+
     return view('file_management.instructions_report');
 }
 
