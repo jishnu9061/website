@@ -937,8 +937,8 @@ Route::any('advocates_target_2026','UserManagement@advocatestarget2026')->name('
 //Mugunthan
 
 //Client-list
-Route::any('add_newclient',"ClientManagement@addNewclient")->name('add_newclient');
-Route::any('store-client',"ClientManagement@storeClient")->name('store-client');
+
+Route::any('add-client',"ClientManagement@addNewClient")->name('add-client');
 Route::any('client_list','ClientManagement@view')->name('client_list');
 Route::any('/edit_person/{id}','ClientManagement@edit_person')->name('edit_person');
 Route::any('show-client/{id}','ClientManagement@show')->name('show-client');
@@ -947,7 +947,6 @@ Route::any('update-client',"ClientManagement@updateClient")->name('update-client
 Route::any('delete-client/{id}',"ClientManagement@deleteClient")->name('delete-client');
 //coporate
 Route::any('add-corporate','ClientManagement@addCorporate')->name('add-corporate');
-Route::any('store-corporate','ClientManagement@storeCorporate')->name('store-corporate');
 Route::any('corporate-list','ClientManagement@listCorporate')->name('corporate-list');
 Route::any('/edit_client/{id}','ClientManagement@edit_corporate')->name('edit_client');
 Route::any('/update-corporate','ClientManagement@Update_corporate')->name('update-corporate');
@@ -957,6 +956,7 @@ Route::any('/delete_client/{id}','ClientManagement@Corporate_destroy')->name('de
 
 //Client-Documents
 Route::any('client-document','ClientManagement@document')->name('client-document');
+Route::any('create-document','ClientManagement@createDocument')->name('create-document');
 Route::any('add-document','ClientManagement@addDocument')->name('add-document');
 Route::any('view-document','ClientManagement@viewDocument')->name('view-document');
 //end Client-Documents
@@ -970,7 +970,6 @@ Route::any('/delete-pickup/{id}','ClientManagement@deletePickup')->name('delete-
 //Client-Pickup
 //complaint
 Route::any('complaint-list','ClientManagement@complaintList')->name('complaint-list');
-Route::any('create-Complaint','ClientManagement@createComplaint')->name('create-Complaint');
 Route::any('add-Complaint','ClientManagement@addComplaint')->name('add-Complaint');
 Route::any('edit_complaint/{id}','ClientManagement@editComplaint')->name('edit-Complaint');
 Route::any('update-Complaint','ClientManagement@updateComplaint')->name('update-Complaint');
@@ -980,7 +979,6 @@ Route::any('delete-Complaint/{id}','ClientManagement@deleteComplaint')->name('de
 
 //Follow Up
 Route::any('follow-up','ClientManagement@followup')->name('follow-up');
-Route::any('create-follow','ClientManagement@createFollow')->name('create-follow');
 Route::any('add-follow','ClientManagement@addFollowup')->name('add-follow');
 Route::any('edit-follow/{id}','ClientManagement@editFollow')->name('edit-follow');
 Route::any('update-follow','ClientManagement@updateFollow')->name('update-follow');
@@ -994,12 +992,12 @@ Route::any('add-service','ClientManagement@addService')->name('add-service');
 
 //Quotation
 Route::any('Quotation','ClientManagement@Quotation')->name('Quotation');
-Route::any('new-Quotation','ClientManagement@newQuotation')->name('new-Quotation');
-Route::any('edit-Quotation','ClientManagement@editQuotation')->name('edit-Quotation');
+Route::any('add-Quotation','ClientManagement@addQuotation')->name('add-Quotation');
+Route::any('edit-Quotation/{id}','ClientManagement@editQuotation')->name('edit-Quotation');
+Route::any('update-Quotation','ClientManagement@updateQuotation')->name('update-Quotation');
 //end Quotation
 //Registration
 Route::any('view-registration','ClientManagement@viewRegistration')->name('view-registration');
-Route::any('create-registration','ClientManagement@createRegistration')->name('create-registration');
 Route::any('add-registration','ClientManagement@addRegistration')->name('add-registration');
 Route::any('edit-registration/{id}','ClientManagement@editRegistration')->name('edit-registration');
 Route::any('update-registration','ClientManagement@updateRegistration')->name('update-registration');
@@ -1017,7 +1015,7 @@ Route::any('edit-communication','ClientManagement@editCommunication')->name('edi
 //end communication
 //search list
 Route::any('search-list','ClientManagement@listSearch')->name('search-list');
-Route::any('register-client','ClientManagement@registerClient')->name('register-client');
+Route::any('add-register','ClientManagement@addRegister')->name('add-register');
 //end search list
 
 
