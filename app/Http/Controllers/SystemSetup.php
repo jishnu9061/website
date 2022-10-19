@@ -63,7 +63,8 @@ class SystemSetup extends Controller
             // 'Add_Logo' => $Add_Logo,
         ]);
    
-       return view('system-settings.add_company_details');
+    //    return view('system-settings.add_company_details');
+    return redirect('/company_details');
      
     }
     public function editcompany($id)
@@ -130,8 +131,8 @@ class SystemSetup extends Controller
             'Date' => $Date,
             'Day' => $Day,
         ]);
-        
-        return view('system-settings.add_new_holiday');
+        return redirect('/weekend_holiday');
+        // return view('system-settings.add_new_holiday');
     }
     public function holiday2017()
     {
@@ -226,8 +227,8 @@ DB::table('cra_company_branch_details')->insert([
             'website' => $website,
            
         ]);
-
-     return view('system-settings.add_company_branch');
+        return redirect('/company_branch');
+    //  return view('system-settings.add_company_branch');
     }
 
 
@@ -236,8 +237,8 @@ DB::table('cra_company_branch_details')->insert([
     public function editbranch($id)
     {
         
-        $company_branch_details= DB::table('cra_company_branch_details')->where('id',$id)->first();
-        return view('system-settings.edit_company_branch',compact('company_branch_details','id'));
+        $branch_details= DB::table('cra_company_branch_details')->where('id',$id)->first();
+        return view('system-settings.edit_company_branch',compact('branch_details','id'));
      
     }
   
@@ -291,7 +292,8 @@ DB::table('cra_company_branch_details')->insert([
     }
     public function addcourt()
     {
-        return view('system-settings.add_court');
+        return redirect('/courts');
+      
     }
     public function editcourt()
     {
@@ -299,7 +301,9 @@ DB::table('cra_company_branch_details')->insert([
     }
     public function addcourtcategory()
     {
-        return view('system-settings.add_court_category');
+        return redirect('/courts');
+
+        
     }
     public function lettertype()
     {
@@ -307,8 +311,9 @@ DB::table('cra_company_branch_details')->insert([
     }
     public function addlettercategory()
     {
-        return view('system-settings.add_letter_category');
+        return redirect('/letter_types');
     }
+
     public function documentlettercategory()
     {
         return view('system-settings.document_letter_category');
@@ -323,7 +328,8 @@ DB::table('cra_company_branch_details')->insert([
     }
     public function addpaymentitem()
     {
-        return view('system-settings.add_payment_item');
+        return redirect('/payment_items');
+   
     }
     public function editpaymentitem()
     {
@@ -344,7 +350,8 @@ DB::table('cra_company_branch_details')->insert([
             'Description_Selection_Name' => $Description_Selection_Name,
             'Selection_Description' => $Selection_Description,
         ]);
-        return view('system-settings.add_desc_sel');
+        return redirect('/description_selectn');
+        
         
     }
 
@@ -406,7 +413,8 @@ public function updatedescsel(Request $Request)
             'factor_without_housing' => $factor_without_housing,
             
         ]);
-        return view('system-settings.add_tax_chart');
+        return redirect('/tax_chart');
+       
     }
     public function edittaxchart($id)
     {
@@ -461,7 +469,7 @@ public function updatetaxchart(Request $Request)
             'Status' => $Status,
            
         ]);
-        return view('system-settings.add_tax_excise');
+        return redirect('/tax_excise');
     }
      
 public function edittaxexcise($id)
@@ -512,8 +520,8 @@ public function updatetaxexcise(Request $Request)
             'Status' => $Status,
            
         ]);
-       
-        return view('system-settings.add_tax_vat');
+        return redirect('/tax_vat');
+
     }
     public function edittaxvat($id)
     {
@@ -563,7 +571,8 @@ public function updatetaxexcise(Request $Request)
              'Status' => $Status,
            
         ]);
-        return view('system-settings.add_tax_wht');
+        return redirect('/tax_wht');
+      
     }
     public function edittaxwht($id)
     {
@@ -615,7 +624,8 @@ public function updatetaxexcise(Request $Request)
              'Status' => $Status,
            
         ]);
-        return view('system-settings.add_tax_wht-vat');
+        return redirect('/tax_wht-vat');
+        
     }
     public function edittaxwhtvat($id)
     {
@@ -669,8 +679,8 @@ public function updatetaxexcise(Request $Request)
                 'Category_Type' => $Category_Type,
                 
             ]);
-    
-        return view('system-settings.add_template_category');
+            return redirect('/template_category');
+        // return view('system-settings.add_template_category');
     }
     public function documenttemplatecategory()
     {
@@ -748,112 +758,112 @@ public function updatetaxexcise(Request $Request)
     {
         return view('system-settings.edit_currency');
     }
-    public function manageuseraccount()
-    {
-        return view('system-settings.manage_user_account');
-    }
-    public function useredit()
-    {
-        return view('system-settings.user_edit');
-    }
-    public function regnewuser()
-    {
-        return view('system-settings.reg_new_user');
-    }
-    public function attachments()
-    {
-        return view('system-settings.user_attachments');
-    }
-    public function comments()
-    {
-        return view('system-settings.user_comments');
-    }
-    public function changepassword()
-    {
-        return view('system-settings.change_user_password');
-    }
-    public function manageusergrp()
-    {
-        return view('system-settings.manage_user_group');
-    }
-    public function addnewusergrp()
-    {
-        return view('system-settings.add_new_user_grp');
-    }
-    public function editnewusergrp()
-    {
-        return view('system-settings.edit_new_user_grp');
-    }
-    public function rolesperuser()
-    {
-        return view('system-settings.view_roles_per_user');
-    }
-    public function editviewroles()
-    {
-        return view('system-settings.edit_view_roles');
-    }
+    // public function manageuseraccount()
+    // {
+    //     return view('system-settings.manage_user_account');
+    // }
+    // public function useredit()
+    // {
+    //     return view('system-settings.user_edit');
+    // }
+    // public function regnewuser()
+    // {
+    //     return view('system-settings.reg_new_user');
+    // }
+    // public function attachments()
+    // {
+    //     return view('system-settings.user_attachments');
+    // }
+    // public function comments()
+    // {
+    //     return view('system-settings.user_comments');
+    // }
+    // public function changepassword()
+    // {
+    //     return view('system-settings.change_user_password');
+    // }
+    // public function manageusergrp()
+    // {
+    //     return view('system-settings.manage_user_group');
+    // }
+    // public function addnewusergrp()
+    // {
+    //     return view('system-settings.add_new_user_grp');
+    // }
+    // public function editnewusergrp()
+    // {
+    //     return view('system-settings.edit_new_user_grp');
+    // }
+    // public function rolesperuser()
+    // {
+    //     return view('system-settings.view_roles_per_user');
+    // }
+    // public function editviewroles()
+    // {
+    //     return view('system-settings.edit_view_roles');
+    // }
     
 
-    public function manageuserroles()
-    {
-        return view('system-settings.manage_user_roles');
-    }
-    public function adduserrole()
-    {
-        return view('system-settings.add_user_roles');
-    }
-    public function edituserrole()
-    {
-        return view('system-settings.edit_user_roles');
-    }
-    public function manageuserdepartment()
-    {
-        return view('system-settings.manage_user_department');
-    }
-    public function adduserdepartment()
-    {
-        return view('system-settings.add_user_department');
-    }
-    public function edituserdepartment()
-    {
-        return view('system-settings.edit_user_department');
-    }
-    public function advocatestarget()
-    {
-        return view('system-settings.advocates_target');
-    }
-    public function addnew()
-    {
-        return view('system-settings.add_new_entry');
-    }
-    public function editadvocatetarget()
-    {
-        return view('system-settings.edit_advocate_target');
-    }
-    public function advocatestarget2021()
-    {
-        return view('system-settings.advocates_target_2021');
-    }
-    public function advocatestarget2022()
-    {
-        return view('system-settings.advocates_target_2022');
-    }
-    public function advocatestarget2023()
-    {
-        return view('system-settings.advocates_target_2023');
-    }
-    public function advocatestarget2024()
-    {
-        return view('system-settings.advocates_target_2024');
-    }
-    public function advocatestarget2025()
-    {
-        return view('system-settings.advocates_target_2025');
-    }
-    public function advocatestarget2026()
-    {
-        return view('system-settings.advocates_target_2026');
-    }
+    // public function manageuserroles()
+    // {
+    //     return view('system-settings.manage_user_roles');
+    // }
+    // public function adduserrole()
+    // {
+    //     return view('system-settings.add_user_roles');
+    // }
+    // public function edituserrole()
+    // {
+    //     return view('system-settings.edit_user_roles');
+    // }
+    // public function manageuserdepartment()
+    // {
+    //     return view('system-settings.manage_user_department');
+    // }
+    // public function adduserdepartment()
+    // {
+    //     return view('system-settings.add_user_department');
+    // }
+    // public function edituserdepartment()
+    // {
+    //     return view('system-settings.edit_user_department');
+    // }
+    // public function advocatestarget()
+    // {
+    //     return view('system-settings.advocates_target');
+    // }
+    // public function addnew()
+    // {
+    //     return view('system-settings.add_new_entry');
+    // }
+    // public function editadvocatetarget()
+    // {
+    //     return view('system-settings.edit_advocate_target');
+    // }
+    // public function advocatestarget2021()
+    // {
+    //     return view('system-settings.advocates_target_2021');
+    // }
+    // public function advocatestarget2022()
+    // {
+    //     return view('system-settings.advocates_target_2022');
+    // }
+    // public function advocatestarget2023()
+    // {
+    //     return view('system-settings.advocates_target_2023');
+    // }
+    // public function advocatestarget2024()
+    // {
+    //     return view('system-settings.advocates_target_2024');
+    // }
+    // public function advocatestarget2025()
+    // {
+    //     return view('system-settings.advocates_target_2025');
+    // }
+    // public function advocatestarget2026()
+    // {
+    //     return view('system-settings.advocates_target_2026');
+    // }
     public function databasebackup()
     {
         return view('system-settings.database_backup');
