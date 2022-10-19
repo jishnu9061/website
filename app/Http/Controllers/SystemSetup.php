@@ -430,7 +430,7 @@ public function updatetaxchart(Request $Request)
             'upper_limit' => $upper_limit,
             'rate' => $rate,
             'status' => $status,
-            'factor_with_housing' => $withhousing,
+            'factor_with_housing' => $factor_with_housing,
             'factor_without_housing' => $factor_without_housing,
             
         );
@@ -443,42 +443,210 @@ public function updatetaxchart(Request $Request)
         return redirect('/tax_chart');
     }
      /////////////////////////end tax chart//////////////////////////
-    public function addtaxexcise()
+     /////////////////////////////////////////////////////////////////////
+     public function taxexcise()
+     {
+        $tax_excise=DB::table('cra_tax_excise')->get();
+         return view('system-settings.tax_excise',compact('tax_excise'));
+     }
+    public function addtaxexcise(Request $Request)
     {
+        $Tax_name=$Request['name'];
+        $Tax_value=$Request['value'];
+        $Status=$Request['status'];
+       
+        DB::table('cra_tax_excise')->insert([
+            'Tax_name' => $Tax_name,
+            'Tax_value' => $Tax_value,
+            'Status' => $Status,
+           
+        ]);
         return view('system-settings.add_tax_excise');
     }
-    public function addtaxvat()
+     
+public function edittaxexcise($id)
+{ 
+     $tax_excise=DB::table('cra_tax_excise')->where('id',$id)->first();
+    return view('system-settings.edit_tax_excise',compact('tax_excise','id'));
+}
+public function updatetaxexcise(Request $Request)
     {
+        $id = $Request['id'];
+        $Tax_name=$Request['name'];
+        $Tax_value=$Request['value'];
+        $Status=$Request['status'];
+      
+        $update_taxexcise = array(
+            'Tax_name' => $Tax_name,
+            'Tax_value' => $Tax_value,
+            'Status' => $Status,
+            
+            
+        );
+        DB::table('cra_tax_excise')->where('id', $id)->update( $update_taxexcise );
+        return redirect('/tax_excise');
+    }
+    public function deletetaxexcise($id)
+    {
+        DB::table('cra_tax_excise')->where('id',$id)->delete();
+        return redirect('/tax_excise');
+    }
+    ////////////////////////////////////////////////////////////////
+    public function taxvat()
+    {
+    
+         $tax_vat=DB::table('cra_tax_vat')->get();
+        return view('system-settings.tax_vat',compact('tax_vat'));
+    }
+    public function addtaxvat(Request $Request)
+    {
+        $Tax_name=$Request['name'];
+        $Tax_value=$Request['value'];
+        $Tax_ordering=$Request['order'];
+        $Status=$Request['status'];
+       
+        DB::table('cra_tax_vat')->insert([
+            'Tax_name' => $Tax_name,
+            'Tax_value' => $Tax_value,
+            'Tax_ordering' => $Tax_ordering,
+            'Status' => $Status,
+           
+        ]);
+       
         return view('system-settings.add_tax_vat');
     }
-    public function addtaxwht()
+    public function edittaxvat($id)
     {
+        $tax_vat=DB::table('cra_tax_vat')->where('id',$id)->first();
+        return view('system-settings.edit_tax_vat',compact('tax_vat','id'));
+    }
+    public function updatetaxvat(Request $Request)
+    {
+        $id = $Request['id'];
+        $Tax_name=$Request['name'];
+        $Tax_value=$Request['value'];
+        $Tax_ordering=$Request['order'];
+        $Status=$Request['status'];
+      
+        $update_taxvat = array(
+            'Tax_name' => $Tax_name,
+            'Tax_value' => $Tax_value,
+            'Tax_ordering' => $Tax_ordering,
+            'Status' => $Status,
+            
+            
+        );
+        DB::table('cra_tax_vat')->where('id', $id)->update( $update_taxvat );
+        return redirect('/tax_vat');
+    }
+    public function deletetaxvat($id)
+    {
+        DB::table('cra_tax_vat')->where('id',$id)->delete();
+        return redirect('/tax_vat');
+    }
+///////////////////////////////////
+    public function taxwht()
+    {
+        $tax_wht=DB::table('cra_tax_wht')->get();
+        return view('system-settings.tax_wht',compact('tax_wht'));
+
+    }
+    public function addtaxwht(Request $Request)
+    {
+        $Tax_name=$Request['name'];
+        $Tax_value=$Request['value'];
+        $Status=$Request['status'];
+       
+        DB::table('cra_tax_wht')->insert([
+            'Tax_name' => $Tax_name,
+            'Tax_value' => $Tax_value,
+             'Status' => $Status,
+           
+        ]);
         return view('system-settings.add_tax_wht');
     }
-
-    public function addtaxwhtvat()
+    public function edittaxwht($id)
     {
+        $tax_wht=DB::table('cra_tax_wht')->where('id',$id)->first();
+        return view('system-settings.edit_tax_wht',compact('tax_wht','id'));
+   
+    }
+    public function updatetaxwht(Request $Request)
+    {
+        $id = $Request['id'];
+        $Tax_name=$Request['name'];
+        $Tax_value=$Request['value'];
+       $Status=$Request['status'];
+      
+        $update_taxwht = array(
+
+            'Tax_name' => $Tax_name,
+            'Tax_value' => $Tax_value,
+            'Status' => $Status,
+            
+            
+        );
+        DB::table('cra_tax_wht')->where('id', $id)->update( $update_taxwht );
+        return redirect('/tax_wht');
+    }
+    public function deletetaxwht($id)
+    {
+        DB::table('cra_tax_wht')->where('id',$id)->delete();
+        return redirect('/tax_wht');
+    }
+    //////////////////////////////////////////
+    public function taxwhtvat()
+    {
+        $tax_wht_vat=DB::table('cra_tax_wht-vat')->get();
+        return view('system-settings.tax_wht-vat',compact('tax_wht_vat'));
+
+    
+    }
+
+    public function addtaxwhtvat(Request $Request)
+    {
+        $Tax_name=$Request['name'];
+        $Tax_value=$Request['value'];
+        $Status=$Request['status'];
+       
+        DB::table('cra_tax_wht-vat')->insert([
+            'Tax_name' => $Tax_name,
+            'Tax_value' => $Tax_value,
+             'Status' => $Status,
+           
+        ]);
         return view('system-settings.add_tax_wht-vat');
     }
- 
-public function edittaxexcise()
+    public function edittaxwhtvat($id)
     {
-        return view('system-settings.edit_tax_excise');
-    }
-    public function edittaxvat()
-    {
-        return view('system-settings.edit_tax_vat');
-    }
-    public function edittaxwht()
-    {
-        return view('system-settings.edit_tax_wht');
-    }
+        $tax_wht_vat=DB::table('cra_tax_wht-vat')->where('id',$id)->first();
+        return view('system-settings.edit_tax_wht-vat',compact('tax_wht_vat','id'));
+   
 
-    public function edittaxwhtvat()
-    {
-        return view('system-settings.edit_tax_wht-vat');
     }
-    
+    public function updatetaxwhtvat(Request $Request)
+    {
+        $id = $Request['id'];
+        $Tax_name=$Request['name'];
+        $Tax_value=$Request['value'];
+       $Status=$Request['status'];
+      
+        $update_taxwhtvat = array(
+
+            'Tax_name' => $Tax_name,
+            'Tax_value' => $Tax_value,
+            'Status' => $Status,
+            
+            
+        );
+        DB::table('cra_tax_wht-vat')->where('id', $id)->update( $update_taxwhtvat );
+        return redirect('/tax_wht-vat');
+    }
+    public function deletetaxwhtvat($id)
+    {
+        DB::table('cra_tax_wht-vat')->where('id',$id)->delete();
+        return redirect('/tax_wht-vat');
+    }
     public function notifications()
     {
         return view('system-settings.notifications');

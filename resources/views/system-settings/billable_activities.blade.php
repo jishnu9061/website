@@ -41,8 +41,8 @@
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
-            <h5 style="text-align:center; ">List of Billable/Non Billable Activities</h5>
-
+            <h6 style="text-align:center; color:#1D1D50;">List of Billable/Non Billable Activities</h6>
+            <div class="table-responsive">    
                 <table class="table table-bordered" id="new-item">
                     <thead>
                         <tr>

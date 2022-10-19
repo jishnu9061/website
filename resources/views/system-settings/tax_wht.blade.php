@@ -11,26 +11,35 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
       <style >
-   
+          body
+        {
+          background-color: white;
+        }
+  th, td ,tr{
+               border: 1px solid  gray ;
+                border-collapse: collapse;
+}
+table{
+    outline: 1px solid  gray;
+}
  </style>
    </head>
    <body>
    
     <div>
             <button class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Tax Excise</u></b></span></button><br>
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Tax WHT</u></b></span></button><br>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous">
      </div>
             <br>
-          
-            <a href="{{('add_tax_excise')}}"><button class="btn btn-primary "style="width=100%;height=100%;">Add Tax Excise</button></a><br><br>
-            
+            <a href="{{('add_tax_wht')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Tax WHT</button></a><br><br>
+    
             <div class="table-responsive">    
             <table class="table table-bordered" id="new-item">
-                            <thead>
-                           
+            <thead>
+
                             <tr>
                                 <th class="text-center" >No</th>
                                 <th class="text-center" >Tax Name</th>
@@ -39,23 +48,23 @@
                                 <th class="text-center" >Action</th>
                             </tr>
                         </thead>
+                        @foreach($tax_wht as $wht_tax)
                         <tbody>
-                        @foreach($tax_excise as $excise_tax)
                             <tr>
-                                <td> {{$excise_tax->id}}</td>
-                                <td>{{$excise_tax->Tax_name}}</td>
-                                <td> {{$excise_tax->Tax_value}}</td>
-                                <td>{{$excise_tax->Status}}</td>
+                                <td> {{$wht_tax->id}}</td>
+                                <td> {{$wht_tax->Tax_name}}</td>
+                                <td > {{$wht_tax->Tax_value}}</td>
+                                <td > {{$wht_tax->Status}}</td>
                                 <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
-                                 <a href="{{url('edit_tax_excise',$excise_tax->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                                 <a href="{{url('delete_tax_excise',$excise_tax->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
+                                 <a href="{{url('edit_tax_wht',$wht_tax->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                                 <a href="{{url('delete_tax_excise',$wht_tax->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
                             </tr>
                         </tbody>
-                        @endforeach
-                    </table><br>
+@endforeach
+                     
+                        </table><br>
 </div>
                     </body>
-
 </div>
 </html>
 
