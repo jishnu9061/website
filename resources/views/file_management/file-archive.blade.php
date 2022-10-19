@@ -108,7 +108,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
+                                <select name="box_type" id="cars">
                                 <option>select</option>
                                                             <option>demo 2</option>
                                                             <option>demo 3</option>
@@ -127,7 +127,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="incorporation" id="age">
+                                <input type="text" class="form-control" name="box_no" id="age">
                             </div>
                         </div>
                     </div>
