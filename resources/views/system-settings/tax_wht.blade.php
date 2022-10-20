@@ -34,7 +34,15 @@ table{
                 crossorigin="anonymous">
      </div>
             <br>
-            <a href="{{('add_tax_wht')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Tax WHT</button></a><br><br>
+            <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
+           
+{{-- <a href="{{('add_tax_wht')}}"><button class="btn btn-primary">Add Tax WHTm</button></a> --}}
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Tax WHT</button>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                      <br>
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
+            <!-- <a href="{{('add_tax_wht')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Tax WHT</button></a><br><br> -->
     
             <div class="table-responsive">    
             <table class="table table-bordered" id="new-item">
@@ -57,12 +65,78 @@ table{
                                 <td > {{$wht_tax->Status}}</td>
                                 <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
                                  <a href="{{url('edit_tax_wht',$wht_tax->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                                 <a href="{{url('delete_tax_excise',$wht_tax->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
+                                 <a href="{{url('delete_tax_wht',$wht_tax->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
                             </tr>
                         </tbody>
 @endforeach
                      
                         </table><br>
+</div>
+ <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
+ <div class="modal fade" id="myModal">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content" style="background-color:#d6ba8a">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                        <h2 class="text-centre"><b>Add Tax WHT</b></h2>
+
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body" style="background-color:white">
+                                        <div class="container">
+                                            <form method="post" action="{{ url('add_tax_wht') }}"
+                                                enctype="multipart/form-data"> 
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->   
+@csrf
+            <div class="row">
+                <div class="col-lg-6 col-md-6 offset-md-3" >
+                    <label >Tax Name:</label>
+                    <div class="row">
+                        <div class="col-md-11">
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text"  id="" name="name"value=""class="form-control" >
+                            <div class="invalid-feedback" style="width: 100%;">
+                            Required Field.
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+            
+            <div class="row">
+                <div class="col-md-11">
+                <label >Tax Value(%):</label>
+                <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <input type="text"  id="" name="value"value="" class="form-control" >
+                    <div class="invalid-feedback" style="width: 100%;">
+                    Required Field.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm">
+
+    </div>
+    <div class="col-sm">
+
+    </div>
+    <div class="col-sm">
+         <br>
+         <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
+         <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
+        </div>
+    </div>
+</div>
+</form>
+</div>
+</div>
+</div>
 </div>
                     </body>
 </div>

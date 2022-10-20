@@ -30,12 +30,18 @@ table{
     <div>
             <button class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Tax VAT-WHT</u></b></span></button><br>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous">
+          
      </div>
             <br>
-            <a href="{{('add_tax_wht-vat')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Tax VAT-WHT</button></a><br><br>
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
+           
+{{-- <a href="{{('add_tax_wht-vat')}}"><button class="btn btn-primary">Add Tax VAT-WHT</button></a> --}}
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Tax VAT-WHT</button>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                      <br>
+<!---------------------------------------------------- MODAL ---------------------------------------------------------------------->
+            <!-- <a href="{{('add_tax_wht-vat')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Tax VAT-WHT</button></a><br><br> -->
     
             <div class="table-responsive">    
             <table class="table table-bordered" id="new-item">
@@ -44,7 +50,7 @@ table{
                             <tr>
                                 <th class="text-center" >No</th>
                                 <th class="text-center" >Tax Name</th>
-                                <th class="text-center" >Tax Value(%)</th>
+                                <th class="text-center" >Tax Value</th>
                                 <th class="text-center" >Status</th>
                                 <th class="text-center">Action</th>
                             </tr>
@@ -64,6 +70,72 @@ table{
 @endforeach
                      
                         </table><br>
+</div>
+     <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
+     <div class="modal fade" id="myModal">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content" style="background-color:#d6ba8a">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                        <h2 class="text-centre"><b>Add Tax VAT-WHT</b></h2>
+
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body" style="background-color:white">
+                                        <div class="container">
+                                            <form method="post" action="{{ url('add_tax_wht-vat') }}"
+                                                enctype="multipart/form-data"> 
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->   
+@csrf
+            <div class="row">
+                <div class="col-lg-6 col-md-6 offset-md-3" >
+                    <label >Tax Name:</label>
+                    <div class="row">
+                        <div class="col-md-11">
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text"  id="" name="name"value=""class="form-control" >
+                            <div class="invalid-feedback" style="width: 100%;">
+                            Required Field.
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+            
+            <div class="row">
+                <div class="col-md-11">
+                <label >Tax Value(%):</label>
+                <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <input type="text"  id="" name="value"value="" class="form-control" >
+                    <div class="invalid-feedback" style="width: 100%;">
+                    Required Field.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm">
+
+    </div>
+    <div class="col-sm">
+
+    </div>
+    <div class="col-sm">
+         <br>
+         <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
+         <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
+        </div>
+    </div>
+</div>
+</form>
+</div>
+</div>
+</div>
 </div>
                     </body>
 </div>

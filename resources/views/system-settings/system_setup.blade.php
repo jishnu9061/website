@@ -18,7 +18,7 @@
 
    </head>
    <body>
-   <p style="text-align:right;">
+   <!-- <p style="text-align:right;">
 
 <a href="{{url('Knowledge_Base')}}"style="color:#1D1D50;">Knowledge Base</a> |
 <a href="{{url('Referral_Program')}}"style="color:#1D1D50;">Referral Program</a> |
@@ -30,7 +30,7 @@
 <a href="{{url('Change_password')}}"style="color:#1D1D50;">Change password</a> |
 <a href="{{url('Logout')}}"style="color:#1D1D50;">Logout</a> 
 </p>
-<br>
+<br> -->
    <div>
         
         <button class="btn btn-primary"

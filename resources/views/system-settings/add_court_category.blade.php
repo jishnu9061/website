@@ -37,7 +37,7 @@
             <form method="post" action="" id="form">  
        @csrf
             <div class="row">
-                    <div class="col-md-5">
+                    <div class="col-md-6">
                         <div class="mb-1">
                         <label >Category No:</label>
                             <div class="input-group">
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label>Category Name:</label>
                             <div class="input-group">
