@@ -36,8 +36,14 @@
                     Add New Progress
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="{{url('add-file-progress')}}">Add File Progress</a>
-                    <a class="dropdown-item" href="{{url('add-file-progress-action')}}">Add File Progress/Action</a>
+                    <!-- <a class="dropdown-item" href="{{url('add-file-progress')}}">Add File Progress</a> -->
+                    {{-- <a href="{{('add-file-progress')}}"><button class="btn btn-primary">Add File Progress</button></a> --}}
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                Add File Progress</button>
+                    <!-- <a class="dropdown-item" href="{{url('add-file-progress-action')}}">Add File Progress/Action</a> -->
+                    {{-- <a href="{{('add-file-progress-action')}}"><button class="btn btn-primary">Add File Progress</button></a> --}}
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-1">
+                Add File Progress</button>
                     <a class="dropdown-item" href="{{url('add-file-bringup-reminder')}}">Add File Bringup/Reminder</a>
                     <a class="dropdown-item" href="{{url('book-court')}}">Book a Court Date</a>
 
@@ -108,131 +114,623 @@
                     </tbody>
 
                 </table>
-
+                
                 <!-- The Modal -->
-                <div class="modal fade" id="editmed">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
+                <div class="modal fade" id="myModal">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content" style="background-color:#d6ba8a">
 
-                            <!-- Modal Header -->
-                            <div class="modal-header" style="background-color:#435ebe">
-                                <h4 class="text-white">Edit Medicine</h4>
+                                    <!-- Modal Header -->
+                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                        <h2 class="text-center"><b>Add File Progress</b></h2>
 
-                            </div>
+                                    </div>
 
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <div class="container">
-                                    <form method="post" action="{{url('update_medicine')}}"
-                                        enctype="multipart/form-data">
-                                        @csrf
-                                        <h4 class="text-center"><b>Medicine Details</b></h4><br>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label for="">Brand Name</label>
-
-                                            </div>
-                                            <div class="col-sm">
-                                                <label for="">Medicine Name</label>
-                                                <input type="text" id="edit_medicine_name" name="medicine_name"
-                                                    class="form-control" required><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <div class="col-sm">
-                                                    <label for="">Medicine Group</label>
-
-                                                </div>
-
-                                            </div>
-                                            <div class="col-sm">
-                                                <label for="">Medicine Category Name</label>
+                                    <!-- Modal body -->
+                                    <div class="modal-body" style="background-color:white">
+                                        <div class="container">
+                                            <form method="post" action="{{ url('') }}"
+                                                enctype="multipart/form-data">
 
 
-                                            </div>
+                                                <div class="row">
 
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label for="">Generic name</label>
+<div class="col-md-12 order-md-1">
 
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Manufacturer Name</label>
+    <form method="post" action="" id="form">
+        @csrf
+        <div class="row">
+        <div class="col-md-6">
+                <div class="mb-1">
+                    <label for="username">Client</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
 
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Supplier Name</label>
-
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label for="">Minimum Level</label>
-                                                <input type="text" id="edit_minimum_level" name="minimum_level"
-                                                    class="form-control"><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Reorder Level</label>
-                                                <input type="text" name="reorder" id="edit_reorder" class="form-control"
-                                                    placeholder=""><br>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label class="text-color:white;">Unit/Packing</Label>
-                                                <input type="text" name="unit_packing" id="edit_unit_packing"
-                                                    class="form-control" placeholder=""><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Upload Medicine Image</label>
-                                                <input type="file" name="editimage" id="edit_image" class="form-control"
-                                                    placeholder="Image"><br>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label>Medicine Composition</label>
-                                                <textarea class="form-control" id="edit_medicine_details1"
-                                                    name="medicine_detailss" rows="3" placeholder=""></textarea><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Notes</label>
-                                                <textarea class="form-control" id="edit_medicine_note"
-                                                    name="medicine_note" rows="3" placeholder=""></textarea><br>
-                                            </div>
-                                        </div>
-                                        <br>
-
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <input type="hidden" class="form-control" id="edit_id" name="method_id">
-
-                                            </div>
-                                        </div>
-
-
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary text-white"
-                                                style="width:15%;background-color:#435ebe"
-                                                data-bs-dismiss="modal">Close</button>
-                                            <button type="submit" class="btn btn-primary"
-                                                style="background-color:#435ebe;width:15%;">Update</button>
-                                        </div>
-                                </div>
-                                <div class="container">
-
-                                </div>
-                            </div>
-
-                            </form>
-
+                        </div>
+                        <select name="client_name" id="cars">
+                            <option ></option>
+                        </select>
+                        <input type="date" class="form-control" name="incorporation" id="age">
+                        <div class="invalid-feedback" style="width: 100%;">
+                            Incorporation is required
                         </div>
                     </div>
                 </div>
-
             </div>
 
+            <div class="col-md-6">
+                <div class="mb-1">
+                    <label for="username">Date of progress</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+
+                        </div>
+                        <input type="date" class="form-control" name="date_progress" id="age">
+                        <div class="invalid-feedback" style="width: 100%;">
+                            Incorporation is required
+                        </div>
+                        <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+            </div>
+<br>
+<div class="row">
+
+            <div class="col-md-12">
+                <div class="mb-1">
+                    <label for="username">Next Action(Way Forward)</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+
+                        </div>
+                        <textarea class="form-control" id="form7Example7" rows="3" name="next_action"></textarea>
+                        <select name="country" id="cars">
+                            <option value="volvo"></option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+</div>
+</div>
+
+           
+</div>
+<br>
+<div class="row">
+            <div class="col-md-4">
+                <div class="mb-1">
+                    <label for="username">New Bringup Date</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+
+                        </div>
+                        <input type="date" class="form-control" name="incorporation" id="age">
+                        <div class="invalid-feedback" style="width: 100%;">
+                            Number is required.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+     
+            <div class="col-md-4">
+                <div class="mb-1">
+                    <label for="username">File</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+
+                        </div>
+                        <select name="country" id="cars">
+                            <option value="volvo"></option>
+                        </select>
+                        <div class="invalid-feedback" style="width: 100%;">
+                            Incorporation is required
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="mb-1">
+                    <label for="username">Reminder period(Days)</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+
+                        </div>
+                        <input type="text" class="form-control" name="incorporation" id="age">
+                        <div class="invalid-feedback" style="width: 100%;">
+                            Incorporation is required
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+<br>
+<div class="row">
+            <div class="col-md-4">
+                <div class="mb-1">
+                    <label for="username">Action Type</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+
+                        </div>
+                        <select name="country" id="cars">
+                            <option value="volvo"></option>
+                        </select>
+                        <div class="invalid-feedback" style="width: 100%;">
+                            Telephone Number is required.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+        </div>
+        <div id="test" style="height:20px;"></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+    <div class="mb-1">
+        <label for="username">Action Description</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <div class="mb-1">
+        <label for="username">Time Taken(Hours)</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <input type="time" class="form-control" name="time_taken_hours" id="age">
+            <input type="text" class="form-control" name="email" id="age">
+            <div class="invalid-feedback" style="width: 100%;">
+                Incorporation is required
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4">
+    <div class="mb-1">
+        <label for="username">Time Taken(Minutes)</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <input type="time" class="form-control" name="time_taken_minutes" id="" required>
+            <input type="text" class="form-control" name="website" id="confirm_password" required>
+            <div class="invalid-feedback" style="width: 100%;">
+                Telephone Number is required.
+            </div>
+        </div>
+    </div>
+</div>
+</div>        
+<br>
+
+<div class="row">
+<div class="col-md-12">
+    <div class="mb-1">
+        <label for="username">Action Description</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <textarea class="form-control" id="form7Example7" rows="3" name="action_description"></textarea>
+        </div>
+    </div>
+</div>
+</div>
+<br>
+<div class="">
+<h6>Send Reminder To:</h6>
+<div>
+    <p>Florence</p>
+    <p>Princes</p>
+</div>
+</div>
+
+<h4 style="text-align:center;">Send Billing</h4>
+
+<div class="row">
+
+<div class="col-md-4">
+    <div class="mb-1">
+        <label for="username">Item Type</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <select name="item_type" id="cars">
+                <option ></option>
+            <select name="country" id="cars">
+                <option value="volvo"></option>
+            </select>
+            <div class="invalid-feedback" style="width: 100%;">
+                Number is required.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4">
+    <div class="mb-1">
+        <label for="username">Currency</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <select name="currency" id="cars">
+                <option ></option>
+            <select name="country" id="cars">
+                <option value="volvo"></option>
+            </select>
+            <div class="invalid-feedback" style="width: 100%;">
+                Number is required.
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="mb-1">
+        <label for="username">Amount</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+
+            </div>
+            <input type="text" class="form-control" name="number" id="username" required>
+            <div class="invalid-feedback" style="width: 100%;">
+                Number is required.
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<br>
+<div id="test" style="height:20px;"></div>
+
+<h4 style="text-align:center;">Send To Timesheet</h4>
+
+<div class="row">
+<div class="col-md-4">
+<div class="mb-1">
+    <label for="username">Start Time</label>
+    <div class="input-group">
+        <div class="input-group-prepend">
+
+        </div>
+        <input type="time" class="form-control" name="start_time" id="username" required>
+        <select name="country" id="cars">
+            <option value="volvo"></option>
+        </select>
+    </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="mb-1">
+    <label for="username">Activity Type</label>
+    <div class="input-group">
+        <div class="input-group-prepend">
+
+        </div>
+
+        <select name="activity_type" id="cars">
+            <option ></option>
+
+        <select name="country" id="cars">
+            <option value="volvo"></option>
+
+        </select>
+    </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="mb-1">
+    <label for="username">Activity</label>
+    <div class="input-group">
+        <div class="input-group-prepend">
+
+        </div>
+        <input type="text" class="form-control" name="number" id="username" required>
+    </div>
+</div>
+</div>
+</div>
+
+  
+
+
+</div>
+<br> <div class="row">
+                       <div class="col-sm">
+
+                       </div>
+                       <div class="col-sm">
+
+                       </div>
+                       <div class="col-sm">
+                           <br>
+                           <button type="submit" class="btn btn-primary float:right;" Style="width:60%;">Save</button>
+                           <button type="button" class="btn btn-primary float:right;" data-dismiss="modal">Cancel</button>
+                       </div>
+                   </div>
+               </div>
+           </form>
+       </div>
+   </div>
+</div>
+
+</div>
+<div class="modal" id="mymodal">
+   <div class="modal-dialog">
+       <div class="modal-content">
+           <div class="modal-header">
+               <div class="modal-body">
+                   <form action="">
+                       <div>
+                           <input type="text" name="type" class="form-control" placeholder="Client Type">
+                           <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                       </div>
+                   </form>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+</div>
+<div class="modal" id="my1">
+   <div class="modal-dialog">
+       <div class="modal-content">
+           <div class="modal-header">
+               <div class="modal-body">
+                   <form action="">
+                       <div>
+                           <input type="text" name="type" class="form-control" placeholder="Country">
+                           <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                       </div>
+                   </form>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+</div>
+
+ 
             <br>
+
+              <!-- The Modal -->
+              <div class="modal fade" id="myModal-1">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content" style="background-color:#d6ba8a">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                        <h2 class="text-center"><b>Add File Progress/Action</b></h2>
+
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body" style="background-color:white">
+                                        <div class="container">
+                                            <form method="post" action="{{ url('') }}"
+                                                enctype="multipart/form-data">
+
+
+                                                <div class="row">
+
+<div class="col-md-12 order-md-1">
+
+    <form method="post" action="" id="form">
+        @csrf
+        <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Date of Progress</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="date" class="form-control" name="incorporation" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Client</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
+                                </select>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">File</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
+                                </select>
+
+                            </div>
+                        </div>
+                    </div>
+</div>
+<br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Time Taken(Hours)</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="incorporation" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+</div>
+                    
+
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Action Type</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="country" id="cars">
+                                    
+                                    <option value="volvo"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+</div>
+<br>
+
+
+
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Time Taken(Minutes)</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="incorporation" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Send Noitification To</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                   
+                    <div>
+                    <h5 style=" margin-left:0;">Action Description</h5>
+
+
+                </div>
+
+                   
+                </div>
+                <br>
+
+                <div>
+                    <h4 style=" margin-left:0;">Send To Billing ?</h4>
+
+
+                </div>
+
+
+                <div>
+                    <h4 style=" margin-left:0;">Send To Timesheet ?</h4>
+
+
+                </div>
+  
+
+
+
+</div>
+<br> <div class="row">
+                       <div class="col-sm">
+
+                       </div>
+                       <div class="col-sm">
+
+                       </div>
+                       <div class="col-sm">
+                           <br>
+                           <button type="submit" class="btn btn-primary float:right;" Style="width:60%;">Add File Progress</button>
+                           <button type="button" class="btn btn-primary float:right;" data-dismiss="modal">Cancel</button>
+                       </div>
+                   </div>
+               </div>
+           </form>
+       </div>
+   </div>
+</div>
+
+</div>
+<div class="modal" id="mymodal-1">
+   <div class="modal-dialog">
+       <div class="modal-content">
+           <div class="modal-header">
+               <div class="modal-body">
+                   <form action="">
+                       <div>
+                           <input type="text" name="type" class="form-control" placeholder="Client Type">
+                           <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                       </div>
+                   </form>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+</div>
+<div class="modal" id="my-1">
+   <div class="modal-dialog">
+       <div class="modal-content">
+           <div class="modal-header">
+               <div class="modal-body">
+                   <form action="">
+                       <div>
+                           <input type="text" name="type" class="form-control" placeholder="Country">
+                           <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                       </div>
+                   </form>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+</div>
+
             <!-- Supplier modal Edit End -->
 
             <!-- Delete  confirmation Message -->
