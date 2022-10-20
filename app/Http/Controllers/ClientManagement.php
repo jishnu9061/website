@@ -358,26 +358,32 @@ class ClientManagement extends Controller
         if(!empty($Request->file('file'))){
 
             $this->validate($Request ,[
-                'file' => 'file|mimes:jpeg,jpg,png,gif,pdf,svg|max:2048',
+                'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg|max:2048',
             ]);
         }
 
-        $input = $Request->all();
+        $img = time() . '-' . $Request->name . '.' .
+        $Request->file->extension();
 
-        if($file = $Request->file('file')){
+       $test = $Request->file->move(public_path('images\files'),$img);
+      
+
+        // $input = $Request->all();
+
+        // if($file = $Request->file('file')){
             
-            $destinationpath = 'CRA/public/images/files';
-            $profile       = date('YmdHis')."." .$file->getClientOriginalExtension();
-            $file->move( $destinationpath,$profile );
-            $paths = $profile ;
-        }else{
-            $paths = '';
-        }
+        //     $destinationpath = 'CRA/public/images/files';
+        //     $profile       = date('YmdHis')."." .$file->getClientOriginalExtension();
+        //     $file->move( $destinationpath,$profile );
+        //     $paths = $profile ;
+        // }else{
+        //     $paths = '';
+        // }
 
         DB::table('cra_document_detials')->insert([
 
             'document_type' =>  $document_type,
-            'file' =>  $paths,
+            'file' =>  $img,
         ]);
         return redirect('/client-document');
 
