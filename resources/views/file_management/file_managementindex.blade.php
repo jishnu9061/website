@@ -19,7 +19,7 @@
 
     <body>
 
-    <!-- <div>
+    <div>
         
         <div class="btn btn-primary"
         style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;margin-left: -8px; ">
@@ -159,7 +159,7 @@
                                 class="btn btn-primary btn_align_btn">Safe Item Request Report</button></a></div>
 
                 </div>
-            -->
+           
 
     </body>
 </div>
