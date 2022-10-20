@@ -379,6 +379,7 @@ class ClientManagement extends Controller
             'document_type' =>  $document_type,
             'file' =>  $paths,
         ]);
+        return redirect('/client-document');
 
     }
 
