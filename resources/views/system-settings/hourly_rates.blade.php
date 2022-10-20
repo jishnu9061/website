@@ -64,7 +64,7 @@
 
                                     <!-- Modal Header -->
                                     <div class="modal-header" style="background-color:#d6ba8a">
-                                        <h2 class="text-centre"><b>Add User Hourly Rates</b></h2>
+                                        <h2 class="text-centre"><b>Add User Hourly Rate</b></h2>
 
                                     </div>
 
