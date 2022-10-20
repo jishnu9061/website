@@ -992,7 +992,7 @@ public function edittransportzone()
     }
     public function addpartnerrevenue()
     {
-        return view('system-settings.add_partner_revenue');
+        return redirect('/partner_revenue_share');
     }
     public function menuaccess()
     {
