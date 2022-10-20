@@ -15,9 +15,7 @@
 
    </head>
    <body>
-    <!-- <h2 >Court List</h2><br>
-    <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
-    <h2 style="text-align:center; text-shadow: 2px 1px;"></h2>
+<h2 style="text-align:center; text-shadow: 2px 1px;"></h2>
   <div>
      <button class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Payment Items</u></b></span></button><br>
@@ -49,8 +47,7 @@
                     </tr>
     </thead>
     <tbody>
-                   
-                    <tr>
+        <tr>
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
@@ -163,7 +160,7 @@
                         </div>
                         <div class="col-sm">
                             <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Submit</button>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
                             <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
                             <br>
                             <br>

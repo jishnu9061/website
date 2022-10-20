@@ -712,7 +712,8 @@ public function updatetaxexcise(Request $Request)
     }
     public function addaccountpairs()
     {
-        return view('system-settings.add_account_pairs');
+        return redirect('/paired_account');
+       
     }
     public function editaccountpairs()
     {
@@ -724,7 +725,8 @@ public function updatetaxexcise(Request $Request)
     }
     public function addfiletypes()
     {
-        return view('system-settings.add_file_types');
+        return redirect('/file_types');
+       
     }
     public function editfiletypes()
     {
@@ -736,7 +738,8 @@ public function updatetaxexcise(Request $Request)
     }
     public function addinvoiceitem()
     {
-        return view('system-settings.add_invoice_item');
+        return redirect('/invoice_items');
+      
     }
     public function editinvoiceitem()
     {
@@ -752,7 +755,8 @@ public function updatetaxexcise(Request $Request)
     }
     public function addcurrency()
     {
-        return view('system-settings.add_currency');
+        return redirect('/currency_list');
+        
     }
     public function editcurrency()
     {
@@ -887,12 +891,10 @@ public function updatetaxexcise(Request $Request)
             'zone_areas' =>  $zone_areas,
             'cost' =>  $cost,
         ]);
-
-       return view('system-settings.add_transport_zone');
+        return redirect('/transport_zones');
+    
     }
-
-
-    public function edittransportzone()
+public function edittransportzone()
     {
         return view('system-settings.edit_transport_zone');
     }
@@ -902,7 +904,8 @@ public function updatetaxexcise(Request $Request)
     }
     public function addbillableactivities()
     {
-        return view('system-settings.add_billable_activities');
+        return redirect('/billable_activities');
+
     }
     public function editbillableactivities()
     {
@@ -942,9 +945,9 @@ public function updatetaxexcise(Request $Request)
             'bank_gl_ac' =>$bank_gl_ac,
            
         ]);
-  
+        return redirect('/bank_details');
 
-        return view('system-settings.add_bank_account');
+   
     }
     
     public function editbankaccount()
@@ -963,7 +966,8 @@ public function updatetaxexcise(Request $Request)
   
     public function addleavedays()
     {
-        return view('system-settings.add_leave_days');
+        return redirect('/leave_days_year');
+   
     }
     public function editleavedays()
     {
@@ -975,7 +979,8 @@ public function updatetaxexcise(Request $Request)
     }
     public function addhourlyrates()
     {
-        return view('system-settings.add_hourly_rates');
+        return redirect('/hourly_rates');
+        
     }
     public function edithourlyrates()
     {
