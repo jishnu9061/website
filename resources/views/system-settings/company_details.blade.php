@@ -128,7 +128,7 @@
  <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
-                            <label for="username">Town-City</label>
+                            <label for="username">Town/City</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="city" id="city" value="">
