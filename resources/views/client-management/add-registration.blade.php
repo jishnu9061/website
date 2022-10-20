@@ -194,7 +194,7 @@
                     </div>
                 </div>
                 <br>
-         
+
 
                 <div class="row">
                     <div class="col-sm">
@@ -388,9 +388,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Salary is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -417,9 +417,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Years of experience is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -442,9 +442,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 dob is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 /div>
 
             {
@@ -476,9 +476,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Bank Name is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -504,9 +504,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Account number is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -529,9 +529,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 IFSC Code is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-12" >
                 <
                 div class = "mb-1" >
@@ -572,7 +572,7 @@ $(document).on('input', '#percent', function() {
 
                 <
                 /tr> < /
-                table > {
+            table > {
                     {
                         -- < input type = "text"
                         class = "form-control"
@@ -589,7 +589,7 @@ $(document).on('input', '#percent', function() {
                         -- < /div> --}} < /
                         div > <
                             /div> < /
-                            div >
+                        div >
 
                             <
                             /div> <
@@ -631,9 +631,9 @@ $(document).on('input', '#percent', function() {
 
                             <
                             /tbody> < /
-                            table > <
+                        table > <
                             /div> < /
-                            div > <
+                        div > <
                             script src = "{{ url('assets/js') }}/jquery.min.js" >
 </script>
 <script type="text/javascript">

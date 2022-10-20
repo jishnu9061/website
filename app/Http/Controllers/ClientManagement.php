@@ -30,11 +30,8 @@ class ClientManagement extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function addNewclient(){
-
-        return view('client-management.add-newclient');
-    }
-    public function storeClient(Request $Request)
+   
+    public function addNewClient(Request $Request)
     {
         $number = $Request['number'];
         $client_type = $Request['type'];
@@ -196,6 +193,151 @@ class ClientManagement extends Controller
     }
 
     // end individual
+
+    //corporate_client
+
+  
+
+    public function addCorporate(Request $Request){
+
+        $number = $Request['number'];
+        $client_type = $Request['type'];
+        $citizen_status = $Request['citizen'];
+        $corporation = $Request['corporation'];
+        $country = $Request['country'];
+        $telephone = $Request['telephone'];
+        $fax_no = $Request['faxno'];
+        $email = $Request['email'];
+        $website = $Request['website'];
+        $brought = $Request['brought'];
+        $status = $Request['status'];
+        $source = $Request['source'];
+        $client_narration = $Request['narration'];
+        $client_name = $Request['name'];
+        $industry = $Request['industry'];
+        $pin_no = $Request['pin'];
+        $address = $Request['address'];
+        $postal_code = $Request['code'];
+        $town = $Request['town'];
+        $physical_address = $Request['physicaladdress'];
+        $Notes = $Request['notes'];
+        $Person_Name = $Request['person'];
+        $Designation = $Request['Designation'];
+        $mobile_no = $Request['no'];
+        $person_email = $Request['person_email'];
+
+        DB::table('cra_corporate_client_details')->insert([
+            'Client_no' => $number,
+            'Client_type' =>  $client_type,
+            'Cityzen_status' => $citizen_status,
+            'Certificate_of_incorporation' =>  $corporation,
+            'Country' =>  $country,
+            'Telephone_No' =>   $telephone,
+            'Fax_no' =>  $fax_no,
+            'Email_address' =>  $email,
+            'Website' =>  $website ,
+            'Brought_in_by' =>  $brought,
+            'Status_reporting_day' =>  $status,
+            'Client_source' => $source,
+            'Client_source_naration' =>  $client_narration,
+            'Client_name' =>    $client_name,
+            'Client_industry' =>   $industry,
+            'Pin_no' =>    $pin_no,
+            'postal_address' =>   $address,
+            'postal_code' =>  $postal_code ,
+            'town' =>      $town ,
+            'physical_address' =>   $physical_address,
+            'notes' => $Notes,
+            'contact_person' => $Person_Name ,
+            'designation' =>  $Designation,
+            'Mobile_no' => $mobile_no,
+            'email' =>$person_email,
+        ]);
+
+        return redirect("/corporate-list");
+    }
+
+
+    public function listCorporate(){
+
+        $corporate_list=DB::table('cra_corporate_client_details')->get();
+        return view('client-management.corporate-list',compact('corporate_list'));
+    }
+
+    public function edit_corporate($id)
+    {
+        $corporate_details= DB::table('cra_corporate_client_details')->where('id',$id)->first();
+        return view('client-management.edit_client',compact('corporate_details','id'));
+    }
+
+    public function Update_corporate(Request $Request){
+        $id     = $Request['id'];
+        $number = $Request['number'];
+        $client_type = $Request['type'];
+        $citizen_status = $Request['citizen'];
+        $corporation = $Request['corporation'];
+        $country = $Request['country'];
+        $telephone = $Request['telephone'];
+        $fax_no = $Request['faxno'];
+        $email = $Request['email'];
+        $website = $Request['website'];
+        $brought = $Request['brought'];
+        $status = $Request['status'];
+        $source = $Request['source'];
+        $client_narration = $Request['narration'];
+        $client_name = $Request['name'];
+        $industry = $Request['industry'];
+        $pin_no = $Request['pin'];
+        $address = $Request['address'];
+        $postal_code = $Request['code'];
+        $town = $Request['town'];
+        $physical_address = $Request['physicaladdress'];
+        $Notes = $Request['notes'];
+        $Person_Name = $Request['person'];
+        $Designation = $Request['Designation'];
+        $mobile_no = $Request['no'];
+        $person_email = $Request['person_email'];
+
+        DB::table('cra_corporate_client_details')->where('id',$id)->update([
+            'Client_no' => $number,
+            'Client_type' =>  $client_type,
+            'Cityzen_status' => $citizen_status,
+            'Certificate_of_incorporation' =>  $corporation,
+            'Country' =>  $country,
+            'Telephone_No' =>   $telephone,
+            'Fax_no' =>  $fax_no,
+            'Email_address' =>  $email,
+            'Website' =>  $website ,
+            'Brought_in_by' =>  $brought,
+            'Status_reporting_day' =>  $status,
+            'Client_source' => $source,
+            'Client_source_naration' =>  $client_narration,
+            'Client_name' =>    $client_name,
+            'Client_industry' =>   $industry,
+            'Pin_no' =>    $pin_no,
+            'postal_address' =>   $address,
+            'postal_code' =>  $postal_code ,
+            'town' =>      $town ,
+            'physical_address' =>   $physical_address,
+            'notes' => $Notes,
+            'contact_person' => $Person_Name ,
+            'designation' =>  $Designation,
+            'Mobile_no' => $mobile_no,
+            'email' =>$person_email,
+        ]);
+
+        return redirect("/corporate-list");
+    }
+
+
+    public function Corporate_destroy($id){
+        DB::table('cra_corporate_client_details')->where('id',$id)->delete();
+        return redirect('/corporate-list');
+    }
+
+    //end corporate_client
+
+
     
     public function document(){
         
@@ -203,9 +345,41 @@ class ClientManagement extends Controller
     }
 
 
-    public function addDocument(){
+    public function createDocument(){
 
         return view('client-management.add-document');
+    }
+
+    public function addDocument(Request $Request){
+
+        $document_type = $Request['type'];
+        $file = $Request['file'];
+
+        if(!empty($Request->file('file'))){
+
+            $this->validate($Request ,[
+                'file' => 'file|mimes:jpeg,jpg,png,gif,pdf,svg|max:2048',
+            ]);
+        }
+
+        $input = $Request->all();
+
+        if($file = $Request->file('file')){
+            
+            $destinationpath = 'CRA/public/images/files';
+            $profile       = date('YmdHis')."." .$file->getClientOriginalExtension();
+            $file->move( $destinationpath,$profile );
+            $paths = $profile ;
+        }else{
+            $paths = '';
+        }
+
+        DB::table('cra_document_detials')->insert([
+
+            'document_type' =>  $document_type,
+            'file' =>  $paths,
+        ]);
+
     }
 
 
@@ -276,11 +450,6 @@ class ClientManagement extends Controller
         return view('client-management.complaint-list',compact('complaint_list'));
     }
 
-
-
-    public function createComplaint(){
-        return view('client-management.add-complaint');
-    }
 
     public function addComplaint(Request $Request){
 
@@ -368,11 +537,6 @@ class ClientManagement extends Controller
         return view('client-management.follow-up',compact('followup'));
     }
 
-
-    public function createFollow(){
-        return view('client-management.add-followup');
-    }
-
     public function addFollowup(Request $Request){
         
         $followup_date = $Request['date'];
@@ -452,20 +616,102 @@ class ClientManagement extends Controller
         return view('client-management.add-client-service');
     }
 
+    //quotation
 
     public function Quotation(){
-        return view('client-management.Quotation');
+        $quotation = DB::table('cra_customer_quotation')->get();
+        return view('client-management.Quotation',compact('quotation'));
     }
 
 
-    public function newQuotation(){
-        return view('client-management.new-Quotation');
+    public function addQuotation(Request $Request){
+        
+        $document_type = $Request['document'];
+        $issue_date = $Request['issue'];
+        $customer = $Request['customer'];
+        $client_ref_no = $Request['ref'];
+        $currency = $Request['currency'];
+        $exchange_rate = $Request['rate'];
+        $approver = $Request['approver'];
+        $bank_account = $Request['account'];
+        $billing_information = $Request['Information'];
+        $attender = $Request['attender'];
+        $subject = $Request['subject'];
+        $type = $Request['type'];
+        $particulers_of_service_rendered = $Request['Rendered'];
+        $amount = $Request['amount'];
+        $vat = $Request['vat'];
+        $comments = $Request['comments'];
+
+        DB::table('cra_customer_quotation')->insert([
+            'document_type' => $document_type ,
+            'issue_date' => $issue_date,
+            'customer' =>   $customer,
+            'client_ref_no' => $client_ref_no,
+            'currency' =>$currency,
+            'exchange_rate' => $exchange_rate,
+            'approver' =>  $approver,
+            'bank_account' =>  $bank_account,
+            'billing_information' =>  $billing_information,
+            'attender' => $attender,
+            'subject' => $subject,
+            'type' =>  $type,
+            'particulers_of_service_rendered' => $particulers_of_service_rendered,
+            'amount' => $amount ,
+            'vat' =>  $vat,
+            'comments' => $comments,
+        ]);
+        return redirect('/Quotation');
     }
 
 
-    public function editQuotation(){
-        return view('client-management.edit-Quotation');
+    public function editQuotation($id){
+        $edit_quotation = DB::table('cra_customer_quotation')->where('id',$id)->first();
+        return view('client-management.edit-Quotation',compact('edit_quotation','id'));
     }
+
+    public function updateQuotation(Request $Request){
+
+        $id            = $Request['id'];
+        $document_type = $Request['document'];
+        $issue_date = $Request['issue'];
+        $customer = $Request['customer'];
+        $client_ref_no = $Request['ref'];
+        $currency = $Request['currency'];
+        $exchange_rate = $Request['rate'];
+        $approver = $Request['approver'];
+        $bank_account = $Request['account'];
+        $billing_information = $Request['Information'];
+        $attender = $Request['attender'];
+        $subject = $Request['subject'];
+        $type = $Request['type'];
+        $particulers_of_service_rendered = $Request['Rendered'];
+        $amount = $Request['amount'];
+        $vat = $Request['vat'];
+        $comments = $Request['comments'];
+
+        DB::table('cra_customer_quotation')->where('id',$id)->update([
+            'document_type' => $document_type ,
+            'issue_date' => $issue_date,
+            'customer' =>   $customer,
+            'client_ref_no' => $client_ref_no,
+            'currency' =>$currency,
+            'exchange_rate' => $exchange_rate,
+            'approver' =>  $approver,
+            'bank_account' =>  $bank_account,
+            'billing_information' =>  $billing_information,
+            'attender' => $attender,
+            'subject' => $subject,
+            'type' =>  $type,
+            'particulers_of_service_rendered' => $particulers_of_service_rendered,
+            'amount' =>$amount,
+            'vat' =>  $vat,
+            'comments' => $comments,
+        ]);
+        return redirect('/Quotation');
+    }
+
+    //end quotation
 
 
     public function customer(){
@@ -488,12 +734,6 @@ class ClientManagement extends Controller
     public function viewRegistration(){
         $view_registration = DB::table('cra_customer_registration')->get();
         return view('client-management.view-registration',compact('view_registration'));
-    }
-
-
-
-    public function createRegistration(){
-        return view('client-management.add-registration');
     }
 
     
@@ -676,11 +916,6 @@ class ClientManagement extends Controller
         return view('client-management.search-list',compact('list_search'));
     }
 
-
-    public function registerClient(){
-        return view('client-management.register-client');
-    }
-
     public function addRegister(Request $Request){
 
         $client_type = $Request['type'];
@@ -705,148 +940,6 @@ class ClientManagement extends Controller
 
   //end client-search
 
-    public function addCorporate(){
-
-        return view('client-management.add-corporate');
-    }
-
-  
-
-    public function storeCorporate(Request $Request){
-
-        $number = $Request['number'];
-        $client_type = $Request['type'];
-        $citizen_status = $Request['citizen'];
-        $corporation = $Request['corporation'];
-        $country = $Request['country'];
-        $telephone = $Request['telephone'];
-        $fax_no = $Request['faxno'];
-        $email = $Request['email'];
-        $website = $Request['website'];
-        $brought = $Request['brought'];
-        $status = $Request['status'];
-        $source = $Request['source'];
-        $client_narration = $Request['narration'];
-        $client_name = $Request['name'];
-        $industry = $Request['industry'];
-        $pin_no = $Request['pin'];
-        $address = $Request['address'];
-        $postal_code = $Request['code'];
-        $town = $Request['town'];
-        $physical_address = $Request['physicaladdress'];
-        $Notes = $Request['notes'];
-        $Person_Name = $Request['person'];
-        $Designation = $Request['Designation'];
-        $mobile_no = $Request['no'];
-        $person_email = $Request['person_email'];
-
-        DB::table('cra_corporate_client_details')->insert([
-            'Client_no' => $number,
-            'Client_type' =>  $client_type,
-            'Cityzen_status' => $citizen_status,
-            'Certificate_of_incorporation' =>  $corporation,
-            'Country' =>  $country,
-            'Telephone_No' =>   $telephone,
-            'Fax_no' =>  $fax_no,
-            'Email_address' =>  $email,
-            'Website' =>  $website ,
-            'Brought_in_by' =>  $brought,
-            'Status_reporting_day' =>  $status,
-            'Client_source' => $source,
-            'Client_source_naration' =>  $client_narration,
-            'Client_name' =>    $client_name,
-            'Client_industry' =>   $industry,
-            'Pin_no' =>    $pin_no,
-            'postal_address' =>   $address,
-            'postal_code' =>  $postal_code ,
-            'town' =>      $town ,
-            'physical_address' =>   $physical_address,
-            'notes' => $Notes,
-            'contact_person' => $Person_Name ,
-            'designation' =>  $Designation,
-            'Mobile_no' => $mobile_no,
-            'email' =>$person_email,
-        ]);
-
-        return redirect("/corporate-list");
-    }
-
-
-    public function listCorporate(){
-
-        $corporate_list=DB::table('cra_corporate_client_details')->get();
-        return view('client-management.corporate-list',compact('corporate_list'));
-    }
-
-    public function edit_corporate($id)
-    {
-        $corporate_details= DB::table('cra_corporate_client_details')->where('id',$id)->first();
-        return view('client-management.edit_client',compact('corporate_details','id'));
-    }
-
-    public function Update_corporate(Request $Request){
-        $id     = $Request['id'];
-        $number = $Request['number'];
-        $client_type = $Request['type'];
-        $citizen_status = $Request['citizen'];
-        $corporation = $Request['corporation'];
-        $country = $Request['country'];
-        $telephone = $Request['telephone'];
-        $fax_no = $Request['faxno'];
-        $email = $Request['email'];
-        $website = $Request['website'];
-        $brought = $Request['brought'];
-        $status = $Request['status'];
-        $source = $Request['source'];
-        $client_narration = $Request['narration'];
-        $client_name = $Request['name'];
-        $industry = $Request['industry'];
-        $pin_no = $Request['pin'];
-        $address = $Request['address'];
-        $postal_code = $Request['code'];
-        $town = $Request['town'];
-        $physical_address = $Request['physicaladdress'];
-        $Notes = $Request['notes'];
-        $Person_Name = $Request['person'];
-        $Designation = $Request['Designation'];
-        $mobile_no = $Request['no'];
-        $person_email = $Request['person_email'];
-
-        DB::table('cra_corporate_client_details')->where('id',$id)->update([
-            'Client_no' => $number,
-            'Client_type' =>  $client_type,
-            'Cityzen_status' => $citizen_status,
-            'Certificate_of_incorporation' =>  $corporation,
-            'Country' =>  $country,
-            'Telephone_No' =>   $telephone,
-            'Fax_no' =>  $fax_no,
-            'Email_address' =>  $email,
-            'Website' =>  $website ,
-            'Brought_in_by' =>  $brought,
-            'Status_reporting_day' =>  $status,
-            'Client_source' => $source,
-            'Client_source_naration' =>  $client_narration,
-            'Client_name' =>    $client_name,
-            'Client_industry' =>   $industry,
-            'Pin_no' =>    $pin_no,
-            'postal_address' =>   $address,
-            'postal_code' =>  $postal_code ,
-            'town' =>      $town ,
-            'physical_address' =>   $physical_address,
-            'notes' => $Notes,
-            'contact_person' => $Person_Name ,
-            'designation' =>  $Designation,
-            'Mobile_no' => $mobile_no,
-            'email' =>$person_email,
-        ]);
-
-        return redirect("/corporate-list");
-    }
-
-
-    public function Corporate_destroy($id){
-        DB::table('cra_corporate_client_details')->where('id',$id)->delete();
-        return redirect('/corporate-list');
-    }
+   
    
 }
