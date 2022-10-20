@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 20, 2022 at 07:28 AM
+-- Generation Time: Oct 20, 2022 at 08:32 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -493,6 +493,41 @@ INSERT INTO `cra_add_file_progress` (`id`, `progress_date`, `next_action`, `clie
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `cra_bank_details`
+--
+
+CREATE TABLE `cra_bank_details` (
+  `id` int(11) NOT NULL,
+  `bank` varchar(255) DEFAULT NULL,
+  `branch` varchar(255) DEFAULT NULL,
+  `account_name` varchar(255) DEFAULT NULL,
+  `account_number` varchar(255) DEFAULT NULL,
+  `bank_code` varchar(255) DEFAULT NULL,
+  `branch_code` varchar(255) DEFAULT NULL,
+  `swift_code` varchar(255) DEFAULT NULL,
+  `mpesa_code` varchar(255) DEFAULT NULL,
+  `bank_gl_ac` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_bank_details`
+--
+
+INSERT INTO `cra_bank_details` (`id`, `bank`, `branch`, `account_name`, `account_number`, `bank_code`, `branch_code`, `swift_code`, `mpesa_code`, `bank_gl_ac`) VALUES
+(21, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(22, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(23, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(24, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(25, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(26, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(27, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(28, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(29, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(30, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `cra_bringup`
 --
 
@@ -570,6 +605,46 @@ CREATE TABLE `cra_client_pickup_reception` (
 
 INSERT INTO `cra_client_pickup_reception` (`id`, `client`, `file_name`, `mobile`, `persion_handling`, `email`, `client_name`, `persion_picking_handling`, `reason`, `visitors`, `time_in`, `time_out`) VALUES
 (1, 'hlo', 'hi', 987654321, 'gh', 'mk@gmail.com', 'dnj', 'ggg', 'hhh', 'hhhh', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_company_branch_details`
+--
+
+CREATE TABLE `cra_company_branch_details` (
+  `id` int(11) NOT NULL,
+  `branch_no` int(11) DEFAULT NULL,
+  `branch_code` varchar(255) DEFAULT NULL,
+  `branch_name` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `telephone` int(11) DEFAULT NULL,
+  `mobile` int(11) DEFAULT NULL,
+  `fax` int(11) DEFAULT NULL,
+  `town` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `website` varchar(255) DEFAULT NULL,
+  `physical_address` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_company_details`
+--
+
+CREATE TABLE `cra_company_details` (
+  `id` int(11) NOT NULL,
+  `company_name` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `town/city` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `company_type` varchar(255) DEFAULT NULL,
+  `pin_no` varchar(255) DEFAULT NULL,
+  `vat_no` varchar(255) DEFAULT NULL,
+  `NHIF` varchar(255) DEFAULT NULL,
+  `NSSF_no` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -978,6 +1053,26 @@ INSERT INTO `cra_open_new_file_details` (`id`, `Associate_handling`, `Client_typ
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `cra_safe_item_request`
+--
+
+CREATE TABLE `cra_safe_item_request` (
+  `id` int(11) NOT NULL,
+  `Client` varchar(255) DEFAULT NULL,
+  `File` varchar(255) DEFAULT NULL,
+  `Document_Type` varchar(255) DEFAULT NULL,
+  `Safe_Name` text DEFAULT NULL,
+  `Approver` text DEFAULT NULL,
+  `Requested_By` text DEFAULT NULL,
+  `Date` date DEFAULT NULL,
+  `And_next` varchar(255) DEFAULT NULL,
+  `Distributed_By` text DEFAULT NULL,
+  `Status` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `cra_safe_register_report`
 --
 
@@ -1153,6 +1248,47 @@ INSERT INTO `cra_template_category` (`id`, `Template_Category`, `Category_Type`)
 (196, NULL, NULL),
 (197, NULL, NULL),
 (198, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_transport_zone`
+--
+
+CREATE TABLE `cra_transport_zone` (
+  `id` int(11) NOT NULL,
+  `zone_name` varchar(225) DEFAULT NULL,
+  `zone_areas` varchar(225) DEFAULT NULL,
+  `cost` varchar(225) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_transport_zone`
+--
+
+INSERT INTO `cra_transport_zone` (`id`, `zone_name`, `zone_areas`, `cost`) VALUES
+(23, NULL, NULL, NULL),
+(24, NULL, NULL, NULL),
+(25, NULL, NULL, NULL),
+(26, NULL, NULL, NULL),
+(27, NULL, NULL, NULL),
+(28, NULL, NULL, NULL),
+(29, NULL, NULL, NULL),
+(30, NULL, NULL, NULL),
+(31, NULL, NULL, NULL),
+(32, NULL, NULL, NULL),
+(33, NULL, NULL, NULL),
+(34, NULL, NULL, NULL),
+(35, NULL, NULL, NULL),
+(36, NULL, NULL, NULL),
+(37, NULL, NULL, NULL),
+(38, NULL, NULL, NULL),
+(39, NULL, NULL, NULL),
+(40, NULL, NULL, NULL),
+(41, NULL, NULL, NULL),
+(42, NULL, NULL, NULL),
+(43, NULL, NULL, NULL),
+(44, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -7663,6 +7799,12 @@ ALTER TABLE `cra_add_file_progress`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cra_bank_details`
+--
+ALTER TABLE `cra_bank_details`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `cra_bringup`
 --
 ALTER TABLE `cra_bringup`
@@ -7678,6 +7820,18 @@ ALTER TABLE `cra_client_monthly_file_status_report`
 -- Indexes for table `cra_client_pickup_reception`
 --
 ALTER TABLE `cra_client_pickup_reception`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_company_branch_details`
+--
+ALTER TABLE `cra_company_branch_details`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_company_details`
+--
+ALTER TABLE `cra_company_details`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -7765,6 +7919,12 @@ ALTER TABLE `cra_open_new_file_details`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cra_safe_item_request`
+--
+ALTER TABLE `cra_safe_item_request`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `cra_safe_register_report`
 --
 ALTER TABLE `cra_safe_register_report`
@@ -7810,6 +7970,12 @@ ALTER TABLE `cra_tax_wht-vat`
 -- Indexes for table `cra_template_category`
 --
 ALTER TABLE `cra_template_category`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_transport_zone`
+--
+ALTER TABLE `cra_transport_zone`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -8364,6 +8530,12 @@ ALTER TABLE `cra_add_file_progress`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
+-- AUTO_INCREMENT for table `cra_bank_details`
+--
+ALTER TABLE `cra_bank_details`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
 -- AUTO_INCREMENT for table `cra_bringup`
 --
 ALTER TABLE `cra_bringup`
@@ -8380,6 +8552,18 @@ ALTER TABLE `cra_client_monthly_file_status_report`
 --
 ALTER TABLE `cra_client_pickup_reception`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `cra_company_branch_details`
+--
+ALTER TABLE `cra_company_branch_details`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `cra_company_details`
+--
+ALTER TABLE `cra_company_details`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `cra_complaint_register`
@@ -8466,6 +8650,12 @@ ALTER TABLE `cra_open_new_file_details`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
 
 --
+-- AUTO_INCREMENT for table `cra_safe_item_request`
+--
+ALTER TABLE `cra_safe_item_request`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `cra_safe_register_report`
 --
 ALTER TABLE `cra_safe_register_report`
@@ -8512,6 +8702,12 @@ ALTER TABLE `cra_tax_wht-vat`
 --
 ALTER TABLE `cra_template_category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=199;
+
+--
+-- AUTO_INCREMENT for table `cra_transport_zone`
+--
+ALTER TABLE `cra_transport_zone`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT for table `cra_weekend_and_holiday`
