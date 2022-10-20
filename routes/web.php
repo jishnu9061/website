@@ -796,7 +796,9 @@ Route::any('edit_template_category','SystemSetup@edittemplatecategory')->name('e
 //paired accounts
 Route::any('paired_account','SystemSetup@pairedaccount')->name('paired_account');
 Route::any('add_account_pairs','SystemSetup@addaccountpairs')->name('add_account_pairs');
-Route::any('edit_account_pairs','SystemSetup@editaccountpairs')->name('edit_account_pairs');
+Route::any('edit_account_pairs/{id}','SystemSetup@editaccountpairs')->name('edit_account_pairs');
+Route::any('/update_paired_account','SystemSetup@updatepairedaccount')->name('update_paired_account');
+Route::any('/delete_account_pairs/{id}','SystemSetup@deletepairedaccount')->name('delete_account_pairs');
 //end
 //file types
 Route::any('file_types','SystemSetup@filetypes')->name('file_types');

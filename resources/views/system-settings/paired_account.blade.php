@@ -12,24 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-      <style >
-          body
-        {
-          background-color: white;
-        }
-
-             th, td ,tr{
-               border: 1px solid  gray ;
-                border-collapse: collapse;
-}
-table{
-    outline: 1px solid  gray ;
-}
-/* td:nth-child(odd) {
-            background-color:rgb(198, 195, 211); 
-        } */
-          
-            </style>
+  
    </head>
    <body>
 <div>
@@ -61,15 +44,18 @@ table{
                     </tr>
     </thead>
     <tbody>
+    @foreach($paired_account as $account_pair)
+   
 <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
+                        <td>{{$account_pair->id}}</td>
+                        <td>{{$account_pair->account_no1}}</td>
+                        <td>{{$account_pair->account_no2}}</td>
                         <td  scope="row"class="text-center">
-                        <a href="{{url('edit_account_pairs')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                        <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
+                        <a href="{{url('edit_account_pairs',$account_pair->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <a href="{{url('delete_account_pairs',$account_pair->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                            </td>
  </tr>
+ @endforeach
                 </tbody>
             </table></div>
      <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
@@ -91,13 +77,15 @@ table{
 <!---------------------------------------------- MODAL ----------------------------------------------------------------------> 
 @csrf
 <div class="row">
+
+
                     <div class="col-md-6">
                         <div class="mb-1">
                         <label >Account Number 1:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <select type="text" value="" id="" name="acnum"style="width:100%;">
-                   <option>Choose an account...</option>
+                                <select type="text" id="acnum" name="acnum1"style="width:100%;">
+                   <option>----select--------</option>
                    <optgroup label="INCOME">
         <option>Income from Legal Fees(1000)</option>
       
@@ -132,14 +120,31 @@ table{
                             <label>Account Number 2:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <select type="text" value="" id="" name="acnum"style="width:100%;">
-                               <option>Choose an account...</option>
-                                  <option></option>
-                                  <option></option>
-                                  <option></option>
-                                  <option></option>
-                                  
-                                              </select>
+                                <select type="text" value="" id="" name="acnum2"style="width:100%;">
+                                <option>----select--------</option>
+                   <optgroup label="INCOME">
+        <option>Income from Legal Fees(1000)</option>
+      
+    <optgroup label="OTHER INCOME">
+        <option>Other Income(1100)</option>
+        <option>Other Income-Interest Earned (1103)</option>
+        <option>Other Income-Miscellaneous Income(1102)</option>
+        <option>Other Income-Vatable Disbursements (1101)</option>
+        <option>Other Income-Loan Administration Fee(1104)</option>
+    </optgroup>
+    <optgroup label="Expense">
+        <option>Agency Fees(2575)</option>
+        <option>Annual Subscriptions(2566)</option>
+        <option>Audit Fees(2511)</option>
+        <option>Bad Debit Expense(2512)</option>
+        <option>Bank Charges(2513)</option>
+        <option>Book Keeping Costs(2553)</option>
+        <option>Business Development & Marketing(2514)</option>
+        <option>Business Trading Licence(2524)</option>
+        <option>Client Disbursements(2506)</option>
+    </optgroup>
+                    
+                                </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
