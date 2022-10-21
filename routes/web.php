@@ -685,7 +685,7 @@ Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents'])
 //---------------------------RESHMA--------------------------------
 // system setup index
 Route::any('system_setup','SystemSetup@index')->name('system_setup');
-Route::any('hrindex','hrindex@index')->name('hrindex');
+
 
 //end
 //company_details
@@ -1194,6 +1194,9 @@ Route::any('new_credit_notes',"clientinvoicing@newcreditnotes")->name('new_credi
 Route::any('capture_billable_items',"clientinvoicing@billable_items")->name('billable_items');
 Route::any('view_bill',"clientinvoicing@view_bill_item")->name('view_bill_item');
 //anandhu
+
+// hr module
+Route::any('hrindex','hrindex@index')->name('hrindex');
 
 
 
