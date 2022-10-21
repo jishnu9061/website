@@ -88,22 +88,25 @@ class filemanagement extends Controller
     public function filearchive(Request $request)
     {
         
-        $Box_type=$request['box_type'];
-        $Box_number=$request['box_no'];
-
-        DB::table('cra_add_box')->insert([
-            'type' =>  $Box_type,
-            'number' =>  $Box_number,
-
-        ]);
-
+        $file_archieve=DB::table('cra_add_box')->get();
         return view('file_management.file-archive');
+
+       
     }
 
 
-    public function addboxno()
+    public function addboxno(Request $request)
     {
-        return view('file_management.add-box-no');
+        $type=$request['box_type'];
+        $number=$request['box_no'];
+
+        DB::table('cra_add_box')->insert([
+            'type' =>  $type,
+            'number' =>  $number,
+
+        ]);
+        return redirect('/file-archive');
+        // return view('file_management.add-box-no');
     }
 
     public function editboxno()
@@ -441,23 +444,26 @@ class filemanagement extends Controller
 
      public function bringup(Request $request)
      {
+        $bring_up=DB::table('cra_bringup')->get();
+     
+
         $id =$request['id'];
         $Client =$request['client'];
         $File =$request['file'];
-        $Registered_by =$request['registered_by'];
-        $Responsible =$request['responsible'];
-        $Data_from =$request['data_from'];
-        $Data_to =$request['date_to'];
+        $Registered_By=$request['registered_by'];
+        $Responsible_Advocate =$request['responsible'];
+        $Date_From =$request['data_from'];
+        $Date_To =$request['date_to'];
 
         DB::table('cra_bringup')->insert([
 
             'id' => $id,
             'Client' => $Client,
             'File' =>  $File,
-            'Registered_By' => $Registered_by,
-            'Responsible_Advocate' => $Responsible,
-            'Date_From' => $Data_from,
-            'Date_To' => $Data_to,
+            'Registered_By' => $Registered_By,
+            'Responsible_Advocate' => $Responsible_Advocate,
+            'Date_From' => $Date_From,
+            'Date_To' => $Date_To,
 
         ]);
          return view('file_management.bringup');

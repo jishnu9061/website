@@ -45,7 +45,7 @@ class SystemSetup extends Controller
         $vat_no = $Request['vatnum'];
         $NHIF= $Request['nhifcode'];
         $NSSF_no = $Request['nnum'];
-       
+        $Add_Logo=$Request['image'];
 ///////////////////////////////////////////////////////////////////
       
 ////////////////////////////////////////////////////////////////////
@@ -60,7 +60,7 @@ class SystemSetup extends Controller
             'vat_no' => $vat_no,
             'NHIF' => $NHIF,
             'NSSF_no' => $NSSF_no,
-            // 'Add_Logo' => $Add_Logo,
+             'Add_Logo' => $Add_Logo,
         ]);
    
     //    return view('system-settings.add_company_details');
@@ -85,6 +85,7 @@ class SystemSetup extends Controller
         $vat_no = $Request['vatnum'];
         $NHIF = $Request['nhifcode'];
         $NSSF_no = $Request['nnum'];
+        $Add_Logo=$Request['image'];
 //////////////////////////////////////////////////////////////////////////////////////////////
       
 /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -99,7 +100,7 @@ class SystemSetup extends Controller
             'vat_no' =>  $vat_no,
             'NHIF' =>  $NHIF,
             'NSSF_no' =>  $NSSF_no ,
-            // 'Add_Logo' =>  $Add_Logo,
+             'Add_Logo' =>  $Add_Logo,
             
         );
         DB::table('cra_company_details')->where('id', $id)->update( $update_company_details );
@@ -708,16 +709,46 @@ public function updatetaxexcise(Request $Request)
 
     public function pairedaccount()
     {
-        return view('system-settings.paired_account');
+        $paired_account=DB::table('cra_paired_account')->get();
+        return view('system-settings.paired_account',compact('paired_account'));
+       
     }
-    public function addaccountpairs()
+    public function addaccountpairs(Request $Request)
     {
+        $account_no1 = $Request['acnum1'];
+        $account_no2 = $Request['acnum2'];
+     
+        DB::table('cra_paired_account')->insert([
+            'account_no1' => $account_no1,
+            'account_no2' => $account_no2,
+        ]);
+       
         return redirect('/paired_account');
        
     }
-    public function editaccountpairs()
+    public function editaccountpairs($id)
     {
-        return view('system-settings.edit_account_pairs');
+        $paired_account=DB::table('cra_paired_account')->where('id',$id)->first();
+     
+        return view('system-settings.edit_account_pairs',compact('paired_account','id'));
+    }
+    public function updatepairedaccount(Request $Request)
+    {
+        $id = $Request['id'];
+        $account_no1 = $Request['acnum1'];
+        $account_no2 = $Request['acnum2'];
+        
+        $update_paired_account = array(
+            'account_no1' => $account_no1,
+            'account_no2' =>  $account_no2,
+        );
+        DB::table('cra_paired_account')->where('id', $id)->update( $update_paired_account );
+        return redirect('/paired_account');
+    }
+    public function deletepairedaccount($id)
+    {
+        DB::table('cra_paired_account')->where('id',$id)->delete();
+        return redirect('/paired_account');
     }
     public function filetypes()
     {
@@ -992,7 +1023,7 @@ public function edittransportzone()
     }
     public function addpartnerrevenue()
     {
-        return view('system-settings.add_partner_revenue');
+        return redirect('/partner_revenue_share');
     }
     public function menuaccess()
     {
