@@ -685,6 +685,8 @@ Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents'])
 //---------------------------RESHMA--------------------------------
 // system setup index
 Route::any('system_setup','SystemSetup@index')->name('system_setup');
+Route::any('hrindex','hrindex@index')->name('hrindex');
+
 //end
 //company_details
 Route::any('company_details','SystemSetup@company')->name('company_details');

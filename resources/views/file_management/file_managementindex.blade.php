@@ -1,41 +1,20 @@
 @extends('layouts.hmsmain')
 @section('content')
-<!DOCTYPE html>
-<html lang="en">
-<div class="container">
 
-    <head>
-        <title>Client</title>
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css"
-            href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-        <link rel="stylesheet" href="public/assets/css/logo">
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-    </head>
+<section >
+   {{-- heading --}}
+   <h4 id="hdtpa"><b>File Management Details</b></h4>
+   <br><br>
+ 
 
-    <body>
-
-    <div>
-        
-        <div class="btn btn-primary"
-        style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;margin-left: -8px; ">
-        <b><u>File Management Details</u></b></div><br><br>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-            crossorigin="anonymous">
-    </div>
 
         
-        <br>
+       {{--sub heading --}}
+    <h5 id="hdbtb">Maintenance</h5>
+    <br>
 
 
-            <div class="btn btn-primary float-left"
-                style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold; font-size:15px; ">Maintenance
-            </div><br><br><br>
+           
             <div class="row sm">
                 <div class="col-sm-4 "> <a href="{{ url('file-list') }}"><img class="logo_size" src="assets\image\Manage file.png"
                             alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn">Manage
@@ -48,9 +27,10 @@
                             class="btn btn-primary btn_align_btn">File Archive</button></a></div>
             </div>
             <br>
-            <div class="btn btn-primary float-left"
-                style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold; font-size:15px; ">File Status
-                Reports</div><br><br><br>
+                   {{--sub heading --}}
+    <h5 id="hdbtb">File Status Reports</h5>
+    <br>
+            
             <div class="row sm">
                 <div class="col-sm-4 "> <a href="{{ url('file-list-progress-report') }}"><img class="logo_size"
                             src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
@@ -72,8 +52,10 @@
                             class="btn btn-primary btn_align_btn">Monthly Staff Status Report</button></a></div>
             </div>
             <br>
-            <div class="btn btn-primary float-left"
-                style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold; font-size:15px; ">Notes</div><br><br><br>
+            {{--sub heading --}}
+    <h5 id="hdbtb">Notes</h5>
+    <br>
+            
             <div class="row sm">
                 <div class="col-sm-4"> <a href="{{ url('diary-management') }}"><img class="logo_size"
                             src="assets\image\Diary management.png" alt=""><button type="button" style="width:70%;"
@@ -90,9 +72,9 @@
             </div>
            
                 <br>
-                <div class="btn btn-primary float-left"
-                    style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold; font-size:15px; ">Instructions</div><br><br><br>
-                <div class="row sm">
+                            {{--sub heading --}}
+    <h5 id="hdbtb">Instructions</h5>
+    <br>                <div class="row sm">
                     <div class="col-sm-4"> <a href="{{ url('file_instruction') }}"><img class="logo_size"
                                 src="assets\image\File instruction.png" alt=""><button type="button" style="width:70%;"
                                 class="btn btn-primary btn_align_btn">File Instructions</button></a></div>
@@ -104,9 +86,10 @@
                                 class="btn btn-primary btn_align_btn">Instructions Report</button></a></div>
                 </div>
                 <br>
-                <div class="btn btn-primary float-left"
-                    style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold; font-size:15px; ">File
-                    Reports</div><br><br><br>
+                                            {{--sub heading --}}
+    <h5 id="hdbtb">File Reports</h5>
+    <br> 
+              
                 <div class="row sm">
                     <div class="col-sm-4"> <a href="{{ url('file-report') }}"><img class="logo_size"
                                 src="assets\image\file report.png" alt=""><button type="button" style="width:70%;"
@@ -132,9 +115,11 @@
 
                 </div>
                 <br>
-                <div class="btn btn-primary float-left"
-                    style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold; font-size:15px; ">Add
-                    Ons</div><br><br><br>
+                 {{--sub heading --}}
+    <h5 id="hdbtb">Add Ons</h5>
+    <br> 
+              
+                
                 <div class="row sm">
                     <div class="col-sm-4"> <a href="{{ url('Safe_management') }}"><img class="logo_size"
                                 src="assets\image\Safe management.png" alt=""><button type="button" style="width:70%;"
@@ -161,8 +146,7 @@
                 </div>
            
 
-    </body>
-</div>
+            </section>
 
-</html>
+
 @endsection
