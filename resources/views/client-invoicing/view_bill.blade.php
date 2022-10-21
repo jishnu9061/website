@@ -1,6 +1,6 @@
 @extends('layouts.hmsmain')
 @section('content')
-<div class="container">
+
     <div class="py-5 text-center">
         @if(Session::has('staffregistered'))
         <div class="alert alert-dark" role="alert">
@@ -16,15 +16,11 @@
 
 
         </div>
-        <div>
-        <div>
-            <div class="btn btn-primary"
-            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>View Billable Items</u></b></div><br><br>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous">
-        </div>
-        
+
+         {{-- heading --}}
+   <h4 id="hdtpa"><b>View Billable Items</b></h4>
+   <br><br>
+               
 
             <br>
             <div style="padding:1px;">

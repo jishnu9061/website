@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 // use Illuminate\Http\Request;
 // use DB;
 
-class hrindex extends Controller
+class accindex extends Controller
 {
     public function index()
     {
-        return view('hr.hrindex');
+        return view('Accounts.accindex');
     }
 
 
