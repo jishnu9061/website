@@ -26,8 +26,7 @@ class UserManagement extends Controller
     }
     public function regnewuser()
     {
-        // return view('user_management.reg_new_user');
-        return redirect('/manage_user_account');
+        return view('user_management.reg_new_user');
     }
     public function attachments()
     {

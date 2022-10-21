@@ -22,7 +22,7 @@
      </div>
             <br>
             
-            <form method="post" action="add_tax_excise" id="form">  
+            <form method="post" action="" id="form">  
             @csrf
             <div class="row">
                 <div class="col-lg-6 col-md-6 offset-md-3" >
@@ -45,7 +45,7 @@
                 <label >Tax Value(%):</label>
                 <div class="input-group">
                     <div class="input-group-prepend"></div>
-                    <input type="text"  id="" name="value"value=""class="form-control" >
+                    <input type="number"  id="" name="name"value=""class="form-control" >
                     <div class="invalid-feedback" style="width: 100%;">
                     Required Field.
                 </div>

@@ -64,10 +64,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="client" id="cars">
-                                <option>select</option>
-                                    <option>demo 1</option>
-                                    <option>demo 2</option>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -82,10 +80,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="file" id="cars">
-                                <option>select</option>
-                                    <option>demo 1</option>
-                                    <option>demo 2</option>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -103,10 +99,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="registered_by" id="cars">
-                                    <option>select</option>
-                                    <option>demo 1</option>
-                                    <option>demo 2</option>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -121,10 +115,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="responsible" id="cars">
-                                <option>select</option>
-                                    <option>demo 1</option>
-                                    <option>demo 2</option>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
@@ -139,7 +131,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="data_from" id="confirm_password" required>
+                                <input type="date" class="form-control" name="website" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
@@ -154,7 +146,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="date_to" id="confirm_password" required>
+                                <input type="date" class="form-control" name="website" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
@@ -186,8 +178,8 @@
                         </div>
                         <div class="col-sm">
                             <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">View Report</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Cancel</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">View Report</button>
                         </div>
                     </div>
                 </div>

@@ -40,11 +40,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="department" id="cars">
-                                    <option>select</option>
-                                    <option>demo 1</option>
-                                    <option>demo 2</option>
-
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -59,20 +56,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="month" id="cars">
-                                <option>select</option>
-                                    <option>January</option>
-                                    <option>February</option>
-                                    <option>March</option>
-                                    <option>April</option>
-                                    <option>May</option>
-                                    <option>June</option>
-                                    <option>July</option>
-                                    <option>August</option>
-                                    <option>September</option>
-                                    <option>October</option>
-                                    <option>November</option>
-                                    <option>December</option>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -80,21 +65,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Year</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <select name="year" id="cars">
-                                <option>select</option>
-                                    <option>demo 1</option>
-                                    <option>demo 2</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div> -->
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Year</label>
@@ -102,11 +72,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="year" id="confirm_password" required>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
+                                </select>
                             </div>
                         </div>
                     </div>
-              
 
 
 
