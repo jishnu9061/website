@@ -19,6 +19,7 @@
             <div class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;">
                 <b><u>File List</u></b>
+               
             </div><br><br>
             <div>
                 <!-- <div class="btn btn-primary"
@@ -28,53 +29,63 @@
                     crossorigin="anonymous">
 
             </div> -->
+            <div >
+                <input class="btn btn-primary" type="button" value="All">
+                <input class="btn btn-primary" type="button" value="Open">
+                <input class="btn btn-primary" type="button" value="Pending">
+                <input class="btn btn-primary" type="button" value="Closed">
+             </div>
+</br>
 
                 <div id="mydatatable_filter" class="dataTables_filter">
                     <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-1">Columns
+                  </button>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Filter
+                  </button>
                 </div>
                 {{-- <a href="{{('add-corporate')}}"><button class="btn btn-primary">Add Corporate</button></a> --}}
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New
-                    File</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">New
+                  File</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <div class="table-responsive">
                             <table class="table table-bordered" id="new-item">
                                 <thead>
                                     <tr>
-                                        <th class="text-center"> No</th>
-                                        <th class="text-center">File No</th>
-                                        <th class="text-center">Client Name</th>
-                                        <th class="text-center">File Name</th>
-                                        <th class="text-center">Date Opened</th>
-                                        <th class="text-center">Responsible Advocates</th>
-                                        <th class="text-center">Resent Progress</th>
-                                        <th class="text-center">Date Closed</th>
-                                        <th class="text-center">Fee Balances</th>
-                                        <th class="text-center">Status</th>
-                                        <th class="text-center">Action</th>
+                                        <th class="text-center"> <input type="checkbox"></th>
+                                        <th class="text-center">Actions</th>
+                                        <th class="text-center">Matter</th>
+                                        <th class="text-center">Client</th>
+                                        <th class="text-center">Responsible</br>Solicitor</th>
+                                        <th class="text-center">Originating</br>Solicitor</th>
+                                        <th class="text-center">Matter</br>Notifications</th>
+                                        <th class="text-center">Practice Area</th>
+                                        <th class="text-center">Open Date</th>
+                                        <th class="text-center">Close Date</th>
+                                        <th class="text-center">Pending Date</th>
+                                        <th class="text-center">State Of Limitations Date</th>
+                                        <th class="text-center">Last</br>Activity</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($file_list as $file)
+                                    <!-- @foreach ($file_list as $file) -->
                                         <tr id="data">
-                                            <td scope="row">{{ $file->our_file_reference_no }}</td>
-                                            <td scope="row">{{ $file->Client_type }}</td>
-                                            <td scope="row">{{ $file->File_name }}</td>
-                                            <td scope="row">{{ $file->opening_date }}</td>
-                                            <td scope="row">{{ $file->Approval_partner }}</td>
                                             <td scope="row"></td>
                                             <td scope="row"></td>
                                             <td scope="row"></td>
                                             <td scope="row"></td>
                                             <td scope="row"></td>
-                                            <td scope="row">
-                                                <a href="{{ url('edit_file', $file->id) }}"><i style="color:black;"
-                                                        class="fa fa-edit" aria-hidden="true"></i>
-                                                    <a href="{{ url('file_destroy', $file->id) }}"><i style="color:black;"
-                                                            class="fa fa-trash" aria-hidden="true"></i>
-                                            </td>
+                                            <td scope="row"></td>
+                                            <td scope="row"></td>
+                                            <td scope="row"></td>
+                                            <td scope="row"></td>
+                                            <td scope="row"></td>
+                                            <td scope="row"></td>
+                                            <td scope="row"></td>
+                                            <td scope="row"></td>
                                         </tr>
-                                    @endforeach
+                                    <!-- @endforeach -->
                                 </tbody>
                             </table>
                         </div>
@@ -146,6 +157,99 @@
             </div>
             <br>
         <br>
+
+                  <!-- COLUMNS -->
+                  <div class="modal fade" id="myModal-1">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content" style="background-color:#d6ba8a">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body" style="background-color:white">
+                                        <div class="container">
+                                            <form method="post" action="{{ url('') }}"
+                                                enctype="multipart/form-data">
+
+                                                @csrf
+
+    <form action="/action_page.php">
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="check1">
+      <label class="form-check-label" for="check1">Option 1</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="check2">
+      <label class="form-check-label" for="check2">Option 2</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input">
+      <label class="form-check-label">Option 3</label>
+    </div>
+   
+  </form>
+                                            
+              
+                   <div class="row">
+                       <div class="col-sm">
+
+                       </div>
+                       <div class="col-sm">
+
+                       </div>
+                       <div class="col-sm">
+                           <br>
+                           <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update Columns</button>
+                           <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                       </div>
+                   </div>
+               </div>
+           </form>
+       </div>
+   </div>
+</div>
+
+</div>
+<div class="modal" id="mymodal">
+   <div class="modal-dialog">
+       <div class="modal-content">
+           <div class="modal-header">
+               <div class="modal-body">
+                   <form action="">
+                       <div>
+                           <input type="text" name="type" class="form-control" placeholder="Client Type">
+                           <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                       </div>
+                   </form>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+</div>
+<div class="modal" id="my">
+   <div class="modal-dialog">
+       <div class="modal-content">
+           <div class="modal-header">
+               <div class="modal-body">
+                   <form action="">
+                       <div>
+                           <input type="text" name="type" class="form-control" placeholder="Country">
+                           <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                       </div>
+                   </form>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+</div>
+
+        <br>
+
+                  <!-- END COLUMNS -->
 
 
       
