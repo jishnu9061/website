@@ -499,7 +499,7 @@
                             
                                 <li class="submenu-item has-sub" style="list-style:none;">
                                     <a href="{{url('hrindex')}}" class='sidebar-link'>
-                                        <i class="fa fa-gear" id="icon"></i>
+                                        <i class="bi bi-grid-fill" id="icon"></i>
                                             <span>HR</span>
                                     </a>
                             </li>

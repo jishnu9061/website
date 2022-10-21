@@ -11,7 +11,7 @@
 <a href="{{url('Calendar')}}"style="color:#1D1D50;">Calendar</a> |
 <a href="{{url('Phone_Book')}}"style="color:#1D1D50;">Phone Book</a> |
 <a href="{{url('Audit_Trail')}}"style="color:#1D1D50;">Audit Trail</a> |
-<a href="{{url('Change_password')}}"style="color:#1D1D50;">Change password</a> |
+<a href="{{url('Change_password')}}"style="color:#1D1D50;">Change pasword</a> |
 <a href="{{url('Logout')}}"style="color:#1D1D50;">Logout</a> 
 </p>
 <br>
