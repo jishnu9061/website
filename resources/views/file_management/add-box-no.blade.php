@@ -14,6 +14,7 @@
         @endif
         <div>
             <!-- <h2>Add Box No</h2> -->
+            
             <div>
             <div class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Add Box No</u></b></span></div><br>

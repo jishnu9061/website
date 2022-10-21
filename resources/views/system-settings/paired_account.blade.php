@@ -35,18 +35,12 @@ table{
 <div>
             <button class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Paired Accounts</u></b></span></button><br>
-   
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
      </div>
             <br>
-            <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-           
-{{-- <a href="{{('add_account_pairs')}}"><button class="btn btn-primary">Add Account Pair</button></a> --}}
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Account Pair</button>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      <br>
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-        <!-- <a href="{{('add_account_pairs')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Account Pair</button></a> <br> <br> -->
+        <a href="{{('add_account_pairs')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Account Pair</button></a> <br> <br>
 <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">List Of Paired Accounts</h3>
     <!-- <div class="container"> -->
       <div class="mydiv">
@@ -56,119 +50,44 @@ table{
                         <th class="text-center" >No</th>
                         <th class="text-center">Account No 1</th>
                         <th class="text-center" >Account No 2</th>
-                        <th class="text-center">Action</th>
-                        
+                        <th class="text-center">Edit</th>
+                        <th class="text-center" ><input type="checkbox"></th>
                     </tr>
     </thead>
     <tbody>
-<tr>
+                   
+
+                   
+                    <tr>
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  scope="row"class="text-center">
-                        <a href="{{url('edit_account_pairs')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                        <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
-                           </td>
- </tr>
-                </tbody>
-            </table></div>
-     <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-<div class="modal fade" id="myModal">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content" style="background-color:#d6ba8a">
+                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{('edit_account_pairs')}}">Edit</td></a>
+                        <td class="text-center" ><input type="checkbox"></td>
+                      
+                    </tr>
+                 
 
-                                    <!-- Modal Header -->
-                                    <div class="modal-header" style="background-color:#d6ba8a">
-                                        <h2 class="text-centre"><b>Add Account Pair</b></h2>
-
-                                    </div>
-
-                                    <!-- Modal body -->
-                                    <div class="modal-body" style="background-color:white">
-                                        <div class="container">
-                                            <form method="post" action="{{ url('add_account_pairs') }}"
-                                                enctype="multipart/form-data"> 
-<!---------------------------------------------- MODAL ----------------------------------------------------------------------> 
-@csrf
-<div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                        <label >Account Number 1:</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <select type="text" value="" id="" name="acnum"style="width:100%;">
-                   <option>Choose an account...</option>
-                   <optgroup label="INCOME">
-        <option>Income from Legal Fees(1000)</option>
-      
-    <optgroup label="OTHER INCOME">
-        <option>Other Income(1100)</option>
-        <option>Other Income-Interest Earned (1103)</option>
-        <option>Other Income-Miscellaneous Income(1102)</option>
-        <option>Other Income-Vatable Disbursements (1101)</option>
-        <option>Other Income-Loan Administration Fee(1104)</option>
-    </optgroup>
-    <optgroup label="Expense">
-        <option>Agency Fees(2575)</option>
-        <option>Annual Subscriptions(2566)</option>
-        <option>Audit Fees(2511)</option>
-        <option>Bad Debit Expense(2512)</option>
-        <option>Bank Charges(2513)</option>
-        <option>Book Keeping Costs(2553)</option>
-        <option>Business Development & Marketing(2514)</option>
-        <option>Business Trading Licence(2524)</option>
-        <option>Client Disbursements(2506)</option>
-    </optgroup>
                     
-                                </select>
-                                <div class="invalid-feedback" style="width: 100%;">
-                                Required Field.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label>Account Number 2:</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <select type="text" value="" id="" name="acnum"style="width:100%;">
-                               <option>Choose an account...</option>
-                                  <option></option>
-                                  <option></option>
-                                  <option></option>
-                                  <option></option>
-                                  
-                                              </select>
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Required Field.
-                                </div>
-                            </div>
-                        </div>
-                     </div>
-                    </div>
-                    <div class="row">
-         <div class="col-sm">
+    </tbody>
 
-                        </div>
-                        <div class="col-sm">
+                   
+                </table>
+                <!-- <div class="class"style="text-align:right;">
+                <select style="width:10%;height:100%;color:white;font-size:small;background-color:rgb(13, 1, 56);"type="text" value="" name="type">
+    <option>Active Category</option>
+    <option>De-Active Category</option>
+ 
+</select>
+<input type="button"value="Go" name="close"style="background-color:rgb(13, 1, 56);color: white; ">
+    </div>
+    <br>
+    <br>
+    </div> -->
 
-                        </div>
-                        <div class="col-sm">
-                            <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
-                            <br>
-                            <br>
-                        </div>
-                    </div>
-        </div>
-</form>   
-</div>
-</div>
-</div>
-</div>
-
+    <!-- <form>
+ <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
+</form> -->
         </body>
     </div>
 </html>

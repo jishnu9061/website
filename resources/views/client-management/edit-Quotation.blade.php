@@ -20,9 +20,8 @@
     </div>
     <div class="row">
         <div class="col-md-12 order-md-1">
-            <form method="post" action="{{url('update-Quotation')}}" id="form">
+            <form method="post" action="" id="form">
                 @csrf
-                <input type="hidden" name="id" value="{{$edit_quotation->id}}">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
@@ -32,7 +31,7 @@
 
                                 </div>
                                 <select name="document" id="cars">
-                                    <option>{{$edit_quotation->document_type}}</option>
+                                    <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
@@ -42,7 +41,7 @@
                             <label for="username">Issue Date</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="issue" id="age" value="{{$edit_quotation->issue_date}}"
+                                <input type="date" class="form-control" name="issue" id="age" value=""
                                     placeholder="corporation" min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
@@ -58,7 +57,7 @@
 
                                 </div>
                                 <select name="customer" id="cars">
-                                    <option >{{$edit_quotation->customer}}</option>
+                                    <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
@@ -71,7 +70,7 @@
                             <label for="username">Client Ref No</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="ref" id="age" value="{{$edit_quotation->client_ref_no}}" placeholder=""
+                                <input type="text" class="form-control" name="ref" id="age" value="" placeholder=""
                                     min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
@@ -87,7 +86,7 @@
 
                                 </div>
                                 <select name="currency" id="cars">
-                                    <option value="volvo">{{$edit_quotation->currency}}</option>
+                                    <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
@@ -97,7 +96,7 @@
                             <label for="username">Exchange Rate</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="rate" value="{{$edit_quotation->exchange_rate}}" id="confirm_password"
+                                <input type="text" class="form-control" name="rate" value="" id="confirm_password"
                                     placeholder="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
@@ -115,7 +114,7 @@
                                 <div class="input-group-prepend">
                                 </div>
                                 <select name="approver" id="cars">
-                                    <option value="volvo">{{$edit_quotation->approver}}</option>
+                                    <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
@@ -127,7 +126,7 @@
                                 <div class="input-group-prepend">
                                 </div>
                                 <select name="account" id="cars">
-                                    <option value="volvo">{{$edit_quotation->bank_account}}</option>
+                                    <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
@@ -151,7 +150,7 @@
                             <label for="username">To The Attender Of</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="attender" value="{{$edit_quotation->attender}}" id="confirm_password"
+                                <input type="text" class="form-control" name="attender" value="" id="confirm_password"
                                     placeholder="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
@@ -164,7 +163,7 @@
                             <label for="username">Subject/Tittle</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="subject" value="{{$edit_quotation->subject}}" id="confirm_password"
+                                <input type="text" class="form-control" name="subject" value="" id="confirm_password"
                                     placeholder="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
@@ -195,7 +194,7 @@
 
                                 </div>
                                 <select name="type" id="cars">
-                                    <option value="volvo">{{$edit_quotation->type}}</option>
+                                    <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
@@ -216,7 +215,7 @@
                             <label for="username">Amount</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="amount" id="age" value="{{$edit_quotation->amount}}" placeholder=""
+                                <input type="text" class="form-control" name="pin" id="age" value="" placeholder=""
                                     min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
@@ -232,7 +231,7 @@
 
                                 </div>
                                 <select name="vat" id="cars">
-                                    <option >{{$edit_quotation->vat}}</option>
+                                    <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
@@ -253,7 +252,8 @@
                             <label for="username">Comments</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <textarea class="form-control" id="form7Example7" rows="2"></textarea>
+                                <input type="text" class="form-control" name="comments" value="" id="password"
+                                    placeholder="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Comments is required.
                                 </div>
@@ -287,7 +287,7 @@
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;"
-                                Style="width:50%;">Update</button>
+                                Style="width:50%;">Submit</button>
                             <button type="button" class="btn btn-primary float:left" Style="width:45%;">Back</button>
                         </div>
                     </div>

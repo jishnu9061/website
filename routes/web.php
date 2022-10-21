@@ -685,6 +685,8 @@ Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents'])
 //---------------------------RESHMA--------------------------------
 // system setup index
 Route::any('system_setup','SystemSetup@index')->name('system_setup');
+
+
 //end
 //company_details
 Route::any('company_details','SystemSetup@company')->name('company_details');
@@ -757,32 +759,15 @@ Route::any('/update_tax_chart','SystemSetup@updatetaxchart')->name('update_tax_c
 Route::any('/delete_tax_chart/{id}','SystemSetup@deletetaxchart')->name('delete_tax_chart');
 //end
 //taxexcise
-Route::any('tax_excise','SystemSetup@taxexcise')->name('tax_excise');
 Route::any('add_tax_excise','SystemSetup@addtaxexcise')->name('add_tax_excise');
-Route::any('edit_tax_excise/{id}','SystemSetup@edittaxexcise')->name('edit_tax_excise');
-Route::any('/update_tax_excise','SystemSetup@updatetaxexcise')->name('update_tax_excise');
-Route::any('/delete_tax_excise/{id}','SystemSetup@deletetaxexcise')->name('delete_tax_excise');
-//end
-//tax_vat
-Route::any('tax_vat','SystemSetup@taxvat')->name('tax_vat');
 Route::any('add_tax_vat','SystemSetup@addtaxvat')->name('add_tax_vat');
-Route::any('edit_tax_vat/{id}','SystemSetup@edittaxvat')->name('edit_tax_vat');
-Route::any('/update_tax_vat','SystemSetup@updatetaxvat')->name('update_tax_vat');
-Route::any('/delete_tax_vat/{id}','SystemSetup@deletetaxvat')->name('delete_tax_vat');
-//end
-//tax_wht
-Route::any('tax_wht','SystemSetup@taxwht')->name('tax_wht');
 Route::any('add_tax_wht','SystemSetup@addtaxwht')->name('add_tax_wht');
-Route::any('edit_tax_wht/{id}','SystemSetup@edittaxwht')->name('edit_tax_wht');
-Route::any('/update_tax_wht','SystemSetup@updatetaxwht')->name('update_tax_wht');
-Route::any('/delete_tax_wht/{id}','SystemSetup@deletetaxwht')->name('delete_tax_wht');
-//end
-//tax_wht-vat
-Route::any('tax_wht-vat','SystemSetup@taxwhtvat')->name('tax_wht-vat');
 Route::any('add_tax_wht-vat','SystemSetup@addtaxwhtvat')->name('add_tax_wht-vat');
-Route::any('edit_tax_wht-vat/{id}','SystemSetup@edittaxwhtvat')->name('edit_tax_wht-vat');
-Route::any('/update_tax_wht_vat','SystemSetup@updatetaxwhtvat')->name('update_tax_wht_vat');
-Route::any('/delete_tax_wht-vat/{id}','SystemSetup@deletetaxwhtvat')->name('delete_tax_wht-vat');
+Route::any('edit_tax_chart','SystemSetup@edittaxchart')->name('edit_tax_chart');
+Route::any('edit_tax_excise','SystemSetup@edittaxexcise')->name('edit_tax_excise');
+Route::any('edit_tax_vat','SystemSetup@edittaxvat')->name('edit_tax_vat');
+Route::any('edit_tax_wht','SystemSetup@edittaxwht')->name('edit_tax_wht');
+Route::any('edit_tax_wht-vat','SystemSetup@edittaxwhtvat')->name('edit_tax_wht-vat');
 //end
 //notifications
 Route::any('notifications','SystemSetup@notifications')->name('notifications');
@@ -790,8 +775,11 @@ Route::any('notifications','SystemSetup@notifications')->name('notifications');
 //template category
 Route::any('template_category','SystemSetup@templatecategory')->name('template_category');
 Route::any('add_template_category','SystemSetup@addtemplatecategory')->name('add_template_category');
+Route::any('edit_template_category/{id}','SystemSetup@edittemplatecategory')->name('edit_template_category');
+Route::any('/update_template_category','SystemSetup@updatetemplatecategory')->name('update_template_category');
+Route::any('/delete_template_category/{id}','SystemSetup@deletetemplatecategory')->name('delete_template_category');
 Route::any('document_template_category','SystemSetup@documenttemplatecategory')->name('document_template_category');
-Route::any('edit_template_category','SystemSetup@edittemplatecategory')->name('edit_template_category');
+
 //end
 //paired accounts
 Route::any('paired_account','SystemSetup@pairedaccount')->name('paired_account');
@@ -954,8 +942,8 @@ Route::any('advocates_target_2026','UserManagement@advocatestarget2026')->name('
 //Mugunthan
 
 //Client-list
-
-Route::any('add-client',"ClientManagement@addNewClient")->name('add-client');
+Route::any('add_newclient',"ClientManagement@addNewclient")->name('add_newclient');
+Route::any('store-client',"ClientManagement@storeClient")->name('store-client');
 Route::any('client_list','ClientManagement@view')->name('client_list');
 Route::any('/edit_person/{id}','ClientManagement@edit_person')->name('edit_person');
 Route::any('show-client/{id}','ClientManagement@show')->name('show-client');
@@ -964,6 +952,7 @@ Route::any('update-client',"ClientManagement@updateClient")->name('update-client
 Route::any('delete-client/{id}',"ClientManagement@deleteClient")->name('delete-client');
 //coporate
 Route::any('add-corporate','ClientManagement@addCorporate')->name('add-corporate');
+Route::any('store-corporate','ClientManagement@storeCorporate')->name('store-corporate');
 Route::any('corporate-list','ClientManagement@listCorporate')->name('corporate-list');
 Route::any('/edit_client/{id}','ClientManagement@edit_corporate')->name('edit_client');
 Route::any('/update-corporate','ClientManagement@Update_corporate')->name('update-corporate');
@@ -973,7 +962,6 @@ Route::any('/delete_client/{id}','ClientManagement@Corporate_destroy')->name('de
 
 //Client-Documents
 Route::any('client-document','ClientManagement@document')->name('client-document');
-Route::any('create-document','ClientManagement@createDocument')->name('create-document');
 Route::any('add-document','ClientManagement@addDocument')->name('add-document');
 Route::any('view-document','ClientManagement@viewDocument')->name('view-document');
 //end Client-Documents
@@ -987,6 +975,7 @@ Route::any('/delete-pickup/{id}','ClientManagement@deletePickup')->name('delete-
 //Client-Pickup
 //complaint
 Route::any('complaint-list','ClientManagement@complaintList')->name('complaint-list');
+Route::any('create-Complaint','ClientManagement@createComplaint')->name('create-Complaint');
 Route::any('add-Complaint','ClientManagement@addComplaint')->name('add-Complaint');
 Route::any('edit_complaint/{id}','ClientManagement@editComplaint')->name('edit-Complaint');
 Route::any('update-Complaint','ClientManagement@updateComplaint')->name('update-Complaint');
@@ -996,10 +985,8 @@ Route::any('delete-Complaint/{id}','ClientManagement@deleteComplaint')->name('de
 
 //Follow Up
 Route::any('follow-up','ClientManagement@followup')->name('follow-up');
-Route::any('add-follow','ClientManagement@addFollowup')->name('add-follow');
-Route::any('edit-follow/{id}','ClientManagement@editFollow')->name('edit-follow');
-Route::any('update-follow','ClientManagement@updateFollow')->name('update-follow');
-Route::any('delete-follow/{id}','ClientManagement@deleteFollow')->name('delete-follow');
+Route::any('add-follow','ClientManagement@addFollow')->name('add-follow');
+Route::any('edit-follow','ClientManagement@editFollow')->name('edit-follow');
 //end Follow Up
 
 //service
@@ -1009,15 +996,13 @@ Route::any('add-service','ClientManagement@addService')->name('add-service');
 
 //Quotation
 Route::any('Quotation','ClientManagement@Quotation')->name('Quotation');
-Route::any('add-Quotation','ClientManagement@addQuotation')->name('add-Quotation');
-Route::any('edit-Quotation/{id}','ClientManagement@editQuotation')->name('edit-Quotation');
-Route::any('update-Quotation','ClientManagement@updateQuotation')->name('update-Quotation');
+Route::any('new-Quotation','ClientManagement@newQuotation')->name('new-Quotation');
+Route::any('edit-Quotation','ClientManagement@editQuotation')->name('edit-Quotation');
 //end Quotation
 //Registration
 Route::any('view-registration','ClientManagement@viewRegistration')->name('view-registration');
 Route::any('add-registration','ClientManagement@addRegistration')->name('add-registration');
-Route::any('edit-registration/{id}','ClientManagement@editRegistration')->name('edit-registration');
-Route::any('update-registration','ClientManagement@updateRegistration')->name('update-registration');
+Route::any('edit-registration','ClientManagement@editRegistration')->name('edit-registration');
 //end registration
 //communication
 Route::any('communication-list','ClientManagement@listCommunication')->name('communication-list');
@@ -1032,7 +1017,7 @@ Route::any('edit-communication','ClientManagement@editCommunication')->name('edi
 //end communication
 //search list
 Route::any('search-list','ClientManagement@listSearch')->name('search-list');
-Route::any('add-register','ClientManagement@addRegister')->name('add-register');
+Route::any('register-client','ClientManagement@registerClient')->name('register-client');
 //end search list
 
 
@@ -1187,6 +1172,9 @@ Route::any('new_credit_notes',"clientinvoicing@newcreditnotes")->name('new_credi
 Route::any('capture_billable_items',"clientinvoicing@billable_items")->name('billable_items');
 Route::any('view_bill',"clientinvoicing@view_bill_item")->name('view_bill_item');
 //anandhu
+
+// hr module
+Route::any('hrindex','hrindex@index')->name('hrindex');
 
 
 

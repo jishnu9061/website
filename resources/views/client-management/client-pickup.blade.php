@@ -66,7 +66,7 @@
                                                 aria-hidden="true"></i></a>
                                     </td>
                                 </tr>
-                                @endforeach
+                                @endforeach;
                             </tbody>
                         </table>
                     </div>

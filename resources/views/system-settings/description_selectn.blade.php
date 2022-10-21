@@ -12,25 +12,41 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+      <style >
+          body
+        {
+          background-color: white;
+        }
 
+             th, td ,tr{
+               border: 1px solid  gray ;
+                border-collapse: collapse;
+}
+table{
+    outline: 1px solid  gray ;
+}
+td:nth-child(odd) {
+            background-color:rgb(198, 195, 211); 
+        }
+          
+            </style>
    </head>
    <body>
   <div>
             <button class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Description Selections</u></b></span></button><br>
-           
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
      </div>
             <br>
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-           
-{{-- <a href="{{('add_desc_sel')}}"><button class="btn btn-primary">Add Description Selection</button></a> --}}
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Description Selection</button>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      <br>
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-  <!-- <a href="{{('add_desc_sel')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Description Selection</button></a><br><br> -->
-<table class="table table-bordered" id="new-item">
+            
+        <a href="{{('add_desc_sel')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Description Selection</button></a><br><br>
+ 
+        
+    <!-- <div class="container"> -->
+ 
+      <table class="table table-bordered" id="new-item">
                   <thead>
                         <tr>
                         <th class="text-center" >No</th>
@@ -68,71 +84,6 @@
     </div>
     <br>
     <br>
-  <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-  <div class="modal fade" id="myModal">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content" style="background-color:#d6ba8a">
-
-                                    <!-- Modal Header -->
-                                    <div class="modal-header" style="background-color:#d6ba8a">
-                                        <h2 class="text-centre"><b>Add Description Selection</b></h2>
-
-                                    </div>
-
-                                    <!-- Modal body -->
-                                    <div class="modal-body" style="background-color:white">
-                                        <div class="container">
-                                            <form method="post" action="{{ url('add_desc_sel') }}"
-                                                enctype="multipart/form-data"> 
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->  
-    @csrf
-<div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                        <label >Description Selection Name:</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text"  id="" name="desselname"value=""class="form-control">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                Required Field.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label>Selection Description:</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="seldes" id="" value="">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Required Field.
-                                </div>
-                            </div>
-                        </div>
-                     </div>
-                    </div>
-<div class="row">
-    <div class="col-sm">
-
-    </div>
-    <div class="col-sm">
-
-    </div>
-    <div class="col-sm">
-         <br>
-         <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
-         <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
-        </div>
-    </div>
-</div>
-</form>
-</div>
-</div>
-</div>
-</div>
-
-
     </div>
 
     <!-- <form>

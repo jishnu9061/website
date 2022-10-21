@@ -91,7 +91,8 @@ h1,
     margin-bottom: 0.5rem;
     font-weight: 700;
     line-height: 1.2;
-    color: #25396f;
+    color: #05629B;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
 h1,
@@ -11681,8 +11682,8 @@ fieldset:disabled .btn {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
+    background: #F4F4F6;
+    /* border-radius: 10px; */
     
     /* Track */
 
@@ -11693,8 +11694,8 @@ fieldset:disabled .btn {
     /* Handle */
     ::-webkit-scrollbar-thumb {
         
-        background: #EEDCBE;
-        border-radius: 10px;
+        background: #ffffff;
+        /* border-radius: 10px; */
     }
 
 
