@@ -22,7 +22,8 @@
      </div>
             <br>
             <br>
-            <form method="post" action="" id="form">  
+            <form method="post"action="{{url('update_paired_account')}}"id="form">  
+          <input type="hidden" name="id" value="{{$paired_account->id}}">
        @csrf
 <div class="row">
                     <div class="col-md-6">
@@ -30,12 +31,30 @@
                         <label >Account Number 1:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <select type="text" value="" id="" name="acnum">
-                   <option>Choose an account...</option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
+                                <select type="text" value="" id="" name="acnum1" >
+                   <option>{{$paired_account->account_no1}}</option>
+                   <option>----select--------</option>
+                   <optgroup label="INCOME">
+        <option>Income from Legal Fees(1000)</option>
+      
+    <optgroup label="OTHER INCOME">
+        <option>Other Income(1100)</option>
+        <option>Other Income-Interest Earned (1103)</option>
+        <option>Other Income-Miscellaneous Income(1102)</option>
+        <option>Other Income-Vatable Disbursements (1101)</option>
+        <option>Other Income-Loan Administration Fee(1104)</option>
+    </optgroup>
+    <optgroup label="Expense">
+        <option>Agency Fees(2575)</option>
+        <option>Annual Subscriptions(2566)</option>
+        <option>Audit Fees(2511)</option>
+        <option>Bad Debit Expense(2512)</option>
+        <option>Bank Charges(2513)</option>
+        <option>Book Keeping Costs(2553)</option>
+        <option>Business Development & Marketing(2514)</option>
+        <option>Business Trading Licence(2524)</option>
+        <option>Client Disbursements(2506)</option>
+    </optgroup>
                     
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
@@ -49,14 +68,32 @@
                             <label>Account Number 2:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <select type="text" value="" id="" name="acnum">
-                               <option>Choose an account...</option>
-                                  <option></option>
-                                  <option></option>
-                                  <option></option>
-                                  <option></option>
-                                  
-                                              </select>
+                                <select type="text"  id="" name="acnum2" >
+                               <option>{{$paired_account->account_no2}}</option>
+                               <option>----select--------</option>
+                   <optgroup label="INCOME">
+        <option>Income from Legal Fees(1000)</option>
+      
+    <optgroup label="OTHER INCOME">
+        <option>Other Income(1100)</option>
+        <option>Other Income-Interest Earned (1103)</option>
+        <option>Other Income-Miscellaneous Income(1102)</option>
+        <option>Other Income-Vatable Disbursements (1101)</option>
+        <option>Other Income-Loan Administration Fee(1104)</option>
+    </optgroup>
+    <optgroup label="Expense">
+        <option>Agency Fees(2575)</option>
+        <option>Annual Subscriptions(2566)</option>
+        <option>Audit Fees(2511)</option>
+        <option>Bad Debit Expense(2512)</option>
+        <option>Bank Charges(2513)</option>
+        <option>Book Keeping Costs(2553)</option>
+        <option>Business Development & Marketing(2514)</option>
+        <option>Business Trading Licence(2524)</option>
+        <option>Client Disbursements(2506)</option>
+    </optgroup>
+                    
+                                </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>

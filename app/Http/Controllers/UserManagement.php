@@ -26,7 +26,8 @@ class UserManagement extends Controller
     }
     public function regnewuser()
     {
-        return view('user_management.reg_new_user');
+        // return view('user_management.reg_new_user');
+        return redirect('/manage_user_account');
     }
     public function attachments()
     {
@@ -46,7 +47,8 @@ class UserManagement extends Controller
     }
     public function addnewusergrp()
     {
-        return view('user_management.add_new_user_grp');
+        return redirect('/manage_user_group');
+     
     }
     public function editnewusergrp()
     {
@@ -68,7 +70,8 @@ class UserManagement extends Controller
     }
     public function adduserrole()
     {
-        return view('user_management.add_user_roles');
+        return redirect('/manage_user_roles');
+      
     }
     public function edituserrole()
     {
@@ -80,7 +83,8 @@ class UserManagement extends Controller
     }
     public function adduserdepartment()
     {
-        return view('user_management.add_user_department');
+        return view('user_management.manage_user_department');
+      
     }
     public function edituserdepartment()
     {
@@ -92,7 +96,8 @@ class UserManagement extends Controller
     }
     public function addnew()
     {
-        return view('user_management.add_new_entry');
+        return redirect('/advocates_target');
+        
     }
     public function editadvocatetarget()
     {

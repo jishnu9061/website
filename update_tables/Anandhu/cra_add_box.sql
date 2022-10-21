@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 10, 2022 at 11:23 AM
+-- Generation Time: Oct 19, 2022 at 01:57 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -24,30 +24,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cra_company_details`
+-- Table structure for table `cra_add_box`
 --
 
-CREATE TABLE `cra_company_details` (
-  `id` int(11) NOT NULL,
-  `company_name` varchar(255) DEFAULT NULL,
-  `address` varchar(255) DEFAULT NULL,
-  `town/city` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `company_type` varchar(255) DEFAULT NULL,
-  `pin_no` varchar(255) DEFAULT NULL,
-  `vat_no` varchar(255) DEFAULT NULL,
-  `NHIF` varchar(255) DEFAULT NULL,
-  `NSSF_no` varchar(255) DEFAULT NULL
+CREATE TABLE `cra_add_box` (
+  `id` int(225) NOT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `number` int(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_add_box`
+--
+
+INSERT INTO `cra_add_box` (`id`, `type`, `number`) VALUES
+(146, 'demo 2', 666666),
+(147, NULL, NULL),
+(148, NULL, NULL),
+(149, NULL, NULL);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `cra_company_details`
+-- Indexes for table `cra_add_box`
 --
-ALTER TABLE `cra_company_details`
+ALTER TABLE `cra_add_box`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -55,10 +58,10 @@ ALTER TABLE `cra_company_details`
 --
 
 --
--- AUTO_INCREMENT for table `cra_company_details`
+-- AUTO_INCREMENT for table `cra_add_box`
 --
-ALTER TABLE `cra_company_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `cra_add_box`
+  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=150;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

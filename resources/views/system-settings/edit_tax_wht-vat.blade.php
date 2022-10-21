@@ -21,8 +21,8 @@
                 crossorigin="anonymous">
      </div>
             <br>
-
-            <form method="post" action="" id="form">  
+            <form method="post" action="{{url('update_tax_wht_vat')}}" id="form">  
+            <input type="hidden" name="id" value="{{$tax_wht_vat->id}}">
             @csrf
             <div class="row">
                 <div class="col-lg-6 col-md-6 offset-md-3" >
@@ -31,7 +31,7 @@
                         <div class="col-md-11">
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text"  id="" name="taxname"value=""class="form-control" >
+                                <input type="text"  id="" name="name"value="{{$tax_wht_vat->Tax_name}}"class="form-control" >
                             <div class="invalid-feedback" style="width: 100%;">
                             Required Field.
                         </div>
@@ -45,7 +45,7 @@
                 <label >Tax Value(%):</label>
                 <div class="input-group">
                     <div class="input-group-prepend"></div>
-                    <input type="number"  id="" name="taxvalue"value="" class="form-control" >
+                    <input type="text"  id="" name="value"value="{{$tax_wht_vat->Tax_value}}" class="form-control" >
                     <div class="invalid-feedback" style="width: 100%;">
                     Required Field.
                 </div>
