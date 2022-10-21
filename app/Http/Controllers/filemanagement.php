@@ -539,8 +539,35 @@ class filemanagement extends Controller
              return view('file_management.add-incomming-letters');
         }
 
-        public function safeitemrequest()
+        public function safeitemrequest(Request $request)
         {
+            $id =$request['id'];
+            $Client =$request['client'];
+            $File =$request['file'];
+            $Document_type =$request['document_type'];
+            $Staf_name =$request['staf_name'];
+            $Approver =$request['approver'];
+            $Requested_by =$request['requested_by'];
+            $Date =$request['date'];
+            $And =$request['and'];
+            $Distributed =$request['distributed'];
+            $status =$request['status'];
+
+            DB::table('cra_safe_item_request')->insert([
+
+                'id' => $id,
+                'Client' => $Client,
+                'File' => $File,
+                'Document_Type' => $Document_type,
+                'Safe_Name' => $Staf_name,
+                'Approver' => $Approver,
+                'Requested_By' => $Requested_by,
+                'Date' =>$Date,
+                'And_next' =>$And,
+                'Distributed_By' => $Distributed,
+                'Status' => $status,
+
+            ]);
              return view('file_management.safe-item-request');
         }
 
