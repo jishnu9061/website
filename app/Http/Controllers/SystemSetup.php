@@ -504,31 +504,38 @@ public function edittaxexcise()
     
         return view('system-settings.add_template_category');
     }
+    public function edittemplatecategory($id)
+    {
+        $template_category=DB::table('cra_template_category')->where('id',$id)->first();
+        return view('system-settings.edit_template_category',compact('template_category','id'));
+
+    }
+ 
+public function updatetemplatecategory(Request $Request)
+{
+    $id = $Request['id'];
+        $Template_Category=$Request['temcategory'];
+        $Category_Type=$Request['cattype'];
+
+        $update_template_category=array(
+            'Template_Category'=>$Template_Category,
+            'Category_Type'=> $Category_Type);
+        DB::table('cra_template_category')->where('id',$id)->update($update_template_category);
+   
+        return redirect('/template_category');
+    }
+    public function deletetemplatecategory($id)
+    {
+        DB::table('cra_template_category')->where('id',$id)->delete();
+        return redirect('/template_category');
+    }
+
+
     public function documenttemplatecategory()
     {
         return view('system-settings.document_template_category');
     }
-
-
-
-    public function edittemplatecategory($id)
-    {
-        $template=DB::table('cra_template_category')->where('id',$id)->get();
-        return view('system-settings.edit_template_category',compact('template','id'));
-    }
-
-    public function update_template_category(Request $Request){
-  
-        $Template_Category=$Request['temcategory'];
-        $Category_Type=$Request['cattype'];
-        $edittemplate=array('temcategory'=>$Template_Category,'cattype'=> $Category_Type);
-        DB::table('cra_template_category')->where('id',$id)->update($edittemplate);
-        return back()->withInput();
-    }
-
-
-
-    public function pairedaccount()
+public function pairedaccount()
     {
         return view('system-settings.paired_account');
     }

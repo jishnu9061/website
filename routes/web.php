@@ -775,8 +775,11 @@ Route::any('notifications','SystemSetup@notifications')->name('notifications');
 //template category
 Route::any('template_category','SystemSetup@templatecategory')->name('template_category');
 Route::any('add_template_category','SystemSetup@addtemplatecategory')->name('add_template_category');
+Route::any('edit_template_category/{id}','SystemSetup@edittemplatecategory')->name('edit_template_category');
+Route::any('/update_template_category','SystemSetup@updatetemplatecategory')->name('update_template_category');
+Route::any('/delete_template_category/{id}','SystemSetup@deletetemplatecategory')->name('delete_template_category');
 Route::any('document_template_category','SystemSetup@documenttemplatecategory')->name('document_template_category');
-Route::any('edit_template_category','SystemSetup@edittemplatecategory')->name('edit_template_category');
+
 //end
 //paired accounts
 Route::any('paired_account','SystemSetup@pairedaccount')->name('paired_account');

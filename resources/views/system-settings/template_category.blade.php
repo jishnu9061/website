@@ -47,12 +47,13 @@
         <a href="{{('add_template_category')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Template Category</button></a><br><br>
 
     <!-- <div class="container"> -->
-      <div class="mydiv">
+      <div class="responsive">
       <table class="table table-bordered" id="new-item">
         <thead>
                         <tr>
                         <th class="text-center" >No</th>
                         <th class="text-center" >Template Category</th>
+                        <th class="text-center" >Category Type</th>
                         <th class="text-center" >Status</th>
                         <th class="text-center" >Edit</th>
                         <th class="text-center" >  <input type="checkbox" ></th>
@@ -63,10 +64,15 @@
       <tr>
                         <td>  {{$category->id}}</td>
                         <td>{{$category->Template_Category}}</td>
-                        <!-- <td>{{$category->Category_Type	}}</td> -->
+                        <td>{{$category->Category_Type}}</td>
                         <td></td>
                         <td  class="text-center" style="color:rgb(13, 1, 56);"><a href="{{('edit_template_category')}}">Edit</a></td>
                         <td  style="color:rgb(13, 1, 56);"class="text-center"><input type="checkbox"></td>
+                        <td  scope="row"class="text-center">
+                        <a href="{{url('edit_template_category',$category->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <a href="{{url('delete_template_category',$category->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
+                           </td>
+                      
                         @endforeach
                     </tr>
 </tbody>
@@ -79,7 +85,7 @@
                 <select style="width:10%;height:100%;color:rgb(13, 1, 56);font-size:small;background-color:#FFFBF4;"type="text" value="" >
     <option>Activate Category</option>
     <option>De-Activate Category</option>
-    <option>Delete Category</option>
+    <option></option>
 </select>
 <input type="button"value="Go" name="close"style="background-color:#FFFBF4;color: rgb(13, 1, 56); ">
     </div>

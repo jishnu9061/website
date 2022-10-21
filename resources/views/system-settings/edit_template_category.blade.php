@@ -24,8 +24,9 @@
             <br>
             <div class="row">
         <div class="col-md-12 ">
-
-            <form method="post" action="" id="form">  
+        <form method="post"action="{{url('update_template_category')}}"id="form">  
+          <input type="hidden" name="id" value="{{$template_category->id}}">
+        
             @csrf
             <div class="row">
                    
@@ -37,7 +38,7 @@
                                <div class="input-group-prepend"></div>
                                <select type="text" value="" id="" name="temcategory"style="width:100%;">
                              
-                               <option>---Select---</option>
+                               <option>{{$template_category->Template_Category}}</option>
                                <option>Business Formation</option>
                                <option>Business Operations</option>
                                <option>Business Property</option>
@@ -60,7 +61,7 @@
                            <label>Category Type:</label>
                            <div class="input-group">
                                <div class="input-group-prepend"></div>
-                               <input type="text" class="form-control" name="cattype" id="" value="">
+                               <input type="text" class="form-control" name="cattype" id="" value="{{$template_category->Category_Type}}">
                                <div class="invalid-feedback" style="width: 100%;">
                                    Required Field.
                                </div>
