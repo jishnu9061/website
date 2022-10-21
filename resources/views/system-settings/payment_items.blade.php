@@ -38,6 +38,7 @@
                         <tr>
                         <th class="text-center" >No</th>
                         <th class="text-center">Item Code</th>
+                        <th class="text-center">Item Group</th>
                         <th class="text-center" >Item Name</th>
                         <th class="text-center" >Item Comments</th>
                         <th class="text-center" >Item Short Names</th>
@@ -54,7 +55,7 @@
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                      
+                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  scope="row"class="text-center">
                         <a href="{{url('edit_payment_item')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                         <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
@@ -90,8 +91,20 @@
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->    
     </div>
     @csrf
-            <div class="row">
-                    <div class="col-md-6">
+    <div class="row">
+    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label>Item Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="iname" id="" value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
                         <div class="mb-1">
                         <label >Item Group:</label>
                             <div class="input-group">
@@ -112,7 +125,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label>Item Name:</label>
                             <div class="input-group">
@@ -125,6 +138,10 @@
                         </div>
                      </div>
                     </div>
+              
+            <div class="row">
+                   
+                  
                     <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">

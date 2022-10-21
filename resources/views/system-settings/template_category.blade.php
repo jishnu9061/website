@@ -100,7 +100,7 @@
                 <label>Template Category:</label>
                 <div class="input-group">
                     <div class="input-group-prepend"></div>
-                    <select type="text" value="" id="" name="temcategory"style="width:92%;">
+                    <select type="text" value="" id="" name="temcategory"style="width:100%;">
                   
                     <option>---Select---</option>
                     <option>Business Formation</option>
@@ -112,9 +112,9 @@
                     <option>Real Estate</option>
                     <option>Will & Estate Planning</option>
                 </select>
-                    <div class="col-md-1">
+                    <!-- <div class="col-md-1">
         <a href="{{url('document_template_category')}}"> <i style="font-size:20px; color:rgb(13, 1, 56);" class="bi bi-plus-circle-fill"> </i></a>
-    </div>
+    </div> -->
                    
                     <div class="invalid-feedback" style="width: 100%;">
                         Required Field.

@@ -32,11 +32,11 @@
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
            
-                        {{-- <a href="{{('add_court_category')}}"><button class="btn btn-primary">Add New Court Category</button></a> --}}
+                        <!-- {{-- <a href="{{('add_court_category')}}"><button class="btn btn-primary">Add New Court Category</button></a> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal2">Add New Court Category</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      <br>
+                      <br> -->
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
         <!-- <a href="{{('add_court')}}"><button class="btn btn-primary add-btn">Add Court</button></a> -->
         <!-- <a href="{{('add_court_category')}}"><button class="btn btn-primary add-btn">Add New Court Category</button></a><br><br> -->
@@ -45,28 +45,32 @@
                   <thead>
                         <tr>
                         <th class="text-center" >No</th>
+                        <th class="text-center" >Court Category</th>
                         <th class="text-center" >Court Name</th>
                         <th class="text-center" >Action</th>
                      
                     </tr>
     </thead>
     <tbody>
+    @foreach($court as $court_details)
                     
                     <tr>
-                        <td ></td>
-                        <td></td>
+                        <td>{{$court_details->id}}</td>
+                      
+                        <td>{{$court_details->court_category}}</td>
+                        <td>{{$court_details->court_name}}</td>
                         <td  scope="row"class="text-center">
-                        <a href="{{url('edit_court')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                        <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
+                        <a href="{{url('edit_court',$court_details->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <a href="{{url('delete_court',$court_details->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                            </td>
                     </tr>
 
-                    
+                    @endforeach 
     </tbody>
                 </table>
                 <div class="class"style="text-align:right;">
                 <select style="width:10%;height:100%;color:rgb(13, 1, 56);font-size:small;background-color:#FFFBF4;"type="text" value="" name="type">
-    <option>Delete Court</option>
+    <!-- <option>Delete Court</option> -->
     <option>Active Category</option>
 </select>
 <input type="button"value="Go" name="close"style="color:rgb(13, 1, 56);background-color:#FFFBF4; ">
@@ -110,7 +114,7 @@
                             <label>Court Category:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <select type="text" value="" id="" name="category">
+                                <select type="text" value="" id="" name="courtcat">
                                     <option>Select</option>
                                    
                     <option>Supreme Court</option>
