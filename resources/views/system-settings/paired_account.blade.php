@@ -36,7 +36,7 @@
       <table class="table table-bordered" id="new-item">
                   <thead>
                         <tr>
-                        <th class="text-center" >No</th>
+                        <th class="text-center" >Sl No</th>
                         <th class="text-center">Account No 1</th>
                         <th class="text-center" >Account No 2</th>
                         <th class="text-center">Action</th>
