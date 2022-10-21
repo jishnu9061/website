@@ -22,7 +22,7 @@
      </div>
             <br>
             <br>
-            <form method="post" action="add_account_pairs" id="form">  
+            <form method="post" action="" id="form">  
        @csrf
 <div class="row">
                     <div class="col-md-6">
@@ -99,6 +99,12 @@
         </div>
 </form>
 
+
+
+
+
+
+    
 </body>
 </div>
 </html>

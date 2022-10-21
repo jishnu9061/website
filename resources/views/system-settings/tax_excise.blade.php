@@ -11,7 +11,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
       <style >
-   
+          body
+        {
+          background-color: white;
+        }
+  th, td ,tr{
+               border: 1px solid  gray ;
+                border-collapse: collapse;
+}
+table{
+    outline: 1px solid  gray;
+}
  </style>
    </head>
    <body>
@@ -19,20 +29,14 @@
     <div>
             <button class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Tax Excise</u></b></span></button><br>
-          
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
      </div>
             <br>
-          <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-           
-{{-- <a href="{{('add_tax_excise')}}"><button class="btn btn-primary">Add Tax Excise</button></a> --}}
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Tax Excise</button>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      <br>
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-            <!-- <a href="{{('add_tax_excise')}}"><button class="btn btn-primary "style="width=100%;height=100%;">Add Tax Excise</button></a><br><br> -->
-            
-            <div class="table-responsive">    
+            <a href="{{('add_tax_excise')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Tax Excise</button></a><br><br>
+    
+
             <table class="table table-bordered" id="new-item">
                             <thead>
                            
@@ -45,88 +49,21 @@
                             </tr>
                         </thead>
                         <tbody>
-                        @foreach($tax_excise as $excise_tax)
                             <tr>
-                                <td> {{$excise_tax->id}}</td>
-                                <td>{{$excise_tax->Tax_name}}</td>
-                                <td> {{$excise_tax->Tax_value}}</td>
-                                <td>{{$excise_tax->Status}}</td>
+                                <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
+                                <td class="text-center" style="color:rgb(13, 1, 56);"></td>
+                                <td  style="color:rgb(13, 1, 56);"></td>
+                                <td  style="color:rgb(13, 1, 56);"></td>
                                 <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
-                                 <a href="{{url('edit_tax_excise',$excise_tax->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                                 <a href="{{url('delete_tax_excise',$excise_tax->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
+                                 <a href="{{url('edit_tax_excise')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                                <a  onClick="return myFunction();" href="" style="  color:rgb(13, 1, 56);"><i class="fas fa-trash-alt"></i></a></td>
                             </tr>
                         </tbody>
-                        @endforeach
-                    </table><br>
-  <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-  <div class="modal fade" id="myModal">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content" style="background-color:#d6ba8a">
 
-                                    <!-- Modal Header -->
-                                    <div class="modal-header" style="background-color:#d6ba8a">
-                                        <h2 class="text-centre"><b>Add Tax Excise</b></h2>
+                     
+                        </table><br>
 
-                                    </div>
-
-                                    <!-- Modal body -->
-                                    <div class="modal-body" style="background-color:white">
-                                        <div class="container">
-                                            <form method="post" action="{{ url('add_tax_excise') }}"
-                                                enctype="multipart/form-data"> 
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->    
-    </div>
-    @csrf
-            <div class="row">
-                <div class="col-lg-6 col-md-6 offset-md-3" >
-                    <label >Tax Name:</label>
-                    <div class="row">
-                        <div class="col-md-11">
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text"  id="" name="name"value=""class="form-control">
-                            <div class="invalid-feedback" style="width: 100%;">
-                            Required Field.
-                        </div>
-                    </div>
-                </div>
-              
-            </div>
-            
-            <div class="row">
-                <div class="col-md-11">
-                <label >Tax Value(%):</label>
-                <div class="input-group">
-                    <div class="input-group-prepend"></div>
-                    <input type="text"  id="" name="value"value=""class="form-control" >
-                    <div class="invalid-feedback" style="width: 100%;">
-                    Required Field.
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-sm">
-
-    </div>
-    <div class="col-sm">
-
-    </div>
-    <div class="col-sm">
-         <br>
-         <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
-         <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
-        </div>
-    </div>
-</div>
-</form>
-</div>
-</div>
-</div>
-</div>
                     </body>
-
 </div>
 </html>
 
