@@ -45,7 +45,7 @@ class SystemSetup extends Controller
         $vat_no = $Request['vatnum'];
         $NHIF= $Request['nhifcode'];
         $NSSF_no = $Request['nnum'];
-       
+        $Add_Logo=$Request['image'];
 ///////////////////////////////////////////////////////////////////
       
 ////////////////////////////////////////////////////////////////////
@@ -60,10 +60,11 @@ class SystemSetup extends Controller
             'vat_no' => $vat_no,
             'NHIF' => $NHIF,
             'NSSF_no' => $NSSF_no,
-            // 'Add_Logo' => $Add_Logo,
+             'Add_Logo' => $Add_Logo,
         ]);
    
-       return view('system-settings.add_company_details');
+    //    return view('system-settings.add_company_details');
+    return redirect('/company_details');
      
     }
     public function editcompany($id)
@@ -84,6 +85,7 @@ class SystemSetup extends Controller
         $vat_no = $Request['vatnum'];
         $NHIF = $Request['nhifcode'];
         $NSSF_no = $Request['nnum'];
+        $Add_Logo=$Request['image'];
 //////////////////////////////////////////////////////////////////////////////////////////////
       
 /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -98,7 +100,7 @@ class SystemSetup extends Controller
             'vat_no' =>  $vat_no,
             'NHIF' =>  $NHIF,
             'NSSF_no' =>  $NSSF_no ,
-            // 'Add_Logo' =>  $Add_Logo,
+             'Add_Logo' =>  $Add_Logo,
             
         );
         DB::table('cra_company_details')->where('id', $id)->update( $update_company_details );
@@ -130,8 +132,8 @@ class SystemSetup extends Controller
             'Date' => $Date,
             'Day' => $Day,
         ]);
-        
-        return view('system-settings.add_new_holiday');
+        return redirect('/weekend_holiday');
+        // return view('system-settings.add_new_holiday');
     }
     public function holiday2017()
     {
@@ -226,8 +228,8 @@ DB::table('cra_company_branch_details')->insert([
             'website' => $website,
            
         ]);
-
-     return view('system-settings.add_company_branch');
+        return redirect('/company_branch');
+    //  return view('system-settings.add_company_branch');
     }
 
 
@@ -236,8 +238,8 @@ DB::table('cra_company_branch_details')->insert([
     public function editbranch($id)
     {
         
-        $company_branch_details= DB::table('cra_company_branch_details')->where('id',$id)->first();
-        return view('system-settings.edit_company_branch',compact('company_branch_details','id'));
+        $branch_details= DB::table('cra_company_branch_details')->where('id',$id)->first();
+        return view('system-settings.edit_company_branch',compact('branch_details','id'));
      
     }
   
@@ -291,7 +293,8 @@ DB::table('cra_company_branch_details')->insert([
     }
     public function addcourt()
     {
-        return view('system-settings.add_court');
+        return redirect('/courts');
+      
     }
     public function editcourt()
     {
@@ -299,7 +302,9 @@ DB::table('cra_company_branch_details')->insert([
     }
     public function addcourtcategory()
     {
-        return view('system-settings.add_court_category');
+        return redirect('/courts');
+
+        
     }
     public function lettertype()
     {
@@ -307,8 +312,9 @@ DB::table('cra_company_branch_details')->insert([
     }
     public function addlettercategory()
     {
-        return view('system-settings.add_letter_category');
+        return redirect('/letter_types');
     }
+
     public function documentlettercategory()
     {
         return view('system-settings.document_letter_category');
@@ -323,7 +329,8 @@ DB::table('cra_company_branch_details')->insert([
     }
     public function addpaymentitem()
     {
-        return view('system-settings.add_payment_item');
+        return redirect('/payment_items');
+   
     }
     public function editpaymentitem()
     {
@@ -344,7 +351,8 @@ DB::table('cra_company_branch_details')->insert([
             'Description_Selection_Name' => $Description_Selection_Name,
             'Selection_Description' => $Selection_Description,
         ]);
-        return view('system-settings.add_desc_sel');
+        return redirect('/description_selectn');
+        
         
     }
 
@@ -406,7 +414,8 @@ public function updatedescsel(Request $Request)
             'factor_without_housing' => $factor_without_housing,
             
         ]);
-        return view('system-settings.add_tax_chart');
+        return redirect('/tax_chart');
+       
     }
     public function edittaxchart($id)
     {
@@ -430,7 +439,7 @@ public function updatetaxchart(Request $Request)
             'upper_limit' => $upper_limit,
             'rate' => $rate,
             'status' => $status,
-            'factor_with_housing' => $withhousing,
+            'factor_with_housing' => $factor_with_housing,
             'factor_without_housing' => $factor_without_housing,
             
         );
@@ -443,42 +452,212 @@ public function updatetaxchart(Request $Request)
         return redirect('/tax_chart');
     }
      /////////////////////////end tax chart//////////////////////////
-    public function addtaxexcise()
+     /////////////////////////////////////////////////////////////////////
+     public function taxexcise()
+     {
+        $tax_excise=DB::table('cra_tax_excise')->get();
+         return view('system-settings.tax_excise',compact('tax_excise'));
+     }
+    public function addtaxexcise(Request $Request)
     {
-        return view('system-settings.add_tax_excise');
+        $Tax_name=$Request['name'];
+        $Tax_value=$Request['value'];
+        $Status=$Request['status'];
+       
+        DB::table('cra_tax_excise')->insert([
+            'Tax_name' => $Tax_name,
+            'Tax_value' => $Tax_value,
+            'Status' => $Status,
+           
+        ]);
+        return redirect('/tax_excise');
     }
-    public function addtaxvat()
+     
+public function edittaxexcise($id)
+{ 
+     $tax_excise=DB::table('cra_tax_excise')->where('id',$id)->first();
+    return view('system-settings.edit_tax_excise',compact('tax_excise','id'));
+}
+public function updatetaxexcise(Request $Request)
     {
-        return view('system-settings.add_tax_vat');
+        $id = $Request['id'];
+        $Tax_name=$Request['name'];
+        $Tax_value=$Request['value'];
+        $Status=$Request['status'];
+      
+        $update_taxexcise = array(
+            'Tax_name' => $Tax_name,
+            'Tax_value' => $Tax_value,
+            'Status' => $Status,
+            
+            
+        );
+        DB::table('cra_tax_excise')->where('id', $id)->update( $update_taxexcise );
+        return redirect('/tax_excise');
     }
-    public function addtaxwht()
+    public function deletetaxexcise($id)
     {
-        return view('system-settings.add_tax_wht');
+        DB::table('cra_tax_excise')->where('id',$id)->delete();
+        return redirect('/tax_excise');
     }
-
-    public function addtaxwhtvat()
+    ////////////////////////////////////////////////////////////////
+    public function taxvat()
     {
-        return view('system-settings.add_tax_wht-vat');
-    }
- 
-public function edittaxexcise()
-    {
-        return view('system-settings.edit_tax_excise');
-    }
-    public function edittaxvat()
-    {
-        return view('system-settings.edit_tax_vat');
-    }
-    public function edittaxwht()
-    {
-        return view('system-settings.edit_tax_wht');
-    }
-
-    public function edittaxwhtvat()
-    {
-        return view('system-settings.edit_tax_wht-vat');
-    }
     
+         $tax_vat=DB::table('cra_tax_vat')->get();
+        return view('system-settings.tax_vat',compact('tax_vat'));
+    }
+    public function addtaxvat(Request $Request)
+    {
+        $Tax_name=$Request['name'];
+        $Tax_value=$Request['value'];
+        $Tax_ordering=$Request['order'];
+        $Status=$Request['status'];
+       
+        DB::table('cra_tax_vat')->insert([
+            'Tax_name' => $Tax_name,
+            'Tax_value' => $Tax_value,
+            'Tax_ordering' => $Tax_ordering,
+            'Status' => $Status,
+           
+        ]);
+        return redirect('/tax_vat');
+
+    }
+    public function edittaxvat($id)
+    {
+        $tax_vat=DB::table('cra_tax_vat')->where('id',$id)->first();
+        return view('system-settings.edit_tax_vat',compact('tax_vat','id'));
+    }
+    public function updatetaxvat(Request $Request)
+    {
+        $id = $Request['id'];
+        $Tax_name=$Request['name'];
+        $Tax_value=$Request['value'];
+        $Tax_ordering=$Request['order'];
+        $Status=$Request['status'];
+      
+        $update_taxvat = array(
+            'Tax_name' => $Tax_name,
+            'Tax_value' => $Tax_value,
+            'Tax_ordering' => $Tax_ordering,
+            'Status' => $Status,
+            
+            
+        );
+        DB::table('cra_tax_vat')->where('id', $id)->update( $update_taxvat );
+        return redirect('/tax_vat');
+    }
+    public function deletetaxvat($id)
+    {
+        DB::table('cra_tax_vat')->where('id',$id)->delete();
+        return redirect('/tax_vat');
+    }
+///////////////////////////////////
+    public function taxwht()
+    {
+        $tax_wht=DB::table('cra_tax_wht')->get();
+        return view('system-settings.tax_wht',compact('tax_wht'));
+
+    }
+    public function addtaxwht(Request $Request)
+    {
+        $Tax_name=$Request['name'];
+        $Tax_value=$Request['value'];
+        $Status=$Request['status'];
+       
+        DB::table('cra_tax_wht')->insert([
+            'Tax_name' => $Tax_name,
+            'Tax_value' => $Tax_value,
+             'Status' => $Status,
+           
+        ]);
+        return redirect('/tax_wht');
+      
+    }
+    public function edittaxwht($id)
+    {
+        $tax_wht=DB::table('cra_tax_wht')->where('id',$id)->first();
+        return view('system-settings.edit_tax_wht',compact('tax_wht','id'));
+   
+    }
+    public function updatetaxwht(Request $Request)
+    {
+        $id = $Request['id'];
+        $Tax_name=$Request['name'];
+        $Tax_value=$Request['value'];
+       $Status=$Request['status'];
+      
+        $update_taxwht = array(
+
+            'Tax_name' => $Tax_name,
+            'Tax_value' => $Tax_value,
+            'Status' => $Status,
+            
+            
+        );
+        DB::table('cra_tax_wht')->where('id', $id)->update( $update_taxwht );
+        return redirect('/tax_wht');
+    }
+    public function deletetaxwht($id)
+    {
+        DB::table('cra_tax_wht')->where('id',$id)->delete();
+        return redirect('/tax_wht');
+    }
+    //////////////////////////////////////////
+    public function taxwhtvat()
+    {
+        $tax_wht_vat=DB::table('cra_tax_wht-vat')->get();
+        return view('system-settings.tax_wht-vat',compact('tax_wht_vat'));
+
+    
+    }
+
+    public function addtaxwhtvat(Request $Request)
+    {
+        $Tax_name=$Request['name'];
+        $Tax_value=$Request['value'];
+        $Status=$Request['status'];
+       
+        DB::table('cra_tax_wht-vat')->insert([
+            'Tax_name' => $Tax_name,
+            'Tax_value' => $Tax_value,
+             'Status' => $Status,
+           
+        ]);
+        return redirect('/tax_wht-vat');
+        
+    }
+    public function edittaxwhtvat($id)
+    {
+        $tax_wht_vat=DB::table('cra_tax_wht-vat')->where('id',$id)->first();
+        return view('system-settings.edit_tax_wht-vat',compact('tax_wht_vat','id'));
+   
+
+    }
+    public function updatetaxwhtvat(Request $Request)
+    {
+        $id = $Request['id'];
+        $Tax_name=$Request['name'];
+        $Tax_value=$Request['value'];
+       $Status=$Request['status'];
+      
+        $update_taxwhtvat = array(
+
+            'Tax_name' => $Tax_name,
+            'Tax_value' => $Tax_value,
+            'Status' => $Status,
+            
+            
+        );
+        DB::table('cra_tax_wht-vat')->where('id', $id)->update( $update_taxwhtvat );
+        return redirect('/tax_wht-vat');
+    }
+    public function deletetaxwhtvat($id)
+    {
+        DB::table('cra_tax_wht-vat')->where('id',$id)->delete();
+        return redirect('/tax_wht-vat');
+    }
     public function notifications()
     {
         return view('system-settings.notifications');
@@ -501,8 +680,8 @@ public function edittaxexcise()
                 'Category_Type' => $Category_Type,
                 
             ]);
-    
-        return view('system-settings.add_template_category');
+            return redirect('/template_category');
+        // return view('system-settings.add_template_category');
     }
     public function documenttemplatecategory()
     {
@@ -530,15 +709,46 @@ public function edittaxexcise()
 
     public function pairedaccount()
     {
-        return view('system-settings.paired_account');
+        $paired_account=DB::table('cra_paired_account')->get();
+        return view('system-settings.paired_account',compact('paired_account'));
+       
     }
-    public function addaccountpairs()
+    public function addaccountpairs(Request $Request)
     {
-        return view('system-settings.add_account_pairs');
+        $account_no1 = $Request['acnum1'];
+        $account_no2 = $Request['acnum2'];
+     
+        DB::table('cra_paired_account')->insert([
+            'account_no1' => $account_no1,
+            'account_no2' => $account_no2,
+        ]);
+       
+        return redirect('/paired_account');
+       
     }
-    public function editaccountpairs()
+    public function editaccountpairs($id)
     {
-        return view('system-settings.edit_account_pairs');
+        $paired_account=DB::table('cra_paired_account')->where('id',$id)->first();
+     
+        return view('system-settings.edit_account_pairs',compact('paired_account','id'));
+    }
+    public function updatepairedaccount(Request $Request)
+    {
+        $id = $Request['id'];
+        $account_no1 = $Request['acnum1'];
+        $account_no2 = $Request['acnum2'];
+        
+        $update_paired_account = array(
+            'account_no1' => $account_no1,
+            'account_no2' =>  $account_no2,
+        );
+        DB::table('cra_paired_account')->where('id', $id)->update( $update_paired_account );
+        return redirect('/paired_account');
+    }
+    public function deletepairedaccount($id)
+    {
+        DB::table('cra_paired_account')->where('id',$id)->delete();
+        return redirect('/paired_account');
     }
     public function filetypes()
     {
@@ -546,7 +756,8 @@ public function edittaxexcise()
     }
     public function addfiletypes()
     {
-        return view('system-settings.add_file_types');
+        return redirect('/file_types');
+       
     }
     public function editfiletypes()
     {
@@ -558,7 +769,8 @@ public function edittaxexcise()
     }
     public function addinvoiceitem()
     {
-        return view('system-settings.add_invoice_item');
+        return redirect('/invoice_items');
+      
     }
     public function editinvoiceitem()
     {
@@ -574,118 +786,119 @@ public function edittaxexcise()
     }
     public function addcurrency()
     {
-        return view('system-settings.add_currency');
+        return redirect('/currency_list');
+        
     }
     public function editcurrency()
     {
         return view('system-settings.edit_currency');
     }
-    public function manageuseraccount()
-    {
-        return view('system-settings.manage_user_account');
-    }
-    public function useredit()
-    {
-        return view('system-settings.user_edit');
-    }
-    public function regnewuser()
-    {
-        return view('system-settings.reg_new_user');
-    }
-    public function attachments()
-    {
-        return view('system-settings.user_attachments');
-    }
-    public function comments()
-    {
-        return view('system-settings.user_comments');
-    }
-    public function changepassword()
-    {
-        return view('system-settings.change_user_password');
-    }
-    public function manageusergrp()
-    {
-        return view('system-settings.manage_user_group');
-    }
-    public function addnewusergrp()
-    {
-        return view('system-settings.add_new_user_grp');
-    }
-    public function editnewusergrp()
-    {
-        return view('system-settings.edit_new_user_grp');
-    }
-    public function rolesperuser()
-    {
-        return view('system-settings.view_roles_per_user');
-    }
-    public function editviewroles()
-    {
-        return view('system-settings.edit_view_roles');
-    }
+    // public function manageuseraccount()
+    // {
+    //     return view('system-settings.manage_user_account');
+    // }
+    // public function useredit()
+    // {
+    //     return view('system-settings.user_edit');
+    // }
+    // public function regnewuser()
+    // {
+    //     return view('system-settings.reg_new_user');
+    // }
+    // public function attachments()
+    // {
+    //     return view('system-settings.user_attachments');
+    // }
+    // public function comments()
+    // {
+    //     return view('system-settings.user_comments');
+    // }
+    // public function changepassword()
+    // {
+    //     return view('system-settings.change_user_password');
+    // }
+    // public function manageusergrp()
+    // {
+    //     return view('system-settings.manage_user_group');
+    // }
+    // public function addnewusergrp()
+    // {
+    //     return view('system-settings.add_new_user_grp');
+    // }
+    // public function editnewusergrp()
+    // {
+    //     return view('system-settings.edit_new_user_grp');
+    // }
+    // public function rolesperuser()
+    // {
+    //     return view('system-settings.view_roles_per_user');
+    // }
+    // public function editviewroles()
+    // {
+    //     return view('system-settings.edit_view_roles');
+    // }
     
 
-    public function manageuserroles()
-    {
-        return view('system-settings.manage_user_roles');
-    }
-    public function adduserrole()
-    {
-        return view('system-settings.add_user_roles');
-    }
-    public function edituserrole()
-    {
-        return view('system-settings.edit_user_roles');
-    }
-    public function manageuserdepartment()
-    {
-        return view('system-settings.manage_user_department');
-    }
-    public function adduserdepartment()
-    {
-        return view('system-settings.add_user_department');
-    }
-    public function edituserdepartment()
-    {
-        return view('system-settings.edit_user_department');
-    }
-    public function advocatestarget()
-    {
-        return view('system-settings.advocates_target');
-    }
-    public function addnew()
-    {
-        return view('system-settings.add_new_entry');
-    }
-    public function editadvocatetarget()
-    {
-        return view('system-settings.edit_advocate_target');
-    }
-    public function advocatestarget2021()
-    {
-        return view('system-settings.advocates_target_2021');
-    }
-    public function advocatestarget2022()
-    {
-        return view('system-settings.advocates_target_2022');
-    }
-    public function advocatestarget2023()
-    {
-        return view('system-settings.advocates_target_2023');
-    }
-    public function advocatestarget2024()
-    {
-        return view('system-settings.advocates_target_2024');
-    }
-    public function advocatestarget2025()
-    {
-        return view('system-settings.advocates_target_2025');
-    }
-    public function advocatestarget2026()
-    {
-        return view('system-settings.advocates_target_2026');
-    }
+    // public function manageuserroles()
+    // {
+    //     return view('system-settings.manage_user_roles');
+    // }
+    // public function adduserrole()
+    // {
+    //     return view('system-settings.add_user_roles');
+    // }
+    // public function edituserrole()
+    // {
+    //     return view('system-settings.edit_user_roles');
+    // }
+    // public function manageuserdepartment()
+    // {
+    //     return view('system-settings.manage_user_department');
+    // }
+    // public function adduserdepartment()
+    // {
+    //     return view('system-settings.add_user_department');
+    // }
+    // public function edituserdepartment()
+    // {
+    //     return view('system-settings.edit_user_department');
+    // }
+    // public function advocatestarget()
+    // {
+    //     return view('system-settings.advocates_target');
+    // }
+    // public function addnew()
+    // {
+    //     return view('system-settings.add_new_entry');
+    // }
+    // public function editadvocatetarget()
+    // {
+    //     return view('system-settings.edit_advocate_target');
+    // }
+    // public function advocatestarget2021()
+    // {
+    //     return view('system-settings.advocates_target_2021');
+    // }
+    // public function advocatestarget2022()
+    // {
+    //     return view('system-settings.advocates_target_2022');
+    // }
+    // public function advocatestarget2023()
+    // {
+    //     return view('system-settings.advocates_target_2023');
+    // }
+    // public function advocatestarget2024()
+    // {
+    //     return view('system-settings.advocates_target_2024');
+    // }
+    // public function advocatestarget2025()
+    // {
+    //     return view('system-settings.advocates_target_2025');
+    // }
+    // public function advocatestarget2026()
+    // {
+    //     return view('system-settings.advocates_target_2026');
+    // }
     public function databasebackup()
     {
         return view('system-settings.database_backup');
@@ -709,12 +922,10 @@ public function edittaxexcise()
             'zone_areas' =>  $zone_areas,
             'cost' =>  $cost,
         ]);
-
-       return view('system-settings.add_transport_zone');
+        return redirect('/transport_zones');
+    
     }
-
-
-    public function edittransportzone()
+public function edittransportzone()
     {
         return view('system-settings.edit_transport_zone');
     }
@@ -724,7 +935,8 @@ public function edittaxexcise()
     }
     public function addbillableactivities()
     {
-        return view('system-settings.add_billable_activities');
+        return redirect('/billable_activities');
+
     }
     public function editbillableactivities()
     {
@@ -764,9 +976,9 @@ public function edittaxexcise()
             'bank_gl_ac' =>$bank_gl_ac,
            
         ]);
-  
+        return redirect('/bank_details');
 
-        return view('system-settings.add_bank_account');
+   
     }
     
     public function editbankaccount()
@@ -785,7 +997,8 @@ public function edittaxexcise()
   
     public function addleavedays()
     {
-        return view('system-settings.add_leave_days');
+        return redirect('/leave_days_year');
+   
     }
     public function editleavedays()
     {
@@ -797,7 +1010,8 @@ public function edittaxexcise()
     }
     public function addhourlyrates()
     {
-        return view('system-settings.add_hourly_rates');
+        return redirect('/hourly_rates');
+        
     }
     public function edithourlyrates()
     {
@@ -809,7 +1023,7 @@ public function edittaxexcise()
     }
     public function addpartnerrevenue()
     {
-        return view('system-settings.add_partner_revenue');
+        return redirect('/partner_revenue_share');
     }
     public function menuaccess()
     {

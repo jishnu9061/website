@@ -81,8 +81,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="client" id="cars">
+                                <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                                 </select>
                             </div>
                         </div>
@@ -95,8 +97,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="file" id="cars">
+                                <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                                 </select>
                             </div>
                         </div>
@@ -116,8 +120,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="instruction" id="cars">
+                                <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                                 </select>
                             </div>
                         </div>
@@ -129,8 +135,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="category" id="cars">
+                                <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                                 </select>
                             </div>
                         </div>
@@ -143,8 +151,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="receiver" id="cars">
+                                <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                                 </select>
                             </div>
                         </div>
@@ -166,20 +176,25 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
+                    <select name="currency" id="cars">
+                    <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
+
+
+                   
                     </select>
                 </div>
             </div>
         </div>
         <div class="col-md-2">
             <div class="mb-1">
-                <label for="username">Exchangr Rate</label>
+                <label for="username">Exchange Rate</label>
                 <div class="input-group">
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="incorporation" id="age">
+                    <input type="text" class="form-control" name="exchange" id="age">
                     <div class="invalid-feedback" style="width: 100%;">
                         Incorporation is required
                     </div>
@@ -194,8 +209,10 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
+                    <select name="turn_around" id="cars">
+                    <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                     </select>
                 </div>
             </div>
@@ -207,8 +224,10 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
+                    <select name="priority" id="cars">
+                    <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                     </select>
                 </div>
             </div>
@@ -221,7 +240,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="incorporation" id="age">
+                    <input type="text" class="form-control" name="amount" id="age">
                     <div class="invalid-feedback" style="width: 100%;">
                         Incorporation is required
                     </div>
@@ -256,8 +275,11 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
+                    <select name="send _notification" id="cars">
+                    <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
+
                     </select>
                 </div>
             </div>

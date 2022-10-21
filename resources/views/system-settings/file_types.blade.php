@@ -8,41 +8,29 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-  
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-      <style >
-          body
-        {
-          background-color: white;
-        }
-
-             th, td ,tr{
-               border: 1px solid  gray ;
-                border-collapse: collapse;
-}
-table{
-    outline: 1px solid  gray ;
-}
-/* td:nth-child(odd) {
-            background-color:rgb(198, 195, 211); 
-        } */
-          
-            </style>
+    
    </head>
    <body>
 <div>
             <button class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>File Types</u></b></span></button><br>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous">
+            
      </div>
             <br>
-            <br>
-        <a href="{{('add_file_types')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add New File Type</button></a> <br>
-            <br>
+          
+            <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
+           
+{{-- <a href="{{('add_file_types')}}"><button class="btn btn-primary">Add New File Type</button></a>--}}
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New File Type</button>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                      <br>
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
+        <!-- <a href="{{('add_file_types')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add New File Type</button></a> <br> -->
+         
   <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">List Of File Types</h3>
     <!-- <div class="container"> -->
       <div class="mydiv">
@@ -55,36 +43,134 @@ table{
                         <th class="text-center">Retainer Period</th>
                         <th class="text-center">Approvers</th>
                         <th class="text-center" >Status</th>
-                        <th class="text-center">Edit</th>
-                        <th class="text-center">View</th>
-                        <th class="text-center" ><input type="checkbox"></th>
+                        <th class="text-center">Action</th>
+                        
                     </tr>
     </thead>
     <tbody>
-                   
-
-                   
-                    <tr>
+<tr>
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                       
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{('edit_file_types')}}">Edit</td></a>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{('view_file_types')}}">View</td></a>
-                        <td class="text-center" ><input type="checkbox"></td>
-                      
-                    </tr>
-                 
+                        <td  scope="row"class="text-center">
+                        <a href="{{url('edit_file_types')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <a href="{{url('view_file_types')}}"><i  style="  color:rgb(13, 1, 56);" class="	far fa-file" aria-hidden="true"></i>
+                        <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
+                           </td>
+                           </tr>
+                    </tbody>
+</table>
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
+<div class="modal fade" id="myModal">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content" style="background-color:#d6ba8a">
 
-                    
-    </tbody>
+                                    <!-- Modal Header -->
+                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                        <h2 class="text-centre"><b>Add New File Type</b></h2>
 
-                   
-                </table>
-      
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body" style="background-color:white">
+                                        <div class="container">
+                                            <form method="post" action="{{ url('add_file_types') }}"
+                                                enctype="multipart/form-data"> 
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->    
+@csrf
+       <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                        <label >File Type Name:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text"  id="" name="name"value="" class="form-control">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label>Short Names:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text"  id="" name="sname"value="" class="form-control" >
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                        <label >Retainer Period(Years):</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="number"  id="" name="year"value=""class="form-control">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label>Approver(s):</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <select type="text" value="" id="" name="approver"style="width:100%;">
+                                <option>Choose Approver...</option>
+                                <option>Alekeen W Benson</option>
+                                <option>Cedric Opara</option>
+                                <option>Corrine Auma</option>
+                                <option>Evans Munene</option>
+                                <option>Florance Muthama</option>
+                                <option>George Njoroge</option>
+                                <option>Gichui Kirogo</option>
+                                <option>Hillary Wamunyolo Casmir</option>
+                                <option>Jackline Ogwemo</option>
+                                <option>John Wachira</option>
+                                <option>Jukius Mburu</option>
+                                <option>Kevin Kavila</option>
+                                <option>Martin Kyalo</option>
+                                <option>Mike Ogutu </option>
+                                <option>Owino PH Onyango</option>
+                                <option>Princess Caroline</option>
+                                <option>Sarah Gladys</option>
+                                <option>Thagichu Nyaga</option>
+                                <option>Wambua Musyoka</option>
+                              </select>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>
+                    <div class="row">
+         <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+        </div>
+</form>
         </body>
       </div>
 </html>

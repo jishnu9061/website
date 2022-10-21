@@ -30,9 +30,7 @@ table{
     <div>
             <button class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Tax Charts</u></b></span></button><br>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous">
+           
      </div>
             <br>
      
@@ -41,7 +39,7 @@ table{
     <div class="col-sm-4 " > <a href="{{url('tax_excise')}}"><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn">Tax Excise</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('tax_vat')}}"><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn">Tax VAT</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('tax_wht')}}"><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn"> Tax WHT</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('tax_vat-wht')}}"><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn"> Tax VAT-WHT</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('tax_wht-vat')}}"><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn"> Tax VAT-WHT</button></a></div>
 </div>
 </body>
 </div>
