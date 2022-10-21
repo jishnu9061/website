@@ -90,7 +90,85 @@
 <input type="button"value="Go" name="close"style="background-color:#FFFBF4;color: rgb(13, 1, 56); ">
     </div>
 
-    </div>
+                                    <!-- Modal Header -->
+                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                        <h2 class="text-centre"><b>Add Template Category</b></h2>
+
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body" style="background-color:white">
+                                        <div class="container">
+                                            <form method="post" action="{{ url('add_template_category') }}"
+                                                enctype="multipart/form-data"> 
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->    
+@csrf
+
+<div class="row">
+       
+
+        <div class="col-md-6">
+            <div class="mb-1">
+                <label>Template Category:</label>
+                <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <select type="text" value="" id="" name="temcategory"style="width:100%;">
+                  
+                    <option>---Select---</option>
+                    <option>Business Formation</option>
+                    <option>Business Operations</option>
+                    <option>Business Property</option>
+                    <option>Employment</option>
+                    <option>Financial</option>
+                    <option>Personal & Family</option>
+                    <option>Real Estate</option>
+                    <option>Will & Estate Planning</option>
+                </select>
+                    <!-- <div class="col-md-1">
+        <a href="{{url('document_template_category')}}"> <i style="font-size:20px; color:rgb(13, 1, 56);" class="bi bi-plus-circle-fill"> </i></a>
+    </div> -->
+                   
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Required Field.
+                    </div>
+                </div>
+            </div>
+         </div>
+        <div class="col-md-6">
+            <div class="mb-1">
+                <label>Category Type:</label>
+                <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <input type="text" class="form-control" name="cattype" id="" value="">
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Required Field.
+                    </div>
+                </div>
+            </div>
+         </div>
+        
+</div>
+
+<div class="row">
+<div class="col-sm">
+
+</div>
+<div class="col-sm">
+
+</div>
+<div class="col-sm">
+<br>
+<button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
+<button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
     </div>
 
     <!-- <form>

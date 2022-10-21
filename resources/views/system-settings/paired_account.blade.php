@@ -43,7 +43,7 @@ table{
         <a href="{{('add_account_pairs')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Account Pair</button></a> <br> <br>
 <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">List Of Paired Accounts</h3>
     <!-- <div class="container"> -->
-      <div class="mydiv">
+      <div class="table-responsive">
       <table class="table table-bordered" id="new-item">
                   <thead>
                         <tr>
@@ -55,7 +55,25 @@ table{
                     </tr>
     </thead>
     <tbody>
-                   
+    @foreach($paired_account as $account_pair)
+   
+<tr>
+                        <td>{{$account_pair->id}}</td>
+                        <td>{{$account_pair->account_no1}}</td>
+                        <td>{{$account_pair->account_no2}}</td>
+                      
+                        <td  scope="row"class="text-center">
+                        <a href="{{url('edit_account_pairs',$account_pair->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <a href="{{url('delete_account_pairs',$account_pair->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
+                           </td>
+ </tr>
+ @endforeach
+                </tbody>
+            </table></div>
+     <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
+<div class="modal fade" id="myModal">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content" style="background-color:#d6ba8a">
 
                    
                     <tr>

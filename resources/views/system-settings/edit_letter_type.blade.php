@@ -22,7 +22,8 @@
                 crossorigin="anonymous">
      </div>
             <br>
- <form method="post" action="" id="form">  
+            <form method="post"action="{{url('update_letter_type')}}"id="form">  
+          <input type="hidden" name="id" value="{{$letter_types->id}}">
        
             @csrf
                 <div class="row">
@@ -31,7 +32,9 @@
                         <label > Letter Category:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <select type="text" value="" name="category">
+                                <select type="text" value="" name="lettercat">
+                                <option> {{$letter_types->letter_category}}</option>
+                               
                             <option>Client</option>
                             <option>Supplier</option>
                             <option>Staff</option>
@@ -51,7 +54,7 @@
                             <label>Letter Types:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="types" id="" value="">
+                                <input type="text" class="form-control" name="lettertype" id="" value="{{$letter_types->letter_type}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -63,7 +66,7 @@
                             <label>Letter Type Name:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="name" id="" value="">
+                                <input type="text" class="form-control" name="lettertypname" id="" value="{{$letter_types->letter_type_name}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>

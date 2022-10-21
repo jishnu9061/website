@@ -287,39 +287,113 @@ DB::table('cra_company_branch_details')->insert([
     }
     public function Courts()
     {
-        return view('system-settings.courts');
+        $court=DB::table('cra_courts')->get();
+        return view('system-settings.courts',compact('court'));
+       
     }
-    public function addcourt()
+    public function addcourt(Request $Request)
     {
-        return view('system-settings.add_court');
+        $date = $Request['date'];
+        $court_category = $Request['courtcat'];
+        $court_name = $Request['courtname'];
+        
+        DB::table('cra_courts')->insert([
+            'date' => $date,
+            'court_category' => $court_category,
+            'court_name' => $court_name,
+        ]);
+        return redirect('/courts');
+      
     }
-    public function editcourt()
+    public function editcourt($id)
     {
-        return view('system-settings.edit_court');
+        $court=DB::table('cra_courts')->where('id',$id)->first();
+        return view('system-settings.edit_court',compact('court','id'));
+        
     }
+    public function updatecourt(Request $Request)
+    {
+        $id = $Request['id'];
+        $date = $Request['date'];
+        $court_category = $Request['courtcat'];
+        $court_name = $Request['courtname'];
+        
+        $update_court = array(
+            'date' => $date,
+            'court_category' =>  $court_category,
+            'court_name' =>  $court_name,
+        );
+        DB::table('cra_courts')->where('id', $id)->update( $update_court );
+        return redirect('/courts');
+    }
+    public function deletecourt($id)
+    {
+        DB::table('cra_courts')->where('id',$id)->delete();
+        return redirect('/courts');
+    }
+
+
+
     public function addcourtcategory()
     {
-        return view('system-settings.add_court_category');
-    }
+        return redirect('/courts');
+
+  }
     public function lettertype()
     {
-        return view('system-settings.letter_types');
+        $letter_types=DB::table('cra_letter_types')->get();
+        return view('system-settings.letter_types',compact('letter_types'));
+     
     }
-    public function addlettercategory()
+    public function addlettercategory(Request $Request)
     {
-        return view('system-settings.add_letter_category');
+        $letter_category = $Request['lettercat'];
+        $letter_type = $Request['lettertype'];
+        $letter_type_name = $Request['lettertypname'];
+        
+        DB::table('cra_letter_types')->insert([
+            'letter_category' => $letter_category,
+            'letter_type' => $letter_type,
+            'letter_type_name' => $letter_type_name,
+        ]);
+        return redirect('/letter_types');
+    }
+    public function editlettertype($id)
+    {
+        $letter_types=DB::table('cra_letter_types')->where('id',$id)->first();
+        return view('system-settings.edit_letter_type',compact('letter_types','id'));
+
+    }
+    public function updatelettertype(Request $Request)
+    {
+        $id = $Request['id'];
+        $letter_category = $Request['lettercat'];
+        $letter_type = $Request['lettertype'];
+        $letter_type_name = $Request['lettertypname'];
+        
+        $update_letter_type = array(
+            'letter_category' => $letter_category,
+            'letter_type' =>  $letter_type,
+            'letter_type_name' =>  $letter_type_name,
+        );
+        DB::table('cra_letter_types')->where('id', $id)->update( $update_letter_type );
+        return redirect('/letter_types');
+    }
+    public function deletelettertype($id)
+    {
+        DB::table('cra_letter_types')->where('id',$id)->delete();
+        return redirect('/letter_types');
     }
     public function documentlettercategory()
     {
         return view('system-settings.document_letter_category');
     }
-    public function editlettertype()
-    {
-        return view('system-settings.edit_letter_type');
-    }
+  
     public function paymentitem()
     {
-        return view('system-settings.payment_items');
+        $payment_item=DB::table(' cra_payment_item')->get();
+        return view('system-settings.payment_items',compact('payment_item'));
+
     }
     public function addpaymentitem()
     {
