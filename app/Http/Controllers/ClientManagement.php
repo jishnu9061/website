@@ -157,7 +157,7 @@ class ClientManagement extends Controller
             'client_number' => $number,
             'client_type' =>  $client_type,
             'citizen_status' => $citizen_status,
-            'certificate_of_incorporation' => $incorporation ,
+            'certificate_of_incorporation' => $incorporation,
             'country' =>  $country,
             'telephone_no' =>   $telephone,
             'fax_no' =>  $fax_no,
@@ -615,12 +615,33 @@ class ClientManagement extends Controller
     //end customer Followup
 
     public function service(){
-        return view('client-management.client-service');
+        $service = DB::table('cra_client_service_at_reception')->get();
+        return view('client-management.client-service',compact('service'));
     }
 
 
-    public function addService(){
-        return view('client-management.add-client-service');
+    public function addService(Request $Request){
+
+        $receipt_no = $Request['Receipt'];
+        $client_name = $Request['Name'];
+        $mobile = $Request['Mobile'];
+        $amount_paid = $Request['amount'];
+        $date = $Request['date'];
+        $email = $Request['email'];
+        $code = $Request['code'];
+        $payment_method = $Request['Method'];
+
+        DB::table('cra_client_service_at_reception')->insert([
+            'receipt_no' =>  $receipt_no ,
+            'client_name' =>   $client_name ,
+            'mobile' => $mobile,
+            'amount_paid' =>$amount_paid,
+            'date' => $date,
+            'email' =>  $email,
+            'code' =>   $code,
+            'payment_method' =>   $payment_method,
+        ]);
+        return redirect('/client-service');
     }
 
     //quotation
