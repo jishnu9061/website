@@ -505,11 +505,11 @@
                             </li>
 
 
-                                <li class="sidebar-item  has-sub">
+                                {{-- <li class="sidebar-item  has-sub">
                                     <a href="{{url('home')}}" class='sidebar-link'>
                                         <i class="bi bi-grid-fill" style="font-weight: 400;" id="icon"></i>
                                             <span>HR</span>
-                                    </a>
+                                    </a> --}}
                                     @if (in_array(request()->path(),$hr))
                                         <ul class="submenu" style="display: block;">
                                         @else
