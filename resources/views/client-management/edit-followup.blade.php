@@ -18,16 +18,16 @@
     </div>
     <div class="row">
         <div class="col-md-12 order-md-1">
-            <form method="post" action="{{url('update-follow')}}" id="form">
+            <form method="post" action="" id="form">
                 @csrf
-                <input type="hidden" name="id" value="{{$edit_follow->id}}">
+
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Follow Up Date</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="date" id="username" value="{{$edit_follow->followup_date}}" required>
+                                <input type="text" class="form-control" name="date" id="username" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Follow Up Date is required.
                                 </div>
@@ -42,7 +42,7 @@
 
                                 </div>
                                 <select name="customer" id="cars">
-                                    <option value="volvo">{{$edit_follow->customer}}</option>
+                                    <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
 
                                 </div>
                                 <select name="type" id="cars">
-                                    <option value="volvo">{{$edit_follow->followup_type}}</option>
+                                    <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
@@ -71,7 +71,7 @@
 
                                 </div>
                                 <select name="responsible" id="cars">
-                                    <option value="volvo">{{$edit_follow->staff_responsible}}</option>
+                                    <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
@@ -83,8 +83,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="Remainder" id="cars">
-                                    <option value="volvo">{{$edit_follow->send_remainder_to}}</option>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
@@ -94,7 +94,7 @@
                             <label for="username">Next Bring Up Date</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="Bring" value="{{$edit_follow->next_bringup_date}}" id="password"
+                                <input type="email" class="form-control" name="date" value="" id="password"
                                     placeholder="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Next Bring Up Date is required.
@@ -110,7 +110,7 @@
                             <label for="username">Alert Period</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="Alert" id="age" value="{{$edit_follow->alert_period}}"
+                                <input type="text" class="form-control" name="telephone" id="age" value=""
                                     placeholder="" min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Alert is required.
@@ -123,7 +123,7 @@
                             <label for="username">Email Address</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="email" class="form-control" name="email" value="{{$edit_follow->email}}" id="password"
+                                <input type="email" class="form-control" name="email" value="" id="password"
                                     placeholder="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Email is required.
@@ -131,27 +131,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Registered By</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="Registered" value="{{$edit_follow->registered_by}}" id="password"
-                                    placeholder="">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Email is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username"> Description</label>
                             <div class="input-group">
-                                <textarea class="form-control" id="form7Example7" rows="3" name="Description"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Description Address is required.
                                 </div>
@@ -187,7 +171,7 @@
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Delete</button>
                         </div>
                     </div>
                 </div>

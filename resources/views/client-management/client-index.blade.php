@@ -49,12 +49,10 @@
 
                 <div class="col-sm-4 "><img class="logo_size" src="image\logo\Client conversation.png" alt=""><a
                         href="{{url('communication-list')}}"><button type="button"style="width:70%;"
-
-                            class="btn btn-primary btn_align_btn"> Client Communication</button></a></div>
-                <div class="col-sm-4 "><img class="logo_size" src="image\logo\Complaint register.png" alt=""> <a
-                        href="complaint-list"><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn"> Complaint
-                            Register</button></a></div>
-
+                            class="btn btn-primary btn_align_btn">Client Conversations</button></a></div>
+                            
+                <div class="col-sm-4 "><img class="logo_size" src="image\logo\Complaint register.png" alt=""><a
+                        href="complaint-list"><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn">Complaint Register</button></a></div>
             </div>
             <br>
 

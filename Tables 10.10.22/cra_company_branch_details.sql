@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 18, 2022 at 05:44 AM
+-- Generation Time: Oct 10, 2022 at 12:55 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -24,30 +24,32 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cra_description_selection`
+-- Table structure for table `cra_company_branch_details`
 --
 
-CREATE TABLE `cra_description_selection` (
+CREATE TABLE `cra_company_branch_details` (
   `id` int(11) NOT NULL,
-  `Description_Selection_Name` varchar(255) DEFAULT NULL,
-  `Selection_Description` varchar(255) DEFAULT NULL
+  `branch_no` int(11) DEFAULT NULL,
+  `branch_code` varchar(255) DEFAULT NULL,
+  `branch_name` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `telephone` int(11) DEFAULT NULL,
+  `mobile` int(11) DEFAULT NULL,
+  `fax` int(11) DEFAULT NULL,
+  `town` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `website` varchar(255) DEFAULT NULL,
+  `physical_address` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `cra_description_selection`
---
-
-INSERT INTO `cra_description_selection` (`id`, `Description_Selection_Name`, `Selection_Description`) VALUES
-(42, 'reshma', 'reshu');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `cra_description_selection`
+-- Indexes for table `cra_company_branch_details`
 --
-ALTER TABLE `cra_description_selection`
+ALTER TABLE `cra_company_branch_details`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -55,10 +57,10 @@ ALTER TABLE `cra_description_selection`
 --
 
 --
--- AUTO_INCREMENT for table `cra_description_selection`
+-- AUTO_INCREMENT for table `cra_company_branch_details`
 --
-ALTER TABLE `cra_description_selection`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+ALTER TABLE `cra_company_branch_details`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
