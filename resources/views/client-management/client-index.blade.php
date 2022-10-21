@@ -17,7 +17,22 @@
        <br>
    
 
-            <div class="row sm">
+        <div class="row sm">
+
+            <div class="col-sm-4 "><img class="logo_size" src="image\logo\Client list.png" alt="">
+                <div class="dropdown">
+
+                    <button class="btn btn-primary btn_align_btn btn_align_client"
+                        style=" width:70%; margin-top: -25px; margin-left: 60px    " type="button"
+                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Client list
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="{{url('corporate-list')}}"> Corporate Client</a>
+                        <a class="dropdown-item" href="{{url('client_list')}}">Individual Client</a>
+                    </div>
+                </div>
+            </div>
 
              
 
@@ -56,26 +71,56 @@
             </div>
             <br>
 
+
               {{--sub heading --}}
        <h5 id="hdbtb">Customer Relationship</h5>
        <br>
             
 
-            <div class="row sm">
-                <div class="col-sm-4 "><img class="logo_size" src="image\logo\Customer registeration.png" alt=""><a
-                        href="{{url('view-registration')}}"><button type="button"style="width:70%;" class="btn btn-primary btn_align_btn">
-                            Customer Registration</button></a></div>
-                <div class="col-sm-4 "><img class="logo_size" src="image\logo\Customer Follow up.png" alt=""><a
-                        href="{{url('follow-up')}}"><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn">Customer
-                            Follow Up</button></a></div>
-                <div class="col-sm-4 "><img class="logo_size" src="image\logo\Customer Follow up report.png" alt=""><a href=""><button
-                            type="button" style="width:70%;"class="btn btn-primary btn_align_btn">Customer Follow Up Report</button></a>
-                </div>
-                <div class="col-sm-4 "><img class="logo_size" src="image\logo\Customer Quotation.png" alt=""><a
-                        href="{{url('Quotation')}}"><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn">
-                            Customer Quotation</button></a></div>
+
+
+            <div class="col-sm-4 "><img class="logo_size" src="image\logo\Client search.png" alt=""><a
+                    href="{{url('search-list')}}"><button type="button" style="width:70%;"
+                        class="btn btn-primary btn_align_btn">Client
+                        Search</button></a></div>
+            <div class="col-sm-4 "><img class="logo_size" src="image\logo\Document details.png" alt=""> <a
+                    href="{{url('client-document')}}"><button type="button" style="width:70%;"
+                        class="btn btn-primary btn_align_btn">
+                        Document Detials</button></a></div>
+            <div class="col-sm-4 "><img class="logo_size" src="image\logo\Client conversation.png" alt=""><a
+                    href="{{url('communication-list')}}"><button type="button" style="width:70%;"
+                        class="btn btn-primary btn_align_btn"> Client Communication</button></a></div>
+            <div class="col-sm-4 "><img class="logo_size" src="image\logo\Complaint register.png" alt=""> <a
+                    href="complaint-list"><button type="button" style="width:70%;"
+                        class="btn btn-primary btn_align_btn"> Complaint
+                        Register</button></a></div>
+        </div>
+        <br>
+        <div class="btn btn-primary float-left"
+            style="width:30%;background-color:#1D1D50;color:white;border:1px solid gold;font-size:15px">Customer
+            Relationship
+        </div><br><br><br>
+
+
+        <div class="row sm">
+            <div class="col-sm-4 "><img class="logo_size" src="image\logo\Customer registeration.png" alt=""><a
+                    href="{{url('view-registration')}}"><button type="button" style="width:70%;"
+                        class="btn btn-primary btn_align_btn">
+                        Customer Registration</button></a></div>
+            <div class="col-sm-4 "><img class="logo_size" src="image\logo\Customer Follow up.png" alt=""><a
+                    href="{{url('follow-up')}}"><button type="button" style="width:70%;"
+                        class="btn btn-primary btn_align_btn">Customer
+                        Follow Up</button></a></div>
+            <div class="col-sm-4 "><img class="logo_size" src="image\logo\Customer Follow up report.png" alt=""><a
+                    href=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn">Customer
+                        Follow Up Report</button></a>
             </div>
-        
+            <div class="col-sm-4 "><img class="logo_size" src="image\logo\Customer Quotation.png" alt=""><a
+                    href="{{url('Quotation')}}"><button type="button" style="width:70%;"
+                        class="btn btn-primary btn_align_btn">
+                        Customer Quotation</button></a></div>
+        </div>
+
 
 
 @endsection

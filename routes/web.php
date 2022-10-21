@@ -942,6 +942,8 @@ Route::any('advocates_target_2026','UserManagement@advocatestarget2026')->name('
 //Mugunthan
 
 //Client-list
+
+Route::any('add-client',"ClientManagement@addNewClient")->name('add-client');
 Route::any('add_newclient',"ClientManagement@addNewclient")->name('add_newclient');
 Route::any('store-client',"ClientManagement@storeClient")->name('store-client');
 Route::any('client_list','ClientManagement@view')->name('client_list');
@@ -973,6 +975,7 @@ Route::any('store-pickup','ClientManagement@storePickup')->name('store-pickup');
 Route::any('/view-pickup/{id}','ClientManagement@viewPickups')->name('view-pickup');
 Route::any('/delete-pickup/{id}','ClientManagement@deletePickup')->name('delete-pickup');
 //Client-Pickup
+
 //complaint
 Route::any('complaint-list','ClientManagement@complaintList')->name('complaint-list');
 Route::any('create-Complaint','ClientManagement@createComplaint')->name('create-Complaint');
@@ -999,11 +1002,13 @@ Route::any('Quotation','ClientManagement@Quotation')->name('Quotation');
 Route::any('new-Quotation','ClientManagement@newQuotation')->name('new-Quotation');
 Route::any('edit-Quotation','ClientManagement@editQuotation')->name('edit-Quotation');
 //end Quotation
+
 //Registration
 Route::any('view-registration','ClientManagement@viewRegistration')->name('view-registration');
 Route::any('add-registration','ClientManagement@addRegistration')->name('add-registration');
 Route::any('edit-registration','ClientManagement@editRegistration')->name('edit-registration');
 //end registration
+
 //communication
 Route::any('communication-list','ClientManagement@listCommunication')->name('communication-list');
 Route::any('add-communication','ClientManagement@addCommunication')->name('add-communication');
@@ -1013,8 +1018,8 @@ Route::any('/update-communication','ClientManagement@updateCommunication')->name
 Route::any('/delete-communication/{id}','ClientManagement@deleteCommunication')->name('delete-communication');
 
 Route::any('edit-communication','ClientManagement@editCommunication')->name('edit-communication');
-
 //end communication
+
 //search list
 Route::any('search-list','ClientManagement@listSearch')->name('search-list');
 Route::any('register-client','ClientManagement@registerClient')->name('register-client');

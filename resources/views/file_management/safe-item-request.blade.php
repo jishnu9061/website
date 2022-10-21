@@ -1,4 +1,4 @@
-@extends('layouts.hmsmain')
+-+@extends('layouts.hmsmain')
 @section('content')
 <div class="container">
     <div class="py-5 text-center">
@@ -55,8 +55,6 @@
                 <input class="btn btn-primary" type="button" value="Last Year">
             </div>
             <br>
-
-
 
         </div>
     </div>
