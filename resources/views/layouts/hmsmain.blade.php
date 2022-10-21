@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<head>
+    <!DOCTYPE html>
+    <html lang="en">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRA</title>
@@ -24,38 +24,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
     {{-- vipin --}}
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <!-- vinu -->
 
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
 
   
-  <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
   
-  <link rel="stylesheet" href="{{asset('/') }}assets/css/sub.css">
-  <link rel="stylesheet" href="{{asset('/') }}assets/css/c.css">
+    <link rel="stylesheet" href="{{asset('/') }}assets/css/sub.css">
+    <link rel="stylesheet" href="{{asset('/') }}assets/css/sub1.scss">
+  
+  
+    <link rel="stylesheet" href="{{asset('/') }}assets/css/c.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 <!-- b -->
-<style> #icon {
-color: #1D1D50
-} 
+    <style>
+    #icon {
+    color: #1D1D50
+    } 
 
-#subm {
-                    color: #070344;
-                }
-                /* .sidebar-item .has sub .sidebar-link .fa-regular .fa-user {
-                    color: #000;
+    #subm {
+        color: #070344;
+    }
 
-                } */
-                        
-              
-</style>
+    body{
+        background-color: #F4F4F6
+    }
+ 
+    </style>
+
     
-</head>
-<body>
+    </head>
+    <body>
 
 
  
@@ -401,7 +409,7 @@ color: #1D1D50
                                 </ul>
                                 </li>
 
-                                <li class="submenu-item  " style="list-style:none;">
+                                <li class="submenu-item  has-sub" style="list-style:none;">
                                 <a href="{{url('user_management')}}" class='sidebar-link'>
                                     <i  class="fa-regular fa-user" id="icon"></i>
                                             <span > User Management</span>
@@ -438,7 +446,7 @@ color: #1D1D50
                                 @endphp
                               
 
-                                <li class="submenu-item " style="list-style:none;">
+                                <li class="submenu-item has-sub" style="list-style:none;">
                                     <a href="{{url('system_setup')}}" class='sidebar-link'>
                                         <i class="fa fa-gear" id="icon"></i>
                                             <span>System Setup</span>
@@ -488,6 +496,14 @@ color: #1D1D50
                                     <!-- </ul>
                                 </li> -->
 
+                            
+                                <li class="submenu-item has-sub" style="list-style:none;">
+                                    <a href="{{url('hrindex')}}" class='sidebar-link'>
+                                        <i class="fa fa-gear" id="icon"></i>
+                                            <span>HR</span>
+                                    </a>
+                            </li>
+
 
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('home')}}" class='sidebar-link'>
@@ -498,7 +514,9 @@ color: #1D1D50
                                         <ul class="submenu" style="display: block;">
                                         @else
                                             <ul class="submenu" style="display: none;">
+
                                     @endif
+                                    
                                     <li class="submenu-item ">
                                         <a href="{{url('addallowance')}}" class='sidebar-link'>
                                             <span id="subm">Settings</span>
@@ -979,7 +997,7 @@ color: #1D1D50
 
         <div id="main">
 
-            <header >
+          
                 
              {{-- <header class="mb-3"> --}}
                 {{-- <a href="#" class="burger-btn d-block d-xl-none">
@@ -991,7 +1009,7 @@ color: #1D1D50
                 {{-- <h3 style="color:#c30147;">ERP Global</h3> --}}
              {{-- </div> --}}
 
-             <div class="container" style="border: none">
+             
 
     
     
@@ -1000,26 +1018,78 @@ color: #1D1D50
               </nav> --}}
 
 
+<nav class="navbar navbar-expand-lg  sticky-top navbar-light bg-white " >
+    {{-- <a id="backbtn" href="javascript:history.back()" style=" color: #070344;
+    font-size: 20px;" >
+    <i id="bkbtnicon" class="far fa-arrow-alt-circle-left"></i></a> --}}
 
-             <nav class="navbar navbar-light  justify-content-between" >
-                <a id="backbtn" href="javascript:history.back()"  ><i id="bkbtnicon" class="far fa-arrow-alt-circle-left"></i></a>
+    <a class="navbar-brand" href="#">
+        <img src="assets/images/faces/lawemb.png"  height="40px" class="d-inline-block align-top" alt="">
+        
+      </a>
+      
 
-                <div id="navr" style="margin-top: -10%;"   >
+      
 
-                   
-                        <ul style="text-align: center; text-decoration: none; list-style:none;">
-                            <li style="align-items: center" class="avatar avatar-xl" style="margin-left: 28%;"> 
-                                <img   src="assets/images/faces/lawemb.png" alt="Face 1">
-                            </li>
-                            
-                    <li><a style="text-align: center" class="font-bold text-uppercase"> {{ Auth::user()->name }}</a></li>
-                    <li><a style="text-align: center" class="text-muted mb-0" href="{{url('logt')}}"> <i class="fas fa-sign-out-alt"></i> Log Out</a></li>
-                  </ul>
-                 
-                </div>
-              </nav>
-             
-             </div>
+      
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse ml-2" id="navbarTogglerDemo01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a  class="font-bold text-uppercase nav-link" href="#">  {{ Auth::user()->name }} <span class="sr-only">(current)</span></a>
+        {{-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> --}}
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+
+    
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+
+    <div class="p-2" id="navr" style="margin-right: .5%;"   >
+
+       
+        <div  style="text-align: center; text-decoration: none; list-style:none;">
+            
+                
+           
+            
+    
+    <a style="text-align: center" class="text-muted mb-0 " href="{{url('logt')}}"> <i class="fas fa-sign-out-alt"></i> Log Out</a>
+    
+ 
+</div>
+
+
+
+
+
+  </div>
+</nav>
+
+    
                    {{-- <a href="javascript:history.back()"  class="btn btn-primary" >Back</a>
                 <div style="margin-left: 83%;margin-top: -8%;">
                 <div class="avatar avatar-xl">
@@ -1030,9 +1100,10 @@ color: #1D1D50
                
               </div> --}}
 
-            </header>
+           
+            <br>
 
-<section class="container-fluid">
+<section class="container-fluid bg-white p-4 mt-2">
             <div class="page-content">
                 <section class="row">
                     <div class="col-12 col-lg-12">
@@ -1040,7 +1111,7 @@ color: #1D1D50
                     </div>
                 </section>
             </div>
-
+<br>
             <footer>
                 <div class="footer clearfix mb-0 text-muted">
                     <div class="float-start">
