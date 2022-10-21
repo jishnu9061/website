@@ -65,12 +65,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="report_category" id="cars">
-                                    <option>select</option>
-                                    <option>demo 1</option>
-                                    <option>demo 2</option>
-
-
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
@@ -85,10 +81,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="instruction_type" id="cars">
-                                <option>select</option>
-                                    <option>demo 1</option>
-                                    <option>demo 2</option>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
@@ -101,10 +95,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="expense_category" id="cars">
-                                <option>select</option>
-                                    <option>demo 1</option>
-                                    <option>demo 2</option>
+                                <select name="country" id="cars">
+                                    <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
@@ -125,10 +117,8 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="report_type" id="cars">
-                    <option>select</option>
-                                    <option>demo 1</option>
-                                    <option>demo 2</option>
+                    <select name="country" id="cars">
+                        <option value="volvo"></option>
                     </select>
                 </div>
             </div>
@@ -140,8 +130,8 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="date" class="form-control" name="date_from" id="username" required>
-                    <div class="invalid-feedback">
+                    <input type="date" class="form-control" name="number" id="username" required>
+                    <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
                 </div>
@@ -155,7 +145,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="date" class="form-control" name="date_to" id="username" required>
+                    <input type="date" class="form-control" name="number" id="username" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -166,6 +156,14 @@
     <div id="test" style="height:20px;"></div>
 </div>
 </div>
+
+
+
+
+
+
+
+
 
 
 </div>
@@ -183,7 +181,7 @@
                       </div>
                       <div class="col-sm">
                         <button type="submit" class="btn btn-primary float:right" style="width:45%">View Report</button>
-                        <button  class="btn btn-primary float:left"style="width:45%">Cancel</button>
+                        <button type="submit" class="btn btn-primary float:left"style="width:45%">Cancel</button>
                       </div>
                     </div>
                   </div>

@@ -12,13 +12,33 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-
+      <style >
+          body
+        {
+          background-color: white;
+        }
+      
+      
+             th, td ,tr{
+               border: 1px solid  gray ;
+                border-collapse: collapse;
+}
+table{
+    outline: 1px solid  gray ;
+}
+/* td:nth-child(odd) {
+            background-color:rgb(198, 195, 211); 
+        } */
+          
+            </style>
    </head>
    <body>
 <div>
             <button class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Court List</u></b></span></button><br>
-          
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
      </div>
             <br>
             <br>
@@ -32,11 +52,11 @@
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
            
-                        <!-- {{-- <a href="{{('add_court_category')}}"><button class="btn btn-primary">Add New Court Category</button></a> --}}
+                        {{-- <a href="{{('add_court_category')}}"><button class="btn btn-primary">Add New Court Category</button></a> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal2">Add New Court Category</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      <br> -->
+                      <br>
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
         <!-- <a href="{{('add_court')}}"><button class="btn btn-primary add-btn">Add Court</button></a> -->
         <!-- <a href="{{('add_court_category')}}"><button class="btn btn-primary add-btn">Add New Court Category</button></a><br><br> -->
@@ -47,30 +67,27 @@
                         <th class="text-center" >No</th>
                         <th class="text-center" >Court Category</th>
                         <th class="text-center" >Court Name</th>
-                        <th class="text-center" >Action</th>
-                     
+                        <th class="text-center" >Edit</th>
+                        <th class="text-center"><input type="radio"></th>
                     </tr>
     </thead>
     <tbody>
-    @foreach($court as $court_details)
                     
                     <tr>
-                        <td>{{$court_details->id}}</td>
-                      
-                        <td>{{$court_details->court_category}}</td>
-                        <td>{{$court_details->court_name}}</td>
+                        <td ></td>
+                        <td></td>
                         <td  scope="row"class="text-center">
-                        <a href="{{url('edit_court',$court_details->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                        <a href="{{url('delete_court',$court_details->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
+                        <a href="{{url('edit_court')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                            </td>
                     </tr>
 
-                    @endforeach 
+                    
     </tbody>
                 </table>
                 <div class="class"style="text-align:right;">
                 <select style="width:10%;height:100%;color:rgb(13, 1, 56);font-size:small;background-color:#FFFBF4;"type="text" value="" name="type">
-    <!-- <option>Delete Court</option> -->
+    <option>Delete Court</option>
     <option>Active Category</option>
 </select>
 <input type="button"value="Go" name="close"style="color:rgb(13, 1, 56);background-color:#FFFBF4; ">
@@ -114,7 +131,7 @@
                             <label>Court Category:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <select type="text" value="" id="" name="courtcat">
+                                <select type="text" value="" id="" name="category">
                                     <option>Select</option>
                                    
                     <option>Supreme Court</option>
@@ -215,24 +232,40 @@
                     <div class="row">
          <div class="col-sm">
 
-                        </div>
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-                            <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
-                            <br>
-                            <br>
-                        </div>
-                    </div>
-        </div>
-</form>
-</div>
-</div>
-</div>
-</div>
+                    <tr>
+                        <td colspan="4"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Others :</td>
+                    </tr>
+                    <tr>
+                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></th>
+                        <td  style="background-color:white;color:rgb(13, 1, 56);"> </th>
+                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_court')}}">Edit</td>
+                        <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
+                    </tr>
+                   
+                    <tr>
+                        <td colspan="4"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">Small Claims Court:</td>
+                    </tr>
+                    <tr>
+                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></th>
+                        <td  style="background-color:white;color:rgb(13, 1, 56);"> </th>
+                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_court')}}">Edit</td>
+                        <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
+                    </tr>
+    </tbody>
+                </table>
+                <div class="class"style="text-align:right;">
+                <select style="width:10%;height:100%;color:white;font-size:small;background-color:rgb(13, 1, 56);"type="text" value="" name="type">
+    <option>Delete Court</option>
+    <option>Active Category</option>
+</select>
+<input type="button"value="Go" name="close"style="background-color:rgb(13, 1, 56);color: white; ">
+    </div>
+    <br>
+    <br>
+    </div>
+    <!-- <form>
+ <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
+</form> -->
         </body>
         </div>
 </html>

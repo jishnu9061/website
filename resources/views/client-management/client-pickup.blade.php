@@ -28,8 +28,8 @@
 
 
             <br>
-            <a href="{{url('add-pickup')}}"><button class="btn btn-primary add-btn" style="width:20%">New Client
-                    Pickup</button></a>
+            <button class="btn btn-primary add-btn" data-toggle="modal" data-target="#myModal" style="width:20%">New Client
+                    Pickup</button>
             <div id="mydatatable_filter" class="dataTables_filter">
                 <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
 
@@ -60,18 +60,209 @@
                                     <td scope="row" class="text-center">{{$pickup->mobile}}</td>
                                     <td scope="row" class="text-center">{{$pickup->time_in}}</td>
                                     <td scope="row" class="text-center">{{$pickup->time_out}}</td>
-                                    <td><a href="{{url('view-pickup',$pickup->id)}}"><i style="color:black;align:centre" class="fa fa-eye"
-                                                aria-hidden="true"></i></a>
-                                        <a href="{{url('delete-pickup',$pickup->id)}}"><i style="color:black;align:centre" class="fa fa-trash"
+                                    <td><a href="{{url('view-pickup',$pickup->id)}}"><i style="color:black;align:centre"
+                                                class="fa fa-eye" aria-hidden="true"></i></a>
+                                        <a href="{{url('delete-pickup',$pickup->id)}}"><i
+                                                style="color:black;align:centre" class="fa fa-trash"
                                                 aria-hidden="true"></i></a>
                                     </td>
                                 </tr>
-                                @endforeach
+                                @endforeach;
                             </tbody>
                         </table>
                     </div>
 
+                    <div class="modal fade" id="myModal">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content" style="background-color:#d6ba8a">
 
+                                <!-- Modal Header -->
+                                <div class="modal-header" style="background-color:#d6ba8a">
+                                    <h2 class="text-center"><b>Register Client</b></h2>
+
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body" style="background-color:white">
+                                    <div class="container">
+                                    <div class="row">
+        <form method="post" action="{{url('store-pickup')}}" id="form">
+            @csrf
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mb-1">
+                        <label for="username">Client</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="client" id="username" value=""
+                                placeholder="" required>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Name is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-1">
+                        <label for="username">File Name</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="file" id="username" value=""
+                                placeholder="" required>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Name is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-1">
+                        <label for="username">Mobile</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="mobile" id="username" value=""
+                                placeholder="" required>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Name is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mb-1">
+                        <label for="username">Persion Handling</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="persion" id="username" value=""
+                                placeholder="" required>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Name is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-1">
+                        <label for="username">Email</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="email" id="username" value=""
+                                placeholder="" required>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Name is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-1">
+                        <label for="username">Client Name</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="name" id="username" value=""
+                                placeholder=" name" required>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Name is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mb-1">
+                        <label for="username">Persion Picking Handling</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="handling" id="username" value=""
+                                placeholder="" required>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Name is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-1">
+                        <label for="username">Reason</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="reason" id="username" value=""
+                                placeholder="" required>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Name is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-1">
+                        <label for="username">visitors</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="visitors" id="username" value=""
+                                placeholder="" required>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Name is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mb-1">
+                        <label for="username">Time In</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="time" class="form-control" name="time-in" id="username" value=""
+                                placeholder="" required>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Name is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-1">
+                        <label for="username">Time Out</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="time" class="form-control" name="time-out" id="username" value="" placeholder="Reason"
+                                required>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Name is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                    </div>
+                    <div class="col-sm">
+                    </div>
+                    <div class="col-sm">
+                        <button type="submit" class="btn btn-primary float:right" style="width:45%">Save</button>
+                        <button type="submit" class="btn btn-primary float:left" style="width:45%">Close</button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- The Modal -->
                     <div class="modal fade" id="editmed">
                         <div class="modal-dialog modal-xl">
@@ -236,26 +427,37 @@
                 src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js">
             </script>
             <script type="text/javascript" charset="utf8"
-                src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+                src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js">
+            </script>
 
             {{-- Supplier Edit start --}}
 
             <script>
             $(document).on('click', '#edit_medicine_details', function() {
 
-                var medicine_id_hidden = $(this).closest('#data').find('#medicine_id_hidden').val();
-                var medicine_name = $(this).closest('#data').find('#medicine_name_1').val();
-                var medicine_brand_name = $(this).closest('#data').find('#medicine_brand_name').val();
-                var medicine_group = $(this).closest('#data').find('#medicine_group').val();
-                var medicicine_category_name = $(this).closest('#data').find('#medicine_category_name1').val();
-                var medicine_generic_name = $(this).closest('#data').find('#medicine_generic_name').val();
-                var medicine_manufactuure_name = $(this).closest('#data').find('#medicine_manufactuure_name')
+                var medicine_id_hidden = $(this).closest('#data').find('#medicine_id_hidden')
                     .val();
-                var medicine_supplier_name = $(this).closest('#data').find('#medicine_supplier_name').val();
-                var medicine_minimum_level = $(this).closest('#data').find('#medicine_minimum_level').val();
-                var medicine_reorder_level = $(this).closest('#data').find('#medicine_reorder_level').val();
-                var medicine_unit_packing = $(this).closest('#data').find('#medicine_unit_packing').val();
-                var medicine_composition = $(this).closest('#data').find('#medicine_composition').val();
+                var medicine_name = $(this).closest('#data').find('#medicine_name_1').val();
+                var medicine_brand_name = $(this).closest('#data').find('#medicine_brand_name')
+                    .val();
+                var medicine_group = $(this).closest('#data').find('#medicine_group').val();
+                var medicicine_category_name = $(this).closest('#data').find(
+                    '#medicine_category_name1').val();
+                var medicine_generic_name = $(this).closest('#data').find(
+                    '#medicine_generic_name').val();
+                var medicine_manufactuure_name = $(this).closest('#data').find(
+                        '#medicine_manufactuure_name')
+                    .val();
+                var medicine_supplier_name = $(this).closest('#data').find(
+                    '#medicine_supplier_name').val();
+                var medicine_minimum_level = $(this).closest('#data').find(
+                    '#medicine_minimum_level').val();
+                var medicine_reorder_level = $(this).closest('#data').find(
+                    '#medicine_reorder_level').val();
+                var medicine_unit_packing = $(this).closest('#data').find(
+                    '#medicine_unit_packing').val();
+                var medicine_composition = $(this).closest('#data').find(
+                    '#medicine_composition').val();
                 var medicine_notes = $(this).closest('#data').find('#medicine_notes').val();
                 var medicine_images = $(this).closest('#data').find('#medicine_images').val();
 

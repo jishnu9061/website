@@ -70,7 +70,7 @@
                             <label for="username">January</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <input type="number" class="form-control" name="" id="username" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -82,7 +82,7 @@
                             <label for="username">February</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <input type="number" class="form-control" name="" id="username" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -94,7 +94,7 @@
                             <label for="username">March</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <input type="number" class="form-control" name="" id="username" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -109,7 +109,7 @@
                             <label for="username">April</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <input type="number" class="form-control" name="" id="username" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -121,7 +121,7 @@
                             <label for="username">May</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <input type="number" class="form-control" name="" id="username" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -133,7 +133,7 @@
                             <label for="username">June</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <input type="number" class="form-control" name="" id="username" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -148,7 +148,7 @@
                             <label for="username">July</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <input type="number" class="form-control" name="" id="username" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -160,7 +160,7 @@
                             <label for="username">August</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <input type="number" class="form-control" name="" id="username" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -172,7 +172,7 @@
                             <label for="username">September</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <input type="number" class="form-control" name="" id="username" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -187,7 +187,7 @@
                             <label for="username">October</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <input type="number" class="form-control" name="" id="username" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -199,7 +199,7 @@
                             <label for="username">November</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <input type="number" class="form-control" name="" id="username" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -211,7 +211,7 @@
                             <label for="username">December</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <input type="number" class="form-control" name="" id="username" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>

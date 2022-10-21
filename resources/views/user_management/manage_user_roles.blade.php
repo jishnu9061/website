@@ -12,24 +12,41 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
- 
+   <style>
+
+          body
+        {
+          background-color: white;
+        }
+
+             th, td ,tr{
+               border: 1px solid  gray ;
+                border-collapse: collapse;
+}
+table{
+    outline: 1px solid  gray;
+}
+ /* tr:nth-child(odd)
+{
+    background-color:rgb(198, 195, 211);
+}   */
+          </style>
    </head>
    <body>
    <div>
             <button class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Manage User Roles</u></b></span></button><br>
-         
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
      </div>
             <br> <br>
-    <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-           
-    {{-- <a href="{{('add_user_roles')}}"><button class="btn btn-primary">Add User Role</button></a> --}}
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add User Role</button>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-    <!-- <a href="{{('add_user_roles')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add User Role</button></a> -->
- <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">User Roles</h3>
+    
+    <a href="{{('add_user_roles')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add User Role</button></a>
+ 
+
+
+    <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">User Roles</h3>
     <div class="table-responsive">   
     <table class="table table-bordered" id="new-item">
       
@@ -39,8 +56,8 @@
                         <th class="text-center" >No</th>
                         <th class="text-center" >Role Name</th>
                         <th class="text-center" >Users</th>
-                        <th class="text-center" >Action</th>
-                   
+                        <th class="text-center" >Edit</th>
+                        <th class="text-center"><input type="checkbox"></th>
                    
                     </tr>
 </thead>
@@ -50,71 +67,26 @@
                         <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
                         <td  class="text-center"style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td  scope="row"class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
-                        <a href="{{url('edit_user_roles')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                        <a href="{{url('')}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
-
+                        <td class="text-center"><a href="{{url('edit_user_roles')}}"><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td>
+                        <td class="text-center"><input type="checkbox"></td>
                      </tr>
                      </tbody>
-      </table><br>
-      </div >
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-<div class="modal fade" id="myModal">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content" style="background-color:#d6ba8a">
-
-                                    <!-- Modal Header -->
-                                    <div class="modal-header" style="background-color:#d6ba8a">
-                                        <h2 class="text-centre"><b>Add User Role</b></h2>
-
-                                    </div>
-
-                                    <!-- Modal body -->
-                                    <div class="modal-body" style="background-color:white">
-                                        <div class="container">
-                                            <form method="post" action="{{ url('add_user_roles') }}"
-                                                enctype="multipart/form-data"> 
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->      
-@csrf
-       <div class="row">
-                <div class="col-lg-6 col-md-6 offset-md-3" >
-                    <label >Role Name:</label>
-                    <div class="row">
-                        <div class="col-md-11">
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text"  id="" name="rolename"value=""class="form-control">
-                            <div class="invalid-feedback" style="width: 100%;">
-                            Required Field.
-                        </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-            <div class="row">
-    <div class="col-sm">
-
-    </div>
-    <div class="col-sm">
-
-    </div>
-    <div class="col-sm">
-         <br>
-         <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Add</button>
-         <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
-        </div>
-    </div>
-</div>
-</form>
-</div>
-</div>
-</div>
-</div>
-                    </body>
-</div>
+        
+                    
+                    </table><br>
+</div >   
+        </body>
+</div >
 </html>
 
   @endsection
+      
+
+
+
+
+
+
 
 
 

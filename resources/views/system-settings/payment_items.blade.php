@@ -12,27 +12,41 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+      <style >
+          body
+        {
+          background-color: white;
+        }
 
+             th, td ,tr{
+               border: 1px solid  gray ;
+                border-collapse: collapse;
+}
+table{
+    outline: 1px solid  gray ;
+}
+/* td:nth-child(odd) {
+            background-color:rgb(198, 195, 211); 
+        } */
+          
+            </style>
    </head>
    <body>
-<h2 style="text-align:center; text-shadow: 2px 1px;"></h2>
+    <!-- <h2 >Court List</h2><br>
+    <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
+    <h2 style="text-align:center; text-shadow: 2px 1px;"></h2>
   <div>
      <button class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Payment Items</u></b></span></button><br>
-   </div>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+     </div>
             <br>
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-           
-{{-- <a href="{{('add_payment_item')}}"><button class="btn btn-primary">Add Payment Item</button></a> --}}
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Payment Item</button>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      <br>
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-        <!-- <a href="{{('add_payment_item')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Payment Item</button></a><br><br> -->
+        <a href="{{('add_payment_item')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Payment Item</button></a><br><br>
      
     <!-- <div class="container"> -->
-    <div class="table-responsive"> 
+      <div class="mydiv">
       <table class="table table-bordered" id="new-item">
                   <thead>
                         <tr>
@@ -43,12 +57,15 @@
                         <th class="text-center" >Item Comments</th>
                         <th class="text-center" >Item Short Names</th>
                         <th class="text-center" >Status</th>
-                        <th class="text-center">Action</th>
-                     
+                        <th class="text-center">Edit</th>
+                        <th class="text-center" ><input type="radio"></th>
                     </tr>
     </thead>
     <tbody>
-        <tr>
+                    <tr>
+                        <td colspan="8"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">01-Legal Fees:</td>
+                    </tr>
+                    <tr>
                         <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
@@ -63,32 +80,15 @@
                         </tbody>
                     </table>
                 <div class="class"style="text-align:right;">
-                <select style="width:10%;height:100%;color:rgb(13, 1, 56);font-size:small;background-color:#FFFBF4;"type="text" value="" name="type">
+                <select style="width:10%;height:100%;color:white;font-size:small;background-color:rgb(13, 1, 56);"type="text" value="" name="type">
     <option>Active Category</option>
     <option>De-Active Category</option>
  
 </select>
-<input type="button"value="Go" name="close"style="background-color:#FFFBF4;color: rgb(13, 1, 56); ">
+<input type="button"value="Go" name="close"style="background-color:rgb(13, 1, 56);color: white; ">
     </div>
     <br>
     <br>
-     <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-<div class="modal fade" id="myModal">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content" style="background-color:#d6ba8a">
-
-                                    <!-- Modal Header -->
-                                    <div class="modal-header" style="background-color:#d6ba8a">
-                                        <h2 class="text-centre"><b>Add Letter Category</b></h2>
-
-                                    </div>
-
-                                    <!-- Modal body -->
-                                    <div class="modal-body" style="background-color:white">
-                                        <div class="container">
-                                            <form method="post" action="{{ url('add_payment_item') }}"
-                                                enctype="multipart/form-data"> 
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->    
     </div>
     @csrf
     <div class="row">
@@ -190,6 +190,9 @@
 </div>
 </div>
 
+    <!-- <form>
+ <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
+</form> -->
         </body>
         </div>
 </html>

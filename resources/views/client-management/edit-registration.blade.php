@@ -29,20 +29,18 @@
 
         </div>
    <br>
-   <br>
 </div>
 <div class="row">
     <div class="col-md-12 order-md-1">
-        <form method="post" action="{{url('update-registration')}}" id="form">
+        <form method="post" action="" id="form">
             @csrf
-            <input type="hidden" name="id" value="{{$edit_registration->id}}">
             <div class="row">
                 <div class="col-md-4">
                     <div class="mb-1">
                         <label for="username">Customer Name</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
-                            <input type="text" class="form-control" name="name" id="username" value="{{$edit_registration->customer_name}}"
+                            <input type="text" class="form-control" name="name" id="username" value=""
                                 placeholder="Customer name" required>
                             <div class="invalid-feedback" style="width: 100%;">
                                 Date is required.
@@ -55,7 +53,7 @@
                         <label for="username">Postal Code</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
-                            <input type="text" class="form-control" name="Code" id="username" value="{{$edit_registration->postal_code}}"
+                            <input type="text" class="form-control" name="Code" id="username" value=""
                                 placeholder="Postal Code" required>
                             <div class="invalid-feedback" style="width: 100%;">
                                 Date is required.
@@ -68,7 +66,7 @@
                         <label for="username">Town</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
-                            <input type="text" class="form-control" name="town" id="username" value="{{$edit_registration->town}}"
+                            <input type="text" class="form-control" name="town" id="username" value=""
                                 placeholder="Town" required>
                             <div class="invalid-feedback" style="width: 100%;">
                                 Date is required.
@@ -87,7 +85,7 @@
 
                             </div>
                             <select name="country" id="cars">
-                                <option value="volvo">{{$edit_registration->country}}</option>
+                                <option value="volvo"></option>
                             </select>
                         </div>
                     </div>
@@ -97,7 +95,7 @@
                         <label for="username">Telephone No</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
-                            <input type="text" class="form-control" name="telephone" id="username" value="{{$edit_registration->telephone_no}}"
+                            <input type="text" class="form-control" name="telephone" id="username" value=""
                                 placeholder="Telephone" required>
                             <div class="invalid-feedback" style="width: 100%;">
                                 Date is required.
@@ -110,7 +108,7 @@
                         <label for="username">Email Address</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
-                            <input type="text" class="form-control" name="email" id="username" value="{{$edit_registration->email}}"
+                            <input type="text" class="form-control" name="email" id="username" value=""
                                 placeholder="Email" required>
                             <div class="invalid-feedback" style="width: 100%;">
                                 Date is required.
@@ -121,12 +119,12 @@
             </div>
             <br>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="mb-1">
                         <label for="username">Mobile No</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
-                            <input type="text" class="form-control" name="mobile" id="age" value="{{$edit_registration->mobile_no}}"
+                            <input type="text" class="form-control" name="mobile" id="age" value=""
                                 placeholder="Mobile No" min="0" max="99">
                             <div class="invalid-feedback" style="width: 100%;">
                                 Telephone No is required.
@@ -134,28 +132,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="mb-1">
                         <label for="username">Web site</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
-                            <input type="text" class="form-control" name="website" value="{{$edit_registration->web_site}}" id="confirm_password"
+                            <input type="text" class="form-control" name="website" value="" id="confirm_password"
                                 placeholder="Web Site">
                             <div class="invalid-feedback" style="width: 100%;">
                                 others is required.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="mb-1">
-                        <label for="username">Registration Date</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend"></div>
-                            <input type="date" class="form-control" name="Date" value="{{$edit_registration->registration_date}}" id="confirm_password"
-                                placeholder="Web Site">
-                            <div class="invalid-feedback" style="width: 100%;">
-                            Registration Date
                             </div>
                         </div>
                     </div>
@@ -167,7 +152,7 @@
                     <div class="mb-1">
                         <label for="username">Customer Address</label>
                         <div class="input-group">
-                            <textarea class="form-control" id="form7Example7" rows="2" name="caddress"></textarea>
+                            <textarea class="form-control" id="form7Example7" rows="2"></textarea>
                             <div class="invalid-feedback" style="width: 100%;">
                                 Action Plan is required.
                             </div>
@@ -178,7 +163,7 @@
                     <div class="mb-1">
                         <label for="username">Physical Address</label>
                         <div class="input-group">
-                            <textarea class="form-control" id="form7Example7" rows="2" name="paddress"></textarea>
+                            <textarea class="form-control" id="form7Example7" rows="2"></textarea>
                             <div class="invalid-feedback" style="width: 100%;">
                                 Complaint Description is required.
                             </div>
@@ -187,8 +172,86 @@
                 </div>
             </div>
             <br>
-           
-        
+            <!-- <h4 style="text-align:center">Contact Persons</h4> -->
+            <div>
+            <div class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Contact Persons</u></b></span></div><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+
+        </div>
+            
+
+            <br>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="mb-1">
+                        <label for="username"> Name</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="" id="username" value="" placeholder=""
+                                required>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Date is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="mb-1">
+                        <label for="username">Designation</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="" id="username" value="" placeholder=""
+                                required>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Date is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="mb-1">
+                        <label for="username">Mobile No</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="" id="username" value="" placeholder=""
+                                required>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Date is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="mb-1">
+                        <label for="username">Email</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="text" class="form-control" name="" id="username" value="" placeholder=""
+                                required>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Date is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+                        <button type="submit" class="btn btn-primary submit_btn_btn">Add Registration</button>
+                        <a href="{{route('client-index')}}" type="button" class="btn btn-primary "
+                            style="width:30%;  margin-top: 30px; padding:8px">Cancel</a>
+                    </div>
+                </div>
+            </div>
+    </div> -->
     <div class="col-sm">
 
         <div class="row">
