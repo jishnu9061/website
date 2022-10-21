@@ -4,6 +4,28 @@
 
 } */
 
+
+#hdtpa{
+    border: 0.5px solid rgba(157, 168, 176, 0.4);
+    
+    background-color: #f8f9fa;
+    padding: 1%;
+    width:100%;  
+    text-align:center;
+}
+
+#hdbtb{
+    /* border: 0.5px solid rgba(157, 168, 176, 0.4); */
+    
+    background-color: #f8f9fa;
+    padding: .5%;
+    width:100%;
+    /* float: left! */
+    text-align: center;
+}
+
+
+
 #backbuttonst {
 
     font-size: 40px;
@@ -21,10 +43,6 @@
 
 }
 
-/* #navr{
-    
-   align-items: center;
-  } */
 
   #ff {
     overflow: hidden;
@@ -49,16 +67,33 @@
 
 }
 
-#backbtn {
-
-    color: #070344;
-    font-size: 50px;
-
-}
 
 .h4 {
 
 text-align: center;
 text-shadow: 2px 1px;
 }
+
+
+.fc th {
+    padding: 10px !important;
+    background: #D5BD94 ;
+    line-height: 1;
+    font-weight: 600;
+}
+
+
+.button {
+    border-radius: 5px;
+    background-color: #aed3ff;
+    color: #377dcc;
+    width: 20%;
+    border: 1px solid;
+}
+
+
+
+
+
+
 
