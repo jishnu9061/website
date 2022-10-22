@@ -62,8 +62,8 @@
                             <td scope="row" class="text-center">{{ $detail->mpesa_code }}</td>
                             <td scope="row" class="text-center">{{ $detail->bank_gl_ac }}</td>
                             <td  scope="row"class="text-center">
-                        <a href="{{url('edit_bank_account')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                        <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
+                        <a href="{{url('edit_bank_account',$detail->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <a href="{{url('delete_bank_account',$detail->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                            </td>
                         </tr>
                         @endforeach

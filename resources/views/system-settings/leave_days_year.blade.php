@@ -50,21 +50,24 @@
                         </tr>
                     </thead>
                     <tbody>
+                    @foreach($leave_days as $leave)
                         <tr id="data">
                            
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{ $leave->id }}</td>
+                            <td scope="row" class="text-center">{{ $leave->year }}</td>
+                            <td scope="row" class="text-center">{{ $leave->annual_leave_day }}</td>
+                            <td scope="row" class="text-center">{{ $leave->satuday_working_days }}</td>
+                            <td scope="row" class="text-center">{{ $leave->perfomance_duration }}</td>
+                            <td scope="row" class="text-center">{{ $leave->pay_relief }}</td>
+                            
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                             <td  scope="row"class="text-center">
-                        <a href="{{url('edit_leave_days')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                        <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
+                        <a href="{{url('edit_leave_days',$leave->id )}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <a href="{{url('delete_leave_days',$leave->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                            </td>
            </tr>
+           @endforeach
                     </tbody>
                 </table>
  <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
@@ -94,7 +97,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select type="year" value="" name="type"style="width:100%;">
+                                <select type="year" value="" name="year"style="width:100%;">
                             <option>---Select---</option>
                             <option>2025</option>
                             <option>2024</option>
@@ -118,7 +121,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="number" class="form-control" name="telephone" id="confirm_password" required>
+                                <input type="text" class="form-control" name="leaveday" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                              
                                 </div>
@@ -133,7 +136,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select type="text" value="" name="type"style="width:100%;">
+                    <select type="text" value="" name="saturday"style="width:100%;">
                             <option>---Select---</option>
                             <option>Not a Working Day</option>
                             <option>Yes (Half Day)</option>
@@ -150,7 +153,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select type="text" value="" name="type"style="width:100%;">
+                    <select type="text" value="" name="performance"style="width:100%;">
                             <option>---Select---</option>
                             <option>Monthly</option>
                             <option>Quarterly</option>
@@ -171,7 +174,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="telephone" id="confirm_password" required>
+                    <input type="text" class="form-control" name="pay" id="confirm_password" required>
                 </div>
             </div>
         </div>

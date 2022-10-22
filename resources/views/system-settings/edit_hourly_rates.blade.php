@@ -36,7 +36,8 @@
 
         <div class="col-md-12 order-md-1">
 
-            <form method="post" action="" id="form">
+        <form method="post"action="{{url('update_hourly_rates')}}"id="form">  
+          <input type="hidden" name="id" value="{{$hourly_rate->id}}">
                 @csrf
                 <div class="row">
                 <div class="col-md-4">
@@ -46,8 +47,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select type="text" value="" name="type"style="width:100%;">
-                            <option>--Select---</option>
+                                <select type="text" value="" name="user"style="width:100%;">
+                            <option>{{$hourly_rate->user_staff}}</option>
                                 <option>Alekeen W Benson</option>
                                 <option>Cedric Opara</option>
                                 <option>Corrine Auma</option>
@@ -82,8 +83,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select type="text" value="" name="type"style="width:100%;">
-                            <option>---Select---</option>
+                                <select type="text" value="" name="currency"style="width:100%;">
+                            <option>{{$hourly_rate->currency}}</option>
                             <option>KES</option>
                             <option>USD</option>
                             <option>EUR</option>
@@ -113,7 +114,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="telephone" id="confirm_password" required>
+                    <input type="text" class="form-control" name="rate" id="confirm_password" value="{{$hourly_rate->hourly_rates}}"required>
                 </div>
             </div>
         </div>

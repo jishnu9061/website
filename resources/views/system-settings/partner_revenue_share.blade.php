@@ -44,14 +44,16 @@
                         </tr>
                     </thead>
                     <tbody>
+                    @foreach($revenue_share as $partner)
                         <tr id="data">
                         
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{ $partner->id }}</td>
+                            <td scope="row" class="text-center">{{ $partner->year }}</td>
+                            <td scope="row" class="text-center">{{ $partner->partner }}</td>
+                            <td scope="row" class="text-center">{{ $partner->total }}</td>
                            
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
  <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
@@ -96,7 +98,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select type="year" value="" name="type"style="width:100%;">
+                                <select type="year" value="" name="year"style="width:100%;">
                             <option>---Select---</option>
                             <option>2026</option>
                             <option>2025</option>
@@ -124,7 +126,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="telephone" id="confirm_password" required>
+                    <input type="text" class="form-control" name="percentage" id="confirm_password" required>
                 </div>
             </div>
         </div>

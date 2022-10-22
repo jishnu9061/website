@@ -169,7 +169,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="branch_code" id="confirm_password" required>
+                                <input type="text" class="form-control" name="branch_code" id="confirm_password"value="{{$bank_details->branch_code}}" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
                                 </div>
@@ -184,7 +184,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="swift_code" id="confirm_password" required>
+                    <input type="text" class="form-control" name="swift_code" id="confirm_password" value="{{$bank_details->swift_code}}"required>
                 </div>
             </div>
         </div>
@@ -195,7 +195,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="mpesa_no" id="confirm_password" required>
+                    <input type="text" class="form-control" name="mpesa_no" id="confirm_password" value="{{$bank_details->mpesa_code}}"required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Telephone Number is required.
                     </div>
@@ -211,7 +211,7 @@
 
                     </div>
                     <select type="text" value="" name="bank_gl_ac"style="width:100%;">
-                            <option>---Select---</option>
+                            <option>{{$bank_details->bank_gl_ac}}</option>
                             <option>8004==> Client A/C Sidian Bank</option>
                             <option>8000==>Client Account - Cooperative Bank</option>
                             <option>8008==>Client Account - Cooperative Bank (USD)</option>

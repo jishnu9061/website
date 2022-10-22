@@ -821,7 +821,9 @@ Route::any('/delete_file_types/{id}','SystemSetup@deletefiletypes')->name('delet
 //invoice_items
 Route::any('invoice_items','SystemSetup@invoiceitems')->name('invoice_items');
 Route::any('add_invoice_item','SystemSetup@addinvoiceitem')->name('add_invoice_item');
-Route::any('edit_invoice_item','SystemSetup@editinvoiceitem')->name('edit_invoice_item');
+Route::any('edit_invoice_item/{id}','SystemSetup@editinvoiceitem')->name('edit_invoice_item');
+Route::any('/update_invoice_item','SystemSetup@updateinvoiceitem')->name('update_invoice_item');
+Route::any('/delete_invoice_item/{id}','SystemSetup@deleteinvoiceitem')->name('delete_invoice_item');
 Route::any('add_gl_account','SystemSetup@addglaccount')->name('add_gl_account');
 //end
 //currency_list
@@ -893,18 +895,24 @@ Route::any('/delete_billable_activities/{id}','SystemSetup@deletebillableactivit
 //bank account details
 Route::any('bank_details','SystemSetup@bankdetails')->name('bank_details');
 Route::any('add_bank_account','SystemSetup@addbankaccount')->name('add_bank_account');
-Route::any('edit_bank_account','SystemSetup@editbankaccount')->name('edit_bank_account');
+Route::any('edit_bank_account/{id}','SystemSetup@editbankaccount')->name('edit_bank_account');
+Route::any('/update_bank_account','SystemSetup@updatebankaccount')->name('update_bank_account');
+Route::any('/delete_bank_account/{id}','SystemSetup@deletebankaccount')->name('delete_bank_account');
 Route::any('add_bank_document','SystemSetup@bankdocument')->name('add_bank_document');
 //end
 //leave days per year
 Route::any('leave_days_year','SystemSetup@leavedays')->name('leave_days_year');
 Route::any('add_leave_days','SystemSetup@addleavedays')->name('add_leave_days');
-Route::any('edit_leave_days','SystemSetup@editleavedays')->name('edit_leave_days');
+Route::any('edit_leave_days/{id}','SystemSetup@editleavedays')->name('edit_leave_days');
+Route::any('/update_leave_days','SystemSetup@updateleavedays')->name('update_leave_days');
+Route::any('/delete_leave_days/{id}','SystemSetup@deleteleavedays')->name('delete_leave_days');
 //end
 //hourly rates
 Route::any('hourly_rates','SystemSetup@hourlyrates')->name('hourly_rates');
 Route::any('add_hourly_rates','SystemSetup@addhourlyrates')->name('add_hourly_rates');
-Route::any('edit_hourly_rates','SystemSetup@edithourlyrates')->name('edit_hourly_rates');
+Route::any('edit_hourly_rates/{id}','SystemSetup@edithourlyrates')->name('edit_hourly_rates');
+Route::any('/update_hourly_rates','SystemSetup@updatehourlyrates')->name('update_hourly_rates');
+Route::any('/delete_hourly_rates/{id}','SystemSetup@deletehourlyrates')->name('delete_hourly_rates');
 //end
 //partner revenue share
 Route::any('partner_revenue_share','SystemSetup@partnerrevenueshare')->name('partner_revenue_share');

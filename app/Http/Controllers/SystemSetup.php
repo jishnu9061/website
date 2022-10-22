@@ -907,17 +907,63 @@ public function updatetemplatecategory(Request $Request)
     }
     public function invoiceitems()
     {
-        
-        return view('system-settings.invoice_items');
+        $invoice_item=DB::table('cra_invoice_items')->get();
+        return view('system-settings.invoice_items',compact('invoice_item'));
+      
     }
-    public function addinvoiceitem()
+    public function addinvoiceitem(Request $Request)
     {
+        $item_code = $Request['code'];
+        $item_category = $Request['category'];
+        $item_name = $Request['iname'];
+        $description = $Request['description'];
+        $sales_tax_code = $Request['sales_tax_code'];
+        $income_account = $Request['account'];
+        DB::table('cra_invoice_items')->insert([
+            'item_code' => $item_code,
+            'item_category' => $item_category,
+            'item_name' => $item_name,
+            'description' => $description,
+            'sales_tax_code' => $sales_tax_code,
+            'income_account' => $income_account,
+            
+        ]);
         return redirect('/invoice_items');
       
     }
-    public function editinvoiceitem()
+    public function editinvoiceitem($id)
     {
-        return view('system-settings.edit_invoice_item');
+        $invoice_item=DB::table('cra_invoice_items')->where('id',$id)->first();
+     
+        return view('system-settings.edit_invoice_item',compact('invoice_item','id'));
+ 
+    }
+    public function updateinvoiceitem(Request $Request)
+    {
+        $id = $Request['id'];
+        $item_code = $Request['code'];
+        $item_category = $Request['category'];
+        $item_name = $Request['iname'];
+        $description = $Request['description'];
+        $sales_tax_code = $Request['sales_tax_code'];
+        $income_account = $Request['income_account'];
+        
+        $update_invoice_item = array(
+            'item_code' => $item_code,
+            'item_category' => $item_category,
+            'item_name' => $item_name,
+            'description' => $description,
+            'sales_tax_code' => $sales_tax_code,
+            'income_account' => $income_account,
+
+        );
+        DB::table('cra_invoice_items')->where('id', $id)->update($update_invoice_item);
+        return redirect('/invoice_items');
+    }
+    public function deleteinvoiceitem($id)
+    {
+        DB::table('cra_invoice_items')->where('id',$id)->delete();
+        return redirect('/invoice_items');
     }
     public function addglaccount()
     {
@@ -1283,36 +1329,157 @@ public function updatetemplatecategory(Request $Request)
   
     public function leavedays()
     {
-        return view('system-settings.leave_days_year');
+        $leave_days=DB::table('cra_leave_days')->get();
+        
+        return view('system-settings.leave_days_year',compact('leave_days'));
+    
     }
   
-    public function addleavedays()
+    public function addleavedays(Request $Request)
     {
-        return view('system-settings.add_leave_days');
+        $year = $Request['year'];
+        $annual_leave_day = $Request['leaveday'];
+        $satuday_working_days = $Request['saturday'];
+        $perfomance_duration = $Request['performance'];
+        $pay_relief = $Request['pay'];
+        $pl_closed = $Request['pl'];
+        $account_closed = $Request['account'];
+      
+
+        DB::table('cra_leave_days')->insert([
+            'year' => $year,
+            'annual_leave_day' => $annual_leave_day,
+            'satuday_working_days' => $satuday_working_days,
+            'perfomance_duration' => $perfomance_duration,
+            'pay_relief' =>  $pay_relief,
+            'pl_closed' => $pl_closed,
+            'account_closed' => $account_closed,
+          
+           
+        ]);
+        return redirect('/leave_days_year');
+       
     }
-    public function editleavedays()
+    public function editleavedays($id)
     {
-        return view('system-settings.edit_leave_days');
+        $leave_days=DB::table('cra_leave_days')->where('id',$id)->first();
+     
+        return view('system-settings.edit_leave_days',compact('leave_days','id'));
+      
     }
+    public function updateleavedays(Request $Request)
+    {
+        $id = $Request['id'];
+        $year = $Request['year'];
+        $annual_leave_day = $Request['leaveday'];
+        $satuday_working_days = $Request['saturday'];
+        $perfomance_duration = $Request['performance'];
+        $pay_relief = $Request['pay'];
+        $pl_closed = $Request['pl'];
+        $account_closed = $Request['account'];
+    
+       
+ $update_leave_days = array(
+            'year' => $year,
+            'annual_leave_day' =>  $annual_leave_day,
+            'satuday_working_days' => $satuday_working_days,
+            'perfomance_duration' => $perfomance_duration,
+            'pay_relief' =>  $pay_relief,
+            'pl_closed' => $pl_closed,
+            'account_closed' => $account_closed,
+            
+);
+        DB::table('cra_leave_days')->where('id', $id)->update( $update_leave_days );
+        return redirect('/leave_days_year');
+    }
+    public function deleteleavedays($id)
+    {
+        DB::table('cra_leave_days')->where('id',$id)->delete();
+        return redirect('/leave_days_year');
+    }
+
     public function hourlyrates()
     {
-        return view('system-settings.hourly_rates');
+        $hourly_rate=DB::table('cra_hourly_rate')->get();
+        
+        return view('system-settings.hourly_rates',compact('hourly_rate'));
+      
     }
-    public function addhourlyrates()
+    public function addhourlyrates(Request $Request)
     {
-        return view('system-settings.add_hourly_rates');
+        $user_staff = $Request['user'];
+        $currency = $Request['currency'];
+        $hourly_rates = $Request['rate'];
+        $amount = $Request['amount'];
+     
+      
+
+        DB::table('cra_hourly_rate')->insert([
+            'user_staff' => $user_staff,
+            'currency' => $currency,
+            'hourly_rates' => $hourly_rates,
+            'amount' => $amount,
+        
+]);
+        return redirect('/hourly_rates');
     }
-    public function edithourlyrates()
+    public function edithourlyrates($id)
     {
-        return view('system-settings.edit_hourly_rates');
+        $hourly_rate=DB::table('cra_hourly_rate')->where('id',$id)->first();
+     
+        return view('system-settings.edit_hourly_rates',compact('hourly_rate','id'));
+   
     }
+    public function updatehourlyrates(Request $Request)
+    {
+        $id = $Request['id'];
+        $user_staff = $Request['user'];
+        $currency = $Request['currency'];
+        $hourly_rates = $Request['rate'];
+        $amount = $Request['amount'];
+    
+       
+ $update_hourly_rates = array(
+    'user_staff' => $user_staff,
+    'currency' => $currency,
+    'hourly_rates' => $hourly_rates,
+    'amount' => $amount,
+            
+);
+        DB::table('cra_hourly_rate')->where('id', $id)->update( $update_hourly_rates );
+        return redirect('/hourly_rates');
+    }
+    public function deletehourlyrates($id)
+    {
+        DB::table('cra_hourly_rate')->where('id',$id)->delete();
+        return redirect('/hourly_rates');
+    }
+
     public function partnerrevenueshare()
     {
-        return view('system-settings.partner_revenue_share');
+        $revenue_share=DB::table('cra_partner_revenue_share')->get();
+        
+        return view('system-settings.partner_revenue_share',compact('revenue_share'));
+       
     }
-    public function addpartnerrevenue()
+    public function addpartnerrevenue(Request $Request)
     {
-        return view('system-settings.add_partner_revenue');
+        $year = $Request['year'];
+        $partner = $Request['partner'];
+        $total = $Request['total'];
+        $percentage = $Request['percentage'];
+     
+      
+
+        DB::table('cra_partner_revenue_share')->insert([
+            'year' => $year,
+            'partner' => $partner,
+            'total' => $total,
+            'percentage' => $percentage,
+        
+]);
+        return redirect('/partner_revenue_share');
+       
     }
     public function menuaccess()
     {
