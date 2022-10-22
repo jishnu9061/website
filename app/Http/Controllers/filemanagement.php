@@ -84,8 +84,18 @@ class filemanagement extends Controller
     //document temblates
 
     //manage files
-    public function filearchive()
+    public function filearchive(Request $request)
     {
+        
+        $Box_type=$request['box_type'];
+        $Box_number=$request['box_no'];
+
+        DB::table('cra_add_box')->insert([
+            'type' =>  $Box_type,
+            'number' =>  $Box_number,
+
+        ]);
+
         return view('file_management.file-archive');
     }
 
