@@ -13,6 +13,18 @@ class hrindex extends Controller
     }
 
 
+   
+     
+ 
+    
+
+    
+
+
 }
+
+
+
+
 
 

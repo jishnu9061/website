@@ -12,20 +12,11 @@
             {{ Session::get('leavevalidat')}}
         </div>
         @endif
-        <!-- <div class="col-sm"> -->
-        </div>
-        <div>
-            <!-- <h3 class="text-center" style="color: #070344;"><b>Search</b></h3> -->
 
-            <div>
-                <div class="btn btn-primary"
-                    style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Search</u></b></span></div><br>
-                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                    crossorigin="anonymous">
+          {{-- heading --}}
+  <h4 id="hdtpa"><b>Search</b></h4>
+  
 
-
-            </div>
 
             <br>
             <div>
@@ -41,7 +32,7 @@
             </div>
 
         </div>
-        <br>
+        
 
 
 
@@ -56,8 +47,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="client" id="cars">
+                                    <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
@@ -76,8 +69,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="file" id="cars">
+                                <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
                                 </select><br>
                             </div>
                         </div>
@@ -93,7 +88,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="incorporation" id="age">
+                                <input type="date" class="form-control" name="date_from" id="age">
                             </div>
                         </div>
                     </div>
@@ -106,7 +101,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="incorporation" id="age">
+                                <input type="text" class="form-control" name="date_to" id="age">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
@@ -127,8 +122,8 @@
                     </div>
                     <div class="col-sm">
                         <br>
-                        <button type="submit" class="btn btn-primary"
-                            Style="width:45%; margin-right:0px;">Search</button>
+                        <button type="submit" class="btn btn-primary"  Style="width:50%; margin-right: -20px;">Search</button>
+                      
 
                     </div>
                 </div>

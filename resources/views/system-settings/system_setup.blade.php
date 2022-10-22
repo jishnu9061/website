@@ -2,7 +2,7 @@
 @section('content')
 
  
-   <p class="m-1" style="text-align:right;">
+   {{-- <p class="m-1" style="text-align:right;">
 
 <a href="{{url('Knowledge_Base')}}"style="color:#1D1D50;">Knowledge Base</a> |
 <a href="{{url('Referral_Program')}}"style="color:#1D1D50;">Referral Program</a> |
@@ -13,7 +13,7 @@
 <a href="{{url('Audit_Trail')}}"style="color:#1D1D50;">Audit Trail</a> |
 <a href="{{url('Change_password')}}"style="color:#1D1D50;">Change password</a> |
 <a href="{{url('Logout')}}"style="color:#1D1D50;">Logout</a> 
-</p>
+</p> --}}
 <br>
   
         

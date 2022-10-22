@@ -1,20 +1,8 @@
 @extends('layouts.hmsmain')
 @section('content')
-<meta name="csrf-token" content="{{ csrf_token() }}">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css"
-    href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-
-{{-- <div class="spacer" style="height:40px;margin-top: 30px;"> --}}
 
 
-</head>
 
-<body>
 
     <div class="col-sm">
 
@@ -22,15 +10,24 @@
 
     </div>
     <div class="container">
-        <h3 class="text-center" style="color: #070344;"><b>File Archive</b></h3>
-        <br>
-
+    {{-- heading --}}
+    <h4 id="hdtpa"><b>File Archive</b></h4>
+    <br>
+  
+ 
+ 
+         
+        
         <div id="mydatatable_filter" class="dataTables_filter">
             <label><b>Search:</b><input type="search" class="box" placeholder="search"
                     aria-controls="mydatatable"></label>
         </div>
-        <a href="{{url('add-box-no')}}"><button class="btn btn-primary add-btn"
-                style="width: 15%; margin-bottom:5%;">Add Box No</button></a>
+        <!-- <a href="{{url('add-box-no')}}"><button class="btn btn-primary add-btn"
+                style="width: 15%; margin-bottom:5%;">Add Box No</button></a> -->
+                {{-- <a href="{{('add-box-no')}}"><button class="btn btn-primary">Add Box No</button></a> --}}
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Box No</button>
+
+
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="table-responsive">
@@ -73,130 +70,134 @@
                         </tr>
                     </tbody>
                 </table>
+</div>
 
 
-                <!-- The Modal -->
-                <div class="modal fade" id="editmed">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
 
-                            <!-- Modal Header -->
-                            <div class="modal-header" style="background-color:#435ebe">
-                                <h4 class="text-white">Edit Medicine</h4>
+           <!-- The Modal -->
+           <div class="modal fade" id="myModal">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content" style="background-color:#d6ba8a">
 
-                            </div>
+                                    <!-- Modal Header -->
+                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                        <h2 class="text-center"><b>Add Box No</b></h2>
 
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <div class="container">
-                                    <form method="post" action="{{url('update_medicine')}}"
-                                        enctype="multipart/form-data">
-                                        @csrf
-                                        <h4 class="text-center"><b>Medicine Details</b></h4><br>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label for="">Brand Name</label>
+                                    </div>
 
-                                            </div>
-                                            <div class="col-sm">
-                                                <label for="">Medicine Name</label>
-                                                <input type="text" id="edit_medicine_name" name="medicine_name"
-                                                    class="form-control" required><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <div class="col-sm">
-                                                    <label for="">Medicine Group</label>
+                                    <!-- Modal body -->
+                                    <div class="modal-body" style="background-color:white">
+                                        <div class="container">
+                                            <form method="post" action="{{ url('file-archive') }}"
+                                                enctype="multipart/form-data">
+                                                @csrf
 
-                                                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Box Type</label>
 
-                                            </div>
-                                            <div class="col-sm">
-                                                <label for="">Medicine Category Name</label>
-
-
-                                            </div>
-
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label for="">Generic name</label>
-
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Manufacturer Name</label>
-
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Supplier Name</label>
-
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label for="">Minimum Level</label>
-                                                <input type="text" id="edit_minimum_level" name="minimum_level"
-                                                    class="form-control"><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Reorder Level</label>
-                                                <input type="text" name="reorder" id="edit_reorder" class="form-control"
-                                                    placeholder=""><br>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label class="text-color:white;">Unit/Packing</Label>
-                                                <input type="text" name="unit_packing" id="edit_unit_packing"
-                                                    class="form-control" placeholder=""><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Upload Medicine Image</label>
-                                                <input type="file" name="editimage" id="edit_image" class="form-control"
-                                                    placeholder="Image"><br>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label>Medicine Composition</label>
-                                                <textarea class="form-control" id="edit_medicine_details1"
-                                                    name="medicine_detailss" rows="3" placeholder=""></textarea><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Notes</label>
-                                                <textarea class="form-control" id="edit_medicine_note"
-                                                    name="medicine_note" rows="3" placeholder=""></textarea><br>
-                                            </div>
-                                        </div>
-                                        <br>
-
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <input type="hidden" class="form-control" id="edit_id" name="method_id">
-
-                                            </div>
-                                        </div>
-
-
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary text-white"
-                                                style="width:15%;background-color:#435ebe"
-                                                data-bs-dismiss="modal">Close</button>
-                                            <button type="submit" class="btn btn-primary"
-                                                style="background-color:#435ebe;width:15%;">Update</button>
-                                        </div>
-                                </div>
-                                <div class="container">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
                                 </div>
+                                <select name="box_type" id="cars">
+                                <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
+                                </select>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
                             </div>
+                        </div>
+                    </div>
+               
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Box No</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
-                            </form>
+                                </div>
+                                <input type="text" class="form-control" name="box_no" id="age">
+                            </div>
+                        </div>
+                    </div>
 
+
+                </div>
+                <br>
+                <!-- <div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm">
+
+                            </div>
+                            <div class="btn-group pt-3 " role="group" aria-label="Basic example">
+
+                                <button type="submit" class="btn btn-primary submit_btn">Cancel</button>
+                                <button type="submit" class="btn btn-primary submit_btn">View Report</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="row">
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">View</button>
+                            <button type="button" class="btn btn-primary float:right;" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
+            </form>
+        </div>
+    </div>
+</div>
 
+</div>
+<div class="modal" id="mymodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-body">
+                    <form action="">
+                        <div>
+                            <input type="text" name="type" class="form-control" placeholder="Client Type">
+                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="modal" id="my">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-body">
+                    <form action="">
+                        <div>
+                            <input type="text" name="type" class="form-control" placeholder="Country">
+                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+       
 
             <br>
             <!-- Supplier modal Edit End -->
