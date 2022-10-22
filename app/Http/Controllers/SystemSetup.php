@@ -384,17 +384,58 @@ class SystemSetup extends Controller
   
     public function paymentitem()
     {
-        $payment_item=DB::table(' cra_payment_item')->get();
-        return view('system-settings.payment_items',compact('payment_item'));
+        $payment_items=DB::table('cra_payment_item')->get();
+        return view('system-settings.payment_items',compact('payment_items'));
 
     }
-    public function addpaymentitem()
+    public function addpaymentitem(Request $Request)
     {
-        return view('system-settings.add_payment_item');
+        $item_code = $Request['icode'];
+        $item_group = $Request['igroup'];
+        $item_name = $Request['iname'];
+        $item_comment = $Request['icomments'];
+        $item_shortname = $Request['ishortname'];
+
+        DB::table('cra_payment_item')->insert([
+            'item_code' => $item_code,
+            'item_group' => $item_group,
+            'item_name' => $item_name,
+            'item_comment' => $item_comment,
+            'item_shortname' => $item_shortname,
+           
+        ]);
+        return redirect('/payment_items');
     }
-    public function editpaymentitem()
+    public function editpaymentitem($id)
     {
-        return view('system-settings.edit_payment_item');
+        $payment_items=DB::table('cra_payment_item')->where('id',$id)->first();
+        return view('system-settings.edit_payment_item',compact('payment_items','id'));
+        
+    }
+    public function updatepaymentitem(Request $Request)
+    {
+        $id = $Request['id'];
+        $item_code = $Request['icode'];
+        $item_group = $Request['igroup'];
+        $item_name = $Request['iname'];
+        $item_comment = $Request['icomments'];
+        $item_shortname = $Request['ishortname'];
+        
+        $update_payment_item = array(
+            'item_code' => $item_code,
+            'item_group' =>  $item_group,
+            'item_name' => $item_name,
+            'item_comment' =>  $item_comment,
+            'item_shortname' => $item_shortname,
+           
+        );
+        DB::table('cra_payment_item')->where('id', $id)->update( $update_payment_item );
+        return redirect('/payment_items');
+    }
+    public function deletepaymentitem($id)
+    {
+        DB::table('cra_payment_item')->where('id',$id)->delete();
+        return redirect('/payment_items');
     }
     ///////////////////////DESCRIPTION SELECTION//////////////////////////////////
     public function descriptionselection()
@@ -666,9 +707,7 @@ public function updatedescsel(Request $Request)
         {
             $tax_wht_vat=DB::table('cra_tax_wht-vat')->get();
             return view('system-settings.tax_wht-vat',compact('tax_wht_vat'));
-    
-        
-        }
+ }
     
         public function addtaxwhtvat(Request $Request)
         {
@@ -816,19 +855,59 @@ public function updatetemplatecategory(Request $Request)
     }
     public function filetypes()
     {
-        return view('system-settings.file_types');
+        $file_types=DB::table('cra_file_types')->get();
+        return view('system-settings.file_types',compact('file_types'));
+        
     }
-    public function addfiletypes()
+    public function addfiletypes(Request $Request)
     {
+        $file_type = $Request['name'];
+        $short_name = $Request['sname'];
+        $retainer_period = $Request['year'];
+        $approvers = $Request['approver'];
+        DB::table('cra_file_types')->insert([
+            'file_type' => $file_type,
+            'short_name' => $short_name,
+            'retainer_period' => $retainer_period,
+            'approvers' => $approvers,
+        ]);
+       
         return redirect('/file_types');
        
     }
-    public function editfiletypes()
+    public function editfiletypes($id)
     {
-        return view('system-settings.edit_file_types');
+        $file_types=DB::table('cra_file_types')->where('id',$id)->first();
+     
+        return view('system-settings.edit_file_types',compact('file_types','id'));
+        
+    }
+    public function updatefiletypes(Request $Request)
+    {
+        $id = $Request['id'];
+        $file_type = $Request['name'];
+        $short_name = $Request['sname'];
+        $retainer_period = $Request['year'];
+        $approvers = $Request['approver'];
+        
+        $update_file_types = array(
+            'file_type' => $file_type,
+            'short_name' =>  $short_name,
+            'retainer_period' => $retainer_period,
+            'approvers' =>  $approvers,
+
+        );
+        DB::table('cra_file_types')->where('id', $id)->update( $update_file_types );
+        return redirect('/file_types');
+    }
+    public function deletefiletypes($id)
+    {
+        DB::table('cra_file_types')->where('id',$id)->delete();
+        return redirect('/file_types');
     }
     public function invoiceitems()
     {
+        
         return view('system-settings.invoice_items');
     }
     public function addinvoiceitem()
@@ -844,19 +923,62 @@ public function updatetemplatecategory(Request $Request)
     {
         return view('system-settings.add_gl_account');
     }
+
+
+
+
     public function currencylist()
     {
-        return view('system-settings.currency_list');
+        $currency_list=DB::table('cra_currency_list')->get();
+        return view('system-settings.currency_list',compact('currency_list'));
+ 
     }
-    public function addcurrency()
+    public function addcurrency(Request $Request)
     {
+        $currency_name = $Request['currency'];
+        $currency_symbol = $Request['csymbol'];
+        $exchange_rate = $Request['exchangerate'];
+        $default_action = $Request['account'];
+        DB::table('cra_currency_list')->insert([
+            'currency_name' => $currency_name,
+            'currency_symbol' => $currency_symbol,
+            'exchange_rate' => $exchange_rate,
+            'default_action' => $default_action,
+        ]);
+       
         return redirect('/currency_list');
        
     }
-    public function editcurrency()
+    public function editcurrency($id)
     {
-        return view('system-settings.edit_currency');
+        $currency_list=DB::table('cra_currency_list')->where('id',$id)->first();
+     
+        return view('system-settings.edit_currency',compact('currency_list','id'));
     }
+    public function updatecurrency(Request $Request)
+    {
+        $id = $Request['id'];
+        $currency_name = $Request['currency'];
+        $currency_symbol = $Request['csymbol'];
+        $exchange_rate = $Request['exchangerate'];
+        $default_action = $Request['account'];
+        
+        $update_currency = array(
+            'currency_name' => $currency_name,
+            'currency_symbol' =>  $currency_symbol,
+            'exchange_rate' => $exchange_rate,
+            'default_action' =>  $default_action,
+
+        );
+        DB::table('cra_currency_list')->where('id', $id)->update( $update_currency );
+        return redirect('/currency_list');
+    }
+    public function deletecurrency($id)
+    {
+        DB::table('cra_currency_list')->where('id',$id)->delete();
+        return redirect('/currency_list');
+    }
+
     public function manageuseraccount()
     {
         return view('system-settings.manage_user_account');
@@ -970,9 +1092,9 @@ public function updatetemplatecategory(Request $Request)
   
     public function transportzone()
     {
-        $transportzone=DB::table('cra_transport_zone')->get();
+        $transport_zone=DB::table('cra_transport_zone')->get();
 
-        return view('system-settings.transport_zones',compact('transportzone'));
+        return view('system-settings.Transport_zones',compact('transport_zone'));
     }
 
     public function addtransportzone(Request $Request)
@@ -987,25 +1109,90 @@ public function updatetemplatecategory(Request $Request)
             'cost' =>  $cost,
         ]);
 
-       return view('system-settings.add_transport_zone');
+        return redirect('/Transport_zones');
     }
 
 
-    public function edittransportzone()
+    public function edittransportzone($id)
     {
-        return view('system-settings.edit_transport_zone');
+        $transport_zone=DB::table('cra_transport_zone')->where('id',$id)->first();
+     
+        return view('system-settings.edit_transport_zone',compact('transport_zone','id'));
+  
     }
+    public function updatetransportzone(Request $Request)
+    {
+        $id = $Request['id'];
+        $zone_name = $Request['zone_name'];
+        $zone_areas = $Request['zone_areas'];
+        $cost = $Request['cost'];
+      
+        
+        $update_transport_zone = array(
+            'zone_name' => $zone_name,
+            'zone_areas' =>  $zone_areas,
+            'cost' => $cost,
+            
+
+        );
+        DB::table('cra_transport_zone')->where('id', $id)->update( $update_transport_zone );
+        return redirect('/Transport_zones');
+    }
+    public function deletetransportzone($id)
+    {
+        DB::table('cra_transport_zone')->where('id',$id)->delete();
+        return redirect('/Transport_zones');
+    }
+
     public function billableactivities()
     {
-        return view('system-settings.billable_activities');
+        $billable_activities=DB::table('cra_billable_activities')->get();
+        return view('system-settings.billable_activities',compact('billable_activities'));
+
     }
-    public function addbillableactivities()
+    public function addbillableactivities(Request $Request)
     {
-        return view('system-settings.add_billable_activities');
+        $type = $Request['type'];
+        $activity_name = $Request['name'];
+        $cost = $Request['cost'];
+
+        DB::table('cra_billable_activities')->insert([
+            'type' => $type,
+            'activity_name' =>  $activity_name,
+            'cost' =>  $cost,
+        ]);
+
+        return redirect('/billable_activities');
     }
-    public function editbillableactivities()
+    public function editbillableactivities($id)
     {
-        return view('system-settings.edit_billable_activities');
+        $billable_activities=DB::table('cra_billable_activities')->where('id',$id)->first();
+     
+        return view('system-settings.edit_billable_activities',compact('billable_activities','id'));
+        
+    }
+    public function updatebillableactivities(Request $Request)
+    {
+        $id = $Request['id'];
+        $type = $Request['type'];
+        $activity_name = $Request['name'];
+        $cost = $Request['cost'];
+      
+        
+        $update_billable_activities = array(
+            'type' => $type,
+            'activity_name' =>  $activity_name,
+            'cost' => $cost,
+            
+
+        );
+        DB::table('cra_billable_activities')->where('id', $id)->update( $update_billable_activities );
+        return redirect('/billable_activities');
+    }
+    public function deletebillableactivities($id)
+    {
+        DB::table('cra_billable_activities')->where('id',$id)->delete();
+        return redirect('/billable_activities');
     }
 
     public function bankdetails()
@@ -1041,15 +1228,54 @@ public function updatetemplatecategory(Request $Request)
             'bank_gl_ac' =>$bank_gl_ac,
            
         ]);
-  
+        return redirect('/bank_details');
 
-        return view('system-settings.add_bank_account');
     }
     
-    public function editbankaccount()
+    public function editbankaccount($id)
     {
-        return view('system-settings.edit_bank_account');
+        $bank_details=DB::table('cra_bank_details')->where('id',$id)->first();
+     
+        return view('system-settings.edit_bank_account',compact('bank_details','id'));
+       
     }
+    public function updatebankaccount(Request $Request)
+    {
+        $id = $Request['id'];
+        $bank = $Request['bank'];
+        $branch = $Request['branch'];
+        $account_name = $Request['account_name'];
+        $account_number = $Request['account_no'];
+        $bank_code = $Request['bank_code'];
+        $branch_code = $Request['branch_code'];
+        $swift_code = $Request['swift_code'];
+        $mpesa_code = $Request['mpesa_no'];
+        $bank_gl_ac = $Request['bank_gl_ac'];
+       
+      
+        
+        $update_bank_account = array(
+            'bank' => $bank,
+            'branch' =>  $branch,
+            'account_name' => $account_name,
+            'account_number' => $account_number,
+            'bank_code' =>  $bank_code,
+            'branch_code' => $branch_code,
+            'swift_code' => $swift_code,
+            'mpesa_code' =>  $mpesa_code,
+            'bank_gl_ac' => $bank_gl_ac,
+            
+
+        );
+        DB::table('cra_bank_details')->where('id', $id)->update( $update_bank_account );
+        return redirect('/bank_details');
+    }
+    public function deletebankaccount($id)
+    {
+        DB::table('cra_bank_details')->where('id',$id)->delete();
+        return redirect('/bank_details');
+    }
+
     public function bankdocument()
     {
         return view('system-settings.add_bank_document');

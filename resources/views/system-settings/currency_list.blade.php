@@ -46,18 +46,20 @@
                     </tr>
     </thead>
     <tbody>
+    @foreach($currency_list as $currency)
        <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
+                        <td>{{$currency->id}}</td>
+                        <td>{{$currency->currency_name}}</td>
+                        <td>{{$currency->currency_symbol}}</td>
+                        <td>{{$currency->exchange_rate}}</td>
+                        <td>{{$currency->default_action}}</td>
                         <td  scope="row"class="text-center">
-                        <a href="{{url('edit_currency')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                        <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
+                        <a href="{{url('edit_currency',$currency->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <a href="{{url('delete_currency',$currency->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                            </td>
                        
           </tr>
+          @endforeach
 </tbody>
 </table>
         <!---------------------------------------------- MODAL ---------------------------------------------------------------------->

@@ -8,39 +8,28 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-  
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-   <style>
 
-          body
-        {
-          background-color: white;
-        }
-
-             th, td ,tr{
-               border: 1px solid  gray ;
-                border-collapse: collapse;
-}
-
-
-          </style>
    </head>
    <body>
  <div>
             <button class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Manage User Accounts</u></b></span></button><br>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous">
-     </div>
-            <br>
-            <br>
-    <a href="{{('reg_new_user')}}"><button class="btn btn-primary add-btn" style="width=10%;height=100%;">Register New User</button></a> <br>
-            <br>
-    
-
+                crossorigin="anonymous"> -->
+              </div>
+              <br>
+              <br>
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
+           
+                {{-- <a href="{{('reg_new_user')}}"><button class="btn btn-primary">Register New User</button></a> --}}
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Register New User</button>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 
     <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;"><b>List Of System Users</b></h3>
     <div class="table-responsive">    
@@ -60,7 +49,7 @@
                         <th class="text-center" >Last Logout Time</th>
                         <th class="text-center" >Status</th>
                         <th class="text-center" >Action</th>
-                        <th class="text-center"><input type="checkbox"></th>
+                       
                     </tr>
 </thead>
              <tbody>
@@ -86,7 +75,7 @@
                                 <!-- <a href="user_view" class="dropdown-item" >View</a> -->
                                 <a href="user_attachments"class="dropdown-item" >Attachment</a>
                                 <a href="user_comments" class="dropdown-item" >Comments</a>
-                              
+                                <a href="user_delete" class="dropdown-item" >Delete</a>
                              
                             </div>
                         </div> 
@@ -97,7 +86,280 @@
                      </tbody>
                
                     </table><br>
-</div>        
+</div>    
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
+<div class="modal fade" id="myModal">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content" style="background-color:#d6ba8a">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                        <h2 class="text-centre"><b>Register New User</b></h2>
+
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body" style="background-color:white">
+                                        <div class="container">
+                                            <form method="post" action="{{ url('reg_new_user') }}"
+                                                enctype="multipart/form-data"> 
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->      
+                @csrf
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">User Code</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="" id="username" value=""required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username"> First Name</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="" id="username" value=""required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Last name</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="" id="username" value=""required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Initials</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">User Name</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Password</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="password" class="form-control" name="" id="username" value="" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Re-type Password</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="password" class="form-control" name="" id="username" value="" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Postal Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Town/City</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Telephone No</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Mobile No</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">E-mail Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="email" class="form-control" name="" id="username" value="" required></br>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Department</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                </div>
+                                <select name="" id="cars"required>
+                                    <option>---Select--- </option>
+                                    <option>Administration</option>
+                                    <option>Clerical & Related Works</option>
+                                    <option>Family Law Sevices</option>
+                                    <option>Finance Department</option>
+                                    <option>HRM & Admin</option>
+                                    <option>Human Resources</option>
+                                    <option>ICT & Data Management</option>
+                                    <option>Immigration Law Sevices</option>
+                                    <option>Litigation</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Signature to upload</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="file" class="form-control" name="" id="username" value="" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">user Group</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                </div>
+                                <select name="" id="cars">
+                                    <option> ---Select--- </option>
+                                    <option>Administrator</option>
+                                    <option>Partner</option>
+                                    <option>Advocate</option>
+                                    <option>Accountant</option>
+                                    <option>HRM & ADMIN Assistant</option>
+                                    <option>Secretary</option>
+                                    <option>Pupil</option>
+                                    <option>Intern</option>
+                                    <option>Clerk</option>
+                                    <option>Legal Assistant</option>
+                                    <option>Senior Associate</option>
+                                    <option>Associate Advocate</option>
+                                    <option>Receptionist</option>
+                                    <option>Support</option>
+                                    <option>Personal Assistant</option>
+                                    <option>ICT & Data Management</option>
+                                    <option>Office Admin</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">User Role</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Name is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+                        <br>
+                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+        </form>
+    </div>
+  </div>
+</div>
+</div>   
         </body>
         </div>     
 </html>

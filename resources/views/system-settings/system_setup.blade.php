@@ -45,7 +45,7 @@
 
 <div class="row sm">
     <div class="col-sm-4 " ><a href="{{url('database_backup')}}"><img class="logo_size"src="assets\image\Database backup.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" > Database Backup</button></a></div>
-    <div class="col-sm-4 " > <a href="{{url('transport_zones')}}"><img class="logo_size"src="assets\image\Transport zones.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" > Transport Zones</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('Transport_zones')}}"><img class="logo_size"src="assets\image\Transport zones.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" > Transport Zones</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('billable_activities')}}"><img class="logo_size"src="assets\image\Billable activity.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Billable Activities</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('bank_details')}}"><img class="logo_size"src="assets\image\Bank account detail.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" > Bank Account Details</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('leave_days_year')}}"><img class="logo_size"src="assets\image\Leaves day per year.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" > Leaves Days per Year</button></a></div>
