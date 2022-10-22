@@ -63,7 +63,7 @@ class SystemSetup extends Controller
             // 'Add_Logo' => $Add_Logo,
         ]);
    
-       return view('system-settings.add_company_details');
+        return redirect('/company_details');
      
     }
     public function editcompany($id)
@@ -131,7 +131,7 @@ class SystemSetup extends Controller
             'Day' => $Day,
         ]);
         
-        return view('system-settings.add_new_holiday');
+        return redirect('/weekend_holiday');
     }
     public function holiday2017()
     {
@@ -190,95 +190,88 @@ class SystemSetup extends Controller
         return view('system-settings.other_confgn');
     }
         //////////////////////// COMPANY_BRANCH///////////////////////////////////
-    public function branch()
-    {
-        $branch_details=DB::table('cra_company_branch_details')->get();
-        return view('system-settings.company_branch',compact('branch_details'));
-    }
-
-
-    public function addbranch(Request $Request)
-    {
-         $branch_no = $Request['bnum'];
-        $branch_code = $Request['bcodes'];
-        $branch_name = $Request['bname'];
-        $address = $Request['paddress'];
-        $physical_address = $Request['physicaladd'];
-        $telephone = $Request['tel'];
-        $mobile = $Request['mobile'];
-        $fax = $Request['fax'];
-        $town = $Request['town'];
-         $email = $Request['email'];
-        $website = $Request['website'];
-   
+        public function branch()
+        {
+            $branch_details=DB::table('cra_company_branch_details')->get();
+            return view('system-settings.company_branch',compact('branch_details'));
+        }
+    
+    
+        public function addbranch(Request $Request)
+        {
+             $branch_no = $Request['bnum'];
+            $branch_code = $Request['bcodes'];
+            $branch_name = $Request['bname'];
+            $address = $Request['paddress'];
+            $physical_address = $Request['physicaladd'];
+            $telephone = $Request['tel'];
+            $mobile = $Request['mobile'];
+            $fax = $Request['fax'];
+            $town = $Request['town'];
+             $email = $Request['email'];
+            $website = $Request['website'];
        
-DB::table('cra_company_branch_details')->insert([
-            'branch_no' => $branch_no,
-            'branch_code' => $branch_code,
-            'branch_name' => $branch_name,
-            'address' => $address,
-            'physical_address' => $physical_address,
-            'telephone' => $telephone,
-            'mobile' => $mobile,
-            'fax' => $fax,
-            'town' => $town,
-            'email' => $email,
-            'website' => $website,
            
-        ]);
-
-     return view('system-settings.add_company_branch');
-    }
-
-
-
-
-    public function editbranch($id)
-    {
-        
-        $company_branch_details= DB::table('cra_company_branch_details')->where('id',$id)->first();
-        return view('system-settings.edit_company_branch',compact('company_branch_details','id'));
-     
-    }
-  
-
-    public function updatebranch(Request $Request){
-        $id     = $Request['id'];
-        $branch_no = $Request['bnum'];
-      
-        $branch_code = $Request['bcodes'];
-        $branch_name = $Request['bname'];
-        $address = $Request['paddress'];
-        $physical_address = $Request['physicaladd'];
-        $telephone = $Request['tel'];
-        $mobile = $Request['mobile'];
-        $fax = $Request['fax'];
-        $town = $Request['town'];
-        $email = $Request['email'];
-        $website = $Request['website'];
-     
-
-        $update_company_branch = array(
-            'branch_no' => $branch_no,
-            'branch_code' =>  $branch_code,
-            'branch_name' => $branch_name,
-            'address' =>  $address,
-            'physical_address' =>  $physical_address,
-            'telephone' =>  $telephone,
-            'mobile' =>   $mobile,
-            'fax' =>  $fax,
-            'town' =>  $town,
-            'email' =>  $email ,
-            'website' =>  $website,
+    DB::table('cra_company_branch_details')->insert([
+                'branch_no' => $branch_no,
+                'branch_code' => $branch_code,
+                'branch_name' => $branch_name,
+                'address' => $address,
+                'physical_address' => $physical_address,
+                'telephone' => $telephone,
+                'mobile' => $mobile,
+                'fax' => $fax,
+                'town' => $town,
+                'email' => $email,
+                'website' => $website,
+               
+            ]);
+            return redirect('/company_branch');
+        //  return view('system-settings.add_company_branch');
+        }
+    
+ public function editbranch($id)
+        {
             
-        );
-        DB::table('cra_company_branch_details')->where('id', $id)->update( $update_company_branch );
-        return redirect('/company_branch');
-    }
-    public function deletebranch($id){
-        DB::table('cra_company_branch_details')->where('id',$id)->delete();
-        return redirect('/company_branch');
-    }
+            $branch_details= DB::table('cra_company_branch_details')->where('id',$id)->first();
+            return view('system-settings.edit_company_branch',compact('branch_details','id'));
+         
+        }
+   public function updatebranch(Request $Request){
+            $id = $Request['id'];
+            $branch_no = $Request['bnum'];
+            $branch_code = $Request['bcodes'];
+            $branch_name = $Request['bname'];
+            $address = $Request['paddress'];
+            $physical_address = $Request['physicaladd'];
+            $telephone = $Request['tel'];
+            $mobile = $Request['mobile'];
+            $fax = $Request['fax'];
+            $town = $Request['town'];
+            $email = $Request['email'];
+            $website = $Request['website'];
+            
+            $update_company_branch = array(
+                'branch_no' => $branch_no,
+                'branch_code' =>  $branch_code,
+                'branch_name' => $branch_name,
+                'address' =>  $address,
+                'physical_address' =>  $physical_address,
+                'telephone' =>  $telephone,
+                'mobile' =>   $mobile,
+                'fax' =>  $fax,
+                'town' =>  $town,
+                'email' =>  $email ,
+                'website' =>  $website,
+                
+            );
+            DB::table('cra_company_branch_details')->where('id', $id)->update( $update_company_branch );
+            return redirect('/company_branch');
+        }
+        public function deletebranch($id){
+            DB::table('cra_company_branch_details')->where('id',$id)->delete();
+            return redirect('/company_branch');
+        }
        //////////////////////// END COMPANY_BRANCH///////////////////////////////////
 
     public function Configtn()
@@ -418,7 +411,7 @@ DB::table('cra_company_branch_details')->insert([
             'Description_Selection_Name' => $Description_Selection_Name,
             'Selection_Description' => $Selection_Description,
         ]);
-        return view('system-settings.add_desc_sel');
+        return redirect('/description_selectn');
         
     }
 
@@ -450,109 +443,278 @@ public function updatedescsel(Request $Request)
 
         //////////////////tax chart//////////////////////////////
              
-    public function taxchartmain()
-    {
-        
-        return view('system-settings.tax_chart_main');
-    }
-    public function taxchart()
-    {
-        $tax_chart=DB::table('cra_tax_chart')->get();
-        return view('system-settings.tax_chart',compact('tax_chart'));
-    }
-   
-    public function addtaxchart(Request $Request)
-    {
-        $tax_brand=$Request['taxband'];
-        $lower_limit=$Request['limit'];
-        $upper_limit=$Request['ulimit'];
-        $rate=$Request['rate'];
-        $status=$Request['status'];
-        $factor_with_housing=$Request['withhousing'];
-        $factor_without_housing=$Request['wouthousing'];
-        DB::table('cra_tax_chart')->insert([
-            'tax_brand' => $tax_brand,
-            'lower_limit' => $lower_limit,
-            'upper_limit' => $upper_limit,
-            'rate' => $rate,
-            'status' => $status,
-            'factor_with_housing' => $factor_with_housing,
-            'factor_without_housing' => $factor_without_housing,
+        public function taxchartmain()
+        {
             
-        ]);
-        return view('system-settings.add_tax_chart');
-    }
-    public function edittaxchart($id)
-    {
-        $tax_chart=DB::table('cra_tax_chart')->where('id',$id)->first();
-        return view('system-settings.edit_tax_chart',compact('tax_chart','id'));
-    }
-
-public function updatetaxchart(Request $Request)
-    {
-        $id = $Request['id'];
-        $tax_brand=$Request['taxband'];
-        $lower_limit=$Request['limit'];
-        $upper_limit=$Request['ulimit'];
-        $rate=$Request['rate'];
-        $status=$Request['status'];
-        $factor_with_housing=$Request['withhousing'];
-        $factor_without_housing=$Request['wouthousing'];
-        $update_taxchart = array(
-            'tax_brand' => $tax_brand,
-            'lower_limit' => $lower_limit,
-            'upper_limit' => $upper_limit,
-            'rate' => $rate,
-            'status' => $status,
-            'factor_with_housing' => $withhousing,
-            'factor_without_housing' => $factor_without_housing,
-            
-        );
-        DB::table('cra_tax_chart')->where('id', $id)->update( $update_taxchart );
-        return redirect('/tax_chart');
-    }
-    public function deletetaxchart($id)
-    {
-        DB::table('cra_tax_chart')->where('id',$id)->delete();
-        return redirect('/tax_chart');
-    }
-     /////////////////////////end tax chart//////////////////////////
-    public function addtaxexcise()
-    {
-        return view('system-settings.add_tax_excise');
-    }
-    public function addtaxvat()
-    {
-        return view('system-settings.add_tax_vat');
-    }
-    public function addtaxwht()
-    {
-        return view('system-settings.add_tax_wht');
-    }
-
-    public function addtaxwhtvat()
-    {
-        return view('system-settings.add_tax_wht-vat');
-    }
- 
-public function edittaxexcise()
-    {
-        return view('system-settings.edit_tax_excise');
-    }
-    public function edittaxvat()
-    {
-        return view('system-settings.edit_tax_vat');
-    }
-    public function edittaxwht()
-    {
-        return view('system-settings.edit_tax_wht');
-    }
-
-    public function edittaxwhtvat()
-    {
-        return view('system-settings.edit_tax_wht-vat');
-    }
+            return view('system-settings.tax_chart_main');
+        }
+        public function taxchart()
+        {
+            $tax_chart=DB::table('cra_tax_chart')->get();
+            return view('system-settings.tax_chart',compact('tax_chart'));
+        }
+       
+        public function addtaxchart(Request $Request)
+        {
+            $tax_brand=$Request['taxband'];
+            $lower_limit=$Request['limit'];
+            $upper_limit=$Request['ulimit'];
+            $rate=$Request['rate'];
+            $status=$Request['status'];
+            $factor_with_housing=$Request['withhousing'];
+            $factor_without_housing=$Request['wouthousing'];
+            DB::table('cra_tax_chart')->insert([
+                'tax_brand' => $tax_brand,
+                'lower_limit' => $lower_limit,
+                'upper_limit' => $upper_limit,
+                'rate' => $rate,
+                'status' => $status,
+                'factor_with_housing' => $factor_with_housing,
+                'factor_without_housing' => $factor_without_housing,
+                
+            ]);
+            return redirect('/tax_chart');
+           
+        }
+        public function edittaxchart($id)
+        {
+            $tax_chart=DB::table('cra_tax_chart')->where('id',$id)->first();
+            return view('system-settings.edit_tax_chart',compact('tax_chart','id'));
+        }
     
+    public function updatetaxchart(Request $Request)
+        {
+            $id = $Request['id'];
+            $tax_brand=$Request['taxband'];
+            $lower_limit=$Request['limit'];
+            $upper_limit=$Request['ulimit'];
+            $rate=$Request['rate'];
+            $status=$Request['status'];
+            $factor_with_housing=$Request['withhousing'];
+            $factor_without_housing=$Request['wouthousing'];
+            $update_taxchart = array(
+                'tax_brand' => $tax_brand,
+                'lower_limit' => $lower_limit,
+                'upper_limit' => $upper_limit,
+                'rate' => $rate,
+                'status' => $status,
+                'factor_with_housing' => $factor_with_housing,
+                'factor_without_housing' => $factor_without_housing,
+                
+            );
+            DB::table('cra_tax_chart')->where('id', $id)->update( $update_taxchart );
+            return redirect('/tax_chart');
+        }
+        public function deletetaxchart($id)
+        {
+            DB::table('cra_tax_chart')->where('id',$id)->delete();
+            return redirect('/tax_chart');
+        }
+         /////////////////////////end tax chart//////////////////////////
+         /////////////////////////////////////////////////////////////////////
+         public function taxexcise()
+         {
+            $tax_excise=DB::table('cra_tax_excise')->get();
+             return view('system-settings.tax_excise',compact('tax_excise'));
+         }
+        public function addtaxexcise(Request $Request)
+        {
+            $Tax_name=$Request['name'];
+            $Tax_value=$Request['value'];
+            $Status=$Request['status'];
+           
+            DB::table('cra_tax_excise')->insert([
+                'Tax_name' => $Tax_name,
+                'Tax_value' => $Tax_value,
+                'Status' => $Status,
+               
+            ]);
+            return redirect('/tax_excise');
+        }
+         
+    public function edittaxexcise($id)
+    { 
+         $tax_excise=DB::table('cra_tax_excise')->where('id',$id)->first();
+        return view('system-settings.edit_tax_excise',compact('tax_excise','id'));
+    }
+    public function updatetaxexcise(Request $Request)
+        {
+            $id = $Request['id'];
+            $Tax_name=$Request['name'];
+            $Tax_value=$Request['value'];
+            $Status=$Request['status'];
+          
+            $update_taxexcise = array(
+                'Tax_name' => $Tax_name,
+                'Tax_value' => $Tax_value,
+                'Status' => $Status,
+                );
+            DB::table('cra_tax_excise')->where('id', $id)->update( $update_taxexcise);
+            return redirect('/tax_excise');
+        }
+        public function deletetaxexcise($id)
+        {
+            DB::table('cra_tax_excise')->where('id',$id)->delete();
+            return redirect('/tax_excise');
+        }
+        ////////////////////////////////////////////////////////////////
+        public function taxvat()
+        {
+        
+             $tax_vat=DB::table('cra_tax_vat')->get();
+            return view('system-settings.tax_vat',compact('tax_vat'));
+        }
+        public function addtaxvat(Request $Request)
+        {
+            $Tax_name=$Request['name'];
+            $Tax_value=$Request['value'];
+            $Tax_ordering=$Request['order'];
+            $Status=$Request['status'];
+           
+            DB::table('cra_tax_vat')->insert([
+                'Tax_name' => $Tax_name,
+                'Tax_value' => $Tax_value,
+                'Tax_ordering' => $Tax_ordering,
+                'Status' => $Status,
+               
+            ]);
+            return redirect('/tax_vat');
+    
+        }
+        public function edittaxvat($id)
+        {
+            $tax_vat=DB::table('cra_tax_vat')->where('id',$id)->first();
+            return view('system-settings.edit_tax_vat',compact('tax_vat','id'));
+        }
+        public function updatetaxvat(Request $Request)
+        {
+            $id = $Request['id'];
+            $Tax_name=$Request['name'];
+            $Tax_value=$Request['value'];
+            $Tax_ordering=$Request['order'];
+            $Status=$Request['status'];
+          
+            $update_taxvat = array(
+                'Tax_name' => $Tax_name,
+                'Tax_value' => $Tax_value,
+                'Tax_ordering' => $Tax_ordering,
+                'Status' => $Status,
+                
+                
+            );
+            DB::table('cra_tax_vat')->where('id', $id)->update( $update_taxvat );
+            return redirect('/tax_vat');
+        }
+        public function deletetaxvat($id)
+        {
+            DB::table('cra_tax_vat')->where('id',$id)->delete();
+            return redirect('/tax_vat');
+        }
+    ///////////////////////////////////
+        public function taxwht()
+        {
+            $tax_wht=DB::table('cra_tax_wht')->get();
+            return view('system-settings.tax_wht',compact('tax_wht'));
+    
+        }
+        public function addtaxwht(Request $Request)
+        {
+            $Tax_name=$Request['name'];
+            $Tax_value=$Request['value'];
+            $Status=$Request['status'];
+           
+            DB::table('cra_tax_wht')->insert([
+                'Tax_name' => $Tax_name,
+                'Tax_value' => $Tax_value,
+                 'Status' => $Status,
+               
+            ]);
+            return redirect('/tax_wht');
+          
+        }
+        public function edittaxwht($id)
+        {
+            $tax_wht=DB::table('cra_tax_wht')->where('id',$id)->first();
+            return view('system-settings.edit_tax_wht',compact('tax_wht','id'));
+       
+        }
+        public function updatetaxwht(Request $Request)
+        {
+            $id = $Request['id'];
+            $Tax_name=$Request['name'];
+            $Tax_value=$Request['value'];
+           $Status=$Request['status'];
+          
+            $update_taxwht = array(
+    
+                'Tax_name' => $Tax_name,
+                'Tax_value' => $Tax_value,
+                'Status' => $Status,
+                
+                
+            );
+            DB::table('cra_tax_wht')->where('id', $id)->update( $update_taxwht );
+            return redirect('/tax_wht');
+        }
+        public function deletetaxwht($id)
+        {
+            DB::table('cra_tax_wht')->where('id',$id)->delete();
+            return redirect('/tax_wht');
+        }
+        //////////////////////////////////////////
+        public function taxwhtvat()
+        {
+            $tax_wht_vat=DB::table('cra_tax_wht-vat')->get();
+            return view('system-settings.tax_wht-vat',compact('tax_wht_vat'));
+    
+        
+        }
+    
+        public function addtaxwhtvat(Request $Request)
+        {
+            $Tax_name=$Request['name'];
+            $Tax_value=$Request['value'];
+            $Status=$Request['status'];
+           
+            DB::table('cra_tax_wht-vat')->insert([
+                'Tax_name' => $Tax_name,
+                'Tax_value' => $Tax_value,
+                 'Status' => $Status,
+               
+            ]);
+            return redirect('/tax_wht-vat');
+            
+        }
+        public function edittaxwhtvat($id)
+        {
+            $tax_wht_vat=DB::table('cra_tax_wht-vat')->where('id',$id)->first();
+            return view('system-settings.edit_tax_wht-vat',compact('tax_wht_vat','id'));
+       
+    
+        }
+        public function updatetaxwhtvat(Request $Request)
+        {
+            $id = $Request['id'];
+            $Tax_name=$Request['name'];
+            $Tax_value=$Request['value'];
+           $Status=$Request['status'];
+          
+            $update_taxwhtvat = array(
+    
+                'Tax_name' => $Tax_name,
+                'Tax_value' => $Tax_value,
+                'Status' => $Status,
+                
+                
+            );
+            DB::table('cra_tax_wht-vat')->where('id', $id)->update( $update_taxwhtvat );
+            return redirect('/tax_wht-vat');
+        }
+        public function deletetaxwhtvat($id)
+        {
+            DB::table('cra_tax_wht-vat')->where('id',$id)->delete();
+            return redirect('/tax_wht-vat');
+        }
     public function notifications()
     {
         return view('system-settings.notifications');
@@ -575,8 +737,8 @@ public function edittaxexcise()
                 'Category_Type' => $Category_Type,
                 
             ]);
-    
-        return view('system-settings.add_template_category');
+            return redirect('/template_category');
+        // return view('system-settings.add_template_category');
     }
     public function edittemplatecategory($id)
     {
@@ -609,17 +771,48 @@ public function updatetemplatecategory(Request $Request)
     {
         return view('system-settings.document_template_category');
     }
-public function pairedaccount()
+    public function pairedaccount()
     {
-        return view('system-settings.paired_account');
+        $paired_account=DB::table('cra_paired_account')->get();
+        return view('system-settings.paired_account',compact('paired_account'));
+       
     }
-    public function addaccountpairs()
+    public function addaccountpairs(Request $Request)
     {
-        return view('system-settings.add_account_pairs');
+        $account_no1 = $Request['acnum1'];
+        $account_no2 = $Request['acnum2'];
+     
+        DB::table('cra_paired_account')->insert([
+            'account_no1' => $account_no1,
+            'account_no2' => $account_no2,
+        ]);
+       
+        return redirect('/paired_account');
+       
     }
-    public function editaccountpairs()
+    public function editaccountpairs($id)
     {
-        return view('system-settings.edit_account_pairs');
+        $paired_account=DB::table('cra_paired_account')->where('id',$id)->first();
+     
+        return view('system-settings.edit_account_pairs',compact('paired_account','id'));
+    }
+    public function updatepairedaccount(Request $Request)
+    {
+        $id = $Request['id'];
+        $account_no1 = $Request['acnum1'];
+        $account_no2 = $Request['acnum2'];
+        
+        $update_paired_account = array(
+            'account_no1' => $account_no1,
+            'account_no2' =>  $account_no2,
+        );
+        DB::table('cra_paired_account')->where('id', $id)->update( $update_paired_account );
+        return redirect('/paired_account');
+    }
+    public function deletepairedaccount($id)
+    {
+        DB::table('cra_paired_account')->where('id',$id)->delete();
+        return redirect('/paired_account');
     }
     public function filetypes()
     {
@@ -627,7 +820,8 @@ public function pairedaccount()
     }
     public function addfiletypes()
     {
-        return view('system-settings.add_file_types');
+        return redirect('/file_types');
+       
     }
     public function editfiletypes()
     {
@@ -639,7 +833,8 @@ public function pairedaccount()
     }
     public function addinvoiceitem()
     {
-        return view('system-settings.add_invoice_item');
+        return redirect('/invoice_items');
+      
     }
     public function editinvoiceitem()
     {
@@ -655,7 +850,8 @@ public function pairedaccount()
     }
     public function addcurrency()
     {
-        return view('system-settings.add_currency');
+        return redirect('/currency_list');
+       
     }
     public function editcurrency()
     {
