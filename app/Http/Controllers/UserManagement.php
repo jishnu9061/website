@@ -29,6 +29,7 @@ class UserManagement extends Controller
         $edit =DB::table('cra_reg_new_user')->where('id',$id)->delete();
         return redirect ('/manage_user_account');
     }
+
     public function useredit($id)
     {
 
@@ -141,18 +142,64 @@ class UserManagement extends Controller
     {
         return view('user_management.change_user_password');
     }
+
+
     public function manageusergrp()
     {
-        return view('user_management.manage_user_group');
+        $user_group = DB::table('cra_add_user_group')->get();
+        return view('user_management.manage_user_group',compact('user_group'));
+        // return view('user_management.manage_user_group');
     }
-    public function addnewusergrp()
+
+    public function addnewusergrp(Request $request)
     {
-        return view('user_management.add_new_user_grp');
+        $id =$request['id'];
+        $group_code=$request['group_code'];
+        $group_name=$request['group_name'];
+        $default_menu=$request['default_menu'];
+        $group_role=$request['group_role'];
+
+        DB::table('cra_add_user_group')->insert([
+            'group_code' =>  $group_code,
+            'group_name' =>  $group_name,
+            'default_menu' =>  $default_menu,
+            'group_role' =>  $group_role,
+
+        ]);
+        
+        return redirect('/manage_user_group');
+        // return view('user_management.add_new_user_grp');
     }
-    public function editnewusergrp()
+
+    public function editnewusergrp($id)
     {
-        return view('user_management.edit_new_user_grp');
+        $edit_user =DB::table('cra_reg_new_user')->where('id',$id)->first();
+        return view('user_management.edit_new_user_grp',compact('edit_user','id'));
+
+        // return view('user_management.edit_new_user_grp');
     }
+
+    public function updategroup(Request $request)
+
+    {
+        $id =$request['id'];
+        $group_code=$request['group_code'];
+        $group_name=$request['group_name'];
+        $default_menu=$request['default_menu'];
+        $group_role=$request['group_role'];
+
+        DB::table('cra_add_user_group')->where('id',$id)->update([
+            
+            'group_code' => $group_code,
+            'group_name' => $group_name,
+            'default_menu' => $default_menu,
+            'group_role' => $group_role,
+
+        ]);
+        return redirect('/manage_user_account');
+    }
+
+
     public function rolesperuser()
     {
         return view('user_management.view_roles_per_user');
