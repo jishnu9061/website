@@ -45,7 +45,7 @@
       
                     </tr>
                     <tr>
-                        <td>  {{$description->id}}</td>
+                        <td>{{$description->id}}</td>
                         <td>{{$description->Description_Selection_Name}}</td>
                         <td >{{$description->Selection_Description}}</td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
