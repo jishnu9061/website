@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class UserManagement extends Controller
 {
@@ -18,16 +19,116 @@ class UserManagement extends Controller
     }
     public function manageuseraccount()
     {
-        return view('user_management.manage_user_account');
+        $user_list = DB::table('cra_reg_new_user')->get();
+        return view('user_management.manage_user_account',compact('user_list'));
+        // return view('user_management.manage_user_account');
     }
-    public function useredit()
+
+    public function userdestroy($id)
     {
-        return view('user_management.user_edit');
+        $edit =DB::table('cra_reg_new_user')->where('id',$id)->delete();
+        return redirect ('/manage_user_account');
     }
-    public function regnewuser()
+    public function useredit($id)
     {
-        return view('user_management.reg_new_user');
+
+        $edit =DB::table('cra_reg_new_user')->where('id',$id)->first();
+        return view('user_management.user_edit',compact('edit','id'));
+        // return view('user_management.user_edit');
     }
+
+
+    public function regnewuser(Request $request)
+    {
+        $id =$request['id'];
+        $user_code=$request['user_code'];
+        $first_name=$request['first_name'];
+        $last_name=$request['last_name'];
+        $initial=$request['initial'];
+        $user_name=$request['user_name'];
+        $password=$request['password'];
+        $re_type_password=$request['re_type_password'];
+        $post_address=$request['post_address'];
+        $town_name=$request['town_name'];
+        $telephone_no=$request['telephone_no'];
+        $mobile_no=$request['mobile_no'];
+        $email_address=$request['email_address'];
+        $departments=$request['departments'];
+        $upload_signature=$request['upload_signature'];
+        $user_group=$request['user_group'];
+        $user_role=$request['user_role'];
+       
+
+        DB::table('cra_reg_new_user')->insert([
+            
+            'user_code' => $user_code,
+            'first_name' => $first_name,
+            'last_name' => $last_name,
+            'initial' => $initial,
+            'user_name' => $user_name,
+            'password' => $password,
+            're_type_password' => $re_type_password,
+            'post_address' => $post_address,
+            'town_name' => $town_name,
+            'telephone_no' => $telephone_no,
+            'mobile_no' => $mobile_no,
+            'email_address' => $email_address,
+            'departments' => $departments,
+            'upload_signature' => $upload_signature,
+            'user_group' => $user_group,
+            'user_role' => $user_role,
+        
+        ]);
+        return redirect('/manage_user_account');
+
+        // return view('user_management.reg_new_user');
+    }
+
+    public function userupdate(Request $request)
+    {
+        $id =$request['id'];
+        $user_code=$request['user_code'];
+        $first_name=$request['first_name'];
+        $last_name=$request['last_name'];
+        $initial=$request['initial'];
+        $user_name=$request['user_name'];
+        $password=$request['password'];
+        $re_type_password=$request['re_type_password'];
+        $post_address=$request['post_address'];
+        $town_name=$request['town_name'];
+        $telephone_no=$request['telephone_no'];
+        $mobile_no=$request['mobile_no'];
+        $email_address=$request['email_address'];
+        $departments=$request['departments'];
+        $upload_signature=$request['upload_signature'];
+        $user_group=$request['user_group'];
+        $user_role=$request['user_role'];
+       
+
+        DB::table('cra_reg_new_user')->where('id',$id)->update([
+            
+            'user_code' => $user_code,
+            'first_name' => $first_name,
+            'last_name' => $last_name,
+            'initial' => $initial,
+            'user_name' => $user_name,
+            'password' => $password,
+            're_type_password' => $re_type_password,
+            'post_address' => $post_address,
+            'town_name' => $town_name,
+            'telephone_no' => $telephone_no,
+            'mobile_no' => $mobile_no,
+            'email_address' => $email_address,
+            'departments' => $departments,
+            'upload_signature' => $upload_signature,
+            'user_group' => $user_group,
+            'user_role' => $user_role,
+        
+        ]);
+        return redirect('/manage_user_account');
+    }
+
+
     public function attachments()
     {
         return view('user_management.user_attachments');

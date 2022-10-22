@@ -928,7 +928,13 @@ Route::any('user_management','UserManagement@index')->name('user_management');
 //manage user accounts
 Route::any('manage_user_account','UserManagement@manageuseraccount')->name('manage_user_account');
 Route::any('reg_new_user','UserManagement@regnewuser')->name('reg_new_user');
-Route::any('user_edit','UserManagement@useredit')->name('user_edit');
+
+Route::any('/user_destroy/{id}',"UserManagement@userdestroy")->name('user_destroy');
+
+Route::any('/user_edit/{id}','UserManagement@useredit')->name('user_edit');
+
+Route::any('/update_user','UserManagement@userupdate')->name('update_user');
+
 Route::any('user_attachments','UserManagement@attachments')->name('user_attachments');
 Route::any('user_comments','UserManagement@comments')->name('user_comments');
 //end
