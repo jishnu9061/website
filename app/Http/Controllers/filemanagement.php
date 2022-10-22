@@ -158,9 +158,7 @@ class filemanagement extends Controller
             'activity_type' => $activity_type,
             'activity' => $activity,
         ]);
-        // return back()->withInput();
-        // return view('file_management.add-new-file');
-        return view('file_management.add-file-progress');
+       return redirect('/file-progress-list');
     }
 
 
@@ -244,28 +242,151 @@ class filemanagement extends Controller
         
     }
 
-    public function addfileprogressaction()
+    public function addfileprogressaction(Request $request)
     {
-        return view('file_management.add-file-progress-action');
+
+        $id =$request['id'];
+        $client_name=$request['client_name'];
+        $file_name=$request['file_name'];
+        $progress_date=$request['progress_date'];      
+        $time_taken_hours=$request['time_taken_hours'];
+        $action_type=$request['action_type'];
+        $time_taken_minutes=$request['time_taken_minutes'];
+        $sent_notification=$request['sent_notification'];
+
+        DB::table('cra_add_file_progress_action')->insert([
+            
+            'client_name' => $client_name,
+            'file_name' => $file_name,
+            'progress_date' => $progress_date,
+            'time_taken_hours' => $time_taken_hours,
+            'action_type' => $action_type,
+            'time_taken_minutes' => $time_taken_minutes,
+            'sent_notification' => $sent_notification,
+            
+        ]);
+        
+        return redirect('/file-progress-list');
         
     }
 
 
-    public function addfilebringupreminder()
+    public function addfilebringupreminder(Request $request)
     {
-        return view('file_management.add-file-bringup-reminder');
+
+        $id =$request['id'];
+        $client_name=$request['client_name'];
+        $file_name=$request['file_name'];
+        $progress_date=$request['progress_date'];      
+        $next_bringup_days=$request['next_bringup_days'];
+        $remind_period_days=$request['remind_period_days'];
+        $send_notification=$request['send_notification'];
+        $reason=$request['reason'];
+
+        DB::table('cra_add_file_bringup_reminder')->insert([
+            
+            'client_name' => $client_name,
+            'file_name' => $file_name,
+            'progress_date' => $progress_date,
+            'next_bringup_days' => $next_bringup_days,
+            'remind_period_days' => $remind_period_days,
+            'send_notification' => $send_notification,
+            'reason' => $reason,
+            
+        ]);
+        return redirect('/file-progress-list');
         
     }
 
-    public function bookcourt()
+    public function bookcourt (Request $request)
     {
-        return view('file_management.book-court');
+
+
+        $id =$request['id'];
+        $client_name=$request['client_name'];
+        $file_name=$request['file_name'];
+        $court_name=$request['court_name'];      
+        $court_event_type=$request['court_event_type'];
+        $start_date=$request['start_date'];
+        $start_time=$request['start_time'];
+        $end_date=$request['end_date'];
+        $end_time=$request['end_time'];
+        $user_assigned=$request['user_assigned'];
+        $send_notification=$request['send_notification'];
+        $set_reminder=$request['set_reminder'];
+        $notes=$request['notes'];
+
+        DB::table('cra_book_a_court')->insert([
+            
+            'client_name' => $client_name,
+            'file_name' => $file_name,
+            'court_name' => $court_name,
+            'court_event_type' => $court_event_type,
+            'start_date' => $start_date,
+            'start_time' => $start_time,
+            'end_date' => $end_date,
+            'end_time' => $end_time,
+            'user_assigned' => $user_assigned,
+            'send_notification' => $send_notification,
+            'set_reminder' => $set_reminder,
+            'notes' => $notes,
+          
+            
+        ]);
+        return redirect('/file-progress-list');
+        // return view('file_management.book-court');
         
     }
 
-    public function courtattendance()
+    public function courtattendance(Request $request)
     {
-        return view('file_management.court-attendance-sheet');
+        $id =$request['id'];
+        $attendance_date=$request['attendance_date'];
+        $client_name=$request['client_name'];
+        $file_name=$request['file_name'];      
+        $other_file=$request['other_file'];
+        $court_name=$request['court_name'];
+        $judicial_officer=$request['judicial_officer'];
+        $case_no=$request['case_no'];
+        $parties=$request['parties'];
+        $acting_for=$request['acting_for'];
+        $instructions=$request['instructions'];
+        $transpired_in_court=$request['transpired_in_court'];
+        $remarks=$request['remarks'];        
+        $notes=$request['notes'];
+        $person_dealing=$request['person_dealing'];
+        $time_taken_hours=$request['time_taken_hours'];
+        $time_taken_minutes=$request['time_taken_minutes'];
+        $bring_up_date=$request['bring_up_date'];
+        $remind_period_days=$request['remind_period_days'];
+        $send_remind_to=$request['send_remind_to'];
+
+        DB::table('cra_court_attendance_sheet')->insert([
+            
+            'attendance_date' => $attendance_date,
+            'client_name' => $client_name,
+            'file_name' => $file_name,
+            'other_file' => $other_file,
+            'court_name' => $court_name,
+            'judicial_officer' => $judicial_officer,
+            'case_no' => $case_no,
+            'parties' => $parties,
+            'acting_for' => $acting_for,
+            'instructions' => $instructions,
+            'transpired_in_court' => $transpired_in_court,
+            'remarks' => $remarks,
+            'notes' => $notes,
+            'person_dealing' => $person_dealing,
+            'time_taken_hours' => $time_taken_hours,
+            'time_taken_minutes' => $time_taken_minutes,
+            'bring_up_date' => $bring_up_date,
+            'remind_period_days' => $remind_period_days,
+            'send_remind_to' => $send_remind_to,
+          
+            
+        ]);
+        return redirect('/file-progress-list');
+        // return view('file_management.court-attendance-sheet');
         
     }
     public function arbirationsheet()
