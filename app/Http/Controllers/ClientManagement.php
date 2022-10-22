@@ -219,15 +219,7 @@ class ClientManagement extends Controller
 
   //end client-search
 
-    public function addCorporate(){
-
-        return view('client-management.add-corporate');
-    }
-
-  
-
-    public function storeCorporate(Request $Request){
-
+    public function addCorporate(Request $Request){
         $number = $Request['number'];
         $client_type = $Request['type'];
         $citizen_status = $Request['citizen'];
@@ -264,7 +256,7 @@ class ClientManagement extends Controller
             'Fax_no' =>  $fax_no,
             'Email_address' =>  $email,
             'Website' =>  $website ,
-            'Brought_in_by' =>  $brought,
+            'Brought_in_By' =>  $brought,
             'Status_reporting_day' =>  $status,
             'Client_source' => $source,
             'Client_source_naration' =>  $client_narration,
@@ -283,8 +275,9 @@ class ClientManagement extends Controller
         ]);
 
         return redirect("/corporate-list");
-    }
 
+        // return view('client-management.add-corporate');
+    }
 
     public function listCorporate(){
 
@@ -336,7 +329,7 @@ class ClientManagement extends Controller
             'Fax_no' =>  $fax_no,
             'Email_address' =>  $email,
             'Website' =>  $website ,
-            'Brought_in_by' =>  $brought,
+            'Brought_in_By' =>  $brought,
             'Status_reporting_day' =>  $status,
             'Client_source' => $source,
             'Client_source_naration' =>  $client_narration,
