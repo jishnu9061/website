@@ -6,36 +6,57 @@
 
         <div>
             <div class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Register Client</u></b></span></div><br><br>
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Add Communication</u></b></span></div><br><br>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous">
 
         </div>
+        <div>
+            <a href="{{url('client-pickup')}}"><input class="btn btn-primary" type="button" style="width:15%;" value="Client Pickup"></a>
+            <a href="{{url('client-service')}}"><input class="btn btn-primary" type="button" style="width:15%;" value="Client Service"></a>
+            
+            
+           
+        </div>
+        <br>
+        <br>
+
     </div>
     <div class="row">
         <div class="col-md-12">
             <form method="post" action="{{url('add-register')}}" id="form">
                 @csrf
                 <div class="row">
-                    <div class="col-md-6">
+                <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Client Type</label>
+                            <label for="username">Communication Date</label>
                             <div class="input-group">
-                                <div class="input-group-prepend">
-                
+                                <div class="input-group-prepend"></div>
+                                <input type="date" class="form-control" name="date" id="username" value="" placeholder=""
+                                    required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Date is required.
                                 </div>
-                                <select name="type" id="cars">
-                                    <option >Select</option>
-                                    <option value="Corporate">Corporate</option>
-                                    <option value="Individual">Individual</option>
-                                </select>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
+                </div>
+                <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Client Category</label>
+                            <label for="username">Time</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="time" class="form-control" name="date" id="username" value="" placeholder=""
+                                    required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Date is required.
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Client</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
                 
@@ -49,12 +70,13 @@
                         </div>
                     </div>
                     
+                    
                 </div>
                 <br>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">File Type</label>
+                            <label for="username">File </label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
@@ -66,20 +88,34 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Country</label>
+                            <label for="username">Customer</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
                                 <select name="country" id="cars">
                                     <option >Select</option>
-                                    <option value="Kenya">Kenya</option>
-                                    <option value="South Africa">South Africa</option>
-                                    <option value="India">India</option>
-                                    <option value="America">America</option>
+                                    <option value="Kenya">demo 1</option>
+                                    <option value="South Africa">demo 1</option>
+                                    <option value="India">demo 3</option>
+                                    <option value="America">demo 4</option>
                                 </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Telephone Number</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="date_to" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -87,34 +123,151 @@
                 </div>
                 <br>
                 <div class="row">
-                    <div class="col-md-6">
+                <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Status</label>
+                            <label for="username">E-mail</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="Status" id="cars">
+                                <input type="text" class="form-control" name="date_to" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Communication Source</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="country" id="cars">
                                     <option >Select</option>
-                                    <option value="Process">Process</option>
-                                    <option value="Pending">Pending </option>
-                                    <option value="Closed">Closed</option>
+                                    <option value="Kenya">demo 1</option>
+                                    <option value="South Africa">demo 1</option>
+                                    <option value="India">demo 3</option>
+                                    <option value="America">demo 4</option>
                                 </select>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Registration Date(From)</label>
+                            <label for="username">Mode of Communication</label>
                             <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="date" id="username" value="" placeholder=""
-                                    required>
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="country" id="cars">
+                                    <option >Select</option>
+                                    <option value="Kenya">demo 1</option>
+                                    <option value="South Africa">demo 1</option>
+                                    <option value="India">demo 3</option>
+                                    <option value="America">demo 4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Communication With (Internal)</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="country" id="cars">
+                                    <option >Select</option>
+                                    <option value="Kenya">demo 1</option>
+                                    <option value="South Africa">demo 1</option>
+                                    <option value="India">demo 3</option>
+                                    <option value="America">demo 4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Duration (Minutes)</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="date_to" id="age">
                                 <div class="invalid-feedback" style="width: 100%;">
-                                    Date is required.
+                                    Incorporation is required
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Communication Description</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="date_to" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Action Plan</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="date_to" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Person Handling</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="country" id="cars">
+                                    <option >Select</option>
+                                    <option value="Kenya">demo 1</option>
+                                    <option value="South Africa">demo 1</option>
+                                    <option value="India">demo 3</option>
+                                    <option value="America">demo 4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Other</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="date_to" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
                 </div>
             
                 <br>

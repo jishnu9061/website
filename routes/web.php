@@ -1017,6 +1017,8 @@ Route::any('edit_complaint/{id}','ClientManagement@editComplaint')->name('edit-C
 Route::any('update-Complaint','ClientManagement@updateComplaint')->name('update-Complaint');
 Route::any('view-Complaint/{id}','ClientManagement@viewComplaint')->name('view-Complaint');
 Route::any('delete-Complaint/{id}','ClientManagement@deleteComplaint')->name('delete-Complaint');
+
+Route::any('new_communication','ClientManagement@add_communication')->name('add_communication');
 //end complaint
 
 //Follow Up

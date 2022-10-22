@@ -20,7 +20,7 @@
             style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Client
                     Conversation</u></b></div><br><br>
         <div class="">
-            <a href="{{url('index-communication')}}"><button type="button" class="btn btn-primary complaint_btn"
+            <a href="{{url('new_communication')}}"><button type="button" class="btn btn-primary complaint_btn"
                     style="width:27%;"> Add
                     Communication</button></a>
         </div><br>
