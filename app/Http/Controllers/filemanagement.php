@@ -157,9 +157,13 @@ class filemanagement extends Controller
     //document temblates
 
     //manage files
-    public function filearchive(Request $request)
+    public function filearchive()
     {
-        
+        return view('file_management.file-archive');
+    }
+
+    public function addboxno(Request $request)
+    {
         $Box_type=$request['box_type'];
         $Box_number=$request['box_no'];
 
@@ -168,17 +172,14 @@ class filemanagement extends Controller
             'number' =>  $Box_number,
 
         ]);
-
-        return view('file_management.file-archive');
-    }
-
-    public function addboxno()
-    {
-        return view('file_management.add-box-no');
+        
+        return redirect('/file-archive');
     }
 
     public function editboxno()
     {
+
+        
         return view('file_management.edit-box-no');
     }
     //manage files
@@ -320,6 +321,7 @@ class filemanagement extends Controller
     {
 
         $file_progress_list=DB::table('cra_add_file_progress')->get();
+        
         return view('file_management.file-progress-list',compact('file_progress_list'));
         
         

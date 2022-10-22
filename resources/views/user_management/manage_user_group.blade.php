@@ -46,19 +46,22 @@
                     </tr>
 </thead>
              <tbody>
-            
+
+             @foreach($user_group as $group)
+             
                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
+                        <td class="text-center">{{$group->id}}</td>
+                        <td class="text-center">{{$group->group_code}}</td>
+                        <td class="text-center">{{$group->group_name}}</td>
+                        <td class="text-center">{{$group->group_role}}</td>
+                        <td class="text-center"></td>
+                        <td class="text-center"></td>
                         <td  scope="row"class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
-                        <a href="{{url('edit_new_user_grp')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <a href="{{url('edit_new_user_grp',$group->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                         <a href="{{url('')}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
                        
                      </tr>
+                     @endforeach
                      </tbody>
         
                     
@@ -88,7 +91,7 @@
                             <label for="username">Group Code</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="">
+                                <input type="text" class="form-control" name="group_code" id="username" value="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -100,7 +103,7 @@
                             <label for="username">Group Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="">
+                                <input type="text" class="form-control" name="group_name" id="username" value="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -113,7 +116,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <select name="" id="cars"style="width: 100%;">
+                                <select name="default_menu" id="cars"style="width: 100%;">
                                     <option>--select--</option>
                                     <option>Dashboard</option>
                                     <option>Client Management</option>
@@ -134,7 +137,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <select name="" id="cars"style="width: 100%;">
+                                <select name="group_role" id="cars"style="width: 100%;">
                                     <option>--select group roles--</option>
                                     <option></option>
                                     <option></option>

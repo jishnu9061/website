@@ -53,36 +53,39 @@
                     </tr>
 </thead>
              <tbody>
-            
+             @foreach ($user_list as $list)
                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);">
+                       
+                        <td class="text-center">{{$list->user_code}}</td>
+                        <td class="text-center">{{$list->first_name}}</td>
+                        <td class="text-center">{{$list->user_name}}</td>
+                        <td class="text-center">{{$list->user_group}}</td>
+                        <td class="text-center">{{$list->email_address}}</td>
+                        <td class="text-center">{{$list->telephone_no}}</td>
+                        <td class="text-center"></td>
+                        <td class="text-center"></td>
+                        <td class="text-center"></td>
+                        <td class="text-center"></td>
+                        <td class="text-center">
                       <div class="dropdown">
                             <button style="background-color:#FFFBF4;"class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                Action
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a href="user_edit" class="dropdown-item" >Edit</a>
+                                <a href="{{url('user_edit',$list->id)}}" class="dropdown-item" >Edit</a>
                                 <!-- <a href="user_view" class="dropdown-item" >View</a> -->
                                 <a href="user_attachments"class="dropdown-item" >Attachment</a>
                                 <a href="user_comments" class="dropdown-item" >Comments</a>
-                                <a href="user_delete" class="dropdown-item" >Delete</a>
+                                <a href="{{url('user_destroy',$list->id)}}" class="dropdown-item" >Delete</a>
                              
                             </div>
                         </div> 
 
                        </td>
                      
+                     
                      </tr>
+                     @endforeach
                      </tbody>
                
                     </table><br>
@@ -111,7 +114,7 @@
                             <label for="username">User Code</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value=""required>
+                                <input type="text" class="form-control" name="user_code" id="" value=""required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -123,7 +126,7 @@
                             <label for="username"> First Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value=""required>
+                                <input type="text" class="form-control" name="first_name" id="" value=""required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -135,7 +138,7 @@
                             <label for="username">Last name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value=""required>
+                                <input type="text" class="form-control" name="last_name" id="" value=""required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -150,7 +153,7 @@
                             <label for="username">Initials</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <input type="text" class="form-control" name="initial" id="" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -162,7 +165,7 @@
                             <label for="username">User Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <input type="text" class="form-control" name="user_name" id="" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -174,7 +177,7 @@
                             <label for="username">Password</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="password" class="form-control" name="" id="username" value="" required>
+                                <input type="password" class="form-control" name="password" id="" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -189,7 +192,7 @@
                             <label for="username">Re-type Password</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="password" class="form-control" name="" id="username" value="" required>
+                                <input type="password" class="form-control" name="re_type_password" id="" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -201,7 +204,7 @@
                             <label for="username">Postal Address</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <input type="text" class="form-control" name="post_address" id="" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -213,7 +216,7 @@
                             <label for="username">Town/City</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <input type="text" class="form-control" name="town_name" id="" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -228,7 +231,7 @@
                             <label for="username">Telephone No</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <input type="text" class="form-control" name="telephone_no" id="" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -240,7 +243,7 @@
                             <label for="username">Mobile No</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <input type="text" class="form-control" name="mobile_no" id="" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -252,7 +255,7 @@
                             <label for="username">E-mail Address</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="email" class="form-control" name="" id="username" value="" required></br>
+                                <input type="email" class="form-control" name="email_address" id="" value="" required></br>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -267,7 +270,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <select name="" id="cars"required>
+                                <select name="departments" id="cars"required>
                                     <option>---Select--- </option>
                                     <option>Administration</option>
                                     <option>Clerical & Related Works</option>
@@ -287,7 +290,7 @@
                             <label for="username">Signature to upload</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="file" class="form-control" name="" id="username" value="" required>
+                                <input type="file" class="form-control" name="upload_signature" id="" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -300,7 +303,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <select name="" id="cars">
+                                <select name="user_group" id="cars">
                                     <option> ---Select--- </option>
                                     <option>Administrator</option>
                                     <option>Partner</option>
@@ -331,7 +334,7 @@
                             <label for="username">User Role</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <input type="text" class="form-control" name="user_role" id="" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>

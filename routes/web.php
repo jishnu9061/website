@@ -936,7 +936,13 @@ Route::any('user_management','UserManagement@index')->name('user_management');
 //manage user accounts
 Route::any('manage_user_account','UserManagement@manageuseraccount')->name('manage_user_account');
 Route::any('reg_new_user','UserManagement@regnewuser')->name('reg_new_user');
-Route::any('user_edit','UserManagement@useredit')->name('user_edit');
+
+Route::any('/user_destroy/{id}',"UserManagement@userdestroy")->name('user_destroy');
+
+Route::any('/user_edit/{id}','UserManagement@useredit')->name('user_edit');
+
+Route::any('/update_user','UserManagement@userupdate')->name('update_user');
+
 Route::any('user_attachments','UserManagement@attachments')->name('user_attachments');
 Route::any('user_comments','UserManagement@comments')->name('user_comments');
 //end
@@ -946,7 +952,10 @@ Route::any('change_user_password','UserManagement@changepassword')->name('change
 //manage user group
 Route::any('manage_user_group','UserManagement@manageusergrp')->name('manage_user_group');
 Route::any('add_new_user_grp','UserManagement@addnewusergrp')->name('add_new_user_grp');
-Route::any('edit_new_user_grp','UserManagement@editnewusergrp')->name('edit_new_user_grp');
+
+Route::any('/update_group','UserManagement@updategroup')->name('update_group');
+
+Route::any('/edit_new_user_grp/{id}','UserManagement@editnewusergrp')->name('edit_new_user_grp');
 //end
 //view roles per user
 Route::any('view_roles_per_user','UserManagement@rolesperuser')->name('view_roles_per_user');
