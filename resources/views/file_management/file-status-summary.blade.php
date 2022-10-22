@@ -18,7 +18,7 @@
         </div>
  {{-- heading --}}
  <h4 id="hdtpa"><b>File Status Report Summary</b></h4>
- <br><br>
+ 
 
             <br>
             <div>
@@ -35,7 +35,7 @@
 
 
         </div>
-    </div>
+   
 
 
     <div class="row">
