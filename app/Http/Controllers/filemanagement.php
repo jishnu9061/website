@@ -386,17 +386,112 @@ class filemanagement extends Controller
             
         ]);
         return redirect('/file-progress-list');
-        // return view('file_management.court-attendance-sheet');
+        // return view('file_management.court-attendance-sheet'); 
+    }
+
+
+    public function arbirationsheet(Request $request)
+    {
+        $id =$request['id'];
+        $court_type=$request['court_type'];
+        $client_name=$request['client_name'];
+        $file_name=$request['file_name'];      
+        $court_name=$request['court_name'];
+        $start_date=$request['start_date'];
+        $start_time=$request['start_time'];
+        $end_date=$request['end_date'];
+        $end_time=$request['end_time'];
+        $user_assigned=$request['user_assigned'];
+        $sent_notification=$request['sent_notification'];
+        $set_reminder=$request['set_reminder'];
+        $notes=$request['notes']; 
+
+        DB::table('cra_arbiration_sheet')->insert([
+            
+            'court_type' => $court_type,
+            'client_name' => $client_name,
+            'file_name' => $file_name,
+            'court_name' => $court_name,
+            'start_date' => $start_date,
+            'start_time' => $start_time,
+            'end_date' => $end_date,
+            'end_time' => $end_time,
+            'user_assigned' => $user_assigned,
+            'sent_notification' => $sent_notification,
+            'set_reminder' => $set_reminder,
+            'notes' => $notes,
+           
+            
+        ]);
+        return redirect('/file-progress-list');
+        // return view('file_management.arbiration-sheet');
         
     }
-    public function arbirationsheet()
+
+    public function conveyance(Request $request)
     {
-        return view('file_management.arbiration-sheet');
-        
-    }
-    public function conveyance()
-    {
-        return view('file_management.conveyance-sheet');
+
+        $id =$request['id'];
+        $arbiration_date=$request['arbiration_date'];
+        $client_name=$request['client_name'];
+        $file_name=$request['file_name'];      
+        $seller_name=$request['seller_name'];
+        $seller_id_no=$request['seller_id_no'];
+        $seller_address=$request['seller_address'];
+        $seller_contact=$request['seller_contact'];
+        $seller_email=$request['seller_email'];
+        $land_ref_no=$request['land_ref_no'];
+        $title_deed_no=$request['title_deed_no'];
+        $location=$request['location'];
+        $property_size=$request['property_size']; 
+        $buyer_name=$request['buyer_name'];
+        $buyer_id_no=$request['buyer_id_no'];
+        $buyer_address=$request['buyer_address'];
+        $buyer_contact=$request['buyer_contact'];
+        $buyer_email=$request['buyer_email'];
+        $solving_process=$request['solving_process']; 
+        $final_aggremnt=$request['final_aggremnt'];
+        $person_dealing=$request['person_dealing'];
+        $time_taken_hours=$request['time_taken_hours'];
+        $time_taken_minutes=$request['time_taken_minutes'];
+        $bringup_date=$request['bringup_date'];
+        $remind_period_days=$request['remind_period_days'];
+        $send_reminder_to=$request['send_reminder_to']; 
+        $next_action=$request['next_action']; 
+
+        DB::table('cra_conveyence_sheet')->insert([
+            
+            'arbiration_date' => $arbiration_date,
+            'client_name' => $client_name,
+            'file_name' => $file_name,
+            'seller_name' => $seller_name,
+            'seller_id_no' => $seller_id_no,
+            'seller_address' => $seller_address,
+            'seller_contact' => $seller_contact,
+            'seller_email' => $seller_email,
+            'land_ref_no' => $land_ref_no,
+            'title_deed_no' => $title_deed_no,
+            'location' => $location,
+            'property_size' => $property_size,
+            'buyer_name' => $buyer_name,
+            'buyer_id_no' => $buyer_id_no,
+            'buyer_address' => $buyer_address,
+            'buyer_contact' => $buyer_contact,
+            'buyer_email' => $buyer_email,
+            'solving_process' => $solving_process,
+            'final_aggremnt' => $final_aggremnt,
+            'person_dealing' => $person_dealing,
+            'time_taken_hours' => $time_taken_hours,
+            'time_taken_minutes' => $time_taken_minutes,
+            'bringup_date' => $bringup_date,
+            'remind_period_days' => $remind_period_days,
+            'send_reminder_to' => $send_reminder_to,
+            'next_action' => $next_action,
+              
+        ]);
+        return redirect('/file-progress-list');
+ 
+        // return view('file_management.conveyance-sheet');
         
     }
     public function filelistprogressreport()

@@ -1730,6 +1730,8 @@
     </div>
                                   <!--END COURT ATTENDANCE SHEET -->
 
+
+
                                   <!-- NEW ARBIRATION FORM -->
                                    <!-- The Modal -->
                     <div class="modal fade" id="myModal-5">
@@ -1745,7 +1747,7 @@
                                 <!-- Modal body -->
                                 <div class="modal-body" style="background-color:white">
                                     <div class="container">
-                                        <form method="post" action="{{ url('add-file-progress') }}" enctype="multipart/form-data">
+                                        <form method="post" action="{{ url('arbiration-sheet') }}" enctype="multipart/form-data">
 
 
                                             <div class="row">
@@ -1762,8 +1764,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="court_type" id="cars">
+                                    <option>select....</option>
+                                    <option>court type 1</option>
+                                    <option>court type 2</option>
+                                    <option>court type 3</option>
+                                    <option>court type 4</option>
                                 </select>
                             </div>
                         </div>
@@ -1775,8 +1781,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="client_name" id="cars">
+                                <option>select....</option>
+                                    <option>client 1</option>
+                                    <option>client 2</option>
+                                    <option>client 3</option>
+                                    <option>client 4</option>
                                 </select>
                             </div>
                         </div>
@@ -1791,8 +1801,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="file_name" id="cars">
+                                <option>select....</option>
+                                    <option>file 1</option>
+                                    <option>file 2</option>
+                                    <option>file 3</option>
+                                    <option>file 4</option>
                                 </select>
                             </div>
                         </div>
@@ -1804,8 +1818,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="court_name" id="cars">
+                                <option>select....</option>
+                                    <option>court name 1</option>
+                                    <option>court name 2</option>
+                                    <option>court name 3</option>
+                                    <option>court name 4</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
@@ -1825,7 +1843,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="website" id="confirm_password" required>
+                                <input type="date" class="form-control" name="start_date" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -1838,7 +1856,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="time" class="form-control" name="website" id="confirm_password" required>
+                                <input type="time" class="form-control" name="start_time" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
                                 </div>
@@ -1859,7 +1877,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="website" id="confirm_password" required>
+                                <input type="date" class="form-control" name="end_date" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -1871,7 +1889,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="time" class="form-control" name="website" id="confirm_password" required>
+                                <input type="time" class="form-control" name="end_time" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
                                 </div>
@@ -1890,8 +1908,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="user_assigned" id="cars">
+                                <option>select....</option>
+                                    <option>user 1</option>
+                                    <option>user 2</option>
+                                    <option>user 3</option>
+                                    <option>user 4</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
@@ -1907,8 +1929,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="sent_notification" id="cars">
+                                <option>select....</option>
+                                    <option>notification 1</option>
+                                    <option>notification 2</option>
+                                    <option>notification 3</option>
+                                    <option>notification 4</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
@@ -1924,8 +1950,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="set_reminder" id="cars">
+                                <option>select....</option>
+                                    <option>reminder 1</option>
+                                    <option>reminder 2</option>
+                                    <option>reminder 3</option>
+                                    <option>reminder 4</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
@@ -1943,7 +1973,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="notes"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -2028,7 +2058,7 @@
                                 <!-- Modal body -->
                                 <div class="modal-body" style="background-color:white">
                                     <div class="container">
-                                        <form method="post" action="{{ url('add-file-progress') }}" enctype="multipart/form-data">
+                                        <form method="post" action="{{ url('conveyance-sheet') }}" enctype="multipart/form-data">
 
 
                                             <div class="row">
@@ -2045,7 +2075,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="website" id="confirm_password" required>
+                                <input type="date" class="form-control" name="arbiration_date" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -2057,8 +2087,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="client_name" id="cars">
+                                    <option>select....</option>
+                                    <option>client 1</option>
+                                    <option>client 2</option>
+                                    <option>client 3</option>
+                                    <option>client 4</option>
                                 </select>
                             </div>
                         </div>
@@ -2071,8 +2105,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="file_name" id="cars">
+                                <option>select....</option>
+                                    <option>file 1</option>
+                                    <option>file 2</option>
+                                    <option>file 3</option>
+                                    <option>file 4</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
@@ -2094,7 +2132,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="seller_name" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -2106,7 +2144,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="seller_id_no" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -2117,7 +2155,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="seller_address" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -2131,7 +2169,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="number" class="form-control" name="seller_contact" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -2143,7 +2181,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="email" class="form-control" name="seller_email" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
                                 </div>
@@ -2171,7 +2209,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="land_ref_no" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -2182,7 +2220,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="title_deed_no" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -2193,7 +2231,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="location" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -2208,7 +2246,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="property_size" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -2230,7 +2268,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="text" class="form-control" name="buyer_name" id="confirm_password" required>
                 </div>
             </div>
         </div>
@@ -2242,7 +2280,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="text" class="form-control" name="buyer_id_no" id="confirm_password" required>
                 </div>
             </div>
         </div>
@@ -2253,7 +2291,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="text" class="form-control" name="buyer_address" id="confirm_password" required>
                 </div>
             </div>
         </div>
@@ -2267,7 +2305,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="number" class="form-control" name="buyer_contact" id="confirm_password" required>
                 </div>
             </div>
         </div>
@@ -2279,7 +2317,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="email" class="form-control" name="buyer_email" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Telephone Number is required.
                     </div>
@@ -2303,7 +2341,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                    <textarea class="form-control" id="form7Example7" rows="3" name="solving_process"></textarea>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -2318,7 +2356,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                    <textarea class="form-control" id="form7Example7" rows="3" name="final_aggremnt"></textarea>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -2337,7 +2375,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="text" class="form-control" name="person_dealing" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -2353,7 +2391,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="time" class="form-control" name="time_taken_hours" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -2368,7 +2406,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="time" class="form-control" name="time_taken_minutes" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -2385,7 +2423,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="date" class="form-control" name="website" id="confirm_password" required>
+                    <input type="date" class="form-control" name="bringup_date" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -2399,7 +2437,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="text" class="form-control" name="remind_period_days" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -2413,7 +2451,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="text" class="form-control" name="send_reminder_to" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -2431,7 +2469,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                    <textarea class="form-control" id="form7Example7" rows="3" name="next_action"></textarea>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
