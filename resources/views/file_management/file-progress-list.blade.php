@@ -19,30 +19,26 @@
         <br>
         <div style="display:flex; margin-bottom: 2%;  margin-top: 3%;">
             <div class="dropdown" style="width:20%;">
-                <button class="btn btn-primary add-btn" type="button" style="width:97%;" id="dropdownMenuButton"
+                <div class="btn btn-primary add-btn" type="button" style="width:97%;" id="dropdownMenuButton"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Add New Progress
-                </button>
+</div>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <!-- <a class="dropdown-item" href="{{url('add-file-progress')}}">Add File Progress</a> -->
-                    {{-- <a href="{{('add-file-progress')}}"><button class="btn btn-primary">Add File
-                        Progress</button></a> --}}
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                    
+                    <button type="button" class="btn btn-primary" data-toggle="modal"  style="width:100%;" data-target="#myModal">
                         Add File Progress</button>
                     <!-- <a class="dropdown-item" href="{{url('add-file-progress-action')}}">Add File Progress/Action</a> -->
-                    {{-- <a href="{{('add-file-progress-action')}}"><button class="btn btn-primary">Add File
-                        Progress/Action</button></a> --}}
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-1">
+                    
+                    <button type="button" class="btn btn-primary" data-toggle="modal"  style="width:100%;" data-target="#myModal-1">
                         Add File Progress/Action</button>
                     <!-- <a class="dropdown-item" href="{{url('add-file-bringup-reminder')}}">Add File Bringup/Reminder</a> -->
-                    {{-- <a href="{{('add-file-bringup-reminder')}}"><button class="btn btn-primary">Add File
-                        Progress/Action</button></a> --}}
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-2">
+                   
+                    <button type="button" class="btn btn-primary" data-toggle="modal"  style="width:100%;" data-target="#myModal-2">
                         Add File Bringup/Reminder</button>
                     <!-- <a class="dropdown-item" href="{{url('book-court')}}">Book a Court Date</a> -->
-                    {{-- <a href="{{('book-court')}}"><button class="btn btn-primary">
-                        </button></a> --}}
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-3">
+                   
+                    <button type="button" class="btn btn-primary" data-toggle="modal"  style="width:100%;" data-target="#myModal-3">
                     Book A Court Date </button>
 
                 </div>
@@ -57,17 +53,17 @@
                     <!-- <a class="dropdown-item" href="{{url('court-attendance-sheet')}}">Fill Court Attendance Sheet</a> -->
                     {{-- <a href="{{('court-attendance-sheet')}}"><button class="btn btn-primary">
                         </button></a> --}}
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-4">
+                    <button type="button" class="btn btn-primary" data-toggle="modal"  style="width:100%;" data-target="#myModal-4">
                     Fill Court Attendance Sheet </button>
                     <!-- <a class="dropdown-item" href="{{url('arbiration-sheet')}}">Fill New Arbiration Form</a> -->
                     {{-- <a href="{{('arbiration-sheet')}}"><button class="btn btn-primary">
                         </button></a> --}}
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-5">
+                    <button type="button" class="btn btn-primary" data-toggle="modal"  style="width:100%;" data-target="#myModal-5">
                     Fill New Arbiration Form </button>
                     <!-- <a class="dropdown-item" href="{{url('conveyance-sheet')}}">Fill Conveyance Sheet</a> -->
                     {{-- <a href="{{('conveyance-sheet')}}"><button class="btn btn-primary">
                         </button></a> --}}
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-6">
+                    <button type="button" class="btn btn-primary" data-toggle="modal"  style="width:100%;" data-target="#myModal-6">
                     Fill New Conveyance Sheet </button>
                 </div>
             </div>
@@ -124,6 +120,10 @@
                         </tbody>
 
                     </table>
+
+
+
+                                    <!-- ADD FILE PROGRESS -->
 
                     <!-- The Modal -->
                     <div class="modal fade" id="myModal">
@@ -527,7 +527,10 @@
 
     <br>
 
+                            <!--END ADD FILE PROGRESS -->
 
+
+                        <!-- ADD FILE PROGRESS/ACTION -->
 
 
     <!-- The Modal -->
@@ -544,7 +547,7 @@
                 <!-- Modal body -->
                 <div class="modal-body" style="background-color:white">
                     <div class="container">
-                        <form method="post" action="{{ url('') }}" enctype="multipart/form-data">
+                        <form method="post" action="{{ url('add-file-progress-action') }}" enctype="multipart/form-data">
 
 
                             <div class="row">
@@ -554,21 +557,7 @@
                                     <form method="post" action="" id="form">
                                         @csrf
                                         <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Date of Progress</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="date" class="form-control" name="incorporation"
-                                                            id="age">
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Incorporation is required
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            
                                             <div class="col-md-4">
                                                 <div class="mb-1">
                                                     <label for="username">Client</label>
@@ -576,8 +565,10 @@
                                                         <div class="input-group-prepend">
 
                                                         </div>
-                                                        <select name="country" id="cars">
-                                                            <option value="volvo"></option>
+                                                        <select name="client_name" id="cars">
+                                                            <option>select</option>
+                                                            <option>client 1</option>
+                                                            <option>client 2</option>
                                                         </select>
                                                         <div class="invalid-feedback" style="width: 100%;">
                                                             Incorporation is required
@@ -592,10 +583,29 @@
                                                         <div class="input-group-prepend">
 
                                                         </div>
-                                                        <select name="country" id="cars">
-                                                            <option value="volvo"></option>
+                                                        <select name="file_name" id="cars">
+                                                            <option>select</option>
+                                                            <option>demo 1</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
+                                                            <option>demo 4</option>
                                                         </select>
 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="mb-1">
+                                                    <label for="username">Date of Progress</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+
+                                                        </div>
+                                                        <input type="date" class="form-control" name="progress_date"
+                                                            id="age">
+                                                        <div class="invalid-feedback" style="width: 100%;">
+                                                            Incorporation is required
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -609,7 +619,7 @@
                                                         <div class="input-group-prepend">
 
                                                         </div>
-                                                        <input type="text" class="form-control" name="incorporation"
+                                                        <input type="time" class="form-control" name="time_taken_hours"
                                                             id="age">
                                                         <div class="invalid-feedback" style="width: 100%;">
                                                             Incorporation is required
@@ -626,9 +636,12 @@
                                                         <div class="input-group-prepend">
 
                                                         </div>
-                                                        <select name="country" id="cars">
-
-                                                            <option value="volvo"></option>
+                                                        <select name="action_type" id="cars">
+                                                            <option>select</option>
+                                                            <option>action 1</option>
+                                                            <option>action 2</option>
+                                                            <option>action 3</option>
+                                                            <option>action 4</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -647,7 +660,7 @@
                                                         <div class="input-group-prepend">
 
                                                         </div>
-                                                        <input type="text" class="form-control" name="incorporation"
+                                                        <input type="text" class="form-control" name="time_taken_minutes"
                                                             id="age">
                                                         <div class="invalid-feedback" style="width: 100%;">
                                                             Incorporation is required
@@ -666,8 +679,12 @@
                                                         <div class="input-group-prepend">
 
                                                         </div>
-                                                        <select name="country" id="cars">
-                                                            <option value="volvo"></option>
+                                                        <select name="sent_notification" id="cars">
+                                                        <option>select</option>
+                                                            <option>notification 1</option>
+                                                            <option>notification 2</option>
+                                                            <option>notification 3</option>
+                                                            <option>notification 4</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -700,7 +717,7 @@
 
 
 
-                                </div>
+                                
                                 <br>
                                 <div class="row">
                                     <div class="col-sm">
@@ -759,6 +776,7 @@
     </div>
     </div>
 
+                                     <!--END ADD FILE PROGRESS/ACTION -->
 
 
 
@@ -778,7 +796,7 @@
                                 <!-- Modal body -->
                                 <div class="modal-body" style="background-color:white">
                                     <div class="container">
-                                        <form method="post" action="{{ url('add-file-progress') }}" enctype="multipart/form-data">
+                                        <form method="post" action="{{ url('add-file-bringup-reminder') }}" enctype="multipart/form-data">
 
 
                                             <div class="row">
@@ -787,30 +805,20 @@
 
                                                     <form method="post" action="" id="form">
                                                         @csrf
-                                                        <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Date of Progress</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
+                       <div class="row">
 
-                                </div>
-                                <input type="date" class="form-control" name="incorporation" id="age">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Incorporation is required
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
+                         <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Client</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="client_name" id="cars">
+                                    <option>select....</option>
+                                    <option>client 1</option>
+                                    <option>client 2</option>
+                                    <option>client 3</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -818,9 +826,80 @@
                             </div>
                         </div>
                     </div>
+                          
+                   
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Files</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="file_name" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                   
 </div>
 <br>
 <div class="row">
+                 
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Date of Progress</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="date" class="form-control" name="progress_date" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Next Bring Up Days</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="next_bringup_days" id="cars">
+                                    <option>select....</option>
+                                    <option>day 1</option>
+                                    <option>day 2</option>
+                                    <option>day 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+</div>
+<br>
+                <div class="row">
+                   
+
+                   <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Reminder Period (Days)</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+
+                                <input type="date" class="form-control" name="remind_period_days" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="col-md-6">
                         <div class="mb-1">
@@ -829,60 +908,16 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="send_notification" id="cars">
+                                <option>select....</option>
+                                    <option>notification 1</option>
+                                    <option>notification 2</option>
+                                    <option>notification 3</option>
                                 </select>
                                 <!-- <textarea class="form-control" id="form7Example7" rows="3"></textarea> -->
                                 <!-- <select name="country" id="cars">
                 <option value="volvo"></option>
             </select> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Files</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="text" class="form-control" name="incorporation" id="age">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Incorporation is required
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-</div>
-<br>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Next Bring Up Days</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Reminder Period (Days)</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-
-                                <input type="text" class="form-control" name="incorporation" id="age">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Incorporation is required
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -897,7 +932,7 @@
 
                                 </div>
 
-                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="reason"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
@@ -980,14 +1015,14 @@
 
                                 <!-- Modal Header -->
                                 <div class="modal-header" style="background-color:#d6ba8a">
-                                    <h2 class="text-center"><b>Add File Bringup/Reminder</b></h2>
+                                    <h2 class="text-center"><b>Book A Court</b></h2>
 
                                 </div>
 
                                 <!-- Modal body -->
                                 <div class="modal-body" style="background-color:white">
                                     <div class="container">
-                                        <form method="post" action="{{ url('add-file-progress') }}" enctype="multipart/form-data">
+                                        <form method="post" action="{{ url('book-court') }}" enctype="multipart/form-data">
 
 
                                             <div class="row">
@@ -997,19 +1032,7 @@
                                                     <form method="post" action="" id="form">
                                                         @csrf
                                                         <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Court Event Type</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Client</label>
@@ -1017,15 +1040,15 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="client_name" id="cars">
+                                    <option >select....</option>
+                                    <option >client 1</option>
+                                    <option >client 2</option>
+                                    <option >client 3</option>
                                 </select>
                             </div>
                         </div>
                     </div>
-                </div>
-                <br>
-                <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">File</label>
@@ -1033,21 +1056,48 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="file_name" id="cars">
+                                <option >select....</option>
+                                    <option >file 1</option>
+                                    <option >file 2</option>
+                                    <option >file 3</option>
                                 </select>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                </div>
+                <br>
+                <div class="row">
+
+                <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Court</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="court_name" id="cars">
+                                <option >select....</option>
+                                    <option >court 1</option>
+                                    <option >court 2</option>
+                                    <option >court 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Court Event Type</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="court_event_type" id="cars">
+                                <option >select....</option>
+                                    <option >event 1</option>
+                                    <option >event 2</option>
+                                    <option >event 3</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
@@ -1067,7 +1117,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="website" id="confirm_password" required>
+                                <input type="date" class="form-control" name="start_date" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -1080,7 +1130,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="time" class="form-control" name="website" id="confirm_password" required>
+                                <input type="time" class="form-control" name="start_time" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
                                 </div>
@@ -1101,7 +1151,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="website" id="confirm_password" required>
+                                <input type="date" class="form-control" name="end_date" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -1113,7 +1163,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="time" class="form-control" name="website" id="confirm_password" required>
+                                <input type="time" class="form-control" name="end_time" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
                                 </div>
@@ -1132,8 +1182,11 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="user_assigned" id="cars">
+                                <option >select....</option>
+                                    <option >user 1</option>
+                                    <option >user 2</option>
+                                    <option >user 3</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
@@ -1149,8 +1202,11 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="send_notification" id="cars">
+                                <option >select....</option>
+                                    <option >notification 1</option>
+                                    <option >notification 2</option>
+                                    <option >notification 3</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
@@ -1166,8 +1222,11 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="set_reminder" id="cars">
+                                <option >select....</option>
+                                    <option >reminder 1</option>
+                                    <option >reminder 2</option>
+                                    <option >reminder 3</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
@@ -1185,7 +1244,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="notes"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -1270,7 +1329,7 @@
                                 <!-- Modal body -->
                                 <div class="modal-body" style="background-color:white">
                                     <div class="container">
-                                        <form method="post" action="{{ url('add-file-progress') }}" enctype="multipart/form-data">
+                                        <form method="post" action="{{ url('court-attendance-sheet') }}" enctype="multipart/form-data">
 
 
                                             <div class="row">
@@ -1287,7 +1346,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="website" id="confirm_password" required>
+                                <input type="date" class="form-control" name="attendance_date" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -1299,8 +1358,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="client_name" id="cars">
+                                    <option>select...</option>
+                                    <option>client 1</option>
+                                    <option>client 2</option>
+                                    <option>client 3</option>
+                                    <option>client 4</option>
                                 </select>
                             </div>
                         </div>
@@ -1315,8 +1378,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="file_name" id="cars">
+                                <option>select...</option>
+                                    <option>file 1</option>
+                                    <option>file 2</option>
+                                    <option>file 3</option>
+                                    <option>file 4</option>
                                 </select>
                             </div>
                         </div>
@@ -1331,8 +1398,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="other_file" id="cars">
+                                <option>select...</option>
+                                    <option>other file 1</option>
+                                    <option>other file 2</option>
+                                    <option>other file 3</option>
+                                    <option>other file 4</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
@@ -1347,7 +1418,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="court_name" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -1358,7 +1429,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="judicial_officer" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -1369,21 +1440,21 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="case_no" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
 </div>
 <br>
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Parties</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="parties" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
                                 </div>
@@ -1392,40 +1463,40 @@
 
 
                     </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Acting For</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="acting_for" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <!-- <div class="col-md-3">
                         <div class="mb-1">
                             <label for="username">Person Dealing</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
+                                <select name="person_dealing" id="cars">
                                     <option value="volvo"></option>
                                 </select>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
 
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Instructions</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="instructions" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
                                 </div>
@@ -1442,7 +1513,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="transpired_in_court"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -1457,7 +1528,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="remarks"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -1472,7 +1543,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="notes"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -1489,7 +1560,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <select name="person_dealing" id="cars">
+                                <option>select...</option>
+                                    <option>person 1</option>
+                                    <option>person 2</option>
+                                    <option>person 3</option>
+                                    <option>person 4</option>                                </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -1505,7 +1581,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="time" class="form-control" name="website" id="time_taken_hours" >
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -1520,7 +1596,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="time" class="form-control" name="website" id="time_taken_minutes" >
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -1537,7 +1613,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="website" id="confirm_password" required>
+                                <input type="date" class="form-control" name="website" id="bring_up_date" >
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -1551,7 +1627,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="website" id="remind_period_days" >
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -1565,7 +1641,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="website" id="send_remind_to" >
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
