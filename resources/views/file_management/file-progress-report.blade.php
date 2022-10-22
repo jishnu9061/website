@@ -15,7 +15,7 @@
 
           {{-- heading --}}
   <h4 id="hdtpa"><b>Search</b></h4>
-  <br><br>
+  
 
 
             <br>
@@ -32,7 +32,7 @@
             </div>
 
         </div>
-        <br>
+        
 
 
 
