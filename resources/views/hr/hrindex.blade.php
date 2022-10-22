@@ -10,8 +10,8 @@
 
         
        {{--sub heading --}}
-    <h5 id="hdbtb">Maintenance</h5>
-    <br>
+    {{-- <h5 id="hdbtb">Maintenance</h5>
+    <br> --}}
 
             <div class="row sm">
                 <div class="col-sm-4 "> <a href="{{url('addallowance')}}"><img class="logo_size"

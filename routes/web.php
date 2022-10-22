@@ -1203,8 +1203,9 @@ Route::any('capture_billable_items',"clientinvoicing@billable_items")->name('bil
 Route::any('view_bill',"clientinvoicing@view_bill_item")->name('view_bill_item');
 //anandhu
 
-// hr module
+// hr module belji
 Route::any('hrindex','hrindex@index')->name('hrindex');
+Route::any('accindex','accindex@index')->name('accindex');
 
 
 

@@ -4381,7 +4381,7 @@ display: block; */
 .dataTable-table:not(.table-borderless) thead th {
     border-bottom: 1px solid #dedede !important;
     color: #1D1D50;
-    background-color: #D5BD94;
+    background-color: #E2E8EE;
     border-radius: 5px;
 }
 

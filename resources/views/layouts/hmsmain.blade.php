@@ -40,6 +40,7 @@
   
   
     <link rel="stylesheet" href="{{asset('/') }}assets/css/c.css">
+    
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -497,7 +498,7 @@
                                 </li> -->
 
                             
-                                <li class="submenu-item has-sub" style="list-style:none;">
+                                <li class="submenu-item" style="list-style:none;">
                                     <a href="{{url('hrindex')}}" class='sidebar-link'>
                                         <i class="bi bi-grid-fill" id="icon"></i>
                                             <span>HR</span>
@@ -566,14 +567,19 @@
                                     $accounts = array("ledger_acount_categories", "ledger_acount_subcategories","ledger_budget_category", "ledger_acounts","expense_report","journal","ledger","trialbalance","profitandlossaccount","balancesheet","stock_section","stock_issue","store_ledger","stock_categories","stock_subcategories","stock_items");
                                 @endphp
 
-
-
+                                       <li class="submenu-item" style="list-style:none;">
+                                    <a href="{{url('accindex')}}" class='sidebar-link'>
+                                        <i class="fa fa-chart-line" id="icon"></i>
+                                            <span>Accounts</span>
+                                    </a>
+                            </li>
+{{-- 
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('home')}}" class="sidebar-link">
                                 <i class="fa fa-chart-line" style="font-weight: 400;" id="icon"></i>
 
                                            <span>Accounts</span>
-                                       </a>
+                                       </a> --}}
                                    @if (in_array(request()->path(), $accounts))
                                        <ul class="submenu" style="display: block;">
                                      @else
@@ -608,19 +614,19 @@
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('ledger') }}" class=" sidebar-link">
-                                                   <span  id="subm">Ledger </span></a>
+                                                   <span  id="subm">Ledger</span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('trialbalance') }}" class=" sidebar-link">
-                                                   <span  id="subm">Trial Balance </span></a>
+                                                   <span  id="subm">Trial Balance</span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('profitandlossaccount') }}" class=" sidebar-link">
-                                                   <span  id="subm">Profit And loss Account </span></a>
+                                                   <span  id="subm">Profit And loss Account</span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('balancesheet') }}" class=" sidebar-link">
-                                                   <span  id="subm">Balance Sheet </span></a>
+                                                   <span  id="subm">Balance Sheet</span></a>
                                            </li>
                                            <li class="submenu-item ">
                                                <a href="{{ url('stock_section') }}" class=" sidebar-link">
@@ -791,7 +797,7 @@
 
                            
                     </ul>
-                    @if(Auth::user()->role == 'hr' || Auth::user()->role == 'hospitaladmin')
+                    {{-- @if(Auth::user()->role == 'hr' || Auth::user()->role == 'hospitaladmin')
                                 @php
                                     $hr = array("addallowance", "addstaffs", "staffs","loans","payslip","attendance","attendanceview","payslipbulk","generatepayslip","managestaff");
                                 @endphp
@@ -985,7 +991,7 @@
                                 </li>
                                
                                 </ul>
-                            </li>
+                            </li> --}}
 
                                     
                 </div>
