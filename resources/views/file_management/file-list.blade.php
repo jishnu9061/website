@@ -19,12 +19,21 @@
                     <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-1">Columns
                   </button>
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Filter
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalb">Filter
                   </button>
                 </div>
                 {{-- <a href="{{('add-corporate')}}"><button class="btn btn-primary">Add Corporate</button></a> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">New
                   File</button>
+
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalaa">temp
+                    </button>
+
+
+
+
+
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <div class="table-responsive">
@@ -35,15 +44,15 @@
                                         <th class="text-center">Actions</th>
                                         <th class="text-center">Matter</th>
                                         <th class="text-center">Client</th>
-                                        <th class="text-center">Responsible</br>Solicitor</th>
-                                        <th class="text-center">Originating</br>Solicitor</th>
-                                        <th class="text-center">Matter</br>Notifications</th>
+                                        <th class="text-center">Responsible<br>Solicitor</th>
+                                        <th class="text-center">Originating<br>Solicitor</th>
+                                        <th class="text-center">Matter<br>Notifications</th>
                                         <th class="text-center">Practice Area</th>
                                         <th class="text-center">Open Date</th>
                                         <th class="text-center">Close Date</th>
                                         <th class="text-center">Pending Date</th>
                                         <th class="text-center">State Of Limitations Date</th>
-                                        <th class="text-center">Last</br>Activity</th>
+                                        <th class="text-center">Last<br>Activity</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -69,10 +78,10 @@
                         </div>
                         <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
-                                <div class="modal-content" style="background-color:#d6ba8a">
+                                <div class="modal-content" >
 
                                     <!-- Modal Header -->
-                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                    <div class="modal-header" >
                                         <h2 class="text-centre"><b>Add New File</b></h2>
 
                                     </div>
@@ -136,14 +145,14 @@
                   <!-- COLUMNS -->
                   <div class="modal fade" id="myModal-1">
                             <div class="modal-dialog modal-lg">
-                                <div class="modal-content" style="background-color:#d6ba8a">
+                                <div class="modal-content" >
 
                                     <!-- Modal Header -->
-                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                    <div class="modal-header" >
                                 </div>
 
                                     <!-- Modal body -->
-                                    <div class="modal-body" style="background-color:white">
+                                    <div class="modal-body" >
                                         <div class="container">
                                             <form method="post" action="{{ url('') }}"
                                                 enctype="multipart/form-data">
@@ -187,7 +196,7 @@
 </div>
 
 </div>
-<div class="modal" id="mymodal">
+<div class="modal" id="mymodalb">
    <div class="modal-dialog">
        <div class="modal-content">
            <div class="modal-header">
@@ -236,7 +245,7 @@
                         <div class="modal-content">
 
                             <!-- Modal Header -->
-                            <div class="modal-header" style="background-color:#435ebe">
+                            <div class="modal-header" >
                                 <h4 class="text-white">Edit Medicine</h4>
 
                             </div>
@@ -406,7 +415,7 @@
                                                     </div>
                                                 </div>
                                                 <br>
-                                                    <div class="modal-footer" style="background-color:#d6ba8a">
+                                                    <div class="modal-footer" >
                                                         <button type="submit" class="btn btn-primary"
                                                             data-dismiss="modal"
                                                             style="width:15%;background-color:white;color:black">Close</button>
@@ -436,13 +445,261 @@
 
             <br>
 
+
+
+
+
+
+
+
+
+
+            <div class="modal fade" id="myModalaa">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content" >
+
+                        <!-- Modal Header -->
+                        <div class="modal-header" >
+                            <h2 class="text-centre"><b>Add New File</b></h2>
+
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div class="container">
+                                <form method="post" action="{{ url('add-new-file') }}"
+                                    enctype="multipart/form-data">
+                                    @csrf
+
+
+                                    <form>
+                                        <div class="form-row">
+                                          <div class="col">
+                                            <input type="text" class="form-control" placeholder="First name">
+                                          </div>
+                                         
+                                        </div>
+                                        <div class="form-row">
+
+                                        <div class="col">
+                                            <input type="text" class="form-control" placeholder="Last name">
+                                          </div>
+                                          
+                                        <div class="col">
+                                            <input type="text" class="form-control" placeholder="Last name">
+                                          </div>
+
+                                         </div>
+
+
+                                         <div class="form-group">
+                                            <label for="exampleFormControlTextarea1">Example textarea</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                          </div>
+
+                                          <div class="form-row">
+
+
+                                            <div class="col">
+                                          <select class="form-control">
+                                            <option>Default select</option>
+                                            <option>Default select</option>
+                                            <option>Default select</option>
+                                          </select>
+                                        </div>
+
+                                          <div class="col">
+
+                                          <select class="form-control">
+                                            <option>Default select</option>
+                                            <option>Default select</option>
+                                            <option>Default select</option>
+                                          </select>
+
+                                        </div>
+
+
+                                        
+
+                                        </div>
+
+
+                                        <div class="form-row">
+
+                                            <div class="col">
+                                                <input type="text" class="form-control" placeholder="Last name">
+                                              </div>
+                                              
+                                            <div class="col">
+                                                <input type="text" class="form-control" placeholder="Last name">
+                                              </div>
+    
+                                             </div>
+
+
+                                             <div class="form-row">
+
+
+                                                <div class="col">
+                                              <select class="form-control">
+                                                <option>Default select</option>
+                                                <option>Default select</option>
+                                                <option>Default select</option>
+                                              </select>
+                                            </div>
+    
+                                              <div class="col">
+    
+                                              <select class="form-control">
+                                                <option>Default select</option>
+                                                <option>Default select</option>
+                                                <option>Default select</option>
+                                              </select>
+    
+                                            </div>
+    
+    
+                                            
+    
+                                            </div>
+
+
+                                            
+                                            <div class="form-row">
+
+
+                                                <div class="col">
+                                              <select class="form-control">
+                                                <option>Default select</option>
+                                                <option>Default select</option>
+                                                <option>Default select</option>
+                                              </select>
+                                            </div>
+    
+                                      
+    
+    
+                                            
+    
+                                            </div>
+    
+                                            <div class="form-row">
+
+                                                <div class="col">
+                                                    <input type="date" class="form-control" placeholder="Last name">
+                                                  </div>
+                                                  
+                                                <div class="col">
+                                                    <input type="date" class="form-control" placeholder="Last name">
+                                                  </div>
+        
+                                                 </div>
+
+                                                 <div class="form-row">
+
+                                                    <div class="col">
+                                                        <input type="date" class="form-control" placeholder="Last name">
+                                                      </div>
+                                                      
+                                                    <div class="col">
+                                                        <input type="date" class="form-control" placeholder="Last name">
+                                                      </div>
+            
+                                                     </div>
+
+                                                     <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                                                      </div>
+    
+
+
+
+
+                                          
+                                      </form>
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="mb-1">
+
+                                                <label for="username">Client</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+
+                                                    </div>
+                                                    <select name="client_type" id="cars">
+                                                        <option>Select</option>
+                                                        <option>Accord University</option>
+                                                        <option>Accounts And Books</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        
+
+                                        <div class="col-md-4">
+                                            <div class="mb-1">
+                                                <label for="username">Associate Handling</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+
+                                                    </div>
+                                                    <select name="associate_handling" id="cars"
+                                                        disabled>
+                                                        <option>Corporate</option>
+                                                        <option>Individual</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="mb-1">
+                                                <label for="username">Opening Date</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"></div>
+                                                    <input type="date" class="form-control" name="opening_date" id="age" value="" min="0" max="99">
+                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                        Age is required.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+    <b><u>File List</u></b></span></div><br>
+
+
+</div>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         <!-- The Modal -->
                         <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
-                                <div class="modal-content" style="background-color:#d6ba8a">
+                                <div class="modal-content" >
 
                                     <!-- Modal Header -->
-                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                    <div class="modal-header" >
                                         <h2 class="text-centre"><b>Add New File</b></h2>
 
                                     </div>
@@ -576,13 +833,13 @@
                                                                     </div>
                                                                 </div>
                                                                 <br>
-                                                                <div class="modal-footer"
-                                                                style="background-color:#d6ba8a">
+                                                                <div class="modal-footer">
+                                                              
                                                                 <button type="submit" class="btn btn-primary"
                                                                     data-dismiss="modal"
-                                                                    style="width:15%;background-color:white;color:black">Close</button>
+                                                                    style="width:15%;;">Close</button>
                                                                 <button type="submit" class="btn btn-primary"
-                                                                    style="width:15%;background-color:white;color:black">Save</button>
+                                                                    style="width:15%;">Save</button>
                                                             </div>
                                                                
 
@@ -590,7 +847,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>    
+                                        </div>
+                                        
+                                        
                         <script>
                             function myFunction() {
                                 if (!confirm("Are you sure to delete this"))

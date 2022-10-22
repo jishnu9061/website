@@ -1,33 +1,13 @@
 @extends('layouts.hmsmain')
 @section('content')
 
-<meta name="csrf-token" content="{{ csrf_token() }}">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css"
-    href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 
-{{-- <div class="spacer" style="height:40px;margin-top: 30px;"> --}}
+ {{-- heading --}}
+ <h4 id="hdtpa"><b>List of File Progress</b></h4>
+ <br><br>
 
+ 
 
-</head>
-
-<body>
-    <div class="container">
-
-        <!-- <h3 class="text-center" style="color: #070344;"><b>List of File Progress</b></h3> -->
-        <div>
-            <div class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>List of File Progress</u></b></span></div><br>
-            <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous"> -->
-
-        
-            </div>
         <br>
         <div style="display:flex; margin-bottom: 2%;  margin-top: 3%;">
             <div class="dropdown" style="width:20%;">
@@ -91,15 +71,15 @@
                         <thead>
                             <tr>
                                 <th class="text-center">*</th>
-                                <th class="text-center">Action </br>Type</th>
-                                <th class="text-center">Progress </br>Date</th>
+                                <th class="text-center">Action <br>Type</th>
+                                <th class="text-center">Progress <br>Date</th>
                                 <th class="text-center">Client</th>
                                 <th class="text-center">FileName</th>
                                 <th class="text-center">Description</th>
-                                <th class="text-center">Time</br>Taken</th>
-                                <th class="text-center">Charge</br>Out</br>Rate</th>
-                                <th class="text-center">Way Action</br>(Way Forward)</th>
-                                <th class="text-center">RGD</br>By</th>
+                                <th class="text-center">Time<br>Taken</th>
+                                <th class="text-center">Charge<br>Out<br>Rate</th>
+                                <th class="text-center">Way Action<br>(Way Forward)</th>
+                                <th class="text-center">RGD<br>By</th>
                                 <th class="text-center">Action</th>
                                 <th class="text-center"><input type="checkbox" name="" id=""></th>
                                 <th class="text-center">Edit</th>
@@ -127,7 +107,7 @@
                                 </td>
                             </tr>
 
-                          @endforeach;
+                          @endforeach
 
                         </tbody>
 
