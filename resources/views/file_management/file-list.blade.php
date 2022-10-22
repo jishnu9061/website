@@ -175,7 +175,7 @@
 
                                                 @csrf
 
-    <form action="/action_page.php">
+    <form action="">
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check1">
       <label class="form-check-label" for="check1">Option 1</label>
