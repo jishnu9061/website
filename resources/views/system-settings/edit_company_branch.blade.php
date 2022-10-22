@@ -34,16 +34,16 @@
         <div class="col-md-12">
             <form method="post" action="{{url('update_company_branch')}}" id="form">  
                
-            <input type="hidden" name="id" value="{{$company_branch_details->id}}">
+            <input type="hidden" name="id" value="{{$branch_details->id}}">
                 @csrf
-                <!-- <input type="text" class="form-control" name="number" id="username" value="{{$company_branch_details->id}}"> -->
+
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label >Branch No:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input  class="form-control" type="text"  id="bnum" name="bnum"  value="{{$company_branch_details->branch_no}}">
+                                <input  class="form-control" type="text"  id="bnum" name="bnum"  value="{{$branch_details->branch_no}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -55,7 +55,7 @@
                             <label>Branch Code:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text"  id="bcode" name="bcodes" class="form-control" value="{{$company_branch_details->branch_code}}">
+                                <input type="text"  id="bcode" name="bcodes" class="form-control" value="{{$branch_details->branch_code}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -67,7 +67,7 @@
                             <label for="username">Branch Name:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text"  id="bname" name="bname"class="form-control"  value="{{$company_branch_details->branch_name}}">
+                                <input type="text"  id="bname" name="bname"class="form-control"  value="{{$branch_details->branch_name}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -83,7 +83,7 @@
                             <label for="username">Postal Address:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <textarea rows="4" cols="50" name="paddress" class="form-control" value="{{$company_branch_details->address}}" type="text"></textarea>
+                                <textarea rows="4" cols="50" name="paddress" class="form-control"  type="text">{{$branch_details->address}}</textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -96,7 +96,7 @@
                             <label for="username">Physical Address:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <textarea rows="4" cols="50" name="physicaladd" class="form-control"  value="{{$company_branch_details->physical_address}}" type="text"></textarea>
+                                <textarea rows="4" cols="50" name="physicaladd" class="form-control"type="text">{{$branch_details->physical_address}}</textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -110,7 +110,7 @@
                         <label for="username">Tel:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="number"  id="tel" name="tel" class="form-control"  value="{{$company_branch_details->telephone}}">
+                                <input type="number"  id="tel" name="tel" class="form-control"  value="{{$branch_details->telephone}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -123,7 +123,7 @@
                         <label for="username">Mobile:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="number"  id="mobile" name="mobile" class="form-control"  value="{{$company_branch_details->mobile}}">
+                                <input type="number"  id="mobile" name="mobile" class="form-control"  value="{{$branch_details->mobile}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -135,7 +135,7 @@
                             <label for="username">Fax:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text"  id="fax" name="fax" class="form-control"  value="{{$company_branch_details->fax}}">
+                                <input type="text"  id="fax" name="fax" class="form-control"  value="{{$branch_details->fax}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -149,7 +149,7 @@
                             <label for="username">Town:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" id="town" name="town" class="form-control" value="{{$company_branch_details->town}}">
+                                <input type="text" id="town" name="town" class="form-control" value="{{$branch_details->town}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -161,7 +161,7 @@
                             <label for="username">Email:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="email"  id="email" name="email"class="form-control" value="{{$company_branch_details->email}}" >
+                                <input type="email"  id="email" name="email"class="form-control" value="{{$branch_details->email}}" >
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -174,7 +174,7 @@
                             <label for="username">Website:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" id="website" name="website" class="form-control" value="{{$company_branch_details->website}}">
+                                <input type="text" id="website" name="website" class="form-control" value="{{$branch_details->website}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>

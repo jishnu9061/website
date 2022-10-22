@@ -52,6 +52,7 @@ table{
                         <tr>
                         <th class="text-center" >No</th>
                         <th class="text-center">Item Code</th>
+                        <th class="text-center">Item Group</th>
                         <th class="text-center" >Item Name</th>
                         <th class="text-center" >Item Comments</th>
                         <th class="text-center" >Item Short Names</th>
@@ -71,73 +72,13 @@ table{
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                      
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('edit_payment_item')}}">Edit</a></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></td>
-                    </tr>
-
-                    <tr>
-                        <td colspan="8"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">03-Client Funds:</td>
-                    </tr>
-                    <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></td>
                         <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('#')}}"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
-                    </tr>
-                   
-
-                    <tr>
-                        <td colspan="8"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">99-VAT Amount:</td>
-                    </tr>
-                    <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('#')}}"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
-                    </tr>
-                 
-
-                    <tr>
-                        <td colspan="8"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">02-Vatable Disbursement(Telephone,Postage,Transport etc)</td>
-                    </tr>
-                    <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('#')}}"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
-                    </tr>
-                 
-
-                    <tr>
-                        <td colspan="8"style="color:rgb(13, 1, 56);font-size:medium;font-weight:bold;">04-Non-Vatable Disbursement(Stamp Duty,Registration Fees etc)  </td>
-                    </tr>
-                    <tr>
-                    <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"><a href="{{url('#')}}"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"class="text-center"><input type="radio"></th>
-                    </tr>
-    </tbody>
-
-                   
-                </table>
+                        <td  scope="row"class="text-center">
+                        <a href="{{url('edit_payment_item')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
+                           </td>
+                        </tbody>
+                    </table>
                 <div class="class"style="text-align:right;">
                 <select style="width:10%;height:100%;color:white;font-size:small;background-color:rgb(13, 1, 56);"type="text" value="" name="type">
     <option>Active Category</option>
@@ -149,6 +90,105 @@ table{
     <br>
     <br>
     </div>
+    @csrf
+    <div class="row">
+    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label>Item Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="iname" id="" value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="mb-1">
+                        <label >Item Group:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <select type="text" value="" id="" name="igroup"style="width:100%;">
+                                    <option>---Select---</option>
+                                   
+                    <option>01-Legal Fees</option>
+                    <option>02-Vatable Disbursement(Telephone,Postage,Transport etc)</option>
+                    <option>03-Client Funds</option>
+                    <option>99-VAT Amount</option>
+                    <option>04-Non-Vatable Disbursement(Stamp Duty,Registration Fees etc)</option>
+                    
+                                </select>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label>Item Name:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="iname" id="" value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>
+              
+            <div class="row">
+                   
+                  
+                    <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                        <label >Item Comments:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="icomments" id="" value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label>Item Short Name:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="ishortname" id="" value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    </div>
+                    <div class="row">
+         <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+        </div>
+        </form>
+</div>
+</div>
+</div>
+</div>
 
     <!-- <form>
  <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
