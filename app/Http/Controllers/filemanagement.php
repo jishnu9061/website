@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use ClientController;
 use DB;
 
 class filemanagement extends Controller
@@ -85,21 +84,10 @@ class filemanagement extends Controller
     //document temblates
 
     //manage files
-    public function filearchive(Request $request)
+    public function filearchive()
     {
-        
-        $Box_type=$request['box_type'];
-        $Box_number=$request['box_no'];
-
-        DB::table('cra_add_box')->insert([
-            'type' =>  $Box_type,
-            'number' =>  $Box_number,
-
-        ]);
-
         return view('file_management.file-archive');
     }
-
 
     public function addboxno()
     {
@@ -116,17 +104,16 @@ class filemanagement extends Controller
 
     public function progressbringup()
     {
-        
         return view('file_management.progress-bringup');
     }
 
-    public function addbringup(Request $request)
+    public function addbringup()
     {
-       
-
-
         return view('file_management.add-new-bringup');
     }
+
+
+
 
 
     public function addprogress(Request $request )
@@ -171,9 +158,7 @@ class filemanagement extends Controller
             'activity_type' => $activity_type,
             'activity' => $activity,
         ]);
-        // return back()->withInput();
-        // return view('file_management.add-new-file');
-        return view('file_management.add-file-progress');
+       return redirect('/file-progress-list');
     }
 
 
@@ -257,38 +242,256 @@ class filemanagement extends Controller
         
     }
 
-    public function addfileprogressaction()
+    public function addfileprogressaction(Request $request)
     {
-        return view('file_management.add-file-progress-action');
+
+        $id =$request['id'];
+        $client_name=$request['client_name'];
+        $file_name=$request['file_name'];
+        $progress_date=$request['progress_date'];      
+        $time_taken_hours=$request['time_taken_hours'];
+        $action_type=$request['action_type'];
+        $time_taken_minutes=$request['time_taken_minutes'];
+        $sent_notification=$request['sent_notification'];
+
+        DB::table('cra_add_file_progress_action')->insert([
+            
+            'client_name' => $client_name,
+            'file_name' => $file_name,
+            'progress_date' => $progress_date,
+            'time_taken_hours' => $time_taken_hours,
+            'action_type' => $action_type,
+            'time_taken_minutes' => $time_taken_minutes,
+            'sent_notification' => $sent_notification,
+            
+        ]);
+        
+        return redirect('/file-progress-list');
         
     }
 
 
-    public function addfilebringupreminder()
+    public function addfilebringupreminder(Request $request)
     {
-        return view('file_management.add-file-bringup-reminder');
+
+        $id =$request['id'];
+        $client_name=$request['client_name'];
+        $file_name=$request['file_name'];
+        $progress_date=$request['progress_date'];      
+        $next_bringup_days=$request['next_bringup_days'];
+        $remind_period_days=$request['remind_period_days'];
+        $send_notification=$request['send_notification'];
+        $reason=$request['reason'];
+
+        DB::table('cra_add_file_bringup_reminder')->insert([
+            
+            'client_name' => $client_name,
+            'file_name' => $file_name,
+            'progress_date' => $progress_date,
+            'next_bringup_days' => $next_bringup_days,
+            'remind_period_days' => $remind_period_days,
+            'send_notification' => $send_notification,
+            'reason' => $reason,
+            
+        ]);
+        return redirect('/file-progress-list');
         
     }
 
-    public function bookcourt()
+    public function bookcourt (Request $request)
     {
-        return view('file_management.book-court');
+
+
+        $id =$request['id'];
+        $client_name=$request['client_name'];
+        $file_name=$request['file_name'];
+        $court_name=$request['court_name'];      
+        $court_event_type=$request['court_event_type'];
+        $start_date=$request['start_date'];
+        $start_time=$request['start_time'];
+        $end_date=$request['end_date'];
+        $end_time=$request['end_time'];
+        $user_assigned=$request['user_assigned'];
+        $send_notification=$request['send_notification'];
+        $set_reminder=$request['set_reminder'];
+        $notes=$request['notes'];
+
+        DB::table('cra_book_a_court')->insert([
+            
+            'client_name' => $client_name,
+            'file_name' => $file_name,
+            'court_name' => $court_name,
+            'court_event_type' => $court_event_type,
+            'start_date' => $start_date,
+            'start_time' => $start_time,
+            'end_date' => $end_date,
+            'end_time' => $end_time,
+            'user_assigned' => $user_assigned,
+            'send_notification' => $send_notification,
+            'set_reminder' => $set_reminder,
+            'notes' => $notes,
+          
+            
+        ]);
+        return redirect('/file-progress-list');
+        // return view('file_management.book-court');
         
     }
 
-    public function courtattendance()
+    public function courtattendance(Request $request)
     {
-        return view('file_management.court-attendance-sheet');
+        $id =$request['id'];
+        $attendance_date=$request['attendance_date'];
+        $client_name=$request['client_name'];
+        $file_name=$request['file_name'];      
+        $other_file=$request['other_file'];
+        $court_name=$request['court_name'];
+        $judicial_officer=$request['judicial_officer'];
+        $case_no=$request['case_no'];
+        $parties=$request['parties'];
+        $acting_for=$request['acting_for'];
+        $instructions=$request['instructions'];
+        $transpired_in_court=$request['transpired_in_court'];
+        $remarks=$request['remarks'];        
+        $notes=$request['notes'];
+        $person_dealing=$request['person_dealing'];
+        $time_taken_hours=$request['time_taken_hours'];
+        $time_taken_minutes=$request['time_taken_minutes'];
+        $bring_up_date=$request['bring_up_date'];
+        $remind_period_days=$request['remind_period_days'];
+        $send_remind_to=$request['send_remind_to'];
+
+        DB::table('cra_court_attendance_sheet')->insert([
+            
+            'attendance_date' => $attendance_date,
+            'client_name' => $client_name,
+            'file_name' => $file_name,
+            'other_file' => $other_file,
+            'court_name' => $court_name,
+            'judicial_officer' => $judicial_officer,
+            'case_no' => $case_no,
+            'parties' => $parties,
+            'acting_for' => $acting_for,
+            'instructions' => $instructions,
+            'transpired_in_court' => $transpired_in_court,
+            'remarks' => $remarks,
+            'notes' => $notes,
+            'person_dealing' => $person_dealing,
+            'time_taken_hours' => $time_taken_hours,
+            'time_taken_minutes' => $time_taken_minutes,
+            'bring_up_date' => $bring_up_date,
+            'remind_period_days' => $remind_period_days,
+            'send_remind_to' => $send_remind_to,
+          
+            
+        ]);
+        return redirect('/file-progress-list');
+        // return view('file_management.court-attendance-sheet'); 
+    }
+
+
+    public function arbirationsheet(Request $request)
+    {
+        $id =$request['id'];
+        $court_type=$request['court_type'];
+        $client_name=$request['client_name'];
+        $file_name=$request['file_name'];      
+        $court_name=$request['court_name'];
+        $start_date=$request['start_date'];
+        $start_time=$request['start_time'];
+        $end_date=$request['end_date'];
+        $end_time=$request['end_time'];
+        $user_assigned=$request['user_assigned'];
+        $sent_notification=$request['sent_notification'];
+        $set_reminder=$request['set_reminder'];
+        $notes=$request['notes']; 
+
+        DB::table('cra_arbiration_sheet')->insert([
+            
+            'court_type' => $court_type,
+            'client_name' => $client_name,
+            'file_name' => $file_name,
+            'court_name' => $court_name,
+            'start_date' => $start_date,
+            'start_time' => $start_time,
+            'end_date' => $end_date,
+            'end_time' => $end_time,
+            'user_assigned' => $user_assigned,
+            'sent_notification' => $sent_notification,
+            'set_reminder' => $set_reminder,
+            'notes' => $notes,
+           
+            
+        ]);
+        return redirect('/file-progress-list');
+        // return view('file_management.arbiration-sheet');
         
     }
-    public function arbirationsheet()
+
+    public function conveyance(Request $request)
     {
-        return view('file_management.arbiration-sheet');
-        
-    }
-    public function conveyance()
-    {
-        return view('file_management.conveyance-sheet');
+
+        $id =$request['id'];
+        $arbiration_date=$request['arbiration_date'];
+        $client_name=$request['client_name'];
+        $file_name=$request['file_name'];      
+        $seller_name=$request['seller_name'];
+        $seller_id_no=$request['seller_id_no'];
+        $seller_address=$request['seller_address'];
+        $seller_contact=$request['seller_contact'];
+        $seller_email=$request['seller_email'];
+        $land_ref_no=$request['land_ref_no'];
+        $title_deed_no=$request['title_deed_no'];
+        $location=$request['location'];
+        $property_size=$request['property_size']; 
+        $buyer_name=$request['buyer_name'];
+        $buyer_id_no=$request['buyer_id_no'];
+        $buyer_address=$request['buyer_address'];
+        $buyer_contact=$request['buyer_contact'];
+        $buyer_email=$request['buyer_email'];
+        $solving_process=$request['solving_process']; 
+        $final_aggremnt=$request['final_aggremnt'];
+        $person_dealing=$request['person_dealing'];
+        $time_taken_hours=$request['time_taken_hours'];
+        $time_taken_minutes=$request['time_taken_minutes'];
+        $bringup_date=$request['bringup_date'];
+        $remind_period_days=$request['remind_period_days'];
+        $send_reminder_to=$request['send_reminder_to']; 
+        $next_action=$request['next_action']; 
+
+        DB::table('cra_conveyence_sheet')->insert([
+            
+            'arbiration_date' => $arbiration_date,
+            'client_name' => $client_name,
+            'file_name' => $file_name,
+            'seller_name' => $seller_name,
+            'seller_id_no' => $seller_id_no,
+            'seller_address' => $seller_address,
+            'seller_contact' => $seller_contact,
+            'seller_email' => $seller_email,
+            'land_ref_no' => $land_ref_no,
+            'title_deed_no' => $title_deed_no,
+            'location' => $location,
+            'property_size' => $property_size,
+            'buyer_name' => $buyer_name,
+            'buyer_id_no' => $buyer_id_no,
+            'buyer_address' => $buyer_address,
+            'buyer_contact' => $buyer_contact,
+            'buyer_email' => $buyer_email,
+            'solving_process' => $solving_process,
+            'final_aggremnt' => $final_aggremnt,
+            'person_dealing' => $person_dealing,
+            'time_taken_hours' => $time_taken_hours,
+            'time_taken_minutes' => $time_taken_minutes,
+            'bringup_date' => $bringup_date,
+            'remind_period_days' => $remind_period_days,
+            'send_reminder_to' => $send_reminder_to,
+            'next_action' => $next_action,
+              
+        ]);
+        return redirect('/file-progress-list');
+ 
+        // return view('file_management.conveyance-sheet');
         
     }
     public function filelistprogressreport()
@@ -297,21 +500,8 @@ class filemanagement extends Controller
         
     }
 
-    public function staffmonthlystatusreport(Request $request)
+    public function staffmonthlystatusreport()
     {
-        $id =$request['id'];
-        $Department =$request['department'];
-        $Month =$request['month'];
-        $Year =$request['year'];
-
-        DB::table('cra_staff_monthly_status_report')->insert([
-
-            'id' =>  $id,
-            'Department' =>  $Department,
-            'Month' =>  $Month,
-            'Year' =>  $Year,
-
-        ]);
         return view('file_management.staff-monthly-status-report');
         
     }
@@ -324,72 +514,18 @@ class filemanagement extends Controller
 
 
     //monthly file status report
-     public function clientmonthlystatus(Request $request)
+     public function clientmonthlystatus()
      {
-        $id =$request['id'];
-        $Report_type =$request['report_type'];
-        $Client =$request['client'];
-        $Month =$request['month'];
-        $Year =$request['year'];
-        DB::table('cra_client_monthly_file_status_report')->insert([
-
-            'id' =>  $id,
-            'Report_Type' => $Report_type,
-            'Client' =>   $Client,
-            'Month' =>  $Month,
-            'year' =>  $Year,
-
-        ]);
          return view('file_management.client-monthly-file-status');
      }
 
-     public function fileprogressreport(Request $request)
+     public function fileprogressreport()
      {
-        $id =$request['id'];
-        $Client =$request['client'];
-        $File =$request['file'];
-        $Date_from =$request['date_from'];
-        $Date_to =$request['date_to'];
-        
-        DB::table('cra_file_progress_report')->insert([
-
-            'id' =>  $id,
-            'Client' =>  $Client,
-            'File' =>   $File,
-            'Progress_Date_From' =>   $Date_from,
-            'Progress_Date_To' =>   $Date_to,
-
-        ]);
          return view('file_management.file-progress-report');
      }
 
-     public function filestatussummary(Request $request)
+     public function filestatussummary()
      {
-        $id =$request['id']; 
-        $Date_To =$request['date_to'];
-        $File =$request['file'];
-        $Instruction_Category =$request['category'];
-        $Receiver =$request['receiver'];
-        $Currency =$request['currency'];
-        $Exchange_Rate =$request['exchange_rate'];
-        $Turn_Around_Time =$request['turn_around_time'];
-        $Priority =$request['priority'];
-        $Details =$request['details'];
-
-        DB::table('cra_file_status_summary')->insert([
-
-            'id' =>  $id,
-            'Date_to' =>  $Date_To,
-            'File' =>   $File,
-            'Instruction_Category' =>   $Instruction_Category,
-            'Receiver' =>  $Receiver,
-            'Currency' =>  $Currency,
-            'Exchange_Rate' =>  $Exchange_Rate,
-            'Turn_Around_Time' =>  $Turn_Around_Time,
-            'Priority' =>  $Priority,
-            'Details' =>  $Details 
-
-        ]);
          return view('file_management.file-status-summary');
      }
 
@@ -439,48 +575,16 @@ class filemanagement extends Controller
  
 
 
-     public function bringup(Request $request)
+     public function bringup()
      {
-        $id =$request['id'];
-        $Client =$request['client'];
-        $File =$request['file'];
-        $Registered_by =$request['registered_by'];
-        $Responsible =$request['responsible'];
-        $Data_from =$request['data_from'];
-        $Data_to =$request['date_to'];
-
-        DB::table('cra_bringup')->insert([
-
-            'id' => $id,
-            'Client' => $Client,
-            'File' =>  $File,
-            'Registered_By' => $Registered_by,
-            'Responsible_Advocate' => $Responsible,
-            'Date_From' => $Data_from,
-            'Date_To' => $Data_to,
-
-        ]);
          return view('file_management.bringup');
      }
        //document manager
 
 
        //File Reports
-       public function filereport(Request $request)
+       public function filereport()
        {
-        $id =$request['id'];
-        $Resposible_advocate =$request['resposible_advocate'];
-        $Data_from =$request['data_from'];
-        $Date_to =$request['date_to'];
-
-        DB::table('cra_file_report')->insert([
-
-            'id' => $id,
-            'Responsible_Advocate' => $Resposible_advocate,
-            'Date_From' => $Data_from,
-            'Date_To' => $Date_to,
-
-        ]);
            return view('file_management.file-report');
        }
 
@@ -533,72 +637,13 @@ class filemanagement extends Controller
              return view('file_management.add-incomming-letters');
         }
 
-        public function safeitemrequest(Request $request)
+        public function safeitemrequest()
         {
-            $id =$request['id'];
-            $Client =$request['client'];
-            $File =$request['file'];
-            $Document_type =$request['document_type'];
-            $Staf_name =$request['staf_name'];
-            $Approver =$request['approver'];
-            $Requested_by =$request['requested_by'];
-            $Date =$request['date'];
-            $And =$request['and'];
-            $Distributed =$request['distributed'];
-            $status =$request['status'];
-
-            DB::table('cra_safe_item_request')->insert([
-
-                'id' => $id,
-                'Client' => $Client,
-                'File' => $File,
-                'Document_Type' => $Document_type,
-                'Safe_Name' => $Staf_name,
-                'Approver' => $Approver,
-                'Requested_By' => $Requested_by,
-                'Date' =>$Date,
-                'And_next' =>$And,
-                'Distributed_By' => $Distributed,
-                'Status' => $status,
-
-            ]);
              return view('file_management.safe-item-request');
         }
 
-        public function saferegisterreport(Request $request)
+        public function saferegisterreport()
         {
-           $id =$request['id'];
-           $Client =$request['client'];
-           $File =$request['file'];
-           $Document_type =$request['document_type'];
-           $Safe_name =$request['safe_name'];
-           $Approver =$request['approver'];
-           $Given_to =$request['given_to'];
-           $Requsted_by =$request['requsted_by'];
-            $Date =$request['date'];
-           $And =$request['and'];
-           $Document_condition =$request['document_condition'];
-           $Status =$request['status'];
-
-
-           DB::table('cra_safe_register_report')->insert([
-
-            'id' => $id,
-            'Client' =>  $Client,
-            'File' =>  $File,
-            'Document_Type' => $Document_type,
-            'Safe_Name' => $Safe_name,
-            'Approver' => $Approver,
-            'Given_To' => $Given_to,
-            'Requested_By' => $Requsted_by,
-            'Date' => $Date,
-            'and' => $And,
-            'Document_Condition' => $Document_condition,
-            'Status' =>  $Status,
-
-        ]);
-
-
              return view('file_management.safe-register-report');
         }
        //add ons
@@ -631,27 +676,8 @@ public function add_new_instructions()
     return view('file_management.new_office_instructions');
 }
 
-public function view_new_instructions(Request $request)
+public function view_new_instructions()
 {
-   $id =$request['id'];
-   $Report_category =$request['report_category'];
-   $Instruction_type =$request['instruction_type'];
-   $Expense_category =$request['expense_category'];
-   $Report_type =$request['report_type'];
-   $Date_from =$request['date_from'];
-   $Date_to =$request['date_to'];
-
-   DB::table('cra_instructions_report')->insert([
-
-    'id' => $id,
-    'Report_Category' => $Report_category,
-    'Instruction_Type' => $Instruction_type,
-    'Expense_Category' => $Expense_category,
-    'Report_Type' => $Report_type,
-    'Date_From' =>  $Date_from,
-    'Date_To' =>   $Date_to,
-]);
-
     return view('file_management.instructions_report');
 }
 
