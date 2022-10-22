@@ -47,8 +47,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="client" id="cars">
+                                    <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
@@ -67,8 +69,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="file" id="cars">
+                                <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
                                 </select><br>
                             </div>
                         </div>
@@ -84,7 +88,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="incorporation" id="age">
+                                <input type="date" class="form-control" name="date_from" id="age">
                             </div>
                         </div>
                     </div>
@@ -97,7 +101,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="incorporation" id="age">
+                                <input type="text" class="form-control" name="date_to" id="age">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
@@ -118,8 +122,8 @@
                     </div>
                     <div class="col-sm">
                         <br>
-                        <button type="submit" class="btn btn-primary"
-                            Style="width:45%; margin-right:0px;">Search</button>
+                        <button type="submit" class="btn btn-primary"  Style="width:50%; margin-right: -20px;">Search</button>
+                      
 
                     </div>
                 </div>

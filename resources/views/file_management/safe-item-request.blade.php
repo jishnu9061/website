@@ -1,4 +1,4 @@
--+@extends('layouts.hmsmain')
+@extends('layouts.hmsmain')
 @section('content')
 <div class="container">
     <div class="py-5 text-center">
@@ -56,6 +56,8 @@
             </div>
             <br>
 
+
+
         </div>
     </div>
 
@@ -79,8 +81,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="client" id="cars">
+                                    <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option> 
+
+
                                 </select>
                             </div>
                         </div>
@@ -95,8 +101,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="file" id="cars">
+                                <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option> 
                                 </select>
                             </div>
                         </div>
@@ -112,8 +120,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="document_type" id="cars">
+                                <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option> 
                                 </select>
                             </div>
                         </div>
@@ -129,8 +139,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="staf_name" id="cars">
+                                <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option> 
                                 </select>
                             </div>
                         </div>
@@ -146,8 +158,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="approver" id="cars">
+                                <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option> 
                                 </select>
                             </div>
                         </div>
@@ -160,8 +174,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="requested_by" id="cars">
+                                <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option> 
                                 </select>
                             </div>
                         </div>
@@ -176,7 +192,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="number" id="username" required>
+                                <input type="date" class="form-control" name="date" id="username" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -190,7 +206,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="number" id="username" required>
+                                <input type="text" class="form-control" name="and" id="username" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -208,8 +224,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="distributed" id="cars">
+                                <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option> 
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
@@ -225,8 +243,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="status" id="cars">
+                                <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option> 
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
@@ -252,21 +272,7 @@
     </div>
 
 
-<!-- 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
 
-            </div>
-            <div class="btn-group pt-3 " role="group" aria-label="Basic example">
-
-                <button type="submit" class="btn btn-primary submit_btn">View Report</button>
-                <button type="submit" class="btn btn-primary submit_btn">Close</button>
-
-            </div>
-        </div>
-    </div>
-</div> -->
 <div class="row">
                         <div class="col-sm">
 
@@ -276,7 +282,8 @@
                         </div>
                         <div class="col-sm">
                             <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">View Report</button>
+                            
+                            <button type="submit" class="btn btn-primary float:right;"  value="Submit" Style="width:45%;">View Report</button>
                             <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
                         </div>
                     </div>
