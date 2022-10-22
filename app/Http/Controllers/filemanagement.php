@@ -67,6 +67,79 @@ class filemanagement extends Controller
         ]);
         return redirect('/file-list');
     }
+    public function update(Request $request)
+    {
+        $id =$request['id'];
+        $Associate_handling=$request['associate_handling'];
+        $Client_type=$request['client_type'];
+        $opening_date=$request['opening_date'];
+        $Client_ref_no=$request['client_ref_no'];
+        $our_file_reference_no=$request['our_file_ref_no'];
+        $File_name=$request['file_name'];
+        $Approval_partner=$request['approval_partner'];
+        $Customer_name=$request['customer_name'];
+        $Address=$request['address'];
+        $Telephone=$request['telephone'];
+        $email=$request['email'];
+        $amount=$request['amount'];
+        $workflow=$request['workflow'];
+
+        $responsible_advocate=$request['responsibleadvocate'];
+        $recent_progress=$request['recentprogress'];
+        $closing_date=$request['closedate'];
+        $file_balance=$request['filebalance'];
+        $paid_amount=$request['paidamount'];
+        $balance_fee=$request['feebalance'];
+        $status=$request['status'];
+
+        // $update_new_file= array(
+        
+        //     'Associate_handling' => $Associate_handling,
+        //     'Client_type' => $Client_type,
+        //     'opening_date' => $opening_date,
+        //     'Client_ref_no' => $Client_ref_no,
+        //     'our_file_reference_no' => $our_file_reference_no,
+        //     'File_name' => $File_name,
+        //     'Approval_partner' => $Approval_partner,
+        //     'Customer_name' => $Customer_name,
+        //     'Address' => $Address,
+        //     'Telephone' => $Telephone,
+        //     'email' => $email,
+        //     'amount' => $amount,
+        //     'workflow' => $workflow,
+        // );
+
+        DB::table('cra_open_new_file_details')->where('id',$id)->update([
+            'Associate_handling' => $Associate_handling,
+            'Client_type' => $Client_type,
+            'opening_date' => $opening_date,
+            'Client_ref_no' => $Client_ref_no,
+            'our_file_reference_no' => $our_file_reference_no,
+            'File_name' => $File_name,
+            'Approval_partner' => $Approval_partner,
+            'Customer_name' => $Customer_name,
+            'Address' => $Address,
+            'Telephone' => $Telephone,
+            'email' => $email,
+            'amount' => $amount,
+            'workflow' => $workflow,
+
+            'responsible_advocate' => $responsible_advocate,
+            'recent_progress' => $recent_progress,
+            'closing_date' => $closing_date,
+            'file_balance' => $file_balance,
+            'paid_amount' => $paid_amount,
+            'balance_fee' => $balance_fee,
+            'status' => $status,
+
+
+        ]);
+
+        return redirect('/file-list');
+
+        // return view('file_management.template-category');
+    }
+
 
 
     //document temblates
