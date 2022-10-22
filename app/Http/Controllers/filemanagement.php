@@ -514,7 +514,7 @@ class filemanagement extends Controller
 
 
     //monthly file status report
-     public function clientmonthlystatus()
+     public function clientmonthlystatus(Request $request)
      {
          return view('file_management.client-monthly-file-status');
      }
