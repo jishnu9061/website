@@ -34,7 +34,7 @@
 
 
             {{-- button with drop down --}}
-            {{-- <div class="col-sm-4 ">
+            <div class="col-sm-4 ">
                 <div class="dropdown    "> <img class="logo_size" src="image\logo\Client list.png" alt=""><button
                         type="button" style="width:70%;" id="dropdownMenuButton" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false" class="btn btn-primary btn_align_btn">Client
@@ -45,7 +45,7 @@
                         <a class="dropdown-item" href="{{ url('client_list') }}">Individual Client</a>
                     </div>
                 </div>
-            </div> --}}
+            </div>
 
             <div class="col-sm-4 "><img class="logo_size" src="image\logo\Client Pickup At Reception.png" alt=""><a
                     href="{{ url('client-pickup') }}"><button type="button" style="width:70%;"
@@ -80,7 +80,7 @@
         {{-- sub heading --}}
         <h5 id="hdbtb">Customer Relationship</h5>
         <br>
-        <div class="row sm">
+            <div class="row sm">
             <div class="col-sm-4 "><img class="logo_size" src="image\logo\Customer registeration.png" alt=""><a
                     href="{{ url('view-registration') }}"><button type="button" style="width:70%;"
                         class="btn btn-primary btn_align_btn">
