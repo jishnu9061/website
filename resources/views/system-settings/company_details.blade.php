@@ -51,10 +51,10 @@
     <td>{{$company->town_city}}</td>
     <td>{{$company->Add_Logo}}</td>
    
-    <<td>CRA</td>
+    <td>CRA</td>
     <td>Stima Investment Plaza 1,3rd Floor,Mushembi Rd, Parklands </td>
     <td>Nairobi, Kenya</td>
-    <td></td> -->
+    <td></td> 
     
 <td  scope="row"class="text-center"><a href="{{url('edit_company_details',$company->id)}}">
 <i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i></td>

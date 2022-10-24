@@ -24,16 +24,17 @@
 
     <form method="post" action="" id="form">  
        @csrf
+   
        <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
                         <label >User's Name:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <select type="text" value="" id="" name="name"style="width:100%;">
+                                <select type="text" value="" id="" name="user_name"style="width:100%;">
+                               
+                  
                                 <option>Princess Caroline(caroline)</option>
-                                <option></option>
-                                <option></option>
                                 <option></option>
                                 <option></option>
                             </select>
@@ -48,7 +49,7 @@
                             <label>Old Password:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="password"  id="" name="password"value=""class="form-control"style="width:100%;">
+                                <input type="password"  id="" name="old_password"value=""class="form-control"style="width:100%;">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -62,7 +63,7 @@
                         <label >New Password:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="password"  id="" name="password"value=""class="form-control"style="width:100%;">
+                                <input type="password"  id="" name="new_password"value=""class="form-control"style="width:100%;">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -74,7 +75,7 @@
                             <label>Confirm Password:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="password"  id="" name="password"value=""class="form-control"style="width:100%;">
+                                <input type="password"  id="" name="confirm_password"value=""class="form-control"style="width:100%;">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
