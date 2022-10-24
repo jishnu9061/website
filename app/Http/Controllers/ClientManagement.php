@@ -862,17 +862,7 @@ class ClientManagement extends Controller
 
     //communication
 
-    public function listCommunication(){
-        $list_communication = DB::table('cra_conversations')->get();
-        return view('client-management.communication-list',compact('list_communication'));
-    }
-
-    
-    public function indexCommunication(){
-        return view('client-management.add-communication');
-    }
-
-    public function addCommunication(Request $Request){
+    public function listCommunication(Request $Request){
         $communication_date = $Request['date'];
         $client = $Request['Client'];
         $file = $Request['File'];
@@ -907,8 +897,52 @@ class ClientManagement extends Controller
             'action_plan' =>  $action_plan,
         ]);
 
-        return redirect('/communication-list');
+        $list_communication = DB::table('cra_conversations')->get();
+        return view('client-management.communication-list',compact('list_communication'));
     }
+
+    
+    public function indexCommunication(){
+        return view('client-management.add-communication');
+    }
+
+    // public function addCommunication(Request $Request){
+    //     $communication_date = $Request['date'];
+    //     $client = $Request['Client'];
+    //     $file = $Request['File'];
+    //     $customer = $Request['Customer'];
+    //     $telephone_no = $Request['telephone'];
+    //     $email = $Request['Email'];
+    //     $communication_source = $Request['Sources'];
+    //     $mode_of_communication = $Request['Communication'];
+    //     $communicated = $Request['Communicated'];
+    //     $duration = $Request['Duration'];
+    //     $person_handling = $Request['Handling'];
+    //     $time = $Request['Timer'];
+    //     $others = $Request['Others'];
+    //     $communicated_description = $Request['Description'];
+    //     $action_plan = $Request['Action'];
+
+    //     DB::table('cra_conversations')->insert([
+    //         'communication_date' => $communication_date,
+    //         'client' =>   $client,
+    //         'file' => $file,
+    //         'customer' =>$customer,
+    //         'telephone_no' => $telephone_no,
+    //         'email' =>  $email,
+    //         'communication_source' =>  $communication_source,
+    //         'mode_of_communication' =>  $mode_of_communication,
+    //         'communicated' => $communicated ,
+    //         'duration' => $duration,
+    //         'person_handling' =>  $person_handling,
+    //         'time' =>  $time,
+    //         'others' => $others ,
+    //         'communicated_description' =>  $communicated_description,
+    //         'action_plan' =>  $action_plan,
+    //     ]);
+
+    //     return redirect('/communication-list');
+    // }
 
 
     public function editCommunication($id){
