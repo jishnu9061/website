@@ -96,7 +96,7 @@
                             <label for="username">Communication Date</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="date" id="username" value="" placeholder=""
+                                <input type="date" class="form-control" name="date" id="date" value="" placeholder=""
                                     required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Date is required.
@@ -109,7 +109,7 @@
                             <label for="username">Time</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="time" class="form-control" name="date" id="username" value="" placeholder=""
+                                <input type="time" class="form-control" name="Timer" id="username" value="" placeholder=""
                                     required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Date is required.
@@ -124,7 +124,7 @@
                                 <div class="input-group-prepend">
                 
                                 </div>
-                                <select name="Category" id="cars">
+                                <select name="Client" id="cars">
                                     <option >Select</option>
                                     <option value="Client Category1">Client Category1</option>
                                     <option value="Client Category2">Client Category2</option>
@@ -158,7 +158,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
+                                <select name="Customer" id="cars">
                                     <option >Select</option>
                                     <option value="Kenya">demo 1</option>
                                     <option value="South Africa">demo 1</option>
@@ -175,7 +175,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="date_to" id="age">
+                                <input type="text" class="form-control" name="telephone" id="age">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
@@ -193,7 +193,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="date_to" id="age">
+                                <input type="text" class="form-control" name="Email" id="age">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
@@ -207,7 +207,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
+                                <select name="Sources" id="cars">
                                     <option >Select</option>
                                     <option value="Kenya">demo 1</option>
                                     <option value="South Africa">demo 1</option>
@@ -224,7 +224,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
+                                <select name="Communication" id="cars">
                                     <option >Select</option>
                                     <option value="Kenya">demo 1</option>
                                     <option value="South Africa">demo 1</option>
@@ -244,7 +244,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
+                                <select name="Communicated" id="cars">
                                     <option >Select</option>
                                     <option value="Kenya">demo 1</option>
                                     <option value="South Africa">demo 1</option>
@@ -261,7 +261,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="date_to" id="age">
+                                <input type="text" class="form-control" name="Duration" id="age">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
@@ -275,7 +275,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="date_to" id="age">
+                                <input type="text" class="form-control" name="Description" id="age">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
@@ -292,7 +292,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="date_to" id="age">
+                                <input type="text" class="form-control" name="Action" id="age">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
@@ -306,7 +306,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
+                                <select name="Handling" id="cars">
                                     <option >Select</option>
                                     <option value="Kenya">demo 1</option>
                                     <option value="South Africa">demo 1</option>
@@ -323,7 +323,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="date_to" id="age">
+                                <input type="text" class="form-control" name="Others" id="age">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
