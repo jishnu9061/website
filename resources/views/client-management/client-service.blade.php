@@ -32,11 +32,11 @@
                     <table class="table table-responsive" id="new-item" style="width:100%">
                         <thead>
                             <tr>
-                                <th class="text-center">Branch</th>
-                                <th class="text-center">Client</th>
+                                <th class="text-center"style="width:15%;">Branch</th>
+                                <th class="text-center"style="width:15%;">Client</th>
                                 <th class="text-center">Phone</th>
                                 <th class="text-center">Service</th>
-                                <th class="text-center">Description</th>
+                                <th class="text-center" style="width:15%;">Description</th>
                                 <th class="text-center">Handling</th>
                                 <th class="text-center">Amount</th>
                                 <th class="text-center">RCPT</th>
@@ -60,7 +60,7 @@
                                 <td class="text-center" id="medicine_name_1"></td>
                                 <td class="text-center" id="medicine_name_1"></td>
                                 <td class="text-center" id="medicine_name_1"></td>
-                                {{-- <td scope="row" class="text-center" id="medicine_name_1"></td>  --}}
+                              
 
                             </tr>
                             @endforeach

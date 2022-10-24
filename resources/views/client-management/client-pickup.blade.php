@@ -51,7 +51,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($client_pickup as $pickup)
+                                @foreach($client_pickup as $pickup)
                                 <tr id="data">
                                     <td scope="row" class="text-center">{{$pickup->id}}</td>
                                     <td scope="row" class="text-center">{{$pickup->client}}</td>
@@ -67,7 +67,7 @@
                                                 aria-hidden="true"></i></a>
                                     </td>
                                 </tr>
-                                @endforeach;
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
