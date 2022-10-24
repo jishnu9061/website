@@ -88,7 +88,7 @@
                             <label for="username">Department Code</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="d_code" id="username" value="">
+                                <input type="text" class="form-control" name="d_code" id="username" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -100,7 +100,7 @@
                             <label for="username">Department Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="d_name" id="username" value="">
+                                <input type="text" class="form-control" name="d_name" id="username" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
