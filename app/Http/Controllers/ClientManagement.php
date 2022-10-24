@@ -30,12 +30,7 @@ class ClientManagement extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function addNewclient(){
-
-        return view('client-management.add-newclient');
-    }
-    public function storeClient(Request $Request)
-    {
+    public function addNewclient(Request $Request){
         $number = $Request['number'];
         $client_type = $Request['type'];
         $citizen_status = $Request['citizen'];
@@ -84,7 +79,6 @@ class ClientManagement extends Controller
         ]);
         
         return redirect('/client_list');
-
     }
 
     /**
@@ -371,22 +365,22 @@ class ClientManagement extends Controller
         return view('client-management.add-document');
     }
 
-    public function addDocument(Request $Request){
+    // public function addDocument(Request $Request){
 
-        $document_type = $Request['type'];
-        $file = $Request['file'];
+    //     $document_type = $Request['type'];
+    //     $file = $Request['file'];
 
-        if(!empty($Request->file('file'))){
+    //     if(!empty($Request->file('file'))){
 
-            $this->validate($Request ,[
-                'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg|max:2048',
-            ]);
-        }
+    //         $this->validate($Request ,[
+    //             'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg|max:2048',
+    //         ]);
+    //     }
 
-        $img = time() . '-' . $Request->name . '.' .
-        $Request->file->extension();
+    //     $img = time() . '-' . $Request->name . '.' .
+    //     $Request->file->extension();
 
-       $test = $Request->file->move(public_path('images\files'),$img);
+    //    $test = $Request->file->move(public_path('images\files'),$img);
       
 
         // $input = $Request->all();
@@ -401,14 +395,14 @@ class ClientManagement extends Controller
         //     $paths = '';
         // }
 
-        DB::table('cra_document_detials')->insert([
+    //     DB::table('cra_document_detials')->insert([
 
-            'document_type' =>  $document_type,
-            'file' =>  $img,
-        ]);
-        return redirect('/client-document');
+    //         'document_type' =>  $document_type,
+    //         'file' =>  $img,
+    //     ]);
+    //     return redirect('/client-document');
 
-    }
+    // }
 
 
     public function viewDocument(){
