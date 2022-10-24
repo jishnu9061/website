@@ -39,30 +39,30 @@
       <thead>
 
                         <tr>
-                        <th class="text-center" >No</th>
-                        <th class="text-center" >Department Code</th>
-                        <th class="text-center" >Department Name</th>
-                        <th class="text-center" >H.O.D</th>
-                        <th class="text-center" >Action</th>
-                      
-                   
-                    </tr>
+                        <th>No</th>
+                        <th>Department Code</th>
+                        <th>Department Name</th>
+                        <th>H.O.D</th>
+                        <th>Action</th>
+  </tr>
 </thead>
              <tbody>
+             @foreach($user_department as $department)
             
                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
+                        <td>{{$department->id}}</td>
+                        <td>{{$department->department_code}}</td>
+                        <td>{{$department->department_name}}</td>
+                        <td>{{$department->hod}}</td>
                         <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
-                                 <a href="{{url('edit_user_department')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                                 <a href="{{url('')}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
+                                 <a href="{{url('edit_user_department',$department->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                                 <a href="{{url('delete_user_department',$department->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
                   
                      </tr>
+                     @endforeach
                      </tbody>
                      </table><br>
-</div >  
+
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
@@ -77,8 +77,9 @@
                                     <!-- Modal body -->
                                     <div class="modal-body" style="background-color:white">
                                         <div class="container">
-                                            <form method="post" action="{{ url('add_user_department') }}"
+                                            <form method="post" action="{{url('add_user_department')}}"
                                                 enctype="multipart/form-data"> 
+</div>
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->   
 @csrf
                 <div class="row">
@@ -87,7 +88,7 @@
                             <label for="username">Department Code</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="">
+                                <input type="text" class="form-control" name="d_code" id="username" value="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -99,7 +100,7 @@
                             <label for="username">Department Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="">
+                                <input type="text" class="form-control" name="d_name" id="username" value="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -115,7 +116,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <select name="" id="cars">
+                                <select name="h_o_d" id="cars">
                                 <option>select</option>
                                 <option>Cedric Opara</option>
                                 <option>Corrine Auma</option>
@@ -145,7 +146,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <select name="" id="cars">
+                                <select name="perf_dept" id="cars">
                                     <option>--select--</option>
                                     <option>Yes</option>
                                     <option>No</option>   
