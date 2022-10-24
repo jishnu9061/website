@@ -47,19 +47,19 @@
                 </div>
             </div>
 
-            <div class="col-sm-4 "><img class="logo_size" src="image\logo\Client Pickup At Reception.png" alt=""><a
+            <!-- <div class="col-sm-4 "><img class="logo_size" src="image\logo\Client Pickup At Reception.png" alt=""><a
                     href="{{ url('client-pickup') }}"><button type="button" style="width:70%;"
-                        class="btn btn-primary btn_align_btn">Client Pickup At Reception</button></a></div>
+                        class="btn btn-primary btn_align_btn">Client Pickup At Reception</button></a></div> -->
 
-            <div class="col-sm-4 "><img class="logo_size" src="image\logo\Client search.png" alt=""><a
+            <!-- <div class="col-sm-4 "><img class="logo_size" src="image\logo\Client search.png" alt=""><a
                     href="{{ url('search-list') }}"><button
                         type="button"style="width:70%;"class="btn btn-primary btn_align_btn">Client
-                        Search</button></a></div>
+                        Search</button></a></div> -->
 
-            <div class="col-sm-4 "><img class="logo_size" src="image\logo\client sevices at reception.png" alt=""><a
+            <!-- <div class="col-sm-4 "><img class="logo_size" src="image\logo\client sevices at reception.png" alt=""><a
                     href="{{ url('client-service') }}"><button type="button"style="width:70%;"
                         class="btn btn-primary btn_align_btn">
-                        Client Services At Reception</button></a></div>
+                        Client Services At Reception</button></a></div> -->
 
             <div class="col-sm-4 "><img class="logo_size" src="image\logo\Document details.png" alt=""><a
                     href="{{ url('client-document') }}"><button
@@ -68,7 +68,7 @@
 
             <div class="col-sm-4 "><img class="logo_size" src="image\logo\Client conversation.png" alt=""><a
                     href="{{ url('communication-list') }}"><button type="button"style="width:70%;"
-                        class="btn btn-primary btn_align_btn">Client Conversations</button></a></div>
+                        class="btn btn-primary btn_align_btn">Client Communication</button></a></div>
 
             <div class="col-sm-4 "><img class="logo_size" src="image\logo\Complaint register.png" alt=""><a
                     href="complaint-list"><button type="button"

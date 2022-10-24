@@ -1,314 +1,296 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container">
-    <div class="py-5 text-center">
-        @if(Session::has('staffregistered'))
-        <div class="alert alert-dark" role="alert">
-            {{ Session::get('staffregistered')}}
-        </div>
-        @endif
-        @if(Session::has('leavevalidat'))
-        <div class="alert alert-dark" role="alert">
-            {{ Session::get('leavevalidat')}}
-        </div>
-        @endif
-        <div class="col-sm">
+    <div class="">
 
 
-        </div>
         <div>
-        <div>
-        {{-- heading --}}
-    <h4 id="hdtpa"><b>Edit Instruction</b></h4>
-    <br><br>
-            
-        </div>
-        
-
-            <br>
-            <div >
-                <input class="btn btn-primary" type="button" value="View File Statement">
-                <input class="btn btn-primary" type="button" value="View File Details">
-                <input class="btn btn-primary" type="button" value="Previous Instructions">
-                <input class="btn btn-primary" type="button" value="Post File Progress">
-                <input class="btn btn-primary" type="button" value="Post File Progress Only">
-                <input class="btn btn-primary" type="button" value="Post File Bring-Up Only">
-
-            </div>
-            <br>
-           
+            <div class="btn btn-primary"
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Add Communication</u></b></span></div><br><br>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
 
         </div>
+       
+        <br>
+        <br>
+
     </div>
-
-
     <div class="row">
-
-
-        <div class="col-md-12 order-md-1">
-
-            <form method="post" action="" id="form">
+        <div class="col-md-12">
+            <form method="post" action="{{url('add-register')}}" id="form">
                 @csrf
-
-
-
                 <div class="row">
-
-
-
-                    <div class="col-md-4">
+                <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username"> Date(to)</label>
+                            <label for="username">Communication Date</label>
                             <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="date" class="form-control" name="number" id="username" required>
+                                <div class="input-group-prepend"></div>
+                                <input type="date" class="form-control" name="date" id="username" value="" placeholder=""
+                                    required>
                                 <div class="invalid-feedback" style="width: 100%;">
-                                    Number is required.
+                                    Date is required.
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-
-
+                </div>
+                <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Time</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="time" class="form-control" name="date" id="username" value="" placeholder=""
+                                    required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Date is required.
+                                </div>
+                            </div>
+                        </div>
+                </div>
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Client</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-
+                
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="Category" id="cars">
+                                    <option >Select</option>
+                                    <option value="Client Category1">Client Category1</option>
+                                    <option value="Client Category2">Client Category2</option>
                                 </select>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">File</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-
-
+                    
+                    
                 </div>
                 <br>
                 <div class="row">
-
-
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Instruction Type</label>
+                            <label for="username">File </label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="File" id="cars">
+                                    <option>Select</option>
+                                    <option value="Type 1">Type 1</option>
+                                    <option value="Type 2">Type 2</option>
                                 </select>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Instruction Category</label>
+                            <label for="username">Customer</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
                                 <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                    <option >Select</option>
+                                    <option value="Kenya">demo 1</option>
+                                    <option value="South Africa">demo 1</option>
+                                    <option value="India">demo 3</option>
+                                    <option value="America">demo 4</option>
                                 </select>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Receiver</label>
+                            <label for="username">Telephone Number</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="date_to" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <br>
+                <div class="row">
+                <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">E-mail</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="date_to" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Communication Source</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
                                 <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                    <option >Select</option>
+                                    <option value="Kenya">demo 1</option>
+                                    <option value="South Africa">demo 1</option>
+                                    <option value="India">demo 3</option>
+                                    <option value="America">demo 4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Mode of Communication</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="country" id="cars">
+                                    <option >Select</option>
+                                    <option value="Kenya">demo 1</option>
+                                    <option value="South Africa">demo 1</option>
+                                    <option value="India">demo 3</option>
+                                    <option value="America">demo 4</option>
                                 </select>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="test" style="height:20px;"></div>
-        </div>
-    </div>
+                <br>
+                <div class="row">
+                <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Communication With (Internal)</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
-
-
-    <div class="row">
-
-
-        <div class="col-md-2">
-            <div class="mb-1">
-                <label for="username">Currency</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
+                                </div>
+                                <select name="country" id="cars">
+                                    <option >Select</option>
+                                    <option value="Kenya">demo 1</option>
+                                    <option value="South Africa">demo 1</option>
+                                    <option value="India">demo 3</option>
+                                    <option value="America">demo 4</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="mb-1">
-                <label for="username">Exchangr Rate</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Duration (Minutes)</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
+                                </div>
+                                <input type="text" class="form-control" name="date_to" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <input type="text" class="form-control" name="incorporation" id="age">
-                    <div class="invalid-feedback" style="width: 100%;">
-                        Incorporation is required
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-md-2">
-            <div class="mb-1">
-                <label for="username">Turn-Around Time</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Communication Description</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
-                    </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="mb-1">
-                <label for="username">Priority</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
-                    </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-md-4">
-            <div class="mb-1">
-                <label for="username">Amount</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
-                    </div>
-                    <input type="text" class="form-control" name="incorporation" id="age">
-                    <div class="invalid-feedback" style="width: 100%;">
-                        Incorporation is required
+                                </div>
+                                <input type="text" class="form-control" name="date_to" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+                <br>
+                <div class="row">
+                <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Action Plan</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="date_to" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Person Handling</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="country" id="cars">
+                                    <option >Select</option>
+                                    <option value="Kenya">demo 1</option>
+                                    <option value="South Africa">demo 1</option>
+                                    <option value="India">demo 3</option>
+                                    <option value="America">demo 4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Other</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="date_to" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            
+                <br>
+                <div class="row">
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+                        <br>
+                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
+                    </div>
+                </div>
+               
 </div>
-<div class="row">
-        <div class="col-md-12">
-            <div class="mb-1">
-                <label for="username">Details</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
-                    </div>
-                    <textarea class="form-control" id="form7Example7" rows="3"></textarea>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-    <hr class="mb-4">
-
-    <div class="row">
-
-
-        <div class="col-md-4">
-            <div class="mb-1">
-                <label for="username">Send Notification To</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
-                    </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
-                    </select>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
 <br>
-<div class="container">
-                    <div class="row">
-                      <div class="col-sm">
-                      </div>
-                      <div class="col-sm">
-                      </div>
-                      <div class="col-sm">
-                        <button type="submit" class="btn btn-primary float:right" style="width:45%">Save</button>
-                        <button type="submit" class="btn btn-primary float:left"style="width:45%">Close</button>
-                      </div>
-                    </div>
-                  </div>
-</form>
 
+</div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
 
-
-
-
-
-
-
-
-
-
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
 $(function() {
@@ -335,7 +317,7 @@ $(document).on('click', '#testing', function() {
                                     method: "POST",
                                     url: "/allowancetostaff",
                                     data: {
-                                        "_token": "{{ csrf_token()}}",
+                                        "_token": "{{ csrf_token() }}",
                                         'allowanceid': allowanceid,
                                         'staffid': staffid,
                                         'status': 'allowance',
@@ -475,9 +457,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Salary is required. <
                 /div> < /
-            div > <
+                div > <
                 /div> < /
-            div >
+                div >
 
                 <
                 div class = "col-md-4" >
@@ -504,9 +486,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Years of experience is required. <
                 /div> < /
-            div > <
+                div > <
                 /div> < /
-            div > <
+                div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -529,9 +511,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 dob is required. <
                 /div> < /
-            div > <
+                div > <
                 /div> < /
-            div > <
+                div > <
                 /div>
 
             {
@@ -563,9 +545,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Bank Name is required. <
                 /div> < /
-            div > <
+                div > <
                 /div> < /
-            div >
+                div >
 
                 <
                 div class = "col-md-4" >
@@ -591,9 +573,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Account number is required. <
                 /div> < /
-            div > <
+                div > <
                 /div> < /
-            div > <
+                div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -616,9 +598,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 IFSC Code is required. <
                 /div> < /
-            div > <
+                div > <
                 /div> < /
-            div > <
+                div > <
                 div class = "col-md-12" >
                 <
                 div class = "mb-1" >
@@ -659,7 +641,7 @@ $(document).on('input', '#percent', function() {
 
                 <
                 /tr> < /
-            table > {
+                table > {
                     {
                         -- < input type = "text"
                         class = "form-control"
@@ -673,10 +655,10 @@ $(document).on('input', '#percent', function() {
                     }
                 } {
                     {
-                        -- < /div> --}} < /
+                        -- < /div> --}} <
+                        /div> < /
                         div > <
-                            /div> < /
-                        div >
+                            /div>
 
                             <
                             /div> <
@@ -718,48 +700,11 @@ $(document).on('input', '#percent', function() {
 
                             <
                             /tbody> < /
-                        table > <
+                            table > <
                             /div> < /
-                        div >
-
-                            <
-                            div class = "modal"
-                        id = "my" >
-                            <
-                            div class = "modal-dialog" >
-                            <
-                            div class = "modal-content" >
-                            <
-                            div class = "modal-header" >
-                            <
-                            div class = "modal-body" >
-                            <
-                            form action = "" >
-                            <
-                            div >
-                            <
-                            input type = "text"
-                        name = "type"
-                        class = "form-control"
-                        placeholder = "Country" >
-                            <
-                            button class = "btn btn-primary sub_btnn"
-                        type = "submit" > submit < /button> < /
-                        div > <
-                            /form> < /
-                        div > <
-                            /div> < /
-                        div > <
-                            /div> < /
-                        div > <
-                            /div>
-
-                            <
-                            script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-                        integrity = "sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-                        crossorigin = "anonymous" >
+                            div > <
+                            script src = "{{ url('assets/js') }}/jquery.min.js" >
 </script>
-<script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
 $(function() {
     $('[data-toggle="popover"]').popover()
@@ -785,7 +730,7 @@ $(document).on('click', '#testing1', function() {
                                     method: "POST",
                                     url: "/allowancetostaff",
                                     data: {
-                                        "_token": "{{ csrf_token()}}",
+                                        "_token": "{{ csrf_token() }}",
                                         'allowanceid': allowanceid,
                                         'staffid': staffid,
                                         'status': 'reduction',
@@ -914,7 +859,8 @@ $(document).on('click', '#testing1', function() {
                                     div > <
                                     /form> < /
                                     div > <
-                                    script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
+                                    script src =
+                                    "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
 </script>
 <script type="text/javascript">
 $('#password, #confirm_password').on('keyup', function() {

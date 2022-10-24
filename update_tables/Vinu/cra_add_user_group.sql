@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 10, 2022 at 12:55 PM
+-- Generation Time: Oct 24, 2022 at 10:50 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -24,32 +24,32 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cra_company_branch_details`
+-- Table structure for table `cra_add_user_group`
 --
 
-CREATE TABLE `cra_company_branch_details` (
+CREATE TABLE `cra_add_user_group` (
   `id` int(11) NOT NULL,
-  `branch_no` int(11) DEFAULT NULL,
-  `branch_code` varchar(255) DEFAULT NULL,
-  `branch_name` varchar(255) DEFAULT NULL,
-  `address` varchar(255) DEFAULT NULL,
-  `telephone` int(11) DEFAULT NULL,
-  `mobile` int(11) DEFAULT NULL,
-  `fax` int(11) DEFAULT NULL,
-  `town` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `website` varchar(255) DEFAULT NULL,
-  `physical_address` varchar(255) DEFAULT NULL
+  `group_code` varchar(255) DEFAULT NULL,
+  `group_name` varchar(255) DEFAULT NULL,
+  `default_menu` varchar(255) DEFAULT NULL,
+  `group_role` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_add_user_group`
+--
+
+INSERT INTO `cra_add_user_group` (`id`, `group_code`, `group_name`, `default_menu`, `group_role`) VALUES
+(1, '123456', 'cra', 'Dashboard', '--select group roles--');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `cra_company_branch_details`
+-- Indexes for table `cra_add_user_group`
 --
-ALTER TABLE `cra_company_branch_details`
+ALTER TABLE `cra_add_user_group`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -57,10 +57,10 @@ ALTER TABLE `cra_company_branch_details`
 --
 
 --
--- AUTO_INCREMENT for table `cra_company_branch_details`
+-- AUTO_INCREMENT for table `cra_add_user_group`
 --
-ALTER TABLE `cra_company_branch_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `cra_add_user_group`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
