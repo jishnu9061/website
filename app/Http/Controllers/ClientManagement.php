@@ -416,6 +416,11 @@ class ClientManagement extends Controller
         return view('client-management.view-document');
     }
 
+    public function add_communication(){
+
+        return view('client-management.new_communication');
+    }
+
     //Pickup-client
 
     public function clientPickup(){
