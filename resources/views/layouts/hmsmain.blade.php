@@ -59,6 +59,10 @@
     body{
         background-color: #F4F4F6
     }
+
+    html {
+  scroll-behavior: smooth;
+}
  
     </style>
 
@@ -1024,12 +1028,12 @@
               </nav> --}}
 
 
-<nav class="navbar navbar-expand-lg  sticky-top navbar-light bg-white " >
-    {{-- <a id="backbtn" href="javascript:history.back()" style=" color: #070344;
+<nav class="navbar navbar-expand-lg  sticky-top navbar-light bg-white  " >
+    <a id="backbtn" href="javascript:history.back()" style=" color: #070344;
     font-size: 20px;" >
-    <i id="bkbtnicon" class="far fa-arrow-alt-circle-left"></i></a> --}}
+    <i id="bkbtnicon" class="far fa-arrow-alt-circle-left"></i></a>
 
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand pl-4" href="#">
         <img src="assets/images/faces/lawemb.png"  height="40px" class="d-inline-block align-top" alt="">
         
       </a>
