@@ -19,11 +19,22 @@
         <div class="btn btn-primary"
             style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Client
                     Conversation</u></b></div><br><br>
-        <div class="">
-            <button type="button" class="btn btn-primary complaint_btn" data-toggle="modal" data-target="#myModal"
-                style="width:27%;"> Add
-                Communication</button></a>
-        </div><br>
+        <div>
+            <button type="submit" class="btn btn-primary float:right;" data-toggle="modal" data-target="#myModal"
+                Style="width:18%;">Add Comminication</button>
+            <a href="{{url('client-pickup')}}"><button type="submit" class="btn btn-primary float:right;"
+                    Style="width:14%;">Client Pickup</button></a>
+            <a href="{{url('client-service')}}"><button type="submit" class="btn btn-primary float:right;"
+                    Style="width:14%;"> Client Services</button></a>
+            <button type="submit" class="btn btn-primary float:right;" Style="width:13%;">Client Portal</button>
+            <button type="submit" class="btn btn-primary float:right;" Style="width:16%;">Internal Message</button>
+            <button type="submit" class="btn btn-primary float:right;" Style="width:11%;">Phone Log</button>
+            <button type="submit" class="btn btn-primary float:right;" Style="width:11%;">Email Log</button>
+        </div>
+        <br>
+       
+        <br>
+
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="table-responsive">
                 <table class="table table-bordered" id="new-item">
