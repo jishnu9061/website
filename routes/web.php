@@ -957,6 +957,8 @@ Route::any('add_new_user_grp','UserManagement@addnewusergrp')->name('add_new_use
 Route::any('/update_group','UserManagement@updategroup')->name('update_group');
 
 Route::any('/edit_new_user_grp/{id}','UserManagement@editnewusergrp')->name('edit_new_user_grp');
+
+Route::any('/user_group_destroy/{id}',"UserManagement@usergroupdestroy")->name('user_group_destroy');
 //end
 //view roles per user
 Route::any('view_roles_per_user','UserManagement@rolesperuser')->name('view_roles_per_user');
@@ -965,16 +967,28 @@ Route::any('edit_view_roles','UserManagement@editviewroles')->name('edit_view_ro
 //manage user roles
 Route::any('manage_user_roles','UserManagement@manageuserroles')->name('manage_user_roles');
 Route::any('add_user_roles','UserManagement@adduserrole')->name('add_user_roles');
+
+Route::any('/edit_user_roles/{id}','UserManagement@edituserrole')->name('edit_user_roles');
+Route::any('/update_role','UserManagement@updaterole')->name('update_role');
+Route::any('/user_role_destroy/{id}',"UserManagement@userroledestroy")->name('user_role_destroy');
+
 Route::any('edit_user_roles/{id}','UserManagement@edituserrole')->name('edit_user_roles');
 Route::any('/update_user_roles','UserManagement@updateuserrole')->name('update_user_roles');
 Route::any('/delete_user_roles/{id}','UserManagement@deleteuserrole')->name('delete_user_roles');
+
 //end
 //manage user department
 Route::any('manage_user_department','UserManagement@manageuserdepartment')->name('manage_user_department');
 Route::any('add_user_department','UserManagement@adduserdepartment')->name('add_user_department');
+
+Route::any('/edit_user_department/{id}','UserManagement@edituserdepartment')->name('edit_user_department');
+Route::any('/update_user_department','UserManagement@updateuserdepartment')->name('update_user_department');
+Route::any('/destroy_user_department/{id}',"UserManagement@destroyuserdepsrtment")->name('destroy_user_department');
+
 Route::any('edit_user_department/{id}','UserManagement@edituserdepartment')->name('edit_user_department');
 Route::any('/update_user_department','UserManagement@updateuserdepartment')->name('update_user_department');
 Route::any('/delete_user_department/{id}','UserManagement@deleteuserdepartment')->name('delete_user_department');
+
 //end
 //advocate targets
 Route::any('advocates_target','UserManagement@advocatestarget')->name('advocates_target');

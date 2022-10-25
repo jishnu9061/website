@@ -47,6 +47,17 @@
   </tr>
 </thead>
              <tbody>
+
+            @foreach($manage_document  as $document)
+                    <tr>
+                        <td  class="text-center">{{$document->id}}</td>
+                        <td  class="text-center">{{$document->department_code}}</td>
+                        <td class="text-center">{{$document->department_name}}</td>
+                        <td class="text-center">{{$document->h_o_d}}</td>
+                        <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
+                                 <a href="{{url('edit_user_department',$document->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                                 <a href="{{url('destroy_user_department',$document->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
+
              @foreach($user_department as $department)
             
                     <tr>
@@ -57,6 +68,7 @@
                         <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
                                  <a href="{{url('edit_user_department',$department->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                                  <a href="{{url('delete_user_department',$department->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
+
                   
                      </tr>
                      @endforeach
@@ -88,7 +100,11 @@
                             <label for="username">Department Code</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
+
+                                <input type="text" class="form-control" name="department_code" id="username" value="">
+
                                 <input type="text" class="form-control" name="d_code" id="username" value="" required>
+
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -100,6 +116,9 @@
                             <label for="username">Department Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
+
+                                <input type="text" class="form-control" name="department_name" id="username" value="">
+
                                 <input type="text" class="form-control" name="d_name" id="username" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
@@ -146,7 +165,11 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
+
+                                <select name="perfomance_report" id="cars">
+
                                 <select name="perf_dept" id="cars">
+
                                     <option>--select--</option>
                                     <option>Yes</option>
                                     <option>No</option>   
