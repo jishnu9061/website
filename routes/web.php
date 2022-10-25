@@ -948,6 +948,7 @@ Route::any('user_comments','UserManagement@comments')->name('user_comments');
 //end
 //change password
 Route::any('change_user_password','UserManagement@changepassword')->name('change_user_password');
+
 //end
 //manage user group
 Route::any('manage_user_group','UserManagement@manageusergrp')->name('manage_user_group');
@@ -966,16 +967,28 @@ Route::any('edit_view_roles','UserManagement@editviewroles')->name('edit_view_ro
 //manage user roles
 Route::any('manage_user_roles','UserManagement@manageuserroles')->name('manage_user_roles');
 Route::any('add_user_roles','UserManagement@adduserrole')->name('add_user_roles');
+
 Route::any('/edit_user_roles/{id}','UserManagement@edituserrole')->name('edit_user_roles');
 Route::any('/update_role','UserManagement@updaterole')->name('update_role');
 Route::any('/user_role_destroy/{id}',"UserManagement@userroledestroy")->name('user_role_destroy');
+
+Route::any('edit_user_roles/{id}','UserManagement@edituserrole')->name('edit_user_roles');
+Route::any('/update_user_roles','UserManagement@updateuserrole')->name('update_user_roles');
+Route::any('/delete_user_roles/{id}','UserManagement@deleteuserrole')->name('delete_user_roles');
+
 //end
 //manage user department
 Route::any('manage_user_department','UserManagement@manageuserdepartment')->name('manage_user_department');
 Route::any('add_user_department','UserManagement@adduserdepartment')->name('add_user_department');
+
 Route::any('/edit_user_department/{id}','UserManagement@edituserdepartment')->name('edit_user_department');
 Route::any('/update_user_department','UserManagement@updateuserdepartment')->name('update_user_department');
 Route::any('/destroy_user_department/{id}',"UserManagement@destroyuserdepsrtment")->name('destroy_user_department');
+
+Route::any('edit_user_department/{id}','UserManagement@edituserdepartment')->name('edit_user_department');
+Route::any('/update_user_department','UserManagement@updateuserdepartment')->name('update_user_department');
+Route::any('/delete_user_department/{id}','UserManagement@deleteuserdepartment')->name('delete_user_department');
+
 //end
 //advocate targets
 Route::any('advocates_target','UserManagement@advocatestarget')->name('advocates_target');
@@ -998,7 +1011,6 @@ Route::any('advocates_target_2026','UserManagement@advocatestarget2026')->name('
 //Mugunthan
 
 //Client-list
-
 Route::any('add-client',"ClientManagement@addNewClient")->name('add-client');
 Route::any('add_newclient',"ClientManagement@addNewclient")->name('add_newclient');
 Route::any('store-client',"ClientManagement@storeClient")->name('store-client');
@@ -1040,6 +1052,8 @@ Route::any('edit_complaint/{id}','ClientManagement@editComplaint')->name('edit-C
 Route::any('update-Complaint','ClientManagement@updateComplaint')->name('update-Complaint');
 Route::any('view-Complaint/{id}','ClientManagement@viewComplaint')->name('view-Complaint');
 Route::any('delete-Complaint/{id}','ClientManagement@deleteComplaint')->name('delete-Complaint');
+
+Route::any('new_communication','ClientManagement@add_communication')->name('add_communication');
 //end complaint
 
 //Follow Up

@@ -45,6 +45,7 @@
                     </tr>
 </thead>
              <tbody>
+
             @foreach($user_role as $role)
                     <tr>
                         <td  class="text-center">{{$role->id}}</td>
@@ -53,6 +54,17 @@
                         <td  scope="row"class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
                         <a href="{{url('edit_user_roles',$role->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                         <a href="{{url('user_role_destroy',$role->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
+
+             @foreach($user_roles as $role)
+            
+                    <tr>
+                        <td>{{$role->id}}</td>
+                        <td>{{$role->role_name}}</td>
+                        <td>{{$role->users}}</td>
+                        <td  scope="row"class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
+                        <a href="{{url('edit_user_roles',$role->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <a href="{{url('delete_user_roles',$role->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
+
 
                      </tr>
                      @endforeach
@@ -84,7 +96,11 @@
                         <div class="col-md-11">
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
+
                                 <input type="text"  id="" name="role_name" value="" class="form-control">
+
+                                <input type="text"  id="" name="role_name"value=""class="form-control">
+
                             <div class="invalid-feedback" style="width: 100%;">
                             Required Field.
                         </div>

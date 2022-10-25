@@ -128,16 +128,16 @@
                     <!-- The Modal -->
                     <div class="modal fade" id="myModal">
                         <div class="modal-dialog modal-lg">
-                            <div class="modal-content" style="background-color:#d6ba8a">
+                            <div class="modal-content" >
 
                                 <!-- Modal Header -->
-                                <div class="modal-header" style="background-color:#d6ba8a">
+                                <div class="modal-header" >
                                     <h2 class="text-center"><b>Add File Progress</b></h2>
 
                                 </div>
 
                                 <!-- Modal body -->
-                                <div class="modal-body" style="background-color:white">
+                                <div class="modal-body" >
                                     <div class="container">
                                         <form method="post" action="{{ url('add-file-progress') }}" enctype="multipart/form-data">
 
@@ -536,16 +536,16 @@
     <!-- The Modal -->
     <div class="modal fade" id="myModal-1">
         <div class="modal-dialog modal-lg">
-            <div class="modal-content" style="background-color:#d6ba8a">
+            <div class="modal-content" >
 
                 <!-- Modal Header -->
-                <div class="modal-header" style="background-color:#d6ba8a">
+                <div class="modal-header" >
                     <h2 class="text-center"><b>Add File Progress/Action</b></h2>
 
                 </div>
 
                 <!-- Modal body -->
-                <div class="modal-body" style="background-color:white">
+                <div class="modal-body" >
                     <div class="container">
                         <form method="post" action="{{ url('add-file-progress-action') }}" enctype="multipart/form-data">
 
@@ -785,16 +785,16 @@
                                                     <!-- The Modal -->
                     <div class="modal fade" id="myModal-2">
                         <div class="modal-dialog modal-lg">
-                            <div class="modal-content" style="background-color:#d6ba8a">
+                            <div class="modal-content">
 
                                 <!-- Modal Header -->
-                                <div class="modal-header" style="background-color:#d6ba8a">
+                                <div class="modal-header">
                                     <h2 class="text-center"><b>Add File Bringup/Reminder</b></h2>
 
                                 </div>
 
                                 <!-- Modal body -->
-                                <div class="modal-body" style="background-color:white">
+                                <div class="modal-body">
                                     <div class="container">
                                         <form method="post" action="{{ url('add-file-bringup-reminder') }}" enctype="multipart/form-data">
 
@@ -1011,16 +1011,16 @@
                       <!-- The Modal -->
                     <div class="modal fade" id="myModal-3">
                         <div class="modal-dialog modal-lg">
-                            <div class="modal-content" style="background-color:#d6ba8a">
+                            <div class="modal-content">
 
                                 <!-- Modal Header -->
-                                <div class="modal-header" style="background-color:#d6ba8a">
+                                <div class="modal-header">
                                     <h2 class="text-center"><b>Book A Court</b></h2>
 
                                 </div>
 
                                 <!-- Modal body -->
-                                <div class="modal-body" style="background-color:white">
+                                <div class="modal-body">
                                     <div class="container">
                                         <form method="post" action="{{ url('book-court') }}" enctype="multipart/form-data">
 
@@ -1318,16 +1318,16 @@
                      <!-- The Modal -->
                      <div class="modal fade" id="myModal-4">
                         <div class="modal-dialog modal-lg">
-                            <div class="modal-content" style="background-color:#d6ba8a">
+                            <div class="modal-content" >
 
                                 <!-- Modal Header -->
-                                <div class="modal-header" style="background-color:#d6ba8a">
+                                <div class="modal-header" >
                                     <h2 class="text-center"><b>Court Attendance Sheet</b></h2>
 
                                 </div>
 
                                 <!-- Modal body -->
-                                <div class="modal-body" style="background-color:white">
+                                <div class="modal-body">
                                     <div class="container">
                                         <form method="post" action="{{ url('court-attendance-sheet') }}" enctype="multipart/form-data">
 
@@ -1724,16 +1724,16 @@
                                    <!-- The Modal -->
                     <div class="modal fade" id="myModal-5">
                         <div class="modal-dialog modal-lg">
-                            <div class="modal-content" style="background-color:#d6ba8a">
+                            <div class="modal-content">
 
                                 <!-- Modal Header -->
-                                <div class="modal-header" style="background-color:#d6ba8a">
+                                <div class="modal-header">
                                     <h2 class="text-center"><b>New Arbiration Form</b></h2>
 
                                 </div>
 
                                 <!-- Modal body -->
-                                <div class="modal-body" style="background-color:white">
+                                <div class="modal-body">
                                     <div class="container">
                                         <form method="post" action="{{ url('arbiration-sheet') }}" enctype="multipart/form-data">
 
@@ -2035,16 +2035,16 @@
                          <!-- The Modal -->
                          <div class="modal fade" id="myModal-6">
                         <div class="modal-dialog modal-lg">
-                            <div class="modal-content" style="background-color:#d6ba8a">
+                            <div class="modal-content">
 
                                 <!-- Modal Header -->
-                                <div class="modal-header" style="background-color:#d6ba8a">
+                                <div class="modal-header">
                                     <h2 class="text-center"><b>Conveyence Sheet</b></h2>
 
                                 </div>
 
                                 <!-- Modal body -->
-                                <div class="modal-body" style="background-color:white">
+                                <div class="modal-body">
                                     <div class="container">
                                         <form method="post" action="{{ url('conveyance-sheet') }}" enctype="multipart/form-data">
 

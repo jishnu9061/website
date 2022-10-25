@@ -15,7 +15,12 @@
     </div>
     <div class="row">
         <div class="col-md-12">
+
             <form method="post" action="{{url('update_user_department')}}" id="form">
+
+        <form method="post"action="{{url('update_user_department')}}"id="form">  
+          <input type="hidden" name="id" value="{{$user_department->id}}">
+
                 @csrf
                 <input type="hidden" name="id" value="{{$edit_department->id}}">
                 <div class="row">
@@ -24,7 +29,11 @@
                             <label for="username">Department Code</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
+
                                 <input type="text" class="form-control" name="department_code" id="" value="{{$edit_department->department_code}}">
+
+                                <input type="text" class="form-control" name="d_code" id="username" value="{{$user_department->department_code}}">
+
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -36,7 +45,11 @@
                             <label for="username">Department Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
+
                                 <input type="text" class="form-control" name="department_name" id="username" value="{{$edit_department->department_name}}">
+
+                                <input type="text" class="form-control" name="d_name" id="username" value="{{$user_department->department_name}}">
+
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -53,8 +66,12 @@
                                 <div class="input-group-prepend">
                                 </div>
                                 <select name="h_o_d" id="cars">
+
                                     <option>{{$edit_department->h_o_d}}</option>
                                 <option>select</option>
+
+                                <option>{{$user_department->hod}}</option>
+
                                 <option>Cedric Opara</option>
                                 <option>Corrine Auma</option>
                                 <option>Evans Munene</option>
@@ -83,9 +100,14 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
+
                                 <select name="perfomance_report" id="cars">
                                     <option>{{$edit_department->perfomance_report}}</option>
                                     <option>--select--</option>
+
+                                <select name="performance_report" id="cars">
+                                    <option>{{$user_department->performance_report}}</option>
+
                                     <option>Yes</option>
                                     <option>No</option>   
                                 </select>
