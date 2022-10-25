@@ -15,7 +15,7 @@
 </head>
 
 <body>
-<body>
+
 <h2 style="text-align:center; text-shadow: 2px 1px;"></h2>
   <div>
      <button class="btn btn-primary"
@@ -42,21 +42,19 @@
                             <th class="text-center">Cost(Kshs)</th>
                             <th class="text-center">Status</th>
                             <th class="text-center">Action</th>
-                       
-                           
-                        </tr>
+</tr>
                     </thead>
                     <tbody>
-                    @foreach($transportzone as $detail)
+                    @foreach($transport_zone as $detail)
                         <tr id="data">
-                            <td scope="row" class="text-center">{{ $detail->id }}</td>
-                            <td scope="row" class="text-center">{{ $detail->zone_name }}</td>
-                            <td scope="row" class="text-center">{{ $detail->zone_areas }}</td>
-                            <td scope="row" class="text-center">{{ $detail->cost }}</td>
+                            <td scope="row" class="text-center">{{$detail->id }}</td>
+                            <td scope="row" class="text-center">{{$detail->zone_name }}</td>
+                            <td scope="row" class="text-center">{{$detail->zone_areas }}</td>
+                            <td scope="row" class="text-center">{{$detail->cost }}</td>
                             <td scope="row" class="text-center"></td>
                             <td  scope="row"class="text-center">
-                        <a href="{{url('edit_transport_zone')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                        <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
+                        <a href="{{url('edit_transport_zone',$detail->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <a href="{{url('delete_transport_zone',$detail->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                            </td>
 </tr>
                     </tbody>

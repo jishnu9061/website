@@ -33,39 +33,42 @@
         <!-- <a href="{{('add_letter_category')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Letter Category</button></a><br><br> -->
     
     <!-- <div class="container"> -->
-      <div class="mydiv">
+      <div class="table-responsive">
       <table class="table table-bordered" id="new-item">
                   <thead>
                         <tr>
                         <th class="text-center" >No</th>
                         <th class="text-center">Letter Category</th>
+                        <th class="text-center">Letter types</th>
                         <th class="text-center" >Status</th>
-                        <th class="text-center" >Edit</th>
+                        <th class="text-center" >Action</th>
                       
                     </tr>
 <thead>
     <tbody>
-                 
-                    <tr>
-                        <td ></td>
-                        <td></td>
+    @foreach($letter_types as $letter)
+        <tr>
+                        <td >{{$letter->id}}</td>
+                        <td>{{$letter->letter_category}}</td>
+                        <td>{{$letter->letter_type}}</td>
                         <td></td>
                         <td  scope="row"class="text-center">
-                        <a href="{{url('edit_letter_type')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                        <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
+                        <a href="{{url('edit_letter_type',$letter->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <a href="{{url('delete_letter_type',$letter->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                            </td>
                        
                     </tr>
 
                    
     </tbody>
+    @endforeach
                     
                 </table>
                 <div class="class"style="text-align:right;">
                 <select style="width:10%;height:100%;color:rgb(13, 1, 56);font-size:small;background-color:#FFFBF4;"type="text" value="" >
     <option>Activate Category</option>
     <option>De-Activate Category</option>
-    <option>Delete Category</option>
+  
 </select>
 <input type="button"value="Go" name="close"style="background-color:#FFFBF4;color: rgb(13, 1, 56); ">
     </div>
@@ -85,7 +88,7 @@
                                     <!-- Modal body -->
                                     <div class="modal-body" style="background-color:white">
                                         <div class="container">
-                                            <form method="post" action="{{ url('add_letter_category') }}"
+                                            <form method="post" action="{{url('add_letter_category')}}"
                                                 enctype="multipart/form-data"> 
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->    
 @csrf
@@ -96,7 +99,7 @@
                         <div class="col-md-11">
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                            <select type="text" value="" id="" name="temcategory"style="width:100%;">
+                            <select type="text" value="" id="" name="lettercat"style="width:100%;">
                                 <option>---Select---</option>
                                 <option>Client</option>
                             <option>Supplier</option>
@@ -109,9 +112,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-1">
+                <!-- <div class="col-md-1">
                     <a href="{{url('document_letter_category')}}"> <i style="font-size:20px; color:rgb(13, 1, 56);" class="bi bi-plus-circle-fill"> </i></a>
-                </div>
+                </div> -->
             </div>
             
             <div class="row">
@@ -119,7 +122,7 @@
                 <label >Letter Types:</label>
                 <div class="input-group">
                     <div class="input-group-prepend"></div>
-                    <input type="text" class="form-control" name="cattype" id="" value="">
+                    <input type="text" class="form-control" name="lettertype" id="" value="">
                     <div class="invalid-feedback" style="width: 100%;">
                     Required Field.
                 </div>
@@ -130,7 +133,7 @@
                 <label >Letter Type Name:</label>
                 <div class="input-group">
                     <div class="input-group-prepend"></div>
-                    <input type="text" class="form-control" name="cattype" id="" value="">
+                    <input type="text" class="form-control" name="lettertypname" id="" value="">
                     <div class="invalid-feedback" style="width: 100%;">
                     Required Field.
                 </div>

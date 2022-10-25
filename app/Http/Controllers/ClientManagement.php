@@ -30,9 +30,7 @@ class ClientManagement extends Controller
      * @return \Illuminate\Http\Response
      */
 
-   
-    public function addNewClient(Request $Request)
-    {
+    public function addNewclient(Request $Request){
         $number = $Request['number'];
         $client_type = $Request['type'];
         $citizen_status = $Request['citizen'];
@@ -81,7 +79,6 @@ class ClientManagement extends Controller
         ]);
         
         return redirect('/client_list');
-
     }
 
     /**
@@ -153,11 +150,11 @@ class ClientManagement extends Controller
         $Notes = $Request['notes'];
 
          
-        DB::table('cra_individual_client_details')->where('id',$id)->update([
+        DB::table('cra_individual_client_details')->where('id',$id)->insert([
             'client_number' => $number,
             'client_type' =>  $client_type,
             'citizen_status' => $citizen_status,
-            'certificate_of_incorporation' => $incorporation ,
+            'certificate_of_incorporation' => $incorporation,
             'country' =>  $country,
             'telephone_no' =>   $telephone,
             'fax_no' =>  $fax_no,
@@ -192,14 +189,31 @@ class ClientManagement extends Controller
         return redirect('/client_list');
     }
 
-    // end individual
+    
+    
 
-    //corporate_client
+    //complaint
+
+    
+    //end complaint
+   
+
+    //communication
+
+   
+    //end communication
+     //client-Search
+
+   
+    public function registerClient(){
+        return view('client-management.register-client');
+    }
 
   
 
-    public function addCorporate(Request $Request){
+  //end client-search
 
+    public function addCorporate(Request $Request){
         $number = $Request['number'];
         $client_type = $Request['type'];
         $citizen_status = $Request['citizen'];
@@ -236,7 +250,7 @@ class ClientManagement extends Controller
             'Fax_no' =>  $fax_no,
             'Email_address' =>  $email,
             'Website' =>  $website ,
-            'Brought_in_by' =>  $brought,
+            'Brought_in_By' =>  $brought,
             'Status_reporting_day' =>  $status,
             'Client_source' => $source,
             'Client_source_naration' =>  $client_narration,
@@ -255,8 +269,9 @@ class ClientManagement extends Controller
         ]);
 
         return redirect("/corporate-list");
-    }
 
+        // return view('client-management.add-corporate');
+    }
 
     public function listCorporate(){
 
@@ -308,7 +323,7 @@ class ClientManagement extends Controller
             'Fax_no' =>  $fax_no,
             'Email_address' =>  $email,
             'Website' =>  $website ,
-            'Brought_in_by' =>  $brought,
+            'Brought_in_By' =>  $brought,
             'Status_reporting_day' =>  $status,
             'Client_source' => $source,
             'Client_source_naration' =>  $client_narration,
@@ -350,22 +365,22 @@ class ClientManagement extends Controller
         return view('client-management.add-document');
     }
 
-    public function addDocument(Request $Request){
+    // public function addDocument(Request $Request){
 
-        $document_type = $Request['type'];
-        $file = $Request['file'];
+    //     $document_type = $Request['type'];
+    //     $file = $Request['file'];
 
-        if(!empty($Request->file('file'))){
+    //     if(!empty($Request->file('file'))){
 
-            $this->validate($Request ,[
-                'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg|max:2048',
-            ]);
-        }
+    //         $this->validate($Request ,[
+    //             'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg|max:2048',
+    //         ]);
+    //     }
 
-        $img = time() . '-' . $Request->name . '.' .
-        $Request->file->extension();
+    //     $img = time() . '-' . $Request->name . '.' .
+    //     $Request->file->extension();
 
-       $test = $Request->file->move(public_path('images\files'),$img);
+    //    $test = $Request->file->move(public_path('images\files'),$img);
       
 
         // $input = $Request->all();
@@ -380,19 +395,24 @@ class ClientManagement extends Controller
         //     $paths = '';
         // }
 
-        DB::table('cra_document_detials')->insert([
+    //     DB::table('cra_document_detials')->insert([
 
-            'document_type' =>  $document_type,
-            'file' =>  $img,
-        ]);
-        return redirect('/client-document');
+    //         'document_type' =>  $document_type,
+    //         'file' =>  $img,
+    //     ]);
+    //     return redirect('/client-document');
 
-    }
+    // }
 
 
     public function viewDocument(){
 
         return view('client-management.view-document');
+    }
+
+    public function add_communication(){
+
+        return view('client-management.new_communication');
     }
 
     //Pickup-client
@@ -615,12 +635,33 @@ class ClientManagement extends Controller
     //end customer Followup
 
     public function service(){
-        return view('client-management.client-service');
+        $service = DB::table('cra_client_service_at_reception')->get();
+        return view('client-management.client-service',compact('service'));
     }
 
 
-    public function addService(){
-        return view('client-management.add-client-service');
+    public function addService(Request $Request){
+
+        $receipt_no = $Request['Receipt'];
+        $client_name = $Request['Name'];
+        $mobile = $Request['Mobile'];
+        $amount_paid = $Request['amount'];
+        $date = $Request['date'];
+        $email = $Request['email'];
+        $code = $Request['code'];
+        $payment_method = $Request['Method'];
+
+        DB::table('cra_client_service_at_reception')->insert([
+            'receipt_no' =>  $receipt_no ,
+            'client_name' =>   $client_name ,
+            'mobile' => $mobile,
+            'amount_paid' =>$amount_paid,
+            'date' => $date,
+            'email' =>  $email,
+            'code' =>   $code,
+            'payment_method' =>   $payment_method,
+        ]);
+        return redirect('/client-service');
     }
 
     //quotation
@@ -815,17 +856,7 @@ class ClientManagement extends Controller
 
     //communication
 
-    public function listCommunication(){
-        $list_communication = DB::table('cra_conversations')->get();
-        return view('client-management.communication-list',compact('list_communication'));
-    }
-
-    
-    public function indexCommunication(){
-        return view('client-management.add-communication');
-    }
-
-    public function addCommunication(Request $Request){
+    public function listCommunication(Request $Request){
         $communication_date = $Request['date'];
         $client = $Request['Client'];
         $file = $Request['File'];
@@ -860,8 +891,52 @@ class ClientManagement extends Controller
             'action_plan' =>  $action_plan,
         ]);
 
-        return redirect('/communication-list');
+        $list_communication = DB::table('cra_conversations')->get();
+        return view('client-management.communication-list',compact('list_communication'));
     }
+
+    
+    public function indexCommunication(){
+        return view('client-management.add-communication');
+    }
+
+    // public function addCommunication(Request $Request){
+    //     $communication_date = $Request['date'];
+    //     $client = $Request['Client'];
+    //     $file = $Request['File'];
+    //     $customer = $Request['Customer'];
+    //     $telephone_no = $Request['telephone'];
+    //     $email = $Request['Email'];
+    //     $communication_source = $Request['Sources'];
+    //     $mode_of_communication = $Request['Communication'];
+    //     $communicated = $Request['Communicated'];
+    //     $duration = $Request['Duration'];
+    //     $person_handling = $Request['Handling'];
+    //     $time = $Request['Timer'];
+    //     $others = $Request['Others'];
+    //     $communicated_description = $Request['Description'];
+    //     $action_plan = $Request['Action'];
+
+    //     DB::table('cra_conversations')->insert([
+    //         'communication_date' => $communication_date,
+    //         'client' =>   $client,
+    //         'file' => $file,
+    //         'customer' =>$customer,
+    //         'telephone_no' => $telephone_no,
+    //         'email' =>  $email,
+    //         'communication_source' =>  $communication_source,
+    //         'mode_of_communication' =>  $mode_of_communication,
+    //         'communicated' => $communicated ,
+    //         'duration' => $duration,
+    //         'person_handling' =>  $person_handling,
+    //         'time' =>  $time,
+    //         'others' => $others ,
+    //         'communicated_description' =>  $communicated_description,
+    //         'action_plan' =>  $action_plan,
+    //     ]);
+
+    //     return redirect('/communication-list');
+    // }
 
 
     public function editCommunication($id){
@@ -948,5 +1023,6 @@ class ClientManagement extends Controller
   //end client-search
 
    
+
    
 }

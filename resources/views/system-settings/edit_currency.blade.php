@@ -22,7 +22,8 @@
      </div>
             <br>
             <br>
-            <form method="post" action="" id="form">  
+            <form method="post" action="{{url('update_currency')}}" id="form">  
+            <input type="hidden" name="id" value="{{$currency_list->id}}">
        @csrf
        <div class="row">
                     <div class="col-md-6">
@@ -30,7 +31,7 @@
                         <label >Currency Name:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text"  id="" name="currency"value="" class="form-control" >
+                                <input type="text"  id="" name="currency"value="{{$currency_list->currency_name}}" class="form-control" >
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -42,7 +43,7 @@
                             <label>Currency Symbol:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text"  id="" name="csymbol"value="" class="form-control" >
+                                <input type="text"  id="" name="csymbol"value="{{$currency_list->currency_symbol}}" class="form-control" >
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -56,7 +57,7 @@
                         <label >Exchange Rate:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="number"  id="" name="exchangerate"value=""class="form-control">
+                                <input type="number"  id="" name="exchangerate"value="{{$currency_list->exchange_rate}}"class="form-control">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -69,7 +70,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <select type="text" value="" id="" name="account"style="width:100%;">
-                                <option>---Select---</option>
+                                <option>{{$currency_list->default_action}}</option>
                                 <option>8000====Client Account- Cooperative Bank</option>
                                 <option>8003====Client Account- DTB Bank</option>
                                 <option>8004====Client Account- Sidian Bank</option>

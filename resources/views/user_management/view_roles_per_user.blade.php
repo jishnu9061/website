@@ -12,23 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-    <!-- <style>
-    body {
-        background-color: white;
-    }
-
-    th,
-    td,
-    tr {
-        border: 1px solid gray;
-        border-collapse: collapse;
-    }
-
-    table {
-        outline: 1px solid gray;
-    }
-
-    </style> -->
+   
 </head>
 
 
@@ -38,18 +22,12 @@
             <button class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>View
                         Roles per User</u></b></span></button><br>
-            <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous"> -->
+           
         </div>
      
         <br>
         <br>
-
-
-
-
-        <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Roles per User</h3>
+<h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Roles per User</h3>
         <div class="table-responsive">
             <table class="table table-bordered" id="new-item">
 

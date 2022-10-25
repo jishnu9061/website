@@ -682,9 +682,11 @@ Route::any('delete_surgery{id}', 'surgeryController@destroy')->name('delete_surg
 Route::get('calendar-event', 'CalenderController@index')->name('calendar-event');
 Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents']);
 
-//---------------------------RESHMA--------------------------------
+//---------------------------RESHMA-------------------------------------------//
 // system setup index
 Route::any('system_setup','SystemSetup@index')->name('system_setup');
+
+
 //end
 //company_details
 Route::any('company_details','SystemSetup@company')->name('company_details');
@@ -726,19 +728,25 @@ Route::any('configu_ration','SystemSetup@Configtn')->name('configu_ration');
 //courts
 Route::any('courts','SystemSetup@courts')->name('courts');
 Route::any('add_court','SystemSetup@addcourt')->name('add_court');
-Route::any('edit_court','SystemSetup@editcourt')->name('edit_court');
+Route::any('edit_court/{id}','SystemSetup@editcourt')->name('edit_court');
+Route::any('/update_court','SystemSetup@updatecourt')->name('update_court');
+Route::any('/delete_court/{id}','SystemSetup@deletecourt')->name('delete_court');
 Route::any('add_court_category','SystemSetup@addcourtcategory')->name('add_court_category');
 //end
 //letter types
 Route::any('letter_types','SystemSetup@lettertype')->name('letter_types');
 Route::any('add_letter_category','SystemSetup@addlettercategory')->name('add_letter_category');
-Route::any('edit_letter_type','SystemSetup@editlettertype')->name('edit_letter_type');
+Route::any('edit_letter_type/{id}','SystemSetup@editlettertype')->name('edit_letter_type');
+Route::any('/update_letter_type','SystemSetup@updatelettertype')->name('update_letter_type');
+Route::any('/delete_letter_type/{id}','SystemSetup@deletelettertype')->name('delete_letter_type');
 Route::any('document_letter_category','SystemSetup@documentlettercategory')->name('document_letter_category');
 //end
 //payment items
 Route::any('payment_items','SystemSetup@paymentitem')->name('payment_items');
 Route::any('add_payment_item','SystemSetup@addpaymentitem')->name('add_payment_item');
-Route::any('edit_payment_item','SystemSetup@editpaymentitem')->name('edit_payment_item');
+Route::any('edit_payment_item/{id}','SystemSetup@editpaymentitem')->name('edit_payment_item');
+Route::any('/update_payment_item','SystemSetup@updatepaymentitem')->name('update_payment_item');
+Route::any('/delete_payment_item/{id}','SystemSetup@deletepaymentitem')->name('delete_payment_item');
 //end
 //description selection
 Route::any('description_selectn','SystemSetup@descriptionselection')->name('description_selectn');
@@ -790,100 +798,121 @@ Route::any('notifications','SystemSetup@notifications')->name('notifications');
 //template category
 Route::any('template_category','SystemSetup@templatecategory')->name('template_category');
 Route::any('add_template_category','SystemSetup@addtemplatecategory')->name('add_template_category');
+Route::any('edit_template_category/{id}','SystemSetup@edittemplatecategory')->name('edit_template_category');
+Route::any('/update_template_category','SystemSetup@updatetemplatecategory')->name('update_template_category');
+Route::any('/delete_template_category/{id}','SystemSetup@deletetemplatecategory')->name('delete_template_category');
 Route::any('document_template_category','SystemSetup@documenttemplatecategory')->name('document_template_category');
-Route::any('edit_template_category','SystemSetup@edittemplatecategory')->name('edit_template_category');
+
 //end
 //paired accounts
 Route::any('paired_account','SystemSetup@pairedaccount')->name('paired_account');
 Route::any('add_account_pairs','SystemSetup@addaccountpairs')->name('add_account_pairs');
-Route::any('edit_account_pairs','SystemSetup@editaccountpairs')->name('edit_account_pairs');
+Route::any('edit_account_pairs/{id}','SystemSetup@editaccountpairs')->name('edit_account_pairs');
+Route::any('/update_paired_account','SystemSetup@updatepairedaccount')->name('update_paired_account');
+Route::any('/delete_account_pairs/{id}','SystemSetup@deletepairedaccount')->name('delete_account_pairs');
 //end
 //file types
 Route::any('file_types','SystemSetup@filetypes')->name('file_types');
 Route::any('add_file_types','SystemSetup@addfiletypes')->name('add_file_types');
-Route::any('edit_file_types','SystemSetup@editfiletypes')->name('edit_file_types');
+Route::any('edit_file_types/{id}','SystemSetup@editfiletypes')->name('edit_file_types');
+Route::any('/update_file_types','SystemSetup@updatefiletypes')->name('update_file_types');
+Route::any('/delete_file_types/{id}','SystemSetup@deletefiletypes')->name('delete_file_types');
 //end
 //invoice_items
 Route::any('invoice_items','SystemSetup@invoiceitems')->name('invoice_items');
 Route::any('add_invoice_item','SystemSetup@addinvoiceitem')->name('add_invoice_item');
-Route::any('edit_invoice_item','SystemSetup@editinvoiceitem')->name('edit_invoice_item');
+Route::any('edit_invoice_item/{id}','SystemSetup@editinvoiceitem')->name('edit_invoice_item');
+Route::any('/update_invoice_item','SystemSetup@updateinvoiceitem')->name('update_invoice_item');
+Route::any('/delete_invoice_item/{id}','SystemSetup@deleteinvoiceitem')->name('delete_invoice_item');
 Route::any('add_gl_account','SystemSetup@addglaccount')->name('add_gl_account');
 //end
 //currency_list
 Route::any('currency_list','SystemSetup@currencylist')->name('currency_list');
 Route::any('add_currency','SystemSetup@addcurrency')->name('add_currency');
-Route::any('edit_currency','SystemSetup@editcurrency')->name('edit_currency');
+Route::any('edit_currency/{id}','SystemSetup@editcurrency')->name('edit_currency');
+Route::any('/update_currency','SystemSetup@updatecurrency')->name('update_currency');
+Route::any('/delete_currency/{id}','SystemSetup@deletecurrency')->name('delete_currency');
 //end
-//USER details
-//manage user accounts
-Route::any('manage_user_account','SystemSetup@manageuseraccount')->name('manage_user_account');
-Route::any('reg_new_user','SystemSetup@regnewuser')->name('reg_new_user');
-Route::any('user_edit','SystemSetup@useredit')->name('user_edit');
-Route::any('user_attachments','SystemSetup@attachments')->name('user_attachments');
-Route::any('user_comments','SystemSetup@comments')->name('user_comments');
-//end
-//change password
-Route::any('change_user_password','SystemSetup@changepassword')->name('change_user_password');
-//end
-//manage user group
-Route::any('manage_user_group','SystemSetup@manageusergrp')->name('manage_user_group');
-Route::any('add_new_user_grp','SystemSetup@addnewusergrp')->name('add_new_user_grp');
-Route::any('edit_new_user_grp','SystemSetup@editnewusergrp')->name('edit_new_user_grp');
-//end
-//view roles per user
-Route::any('view_roles_per_user','SystemSetup@rolesperuser')->name('view_roles_per_user');
-Route::any('edit_view_roles','SystemSetup@editviewroles')->name('edit_view_roles');
-//end
-//manage user roles
-Route::any('manage_user_roles','SystemSetup@manageuserroles')->name('manage_user_roles');
-Route::any('add_user_roles','SystemSetup@adduserrole')->name('add_user_roles');
-Route::any('edit_user_roles','SystemSetup@edituserrole')->name('edit_user_roles');
-//end
-//manage user department
-Route::any('manage_user_department','SystemSetup@manageuserdepartment')->name('manage_user_department');
-Route::any('add_user_department','SystemSetup@adduserdepartment')->name('add_user_department');
-Route::any('edit_user_department','SystemSetup@edituserdepartment')->name('edit_user_department');
-//end
-//advocate targets
-Route::any('advocates_target','SystemSetup@advocatestarget')->name('advocates_target');
-Route::any('add_new_entry','SystemSetup@addnew')->name('add_new_entry');
-Route::any('edit_advocate_target','SystemSetup@editadvocatetarget')->name('edit_advocate_target');
-Route::any('advocates_target_2021','SystemSetup@advocatestarget2021')->name('advocates_target_2021');
-Route::any('advocates_target_2022','SystemSetup@advocatestarget2022')->name('advocates_target_2022');
-Route::any('advocates_target_2023','SystemSetup@advocatestarget2023')->name('advocates_target_2023');
-Route::any('advocates_target_2024','SystemSetup@advocatestarget2024')->name('advocates_target_2024');
-Route::any('advocates_target_2025','SystemSetup@advocatestarget2025')->name('advocates_target_2025');
-Route::any('advocates_target_2026','SystemSetup@advocatestarget2026')->name('advocates_target_2026');
-//end
+// //USER details
+// //manage user accounts
+// Route::any('manage_user_account','SystemSetup@manageuseraccount')->name('manage_user_account');
+// Route::any('reg_new_user','SystemSetup@regnewuser')->name('reg_new_user');
+// Route::any('user_edit','SystemSetup@useredit')->name('user_edit');
+// Route::any('user_attachments','SystemSetup@attachments')->name('user_attachments');
+// Route::any('user_comments','SystemSetup@comments')->name('user_comments');
+// //end
+// //change password
+// Route::any('change_user_password','SystemSetup@changepassword')->name('change_user_password');
+// //end
+// //manage user group
+// Route::any('manage_user_group','SystemSetup@manageusergrp')->name('manage_user_group');
+// Route::any('add_new_user_grp','SystemSetup@addnewusergrp')->name('add_new_user_grp');
+// Route::any('edit_new_user_grp','SystemSetup@editnewusergrp')->name('edit_new_user_grp');
+// //end
+// //view roles per user
+// Route::any('view_roles_per_user','SystemSetup@rolesperuser')->name('view_roles_per_user');
+// Route::any('edit_view_roles','SystemSetup@editviewroles')->name('edit_view_roles');
+// //end
+// //manage user roles
+// Route::any('manage_user_roles','SystemSetup@manageuserroles')->name('manage_user_roles');
+// Route::any('add_user_roles','SystemSetup@adduserrole')->name('add_user_roles');
+// Route::any('edit_user_roles','SystemSetup@edituserrole')->name('edit_user_roles');
+// //end
+// //manage user department
+// Route::any('manage_user_department','SystemSetup@manageuserdepartment')->name('manage_user_department');
+// Route::any('add_user_department','SystemSetup@adduserdepartment')->name('add_user_department');
+// Route::any('edit_user_department','SystemSetup@edituserdepartment')->name('edit_user_department');
+// //end
+// //advocate targets
+// Route::any('advocates_target','SystemSetup@advocatestarget')->name('advocates_target');
+// Route::any('add_new_entry','SystemSetup@addnew')->name('add_new_entry');
+// Route::any('edit_advocate_target','SystemSetup@editadvocatetarget')->name('edit_advocate_target');
+// Route::any('advocates_target_2021','SystemSetup@advocatestarget2021')->name('advocates_target_2021');
+// Route::any('advocates_target_2022','SystemSetup@advocatestarget2022')->name('advocates_target_2022');
+// Route::any('advocates_target_2023','SystemSetup@advocatestarget2023')->name('advocates_target_2023');
+// Route::any('advocates_target_2024','SystemSetup@advocatestarget2024')->name('advocates_target_2024');
+// Route::any('advocates_target_2025','SystemSetup@advocatestarget2025')->name('advocates_target_2025');
+// Route::any('advocates_target_2026','SystemSetup@advocatestarget2026')->name('advocates_target_2026');
+// //end
 //OTHER SETTINGS
 //database backups
 Route::any('database_backup','SystemSetup@databasebackup')->name('database_backup');
 //end
 //tansport zone
-Route::any('transport_zones','SystemSetup@transportzone')->name('transport_zones');
+Route::any('Transport_zones','SystemSetup@transportzone')->name('Transport_zones');
 Route::any('add_transport_zone','SystemSetup@addtransportzone')->name('add_transport_zone');
-Route::any('edit_transport_zone','SystemSetup@edittransportzone')->name('edit_transport_zone');
+Route::any('edit_transport_zone/{id}','SystemSetup@edittransportzone')->name('edit_transport_zone');
+Route::any('/update_transport_zone','SystemSetup@updatetransportzone')->name('update_transport_zone');
+Route::any('/delete_transport_zone/{id}','SystemSetup@deletetransportzone')->name('delete_transport_zone');
 //end
 //billable activities
 Route::any('billable_activities','SystemSetup@billableactivities')->name('billable_activities');
 Route::any('add_billable_activities','SystemSetup@addbillableactivities')->name('add_billable_activities');
-Route::any('edit_billable_activities','SystemSetup@editbillableactivities')->name('edit_billable_activities');
+Route::any('edit_billable_activities/{id}','SystemSetup@editbillableactivities')->name('edit_billable_activities');
+Route::any('/update_billable_activities','SystemSetup@updatebillableactivities')->name('update_billable_activities');
+Route::any('/delete_billable_activities/{id}','SystemSetup@deletebillableactivities')->name('delete_billable_activities');
 //end
 //bank account details
 Route::any('bank_details','SystemSetup@bankdetails')->name('bank_details');
 Route::any('add_bank_account','SystemSetup@addbankaccount')->name('add_bank_account');
-Route::any('edit_bank_account','SystemSetup@editbankaccount')->name('edit_bank_account');
+Route::any('edit_bank_account/{id}','SystemSetup@editbankaccount')->name('edit_bank_account');
+Route::any('/update_bank_account','SystemSetup@updatebankaccount')->name('update_bank_account');
+Route::any('/delete_bank_account/{id}','SystemSetup@deletebankaccount')->name('delete_bank_account');
 Route::any('add_bank_document','SystemSetup@bankdocument')->name('add_bank_document');
 //end
 //leave days per year
 Route::any('leave_days_year','SystemSetup@leavedays')->name('leave_days_year');
 Route::any('add_leave_days','SystemSetup@addleavedays')->name('add_leave_days');
-Route::any('edit_leave_days','SystemSetup@editleavedays')->name('edit_leave_days');
+Route::any('edit_leave_days/{id}','SystemSetup@editleavedays')->name('edit_leave_days');
+Route::any('/update_leave_days','SystemSetup@updateleavedays')->name('update_leave_days');
+Route::any('/delete_leave_days/{id}','SystemSetup@deleteleavedays')->name('delete_leave_days');
 //end
 //hourly rates
 Route::any('hourly_rates','SystemSetup@hourlyrates')->name('hourly_rates');
 Route::any('add_hourly_rates','SystemSetup@addhourlyrates')->name('add_hourly_rates');
-Route::any('edit_hourly_rates','SystemSetup@edithourlyrates')->name('edit_hourly_rates');
+Route::any('edit_hourly_rates/{id}','SystemSetup@edithourlyrates')->name('edit_hourly_rates');
+Route::any('/update_hourly_rates','SystemSetup@updatehourlyrates')->name('update_hourly_rates');
+Route::any('/delete_hourly_rates/{id}','SystemSetup@deletehourlyrates')->name('delete_hourly_rates');
 //end
 //partner revenue share
 Route::any('partner_revenue_share','SystemSetup@partnerrevenueshare')->name('partner_revenue_share');
@@ -907,17 +936,27 @@ Route::any('user_management','UserManagement@index')->name('user_management');
 //manage user accounts
 Route::any('manage_user_account','UserManagement@manageuseraccount')->name('manage_user_account');
 Route::any('reg_new_user','UserManagement@regnewuser')->name('reg_new_user');
-Route::any('user_edit','UserManagement@useredit')->name('user_edit');
+
+Route::any('/user_destroy/{id}',"UserManagement@userdestroy")->name('user_destroy');
+
+Route::any('/user_edit/{id}','UserManagement@useredit')->name('user_edit');
+
+Route::any('/update_user','UserManagement@userupdate')->name('update_user');
+
 Route::any('user_attachments','UserManagement@attachments')->name('user_attachments');
 Route::any('user_comments','UserManagement@comments')->name('user_comments');
 //end
 //change password
 Route::any('change_user_password','UserManagement@changepassword')->name('change_user_password');
+
 //end
 //manage user group
 Route::any('manage_user_group','UserManagement@manageusergrp')->name('manage_user_group');
 Route::any('add_new_user_grp','UserManagement@addnewusergrp')->name('add_new_user_grp');
-Route::any('edit_new_user_grp','UserManagement@editnewusergrp')->name('edit_new_user_grp');
+
+Route::any('/update_group','UserManagement@updategroup')->name('update_group');
+
+Route::any('/edit_new_user_grp/{id}','UserManagement@editnewusergrp')->name('edit_new_user_grp');
 //end
 //view roles per user
 Route::any('view_roles_per_user','UserManagement@rolesperuser')->name('view_roles_per_user');
@@ -926,12 +965,16 @@ Route::any('edit_view_roles','UserManagement@editviewroles')->name('edit_view_ro
 //manage user roles
 Route::any('manage_user_roles','UserManagement@manageuserroles')->name('manage_user_roles');
 Route::any('add_user_roles','UserManagement@adduserrole')->name('add_user_roles');
-Route::any('edit_user_roles','UserManagement@edituserrole')->name('edit_user_roles');
+Route::any('edit_user_roles/{id}','UserManagement@edituserrole')->name('edit_user_roles');
+Route::any('/update_user_roles','UserManagement@updateuserrole')->name('update_user_roles');
+Route::any('/delete_user_roles/{id}','UserManagement@deleteuserrole')->name('delete_user_roles');
 //end
 //manage user department
 Route::any('manage_user_department','UserManagement@manageuserdepartment')->name('manage_user_department');
 Route::any('add_user_department','UserManagement@adduserdepartment')->name('add_user_department');
-Route::any('edit_user_department','UserManagement@edituserdepartment')->name('edit_user_department');
+Route::any('edit_user_department/{id}','UserManagement@edituserdepartment')->name('edit_user_department');
+Route::any('/update_user_department','UserManagement@updateuserdepartment')->name('update_user_department');
+Route::any('/delete_user_department/{id}','UserManagement@deleteuserdepartment')->name('delete_user_department');
 //end
 //advocate targets
 Route::any('advocates_target','UserManagement@advocatestarget')->name('advocates_target');
@@ -955,6 +998,8 @@ Route::any('advocates_target_2026','UserManagement@advocatestarget2026')->name('
 
 //Client-list
 Route::any('add-client',"ClientManagement@addNewClient")->name('add-client');
+Route::any('add_newclient',"ClientManagement@addNewclient")->name('add_newclient');
+Route::any('store-client',"ClientManagement@storeClient")->name('store-client');
 Route::any('client_list','ClientManagement@view')->name('client_list');
 Route::any('/edit_person/{id}','ClientManagement@edit_person')->name('edit_person');
 Route::any('show-client/{id}','ClientManagement@show')->name('show-client');
@@ -963,6 +1008,7 @@ Route::any('update-client',"ClientManagement@updateClient")->name('update-client
 Route::any('delete-client/{id}',"ClientManagement@deleteClient")->name('delete-client');
 //coporate
 Route::any('add-corporate','ClientManagement@addCorporate')->name('add-corporate');
+Route::any('store-corporate','ClientManagement@storeCorporate')->name('store-corporate');
 Route::any('corporate-list','ClientManagement@listCorporate')->name('corporate-list');
 Route::any('/edit_client/{id}','ClientManagement@edit_corporate')->name('edit_client');
 Route::any('/update-corporate','ClientManagement@Update_corporate')->name('update-corporate');
@@ -972,7 +1018,6 @@ Route::any('/delete_client/{id}','ClientManagement@Corporate_destroy')->name('de
 
 //Client-Documents
 Route::any('client-document','ClientManagement@document')->name('client-document');
-Route::any('create-document','ClientManagement@createDocument')->name('create-document');
 Route::any('add-document','ClientManagement@addDocument')->name('add-document');
 Route::any('view-document','ClientManagement@viewDocument')->name('view-document');
 //end Client-Documents
@@ -987,6 +1032,7 @@ Route::any('/delete-pickup/{id}','ClientManagement@deletePickup')->name('delete-
 
 //complaint
 Route::any('complaint-list','ClientManagement@complaintList')->name('complaint-list');
+Route::any('create-Complaint','ClientManagement@createComplaint')->name('create-Complaint');
 Route::any('add-Complaint','ClientManagement@addComplaint')->name('add-Complaint');
 Route::any('edit_complaint/{id}','ClientManagement@editComplaint')->name('edit-Complaint');
 Route::any('update-Complaint','ClientManagement@updateComplaint')->name('update-Complaint');
@@ -996,10 +1042,8 @@ Route::any('delete-Complaint/{id}','ClientManagement@deleteComplaint')->name('de
 
 //Follow Up
 Route::any('follow-up','ClientManagement@followup')->name('follow-up');
-Route::any('add-follow','ClientManagement@addFollowup')->name('add-follow');
-Route::any('edit-follow/{id}','ClientManagement@editFollow')->name('edit-follow');
-Route::any('update-follow','ClientManagement@updateFollow')->name('update-follow');
-Route::any('delete-follow/{id}','ClientManagement@deleteFollow')->name('delete-follow');
+Route::any('add-follow','ClientManagement@addFollow')->name('add-follow');
+Route::any('edit-follow','ClientManagement@editFollow')->name('edit-follow');
 //end Follow Up
 
 //service
@@ -1009,16 +1053,14 @@ Route::any('add-service','ClientManagement@addService')->name('add-service');
 
 //Quotation
 Route::any('Quotation','ClientManagement@Quotation')->name('Quotation');
-Route::any('add-Quotation','ClientManagement@addQuotation')->name('add-Quotation');
-Route::any('edit-Quotation/{id}','ClientManagement@editQuotation')->name('edit-Quotation');
-Route::any('update-Quotation','ClientManagement@updateQuotation')->name('update-Quotation');
+Route::any('new-Quotation','ClientManagement@newQuotation')->name('new-Quotation');
+Route::any('edit-Quotation','ClientManagement@editQuotation')->name('edit-Quotation');
 //end Quotation
 
 //Registration
 Route::any('view-registration','ClientManagement@viewRegistration')->name('view-registration');
 Route::any('add-registration','ClientManagement@addRegistration')->name('add-registration');
-Route::any('edit-registration/{id}','ClientManagement@editRegistration')->name('edit-registration');
-Route::any('update-registration','ClientManagement@updateRegistration')->name('update-registration');
+Route::any('edit-registration','ClientManagement@editRegistration')->name('edit-registration');
 //end registration
 
 //communication
@@ -1034,7 +1076,7 @@ Route::any('edit-communication','ClientManagement@editCommunication')->name('edi
 
 //search list
 Route::any('search-list','ClientManagement@listSearch')->name('search-list');
-Route::any('add-register','ClientManagement@addRegister')->name('add-register');
+Route::any('register-client','ClientManagement@registerClient')->name('register-client');
 //end search list
 
 
@@ -1190,6 +1232,10 @@ Route::any('capture_billable_items',"clientinvoicing@billable_items")->name('bil
 Route::any('view_bill',"clientinvoicing@view_bill_item")->name('view_bill_item');
 //anandhu
 
+// hr module belji
+Route::any('hrindex','hrindex@index')->name('hrindex');
+Route::any('accindex','accindex@index')->name('accindex');
+Route::any('new_communication','ClientManagement@add_communication')->name('add_communication');
 
 
 

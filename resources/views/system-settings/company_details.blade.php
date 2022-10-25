@@ -1,20 +1,10 @@
 @extends('layouts.hmsmain')
 @section('content')
 
-<html>
-<div class="container">
+
 
 <head>
-    <title>Company</title>
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css"
-        href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-    <link rel="stylesheet" href="public/assets/css/logo">
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    
       <style>
     #upload_button input[type=file] 
     {
@@ -53,6 +43,7 @@
   </thead>
         <tbody>
         @foreach($company_details as $company)
+
   <tr>
     <td>{{$company->id}}</td>
     <td>{{$company->company_name}}</td>
@@ -60,10 +51,10 @@
     <td>{{$company->town_city}}</td>
     <td>{{$company->Add_Logo}}</td>
    
-    <!-- <td>CRA</td>
+    <td>CRA</td>
     <td>Stima Investment Plaza 1,3rd Floor,Mushembi Rd, Parklands </td>
     <td>Nairobi, Kenya</td>
-    <td></td> -->
+    <td></td> 
     
 <td  scope="row"class="text-center"><a href="{{url('edit_company_details',$company->id)}}">
 <i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i></td>

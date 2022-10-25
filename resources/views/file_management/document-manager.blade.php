@@ -1,32 +1,15 @@
 @extends('layouts.hmsmain')
 @section('content')
-<meta name="csrf-token" content="{{ csrf_token() }}">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css"
-    href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 
-{{-- <div class="spacer" style="height:40px;margin-top: 30px;"> --}}
-
-
-</head>
 
 <body>
     <div class="container">
         <!-- <h3 class="text-center" style="color: #070344;"><b>Document Manager(DMS)</b></h3> -->
         
-        <div>
-            <div class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Document Manager(DMS)</u></b></span></div><br>
-            <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous"> -->
-
-        
-                
+        <div>{{-- heading --}}
+    <h4 id="hdtpa"><b>Document Manager(DMS)</b></h4>
+    <br><br>
+            
             </div>
         <br>
 
@@ -36,8 +19,12 @@
                 Upload Document
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="{{url('upload-document')}}">File Upload</a>
-                <a class="dropdown-item" href="{{url('generate-document')}}">Generate Document</a>
+                <!-- <a class="dropdown-item" href="{{url('upload-document')}}">File Upload</a> -->
+                <button type="button" class="btn btn-primary" data-toggle="modal"  style="width:100%;" data-target="#myModal">
+                    File Upload </button>
+                <!-- <a class="dropdown-item" href="{{url('generate-document')}}">Generate Document</a> -->
+                <button type="button" class="btn btn-primary" data-toggle="modal"  style="width:100%;" data-target="#myModal-1">
+                Generate Document </button>
             </div>
         </div>
         <br>
@@ -82,6 +69,522 @@
                     </tbody>
 
                 </table>
+
+
+                                         <!-- START   FILE UPLOAD -->
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="background-color:#d6ba8a">
+
+                <!-- Modal Header -->
+                <div class="modal-header" style="background-color:#d6ba8a">
+                    <h2 class="text-center"><b>Upload Documents</b></h2>
+
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body" style="background-color:white">
+                    <div class="container">
+                        <form method="post" action="{{ url('upload-document') }}" enctype="multipart/form-data">
+
+
+                            <div class="row">
+
+                                <div class="col-md-12 order-md-1">
+
+                                    <form method="post" action="" id="form">
+                                        @csrf
+                                        <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Client</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">File</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Other Files</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                            </div>
+                        </div>
+                    </div>
+</div>
+<br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Document Category</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Document Title</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Telephone Number is required.
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                </br>
+
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Nature Of Document</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Keyword Search/ Tags</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+        </div>
+    </div>
+    <br>
+
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="mb-1">
+                <label for="username">Documet Owner</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <select name="country" id="cars">
+                        <option value="volvo"></option>
+                    </select>
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Number is required.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-6">
+            <div class="mb-1">
+                <label for="username">Final Aggrement</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Number is required.
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<br>
+        
+        <div class="row"> 
+        <div class="col-md-6">
+            <div class="mb-1">
+                <label for="username">Documet To Upload</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <input type="file" class="form-control" name="website" id="confirm_password" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Number is required.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-6">
+            <div class="mb-1">
+                <label for="username">Folder To Upload </label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <input type="file" class="form-control" name="website" id="confirm_password" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Number is required.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+                                
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm">
+
+                                    </div>
+                                    <div class="col-sm">
+
+                                    </div>
+                                    <div class="col-sm">
+                                        <br>
+                                        <button type="submit" class="btn btn-primary float:right;"
+                                            Style="width:60%;">Upload</button>
+                                        <button type="button" class="btn btn-primary float:right;"
+                                            data-dismiss="modal">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal" id="mymodal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-body">
+                            <form action="">
+                                <div>
+                                    <input type="text" name="type" class="form-control" placeholder="Client Type">
+                                    <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="my-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-body">
+                        <form action="">
+                            <div>
+                                <input type="text" name="type" class="form-control" placeholder="Country">
+                                <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+                                         <!-- END FILE UPLOAD -->
+
+
+                                         <!-- START GENERATE DOCUMENT -->
+<!-- The Modal -->
+<div class="modal fade" id="myModal-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="background-color:#d6ba8a">
+
+                <!-- Modal Header -->
+                <div class="modal-header" style="background-color:#d6ba8a">
+                    <h2 class="text-center"><b>Generate Document</b></h2>
+
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body" style="background-color:white">
+                    <div class="container">
+                        <form method="post" action="{{ url('upload-document') }}" enctype="multipart/form-data">
+
+
+                            <div class="row">
+
+                                <div class="col-md-12 order-md-1">
+
+                                    <form method="post" action="" id="form">
+                                        @csrf
+                                        <div class="row">
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label for="username">Client</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label for="username">File</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label for="username">Document Category</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label for="username">Document Title</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Telephone Number is required.
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                </br>
+
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Nature Of Document</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Keyword Search/ Tags</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+        </div>
+    </div>
+    <br>
+
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="mb-1">
+                <label for="username">Documet Owner</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <select name="country" id="cars">
+                        <option value="volvo"></option>
+                    </select>
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Number is required.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="mb-1">
+                <label for="username">Viewer</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Number is required.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="mb-1">
+                <label for="username">Document Template</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Number is required.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+                                
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm">
+
+                                    </div>
+                                    <div class="col-sm">
+
+                                    </div>
+                                    <div class="col-sm">
+                                        <br>
+                                        <button type="submit" class="btn btn-primary float:right;"
+                                            Style="width:60%;">Generate</button>
+                                        <button type="button" class="btn btn-primary float:right;"
+                                            data-dismiss="modal">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal" id="mymodal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-body">
+                            <form action="">
+                                <div>
+                                    <input type="text" name="type" class="form-control" placeholder="Client Type">
+                                    <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="my-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-body">
+                        <form action="">
+                            <div>
+                                <input type="text" name="type" class="form-control" placeholder="Country">
+                                <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+                                         <!-- END GENERATE DOCUMENT -->
+
+
+
+
+
+
+
+
+
+
+                
 
                 <!-- The Modal -->
                 <div class="modal fade" id="editmed">

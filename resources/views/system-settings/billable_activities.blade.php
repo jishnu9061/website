@@ -47,7 +47,7 @@
                         <tr>
                             <th class="text-center">No</th>
                             <th class="text-center">Type</th>
-                            <th class="text-center">Code</th>
+                            <!-- <th class="text-center">Code</th> -->
                             <th class="text-center">Activity Name</th>
                             <th class="text-center">Cost(Kshs)</th>
                             <th class="text-center">Status</th>
@@ -55,18 +55,19 @@
            </tr>
                     </thead>
                     <tbody>
+                    @foreach($billable_activities as $activity)
                         <tr id="data">
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
+                            <td>{{$activity->id}}</td>
+                            <td>{{$activity->type}}</td>
+                            <td>{{$activity->activity_name}}</td>
+                            <td>{{$activity->cost}}</td>
+                            <td></td>
                             <td  scope="row"class="text-center">
-                        <a href="{{url('edit_billable_activities')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                        <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
+                        <a href="{{url('edit_billable_activities',$activity->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <a href="{{url('delete_billable_activities',$activity->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                            </td>
          </tr>
+         @endforeach
                     </tbody>
                 </table>
                  <!---------------------------------------------- MODAL ---------------------------------------------------------------------->

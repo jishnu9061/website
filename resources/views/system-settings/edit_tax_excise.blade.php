@@ -26,7 +26,7 @@
             <input type="hidden" name="id" value="{{$tax_excise->id}}">
             @csrf
             <div class="row">
-                <div class="col-lg-6 col-md-6 offset-md-3" >
+                <div class="col-lg-6 col-md-6 offset-md-3">
                     <label >Tax Name:</label>
                     <div class="row">
                         <div class="col-md-11">

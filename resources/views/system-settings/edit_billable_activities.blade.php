@@ -30,7 +30,8 @@
 
         <div class="col-md-12 order-md-1">
 
-            <form method="post" action="" id="form">
+        <form method="post"action="{{url('update_billable_activities')}}"id="form">  
+          <input type="hidden" name="id" value="{{$billable_activities->id}}">
                 @csrf
                 <div class="row">
                     <div class="col-md-4">
@@ -42,7 +43,7 @@
 
                                 </div>
                                 <select type="text" value="" id="" name="type"style="width:100%;">
-                                <option>--Select---</option>
+                                <option>{{$billable_activities->type}}</option>
                                 <option>Billable Activity</option>
                                 <option>Non-Billable Activity</option>
                                 
@@ -62,7 +63,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="incorporation" id="age">
+                                <input type="text" class="form-control" name="name" id="age" value="{{$billable_activities->activity_name}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
@@ -77,7 +78,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="incorporation" id="age">
+                                <input type="text" class="form-control" name="cost" id="age" value="{{$billable_activities->cost}}">
                             </div>
                         </div>
                     </div>
@@ -85,21 +86,7 @@
 
                 </div>
                 <br>
-                <!-- <div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm">
-
-                            </div>
-                            <div class="btn-group pt-3 " role="group" aria-label="Basic example">
-
-                                <button type="submit" class="btn btn-primary submit_btn">Cancel</button>
-                                <button type="submit" class="btn btn-primary submit_btn">View Report</button>
-
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+               
                 <div class="row">
                         <div class="col-sm">
 
@@ -109,8 +96,8 @@
                         </div>
                         <div class="col-sm">
                             <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Close</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Update</button>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">close</button>
                         </div>
                     </div>
                 </div>

@@ -1,20 +1,8 @@
 @extends('layouts.hmsmain')
 @section('content')
-<meta name="csrf-token" content="{{ csrf_token() }}">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css"
-    href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-
-{{-- <div class="spacer" style="height:40px;margin-top: 30px;"> --}}
 
 
-</head>
 
-<body>
 
     <div class="col-sm">
 
@@ -22,9 +10,14 @@
 
     </div>
     <div class="container">
-        <h3 class="text-center" style="color: #070344;"><b>File Archive</b></h3>
-        <br>
-
+    {{-- heading --}}
+    <h4 id="hdtpa"><b>File Archive</b></h4>
+    <br>
+  
+ 
+ 
+         
+        
         <div id="mydatatable_filter" class="dataTables_filter">
             <label><b>Search:</b><input type="search" class="box" placeholder="search"
                     aria-controls="mydatatable"></label>
@@ -95,7 +88,7 @@
                                     <!-- Modal body -->
                                     <div class="modal-body" style="background-color:white">
                                         <div class="container">
-                                            <form method="post" action="{{ url('file-archive') }}"
+                                            <form method="post" action="{{ url('add-box-no') }}"
                                                 enctype="multipart/form-data">
                                                 @csrf
 

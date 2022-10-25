@@ -36,7 +36,8 @@
 
         <div class="col-md-12 order-md-1">
 
-            <form method="post" action="" id="form">
+        <form method="post"action="{{url('update_leave_days')}}"id="form">  
+          <input type="hidden" name="id" value="{{$leave_days->id}}">
                 @csrf
                 <div class="row">
                 <div class="col-md-4">
@@ -46,8 +47,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select type="year" value="" name="type"style="width:100%;">
-                            <option>---Select---</option>
+                                <select type="year" value="" name="year"style="width:100%;">
+                            <option>{{$leave_days->year}}</option>
                             <option>2025</option>
                             <option>2024</option>
                             <option>2023</option>
@@ -70,7 +71,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="number" class="form-control" name="telephone" id="confirm_password" required>
+                                <input type="number" class="form-control" name="leaveday" id="confirm_password" required value="{{$leave_days->annual_leave_day}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
                                 </div>
@@ -85,8 +86,8 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select type="text" value="" name="type"style="width:100%;">
-                            <option>---Select---</option>
+                    <select type="text" value="" name="saturday"style="width:100%;">
+                            <option>{{$leave_days->satuday_working_days}}</option>
                             <option>Not a Working Day</option>
                             <option>Yes (Half Day)</option>
                             <option>Yes (Full Day)</option>
@@ -102,8 +103,8 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select type="text" value="" name="type"style="width:100%;">
-                            <option>---Select---</option>
+                    <select type="text" value="" name="performance"style="width:100%;">
+                            <option>{{$leave_days->perfomance_duration}}</option>
                             <option>Monthly</option>
                             <option>Quarterly</option>
                             <option>Bi Annual</option>
@@ -123,7 +124,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="telephone" id="confirm_password" required>
+                    <input type="text" class="form-control" name="pay" id="confirm_password" required value="{{$leave_days->pay_relief}}">
                 </div>
             </div>
         </div>

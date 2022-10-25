@@ -19,8 +19,8 @@
         <div class="btn btn-primary"
             style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Client
                     Reception</u></b></span></div><br><br>
-       <button class="btn btn-primary add-btn" data-toggle="modal" data-target="#myModal" style="width:21%">New Client
-                Service</button></a>
+        <button class="btn btn-primary add-btn" data-toggle="modal" data-target="#myModal" style="width:21%">New Client
+            Service</button></a>
         <div id="mydatatable_filter" class="dataTables_filter">
             <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
         </div>
@@ -32,11 +32,11 @@
                     <table class="table table-responsive" id="new-item" style="width:100%">
                         <thead>
                             <tr>
-                                <th class="text-center">Branch</th>
-                                <th class="text-center">Client</th>
+                                <th class="text-center" style="width:15%;">Branch</th>
+                                <th class="text-center" style="width:15%;">Client</th>
                                 <th class="text-center">Phone</th>
                                 <th class="text-center">Service</th>
-                                <th class="text-center">Description</th>
+                                <th class="text-center" style="width:15%;">Description</th>
                                 <th class="text-center">Handling</th>
                                 <th class="text-center">Amount</th>
                                 <th class="text-center">RCPT</th>
@@ -52,16 +52,16 @@
                                 <td class="text-center"></td>
                                 <td class="text-center" id="medicine_name_1">{{$list_service->client_name}}</td>
                                 <td class="text-center" id="medicine_name_1">{{$list_service->mobile}}</td>
-                                <td class="text-center" id="medicine_name_1"></td>
-                                <td class="text-center" id="medicine_name_1"></td>
-                                <td class="text-center" id="medicine_name_1"></td>
-                                <td class="text-center" id="medicine_name_1"></td>
-                                <td class="text-center" id="medicine_name_1"></td>
-                                <td class="text-center" id="medicine_name_1"></td>
-                                <td class="text-center" id="medicine_name_1"></td>
-                                <td class="text-center" id="medicine_name_1"></td>
-                                {{-- <td scope="row" class="text-center" id="medicine_name_1"></td>  --}}
 
+                                <td class="text-center" id="medicine_name_1"></td>
+                                <td class="text-center" id="medicine_name_1"></td>
+                                <td class="text-center" id="medicine_name_1"></td>
+                                <td class="text-center" id="medicine_name_1"></td>
+
+                                <td class="text-center" id="medicine_name_1"></td>
+                                <td class="text-center" id="medicine_name_1"></td>
+                                <td class="text-center" id="medicine_name_1"></td>
+                                <td class="text-center" id="medicine_name_1"></td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -177,9 +177,9 @@
 
                                                                 </div>
                                                                 <select name="code" id="cars">
-                                                                    <option >select</option>
-                                                                    <option >Code1</option>
-                                                                    <option >Code2</option>
+                                                                    <option>select</option>
+                                                                    <option>Code1</option>
+                                                                    <option>Code2</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -191,13 +191,13 @@
                                                                 <div class="input-group-prepend">
                                                                 </div>
                                                                 <select name="Method" id="cars">
-                                                                    <option >Select</option>
-                                                                    <option >Cash</option>
-                                                                    <option >Checks</option>
-                                                                    <option >Debit cards</option>
-                                                                    <option >Credit cards</option>
-                                                                    <option >Mobile payments</option>
-                                                                    <option >Electronic bank transfers
+                                                                    <option>Select</option>
+                                                                    <option>Cash</option>
+                                                                    <option>Checks</option>
+                                                                    <option>Debit cards</option>
+                                                                    <option>Credit cards</option>
+                                                                    <option>Mobile payments</option>
+                                                                    <option>Electronic bank transfers
                                                                     </option>
                                                                 </select>
                                                             </div>

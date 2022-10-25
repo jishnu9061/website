@@ -1,5 +1,6 @@
 @extends('layouts.hmsmain')
 @section('content')
+<div class="container">
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css"
@@ -42,17 +43,19 @@
                        </tr>
                     </thead>
                     <tbody>
+                    @foreach($hourly_rate as $rate)
                         <tr id="data">
                         
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{ $rate->id }}</td>
+                            <td scope="row" class="text-center">{{ $rate->user_staff }}</td>
+                            <td scope="row" class="text-center">{{ $rate->currency }}</td>
+                            <td scope="row" class="text-center">{{ $rate->amount }}</td>
                             <td  scope="row"class="text-center">
-                        <a href="{{url('edit_hourly_rates')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                        <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
+                        <a href="{{url('edit_hourly_rates',$rate->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <a href="{{url('delete_hourly_rates',$rate->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                            </td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
                 <br>
@@ -83,7 +86,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select type="text" value="" name="type"style="width:100%;">
+                                <select type="text" value="" name="user"style="width:100%;">
                             <option>--Select---</option>
                                 <option>Alekeen W Benson</option>
                                 <option>Cedric Opara</option>
@@ -116,7 +119,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select type="text" value="" name="type"style="width:100%;">
+                                <select type="text" value="" name="currency"style="width:100%;">
                             <option>---Select---</option>
                             <option>KES</option>
                             <option>USD</option>
@@ -147,7 +150,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="telephone" id="confirm_password" required>
+                    <input type="text" class="form-control" name="rate" id="confirm_password" required>
                 </div>
             </div>
         </div>
