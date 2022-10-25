@@ -61,7 +61,12 @@
                                 <td class="text-center" id="medicine_name_1"></td>
                                 <td class="text-center" id="medicine_name_1"></td>
                                 <td class="text-center" id="medicine_name_1"></td>
-                                <td class="text-center" id="medicine_name_1"></td>
+                                <td class="text-center" id="medicine_name_1">
+                                <a href="{{url('edit-service',$list_service->id)}}"><i style="color:black;"
+                                            class="fa fa-edit" aria-hidden="true"></i></a>
+                                    <a href="{{url('delete-service',$list_service->id)}}"><i style="color:black;"
+                                            class="fa fa-trash" aria-hidden="true"></i></a>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -217,7 +222,7 @@
                                                             <button type="submit" class="btn btn-primary float:right;"
                                                                 Style="width:45%;">Save</button>
                                                             <button type="button" class="btn btn-primary float:left"
-                                                                Style="width:45%;">close</button>
+                                                                Style="width:45%;">Cancel</button>
                                                         </div>
                                                     </div>
                                                 </div>

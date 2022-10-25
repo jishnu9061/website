@@ -370,8 +370,8 @@
                         </div>
                         <div class="col-sm">
                             <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;"><b>UPDATE</b></button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"><b>CLOSE</b</button>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;"><b>Update</b></button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"><b>Cancel</b</button>
                         </div>
                     </div>
                 </div>
