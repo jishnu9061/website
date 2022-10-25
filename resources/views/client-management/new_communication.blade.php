@@ -12,7 +12,17 @@
                 crossorigin="anonymous">
 
         </div>
+
        
+
+        <div>
+            <a href="{{url('client-pickup')}}"><input class="btn btn-primary" type="button" style="width:15%;" value="Client Pickup"></a>
+            <a href="{{url('client-service')}}"><input class="btn btn-primary" type="button" style="width:15%;" value="Client Service"></a>
+            
+            
+           
+        </div>
+
         <br>
         <br>
 
