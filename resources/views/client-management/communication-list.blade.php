@@ -34,12 +34,6 @@
         </div>
         <br>
 
-        <div class="">
-            <a href="{{url('new_communication')}}"><button type="button" class="btn btn-primary complaint_btn"
-                    style="width:27%;"> Add
-                    Communication</button></a>
-        </div><br>
-
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="table-responsive">
                 <table class="table table-bordered" id="new-item">
