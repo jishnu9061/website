@@ -19,12 +19,21 @@
         <div class="btn btn-primary"
             style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Client
                     Conversation</u></b></div><br><br>
-        <div >
-        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="width:17%">Add Communication</button></a>
-                    
-                    <a href="{{url('client-pickup')}}"><input class="btn btn-primary" type="button" style="width:15%;" value="Client Pickup"></a>
-                    <a href="{{url('client-service')}}"><input class="btn btn-primary" type="button" style="width:15%;" value="Client Service"></a>
-        </div><br>
+
+        <div>
+            <button type="submit" class="btn btn-primary float:right;" data-toggle="modal" data-target="#myModal"
+                Style="width:18%;">Add Comminication</button>
+            <a href="{{url('client-pickup')}}"><button type="submit" class="btn btn-primary float:right;"
+                    Style="width:14%;">Client Pickup</button></a>
+            <a href="{{url('client-service')}}"><button type="submit" class="btn btn-primary float:right;"
+                    Style="width:14%;"> Client Services</button></a>
+            <button type="submit" class="btn btn-primary float:right;" Style="width:13%;">Client Portal</button>
+            <button type="submit" class="btn btn-primary float:right;" Style="width:16%;">Internal Message</button>
+            <button type="submit" class="btn btn-primary float:right;" Style="width:11%;">Phone Log</button>
+            <button type="submit" class="btn btn-primary float:right;" Style="width:11%;">Email Log</button>
+        </div>
+        <br>
+
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="table-responsive">
                 <table class="table table-bordered" id="new-item">
