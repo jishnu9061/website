@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 24, 2022 at 10:50 AM
+-- Generation Time: Oct 25, 2022 at 09:37 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -24,32 +24,25 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cra_add_user_group`
+-- Table structure for table `cra_add_user_department`
 --
 
-CREATE TABLE `cra_add_user_group` (
+CREATE TABLE `cra_add_user_department` (
   `id` int(11) NOT NULL,
-  `group_code` varchar(255) DEFAULT NULL,
-  `group_name` varchar(255) DEFAULT NULL,
-  `default_menu` varchar(255) DEFAULT NULL,
-  `group_role` varchar(255) DEFAULT NULL
+  `department_code` varchar(255) DEFAULT NULL,
+  `department_name` varchar(255) DEFAULT NULL,
+  `h_o_d` varchar(255) DEFAULT NULL,
+  `perfomance_report` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `cra_add_user_group`
---
-
-INSERT INTO `cra_add_user_group` (`id`, `group_code`, `group_name`, `default_menu`, `group_role`) VALUES
-(1, '123456', 'cra', 'Dashboard', '--select group roles--');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `cra_add_user_group`
+-- Indexes for table `cra_add_user_department`
 --
-ALTER TABLE `cra_add_user_group`
+ALTER TABLE `cra_add_user_department`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -57,10 +50,10 @@ ALTER TABLE `cra_add_user_group`
 --
 
 --
--- AUTO_INCREMENT for table `cra_add_user_group`
+-- AUTO_INCREMENT for table `cra_add_user_department`
 --
-ALTER TABLE `cra_add_user_group`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `cra_add_user_department`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
