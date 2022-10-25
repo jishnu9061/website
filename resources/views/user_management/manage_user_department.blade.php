@@ -49,17 +49,18 @@
                     </tr>
 </thead>
              <tbody>
-            
+            @foreach($manage_document  as $document)
                     <tr>
-                        <td  class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td  class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"style="color:rgb(13, 1, 56);"></td>
+                        <td  class="text-center">{{$document->id}}</td>
+                        <td  class="text-center">{{$document->department_code}}</td>
+                        <td class="text-center">{{$document->department_name}}</td>
+                        <td class="text-center">{{$document->h_o_d}}</td>
                         <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
-                                 <a href="{{url('edit_user_department')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                                 <a href="{{url('')}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
+                                 <a href="{{url('edit_user_department',$document->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                                 <a href="{{url('destroy_user_department',$document->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
                   
                      </tr>
+                     @endforeach
                      </tbody>
                      </table><br>
 </div >  
@@ -87,7 +88,7 @@
                             <label for="username">Department Code</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="">
+                                <input type="text" class="form-control" name="department_code" id="username" value="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -99,7 +100,7 @@
                             <label for="username">Department Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="">
+                                <input type="text" class="form-control" name="department_name" id="username" value="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -115,7 +116,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <select name="" id="cars">
+                                <select name="h_o_d" id="cars">
                                 <option>select</option>
                                 <option>Cedric Opara</option>
                                 <option>Corrine Auma</option>
@@ -145,7 +146,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <select name="" id="cars">
+                                <select name="perfomance_report" id="cars">
                                     <option>--select--</option>
                                     <option>Yes</option>
                                     <option>No</option>   

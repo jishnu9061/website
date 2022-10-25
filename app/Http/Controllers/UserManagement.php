@@ -26,7 +26,7 @@ class UserManagement extends Controller
 
     public function userdestroy($id)
     {
-        $edit =DB::table('cra_reg_new_user')->where('id',$id)->delete();
+        $user_destroy =DB::table('cra_reg_new_user')->where('id',$id)->delete();
         return redirect ('/manage_user_account');
     }
 
@@ -173,7 +173,7 @@ class UserManagement extends Controller
 
     public function editnewusergrp($id)
     {
-        $edit_user =DB::table('cra_reg_new_user')->where('id',$id)->first();
+        $edit_user =DB::table('cra_add_user_group')->where('id',$id)->first();
         return view('user_management.edit_new_user_grp',compact('edit_user','id'));
 
         // return view('user_management.edit_new_user_grp');
@@ -196,12 +196,19 @@ class UserManagement extends Controller
             'group_role' => $group_role,
 
         ]);
-        return redirect('/manage_user_account');
+        return redirect('/manage_user_group');
+    }
+
+    public function usergroupdestroy($id)
+    {
+        $user_group_destroy =DB::table('cra_add_user_group')->where('id',$id)->delete();
+        return redirect ('/manage_user_group');
     }
 
 
     public function rolesperuser()
     {
+        
         return view('user_management.view_roles_per_user');
     }
     public function editviewroles()
@@ -212,28 +219,120 @@ class UserManagement extends Controller
 
     public function manageuserroles()
     {
-        return view('user_management.manage_user_roles');
+
+        $user_role=DB::table('cra_add_user_roles')->get();
+        return view('user_management.manage_user_roles',compact('user_role'));
+        // return view('user_management.manage_user_roles');
     }
-    public function adduserrole()
+
+
+    public function adduserrole(Request $request)
     {
-        return view('user_management.add_user_roles');
+
+        $id  =$request['id '];
+        $role_name=$request['role_name'];
+       
+
+        DB::table('cra_add_user_roles')->insert([
+            'role_name' =>  $role_name,
+        ]);
+        
+        return redirect('/manage_user_roles');
+    
+        // return view('user_management.add_user_roles');
     }
-    public function edituserrole()
+
+
+    public function edituserrole($id)
     {
-        return view('user_management.edit_user_roles');
+        $edit_role =DB::table('cra_add_user_roles')->where('id',$id)->first();
+        return view('user_management.edit_user_roles',compact('edit_role','id'));
+        // return view('user_management.edit_user_roles');
     }
+
+    public function updaterole(Request $request)
+
+    {
+        $id =$request['id'];
+        $role_name=$request['role_name'];
+       
+        DB::table('cra_add_user_roles')->where('id',$id)->update([
+            
+            'role_name' => $role_name,
+            
+        ]);
+        return redirect('/manage_user_roles');
+    }
+
+    public function userroledestroy($id)
+    {
+        $user_role_destroy =DB::table('cra_add_user_roles')->where('id',$id)->delete();
+        return redirect ('/manage_user_roles');
+    }
+
+
     public function manageuserdepartment()
     {
-        return view('user_management.manage_user_department');
+        $manage_document = DB::table('cra_add_user_department')->get();
+        return view('user_management.manage_user_department',compact('manage_document'));
     }
-    public function adduserdepartment()
+
+
+    public function adduserdepartment(Request $request)
     {
-        return view('user_management.add_user_department');
+        
+        $department_code =$request['department_code'];
+        $department_name=$request['department_name'];
+        $h_o_d =$request['h_o_d'];
+        $perfomance_report=$request['perfomance_report'];
+       
+        DB::table('cra_add_user_department')-> insert([
+       
+            'department_code' => $department_code,
+            'department_name' => $department_name,
+            'h_o_d' => $h_o_d,
+            'perfomance_report' => $perfomance_report,
+        ]);
+        return redirect ('/manage_user_department');
+       
     }
-    public function edituserdepartment()
+
+
+    public function edituserdepartment($id)
     {
-        return view('user_management.edit_user_department');
+        $edit_department = DB::table('cra_add_user_department')->where('id',$id)->first();
+        return view('user_management.edit_user_department',compact('edit_department','id'));
     }
+
+    public function updateuserdepartment (Request $request)
+    {
+
+        $id = $request['id'];
+        $department_code =$request['department_code'];
+        $department_name=$request['department_name'];
+        $h_o_d =$request['h_o_d'];
+        $perfomance_report=$request['perfomance_report'];
+       
+        DB::table('cra_add_user_department')-> where('id',$id)->update([
+       
+            'department_code' => $department_code,
+            'department_name' => $department_name,
+            'h_o_d' => $h_o_d,
+            'perfomance_report' => $perfomance_report,
+
+        ]);
+        return redirect ('/manage_user_department');
+    }
+
+
+
+    public function destroyuserdepsrtment($id)
+    {
+        $destroy_user_department = DB::table('cra_add_user_department')->where ('id',$id)->delete();
+        return redirect ('/manage_user_department');
+    }
+
+
     public function advocatestarget()
     {
         return view('user_management.advocates_target');
@@ -337,3 +436,24 @@ class UserManagement extends Controller
         //
     }
 }
+// public function manageuserdepartment (Request $request)
+
+//     {
+
+//         $id = $request['id'];
+//         $department_code =$request['department_code'];
+//         $department_name=$request['department_name'];
+//         $h_o_d =$request['h_o_d'];
+//         $perfomance_report=$request['perfomance_report'];
+
+//         DB::table('cra_add_user_department')-> insert([
+
+//             'department_code' => $department_code,
+//             'department_name' => $department_name,
+//             'h_o_d' => $h_o_d,
+//             'perfomance_report' => $perfomance_report,
+//         ]);
+
+//         return redirect('/manage_user_department');
+       
+//     }

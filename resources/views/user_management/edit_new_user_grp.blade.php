@@ -14,15 +14,17 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <form method="post" action="" id="form">
+            <form method="post" action="{{url('update_group')}}" id="form">
                 @csrf
+
+                <input type="hidden" name="id" value="{{$edit_user->id}}">
                 <div class="row">
                     <div class="col-md-3">
                         <div class="mb-1">
                             <label for="username">Group Code</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="">
+                                <input type="text" class="form-control" name="group_code" id="username" value="{{$edit_user->group_code}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -34,7 +36,7 @@
                             <label for="username">Group Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="">
+                                <input type="text" class="form-control" name="group_name" id="username" value="{{$edit_user->group_name}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -47,7 +49,8 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <select name="" id="cars">
+                                <select name="default_menu" id="cars">
+                                    <option value="">{{$edit_user->default_menu}}</option>
                                     <option>--select--</option>
                                     <option>Dashboard</option>
                                     <option>Client Management</option>
@@ -68,7 +71,8 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <select name="" id="cars">
+                                <select name="group_role" id="cars">
+                                    <option value="">{{$edit_user->group_role}}</option>
                                     <option>--select group roles--</option>
                                     <option></option>
                                     <option></option>
