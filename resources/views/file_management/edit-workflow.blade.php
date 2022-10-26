@@ -38,6 +38,7 @@
 
         <form method="post" action="{{url('update-workflow')}}" id="form">
                 @csrf
+                <input type="hidden" name="id" value="{{$edit_flow->id}}">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
