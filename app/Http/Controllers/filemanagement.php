@@ -684,12 +684,37 @@ class filemanagement extends Controller
 
      public function workflow()
      {
-         return view('file_management.work-flow');
+        $flow=DB::table('cra_work_flow')->get();
+         return view('file_management.work-flow',compact('flow'));
      }
 
-     public function newworkflow()
+     public function newworkflow(Request $request)
      {
-         return view('file_management.new-workflow');
+        $id =$request['id']; 
+        $Date =$request['date']; 
+        $Flow_name =$request['flow_name']; 
+        $start_date =$request['start_date'];
+        $Duration =$request['duration']; 
+        $Flow_comments =$request['flow_comments']; 
+
+        DB::table('cra_work_flow')->insert([
+            'id' =>  $id,
+            'Date_Created' =>  $Date,
+            'Workflow_Name' =>  $Flow_name,
+            'Start_Date' =>  $start_date,
+            'Duration' =>   $Duration,
+            'Workflow_Comments' =>   $Flow_comments,
+        ]);
+
+     
+     return redirect('/work-flow');
+     }
+
+     public function deleteworkflow($id)
+     {
+        $delete_flow=DB::table('cra_work_flow')->where('id',$id)->delete();
+       return redirect('/work-flow');
+      
      }
 
 

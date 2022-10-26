@@ -31,7 +31,7 @@
 
 
 
-                <div class="row">
+                <<div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Date Created</label>
@@ -39,7 +39,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="website" id="confirm_password" required>
+                                <input type="date" class="form-control" name="" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="website" id="confirm_password" required>
+                                <input type="date" class="form-control" name="" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -88,7 +88,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <textarea class="form-control" id="edit_medicine_details1" name="medicine_detailss"
+                                <textarea class="form-control" id="edit_medicine_details1" name=""
                                     rows="3" placeholder=""></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
@@ -103,44 +103,66 @@
 
 
 
-       
-    </div>
-
-
-
-
-
-</div>
-<br>
-
-<div class="row">
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-                            <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save Workflow</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
-                        </div>
-                    </div>
-                </div>
-
+  
 
 
 
 </div>
+<br> <div class="row">
+                       <div class="col-sm">
 
+                       </div>
+                       <div class="col-sm">
 
+                       </div>
+                       <div class="col-sm">
+                           <br>
+                           <button type="submit" class="btn btn-primary float:right;" Style="width:60%;">Save Workflow</button>
+                           <button type="button" class="btn btn-primary float:right;" data-dismiss="modal">Cancel</button>
+                       </div>
+                   </div>
+               </div>
+           </form>
+       </div>
+   </div>
+</div>
 
-
-
-</tbody>
-</table>
+</div>
+<div class="modal" id="mymodal">
+   <div class="modal-dialog">
+       <div class="modal-content">
+           <div class="modal-header">
+               <div class="modal-body">
+                   <form action="">
+                       <div>
+                           <input type="text" name="type" class="form-control" placeholder="Client Type">
+                           <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                       </div>
+                   </form>
+               </div>
+           </div>
+       </div>
+   </div>
 </div>
 </div>
+<div class="modal" id="my">
+   <div class="modal-dialog">
+       <div class="modal-content">
+           <div class="modal-header">
+               <div class="modal-body">
+                   <form action="">
+                       <div>
+                           <input type="text" name="type" class="form-control" placeholder="Country">
+                           <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                       </div>
+                   </form>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+</div>
+
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
 $(function() {

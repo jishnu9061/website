@@ -48,27 +48,37 @@
                             <th class="text-center">Start Name</th>
                             <th class="text-center">Duration(days)</th>
                             <th class="text-center">Created By</th>
-                            <th class="text-center">View</th>
-                            <th class="text-center">Edit</th>
+                           
                             <th class="text-center"> <input type="checkbox" name="" id=""> </th>
+                            <th class="text-center">Action</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($flow as $list)
                         <tr id="data">
                             <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$list->Date_Created}}</td>
+                            <td scope="row" class="text-center">{{$list->Workflow_Name}}</td>
+                            <td scope="row" class="text-center">{{$list->Workflow_Comments}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$list->Duration}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></i>
-                                <input type="checkbox" name="" id="">
+                            <input type="checkbox" name="" id="">
+                            </td>
+                            <td scope="row" class="text-center">
+                            <button style="background-color:#FFFBF4;"class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               Action
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                           
+                                <a href="" class="dropdown-item" >Edit</a>
+                                <a href="" class="dropdown-item" >View</a>
+                                <a href="{{url('delete-workflow',$list->id)}}" class="dropdown-item" >Delete</a>
                             </td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
                  <!-- The Modal -->
@@ -85,10 +95,10 @@
                                     <!-- Modal body -->
                                     <div class="modal-body">
                                         <div class="container">
-                                            <form method="post" action="{{ url('') }}"
+                                            <form method="post" action="{{ url('new-workflow') }}"
                                                 enctype="multipart/form-data">
 
-
+                                                @csrf
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
@@ -134,7 +144,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="Duration" id="confirm_password" required>
+                                <input type="text" class="form-control" name="duration" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
