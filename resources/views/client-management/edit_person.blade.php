@@ -40,7 +40,7 @@
 
                                 </div>
                                 <select name="type" id="cars" disabled>
-                                    <option value="Individual">{{$edit_client->client_type}}</option>
+                                    <option>{{$edit_client->client_type}}</option>
                                 </select>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
 
                                 </div>
                                 <select name="citizen" id="cars">
-                                    <option value="Residensial">{{$edit_client->citizen_status}}</option>
+                                    <option >{{$edit_client->citizen_status}}</option>
                                 </select>
                             </div>
                         </div>

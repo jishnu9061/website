@@ -478,9 +478,9 @@
                                                     <div class="modal-footer" style="background-color:#d6ba8a">
                                                         <button type="submit" class="btn btn-primary"
                                                             data-dismiss="modal"
-                                                            style="width:15%;background-color:white;color:black">Close</button>
-                                                        <button type="submit" class="btn btn-primary"
                                                             style="width:15%;background-color:white;color:black">Save</button>
+                                                        <button type="button" class="btn btn-primary"
+                                                            style="width:15%;background-color:white;color:black">Cancel</button>
                                                     </div>
 
                                                 </div>

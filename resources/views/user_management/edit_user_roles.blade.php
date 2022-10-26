@@ -23,17 +23,18 @@
                 crossorigin="anonymous">
      </div>
             <br> <br>
-            <form method="post"action="{{url('update_user_roles')}}"id="form">  
-          <input type="hidden" name="id" value="{{$user_roles->id}}">
+ 
+            <form method="post" action="{{url('update_role')}}" id="form">  
        @csrf
        <div class="row">
+       <input type="hidden" name="id" value="{{$edit_role->id}}">
                 <div class="col-lg-6 col-md-6 offset-md-3" >
                     <label >Role Name:</label>
                     <div class="row">
                         <div class="col-md-11">
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text"  id="" name="role_name"value="{{$user_roles->role_name}}"class="form-control">
+                                <input type="text"  id="" name="role_name" value="{{$edit_role->role_name}}" class="form-control">
                             <div class="invalid-feedback" style="width: 100%;">
                             Required Field.
                         </div>
