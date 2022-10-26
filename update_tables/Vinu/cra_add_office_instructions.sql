@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 25, 2022 at 09:37 AM
+-- Generation Time: Oct 26, 2022 at 12:01 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -24,15 +24,23 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cra_add_user_group`
+-- Table structure for table `cra_add_office_instructions`
 --
 
-CREATE TABLE `cra_add_user_group` (
+CREATE TABLE `cra_add_office_instructions` (
   `id` int(11) NOT NULL,
-  `group_code` varchar(255) DEFAULT NULL,
-  `group_name` varchar(255) DEFAULT NULL,
-  `default_menu` varchar(255) DEFAULT NULL,
-  `group_role` varchar(255) DEFAULT NULL
+  `date` date NOT NULL,
+  `instruction_type` varchar(255) NOT NULL,
+  `instruction_category` varchar(255) NOT NULL,
+  `receiver` varchar(255) NOT NULL,
+  `currency` varchar(255) NOT NULL,
+  `exchange_rate` varchar(255) NOT NULL,
+  `expence_category` varchar(255) NOT NULL,
+  `turn_around` varchar(255) NOT NULL,
+  `priority` varchar(255) NOT NULL,
+  `amount` varchar(255) NOT NULL,
+  `detail` varchar(255) NOT NULL,
+  `send_notification` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -40,9 +48,9 @@ CREATE TABLE `cra_add_user_group` (
 --
 
 --
--- Indexes for table `cra_add_user_group`
+-- Indexes for table `cra_add_office_instructions`
 --
-ALTER TABLE `cra_add_user_group`
+ALTER TABLE `cra_add_office_instructions`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -50,10 +58,10 @@ ALTER TABLE `cra_add_user_group`
 --
 
 --
--- AUTO_INCREMENT for table `cra_add_user_group`
+-- AUTO_INCREMENT for table `cra_add_office_instructions`
 --
-ALTER TABLE `cra_add_user_group`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+ALTER TABLE `cra_add_office_instructions`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

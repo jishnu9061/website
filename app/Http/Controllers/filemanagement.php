@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
-
+//
 class filemanagement extends Controller
 {
     public function index()
@@ -684,12 +684,68 @@ class filemanagement extends Controller
 
      public function workflow()
      {
-         return view('file_management.work-flow');
+        $flow=DB::table('cra_work_flow')->get();
+         return view('file_management.work-flow',compact('flow'));
      }
 
-     public function newworkflow()
+     public function newworkflow(Request $request)
      {
-         return view('file_management.new-workflow');
+        $id =$request['id']; 
+        $Date =$request['date']; 
+        $Flow_name =$request['flow_name']; 
+        $start_date =$request['start_date'];
+        $Duration =$request['duration']; 
+        $Flow_comments =$request['flow_comments']; 
+
+        DB::table('cra_work_flow')->insert([
+            'id' =>  $id,
+            'Date_Created' =>  $Date,
+            'Workflow_Name' =>  $Flow_name,
+            'Start_Date' =>  $start_date,
+            'Duration' =>   $Duration,
+            'Workflow_Comments' =>   $Flow_comments,
+        ]);
+
+     
+     return redirect('/work-flow');
+     }
+
+     public function updatworkflow(Request $request)
+     {
+        $id =$request['id']; 
+        $Date =$request['date']; 
+        $Flow_name =$request['flow_name']; 
+        $start_date =$request['start_date'];
+        $Duration =$request['duration']; 
+        $Flow_comments =$request['flow_comments']; 
+
+        DB::table('cra_work_flow')->where('id',$id)->update([
+            'id' =>  $id,
+            'Date_Created' =>  $Date,
+            'Workflow_Name' =>  $Flow_name,
+            'Start_Date' =>  $start_date,
+            'Duration' =>   $Duration,
+            'Workflow_Comments' =>   $Flow_comments,
+        ]);
+
+     
+     return redirect('/work-flow');
+     }
+
+
+     public function deleteworkflow($id)
+     {
+        $delete_flow=DB::table('cra_work_flow')->where('id',$id)->delete();
+       return redirect('/work-flow');
+      
+     }
+
+     public function editworkflow($id)
+
+     {
+         $edit_flow =DB::table('cra_work_flow')->where('id',$id)->first();
+         return view('file_management.edit-workflow',compact('edit_flow','id'));
+        
      }
 
 
@@ -697,12 +753,121 @@ class filemanagement extends Controller
 
      public function diarymanagement()
      {
-         return view('file_management.diary-management');
+        $event=DB::table('cra_add_event')->get();
+         return view('file_management.diary-management',compact('event'));
      }
 
-     public function addevent()
+     public function eventdelete($id)
      {
-         return view('file_management.add-event');
+        $event_delete=DB::table('cra_add_event')->where('id',$id)->delete();
+        return redirect('/diary-management');
+        //  return redirect('file_management.diary-management');
+     }
+
+
+     public function editevent($id)
+
+     {
+         $edit_event =DB::table('cra_add_event')->where('id',$id)->first();
+         return view('file_management.edit_event',compact('edit_event','id'));
+        
+     }
+
+     public function updateevent(Request $request)
+     {
+        $id =$request['id'];
+        $Event_type =$request['event'];
+        $Title =$request['title'];
+        $Meeting_room =$request['room'];
+        $Location =$request['location'];
+        $Start_sate =$request['start_date'];
+        $Time =$request['time'];
+        $End_date =$request['end_date'];
+        $Time_1 =$request['time_1'];
+        $Event =$request['event'];
+        $User =$request['user'];
+        $Others =$request['others'];
+        $Client =$request['client'];
+        $File =$request['file'];
+        $Notes =$request['notes'];
+        $Repetition =$request['repetition'];
+        $Repetition_end =$request['repetition_end'];
+        $Reminder =$request['reminder'];
+        
+
+        DB::table('cra_add_event')->where('id',$id)->update([
+
+            
+            'Event_Type' =>  $Event_type,
+            'Title' =>  $Title,
+            'Meeting_Room' =>  $Meeting_room,
+            'Location' =>   $Location,
+            'Start_Date' =>   $Start_sate,
+            'Time' =>  $Time,
+            'End_Date' =>  $End_date,
+            'Time_End' =>  $Time_1,
+            'Event_Booked_For' =>  $Event,
+            'User_Invited' =>  $User,
+            'Other_Invites' =>  $Others,
+            'Client' =>  $Client,
+            'File' =>   $File,
+            'Notes' =>   $Notes,
+            'Set_Repetition' =>   $Repetition,
+            'Repetition_End' =>   $Repetition_end,
+            'Set_Reminder' =>  $Reminder,
+
+        ]);
+        return redirect('/diary-management');
+    }
+ 
+
+     public function addevent(Request $request)
+     {
+        
+        $Event_type =$request['event'];
+        // dd($Event_type); 
+        $Title =$request['title'];
+        $Meeting_room =$request['room'];
+        $Location =$request['location'];
+        $Start_sate =$request['start_date'];
+        $Time =$request['time'];
+        $End_date =$request['end_date'];
+        $Time_1 =$request['time_1'];
+        $Event =$request['event'];
+        $User =$request['user'];
+        $Others =$request['others'];
+        $Client =$request['client'];
+        $File =$request['file'];
+        $Notes =$request['notes'];
+        $Repetition =$request['repetition'];
+        $Repetition_end =$request['repetition_end'];
+        $Reminder =$request['reminder'];
+        
+
+        DB::table('cra_add_event')->insert([
+
+           
+            'Event_Type' =>  $Event_type,
+            'Title' =>  $Title,
+            'Meeting_Room' =>  $Meeting_room,
+            'Location' =>   $Location,
+            'Start_Date' =>   $Start_sate,
+            'Time' =>  $Time,
+            'End_Date' =>  $End_date,
+            'Time_End' =>  $Time_1,
+            'Event_Booked_For' =>  $Event,
+            'User_Invited' =>  $User,
+            'Other_Invites' =>  $Others,
+            'Client' =>  $Client,
+            'File' =>   $File,
+            'Notes' =>   $Notes,
+            'Set_Repetition' =>   $Repetition,
+            'Repetition_End' =>   $Repetition_end,
+            'Set_Reminder' =>  $Reminder,
+
+        ]);
+        return redirect('/diary-management');
+        
      }
 
      public function meetingrooms()
@@ -908,16 +1073,9 @@ class filemanagement extends Controller
     {
         return view('system-settings.User.change_password');
     }
-    public function new_instructions()
-    {
-        return view('file_management.office_instructions');
-    }
- 
 
-public function add_new_instructions()
-{
-    return view('file_management.new_office_instructions');
-}
+
+   
 
 public function view_new_instructions(Request $request)
 {
@@ -945,13 +1103,211 @@ public function view_new_instructions(Request $request)
 
 public function new_file_instructions()
 {
-    return view('file_management.file_instruction');
+
+    $new_file_instruction=DB::table('cra_add_new_instructions')->get();
+        
+        return view('file_management.file_instruction',compact('new_file_instruction'));
+    // return view('file_management.file_instruction');
 }
 
-public function add_new_file_instructions()
+
+
+
+
+public function add_new_file_instructions(Request $request)
 {
-    return view('file_management.file_new_instruction');                                                             
+   $id =$request['id'];
+   $date =$request['date'];
+   $client =$request['client'];
+   $file =$request['file'];
+   $instruction =$request['instruction'];
+   $category =$request['category'];
+   $receiver =$request['receiver'];
+   $currency =$request['currency'];
+   $exchange =$request['exchange'];
+   $turn_around =$request['turn_around'];
+   $priority =$request['priority'];
+   $amount =$request['amount'];
+   $details =$request['details'];
+   $send_notification =$request['send_notification'];
+
+   DB::table('cra_add_new_instructions')->insert([
+
+    'id' => $id,
+    'date' => $date,
+    'client' => $client,
+    'file' => $file,
+    'instruction' => $instruction,
+    'category' =>  $category,
+    'receiver' =>   $receiver,
+    'currency' => $currency,
+    'exchange' => $exchange,
+    'turn_around' => $turn_around,
+    'priority' => $priority,
+    'amount' =>  $amount,
+    'details' =>   $details,
+    'send_notification' =>   $send_notification,
+]);
+    return view('file_management.file_instruction');                                                             
 }
+
+public function edit_file_instruction_list($id)
+{
+
+
+    $edit_file_instruction =DB::table('cra_add_new_instructions')->where('id',$id)->first();
+    return view('file_management.edit_file_instruction',compact('edit_file_instruction','id'));
+
+                                                             
+}
+
+public function updatefileinstruction(Request $request)
+{
+
+
+    $id =$request['id'];
+    $date =$request['date'];
+    $client =$request['client'];
+    $file =$request['file'];
+    $instruction =$request['instruction'];
+    $category =$request['category'];
+    $receiver =$request['receiver'];
+    $currency =$request['currency'];
+    $exchange =$request['exchange'];
+    $turn_around =$request['turn_around'];
+    $priority =$request['priority'];
+    $amount =$request['amount'];
+    $details =$request['details'];
+    $send_notification =$request['send_notification'];
+ 
+    DB::table('cra_add_new_instructions')->where('id',$id)->update([
+ 
+     'id' => $id,
+     'date' => $date,
+     'client' => $client,
+     'file' => $file,
+     'instruction' => $instruction,
+     'category' =>  $category,
+     'receiver' =>   $receiver,
+     'currency' => $currency,
+     'exchange' => $exchange,
+     'turn_around' => $turn_around,
+     'priority' => $priority,
+     'amount' =>  $amount,
+     'details' =>   $details,
+     'send_notification' =>   $send_notification,
+ ]);
+
+ return redirect('/file_instruction');
+
+}
+
+public function destroyfileinstruction($id)
+{
+    $destroy_file =DB::table('cra_add_new_instructions')->where('id',$id)->delete();
+    return redirect ('/file_instruction');
+}
+
+
+public function new_instructions()
+{
+    $new_office_instruction=DB::table('cra_add_office_instructions')->get();
+        
+    return view('file_management.office_instructions',compact('new_office_instruction'));
+}
+
+
+public function add_new_instructions(Request $request)
+{
+
+
+   
+    $date =$request['date'];
+    $instruction_type =$request['instruction_type'];
+    $instruction_category =$request['instruction_category'];
+    $receiver =$request['receiver'];
+    $currency =$request['currency'];
+    $exchange_rate =$request['exchange_rate'];
+    $expence_category =$request['expence_category'];
+    $turn_around =$request['turn_around'];
+    $priority =$request['priority'];
+    $amount =$request['amount'];
+    $detail =$request['detail'];
+    $send_notification =$request['send_notification'];
+ 
+    DB::table('cra_add_office_instructions')->insert([
+ 
+    
+     'date' => $date,
+     'instruction_type' => $instruction_type,
+     'instruction_category' => $instruction_category,
+     'receiver' => $receiver,
+     'currency' =>  $currency,
+     'exchange_rate' =>   $exchange_rate,
+     'expence_category' => $expence_category,
+     'turn_around' => $turn_around,
+     'priority' => $priority,
+     'amount' => $amount,
+     'detail' =>  $detail,
+     'send_notification' =>   $send_notification,
+ ]);
+
+ return redirect('/office_instructions');
+
+}
+
+public function edit_office_instruction_list($id)
+{
+    $edit_office_instruction =DB::table('cra_add_office_instructions')->where('id',$id)->first();
+    return view('file_management.edit_office_instruction',compact('edit_office_instruction','id'));                                                           
+}
+
+public function updateofficeinstructions(Request $request)
+{
+
+
+    $id =$request['id'];
+    $date =$request['date'];
+    $instruction_type =$request['instruction_type'];
+    $instruction_category =$request['instruction_category'];
+    $receiver =$request['receiver'];
+    $currency =$request['currency'];
+    $exchange_rate =$request['exchange_rate'];
+    $expence_category =$request['expence_category'];
+    $turn_around =$request['turn_around'];
+    $priority =$request['priority'];
+    $amount =$request['amount'];
+    $detail =$request['detail'];
+    $send_notification =$request['send_notification'];
+ 
+    DB::table('cra_add_office_instructions')->where('id',$id)->update([
+ 
+     'id' => $id,
+     'date' => $date,
+     'instruction_type' => $instruction_type,
+     'instruction_category' => $instruction_category,
+     'receiver' => $receiver,
+     'currency' =>  $currency,
+     'exchange_rate' =>   $exchange_rate,
+     'expence_category' => $expence_category,
+     'turn_around' => $turn_around,
+     'priority' => $priority,
+     'amount' => $amount,
+     'detail' =>  $detail,
+     'send_notification' =>   $send_notification,
+ ]);
+
+ return redirect('/office_instructions');
+
+}
+
+public function destroyofficeinstruction($id)
+{
+    $destroy_file =DB::table('cra_add_office_instructions')->where('id',$id)->delete();
+    return redirect ('/office_instructions');
+}
+
+
 
 public function safe_management_list()
 {
@@ -978,15 +1334,12 @@ public function Process_Request_list()
     return view('file_management.Process_Request');                                                             
 }
 
-public function edit_file_instruction_list()
-{
-    return view('file_management.edit_file_instruction');                                                             
-}
 
-public function edit_office_instruction_list()
-{
-    return view('file_management.edit_office_instruction');                                                             
-}
+
+
+
+
+
 
 }
 

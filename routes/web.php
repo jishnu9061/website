@@ -1169,6 +1169,14 @@ Route::any('meeting-rooms',"filemanagement@meetingrooms")->name('meeting-rooms')
 Route::any('add-event',"filemanagement@addevent")->name('add-event');
 Route::any('work-flow',"filemanagement@workflow")->name('work-flow');
 Route::any('new-workflow',"filemanagement@newworkflow")->name('new-workflow');
+Route::any('/event_delete/{id}',"filemanagement@eventdelete")->name('eventdelete');
+Route::any('/edit_event/{id}',"filemanagement@editevent")->name('editevent');
+Route::any('/update_event',"filemanagement@updateevent")->name('update_event');
+//workflow
+Route::any('/delete-workflow/{id}',"filemanagement@deleteworkflow")->name('delete-workflow');
+Route::any('/edit-workflow/{id}',"filemanagement@editworkflow")->name('editworkflow');
+Route::any('/update-workflow',"filemanagement@updatworkflow")->name('update-workflow');
+
 //document manager
 Route::any('document-manager',"filemanagement@documentmanager")->name('document-manager');
 Route::any('upload-document',"filemanagement@uploaddocument")->name('upload-document');
@@ -1217,8 +1225,9 @@ Route::any('/u_details',"filemanagement@u_details")->name('u_details');
 
 //Anandhu
 Route::any('/office_instructions',"filemanagement@new_instructions")->name('new_instruction');
-
 Route::any('/new_office_instructions',"filemanagement@add_new_instructions")->name('add_new_instructions');
+Route::any('/update_office_instruction',"filemanagement@updateofficeinstructions")->name('update_office_instruction');
+Route::any('/delete_office/{id}',"filemanagement@destroyofficeinstruction")->name('delete_office');
 
 Route::any('/instructions_report',"filemanagement@view_new_instructions")->name('view_new_instructions');
 
@@ -1236,10 +1245,13 @@ Route::any('/new_Request_staff_item',"filemanagement@add_Request_staff_item_list
 
 Route::any('/Process_Request',"filemanagement@Process_Request_list")->name('Process_Request_list');
 
-Route::any('/edit_file_instruction',"filemanagement@edit_file_instruction_list")->name('Process_Request_list');
+Route::any('/edit_file_instruction/{id}',"filemanagement@edit_file_instruction_list")->name('edit_file_instruction');
 
-Route::any('/edit_office_instruction',"filemanagement@edit_office_instruction_list")->name('edit_office_instruction_list');
+Route::any('/update_file_instruction',"filemanagement@updatefileinstruction")->name('update_file_instruction');
 
+Route::any('/edit_office_instruction/{id}',"filemanagement@edit_office_instruction_list")->name('edit_office_instruction_list');
+
+Route::any('/delete_file/{id}',"filemanagement@destroyfileinstruction")->name('delete_file');
 
 
 //client invoicing

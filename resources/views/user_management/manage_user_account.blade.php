@@ -42,7 +42,7 @@
                         <th class="text-center" >Name</th>
                         <th class="text-center" >User Name</th>
                         <th class="text-center" >User Group</th>
-                        <th class="text-center" >E mail</th>
+                        <th class="text-center" >E-mail</th>
                         <th class="text-center" >Telephone</th>
                         <th class="text-center" >Log Status</th>
                         <th class="text-center" >IP Address</th>
@@ -77,7 +77,7 @@
                                 <a href="user_attachments"class="dropdown-item" >Attachment</a>
                                 <a href="user_comments" class="dropdown-item" >Comments</a>
                                 <a href="{{url('user_destroy',$list->id)}}" class="dropdown-item" >Delete</a>
-                             
+                            
                             </div>
                         </div> 
 

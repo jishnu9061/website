@@ -17,16 +17,16 @@
 
         </div>
         <div>
-        <div>
-        {{-- heading --}}
-    <h4 id="hdtpa"><b>Edit Instruction</b></h4>
-    <br><br>
-            
-        </div>
-        
+            <div>
+                {{-- heading --}}
+                <h4 id="hdtpa"><b>Edit Instruction</b></h4>
+                <br><br>
+
+            </div>
+
 
             <br>
-            <div >
+            <div>
                 <input class="btn btn-primary" type="button" value="View File Statement">
                 <input class="btn btn-primary" type="button" value="View File Details">
                 <input class="btn btn-primary" type="button" value="Previous Instructions">
@@ -36,7 +36,7 @@
 
             </div>
             <br>
-           
+
 
         </div>
     </div>
@@ -47,10 +47,11 @@
 
         <div class="col-md-12 order-md-1">
 
-            <form method="post" action="" id="form">
+            <form method="post" action="{{url('update_file_instruction')}}" id="form">
                 @csrf
 
 
+                <input type="hidden" name="id" value="{{ $edit_file_instruction->id}}">
 
                 <div class="row">
 
@@ -63,7 +64,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="number" id="username" required>
+                                <input type="date" class="form-control" name="date" id="username"
+                                    value="{{ $edit_file_instruction->date}}" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -80,8 +82,13 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="client" id="cars">
+                                    <option>{{ $edit_file_instruction->client}}</option>
+                                    <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                                 </select>
                             </div>
                         </div>
@@ -94,9 +101,14 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
-                                </select>
+                                <select name="file" id="cars">
+                                    <option>{{ $edit_file_instruction->file}}</option>
+                                    <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option> 
+                    </select>
                             </div>
                         </div>
                     </div>
@@ -115,8 +127,13 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="instruction" id="cars">
+                                    <option>{{ $edit_file_instruction->instruction}}</option>
+                                    <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                                 </select>
                             </div>
                         </div>
@@ -128,7 +145,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
+                                <select name="category" id="cars">
+                                    <option>{{ $edit_file_instruction->category}}</option>
                                     <option value="volvo"></option>
                                 </select>
                             </div>
@@ -142,8 +160,13 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="receiver" id="cars">
+                                    <option>{{ $edit_file_instruction->receiver}}</option>
+                                    <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                                 </select>
                             </div>
                         </div>
@@ -165,8 +188,13 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
+                    <select name="currency" id="cars">
+                        <option>{{ $edit_file_instruction->currency}}</option>
+                        <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                     </select>
                 </div>
             </div>
@@ -178,14 +206,15 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="incorporation" id="age">
+                    <input type="text" class="form-control" name="exchange"
+                        value="{{ $edit_file_instruction->exchange}}" id="age">
                     <div class="invalid-feedback" style="width: 100%;">
                         Incorporation is required
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <div class="col-md-2">
             <div class="mb-1">
                 <label for="username">Turn-Around Time</label>
@@ -193,8 +222,13 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
+                    <select name="turn_around" id="cars">
+                        <option>{{ $edit_file_instruction->turn_around}}</option>
+                        <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                     </select>
                 </div>
             </div>
@@ -206,13 +240,18 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
+                    <select name="priority" id="cars">
+                        <option>{{ $edit_file_instruction->priority}}</option>
+                        <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                     </select>
                 </div>
             </div>
         </div>
-        
+
         <div class="col-md-4">
             <div class="mb-1">
                 <label for="username">Amount</label>
@@ -220,15 +259,16 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="incorporation" id="age">
+                    <input type="text" class="form-control" name="amount"
+                        value="{{ $edit_file_instruction->amount}}" id="age">
                     <div class="invalid-feedback" style="width: 100%;">
                         Incorporation is required
                     </div>
                 </div>
             </div>
         </div>
-</div>
-<div class="row">
+    </div>
+    <div class="row">
         <div class="col-md-12">
             <div class="mb-1">
                 <label for="username">Details</label>
@@ -236,7 +276,8 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                    <textarea class="form-control" name="details" id="form7Example7"
+                        value="{{ $edit_file_instruction->details}}" rows="3"></textarea>
                 </div>
             </div>
         </div>
@@ -255,8 +296,13 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
+                    <select name="send_notification" id="cars">
+                        <option>{{ $edit_file_instruction->send_notification}}</option>
+                        <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                     </select>
                 </div>
             </div>
@@ -284,17 +330,17 @@
 
 <br>
 <div class="container">
-                    <div class="row">
-                      <div class="col-sm">
-                      </div>
-                      <div class="col-sm">
-                      </div>
-                      <div class="col-sm">
-                        <button type="submit" class="btn btn-primary float:right" style="width:45%">Save</button>
-                        <button type="submit" class="btn btn-primary float:left"style="width:45%">Close</button>
-                      </div>
-                    </div>
-                  </div>
+    <div class="row">
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+            <button type="submit" class="btn btn-primary float:right" style="width:45%">Save</button>
+            <button type="button" class="btn btn-primary float:left" style="width:45%">Close</button>
+        </div>
+    </div>
+</div>
 </form>
 
 

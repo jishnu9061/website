@@ -48,27 +48,34 @@
                     </thead>
 
                     <tbody>
-
+                    @foreach($event as $list)
                         <tr id="data">
 
                             <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$list->Title}}</td>
+                            <td scope="row" class="text-center">{{$list->Client}}</td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$list->File}}</td>
+                            <td scope="row" class="text-center">{{$list->Start_Date}}</td>
+                            <td scope="row" class="text-center">{{$list->End_Date}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center">
-                                <select name="" id="">
-                                    <option value=""> <a href="">Action</a> </option>
-                                    <option value=""> <a href=""></a> </option>
-                                </select>
+                            <button style="background-color:#FFFBF4;"class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               Action
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                           
+                                <a href="{{url('edit_event',$list->id)}}" class="dropdown-item" >Edit</a>
+                                <a href="user_attachments"class="dropdown-item" >Attachment</a>
+                                <a href="user_comments" class="dropdown-item" >Comments</a>
+                                <a href="{{url('event_delete',$list->id)}}" class="dropdown-item" >Delete</a>
+                        
+                               
                             </td>
                         </tr>
+<!-- <div> -->
 
-
-
+@endforeach 
                     </tbody>
 
                 </table>
@@ -86,7 +93,7 @@
                                     <!-- Modal body -->
                                     <div class="modal-body">
                                         <div class="container">
-                                            <form method="post" action="{{ url('diary-management') }}"
+                                            <form method="post" action="{{ url('add-event') }}"
                                                 enctype="multipart/form-data">
                                                 
                                         @csrf
@@ -108,7 +115,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="mb-1">
+                        <div class="mb-1">  
                             <label for="username">Title</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
@@ -281,7 +288,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                    <textarea class="form-control" name="others" id="form7Example7" rows="3"></textarea>
                     <div class="invalid-feedback" style="width: 100%;">
                         Telephone Number is required.
                     </div>
@@ -431,7 +438,7 @@
                         </div>
                         <div class="col-sm">
                             <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Submit</button>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
                             <button type="button" class="btn btn-primary float:right;" data-dismiss="modal">Close</button>
                         </div>
                     </div>

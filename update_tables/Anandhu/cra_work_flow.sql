@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 25, 2022 at 09:37 AM
+-- Generation Time: Oct 26, 2022 at 01:27 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -24,25 +24,34 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cra_add_user_department`
+-- Table structure for table `cra_work_flow`
 --
 
-CREATE TABLE `cra_add_user_department` (
+CREATE TABLE `cra_work_flow` (
   `id` int(11) NOT NULL,
-  `department_code` varchar(255) DEFAULT NULL,
-  `department_name` varchar(255) DEFAULT NULL,
-  `h_o_d` varchar(255) DEFAULT NULL,
-  `perfomance_report` varchar(255) DEFAULT NULL
+  `Date_Created` date NOT NULL,
+  `Workflow_Name` varchar(255) DEFAULT NULL,
+  `Start_Date` date DEFAULT NULL,
+  `Duration` varchar(255) DEFAULT NULL,
+  `Workflow_Comments` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_work_flow`
+--
+
+INSERT INTO `cra_work_flow` (`id`, `Date_Created`, `Workflow_Name`, `Start_Date`, `Duration`, `Workflow_Comments`) VALUES
+(4, '2022-10-11', 'aaaa', '2022-10-18', 'cccc', NULL),
+(5, '2022-10-12', 'aaaaaaa', '2022-10-12', 'aaaaaaaaaa', 'aaaaaaaaa');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `cra_add_user_department`
+-- Indexes for table `cra_work_flow`
 --
-ALTER TABLE `cra_add_user_department`
+ALTER TABLE `cra_work_flow`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -50,10 +59,10 @@ ALTER TABLE `cra_add_user_department`
 --
 
 --
--- AUTO_INCREMENT for table `cra_add_user_department`
+-- AUTO_INCREMENT for table `cra_work_flow`
 --
-ALTER TABLE `cra_add_user_department`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `cra_work_flow`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
