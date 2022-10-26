@@ -369,6 +369,50 @@ class UserManagement extends Controller
     {
         return view('user_management.advocates_target_2026');
     }
+    public function managetowns()
+    {
+        $manage_towns=DB::table('cra_town_city')->get();
+        return view('user_management.manage_towns',compact('manage_towns'));
+     
+       
+    }
+    public function addtown(Request $request)
+    {
+        $Town_City = $Request['Town_City'];
+      
+     DB::table('cra_town_city')->insert([
+            'Town_City' => $Town_City,
+           
+        ]);
+        
+        return redirect('/manage_towns');
+     
+        
+    }
+    public function edittown($id)
+    {
+         $manage_towns=DB::table('cra_town_city')->where('id',$id)->first();
+        return view('user_management.edit_town',compact('manage_towns','id'));
+        
+    } 
+    public function updatetown(Request $Request)
+    {
+        $id = $Request['id'];
+        $Town_City = $Request['Town_City'];
+       
+        
+        $update_town = array(
+            'Town_City' => $Town_City,
+          
+        );
+        DB::table('cra_town_city')->where('id', $id)->update( $update_town );
+        return redirect('/manage_towns');
+    }
+    public function deletetown($id)
+    {
+        DB::table('cra_town_city')->where('id',$id)->delete();
+        return redirect('/manage_towns');
+    }
 
     /**
      * Show the form for creating a new resource.

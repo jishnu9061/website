@@ -47,7 +47,7 @@
 <table class="table table-bordered" id="new-item">
   <thead>
   <tr>
-    <th>Sl No</th>
+    <!-- <th>Sl No</th> -->
     <th>Company Name</th>
     <th>Company Address</th>
     <th>Town/City</th>
@@ -60,16 +60,16 @@
         @foreach($company_details as $company)
 
   <tr>
-    <td>{{$company->id}}</td>
+    <!-- <td>{{$company->id}}</td> -->
     <td>{{$company->company_name}}</td>
     <td>{{$company->address}}</td>
     <td>{{$company->town_city}}</td>
     <td>{{$company->Add_Logo}}</td>
    
-    <td>CRA</td>
+    <!-- <td>CRA</td>
     <td>Stima Investment Plaza 1,3rd Floor,Mushembi Rd, Parklands </td>
     <td>Nairobi, Kenya</td>
-    <td></td> 
+    <td></td>  -->
     
 <td  scope="row"class="text-center"><a href="{{url('edit_company_details',$company->id)}}">
 <i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i></td>
@@ -113,7 +113,7 @@
                             <label >Company Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="name" id="name" value="">
+                                <input type="text" class="form-control" name="name" id="name" value="CRA">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -125,7 +125,7 @@
                             <label>Company Address</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="address" id="address" value="">
+                                <input type="text" class="form-control" name="address" id="address" value="Stima Investment Plaza 1,3rd Floor,Mushembi Rd, Parklands">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -139,7 +139,7 @@
                             <label for="username">Town/City</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="city" id="city" value="">
+                                <input type="text" class="form-control" name="city" id="city" value="Nairobi, Kenya">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
