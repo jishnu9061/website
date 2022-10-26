@@ -336,13 +336,14 @@
                                 <div class="input-group-prepend"></div>
                                 <select name="user_role" id="cars"required>
                                     <option> ---Select--- </option>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
-                                  
+                                    <option>Add Client</option>
+                                    <option>Edit Client</option>
+                                    <option>View Client</option>
+                                    <option>Open New File</option>
+                                    <option>Edit File Type</option>
+                                    <option>View File Detais</option>
+                                    <option>Edit File Progress</option>
+                                    <option>Add Progress</option>
                                 </select>
                               
                                 <div class="invalid-feedback" style="width: 100%;">
