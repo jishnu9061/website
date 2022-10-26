@@ -77,7 +77,7 @@
                                 <a href="user_attachments"class="dropdown-item" >Attachment</a>
                                 <a href="user_comments" class="dropdown-item" >Comments</a>
                                 <a href="{{url('user_destroy',$list->id)}}" class="dropdown-item" >Delete</a>
-                             
+                            
                             </div>
                         </div> 
 
