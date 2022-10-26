@@ -65,28 +65,28 @@
                                 </tr>
                             </thead>
                             <tbody>
+
+                                @foreach ($new_file_instruction as $instruction)
+                                
                                 <tr id="data">
+                                    <td scope="row" class="text-center">{{$instruction->id}}</td>
                                     <td scope="row" class="text-center"></td>
                                     <td scope="row" class="text-center"></td>
+                                    <td scope="row" class="text-center">{{$instruction->date}}</td>
                                     <td scope="row" class="text-center"></td>
-                                    <!-- <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td> -->
+                                    <td scope="row" class="text-center">{{$instruction->receiver}}</td>
+                                    <td scope="row" class="text-center">{{$instruction->details}}</td>
+                                    <td scope="row" class="text-center">{{$instruction->amount}}</td>
+                                    <td scope="row" class="text-center">{{$instruction->client}}</td>
+                                    <td scope="row" class="text-center">{{$instruction->file}}</td>
                                     <td scope="row" class="text-center"></td>
-                                    <td scope="row" class="text-center" id="medicine_name_1"></td>
-                                    <td scope="row" class="text-center" id="medicine_name_1"></td>
-                                    <td scope="row" class="text-center" id="medicine_name_1"></td>
-                                    <td scope="row" class="text-center" id="medicine_name_1"></td>
-                                    <td scope="row" class="text-center" id="medicine_name_1"></td>
-                                    <td scope="row" class="text-center" id="medicine_name_1"></td>
-                                    <td scope="row" class="text-center" id="medicine_name_1"></td>
-                                    <td scope="row" class="text-center" id="medicine_name_1"></td>
-                                    <td scope="row" class="text-center"><a href="edit_file_instruction"><i
+                                    <td scope="row" class="text-center"></td>
+                                    <td scope="row" class="text-center"><a href="{{url('edit_file_instruction',$instruction->id)}}"><i
                                                 style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
-                                            <a onClick="return myFunction();" href="" style="color:black;"><i
+                                            <a onClick="return myFunction();" href="{{url('delete_file',$instruction->id)}}" style="color:black;"><i
                                                     class="fas fa-trash-alt"></i></a></td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -106,7 +106,7 @@
                             <!-- Modal body -->
                             <div class="modal-body">
                                 <div class="container">
-                                    <form method="post" action="{{ url('add-corporate') }}"
+                                    <form method="post" action="{{ url('file_new_instruction') }}"
                                         enctype="multipart/form-data">
                                         @csrf
 
@@ -123,7 +123,7 @@
                                                         <div class="input-group-prepend">
 
                                                         </div>
-                                                        <input type="date" class="form-control" name="number"
+                                                        <input type="date" class="form-control" name="date"
                                                             id="username" required>
                                                         <div class="invalid-feedback" style="width: 100%;">
                                                             Number is required.
@@ -317,7 +317,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                            <textarea class="form-control" id="form7Example7" rows="3" name="details"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -336,7 +336,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <select name="send _notification" id="cars">
+                                            <select name="send_notification" id="cars">
                                                 <option>select</option>
                                                 <option>demo 2</option>
                                                 <option>demo 3</option>

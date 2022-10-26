@@ -1224,6 +1224,8 @@ Route::any('/office_instructions',"filemanagement@new_instructions")->name('new_
 
 Route::any('/new_office_instructions',"filemanagement@add_new_instructions")->name('add_new_instructions');
 
+
+
 Route::any('/instructions_report',"filemanagement@view_new_instructions")->name('view_new_instructions');
 
 Route::any('/file_instruction',"filemanagement@new_file_instructions")->name('new_file_instructions');
@@ -1240,10 +1242,13 @@ Route::any('/new_Request_staff_item',"filemanagement@add_Request_staff_item_list
 
 Route::any('/Process_Request',"filemanagement@Process_Request_list")->name('Process_Request_list');
 
-Route::any('/edit_file_instruction',"filemanagement@edit_file_instruction_list")->name('Process_Request_list');
+Route::any('/edit_file_instruction/{id}',"filemanagement@edit_file_instruction_list")->name('edit_file_instruction');
+
+Route::any('/update_file_instruction',"filemanagement@updatefileinstruction")->name('update_file_instruction');
 
 Route::any('/edit_office_instruction',"filemanagement@edit_office_instruction_list")->name('edit_office_instruction_list');
 
+Route::any('/delete_file/{id}',"filemanagement@destroyfileinstruction")->name('delete_file');
 
 
 //client invoicing
