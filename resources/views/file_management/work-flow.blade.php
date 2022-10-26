@@ -73,7 +73,7 @@
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                            
-                                <a href="" class="dropdown-item" >Edit</a>
+                                <a href="{{url('edit-workflow',$list->id)}}" class="dropdown-item" >Edit</a>
                                 <a href="" class="dropdown-item" >View</a>
                                 <a href="{{url('delete-workflow',$list->id)}}" class="dropdown-item" >Delete</a>
                             </td>
