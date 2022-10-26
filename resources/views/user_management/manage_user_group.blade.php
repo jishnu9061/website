@@ -17,14 +17,14 @@
    <body>
 <div>
             <button class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Manage User Groups </u></b></span></button><br>
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Manage Groups </u></b></span></button><br>
     
      </div>
      <br>
      <br>
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-{{-- <a href="{{('add_new_user_grp')}}"><button class="btn btn-primary">Add New User Group</button></a> --}}
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New User Group</button>
+{{-- <a href="{{('add_new_user_grp')}}"><button class="btn btn-primary">Add New Group</button></a> --}}
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New  Group</button>
 <div class="tab-content" id="myTabContent">
  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
@@ -74,7 +74,7 @@
 
                                     <!-- Modal Header -->
                                     <div class="modal-header" style="background-color:#d6ba8a">
-                                        <h2 class="text-centre"><b>Add New User Group</b></h2>
+                                        <h2 class="text-centre"><b>Add New Group</b></h2>
 
                                     </div>
 
@@ -138,7 +138,7 @@
                                 <div class="input-group-prepend">
                                 </div>
                                 <select name="group_role" id="cars"style="width: 100%;">
-                                    <option>--select group roles--</option>
+                                    <option>---select---</option>
                                     <option></option>
                                     <option></option>
                                     <option></option>
@@ -160,7 +160,7 @@
                     <div class="col-sm">
                         <br>
                         <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Add</button>
-                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
                         </div>
                 </div>
         </div>

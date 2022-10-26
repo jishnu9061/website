@@ -7,7 +7,7 @@
         <div>
             <button class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>
-                        Edit User Details</u></b></span></button><br><br><br>
+                        Edit Details</u></b></span></button><br><br><br>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous">
@@ -204,7 +204,17 @@
                             <label for="username">User Roles</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="" id="username" value="" required>
+                                <select name="user_role" id="cars"required>
+                                    <option> ---Select--- </option>
+                                    <option></option>
+                                    <option></option>
+                                    <option></option>
+                                    <option></option>
+                                    <option></option>
+                                    <option></option>
+                                  
+                                </select>
+                                <!-- <input type="text" class="form-control" name="" id="username" value="" required> -->
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -241,7 +251,7 @@
                     <div class="col-sm">
                         <br>
                         <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
-                        <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
                     </div>
                 </div>
         </div>
