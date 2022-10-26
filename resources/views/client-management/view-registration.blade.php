@@ -20,14 +20,14 @@
         <div>
             <div class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
-                <b><u>Customer Registration</u></b></span>
+                <b><u>Client Registration</u></b></span>
             </div><br>
 
         </div>
         <br>
         <div>
             <button type="button" class="btn btn-primary complaint_btn btn " data-toggle="modal"
-                data-target="#myModal">Register Customer</button></a>
+                data-target="#myModal">Register Client</button></a>
             <div id="mydatatable_filter" class="dataTables_filter">
                 <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
             </div>
@@ -85,7 +85,7 @@
 
                             <!-- Modal Header -->
                             <div class="modal-header" style="background-color:#d6ba8a">
-                                <h2 class="text-center"><b>Register Customer</b></h2>
+                                <h2 class="text-center"><b>Register Client</b></h2>
 
                             </div>
 
@@ -99,7 +99,7 @@
                                                 <div class="row">
                                                     <div class="col-md-4">
                                                         <div class="mb-1">
-                                                            <label for="username">Customer Name</label>
+                                                            <label for="username">Client Name</label>
                                                             <div class="input-group">
                                                                 <div class="input-group-prepend"></div>
                                                                 <input type="text" class="form-control" name="name"
@@ -129,8 +129,19 @@
                                                         <div class="mb-1">
                                                             <label for="username">Town</label>
                                                             <div class="input-group">
-                                                                <div class="input-group-prepend">
-
+                                                                <div class="input-group-prepend"></div>
+                                                               
+                                                                    <select name="town" id="username"style="width:100%;">
+                                                                    <option>Nairobi </option>
+                                                                    <option>Kisumu</option>
+                                                                    <option>Nakuru</option>
+                                                                    <option>Mombasa</option>
+                                                                    <option>Thika</option>
+                                                                    <option>Malindi</option>
+                                                                    
+                                                                </select>
+                                                                <div class="invalid-feedback" style="width: 100%;">
+                                                                    Town is required.
                                                                 </div>
                                                                 <select name="Town" id="cars">
                                                                     <option>select</option>
@@ -233,7 +244,7 @@
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="mb-1">
-                                                            <label for="username">Customer Address</label>
+                                                            <label for="username">Client Address</label>
                                                             <div class="input-group">
                                                                 <textarea class="form-control" id="form7Example7"
                                                                     rows="2" name="caddress"></textarea>
