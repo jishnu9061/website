@@ -1042,16 +1042,9 @@ class filemanagement extends Controller
     {
         return view('system-settings.User.change_password');
     }
-    public function new_instructions()
-    {
-        return view('file_management.office_instructions');
-    }
- 
 
-public function add_new_instructions()
-{
-    return view('file_management.new_office_instructions');
-}
+
+   
 
 public function view_new_instructions(Request $request)
 {
@@ -1185,13 +1178,110 @@ public function destroyfileinstruction($id)
 }
 
 
+public function new_instructions()
+{
+    $new_office_instruction=DB::table('cra_add_office_instructions')->get();
+        
+    return view('file_management.office_instructions',compact('new_office_instruction'));
+}
+
+
+public function add_new_instructions(Request $request)
+{
+
+
+   
+    $date =$request['date'];
+    $instruction_type =$request['instruction_type'];
+    $instruction_category =$request['instruction_category'];
+    $receiver =$request['receiver'];
+    $currency =$request['currency'];
+    $exchange_rate =$request['exchange_rate'];
+    $expence_category =$request['expence_category'];
+    $turn_around =$request['turn_around'];
+    $priority =$request['priority'];
+    $amount =$request['amount'];
+    $detail =$request['detail'];
+    $send_notification =$request['send_notification'];
+ 
+    DB::table('cra_add_office_instructions')->insert([
+ 
+    
+     'date' => $date,
+     'instruction_type' => $instruction_type,
+     'instruction_category' => $instruction_category,
+     'receiver' => $receiver,
+     'currency' =>  $currency,
+     'exchange_rate' =>   $exchange_rate,
+     'expence_category' => $expence_category,
+     'turn_around' => $turn_around,
+     'priority' => $priority,
+     'amount' => $amount,
+     'detail' =>  $detail,
+     'send_notification' =>   $send_notification,
+ ]);
+
+ return redirect('/office_instructions');
+
+}
+
+public function edit_office_instruction_list($id)
+{
+    $edit_office_instruction =DB::table('cra_add_office_instructions')->where('id',$id)->first();
+    return view('file_management.edit_office_instruction',compact('edit_office_instruction','id'));                                                           
+}
+
+public function updateofficeinstructions(Request $request)
+{
+
+
+    $id =$request['id'];
+    $date =$request['date'];
+    $instruction_type =$request['instruction_type'];
+    $instruction_category =$request['instruction_category'];
+    $receiver =$request['receiver'];
+    $currency =$request['currency'];
+    $exchange_rate =$request['exchange_rate'];
+    $expence_category =$request['expence_category'];
+    $turn_around =$request['turn_around'];
+    $priority =$request['priority'];
+    $amount =$request['amount'];
+    $detail =$request['detail'];
+    $send_notification =$request['send_notification'];
+ 
+    DB::table('cra_add_office_instructions')->where('id',$id)->update([
+ 
+     'id' => $id,
+     'date' => $date,
+     'instruction_type' => $instruction_type,
+     'instruction_category' => $instruction_category,
+     'receiver' => $receiver,
+     'currency' =>  $currency,
+     'exchange_rate' =>   $exchange_rate,
+     'expence_category' => $expence_category,
+     'turn_around' => $turn_around,
+     'priority' => $priority,
+     'amount' => $amount,
+     'detail' =>  $detail,
+     'send_notification' =>   $send_notification,
+ ]);
+
+ return redirect('/office_instructions');
+
+}
+
+public function destroyofficeinstruction($id)
+{
+    $destroy_file =DB::table('cra_add_office_instructions')->where('id',$id)->delete();
+    return redirect ('/office_instructions');
+}
+
+
 
 public function safe_management_list()
 {
     return view('file_management.Safe_management');                                                             
 }
-
-
 
 public function new_safe_management_list()
 {
@@ -1218,10 +1308,7 @@ public function Process_Request_list()
 
 
 
-public function edit_office_instruction_list()
-{
-    return view('file_management.edit_office_instruction');                                                             
-}
+
 
 }
 

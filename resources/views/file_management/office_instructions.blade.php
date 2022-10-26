@@ -48,36 +48,31 @@
                             <th class="text-center">Amount</th>
                             <th class="text-center">Checked By</th>
                             <th class="text-center">Accepted By</th>
-                            <!-- <th class="text-center">Completed By</th>
-                            <th class="text-center">Declined By</th>
-                            <th class="text-center">Faild By</th> -->
                             <th class="text-center">TAT Date</th>
                             <th class="text-center">Status</th>
                             <th class="text-center">Action</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ( $new_office_instruction as $instruction)
                         <tr id="data">
+                            <td scope="row" class="text-center">{{$instruction->id}}</td>   
                             <td scope="row" class="text-center"></td>
-                            <!-- <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$instruction->date}}</td>
+                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$instruction->receiver}}</td>
+                            <td scope="row" class="text-center">{{$instruction->detail}}</td>
+                            <td scope="row" class="text-center">{{$instruction->amount}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td> -->
+                            <td scope="row" class="text-center">{{$instruction->turn_around}}</td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center"><a href="edit_office_instruction"><i style="color:black;" class="fa fa-edit"
+                            <td scope="row" class="text-center"><a href="{{url('edit_office_instruction',$instruction->id)}}"><i style="color:black;" class="fa fa-edit"
                                         aria-hidden="true"></i>
-                                    <a onClick="return myFunction();" href="" style="color:black;"><i
+                                    <a onClick="return myFunction();" href="{{url('delete_office',$instruction->id)}}" style="color:black;"><i
                                             class="fas fa-trash-alt"></i></a></td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
 </div>
@@ -98,7 +93,7 @@
                                     <!-- Modal body -->
                                     <div class="modal-body">
                                         <div class="container">
-                                            <form method="post" action="{{ url('add-corporate') }}"
+                                            <form method="post" action="{{ url('new_office_instructions') }}"
                                                 enctype="multipart/form-data">
                                                 @csrf
 
@@ -112,7 +107,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="number" id="username" required>
+                                <input type="date" class="form-control" name="date" id="username" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -127,8 +122,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="instruction_type" id="cars">
+                                <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                                 </select>
                             </div>
                         </div>
@@ -143,8 +142,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="instruction_category" id="cars">
+                                <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                                 </select>
                             </div>
                         </div>
@@ -161,7 +164,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="incorporation" id="age">
+                    <input type="text" class="form-control" name="receiver" id="age">
                     <div class="invalid-feedback" style="width: 100%;">
                         Incorporation is required
                     </div>
@@ -176,8 +179,12 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
+                    <select name="currency" id="cars">
+                    <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                     </select>
                 </div>
             </div>
@@ -189,7 +196,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="telephone" id="confirm_password" required>
+                    <input type="text" class="form-control" name="exchange_rate" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Telephone Number is required.
                     </div>
@@ -209,8 +216,12 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
+                    <select name="expence_category" id="cars">
+                    <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                     </select>
                 </div>
             </div>
@@ -223,8 +234,12 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
+                    <select name="turn_around" id="cars">
+                    <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                     </select>
                 </div>
             </div>
@@ -238,8 +253,12 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
+                    <select name="priority" id="cars">
+                    <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                     </select>
                 </div>
             </div>
@@ -256,7 +275,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="number" id="username" required>
+                    <input type="text" class="form-control" name="amount" id="username" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -271,7 +290,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                    <textarea class="form-control" id="form7Example7" name="detail" rows="3"></textarea>
                 </div>
             </div>
         </div>
@@ -291,8 +310,12 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
+                    <select name="send_notification" id="cars">
+                        <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                     </select>
                 </div>
             </div>
@@ -337,7 +360,7 @@
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Send</button>
-                            <button type="submit" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
                         </div>
                     </div>
                 </div>
