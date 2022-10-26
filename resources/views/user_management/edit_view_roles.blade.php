@@ -241,7 +241,7 @@
                     <div class="col-sm">
                         <br>
                         <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
-                        <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;">cANCEL</button>
                     </div>
                 </div>
         </div>
