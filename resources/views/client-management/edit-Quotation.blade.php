@@ -12,9 +12,9 @@
                     <b><u>Edit
                             Quotation</u></b></span>
                 </div><br>
-                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                    crossorigin="anonymous">
+                    crossorigin="anonymous"> -->
 
             </div>
 
@@ -34,7 +34,11 @@
 
                                 </div>
                                 <select name="document" id="cars">
-                                    <option >{{$edit_quotation->document_type}}</option>
+                                    <option>{{$edit_quotation->document_type}}</option>
+                                    <option>Type 1</option>
+                                    <option>Type 2</option>
+                                     <option>Type 3</option>
+                                     <option>Type 4</option>
                                 </select>
                             </div>
                         </div>
@@ -54,13 +58,17 @@
                     </div>
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Customer</label>
+                            <label for="username">Client</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="customer" id="cars">
-                                    <option>{{$edit_quotation->customer}}</option>
+                                <select name="client" id="cars">
+                                    <option>{{$edit_quotation->Client}}</option>
+                                    <option>client 1</option>
+                                     <option>client 2</option>
+                                      <option>client 3</option>
+                                       <option>client 4</option>
                                 </select>
                             </div>
                         </div>
@@ -281,8 +289,8 @@
                         </div>
                         <div class="col-sm">
                             <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:50%;">Submit</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:50%;">Update</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
                         </div>
                     </div>
                 </div>

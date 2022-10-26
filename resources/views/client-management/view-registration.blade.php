@@ -44,7 +44,7 @@
                             <tr>
                                 <th class="text-center">No</th>
                                 <th class="text-center">Client Name</th>
-                                <th class="text-center"> Address</th>
+                                <th class="text-center"> Client Address</th>
                                 <th class="text-center">Contact</th>
                                 <th class="text-center">Physical Address</th>
                                 <th class="text-center">Registration Date</th>
@@ -53,18 +53,24 @@
                             </tr>
                         </thead>
                         <tbody>
+
+
+
+
                             @foreach($view_registration as $registration)
+
+
+
+
+
+    
                             <tr id="data">
-                                <td scope="row" class="text-center" id="medicine_name_1">{{$registration->id}}</td>
-                                <td scope="row" class="text-center" id="medicine_name_1">
-                                    {{$registration->customer_name}}</td>
-                                <td scope="row" class="text-center" id="medicine_name_1"></td>
-                                <td scope="row" class="text-center" id="medicine_name_1">{{$registration->mobile_no}}
-                                </td>
-                                <td scope="row" class="text-center" id="medicine_name_1">
-                                    {{$registration->physical_address}}</td>
-                                <td scope="row" class="text-center" id="medicine_name_1">
-                                    {{$registration->registration_date}}</td>
+                                <td >{{$registration->id}}</td>
+                                <td>{{$registration->client_name}}</td>
+                                <td >{{$registration->client_address}}</td>
+                                <td>{{$registration->mobile_no}}</td>
+                                <td >{{$registration->physical_address}}</td>
+                                <td >{{$registration->registration_date}}</td>
                                 <td scope="row" class="text-center"><a
                                         href="{{url('edit-registration',$registration->id)}}"><i style="color:black;"
                                             class="fa fa-edit" aria-hidden="true"></i>
@@ -103,7 +109,7 @@
                                                             <div class="input-group">
                                                                 <div class="input-group-prepend"></div>
                                                                 <input type="text" class="form-control" name="name"
-                                                                    id="username" value="" placeholder="Customer name"
+                                                                    id="username" value="" placeholder="Client name"
                                                                     required>
                                                                 <div class="invalid-feedback" style="width: 100%;">
                                                                     Customer Name is required.
@@ -132,6 +138,7 @@
                                                                 <div class="input-group-prepend"></div>
                                                                
                                                                     <select name="town" id="username"style="width:100%;">
+                                                                    <option>---select--- </option>
                                                                     <option>Nairobi </option>
                                                                     <option>Kisumu</option>
                                                                     <option>Nakuru</option>
@@ -158,7 +165,7 @@
 
                                                                 </div>
                                                                 <select name="country" id="cars">
-                                                                    <option>select</option>
+                                                                    <option>---select---</option>
                                                                     <option>kenya</option>
                                                                 </select>
                                                             </div>
@@ -279,9 +286,9 @@
                                                     <div class="col-sm">
                                                         <br>
                                                         <button type="submit" class="btn btn-primary float:right;"
-                                                            Style="width:50%;">Submit</button>
+                                                            Style="width:50%;">Save</button>
                                                         <button type="button" class="btn btn-primary float:left"
-                                                            Style="width:45%;">Cancel</button>
+                                                            Style="width:45%;"data-dismiss="modal">Cancel</button>
                                                     </div>
                                                 </div>
                                         </div>

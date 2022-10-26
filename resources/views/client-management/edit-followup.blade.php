@@ -29,7 +29,7 @@
                             <label for="username">Follow Up Date</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="date" id="username"
+                                <input type="date" class="form-control" name="date" id="username"
                                     value="{{$edit_follow->followup_date}}" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Follow Up Date is required.
@@ -39,13 +39,13 @@
                     </div>
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Customer</label>
+                            <label for="username">Client</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="customer" id="cars">
-                                    <option>{{$edit_follow->customer}}</option>
+                                <select name="client" id="cars">
+                                    <option>{{$edit_follow->client}}</option>
                                 </select>
                             </div>
                         </div>
@@ -97,7 +97,7 @@
                             <label for="username">Next Bring Up Date</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="date"
+                                <input type="date" class="form-control" name="date"
                                     value="{{$edit_follow->next_bringup_date}}" id="password" placeholder="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Next Bring Up Date is required.
@@ -154,7 +154,7 @@
                         <div class="mb-1">
                             <label for="username"> Description</label>
                             <div class="input-group">
-                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3"name="description">{{$edit_follow->description}}</textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Description Address is required.
                                 </div>
@@ -190,7 +190,7 @@
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;"Style="width:45%;">Update</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
                         </div>
                     </div>
                 </div>

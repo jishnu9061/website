@@ -75,13 +75,12 @@
                                     <!-- Modal body -->
                                     <div class="modal-body" style="background-color:white">
                                         <div class="container">
-                                            <form method="post" action="{{ url('add_town') }}"
+                                            <form method="post" action="{{url('add_town') }}"
                                                 enctype="multipart/form-data"> 
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->   
 @csrf
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-1">
+<div class="row">
+                <div class="col-lg-6 col-md-6 offset-md-3" >
                             <label for="username">Town/City</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
@@ -104,7 +103,7 @@
                     </div>
                     <div class="col-sm">
                         <br>
-                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Add</button>
+                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
                         <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
                     </div>
                 </div>

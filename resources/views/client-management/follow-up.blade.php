@@ -59,7 +59,7 @@
                             <td scope="row" class="text-center" id="medicine_name_1">{{$list->id}}</td>
                             <td scope="row" class="text-center" id="medicine_name_1">{{$list->followup_date}}</td>
                             <td scope="row" class="text-center" id="medicine_name_1">{{$list->followup_type}}</td>
-                            <td scope="row" class="text-center" id="medicine_name_1">{{$list->customer}}</td>
+                            <td scope="row" class="text-center" id="medicine_name_1">{{$list->client}}</td>
                             <td scope="row" class="text-center" id="medicine_name_1">{{$list->description}}</td>
                             <td scope="row" class="text-center" id="medicine_name_1">{{$list->next_bringup_date}}</td>
                             <td scope="row" class="text-center" id="medicine_name_1">{{$list->alert_period}}</td>
@@ -109,14 +109,17 @@
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="mb-1">
-                                                            <label for="username">Customer</label>
+                                                            <label for="username">Client</label>
                                                             <div class="input-group">
                                                                 <div class="input-group-prepend">
 
                                                                 </div>
-                                                                <select name="customer" id="cars">
-                                                                    <option>select</option>
-                                                                    <option>demo1</option>
+                                                                <select name="client" id="cars">
+                                                                    <option>---select---</option>
+                                                                    <option>client-1</option>
+                                                                    <option>client-2</option>
+                                                                    <option>client-3</option>
+                                                                    <option>client-4</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -129,8 +132,11 @@
 
                                                                 </div>
                                                                 <select name="type" id="cars">
-                                                                    <option>select</option>
-                                                                    <option>demo</option>
+                                                                    <option>---select---</option>
+                                                                    <option>type-1</option>
+                                                                    <option>type-2</option>
+                                                                    <option>type-3</option>
+                                                                    <option>type-4</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -146,8 +152,11 @@
 
                                                                 </div>
                                                                 <select name="responsible" id="cars">
-                                                                    <option>select</option>
-                                                                    <option>demo11</option>
+                                                                    <option>---select---</option>
+                                                                    <option>staff-1</option>
+                                                                    <option>staff-2</option>
+                                                                    <option>staff-3</option>
+                                                                    <option>staff-4</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -160,8 +169,11 @@
 
                                                                 </div>
                                                                 <select name="Remainder" id="cars">
-                                                                    <option>select</option>
-                                                                    <option>demo22</option>
+                                                                    <option>---select---</option>
+                                                                    <option>remainder-1</option>
+                                                                    <option>remainder-2</option>
+                                                                    <option>remainder-3</option>
+                                                                    <option>remainder-4</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -230,7 +242,7 @@
                                                             <label for="username"> Description</label>
                                                             <div class="input-group">
                                                                 <textarea class="form-control" id="form7Example7"
-                                                                    rows="3" name="Description"></textarea>
+                                                                    rows="3" name="description"></textarea>
                                                                 <div class="invalid-feedback" style="width: 100%;">
                                                                     Description Address is required.
                                                                 </div>
@@ -250,8 +262,8 @@
                                                         </div>
                                                         <div class="col-sm">
                                                             <br>
-                                                            <button type="submit" class="btn btn-primary float:right;"Style="width:50%;">Submit</button>
-                                                            <button type="button" class="btn btn-primary float:left"Style="width:45%;">Cancel</button>
+                                                            <button type="submit" class="btn btn-primary float:right;"Style="width:50%;">Save</button>
+                                                            <button type="button" class="btn btn-primary float:left"Style="width:45%;"data-dismiss="modal">Cancel</button>
                                                         </div>
                                                     </div>
                                                 </div>
