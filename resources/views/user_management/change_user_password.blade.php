@@ -15,7 +15,7 @@
     <body>
  <div>
             <button class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Change User Password</u></b></span></button><br>
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Change Password</u></b></span></button><br>
           
      </div>
             <br>
@@ -94,7 +94,8 @@
                         <div class="col-sm">
                             <br>
                             <div class="class"style="text-align:center;">
-                    <button type="submit" class="btn btn-primary float:right;" Style="width:50%;">Submit</button>
+                    <button type="submit" class="btn btn-primary float:right;" Style="width:50%;">Save</button>
+                    <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
 </div > 
                            
                             <br>

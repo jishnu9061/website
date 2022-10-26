@@ -1,11 +1,18 @@
 @extends('layouts.hmsmain')
 @section('content')
+<html>
+    <div class="container">
+   <head>
+   <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 
-
-
-<head>
-    
-      <style>
+<style>
     #upload_button input[type=file] 
     {
         display:none;
@@ -40,7 +47,7 @@
 <table class="table table-bordered" id="new-item">
   <thead>
   <tr>
-    <th>Sl No</th>
+    <!-- <th>Sl No</th> -->
     <th>Company Name</th>
     <th>Company Address</th>
     <th>Town/City</th>
@@ -53,16 +60,16 @@
         @foreach($company_details as $company)
 
   <tr>
-    <td>{{$company->id}}</td>
+    <!-- <td>{{$company->id}}</td> -->
     <td>{{$company->company_name}}</td>
     <td>{{$company->address}}</td>
     <td>{{$company->town_city}}</td>
     <td>{{$company->Add_Logo}}</td>
    
-    <td>CRA</td>
+    <!-- <td>CRA</td>
     <td>Stima Investment Plaza 1,3rd Floor,Mushembi Rd, Parklands </td>
     <td>Nairobi, Kenya</td>
-    <td></td> 
+    <td></td>  -->
     
 <td  scope="row"class="text-center"><a href="{{url('edit_company_details',$company->id)}}">
 <i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i></td>
@@ -106,7 +113,7 @@
                             <label >Company Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="name" id="name" value="">
+                                <input type="text" class="form-control" name="name" id="name" value="CRA">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -118,7 +125,7 @@
                             <label>Company Address</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="address" id="address" value="">
+                                <input type="text" class="form-control" name="address" id="address" value="Stima Investment Plaza 1,3rd Floor,Mushembi Rd, Parklands">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -132,7 +139,7 @@
                             <label for="username">Town/City</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="city" id="city" value="">
+                                <input type="text" class="form-control" name="city" id="city" value="Nairobi, Kenya">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -435,7 +442,7 @@
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
                         </div>
                     </div>
                 </div>

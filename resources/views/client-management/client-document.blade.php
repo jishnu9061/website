@@ -33,17 +33,19 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach( $client_document as $document)
                     <tr id="data">
                         <td scope="row" class="text-center"></td>
                         <td scope="row" class="text-center"></td>
-                        <td scope="row" class="text-center" id="medicine_name_1"></td>
-                        <td scope="row" class="text-center"><a href="{{url('view-document')}}"><i style="color:black;"
+                        <td scope="row" class="text-center" id="medicine_name_1">{{$document->file}}</td>
+                        <td scope="row" class="text-center"><a href="{{url('view-document',$document->id)}}"><i style="color:black;"
                                     class="fa fa-eye" aria-hidden="true"></i>
                                 <input type="hidden" value="" id="medicine_id_hidden" class="applicate"
                                     name="supplier_id_hidden">
                                 <a onClick="return myFunction();" href="" style="color:black;"><i
                                         class="fas fa-trash-alt"></i></a></td>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
 </div>
