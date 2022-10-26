@@ -376,7 +376,7 @@ class UserManagement extends Controller
      
        
     }
-    public function addtown(Request $request)
+    public function addtown(Request $Request)
     {
         $Town_City = $Request['Town_City'];
       

@@ -17,14 +17,13 @@
         <div class="col-md-12">
             <form method="post" action="{{url('update_town')}}" id="form">
                 @csrf
-                <input type="hidden" name="id" value="{{$edit_town->id}}">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-1">
+       <input type="hidden" name="id" value="{{$manage_towns->id}}">
+                <div class="col-lg-6 col-md-6 offset-md-3" >
                             <label for="username">Town/City</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="Town_City" id="" value="{{$edit_town->Town_City}}">
+                                <input type="text" class="form-control" name="Town_City" id="" value="{{$manage_towns->Town_City}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>

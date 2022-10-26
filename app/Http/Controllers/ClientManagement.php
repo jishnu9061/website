@@ -552,7 +552,7 @@ class ClientManagement extends Controller
     public function addFollowup(Request $Request){
         
         $followup_date = $Request['date'];
-        $customer = $Request['customer'];
+        $client = $Request['client'];
         $followup_type = $Request['type'];
         $staff_responsible = $Request['responsible'];
         $send_remainder_to = $Request['Remainder'];
@@ -560,11 +560,11 @@ class ClientManagement extends Controller
         $alert_period = $Request['Alert'];
         $email = $Request['email'];
         $registered_by = $Request['Registered'];
-        $description = $Request['Description'];
+        $description = $Request['description'];
         
         DB::table('cra_customer_followup')->insert([
             'followup_date' => $followup_date ,
-            'customer' =>  $customer,
+            'client' =>  $client,
             'followup_type' => $followup_type,
             'staff_responsible' =>$staff_responsible,
             'send_remainder_to' => $send_remainder_to,
@@ -587,19 +587,19 @@ class ClientManagement extends Controller
 
         $id            = $Request['id'];
         $followup_date = $Request['date'];
-        $customer = $Request['customer'];
+        $client = $Request['client'];
         $followup_type = $Request['type'];
         $staff_responsible = $Request['responsible'];
         $send_remainder_to = $Request['Remainder'];
-        $next_bringup_date = $Request['Bring'];
+        $next_bringup_date = $Request['date'];
         $alert_period = $Request['Alert'];
         $email = $Request['email'];
         $registered_by = $Request['Registered'];
-        $description = $Request['Description'];
+        $description = $Request['description'];
         
         DB::table('cra_customer_followup')->where('id',$id)->update([
             'followup_date' => $followup_date ,
-            'customer' =>  $customer,
+            'client' =>  $client,
             'followup_type' => $followup_type,
             'staff_responsible' =>$staff_responsible,
             'send_remainder_to' => $send_remainder_to,
@@ -700,7 +700,7 @@ class ClientManagement extends Controller
         
         $document_type = $Request['document'];
         $issue_date = $Request['issue'];
-        $customer = $Request['customer'];
+        $Client = $Request['client'];
         $client_ref_no = $Request['ref'];
         $currency = $Request['currency'];
         $exchange_rate = $Request['rate'];
@@ -718,7 +718,7 @@ class ClientManagement extends Controller
         DB::table('cra_customer_quotation')->insert([
             'document_type' => $document_type ,
             'issue_date' => $issue_date,
-            'customer' =>   $customer,
+            'Client' =>   $Client,
             'client_ref_no' => $client_ref_no,
             'currency' =>$currency,
             'exchange_rate' => $exchange_rate,
@@ -747,7 +747,7 @@ class ClientManagement extends Controller
         $id            = $Request['id'];
         $document_type = $Request['document'];
         $issue_date = $Request['issue'];
-        $customer = $Request['customer'];
+        $Client = $Request['client'];
         $client_ref_no = $Request['ref'];
         $currency = $Request['currency'];
         $exchange_rate = $Request['rate'];
@@ -765,7 +765,7 @@ class ClientManagement extends Controller
         DB::table('cra_customer_quotation')->where('id',$id)->update([
             'document_type' => $document_type ,
             'issue_date' => $issue_date,
-            'customer' =>   $customer,
+            'Client' =>   $Client,
             'client_ref_no' => $client_ref_no,
             'currency' =>$currency,
             'exchange_rate' => $exchange_rate,
@@ -801,7 +801,7 @@ class ClientManagement extends Controller
     
     public function addRegistration(Request $Request){
 
-        $customer_name = $Request['name'];
+        $client_name = $Request['name'];
         $postal_code = $Request['Code'];
         $town = $Request['town'];
         $country = $Request['country'];
@@ -810,11 +810,11 @@ class ClientManagement extends Controller
         $mobile_no = $Request['mobile'];
         $web_site = $Request['website'];
         $registration_date = $Request['Date'];
-        $customer_address = $Request['caddress'];
+        $client_address = $Request['caddress'];
         $physical_address = $Request['paddress'];
 
         DB::table('cra_customer_registration')->insert([
-            'customer_name' =>  $customer_name ,
+            'client_name' =>  $client_name ,
             'postal_code' =>   $postal_code ,
             'town' => $town,
             'country' =>$country,
@@ -823,7 +823,7 @@ class ClientManagement extends Controller
             'mobile_no' =>   $mobile_no,
             'web_site' =>   $web_site,
             'registration_date' =>   $registration_date,
-            'customer_address' => $customer_address,
+            'client_address' => $client_address,
             'physical_address' => $physical_address,
         ]);
 
@@ -838,7 +838,7 @@ class ClientManagement extends Controller
 
     public function updateRegistration(Request $Request){
         $id            = $Request['id'];
-        $customer_name = $Request['name'];
+        $client_name = $Request['name'];
         $postal_code = $Request['Code'];
         $town = $Request['town'];
         $country = $Request['country'];
@@ -847,11 +847,11 @@ class ClientManagement extends Controller
         $mobile_no = $Request['mobile'];
         $web_site = $Request['website'];
         $registration_date = $Request['Date'];
-        $customer_address = $Request['caddress'];
+        $client_address = $Request['caddress'];
         $physical_address = $Request['paddress'];
 
         DB::table('cra_customer_registration')->where('id',$id)->update([
-            'customer_name' =>  $customer_name ,
+            'client_name' =>  $client_name ,
             'postal_code' =>   $postal_code ,
             'town' => $town,
             'country' =>$country,
@@ -860,7 +860,7 @@ class ClientManagement extends Controller
             'mobile_no' =>   $mobile_no,
             'web_site' =>   $web_site,
             'registration_date' =>   $registration_date,
-            'customer_address' => $customer_address,
+            'client_address' => $client_address,
             'physical_address' => $physical_address,
         ]);
 

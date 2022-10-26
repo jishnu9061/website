@@ -45,7 +45,7 @@
                                 <th class="text-center"> No</th>
                                 <th class="text-center"> Issue Date</th>
                                 <th class="text-center">Document No</th>
-                                <th class="text-center">Customer</th>
+                                <th class="text-center">Client</th>
                                 <th class="text-center">Amount</th>
                                 <th class="text-center">Posted By</th>
                                 <th class="text-center">Action</th>
@@ -57,7 +57,7 @@
                                 <td scope="row" class="text-center">{{$list->id}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->issue_date}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1"></td>
-                                <td scope="row" class="text-center" id="medicine_name_1">{{$list->customer}}</td>
+                                <td scope="row" class="text-center" id="medicine_name_1">{{$list->Client}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->amount}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1"></td>
                                 <td>
@@ -96,8 +96,12 @@
 
                                                                     </div>
                                                                     <select name="document" id="cars">
-                                                                        <option>select</option>
-                                                                        <option>demo11</option>
+                                                                        <option>---select---</option>
+                                                                        <option>Type 1</option>
+                                                                        <option>Type 2</option>
+                                                                        <option>Type 3</option>
+                                                                        <option>Type 4</option>
+
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -118,14 +122,18 @@
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="mb-1">
-                                                                <label for="username">Customer</label>
+                                                                <label for="username">Client</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend">
 
                                                                     </div>
-                                                                    <select name="customer" id="cars">
-                                                                        <option>select</option>
-                                                                        <option>demo22</option>
+                                                                    <select name="client" id="cars">
+                                                                        <option>---select---</option>
+                                                                        <option>client 1</option>
+                                                                        <option>client 2</option>
+                                                                        <option>client 3</option>
+                                                                        <option>client 4</option>
+
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -155,8 +163,11 @@
 
                                                                     </div>
                                                                     <select name="currency" id="cars">
-                                                                        <option>select</option>
-                                                                        <option>demo22</option>
+                                                                        <option>---select---</option>
+                                                                        <option>currency 1</option>
+                                                                        <option>currency 2</option>
+                                                                        <option>currency 3</option>
+                                                                        <option>currency 4</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -184,8 +195,11 @@
                                                                     <div class="input-group-prepend">
                                                                     </div>
                                                                     <select name="approver" id="cars">
-                                                                        <option>select</option>
-                                                                        <option>demo33</option>
+                                                                        <option>---select---</option>
+                                                                        <option>Approver 1</option>
+                                                                        <option>Approver 2</option>
+                                                                        <option>Approver 3</option>
+                                                                        <option>Approver 4</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -197,8 +211,11 @@
                                                                     <div class="input-group-prepend">
                                                                     </div>
                                                                     <select name="account" id="cars">
-                                                                        <option>select</option>
-                                                                        <option>demo44</option>
+                                                                        <option>---select---</option>
+                                                                        <option>43556737</option>
+                                                                        <option>44556737</option>
+                                                                        <option>335567373</option>
+                                                                        <option>667567374</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -254,11 +271,7 @@
                                                             style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
                                                             <b><u> Quotation Items</u></b></span>
                                                         </div><br>
-                                                        <link
-                                                            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-                                                            rel="stylesheet"
-                                                            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                                                            crossorigin="anonymous">
+                                                       
 
                                                     </div>
                                                     <br>
@@ -271,8 +284,11 @@
 
                                                                     </div>
                                                                     <select name="type" id="cars">
-                                                                        <option>select</option>
-                                                                        <option>demo</option>
+                                                                    <option>---select---</option>
+                                                                        <option>Type 1</option>
+                                                                        <option>Type 2</option>
+                                                                        <option>Type 3</option>
+                                                                        <option>Type 4</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -312,8 +328,11 @@
 
                                                                     </div>
                                                                     <select name="vat" id="cars">
-                                                                        <option>select</option>
-                                                                        <option>demo</option>
+                                                                        <option>---select---</option>
+                                                                        <option>V.A.T 1</option>
+                                                                        <option>V.A.T 2</option>
+                                                                        <option>V.A.T 3</option>
+                                                                        <option>V.A.T 4</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -353,8 +372,8 @@
                                                             </div>
                                                             <div class="col-sm">
                                                                 <br>
-                                                                <button type="submit" class="btn btn-primary float:right;"Style="width:50%;">Submit</button>
-                                                                <button type="button" class="btn btn-primary float:left"Style="width:45%;">Cancel</button>
+                                                                <button type="submit" class="btn btn-primary float:right;"Style="width:50%;">Save</button>
+                                                                <button type="button" class="btn btn-primary float:left"Style="width:45%;"data-dismiss="modal">Cancel</button>
                                                             </div>
                                                         </div>
                                                     </div>

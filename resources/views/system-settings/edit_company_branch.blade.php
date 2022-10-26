@@ -149,7 +149,15 @@
                             <label for="username">Town:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" id="town" name="town" class="form-control" value="{{$branch_details->town}}">
+                                <select name="town" id="town"style="width:100%;">
+                                <option>{{$branch_details->town}}</option>
+                                <option>Nairobi </option>
+                                <option>Kisumu</option>
+                                <option>Nakuru</option>
+                                <option>Mombasa</option>
+                                <option>Thika</option>
+                                <option>Malindi</option>
+                            </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
