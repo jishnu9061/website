@@ -23,7 +23,7 @@
             <hr class="mb-4">. -->
             <div>
             <div class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Add Event</u></b></span></div><br>
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Edit Event</u></b></span></div><br>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous">
@@ -36,9 +36,11 @@
 
         <div class="col-md-12 order-md-1">
 
-            <form method="post" action="" id="form">
-                @csrf
+            <form method="post" action="{{url('update_event')}}" id="form">
+                @csrf  
+                <input type="hidden" name="id" value="{{$edit_event->id}}">
                 <div class="row">
+                
                 <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Event Type</label>
@@ -46,7 +48,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="" id="cars">
+                                <select name="event" id="cars" >
                                 <option>select</option>
                                                             <option>demo 2</option>
                                                             <option>demo 3</option>
@@ -56,13 +58,13 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="mb-1">
+                        <div class="mb-1">  
                             <label for="username">Title</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="" id="username" required>
+                                <input type="text" class="form-control" name="title" id="username"  value="{{$edit_event->Title}}">
                                 <br>
                             </div>
                         </div>
@@ -79,7 +81,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="" id="cars">
+                                <select name="room" id="cars" >
                                 <option>select</option>
                                                             <option>demo 2</option>
                                                             <option>demo 3</option>
@@ -111,7 +113,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="" id="username" required>
+                                <input type="text" class="form-control" name="location" id="username" required value="{{ $edit_event->Location}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -129,7 +131,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="" id="age">
+                                <input type="date" class="form-control" name="start_date" id="age" value="{{ $edit_event->Start_Date}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
@@ -144,7 +146,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="time" class="form-control" name="" id="confirm_password" required>
+                                <input type="time" class="form-control" name="time" id="confirm_password" required value="{{ $edit_event->Time}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
                                 </div>
@@ -166,7 +168,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="date" class="form-control" name="" id="confirm_password" required>
+                    <input type="date" class="form-control" name="end_date" id="confirm_password" required value="{{ $edit_event->End_Date}}">
                 </div>
             </div>
         </div>
@@ -177,7 +179,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="time" class="form-control" name="" id="confirm_password" required>
+                    <input type="time" class="form-control" name="time_1" id="confirm_password" required value="{{ $edit_event->Time_End}}">
                     <div class="invalid-feedback" style="width: 100%;">
                         Telephone Number is required.
                     </div>
@@ -196,7 +198,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="" id="cars">
+                    <select name="event" id="cars">
                     <option>select</option>
                                                             <option>demo 2</option>
                                                             <option>demo 3</option>
@@ -212,7 +214,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="" id="age">
+                    <input type="text" class="form-control" name="user" id="age" value="{{ $edit_event->User_Invited}}">
                     <div class="invalid-feedback" style="width: 100%;">
                         Incorporation is required
                     </div>
@@ -229,7 +231,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <textarea class="form-control" name="" id="form7Example7" rows="3"></textarea>
+                    <input type="textarea" class="form-control" name="others" id="form7Example7" rows="3" value="{{ $edit_event->Other_Invites}}">
                     <div class="invalid-feedback" style="width: 100%;">
                         Telephone Number is required.
                     </div>
@@ -247,7 +249,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="" id="cars">
+                    <select name="client" id="cars">
                     <option>select</option>
                                                             <option>demo 2</option>
                                                             <option>demo 3</option>
@@ -263,7 +265,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="" id="cars">
+                    <select name="file" id="cars">
                     <option>select</option>
                                                             <option>demo 2</option>
                                                             <option>demo 3</option>
@@ -281,7 +283,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="" id="confirm_password" required>
+                    <input type="text" class="form-control" name="notes" id="confirm_password" required value="{{ $edit_event->Notes}}">
                     <div class="invalid-feedback" style="width: 100%;">
                         Telephone Number is required.
                     </div>
@@ -299,7 +301,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="" id="cars">
+                    <select name="repetition" id="cars">
                     <option>select</option>
                                                             <option>demo 2</option>
                                                             <option>demo 3</option>
@@ -318,7 +320,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="date" class="form-control" name="" id="username" required>
+                    <input type="date" class="form-control" name="repetition_end" id="username" required value="{{ $edit_event->Repetition_End}}">
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -333,7 +335,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="" id="cars">
+                    <select name="reminder" id="cars">
                     <option>select</option>
                                                             <option>demo 2</option>
                                                             <option>demo 3</option>
@@ -379,7 +381,7 @@
                         </div>
                         <div class="col-sm">
                             <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
                             <button type="button" class="btn btn-primary float:right;" data-dismiss="modal">Close</button>
                         </div>
                     </div>
@@ -424,7 +426,6 @@
     </div>
 </div>
 </div>
-
 
         <script src="{{ url('assets/js') }}/jquery.min.js"></script>
         <script type="text/javascript">

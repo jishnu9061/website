@@ -1169,6 +1169,10 @@ Route::any('meeting-rooms',"filemanagement@meetingrooms")->name('meeting-rooms')
 Route::any('add-event',"filemanagement@addevent")->name('add-event');
 Route::any('work-flow',"filemanagement@workflow")->name('work-flow');
 Route::any('new-workflow',"filemanagement@newworkflow")->name('new-workflow');
+Route::any('/event_delete/{id}',"filemanagement@eventdelete")->name('eventdelete');
+Route::any('/edit_event/{id}',"filemanagement@editevent")->name('editevent');
+Route::any('/update_event',"filemanagement@updateevent")->name('update_event');
+
 //document manager
 Route::any('document-manager',"filemanagement@documentmanager")->name('document-manager');
 Route::any('upload-document',"filemanagement@uploaddocument")->name('upload-document');
