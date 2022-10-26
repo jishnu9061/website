@@ -10,20 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-      <style >
-                body
-        {
-          background-color: white;
-        }
-
-             th, td ,tr{
-               border: 1px solid  gray ;
-                border-collapse: collapse;
-}
-table{
-    outline: 1px solid  gray ;
-}
- </style>
+  
    </head>
    <body>
    

@@ -990,6 +990,14 @@ Route::any('/update_user_department','UserManagement@updateuserdepartment')->nam
 Route::any('/delete_user_department/{id}','UserManagement@deleteuserdepartment')->name('delete_user_department');
 
 //end
+//manage towns
+Route::any('manage_towns','UserManagement@managetowns')->name('manage_towns');
+Route::any('add_town','UserManagement@addtown')->name('add_town');
+
+Route::any('edit_town/{id}','UserManagement@edittown')->name('edit_town');
+Route::any('/update_town','UserManagement@updatetown')->name('update_town');
+Route::any('/delete_town/{id}','UserManagement@deletetown')->name('delete_town');
+//end
 //advocate targets
 Route::any('advocates_target','UserManagement@advocatestarget')->name('advocates_target');
 Route::any('add_new_entry','UserManagement@addnew')->name('add_new_entry');
@@ -1022,7 +1030,7 @@ Route::any('update-client',"ClientManagement@updateClient")->name('update-client
 Route::any('delete-client/{id}',"ClientManagement@deleteClient")->name('delete-client');
 //coporate
 Route::any('add-corporate','ClientManagement@addCorporate')->name('add-corporate');
-Route::any('store-corporate','ClientManagement@storeCorporate')->name('store-corporate');
+// Route::any('store-corporate','ClientManagement@storeCorporate')->name('store-corporate');
 Route::any('corporate-list','ClientManagement@listCorporate')->name('corporate-list');
 Route::any('/edit_client/{id}','ClientManagement@edit_corporate')->name('edit_client');
 Route::any('/update-corporate','ClientManagement@Update_corporate')->name('update-corporate');
@@ -1034,7 +1042,7 @@ Route::any('/delete_client/{id}','ClientManagement@Corporate_destroy')->name('de
 Route::any('client-document','ClientManagement@document')->name('client-document');
 Route::any('create-document','ClientManagement@createDocument')->name('create-document');
 Route::any('add-document','ClientManagement@addDocument')->name('add-document');
-Route::any('view-document','ClientManagement@viewDocument')->name('view-document');
+Route::any('view-document/{id}','ClientManagement@viewDocument')->name('view-document');
 //end Client-Documents
 
 //Client-Pickup
@@ -1161,6 +1169,10 @@ Route::any('meeting-rooms',"filemanagement@meetingrooms")->name('meeting-rooms')
 Route::any('add-event',"filemanagement@addevent")->name('add-event');
 Route::any('work-flow',"filemanagement@workflow")->name('work-flow');
 Route::any('new-workflow',"filemanagement@newworkflow")->name('new-workflow');
+Route::any('/event_delete/{id}',"filemanagement@eventdelete")->name('eventdelete');
+Route::any('/edit_event/{id}',"filemanagement@editevent")->name('editevent');
+Route::any('/update_event',"filemanagement@updateevent")->name('update_event');
+
 //document manager
 Route::any('document-manager',"filemanagement@documentmanager")->name('document-manager');
 Route::any('upload-document',"filemanagement@uploaddocument")->name('upload-document');

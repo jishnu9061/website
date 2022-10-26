@@ -16,7 +16,7 @@
    <body>
  <div>
             <button class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Manage User Accounts</u></b></span></button><br>
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Manage Accounts</u></b></span></button><br>
             <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous"> -->
@@ -25,8 +25,8 @@
               <br>
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
            
-                {{-- <a href="{{('reg_new_user')}}"><button class="btn btn-primary">Register New User</button></a> --}}
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Register New User</button>
+                {{-- <a href="{{('reg_new_user')}}"><button class="btn btn-primary">Add New User</button></a> --}}
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New User</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
@@ -77,7 +77,7 @@
                                 <a href="user_attachments"class="dropdown-item" >Attachment</a>
                                 <a href="user_comments" class="dropdown-item" >Comments</a>
                                 <a href="{{url('user_destroy',$list->id)}}" class="dropdown-item" >Delete</a>
-                             
+                            
                             </div>
                         </div> 
 
@@ -97,7 +97,7 @@
 
                                     <!-- Modal Header -->
                                     <div class="modal-header" style="background-color:#d6ba8a">
-                                        <h2 class="text-centre"><b>Register New User</b></h2>
+                                        <h2 class="text-centre"><b>Add New User</b></h2>
 
                                     </div>
 
@@ -299,7 +299,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">user Group</label>
+                            <label for="username">User Group</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
@@ -331,10 +331,21 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">User Role</label>
+                            <label for="username">User Roles</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="user_role" id="" value="" required>
+                                <select name="user_role" id="cars"required>
+                                    <option> ---Select--- </option>
+                                    <option>Add Client</option>
+                                    <option>Edit Client</option>
+                                    <option>View Client</option>
+                                    <option>Open New File</option>
+                                    <option>Edit File Type</option>
+                                    <option>View File Detais</option>
+                                    <option>Edit File Progress</option>
+                                    <option>Add Progress</option>
+                                </select>
+                              
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>

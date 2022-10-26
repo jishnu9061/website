@@ -20,7 +20,7 @@
         <div>
             <div class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
-                <b><u>Customer Follow Up</u></b></span>
+                <b><u>Client Follow Up</u></b></span>
             </div><br>
 
         </div>
@@ -43,7 +43,7 @@
                             <th class="text-center">No</th>
                             <th class="text-center">Follow Up date</th>
                             <th class="text-center"> Follow Up Type</th>
-                            <th class="text-center">Customer Name</th>
+                            <th class="text-center">Client Name</th>
                             <th class="text-center">Description</th>
                             <th class="text-center">Next BU Date</th>
                             <th class="text-center">Alert Period</th>

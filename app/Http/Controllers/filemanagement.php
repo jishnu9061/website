@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
-
+//
 class filemanagement extends Controller
 {
     public function index()
@@ -697,12 +697,121 @@ class filemanagement extends Controller
 
      public function diarymanagement()
      {
-         return view('file_management.diary-management');
+        $event=DB::table('cra_add_event')->get();
+         return view('file_management.diary-management',compact('event'));
      }
 
-     public function addevent()
+     public function eventdelete($id)
      {
-         return view('file_management.add-event');
+        $event_delete=DB::table('cra_add_event')->where('id',$id)->delete();
+        return redirect('/diary-management');
+        //  return redirect('file_management.diary-management');
+     }
+
+
+     public function editevent($id)
+
+     {
+         $edit_event =DB::table('cra_add_event')->where('id',$id)->first();
+         return view('file_management.edit_event',compact('edit_event','id'));
+        
+     }
+
+     public function updateevent(Request $request)
+     {
+        $id =$request['id'];
+        $Event_type =$request['event'];
+        $Title =$request['title'];
+        $Meeting_room =$request['room'];
+        $Location =$request['location'];
+        $Start_sate =$request['start_date'];
+        $Time =$request['time'];
+        $End_date =$request['end_date'];
+        $Time_1 =$request['time_1'];
+        $Event =$request['event'];
+        $User =$request['user'];
+        $Others =$request['others'];
+        $Client =$request['client'];
+        $File =$request['file'];
+        $Notes =$request['notes'];
+        $Repetition =$request['repetition'];
+        $Repetition_end =$request['repetition_end'];
+        $Reminder =$request['reminder'];
+        
+
+        DB::table('cra_add_event')->where('id',$id)->update([
+
+            
+            'Event_Type' =>  $Event_type,
+            'Title' =>  $Title,
+            'Meeting_Room' =>  $Meeting_room,
+            'Location' =>   $Location,
+            'Start_Date' =>   $Start_sate,
+            'Time' =>  $Time,
+            'End_Date' =>  $End_date,
+            'Time_End' =>  $Time_1,
+            'Event_Booked_For' =>  $Event,
+            'User_Invited' =>  $User,
+            'Other_Invites' =>  $Others,
+            'Client' =>  $Client,
+            'File' =>   $File,
+            'Notes' =>   $Notes,
+            'Set_Repetition' =>   $Repetition,
+            'Repetition_End' =>   $Repetition_end,
+            'Set_Reminder' =>  $Reminder,
+
+        ]);
+        return redirect('/diary-management');
+    }
+ 
+
+     public function addevent(Request $request)
+     {
+        
+        $Event_type =$request['event'];
+        // dd($Event_type); 
+        $Title =$request['title'];
+        $Meeting_room =$request['room'];
+        $Location =$request['location'];
+        $Start_sate =$request['start_date'];
+        $Time =$request['time'];
+        $End_date =$request['end_date'];
+        $Time_1 =$request['time_1'];
+        $Event =$request['event'];
+        $User =$request['user'];
+        $Others =$request['others'];
+        $Client =$request['client'];
+        $File =$request['file'];
+        $Notes =$request['notes'];
+        $Repetition =$request['repetition'];
+        $Repetition_end =$request['repetition_end'];
+        $Reminder =$request['reminder'];
+        
+
+        DB::table('cra_add_event')->insert([
+
+           
+            'Event_Type' =>  $Event_type,
+            'Title' =>  $Title,
+            'Meeting_Room' =>  $Meeting_room,
+            'Location' =>   $Location,
+            'Start_Date' =>   $Start_sate,
+            'Time' =>  $Time,
+            'End_Date' =>  $End_date,
+            'Time_End' =>  $Time_1,
+            'Event_Booked_For' =>  $Event,
+            'User_Invited' =>  $User,
+            'Other_Invites' =>  $Others,
+            'Client' =>  $Client,
+            'File' =>   $File,
+            'Notes' =>   $Notes,
+            'Set_Repetition' =>   $Repetition,
+            'Repetition_End' =>   $Repetition_end,
+            'Set_Reminder' =>  $Reminder,
+
+        ]);
+        return redirect('/diary-management');
+        
      }
 
      public function meetingrooms()
