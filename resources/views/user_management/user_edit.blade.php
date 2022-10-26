@@ -208,7 +208,20 @@
                             <label for="username">User Roles</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="user_role" id="username" value="{{ $edit->user_role}}" required>
+                                <select name="user_role" id="cars">
+                                    <option>{{ $edit->user_role}}</option>
+                          
+                                    <option>Add Client</option>
+                                    <option>Edit Client</option>
+                                    <option>View Client</option>
+                                    <option>Open New File</option>
+                                    <option>Edit File Type</option>
+                                    <option>View File Detais</option>
+                                    <option>Edit File Progress</option>
+                                    <option>Add Progress</option>
+                                  
+                                </select>
+                          
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -246,7 +259,7 @@
                     <div class="col-sm">
                         <br>
                         <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
-                        <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
                     </div>
                 </div>
         </div>

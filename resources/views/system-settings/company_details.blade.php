@@ -1,11 +1,18 @@
 @extends('layouts.hmsmain')
 @section('content')
+<html>
+    <div class="container">
+   <head>
+   <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 
-
-
-<head>
-    
-      <style>
+<style>
     #upload_button input[type=file] 
     {
         display:none;
@@ -25,6 +32,14 @@
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                       <br>
+<!---------------------------------------------- MODAL ------------------------------------------------------------------------->
+<!---------------------------------------------- MODAL ------------------------------------------------------------------------->
+           
+{{-- <a href="{{('add_company_branch')}}"><button class="btn btn-primary">Add Branch</button></a> --}}
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal2">Add Branch</button>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                      <br>
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
   <!-- <a href="{{('add_company_details')}}"><button class="btn btn-primary add-btn" style="width:20%;">Add Company Details</button></a><br><br> -->
   <h1 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;"><b>Company</b></h1>
@@ -32,7 +47,7 @@
 <table class="table table-bordered" id="new-item">
   <thead>
   <tr>
-    <th>Sl No</th>
+    <!-- <th>Sl No</th> -->
     <th>Company Name</th>
     <th>Company Address</th>
     <th>Town/City</th>
@@ -45,16 +60,16 @@
         @foreach($company_details as $company)
 
   <tr>
-    <td>{{$company->id}}</td>
+    <!-- <td>{{$company->id}}</td> -->
     <td>{{$company->company_name}}</td>
     <td>{{$company->address}}</td>
     <td>{{$company->town_city}}</td>
     <td>{{$company->Add_Logo}}</td>
    
-    <td>CRA</td>
+    <!-- <td>CRA</td>
     <td>Stima Investment Plaza 1,3rd Floor,Mushembi Rd, Parklands </td>
     <td>Nairobi, Kenya</td>
-    <td></td> 
+    <td></td>  -->
     
 <td  scope="row"class="text-center"><a href="{{url('edit_company_details',$company->id)}}">
 <i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i></td>
@@ -81,7 +96,9 @@
                                         <div class="container">
                                             <form method="post" action="{{ url('add_company_details') }}"
                                                 enctype="multipart/form-data"> 
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->    
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->  
+
+    
 @csrf
 <div id="upload_button">
     <label>
@@ -96,7 +113,7 @@
                             <label >Company Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="name" id="name" value="">
+                                <input type="text" class="form-control" name="name" id="name" value="CRA">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -108,7 +125,7 @@
                             <label>Company Address</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="address" id="address" value="">
+                                <input type="text" class="form-control" name="address" id="address" value="Stima Investment Plaza 1,3rd Floor,Mushembi Rd, Parklands">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -122,7 +139,7 @@
                             <label for="username">Town/City</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="city" id="city" value="">
+                                <input type="text" class="form-control" name="city" id="city" value="Nairobi, Kenya">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -230,11 +247,7 @@
                         </div>
                     </div>
                 </div>
-  
-                
-               
-
-                <div class="row">
+<div class="row">
                        <div class="col-sm">
 
                        </div>
@@ -253,7 +266,194 @@
    </div>
 </div>
 </div>
+ <!----------------------------------------------Company_branch MODAL ---------------------------------------------------------------------->
+
+<div class="modal fade" id="Modal2">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content" style="background-color:#d6ba8a">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                        <h2 class="text-centre"><b>Add Branch</b></h2>
+
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body" style="background-color:white">
+                                        <div class="container">
+                                            <form method="post" action="{{ url('add_company_branch') }}"
+                                                enctype="multipart/form-data"> 
+<!---------------------------------------------- MODAL ----------------------------------------------------------------------> 
+@csrf
+<div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label >Branch No:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input  class="form-control" type="bnumber"  id="bnum" name="bnum" value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label>Branch Code:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text"  id="bcode" name="bcodes" class="form-control" value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Branch Name:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text"  id="bname" name="bname"class="form-control"  value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <br>
+                    <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Postal Address:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                               
+                                <textarea rows="4" cols="50" name="paddress" class="form-control"  type="text"></textarea>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Physical Address:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <textarea rows="4" cols="50" name="physicaladd" class="form-control"  type="text"></textarea>
+                             
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                        <label for="username">Tel:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="number"  id="tel" name="tel" class="form-control"  value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                        <label for="username">Mobile:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="number"  id="mobile" name="mobile" class="form-control"  value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Fax:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text"  id="fax" name="fax" class="form-control"  value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Town:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" id="town" name="town" class="form-control" value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Email:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="email"  id="email" name="email"class="form-control"  value="" >
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Website:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" id="website" name="website" class="form-control" >
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+ 
+  <div class="row">
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
 </body>
+</div>
 </html>
 
 @endsection

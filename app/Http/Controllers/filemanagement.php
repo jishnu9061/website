@@ -1079,18 +1079,119 @@ public function view_new_instructions(Request $request)
 
 public function new_file_instructions()
 {
-    return view('file_management.file_instruction');
+
+    $new_file_instruction=DB::table('cra_add_new_instructions')->get();
+        
+        return view('file_management.file_instruction',compact('new_file_instruction'));
+    // return view('file_management.file_instruction');
 }
 
-public function add_new_file_instructions()
+
+
+
+
+public function add_new_file_instructions(Request $request)
 {
-    return view('file_management.file_new_instruction');                                                             
+   $id =$request['id'];
+   $date =$request['date'];
+   $client =$request['client'];
+   $file =$request['file'];
+   $instruction =$request['instruction'];
+   $category =$request['category'];
+   $receiver =$request['receiver'];
+   $currency =$request['currency'];
+   $exchange =$request['exchange'];
+   $turn_around =$request['turn_around'];
+   $priority =$request['priority'];
+   $amount =$request['amount'];
+   $details =$request['details'];
+   $send_notification =$request['send_notification'];
+
+   DB::table('cra_add_new_instructions')->insert([
+
+    'id' => $id,
+    'date' => $date,
+    'client' => $client,
+    'file' => $file,
+    'instruction' => $instruction,
+    'category' =>  $category,
+    'receiver' =>   $receiver,
+    'currency' => $currency,
+    'exchange' => $exchange,
+    'turn_around' => $turn_around,
+    'priority' => $priority,
+    'amount' =>  $amount,
+    'details' =>   $details,
+    'send_notification' =>   $send_notification,
+]);
+    return view('file_management.file_instruction');                                                             
 }
+
+public function edit_file_instruction_list($id)
+{
+
+
+    $edit_file_instruction =DB::table('cra_add_new_instructions')->where('id',$id)->first();
+    return view('file_management.edit_file_instruction',compact('edit_file_instruction','id'));
+
+                                                             
+}
+
+public function updatefileinstruction(Request $request)
+{
+
+
+    $id =$request['id'];
+    $date =$request['date'];
+    $client =$request['client'];
+    $file =$request['file'];
+    $instruction =$request['instruction'];
+    $category =$request['category'];
+    $receiver =$request['receiver'];
+    $currency =$request['currency'];
+    $exchange =$request['exchange'];
+    $turn_around =$request['turn_around'];
+    $priority =$request['priority'];
+    $amount =$request['amount'];
+    $details =$request['details'];
+    $send_notification =$request['send_notification'];
+ 
+    DB::table('cra_add_new_instructions')->where('id',$id)->update([
+ 
+     'id' => $id,
+     'date' => $date,
+     'client' => $client,
+     'file' => $file,
+     'instruction' => $instruction,
+     'category' =>  $category,
+     'receiver' =>   $receiver,
+     'currency' => $currency,
+     'exchange' => $exchange,
+     'turn_around' => $turn_around,
+     'priority' => $priority,
+     'amount' =>  $amount,
+     'details' =>   $details,
+     'send_notification' =>   $send_notification,
+ ]);
+
+ return redirect('/file_instruction');
+
+}
+
+public function destroyfileinstruction($id)
+{
+    $destroy_file =DB::table('cra_add_new_instructions')->where('id',$id)->delete();
+    return redirect ('/file_instruction');
+}
+
+
 
 public function safe_management_list()
 {
     return view('file_management.Safe_management');                                                             
 }
+
+
 
 public function new_safe_management_list()
 {
@@ -1112,10 +1213,10 @@ public function Process_Request_list()
     return view('file_management.Process_Request');                                                             
 }
 
-public function edit_file_instruction_list()
-{
-    return view('file_management.edit_file_instruction');                                                             
-}
+
+
+
+
 
 public function edit_office_instruction_list()
 {

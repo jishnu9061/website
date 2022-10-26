@@ -18,7 +18,7 @@
 
     <div>
             <button class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Manage User Departments </u></b></span></button><br>
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Manage Departments </u></b></span></button><br>
            
      </div>
             <br> <br>
@@ -166,7 +166,7 @@
                     <div class="col-sm">
                         <br>
                         <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Add</button>
-                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
                     </div>
                 </div>
         </div>

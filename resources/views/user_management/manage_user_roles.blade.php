@@ -17,14 +17,14 @@
    <body>
    <div>
             <button class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Manage User Roles</u></b></span></button><br>
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Manage Roles</u></b></span></button><br>
          
      </div>
             <br> <br>
     <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
            
-    {{-- <a href="{{('add_user_roles')}}"><button class="btn btn-primary">Add User Role</button></a> --}}
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add User Role</button>
+    {{-- <a href="{{('add_user_roles')}}"><button class="btn btn-primary">Add New Role</button></a> --}}
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New Role</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
@@ -66,7 +66,7 @@
 
                                     <!-- Modal Header -->
                                     <div class="modal-header" style="background-color:#d6ba8a">
-                                        <h2 class="text-centre"><b>Add User Role</b></h2>
+                                        <h2 class="text-centre"><b>Add New Role</b></h2>
 
                                     </div>
 

@@ -5,7 +5,7 @@
         <div>
             <button class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>
-                        Edit User Group</u></b></span></button><br><br><br>
+                        Edit Group</u></b></span></button><br><br><br>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous">
@@ -73,7 +73,7 @@
                                 </div>
                                 <select name="group_role" id="cars">
                                     <option value="">{{$edit_user->group_role}}</option>
-                                    <option>--select group roles--</option>
+                                    <option>--selects--</option>
                                     <option></option>
                                     <option></option>
                                     <option></option>
@@ -99,7 +99,7 @@
                     <div class="col-sm">
                         <br>
                         <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
-                        <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
                     </div>
                 </div>
         </div>
