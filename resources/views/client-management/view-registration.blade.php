@@ -129,12 +129,13 @@
                                                         <div class="mb-1">
                                                             <label for="username">Town</label>
                                                             <div class="input-group">
-                                                                <div class="input-group-prepend"></div>
-                                                                <input type="text" class="form-control" name="town"
-                                                                    id="username" value="" placeholder="Town" required>
-                                                                <div class="invalid-feedback" style="width: 100%;">
-                                                                    Town is required.
+                                                                <div class="input-group-prepend">
+
                                                                 </div>
+                                                                <select name="Town" id="cars">
+                                                                    <option>select</option>
+                                                                    <option>kenya</option>
+                                                                </select>
                                                             </div>
                                                         </div>
                                                     </div>
