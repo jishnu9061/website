@@ -61,7 +61,7 @@
                                                 {{ $list->designation }}</td>
                                             <td scope="row" class="text-center" id="medicine_name_1">
                                                 {{ $list->Mobile_no }}</td>
-                                            <td scope="row" class="text-center" id="medicine_name_1">{{ $list->email }}
+                                            <td scope="row" class="text-center" id="medicine_name_1">{{ $list->Email_address }}
                                             </td>
                                             <td scope="row" class="text-center" id="medicine_name_1">
                                                 <a href="{{ url('edit_client', $list->id) }}"><i style="color:black;"
@@ -117,7 +117,7 @@
                                                                     <option value="Corporate">Corporate</option>
                                                                 </select> -->
                                                                 <select name="type" id="cars">
-                                                                    <option value="Corporate">Corporate</option>
+                                                                    <option >Corporate</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -130,9 +130,9 @@
 
                                                                 </div>
                                                                 <select name="citizen" id="cars">
-                                                                    <option value="volvo">Select</option>
-                                                                    <option value="Residensial">Residensial</option>
-                                                                    <option value="Non Residensial">Non Residensial
+                                                                    <option >Select</option>
+                                                                    <option >Residensial</option>
+                                                                    <option >Non Residensial
                                                                     </option>
                                                                 </select>
                                                             </div>
@@ -163,11 +163,11 @@
 
                                                                 </div>
                                                                 <select name="country" id="cars">
-                                                                    <option value="volvo">Select</option>
-                                                                    <option value="Kenya">Kenya</option>
-                                                                    <option value="South Africa">South Africa</option>
-                                                                    <option value="India">India</option>
-                                                                    <option value="America">America</option>
+                                                                    <option >Select</option>
+                                                                    <option >Kenya</option>
+                                                                    <option >South Africa</option>
+                                                                    <option >India</option>
+                                                                    <option >America</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -239,9 +239,9 @@
                                                                 <div class="input-group-prepend">
                                                                 </div>
                                                                 <select name="brought">
-                                                                    <option value="volvo">Select</option>
-                                                                    <option value="Agent">Agent</option>
-                                                                    <option value="Staff">Staff</option>
+                                                                    <option >Select</option>
+                                                                    <option >Agent</option>
+                                                                    <option >Staff</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -254,12 +254,12 @@
 
                                                                 </div>
                                                                 <select name="status" id="cars">
-                                                                    <option value="">Select</option>
-                                                                    <option value="Monday">Monday</option>
-                                                                    <option value="Tuesday">Tuesday</option>
-                                                                    <option value="Wednesday">Wednesday</option>
-                                                                    <option value="Thursday">Thursday</option>
-                                                                    <option value="Friday">Friday</option>
+                                                                    <option >Select</option>
+                                                                    <option >Monday</option>
+                                                                    <option >Tuesday</option>
+                                                                    <option >Wednesday</option>
+                                                                    <option >Thursday</option>
+                                                                    <option>Friday</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -272,9 +272,9 @@
 
                                                                 </div>
                                                                 <select name="source" id="cars">
-                                                                    <option value="volvo">Select</option>
-                                                                    <option value="Excisting">Excisting Client</option>
-                                                                    <option value="Online">Online</option>
+                                                                    <option >Select</option>
+                                                                    <option >Excisting Client</option>
+                                                                    <option >Online</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -317,10 +317,10 @@
 
                                                                 </div>
                                                                 <select name="industry" id="cars">
-                                                                    <option value="volvo">Select</option>
-                                                                    <option value="Commerce">Commerce</option>
-                                                                    <option value="Construction">Construction</option>
-                                                                    <option value="Education">Education</option>
+                                                                    <option >Select</option>
+                                                                    <option >Commerce</option>
+                                                                    <option >Construction</option>
+                                                                    <option >Education</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -475,12 +475,9 @@
 
                                                     </div>
                                                     <br><br>
-                                                    <div class="modal-footer" style="background-color:#d6ba8a">
-                                                        <button type="submit" class="btn btn-primary"
-                                                            data-dismiss="modal"
-                                                            style="width:15%;background-color:white;color:black">Save</button>
-                                                        <button type="button" class="btn btn-primary"
-                                                            style="width:15%;background-color:white;color:black">Cancel</button>
+                                                    <div class="modal-footer" style="background-color:#d6ba8a">  
+                                                        <button type="submit" class="btn btn-primary"style="width:15%;background-color:white;color:black">submit</button>
+                                                        <button type="button" class="btn btn-primary"style="width:15%;background-color:white;color:black">Cancel</button>
                                                     </div>
 
                                                 </div>
