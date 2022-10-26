@@ -132,8 +132,7 @@
                                                                 <select name="citizen" id="cars">
                                                                     <option >Select</option>
                                                                     <option >Residensial</option>
-                                                                    <option >Non Residensial
-                                                                    </option>
+                                                                    <option >Non Residensial</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -476,7 +475,7 @@
                                                     </div>
                                                     <br><br>
                                                     <div class="modal-footer" style="background-color:#d6ba8a">  
-                                                        <button type="submit" class="btn btn-primary"style="width:15%;background-color:white;color:black">submit</button>
+                                                        <button type="submit" class="btn btn-primary"style="width:15%;background-color:white;color:black">save</button>
                                                         <button type="button" class="btn btn-primary"style="width:15%;background-color:white;color:black">Cancel</button>
                                                     </div>
 
