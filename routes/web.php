@@ -1209,10 +1209,9 @@ Route::any('/u_details',"filemanagement@u_details")->name('u_details');
 
 //Anandhu
 Route::any('/office_instructions',"filemanagement@new_instructions")->name('new_instruction');
-
 Route::any('/new_office_instructions',"filemanagement@add_new_instructions")->name('add_new_instructions');
-
-
+Route::any('/update_office_instruction',"filemanagement@updateofficeinstructions")->name('update_office_instruction');
+Route::any('/delete_office/{id}',"filemanagement@destroyofficeinstruction")->name('delete_office');
 
 Route::any('/instructions_report',"filemanagement@view_new_instructions")->name('view_new_instructions');
 
@@ -1234,7 +1233,7 @@ Route::any('/edit_file_instruction/{id}',"filemanagement@edit_file_instruction_l
 
 Route::any('/update_file_instruction',"filemanagement@updatefileinstruction")->name('update_file_instruction');
 
-Route::any('/edit_office_instruction',"filemanagement@edit_office_instruction_list")->name('edit_office_instruction_list');
+Route::any('/edit_office_instruction/{id}',"filemanagement@edit_office_instruction_list")->name('edit_office_instruction_list');
 
 Route::any('/delete_file/{id}',"filemanagement@destroyfileinstruction")->name('delete_file');
 

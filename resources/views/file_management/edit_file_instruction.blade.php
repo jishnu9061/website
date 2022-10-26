@@ -84,7 +84,11 @@
                                 </div>
                                 <select name="client" id="cars">
                                     <option>{{ $edit_file_instruction->client}}</option>
-                                    <option value="volvo"></option>
+                                    <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                                 </select>
                             </div>
                         </div>
@@ -99,8 +103,12 @@
                                 </div>
                                 <select name="file" id="cars">
                                     <option>{{ $edit_file_instruction->file}}</option>
-                                    <option value="volvo"></option>
-                                </select>
+                                    <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option> 
+                    </select>
                             </div>
                         </div>
                     </div>
@@ -121,7 +129,11 @@
                                 </div>
                                 <select name="instruction" id="cars">
                                     <option>{{ $edit_file_instruction->instruction}}</option>
-                                    <option value="volvo"></option>
+                                    <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                                 </select>
                             </div>
                         </div>
@@ -150,7 +162,11 @@
                                 </div>
                                 <select name="receiver" id="cars">
                                     <option>{{ $edit_file_instruction->receiver}}</option>
-                                    <option value="volvo"></option>
+                                    <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                                 </select>
                             </div>
                         </div>
@@ -174,7 +190,11 @@
                     </div>
                     <select name="currency" id="cars">
                         <option>{{ $edit_file_instruction->currency}}</option>
-                        <option value="volvo"></option>
+                        <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                     </select>
                 </div>
             </div>
@@ -204,7 +224,11 @@
                     </div>
                     <select name="turn_around" id="cars">
                         <option>{{ $edit_file_instruction->turn_around}}</option>
-                        <option value="volvo"></option>
+                        <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                     </select>
                 </div>
             </div>
@@ -218,7 +242,11 @@
                     </div>
                     <select name="priority" id="cars">
                         <option>{{ $edit_file_instruction->priority}}</option>
-                        <option value="volvo"></option>
+                        <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                     </select>
                 </div>
             </div>
@@ -270,7 +298,11 @@
                     </div>
                     <select name="send_notification" id="cars">
                         <option>{{ $edit_file_instruction->send_notification}}</option>
-                        <option value="volvo"></option>
+                        <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                     </select>
                 </div>
             </div>
