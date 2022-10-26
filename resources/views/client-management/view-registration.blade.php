@@ -143,10 +143,7 @@
                                                                 <div class="invalid-feedback" style="width: 100%;">
                                                                     Town is required.
                                                                 </div>
-                                                                <select name="Town" id="cars">
-                                                                    <option>select</option>
-                                                                    <option>kenya</option>
-                                                                </select>
+                                                              
                                                             </div>
                                                         </div>
                                                     </div>
