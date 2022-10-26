@@ -1174,7 +1174,8 @@ Route::any('/edit_event/{id}',"filemanagement@editevent")->name('editevent');
 Route::any('/update_event',"filemanagement@updateevent")->name('update_event');
 //workflow
 Route::any('/delete-workflow/{id}',"filemanagement@deleteworkflow")->name('delete-workflow');
-
+Route::any('/edit-workflow/{id}',"filemanagement@editworkflow")->name('editworkflow');
+Route::any('/update-workflow',"filemanagement@updatworkflow")->name('update-workflow');
 
 //document manager
 Route::any('document-manager',"filemanagement@documentmanager")->name('document-manager');
