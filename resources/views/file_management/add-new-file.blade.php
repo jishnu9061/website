@@ -1,901 +1,360 @@
 @extends('layouts.hmsmain')
 @section('content')
-<div class="container">
-    <div class="py-5 text-center">
 
-
-        <div>
-            <div class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Open New File</u></b></span></div><br>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous">
-
-        
-            </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <form method="post" action="" id="form">  
-                @csrf
-                <div class="row">
-                   
-                   
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Client</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <select name="client_type" id="cars">
-                                    <option>Select</option>
-                                    <option>Accord University</option>
-                                    <option>Accounts And Books</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                
-                <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Associate Handling</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <select name="associate_handling" id="cars" disabled>
-                                    <option >Corporate</option>
-                                    <option >Individual</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-</div>
-<br>
-
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Opening Date</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="opening_date" id="age" value="" min="0" max="99">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Age is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Client Ref.No or(Case No)</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="client_ref_no" id="age" value="" min="0" max="99">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Age is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Our File Ref No</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="our_file_ref_no" value=""
-                                    id="confirm_password">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Password is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">File Name/Subject</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="file_name" id="age" value=""
-                                 min="0" max="99">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Age is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Approval Partner</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <select name="approval_partner" id="cars">
-                                    <option >Select</option>
-                                    <option >Residensial</option>
-                                    <option >Non Residensial</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Customer Name</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="customer_name" value=""
-                                    id="confirm_password">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Password is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Customer Address</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="address" value=""
-                                    id="confirm_password">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Password is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Customer Tel</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="telephone" value=""
-                                    id="confirm_password">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Password is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                <br>
-                <div class="row">
-                <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Customer E-mail</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="email" class="form-control" name="email" value=""
-                                    id="confirm_password">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Password is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Amount</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="narration" class="form-control" name="amount" value=""
-                                    id="confirm_password">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Password is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Workflow</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <select name="workflow" id="cars">
-                                    <option >Select</option>
-                                    <option >Residensial</option>
-                                    <option >Non Residensial</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                <br>
-               
-                    <div class="row">
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-                            <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Open File</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-</div>
-<div class="modal" id="mymodal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-body">
-                    <form action="">
-                        <div>
-                            <input type="text" name="type" class="form-control" placeholder="Client Type">
-                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<div class="modal" id="my">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-body">
-                    <form action="">
-                        <div>
-                            <input type="text" name="type" class="form-control" placeholder="Country">
-                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-</script>
-<script src="{{ url('assets/js') }}/jquery.min.js"></script>
-<script type="text/javascript">
-$(function() {
-    $('[data-toggle="popover"]').popover()
-})
-
-
-$(document).on('click', '#testing', function() {
-            $(this).text(' submited ');
-            $('.checkz:checked').each(function() {
-                        var allowanceid = this.value;
-                        var staffid = $('#staffname').val();
-
-
-                        $(this).prop('disabled', true);
-                        $.ajaxSetup({
-                            headers: {
-                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                            }
-                        });
-
-
-                        $.ajax({
-                                    method: "POST",
-                                    url: "/allowancetostaff",
-                                    data: {
-                                        "_token": "{{ csrf_token() }}",
-                                        'allowanceid': allowanceid,
-                                        'staffid': staffid,
-                                        'status': 'allowance',
-                                    },
-
-                                    //success: function (response){
-                                    //  alert(response.status);
-                                    //},
-                                    <
-                                    /select>
-
-                                    <
-                                    /div> <
-                                    div class = "form-group col-md-7" >
-                                    <
-                                    label
-                                    for = "username" > Consulatation Fees < /label> <
-                                    div class = "input-group" >
-                                    <
-                                    div class = "input-group-prepend" >
-
-                                    <
-                                    /div> <
-                                    input type = "number"
-                                    class = "form-control"
-                                    name = "cons_fee"
-                                    id = "cons_fee"
-                                    placeholder = ""
-                                    min = "0" >
-                                    <
-                                    div class = "invalid-feedback"
-                                    style = "width: 100%;" >
-                                    <
-                                    /div> < /
-                                    div > <
-                                    /div>
-
-                                    <
-                                    div class = "col-md-4 col-lg-2" >
-                                    <
-                                    p class = "card-title" > < b > Sex < /b></p >
-                                    <
-                                    div class = "card-body" >
-                                    <
-                                    div class = "form-check" >
-                                    <
-                                    input class = "form-check-input"
-                                    type = "radio"
-                                    name = "patienthere"
-                                    id = "flexRadioDefault1" >
-                                    <
-                                    label class = "form-check-label"
-                                    for = "flexRadioDefault1" >
-                                    Male <
-                                    /label> < /
-                                    div > <
-                                    div class = "form-check" >
-                                    <
-                                    input class = "form-check-input"
-                                    type = "radio"
-                                    name = "patienthere"
-                                    id = "flexRadioDefault1"
-                                    checked >
-                                    <
-                                    label class = "form-check-label"
-                                    for = "flexRadioDefault1" >
-                                    Female <
-                                    /label> < /
-                                    div > <
-                                    div class = "form-check" >
-                                    <
-                                    input class = "form-check-input"
-                                    type = "radio"
-                                    name = "patienthere"
-                                    id = "flexRadioDefault1"
-                                    checked >
-                                    <
-                                    label class = "form-check-label"
-                                    for = "flexRadioDefault1" >
-                                    Others <
-                                    /label> < /
-                                    div >
-
-                                    <
-                                    /div> < /
-                                    div > <
-                                    /div>
-
-                                    <
-                                    div style = "height:50px;" >
-
-                                    <
-                                    div style = "height: 50px;" >
-
-                                    <
-                                    /div> <
-                                    script src = "{{ url('assets/js') }}/jquery.min.js" >
-</script>
-<script type="text/javascript">
-$(document).on('input', '#price', function() {
-    alert('sdf');
-    $('#percent').prop('readonly', true);
-
-});
-$(document).on('input', '#percent', function() {
-            $('#price').prop('readonly', true); <
-            /div>
-
-            <
-            h6 > Salary And Allowances < /h6>
-
-                <
-                hr class = "mb-4" >
-                <
-                div class = "row" >
-                <
-                div class = "col-md-4" >
-                <
-                div class = "mb-1" >
-                <
-                label
-            for = "username" > Salary < /label> <
-            div class = "input-group" >
-                <
-                div class = "input-group-prepend" >
-
-                <
-                /div> <
-            input type = "number"
-            class = "form-control"
-            name = "salary"
-            id = "username"
-            placeholder = "Salary"
-            min = "0" >
-                <
-                div class = "invalid-feedback"
-            style = "width: 100%;" >
-                Salary is required. <
-                /div> < /
-                div > <
-                /div> < /
-                div >
-
-                <
-                div class = "col-md-4" >
-                <
-                div class = "mb-1" >
-                <
-                label
-            for = "username" > Years of experience < /label> <
-            div class = "input-group" >
-                <
-                div class = "input-group-prepend" >
-
-                <
-                /div> <
-            input type = "number"
-            class = "form-control"
-            name = "yearsexp"
-            id = "username"
-            placeholder = "Experience"
-            min = "0"
-            max = "70" >
-                <
-                div class = "invalid-feedback"
-            style = "width: 100%;" >
-                Years of experience is required. <
-                /div> < /
-                div > <
-                /div> < /
-                div > <
-                div class = "col-md-4" >
-                <
-                div class = "mb-1" >
-                <
-                label
-            for = "username" > D.O.B < /label> <
-            div class = "input-group" >
-                <
-                div class = "input-group-prepend" >
-
-                <
-                /div> <
-            input type = "date"
-            class = "form-control"
-            name = "dob"
-            id = "username"
-            placeholder = "DOB" >
-                <
-                div class = "invalid-feedback"
-            style = "width: 100%;" >
-                dob is required. <
-                /div> < /
-                div > <
-                /div> < /
-                div > <
-                /div>
-
-            {
-                {
-                    Session::forget('staffregistered')
-                }
-            } <
-            div class = "row" >
-                <
-                div class = "col-md-4" >
-                <
-                div class = "mb-1" >
-                <
-                label
-            for = "username" > Bank Name < /label> <
-            div class = "input-group" >
-                <
-                div class = "input-group-prepend" >
-
-                <
-                /div> <
-            input type = "text"
-            class = "form-control"
-            name = "bankname"
-            id = "username"
-            placeholder = "Bank Name" >
-                <
-                div class = "invalid-feedback"
-            style = "width: 100%;" >
-                Bank Name is required. <
-                /div> < /
-                div > <
-                /div> < /
-                div >
-
-                <
-                div class = "col-md-4" >
-                <
-                div class = "mb-1" >
-                <
-                label
-            for = "username" > Account Number < /label> <
-            div class = "input-group" >
-                <
-                div class = "input-group-prepend" >
-
-                <
-                /div> <
-            input type = "number"
-            class = "form-control"
-            name = "accountnumber"
-            id = "username"
-            placeholder = "Account Number"
-            min = "0" >
-                <
-                div class = "invalid-feedback"
-            style = "width: 100%;" >
-                Account number is required. <
-                /div> < /
-                div > <
-                /div> < /
-                div > <
-                div class = "col-md-4" >
-                <
-                div class = "mb-1" >
-                <
-                label
-            for = "username" > IFSC code < /label> <
-            div class = "input-group" >
-                <
-                div class = "input-group-prepend" >
-
-                <
-                /div> <
-            input type = "text"
-            class = "form-control"
-            name = "isfc"
-            id = "username"
-            placeholder = "Ifsc Code" >
-                <
-                div class = "invalid-feedback"
-            style = "width: 100%;" >
-                IFSC Code is required. <
-                /div> < /
-                div > <
-                /div> < /
-                div > <
-                div class = "col-md-12" >
-                <
-                div class = "mb-1" >
-                <
-                br >
-                <
-                h6 > No: of Leaves(Annual) < /h6>
-
-                <
-                div class = "input-group" >
-
-                <
-                div class = "input-group-prepend" >
-                <
-                /div> <
-            table class = "table" >
-                <
-                tr >
-
-
-
-                <
-                td >
-
-                <
-                input type = "hidden"
-            name = "leave_type[]"
-            value = "" > < /td> <
-            td > < input type = "number"
-            class = "form-control"
-            name = "leaves[]"
-            value = ""
-            min = "0"
-            max = "365"
-            width = "auto" > < /td>
-
-
-
-                <
-                /tr> < /
-                table > {
-                    {
-                        -- < input type = "text"
-                        class = "form-control"
-                        name = "leavetype"
-                        value = ""
-                        id = "leavetype"
-                        placeholder = "" >
-                            <
-                            div class = "invalid-feedback"
-                        style = "width:100%;" > --
-                    }
-                } {
-                    {
-                        -- < /div> --}} <
-                        /div> < /
-                        div > <
-                            /div>
-
-                            <
-                            /div> <
-                        div style = "height: 50px;" >
-
-                            <
-                            /div> <
-                        div class = "row" >
-
-                            <
-                            div class = "col-md-4 col-lg-4" >
-                            <
-                            p > < b > Fixed Allowances < /b></p >
-                            <
-                            table class = "table table-bordered" >
-                            <
-                            tbody >
-
-
-
-                            <
-                            tr >
-
-                            <
-                            td > < /td> <
-                        input type = "hidden"
-                        name = ""
-                        value = "" >
-                            <
-                            td > < input type = "checkbox"
-                        class = "checkz"
-                        name = "allowz[]"
-                        value = "" > < /td>
-
-                            <
-                            /tr>
-
-
-
-                            <
-                            /tbody> < /
-                            table > <
-                            /div> < /
-                            div > <
-                            script src = "{{ url('assets/js') }}/jquery.min.js" >
-</script>
-<script type="text/javascript">
-$(function() {
-    $('[data-toggle="popover"]').popover()
-})
-
-$(document).on('click', '#testing1', function() {
-
-            $(this).text(' submited ');
-            $('.checkz:checked').each(function() {
-                        var allowanceid = this.value;
-                        var staffid = $('#staffname').val();
-
-
-                        $(this).prop('disabled', true);
-                        $.ajaxSetup({
-                            headers: {
-                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                            }
-                        });
-
-
-                        $.ajax({
-                                    method: "POST",
-                                    url: "/allowancetostaff",
-                                    data: {
-                                        "_token": "{{ csrf_token() }}",
-                                        'allowanceid': allowanceid,
-                                        'staffid': staffid,
-                                        'status': 'reduction',
-
-                                    },
-
-                                    //success: function (response){
-                                    //  alert(response.status);
-                                    //},
-
-
-                                    <
-                                    div class = "col-md-4 col-lg-4" >
-                                    <
-                                    p > < b > Non - Fixed Allowances < /b></p >
-                                    <
-                                    table class = "table table-bordered" >
-                                    <
-                                    tbody >
-
-
-
-                                    <
-                                    tr >
-
-                                    <
-                                    td > < /td> <
-                                    input type = "hidden"
-                                    name = ""
-                                    value = "" >
-                                    <
-                                    td > < input type = "number"
-                                    class = "checkz"
-                                    name = "nonfx[]"
-                                    min = "0"
-                                    value = "" > < /td>
-
-                                    <
-                                    /tr>
-
-
-
-                                    <
-                                    /tbody> < /
-                                    table > <
-                                    /div>
-
-                                    <
-                                    div class = "col-md-4 col-lg-4" >
-                                    <
-                                    p > < b > Deductions < /b></p >
-                                    <
-                                    table class = "table table-bordered" >
-                                    <
-                                    tbody >
-
-
-
-                                    <
-                                    tr >
-
-                                    <
-                                    td > < /td> <
-                                    input type = "hidden"
-                                    name = ""
-                                    value = "" >
-                                    <
-                                    td > < input type = "checkbox"
-                                    class = "checkz"
-                                    name = "category[]"
-                                    value = "" > < /td>
-
-                                    <
-                                    /tr>
-
-
-
-                                    <
-                                    /tbody> < /
-                                    table > <
-                                    /div>
-
-                                    <
-                                    /div> <
-                                    div class = "row" >
-                                    <
-                                    div class = "col-md-4" >
-                                    <
-                                    div class = "mb-1" >
-                                    <
-                                    label
-                                    for = "username" > Staff Status < /label> <
-                                    div class = "input-group" >
-                                    <
-                                    div class = "input-group-prepend" >
-                                    <
-                                    /div> <
-                                    select class = "form-control"
-                                    name = "status"
-                                    id = "status" >
-                                    <
-                                    option value = "" > Select < /option>
-
-                                    <
-                                    option value = "" > HH < /option>
-
-                                    <
-                                    div class = "invalid-feedback"
-                                    style = "width: 100%;" >
-                                    <
-                                    /div> < /
-                                    select > <
-                                    /div> < /
-                                    div > <
-                                    /div> < /
-                                    div > <
-                                    hr class = "mb-4" >
-
-                                    <
-                                    button type = "submit"
-                                    class = "btn btn-primary btn-lg btn-block"
-                                    type = "submit" > Add staffs < /button>
-
-                                    <
-                                    /div> < /
-                                    div > <
-                                    /form> < /
-                                    div > <
-                                    script src =
-                                    "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
-</script>
-<script type="text/javascript">
-$('#password, #confirm_password').on('keyup', function() {
-    var v = $('#password').val();
-    var b = $('#confirm_password').val()
-    if (v != b) {
-        $('#test').html('Not Matching').css('color', 'red');
-    } else {
-        $('#test').html('Matching').css('color', 'green');
+<head>
+  <style> 
+    #myDIV {
+     
+     
+     
+      /* overflow: auto; */
+      transition: all 1s;
     }
-    if ($('#password').val() == $('#confirm_password').val()) {
+    
+    #myDIV:hover {
+      background-color: #ebeff3;;
+      /* width: 570px;
+      height: 500px; */
+      padding: 10px;
+      /* border-radius: 50px; */
+    }
+    </style>
+</head>
 
-        $('#message').html('Matching').css('color', 'green');
-    } else
-        $('#message').html('Not Matching').css('color', 'red');
-});
-</script>
-<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-<script>
-$(document).ready(function() {
-    $('#form').validate({
-        rules: {
-            name: {
-                required: true
-            },
-            email: {
-                required: true,
-                email: true
-            },
-            phoneno: {
-                required: true
-            }
-            number: {
-                required: true,
-                digits: true
 
-            },
-        },
-        errorElement: 'span',
-        errorPlacement: function(error, element) {
-            error.addClass('invalid-feedback');
-            element.closest('.form-group').append(error);
-        },
-        highlight: function(element, errorClass, validClass) {
-            $(element).addClass('is-invalid');
-        },
-        unhighlight: function(element, errorClass, validClass) {
-            $(element).removeClass('is-invalid');
-        }
-    });
-});
-</script>
+<section id="myDIV" class="container" >
+    <section class="m-5" >
+    {{-- <h4 id="hdtpa"><b>Matters</b></h4>
+
+
+     <br><br><br> --}}
+
+     {{-- <ul class="p-2" style="position: absolute; z-index:100; background-color:rgb(243, 242, 227);  display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center; left:0px; top:0px; height:100%; line-height: 15.6; list-style-type:none;   ">
+         <li><a id="gg"  class="btn btn-primary " href="#sef">Task</a> </li>
+         <li><a id="gg"  class="btn btn-primary " href="#see">Billing</a> </li>
+         <li><a id="gg"  class="btn btn-primary " href="#sed">Custom Fields</a> </li>
+         <li><a id="gg"  class="btn btn-primary " href="#sec">Contacts</a> </li>
+         <li><a id="gg"  class="btn btn-primary " href="#seb">Notification</a> </li>
+         <li><a id="gg"  class="btn btn-primary " href="#sea">Matter</a> </li>
+
+     </ul> --}}
+
+
+     
+     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top " id="nnav" >
+         <a onclick="myFunction()" class="navbar-brand" href="#"><h4 ><b>Matters</b></h4></a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+           <div class="navbar-nav" >
+            
+             <a type="button" onclick="document.getElementById('ww').style.color='#3d98fc'" class="nav-item nav-link active" href="#sea">Matter</a>
+             <a type="button" onclick="document.getElementById('wwa').style.color='#3d98fc'" class="nav-item nav-link active" class="nav-item nav-link active" href="#seb">Notification</a>
+             <a type="button" onclick="document.getElementById('wwb').style.color='#3d98fc'" class="nav-item nav-link active" class="nav-item nav-link active" href="#sec">Contacts</a>
+             <a type="button" onclick="document.getElementById('wwc').style.color='#3d98fc'" class="nav-item nav-link active" class="nav-item nav-link active" href="#sed">Custom Fields</a>
+             <a type="button" onclick="document.getElementById('wwd').style.color='#3d98fc'" class="nav-item nav-link active" class="nav-item nav-link active" href="#see">Billing</a>
+             <a type="button" onclick="document.getElementById('wwe').style.color='#3d98fc'" class="nav-item nav-link active" class="nav-item nav-link active" href="#sef">Task</a>
+
+             
+            
+             <script>
+              function myFunction() {
+                document.getElementById("myDIV").style.transitionDuration = "1s";
+              }
+              </script>
+
+             <div ><a class="nav-item nav-link active" type="button" onclick="document.getElementById('nnav').style.display='none'"><i class="fa fa-bars"></i></a> </div> 
+              
+           </div>
+         </div>
+       </nav>
+       
+
+       <section  class="m-5"  >
+<br id="sea"><br><br><br>
+       <form   class="p-5" style="background-color: #f8f9fa;" >
+        
+        <h5 id="ww">Matter</h5>
+        <div class="form">
+            
+          <div class="form-group ">
+
+            
+            <label for="inputEmail4">Email</label>
+            <input type="text" class="form-control" placeholder="First name">
+          </div>
+          <div class="form-group ">
+            <label for="comment">Comments:</label>
+      <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+          </div>
+        </div>
+
+        <div class="form-group row ">
+            <div class="col-md-6" >
+          <label for="inputAddress">Address</label>
+          <select class="custom-select custom-select mb-3">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="col-md-6" >
+            <label for="inputAddress">Address</label>
+            <select class="custom-select custom-select mb-3">
+              <option selected>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          
+          
+         
+        </div>
+   
+
+        <div class="form-group row ">
+            <div class="col-md-6" >
+          <label for="inputAddress">Address</label>
+          <select class="custom-select custom-select mb-3">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="col-md-6" >
+            <label for="inputAddress">Address</label>
+            <input type="text" class="form-control" placeholder="First name">
+          </div>
+          
+          
+         
+        </div>
+
+        <div class="form-group row ">
+ 
+
+        <div class="col-md-6" >
+            <label for="inputAddress">Address</label>
+            <input type="date" class="form-control" placeholder="First name">
+          </div>
+          
+          <div class="col-md-6" >
+            <label for="inputAddress">Address</label>
+            <input type="date" class="form-control" placeholder="First name">
+          </div>
+          
+         
+        </div>
+
+        <div class="form-group row ">
+ 
+
+            <div class="col-md-6" >
+                <label for="inputAddress">Address</label>
+                <input type="date" class="form-control" placeholder="First name">
+              </div>
+              
+              <div class="col-md-6" >
+                <label for="inputAddress">Address</label>
+                <input type="date" class="form-control" placeholder="First name">
+              </div>
+              
+             
+            </div>
+
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Satisfied
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </form>
+
+
+<br id="seb"><br><br><br>
+
+      <form class="p-5" style="background-color: #f8f9fa;" >
+        <h5 id="wwa" >Notification</h5>
+        <div class="form">
+            
+          <div class="form-group ">
+
+            
+            <label for="inputEmail4">Email</label>
+            <input type="text" class="form-control" placeholder="First name">
+          </div>
+
+          <div class="p-1 m-1" style="background-color:aliceblue; font-size:10px; border: 1px solid;">
+            this text used only
+            <br> for demo purpose
+        </div></div>
+
+
+        </form>
+
+        <br id="sec"><br><br><br>
+
+        <form class="p-5" style="background-color: #f8f9fa;">
+            <h5 id="wwb" >Contacts</h5>
+            <div class="form">
+                
+                <div class="form-group row ">
+                    <div class="col-md-6" >
+                  <label for="inputAddress">Address</label>
+                  <select class="custom-select custom-select mb-3">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+        
+                <div class="col-md-6" >
+                    <label for="inputAddress">Address</label>
+                    <input type="text" class="form-control" placeholder="First name">
+                  </div> </div>
+
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="gridCheck">
+                      <label class="form-check-label" for="gridCheck">
+                        Satisfied
+                      </label>
+                    </div>
+                  </div></div>
+            
+    
+            </form>
+
+            <br id="sed"><br><br><br>
+            <form class="p-5" style="background-color: #f8f9fa;">
+                <h5 id="wwc" >Custom Fields</h5>
+                <div class="form">
+
+                    <div class="p-1 m-1" style="background-color:aliceblue; font-size:10px; border: 1px solid;">
+                        this text used only
+                        <br> for demo purpose
+                    </div>
+                    
+                    <div class="form-group row ">
+                        <div class="col-md-6" >
+                      <label for="inputAddress">Address</label>
+                      <select class="custom-select custom-select mb-3">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+            
+                    <div class="col-md-6" >
+                        <label for="inputAddress">Address</label>
+                        <input type="text" class="form-control" placeholder="First name">
+                      </div> </div>
+    
+                      <div class="form-group">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="gridCheck">
+                          <label class="form-check-label" for="gridCheck">
+                            Satisfied
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+        
+                </form>
+
+                <br id="see"><br><br><br>
+                <form class="p-5" style="background-color: #f8f9fa;">
+                    <h5 id="wwd" >Billing</h5>
+                    <div class="form">
+    
+                        <div class="p-1 m-1" style="background-color:aliceblue; font-size:10px; border: 1px solid;">
+                            <div class="form-group">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                                  <label class="form-check-label" for="gridCheck">
+                                    Satisfied
+                                  </label>
+                                </div>
+                              </div>
+                            this text used only
+                            <br> for demo purpose
+                        </div>
+                        
+                        <div class="form-group ">
+                     
+                
+                        
+                            <label for="inputAddress">Address</label>
+                            <input type="text" class="form-control" placeholder="First name">
+                          </div>
+        
+                          <div class="form-group">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="gridCheck">
+                              <label class="form-check-label" for="gridCheck">
+                                Satisfied
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+            
+                    </form>
+    
+                    <br id="sef"><br><br><br>
+
+                    <form class="p-5" style="background-color: #f8f9fa;" >
+                        <h5 id="wwe" >Task</h5>
+                        <div class="form">
+        
+                            <div class="p-1 m-1" style="background-color:aliceblue; font-size:10px; border: 1px solid;">
+                           
+                                this text used only
+                                <br> for demo purpose
+                            </div>
+                            
+                            <div class="form-group ">
+                         
+                    
+                            
+                                <label for="inputAddress">Address</label>
+                                <input type="text" class="form-control" placeholder="First name">
+                              </div></div>
+            
+                       
+                        
+                
+                        </form>
+                        
+                    </section>
+
+                    </section> </section>
+
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                   {{-- bj --}}
+
 @endsection
+
+
+
+
+
+
+
+
+
+
+

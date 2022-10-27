@@ -1,7 +1,8 @@
 @extends('layouts.hmsmain')
 @section('content')
-
-
+ {{-- heading --}}
+ <h4 id="hdtpa"><b>List of File Progress</b></h4>
+ <br><br>
 
 <body>
     <div class="container">
@@ -79,15 +80,15 @@
                         <thead>
                             <tr>
                                 <th class="text-center">*</th>
-                                <th class="text-center">Action </br>Type</th>
-                                <th class="text-center">Progress </br>Date</th>
+                                <th class="text-center">Action <br>Type</th>
+                                <th class="text-center">Progress <br>Date</th>
                                 <th class="text-center">Client</th>
                                 <th class="text-center">File Name</th>
                                 <th class="text-center">Description</th>
-                                <th class="text-center">Time</br>Taken</th>
-                                <th class="text-center">Charge</br>Out</br>Rate</th>
-                                <th class="text-center">Way Action</br>(Way Forward)</th>
-                                <th class="text-center">RGD</br>By</th>
+                                <th class="text-center">Time<br>Taken</th>
+                                <th class="text-center">Charge<br>Out<br>Rate</th>
+                                <th class="text-center">Way Action<br>(Way Forward)</th>
+                                <th class="text-center">RGD<br>By</th>
                                 <th class="text-center">Action</th>
                                 <!-- <th class="text-center"><input type="checkbox" name="" id=""></th> -->
                                 <!-- <th class="text-center">Edit</th> -->

@@ -1,9 +1,12 @@
 @extends('layouts.hmsmain')
 @section('content')
+{{-- heading --}}
+ <h4 id="hdtpa"><b>Diary(Calender Events)</b></h4>
+ <br><br>
 
+   
 
-<body>
-
+            <br>
     <div class="container">
         <!-- <h3 class="text-center" style="color: #070344;"><b>Diary(Calender Events)</b></h3> -->
         <div>
@@ -40,7 +43,7 @@
                             <th class="text-center">File Name</th>
                             <th class="text-center">Start</th>
                             <th class="text-center">End</th>
-                            <th class="text-center">Submitted </br>By</th>
+                            <th class="text-center">Submitted <br>By</th>
 
                             <th class="text-center">Action</th>
 
@@ -196,7 +199,13 @@
                             <label for="username">Start Date</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary text-white"
+                                                style="width:15%;background-color:#435ebe;"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary"
+                                                style="background-color:#435ebe;width:15%;">Update</button>
+                                        </div>
                                 </div>
                                 <input type="date" class="form-control" name="start_date" id="age">
                                 <div class="invalid-feedback" style="width: 100%;">

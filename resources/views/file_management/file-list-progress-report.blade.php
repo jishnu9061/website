@@ -2,6 +2,10 @@
 @section('content')
 
 
+
+
+</head>
+
 <body>
 
     <div class="container">

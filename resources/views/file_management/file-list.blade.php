@@ -41,6 +41,16 @@
                     <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
                     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-1">Columns
                   </button>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalb">Filter
+                  </button>
+                </div>
+                {{-- <a href="{{('add-corporate')}}"><button class="btn btn-primary">Add Corporate</button></a> --}}
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">New
+                  File</button>
+
+
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalaa">temp
+                    </button
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Filter
                   </button> -->
                 </div><br>
@@ -57,15 +67,15 @@
                                         <th class="text-center">Actions</th>
                                         <th class="text-center">Matter</th>
                                         <th class="text-center">Client</th>
-                                        <th class="text-center">Responsible</br>Solicitor</th>
-                                        <th class="text-center">Originating</br>Solicitor</th>
-                                        <th class="text-center">Matter</br>Notifications</th>
+                                        <th class="text-center">Responsible<br>Solicitor</th>
+                                        <th class="text-center">Originating<br>Solicitor</th>
+                                        <th class="text-center">Matter<br>Notifications</th>
                                         <th class="text-center">Practice Area</th>
                                         <th class="text-center">Open Date</th>
                                         <th class="text-center">Close Date</th>
                                         <th class="text-center">Pending Date</th>
                                         <th class="text-center">State Of Limitations Date</th>
-                                        <th class="text-center">Last</br>Activity</th>
+                                        <th class="text-center">Last<br>Activity</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -101,10 +111,10 @@
                         </div>
                         <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
-                                <div class="modal-content" style="background-color:#d6ba8a">
+                                <div class="modal-content" >
 
                                     <!-- Modal Header -->
-                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                    <div class="modal-header" >
                                         <h2 class="text-centre"><b>Add New File</b></h2>
 
                                     </div>
@@ -376,14 +386,14 @@
                   <!-- COLUMNS -->
                   <div class="modal fade" id="myModal-1">
                             <div class="modal-dialog modal-lg">
-                                <div class="modal-content" style="background-color:#d6ba8a">
+                                <div class="modal-content" >
 
                                     <!-- Modal Header -->
-                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                    <div class="modal-header" >
                                 </div>
 
                                     <!-- Modal body -->
-                                    <div class="modal-body" style="background-color:white">
+                                    <div class="modal-body" >
                                         <div class="container">
                                             <form method="post" action="{{ url('') }}"
                                                 enctype="multipart/form-data">
@@ -429,7 +439,7 @@
 </div>
 
 </div>
-<div class="modal" id="mymodal">
+<div class="modal" id="mymodalb">
    <div class="modal-dialog">
        <div class="modal-content">
            <div class="modal-header">
@@ -478,7 +488,7 @@
                         <div class="modal-content">
 
                             <!-- Modal Header -->
-                            <div class="modal-header" style="background-color:#435ebe">
+                            <div class="modal-header" >
                                 <h4 class="text-white">Edit Medicine</h4>
 
                             </div>
@@ -648,7 +658,7 @@
                                                     </div>
                                                 </div>
                                                 <br>
-                                                    <div class="modal-footer" style="background-color:#d6ba8a">
+                                                    <div class="modal-footer" >
                                                         <button type="submit" class="btn btn-primary"
                                                             data-dismiss="modal"
                                                             style="width:15%;background-color:white;color:black">Close</button>
@@ -678,13 +688,414 @@
 
             <br>
 
+
+
+
+
+
+
+
+
+
+            <div class="modal fade" id="myModalaa">
+                
+          
+                <div class="modal-dialog modal-lg">
+
+                   
+                    <div class="modal-content " style="padding-left: 150px; ">
+
+
+                        <ul class="p-2" style="position: absolute; z-index:100; background-color:rgb(243, 242, 227);  display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: center; left:0px; top:0px; height:100%; line-height: 15.6; list-style-type:none;   ">
+                            <li><a id="gg"  class="btn btn-primary " href="#sef">Task</a> </li>
+                            <li><a id="gg"  class="btn btn-primary " href="#see">Billing</a> </li>
+                            <li><a id="gg"  class="btn btn-primary " href="#sed">Custom Fields</a> </li>
+                            <li><a id="gg"  class="btn btn-primary " href="#sec">Contacts</a> </li>
+                            <li><a id="gg"  class="btn btn-primary " href="#seb">Notification</a> </li>
+                            <li><a id="gg"  class="btn btn-primary " href="#sea">Matter</a> </li>
+
+                        </ul>
+
+                        
+                        {{-- <nav style=" " class="navbar navbar-expand-lg navbar-light bg-light fixed">
+                            <a class="navbar-brand" href="#">Navbar</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                              <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                              <div class="navbar-nav">
+            
+                                <a  class="nav-item nav-link active" href="#sea">hgh</a>
+                                <a  class="nav-item nav-link active" href="#seb">yjgj</a>
+                                <a  class="nav-item nav-link active" href="#sec">yuyu</a>
+                                <a  class="nav-item nav-link active" href="#sed">yutyiu</a>
+                                <a  class="nav-item nav-link active" href="#see">yiyi</a>
+            
+            
+            
+                                
+                              </div>
+                            </div>
+                          </nav> --}}
+
+
+
+
+
+
+
+                 
+
+
+
+
+
+
+
+
+
+                        <!-- Modal Header -->
+                        <div class="modal-header" >
+                            <h2 class="text-centre"><b>Add New File</b></h2>
+
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div class="container">
+                             
+                                <form method="post" action="{{ url('add-new-file') }}"
+                                    enctype="multipart/form-data">
+                                    @csrf
+                                    <h5 id="sea">Matter</h5>
+
+                                    <form >
+                                        
+                                        <div class="form-row">
+                                          <div class="col">
+                                            <input type="text" class="form-control" placeholder="First name">
+                                          </div>
+                                         
+                                        </div>
+                                        <br>
+                                        <div class="form-row">
+
+                                        <div class="col">
+                                            <input type="text" class="form-control" placeholder="Last name">
+                                          </div>
+                                          
+                                        <div class="col">
+                                            <input type="text" class="form-control" placeholder="Last name">
+                                          </div>
+
+                                         </div>
+
+                                         <br>
+                                         <div class="form-group">
+                                            <label for="exampleFormControlTextarea1">Example textarea</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                          </div>
+
+                                          <div class="form-row">
+
+
+                                            <div class="col">
+                                          <select class="form-control">
+                                            <option>Default select</option>
+                                            <option>Default select</option>
+                                            <option>Default select</option>
+                                          </select>
+                                        </div>
+
+                                          <div class="col">
+
+                                          <select class="form-control">
+                                            <option>Default select</option>
+                                            <option>Default select</option>
+                                            <option>Default select</option>
+                                          </select>
+
+                                        </div>
+
+
+                                        
+
+                                        </div>
+<br>
+
+                                        <div class="form-row">
+
+                                            <div class="col">
+                                                <input type="text" class="form-control" placeholder="Last name">
+                                              </div>
+                                              
+                                            <div class="col">
+                                                <input type="text" class="form-control" placeholder="Last name">
+                                              </div>
+    
+                                             </div>
+                                             <br>
+
+
+                                             <div class="form-row">
+
+
+                                                <div class="col">
+                                              <select class="form-control">
+                                                <option>Default select</option>
+                                                <option>Default select</option>
+                                                <option>Default select</option>
+                                              </select>
+                                            </div>
+    
+                                              <div class="col">
+    
+                                              <select class="form-control">
+                                                <option>Default select</option>
+                                                <option>Default select</option>
+                                                <option>Default select</option>
+                                              </select>
+    
+                                            </div>
+    
+                                            <br>
+                                            
+    
+                                            </div>
+
+                                            <br>
+                                            
+                                            <div class="form-row">
+
+
+                                                <div class="col">
+                                              <select class="form-control">
+                                                <option>Default select</option>
+                                                <option>Default select</option>
+                                                <option>Default select</option>
+                                              </select>
+                                            </div>
+    
+                                      
+    
+    
+                                            
+    
+                                            </div>
+                                            <br>
+                                            <div class="form-row">
+
+                                                <div class="col">
+                                                    <input type="date" class="form-control" placeholder="Last name">
+                                                  </div>
+                                                  
+                                                <div class="col">
+                                                    <input type="date" class="form-control" placeholder="Last name">
+                                                  </div>
+        
+                                                 </div>
+                                                 <br>
+
+                                                 <div class="form-row">
+
+                                                    <div class="col">
+                                                        <input type="date" class="form-control" placeholder="Last name">
+                                                      </div>
+                                                      
+                                                    <div class="col">
+                                                        <input type="date" class="form-control" placeholder="Last name">
+                                                      </div>
+            
+                                                     </div>
+
+                                                     <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                                                      </div>
+                                                      <br>
+                                                      <br><br><br>
+                                                   
+
+                                                    
+
+                                                    <h5 id="seb">Notification</h5>
+                                                    
+
+                                                      <div class="form-row">
+                                                      
+
+                                                        <div class="col">
+                                                            <input type="text" class="form-control" placeholder="Last name">
+                                                          </div>
+                                                          
+                                                
+                
+                                                         </div>
+                                                         <br>
+
+                                                         <div class="p-1 m-1" style="background-color:aliceblue; font-size:10px; border: 1px solid;">
+                                                            this text used only
+                                                            <br> for demo purpose
+                                                        </div>
+
+                                                        <br><br><br>
+
+                                                        <h5 id="sec">Contacts</h5>
+                                                         
+                                                             <div class="form-row">
+
+                                                                
+                                                                    <div class="col">
+                                                                        <select class="form-control">
+                                                                          <option>Default select</option>
+                                                                          <option>Default select</option>
+                                                                          <option>Default select</option>
+                                                                        </select>
+                                                                      </div>
+                              
+                                                                  
+                                                                  
+                                                                <div class="col">
+                                                                    <input type="text" class="form-control" placeholder="Last name">
+                                                                  </div>
+                        
+                                                                 </div>
+
+                                                                 <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                    <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                                                                  </div>
+                                                                  <br><br><br>
+
+                                                                  <h5 id="sed">Custom Fields</h5>
+                                                                 
+                                                                 
+                                                                  <div class="p-1 m-1" style="background-color:aliceblue; font-size:10px; border: 1px solid;">
+                                                                    this text used only
+                                                                    <br> for demo purpose
+                                                                </div>
+                                                                <br>
+                                                                  <div class="form-row">
+
+                                                                
+                                                                    <div class="col">
+                                                                        <select class="form-control">
+                                                                          <option>Default select</option>
+                                                                          <option>Default select</option>
+                                                                          <option>Default select</option>
+                                                                        </select>
+                                                                      </div>
+    
+                                                                 </div>
+                                                                 <br>
+
+                                                                 <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                    <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                                                                  </div>
+                                                                  <br>
+                                                                 <div class="form-row">
+                                                                    
+
+                                                                        <div class="col">
+                                                                            <input type="Date" class="form-control" placeholder="Last name">
+                                                                          </div>
+                                                                          
+                                                                      </div>
+                                                                      
+                                                                      <br><br><br>
+                                                                      <h5 id="sed">Billing</h5>
+
+                                                                      <div class="p-1 m-1" style="background-color:aliceblue; font-size:10px; border: 1px solid;">
+                                                                        <div class="form-check form-check-inline">
+                                                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                            <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                                                                          </div>
+                                                                         this text used only
+                                                                         <br> for demo purpose
+                                                                     </div>
+
+                                                                     <div class="form-row">
+
+                                                                     <div class="col">
+                                                                        <select class="form-control">
+                                                                          <option>Default select</option>
+                                                                          <option>Default select</option>
+                                                                          <option>Default select</option>
+                                                                        </select>
+                                                                      </div>
+                                                                    </div>
+                                                                    <h6 id="see">Billing</h6>
+                                                                   
+
+                                                                    <div class="form-check form-check-inline col">
+                                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                                                                      </div>
+                                                                      <h6>Billing</h6>  
+                                                                      
+
+                                                                    
+                                                                      <div class="form-check form-check-inline col">
+                                                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                                        <label class="form-check-label" for="inlineCheckbox1">Satisfied</label>
+                                                                    </div>
+                                                                    <br><br><br>
+                                                                        <h5 id="sef">Task</h5>
+                                                                        <div class="p-1 m-1" style="background-color:aliceblue; font-size:10px; border: 1px solid;">
+                                                                            this text used only
+                                                                            <br> for demo purpose
+                                                                        </div>
+
+                                                                        <h6 >Task List</h6>
+                                                                        
+                                                                     <div class="form-row">
+
+                                                                        <div class="col">
+                                                                           <select class="form-control">
+                                                                             <option>Default select</option>
+                                                                             <option>Default select</option>
+                                                                             <option>Default select</option>
+                                                                           </select>
+                                                                         </div>
+                                                                       </div>
+                                                                 </div>
+
+                                                                </form>
+
+                                      {{-- bj --}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         <!-- The Modal -->
                         <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
-                                <div class="modal-content" style="background-color:#d6ba8a">
+                                <div class="modal-content" >
 
                                     <!-- Modal Header -->
-                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                    <div class="modal-header" >
                                         <h2 class="text-centre"><b>Add New File</b></h2>
 
                                     </div>
@@ -818,13 +1229,13 @@
                                                                     </div>
                                                                 </div>
                                                                 <br>
-                                                                <div class="modal-footer"
-                                                                style="background-color:#d6ba8a">
+                                                                <div class="modal-footer">
+                                                              
                                                                 <button type="submit" class="btn btn-primary"
                                                                     data-dismiss="modal"
-                                                                    style="width:15%;background-color:white;color:black">Close</button>
+                                                                    style="width:15%;;">Close</button>
                                                                 <button type="submit" class="btn btn-primary"
-                                                                    style="width:15%;background-color:white;color:black">Save</button>
+                                                                    style="width:15%;">Save</button>
                                                             </div>
                                                                
 
@@ -832,7 +1243,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>    
+                                        </div>
+                                        
+                                        
                         <script>
                             function myFunction() {
                                 if (!confirm("Are you sure to delete this"))
