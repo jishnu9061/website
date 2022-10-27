@@ -37,16 +37,16 @@ class SystemSetup extends Controller
     {
        
 
-        if(!empty($Request->file('logo'))){
+        // if(!empty($Request->file('logo'))){
 
-            $this->validate($Request ,[
-                'logo' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg|max:2048',
-            ]);
-        }
+        //     $this->validate($Request ,[
+        //         'logo' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg|max:2048',
+        //     ]);
+        // }
 
-        $img = time() . '-' . $Request->logo . '.' .
-        $Request->logo->extension();
-        $test = $Request->logo->move(public_path('\images\logos'),$img);
+        // $img = time() . '-' . $Request->logo . '.' .
+        // $Request->logo->extension();
+        // $test = $Request->logo->move(public_path('\images\logos'),$img);
 
         $logo        = $Request['logo'];
         $company_name= $Request['name'];
@@ -64,10 +64,10 @@ class SystemSetup extends Controller
       
 ////////////////////////////////////////////////////////////////////
         DB::table('cra_company_details')->insert([
-            'logo'=>  $logo  ,
+            // 'logo'=>  $logo,
             'company_name' => $company_name,
             'address' => $address,
-            'town_city' => $town_city,
+            'town' => $town_city,
             'company_website' => $company_website,
             'email' => $email,
             'company_type' => $company_type,
@@ -107,7 +107,7 @@ class SystemSetup extends Controller
     'logo'     =>  $logo  ,
             'company_name' => $company_name,
             'address' =>  $address,
-            'town_city' => $town_city,
+            'town' => $town_city,
             'company_website' =>  $company_website,
             'email' =>  $email,
             'company_type' =>  $company_type,
