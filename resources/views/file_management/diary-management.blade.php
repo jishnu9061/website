@@ -79,6 +79,16 @@
                     </tbody>
 
                 </table>
+                <br>
+                <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Previous</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Next</a></li>
+                                </ul>
+                            </nav>
   <!-- The Modal -->
   <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">

@@ -35,9 +35,7 @@
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
                 <table class="table table-bordered" id="new-item">
-                    <thead
-                    
-                    >
+                    <thead>
                         <tr>
                             <th class="text-center">*</th>
                             <th class="text-center">Type</th>
@@ -69,6 +67,16 @@
                     </tbody>
 
                 </table>
+                 <br>
+                <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Previous</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Next</a></li>
+                                </ul>
+                            </nav>
 
 
                                          <!-- START   FILE UPLOAD -->
