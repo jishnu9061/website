@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
     {{-- vipin --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
 <!-- vinu -->
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
@@ -1068,25 +1068,41 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        {{-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> --}}
       </li>
     </ul>
 
     
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+ 
+
+
+
+      <ul class="navbar-nav mr-auto pl-3" >
+      
+      <li class="nav-item dropdown" >
+        <a  class="nav-link dropdown-toggle-x btn btn-outline-success" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Menu
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{{url('user_management')}}">User Management</a>
+          <a class="dropdown-item" href="{{url('client-index')}}">Client Management</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{url('file_managementindex')}}">File Management</a>
+        </div>
+      </li>
+   
+    </ul>
+
 
     <div class="p-2" id="navr" style="margin-right: .5%;"   >
 
-       
         <div  style="text-align: center; text-decoration: none; list-style:none;">
-            
-                
-           
-            
-    
+     
+
     <a style="text-align: center" class="text-muted mb-0 " href="{{url('logt')}}"> <i class="fas fa-sign-out-alt"></i> Log Out</a>
     
  
@@ -1128,7 +1144,8 @@
                         <p>2022 &copy; Globaleyet</p>
                     </div>
                     <div class="float-end">
-                        <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a href="https://www.globaleyet.com/">globaleyet</a></p>
+                        
+                        <p> <a class="pr-3" href="#"><i style="color: green;" class="	fa fa-level-up"></i> </a>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a href="https://www.globaleyet.com/">globaleyet</a></p>
                     </div>
                 </div>
             </footer>

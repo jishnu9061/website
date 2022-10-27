@@ -1069,7 +1069,7 @@ Route::any('edit-document','clientinvoicing@editDocument')->name('edit-document'
 
 //manage files
 Route::any('file_managementindex',"filemanagement@index")->name('file_managementindex');
-Route::any('file-list',"filemanagement@view")->name('file-list');
+Route::any('file-list',"filemanagement@views")->name('file-list');
 Route::any('/edit-file/{id}',"filemanagement@edit")->name('edit-file');
 Route::any('/update',"filemanagement@update")->name('update');
 
@@ -1207,7 +1207,7 @@ Route::any('view_bill',"clientinvoicing@view_bill_item")->name('view_bill_item')
 Route::any('hrindex','hrindex@index')->name('hrindex');
 Route::any('accindex','accindex@index')->name('accindex');
 
-Route::any('matters','matters@index')->name('matters');
+
 
 
 

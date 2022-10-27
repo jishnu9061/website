@@ -122,10 +122,7 @@ class UserManagement extends Controller
     {
         return view('user_management.advocates_target_2026');
     }
-     public function matters()
-    {
-        return view('user_management.matters');
-    }
+    
 
 
 

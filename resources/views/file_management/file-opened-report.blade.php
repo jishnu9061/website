@@ -20,9 +20,9 @@
                             <th class="text-center">File No</th>
                             <th class="text-center">File Name</th>
                             <th class="text-center">File Type</th>
-                            <th class="text-center">Responsible </br>Advocate</th>
-                            <th class="text-center">Partner </br>in Charged</th>
-                            <th class="text-center">Date</br> Opened</th>
+                            <th class="text-center">Responsible <br>Advocate</th>
+                            <th class="text-center">Partner <br>in Charged</th>
+                            <th class="text-center">Date<br> Opened</th>
                             <th class="text-center">Action</th>
 
                         </tr>

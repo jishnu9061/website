@@ -20,7 +20,7 @@
     <div class="col-sm-4 " > <a href="{{url('manage_user_roles')}}"><img class="logo_size"src="assets\image\Manage user role.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Manage User Roles</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('manage_user_department')}}"><img class="logo_size"src="assets\image\Manage user Department.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" > Manage User Departments</button></a></div>
     <div class="col-sm-4" > <a href="{{url('advocates_target')}}"><img class="logo_size"src="assets\image\Advocate target.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Advocates Targets</button></a></div>
-    <div class="col-sm-4" > <a href="{{url('matters')}}"><img class="logo_size"src="assets\image\Advocate target.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" >Matters</button></a></div>
+   
     
 
 </div>
