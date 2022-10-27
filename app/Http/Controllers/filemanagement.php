@@ -309,7 +309,11 @@ class filemanagement extends Controller
         return redirect('/file-progress-list');
 
     }
-
+    public function delete_progress($id)
+    {
+        DB::table('cra_add_file_progress')->where('id',$id)->delete();
+        return redirect('/file-progress-list');
+    }
     
     public function fileactionhours()
     {

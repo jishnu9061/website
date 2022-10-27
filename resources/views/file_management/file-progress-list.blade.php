@@ -82,15 +82,15 @@
                                 <th class="text-center">Action </br>Type</th>
                                 <th class="text-center">Progress </br>Date</th>
                                 <th class="text-center">Client</th>
-                                <th class="text-center">FileName</th>
+                                <th class="text-center">File Name</th>
                                 <th class="text-center">Description</th>
                                 <th class="text-center">Time</br>Taken</th>
                                 <th class="text-center">Charge</br>Out</br>Rate</th>
                                 <th class="text-center">Way Action</br>(Way Forward)</th>
                                 <th class="text-center">RGD</br>By</th>
                                 <th class="text-center">Action</th>
-                                <th class="text-center"><input type="checkbox" name="" id=""></th>
-                                <th class="text-center">Edit</th>
+                                <!-- <th class="text-center"><input type="checkbox" name="" id=""></th> -->
+                                <!-- <th class="text-center">Edit</th> -->
                             </tr>
                         </thead>
 
@@ -107,11 +107,12 @@
                                 <td scope="row" class="text-center"></td>
                                 <td scope="row" class="text-center">{{$list->next_action}}</td>
                                 <td scope="row" class="text-center"></td>
-                                <td scope="row" class="text-center">{{$list->activity}}</td>
-                                <td scope="row" class="text-center"><input type="checkbox" name="" id=""></td>
+                                <!-- <td scope="row" class="text-center">{{$list->activity}}</td> -->
+                                <!-- <td scope="row" class="text-center"><input type="checkbox" name="" id=""></td> -->
                                 <td scope="row" class="text-center">
                                     <a href="{{url('edit-file-progress',$list->id)}}"><i style="color:black;"
                                             class="fa fa-edit" aria-hidden="true"></i>
+                                            <a href="{{url('delete-file-progress',$list->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                                 </td>
                             </tr>
 
@@ -120,6 +121,16 @@
                         </tbody>
 
                     </table>
+                    <br>
+                    <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Previous</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Next</a></li>
+                                </ul>
+                            </nav>
 
 
 
@@ -157,9 +168,11 @@
 
                                                                         </div>
                                                                         <select name="client_name" id="cars"><br>
-                                                                            <option>select</option>
-                                                                            <option>demo1</option>
-                                                                            <option>demo2</option>
+                                                                            <option>---select---</option>
+                                                                            <option>Client 1</option>
+                                                                            <option>Client 2</option>
+                                                                            <option>Client 3</option>
+                                                                            <option>Client 4</option>
                                                                         </select>
 
                                                                         <div class="invalid-feedback"
@@ -241,7 +254,10 @@
 
                                                             </div>
                                                             <select name="file_name" id="cars">
-                                                                <option></option>
+                                                                <option>---select---</option>
+                                                                <option>File 1</option>
+                                                                <option>File 2</option>
+                                                                <option>File 3</option>
                                                             </select>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Incorporation is required
@@ -276,9 +292,11 @@
 
                                                             </div>
                                                             <select name="action_type" id="cars">
-                                                            <option>select</option>
-                                                                            <option>demo1</option>
-                                                                            <option>demo2</option>
+                                                            <option>---select---</option>
+                                                                            <option>action_type 1</option>
+                                                                            <option>action_type 2</option>
+                                                                            <option>action_type 3</option>
+                                                                            <option>action_type 4</option>
                                                             </select>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Telephone Number is required.
@@ -365,9 +383,11 @@
 
                                                     </div>
                                                     <select name="item_type" id="cars">
-                                                    <option>select</option>
-                                                                            <option>demo1</option>
-                                                                            <option>demo2</option>
+                                                    <option>---select---</option>
+                                                                            <option>item_type 1</option>
+                                                                            <option>item_type 2</option>
+                                                                            <option>item_type 3</option>
+                                                                            <option>item_type 4</option>
 
                                                     </select>
                                                     <div class="invalid-feedback" style="width: 100%;">
@@ -385,9 +405,18 @@
 
                                                     </div>
                                                     <select name="currency" id="cars">
-                                                    <option>select</option>
-                                                                            <option>demo1</option>
-                                                                            <option>demo2</option>
+                                                    <option>---select---</option>
+                                                    <option>KES</option>
+                                <option>USD</option>
+                                <option>EUR</option>
+                                <option>GBP</option>
+                                <option>AUD</option>
+                                <option>CAD</option>
+                                <option>SEK</option>
+                                <option>DKK</option>
+                                <option>JPY</option>
+                                <option>CHF</option>
+                                <option>HKD</option>
                                                     </select>
                                                     <div class="invalid-feedback" style="width: 100%;">
                                                         Number is required.
@@ -439,9 +468,11 @@
                                                     </div>
 
                                                     <select name="activity_type" id="cars">
-                                                    <option>select</option>
-                                                                            <option>demo1</option>
-                                                                            <option>demo2</option>
+                                                    <option>---select---</option>
+                                                    <option>action_type 1</option>
+                                                                            <option>action_type 2</option>
+                                                                            <option>action_type 3</option>
+                                                                            <option>action_type 4</option>
 
 
                                                     </select>
@@ -566,7 +597,7 @@
 
                                                         </div>
                                                         <select name="client_name" id="cars">
-                                                            <option>select</option>
+                                                            <option>---select---</option>
                                                             <option>client 1</option>
                                                             <option>client 2</option>
                                                         </select>
@@ -584,11 +615,10 @@
 
                                                         </div>
                                                         <select name="file_name" id="cars">
-                                                            <option>select</option>
-                                                            <option>demo 1</option>
-                                                            <option>demo 2</option>
-                                                            <option>demo 3</option>
-                                                            <option>demo 4</option>
+                                                            <option>---select---</option>
+                                                            <option>File 1</option>
+                                                                <option>File 2</option>
+                                                                <option>File 3</option>
                                                         </select>
 
                                                     </div>
@@ -637,11 +667,11 @@
 
                                                         </div>
                                                         <select name="action_type" id="cars">
-                                                            <option>select</option>
-                                                            <option>action 1</option>
-                                                            <option>action 2</option>
-                                                            <option>action 3</option>
-                                                            <option>action 4</option>
+                                                            <option>---select---</option>
+                                                            <option>action_type 1</option>
+                                                                            <option>action_type 2</option>
+                                                                            <option>action_type 3</option>
+                                                                            <option>action_type 4</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -680,7 +710,7 @@
 
                                                         </div>
                                                         <select name="sent_notification" id="cars">
-                                                        <option>select</option>
+                                                        <option>---select---</option>
                                                             <option>notification 1</option>
                                                             <option>notification 2</option>
                                                             <option>notification 3</option>
@@ -729,7 +759,7 @@
                                     <div class="col-sm">
                                         <br>
                                         <button type="submit" class="btn btn-primary float:right;"
-                                            Style="width:60%;">Add File Progress</button>
+                                            Style="width:60%;">Save</button>
                                         <button type="button" class="btn btn-primary float:right;"
                                             data-dismiss="modal">Cancel</button>
                                     </div>
