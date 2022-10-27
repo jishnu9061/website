@@ -52,7 +52,7 @@
     <th>Company Name</th>
     <th>Company Address</th>
     <th>Town/City</th>
-    <th>Logo</th>
+    {{-- <th>Logo</th> --}}
     <th>Action</th>
   
   </tr>
@@ -64,8 +64,8 @@
     <!-- <td>{{$company->id}}</td> -->
     <td>{{$company->company_name}}</td>
     <td>{{$company->address}}</td>
-    <td>{{$company->town_city}}</td>
-    <td>{{$company->logo}}</td>
+    <td>{{$company->town}}</td>
+    {{-- <td>{{$company->logo}}</td> --}}
    
     <!-- <td>CRA</td>
     <td>Stima Investment Plaza 1,3rd Floor,Mushembi Rd, Parklands </td>
