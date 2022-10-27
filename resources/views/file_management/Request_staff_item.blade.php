@@ -30,7 +30,7 @@
                         <thead style="font-size:15px; width:100%;">
                             <tr>
                                 <th class="text-center">*</th>
-                                <th class="text-center">Data <br>Registered</th>
+                                <th class="text-center">Registered Date</th>
                                 <th class="text-center">Client</th>
                                 <th class="text-center">File NO</th>
                                 <th class="text-center">File Name</th>
@@ -57,8 +57,14 @@
                                 <td scope="row" class="text-center"></td>
                                 <td scope="row" class="text-center"></td>
                                 <td scope="row" class="text-center"></td>
-                                <td scope="row" class="text-center"></td>
-
+                                <td scope="row" class="text-center">
+                                    <select name="" id="">
+                                        <option value=""> <a href="">Action</a> </option>
+                                        <option value=""> <a href=""></a>View</option>
+                                        <option value=""> <a href=""></a>Edit</option>
+                                        <option value=""> <a href=""></a>Delete</option>
+                                    </select>
+                                </td>
                             </tr>
 
 
@@ -124,8 +130,8 @@
                                                             </div>
                                                             <select name="client" id="cars">
                                                             <option>select</option>
-                                                            <option>demo 2</option>
-                                                            <option>demo 3</option>
+                                                            <option>Client 1</option>
+                                                            <option>Client 2</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -140,8 +146,8 @@
                                                             </div>
                                                             <select name="file" id="cars">
                                                             <option>select</option>
-                                                            <option>demo 2</option>
-                                                            <option>demo 3</option>
+                                                            <option>File 1</option>
+                                                            <option>File 2</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -162,8 +168,8 @@
                                                 </div>
                                                 <select name="send_instruction" id="cars">
                                                 <option>select</option>
-                                                            <option>demo 2</option>
-                                                            <option>demo 3</option>
+                                                            <option>Person 1</option>
+                                                            <option>person 2</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -177,8 +183,8 @@
                                                 </div>
                                                 <select name="approver" id="cars">
                                                 <option>select</option>
-                                                            <option>demo 2</option>
-                                                            <option>demo 3</option>
+                                                            <option>Admin</option>
+                                                            <option>Department Head</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -201,8 +207,7 @@
                        </div>
                        <div class="col-sm">
                            <br>
-                           <button type="submit" class="btn btn-primary float:right;" Style="width:60%;">Request
-                                    Doc</button>
+                           <button type="submit" class="btn btn-primary float:right;" Style="width:60%;">Save</button>
                            <button type="button" class="btn btn-primary float:right;" data-dismiss="modal">Cancel</button>
                        </div>
                    </div>
