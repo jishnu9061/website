@@ -22,7 +22,8 @@
                 crossorigin="anonymous">
      </div>
             <br>
-            <form method="post" action="" id="form">  
+            <form method="post" action="{{url('update_payment_item')}}" id="form">  
+            <input type="hidden" name="id" value="{{$payment_items->id}}">
        @csrf
             <div class="row">
             <div class="col-md-4">
@@ -30,7 +31,7 @@
                             <label>Item Code:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="iname" id="" value="">
+                                <input type="text" class="form-control" name="iname" id="" value="{{$payment_items->item_code}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -43,7 +44,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <select type="text" value="" id="" name="igroup"style="width:100%;">
-                                    <option>---Select---</option>
+                                    <option>{{$payment_items->item_group}}</option>
                                    
                     <option>01-Legal Fees</option>
                     <option>02-Vatable Disbursement(Telephone,Postage,Transport etc)</option>
@@ -63,7 +64,7 @@
                             <label>Item Name:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="iname" id="" value="">
+                                <input type="text" class="form-control" name="iname" id="" value="{{$payment_items->item_name}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -77,7 +78,7 @@
                         <label >Item Comments:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="icomments" id="" value="">
+                                <input type="text" class="form-control" name="icomments" id="" value="{{$payment_items->item_comment}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -89,7 +90,7 @@
                             <label>Item Short Name:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="ishortname" id="" value="">
+                                <input type="text" class="form-control" name="ishortname" id="" value="{{$payment_items->item_shortname}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -107,7 +108,7 @@
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
                             <br>
                             <br>
                         </div>

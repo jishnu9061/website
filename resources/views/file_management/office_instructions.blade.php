@@ -24,8 +24,11 @@
                     aria-controls="mydatatable"></label>
                     
         </div>
-        <a href="{{url('new_office_instructions')}}"><button class="btn btn-primary add-btn" Style="width:200px;">Add
-                New Instructions</button></a>
+        <!-- <a href="{{url('new_office_instructions')}}"><button class="btn btn-primary add-btn" Style="width:200px;">Add
+                New Instructions</button></a> -->
+                {{-- <a href="{{('add-corporate')}}"><button class="btn btn-primary">Add New Instructions</button></a> --}}
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New Instructions</button>
+
                 
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -45,165 +48,372 @@
                             <th class="text-center">Amount</th>
                             <th class="text-center">Checked By</th>
                             <th class="text-center">Accepted By</th>
-                            <!-- <th class="text-center">Completed By</th>
-                            <th class="text-center">Declined By</th>
-                            <th class="text-center">Faild By</th> -->
                             <th class="text-center">TAT Date</th>
                             <th class="text-center">Status</th>
                             <th class="text-center">Action</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ( $new_office_instruction as $instruction)
                         <tr id="data">
+                            <td scope="row" class="text-center">{{$instruction->id}}</td>   
                             <td scope="row" class="text-center"></td>
-                            <!-- <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$instruction->date}}</td>
+                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$instruction->receiver}}</td>
+                            <td scope="row" class="text-center">{{$instruction->detail}}</td>
+                            <td scope="row" class="text-center">{{$instruction->amount}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td> -->
+                            <td scope="row" class="text-center">{{$instruction->turn_around}}</td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center"><a href="edit_office_instruction"><i style="color:black;" class="fa fa-edit"
+                            <td scope="row" class="text-center"><a href="{{url('edit_office_instruction',$instruction->id)}}"><i style="color:black;" class="fa fa-edit"
                                         aria-hidden="true"></i>
-                                    <a onClick="return myFunction();" href="" style="color:black;"><i
+                                    <a onClick="return myFunction();" href="{{url('delete_office',$instruction->id)}}" style="color:black;"><i
                                             class="fas fa-trash-alt"></i></a></td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
+                <br>
+                <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Previous</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Next</a></li>
+                                </ul>
+                            </nav>
 </div>
 </div>
 
 
-                <!-- The Modal -->
-                <div class="modal fade" id="editmed">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
+               <!-- The Modal -->
+               <div class="modal fade" id="myModal">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
 
-                            <!-- Modal Header -->
-                            <div class="modal-header" style="background-color:#435ebe">
-                                <h4 class="text-white">Edit Medicine</h4>
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h2 class="text-center"><b>Add New Instruction</b></h2>
 
-                            </div>
+                                    </div>
 
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <div class="container">
-                                    <form method="post" action="{{url('update_medicine')}}"
-                                        enctype="multipart/form-data">
-                                        @csrf
-                                        <h4 class="text-center"><b>Medicine Details</b></h4><br>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label for="">Brand Name</label>
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <form method="post" action="{{ url('new_office_instructions') }}"
+                                                enctype="multipart/form-data">
+                                                @csrf
 
-                                            </div>
-                                            <div class="col-sm">
-                                                <label for="">Medicine Name</label>
-                                                <input type="text" id="edit_medicine_name" name="medicine_name"
-                                                    class="form-control" required><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <div class="col-sm">
-                                                    <label for="">Medicine Group</label>
-
-                                                </div>
-
-                                            </div>
-                                            <div class="col-sm">
-                                                <label for="">Medicine Category Name</label>
-
-
-                                            </div>
-
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label for="">Generic name</label>
-
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Manufacturer Name</label>
-
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Supplier Name</label>
-
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label for="">Minimum Level</label>
-                                                <input type="text" id="edit_minimum_level" name="minimum_level"
-                                                    class="form-control"><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Reorder Level</label>
-                                                <input type="text" name="reorder" id="edit_reorder" class="form-control"
-                                                    placeholder=""><br>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label class="text-color:white;">Unit/Packing</Label>
-                                                <input type="text" name="unit_packing" id="edit_unit_packing"
-                                                    class="form-control" placeholder=""><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Upload Medicine Image</label>
-                                                <input type="file" name="editimage" id="edit_image" class="form-control"
-                                                    placeholder="Image"><br>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label>Medicine Composition</label>
-                                                <textarea class="form-control" id="edit_medicine_details1"
-                                                    name="medicine_detailss" rows="3" placeholder=""></textarea><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Notes</label>
-                                                <textarea class="form-control" id="edit_medicine_note"
-                                                    name="medicine_note" rows="3" placeholder=""></textarea><br>
-                                            </div>
-                                        </div>
-                                        <br>
 
                                         <div class="row">
-                                            <div class="col-md-6">
-                                                <input type="hidden" class="form-control" id="edit_id" name="method_id">
 
-                                            </div>
-                                        </div>
-
-
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary text-white"
-                                                style="width:15%;background-color:#435ebe"
-                                                data-bs-dismiss="modal">Close</button>
-                                            <button type="submit" class="btn btn-primary"
-                                                style="background-color:#435ebe;width:15%;">Update</button>
-                                        </div>
-                                </div>
-                                <div class="container">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username"> Date</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
                                 </div>
+                                <input type="date" class="form-control" name="date" id="username" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Number is required.
+                                </div>
                             </div>
+                        </div>
+                    </div>
 
-                            </form>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Instruction Type</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
+                                </div>
+                                <select name="instruction_type" id="cars">
+                                <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Instruction Category</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="instruction_category" id="cars">
+                                <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+      
+    <br>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="mb-1">
+                <label for="username">Receiver</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <input type="text" class="form-control" name="receiver" id="age">
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Incorporation is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="mb-1">
+                <label for="username">Currency</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <select name="currency" id="cars">
+                    <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="mb-1">
+                <label for="username">Exchange Rate</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <input type="text" class="form-control" name="exchange_rate" id="confirm_password" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Telephone Number is required.
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+<br>
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="mb-1">
+                <label for="username">Expense Category</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <select name="expence_category" id="cars">
+                    <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="mb-1">
+                <label for="username">Turn-Around Time(TAT)</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <select name="turn_around" id="cars">
+                    <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="mb-1">
+                <label for="username">Priority</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <select name="priority" id="cars">
+                    <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <br>
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="mb-1">
+                <label for="username">Amount</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <input type="text" class="form-control" name="amount" id="username" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Number is required.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="mb-1">
+                <label for="username">Details</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <textarea class="form-control" id="form7Example7" name="detail" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <hr class="mb-4">
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="mb-1">
+                <label for="username">Send Notification To</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <select name="send_notification" id="cars">
+                        <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<br>
+
+<!-- <div class="container">
+                    <div class="row">
+                      <div class="col-sm">
+                      </div>
+                      <div class="col-sm">
+                      </div>
+                      <div class="col-sm">
+                        <button type="submit" class="btn btn-primary float:right" style="width:45%">Send Instruction</button>
+                        <button type="submit" class="btn btn-primary float:left"style="width:45%">Close</button>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+</div>
+
+</form>
+</div>
+</div>
+
+
+
+
+</div>
+</div> -->
+<div class="row">
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Send</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
                         </div>
                     </div>
                 </div>
+            </form>
+        </div>
+    </div>
+</div>
 
+</div>
+<div class="modal" id="mymodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-body">
+                    <form action="">
+                        <div>
+                            <input type="text" name="type" class="form-control" placeholder="Client Type">
+                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-
+        </div>
+    </div>
+</div>
+</div>
+<div class="modal" id="my">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-body">
+                    <form action="">
+                        <div>
+                            <input type="text" name="type" class="form-control" placeholder="Country">
+                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
             <br>
             <!-- Supplier modal Edit End -->
 

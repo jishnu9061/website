@@ -1,14 +1,8 @@
 @extends('layouts.hmsmain')
 @section('content')
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css"
-        href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-
+   
+   
+    
 
 {{-- <div class="spacer" style="height:40px;margin-top: 30px;"> --}}
 
@@ -18,10 +12,13 @@
 <body>
    
         <div class="container">
-            <div class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;">
-                <b><u>Corporate Client List</u></b>
-            </div><br><br>
+            <div>
+                <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;">
+                <b><u>Corporate Client List</u></b> -->
+                {{-- heading --}}
+    <h4 id="hdtpa"><b>Corporate Client List</b></h4>
+    <br><br>
+            </div>
             <div>
                 <!-- <div class="btn btn-primary"
                     style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Corporate Client List</u></b></span></div><br>
@@ -61,7 +58,7 @@
                                                 {{ $list->designation }}</td>
                                             <td scope="row" class="text-center" id="medicine_name_1">
                                                 {{ $list->Mobile_no }}</td>
-                                            <td scope="row" class="text-center" id="medicine_name_1">{{ $list->email }}
+                                            <td scope="row" class="text-center" id="medicine_name_1">{{ $list->Email_address }}
                                             </td>
                                             <td scope="row" class="text-center" id="medicine_name_1">
                                                 <a href="{{ url('edit_client', $list->id) }}"><i style="color:black;"
@@ -78,16 +75,16 @@
                         <!-- The Modal -->
                         <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
-                                <div class="modal-content" style="background-color:#d6ba8a">
+                                <div class="modal-content" >
 
                                     <!-- Modal Header -->
-                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                    <div class="modal-header" >
                                         <h2 class="text-center"><b>Add Corporate Client</b></h2>
 
                                     </div>
 
                                     <!-- Modal body -->
-                                    <div class="modal-body" style="background-color:white">
+                                    <div class="modal-body" >
                                         <div class="container">
                                             <form method="post" action="{{ url('add-corporate') }}"
                                                 enctype="multipart/form-data">
@@ -117,7 +114,7 @@
                                                                     <option value="Corporate">Corporate</option>
                                                                 </select> -->
                                                                 <select name="type" id="cars">
-                                                                    <option value="Corporate">Corporate</option>
+                                                                    <option >Corporate</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -130,10 +127,9 @@
 
                                                                 </div>
                                                                 <select name="citizen" id="cars">
-                                                                    <option value="volvo">Select</option>
-                                                                    <option value="Residensial">Residensial</option>
-                                                                    <option value="Non Residensial">Non Residensial
-                                                                    </option>
+                                                                    <option >Select</option>
+                                                                    <option >Residensial</option>
+                                                                    <option >Non Residensial</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -163,11 +159,11 @@
 
                                                                 </div>
                                                                 <select name="country" id="cars">
-                                                                    <option value="volvo">Select</option>
-                                                                    <option value="Kenya">Kenya</option>
-                                                                    <option value="South Africa">South Africa</option>
-                                                                    <option value="India">India</option>
-                                                                    <option value="America">America</option>
+                                                                    <option >Select</option>
+                                                                    <option >Kenya</option>
+                                                                    <option >South Africa</option>
+                                                                    <option >India</option>
+                                                                    <option >America</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -239,9 +235,9 @@
                                                                 <div class="input-group-prepend">
                                                                 </div>
                                                                 <select name="brought">
-                                                                    <option value="volvo">Select</option>
-                                                                    <option value="Agent">Agent</option>
-                                                                    <option value="Staff">Staff</option>
+                                                                    <option >Select</option>
+                                                                    <option >Agent</option>
+                                                                    <option >Staff</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -254,12 +250,12 @@
 
                                                                 </div>
                                                                 <select name="status" id="cars">
-                                                                    <option value="">Select</option>
-                                                                    <option value="Monday">Monday</option>
-                                                                    <option value="Tuesday">Tuesday</option>
-                                                                    <option value="Wednesday">Wednesday</option>
-                                                                    <option value="Thursday">Thursday</option>
-                                                                    <option value="Friday">Friday</option>
+                                                                    <option >Select</option>
+                                                                    <option >Monday</option>
+                                                                    <option >Tuesday</option>
+                                                                    <option >Wednesday</option>
+                                                                    <option >Thursday</option>
+                                                                    <option>Friday</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -272,9 +268,9 @@
 
                                                                 </div>
                                                                 <select name="source" id="cars">
-                                                                    <option value="volvo">Select</option>
-                                                                    <option value="Excisting">Excisting Client</option>
-                                                                    <option value="Online">Online</option>
+                                                                    <option >Select</option>
+                                                                    <option >Excisting Client</option>
+                                                                    <option >Online</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -317,10 +313,10 @@
 
                                                                 </div>
                                                                 <select name="industry" id="cars">
-                                                                    <option value="volvo">Select</option>
-                                                                    <option value="Commerce">Commerce</option>
-                                                                    <option value="Construction">Construction</option>
-                                                                    <option value="Education">Education</option>
+                                                                    <option >Select</option>
+                                                                    <option >Commerce</option>
+                                                                    <option >Construction</option>
+                                                                    <option >Education</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -409,9 +405,9 @@
                                                     </div>
                                                 </div>
                                                 <br>
-                                                <div class="btn btn-primary"
-                                                    style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;">
-                                                    <b>Contact Person</b></span></div><br>
+                                                <div>
+                                                <h4 id="hdtpa"><b>Contact Person</b></h4>
+                                                   
                                                 <br>
                                                 <div class="row">
                                                     <div class="col-md-3">
@@ -475,12 +471,9 @@
 
                                                     </div>
                                                     <br><br>
-                                                    <div class="modal-footer" style="background-color:#d6ba8a">
-                                                        <button type="submit" class="btn btn-primary"
-                                                            data-dismiss="modal"
-                                                            style="width:15%;background-color:white;color:black">Close</button>
-                                                        <button type="submit" class="btn btn-primary"
-                                                            style="width:15%;background-color:white;color:black">Save</button>
+                                                    <div class="modal-footer" >  
+                                                        <button type="submit" class="btn btn-primary"style="width:15%;background-color:white;color:black">save</button>
+                                                        <button type="button" class="btn btn-primary"style="width:15%;background-color:white;color:black">Cancel</button>
                                                     </div>
 
                                                 </div>

@@ -119,7 +119,7 @@
     <div class="col-sm">
          <br>
          <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
-         <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+         <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
         </div>
     </div>
 </div>

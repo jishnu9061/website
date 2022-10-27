@@ -16,12 +16,13 @@
             <!-- <h2 style="text-align:center;">Client Monthly Status Report</h2>
             <hr class="mb-4">. -->
             <div>
-            <div class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Client Monthly Status Report</u></b></span></div><br>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous">
-
+            {{-- heading --}}
+    <h4 id="hdtpa"><b>Client Monthly Status Report</b></h4>
+    <br>
+  
+ 
+ 
+      
         
             </div>
         </div>
@@ -40,8 +41,11 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="report_type" id="cars">
+                                    <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
+
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -57,8 +61,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="client" id="cars">
+                                <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
                                 </select>
                             </div>
                         </div>
@@ -71,6 +77,17 @@
 
 
             <div class="row">
+                    <!-- <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Month</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="month" id="confirm_password" required>
+                            </div>
+                        </div>
+                    </div> -->
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Month</label>
@@ -78,7 +95,21 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <select name="month" id="cars">
+                                <option>select</option>
+                                    <option>January</option>
+                                    <option>February</option>
+                                    <option>March</option>
+                                    <option>April</option>
+                                    <option>May</option>
+                                    <option>June</option>
+                                    <option>July</option>
+                                    <option>August</option>
+                                    <option>September</option>
+                                    <option>October</option>
+                                    <option>November</option>
+                                    <option>December</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -91,7 +122,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="year" id="confirm_password" required>
                             </div>
                         </div>
                     </div>

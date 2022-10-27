@@ -30,7 +30,8 @@
 
         <div class="col-md-12 order-md-1">
 
-            <form method="post" action="" id="form">
+        <form method="post"action="{{url('update_transport_zone')}}"id="form">  
+          <input type="hidden" name="id" value="{{$transport_zone->id}}">
                 @csrf
                 <div class="row">
                     <div class="col-md-4">
@@ -41,7 +42,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="incorporation" id="age">
+                                <input type="text" class="form-control" name="zone_name" id="age"value="{{$transport_zone->zone_name}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
@@ -57,7 +58,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="incorporation" id="age">
+                                <input type="text" class="form-control" name="zone_areas" id="age"value="{{$transport_zone->zone_areas}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
@@ -72,7 +73,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="incorporation" id="age">
+                                <input type="text" class="form-control" name="cost" id="age"value="{{$transport_zone->cost}}">
                             </div>
                         </div>
                     </div>
@@ -105,7 +106,7 @@
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
                         </div>
                     </div>
                 </div>

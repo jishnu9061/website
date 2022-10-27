@@ -19,12 +19,10 @@
         </div>
         
         <div>
+        {{-- heading --}}
+    <h4 id="hdtpa"><b>Edit Office Instruction</b></h4>
+    <br><br>
         
-            <div class="btn btn-primary"
-            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Edit Office Instruction</u></b></div><br><br>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous">
         </div>
     </div>
 
@@ -34,10 +32,10 @@
 
         <div class="col-md-12 order-md-1">
 
-            <form method="post" action="" id="form">
+            <form method="post" action="{{url('update_office_instruction')}}" id="form">
                 @csrf
 
-
+              <input type="hidden" name="id" value="{{$edit_office_instruction->id}}">
 
                 <div class="row">
 
@@ -48,7 +46,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="number" id="username" required>
+                                <input type="date" class="form-control" name="date" value="{{$edit_office_instruction->date}}" id="username" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -63,8 +61,13 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="instruction_type" id="cars">
+                                    <option >{{$edit_office_instruction->instruction_type}}</option>
+                                <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                                 </select>
                             </div>
                         </div>
@@ -79,8 +82,13 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="instruction_category" id="cars">
+                                    <option>{{$edit_office_instruction->instruction_category}}</option>
+                                <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                                 </select>
                             </div>
                         </div>
@@ -97,7 +105,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="incorporation" id="age">
+                    <input type="text" class="form-control" name="receiver" value="{{$edit_office_instruction->receiver}}" id="age">
                     <div class="invalid-feedback" style="width: 100%;">
                         Incorporation is required
                     </div>
@@ -112,8 +120,13 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
+                    <select name="currency" id="cars">
+                        <option>{{$edit_office_instruction->currency}}</option>
+                    <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                     </select>
                 </div>
             </div>
@@ -125,7 +138,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="telephone" id="confirm_password" required>
+                    <input type="text" class="form-control" name="exchange_rate" value="{{$edit_office_instruction->exchange_rate}}" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Telephone Number is required.
                     </div>
@@ -146,8 +159,13 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
+                    <select name="expence_category" id="cars">
+                        <option>{{$edit_office_instruction->expence_category}}</option>
+                    <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                     </select>
                 </div>
             </div>
@@ -160,8 +178,13 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
+                    <select name="turn_around" id="cars">
+                        <option>{{$edit_office_instruction->turn_around}}</option>
+                    <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                     </select>
                 </div>
             </div>
@@ -175,8 +198,13 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
+                    <select name="priority" id="cars">
+                        <option>{{$edit_office_instruction->priority}}</option>
+                    <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                     </select>
                 </div>
             </div>
@@ -193,7 +221,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="number" id="username" required>
+                    <input type="text" class="form-control" name="amount" value="{{$edit_office_instruction->amount}}" id="username" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -208,7 +236,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                    <textarea class="form-control" id="form7Example7" name="detail" value="{{$edit_office_instruction->detail}}" rows="3"></textarea>
                 </div>
             </div>
         </div>
@@ -228,8 +256,13 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
+                    <select name="send_notification" id="cars">
+                        <option>{{$edit_office_instruction->send_notification}}</option>
+                    <option>select...</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                     </select>
                 </div>
             </div>

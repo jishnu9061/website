@@ -24,7 +24,7 @@
                             <th class="text-center">Responsible <br>Advocate</th>
                             <th class="text-center">Date <br>Opened</th>
                             <th class="text-center">Action</th>
-                            <th class="text-center"> <input type="checkbox" name="" id=""> </th>
+                            <!-- <th class="text-center"> <input type="checkbox" name="" id=""> </th> -->
 
                         </tr>
                     </thead>
@@ -42,11 +42,12 @@
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center">
                                 <select name="" id="">
-                                    <option value=""> <a href="">Action</a> </option>
-                                    <option value=""> <a href=""></a> </option>
+                                <option value=""> <a href="">Action</a> </option>
+                                    <option value=""> <a href="">Edit</a> </option>
+                                    <option value=""> <a href=""></a>Delete </option>
                                 </select>
                             </td>
-                            <td scope="row" class="text-center"> <input type="checkbox" name="" id=""></td>
+                            <!-- <td scope="row" class="text-center"> <input type="checkbox" name="" id=""></td> -->
                         </tr>
 
 
@@ -54,7 +55,16 @@
                     </tbody>
 
                 </table>
-
+                <br>
+                <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Previous</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Next</a></li>
+                                </ul>
+                            </nav>
                 <!-- The Modal -->
                 <div class="modal fade" id="editmed">
                     <div class="modal-dialog modal-xl">

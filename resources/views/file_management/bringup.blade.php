@@ -16,19 +16,19 @@
             <!-- <h2 style="text-align:center;">Search</h2>
             <hr class="mb-4">. -->
             <div>
-            <div class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Search</u></b></span></div><br>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous">
-
+            {{-- heading --}}
+    <h4 id="hdtpa"><b>Bringup Report</b></h4>
+    
+ 
+         
+       
         
             </div>
         </div>
     </div>
 
     <div>
-        <br>
+        
         <div>
             <input class="btn btn-primary" type="button" style="width:65px;" value="Today">
             <input class="btn btn-primary" type="button" value="This Week">
@@ -64,8 +64,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="client" id="cars">
+                                <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -80,8 +82,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="file" id="cars">
+                                <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -99,8 +103,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="registered_by" id="cars">
+                                    <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -115,8 +121,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="responsible" id="cars">
+                                <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
                                 </select>
                             </div>
                         </div>
@@ -131,7 +139,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="website" id="confirm_password" required>
+                                <input type="date" class="form-control" name="data_from" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
@@ -146,7 +154,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="website" id="confirm_password" required>
+                                <input type="date" class="form-control" name="date_to" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
@@ -178,8 +186,8 @@
                         </div>
                         <div class="col-sm">
                             <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Cancel</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">View Report</button>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">View Report</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
                         </div>
                     </div>
                 </div>

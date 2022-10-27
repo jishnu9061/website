@@ -1,23 +1,45 @@
 @extends('layouts.hmsmain')
 @section('content')
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 
-  {{-- heading --}}
-  <h4 id="hdtpa"><b>File List</b></h4>
-  <br><br>
+    {{-- <div class="spacer" style="height:40px;margin-top: 30px;"> --}}
 
 
+    </head>
 
+    <body>
+        <div class="container">
+            <div>
+                
+    <h4 id="hdtpa"><b>File List</b></h4>
+    <br><br>
+            </div>
+            <div>
+                <!-- <div class="btn btn-primary"
+                    style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Corporate Client List</u></b></span></div><br>
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                    crossorigin="anonymous">
+
+            </div> -->
             <div >
                 <input class="btn btn-primary" type="button" value="All">
                 <input class="btn btn-primary" type="button" value="Open">
                 <input class="btn btn-primary" type="button" value="Pending">
                 <input class="btn btn-primary" type="button" value="Closed">
              </div>
-<br>
+</br>
 
                 <div id="mydatatable_filter" class="dataTables_filter">
                     <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-1">Columns
+                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-1">Columns
                   </button>
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalb">Filter
                   </button>
@@ -28,19 +50,20 @@
 
 
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalaa">temp
-                    </button>
-
-
-
-
-
+                    </button
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Filter
+                  </button> -->
+                </div><br>
+                {{-- <a href="{{('add-corporate')}}"><button class="btn btn-primary">Add Corporate</button></a> --}}
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">New
+                  File</button><br>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <div class="table-responsive">
                             <table class="table table-bordered" id="new-item">
                                 <thead>
                                     <tr>
-                                        <th class="text-center"> <input type="checkbox"></th>
+                                        <!-- <th class="text-center"> <input type="checkbox"></th> -->
                                         <th class="text-center">Actions</th>
                                         <th class="text-center">Matter</th>
                                         <th class="text-center">Client</th>
@@ -58,7 +81,7 @@
                                 <tbody>
                                     <!-- @foreach ($file_list as $file) -->
                                         <tr id="data">
-                                            <td scope="row"></td>
+                                            <!-- <td scope="row"></td> -->
                                             <td scope="row"></td>
                                             <td scope="row"></td>
                                             <td scope="row"></td>
@@ -75,6 +98,16 @@
                                     <!-- @endforeach -->
                                 </tbody>
                             </table>
+                            <br>
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Previous</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Next</a></li>
+                                </ul>
+                            </nav>
                         </div>
                         <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
@@ -91,55 +124,263 @@
                                         <div class="container">
                                             <form method="post" action="{{ url('add-new-file') }}"
                                                 enctype="multipart/form-data">
+
                                                 @csrf
                                                 <div class="row">
-                                                    <div class="col-md-4">
-                                                        <div class="mb-1">
-                                                            <label for="username">Client</label>
-                                                            <div class="input-group">
-                                                                <div class="input-group-prepend">
+                   
+                   
+                   <div class="col-md-6">
+                       <div class="mb-1">
+                           <label for="username">Client</label>
+                           <div class="input-group">
+                               <div class="input-group-prepend">
 
-                                                                </div>
-                                                                <select name="client_type" id="cars">
-                                                                    <option>Select</option>
-                                                                    <option>Accord University</option>
-                                                                    <option>Accounts And Books</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="mb-1">
-                                                            <label for="username">Associate Handling</label>
-                                                            <div class="input-group">
-                                                                <div class="input-group-prepend">
+                               </div>
+                               <select name="client_type" id="cars">
+                                   <option>Select</option>
+                                   <option>Accord University</option>
+                                   <option>Accounts And Books</option>
+                               </select>
+                           </div>
+                       </div>
+                   </div>
+               
+               <div class="col-md-6">
+                       <div class="mb-1">
+                           <label for="username">Associate Handling</label>
+                           <div class="input-group">
+                               <div class="input-group-prepend">
 
-                                                                </div>
-                                                                <select name="associate_handling" id="cars"
-                                                                    disabled>
-                                                                    <option>Corporate</option>
-                                                                    <option>Individual</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="mb-1">
-                                                            <label for="username">Opening Date</label>
-                                                            <div class="input-group">
-                                                                <div class="input-group-prepend"></div>
-                                                                <input type="date" class="form-control" name="opening_date" id="age" value="" min="0" max="99">
-                                                                <div class="invalid-feedback" style="width: 100%;">
-                                                                    Age is required.
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                <b><u>File List</u></b></span></div><br>
-           
-        
-            </div>
-            <br>
+                               </div>
+                               <select name="associate_handling" id="cars" disabled>
+                                   <option >Corporate</option>
+                                   <option >Individual</option>
+                               </select>
+                           </div>
+                       </div>
+                   </div>
+</div>
+<br>
+
+               <div class="row">
+                   <div class="col-md-4">
+                       <div class="mb-1">
+                           <label for="username">Opening Date</label>
+                           <div class="input-group">
+                               <div class="input-group-prepend"></div>
+                               <input type="date" class="form-control" name="opening_date" id="age" value="" min="0" max="99">
+                               <div class="invalid-feedback" style="width: 100%;">
+                                   Age is required.
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-md-4">
+                       <div class="mb-1">
+                           <label for="username">Client Ref.No or(Case No)</label>
+                           <div class="input-group">
+                               <div class="input-group-prepend"></div>
+                               <input type="text" class="form-control" name="client_ref_no" id="age" value="" min="0" max="99">
+                               <div class="invalid-feedback" style="width: 100%;">
+                                   Age is required.
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-md-4">
+                       <div class="mb-1">
+                           <label for="username">Our File Ref No</label>
+                           <div class="input-group">
+                               <div class="input-group-prepend"></div>
+                               <input type="text" class="form-control" name="our_file_ref_no" value=""
+                                   id="confirm_password">
+                               <div class="invalid-feedback" style="width: 100%;">
+                                   Password is required.
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <br>
+               <div class="row">
+                   <div class="col-md-4">
+                       <div class="mb-1">
+                           <label for="username">File Name/Subject</label>
+                           <div class="input-group">
+                               <div class="input-group-prepend"></div>
+                               <input type="text" class="form-control" name="file_name" id="age" value=""
+                                min="0" max="99">
+                               <div class="invalid-feedback" style="width: 100%;">
+                                   Age is required.
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-md-4">
+                       <div class="mb-1">
+                           <label for="username">Approval Partner</label>
+                           <div class="input-group">
+                               <div class="input-group-prepend">
+
+                               </div>
+                               <select name="approval_partner" id="cars">
+                                   <option >Select</option>
+                                   <option >Residensial</option>
+                                   <option >Non Residensial</option>
+                               </select>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-md-4">
+                       <div class="mb-1">
+                           <label for="username">Customer Name</label>
+                           <div class="input-group">
+                               <div class="input-group-prepend"></div>
+                               <input type="text" class="form-control" name="customer_name" value=""
+                                   id="confirm_password">
+                               <div class="invalid-feedback" style="width: 100%;">
+                                   Password is required.
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <br>
+               <div class="row">
+               <div class="col-md-6">
+                       <div class="mb-1">
+                           <label for="username">Customer Address</label>
+                           <div class="input-group">
+                               <div class="input-group-prepend"></div>
+                               <input type="text" class="form-control" name="address" value=""
+                                   id="confirm_password">
+                               <div class="invalid-feedback" style="width: 100%;">
+                                   Password is required.
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-md-6">
+                       <div class="mb-1">
+                           <label for="username">Customer Tel</label>
+                           <div class="input-group">
+                               <div class="input-group-prepend"></div>
+                               <input type="text" class="form-control" name="telephone" value=""
+                                   id="confirm_password">
+                               <div class="invalid-feedback" style="width: 100%;">
+                                   Password is required.
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   
+               </div>
+               <br>
+               <div class="row">
+               <div class="col-md-4">
+                       <div class="mb-1">
+                           <label for="username">Customer E-mail</label>
+                           <div class="input-group">
+                               <div class="input-group-prepend"></div>
+                               <input type="email" class="form-control" name="email" value=""
+                                   id="confirm_password">
+                               <div class="invalid-feedback" style="width: 100%;">
+                                   Password is required.
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-md-4">
+                       <div class="mb-1">
+                           <label for="username">Amount</label>
+                           <div class="input-group">
+                               <div class="input-group-prepend"></div>
+                               <input type="narration" class="form-control" name="amount" value=""
+                                   id="confirm_password">
+                               <div class="invalid-feedback" style="width: 100%;">
+                                   Password is required.
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-md-4">
+                       <div class="mb-1">
+                           <label for="username">Workflow</label>
+                           <div class="input-group">
+                               <div class="input-group-prepend">
+
+                               </div>
+                               <select name="workflow" id="cars">
+                                   <option >Select</option>
+                                   <option >Residensial</option>
+                                   <option >Non Residensial</option>
+                               </select>
+                           </div>
+                       </div>
+                   </div>
+                   
+               </div>
+               <br>
+              
+                   <div class="row">
+                       <div class="col-sm">
+
+                       </div>
+                       <div class="col-sm">
+
+                       </div>
+                       <div class="col-sm">
+                           <br>
+                           <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
+                           <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
+                       </div>
+                   </div>
+               </div>
+           </form>
+       </div>
+   </div>
+</div>
+
+
+
+
+
+</div>
+<div class="modal" id="mymodal">
+   <div class="modal-dialog">
+       <div class="modal-content">
+           <div class="modal-header">
+               <div class="modal-body">
+                   <form action="">
+                       <div>
+                           <input type="text" name="type" class="form-control" placeholder="Client Type">
+                           <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                       </div>
+                   </form>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+</div>
+<div class="modal" id="my">
+   <div class="modal-dialog">
+       <div class="modal-content">
+           <div class="modal-header">
+               <div class="modal-body">
+                   <form action="">
+                       <div>
+                           <input type="text" name="type" class="form-control" placeholder="Country">
+                           <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                       </div>
+                   </form>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+</div>
+
         <br>
 
                   <!-- COLUMNS -->
@@ -160,6 +401,7 @@
                                                 @csrf
 
     <form action="/action_page.php">
+        
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check1">
       <label class="form-check-label" for="check1">Option 1</label>
@@ -172,6 +414,7 @@
       <input type="checkbox" class="form-check-input">
       <label class="form-check-label">Option 3</label>
     </div>
+    
    
   </form>
                                             

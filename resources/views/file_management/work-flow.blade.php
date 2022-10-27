@@ -2,11 +2,6 @@
 @section('content')
 
 
-{{-- <div class="spacer" style="height:40px;margin-top: 30px;"> --}}
-
-
-</head>
-
 <body>
 
     <div class="col-sm">
@@ -17,13 +12,14 @@
     <div class="container">
         <!-- <h3 class="text-center" style="color: #070344;"><b>Workflow Management</b></h3> -->
         <div>
-            <div class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Workflow Management</u></b></span></div><br>
-            <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous"> -->
-
-        
+        {{-- heading --}}
+    <h4 id="hdtpa"><b>Workflow Management</b></h4>
+    <br>
+  
+ 
+ 
+         
+       
             </div>
         <br>
 
@@ -31,8 +27,13 @@
             <label><b>Search:</b><input type="search" class="box" placeholder="search"
                     aria-controls="mydatatable"></label>
         </div>
-        <a href="{{url('new-workflow')}}"><button class="btn btn-primary add-btn"
-                style="width: 15%; margin-bottom:2%;">Add Workflow</button></a>
+        <!-- <a href="{{url('new-workflow')}}"><button class="btn btn-primary add-btn"
+                style="width: 15%; margin-bottom:2%;">Add Workflow</button></a> -->
+
+                {{-- <a href="{{('new-workflow')}}"><button class="btn btn-primary">Add Workflow</button></a> --}}
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                Add Workflow</button>
+
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="table-responsive">
@@ -47,154 +48,220 @@
                             <th class="text-center">Start Name</th>
                             <th class="text-center">Duration(days)</th>
                             <th class="text-center">Created By</th>
-                            <th class="text-center">View</th>
-                            <th class="text-center">Edit</th>
+                           
                             <th class="text-center"> <input type="checkbox" name="" id=""> </th>
+                            <th class="text-center">Action</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($flow as $list)
                         <tr id="data">
                             <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$list->Date_Created}}</td>
+                            <td scope="row" class="text-center">{{$list->Workflow_Name}}</td>
+                            <td scope="row" class="text-center">{{$list->Workflow_Comments}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$list->Duration}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></i>
-                                <input type="checkbox" name="" id="">
+                            <input type="checkbox" name="" id="">
+                            </td>
+                            <td scope="row" class="text-center">
+                            <button style="background-color:#FFFBF4;"class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               Action
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                           
+                                <a href="{{url('edit-workflow',$list->id)}}" class="dropdown-item" >Edit</a>
+                                <a href="" class="dropdown-item" >View</a>
+                                <a href="{{url('delete-workflow',$list->id)}}" class="dropdown-item" >Delete</a>
                             </td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
+                <br>
+                <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Previous</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Next</a></li>
+                                </ul>
+                            </nav>
+                 <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
 
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h2 class="text-center"><b>Add Work Flow</b></h2>
 
-                <!-- The Modal -->
-                <div class="modal fade" id="editmed">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
+                                    </div>
 
-                            <!-- Modal Header -->
-                            <div class="modal-header" style="background-color:#435ebe">
-                                <h4 class="text-white">Edit Medicine</h4>
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <form method="post" action="{{ url('new-workflow') }}"
+                                                enctype="multipart/form-data">
 
-                            </div>
-
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <div class="container">
-                                    <form method="post" action="{{url('update_medicine')}}"
-                                        enctype="multipart/form-data">
-                                        @csrf
-                                        <h4 class="text-center"><b>Medicine Details</b></h4><br>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label for="">Brand Name</label>
-
-                                            </div>
-                                            <div class="col-sm">
-                                                <label for="">Medicine Name</label>
-                                                <input type="text" id="edit_medicine_name" name="medicine_name"
-                                                    class="form-control" required><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <div class="col-sm">
-                                                    <label for="">Medicine Group</label>
-
-                                                </div>
-
-                                            </div>
-                                            <div class="col-sm">
-                                                <label for="">Medicine Category Name</label>
-
-
-                                            </div>
-
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label for="">Generic name</label>
-
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Manufacturer Name</label>
-
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Supplier Name</label>
-
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label for="">Minimum Level</label>
-                                                <input type="text" id="edit_minimum_level" name="minimum_level"
-                                                    class="form-control"><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Reorder Level</label>
-                                                <input type="text" name="reorder" id="edit_reorder" class="form-control"
-                                                    placeholder=""><br>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label class="text-color:white;">Unit/Packing</Label>
-                                                <input type="text" name="unit_packing" id="edit_unit_packing"
-                                                    class="form-control" placeholder=""><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Upload Medicine Image</label>
-                                                <input type="file" name="editimage" id="edit_image" class="form-control"
-                                                    placeholder="Image"><br>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <label>Medicine Composition</label>
-                                                <textarea class="form-control" id="edit_medicine_details1"
-                                                    name="medicine_detailss" rows="3" placeholder=""></textarea><br>
-                                            </div>
-                                            <div class="col-sm">
-                                                <label>Notes</label>
-                                                <textarea class="form-control" id="edit_medicine_note"
-                                                    name="medicine_note" rows="3" placeholder=""></textarea><br>
-                                            </div>
-                                        </div>
-                                        <br>
-
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <input type="hidden" class="form-control" id="edit_id" name="method_id">
-
-                                            </div>
-                                        </div>
-
-
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary text-white"
-                                                style="width:15%;background-color:#435ebe"
-                                                data-bs-dismiss="modal">Close</button>
-                                            <button type="submit" class="btn btn-primary"
-                                                style="background-color:#435ebe;width:15%;">Update</button>
-                                        </div>
-                                </div>
-                                <div class="container">
+                                                @csrf
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Date Created</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
                                 </div>
+                                <input type="date" class="form-control" name="date" id="confirm_password" required>
                             </div>
+                        </div>
+                    </div>
 
-                            </form>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Workflow Name</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
+                                </div>
+                                <input type="text" class="form-control" name="flow_name" id="confirm_password" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Start Date</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="date" class="form-control" name="start_date" id="confirm_password" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Duration(Days)</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="duration" id="confirm_password" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Workflow Comments</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <textarea class="form-control" id="edit_medicine_details1" name="flow_comments"
+                                    rows="3" placeholder=""></textarea>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Telephone Number is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+ <br>
+
+
+
+  
+
+
+
+</div>
+<br> <div class="row">
+                       <div class="col-sm">
+
+                       </div>
+                       <div class="col-sm">
+
+                       </div>
+                       <div class="col-sm">
+                           <br>
+                           <button type="submit" class="btn btn-primary float:right;" Style="width:60%;">Save Workflow</button>
+                           <button type="button" class="btn btn-primary float:right;" data-dismiss="modal">Cancel</button>
+                       </div>
+                   </div>
+               </div>
+           </form>
+       </div>
+   </div>
+</div>
+
+</div>
+<div class="modal" id="mymodal">
+   <div class="modal-dialog">
+       <div class="modal-content">
+           <div class="modal-header">
+               <div class="modal-body">
+                   <form action="">
+                       <div>
+                           <input type="text" name="type" class="form-control" placeholder="Client Type">
+                           <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                       </div>
+                   </form>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+</div>
+<div class="modal" id="my">
+   <div class="modal-dialog">
+       <div class="modal-content">
+           <div class="modal-header">
+               <div class="modal-body">
+                   <form action="">
+                       <div>
+                           <input type="text" name="type" class="form-control" placeholder="Country">
+                           <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                       </div>
+                   </form>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+</div>
+
+ 
+
+<!-- <div class="row">
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:60%;">Save Workflow</button>
+                            <button type="button" class="btn btn-primary float:right;" data-dismiss="modal">Cancel</button>
                         </div>
                     </div>
                 </div>
 
-            </div>
 
+
+
+</div> -->
             <br>
             <!-- Supplier modal Edit End -->
 

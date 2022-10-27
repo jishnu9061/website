@@ -22,10 +22,11 @@
      </div>
             <br>
             <br>
-            <form method="post" action="" id="form">  
+            <form method="post"action="{{url('update_invoice_item')}}"id="form">  
+          <input type="hidden" name="id" value="{{$invoice_item->id}}">
        @csrf
        <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                         <label >Type Name:</label>
                             <div class="input-group">
@@ -37,12 +38,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label>Comments:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text"  id="" name="comments"value=""class="form-control" >
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                  
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label>Item Name:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text"  id="" name="iname"value="{{$invoice_item->item_name}}"class="form-control" >
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -56,8 +70,8 @@
                         <label >Item Category:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <select type="text" value="" id="" name="category"style="width:100%;">
-                                <option>---select---</option>
+                                <select type="text" id="" name="category"style="width:100%;">
+                                <option> {{$invoice_item->item_category}}</option>
                                 <option>Fees</option>
                                 <option>Disbursements w/VAT</option>
                                 <option>Disbursements w/o VAT</option>
@@ -73,8 +87,8 @@
                             <label>Sales Tax Code:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <select type="text" value="" id="" name="code"style="width:100%;">
-                                <option>---select---</option>
+                                <select type="text" value="" id="" name="sales_tax_code"style="width:100%;">
+                                <option>{{$invoice_item->sales_tax_code}}</option>
                                 <option>Non-Taxable</option>
                                 <option>Taxable</option>
                             </select>
@@ -90,7 +104,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <select type="text" value="" id="" name="account"style="width:100%;">
-                                <option>---select---</option>
+                                <option>{{$invoice_item->income_account}}</option>
                                 <option>1000====Income from Legal Fees</option>
                                 <option>1100====Other Income</option>
                                 <option>1101====Other Income - Vatable Disbursements</option>
@@ -118,7 +132,7 @@
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
                             <br>
                             <br>
                         </div>

@@ -22,7 +22,8 @@
      </div>
             <br>
             <br>
-            <form method="post" action="" id="form">  
+            <form method="post"action="{{url('update_file_types')}}"id="form">  
+          <input type="hidden" name="id" value="{{$file_types->id}}">
        @csrf
        <div class="row">
                     <div class="col-md-6">
@@ -30,7 +31,7 @@
                         <label >File Type Name:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text"  id="" name="name"value="" class="form-control">
+                                <input type="text"  id="" name="name"value="{{$file_types->file_type}}" class="form-control">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -42,7 +43,7 @@
                             <label>Short Names:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text"  id="" name="sname"value="" class="form-control" >
+                                <input type="text"  id="" name="sname"value="{{$file_types->short_name}}" class="form-control" >
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -56,7 +57,7 @@
                         <label >Retainer Period(Years):</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="number"  id="" name="year"value=""class="form-control">
+                                <input type="number"  id="" name="year"value="{{$file_types->retainer_period}}"class="form-control">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -69,7 +70,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <select type="text" value="" id="" name="approver"style="width:100%;">
-                                <option>Choose Approver...</option>
+                                <option>{{$file_types->approvers}}</option>
                                 <option>Alekeen W Benson</option>
                                 <option>Cedric Opara</option>
                                 <option>Corrine Auma</option>
@@ -109,7 +110,7 @@
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
                             <br>
                             <br>
                         </div>

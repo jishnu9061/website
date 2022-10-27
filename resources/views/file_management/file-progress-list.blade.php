@@ -1,13 +1,22 @@
 @extends('layouts.hmsmain')
 @section('content')
-
-
  {{-- heading --}}
  <h4 id="hdtpa"><b>List of File Progress</b></h4>
  <br><br>
 
- 
+<body>
+    <div class="container">
 
+        <!-- <h3 class="text-center" style="color: #070344;"><b>List of File Progress</b></h3> -->
+        <div>
+        {{-- heading --}}
+    <h4 id="hdtpa"><b>List of File Progress</b></h4>
+    
+  
+ 
+ 
+        
+            </div>
         <br>
         <div style="display:flex; margin-bottom: 2%;  margin-top: 3%;">
             <div class="dropdown" style="width:20%;">
@@ -74,15 +83,15 @@
                                 <th class="text-center">Action <br>Type</th>
                                 <th class="text-center">Progress <br>Date</th>
                                 <th class="text-center">Client</th>
-                                <th class="text-center">FileName</th>
+                                <th class="text-center">File Name</th>
                                 <th class="text-center">Description</th>
                                 <th class="text-center">Time<br>Taken</th>
                                 <th class="text-center">Charge<br>Out<br>Rate</th>
                                 <th class="text-center">Way Action<br>(Way Forward)</th>
                                 <th class="text-center">RGD<br>By</th>
                                 <th class="text-center">Action</th>
-                                <th class="text-center"><input type="checkbox" name="" id=""></th>
-                                <th class="text-center">Edit</th>
+                                <!-- <th class="text-center"><input type="checkbox" name="" id=""></th> -->
+                                <!-- <th class="text-center">Edit</th> -->
                             </tr>
                         </thead>
 
@@ -99,11 +108,12 @@
                                 <td scope="row" class="text-center"></td>
                                 <td scope="row" class="text-center">{{$list->next_action}}</td>
                                 <td scope="row" class="text-center"></td>
-                                <td scope="row" class="text-center">{{$list->activity}}</td>
-                                <td scope="row" class="text-center"><input type="checkbox" name="" id=""></td>
+                                <!-- <td scope="row" class="text-center">{{$list->activity}}</td> -->
+                                <!-- <td scope="row" class="text-center"><input type="checkbox" name="" id=""></td> -->
                                 <td scope="row" class="text-center">
                                     <a href="{{url('edit-file-progress',$list->id)}}"><i style="color:black;"
                                             class="fa fa-edit" aria-hidden="true"></i>
+                                            <a href="{{url('delete-file-progress',$list->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                                 </td>
                             </tr>
 
@@ -112,6 +122,16 @@
                         </tbody>
 
                     </table>
+                    <br>
+                    <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Previous</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Next</a></li>
+                                </ul>
+                            </nav>
 
 
 
@@ -120,16 +140,16 @@
                     <!-- The Modal -->
                     <div class="modal fade" id="myModal">
                         <div class="modal-dialog modal-lg">
-                            <div class="modal-content" style="background-color:#d6ba8a">
+                            <div class="modal-content" >
 
                                 <!-- Modal Header -->
-                                <div class="modal-header" style="background-color:#d6ba8a">
+                                <div class="modal-header" >
                                     <h2 class="text-center"><b>Add File Progress</b></h2>
 
                                 </div>
 
                                 <!-- Modal body -->
-                                <div class="modal-body" style="background-color:white">
+                                <div class="modal-body" >
                                     <div class="container">
                                         <form method="post" action="{{ url('add-file-progress') }}" enctype="multipart/form-data">
 
@@ -149,9 +169,11 @@
 
                                                                         </div>
                                                                         <select name="client_name" id="cars"><br>
-                                                                            <option>select</option>
-                                                                            <option>demo1</option>
-                                                                            <option>demo2</option>
+                                                                            <option>---select---</option>
+                                                                            <option>Client 1</option>
+                                                                            <option>Client 2</option>
+                                                                            <option>Client 3</option>
+                                                                            <option>Client 4</option>
                                                                         </select>
 
                                                                         <div class="invalid-feedback"
@@ -233,7 +255,10 @@
 
                                                             </div>
                                                             <select name="file_name" id="cars">
-                                                                <option></option>
+                                                                <option>---select---</option>
+                                                                <option>File 1</option>
+                                                                <option>File 2</option>
+                                                                <option>File 3</option>
                                                             </select>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Incorporation is required
@@ -268,9 +293,11 @@
 
                                                             </div>
                                                             <select name="action_type" id="cars">
-                                                            <option>select</option>
-                                                                            <option>demo1</option>
-                                                                            <option>demo2</option>
+                                                            <option>---select---</option>
+                                                                            <option>action_type 1</option>
+                                                                            <option>action_type 2</option>
+                                                                            <option>action_type 3</option>
+                                                                            <option>action_type 4</option>
                                                             </select>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Telephone Number is required.
@@ -357,9 +384,11 @@
 
                                                     </div>
                                                     <select name="item_type" id="cars">
-                                                    <option>select</option>
-                                                                            <option>demo1</option>
-                                                                            <option>demo2</option>
+                                                    <option>---select---</option>
+                                                                            <option>item_type 1</option>
+                                                                            <option>item_type 2</option>
+                                                                            <option>item_type 3</option>
+                                                                            <option>item_type 4</option>
 
                                                     </select>
                                                     <div class="invalid-feedback" style="width: 100%;">
@@ -377,9 +406,18 @@
 
                                                     </div>
                                                     <select name="currency" id="cars">
-                                                    <option>select</option>
-                                                                            <option>demo1</option>
-                                                                            <option>demo2</option>
+                                                    <option>---select---</option>
+                                                    <option>KES</option>
+                                <option>USD</option>
+                                <option>EUR</option>
+                                <option>GBP</option>
+                                <option>AUD</option>
+                                <option>CAD</option>
+                                <option>SEK</option>
+                                <option>DKK</option>
+                                <option>JPY</option>
+                                <option>CHF</option>
+                                <option>HKD</option>
                                                     </select>
                                                     <div class="invalid-feedback" style="width: 100%;">
                                                         Number is required.
@@ -431,9 +469,11 @@
                                                     </div>
 
                                                     <select name="activity_type" id="cars">
-                                                    <option>select</option>
-                                                                            <option>demo1</option>
-                                                                            <option>demo2</option>
+                                                    <option>---select---</option>
+                                                    <option>action_type 1</option>
+                                                                            <option>action_type 2</option>
+                                                                            <option>action_type 3</option>
+                                                                            <option>action_type 4</option>
 
 
                                                     </select>
@@ -528,16 +568,16 @@
     <!-- The Modal -->
     <div class="modal fade" id="myModal-1">
         <div class="modal-dialog modal-lg">
-            <div class="modal-content" style="background-color:#d6ba8a">
+            <div class="modal-content" >
 
                 <!-- Modal Header -->
-                <div class="modal-header" style="background-color:#d6ba8a">
+                <div class="modal-header" >
                     <h2 class="text-center"><b>Add File Progress/Action</b></h2>
 
                 </div>
 
                 <!-- Modal body -->
-                <div class="modal-body" style="background-color:white">
+                <div class="modal-body" >
                     <div class="container">
                         <form method="post" action="{{ url('add-file-progress-action') }}" enctype="multipart/form-data">
 
@@ -558,7 +598,7 @@
 
                                                         </div>
                                                         <select name="client_name" id="cars">
-                                                            <option>select</option>
+                                                            <option>---select---</option>
                                                             <option>client 1</option>
                                                             <option>client 2</option>
                                                         </select>
@@ -576,11 +616,10 @@
 
                                                         </div>
                                                         <select name="file_name" id="cars">
-                                                            <option>select</option>
-                                                            <option>demo 1</option>
-                                                            <option>demo 2</option>
-                                                            <option>demo 3</option>
-                                                            <option>demo 4</option>
+                                                            <option>---select---</option>
+                                                            <option>File 1</option>
+                                                                <option>File 2</option>
+                                                                <option>File 3</option>
                                                         </select>
 
                                                     </div>
@@ -629,11 +668,11 @@
 
                                                         </div>
                                                         <select name="action_type" id="cars">
-                                                            <option>select</option>
-                                                            <option>action 1</option>
-                                                            <option>action 2</option>
-                                                            <option>action 3</option>
-                                                            <option>action 4</option>
+                                                            <option>---select---</option>
+                                                            <option>action_type 1</option>
+                                                                            <option>action_type 2</option>
+                                                                            <option>action_type 3</option>
+                                                                            <option>action_type 4</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -672,7 +711,7 @@
 
                                                         </div>
                                                         <select name="sent_notification" id="cars">
-                                                        <option>select</option>
+                                                        <option>---select---</option>
                                                             <option>notification 1</option>
                                                             <option>notification 2</option>
                                                             <option>notification 3</option>
@@ -721,7 +760,7 @@
                                     <div class="col-sm">
                                         <br>
                                         <button type="submit" class="btn btn-primary float:right;"
-                                            Style="width:60%;">Add File Progress</button>
+                                            Style="width:60%;">Save</button>
                                         <button type="button" class="btn btn-primary float:right;"
                                             data-dismiss="modal">Cancel</button>
                                     </div>
@@ -777,16 +816,16 @@
                                                     <!-- The Modal -->
                     <div class="modal fade" id="myModal-2">
                         <div class="modal-dialog modal-lg">
-                            <div class="modal-content" style="background-color:#d6ba8a">
+                            <div class="modal-content">
 
                                 <!-- Modal Header -->
-                                <div class="modal-header" style="background-color:#d6ba8a">
+                                <div class="modal-header">
                                     <h2 class="text-center"><b>Add File Bringup/Reminder</b></h2>
 
                                 </div>
 
                                 <!-- Modal body -->
-                                <div class="modal-body" style="background-color:white">
+                                <div class="modal-body">
                                     <div class="container">
                                         <form method="post" action="{{ url('add-file-bringup-reminder') }}" enctype="multipart/form-data">
 
@@ -1003,16 +1042,16 @@
                       <!-- The Modal -->
                     <div class="modal fade" id="myModal-3">
                         <div class="modal-dialog modal-lg">
-                            <div class="modal-content" style="background-color:#d6ba8a">
+                            <div class="modal-content">
 
                                 <!-- Modal Header -->
-                                <div class="modal-header" style="background-color:#d6ba8a">
+                                <div class="modal-header">
                                     <h2 class="text-center"><b>Book A Court</b></h2>
 
                                 </div>
 
                                 <!-- Modal body -->
-                                <div class="modal-body" style="background-color:white">
+                                <div class="modal-body">
                                     <div class="container">
                                         <form method="post" action="{{ url('book-court') }}" enctype="multipart/form-data">
 
@@ -1310,16 +1349,16 @@
                      <!-- The Modal -->
                      <div class="modal fade" id="myModal-4">
                         <div class="modal-dialog modal-lg">
-                            <div class="modal-content" style="background-color:#d6ba8a">
+                            <div class="modal-content" >
 
                                 <!-- Modal Header -->
-                                <div class="modal-header" style="background-color:#d6ba8a">
+                                <div class="modal-header" >
                                     <h2 class="text-center"><b>Court Attendance Sheet</b></h2>
 
                                 </div>
 
                                 <!-- Modal body -->
-                                <div class="modal-body" style="background-color:white">
+                                <div class="modal-body">
                                     <div class="container">
                                         <form method="post" action="{{ url('court-attendance-sheet') }}" enctype="multipart/form-data">
 
@@ -1710,22 +1749,24 @@
     </div>
                                   <!--END COURT ATTENDANCE SHEET -->
 
+
+
                                   <!-- NEW ARBIRATION FORM -->
                                    <!-- The Modal -->
                     <div class="modal fade" id="myModal-5">
                         <div class="modal-dialog modal-lg">
-                            <div class="modal-content" style="background-color:#d6ba8a">
+                            <div class="modal-content">
 
                                 <!-- Modal Header -->
-                                <div class="modal-header" style="background-color:#d6ba8a">
+                                <div class="modal-header">
                                     <h2 class="text-center"><b>New Arbiration Form</b></h2>
 
                                 </div>
 
                                 <!-- Modal body -->
-                                <div class="modal-body" style="background-color:white">
+                                <div class="modal-body">
                                     <div class="container">
-                                        <form method="post" action="{{ url('add-file-progress') }}" enctype="multipart/form-data">
+                                        <form method="post" action="{{ url('arbiration-sheet') }}" enctype="multipart/form-data">
 
 
                                             <div class="row">
@@ -1742,8 +1783,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="court_type" id="cars">
+                                    <option>select....</option>
+                                    <option>court type 1</option>
+                                    <option>court type 2</option>
+                                    <option>court type 3</option>
+                                    <option>court type 4</option>
                                 </select>
                             </div>
                         </div>
@@ -1755,8 +1800,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="client_name" id="cars">
+                                <option>select....</option>
+                                    <option>client 1</option>
+                                    <option>client 2</option>
+                                    <option>client 3</option>
+                                    <option>client 4</option>
                                 </select>
                             </div>
                         </div>
@@ -1771,8 +1820,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="file_name" id="cars">
+                                <option>select....</option>
+                                    <option>file 1</option>
+                                    <option>file 2</option>
+                                    <option>file 3</option>
+                                    <option>file 4</option>
                                 </select>
                             </div>
                         </div>
@@ -1784,8 +1837,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="court_name" id="cars">
+                                <option>select....</option>
+                                    <option>court name 1</option>
+                                    <option>court name 2</option>
+                                    <option>court name 3</option>
+                                    <option>court name 4</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
@@ -1805,7 +1862,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="website" id="confirm_password" required>
+                                <input type="date" class="form-control" name="start_date" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -1818,7 +1875,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="time" class="form-control" name="website" id="confirm_password" required>
+                                <input type="time" class="form-control" name="start_time" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
                                 </div>
@@ -1839,7 +1896,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="website" id="confirm_password" required>
+                                <input type="date" class="form-control" name="end_date" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -1851,7 +1908,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="time" class="form-control" name="website" id="confirm_password" required>
+                                <input type="time" class="form-control" name="end_time" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
                                 </div>
@@ -1870,8 +1927,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="user_assigned" id="cars">
+                                <option>select....</option>
+                                    <option>user 1</option>
+                                    <option>user 2</option>
+                                    <option>user 3</option>
+                                    <option>user 4</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
@@ -1887,8 +1948,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="sent_notification" id="cars">
+                                <option>select....</option>
+                                    <option>notification 1</option>
+                                    <option>notification 2</option>
+                                    <option>notification 3</option>
+                                    <option>notification 4</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
@@ -1904,8 +1969,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="set_reminder" id="cars">
+                                <option>select....</option>
+                                    <option>reminder 1</option>
+                                    <option>reminder 2</option>
+                                    <option>reminder 3</option>
+                                    <option>reminder 4</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
@@ -1923,7 +1992,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="notes"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -1997,18 +2066,18 @@
                          <!-- The Modal -->
                          <div class="modal fade" id="myModal-6">
                         <div class="modal-dialog modal-lg">
-                            <div class="modal-content" style="background-color:#d6ba8a">
+                            <div class="modal-content">
 
                                 <!-- Modal Header -->
-                                <div class="modal-header" style="background-color:#d6ba8a">
+                                <div class="modal-header">
                                     <h2 class="text-center"><b>Conveyence Sheet</b></h2>
 
                                 </div>
 
                                 <!-- Modal body -->
-                                <div class="modal-body" style="background-color:white">
+                                <div class="modal-body">
                                     <div class="container">
-                                        <form method="post" action="{{ url('add-file-progress') }}" enctype="multipart/form-data">
+                                        <form method="post" action="{{ url('conveyance-sheet') }}" enctype="multipart/form-data">
 
 
                                             <div class="row">
@@ -2025,7 +2094,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="website" id="confirm_password" required>
+                                <input type="date" class="form-control" name="arbiration_date" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -2037,8 +2106,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="client_name" id="cars">
+                                    <option>select....</option>
+                                    <option>client 1</option>
+                                    <option>client 2</option>
+                                    <option>client 3</option>
+                                    <option>client 4</option>
                                 </select>
                             </div>
                         </div>
@@ -2051,8 +2124,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="file_name" id="cars">
+                                <option>select....</option>
+                                    <option>file 1</option>
+                                    <option>file 2</option>
+                                    <option>file 3</option>
+                                    <option>file 4</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
@@ -2074,7 +2151,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="seller_name" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -2086,7 +2163,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="seller_id_no" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -2097,7 +2174,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="seller_address" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -2111,7 +2188,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="number" class="form-control" name="seller_contact" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -2123,7 +2200,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="email" class="form-control" name="seller_email" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
                                 </div>
@@ -2151,7 +2228,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="land_ref_no" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -2162,7 +2239,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="title_deed_no" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -2173,7 +2250,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="location" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -2188,7 +2265,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="property_size" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -2210,7 +2287,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="text" class="form-control" name="buyer_name" id="confirm_password" required>
                 </div>
             </div>
         </div>
@@ -2222,7 +2299,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="text" class="form-control" name="buyer_id_no" id="confirm_password" required>
                 </div>
             </div>
         </div>
@@ -2233,7 +2310,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="text" class="form-control" name="buyer_address" id="confirm_password" required>
                 </div>
             </div>
         </div>
@@ -2247,7 +2324,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="number" class="form-control" name="buyer_contact" id="confirm_password" required>
                 </div>
             </div>
         </div>
@@ -2259,7 +2336,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="email" class="form-control" name="buyer_email" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Telephone Number is required.
                     </div>
@@ -2283,7 +2360,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                    <textarea class="form-control" id="form7Example7" rows="3" name="solving_process"></textarea>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -2298,7 +2375,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                    <textarea class="form-control" id="form7Example7" rows="3" name="final_aggremnt"></textarea>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -2317,7 +2394,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="text" class="form-control" name="person_dealing" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -2333,7 +2410,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="time" class="form-control" name="time_taken_hours" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -2348,7 +2425,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="time" class="form-control" name="time_taken_minutes" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -2365,7 +2442,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="date" class="form-control" name="website" id="confirm_password" required>
+                    <input type="date" class="form-control" name="bringup_date" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -2379,7 +2456,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="text" class="form-control" name="remind_period_days" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -2393,7 +2470,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="text" class="form-control" name="send_reminder_to" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -2411,7 +2488,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                    <textarea class="form-control" id="form7Example7" rows="3" name="next_action"></textarea>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>

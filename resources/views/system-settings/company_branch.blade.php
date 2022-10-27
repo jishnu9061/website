@@ -66,7 +66,7 @@
                 <select style="width:10%;height:100%;color:rgb(13, 1, 56);font-size:small;background-color:#FFFBF4;"type="text" value="" >
     <option>Activate Category</option>
     <option>De-Activate Category</option>
-    <option>Delete Category</option>
+    <!-- <option>Delete Category</option> -->
 </select>
 <input type="button"value="Go" name="close"style="background-color:#FFFBF4;color: rgb(13, 1, 56); ">
     </div>
@@ -206,7 +206,16 @@
                             <label for="username">Town:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" id="town" name="town" class="form-control" value="">
+                                <select name="town" id="town"style="width:100%;">
+                                <option>---select---</option>
+                                <option>Nairobi </option>
+                                <option>Kisumu</option>
+                                <option>Nakuru</option>
+                                <option>Mombasa</option>
+                                <option>Thika</option>
+                                <option>Malindi</option>
+                            </select>
+                             
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -249,7 +258,7 @@
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
                         </div>
                     </div>
                 </div>

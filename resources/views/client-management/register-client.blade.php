@@ -6,7 +6,7 @@
 
         <div>
             <div class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Search Client</u></b></span></div><br><br>
+                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Register Client</u></b></span></div><br><br>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous">
@@ -127,8 +127,8 @@
                     </div>
                     <div class="col-sm">
                         <br>
-                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Search</button>
-                        <button type="button" class="btn btn-primary float:left" Style="width:45%;">close</button>
+                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
                     </div>
                 </div>
                

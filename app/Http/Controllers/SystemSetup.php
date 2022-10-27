@@ -52,7 +52,7 @@ class SystemSetup extends Controller
         DB::table('cra_company_details')->insert([
             'company_name' => $company_name,
             'address' => $address,
-            'town/city' => $town_city,
+            'town_city' => $town_city,
             'company_website' => $company_website,
             'email' => $email,
             'company_type' => $company_type,
@@ -90,7 +90,7 @@ class SystemSetup extends Controller
  $update_company_details = array(
             'company_name' => $company_name,
             'address' =>  $address,
-            'town/city' => $town_city,
+            'town_city' => $town_city,
             'company_website' =>  $company_website,
             'email' =>  $email,
             'company_type' =>  $company_type,
@@ -384,17 +384,58 @@ class SystemSetup extends Controller
   
     public function paymentitem()
     {
-        $payment_item=DB::table(' cra_payment_item')->get();
-        return view('system-settings.payment_items',compact('payment_item'));
+        $payment_items=DB::table('cra_payment_item')->get();
+        return view('system-settings.payment_items',compact('payment_items'));
 
     }
-    public function addpaymentitem()
+    public function addpaymentitem(Request $Request)
     {
-        return view('system-settings.add_payment_item');
+        $item_code = $Request['icode'];
+        $item_group = $Request['igroup'];
+        $item_name = $Request['iname'];
+        $item_comment = $Request['icomments'];
+        $item_shortname = $Request['ishortname'];
+
+        DB::table('cra_payment_item')->insert([
+            'item_code' => $item_code,
+            'item_group' => $item_group,
+            'item_name' => $item_name,
+            'item_comment' => $item_comment,
+            'item_shortname' => $item_shortname,
+           
+        ]);
+        return redirect('/payment_items');
     }
-    public function editpaymentitem()
+    public function editpaymentitem($id)
     {
-        return view('system-settings.edit_payment_item');
+        $payment_items=DB::table('cra_payment_item')->where('id',$id)->first();
+        return view('system-settings.edit_payment_item',compact('payment_items','id'));
+        
+    }
+    public function updatepaymentitem(Request $Request)
+    {
+        $id = $Request['id'];
+        $item_code = $Request['icode'];
+        $item_group = $Request['igroup'];
+        $item_name = $Request['iname'];
+        $item_comment = $Request['icomments'];
+        $item_shortname = $Request['ishortname'];
+        
+        $update_payment_item = array(
+            'item_code' => $item_code,
+            'item_group' =>  $item_group,
+            'item_name' => $item_name,
+            'item_comment' =>  $item_comment,
+            'item_shortname' => $item_shortname,
+           
+        );
+        DB::table('cra_payment_item')->where('id', $id)->update( $update_payment_item );
+        return redirect('/payment_items');
+    }
+    public function deletepaymentitem($id)
+    {
+        DB::table('cra_payment_item')->where('id',$id)->delete();
+        return redirect('/payment_items');
     }
     ///////////////////////DESCRIPTION SELECTION//////////////////////////////////
     public function descriptionselection()
@@ -666,9 +707,7 @@ public function updatedescsel(Request $Request)
         {
             $tax_wht_vat=DB::table('cra_tax_wht-vat')->get();
             return view('system-settings.tax_wht-vat',compact('tax_wht_vat'));
-    
-        
-        }
+ }
     
         public function addtaxwhtvat(Request $Request)
         {
@@ -816,153 +855,177 @@ public function updatetemplatecategory(Request $Request)
     }
     public function filetypes()
     {
-        return view('system-settings.file_types');
+        $file_types=DB::table('cra_file_types')->get();
+        return view('system-settings.file_types',compact('file_types'));
+        
     }
-    public function addfiletypes()
+    public function addfiletypes(Request $Request)
     {
+        $file_type = $Request['name'];
+        $short_name = $Request['sname'];
+        $retainer_period = $Request['year'];
+        $approvers = $Request['approver'];
+        DB::table('cra_file_types')->insert([
+            'file_type' => $file_type,
+            'short_name' => $short_name,
+            'retainer_period' => $retainer_period,
+            'approvers' => $approvers,
+        ]);
+       
         return redirect('/file_types');
        
     }
-    public function editfiletypes()
+    public function editfiletypes($id)
     {
-        return view('system-settings.edit_file_types');
+        $file_types=DB::table('cra_file_types')->where('id',$id)->first();
+     
+        return view('system-settings.edit_file_types',compact('file_types','id'));
+        
+    }
+    public function updatefiletypes(Request $Request)
+    {
+        $id = $Request['id'];
+        $file_type = $Request['name'];
+        $short_name = $Request['sname'];
+        $retainer_period = $Request['year'];
+        $approvers = $Request['approver'];
+        
+        $update_file_types = array(
+            'file_type' => $file_type,
+            'short_name' =>  $short_name,
+            'retainer_period' => $retainer_period,
+            'approvers' =>  $approvers,
+
+        );
+        DB::table('cra_file_types')->where('id', $id)->update( $update_file_types );
+        return redirect('/file_types');
+    }
+    public function deletefiletypes($id)
+    {
+        DB::table('cra_file_types')->where('id',$id)->delete();
+        return redirect('/file_types');
     }
     public function invoiceitems()
     {
-        return view('system-settings.invoice_items');
+        $invoice_item=DB::table('cra_invoice_items')->get();
+        return view('system-settings.invoice_items',compact('invoice_item'));
+      
     }
-    public function addinvoiceitem()
+    public function addinvoiceitem(Request $Request)
     {
+        $item_code = $Request['code'];
+        $item_category = $Request['category'];
+        $item_name = $Request['iname'];
+        $description = $Request['description'];
+        $sales_tax_code = $Request['sales_tax_code'];
+        $income_account = $Request['account'];
+        DB::table('cra_invoice_items')->insert([
+            'item_code' => $item_code,
+            'item_category' => $item_category,
+            'item_name' => $item_name,
+            'description' => $description,
+            'sales_tax_code' => $sales_tax_code,
+            'income_account' => $income_account,
+            
+        ]);
         return redirect('/invoice_items');
       
     }
-    public function editinvoiceitem()
+    public function editinvoiceitem($id)
     {
-        return view('system-settings.edit_invoice_item');
+        $invoice_item=DB::table('cra_invoice_items')->where('id',$id)->first();
+     
+        return view('system-settings.edit_invoice_item',compact('invoice_item','id'));
+ 
+    }
+    public function updateinvoiceitem(Request $Request)
+    {
+        $id = $Request['id'];
+        $item_code = $Request['code'];
+        $item_category = $Request['category'];
+        $item_name = $Request['iname'];
+        $description = $Request['description'];
+        $sales_tax_code = $Request['sales_tax_code'];
+        $income_account = $Request['income_account'];
+        
+        $update_invoice_item = array(
+            'item_code' => $item_code,
+            'item_category' => $item_category,
+            'item_name' => $item_name,
+            'description' => $description,
+            'sales_tax_code' => $sales_tax_code,
+            'income_account' => $income_account,
+
+        );
+        DB::table('cra_invoice_items')->where('id', $id)->update($update_invoice_item);
+        return redirect('/invoice_items');
+    }
+    public function deleteinvoiceitem($id)
+    {
+        DB::table('cra_invoice_items')->where('id',$id)->delete();
+        return redirect('/invoice_items');
     }
     public function addglaccount()
     {
         return view('system-settings.add_gl_account');
     }
+
+
+
+
     public function currencylist()
     {
-        return view('system-settings.currency_list');
+        $currency_list=DB::table('cra_currency_list')->get();
+        return view('system-settings.currency_list',compact('currency_list'));
+ 
     }
-    public function addcurrency()
+    public function addcurrency(Request $Request)
     {
+        $currency_name = $Request['currency'];
+        $currency_symbol = $Request['csymbol'];
+        $exchange_rate = $Request['exchangerate'];
+        $default_action = $Request['account'];
+        DB::table('cra_currency_list')->insert([
+            'currency_name' => $currency_name,
+            'currency_symbol' => $currency_symbol,
+            'exchange_rate' => $exchange_rate,
+            'default_action' => $default_action,
+        ]);
+       
         return redirect('/currency_list');
        
     }
-    public function editcurrency()
+    public function editcurrency($id)
     {
-        return view('system-settings.edit_currency');
+        $currency_list=DB::table('cra_currency_list')->where('id',$id)->first();
+     
+        return view('system-settings.edit_currency',compact('currency_list','id'));
     }
-    public function manageuseraccount()
+    public function updatecurrency(Request $Request)
     {
-        return view('system-settings.manage_user_account');
-    }
-    public function useredit()
-    {
-        return view('system-settings.user_edit');
-    }
-    public function regnewuser()
-    {
-        return view('system-settings.reg_new_user');
-    }
-    public function attachments()
-    {
-        return view('system-settings.user_attachments');
-    }
-    public function comments()
-    {
-        return view('system-settings.user_comments');
-    }
-    public function changepassword()
-    {
-        return view('system-settings.change_user_password');
-    }
-    public function manageusergrp()
-    {
-        return view('system-settings.manage_user_group');
-    }
-    public function addnewusergrp()
-    {
-        return view('system-settings.add_new_user_grp');
-    }
-    public function editnewusergrp()
-    {
-        return view('system-settings.edit_new_user_grp');
-    }
-    public function rolesperuser()
-    {
-        return view('system-settings.view_roles_per_user');
-    }
-    public function editviewroles()
-    {
-        return view('system-settings.edit_view_roles');
-    }
-    
+        $id = $Request['id'];
+        $currency_name = $Request['currency'];
+        $currency_symbol = $Request['csymbol'];
+        $exchange_rate = $Request['exchangerate'];
+        $default_action = $Request['account'];
+        
+        $update_currency = array(
+            'currency_name' => $currency_name,
+            'currency_symbol' =>  $currency_symbol,
+            'exchange_rate' => $exchange_rate,
+            'default_action' =>  $default_action,
 
-    public function manageuserroles()
-    {
-        return view('system-settings.manage_user_roles');
+        );
+        DB::table('cra_currency_list')->where('id', $id)->update( $update_currency );
+        return redirect('/currency_list');
     }
-    public function adduserrole()
+    public function deletecurrency($id)
     {
-        return view('system-settings.add_user_roles');
+        DB::table('cra_currency_list')->where('id',$id)->delete();
+        return redirect('/currency_list');
     }
-    public function edituserrole()
-    {
-        return view('system-settings.edit_user_roles');
-    }
-    public function manageuserdepartment()
-    {
-        return view('system-settings.manage_user_department');
-    }
-    public function adduserdepartment()
-    {
-        return view('system-settings.add_user_department');
-    }
-    public function edituserdepartment()
-    {
-        return view('system-settings.edit_user_department');
-    }
-    public function advocatestarget()
-    {
-        return view('system-settings.advocates_target');
-    }
-    public function addnew()
-    {
-        return view('system-settings.add_new_entry');
-    }
-    public function editadvocatetarget()
-    {
-        return view('system-settings.edit_advocate_target');
-    }
-    public function advocatestarget2021()
-    {
-        return view('system-settings.advocates_target_2021');
-    }
-    public function advocatestarget2022()
-    {
-        return view('system-settings.advocates_target_2022');
-    }
-    public function advocatestarget2023()
-    {
-        return view('system-settings.advocates_target_2023');
-    }
-    public function advocatestarget2024()
-    {
-        return view('system-settings.advocates_target_2024');
-    }
-    public function advocatestarget2025()
-    {
-        return view('system-settings.advocates_target_2025');
-    }
-    public function advocatestarget2026()
-    {
-        return view('system-settings.advocates_target_2026');
-    }
+
+   
     public function databasebackup()
     {
         return view('system-settings.database_backup');
@@ -970,9 +1033,9 @@ public function updatetemplatecategory(Request $Request)
   
     public function transportzone()
     {
-        $transportzone=DB::table('cra_transport_zone')->get();
+        $transport_zone=DB::table('cra_transport_zone')->get();
 
-        return view('system-settings.transport_zones',compact('transportzone'));
+        return view('system-settings.Transport_zones',compact('transport_zone'));
     }
 
     public function addtransportzone(Request $Request)
@@ -987,25 +1050,90 @@ public function updatetemplatecategory(Request $Request)
             'cost' =>  $cost,
         ]);
 
-       return view('system-settings.add_transport_zone');
+        return redirect('/Transport_zones');
     }
 
 
-    public function edittransportzone()
+    public function edittransportzone($id)
     {
-        return view('system-settings.edit_transport_zone');
+        $transport_zone=DB::table('cra_transport_zone')->where('id',$id)->first();
+     
+        return view('system-settings.edit_transport_zone',compact('transport_zone','id'));
+  
     }
+    public function updatetransportzone(Request $Request)
+    {
+        $id = $Request['id'];
+        $zone_name = $Request['zone_name'];
+        $zone_areas = $Request['zone_areas'];
+        $cost = $Request['cost'];
+      
+        
+        $update_transport_zone = array(
+            'zone_name' => $zone_name,
+            'zone_areas' =>  $zone_areas,
+            'cost' => $cost,
+            
+
+        );
+        DB::table('cra_transport_zone')->where('id', $id)->update( $update_transport_zone );
+        return redirect('/Transport_zones');
+    }
+    public function deletetransportzone($id)
+    {
+        DB::table('cra_transport_zone')->where('id',$id)->delete();
+        return redirect('/Transport_zones');
+    }
+
     public function billableactivities()
     {
-        return view('system-settings.billable_activities');
+        $billable_activities=DB::table('cra_billable_activities')->get();
+        return view('system-settings.billable_activities',compact('billable_activities'));
+
     }
-    public function addbillableactivities()
+    public function addbillableactivities(Request $Request)
     {
-        return view('system-settings.add_billable_activities');
+        $type = $Request['type'];
+        $activity_name = $Request['name'];
+        $cost = $Request['cost'];
+
+        DB::table('cra_billable_activities')->insert([
+            'type' => $type,
+            'activity_name' =>  $activity_name,
+            'cost' =>  $cost,
+        ]);
+
+        return redirect('/billable_activities');
     }
-    public function editbillableactivities()
+    public function editbillableactivities($id)
     {
-        return view('system-settings.edit_billable_activities');
+        $billable_activities=DB::table('cra_billable_activities')->where('id',$id)->first();
+     
+        return view('system-settings.edit_billable_activities',compact('billable_activities','id'));
+        
+    }
+    public function updatebillableactivities(Request $Request)
+    {
+        $id = $Request['id'];
+        $type = $Request['type'];
+        $activity_name = $Request['name'];
+        $cost = $Request['cost'];
+      
+        
+        $update_billable_activities = array(
+            'type' => $type,
+            'activity_name' =>  $activity_name,
+            'cost' => $cost,
+            
+
+        );
+        DB::table('cra_billable_activities')->where('id', $id)->update( $update_billable_activities );
+        return redirect('/billable_activities');
+    }
+    public function deletebillableactivities($id)
+    {
+        DB::table('cra_billable_activities')->where('id',$id)->delete();
+        return redirect('/billable_activities');
     }
 
     public function bankdetails()
@@ -1041,15 +1169,54 @@ public function updatetemplatecategory(Request $Request)
             'bank_gl_ac' =>$bank_gl_ac,
            
         ]);
-  
+        return redirect('/bank_details');
 
-        return view('system-settings.add_bank_account');
     }
     
-    public function editbankaccount()
+    public function editbankaccount($id)
     {
-        return view('system-settings.edit_bank_account');
+        $bank_details=DB::table('cra_bank_details')->where('id',$id)->first();
+     
+        return view('system-settings.edit_bank_account',compact('bank_details','id'));
+       
     }
+    public function updatebankaccount(Request $Request)
+    {
+        $id = $Request['id'];
+        $bank = $Request['bank'];
+        $branch = $Request['branch'];
+        $account_name = $Request['account_name'];
+        $account_number = $Request['account_no'];
+        $bank_code = $Request['bank_code'];
+        $branch_code = $Request['branch_code'];
+        $swift_code = $Request['swift_code'];
+        $mpesa_code = $Request['mpesa_no'];
+        $bank_gl_ac = $Request['bank_gl_ac'];
+       
+      
+        
+        $update_bank_account = array(
+            'bank' => $bank,
+            'branch' =>  $branch,
+            'account_name' => $account_name,
+            'account_number' => $account_number,
+            'bank_code' =>  $bank_code,
+            'branch_code' => $branch_code,
+            'swift_code' => $swift_code,
+            'mpesa_code' =>  $mpesa_code,
+            'bank_gl_ac' => $bank_gl_ac,
+            
+
+        );
+        DB::table('cra_bank_details')->where('id', $id)->update( $update_bank_account );
+        return redirect('/bank_details');
+    }
+    public function deletebankaccount($id)
+    {
+        DB::table('cra_bank_details')->where('id',$id)->delete();
+        return redirect('/bank_details');
+    }
+
     public function bankdocument()
     {
         return view('system-settings.add_bank_document');
@@ -1057,36 +1224,157 @@ public function updatetemplatecategory(Request $Request)
   
     public function leavedays()
     {
-        return view('system-settings.leave_days_year');
+        $leave_days=DB::table('cra_leave_days')->get();
+        
+        return view('system-settings.leave_days_year',compact('leave_days'));
+    
     }
   
-    public function addleavedays()
+    public function addleavedays(Request $Request)
     {
-        return view('system-settings.add_leave_days');
+        $year = $Request['year'];
+        $annual_leave_day = $Request['leaveday'];
+        $satuday_working_days = $Request['saturday'];
+        $perfomance_duration = $Request['performance'];
+        $pay_relief = $Request['pay'];
+        $pl_closed = $Request['pl'];
+        $account_closed = $Request['account'];
+      
+
+        DB::table('cra_leave_days')->insert([
+            'year' => $year,
+            'annual_leave_day' => $annual_leave_day,
+            'satuday_working_days' => $satuday_working_days,
+            'perfomance_duration' => $perfomance_duration,
+            'pay_relief' =>  $pay_relief,
+            'pl_closed' => $pl_closed,
+            'account_closed' => $account_closed,
+          
+           
+        ]);
+        return redirect('/leave_days_year');
+       
     }
-    public function editleavedays()
+    public function editleavedays($id)
     {
-        return view('system-settings.edit_leave_days');
+        $leave_days=DB::table('cra_leave_days')->where('id',$id)->first();
+     
+        return view('system-settings.edit_leave_days',compact('leave_days','id'));
+      
     }
+    public function updateleavedays(Request $Request)
+    {
+        $id = $Request['id'];
+        $year = $Request['year'];
+        $annual_leave_day = $Request['leaveday'];
+        $satuday_working_days = $Request['saturday'];
+        $perfomance_duration = $Request['performance'];
+        $pay_relief = $Request['pay'];
+        $pl_closed = $Request['pl'];
+        $account_closed = $Request['account'];
+    
+       
+ $update_leave_days = array(
+            'year' => $year,
+            'annual_leave_day' =>  $annual_leave_day,
+            'satuday_working_days' => $satuday_working_days,
+            'perfomance_duration' => $perfomance_duration,
+            'pay_relief' =>  $pay_relief,
+            'pl_closed' => $pl_closed,
+            'account_closed' => $account_closed,
+            
+);
+        DB::table('cra_leave_days')->where('id', $id)->update( $update_leave_days );
+        return redirect('/leave_days_year');
+    }
+    public function deleteleavedays($id)
+    {
+        DB::table('cra_leave_days')->where('id',$id)->delete();
+        return redirect('/leave_days_year');
+    }
+
     public function hourlyrates()
     {
-        return view('system-settings.hourly_rates');
+        $hourly_rate=DB::table('cra_hourly_rate')->get();
+        
+        return view('system-settings.hourly_rates',compact('hourly_rate'));
+      
     }
-    public function addhourlyrates()
+    public function addhourlyrates(Request $Request)
     {
-        return view('system-settings.add_hourly_rates');
+        $user_staff = $Request['user'];
+        $currency = $Request['currency'];
+        $hourly_rates = $Request['rate'];
+        $amount = $Request['amount'];
+     
+      
+
+        DB::table('cra_hourly_rate')->insert([
+            'user_staff' => $user_staff,
+            'currency' => $currency,
+            'hourly_rates' => $hourly_rates,
+            'amount' => $amount,
+        
+]);
+        return redirect('/hourly_rates');
     }
-    public function edithourlyrates()
+    public function edithourlyrates($id)
     {
-        return view('system-settings.edit_hourly_rates');
+        $hourly_rate=DB::table('cra_hourly_rate')->where('id',$id)->first();
+     
+        return view('system-settings.edit_hourly_rates',compact('hourly_rate','id'));
+   
     }
+    public function updatehourlyrates(Request $Request)
+    {
+        $id = $Request['id'];
+        $user_staff = $Request['user'];
+        $currency = $Request['currency'];
+        $hourly_rates = $Request['rate'];
+        $amount = $Request['amount'];
+    
+       
+ $update_hourly_rates = array(
+    'user_staff' => $user_staff,
+    'currency' => $currency,
+    'hourly_rates' => $hourly_rates,
+    'amount' => $amount,
+            
+);
+        DB::table('cra_hourly_rate')->where('id', $id)->update( $update_hourly_rates );
+        return redirect('/hourly_rates');
+    }
+    public function deletehourlyrates($id)
+    {
+        DB::table('cra_hourly_rate')->where('id',$id)->delete();
+        return redirect('/hourly_rates');
+    }
+
     public function partnerrevenueshare()
     {
-        return view('system-settings.partner_revenue_share');
+        $revenue_share=DB::table('cra_partner_revenue_share')->get();
+        
+        return view('system-settings.partner_revenue_share',compact('revenue_share'));
+       
     }
-    public function addpartnerrevenue()
+    public function addpartnerrevenue(Request $Request)
     {
-        return view('system-settings.add_partner_revenue');
+        $year = $Request['year'];
+        $partner = $Request['partner'];
+        $total = $Request['total'];
+        $percentage = $Request['percentage'];
+     
+      
+
+        DB::table('cra_partner_revenue_share')->insert([
+            'year' => $year,
+            'partner' => $partner,
+            'total' => $total,
+            'percentage' => $percentage,
+        
+]);
+        return redirect('/partner_revenue_share');
+       
     }
     public function menuaccess()
     {
@@ -1097,7 +1385,113 @@ public function updatetemplatecategory(Request $Request)
         return view('system-settings.useful_links');
     }
 
+//user acounts..........................
+// public function manageuseraccount()
+// {
+//     return view('system-settings.manage_user_account');
+// }
+// public function useredit()
+// {
+//     return view('system-settings.user_edit');
+// }
+// public function regnewuser()
+// {
+//     return view('system-settings.reg_new_user');
+// }
+// public function attachments()
+// {
+//     return view('system-settings.user_attachments');
+// }
+// public function comments()
+// {
+//     return view('system-settings.user_comments');
+// }
+// public function changepassword()
+// {
+//     return view('system-settings.change_user_password');
+// }
+// public function manageusergrp()
+// {
+//     return view('system-settings.manage_user_group');
+// }
+// public function addnewusergrp()
+// {
+//     return view('system-settings.add_new_user_grp');
+// }
+// public function editnewusergrp()
+// {
+//     return view('system-settings.edit_new_user_grp');
+// }
+// public function rolesperuser()
+// {
+//     return view('system-settings.view_roles_per_user');
+// }
+// public function editviewroles()
+// {
+//     return view('system-settings.edit_view_roles');
+// }
 
+
+// public function manageuserroles()
+// {
+//     return view('system-settings.manage_user_roles');
+// }
+// public function adduserrole()
+// {
+//     return view('system-settings.add_user_roles');
+// }
+// public function edituserrole()
+// {
+//     return view('system-settings.edit_user_roles');
+// }
+// public function manageuserdepartment()
+// {
+//     return view('system-settings.manage_user_department');
+// }
+// public function adduserdepartment()
+// {
+//     return view('system-settings.add_user_department');
+// }
+// public function edituserdepartment()
+// {
+//     return view('system-settings.edit_user_department');
+// }
+// public function advocatestarget()
+// {
+//     return view('system-settings.advocates_target');
+// }
+// public function addnew()
+// {
+//     return view('system-settings.add_new_entry');
+// }
+// public function editadvocatetarget()
+// {
+//     return view('system-settings.edit_advocate_target');
+// }
+// public function advocatestarget2021()
+// {
+//     return view('system-settings.advocates_target_2021');
+// }
+// public function advocatestarget2022()
+// {
+//     return view('system-settings.advocates_target_2022');
+// }
+// public function advocatestarget2023()
+// {
+//     return view('system-settings.advocates_target_2023');
+// }
+// public function advocatestarget2024()
+// {
+//     return view('system-settings.advocates_target_2024');
+// }
+// public function advocatestarget2025()
+// {
+//     return view('system-settings.advocates_target_2025');
+// }
+// public function advocatestarget2026()
+// {
+//     return view('system-settings.advocates_target_2026');
+// }
    
 
 
