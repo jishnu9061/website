@@ -1,30 +1,16 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container" >
-    <div class="py-5 text-center">
-        @if(Session::has('staffregistered'))
-        <div class="alert alert-dark" role="alert">
-            {{ Session::get('staffregistered')}}
-        </div>
-        @endif
-        @if(Session::has('leavevalidat'))
-        <div class="alert alert-dark" role="alert">
-            {{ Session::get('leavevalidat')}}
-        </div>
-        @endif
-        <div>
-            <!-- <h2>Add Box No</h2> -->
+    
+       
             <div>
-            <div class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Edit Activity</u></b></span></div><br>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous">
+            {{-- heading --}}
+    <h4 id="hdtpa"><b>Edit Activity</b></h4>
+    <br><br>
+          
 
         
-            </div>
-
-        </div>
+       
     </div>
     <div class="row">
 
