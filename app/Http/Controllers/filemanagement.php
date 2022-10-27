@@ -13,10 +13,10 @@ class filemanagement extends Controller
     }
 
 
-    public function view()
+    public function views()
     {
         $file_list=DB::table('cra_open_new_file_details')->get();
-        return view('file_management.file-list',compact('file_list'));
+        return view('file_management.add-new-file',compact('file_list'));
     }
 
     public function edit($id)

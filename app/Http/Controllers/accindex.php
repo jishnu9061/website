@@ -12,14 +12,14 @@ class accindex extends Controller
         return view('Accounts.accindex');
     }
 
+}
 
-   
-     
- 
-    
-
-    
-
+class matters extends Controller
+{
+    public function index()
+    {
+        return view('user_management.matters');
+    }
 
 }
 
