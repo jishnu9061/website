@@ -31,8 +31,8 @@
                             <th class="text-center">File No.</th>
                             <th class="text-center">Delivered To</th>
                             <th class="text-center">Who Distributed</th>
-                            <th class="text-center">Acknowledgement </br>Return By</th>
-                            <th class="text-center">Acknowledgement </br>Given To</th>
+                            <th class="text-center">Acknowledgement <br>Return By</th>
+                            <th class="text-center">Acknowledgement <br>Given To</th>
                             <th class="text-center">Action</th>
                             <th class="text-center"> <input type="checkbox" name="" id=""> </th>
 
