@@ -57,7 +57,7 @@
                                 <td scope="row" class="text-center">{{$list->id}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->issue_date}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1"></td>
-                                <td scope="row" class="text-center" id="medicine_name_1">{{$list->client}}</td>
+                                <td scope="row" class="text-center" id="medicine_name_1">{{$list->customer}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->amount}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1"></td>
                                 <td>

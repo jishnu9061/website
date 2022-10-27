@@ -59,7 +59,7 @@
                             <td scope="row" class="text-center" id="medicine_name_1">{{$list->id}}</td>
                             <td scope="row" class="text-center" id="medicine_name_1">{{$list->followup_date}}</td>
                             <td scope="row" class="text-center" id="medicine_name_1">{{$list->followup_type}}</td>
-                            <td scope="row" class="text-center" id="medicine_name_1">{{$list->client}}</td>
+                            <td scope="row" class="text-center" id="medicine_name_1">{{$list->customer}}</td>
                             <td scope="row" class="text-center" id="medicine_name_1">{{$list->description}}</td>
                             <td scope="row" class="text-center" id="medicine_name_1">{{$list->next_bringup_date}}</td>
                             <td scope="row" class="text-center" id="medicine_name_1">{{$list->alert_period}}</td>

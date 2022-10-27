@@ -66,8 +66,8 @@
     
                             <tr id="data">
                                 <td >{{$registration->id}}</td>
-                                <td>{{$registration->client_name}}</td>
-                                <td >{{$registration->client_address}}</td>
+                                <td>{{$registration->customer_name}}</td>
+                                <td >{{$registration->customer_address}}</td>
                                 <td>{{$registration->mobile_no}}</td>
                                 <td >{{$registration->physical_address}}</td>
                                 <td >{{$registration->registration_date}}</td>

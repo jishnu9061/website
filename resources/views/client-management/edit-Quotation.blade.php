@@ -64,7 +64,7 @@
 
                                 </div>
                                 <select name="client" id="cars">
-                                    <option>{{$edit_quotation->client}}</option>
+                                    <option>{{$edit_quotation->customer}}</option>
                                     <option>client 1</option>
                                      <option>client 2</option>
                                       <option>client 3</option>
