@@ -40,9 +40,9 @@
                                 <th class="text-center">Return<br>Date</th>
                                 <th class="text-center">Status</th>
                                 <th class="text-center">Action </th>
-                                <th class="text-center"><input type="checkbox" id="vehicle1" name="vehicle1"
+                                {{-- <th class="text-center"><input type="checkbox" id="vehicle1" name="vehicle1"
                                         value="Bike">
-                                </th>
+                                </th> --}}
 
 
                             </tr>
@@ -62,10 +62,14 @@
                                 <td scope="row" class="text-center"></td>
                                 <td scope="row" class="text-center"></td>
                                 <td scope="row" class="text-center"></td>
-
-                                <td scope="row" class="text-center"><button class="btn btn-light"
-                                        style="color:blue;">Action</button></td>
-                                <td scope="row" class="text-center"></td>
+                                <td scope="row" class="text-center">
+                                    <select name="" id="">
+                                        <option value=""> <a href="">Action</a> </option>
+                                        <option value=""> <a href=""></a>View</option>
+                                        <option value=""> <a href=""></a>Edit</option>
+                                        <option value=""> <a href=""></a>Delete</option>
+                                    </select>
+                                </td>
                             </tr>
 
 
@@ -73,7 +77,6 @@
                         </tbody>
 
                     </table>
-                    <br>
                 <nav aria-label="Page navigation example">
                                 <ul class="pagination">
                                     <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Previous</a></li>
@@ -135,8 +138,8 @@
                                                             </div>
                                                             <select name="client" id="cars">
                                                             <option>select</option>
-                                                            <option>demo 2</option>
-                                                            <option>demo 3</option>
+                                                            <option>Client 1</option>
+                                                            <option>Client 2</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -151,8 +154,8 @@
                                                             </div>
                                                             <select name="file" id="cars">
                                                             <option>select</option>
-                                                            <option>demo 2</option>
-                                                            <option>demo 3</option>
+                                                            <option>File 1</option>
+                                                            <option>File 2</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -173,8 +176,8 @@
                                                             </div>
                                                             <select name="safe_name" id="cars">
                                                             <option>select</option>
-                                                            <option>demo 2</option>
-                                                            <option>demo 3</option>
+                                                            <option>Safe 1</option>
+                                                            <option>Safe 2</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -205,8 +208,8 @@
                                                             </div>
                                                             <select name="approver" id="cars">
                                                             <option>select</option>
-                                                            <option>demo 2</option>
-                                                            <option>demo 3</option>
+                                                            <option>Person 1</option>
+                                                            <option>Person 2</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -231,13 +234,6 @@
                                     <h2 class="text-center"><b>Documents</b></h2>
 
                                 </div>
-                                  
-
-
-                               >
-                                <br>
-                                <br>
-
                                 <div class="tab-content" id="myTabContent">
                                 <div class="table-responsive">
                                     <div class="tab-pane fade show active" id="home" role="tabpanel"
@@ -289,14 +285,14 @@
                                         <br>
 
 
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <button type="submit" class="btn btn-primary submit_btn"
-                                                        style=" margin-left:0px; width:200px;">New Document</button>
+                                            {{-- <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="mb-1">
+                                                        <button type="" class="btn btn-primary submit_btn"
+                                                            style=" margin-left:0px; width:200px;">New Document</button>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
+                                            </div> --}}
                                     </div>
 
 
@@ -310,7 +306,7 @@
                        </div>
                        <div class="col-sm">
                            <br>
-                           <button type="submit" class="btn btn-primary float:right;" Style="width:60%;">Upload</button>
+                           <button type="submit" class="btn btn-primary float:right;" Style="width:60%;">Save</button>
                            <button type="button" class="btn btn-primary float:right;" data-dismiss="modal">Cancel</button>
                        </div>
                    </div>
