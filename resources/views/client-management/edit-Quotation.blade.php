@@ -1,24 +1,13 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container">
-    <div class="py-5 text-center">
+   
 
-        <div>
-            <!-- <h2 style="text-align:center; ">Edit Quotation</h2>
-            <hr class="mb-4">. -->
-            <div>
-                <div class="btn btn-primary"
-                    style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
-                    <b><u>Edit
-                            Quotation</u></b></span>
-                </div><br>
-                <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                    crossorigin="anonymous"> -->
-
-            </div>
-
-        </div>
+                <div>
+                {{-- heading --}}
+    <h4 id="hdtpa"><b>Edit Quotation</b></h4>
+    <br><br>
+                 
     </div>
     <div class="row">
         <div class="col-md-12 order-md-1">
@@ -198,16 +187,9 @@
                 <br>
                 <!-- <h2 style="text-align:center; text-shadow: 2px 1px;"> Quotation Items</h2> -->
                 <div>
-                    <div class="btn btn-primary"
-                        style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
-                        <b><u>Quotation
-                                Items</u></b></span>
-                    </div><br>
-                    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-                        rel="stylesheet"
-                        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                        crossorigin="anonymous">
-
+                <h4 id="hdtpa"><b>Quotation
+                                Items </b></h4>
+                    
                 </div>
                 <br>
                 <div class="row">

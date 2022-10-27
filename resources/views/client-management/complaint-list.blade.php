@@ -66,16 +66,16 @@
                 </div>
                 <div class="modal fade" id="myModal">
                     <div class="modal-dialog modal-lg">
-                        <div class="modal-content" style="background-color:#d6ba8a">
+                        <div class="modal-content" >
 
                             <!-- Modal Header -->
-                            <div class="modal-header" style="background-color:#d6ba8a">
+                            <div class="modal-header" >
                                 <h2 class="text-center"><b>Add New Complaint</b></h2>
 
                             </div>
 
                             <!-- Modal body -->
-                            <div class="modal-body" style="background-color:white">
+                            <div class="modal-body" >
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-12">
