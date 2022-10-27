@@ -19,9 +19,9 @@
         </div>
         <br>
 
-        <div id="mydatatable_filter" class="dataTables_filter">
+        <!-- <div id="mydatatable_filter" class="dataTables_filter">
             <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
-        </div>
+        </div> -->
         <button class="btn btn-primary add-btn" style="width:20%;" data-toggle="modal" data-target="#myModal">Add
             Quotation</button></a>
 

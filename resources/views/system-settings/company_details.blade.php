@@ -32,6 +32,7 @@
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                       <br>
+                      
 <!---------------------------------------------- MODAL ------------------------------------------------------------------------->
 <!---------------------------------------------- MODAL ------------------------------------------------------------------------->
            
@@ -113,7 +114,7 @@
                             <label >Company Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="name" id="name" value="CRA">
+                                <input type="text" class="form-control" name="name" id="name" value="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -125,7 +126,7 @@
                             <label>Company Address</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="address" id="address" value="Stima Investment Plaza 1,3rd Floor,Mushembi Rd, Parklands">
+                                <input type="text" class="form-control" name="address" id="address" value="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -139,7 +140,7 @@
                             <label for="username">Town/City</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="city" id="city" value="Nairobi, Kenya">
+                                <input type="text" class="form-control" name="city" id="city" value="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>

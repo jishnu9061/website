@@ -20,7 +20,7 @@
             <button type="button" class="btn btn-primary complaint_btn" data-toggle="modal" data-target="#myModal"> Add
                 Follow
                 Up</button></a>
-        </div>
+        </div><br>
 
 
        
