@@ -1,37 +1,16 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container">
-    <div class="py-5 text-center">
-
-    </div>
-    <div style="height: 50px;"></div>
-    <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-    <script type="text/javascript">
-    $(document).on('input', '#price', function() {
-        $('#percent').prop('readonly', true);
-
-    });
-    $(document).on('input', '#percent', function() {
-        $('#price').prop('readonly', true);
-
-    });
-    </script>
-    <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-    <div>
-        <!-- <h2 style="text-align:center;">Edit Customer Detials</h2>
-        <hr class="mb-4">. -->
-        <div>
-            <div class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
-                <b><u>Edit Customer Detials</u></b></span>
-            </div><br>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous">
+   <br>
+            <div>
+             
+                {{-- heading --}}
+    <h4 id="hdtpa"><b>Edit Customer Detials</b></h4>
+    <br><br>
 
         </div>
-        <br>
-    </div>
+        
+  
     <div class="row">
         <div class="col-md-12 order-md-1">
             <form method="post" action="{{url('update-registration')}}" id="form">
