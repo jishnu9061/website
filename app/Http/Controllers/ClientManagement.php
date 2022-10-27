@@ -747,7 +747,7 @@ class ClientManagement extends Controller
         $id            = $Request['id'];
         $document_type = $Request['document'];
         $issue_date = $Request['issue'];
-        $Client = $Request['client'];
+        $customer = $Request['client'];
         $client_ref_no = $Request['ref'];
         $currency = $Request['currency'];
         $exchange_rate = $Request['rate'];
@@ -765,7 +765,7 @@ class ClientManagement extends Controller
         DB::table('cra_customer_quotation')->where('id',$id)->update([
             'document_type' => $document_type ,
             'issue_date' => $issue_date,
-            'Client' =>   $Client,
+            'customer' =>   $customer,
             'client_ref_no' => $client_ref_no,
             'currency' =>$currency,
             'exchange_rate' => $exchange_rate,
@@ -851,7 +851,7 @@ class ClientManagement extends Controller
         $physical_address = $Request['paddress'];
 
         DB::table('cra_customer_registration')->where('id',$id)->update([
-            'client_name' =>  $client_name ,
+            'customer_name' =>  $client_name ,
             'postal_code' =>   $postal_code ,
             'town' => $town,
             'country' =>$country,
@@ -860,7 +860,7 @@ class ClientManagement extends Controller
             'mobile_no' =>   $mobile_no,
             'web_site' =>   $web_site,
             'registration_date' =>   $registration_date,
-            'client_address' => $client_address,
+            'customer_address' => $client_address,
             'physical_address' => $physical_address,
         ]);
 

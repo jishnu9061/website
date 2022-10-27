@@ -87,6 +87,10 @@
                                 </div>
                                 <select name="currency" id="cars">
                                     <option >{{$edit_quotation->currency}}</option>
+                                    <option>currency 1</option>
+                                                                        <option>currency 2</option>
+                                                                        <option>currency 3</option>
+                                                                        <option>currency 4</option>
                                 </select>
                             </div>
                         </div>
@@ -115,6 +119,10 @@
                                 </div>
                                 <select name="approver" id="cars">
                                     <option >{{$edit_quotation->approver}}</option>
+                                    <option>Approver 1</option>
+                                                                        <option>Approver 2</option>
+                                                                        <option>Approver 3</option>
+                                                                        <option>Approver 4</option>
                                 </select>
                             </div>
                         </div>
@@ -127,6 +135,10 @@
                                 </div>
                                 <select name="account" id="cars">
                                     <option>{{$edit_quotation->bank_account}}</option>
+                                    <option>43556737</option>
+                                                                        <option>44556737</option>
+                                                                        <option>335567373</option>
+                                                                        <option>667567374</option>
                                 </select>
                             </div>
                         </div>
@@ -190,6 +202,10 @@
                                 </div>
                                 <select name="type" id="cars">
                                     <option>{{$edit_quotation->type}}</option>
+                                    <option>Type 1</option>
+                                                                        <option>Type 2</option>
+                                                                        <option>Type 3</option>
+                                                                        <option>Type 4</option>
                                    
                                 </select>
                             </div>
@@ -231,6 +247,10 @@
                                 </div>
                                 <select name="vat" id="cars">
                                     <option>{{$edit_quotation->vat}}</option>
+                                    <option>V.A.T 1</option>
+                                                                        <option>V.A.T 2</option>
+                                                                        <option>V.A.T 3</option>
+                                                                        <option>V.A.T 4</option>
                                    
                                 </select>
                             </div>
