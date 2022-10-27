@@ -45,7 +45,7 @@
 
                                 </div>
                                 <select name="client" id="cars">
-                                    <option>{{$edit_follow->client}}</option>
+                                    <option>{{$edit_follow->customer}}</option>
                                 </select>
                             </div>
                         </div>
