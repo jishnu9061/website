@@ -64,7 +64,7 @@
     <td>{{$company->company_name}}</td>
     <td>{{$company->address}}</td>
     <td>{{$company->town_city}}</td>
-    <td>{{$company->Add_Logo}}</td>
+    <td>{{$company->logo}}</td>
    
     <!-- <td>CRA</td>
     <td>Stima Investment Plaza 1,3rd Floor,Mushembi Rd, Parklands </td>
@@ -102,7 +102,7 @@
 @csrf
 <div id="upload_button">
     <label>
-      <input type="file" name="image" ngf-select ng-model="new_files" ng-change="fs.uploadFiles(new_files)" multiple>
+      <input type="file" name="logo" ngf-select ng-model="new_files" ng-change="fs.uploadFiles(new_files)" multiple>
       <span class="btn btn-primary"> <span class="fa fa-plus"></span>&nbsp;&nbsp;ADD LOGO</span>
     </label>
   </div>

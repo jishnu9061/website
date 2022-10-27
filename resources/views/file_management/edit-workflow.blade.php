@@ -24,9 +24,7 @@
             <div>
             <div class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Edit Work Flow</u></b></span></div><br>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous">
+         
 
         
             </div>
@@ -96,8 +94,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <textarea class="form-control" id="edit_medicine_details1" name="flow_comments" value="{{$edit_flow->Workflow_Comments}}"
-                                    rows="3" placeholder=""></textarea>
+                                <textarea class="form-control" id="edit_medicine_details1" name="flow_comments" value=""
+                                    rows="3" placeholder="">{{$edit_flow->Workflow_Comments}}</textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
                                 </div>

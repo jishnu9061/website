@@ -1,5 +1,13 @@
 @extends('layouts.hmsmain')
 @section('content')
+<meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+   
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 <div class="container">
     <div class="py-5 text-center">
         @if(Session::has('staffregistered'))
@@ -65,9 +73,12 @@
 
                                 </div>
                                 <select name="client" id="cars">
-                                <option>select</option>
-                                    <option>demo 1</option>
-                                    <option>demo 2</option>
+                                <option>---select---</option>
+                                    <option>client 1</option>
+                                    <option>client 2</option>
+                                    <option>client 3</option>
+                                    <option>client 4</option>
+
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -83,9 +94,11 @@
 
                                 </div>
                                 <select name="file" id="cars">
-                                <option>select</option>
-                                    <option>demo 1</option>
-                                    <option>demo 2</option>
+                                <option>---select---</option>
+                                    <option>File 1</option>
+                                    <option>File 2</option>
+                                    <option>File 3</option>
+                                    <option>File 4</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -104,9 +117,11 @@
 
                                 </div>
                                 <select name="registered_by" id="cars">
-                                    <option>select</option>
-                                    <option>demo 1</option>
-                                    <option>demo 2</option>
+                                    <option>---select---</option>
+                                    <option>registered 1</option>
+                                    <option>registered 2</option>
+                                    <option>registered 3</option>
+                                    <option>registered 4</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -122,9 +137,11 @@
 
                                 </div>
                                 <select name="responsible" id="cars">
-                                <option>select</option>
-                                    <option>demo 1</option>
-                                    <option>demo 2</option>
+                                <option>---select---</option>
+                                    <option>Advocate 1</option>
+                                    <option>Advocate 2</option>
+                                    <option>Advocate 3</option>
+                                    <option>Advocate 4</option>
                                 </select>
                             </div>
                         </div>
@@ -187,7 +204,7 @@
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">View Report</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
                         </div>
                     </div>
                 </div>

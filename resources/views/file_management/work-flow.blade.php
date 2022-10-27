@@ -15,27 +15,17 @@
         {{-- heading --}}
     <h4 id="hdtpa"><b>Workflow Management</b></h4>
     <br>
+</div>
   
- 
- 
-         
-       
-            </div>
-        <br>
-
-        <div id="mydatatable_filter" class="dataTables_filter">
-            <label><b>Search:</b><input type="search" class="box" placeholder="search"
-                    aria-controls="mydatatable"></label>
-        </div>
-        <!-- <a href="{{url('new-workflow')}}"><button class="btn btn-primary add-btn"
+ <!-- <a href="{{url('new-workflow')}}"><button class="btn btn-primary add-btn"
                 style="width: 15%; margin-bottom:2%;">Add Workflow</button></a> -->
 
                 {{-- <a href="{{('new-workflow')}}"><button class="btn btn-primary">Add Workflow</button></a> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                 Add Workflow</button>
-
+             
         <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">   <br>
             <div class="table-responsive">
                 <table class="table table-bordered" id="new-item">
                     <thead>
@@ -49,14 +39,14 @@
                             <th class="text-center">Duration(days)</th>
                             <th class="text-center">Created By</th>
                            
-                            <th class="text-center"> <input type="checkbox" name="" id=""> </th>
+                     
                             <th class="text-center">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($flow as $list)
                         <tr id="data">
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$list->id}}</td>
                             <td scope="row" class="text-center">{{$list->Date_Created}}</td>
                             <td scope="row" class="text-center">{{$list->Workflow_Name}}</td>
                             <td scope="row" class="text-center">{{$list->Workflow_Comments}}</td>
@@ -64,9 +54,8 @@
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center">{{$list->Duration}}</td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></i>
-                            <input type="checkbox" name="" id="">
-                            </td>
+                         
+                            
                             <td scope="row" class="text-center">
                             <button style="background-color:#FFFBF4;"class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                Action
@@ -195,7 +184,7 @@
                        </div>
                        <div class="col-sm">
                            <br>
-                           <button type="submit" class="btn btn-primary float:right;" Style="width:60%;">Save Workflow</button>
+                           <button type="submit" class="btn btn-primary float:right;" Style="width:60%;">Save </button>
                            <button type="button" class="btn btn-primary float:right;" data-dismiss="modal">Cancel</button>
                        </div>
                    </div>
