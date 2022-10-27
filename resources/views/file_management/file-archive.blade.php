@@ -6,7 +6,7 @@
         href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 
     {{-- <div class="spacer" style="height:40px;margin-top: 30px;"> --}}
@@ -21,11 +21,15 @@
     <h4 id="hdtpa"><b>File Archive</b></h4>
     <br>
   
-<!--  
+ 
     <div id="mydatatable_filter" class="dataTables_filter">
                     <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
-
-        </div> -->
+         
+<!--         
+        <div id="mydatatable_filter" class="dataTables_filter">
+            <label><b>Search:</b><input type="search" class="box" placeholder="search"
+                    aria-controls="mydatatable"></label> -->
+        </div>
      
                 {{-- <a href="{{('add-box-no')}}"><button class="btn btn-primary">Add Box No</button></a> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Box No</button>
@@ -33,7 +37,6 @@
 
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            <br>
             <div class="table-responsive">
                 <table class="table table-bordered" id="new-item">
                     <thead>

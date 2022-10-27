@@ -48,11 +48,9 @@
 
                                 </div>
                                 <select name="client" id="cars">
-                                <option>---select---</option>
-                                    <option>client 1</option>
-                                    <option>client 2</option>
-                                    <option>client 3</option>
-                                    <option>client 4</option>
+                                    <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
@@ -72,11 +70,9 @@
 
                                 </div>
                                 <select name="file" id="cars">
-                                <option>---select---</option>
-                                <option>File 1</option>
-                                    <option>File 2</option>
-                                    <option>File 3</option>
-                                    <option>File 4</option>
+                                <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
                                 </select><br>
                             </div>
                         </div>
@@ -118,18 +114,19 @@
                 <br>
 
                 <div class="row">
-                        <div class="col-sm">
+                    <div class="col-sm">
 
-                        </div>
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-                            <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Search</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
-                        </div>
                     </div>
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+                        <br>
+                        <button type="submit" class="btn btn-primary"  Style="width:50%; margin-right: -20px;">Search</button>
+                      
+
+                    </div>
+                </div>
 
 
 

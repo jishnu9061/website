@@ -25,39 +25,134 @@
         {{-- <a href="{{('')}}"><button class="btn btn-primary">Add Template</button></a> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Template</button>
 
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><br>
-                
-
-<div class="table-responsive">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <p style="margin-top:2%;">Total Results:</p>
+                <div class="table-responsive">
                 <table class="table table-bordered" id="new-item">
                     <thead>
                         <tr>
                             <th class="text-center">No</th>
                             <th class="text-center">Template Category</th>
                             <th class="text-center">Status</th>
-                            <th class="text-center">Action</th>
-                           
+                            <th class="text-center">Edit</th>
+                            <th class="text-center"><input type="radio"></th>
+
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr id="data">
-                        
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td  scope="row"class="text-center">
-                        <a href="{{url('edit_template')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                        <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
-                           </td>
-                        </tr>
-                    </tbody>
+
                 </table>
 
+                <p>Business Formation:</p>
+                <table class="table table-bordered" id="new-item">
+                    <tbody>
+                        <tr id="data">
+                            <td scope="row" class="text-center">1</td>
+
+                            <td scope="row" class="text-center">Employment Agent</td>
+                            <td scope="row" class="text-center">Active</td>
+                            <td scope="row" class="text-center">Edit</td>
+                            <td scope="row" class="text-center"><input type="radio"></td>
+
+                    </tbody>
+                </table>
+                <p>Business Operation:</p>
+                <table class="table table-bordered" id="new-item">
+                    <tbody>
+                        <tr id="data">
+                            <td scope="row" class="text-center">1</td>
+
+                            <td scope="row" class="text-center">Employment Agent</td>
+                            <td scope="row" class="text-center">Active</td>
+                            <td scope="row" class="text-center">Edit</td>
+                            <td scope="row" class="text-center"><input type="radio"></td>
 
 
+                    </tbody>
+                </table>
+                <p>Business Property:</p>
+                <table class="table table-bordered" id="new-item">
+                    <tbody>
+                        <tr id="data">
+                            <td scope="row" class="text-center">1</td>
+
+                            <td scope="row" class="text-center">Employment Agent</td>
+                            <td scope="row" class="text-center">Active</td>
+                            <td scope="row" class="text-center">Edit</td>
+                            <td scope="row" class="text-center"><input type="radio"></td>
 
 
-                
+                    </tbody>
+                </table>
+                <p>Employment:</p>
+                <table class="table table-bordered" id="new-item">
+                    <tbody>
+                        <tr id="data">
+                            <td scope="row" class="text-center">1</td>
+
+                            <td scope="row" class="text-center">Employment Agent</td>
+                            <td scope="row" class="text-center">Active</td>
+                            <td scope="row" class="text-center">Edit</td>
+                            <td scope="row" class="text-center"><input type="radio"></td>
+
+
+                    </tbody>
+                </table>
+                <p>Financial:</p>
+                <table class="table table-bordered" id="new-item">
+                    <tbody>
+                        <tr id="data">
+                            <td scope="row" class="text-center">1</td>
+
+                            <td scope="row" class="text-center">Employment Agent</td>
+                            <td scope="row" class="text-center">Active</td>
+                            <td scope="row" class="text-center">Edit</td>
+                            <td scope="row" class="text-center"><input type="radio"></td>
+
+
+                    </tbody>
+                </table>
+                <p>Personal & Family:</p>
+                <table class="table table-bordered" id="new-item">
+                    <tbody>
+                        <tr id="data">
+                            <td scope="row" class="text-center">1</td>
+
+                            <td scope="row" class="text-center">Employment Agent</td>
+                            <td scope="row" class="text-center">Active</td>
+                            <td scope="row" class="text-center">Edit</td>
+                            <td scope="row" class="text-center"><input type="radio"></td>
+
+
+                    </tbody>
+                </table>
+                <p>Real Estate:</p>
+                <table class="table table-bordered" id="new-item">
+                    <tbody>
+                        <tr id="data">
+                            <td scope="row" class="text-center">1</td>
+
+                            <td scope="row" class="text-center">Employment Agent</td>
+                            <td scope="row" class="text-center">Active</td>
+                            <td scope="row" class="text-center">Edit</td>
+                            <td scope="row" class="text-center"><input type="radio"></td>
+
+
+                    </tbody>
+                </table>
+                <p>Will& Estate Planning:</p>
+                <table class="table table-bordered" id="new-item">
+                    <tbody>
+                        <tr id="data">
+                            <td scope="row" class="text-center">1</td>
+
+                            <td scope="row" class="text-center">Employment Agent</td>
+                            <td scope="row" class="text-center">Active</td>
+                            <td scope="row" class="text-center">Edit</td>
+                            <td scope="row" class="text-center"><input type="radio"></td>
+
+
+                    </tbody>
+                </table>
                   <!-- The Modal -->
                   <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
@@ -88,11 +183,9 @@
 
                                 </div>
                                 <select name="doc_type" id="cars">
-                                <option>---select---</option>
-                                                            <option>doc_type 2</option>
-                                                            <option>doc_type 3</option>
-                                                            <option>doc_type 1</option>
-                                                            <option>doc_type 4</option>
+                                <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -145,7 +238,7 @@
                     <div class="col-sm">
                         <br>
                         <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
-                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
                     </div>
                 </div>
         </div>

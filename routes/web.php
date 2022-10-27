@@ -1144,8 +1144,6 @@ Route::any('edit-box-no',"filemanagement@editboxno")->name('edit-box-no');
 //document templates
 Route::any('template-category',"filemanagement@template")->name('template-category');
 Route::any('add-template',"filemanagement@addtemplate")->name('add-template');
-Route::any('edit_template',"filemanagement@edittemplate")->name('edit_template');
-
 //document templates
 
 //file progress

@@ -152,10 +152,6 @@ class filemanagement extends Controller
     {
         return view('file_management.add-template');
     }
-    public function edittemplate()
-    {
-        return view('file_management.edit_template');
-    }
 
 
     //document temblates
@@ -829,7 +825,6 @@ class filemanagement extends Controller
     }
  
 
-
      public function addevent(Request $request)
      {
         
@@ -878,8 +873,6 @@ class filemanagement extends Controller
         return redirect('/diary-management');
         
      }
-     
-
 
      public function meetingrooms()
      {
