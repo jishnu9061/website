@@ -24,6 +24,7 @@ table{
           
             </style>
    </head>
+
    <body>
     </form>
     <!-- <h2 >Court List</h2><br>
@@ -32,15 +33,16 @@ table{
        
         <hr class="mb-4">. -->
         <div>
-            <div class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Useful Link</u></b></span></div><br><br>
-         
+        {{-- heading --}}
+    <h4 id="hdtpa"><b>Useful Link</b></h4>
+    <br><br>
+            
 
         </div>
         
     <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Useful Links</h3>
     <!-- <div class="container"> -->
-      <br>
+     
     <div class="table-responsive"> 
       <table class="table table-bordered" id="new-item">
                   <thead>

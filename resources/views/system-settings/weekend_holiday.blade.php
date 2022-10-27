@@ -3,12 +3,15 @@
 
 
 
+
   <div>
-    <button class="btn btn-primary"
-    style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Weekend and Holidays</u></b></button>
-  
+    <div>
+    {{-- heading --}}
+    <h4 id="hdtpa"><b>Weekend and Holidays</b></h4>
+    <br><br>
+   
           </div>
-          <br>
+          
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
            
   {{-- <a href="{{('add_new_holiday')}}"><button class="btn btn-primary">Add New Holiday / Weekend Date</button></a> --}}
@@ -49,16 +52,16 @@
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
-                                <div class="modal-content" style="background-color:#d6ba8a">
+                                <div class="modal-content">
 
                                     <!-- Modal Header -->
-                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                    <div class="modal-header">
                                         <h2 class="text-centre"><b>Add New Holiday / Weekend Date</b></h2>
 
                                     </div>
 
                                     <!-- Modal body -->
-                                    <div class="modal-body" style="background-color:white">
+                                    <div class="modal-body">
                                         <div class="container">
                                             <form method="post" action="{{ url('add_new_holiday') }}"
                                                 enctype="multipart/form-data"> 

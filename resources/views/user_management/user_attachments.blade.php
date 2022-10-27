@@ -3,15 +3,14 @@
 
 <html>
 
-    <head>
+<head>
 
-      <!-- <link rel="stylesheet" href="assets/css/cstyle.css">  -->
       <style>
        .attachments
       {
         border: 2px solid rgb(13, 1, 56);
         margin: 20px;
-        padding: 20px;
+        padding: 25px;
 
       }
    
@@ -20,14 +19,16 @@
 </head>
 <body>
 <div>
-            <button class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Attachments</u></b></span></button><br>
+            <div>
+                <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Attachments</u></b></span></button><br>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous">
+                crossorigin="anonymous"> -->
+                {{-- heading --}}
+    <h4 id="hdtpa"><b>Attachments</b></h4>
+    <br><br>
      </div>
-            <br>
-            <br>
+          
     <form> 
       <div class="attachments">
     <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Documents to Upload</h3><br>

@@ -1,24 +1,13 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container">
-    <div class="py-5 text-center">
+   
 
-        <div>
-            <!-- <h2 style="text-align:center; ">Edit Quotation</h2>
-            <hr class="mb-4">. -->
-            <div>
-                <div class="btn btn-primary"
-                    style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
-                    <b><u>Edit
-                            Quotation</u></b></span>
-                </div><br>
-                <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                    crossorigin="anonymous"> -->
-
-            </div>
-
-        </div>
+                <div>
+                {{-- heading --}}
+    <h4 id="hdtpa"><b>Edit Quotation</b></h4>
+    <br><br>
+                 
     </div>
     <div class="row">
         <div class="col-md-12 order-md-1">
@@ -64,7 +53,7 @@
 
                                 </div>
                                 <select name="client" id="cars">
-                                    <option>{{$edit_quotation->client}}</option>
+                                    <option>{{$edit_quotation->customer}}</option>
                                     <option>client 1</option>
                                      <option>client 2</option>
                                       <option>client 3</option>
@@ -98,6 +87,10 @@
                                 </div>
                                 <select name="currency" id="cars">
                                     <option >{{$edit_quotation->currency}}</option>
+                                    <option>currency 1</option>
+                                                                        <option>currency 2</option>
+                                                                        <option>currency 3</option>
+                                                                        <option>currency 4</option>
                                 </select>
                             </div>
                         </div>
@@ -126,6 +119,10 @@
                                 </div>
                                 <select name="approver" id="cars">
                                     <option >{{$edit_quotation->approver}}</option>
+                                    <option>Approver 1</option>
+                                                                        <option>Approver 2</option>
+                                                                        <option>Approver 3</option>
+                                                                        <option>Approver 4</option>
                                 </select>
                             </div>
                         </div>
@@ -138,6 +135,10 @@
                                 </div>
                                 <select name="account" id="cars">
                                     <option>{{$edit_quotation->bank_account}}</option>
+                                    <option>43556737</option>
+                                                                        <option>44556737</option>
+                                                                        <option>335567373</option>
+                                                                        <option>667567374</option>
                                 </select>
                             </div>
                         </div>
@@ -186,16 +187,9 @@
                 <br>
                 <!-- <h2 style="text-align:center; text-shadow: 2px 1px;"> Quotation Items</h2> -->
                 <div>
-                    <div class="btn btn-primary"
-                        style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
-                        <b><u>Quotation
-                                Items</u></b></span>
-                    </div><br>
-                    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-                        rel="stylesheet"
-                        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                        crossorigin="anonymous">
-
+                <h4 id="hdtpa"><b>Quotation
+                                Items </b></h4>
+                    
                 </div>
                 <br>
                 <div class="row">
@@ -208,6 +202,10 @@
                                 </div>
                                 <select name="type" id="cars">
                                     <option>{{$edit_quotation->type}}</option>
+                                    <option>Type 1</option>
+                                                                        <option>Type 2</option>
+                                                                        <option>Type 3</option>
+                                                                        <option>Type 4</option>
                                    
                                 </select>
                             </div>
@@ -249,6 +247,10 @@
                                 </div>
                                 <select name="vat" id="cars">
                                     <option>{{$edit_quotation->vat}}</option>
+                                    <option>V.A.T 1</option>
+                                                                        <option>V.A.T 2</option>
+                                                                        <option>V.A.T 3</option>
+                                                                        <option>V.A.T 4</option>
                                    
                                 </select>
                             </div>

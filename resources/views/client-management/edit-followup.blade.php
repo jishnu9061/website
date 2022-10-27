@@ -3,20 +3,16 @@
 <div class="container">
     <div class="py-5 text-center">
 
-        <div>
-            <!-- <h2 style="text-align:center; ">Edit Follow Up</h2> -->
-            <div>
-                <div class="btn btn-primary"
-                    style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
-                    <b><u>Edit Follow Up</u></b></span>
-                </div><br>
-                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                    crossorigin="anonymous">
+     
+              
+                    {{-- heading --}}
+    <h4 id="hdtpa"><b>Edit Follow Up</b></h4>
+    <br><br>
+                
+                
+            
 
-            </div>
-
-        </div>
+        
     </div>
     <div class="row">
         <div class="col-md-12 order-md-1">
@@ -45,7 +41,12 @@
 
                                 </div>
                                 <select name="client" id="cars">
-                                    <option>{{$edit_follow->client}}</option>
+                                    <option>{{$edit_follow->customer}}</option>
+                                    
+                                                                    <option>client-1</option>
+                                                                    <option>client-2</option>
+                                                                    <option>client-3</option>
+                                                                    <option>client-4</option>
                                 </select>
                             </div>
                         </div>
@@ -59,6 +60,10 @@
                                 </div>
                                 <select name="type" id="cars">
                                     <option>{{$edit_follow->followup_type}}</option>
+                                    <option>type-1</option>
+                                                                    <option>type-2</option>
+                                                                    <option>type-3</option>
+                                                                    <option>type-4</option>
                                 </select>
                             </div>
                         </div>
@@ -75,6 +80,10 @@
                                 </div>
                                 <select name="responsible" id="cars">
                                     <option>{{$edit_follow->staff_responsible}}</option>
+                                    <option>staff-1</option>
+                                                                    <option>staff-2</option>
+                                                                    <option>staff-3</option>
+                                                                    <option>staff-4</option>
                                 </select>
                             </div>
                         </div>
@@ -88,6 +97,10 @@
                                 </div>
                                 <select name="country" id="cars">
                                     <option>{{$edit_follow->send_remainder_to}}</option>
+                                    <option>remainder-1</option>
+                                                                    <option>remainder-2</option>
+                                                                    <option>remainder-3</option>
+                                                                    <option>remainder-4</option>
                                 </select>
                             </div>
                         </div>

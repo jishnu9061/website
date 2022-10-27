@@ -2,14 +2,13 @@
 @section('content')
 
 
-
-
-<body>
 <div>
-     <button class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Hourly Rates</u></b></span></button><br>
+{{-- heading --}}
+    <h4 id="hdtpa"><b>Hourly Rates</b></h4>
+    <br><br>
+     
    </div>
-            <br>
+            
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
            
 {{-- <a href="{{('add_hourly_rates')}}"><button class="btn btn-primary">Add User Hourly Rates</button></a> --}}
@@ -55,16 +54,16 @@
       <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
-                                <div class="modal-content" style="background-color:#d6ba8a">
+                                <div class="modal-content">
 
                                     <!-- Modal Header -->
-                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                    <div class="modal-header">
                                         <h2 class="text-centre"><b>Add User Hourly Rate</b></h2>
 
                                     </div>
 
                                     <!-- Modal body -->
-                                    <div class="modal-body" style="background-color:white">
+                                    <div class="modal-body">
                                         <div class="container">
                                             <form method="post" action="{{ url('add_hourly_rates') }}"
                                                 enctype="multipart/form-data"> 

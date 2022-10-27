@@ -1,12 +1,15 @@
 @extends('layouts.hmsmain')
 @section('content')
 
-<h2 style="text-align:center; text-shadow: 2px 1px;"></h2>
+
+
   <div>
-     <button class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Transport Zones</u></b></span></button><br>
+  {{-- heading --}}
+    <h4 id="hdtpa"><b>Transport Zones</b></h4>
+    <br><br>
+    
    </div>
-            <br>
+           
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
            
 {{-- <a href="{{('add_transport_zone')}}"><button class="btn btn-primary">Add Transport Zone</button></a> --}}
@@ -48,16 +51,16 @@
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
-                                <div class="modal-content" style="background-color:#d6ba8a">
+                                <div class="modal-content" >
 
                                     <!-- Modal Header -->
-                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                    <div class="modal-header">
                                         <h2 class="text-centre"><b>Add Transport Zone</b></h2>
 
                                     </div>
 
                                     <!-- Modal body -->
-                                    <div class="modal-body" style="background-color:white">
+                                    <div class="modal-body">
                                         <div class="container">
                                             <form method="post" action="{{ url('add_transport_zone') }}"
                                                 enctype="multipart/form-data"> 

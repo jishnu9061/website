@@ -2,14 +2,19 @@
 @extends('layouts.hmsmain')
 @section('content')
 
-    
-
-<div>
-            <button class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>File Types</u></b></span></button><br>
+<html>
+<div class="container">
+   <head>
+  
+   </head>
+   <body>
+<div>{{-- heading --}}
+    <h4 id="hdtpa"><b>File Types</b></h4>
+    <br><br>
+           
             
      </div>
-            <br>
+            
           
             <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
            
@@ -58,16 +63,16 @@
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
-                                <div class="modal-content" style="background-color:#d6ba8a">
+                                <div class="modal-content">
 
                                     <!-- Modal Header -->
-                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                    <div class="modal-header" >
                                         <h2 class="text-centre"><b>Add New File Type</b></h2>
 
                                     </div>
 
                                     <!-- Modal body -->
-                                    <div class="modal-body" style="background-color:white">
+                                    <div class="modal-body" >
                                         <div class="container">
                                             <form method="post" action="{{ url('add_file_types') }}"
                                                 enctype="multipart/form-data"> 

@@ -4,21 +4,22 @@
 <html>
 
 
-
-<div>
-            <button class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Comments</u></b></span></button><br>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous">
+                {{-- heading --}}
+    <h4 id="hdtpa"><b>Comments</b></h4>
+    <br><br>
+               
      </div>
-            <br>
-            <br>
+            
     <form> 
       
         <input type="text" class="form-control" id="" style="border: 1px solid rgb(13, 1, 56);" placeholder="Write your comments here...."><br><br>
    
-    <a href="something"><input type="submit"value="Post" name="submit"style="background-color:#ffffff;color: #1D1D50; "> </a>
+  
+                                                            <div class="col-sm">
+                                                                <br>
+                                                                <button type="submit" class="btn btn-primary float:right;"Style="width:10%;">Post</button>
+                                                                <button type="button" class="btn btn-primary float:left"Style="width:10%;"data-dismiss="modal">Cancel</button>
+                                                            </div>
      
       </form>
    </body>

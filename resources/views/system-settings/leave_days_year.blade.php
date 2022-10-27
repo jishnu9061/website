@@ -1,17 +1,13 @@
 @extends('layouts.hmsmain')
 @section('content')
 
-
-{{-- <div class="spacer" style="height:40px;margin-top: 30px;"> --}}
-
-
-
-
 <body>
-<h2 style="text-align:center; text-shadow: 2px 1px;"></h2>
+
   <div>
-     <button class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Leave Days per Year</u></b></span></button><br>
+  {{-- heading --}}
+    <h4 id="hdtpa"><b>Leave Days per Year</b></h4>
+    <br><br>
+     
    </div>
             <br>
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
@@ -66,16 +62,16 @@
  <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
  <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
-                                <div class="modal-content" style="background-color:#d6ba8a">
+                                <div class="modal-content" >
 
                                     <!-- Modal Header -->
-                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                    <div class="modal-header" >
                                         <h2 class="text-centre"><b>Add Leave Days</b></h2>
 
                                     </div>
 
                                     <!-- Modal body -->
-                                    <div class="modal-body" style="background-color:white">
+                                    <div class="modal-body">
                                         <div class="container">
                                             <form method="post" action="{{ url('add_leave_days') }}"
                                                 enctype="multipart/form-data"> 

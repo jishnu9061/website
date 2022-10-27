@@ -7,18 +7,18 @@
 
 
     </div>
-    <div class="container">
-        <!-- <h3 class="text-center" style="color: #070344;"><b>File List</b></h3> -->
-        <div>
-            <div class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Partner Revenue Share</u></b></span></div><br>
-            <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous"> -->
+   
 
-        
-            </div>
-            <br>
+   
+<body>
+
+  <div>
+  {{-- heading --}}
+    <h4 id="hdtpa"><b>Partner Revenue Share</b></h4>
+    <br><br>
+     
+   </div>
+      
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
            
 {{-- <a href="{{('add_partner_revenue')}}"><button class="btn btn-primary">Add New Entry</button></a> --}}
@@ -57,16 +57,16 @@
  <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
  <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
-                                <div class="modal-content" style="background-color:#d6ba8a">
+                                <div class="modal-content" >
 
                                     <!-- Modal Header -->
-                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                    <div class="modal-header" >
                                         <h2 class="text-centre"><b>Add New Entry</b></h2>
 
                                     </div>
 
                                     <!-- Modal body -->
-                                    <div class="modal-body" style="background-color:white">
+                                    <div class="modal-body" >
                                         <div class="container">
                                             <form method="post" action="{{ url('add_partner_revenue') }}"
                                                 enctype="multipart/form-data"> 

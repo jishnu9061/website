@@ -23,24 +23,26 @@ table{
 }            */
  </style>
    </head>
+
+  
+
    <body>
-    <div>
+   
    <div class="container">
     <!-- <h2 >Court List</h2><br>
     <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
     <!-- <h2 style="text-align:center; text-shadow: 2px 1px;">Menu Access Configuration</h2>
  <hr class="mb-4">. -->
  <div>
-            <div class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Menu Access Configuration</u></b></span></div><br>
-        
-
+ {{-- heading --}}
+    <h4 id="hdtpa"><b>Menu Access Configuration</b></h4>
+    <br><br>
+            
         
             </div>
-            <br>
-
+           
 <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">WakiliCMS Menu Configuration</h3>
-<br>
+
 <form>
 <div class="table-responsive"> 
            

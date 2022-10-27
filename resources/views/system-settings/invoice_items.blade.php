@@ -7,13 +7,14 @@
   <br><br>
 
             <br>
+
           <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
            
 {{-- <a href="{{('add_invoice_item')}}"><button class="btn btn-primary">Add New Item</button></a> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New Item</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      <br>
+                     
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
         <!-- <a href="{{('add_invoice_item')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add New Item</button></a><br> -->
             <br>
@@ -58,16 +59,16 @@
          <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
-                                <div class="modal-content" style="background-color:#d6ba8a">
+                                <div class="modal-content" >
 
                                     <!-- Modal Header -->
-                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                    <div class="modal-header" >
                                         <h2 class="text-centre"><b>Add New Item</b></h2>
 
                                     </div>
 
                                     <!-- Modal body -->
-                                    <div class="modal-body" style="background-color:white">
+                                    <div class="modal-body" >
                                         <div class="container">
                                             <form method="post" action="{{ url('add_invoice_item') }}"
                                                 enctype="multipart/form-data"> 
@@ -161,7 +162,7 @@
                                 <option>9500====Other Income - Client gets Account Payable - Cooperative Bank</option>
                                 </select>
                                 <div class="col-md-1">
-                    <a href="{{url('add_gl_account')}}"> <i style="font-size:20px; color:rgb(13, 1, 56);" class="bi bi-plus-circle-fill"> </i></a>
+                    {{-- <a href="{{url('add_gl_account')}}"> <i style="font-size:20px; color:rgb(13, 1, 56);" class="bi bi-plus-circle-fill"> </i></a> --}}
                 </div>
                                
                                 <div class="invalid-feedback" style="width: 100%;">
