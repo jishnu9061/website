@@ -2,11 +2,8 @@
 @section('content')
 
 <html>
-<div class="container">
-    
-<body>
-<div>
-            <div>
+
+
                 {{-- heading --}}
     <h4 id="hdtpa"><b>Comments</b></h4>
     <br><br>
@@ -27,5 +24,5 @@
       </form>
    </body>
    </div>
-</html><br><br>
+<br><br>
 @endsection

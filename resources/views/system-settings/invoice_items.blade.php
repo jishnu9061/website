@@ -1,19 +1,13 @@
 
 @extends('layouts.hmsmain')
 @section('content')
-<html>
-<div class="container">
-   <head>
-  
-   </head>
-   <body>
-<div>
-{{-- heading --}}
-    <h4 id="hdtpa"><b>Invoice Items</b></h4>
-    <br><br>
-            
-</div>
-            
+
+  {{-- heading --}}
+  <h4 id="hdtpa"><b>Invoice Items</b></h4>
+  <br><br>
+
+            <br>
+
           <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
            
 {{-- <a href="{{('add_invoice_item')}}"><button class="btn btn-primary">Add New Item</button></a> --}}

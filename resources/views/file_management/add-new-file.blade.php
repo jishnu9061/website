@@ -52,7 +52,7 @@
          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
            <div class="navbar-nav" >
             
-             <a type="button" onclick="document.getElementById('ww').style.color='#3d98fc'" class="nav-item nav-link active" href="#sea">Matter</a>
+             <a type="button" onclick="document.getElementById('ww ').style.color='#3d98fc'" class="nav-item nav-link active" href="#sea">Matter</a>
              <a type="button" onclick="document.getElementById('wwa').style.color='#3d98fc'" class="nav-item nav-link active" class="nav-item nav-link active" href="#seb">Notification</a>
              <a type="button" onclick="document.getElementById('wwb').style.color='#3d98fc'" class="nav-item nav-link active" class="nav-item nav-link active" href="#sec">Contacts</a>
              <a type="button" onclick="document.getElementById('wwc').style.color='#3d98fc'" class="nav-item nav-link active" class="nav-item nav-link active" href="#sed">Custom Fields</a>
@@ -67,7 +67,7 @@
               }
               </script>
 
-             <div ><a class="nav-item nav-link active" type="button" onclick="document.getElementById('nnav').style.display='none'"><i class="fa fa-bars"></i></a> </div> 
+             <div><a class="nav-item nav-link active" type="button" onclick="document.getElementById('nnav').style.display='none'"><i class="fa fa-bars"></i></a> </div> 
               
            </div>
          </div>

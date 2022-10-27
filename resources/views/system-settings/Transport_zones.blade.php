@@ -1,10 +1,6 @@
 @extends('layouts.hmsmain')
 @section('content')
-<html>
-    <div class="container">
 
-
-<body>
 
 
   <div>

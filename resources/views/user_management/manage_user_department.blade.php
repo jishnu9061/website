@@ -2,8 +2,29 @@
 @extends('layouts.hmsmain')
 @section('content')
 <html>
-<div class="container">
-   
+
+   <head>
+  
+   <style>
+
+          body
+        {
+          background-color: white;
+        }
+
+             th, td ,tr{
+               border: 1px solid  gray ;
+                border-collapse: collapse;
+}
+table{
+    outline: 1px solid  gray;
+}
+ /* tr:nth-child(odd)
+{
+    background-color:rgb(198, 195, 211);
+}   */
+          </style>
+   </head>
    <body>
 
     <div>

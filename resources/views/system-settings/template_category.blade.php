@@ -1,16 +1,12 @@
 
 @extends('layouts.hmsmain')
 @section('content')
-<html>
-<div class="container">
-  
-   <body>
 
-    <div>
-            <button class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Template Category</u></b></span></button><br>
-           
-     </div>
+
+{{-- heading --}}
+<h4 id="hdtpa"><b>Template Category</b></h4>
+<br><br>
+
             <br>
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
            
