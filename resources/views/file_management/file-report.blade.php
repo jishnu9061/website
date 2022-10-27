@@ -57,8 +57,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="resposible_advocate" id="cars">
+                                    <option>select</option>
+                                    <option>demo 1</option>
+
+                                    <option>demo 2</option>
+
                                 </select>
                             </div>
                         </div>
@@ -74,7 +78,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="website" id="confirm_password" required>
+                                <input type="date" class="form-control" name="data_from" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
@@ -89,7 +93,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="website" id="confirm_password" required>
+                                <input type="date" class="form-control" name="date_to" id="confirm_password" required>
                             </div>
                         </div>
                     </div>

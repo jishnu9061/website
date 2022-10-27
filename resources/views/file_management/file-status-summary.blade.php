@@ -18,7 +18,7 @@
         </div>
  {{-- heading --}}
  <h4 id="hdtpa"><b>File Status Report Summary</b></h4>
- <br><br>
+ 
 
             <br>
             <div>
@@ -35,7 +35,7 @@
 
 
         </div>
-    </div>
+   
 
 
     <div class="row">
@@ -59,7 +59,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="date" class="form-control" name="incorporation" id="age">
+                    <input type="date" class="form-control" name="date_to" id="age">
                     <div class="invalid-feedback" style="width: 100%;">
                         Incorporation is required
                     </div>
@@ -75,8 +75,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="file" id="cars">
+                                    <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
                                 </select>
                             </div>
                         </div>
@@ -88,8 +90,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="category" id="cars">
+                                <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
                                 </select>
                             </div>
                         </div>
@@ -111,8 +115,10 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="receiver" id="cars">
+                                <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
                                 </select>
                             </div>
                         </div>
@@ -124,20 +130,22 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
+                    <select name="currency" id="cars">
+                    <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
                     </select>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="mb-1">
-                <label for="username">Exchangr Rate</label>
+                <label for="username">Exchange Rate</label>
                 <div class="input-group">
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="incorporation" id="age">
+                    <input type="text" class="form-control" name="exchange_rate" id="age">
                     <div class="invalid-feedback" style="width: 100%;">
                         Incorporation is required
                     </div>
@@ -163,6 +171,21 @@
     <div class="row">
 
 
+        <!-- <div class="col-md-4">
+            <div class="mb-1">
+                <label for="username">Turn-Around Time(TAT)</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <select name="turn_around_time" id="cars">
+                    <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
+                    </select>
+                </div>
+            </div>
+        </div> -->
         <div class="col-md-4">
             <div class="mb-1">
                 <label for="username">Turn-Around Time(TAT)</label>
@@ -170,12 +193,14 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
-                    </select>
+                    <input type="time" class="form-control" name="turn_around_time" id="age">
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Incorporation is required
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="col-md-4">
             <div class="mb-1">
                 <label for="username">Priority</label>
@@ -183,8 +208,10 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
+                    <select name="priority" id="cars">
+                    <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
                     </select>
                 </div>
             </div>
@@ -196,7 +223,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="incorporation" id="age">
+                    <input type="text" class="form-control" name="details" id="age">
                     <div class="invalid-feedback" style="width: 100%;">
                         Incorporation is required
                     </div>

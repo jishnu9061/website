@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 10, 2022 at 11:22 AM
+-- Generation Time: Oct 22, 2022 at 01:30 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -24,24 +24,15 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cra_open_new_file_details`
+-- Table structure for table `cra_hourly_rate`
 --
 
-CREATE TABLE `cra_open_new_file_details` (
+CREATE TABLE `cra_hourly_rate` (
   `id` int(11) NOT NULL,
-  `Associate_handling` varchar(255) DEFAULT NULL,
-  `Client_type` varchar(255) DEFAULT NULL,
-  `opening_date` date DEFAULT NULL,
-  `Client_ref_no` varchar(255) DEFAULT NULL,
-  `our_file_reference_no` varchar(255) DEFAULT NULL,
-  `File_name` varchar(255) DEFAULT NULL,
-  `Approval_partner` varchar(255) DEFAULT NULL,
-  `Customer_name` varchar(255) DEFAULT NULL,
-  `Address` varchar(255) DEFAULT NULL,
-  `Telephone` int(11) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `amount` float NOT NULL,
-  `workflow` varchar(255) NOT NULL
+  `user_staff` varchar(255) DEFAULT NULL,
+  `currency` varchar(255) DEFAULT NULL,
+  `hourly_rates` varchar(255) DEFAULT NULL,
+  `amount` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -49,9 +40,9 @@ CREATE TABLE `cra_open_new_file_details` (
 --
 
 --
--- Indexes for table `cra_open_new_file_details`
+-- Indexes for table `cra_hourly_rate`
 --
-ALTER TABLE `cra_open_new_file_details`
+ALTER TABLE `cra_hourly_rate`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -59,10 +50,10 @@ ALTER TABLE `cra_open_new_file_details`
 --
 
 --
--- AUTO_INCREMENT for table `cra_open_new_file_details`
+-- AUTO_INCREMENT for table `cra_hourly_rate`
 --
-ALTER TABLE `cra_open_new_file_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `cra_hourly_rate`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

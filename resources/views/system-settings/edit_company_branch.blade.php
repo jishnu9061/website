@@ -149,7 +149,15 @@
                             <label for="username">Town:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" id="town" name="town" class="form-control" value="{{$branch_details->town}}">
+                                <select name="town" id="town"style="width:100%;">
+                                <option>{{$branch_details->town}}</option>
+                                <option>Nairobi </option>
+                                <option>Kisumu</option>
+                                <option>Nakuru</option>
+                                <option>Mombasa</option>
+                                <option>Thika</option>
+                                <option>Malindi</option>
+                            </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -193,7 +201,7 @@
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
                         </div>
                     </div>
                 </div>

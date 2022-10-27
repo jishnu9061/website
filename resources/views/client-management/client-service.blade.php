@@ -1,13 +1,5 @@
 @extends('layouts.hmsmain')
 @section('content')
-<meta name="csrf-token" content="{{ csrf_token() }}">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css"
-    href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 
 {{-- <div class="spacer" style="height:40px;margin-top: 30px;"> --}}
 
@@ -16,15 +8,19 @@
 
 <body>
     <div class="container">
-        <div class="btn btn-primary"
-            style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Client
-                    Reception</u></b></span></div><br><br>
-       <button class="btn btn-primary add-btn" data-toggle="modal" data-target="#myModal" style="width:21%">New Client
-                Service</button></a>
+        <div>
+            <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Client
+                    Reception</u></b></span>-->
+                    {{-- heading --}}
+    <h4 id="hdtpa"><b>Client Reception</b></h4>
+    <br><br>
+                </div>
+        <button class="btn btn-primary add-btn" data-toggle="modal" data-target="#myModal" style="width:21%">New Client
+            Service</button></a>
         <div id="mydatatable_filter" class="dataTables_filter">
             <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
         </div>
-        <br>
+        
 
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -32,11 +28,11 @@
                     <table class="table table-responsive" id="new-item" style="width:100%">
                         <thead>
                             <tr>
-                                <th class="text-center">Branch</th>
-                                <th class="text-center">Client</th>
+                                <th class="text-center" style="width:15%;">Branch</th>
+                                <th class="text-center" style="width:15%;">Client</th>
                                 <th class="text-center">Phone</th>
                                 <th class="text-center">Service</th>
-                                <th class="text-center">Description</th>
+                                <th class="text-center" style="width:15%;">Description</th>
                                 <th class="text-center">Handling</th>
                                 <th class="text-center">Amount</th>
                                 <th class="text-center">RCPT</th>
@@ -52,16 +48,21 @@
                                 <td class="text-center"></td>
                                 <td class="text-center" id="medicine_name_1">{{$list_service->client_name}}</td>
                                 <td class="text-center" id="medicine_name_1">{{$list_service->mobile}}</td>
-                                <td class="text-center" id="medicine_name_1"></td>
-                                <td class="text-center" id="medicine_name_1"></td>
-                                <td class="text-center" id="medicine_name_1"></td>
-                                <td class="text-center" id="medicine_name_1"></td>
-                                <td class="text-center" id="medicine_name_1"></td>
-                                <td class="text-center" id="medicine_name_1"></td>
-                                <td class="text-center" id="medicine_name_1"></td>
-                                <td class="text-center" id="medicine_name_1"></td>
-                                {{-- <td scope="row" class="text-center" id="medicine_name_1"></td>  --}}
 
+                                <td class="text-center" id="medicine_name_1"></td>
+                                <td class="text-center" id="medicine_name_1"></td>
+                                <td class="text-center" id="medicine_name_1"></td>
+                                <td class="text-center" id="medicine_name_1"></td>
+
+                                <td class="text-center" id="medicine_name_1"></td>
+                                <td class="text-center" id="medicine_name_1"></td>
+                                <td class="text-center" id="medicine_name_1"></td>
+                                <td class="text-center" id="medicine_name_1">
+                                <a href="{{url('edit-service',$list_service->id)}}"><i style="color:black;"
+                                            class="fa fa-edit" aria-hidden="true"></i></a>
+                                    <a href="{{url('delete-service',$list_service->id)}}"><i style="color:black;"
+                                            class="fa fa-trash" aria-hidden="true"></i></a>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -69,16 +70,16 @@
                 </div>
                 <div class="modal fade" id="myModal">
                     <div class="modal-dialog modal-lg">
-                        <div class="modal-content" style="background-color:#d6ba8a">
+                        <div class="modal-content" >
 
                             <!-- Modal Header -->
-                            <div class="modal-header" style="background-color:#d6ba8a">
+                            <div class="modal-header" >
                                 <h2 class="text-center"><b>New Client Service</b></h2>
 
                             </div>
 
                             <!-- Modal body -->
-                            <div class="modal-body" style="background-color:white">
+                            <div class="modal-body" >
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-12">
@@ -177,9 +178,9 @@
 
                                                                 </div>
                                                                 <select name="code" id="cars">
-                                                                    <option >select</option>
-                                                                    <option >Code1</option>
-                                                                    <option >Code2</option>
+                                                                    <option>select</option>
+                                                                    <option>Code1</option>
+                                                                    <option>Code2</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -191,13 +192,13 @@
                                                                 <div class="input-group-prepend">
                                                                 </div>
                                                                 <select name="Method" id="cars">
-                                                                    <option >Select</option>
-                                                                    <option >Cash</option>
-                                                                    <option >Checks</option>
-                                                                    <option >Debit cards</option>
-                                                                    <option >Credit cards</option>
-                                                                    <option >Mobile payments</option>
-                                                                    <option >Electronic bank transfers
+                                                                    <option>Select</option>
+                                                                    <option>Cash</option>
+                                                                    <option>Checks</option>
+                                                                    <option>Debit cards</option>
+                                                                    <option>Credit cards</option>
+                                                                    <option>Mobile payments</option>
+                                                                    <option>Electronic bank transfers
                                                                     </option>
                                                                 </select>
                                                             </div>
@@ -217,7 +218,7 @@
                                                             <button type="submit" class="btn btn-primary float:right;"
                                                                 Style="width:45%;">Save</button>
                                                             <button type="button" class="btn btn-primary float:left"
-                                                                Style="width:45%;">close</button>
+                                                                Style="width:45%;">Cancel</button>
                                                         </div>
                                                     </div>
                                                 </div>

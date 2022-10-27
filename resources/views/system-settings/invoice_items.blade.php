@@ -30,26 +30,29 @@
                         <th class="text-center">Item Name</th>
                         <th class="text-center">Description</th>
                         <th class="text-center" >Sales Tax Code</th>
-                        <th class="text-center">G/L Account</th>
+                        <!-- <th class="text-center">G/L Account</th>.....note: g/l account changed as income account-->
+                         <th class="text-center">Income Account</th>
                         <th class="text-center">Action</th>
                   
                     </tr>
     </thead>
     <tbody>
+    @foreach($invoice_item as $invoice)
  <tr>
-    <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
+    <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">{{ $invoice->id }}</td>
+                        <td  style="background-color:white;color:rgb(13, 1, 56);">{{ $invoice->item_code }}</td>
+                        <td  style="background-color:white;color:rgb(13, 1, 56);">{{ $invoice->item_category }}</td>
+                        <td  style="background-color:white;color:rgb(13, 1, 56);">{{ $invoice->item_name }}</td>
+                        <td  style="background-color:white;color:rgb(13, 1, 56);">{{ $invoice->description }}</td>
+                        <td  style="background-color:white;color:rgb(13, 1, 56);">{{ $invoice->sales_tax_code }}</td>
+                        <td  style="background-color:white;color:rgb(13, 1, 56);">{{ $invoice->income_account }}</td>
                         <td  scope="row"class="text-center">
-                        <a href="{{url('edit_invoice_item')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                        <a href="{{url('delete_invoice_items')}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
+                        <a href="{{url('edit_invoice_item',$invoice->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <a href="{{url('delete_invoice_item',$invoice->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                            </td>
                       
                     </tr>
+                    @endforeach
                 </tbody>
 </table>
          <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
@@ -71,7 +74,7 @@
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->  
 @csrf
        <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                         <label >Type Name:</label>
                             <div class="input-group">
@@ -83,12 +86,24 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label>Comments:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text"  id="" name="comments"value=""class="form-control" >
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="mb-1">
+                            <label>Item Name:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text"  id="" name="iname"value=""class="form-control" >
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -119,7 +134,7 @@
                             <label>Sales Tax Code:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <select type="text" value="" id="" name="code"style="width:100%;">
+                                <select type="text" value="" id="" name="sales_tax_code"style="width:100%;">
                                 <option>---select---</option>
                                 <option>Non-Taxable</option>
                                 <option>Taxable</option>

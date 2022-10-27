@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class UserManagement extends Controller
 {
@@ -18,16 +19,117 @@ class UserManagement extends Controller
     }
     public function manageuseraccount()
     {
-        return view('user_management.manage_user_account');
+        $user_list = DB::table('cra_reg_new_user')->get();
+        return view('user_management.manage_user_account',compact('user_list'));
+        // return view('user_management.manage_user_account');
     }
-    public function useredit()
+
+    public function userdestroy($id)
     {
-        return view('user_management.user_edit');
+        $user_destroy =DB::table('cra_reg_new_user')->where('id',$id)->delete();
+        return redirect ('/manage_user_account');
     }
-    public function regnewuser()
+
+    public function useredit($id)
     {
-        return view('user_management.reg_new_user');
+
+        $edit =DB::table('cra_reg_new_user')->where('id',$id)->first();
+        return view('user_management.user_edit',compact('edit','id'));
+        // return view('user_management.user_edit');
     }
+
+
+    public function regnewuser(Request $request)
+    {
+        $id =$request['id'];
+        $user_code=$request['user_code'];
+        $first_name=$request['first_name'];
+        $last_name=$request['last_name'];
+        $initial=$request['initial'];
+        $user_name=$request['user_name'];
+        $password=$request['password'];
+        $re_type_password=$request['re_type_password'];
+        $post_address=$request['post_address'];
+        $town_name=$request['town_name'];
+        $telephone_no=$request['telephone_no'];
+        $mobile_no=$request['mobile_no'];
+        $email_address=$request['email_address'];
+        $departments=$request['departments'];
+        $upload_signature=$request['upload_signature'];
+        $user_group=$request['user_group'];
+        $user_role=$request['user_role'];
+       
+
+        DB::table('cra_reg_new_user')->insert([
+            
+            'user_code' => $user_code,
+            'first_name' => $first_name,
+            'last_name' => $last_name,
+            'initial' => $initial,
+            'user_name' => $user_name,
+            'password' => $password,
+            're_type_password' => $re_type_password,
+            'post_address' => $post_address,
+            'town_name' => $town_name,
+            'telephone_no' => $telephone_no,
+            'mobile_no' => $mobile_no,
+            'email_address' => $email_address,
+            'departments' => $departments,
+            'upload_signature' => $upload_signature,
+            'user_group' => $user_group,
+            'user_role' => $user_role,
+        
+        ]);
+        return redirect('/manage_user_account');
+
+        // return view('user_management.reg_new_user');
+    }
+
+    public function userupdate(Request $request)
+    {
+        $id =$request['id'];
+        $user_code=$request['user_code'];
+        $first_name=$request['first_name'];
+        $last_name=$request['last_name'];
+        $initial=$request['initial'];
+        $user_name=$request['user_name'];
+        $password=$request['password'];
+        $re_type_password=$request['re_type_password'];
+        $post_address=$request['post_address'];
+        $town_name=$request['town_name'];
+        $telephone_no=$request['telephone_no'];
+        $mobile_no=$request['mobile_no'];
+        $email_address=$request['email_address'];
+        $departments=$request['departments'];
+        $upload_signature=$request['upload_signature'];
+        $user_group=$request['user_group'];
+        $user_role=$request['user_role'];
+       
+
+        DB::table('cra_reg_new_user')->where('id',$id)->update([
+            
+            'user_code' => $user_code,
+            'first_name' => $first_name,
+            'last_name' => $last_name,
+            'initial' => $initial,
+            'user_name' => $user_name,
+            'password' => $password,
+            're_type_password' => $re_type_password,
+            'post_address' => $post_address,
+            'town_name' => $town_name,
+            'telephone_no' => $telephone_no,
+            'mobile_no' => $mobile_no,
+            'email_address' => $email_address,
+            'departments' => $departments,
+            'upload_signature' => $upload_signature,
+            'user_group' => $user_group,
+            'user_role' => $user_role,
+        
+        ]);
+        return redirect('/manage_user_account');
+    }
+
+
     public function attachments()
     {
         return view('user_management.user_attachments');
@@ -40,20 +142,73 @@ class UserManagement extends Controller
     {
         return view('user_management.change_user_password');
     }
+
+
     public function manageusergrp()
     {
-        return view('user_management.manage_user_group');
+        $user_group = DB::table('cra_add_user_group')->get();
+        return view('user_management.manage_user_group',compact('user_group'));
+        // return view('user_management.manage_user_group');
     }
-    public function addnewusergrp()
+
+    public function addnewusergrp(Request $request)
     {
-        return view('user_management.add_new_user_grp');
+        $id =$request['id'];
+        $group_code=$request['group_code'];
+        $group_name=$request['group_name'];
+        $default_menu=$request['default_menu'];
+        $group_role=$request['group_role'];
+
+        DB::table('cra_add_user_group')->insert([
+            'group_code' =>  $group_code,
+            'group_name' =>  $group_name,
+            'default_menu' =>  $default_menu,
+            'group_role' =>  $group_role,
+
+        ]);
+        
+        return redirect('/manage_user_group');
+        // return view('user_management.add_new_user_grp');
     }
-    public function editnewusergrp()
+
+    public function editnewusergrp($id)
     {
-        return view('user_management.edit_new_user_grp');
+        $edit_user =DB::table('cra_add_user_group')->where('id',$id)->first();
+        return view('user_management.edit_new_user_grp',compact('edit_user','id'));
+
+        // return view('user_management.edit_new_user_grp');
     }
+
+    public function updategroup(Request $request)
+
+    {
+        $id =$request['id'];
+        $group_code=$request['group_code'];
+        $group_name=$request['group_name'];
+        $default_menu=$request['default_menu'];
+        $group_role=$request['group_role'];
+
+        DB::table('cra_add_user_group')->where('id',$id)->update([
+            
+            'group_code' => $group_code,
+            'group_name' => $group_name,
+            'default_menu' => $default_menu,
+            'group_role' => $group_role,
+
+        ]);
+        return redirect('/manage_user_group');
+    }
+
+    public function usergroupdestroy($id)
+    {
+        $user_group_destroy =DB::table('cra_add_user_group')->where('id',$id)->delete();
+        return redirect ('/manage_user_group');
+    }
+
+
     public function rolesperuser()
     {
+        
         return view('user_management.view_roles_per_user');
     }
     public function editviewroles()
@@ -64,28 +219,120 @@ class UserManagement extends Controller
 
     public function manageuserroles()
     {
-        return view('user_management.manage_user_roles');
+
+        $user_role=DB::table('cra_add_user_roles')->get();
+        return view('user_management.manage_user_roles',compact('user_role'));
+        // return view('user_management.manage_user_roles');
     }
-    public function adduserrole()
+
+
+    public function adduserrole(Request $request)
     {
-        return view('user_management.add_user_roles');
+
+        $id  =$request['id '];
+        $role_name=$request['role_name'];
+       
+
+        DB::table('cra_add_user_roles')->insert([
+            'role_name' =>  $role_name,
+        ]);
+        
+        return redirect('/manage_user_roles');
+    
+        // return view('user_management.add_user_roles');
     }
-    public function edituserrole()
+
+
+    public function edituserrole($id)
     {
-        return view('user_management.edit_user_roles');
+        $edit_role =DB::table('cra_add_user_roles')->where('id',$id)->first();
+        return view('user_management.edit_user_roles',compact('edit_role','id'));
+        // return view('user_management.edit_user_roles');
     }
+
+    public function updaterole(Request $request)
+
+    {
+        $id =$request['id'];
+        $role_name=$request['role_name'];
+       
+        DB::table('cra_add_user_roles')->where('id',$id)->update([
+            
+            'role_name' => $role_name,
+            
+        ]);
+        return redirect('/manage_user_roles');
+    }
+
+    public function userroledestroy($id)
+    {
+        $user_role_destroy =DB::table('cra_add_user_roles')->where('id',$id)->delete();
+        return redirect ('/manage_user_roles');
+    }
+
+
     public function manageuserdepartment()
     {
-        return view('user_management.manage_user_department');
+        $manage_document = DB::table('cra_add_user_department')->get();
+        return view('user_management.manage_user_department',compact('manage_document'));
     }
-    public function adduserdepartment()
+
+
+    public function adduserdepartment(Request $request)
     {
-        return view('user_management.add_user_department');
+        
+        $department_code =$request['department_code'];
+        $department_name=$request['department_name'];
+        $h_o_d =$request['h_o_d'];
+        $perfomance_report=$request['perfomance_report'];
+       
+        DB::table('cra_add_user_department')-> insert([
+       
+            'department_code' => $department_code,
+            'department_name' => $department_name,
+            'h_o_d' => $h_o_d,
+            'perfomance_report' => $perfomance_report,
+        ]);
+        return redirect ('/manage_user_department');
+       
     }
-    public function edituserdepartment()
+
+
+    public function edituserdepartment($id)
     {
-        return view('user_management.edit_user_department');
+        $edit_department = DB::table('cra_add_user_department')->where('id',$id)->first();
+        return view('user_management.edit_user_department',compact('edit_department','id'));
     }
+
+    public function updateuserdepartment (Request $request)
+    {
+
+        $id = $request['id'];
+        $department_code =$request['department_code'];
+        $department_name=$request['department_name'];
+        $h_o_d =$request['h_o_d'];
+        $perfomance_report=$request['perfomance_report'];
+       
+        DB::table('cra_add_user_department')-> where('id',$id)->update([
+       
+            'department_code' => $department_code,
+            'department_name' => $department_name,
+            'h_o_d' => $h_o_d,
+            'perfomance_report' => $perfomance_report,
+
+        ]);
+        return redirect ('/manage_user_department');
+    }
+
+
+
+    public function destroyuserdepsrtment($id)
+    {
+        $destroy_user_department = DB::table('cra_add_user_department')->where ('id',$id)->delete();
+        return redirect ('/manage_user_department');
+    }
+
+
     public function advocatestarget()
     {
         return view('user_management.advocates_target');
@@ -122,9 +369,50 @@ class UserManagement extends Controller
     {
         return view('user_management.advocates_target_2026');
     }
-    
-
-
+    public function managetowns()
+    {
+        $manage_towns=DB::table('cra_town_city')->get();
+        return view('user_management.manage_towns',compact('manage_towns'));
+     
+       
+    }
+    public function addtown(Request $Request)
+    {
+        $Town_City = $Request['Town_City'];
+      
+     DB::table('cra_town_city')->insert([
+            'Town_City' => $Town_City,
+           
+        ]);
+        
+        return redirect('/manage_towns');
+     
+        
+    }
+    public function edittown($id)
+    {
+         $manage_towns=DB::table('cra_town_city')->where('id',$id)->first();
+        return view('user_management.edit_town',compact('manage_towns','id'));
+        
+    } 
+    public function updatetown(Request $Request)
+    {
+        $id = $Request['id'];
+        $Town_City = $Request['Town_City'];
+       
+        
+        $update_town = array(
+            'Town_City' => $Town_City,
+          
+        );
+        DB::table('cra_town_city')->where('id', $id)->update( $update_town );
+        return redirect('/manage_towns');
+    }
+    public function deletetown($id)
+    {
+        DB::table('cra_town_city')->where('id',$id)->delete();
+        return redirect('/manage_towns');
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -192,3 +480,24 @@ class UserManagement extends Controller
         //
     }
 }
+// public function manageuserdepartment (Request $request)
+
+//     {
+
+//         $id = $request['id'];
+//         $department_code =$request['department_code'];
+//         $department_name=$request['department_name'];
+//         $h_o_d =$request['h_o_d'];
+//         $perfomance_report=$request['perfomance_report'];
+
+//         DB::table('cra_add_user_department')-> insert([
+
+//             'department_code' => $department_code,
+//             'department_name' => $department_name,
+//             'h_o_d' => $h_o_d,
+//             'perfomance_report' => $perfomance_report,
+//         ]);
+
+//         return redirect('/manage_user_department');
+       
+//     }

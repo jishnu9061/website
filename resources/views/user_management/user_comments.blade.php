@@ -18,7 +18,7 @@
       
         <input type="text" class="form-control" id="" style="border: 1px solid rgb(13, 1, 56);" placeholder="Write your comments here...."><br><br>
    
-    <a href="something"><input type="submit"value="Post" name="submit"style="background-color:green;color: white; "> </a>
+    <a href="something"><input type="submit"value="Post" name="submit"style="background-color:#ffffff;color: #1D1D50; "> </a>
      
       </form>
    </body>

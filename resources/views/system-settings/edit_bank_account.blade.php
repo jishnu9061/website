@@ -36,7 +36,8 @@
 
         <div class="col-md-12 order-md-1">
 
-            <form method="post" action="" id="form">
+        <form method="post"action="{{url('update_bank_account')}}"id="form">  
+          <input type="hidden" name="id" value="{{$bank_details->id}}">
                 @csrf
                 <div class="row">
                 <div class="col-md-4">
@@ -47,7 +48,7 @@
 
                                 </div>
                                 <select type="text" value="" name="bank"style="width:100%;">
-                            <option>---Select---</option>
+                            <option>{{$bank_details->bank}}</option>
                             <option>AFRICAN BANKING CORP LTD</option>
                             <option>AKIBA BANK LTD</option>
                             <option>BANK OF AFRICA LTD</option>
@@ -109,7 +110,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="number" id="username" required>
+                                <input type="text" class="form-control" name="branch" id="username" value="{{$bank_details->branch}}"required>
                                 
                             </div>
                         </div>
@@ -122,7 +123,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="number" id="username" required>
+                                <input type="text" class="form-control" name="account_name" id="username" value="{{$bank_details->account_name}}"required>
 
                             </div>
                         </div>
@@ -138,7 +139,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="number" id="username" required></br>
+                                <input type="text" class="form-control" name="account_no" id="username" value="{{$bank_details->account_number}}"required></br>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -153,7 +154,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="incorporation" id="age">
+                                <input type="text" class="form-control" name="bank_code" id="age"value="{{$bank_details->bank_code}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
@@ -168,7 +169,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="telephone" id="confirm_password" required>
+                                <input type="text" class="form-control" name="branch_code" id="confirm_password"value="{{$bank_details->branch_code}}" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
                                 </div>
@@ -183,7 +184,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="text" class="form-control" name="swift_code" id="confirm_password" value="{{$bank_details->swift_code}}"required>
                 </div>
             </div>
         </div>
@@ -194,7 +195,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="text" class="form-control" name="mpesa_no" id="confirm_password" value="{{$bank_details->mpesa_code}}"required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Telephone Number is required.
                     </div>
@@ -209,8 +210,8 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select type="text" value="" name="type"style="width:100%;">
-                            <option>---Select---</option>
+                    <select type="text" value="" name="bank_gl_ac"style="width:100%;">
+                            <option>{{$bank_details->bank_gl_ac}}</option>
                             <option>8004==> Client A/C Sidian Bank</option>
                             <option>8000==>Client Account - Cooperative Bank</option>
                             <option>8008==>Client Account - Cooperative Bank (USD)</option>
@@ -243,7 +244,7 @@
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
                         </div>
                     </div>
                 </div>

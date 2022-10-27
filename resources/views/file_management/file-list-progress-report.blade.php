@@ -4,24 +4,23 @@
 
 
 
-
 </head>
 
 <body>
 
     <div class="container">
-        <!-- <h3 class="text-center" style="color: #070344;"><b>List of File Progress</b></h3> -->
+       
         <div>
-            <div class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>List of File Progress</u></b></span></div><br>
-            <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous"> -->
-
-        
+        {{-- heading --}}
+    <h4 id="hdtpa"><b>List of File Progress</b></h4>
+    <br><br>
+  
+ 
+ 
+         
+       
             </div>
-        <br>
-        <br>
+       
 
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -67,7 +66,16 @@
                     </tbody>
 
                 </table>
-
+                <br>
+                <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Previous</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Next</a></li>
+                                </ul>
+                            </nav>
                 <!-- The Modal -->
                 <div class="modal fade" id="editmed">
                     <div class="modal-dialog modal-xl">

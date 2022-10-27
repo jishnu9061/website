@@ -38,19 +38,21 @@
                     </tr>
     </thead>
     <tbody>
+    @foreach($file_types as $file)
 <tr>
-                        <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);"></td>
+                        <td>{{$file->id}}</td>
+                        <td>{{$file->file_type}}</td>
+                        <td>{{$file->short_name}}</td>
+                        <td>{{$file->retainer_period}}</td>
+                        <td>{{$file->approvers}}</td>
+                        <td></td>
                         <td  scope="row"class="text-center">
-                        <a href="{{url('edit_file_types')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                        <a href="{{url('view_file_types')}}"><i  style="  color:rgb(13, 1, 56);" class="	far fa-file" aria-hidden="true"></i>
-                        <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
+                        <a href="{{url('edit_file_types',$file->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <a href="{{url('view_file_types',$file->id)}}"><i  style="  color:rgb(13, 1, 56);" class="	far fa-file" aria-hidden="true"></i>
+                        <a href="{{url('delete_file_types',$file->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                            </td>
                            </tr>
+                           @endforeach
                     </tbody>
 </table>
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
