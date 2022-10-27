@@ -44,7 +44,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="name" id="username"
-                                    value="{{$edit_registration->client_name}}" placeholder="Customer name" required>
+                                    value="{{$edit_registration->customer_name}}" placeholder="Customer name" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Date is required.
                                 </div>
@@ -176,9 +176,9 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
-                            <label for="username">Customer Address</label>
+                            <label for="username">Client Address</label>
                             <div class="input-group">
-                                <textarea class="form-control"name="caddress" id="form7Example7" rows="2">{{$edit_registration->client_address}}</textarea>
+                                <textarea class="form-control"name="caddress" id="form7Example7" rows="2">{{$edit_registration->customer_address}}</textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Action Plan is required.
                                 </div>
