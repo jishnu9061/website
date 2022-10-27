@@ -1,6 +1,13 @@
 @extends('layouts.hmsmain')
 @section('content')
+<meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 
+    
 
 
 <body>
@@ -17,6 +24,7 @@
         
             </div>
         <br>
+        
         <div style="display:flex; margin-bottom: 2%;  margin-top: 3%;">
             <div class="dropdown" style="width:20%;">
                 <div class="btn btn-primary add-btn" type="button" style="width:97%;" id="dropdownMenuButton"
@@ -68,7 +76,9 @@
                 </div>
             </div>
         </div>
-
+        <!-- <div id="mydatatable_filter" class="dataTables_filter">
+                    <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
+                    </div> -->
 
 
 

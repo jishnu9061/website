@@ -35,6 +35,20 @@ class SystemSetup extends Controller
     }
     public function addcompany(Request $Request)
     {
+       
+
+        if(!empty($Request->file('logo'))){
+
+            $this->validate($Request ,[
+                'logo' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg|max:2048',
+            ]);
+        }
+
+        $img = time() . '-' . $Request->logo . '.' .
+        $Request->logo->extension();
+        $test = $Request->logo->move(public_path('\images\logos'),$img);
+
+        $logo        = $Request['logo'];
         $company_name= $Request['name'];
         $address = $Request['address'];
         $town_city = $Request['city'];
@@ -50,6 +64,7 @@ class SystemSetup extends Controller
       
 ////////////////////////////////////////////////////////////////////
         DB::table('cra_company_details')->insert([
+            'logo'=>  $logo  ,
             'company_name' => $company_name,
             'address' => $address,
             'town_city' => $town_city,
@@ -74,6 +89,7 @@ class SystemSetup extends Controller
     }
     public function updatecompany(Request $Request){
         $id     = $Request['id'];
+        $logo = $Request['logo'];
         $company_name = $Request['name'];
         $address = $Request['address'];
         $town_city = $Request['city'];
@@ -88,6 +104,7 @@ class SystemSetup extends Controller
       
 /////////////////////////////////////////////////////////////////////////////////////////////////
  $update_company_details = array(
+    'logo'     =>  $logo  ,
             'company_name' => $company_name,
             'address' =>  $address,
             'town_city' => $town_city,
