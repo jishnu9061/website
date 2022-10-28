@@ -6,15 +6,15 @@
     <div class="container">
         <!-- <h3 class="text-center" style="color: #070344; "><b>New Quotation</b></h3> -->
         <div>
-<!--             
+            <!--             
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>New
                         Quotation</u></b></span></div><br> -->
             <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous"> -->
-                {{-- heading --}}
-    <h4 id="hdtpa"><b>New Quotation</b></h4>
-    <br><br>
+            {{-- heading --}}
+            <h4 id="hdtpa"><b>New Quotation</b></h4>
+            <br><br>
 
         </div>
         <br>
@@ -54,8 +54,8 @@
                                 <td>
                                     <a href="{{url('edit-Quotation',$list->id)}}"><i style="color:black;"
                                             class="fa fa-edit" aria-hidden="true"></i></a>
-                                    <a href="{{url('delete-Quotation',$list->id)}}"><i style="color:black;"
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
+                                    <a onClick="return myFunction();" href="{{url('delete-Quotation',$list->id)}}"
+                                        style="color:black;"><i class="fas fa-trash-alt"></i></a>
                                 </td>
 
 
@@ -259,10 +259,10 @@
                                                     <!-- <h2 style="text-align:center;"> Quotation Items</h2> -->
                                                     <div>
                                                         <div>
-                                                        <h4 id="hdtpa"><b> Quotation Items</b></h4>
-                                                        
+                                                            <h4 id="hdtpa"><b> Quotation Items</b></h4>
+
                                                         </div><br>
-                                                       
+
 
                                                     </div>
                                                     <br>
@@ -275,7 +275,7 @@
 
                                                                     </div>
                                                                     <select name="type" id="cars">
-                                                                    <option>---select---</option>
+                                                                        <option>---select---</option>
                                                                         <option>Type 1</option>
                                                                         <option>Type 2</option>
                                                                         <option>Type 3</option>
@@ -343,7 +343,8 @@
                                                                 <label for="username">Comments</label>
                                                                 <div class="input-group">
                                                                     <textarea class="form-control" id="form7Example7"
-                                                                        rows="2" name="Rendered" name="comments"></textarea>
+                                                                        rows="2" name="Rendered"
+                                                                        name="comments"></textarea>
                                                                     <div class="invalid-feedback" style="width: 100%;">
                                                                         Postal Address is required.
                                                                     </div>
@@ -363,8 +364,12 @@
                                                             </div>
                                                             <div class="col-sm">
                                                                 <br>
-                                                                <button type="submit" class="btn btn-primary float:right;"Style="width:50%;">Save</button>
-                                                                <button type="button" class="btn btn-primary float:left"Style="width:45%;"data-dismiss="modal">Cancel</button>
+                                                                <button type="submit"
+                                                                    class="btn btn-primary float:right;"
+                                                                    Style="width:50%;">Save</button>
+                                                                <button type="button" class="btn btn-primary float:left"
+                                                                    Style="width:45%;"
+                                                                    data-dismiss="modal">Cancel</button>
                                                             </div>
                                                         </div>
                                                     </div>

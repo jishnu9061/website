@@ -11,12 +11,12 @@
                 <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
                 <b><u>Client Registration</u></b></span> -->
                 {{-- heading --}}
-    <h4 id="hdtpa"><b>Client Registration</b></h4>
-    <br><br>
+                <h4 id="hdtpa"><b>Client Registration</b></h4>
+                <br><br>
             </div>
 
         </div>
-        
+
         <div>
             <button type="button" class="btn btn-primary complaint_btn btn " data-toggle="modal"
                 data-target="#myModal">Register Client</button></a>
@@ -45,29 +45,21 @@
                             </tr>
                         </thead>
                         <tbody>
-
-
-
-
                             @foreach($view_registration as $registration)
 
-
-
-
-
-    
                             <tr id="data">
-                                <td >{{$registration->id}}</td>
+                                <td>{{$registration->id}}</td>
                                 <td>{{$registration->customer_name}}</td>
-                                <td >{{$registration->customer_address}}</td>
+                                <td>{{$registration->customer_address}}</td>
                                 <td>{{$registration->mobile_no}}</td>
-                                <td >{{$registration->physical_address}}</td>
-                                <td >{{$registration->registration_date}}</td>
+                                <td>{{$registration->physical_address}}</td>
+                                <td>{{$registration->registration_date}}</td>
                                 <td scope="row" class="text-center"><a
                                         href="{{url('edit-registration',$registration->id)}}"><i style="color:black;"
                                             class="fa fa-edit" aria-hidden="true"></i>
-                                        <a href="{{url('delete-registration',$registration->id)}}">
-                                            <i style="color:black;" class="fa fa-trash" aria-hidden="true"></i>
+                                            <a onClick="return myFunction();"
+                                                href="{{url('delete-registration',$registration->id)}}" style="color:black;"><i
+                                                    class="fas fa-trash-alt"></i></a>
                                             <input type="hidden" value="" id="medicine_id_hidden" class="applicate"
                                                 name="supplier_id_hidden">
 
@@ -79,10 +71,10 @@
                 </div>
                 <div class="modal fade" id="myModal">
                     <div class="modal-dialog modal-lg">
-                        <div class="modal-content" >
+                        <div class="modal-content">
 
                             <!-- Modal Header -->
-                            <div class="modal-header" >
+                            <div class="modal-header">
                                 <h2 class="text-center"><b>Register Client</b></h2>
 
                             </div>
@@ -128,8 +120,8 @@
                                                             <label for="username">Town</label>
                                                             <div class="input-group">
                                                                 <div class="input-group-prepend"></div>
-                                                               
-                                                                    <select name="town" id="username"style="width:100%;">
+
+                                                                <select name="town" id="username" style="width:100%;">
                                                                     <option>---select--- </option>
                                                                     <option>Nairobi </option>
                                                                     <option>Kisumu</option>
@@ -137,12 +129,12 @@
                                                                     <option>Mombasa</option>
                                                                     <option>Thika</option>
                                                                     <option>Malindi</option>
-                                                                    
+
                                                                 </select>
                                                                 <div class="invalid-feedback" style="width: 100%;">
                                                                     Town is required.
                                                                 </div>
-                                                              
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -280,7 +272,7 @@
                                                         <button type="submit" class="btn btn-primary float:right;"
                                                             Style="width:50%;">Save</button>
                                                         <button type="button" class="btn btn-primary float:left"
-                                                            Style="width:45%;"data-dismiss="modal">Cancel</button>
+                                                            Style="width:45%;" data-dismiss="modal">Cancel</button>
                                                     </div>
                                                 </div>
                                         </div>

@@ -11,16 +11,16 @@
         <div>
             <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Client
                     Reception</u></b></span>-->
-                    {{-- heading --}}
-    <h4 id="hdtpa"><b>Client Reception</b></h4>
-    <br><br>
-                </div>
+            {{-- heading --}}
+            <h4 id="hdtpa"><b>Client Reception</b></h4>
+            <br><br>
+        </div>
         <button class="btn btn-primary add-btn" data-toggle="modal" data-target="#myModal" style="width:21%">New Client
             Service</button></a>
         <div id="mydatatable_filter" class="dataTables_filter">
             <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
         </div>
-        
+
 
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -58,10 +58,10 @@
                                 <td class="text-center" id="medicine_name_1"></td>
                                 <td class="text-center" id="medicine_name_1"></td>
                                 <td class="text-center" id="medicine_name_1">
-                                <a href="{{url('edit-service',$list_service->id)}}"><i style="color:black;"
+                                    <a href="{{url('edit-service',$list_service->id)}}"><i style="color:black;"
                                             class="fa fa-edit" aria-hidden="true"></i></a>
-                                    <a href="{{url('delete-service',$list_service->id)}}"><i style="color:black;"
-                                            class="fa fa-trash" aria-hidden="true"></i></a>
+                                    <a onClick="return myFunction();" href="{{url('delete-service',$list_service->id)}}"
+                                        style="color:black;"><i class="fas fa-trash-alt"></i></a>
                                 </td>
                             </tr>
                             @endforeach
@@ -70,16 +70,16 @@
                 </div>
                 <div class="modal fade" id="myModal">
                     <div class="modal-dialog modal-lg">
-                        <div class="modal-content" >
+                        <div class="modal-content">
 
                             <!-- Modal Header -->
-                            <div class="modal-header" >
+                            <div class="modal-header">
                                 <h2 class="text-center"><b>New Client Service</b></h2>
 
                             </div>
 
                             <!-- Modal body -->
-                            <div class="modal-body" >
+                            <div class="modal-body">
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-12">

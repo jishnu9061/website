@@ -1043,6 +1043,7 @@ Route::any('client-document','ClientManagement@document')->name('client-document
 Route::any('create-document','ClientManagement@createDocument')->name('create-document');
 Route::any('add-document','ClientManagement@addDocument')->name('add-document');
 Route::any('view-document/{id}','ClientManagement@viewDocument')->name('view-document');
+Route::any('delete-document/{id}','ClientManagement@deleteDocument')->name('delete-document');
 //end Client-Documents
 
 //Client-Pickup
@@ -1144,8 +1145,6 @@ Route::any('edit-box-no',"filemanagement@editboxno")->name('edit-box-no');
 //document templates
 Route::any('template-category',"filemanagement@template")->name('template-category');
 Route::any('add-template',"filemanagement@addtemplate")->name('add-template');
-Route::any('edit_template',"filemanagement@edittemplate")->name('edit_template');
-
 //document templates
 
 //file progress

@@ -44,11 +44,10 @@
 
                                 </div>
                                 <select name="department" id="cars">
-                                    <option>---select---</option>
-                                    <option>department 1</option>
-                                    <option>department 2</option>
-                                    <option>department 3</option>
-                                    <option>department 4</option>
+                                    <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
+
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -64,7 +63,7 @@
 
                                 </div>
                                 <select name="month" id="cars">
-                                <option>---select---</option>
+                                <option>select</option>
                                     <option>January</option>
                                     <option>February</option>
                                     <option>March</option>
@@ -131,7 +130,7 @@
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">View Report</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
                         </div>
                     </div>
                 </div>
