@@ -155,7 +155,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
-                            <label for="username">Customer Address</label>
+                            <label for="username">Client Address</label>
                             <div class="input-group">
                                 <textarea class="form-control"name="caddress" id="form7Example7" rows="2">{{$edit_registration->customer_address}}</textarea>
                                 <div class="invalid-feedback" style="width: 100%;">

@@ -857,6 +857,7 @@ class ClientManagement extends Controller
         $physical_address = $Request['paddress'];
 
         DB::table('cra_customer_registration')->where('id',$id)->update([
+
             'customer_name' => $customer_name ,
             'postal_code' =>   $postal_code ,
             'town' => $town,

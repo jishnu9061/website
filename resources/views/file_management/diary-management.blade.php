@@ -1,8 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
 {{-- heading --}}
- <h4 id="hdtpa"><b>Diary(Calender Events)</b></h4>
- <br><br>
+
 
    
 

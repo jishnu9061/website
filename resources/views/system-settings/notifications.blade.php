@@ -15,13 +15,16 @@
 
    </head>
    <body>
-<div>
+   {{-- heading --}}
+  <h4 id="hdtpa"><b>WakiliCMS Notification Config</b></h4>
+  <br><br>
+<!-- <div>
             <button class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>WakiliCMS Notification Config</u></b></span></button><br>
            
      </div>
             <br>
-            <br>
+            <br> -->
     <form>
     <div class="table-responsive">   
     <table class="table table-bordered" id="new-item">

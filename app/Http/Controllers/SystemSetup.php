@@ -52,7 +52,7 @@ class SystemSetup extends Controller
         DB::table('cra_company_details')->insert([
             'company_name' => $company_name,
             'address' => $address,
-            'town_city' => $town_city,
+            'town' => $town_city,
             'company_website' => $company_website,
             'email' => $email,
             'company_type' => $company_type,
@@ -90,7 +90,7 @@ class SystemSetup extends Controller
  $update_company_details = array(
             'company_name' => $company_name,
             'address' =>  $address,
-            'town_city' => $town_city,
+            'town' => $town_city,
             'company_website' =>  $company_website,
             'email' =>  $email,
             'company_type' =>  $company_type,

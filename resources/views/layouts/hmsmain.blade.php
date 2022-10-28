@@ -45,7 +45,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+<script type="text/javascript" src="table.js"></script>
 <!-- b -->
     <style>
     #icon {
@@ -1030,11 +1030,11 @@
 
 <nav class="navbar navbar-expand-lg  sticky-top navbar-light bg-white  " >
     <a id="backbtn" href="javascript:history.back()" style=" color: #070344;
-    font-size: 20px;" >
+    font-size: 35px;" >
     <i id="bkbtnicon" class="far fa-arrow-alt-circle-left"></i></a>
 
     <a class="navbar-brand pl-4" href="#">
-        <img src="assets/images/faces/lawemb.png"  height="40px" class="d-inline-block align-top" alt="">
+        <img src="assets/images/faces/lawemb.png"  height="50px" class="d-inline-block align-top" alt="">
         
       </a>
       
@@ -1053,7 +1053,7 @@
         <a  class="font-bold text-uppercase nav-link" href="#">  {{ Auth::user()->name }} <span class="sr-only">(current)</span></a>
         {{-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> --}}
       </li>
-      <li class="nav-item">
+      {{-- <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
       </li>
       <li class="nav-item dropdown">
@@ -1066,11 +1066,11 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
-      </li>
+      </li> --}}
       <li class="nav-item">
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
           </form>
         {{-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> --}}
       </li>
@@ -1084,14 +1084,29 @@
       <ul class="navbar-nav mr-auto pl-3" >
       
       <li class="nav-item dropdown" >
-        <a  class="nav-link dropdown-toggle-x btn btn-outline-success" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Menu
-        </a>
+        <button   class="nav-link dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Create New
+        </button>
+
+
+
+
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{{url('user_management')}}">User Management</a>
-          <a class="dropdown-item" href="{{url('client-index')}}">Client Management</a>
+          <a class="dropdown-item" href="{{url('user_management')}}">Time entry</a>
+          <a class="dropdown-item" href="{{url('client-index')}}">Expense entry</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="{{url('file_managementindex')}}">File Management</a>
+          <a class="dropdown-item" href="{{url('file_managementindex')}}">Task</a>
+          <a class="dropdown-item" href="{{url('file_managementindex')}}">Matter</a>
+
+          <a class="dropdown-item" href="{{url('file_managementindex')}}">Contact</a>
+          <a class="dropdown-item" href="{{url('file_managementindex')}}">Record payment</a>
+          <a class="dropdown-item" href="{{url('file_managementindex')}}">Client funds request</a>
+          <a class="dropdown-item" href="{{url('file_managementindex')}}">Email log</a>
+          <a class="dropdown-item" href="{{url('file_managementindex')}}">Phone log</a>
+          <a class="dropdown-item" href="{{url('file_managementindex')}}">Secure message</a>
+          <a class="dropdown-item" href="{{url('file_managementindex')}}">Event</a>
+          <a class="dropdown-item" href="{{url('file_managementindex')}}">Note</a>
+          
         </div>
       </li>
    
