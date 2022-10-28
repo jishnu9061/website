@@ -57,7 +57,7 @@
     <!-- <td>{{$company->id}}</td> -->
     <td>{{$company->company_name}}</td>
     <td>{{$company->address}}</td>
-    <td>{{$company->town}}</td>
+    <td>{{$company->town_city}}</td>
     {{-- <td>{{$company->logo}}</td> --}}
    
     <!-- <td>CRA</td>

@@ -19,7 +19,7 @@
 
        
 
-<!-- 
+
         <a href="{{url('add-template')}}"><button class="btn btn-primary add-btn">Add Template</button></a>
         <div class="tab-content" id="myTabContent"> -->
         {{-- <a href="{{('')}}"><button class="btn btn-primary">Add Template</button></a> --}}
@@ -46,6 +46,7 @@
                 <table class="table table-bordered" id="new-item">
                     <tbody>
                         <tr id="data">
+
                             <td scope="row" class="text-center">1</td>
 
                             <td scope="row" class="text-center">Employment Agent</td>
@@ -122,6 +123,16 @@
                             <td scope="row" class="text-center">Edit</td>
                             <td scope="row" class="text-center"><input type="radio"></td>
 
+
+                        
+                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center"></td>
+                            <td  scope="row"class="text-center">
+                        <a href="{{url('edit_template')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <a onClick="return myFunction();" href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
+                           </td>
+                        </tr>
 
                     </tbody>
                 </table>

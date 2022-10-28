@@ -69,7 +69,7 @@
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"><a href="{{url('edit_office_instruction',$instruction->id)}}"><i style="color:black;" class="fa fa-edit"
                                         aria-hidden="true"></i>
-                                    <a onClick="return myFunction();" href="{{url('delete_office',$instruction->id)}}" style="color:black;"><i
+                                    <a onClick="return myFunction();" href="{{url('delete_office',$instruction->id)}}" style="color:black;" ><i
                                             class="fas fa-trash-alt"></i></a></td>
                         </tr>
                         @endforeach
