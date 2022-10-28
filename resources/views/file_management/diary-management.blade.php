@@ -53,7 +53,7 @@
                     @foreach($event as $list)
                         <tr id="data">
 
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$list->id}}</td>
                             <td scope="row" class="text-center">{{$list->Title}}</td>
                             <td scope="row" class="text-center">{{$list->Client}}</td>
                             <td scope="row" class="text-center"></td>
@@ -68,8 +68,8 @@
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                            
                                 <a href="{{url('edit_event',$list->id)}}" class="dropdown-item" >Edit</a>
-                                <a href="user_attachments"class="dropdown-item" >Attachment</a>
-                                <a href="user_comments" class="dropdown-item" >Comments</a>
+                            
+                           
                                 <a href="{{url('event_delete',$list->id)}}" class="dropdown-item" >Delete</a>
                         
                                
@@ -118,9 +118,11 @@
 
                                 </div>
                                 <select name="event" id="cars">
-                                <option>select</option>
-                                                            <option>demo 2</option>
-                                                            <option>demo 3</option>
+                                <option>---select---</option>
+                                                            <option>event type 1</option>
+                                                            <option>event type 2</option>
+                                                            <option>event type 3</option>
+                                                            <option>event type 4</option>
                                 </select>
                                 
                             </div>
@@ -151,9 +153,11 @@
 
                                 </div>
                                 <select name="room" id="cars">
-                                <option>select</option>
-                                                            <option>demo 2</option>
-                                                            <option>demo 3</option>
+                                <option>---select---</option>
+                                                            <option>Room 1</option>
+                                                            <option>Room 2</option>
+                                                            <option>Room 3</option>
+                                                            <option>Room 4</option>
                                 </select>
 
                             </div>
@@ -198,14 +202,14 @@
                             <label for="username">Start Date</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                        <div class="modal-footer">
+                                        <!-- <div class="modal-footer">
                                             <button type="button" class="btn btn-primary text-white"
                                                 style="width:15%;background-color:#435ebe;"
                                                 data-bs-dismiss="modal">Close</button>
                                             <button type="submit" class="btn btn-primary"
                                                 style="background-color:#435ebe;width:15%;">Update</button>
                                         </div>
-                                </div>
+                                </div> -->
                                 <input type="date" class="form-control" name="start_date" id="age">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -230,12 +234,7 @@
                     </div>
                 </div>
                 
-       
-   
-
-
-
-    <div class="row">
+ <div class="row">
         <div class="col-md-6">
             <div class="mb-1">
                 <label for="username">End Date</label>
@@ -274,9 +273,11 @@
 
                     </div>
                     <select name="event" id="cars">
-                    <option>select</option>
-                                                            <option>demo 2</option>
-                                                            <option>demo 3</option>
+                    <option>---select---</option>
+                                                            <option>event 1</option>
+                                                            <option>event 2</option>
+                                                            <option>event 3</option>
+                                                            <option>event 4</option>
                     </select>
                 </div>
             </div>
@@ -325,9 +326,11 @@
 
                     </div>
                     <select name="client" id="cars">
-                    <option>select</option>
-                                                            <option>demo 2</option>
-                                                            <option>demo 3</option>
+                    <option>---select---</option>
+                                                            <option>Client 1</option>
+                                                            <option>Client 2</option>
+                                                            <option>Client 3</option>
+                                                            <option>Client 4</option>
                     </select>
                 </div>
             </div>
@@ -341,9 +344,11 @@
 
                     </div>
                     <select name="file" id="cars">
-                    <option>select</option>
-                                                            <option>demo 2</option>
-                                                            <option>demo 3</option>
+                    <option>---select---</option>
+                                                            <option>file 1</option>
+                                                            <option>file 2</option>
+                                                            <option>file 3</option>
+                                                            <option>file 4</option>
                     </select>
                     <div class="invalid-feedback" style="width: 100%;">
                         Incorporation is required
@@ -377,9 +382,11 @@
 
                     </div>
                     <select name="repetition" id="cars">
-                    <option>select</option>
-                                                            <option>demo 2</option>
-                                                            <option>demo 3</option>
+                    <option>---select---</option>
+                                                            <option>Repetition 1</option>
+                                                            <option>Repetition 2</option>
+                                                            <option>Repetition 3</option>
+                                                            <option>Repetition 4</option>
                     </select>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
@@ -411,9 +418,11 @@
 
                     </div>
                     <select name="reminder" id="cars">
-                    <option>select</option>
-                                                            <option>demo 2</option>
-                                                            <option>demo 3</option>
+                    <option>---select---</option>
+                                                            <option>Reminder 2</option>
+                                                            <option>Reminder 3</option>
+                                                            <option>Reminder 1</option>
+                                                            <option>Reminder 4</option>
                     </select>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
@@ -457,7 +466,7 @@
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
-                            <button type="button" class="btn btn-primary float:right;" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary float:right;" data-dismiss="modal">Cancel</button>
                         </div>
                     </div>
                 </div>
