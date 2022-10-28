@@ -38,19 +38,19 @@
             <div class="row sm">
                 <div class="col-sm-4 "> <a href="{{ url('file-list-progress-report') }}"><img class="logo_size"
                             src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
-                            class="btn btn-primary btn_align_btn"> List of Progress Report</button></a></div>
+                            class="btn btn-primary btn_align_btn"> File List Progress Report</button></a></div>
                 <div class="col-sm-4 "> <a href="{{ url('bringup') }}"><img class="logo_size" src="assets\image\Bring up report.png"
                             alt=""><button type="button" style="width:70%;"
                             class="btn btn-primary btn_align_btn">Bringup Report</button></a></div>
                 <div class="col-sm-4 "> <a href="{{ url('file-progress-report') }}"><img class="logo_size"
                             src="assets\image\File progress report.png" alt=""><button type="button" style="width:70%;"
-                            class="btn btn-primary btn_align_btn">Progress Report</button></a></div>
+                            class="btn btn-primary btn_align_btn">File Progress Report</button></a></div>
                 <div class="col-sm-4"> <a href="{{ url('file-status-summary') }}"><img class="logo_size"
                             src="assets\image\File status report summary.png" alt=""><button type="button" style="width:70%;"
-                            class="btn btn-primary btn_align_btn">Status Report Summary</button></a></div>
+                            class="btn btn-primary btn_align_btn">File Status Report Summary</button></a></div>
                 <div class="col-sm-4"> <a href="{{ url('client-monthly-file-status') }}"><img class="logo_size"
                             src="assets\image\Monthly file status report.png" alt=""><button type="button" style="width:70%;"
-                            class="btn btn-primary btn_align_btn">Monthly Status Report</button></a></div>
+                            class="btn btn-primary btn_align_btn">Monthly File Status Report</button></a></div>
                 <div class="col-sm-4"> <a href="{{ url('staff-monthly-status-report') }}"><img class="logo_size"
                             src="assets\image\Monthly Staff status report.png" alt=""><button type="button" style="width:70%;"
                             class="btn btn-primary btn_align_btn">Monthly Staff Status Report</button></a></div>

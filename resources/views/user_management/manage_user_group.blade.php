@@ -4,16 +4,13 @@
 <html>
 
 
-   
-<div>
-            <!-- <button class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Manage Groups </u></b></span></button><br> -->
-                {{-- heading --}}
-    <h4 id="hdtpa"><b>Manage Groups</b></h4>
-    <br><br>
-    
-     </div>
-     
+
+
+   {{-- heading --}}
+  <h4 id="hdtpa"><b>Manage Groups</b></h4>
+  <br><br>
+
+     <br> -->
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 {{-- <a href="{{('add_new_user_grp')}}"><button class="btn btn-primary">Add New Group</button></a> --}}
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New  Group</button>

@@ -1,14 +1,8 @@
 @extends('layouts.hmsmain')
 @section('content')
-<meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css"
-        href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-
-    
-
+ {{-- heading --}}
+ <h4 id="hdtpa"><b>List of File Progress</b></h4>
+ <br><br>
 
 <body>
     <div class="container">
@@ -24,7 +18,6 @@
         
             </div>
         <br>
-        
         <div style="display:flex; margin-bottom: 2%;  margin-top: 3%;">
             <div class="dropdown" style="width:20%;">
                 <div class="btn btn-primary add-btn" type="button" style="width:97%;" id="dropdownMenuButton"
@@ -76,9 +69,7 @@
                 </div>
             </div>
         </div>
-        <!-- <div id="mydatatable_filter" class="dataTables_filter">
-                    <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
-                    </div> -->
+
 
 
 
@@ -122,7 +113,7 @@
                                 <td scope="row" class="text-center">
                                     <a href="{{url('edit-file-progress',$list->id)}}"><i style="color:black;"
                                             class="fa fa-edit" aria-hidden="true"></i>
-                                            <a href="{{url('delete-file-progress',$list->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
+                                            <a onClick="return myFunction();" href="{{url('delete-file-progress',$list->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                                 </td>
                             </tr>
 

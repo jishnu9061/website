@@ -37,9 +37,8 @@
              </div>
 </br>
 
-                <!-- <div id="mydatatable_filter" class="dataTables_filter">
+                <div id="mydatatable_filter" class="dataTables_filter">
                     <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
-                    </div> -->
                     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-1">Columns
                   </button>
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalb">Filter
@@ -54,13 +53,12 @@
                     </button
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Filter
                   </button> -->
-             
+                </div><br>
                 {{-- <a href="{{('add-corporate')}}"><button class="btn btn-primary">Add Corporate</button></a> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">New
-                  File</button>
+                  File</button><br>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <br>
                         <div class="table-responsive">
                             <table class="table table-bordered" id="new-item">
                                 <thead>

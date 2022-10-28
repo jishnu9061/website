@@ -2,15 +2,20 @@
 @extends('layouts.hmsmain')
 @section('content')
 <html>
+
  
  
+
    <body>
-<h2 style="text-align:center; text-shadow: 2px 1px;"></h2>
+<!-- <h2 style="text-align:center; text-shadow: 2px 1px;"></h2>
   <div>
      <button class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Payment Items</u></b></span></button><br>
    </div>
-            <br>
+            <br> -->
+            {{-- heading --}}
+  <h4 id="hdtpa"><b>Payment Items</b></h4>
+  <br><br>
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
            
 {{-- <a href="{{('add_payment_item')}}"><button class="btn btn-primary">Add Payment Item</button></a> --}}

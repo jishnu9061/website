@@ -42,11 +42,9 @@
 
                                 </div>
                                 <select name="report_type" id="cars">
-                                    <option>---select---</option>
-                                    <option>Report Type 1</option>
-                                    <option>Report Type 2</option>
-                                    <option>Report Type 3</option>
-                                    <option>Report Type 4</option>
+                                    <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
 
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
@@ -64,11 +62,9 @@
 
                                 </div>
                                 <select name="client" id="cars">
-                                <option>---select---</option>
-                                    <option>Client 1</option>
-                                    <option>Client 2</option>
-                                    <option>Client 3</option>
-                                    <option>Client 4</option>
+                                <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
                                 </select>
                             </div>
                         </div>
@@ -100,7 +96,7 @@
 
                                 </div>
                                 <select name="month" id="cars">
-                                <option>---select---</option>
+                                <option>select</option>
                                     <option>January</option>
                                     <option>February</option>
                                     <option>March</option>
@@ -149,7 +145,7 @@
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">View Report</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
                         </div>
                     </div>
                 </div>

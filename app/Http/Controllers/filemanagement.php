@@ -152,10 +152,6 @@ class filemanagement extends Controller
     {
         return view('file_management.add-template');
     }
-    public function edittemplate()
-    {
-        return view('file_management.edit_template');
-    }
 
 
     //document temblates
@@ -829,7 +825,6 @@ class filemanagement extends Controller
     }
  
 
-
      public function addevent(Request $request)
      {
         
@@ -878,8 +873,6 @@ class filemanagement extends Controller
         return redirect('/diary-management');
         
      }
-     
-
 
      public function meetingrooms()
      {
@@ -978,12 +971,40 @@ class filemanagement extends Controller
        //add ons
         public function outgoingletter()
         {
-             return view('file_management.outgoing-letters');
+
+            $add_letter=DB::table('cra_add_outgoing_letter')->get();
+            return view('file_management.outgoing-letters',compact('add_letter'));
+            
         }
 
-        public function addoutgoingletters()
+        public function addoutgoingletters(Request $request)
         {
-             return view('file_management.add-outgoing-letters');
+          
+           $letter_date =$request['letter_date'];
+           $client =$request['client'];
+           $file =$request['file'];
+           $delivered_to =$request['delivered_to'];
+           $Document_category =$request['Document_category'];
+           $letter_name =$request['letter_name'];
+           $originator =$request['originator'];
+           $viewers =$request['viewers'];
+           $upload_copy =$request['upload_copy'];
+   
+           DB::table('cra_add_outgoing_letter')->insert([
+   
+               
+               'letter_date' => $letter_date,
+               'client' =>  $client,
+               'file' => $file,
+               'delivered_to' => $delivered_to,
+               'Document_category' => $Document_category,
+               'letter_name' => $letter_name,
+               'originator' => $originator,
+               'viewers' =>  $viewers,
+               'upload_copy' => $upload_copy,
+   
+           ]);
+             return view('file_management.outgoing-letters');
         }
 
 

@@ -22,12 +22,12 @@
 
             <br>
             <div>
-                <input class="btn btn-primary" type="button" value="View Statement">
-                <input class="btn btn-primary" type="button" value="View Details">
+                <input class="btn btn-primary" type="button" value="View File Statement">
+                <input class="btn btn-primary" type="button" value="View File Details">
                 <input class="btn btn-primary" type="button" value="Previous Instructions">
-                <input class="btn btn-primary" type="button" value="Post Progress">
-                <input class="btn btn-primary" type="button" value="Post Progress Only">
-                <input class="btn btn-primary" type="button" value="Post Bring-Up Only">
+                <input class="btn btn-primary" type="button" value="Post File Progress">
+                <input class="btn btn-primary" type="button" value="Post File Progress Only">
+                <input class="btn btn-primary" type="button" value="Post File Bring-Up Only">
 
             </div>
             
@@ -76,11 +76,9 @@
 
                                 </div>
                                 <select name="file" id="cars">
-                                <option>---select---</option>
-                                <option>File 1</option>
-                                    <option>File 2</option>
-                                    <option>File 3</option>
-                                    <option>File 4</option>
+                                    <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
                                 </select>
                             </div>
                         </div>
@@ -93,11 +91,9 @@
 
                                 </div>
                                 <select name="category" id="cars">
-                                <option>---select---</option>
-                                    <option>Category 1</option>
-                                    <option>Category 2</option>
-                                    <option>Category 3</option>
-                                    <option>Category 4</option>
+                                <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
                                 </select>
                             </div>
                         </div>
@@ -120,11 +116,9 @@
 
                                 </div>
                                 <select name="receiver" id="cars">
-                                <option>---select---</option>
-                                    <option>receiver 1</option>
-                                    <option>receiver 2</option>
-                                    <option>receiver 3</option>
-                                    <option>receiver 4</option>
+                                <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
                                 </select>
                             </div>
                         </div>
@@ -137,18 +131,9 @@
 
                     </div>
                     <select name="currency" id="cars">
-                    <option>---select---</option>
-                    <option>KES</option>
-                                <option>USD</option>
-                                <option>EUR</option>
-                                <option>GBP</option>
-                                <option>AUD</option>
-                                <option>CAD</option>
-                                <option>SEK</option>
-                                <option>DKK</option>
-                                <option>JPY</option>
-                                <option>CHF</option>
-                                <option>HKD</option>
+                    <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
                     </select>
                 </div>
             </div>
@@ -224,11 +209,9 @@
 
                     </div>
                     <select name="priority" id="cars">
-                    <option>---select---</option>
-                                    <option>Priority 1</option>
-                                    <option>Priority 2</option>
-                                    <option>Priority 3</option>
-                                    <option>Priority 4</option>
+                    <option>select</option>
+                                    <option>demo 1</option>
+                                    <option>demo 2</option>
                     </select>
                 </div>
             </div>
@@ -263,7 +246,7 @@
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">View Report</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
                         </div>
                     </div>
                 </div>

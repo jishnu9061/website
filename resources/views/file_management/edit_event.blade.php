@@ -24,7 +24,9 @@
             <div>
             <div class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Edit Event</u></b></span></div><br>
-           
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
 
         
             </div>
@@ -47,11 +49,9 @@
 
                                 </div>
                                 <select name="event" id="cars" >
-                                <option>---select---</option>
-                                                            <option>event type 1</option>
-                                                            <option>event type 2</option>
-                                                            <option>event type 3</option>
-                                                            <option>event type 4</option>
+                                <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                                 </select>
                                 
                             </div>
@@ -82,11 +82,9 @@
 
                                 </div>
                                 <select name="room" id="cars" >
-                                <option>---select---</option>
-                                                            <option>Room 1</option>
-                                                            <option>Room 2</option>
-                                                            <option>Room 3</option>
-                                                            <option>Room 4</option>
+                                <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                                 </select>
 
                             </div>
@@ -201,11 +199,9 @@
 
                     </div>
                     <select name="event" id="cars">
-                    <option>---select---</option>
-                                                            <option>event 1</option>
-                                                            <option>event 2</option>
-                                                            <option>event 3</option>
-                                                            <option>event 4</option>
+                    <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                     </select>
                 </div>
             </div>
@@ -254,11 +250,9 @@
 
                     </div>
                     <select name="client" id="cars">
-                    <option>---select---</option>
-                                                            <option>Client 1</option>
-                                                            <option>Client 2</option>
-                                                            <option>Client 3</option>
-                                                            <option>Client 4</option>
+                    <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                     </select>
                 </div>
             </div>
@@ -272,11 +266,9 @@
 
                     </div>
                     <select name="file" id="cars">
-                    <option>---select---</option>
-                                                            <option>file 1</option>
-                                                            <option>file 2</option>
-                                                            <option>file 3</option>
-                                                            <option>file 4</option>
+                    <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                     </select>
                     <div class="invalid-feedback" style="width: 100%;">
                         Incorporation is required
@@ -310,11 +302,9 @@
 
                     </div>
                     <select name="repetition" id="cars">
-                    <option>---select---</option>
-                                                            <option>Repetition 1</option>
-                                                            <option>Repetition 2</option>
-                                                            <option>Repetition 3</option>
-                                                            <option>Repetition 4</option>
+                    <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                     </select>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
@@ -346,11 +336,9 @@
 
                     </div>
                     <select name="reminder" id="cars">
-                    <option>---select---</option>
-                                                            <option>Reminder 2</option>
-                                                            <option>Reminder 3</option>
-                                                            <option>Reminder 1</option>
-                                                            <option>Reminder 4</option>
+                    <option>select</option>
+                                                            <option>demo 2</option>
+                                                            <option>demo 3</option>
                     </select>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
@@ -394,7 +382,7 @@
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
-                            <button type="button" class="btn btn-primary float:right;" data-dismiss="modal"onclick="history.back()">Cancel</button>
+                            <button type="button" class="btn btn-primary float:right;" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
