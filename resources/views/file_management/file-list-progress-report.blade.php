@@ -1,26 +1,26 @@
 @extends('layouts.hmsmain')
 @section('content')
 
-<meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css"
-        href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+
+
+
+</head>
+
 <body>
 
     <div class="container">
        
         <div>
         {{-- heading --}}
-    <h4 id="hdtpa"><b>List of Progress</b></h4>
-    <br><br></div>
-    <!-- <div id="mydatatable_filter" class="dataTables_filter">
-                    <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
-
-        </div> -->
+    <h4 id="hdtpa"><b>List of File Progress</b></h4>
+    <br><br>
+  
+ 
+ 
+         
+       
+            </div>
+       
 
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -55,8 +55,8 @@
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center">
                                 <select name="" id="">
-                                    <option value=""> <a href="">View</a> </option>
-                               
+                                    <option value=""> <a href="">Action</a> </option>
+                                    <option value=""> <a href=""></a> </option>
                                 </select>
                             </td>
                         </tr>

@@ -25,14 +25,11 @@
     </div>
    
     <div id="upload_button">
-    <label>
-    <input type="file" name="logo" ngf-select ng-model="new_files" ng-change="fs.uploadFiles(new_files)" value="{{$company_details->logo}}"multiple>
-    <span class="btn btn-primary"> <span class="fa fa-plus"></span>&nbsp;&nbsp;Edit logo</span> <br>
-</label>
+    <input type="file" name="image" ngf-select ng-model="new_files" ng-change="fs.uploadFiles(new_files)" value="{{$company_details->Add_Logo}}"multiple>
+    <span class="btn btn-primary"> <span class="fa fa-plus"></span>&nbsp;&nbsp;ADD LOGO</span> <br>
     <br>
     <!-- <input type="text" class="form-control" name="name" id="name" > -->
 </div>
-<br>
     <div class="row">
         <div class="col-md-12">
             <form method="post"action="{{url('update_company_details')}}"  id="form">  

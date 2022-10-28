@@ -33,7 +33,7 @@
                                     class="fa fa-eye" aria-hidden="true"></i>
                                 <input type="hidden" value="" id="medicine_id_hidden" class="applicate"
                                     name="supplier_id_hidden">
-                                <a onClick="return myFunction();" href="" style="color:black;"><i
+                                <a onClick="return myFunction();" href="{{url('delete-document',$document->id)}}" style="color:black;"><i
                                         class="fas fa-trash-alt"></i></a></td>
                     </tr>
                     @endforeach

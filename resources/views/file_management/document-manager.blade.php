@@ -53,10 +53,13 @@
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
 
-                            <td  scope="row"class="text-center">
-                        <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                        <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
-                           </td>
+                            <td scope="row" class="text-center">
+                                
+                                <select name="" id="">
+                                    <option value=""> <a href=""></a>Action </option>
+                                    <option value=""> <a href=""></a> </option>
+                                </select>
+                            </td>
                         </tr>
 
 
@@ -108,13 +111,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="" id="cars">
-                        <option >---select---</option>
-                        <option >client 1</option>
-                        <option >client 2</option>
-                        <option >client 3</option>
-                    </select>
-                              
+                                <input type="text" class="form-control" name="website" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -126,12 +123,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="" id="cars">
-                        <option >---select---</option>
-                        <option >file 1</option>
-                        <option >file 2</option>
-                        <option >file 3</option>
-                    </select>
+                                <input type="text" class="form-control" name="website" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -156,12 +148,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                        <option >---select---</option>
-                        <option >category_1</option>
-                        <option >category_2</option>
-                        <option >category_3</option>
-                    </select>
+                                <input type="text" class="form-control" name="website" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -232,10 +219,7 @@
 
                     </div>
                     <select name="country" id="cars">
-                        <option >---select---</option>
-                        <option >doc_owner_1</option>
-                        <option >doc_owner_2</option>
-                        <option >doc_owner_3</option>
+                        <option value="volvo"></option>
                     </select>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.

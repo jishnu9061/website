@@ -7,12 +7,12 @@
             <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;">
             <b><u>Individual Client List</u></b> -->
             {{-- heading --}}
-    <h4 id="hdtpa"><b>Individual Client List</b></h4>
-    <br><br>
+            <h4 id="hdtpa"><b>Individual Client List</b></h4>
+            <br><br>
         </div>
-       
 
-       
+
+
 
         <div id="mydatatable_filter" class="dataTables_filter">
             <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
@@ -56,8 +56,11 @@
                                             class="fa fa-eye" aria-hidden="true"></i></td></a>
                                 <td><a href="{{url('edit_person',$list_client->id)}}"><i style="color:black;"
                                             class="fa fa-edit" aria-hidden="true"></i></td>
-                                <td><a href="{{url('delete-client',$list_client->id)}}"><i style="color:black;"
-                                            class="fa fa-trash" aria-hidden="true"></i></td>
+                                <td>
+                                <a onClick="return myFunction();" href="{{url('delete-client',$list_client->id)}}"
+                                        style="color:black;"><i class="fas fa-trash-alt"></i></a>
+                                </td>
+                                </td>
 
                             </tr>
                             @endforeach
@@ -67,10 +70,10 @@
             </div>
             <div class="modal fade" id="myModal">
                 <div class="modal-dialog modal-lg">
-                    <div class="modal-content" >
+                    <div class="modal-content">
 
                         <!-- Modal Header -->
-                        <div class="modal-header" >
+                        <div class="modal-header">
                             <h2 class="text-center"><b>Add Individual Client</b></h2>
 
                         </div>
@@ -391,12 +394,14 @@
 
                                                 </div>
                                                 <div class="col-sm">
-                                                <br>
+                                                    <br>
                                                 </div>
-                                                <div class="modal-footer" >  
-                                                        <button type="submit" class="btn btn-primary"style="width:15%;background-color:white;color:black">save</button>
-                                                        <button type="button" class="btn btn-primary"style="width:15%;background-color:white;color:black">Cancel</button>
-                                                    </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-primary"
+                                                        style="width:15%;background-color:white;color:black">save</button>
+                                                    <button type="button" class="btn btn-primary"
+                                                        style="width:15%;background-color:white;color:black">Cancel</button>
+                                                </div>
                                             </div>
                                         </form>
                                     </div>
