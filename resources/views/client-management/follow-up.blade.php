@@ -10,12 +10,12 @@
                 <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
                 <b><u>Client Follow Up</u></b></span> -->
                 {{-- heading --}}
-    <h4 id="hdtpa"><b>Client Follow Up</b></h4>
-    <br><br>
+                <h4 id="hdtpa"><b>Client Follow Up</b></h4>
+                <br><br>
             </div><br>
 
         </div>
-        
+
         <div>
             <button type="button" class="btn btn-primary complaint_btn" data-toggle="modal" data-target="#myModal"> Add
                 Follow
@@ -23,7 +23,7 @@
         </div>
 
 
-       
+
 
 
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -58,8 +58,8 @@
                             <td scope="row" class="text-center" id="medicine_name_1">{{$list->registered_by}}</td>
                             <td><a href="{{url('edit-follow',$list->id)}}"><i style="color:black;" class="fa fa-edit"
                                         aria-hidden="true"></i></a>
-                                <a href="{{url('delete-follow',$list->id)}}"><i style="color:black;" class="fa fa-trash"
-                                        aria-hidden="true"></i>
+                                <a onClick="return myFunction();" href="{{url('delete-follow',$list->id)}}"
+                                    style="color:black;"><i class="fas fa-trash-alt"></i></a>
                             </td>
 
                         </tr>
@@ -77,7 +77,7 @@
                             </div>
 
                             <!-- Modal body -->
-                            <div class="modal-body" >
+                            <div class="modal-body">
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-12 order-md-1">
@@ -253,8 +253,10 @@
                                                         </div>
                                                         <div class="col-sm">
                                                             <br>
-                                                            <button type="submit" class="btn btn-primary float:right;"Style="width:50%;">Save</button>
-                                                            <button type="button" class="btn btn-primary float:left"Style="width:45%;"data-dismiss="modal">Cancel</button>
+                                                            <button type="submit" class="btn btn-primary float:right;"
+                                                                Style="width:50%;">Save</button>
+                                                            <button type="button" class="btn btn-primary float:left"
+                                                                Style="width:45%;" data-dismiss="modal">Cancel</button>
                                                         </div>
                                                     </div>
                                                 </div>

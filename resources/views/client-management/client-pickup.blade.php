@@ -7,15 +7,15 @@
         <div>
             <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Client
                     Pickup Reception</u></b> -->
-                    {{-- heading --}}
-    <h4 id="hdtpa"><b>Client Pickup Reception</b></h4>
-    <br><br>
-                </div>
+            {{-- heading --}}
+            <h4 id="hdtpa"><b>Client Pickup Reception</b></h4>
+            <br><br>
+        </div>
         <div>
-            
 
 
-            
+
+
             <button class="btn btn-primary add-btn" data-toggle="modal" data-target="#myModal" style="width:20%">New
                 Client
                 Pickup</button>
@@ -51,9 +51,9 @@
                                     <td scope="row" class="text-center">{{$pickup->time_out}}</td>
                                     <td><a href="{{url('view-pickup',$pickup->id)}}"><i style="color:black;align:centre"
                                                 class="fa fa-eye" aria-hidden="true"></i></a>
-                                        <a href="{{url('delete-pickup',$pickup->id)}}"><i
-                                                style="color:black;align:centre" class="fa fa-trash"
-                                                aria-hidden="true"></i></a>
+                                        <a onClick="return myFunction();"
+                                            href="{{url('delete-pickup',$pickup->id)}}" style="color:black;"><i
+                                                class="fas fa-trash-alt"></i></a>
                                     </td>
                                 </tr>
                                 @endforeach
@@ -63,16 +63,16 @@
 
                     <div class="modal fade" id="myModal">
                         <div class="modal-dialog modal-lg">
-                            <div class="modal-content" >
+                            <div class="modal-content">
 
                                 <!-- Modal Header -->
-                                <div class="modal-header" >
+                                <div class="modal-header">
                                     <h2 class="text-center"><b>Register Client</b></h2>
 
                                 </div>
 
                                 <!-- Modal body -->
-                                <div class="modal-body" >
+                                <div class="modal-body">
                                     <div class="container">
                                         <div class="row">
                                             <form method="post" action="{{url('store-pickup')}}" id="form">

@@ -13,15 +13,15 @@
             <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;">
             <b><u>Complaint Register</u></b> -->
             {{-- heading --}}
-    <h4 id="hdtpa"><b>Complaint Register</b></h4>
-    <br><br>
+            <h4 id="hdtpa"><b>Complaint Register</b></h4>
+            <br><br>
         </div>
-     
+
         <div id="mydatatable_filter" class="dataTables_filter">
             <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
         </div>
         <button class="btn btn-primary add-btn" Style="width:20%" data-toggle="modal" data-target="#myModal">Add New
-                Complaint</button>
+            Complaint</button>
 
 
         <div class="tab-content" id="myTabContent">
@@ -56,8 +56,11 @@
                                             class="fa fa-eye" aria-hidden="true"></i></td></a>
                                 <td><a href="{{url('edit_complaint',$list->id)}}"><i style="color:black;"
                                             class="fa fa-edit" aria-hidden="true"></i></td>
-                                <td><a href="{{url('delete-Complaint',$list->id)}}"><i style="color:black;"
-                                            class="fa fa-trash" aria-hidden="true"></i></td>
+                                <td>
+                                        <a onClick="return myFunction();"
+                                            href="{{url('delete-Complaint',$list->id)}}" style="color:black;"><i
+                                                class="fas fa-trash-alt"></i></a>
+                                </td>
 
                             </tr>
                             @endforeach
@@ -66,16 +69,16 @@
                 </div>
                 <div class="modal fade" id="myModal">
                     <div class="modal-dialog modal-lg">
-                        <div class="modal-content" >
+                        <div class="modal-content">
 
                             <!-- Modal Header -->
-                            <div class="modal-header" >
+                            <div class="modal-header">
                                 <h2 class="text-center"><b>Add New Complaint</b></h2>
 
                             </div>
 
                             <!-- Modal body -->
-                            <div class="modal-body" >
+                            <div class="modal-body">
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-12">

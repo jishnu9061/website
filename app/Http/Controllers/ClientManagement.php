@@ -398,6 +398,12 @@ class ClientManagement extends Controller
         return view('client-management.view-document',compact('view_document','id'));
     }
 
+
+    public function deleteDocument($id){
+         DB::table('cra_document_detials')->where('id',$id)->delete();  
+        return redirect('/client-document');
+    }
+
     //document
 
     //Pickup-client
@@ -747,7 +753,7 @@ class ClientManagement extends Controller
         $id            = $Request['id'];
         $document_type = $Request['document'];
         $issue_date = $Request['issue'];
-        $Client = $Request['client'];
+        $customer = $Request['client'];
         $client_ref_no = $Request['ref'];
         $currency = $Request['currency'];
         $exchange_rate = $Request['rate'];
@@ -765,7 +771,7 @@ class ClientManagement extends Controller
         DB::table('cra_customer_quotation')->where('id',$id)->update([
             'document_type' => $document_type ,
             'issue_date' => $issue_date,
-            'Client' =>   $Client,
+            'customer' =>   $customer,
             'client_ref_no' => $client_ref_no,
             'currency' =>$currency,
             'exchange_rate' => $exchange_rate,
@@ -838,7 +844,7 @@ class ClientManagement extends Controller
 
     public function updateRegistration(Request $Request){
         $id            = $Request['id'];
-        $client_name = $Request['name'];
+        $customer_name = $Request['name'];
         $postal_code = $Request['Code'];
         $town = $Request['town'];
         $country = $Request['country'];
@@ -847,11 +853,11 @@ class ClientManagement extends Controller
         $mobile_no = $Request['mobile'];
         $web_site = $Request['website'];
         $registration_date = $Request['Date'];
-        $client_address = $Request['caddress'];
+        $customer_address = $Request['caddress'];
         $physical_address = $Request['paddress'];
 
         DB::table('cra_customer_registration')->where('id',$id)->update([
-            'client_name' =>  $client_name ,
+            'customer_name' => $customer_name ,
             'postal_code' =>   $postal_code ,
             'town' => $town,
             'country' =>$country,
@@ -860,7 +866,7 @@ class ClientManagement extends Controller
             'mobile_no' =>   $mobile_no,
             'web_site' =>   $web_site,
             'registration_date' =>   $registration_date,
-            'client_address' => $client_address,
+            'customer_address' =>  $customer_address,
             'physical_address' => $physical_address,
         ]);
 
@@ -915,8 +921,8 @@ class ClientManagement extends Controller
             'action_plan' =>  $action_plan,
         ]);
 
-        $list_communication = DB::table('cra_conversations')->get();
-        return view('client-management.communication-list',compact('list_communication'));
+        
+        return redirect('communication-list');
     }
 
     

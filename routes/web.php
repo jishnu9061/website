@@ -1043,6 +1043,7 @@ Route::any('client-document','ClientManagement@document')->name('client-document
 Route::any('create-document','ClientManagement@createDocument')->name('create-document');
 Route::any('add-document','ClientManagement@addDocument')->name('add-document');
 Route::any('view-document/{id}','ClientManagement@viewDocument')->name('view-document');
+Route::any('delete-document/{id}','ClientManagement@deleteDocument')->name('delete-document');
 //end Client-Documents
 
 //Client-Pickup
