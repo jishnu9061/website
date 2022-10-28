@@ -1,18 +1,6 @@
 @extends('layouts.hmsmain')
 @section('content')
-<!DOCTYPE html>
-<html>
-<head>
-    {{-- <title>How to Use Fullcalendar in Laravel 8</title> --}}
-    
-    <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.js"></script>
    <style>
      .fc-time
      {
@@ -22,7 +10,7 @@
 </head>
 <body>
   
-<div class="container">
+
  {{-- {{request()->id}} --}}
  {{-- <h4>{{ $operation_t[0]->theatre_name }}</h4> --}}
     {{-- <br />

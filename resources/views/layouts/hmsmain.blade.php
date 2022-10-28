@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRA</title>
-
+    
     <link rel="preconnect" href="https://fonts.gstatic.com/">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('/') }}assets/css/bootstrap.css">
@@ -46,6 +46,12 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script type="text/javascript" src="table.js"></script>
+
+<script>
+    $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
 <!-- b -->
     <style>
     #icon {
@@ -1041,7 +1047,7 @@
  
       <div class="nav-item dropdown" >
         <button   class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <img style="height: 35px; width: 35px;"  id="cr_logo" src="assets/images/Logo cra.png"  alt="CRA">
+            <img data-toggle="tooltip" data-placement="top" title="Menu" style="height: 35px; width: 35px;"  id="cr_logo" src="assets/images/Logo cra.png"  alt="CRA">
         </button>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="{{url('user_management')}}">User Management</a>
@@ -1063,7 +1069,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse ml-2" id="navbarTogglerDemo01" style="background-color: #ffffff; padding:5px; ">
+  <div class="collapse navbar-collapse ml-2" id="navbarTogglerDemo01">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a  class="font-bold text-uppercase nav-link" href="#">  {{ Auth::user()->name }} <span class="sr-only">(current)</span></a>
@@ -1095,7 +1101,7 @@
       <li class="nav-item">
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+            <button class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
           </form>
         {{-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> --}}
       </li>
@@ -1106,49 +1112,51 @@
 
 
 
-      <ul class="navbar-nav mr-auto lg-pl-3" >
+
+
+
+  
+    <ul class="navbar-nav mr-auto lg-pl-3" >
       
-      <li class="nav-item dropdown" >
-        <button   class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Create New
-        </button>
-
-
-
-
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{{url('user_management')}}">Time entry</a>
-          <a class="dropdown-item" href="{{url('client-index')}}">Expense entry</a>
-          {{-- <div class="dropdown-divider"></div> --}}
-          <a class="dropdown-item" href="{{url('file_managementindex')}}">Task</a>
-          <a class="dropdown-item" href="{{url('file_managementindex')}}">Matter</a>
-
-          <a class="dropdown-item" href="{{url('file_managementindex')}}">Contact</a>
-          <a class="dropdown-item" href="{{url('file_managementindex')}}">Record payment</a>
-          <a class="dropdown-item" href="{{url('file_managementindex')}}">Client funds request</a>
-          <a class="dropdown-item" href="{{url('file_managementindex')}}">Email log</a>
-          <a class="dropdown-item" href="{{url('file_managementindex')}}">Phone log</a>
-          <a class="dropdown-item" href="{{url('file_managementindex')}}">Secure message</a>
-          <a class="dropdown-item" href="{{url('file_managementindex')}}">Event</a>
-          <a class="dropdown-item" href="{{url('file_managementindex')}}">Note</a>
-          
-        </div>
-      </li>
-   
-    </ul>
-
-
+        <li class="nav-item dropdown" >
+          <button   class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Create New <i class="fa fa-plus-square" ></i>
+          </button>
   
   
+  
+  
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{{url('user_management')}}">Time entry</a>
+            <a class="dropdown-item" href="{{url('client-index')}}">Expense entry</a>
+            {{-- <div class="dropdown-divider"></div> --}}
+            <a class="dropdown-item" href="{{url('file_managementindex')}}">Task</a>
+            <a class="dropdown-item" href="{{url('file_managementindex')}}">Matter</a>
+  
+            <a class="dropdown-item" href="{{url('file_managementindex')}}">Contact</a>
+            <a class="dropdown-item" href="{{url('file_managementindex')}}">Record payment</a>
+            <a class="dropdown-item" href="{{url('file_managementindex')}}">Client funds request</a>
+            <a class="dropdown-item" href="{{url('file_managementindex')}}">Email log</a>
+            <a class="dropdown-item" href="{{url('file_managementindex')}}">Phone log</a>
+            <a class="dropdown-item" href="{{url('file_managementindex')}}">Secure message</a>
+            <a class="dropdown-item" href="{{url('file_managementindex')}}">Event</a>
+            <a class="dropdown-item" href="{{url('file_managementindex')}}">Note</a>
+            
+          </div>
+        </li>
+     
+      </ul>
 
-    <div class="p-2" id="navr" style="margin-right: .5%;"   >
+    <div  id="navr" style="margin-right: .5%;"   >
+
+        
 
         <div  style=" text-decoration: none; list-style:none;">
      
-
-    <a style="text-align: center" class="text-muted mb-0 " href="{{url('logt')}}"> <i class="fas fa-sign-out-alt"></i> Log Out</a>
+<button class="btn btn-primary">
+    <a  style="text-align: center" class="text-muted mb-0 " href="{{url('logt')}}"><i   class="fas fa-sign-out-alt"></i>LogOut</a>
     
- 
+</button>
 </div>
 
 

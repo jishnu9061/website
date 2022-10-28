@@ -12,7 +12,10 @@
                 {{ Session::get('leavevalidat')}}
             </div>
         @endif
-        <h2>Add staffs</h2>
+          {{-- heading --}}
+    <h4 id="hdtpa"><b>Add staffs</b></h4>
+    <br><br>
+        
         <hr class="mb-4">
     </div>
     <h6>Basic Details</h6>
