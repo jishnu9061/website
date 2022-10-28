@@ -2,7 +2,7 @@
 @section('content')
 
 <head>
-  <style> 
+  {{-- <style> 
     #myDIV {
      
      
@@ -18,7 +18,7 @@
       padding: 10px;
       /* border-radius: 50px; */
     }
-    </style>
+    </style> --}}
 </head>
 
 

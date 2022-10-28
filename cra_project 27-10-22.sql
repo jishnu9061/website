@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 20, 2022 at 08:32 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.29
+-- Generation Time: Oct 27, 2022 at 12:50 PM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 7.4.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -427,18 +427,85 @@ CREATE TABLE `callambulance` (
 CREATE TABLE `cra_add_box` (
   `id` int(225) NOT NULL,
   `type` varchar(255) DEFAULT NULL,
-  `number` int(255) DEFAULT NULL
+  `number` int(255) DEFAULT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  `branch_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `cra_add_box`
 --
 
-INSERT INTO `cra_add_box` (`id`, `type`, `number`) VALUES
-(146, 'demo 2', 666666),
-(147, NULL, NULL),
-(148, NULL, NULL),
-(149, NULL, NULL);
+INSERT INTO `cra_add_box` (`id`, `type`, `number`, `company_id`, `branch_id`) VALUES
+(146, 'demo 2', 666666, NULL, NULL),
+(147, NULL, NULL, NULL, NULL),
+(148, NULL, NULL, NULL, NULL),
+(149, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_add_event`
+--
+
+CREATE TABLE `cra_add_event` (
+  `id` int(11) NOT NULL,
+  `Event_Type` varchar(255) DEFAULT NULL,
+  `Title` varchar(255) DEFAULT NULL,
+  `Meeting_Room` varchar(255) DEFAULT NULL,
+  `Location` varchar(255) DEFAULT NULL,
+  `Start_Date` date DEFAULT NULL,
+  `Time` time DEFAULT NULL,
+  `End_Date` date DEFAULT NULL,
+  `Time_End` time DEFAULT NULL,
+  `Event_Booked_For` varchar(255) DEFAULT NULL,
+  `User_Invited` varchar(255) DEFAULT NULL,
+  `Other_Invites` varchar(255) DEFAULT NULL,
+  `Client` varchar(255) DEFAULT NULL,
+  `File` varchar(225) DEFAULT NULL,
+  `Notes` varchar(225) DEFAULT NULL,
+  `Set_Repetition` varchar(225) DEFAULT NULL,
+  `Repetition_End` varchar(225) DEFAULT NULL,
+  `Set_Reminder` varchar(225) DEFAULT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  `branch_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_add_event`
+--
+
+INSERT INTO `cra_add_event` (`id`, `Event_Type`, `Title`, `Meeting_Room`, `Location`, `Start_Date`, `Time`, `End_Date`, `Time_End`, `Event_Booked_For`, `User_Invited`, `Other_Invites`, `Client`, `File`, `Notes`, `Set_Repetition`, `Repetition_End`, `Set_Reminder`, `company_id`, `branch_id`) VALUES
+(5, 'demo 2', 'sdgdg', 'demo 3', 'sdfsdf', '2022-09-28', '15:27:00', '2022-10-28', '16:28:00', 'demo 2', 'sdfsd', 'test', 'demo 3', 'demo 2', 'dfgdfgdg', 'demo 2', '2022-10-28', 'demo 2', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_add_file_bringup_reminder`
+--
+
+CREATE TABLE `cra_add_file_bringup_reminder` (
+  `id` int(11) NOT NULL,
+  `client_name` varchar(255) NOT NULL,
+  `file_name` varchar(255) NOT NULL,
+  `progress_date` date NOT NULL,
+  `next_bringup_days` date NOT NULL,
+  `remind_period_days` date NOT NULL,
+  `send_notification` varchar(255) NOT NULL,
+  `reason` varchar(500) NOT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  `branch_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_add_file_bringup_reminder`
+--
+
+INSERT INTO `cra_add_file_bringup_reminder` (`id`, `client_name`, `file_name`, `progress_date`, `next_bringup_days`, `remind_period_days`, `send_notification`, `reason`, `company_id`, `branch_id`) VALUES
+(1, 'client 1', 'cra project', '2022-10-16', '0000-00-00', '2022-10-30', 'notification 1', 'complete', NULL, NULL),
+(2, 'client 1', 'test', '2022-10-27', '0000-00-00', '2022-10-22', 'notification 1', 'test', NULL, NULL),
+(3, 'client 1', 'test', '2022-10-28', '0000-00-00', '2022-10-23', 'select....', 'test', NULL, NULL),
+(4, 'client 3', 'onetwo', '2022-10-29', '0000-00-00', '2022-10-27', 'notification 3', 'test 12345', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -463,32 +530,151 @@ CREATE TABLE `cra_add_file_progress` (
   `amount` double DEFAULT NULL,
   `start_time` timestamp NULL DEFAULT NULL,
   `activity_type` varchar(255) DEFAULT NULL,
-  `activity` varchar(255) DEFAULT NULL
+  `activity` varchar(255) DEFAULT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  `branch_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `cra_add_file_progress`
 --
 
-INSERT INTO `cra_add_file_progress` (`id`, `progress_date`, `next_action`, `client_name`, `bringup_date`, `file_name`, `reminder_period`, `action_type`, `action_description`, `time_taken_hours`, `time_taken_minutes`, `item_type`, `currency`, `amount`, `start_time`, `activity_type`, `activity`) VALUES
-(1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(2, '2022-10-08', 'khgjkhkljvdx', 'volvo', '2022-10-21', 'volvo', 52, 'volvo', 'sdfg', '00:00:10', '00:00:44', 'volvo', 'volvo', 4444, '0000-00-00 00:00:00', 'volvo', '4444'),
-(3, '2022-10-08', 'khgjkhkljvdx', 'volvo', '2022-10-21', 'volvo', 52, 'volvo', 'sdfg', '00:00:10', '00:00:44', 'volvo', 'volvo', 4444, '0000-00-00 00:00:00', 'volvo', '4444'),
-(7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(8, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(9, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(10, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(11, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(12, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(13, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(14, '2022-10-26', 'egsgsghdf', NULL, '2022-10-28', NULL, 444, NULL, 'fgxcb', '00:00:04', '00:00:52', NULL, NULL, 741, NULL, NULL, 'gfjgjf'),
-(15, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(16, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(17, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(18, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(19, '2022-10-25', 'fgjjasgdsdfh', NULL, '2022-10-08', NULL, 41, NULL, 'dfhshdhh', '20:47:00', '00:41:00', NULL, NULL, 789, '0000-00-00 00:00:00', NULL, '75358'),
-(20, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(21, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `cra_add_file_progress` (`id`, `progress_date`, `next_action`, `client_name`, `bringup_date`, `file_name`, `reminder_period`, `action_type`, `action_description`, `time_taken_hours`, `time_taken_minutes`, `item_type`, `currency`, `amount`, `start_time`, `activity_type`, `activity`, `company_id`, `branch_id`) VALUES
+(1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(2, '2022-10-08', 'khgjkhkljvdx', 'volvo', '2022-10-21', 'volvo', 52, 'volvo', 'sdfg', '00:00:10', '00:00:44', 'volvo', 'volvo', 4444, '0000-00-00 00:00:00', 'volvo', '4444', NULL, NULL),
+(3, '2022-10-08', 'khgjkhkljvdx', 'volvo', '2022-10-21', 'volvo', 52, 'volvo', 'sdfg', '00:00:10', '00:00:44', 'volvo', 'volvo', 4444, '0000-00-00 00:00:00', 'volvo', '4444', NULL, NULL),
+(7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(8, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(9, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(10, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(11, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(12, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(13, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(14, '2022-10-26', 'egsgsghdf', NULL, '2022-10-28', NULL, 444, NULL, 'fgxcb', '00:00:04', '00:00:52', NULL, NULL, 741, NULL, NULL, 'gfjgjf', NULL, NULL),
+(15, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(16, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(17, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(18, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(19, '2022-10-25', 'fgjjasgdsdfh', NULL, '2022-10-08', NULL, 41, NULL, 'dfhshdhh', '20:47:00', '00:41:00', NULL, NULL, 789, '0000-00-00 00:00:00', NULL, '75358', NULL, NULL),
+(20, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(21, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(22, '2022-10-26', 'test action', 'demo1', '2022-11-02', NULL, 10, 'demo1', 'test', '03:04:00', '17:03:00', 'demo1', 'demo1', 3000, '0000-00-00 00:00:00', 'demo1', 'test', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_add_new_instructions`
+--
+
+CREATE TABLE `cra_add_new_instructions` (
+  `id` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `client` varchar(255) NOT NULL,
+  `file` varchar(255) NOT NULL,
+  `instruction` varchar(255) NOT NULL,
+  `category` varchar(255) NOT NULL,
+  `receiver` varchar(255) NOT NULL,
+  `currency` varchar(255) NOT NULL,
+  `exchange` int(11) NOT NULL,
+  `turn_around` varchar(255) NOT NULL,
+  `priority` varchar(255) NOT NULL,
+  `amount` varchar(255) NOT NULL,
+  `details` varchar(255) NOT NULL,
+  `send_notification` varchar(255) NOT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  `branch_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_add_office_instructions`
+--
+
+CREATE TABLE `cra_add_office_instructions` (
+  `id` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `instruction_type` varchar(255) NOT NULL,
+  `instruction_category` varchar(255) NOT NULL,
+  `receiver` varchar(255) NOT NULL,
+  `currency` varchar(255) NOT NULL,
+  `exchange_rate` varchar(255) NOT NULL,
+  `expence_category` varchar(255) NOT NULL,
+  `turn_around` varchar(255) NOT NULL,
+  `priority` varchar(255) NOT NULL,
+  `amount` varchar(255) NOT NULL,
+  `detail` varchar(255) NOT NULL,
+  `send_notification` varchar(255) NOT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  `branch_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_add_user_department`
+--
+
+CREATE TABLE `cra_add_user_department` (
+  `id` int(11) NOT NULL,
+  `department_code` varchar(255) DEFAULT NULL,
+  `department_name` varchar(255) DEFAULT NULL,
+  `h_o_d` varchar(255) DEFAULT NULL,
+  `perfomance_report` varchar(255) DEFAULT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  `branch_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_add_user_department`
+--
+
+INSERT INTO `cra_add_user_department` (`id`, `department_code`, `department_name`, `h_o_d`, `perfomance_report`, `company_id`, `branch_id`) VALUES
+(6, '1234', 'HR Department', 'George Njoroge', 'Yes', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_add_user_group`
+--
+
+CREATE TABLE `cra_add_user_group` (
+  `id` int(11) NOT NULL,
+  `group_code` varchar(255) DEFAULT NULL,
+  `group_name` varchar(255) DEFAULT NULL,
+  `default_menu` varchar(255) DEFAULT NULL,
+  `group_role` varchar(255) DEFAULT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  `branch_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_add_user_group`
+--
+
+INSERT INTO `cra_add_user_group` (`id`, `group_code`, `group_name`, `default_menu`, `group_role`, `company_id`, `branch_id`) VALUES
+(1, '123456', 'cra', 'Dashboard', '--select group roles--', NULL, NULL),
+(2, '12356', 'test112', 'Office Administration', '--select group roles--', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_add_user_roles`
+--
+
+CREATE TABLE `cra_add_user_roles` (
+  `id` int(11) NOT NULL,
+  `role_name` varchar(255) NOT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  `branch_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_add_user_roles`
+--
+
+INSERT INTO `cra_add_user_roles` (`id`, `role_name`, `company_id`, `branch_id`) VALUES
+(8, 'Account', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -528,6 +714,49 @@ INSERT INTO `cra_bank_details` (`id`, `bank`, `branch`, `account_name`, `account
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `cra_billable_activities`
+--
+
+CREATE TABLE `cra_billable_activities` (
+  `id` int(11) NOT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `activity_name` varchar(255) DEFAULT NULL,
+  `cost` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_book_a_court`
+--
+
+CREATE TABLE `cra_book_a_court` (
+  `id` int(11) NOT NULL,
+  `client_name` varchar(255) NOT NULL,
+  `file_name` varchar(255) NOT NULL,
+  `court_name` varchar(255) NOT NULL,
+  `court_event_type` varchar(255) NOT NULL,
+  `start_date` date NOT NULL,
+  `start_time` time NOT NULL,
+  `end_date` date NOT NULL,
+  `end_time` time NOT NULL,
+  `user_assigned` varchar(255) NOT NULL,
+  `send_notification` varchar(255) NOT NULL,
+  `set_reminder` varchar(255) NOT NULL,
+  `notes` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_book_a_court`
+--
+
+INSERT INTO `cra_book_a_court` (`id`, `client_name`, `file_name`, `court_name`, `court_event_type`, `start_date`, `start_time`, `end_date`, `end_time`, `user_assigned`, `send_notification`, `set_reminder`, `notes`) VALUES
+(0, 'client 1', 'file 1', 'court 1', 'event 1', '2022-10-03', '16:02:00', '2022-10-10', '16:03:00', 'user 1', 'notification 1', 'reminder 1', 'complete'),
+(0, 'client 1', 'file 3', 'court 1', 'event 2', '2022-10-26', '19:49:00', '2022-10-30', '20:49:00', 'user 3', 'notification 3', 'reminder 3', 'test one');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `cra_bringup`
 --
 
@@ -553,7 +782,12 @@ INSERT INTO `cra_bringup` (`id`, `Client`, `File`, `Registered_By`, `Responsible
 (5, NULL, NULL, NULL, NULL, NULL, NULL),
 (6, NULL, NULL, NULL, NULL, NULL, NULL),
 (7, NULL, NULL, NULL, NULL, NULL, NULL),
-(8, NULL, NULL, NULL, 'demo 1', '2022-10-20', '2022-10-29');
+(8, NULL, NULL, NULL, 'demo 1', '2022-10-20', '2022-10-29'),
+(9, NULL, NULL, NULL, NULL, NULL, NULL),
+(10, NULL, NULL, NULL, NULL, NULL, NULL),
+(11, NULL, NULL, NULL, NULL, NULL, NULL),
+(12, 'demo 1', 'demo 1', 'demo 1', 'demo 1', '2022-10-27', '2022-10-28'),
+(13, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -576,7 +810,10 @@ CREATE TABLE `cra_client_monthly_file_status_report` (
 INSERT INTO `cra_client_monthly_file_status_report` (`id`, `Report_Type`, `Client`, `Month`, `year`) VALUES
 (1, NULL, NULL, NULL, NULL),
 (2, 'demo 1', 'demo 1', 'September', '2500'),
-(3, NULL, NULL, NULL, NULL);
+(3, NULL, NULL, NULL, NULL),
+(4, NULL, NULL, NULL, NULL),
+(5, NULL, NULL, NULL, NULL),
+(6, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -599,12 +836,31 @@ CREATE TABLE `cra_client_pickup_reception` (
   `time_out` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `cra_client_pickup_reception`
+-- Table structure for table `cra_client_service_at_reception`
 --
 
-INSERT INTO `cra_client_pickup_reception` (`id`, `client`, `file_name`, `mobile`, `persion_handling`, `email`, `client_name`, `persion_picking_handling`, `reason`, `visitors`, `time_in`, `time_out`) VALUES
-(1, 'hlo', 'hi', 987654321, 'gh', 'mk@gmail.com', 'dnj', 'ggg', 'hhh', 'hhhh', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+CREATE TABLE `cra_client_service_at_reception` (
+  `id` int(11) NOT NULL,
+  `receipt_no` int(11) DEFAULT NULL,
+  `client_name` varchar(200) DEFAULT NULL,
+  `mobile` int(11) DEFAULT NULL,
+  `amount_paid` varchar(200) DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `email` varchar(200) DEFAULT NULL,
+  `code` varchar(200) DEFAULT NULL,
+  `payment_method` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_client_service_at_reception`
+--
+
+INSERT INTO `cra_client_service_at_reception` (`id`, `receipt_no`, `client_name`, `mobile`, `amount_paid`, `date`, `email`, `code`, `payment_method`) VALUES
+(1, 0, 'man', 987654321, '345', '2022-10-20', 'mk@gmail.com', 'Code1', 'Checks'),
+(2, 0, 'man', 0, '345', '2022-10-15', 'mk@gmail.com', 'Code1', 'Cash');
 
 -- --------------------------------------------------------
 
@@ -643,7 +899,8 @@ CREATE TABLE `cra_company_details` (
   `pin_no` varchar(255) DEFAULT NULL,
   `vat_no` varchar(255) DEFAULT NULL,
   `NHIF` varchar(255) DEFAULT NULL,
-  `NSSF_no` varchar(255) DEFAULT NULL
+  `NSSF_no` varchar(255) DEFAULT NULL,
+  `company_website` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -672,7 +929,7 @@ CREATE TABLE `cra_complaint_register` (
 --
 
 INSERT INTO `cra_complaint_register` (`id`, `date`, `client_type`, `files`, `customer_name`, `staff_handling`, `complaint_about`, `telephone_no`, `email`, `others`, `action_plan`, `complaint_description`) VALUES
-(2, '2022-10-20', 'Corporate', 'File 1', 'dnj', 'Staff 1', 'Person', 98765098, 'mk@gmail.com', 'gg', 'gost', 'hai');
+(3, '2022-10-26', 'Corporate', 'File 2', 'Allan', 'Staff 1', 'Person', 789456123, 'test@gmail.com', 'test other', 'test plan', 'test complaint');
 
 -- --------------------------------------------------------
 
@@ -704,7 +961,7 @@ CREATE TABLE `cra_conversations` (
 --
 
 INSERT INTO `cra_conversations` (`id`, `communication_date`, `client`, `file`, `customer`, `telephone_no`, `email`, `communication_source`, `mode_of_communication`, `communicated`, `duration`, `person_handling`, `time`, `others`, `communicated_description`, `action_plan`) VALUES
-(1, '2022-10-01', 'Corporate', 'Type 1', 'hii', 987654321, 'm@gmail.com', 'Vedio Conference', 'Mode 1', 'Clerical Staff', 'Half Hour', 'Person 2', '16:23:00', 'gg', 'ggg', 'ggg');
+(1, '2022-11-26', 'Corporate', 'Type 1', 'test customer', 456789123, 'test@gmail.com', 'Vedio Conference', 'Mode 1', 'Clerical Staff', 'Half Hour', 'Person 2', '16:23:00', 'gg', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -723,7 +980,7 @@ CREATE TABLE `cra_corporate_client_details` (
   `Fax_no` varchar(255) DEFAULT NULL,
   `Email_address` varchar(255) DEFAULT NULL,
   `Website` varchar(255) DEFAULT NULL,
-  `Brought_in _By` varchar(255) DEFAULT NULL,
+  `Brought_in_By` varchar(255) DEFAULT NULL,
   `Status_reporting_day` varchar(255) DEFAULT NULL,
   `Client_source` varchar(255) DEFAULT NULL,
   `Client_source_naration` varchar(255) DEFAULT NULL,
@@ -738,7 +995,44 @@ CREATE TABLE `cra_corporate_client_details` (
   `contact_person` varchar(255) DEFAULT NULL,
   `designation` varchar(255) DEFAULT NULL,
   `Mobile_no` int(11) DEFAULT NULL,
-  `email` varchar(255) NOT NULL
+  `email` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_corporate_client_details`
+--
+
+INSERT INTO `cra_corporate_client_details` (`id`, `Client_no`, `Client_type`, `Cityzen_status`, `Certificate_of_incorporation`, `Country`, `Telephone_No`, `Fax_no`, `Email_address`, `Website`, `Brought_in_By`, `Status_reporting_day`, `Client_source`, `Client_source_naration`, `Client_name`, `Client_industry`, `Pin_no`, `postal_address`, `postal_code`, `town`, `physical_address`, `notes`, `contact_person`, `designation`, `Mobile_no`, `email`) VALUES
+(1, '1234', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, ''),
+(2, '258', 'Corporate', 'Select', NULL, 'Select', NULL, NULL, NULL, NULL, 'Select', 'Select', 'Select', NULL, NULL, 'Select', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_courts`
+--
+
+CREATE TABLE `cra_courts` (
+  `id` int(11) NOT NULL,
+  `date` date DEFAULT NULL,
+  `court_category` varchar(255) DEFAULT NULL,
+  `court_name` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_currency_list`
+--
+
+CREATE TABLE `cra_currency_list` (
+  `id` int(11) NOT NULL,
+  `currency_name` varchar(255) DEFAULT NULL,
+  `currency_symbol` varchar(255) DEFAULT NULL,
+  `exchange_rate` varchar(255) DEFAULT NULL,
+  `default_action` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -766,9 +1060,9 @@ CREATE TABLE `cra_customer_followup` (
 --
 
 INSERT INTO `cra_customer_followup` (`id`, `followup_date`, `customer`, `followup_type`, `staff_responsible`, `send_remainder_to`, `next_bringup_date`, `alert_period`, `email`, `registered_by`, `description`) VALUES
-(2, '2022-10-14', 'Aggriculture Development Corporation', 'Email', 'Corine Auma', 'hi', '2022-10-12', '1 year', 'mk@gmail.com', 'hlo', 'gnbnbn'),
 (3, '2022-10-08', 'Aggriculture Development Corporation', 'Email', 'Corine Auma', 'hi', '2022-10-13', '1 year', 'mugu@gmail.com', 'hlo', 'hgmgh'),
-(4, '2022-10-21', 'Aggriculture Development Corporation', 'Email', 'Corine Auma', 'hi', '2022-10-13', '1 year', 'mmmmm@gmail.com', 'hlo', 'jjj');
+(4, '2022-10-21', 'Aggriculture Development Corporation', 'Email', 'Corine Auma', 'hi', '2022-10-13', '1 year', 'mmmmm@gmail.com', 'hlo', 'jjj'),
+(5, '2022-11-30', 'demo1', 'demo', 'demo11', NULL, NULL, '1 month', 'test@gmail.com', 'Clerk', NULL);
 
 -- --------------------------------------------------------
 
@@ -801,7 +1095,8 @@ CREATE TABLE `cra_customer_quotation` (
 --
 
 INSERT INTO `cra_customer_quotation` (`id`, `document_type`, `issue_date`, `customer`, `client_ref_no`, `currency`, `exchange_rate`, `approver`, `bank_account`, `billing_information`, `attender`, `subject`, `type`, `particulers_of_service_rendered`, `amount`, `vat`, `comments`) VALUES
-(3, 'free notes', '2022-10-21', 'demo1', 45, 0, 56, 'volvo', 'volvo', NULL, 'hlo', 'tamil', 'volvo', NULL, 34, 'demo1', NULL);
+(3, 'free notes', '2022-10-21', 'demo1', 45, 0, 56, 'volvo', 'volvo', NULL, 'hlo', 'tamil', 'volvo', NULL, 34, 'demo1', NULL),
+(4, 'demo11', '2022-10-26', 'demo22', 123, 0, NULL, 'demo33', 'select', NULL, 'test', NULL, 'select', NULL, NULL, 'select', NULL);
 
 -- --------------------------------------------------------
 
@@ -829,7 +1124,7 @@ CREATE TABLE `cra_customer_registration` (
 --
 
 INSERT INTO `cra_customer_registration` (`id`, `customer_name`, `postal_code`, `town`, `country`, `telephone_no`, `email`, `mobile_no`, `web_site`, `registration_date`, `customer_address`, `physical_address`) VALUES
-(1, 'anish', 98779, 'tvm', 'volvo', 987654321, 'mk@gmail.com', 987654321, 'ww.india.com', '2022-10-13', 'ghhh', 'hhhhh'),
+(1, 'anish 123', 987791232, 'Nairobi', 'volvo', 456123789, 'test@gmail.com', 789456123, 'ww.test.com', '2022-10-27', NULL, NULL),
 (2, 'arun', 5555, 'tvm', 'kenya', 98765, 'mmmmm@gmail.com', 987654321, 'ww.india.com', '2022-09-28', '55gggg', 'gggg');
 
 -- --------------------------------------------------------
@@ -898,7 +1193,12 @@ INSERT INTO `cra_file_progress_report` (`id`, `Client`, `File`, `Progress_Date_F
 (7, NULL, NULL, NULL, NULL),
 (8, NULL, NULL, NULL, NULL),
 (9, 'demo 1', 'select', NULL, NULL),
-(10, NULL, NULL, NULL, NULL);
+(10, NULL, NULL, NULL, NULL),
+(11, NULL, NULL, NULL, NULL),
+(12, NULL, NULL, NULL, NULL),
+(13, NULL, NULL, NULL, NULL),
+(14, NULL, NULL, NULL, NULL),
+(15, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -920,7 +1220,13 @@ CREATE TABLE `cra_file_report` (
 INSERT INTO `cra_file_report` (`id`, `Responsible_Advocate`, `Date_From`, `Date_To`) VALUES
 (1, 'demo 1', '2022-10-20', '2022-10-29'),
 (2, 'demo 1', '2022-10-12', '2022-11-04'),
-(3, NULL, NULL, NULL);
+(3, NULL, NULL, NULL),
+(4, NULL, NULL, NULL),
+(5, NULL, NULL, NULL),
+(6, NULL, NULL, NULL),
+(7, NULL, NULL, NULL),
+(8, NULL, NULL, NULL),
+(9, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -950,7 +1256,39 @@ INSERT INTO `cra_file_status_summary` (`id`, `Date_to`, `File`, `Instruction_Cat
 (2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (3, '2022-10-13', 'demo 1', 'demo 1', 'demo 1', 'demo 1', 45345, '16:05:00', 'demo 1', 'fhxfh'),
 (4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(6, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(8, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(9, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_file_types`
+--
+
+CREATE TABLE `cra_file_types` (
+  `id` int(11) NOT NULL,
+  `file_type` varchar(255) DEFAULT NULL,
+  `short_name` varchar(255) DEFAULT NULL,
+  `retainer_period` varchar(255) DEFAULT NULL,
+  `approvers` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_hourly_rate`
+--
+
+CREATE TABLE `cra_hourly_rate` (
+  `id` int(11) NOT NULL,
+  `user_staff` varchar(255) DEFAULT NULL,
+  `currency` varchar(255) DEFAULT NULL,
+  `hourly_rates` varchar(255) DEFAULT NULL,
+  `amount` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -1008,7 +1346,70 @@ INSERT INTO `cra_instructions_report` (`id`, `Report_Category`, `Instruction_Typ
 (2, NULL, 'demo 1', 0, 'demo 1', '2022-10-27', '2022-10-30'),
 (3, NULL, 'demo 1', 0, 'select', '2022-10-27', '2022-10-30'),
 (4, 'demo 1', 'demo 1', 0, 'select', '2022-10-28', '2022-10-30'),
-(5, NULL, NULL, NULL, NULL, NULL, NULL);
+(5, NULL, NULL, NULL, NULL, NULL, NULL),
+(6, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_invoice_items`
+--
+
+CREATE TABLE `cra_invoice_items` (
+  `id` int(11) NOT NULL,
+  `item_code` varchar(255) DEFAULT NULL,
+  `item_category` varchar(255) DEFAULT NULL,
+  `item_name` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `sales_tax_code` varchar(255) DEFAULT NULL,
+  `income_account` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_leave_days`
+--
+
+CREATE TABLE `cra_leave_days` (
+  `id` int(11) NOT NULL,
+  `year` varchar(255) DEFAULT NULL,
+  `annual_leave_day` varchar(255) DEFAULT NULL,
+  `satuday_working_days` varchar(255) DEFAULT NULL,
+  `perfomance_duration` varchar(255) DEFAULT NULL,
+  `pay_relief` varchar(255) DEFAULT NULL,
+  `pl_closed` varchar(255) DEFAULT NULL,
+  `account_closed` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_letter_types`
+--
+
+CREATE TABLE `cra_letter_types` (
+  `id` int(11) NOT NULL,
+  `letter_category` varchar(255) DEFAULT NULL,
+  `letter_type` varchar(255) DEFAULT NULL,
+  `letter_type_name` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_manage_user_department`
+--
+
+CREATE TABLE `cra_manage_user_department` (
+  `id` int(11) NOT NULL,
+  `department_code` varchar(255) DEFAULT NULL,
+  `department_name` varchar(255) DEFAULT NULL,
+  `hod` varchar(255) NOT NULL,
+  `performance_report` int(11) DEFAULT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  `branch_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -1053,6 +1454,75 @@ INSERT INTO `cra_open_new_file_details` (`id`, `Associate_handling`, `Client_typ
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `cra_partner_revenue_share`
+--
+
+CREATE TABLE `cra_partner_revenue_share` (
+  `id` int(11) NOT NULL,
+  `year` varchar(255) DEFAULT NULL,
+  `partner` varchar(255) DEFAULT NULL,
+  `total` varchar(255) DEFAULT NULL,
+  `percentage` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_partner_revenue_share`
+--
+
+INSERT INTO `cra_partner_revenue_share` (`id`, `year`, `partner`, `total`, `percentage`) VALUES
+(1, '2025', 'Princess Caroline', NULL, '34');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_payment_item`
+--
+
+CREATE TABLE `cra_payment_item` (
+  `id` int(11) NOT NULL,
+  `item_code` varchar(255) DEFAULT NULL,
+  `item_group` varchar(255) DEFAULT NULL,
+  `item_name` varchar(255) DEFAULT NULL,
+  `item_comment` varchar(255) DEFAULT NULL,
+  `item_shortname` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_reg_new_user`
+--
+
+CREATE TABLE `cra_reg_new_user` (
+  `id` int(11) NOT NULL,
+  `user_code` varchar(255) DEFAULT NULL,
+  `first_name` varchar(255) DEFAULT NULL,
+  `last_name` varchar(255) DEFAULT NULL,
+  `initial` varchar(255) DEFAULT NULL,
+  `user_name` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `re_type_password` varchar(255) DEFAULT NULL,
+  `post_address` varchar(255) DEFAULT NULL,
+  `town_name` varchar(255) DEFAULT NULL,
+  `telephone_no` varchar(255) DEFAULT NULL,
+  `mobile_no` varchar(255) DEFAULT NULL,
+  `email_address` varchar(255) DEFAULT NULL,
+  `departments` varchar(255) DEFAULT NULL,
+  `upload_signature` varchar(255) DEFAULT NULL,
+  `user_group` varchar(255) DEFAULT NULL,
+  `user_role` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_reg_new_user`
+--
+
+INSERT INTO `cra_reg_new_user` (`id`, `user_code`, `first_name`, `last_name`, `initial`, `user_name`, `password`, `re_type_password`, `post_address`, `town_name`, `telephone_no`, `mobile_no`, `email_address`, `departments`, `upload_signature`, `user_group`, `user_role`) VALUES
+(7, '1234', 'Allams', NULL, 'sss', 'allan1234', '123456', NULL, 'Allan Villaa', 'Nairobii', NULL, '7894561241', 'allan123@gmail.com', 'HRM & Admin', 'cra_add_user_roles.sql', 'Support', 'Department Head');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `cra_safe_item_request`
 --
 
@@ -1069,6 +1539,13 @@ CREATE TABLE `cra_safe_item_request` (
   `Distributed_By` text DEFAULT NULL,
   `Status` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_safe_item_request`
+--
+
+INSERT INTO `cra_safe_item_request` (`id`, `Client`, `File`, `Document_Type`, `Safe_Name`, `Approver`, `Requested_By`, `Date`, `And_next`, `Distributed_By`, `Status`) VALUES
+(1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1099,7 +1576,8 @@ INSERT INTO `cra_safe_register_report` (`id`, `Client`, `File`, `Document_Type`,
 (1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (2, 'demo 1', 'demo 1', 'demo 1', 'demo 1', 'demo 1', 'demo 1', 'demo 1', '2022-10-12', 'sdsdgd', 'demo 1', 'demo 1'),
 (3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1113,6 +1591,13 @@ CREATE TABLE `cra_staff_monthly_status_report` (
   `Month` text DEFAULT NULL,
   `Year` int(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_staff_monthly_status_report`
+--
+
+INSERT INTO `cra_staff_monthly_status_report` (`id`, `Department`, `Month`, `Year`) VALUES
+(9, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1252,6 +1737,25 @@ INSERT INTO `cra_template_category` (`id`, `Template_Category`, `Category_Type`)
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `cra_town_city`
+--
+
+CREATE TABLE `cra_town_city` (
+  `id` int(11) NOT NULL,
+  `Town_City` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_town_city`
+--
+
+INSERT INTO `cra_town_city` (`id`, `Town_City`) VALUES
+(4, 'nairobi'),
+(5, 'text');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `cra_transport_zone`
 --
 
@@ -1301,6 +1805,37 @@ CREATE TABLE `cra_weekend_and_holiday` (
   `Date` date NOT NULL,
   `Day` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_weekend_and_holiday`
+--
+
+INSERT INTO `cra_weekend_and_holiday` (`id`, `Date`, `Day`) VALUES
+(1, '2022-10-27', '15');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_work_flow`
+--
+
+CREATE TABLE `cra_work_flow` (
+  `id` int(11) NOT NULL,
+  `Date_Created` date NOT NULL,
+  `Workflow_Name` varchar(255) DEFAULT NULL,
+  `Start_Date` date DEFAULT NULL,
+  `Duration` varchar(255) DEFAULT NULL,
+  `Workflow_Comments` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_work_flow`
+--
+
+INSERT INTO `cra_work_flow` (`id`, `Date_Created`, `Workflow_Name`, `Start_Date`, `Duration`, `Workflow_Comments`) VALUES
+(4, '2022-10-11', 'aaaa', '2022-10-18', 'cccc', NULL),
+(5, '2022-10-12', 'aaaaaaa', '2022-10-12', 'aaaaaaaaaa', 'aaaaaaaaa'),
+(6, '2022-10-27', 'text', '2022-10-27', '15', 'dggfg');
 
 -- --------------------------------------------------------
 
@@ -3876,7 +4411,1344 @@ INSERT INTO `dailyattendances` (`id`, `year`, `month`, `date`, `staffid`, `atten
 (2539, '2022', '01', '28-01-2022', '0904000010104', 'P', 'kims intetrnational', 'Medical Departments', NULL, '2022-08-17 07:21:33', '2022-08-17 07:21:33', 'vipin'),
 (2540, '2022', '01', '29-01-2022', '0904000010104', 'P', 'kims intetrnational', 'Medical Departments', NULL, '2022-08-17 07:21:33', '2022-08-17 07:21:33', 'vipin'),
 (2541, '2022', '01', '30-01-2022', '0904000010104', 'P', 'kims intetrnational', 'Medical Departments', NULL, '2022-08-17 07:21:33', '2022-08-17 07:21:33', 'vipin'),
-(2542, '2022', '01', '31-01-2022', '0904000010104', 'P', 'kims intetrnational', 'Medical Departments', NULL, '2022-08-17 07:21:33', '2022-08-17 07:21:33', 'vipin');
+(2542, '2022', '01', '31-01-2022', '0904000010104', 'P', 'kims intetrnational', 'Medical Departments', NULL, '2022-08-17 07:21:33', '2022-08-17 07:21:33', 'vipin'),
+(2543, '2022', '10', '1-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2544, '2022', '10', '2-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2545, '2022', '10', '3-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2546, '2022', '10', '4-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2547, '2022', '10', '5-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2548, '2022', '10', '6-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2549, '2022', '10', '7-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2550, '2022', '10', '8-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2551, '2022', '10', '9-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2552, '2022', '10', '10-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2553, '2022', '10', '11-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2554, '2022', '10', '12-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2555, '2022', '10', '13-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2556, '2022', '10', '14-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2557, '2022', '10', '15-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2558, '2022', '10', '16-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2559, '2022', '10', '17-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2560, '2022', '10', '18-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2561, '2022', '10', '19-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2562, '2022', '10', '20-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2563, '2022', '10', '21-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2564, '2022', '10', '22-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2565, '2022', '10', '23-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2566, '2022', '10', '24-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2567, '2022', '10', '25-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2568, '2022', '10', '26-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2569, '2022', '10', '27-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2570, '2022', '10', '28-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2571, '2022', '10', '29-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2572, '2022', '10', '30-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2573, '2022', '10', '31-10-2022', '0400037', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimshr'),
+(2574, '2022', '10', '1-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2575, '2022', '10', '2-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2576, '2022', '10', '3-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2577, '2022', '10', '4-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2578, '2022', '10', '5-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2579, '2022', '10', '6-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2580, '2022', '10', '7-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2581, '2022', '10', '8-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2582, '2022', '10', '9-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2583, '2022', '10', '10-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2584, '2022', '10', '11-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2585, '2022', '10', '12-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2586, '2022', '10', '13-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2587, '2022', '10', '14-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2588, '2022', '10', '15-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2589, '2022', '10', '16-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2590, '2022', '10', '17-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2591, '2022', '10', '18-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2592, '2022', '10', '19-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2593, '2022', '10', '20-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2594, '2022', '10', '21-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2595, '2022', '10', '22-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2596, '2022', '10', '23-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2597, '2022', '10', '24-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2598, '2022', '10', '25-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2599, '2022', '10', '26-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2600, '2022', '10', '27-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:16', '2022-10-27 03:18:16', 'kimsdoctor'),
+(2601, '2022', '10', '28-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor'),
+(2602, '2022', '10', '29-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor'),
+(2603, '2022', '10', '30-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor'),
+(2604, '2022', '10', '31-10-2022', '0900038', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor'),
+(2605, '2022', '10', '1-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2606, '2022', '10', '2-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2607, '2022', '10', '3-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2608, '2022', '10', '4-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2609, '2022', '10', '5-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2610, '2022', '10', '6-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff');
+INSERT INTO `dailyattendances` (`id`, `year`, `month`, `date`, `staffid`, `attendance`, `hospital`, `department`, `status`, `created_at`, `updated_at`, `staffname`) VALUES
+(2611, '2022', '10', '7-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2612, '2022', '10', '8-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2613, '2022', '10', '9-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2614, '2022', '10', '10-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2615, '2022', '10', '11-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2616, '2022', '10', '12-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2617, '2022', '10', '13-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2618, '2022', '10', '14-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2619, '2022', '10', '15-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2620, '2022', '10', '16-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2621, '2022', '10', '17-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2622, '2022', '10', '18-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2623, '2022', '10', '19-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2624, '2022', '10', '20-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2625, '2022', '10', '21-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2626, '2022', '10', '22-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2627, '2022', '10', '23-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2628, '2022', '10', '24-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2629, '2022', '10', '25-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2630, '2022', '10', '26-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2631, '2022', '10', '27-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2632, '2022', '10', '28-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2633, '2022', '10', '29-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2634, '2022', '10', '30-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2635, '2022', '10', '31-10-2022', '0900039', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'teststaff'),
+(2636, '2022', '10', '1-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2637, '2022', '10', '2-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2638, '2022', '10', '3-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2639, '2022', '10', '4-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2640, '2022', '10', '5-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2641, '2022', '10', '6-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2642, '2022', '10', '7-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2643, '2022', '10', '8-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2644, '2022', '10', '9-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2645, '2022', '10', '10-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2646, '2022', '10', '11-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2647, '2022', '10', '12-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2648, '2022', '10', '13-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2649, '2022', '10', '14-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2650, '2022', '10', '15-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2651, '2022', '10', '16-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2652, '2022', '10', '17-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2653, '2022', '10', '18-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2654, '2022', '10', '19-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2655, '2022', '10', '20-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2656, '2022', '10', '21-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2657, '2022', '10', '22-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2658, '2022', '10', '23-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2659, '2022', '10', '24-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2660, '2022', '10', '25-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2661, '2022', '10', '26-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2662, '2022', '10', '27-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2663, '2022', '10', '28-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2664, '2022', '10', '29-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2665, '2022', '10', '30-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2666, '2022', '10', '31-10-2022', '0900040', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsdoctor1'),
+(2667, '2022', '10', '1-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2668, '2022', '10', '2-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2669, '2022', '10', '3-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2670, '2022', '10', '4-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2671, '2022', '10', '5-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2672, '2022', '10', '6-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2673, '2022', '10', '7-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2674, '2022', '10', '8-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2675, '2022', '10', '9-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2676, '2022', '10', '10-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2677, '2022', '10', '11-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2678, '2022', '10', '12-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2679, '2022', '10', '13-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2680, '2022', '10', '14-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2681, '2022', '10', '15-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2682, '2022', '10', '16-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2683, '2022', '10', '17-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2684, '2022', '10', '18-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2685, '2022', '10', '19-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2686, '2022', '10', '20-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2687, '2022', '10', '21-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2688, '2022', '10', '22-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2689, '2022', '10', '23-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2690, '2022', '10', '24-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2691, '2022', '10', '25-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2692, '2022', '10', '26-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2693, '2022', '10', '27-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2694, '2022', '10', '28-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2695, '2022', '10', '29-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2696, '2022', '10', '30-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2697, '2022', '10', '31-10-2022', '0900041', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'entdoctor'),
+(2698, '2022', '10', '1-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2699, '2022', '10', '2-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2700, '2022', '10', '3-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2701, '2022', '10', '4-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2702, '2022', '10', '5-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2703, '2022', '10', '6-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2704, '2022', '10', '7-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2705, '2022', '10', '8-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2706, '2022', '10', '9-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2707, '2022', '10', '10-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2708, '2022', '10', '11-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2709, '2022', '10', '12-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2710, '2022', '10', '13-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2711, '2022', '10', '14-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2712, '2022', '10', '15-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2713, '2022', '10', '16-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2714, '2022', '10', '17-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2715, '2022', '10', '18-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2716, '2022', '10', '19-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2717, '2022', '10', '20-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2718, '2022', '10', '21-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2719, '2022', '10', '22-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2720, '2022', '10', '23-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2721, '2022', '10', '24-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2722, '2022', '10', '25-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2723, '2022', '10', '26-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2724, '2022', '10', '27-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2725, '2022', '10', '28-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2726, '2022', '10', '29-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2727, '2022', '10', '30-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2728, '2022', '10', '31-10-2022', '0900042', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'ent2doctor'),
+(2729, '2022', '10', '1-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2730, '2022', '10', '2-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2731, '2022', '10', '3-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2732, '2022', '10', '4-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2733, '2022', '10', '5-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2734, '2022', '10', '6-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2735, '2022', '10', '7-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2736, '2022', '10', '8-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2737, '2022', '10', '9-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2738, '2022', '10', '10-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2739, '2022', '10', '11-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2740, '2022', '10', '12-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2741, '2022', '10', '13-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2742, '2022', '10', '14-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2743, '2022', '10', '15-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2744, '2022', '10', '16-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2745, '2022', '10', '17-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2746, '2022', '10', '18-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2747, '2022', '10', '19-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2748, '2022', '10', '20-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2749, '2022', '10', '21-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2750, '2022', '10', '22-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2751, '2022', '10', '23-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2752, '2022', '10', '24-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2753, '2022', '10', '25-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2754, '2022', '10', '26-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2755, '2022', '10', '27-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2756, '2022', '10', '28-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2757, '2022', '10', '29-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2758, '2022', '10', '30-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2759, '2022', '10', '31-10-2022', '0900043', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'radha'),
+(2760, '2022', '10', '1-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2761, '2022', '10', '2-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2762, '2022', '10', '3-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2763, '2022', '10', '4-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2764, '2022', '10', '5-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2765, '2022', '10', '6-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2766, '2022', '10', '7-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2767, '2022', '10', '8-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2768, '2022', '10', '9-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2769, '2022', '10', '10-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2770, '2022', '10', '11-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2771, '2022', '10', '12-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2772, '2022', '10', '13-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2773, '2022', '10', '14-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2774, '2022', '10', '15-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2775, '2022', '10', '16-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2776, '2022', '10', '17-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2777, '2022', '10', '18-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2778, '2022', '10', '19-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2779, '2022', '10', '20-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2780, '2022', '10', '21-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2781, '2022', '10', '22-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2782, '2022', '10', '23-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2783, '2022', '10', '24-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2784, '2022', '10', '25-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2785, '2022', '10', '26-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2786, '2022', '10', '27-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2787, '2022', '10', '28-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2788, '2022', '10', '29-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2789, '2022', '10', '30-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2790, '2022', '10', '31-10-2022', '0900044', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimspharma'),
+(2791, '2022', '10', '1-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2792, '2022', '10', '2-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2793, '2022', '10', '3-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2794, '2022', '10', '4-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2795, '2022', '10', '5-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2796, '2022', '10', '6-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2797, '2022', '10', '7-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2798, '2022', '10', '8-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2799, '2022', '10', '9-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2800, '2022', '10', '10-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2801, '2022', '10', '11-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2802, '2022', '10', '12-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2803, '2022', '10', '13-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2804, '2022', '10', '14-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2805, '2022', '10', '15-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2806, '2022', '10', '16-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2807, '2022', '10', '17-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2808, '2022', '10', '18-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2809, '2022', '10', '19-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2810, '2022', '10', '20-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2811, '2022', '10', '21-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2812, '2022', '10', '22-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2813, '2022', '10', '23-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2814, '2022', '10', '24-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2815, '2022', '10', '25-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2816, '2022', '10', '26-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2817, '2022', '10', '27-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2818, '2022', '10', '28-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2819, '2022', '10', '29-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2820, '2022', '10', '30-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2821, '2022', '10', '31-10-2022', '0900045', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsurodoctor'),
+(2822, '2022', '10', '1-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2823, '2022', '10', '2-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2824, '2022', '10', '3-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2825, '2022', '10', '4-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2826, '2022', '10', '5-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2827, '2022', '10', '6-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2828, '2022', '10', '7-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2829, '2022', '10', '8-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2830, '2022', '10', '9-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2831, '2022', '10', '10-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2832, '2022', '10', '11-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2833, '2022', '10', '12-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2834, '2022', '10', '13-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2835, '2022', '10', '14-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2836, '2022', '10', '15-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2837, '2022', '10', '16-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2838, '2022', '10', '17-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2839, '2022', '10', '18-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2840, '2022', '10', '19-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2841, '2022', '10', '20-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2842, '2022', '10', '21-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2843, '2022', '10', '22-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2844, '2022', '10', '23-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2845, '2022', '10', '24-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2846, '2022', '10', '25-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2847, '2022', '10', '26-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2848, '2022', '10', '27-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2849, '2022', '10', '28-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2850, '2022', '10', '29-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2851, '2022', '10', '30-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2852, '2022', '10', '31-10-2022', '0900046', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsudoctor'),
+(2853, '2022', '10', '1-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2854, '2022', '10', '2-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2855, '2022', '10', '3-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2856, '2022', '10', '4-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2857, '2022', '10', '5-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2858, '2022', '10', '6-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2859, '2022', '10', '7-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2860, '2022', '10', '8-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2861, '2022', '10', '9-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2862, '2022', '10', '10-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2863, '2022', '10', '11-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2864, '2022', '10', '12-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2865, '2022', '10', '13-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2866, '2022', '10', '14-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2867, '2022', '10', '15-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2868, '2022', '10', '16-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2869, '2022', '10', '17-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2870, '2022', '10', '18-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2871, '2022', '10', '19-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2872, '2022', '10', '20-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2873, '2022', '10', '21-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2874, '2022', '10', '22-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2875, '2022', '10', '23-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2876, '2022', '10', '24-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2877, '2022', '10', '25-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2878, '2022', '10', '26-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2879, '2022', '10', '27-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2880, '2022', '10', '28-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2881, '2022', '10', '29-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2882, '2022', '10', '30-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2883, '2022', '10', '31-10-2022', '0900047', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsadmin'),
+(2884, '2022', '10', '1-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2885, '2022', '10', '2-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2886, '2022', '10', '3-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2887, '2022', '10', '4-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2888, '2022', '10', '5-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2889, '2022', '10', '6-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2890, '2022', '10', '7-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2891, '2022', '10', '8-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2892, '2022', '10', '9-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2893, '2022', '10', '10-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2894, '2022', '10', '11-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2895, '2022', '10', '12-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2896, '2022', '10', '13-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2897, '2022', '10', '14-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2898, '2022', '10', '15-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2899, '2022', '10', '16-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2900, '2022', '10', '17-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2901, '2022', '10', '18-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2902, '2022', '10', '19-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2903, '2022', '10', '20-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2904, '2022', '10', '21-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2905, '2022', '10', '22-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2906, '2022', '10', '23-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2907, '2022', '10', '24-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2908, '2022', '10', '25-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2909, '2022', '10', '26-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2910, '2022', '10', '27-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2911, '2022', '10', '28-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2912, '2022', '10', '29-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2913, '2022', '10', '30-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2914, '2022', '10', '31-10-2022', '0900048', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', '123'),
+(2915, '2022', '10', '1-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2916, '2022', '10', '2-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2917, '2022', '10', '3-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2918, '2022', '10', '4-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2919, '2022', '10', '5-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2920, '2022', '10', '6-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2921, '2022', '10', '7-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2922, '2022', '10', '8-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2923, '2022', '10', '9-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2924, '2022', '10', '10-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2925, '2022', '10', '11-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2926, '2022', '10', '12-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2927, '2022', '10', '13-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2928, '2022', '10', '14-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2929, '2022', '10', '15-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2930, '2022', '10', '16-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2931, '2022', '10', '17-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2932, '2022', '10', '18-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2933, '2022', '10', '19-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2934, '2022', '10', '20-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2935, '2022', '10', '21-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2936, '2022', '10', '22-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2937, '2022', '10', '23-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2938, '2022', '10', '24-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2939, '2022', '10', '25-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2940, '2022', '10', '26-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2941, '2022', '10', '27-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2942, '2022', '10', '28-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2943, '2022', '10', '29-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2944, '2022', '10', '30-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2945, '2022', '10', '31-10-2022', '0900049', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'qwe'),
+(2946, '2022', '10', '1-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2947, '2022', '10', '2-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2948, '2022', '10', '3-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2949, '2022', '10', '4-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2950, '2022', '10', '5-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2951, '2022', '10', '6-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2952, '2022', '10', '7-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2953, '2022', '10', '8-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2954, '2022', '10', '9-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2955, '2022', '10', '10-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2956, '2022', '10', '11-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2957, '2022', '10', '12-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2958, '2022', '10', '13-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2959, '2022', '10', '14-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2960, '2022', '10', '15-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor');
+INSERT INTO `dailyattendances` (`id`, `year`, `month`, `date`, `staffid`, `attendance`, `hospital`, `department`, `status`, `created_at`, `updated_at`, `staffname`) VALUES
+(2961, '2022', '10', '16-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2962, '2022', '10', '17-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2963, '2022', '10', '18-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2964, '2022', '10', '19-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2965, '2022', '10', '20-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2966, '2022', '10', '21-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2967, '2022', '10', '22-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2968, '2022', '10', '23-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2969, '2022', '10', '24-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2970, '2022', '10', '25-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2971, '2022', '10', '26-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2972, '2022', '10', '27-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2973, '2022', '10', '28-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2974, '2022', '10', '29-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2975, '2022', '10', '30-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2976, '2022', '10', '31-10-2022', '0900050', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsentdoctor'),
+(2977, '2022', '10', '1-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(2978, '2022', '10', '2-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(2979, '2022', '10', '3-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(2980, '2022', '10', '4-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(2981, '2022', '10', '5-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(2982, '2022', '10', '6-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(2983, '2022', '10', '7-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(2984, '2022', '10', '8-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(2985, '2022', '10', '9-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(2986, '2022', '10', '10-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(2987, '2022', '10', '11-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(2988, '2022', '10', '12-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(2989, '2022', '10', '13-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(2990, '2022', '10', '14-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(2991, '2022', '10', '15-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(2992, '2022', '10', '16-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(2993, '2022', '10', '17-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(2994, '2022', '10', '18-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(2995, '2022', '10', '19-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(2996, '2022', '10', '20-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(2997, '2022', '10', '21-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(2998, '2022', '10', '22-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(2999, '2022', '10', '23-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(3000, '2022', '10', '24-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(3001, '2022', '10', '25-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(3002, '2022', '10', '26-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(3003, '2022', '10', '27-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(3004, '2022', '10', '28-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(3005, '2022', '10', '29-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(3006, '2022', '10', '30-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(3007, '2022', '10', '31-10-2022', '0900051', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsent1doctor'),
+(3008, '2022', '10', '1-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3009, '2022', '10', '2-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3010, '2022', '10', '3-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3011, '2022', '10', '4-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3012, '2022', '10', '5-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3013, '2022', '10', '6-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3014, '2022', '10', '7-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3015, '2022', '10', '8-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3016, '2022', '10', '9-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3017, '2022', '10', '10-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3018, '2022', '10', '11-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3019, '2022', '10', '12-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3020, '2022', '10', '13-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3021, '2022', '10', '14-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3022, '2022', '10', '15-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3023, '2022', '10', '16-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3024, '2022', '10', '17-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3025, '2022', '10', '18-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3026, '2022', '10', '19-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3027, '2022', '10', '20-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3028, '2022', '10', '21-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3029, '2022', '10', '22-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3030, '2022', '10', '23-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3031, '2022', '10', '24-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3032, '2022', '10', '25-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3033, '2022', '10', '26-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3034, '2022', '10', '27-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3035, '2022', '10', '28-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3036, '2022', '10', '29-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3037, '2022', '10', '30-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3038, '2022', '10', '31-10-2022', '0900052', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimscounter'),
+(3039, '2022', '10', '1-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3040, '2022', '10', '2-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3041, '2022', '10', '3-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3042, '2022', '10', '4-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3043, '2022', '10', '5-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3044, '2022', '10', '6-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3045, '2022', '10', '7-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3046, '2022', '10', '8-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3047, '2022', '10', '9-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3048, '2022', '10', '10-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3049, '2022', '10', '11-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3050, '2022', '10', '12-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3051, '2022', '10', '13-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3052, '2022', '10', '14-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3053, '2022', '10', '15-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3054, '2022', '10', '16-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3055, '2022', '10', '17-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3056, '2022', '10', '18-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3057, '2022', '10', '19-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3058, '2022', '10', '20-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3059, '2022', '10', '21-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3060, '2022', '10', '22-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3061, '2022', '10', '23-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3062, '2022', '10', '24-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3063, '2022', '10', '25-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3064, '2022', '10', '26-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3065, '2022', '10', '27-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3066, '2022', '10', '28-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3067, '2022', '10', '29-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3068, '2022', '10', '30-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3069, '2022', '10', '31-10-2022', '0900053', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'salarytest'),
+(3070, '2022', '10', '1-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3071, '2022', '10', '2-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3072, '2022', '10', '3-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3073, '2022', '10', '4-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3074, '2022', '10', '5-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3075, '2022', '10', '6-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3076, '2022', '10', '7-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3077, '2022', '10', '8-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3078, '2022', '10', '9-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3079, '2022', '10', '10-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3080, '2022', '10', '11-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3081, '2022', '10', '12-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3082, '2022', '10', '13-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3083, '2022', '10', '14-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3084, '2022', '10', '15-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3085, '2022', '10', '16-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3086, '2022', '10', '17-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3087, '2022', '10', '18-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3088, '2022', '10', '19-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3089, '2022', '10', '20-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3090, '2022', '10', '21-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3091, '2022', '10', '22-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3092, '2022', '10', '23-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3093, '2022', '10', '24-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3094, '2022', '10', '25-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3095, '2022', '10', '26-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3096, '2022', '10', '27-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3097, '2022', '10', '28-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3098, '2022', '10', '29-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3099, '2022', '10', '30-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3100, '2022', '10', '31-10-2022', '0900054', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'example'),
+(3101, '2022', '10', '1-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3102, '2022', '10', '2-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3103, '2022', '10', '3-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3104, '2022', '10', '4-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3105, '2022', '10', '5-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3106, '2022', '10', '6-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3107, '2022', '10', '7-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3108, '2022', '10', '8-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3109, '2022', '10', '9-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3110, '2022', '10', '10-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3111, '2022', '10', '11-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3112, '2022', '10', '12-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3113, '2022', '10', '13-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3114, '2022', '10', '14-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3115, '2022', '10', '15-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3116, '2022', '10', '16-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3117, '2022', '10', '17-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3118, '2022', '10', '18-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3119, '2022', '10', '19-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3120, '2022', '10', '20-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3121, '2022', '10', '21-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3122, '2022', '10', '22-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3123, '2022', '10', '23-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3124, '2022', '10', '24-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3125, '2022', '10', '25-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3126, '2022', '10', '26-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3127, '2022', '10', '27-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3128, '2022', '10', '28-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3129, '2022', '10', '29-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3130, '2022', '10', '30-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3131, '2022', '10', '31-10-2022', '0900074', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'kimsstore'),
+(3132, '2022', '10', '1-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'casuality'),
+(3133, '2022', '10', '2-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'casuality'),
+(3134, '2022', '10', '3-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'casuality'),
+(3135, '2022', '10', '4-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'casuality'),
+(3136, '2022', '10', '5-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'casuality'),
+(3137, '2022', '10', '6-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'casuality'),
+(3138, '2022', '10', '7-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'casuality'),
+(3139, '2022', '10', '8-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'casuality'),
+(3140, '2022', '10', '9-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'casuality'),
+(3141, '2022', '10', '10-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'casuality'),
+(3142, '2022', '10', '11-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'casuality'),
+(3143, '2022', '10', '12-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'casuality'),
+(3144, '2022', '10', '13-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'casuality'),
+(3145, '2022', '10', '14-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'casuality'),
+(3146, '2022', '10', '15-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'casuality'),
+(3147, '2022', '10', '16-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'casuality'),
+(3148, '2022', '10', '17-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'casuality'),
+(3149, '2022', '10', '18-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'casuality'),
+(3150, '2022', '10', '19-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'casuality'),
+(3151, '2022', '10', '20-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'casuality'),
+(3152, '2022', '10', '21-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'casuality'),
+(3153, '2022', '10', '22-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:17', '2022-10-27 03:18:17', 'casuality'),
+(3154, '2022', '10', '23-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'casuality'),
+(3155, '2022', '10', '24-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'casuality'),
+(3156, '2022', '10', '25-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'casuality'),
+(3157, '2022', '10', '26-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'casuality'),
+(3158, '2022', '10', '27-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'casuality'),
+(3159, '2022', '10', '28-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'casuality'),
+(3160, '2022', '10', '29-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'casuality'),
+(3161, '2022', '10', '30-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'casuality'),
+(3162, '2022', '10', '31-10-2022', '0900076', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'casuality'),
+(3163, '2022', '10', '1-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3164, '2022', '10', '2-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3165, '2022', '10', '3-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3166, '2022', '10', '4-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3167, '2022', '10', '5-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3168, '2022', '10', '6-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3169, '2022', '10', '7-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3170, '2022', '10', '8-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3171, '2022', '10', '9-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3172, '2022', '10', '10-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3173, '2022', '10', '11-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3174, '2022', '10', '12-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3175, '2022', '10', '13-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3176, '2022', '10', '14-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3177, '2022', '10', '15-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3178, '2022', '10', '16-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3179, '2022', '10', '17-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3180, '2022', '10', '18-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3181, '2022', '10', '19-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3182, '2022', '10', '20-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3183, '2022', '10', '21-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3184, '2022', '10', '22-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3185, '2022', '10', '23-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3186, '2022', '10', '24-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3187, '2022', '10', '25-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3188, '2022', '10', '26-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3189, '2022', '10', '27-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3190, '2022', '10', '28-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3191, '2022', '10', '29-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3192, '2022', '10', '30-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3193, '2022', '10', '31-10-2022', '0900077', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nurse'),
+(3194, '2022', '10', '1-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3195, '2022', '10', '2-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3196, '2022', '10', '3-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3197, '2022', '10', '4-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3198, '2022', '10', '5-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3199, '2022', '10', '6-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3200, '2022', '10', '7-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3201, '2022', '10', '8-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3202, '2022', '10', '9-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3203, '2022', '10', '10-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3204, '2022', '10', '11-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3205, '2022', '10', '12-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3206, '2022', '10', '13-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3207, '2022', '10', '14-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3208, '2022', '10', '15-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3209, '2022', '10', '16-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3210, '2022', '10', '17-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3211, '2022', '10', '18-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3212, '2022', '10', '19-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3213, '2022', '10', '20-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3214, '2022', '10', '21-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3215, '2022', '10', '22-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3216, '2022', '10', '23-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3217, '2022', '10', '24-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3218, '2022', '10', '25-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3219, '2022', '10', '26-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3220, '2022', '10', '27-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3221, '2022', '10', '28-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3222, '2022', '10', '29-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3223, '2022', '10', '30-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3224, '2022', '10', '31-10-2022', '0900078', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'hospitaladmin'),
+(3225, '2022', '10', '1-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3226, '2022', '10', '2-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3227, '2022', '10', '3-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3228, '2022', '10', '4-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3229, '2022', '10', '5-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3230, '2022', '10', '6-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3231, '2022', '10', '7-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3232, '2022', '10', '8-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3233, '2022', '10', '9-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3234, '2022', '10', '10-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3235, '2022', '10', '11-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3236, '2022', '10', '12-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3237, '2022', '10', '13-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3238, '2022', '10', '14-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3239, '2022', '10', '15-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3240, '2022', '10', '16-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3241, '2022', '10', '17-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3242, '2022', '10', '18-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3243, '2022', '10', '19-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3244, '2022', '10', '20-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3245, '2022', '10', '21-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3246, '2022', '10', '22-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3247, '2022', '10', '23-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3248, '2022', '10', '24-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3249, '2022', '10', '25-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3250, '2022', '10', '26-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3251, '2022', '10', '27-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3252, '2022', '10', '28-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3253, '2022', '10', '29-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3254, '2022', '10', '30-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3255, '2022', '10', '31-10-2022', '0900079', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'Dep Admin'),
+(3256, '2022', '10', '1-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3257, '2022', '10', '2-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3258, '2022', '10', '3-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3259, '2022', '10', '4-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3260, '2022', '10', '5-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3261, '2022', '10', '6-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3262, '2022', '10', '7-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3263, '2022', '10', '8-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3264, '2022', '10', '9-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3265, '2022', '10', '10-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3266, '2022', '10', '11-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3267, '2022', '10', '12-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3268, '2022', '10', '13-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3269, '2022', '10', '14-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3270, '2022', '10', '15-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3271, '2022', '10', '16-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3272, '2022', '10', '17-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3273, '2022', '10', '18-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3274, '2022', '10', '19-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3275, '2022', '10', '20-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3276, '2022', '10', '21-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3277, '2022', '10', '22-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3278, '2022', '10', '23-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3279, '2022', '10', '24-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3280, '2022', '10', '25-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3281, '2022', '10', '26-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3282, '2022', '10', '27-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3283, '2022', '10', '28-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3284, '2022', '10', '29-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3285, '2022', '10', '30-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3286, '2022', '10', '31-10-2022', '0900081', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entadmin'),
+(3287, '2022', '10', '1-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3288, '2022', '10', '2-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3289, '2022', '10', '3-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3290, '2022', '10', '4-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3291, '2022', '10', '5-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3292, '2022', '10', '6-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3293, '2022', '10', '7-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3294, '2022', '10', '8-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3295, '2022', '10', '9-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3296, '2022', '10', '10-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3297, '2022', '10', '11-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3298, '2022', '10', '12-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3299, '2022', '10', '13-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3300, '2022', '10', '14-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3301, '2022', '10', '15-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3302, '2022', '10', '16-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3303, '2022', '10', '17-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3304, '2022', '10', '18-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3305, '2022', '10', '19-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3306, '2022', '10', '20-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3307, '2022', '10', '21-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse');
+INSERT INTO `dailyattendances` (`id`, `year`, `month`, `date`, `staffid`, `attendance`, `hospital`, `department`, `status`, `created_at`, `updated_at`, `staffname`) VALUES
+(3308, '2022', '10', '22-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3309, '2022', '10', '23-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3310, '2022', '10', '24-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3311, '2022', '10', '25-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3312, '2022', '10', '26-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3313, '2022', '10', '27-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3314, '2022', '10', '28-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3315, '2022', '10', '29-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3316, '2022', '10', '30-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3317, '2022', '10', '31-10-2022', '0900082', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'entnurse'),
+(3318, '2022', '10', '1-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3319, '2022', '10', '2-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3320, '2022', '10', '3-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3321, '2022', '10', '4-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3322, '2022', '10', '5-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3323, '2022', '10', '6-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3324, '2022', '10', '7-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3325, '2022', '10', '8-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3326, '2022', '10', '9-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3327, '2022', '10', '10-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3328, '2022', '10', '11-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3329, '2022', '10', '12-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3330, '2022', '10', '13-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3331, '2022', '10', '14-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3332, '2022', '10', '15-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3333, '2022', '10', '16-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3334, '2022', '10', '17-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3335, '2022', '10', '18-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3336, '2022', '10', '19-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3337, '2022', '10', '20-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3338, '2022', '10', '21-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3339, '2022', '10', '22-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3340, '2022', '10', '23-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3341, '2022', '10', '24-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3342, '2022', '10', '25-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3343, '2022', '10', '26-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3344, '2022', '10', '27-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3345, '2022', '10', '28-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3346, '2022', '10', '29-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3347, '2022', '10', '30-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3348, '2022', '10', '31-10-2022', '0900083', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'ent lab'),
+(3349, '2022', '10', '1-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3350, '2022', '10', '2-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3351, '2022', '10', '3-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3352, '2022', '10', '4-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3353, '2022', '10', '5-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3354, '2022', '10', '6-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3355, '2022', '10', '7-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3356, '2022', '10', '8-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3357, '2022', '10', '9-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3358, '2022', '10', '10-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3359, '2022', '10', '11-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3360, '2022', '10', '12-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3361, '2022', '10', '13-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3362, '2022', '10', '14-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3363, '2022', '10', '15-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3364, '2022', '10', '16-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3365, '2022', '10', '17-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3366, '2022', '10', '18-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3367, '2022', '10', '19-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3368, '2022', '10', '20-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3369, '2022', '10', '21-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3370, '2022', '10', '22-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3371, '2022', '10', '23-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3372, '2022', '10', '24-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3373, '2022', '10', '25-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3374, '2022', '10', '26-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3375, '2022', '10', '27-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3376, '2022', '10', '28-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3377, '2022', '10', '29-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3378, '2022', '10', '30-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3379, '2022', '10', '31-10-2022', '0900084', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'anpham'),
+(3380, '2022', '10', '1-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3381, '2022', '10', '2-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3382, '2022', '10', '3-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3383, '2022', '10', '4-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3384, '2022', '10', '5-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3385, '2022', '10', '6-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3386, '2022', '10', '7-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3387, '2022', '10', '8-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3388, '2022', '10', '9-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3389, '2022', '10', '10-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3390, '2022', '10', '11-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3391, '2022', '10', '12-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3392, '2022', '10', '13-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3393, '2022', '10', '14-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3394, '2022', '10', '15-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3395, '2022', '10', '16-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3396, '2022', '10', '17-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3397, '2022', '10', '18-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3398, '2022', '10', '19-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3399, '2022', '10', '20-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3400, '2022', '10', '21-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3401, '2022', '10', '22-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3402, '2022', '10', '23-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3403, '2022', '10', '24-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3404, '2022', '10', '25-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3405, '2022', '10', '26-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3406, '2022', '10', '27-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3407, '2022', '10', '28-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3408, '2022', '10', '29-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3409, '2022', '10', '30-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3410, '2022', '10', '31-10-2022', '0900085', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'testprevilage'),
+(3411, '2022', '10', '1-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3412, '2022', '10', '2-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3413, '2022', '10', '3-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3414, '2022', '10', '4-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3415, '2022', '10', '5-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3416, '2022', '10', '6-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3417, '2022', '10', '7-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3418, '2022', '10', '8-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3419, '2022', '10', '9-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3420, '2022', '10', '10-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3421, '2022', '10', '11-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3422, '2022', '10', '12-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3423, '2022', '10', '13-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3424, '2022', '10', '14-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3425, '2022', '10', '15-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3426, '2022', '10', '16-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3427, '2022', '10', '17-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3428, '2022', '10', '18-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3429, '2022', '10', '19-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3430, '2022', '10', '20-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3431, '2022', '10', '21-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3432, '2022', '10', '22-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3433, '2022', '10', '23-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3434, '2022', '10', '24-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3435, '2022', '10', '25-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3436, '2022', '10', '26-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3437, '2022', '10', '27-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3438, '2022', '10', '28-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3439, '2022', '10', '29-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3440, '2022', '10', '30-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3441, '2022', '10', '31-10-2022', '0900086', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'dutnurse'),
+(3442, '2022', '10', '1-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3443, '2022', '10', '2-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3444, '2022', '10', '3-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3445, '2022', '10', '4-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3446, '2022', '10', '5-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3447, '2022', '10', '6-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3448, '2022', '10', '7-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3449, '2022', '10', '8-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3450, '2022', '10', '9-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3451, '2022', '10', '10-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3452, '2022', '10', '11-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3453, '2022', '10', '12-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3454, '2022', '10', '13-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3455, '2022', '10', '14-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3456, '2022', '10', '15-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3457, '2022', '10', '16-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3458, '2022', '10', '17-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3459, '2022', '10', '18-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3460, '2022', '10', '19-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3461, '2022', '10', '20-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3462, '2022', '10', '21-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3463, '2022', '10', '22-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3464, '2022', '10', '23-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3465, '2022', '10', '24-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3466, '2022', '10', '25-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3467, '2022', '10', '26-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3468, '2022', '10', '27-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3469, '2022', '10', '28-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3470, '2022', '10', '29-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3471, '2022', '10', '30-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3472, '2022', '10', '31-10-2022', '0900087', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'SSS'),
+(3473, '2022', '10', '1-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3474, '2022', '10', '2-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3475, '2022', '10', '3-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3476, '2022', '10', '4-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3477, '2022', '10', '5-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3478, '2022', '10', '6-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3479, '2022', '10', '7-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3480, '2022', '10', '8-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3481, '2022', '10', '9-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3482, '2022', '10', '10-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3483, '2022', '10', '11-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3484, '2022', '10', '12-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3485, '2022', '10', '13-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3486, '2022', '10', '14-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3487, '2022', '10', '15-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3488, '2022', '10', '16-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3489, '2022', '10', '17-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3490, '2022', '10', '18-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3491, '2022', '10', '19-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3492, '2022', '10', '20-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3493, '2022', '10', '21-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3494, '2022', '10', '22-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3495, '2022', '10', '23-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3496, '2022', '10', '24-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3497, '2022', '10', '25-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3498, '2022', '10', '26-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3499, '2022', '10', '27-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3500, '2022', '10', '28-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3501, '2022', '10', '29-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3502, '2022', '10', '30-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3503, '2022', '10', '31-10-2022', '0900088', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', '5'),
+(3504, '2022', '10', '1-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3505, '2022', '10', '2-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3506, '2022', '10', '3-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3507, '2022', '10', '4-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3508, '2022', '10', '5-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3509, '2022', '10', '6-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3510, '2022', '10', '7-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3511, '2022', '10', '8-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3512, '2022', '10', '9-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3513, '2022', '10', '10-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3514, '2022', '10', '11-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3515, '2022', '10', '12-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3516, '2022', '10', '13-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3517, '2022', '10', '14-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3518, '2022', '10', '15-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3519, '2022', '10', '16-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3520, '2022', '10', '17-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3521, '2022', '10', '18-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3522, '2022', '10', '19-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3523, '2022', '10', '20-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3524, '2022', '10', '21-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3525, '2022', '10', '22-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3526, '2022', '10', '23-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3527, '2022', '10', '24-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3528, '2022', '10', '25-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3529, '2022', '10', '26-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3530, '2022', '10', '27-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3531, '2022', '10', '28-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3532, '2022', '10', '29-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3533, '2022', '10', '30-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3534, '2022', '10', '31-10-2022', '0900089', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'aaa'),
+(3535, '2022', '10', '1-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3536, '2022', '10', '2-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3537, '2022', '10', '3-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3538, '2022', '10', '4-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3539, '2022', '10', '5-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3540, '2022', '10', '6-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3541, '2022', '10', '7-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3542, '2022', '10', '8-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3543, '2022', '10', '9-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3544, '2022', '10', '10-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3545, '2022', '10', '11-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3546, '2022', '10', '12-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3547, '2022', '10', '13-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3548, '2022', '10', '14-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3549, '2022', '10', '15-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3550, '2022', '10', '16-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3551, '2022', '10', '17-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3552, '2022', '10', '18-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3553, '2022', '10', '19-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3554, '2022', '10', '20-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3555, '2022', '10', '21-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3556, '2022', '10', '22-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3557, '2022', '10', '23-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3558, '2022', '10', '24-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3559, '2022', '10', '25-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3560, '2022', '10', '26-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3561, '2022', '10', '27-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3562, '2022', '10', '28-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3563, '2022', '10', '29-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3564, '2022', '10', '30-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3565, '2022', '10', '31-10-2022', '0900090', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'nursetestdep'),
+(3566, '2022', '10', '1-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3567, '2022', '10', '2-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3568, '2022', '10', '3-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3569, '2022', '10', '4-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3570, '2022', '10', '5-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3571, '2022', '10', '6-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3572, '2022', '10', '7-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3573, '2022', '10', '8-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3574, '2022', '10', '9-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3575, '2022', '10', '10-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3576, '2022', '10', '11-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3577, '2022', '10', '12-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3578, '2022', '10', '13-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3579, '2022', '10', '14-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3580, '2022', '10', '15-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3581, '2022', '10', '16-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3582, '2022', '10', '17-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3583, '2022', '10', '18-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3584, '2022', '10', '19-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3585, '2022', '10', '20-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3586, '2022', '10', '21-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3587, '2022', '10', '22-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3588, '2022', '10', '23-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3589, '2022', '10', '24-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3590, '2022', '10', '25-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3591, '2022', '10', '26-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3592, '2022', '10', '27-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3593, '2022', '10', '28-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3594, '2022', '10', '29-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3595, '2022', '10', '30-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3596, '2022', '10', '31-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologyadmin'),
+(3597, '2022', '10', '1-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3598, '2022', '10', '2-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3599, '2022', '10', '3-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3600, '2022', '10', '4-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3601, '2022', '10', '5-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3602, '2022', '10', '6-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3603, '2022', '10', '7-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3604, '2022', '10', '8-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3605, '2022', '10', '9-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3606, '2022', '10', '10-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3607, '2022', '10', '11-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3608, '2022', '10', '12-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3609, '2022', '10', '13-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3610, '2022', '10', '14-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3611, '2022', '10', '15-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3612, '2022', '10', '16-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3613, '2022', '10', '17-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3614, '2022', '10', '18-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3615, '2022', '10', '19-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3616, '2022', '10', '20-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3617, '2022', '10', '21-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3618, '2022', '10', '22-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3619, '2022', '10', '23-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3620, '2022', '10', '24-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3621, '2022', '10', '25-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3622, '2022', '10', '26-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3623, '2022', '10', '27-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3624, '2022', '10', '28-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3625, '2022', '10', '29-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3626, '2022', '10', '30-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3627, '2022', '10', '31-10-2022', '0900098', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardiologydoctor'),
+(3628, '2022', '10', '1-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3629, '2022', '10', '2-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3630, '2022', '10', '3-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3631, '2022', '10', '4-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3632, '2022', '10', '5-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3633, '2022', '10', '6-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3634, '2022', '10', '7-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3635, '2022', '10', '8-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3636, '2022', '10', '9-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3637, '2022', '10', '10-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3638, '2022', '10', '11-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3639, '2022', '10', '12-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3640, '2022', '10', '13-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3641, '2022', '10', '14-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3642, '2022', '10', '15-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3643, '2022', '10', '16-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3644, '2022', '10', '17-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3645, '2022', '10', '18-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3646, '2022', '10', '19-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3647, '2022', '10', '20-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3648, '2022', '10', '21-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3649, '2022', '10', '22-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3650, '2022', '10', '23-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3651, '2022', '10', '24-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3652, '2022', '10', '25-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3653, '2022', '10', '26-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3654, '2022', '10', '27-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3655, '2022', '10', '28-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3656, '2022', '10', '29-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3657, '2022', '10', '30-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3658, '2022', '10', '31-10-2022', '0900099', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'card'),
+(3659, '2022', '10', '1-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest');
+INSERT INTO `dailyattendances` (`id`, `year`, `month`, `date`, `staffid`, `attendance`, `hospital`, `department`, `status`, `created_at`, `updated_at`, `staffname`) VALUES
+(3660, '2022', '10', '2-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3661, '2022', '10', '3-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3662, '2022', '10', '4-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3663, '2022', '10', '5-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3664, '2022', '10', '6-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3665, '2022', '10', '7-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3666, '2022', '10', '8-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3667, '2022', '10', '9-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3668, '2022', '10', '10-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3669, '2022', '10', '11-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3670, '2022', '10', '12-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3671, '2022', '10', '13-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3672, '2022', '10', '14-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3673, '2022', '10', '15-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3674, '2022', '10', '16-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3675, '2022', '10', '17-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3676, '2022', '10', '18-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3677, '2022', '10', '19-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3678, '2022', '10', '20-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3679, '2022', '10', '21-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3680, '2022', '10', '22-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3681, '2022', '10', '23-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3682, '2022', '10', '24-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3683, '2022', '10', '25-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3684, '2022', '10', '26-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3685, '2022', '10', '27-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3686, '2022', '10', '28-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3687, '2022', '10', '29-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3688, '2022', '10', '30-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3689, '2022', '10', '31-10-2022', NULL, 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'depadmintest'),
+(3690, '2022', '10', '1-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardftest'),
+(3691, '2022', '10', '2-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardftest'),
+(3692, '2022', '10', '3-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardftest'),
+(3693, '2022', '10', '4-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardftest'),
+(3694, '2022', '10', '5-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardftest'),
+(3695, '2022', '10', '6-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardftest'),
+(3696, '2022', '10', '7-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardftest'),
+(3697, '2022', '10', '8-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardftest'),
+(3698, '2022', '10', '9-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardftest'),
+(3699, '2022', '10', '10-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardftest'),
+(3700, '2022', '10', '11-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardftest'),
+(3701, '2022', '10', '12-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardftest'),
+(3702, '2022', '10', '13-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardftest'),
+(3703, '2022', '10', '14-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardftest'),
+(3704, '2022', '10', '15-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardftest'),
+(3705, '2022', '10', '16-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardftest'),
+(3706, '2022', '10', '17-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:18', '2022-10-27 03:18:18', 'cardftest'),
+(3707, '2022', '10', '18-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'cardftest'),
+(3708, '2022', '10', '19-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'cardftest'),
+(3709, '2022', '10', '20-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'cardftest'),
+(3710, '2022', '10', '21-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'cardftest'),
+(3711, '2022', '10', '22-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'cardftest'),
+(3712, '2022', '10', '23-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'cardftest'),
+(3713, '2022', '10', '24-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'cardftest'),
+(3714, '2022', '10', '25-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'cardftest'),
+(3715, '2022', '10', '26-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'cardftest'),
+(3716, '2022', '10', '27-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'cardftest'),
+(3717, '2022', '10', '28-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'cardftest'),
+(3718, '2022', '10', '29-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'cardftest'),
+(3719, '2022', '10', '30-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'cardftest'),
+(3720, '2022', '10', '31-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'cardftest'),
+(3721, '2022', '10', '1-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3722, '2022', '10', '2-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3723, '2022', '10', '3-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3724, '2022', '10', '4-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3725, '2022', '10', '5-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3726, '2022', '10', '6-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3727, '2022', '10', '7-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3728, '2022', '10', '8-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3729, '2022', '10', '9-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3730, '2022', '10', '10-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3731, '2022', '10', '11-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3732, '2022', '10', '12-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3733, '2022', '10', '13-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3734, '2022', '10', '14-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3735, '2022', '10', '15-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3736, '2022', '10', '16-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3737, '2022', '10', '17-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3738, '2022', '10', '18-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3739, '2022', '10', '19-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3740, '2022', '10', '20-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3741, '2022', '10', '21-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3742, '2022', '10', '22-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3743, '2022', '10', '23-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3744, '2022', '10', '24-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3745, '2022', '10', '25-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3746, '2022', '10', '26-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3747, '2022', '10', '27-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3748, '2022', '10', '28-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3749, '2022', '10', '29-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3750, '2022', '10', '30-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3751, '2022', '10', '31-10-2022', '0900102', 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'testorder'),
+(3752, '2022', '10', '1-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3753, '2022', '10', '2-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3754, '2022', '10', '3-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3755, '2022', '10', '4-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3756, '2022', '10', '5-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3757, '2022', '10', '6-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3758, '2022', '10', '7-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3759, '2022', '10', '8-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3760, '2022', '10', '9-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3761, '2022', '10', '10-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3762, '2022', '10', '11-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3763, '2022', '10', '12-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3764, '2022', '10', '13-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3765, '2022', '10', '14-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3766, '2022', '10', '15-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3767, '2022', '10', '16-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3768, '2022', '10', '17-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3769, '2022', '10', '18-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3770, '2022', '10', '19-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3771, '2022', '10', '20-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3772, '2022', '10', '21-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3773, '2022', '10', '22-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3774, '2022', '10', '23-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3775, '2022', '10', '24-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3776, '2022', '10', '25-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3777, '2022', '10', '26-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3778, '2022', '10', '27-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3779, '2022', '10', '28-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3780, '2022', '10', '29-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3781, '2022', '10', '30-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3782, '2022', '10', '31-10-2022', NULL, 'P', 'kims intetrnational', '0', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 't'),
+(3783, '2022', '10', '1-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3784, '2022', '10', '2-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3785, '2022', '10', '3-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3786, '2022', '10', '4-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3787, '2022', '10', '5-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3788, '2022', '10', '6-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3789, '2022', '10', '7-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3790, '2022', '10', '8-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3791, '2022', '10', '9-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3792, '2022', '10', '10-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3793, '2022', '10', '11-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3794, '2022', '10', '12-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3795, '2022', '10', '13-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3796, '2022', '10', '14-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3797, '2022', '10', '15-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3798, '2022', '10', '16-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3799, '2022', '10', '17-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3800, '2022', '10', '18-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3801, '2022', '10', '19-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3802, '2022', '10', '20-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3803, '2022', '10', '21-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3804, '2022', '10', '22-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3805, '2022', '10', '23-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3806, '2022', '10', '24-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3807, '2022', '10', '25-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3808, '2022', '10', '26-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3809, '2022', '10', '27-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3810, '2022', '10', '28-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3811, '2022', '10', '29-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3812, '2022', '10', '30-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3813, '2022', '10', '31-10-2022', '0904000010104', 'P', 'kims intetrnational', '36', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'vipin'),
+(3814, '2022', '10', '1-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3815, '2022', '10', '2-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3816, '2022', '10', '3-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3817, '2022', '10', '4-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3818, '2022', '10', '5-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3819, '2022', '10', '6-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3820, '2022', '10', '7-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3821, '2022', '10', '8-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3822, '2022', '10', '9-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3823, '2022', '10', '10-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3824, '2022', '10', '11-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3825, '2022', '10', '12-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3826, '2022', '10', '13-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3827, '2022', '10', '14-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3828, '2022', '10', '15-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3829, '2022', '10', '16-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3830, '2022', '10', '17-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3831, '2022', '10', '18-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3832, '2022', '10', '19-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3833, '2022', '10', '20-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3834, '2022', '10', '21-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3835, '2022', '10', '22-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3836, '2022', '10', '23-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3837, '2022', '10', '24-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3838, '2022', '10', '25-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3839, '2022', '10', '26-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3840, '2022', '10', '27-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3841, '2022', '10', '28-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3842, '2022', '10', '29-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3843, '2022', '10', '30-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3844, '2022', '10', '31-10-2022', '0904000010106', 'P', 'kims intetrnational', '41', NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'manoj'),
+(3845, '2022', '10', '1-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3846, '2022', '10', '2-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3847, '2022', '10', '3-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3848, '2022', '10', '4-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3849, '2022', '10', '5-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3850, '2022', '10', '6-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3851, '2022', '10', '7-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3852, '2022', '10', '8-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3853, '2022', '10', '9-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3854, '2022', '10', '10-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3855, '2022', '10', '11-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3856, '2022', '10', '12-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3857, '2022', '10', '13-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3858, '2022', '10', '14-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3859, '2022', '10', '15-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3860, '2022', '10', '16-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3861, '2022', '10', '17-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3862, '2022', '10', '18-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3863, '2022', '10', '19-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3864, '2022', '10', '20-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3865, '2022', '10', '21-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3866, '2022', '10', '22-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3867, '2022', '10', '23-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3868, '2022', '10', '24-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3869, '2022', '10', '25-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3870, '2022', '10', '26-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3871, '2022', '10', '27-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3872, '2022', '10', '28-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3873, '2022', '10', '29-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3874, '2022', '10', '30-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg'),
+(3875, '2022', '10', '31-10-2022', '0904000010107', 'P', 'kims intetrnational', NULL, NULL, '2022-10-27 03:18:19', '2022-10-27 03:18:19', 'gfgg');
 
 -- --------------------------------------------------------
 
@@ -7793,15 +9665,63 @@ ALTER TABLE `cra_add_box`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cra_add_event`
+--
+ALTER TABLE `cra_add_event`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_add_file_bringup_reminder`
+--
+ALTER TABLE `cra_add_file_bringup_reminder`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `cra_add_file_progress`
 --
 ALTER TABLE `cra_add_file_progress`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cra_add_new_instructions`
+--
+ALTER TABLE `cra_add_new_instructions`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_add_office_instructions`
+--
+ALTER TABLE `cra_add_office_instructions`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_add_user_department`
+--
+ALTER TABLE `cra_add_user_department`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_add_user_group`
+--
+ALTER TABLE `cra_add_user_group`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_add_user_roles`
+--
+ALTER TABLE `cra_add_user_roles`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `cra_bank_details`
 --
 ALTER TABLE `cra_bank_details`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_billable_activities`
+--
+ALTER TABLE `cra_billable_activities`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -7820,6 +9740,12 @@ ALTER TABLE `cra_client_monthly_file_status_report`
 -- Indexes for table `cra_client_pickup_reception`
 --
 ALTER TABLE `cra_client_pickup_reception`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_client_service_at_reception`
+--
+ALTER TABLE `cra_client_service_at_reception`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -7850,6 +9776,18 @@ ALTER TABLE `cra_conversations`
 -- Indexes for table `cra_corporate_client_details`
 --
 ALTER TABLE `cra_corporate_client_details`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_courts`
+--
+ALTER TABLE `cra_courts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_currency_list`
+--
+ALTER TABLE `cra_currency_list`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -7901,6 +9839,18 @@ ALTER TABLE `cra_file_status_summary`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cra_file_types`
+--
+ALTER TABLE `cra_file_types`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_hourly_rate`
+--
+ALTER TABLE `cra_hourly_rate`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `cra_individual_client_details`
 --
 ALTER TABLE `cra_individual_client_details`
@@ -7913,9 +9863,51 @@ ALTER TABLE `cra_instructions_report`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cra_invoice_items`
+--
+ALTER TABLE `cra_invoice_items`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_leave_days`
+--
+ALTER TABLE `cra_leave_days`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_letter_types`
+--
+ALTER TABLE `cra_letter_types`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_manage_user_department`
+--
+ALTER TABLE `cra_manage_user_department`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `cra_open_new_file_details`
 --
 ALTER TABLE `cra_open_new_file_details`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_partner_revenue_share`
+--
+ALTER TABLE `cra_partner_revenue_share`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_payment_item`
+--
+ALTER TABLE `cra_payment_item`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_reg_new_user`
+--
+ALTER TABLE `cra_reg_new_user`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -7973,6 +9965,12 @@ ALTER TABLE `cra_template_category`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cra_town_city`
+--
+ALTER TABLE `cra_town_city`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `cra_transport_zone`
 --
 ALTER TABLE `cra_transport_zone`
@@ -7982,6 +9980,12 @@ ALTER TABLE `cra_transport_zone`
 -- Indexes for table `cra_weekend_and_holiday`
 --
 ALTER TABLE `cra_weekend_and_holiday`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_work_flow`
+--
+ALTER TABLE `cra_work_flow`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -8524,10 +10528,52 @@ ALTER TABLE `cra_add_box`
   MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=150;
 
 --
+-- AUTO_INCREMENT for table `cra_add_event`
+--
+ALTER TABLE `cra_add_event`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `cra_add_file_bringup_reminder`
+--
+ALTER TABLE `cra_add_file_bringup_reminder`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `cra_add_file_progress`
 --
 ALTER TABLE `cra_add_file_progress`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT for table `cra_add_new_instructions`
+--
+ALTER TABLE `cra_add_new_instructions`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `cra_add_office_instructions`
+--
+ALTER TABLE `cra_add_office_instructions`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `cra_add_user_department`
+--
+ALTER TABLE `cra_add_user_department`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `cra_add_user_group`
+--
+ALTER TABLE `cra_add_user_group`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `cra_add_user_roles`
+--
+ALTER TABLE `cra_add_user_roles`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `cra_bank_details`
@@ -8536,22 +10582,34 @@ ALTER TABLE `cra_bank_details`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
+-- AUTO_INCREMENT for table `cra_billable_activities`
+--
+ALTER TABLE `cra_billable_activities`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `cra_bringup`
 --
 ALTER TABLE `cra_bringup`
-  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `cra_client_monthly_file_status_report`
 --
 ALTER TABLE `cra_client_monthly_file_status_report`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `cra_client_pickup_reception`
 --
 ALTER TABLE `cra_client_pickup_reception`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `cra_client_service_at_reception`
+--
+ALTER TABLE `cra_client_service_at_reception`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `cra_company_branch_details`
@@ -8569,7 +10627,7 @@ ALTER TABLE `cra_company_details`
 -- AUTO_INCREMENT for table `cra_complaint_register`
 --
 ALTER TABLE `cra_complaint_register`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `cra_conversations`
@@ -8581,25 +10639,37 @@ ALTER TABLE `cra_conversations`
 -- AUTO_INCREMENT for table `cra_corporate_client_details`
 --
 ALTER TABLE `cra_corporate_client_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `cra_courts`
+--
+ALTER TABLE `cra_courts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `cra_currency_list`
+--
+ALTER TABLE `cra_currency_list`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `cra_customer_followup`
 --
 ALTER TABLE `cra_customer_followup`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `cra_customer_quotation`
 --
 ALTER TABLE `cra_customer_quotation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `cra_customer_registration`
 --
 ALTER TABLE `cra_customer_registration`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `cra_description_selection`
@@ -8617,31 +10687,67 @@ ALTER TABLE `cra_document_detials`
 -- AUTO_INCREMENT for table `cra_file_progress_report`
 --
 ALTER TABLE `cra_file_progress_report`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `cra_file_report`
 --
 ALTER TABLE `cra_file_report`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `cra_file_status_summary`
 --
 ALTER TABLE `cra_file_status_summary`
-  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `cra_file_types`
+--
+ALTER TABLE `cra_file_types`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `cra_hourly_rate`
+--
+ALTER TABLE `cra_hourly_rate`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `cra_individual_client_details`
 --
 ALTER TABLE `cra_individual_client_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `cra_instructions_report`
 --
 ALTER TABLE `cra_instructions_report`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `cra_invoice_items`
+--
+ALTER TABLE `cra_invoice_items`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `cra_leave_days`
+--
+ALTER TABLE `cra_leave_days`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `cra_letter_types`
+--
+ALTER TABLE `cra_letter_types`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `cra_manage_user_department`
+--
+ALTER TABLE `cra_manage_user_department`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `cra_open_new_file_details`
@@ -8650,22 +10756,40 @@ ALTER TABLE `cra_open_new_file_details`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
 
 --
+-- AUTO_INCREMENT for table `cra_partner_revenue_share`
+--
+ALTER TABLE `cra_partner_revenue_share`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `cra_payment_item`
+--
+ALTER TABLE `cra_payment_item`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `cra_reg_new_user`
+--
+ALTER TABLE `cra_reg_new_user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT for table `cra_safe_item_request`
 --
 ALTER TABLE `cra_safe_item_request`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `cra_safe_register_report`
 --
 ALTER TABLE `cra_safe_register_report`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `cra_staff_monthly_status_report`
 --
 ALTER TABLE `cra_staff_monthly_status_report`
-  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `cra_tax_chart`
@@ -8704,6 +10828,12 @@ ALTER TABLE `cra_template_category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=199;
 
 --
+-- AUTO_INCREMENT for table `cra_town_city`
+--
+ALTER TABLE `cra_town_city`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `cra_transport_zone`
 --
 ALTER TABLE `cra_transport_zone`
@@ -8713,13 +10843,19 @@ ALTER TABLE `cra_transport_zone`
 -- AUTO_INCREMENT for table `cra_weekend_and_holiday`
 --
 ALTER TABLE `cra_weekend_and_holiday`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `cra_work_flow`
+--
+ALTER TABLE `cra_work_flow`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `dailyattendances`
 --
 ALTER TABLE `dailyattendances`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2543;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3876;
 
 --
 -- AUTO_INCREMENT for table `departments`
