@@ -25,7 +25,7 @@
     </div>
    
     <div id="upload_button">
-    <input type="file" name="image" ngf-select ng-model="new_files" ng-change="fs.uploadFiles(new_files)" value="{{$company_details->Add_Logo}}"multiple>
+    <input type="file" name="image" ngf-select ng-model="new_files" ng-change="fs.uploadFiles(new_files)" value=""multiple>
     <span class="btn btn-primary"> <span class="fa fa-plus"></span>&nbsp;&nbsp;ADD LOGO</span> <br>
     <br>
     <!-- <input type="text" class="form-control" name="name" id="name" > -->
@@ -69,7 +69,7 @@
                             <label for="username">Town/City</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="city" id="city" value="{{$company_details->town_city}}">
+                                <input type="text" class="form-control" name="city" id="city" value="{{$company_details->town}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>

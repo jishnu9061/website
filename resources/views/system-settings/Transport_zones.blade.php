@@ -9,11 +9,13 @@
     <br><br>
     
    </div>
+
            
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
            
 {{-- <a href="{{('add_transport_zone')}}"><button class="btn btn-primary">Add Transport Zone</button></a> --}}
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Transport Zone</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" 
+                >Add Transport Zone</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                       <br>
