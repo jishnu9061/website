@@ -11,8 +11,8 @@
         <!-- <a href="{{url('add-outgoing-letters')}}"><button class="btn btn-primary add-btn"
                 style="width: 20%;">Add Outgoing Letter</button></a> -->
                 {{-- <a href="{{('add-corporate')}}"><button class="btn btn-primary">Add Outgoing Letter</button></a> --}}
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add
-                    Corporate</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                Add Outgoing Letter</button>
                 
         
                 
@@ -40,16 +40,17 @@
                     </thead>
 
                     <tbody>
-
+                        
+                        @foreach($add_letter as $letter)
                         <tr id="data">
 
+                            <td scope="row" class="text-center">{{$letter->id}}</td>
+                            <td scope="row" class="text-center">{{$letter->letter_date}}</td>
+                            <td scope="row" class="text-center">{{$letter->originator}}</td>
+                            <td scope="row" class="text-center">{{$letter->letter_name}}</td>
+                            <td scope="row" class="text-center">{{$letter->client}}</td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$letter->delivered_to}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
@@ -61,7 +62,7 @@
                             </td>
                             <td scope="row" class="text-center"><input type="checkbox" name="" id=""></td>
                         </tr>
-
+                    @endforeach
 
 
                     </tbody>
@@ -91,7 +92,7 @@
                                     <!-- Modal body -->
                                     <div class="modal-body">
                                         <div class="container">
-                                            <form method="post" action="{{ url('add-corporate') }}"
+                                            <form method="post" action="{{ url('add-outgoing-letters') }}"
                                                 enctype="multipart/form-data">
                                                 @csrf
 
@@ -197,7 +198,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="Originator" id="cars">
+                                <select name="originator" id="cars">
                                 <option>select</option>
                                                             <option>demo 2</option>
                                                             <option>demo 3</option>
