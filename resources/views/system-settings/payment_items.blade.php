@@ -3,15 +3,7 @@
 @section('content')
 <html>
  
-   <head>
-
-      <style >
-          body
-        {
-          background-color: white;
-        }
-
-   </head>
+ 
    <body>
 <h2 style="text-align:center; text-shadow: 2px 1px;"></h2>
   <div>
@@ -76,16 +68,16 @@
      <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
-                                <div class="modal-content" style="background-color:#d6ba8a">
+                                <div class="modal-content" >
 
                                     <!-- Modal Header -->
-                                    <div class="modal-header" style="background-color:#d6ba8a">
+                                    <div class="modal-header" >
                                         <h2 class="text-centre"><b>Add Payment Item</b></h2>
 
                                     </div>
 
                                     <!-- Modal body -->
-                                    <div class="modal-body" style="background-color:white">
+                                    <div class="modal-body" >
                                         <div class="container">
                                             <form method="post" action="{{ url('add_payment_item') }}"
                                                 enctype="multipart/form-data"> 

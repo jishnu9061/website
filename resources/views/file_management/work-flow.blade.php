@@ -31,7 +31,7 @@
                     <thead>
                         <tr>
                             <th class="text-center">*</th>
-                            <th class="text-center">Date</br>Created</th>
+                            <th class="text-center">Date<br>Created</th>
                             <th class="text-center">Workflow Name</th>
                             <th class="text-center">Workflow Comments</th>
                             <th class="text-center">Start Report</th>

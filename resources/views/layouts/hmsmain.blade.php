@@ -1034,12 +1034,28 @@
     <i id="bkbtnicon" class="far fa-arrow-alt-circle-left"></i></a>
 
     <a class="navbar-brand pl-4" href="#">
-        <img src="assets/images/faces/lawemb.png"  height="50px" class="d-inline-block align-top" alt="">
+        <img src="assets/images/faces/lawemb.png"  height="40px" class="d-inline-block align-top" alt="">
         
       </a>
       
+ 
+      <div class="nav-item dropdown" >
+        <button   class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img style="height: 35px; width: 35px;"  id="cr_logo" src="assets/images/Logo cra.png"  alt="CRA">
+        </button>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{{url('user_management')}}">User Management</a>
+          <a class="dropdown-item" href="{{url('client-index')}}">Client Management</a>
+          {{-- <div class="dropdown-divider"></div> --}}
+          <a class="dropdown-item" href="{{url('file_managementindex')}}">File Management</a>
+          <a class="dropdown-item" href="{{url('system_setup')}}">System Setup</a>
 
-      
+          <a class="dropdown-item" href="{{url('hrindex')}}">HR</a>
+          <a class="dropdown-item" href="{{url('accindex')}}">Accounts</a>
+         
+        </div>
+    </div>
+   
 
       
 
@@ -1047,12 +1063,21 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse ml-2" id="navbarTogglerDemo01">
+  <div class="collapse navbar-collapse ml-2" id="navbarTogglerDemo01" style="background-color: #ffffff; padding:5px; ">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a  class="font-bold text-uppercase nav-link" href="#">  {{ Auth::user()->name }} <span class="sr-only">(current)</span></a>
         {{-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> --}}
       </li>
+
+
+      
+      
+   
+  
+
+
+
       {{-- <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
       </li>
@@ -1081,10 +1106,10 @@
 
 
 
-      <ul class="navbar-nav mr-auto pl-3" >
+      <ul class="navbar-nav mr-auto lg-pl-3" >
       
       <li class="nav-item dropdown" >
-        <button   class="nav-link dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button   class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Create New
         </button>
 
@@ -1094,7 +1119,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="{{url('user_management')}}">Time entry</a>
           <a class="dropdown-item" href="{{url('client-index')}}">Expense entry</a>
-          <div class="dropdown-divider"></div>
+          {{-- <div class="dropdown-divider"></div> --}}
           <a class="dropdown-item" href="{{url('file_managementindex')}}">Task</a>
           <a class="dropdown-item" href="{{url('file_managementindex')}}">Matter</a>
 
@@ -1113,9 +1138,12 @@
     </ul>
 
 
+  
+  
+
     <div class="p-2" id="navr" style="margin-right: .5%;"   >
 
-        <div  style="text-align: center; text-decoration: none; list-style:none;">
+        <div  style=" text-decoration: none; list-style:none;">
      
 
     <a style="text-align: center" class="text-muted mb-0 " href="{{url('logt')}}"> <i class="fas fa-sign-out-alt"></i> Log Out</a>
