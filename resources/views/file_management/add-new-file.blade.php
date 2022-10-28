@@ -1,28 +1,33 @@
 @extends('layouts.hmsmain')
 @section('content')
 
-<head>
-  {{-- <style> 
-    #myDIV {
-     
-     
-     
-      /* overflow: auto; */
-      transition: all 1s;
-    }
+
+
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
-    #myDIV:hover {
-      background-color: #ebeff3;;
-      /* width: 570px;
-      height: 500px; */
-      padding: 10px;
-      /* border-radius: 50px; */
-    }
-    </style> --}}
-</head>
+    <nav class="navbar navbar-expand-lg navbar-light   " id="nnav" >
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav" >
 
+<div class="w3-sidebar w3-light-grey w3-bar-block p-1" style="width:auto; height:auto;">
+  <h3 class="w3-bar-item">Matter</h3>
+  <a type="button" onclick="document.getElementById('ww ').style.color='#3d98fc'" class="nav-item nav-link active" href="#sea">Matter</a>
+  <a type="button" onclick="document.getElementById('wwa').style.color='#3d98fc'" class="nav-item nav-link active" class="nav-item nav-link active" href="#seb">Notification</a>
+  <a type="button" onclick="document.getElementById('wwb').style.color='#3d98fc'" class="nav-item nav-link active" class="nav-item nav-link active" href="#sec">Contacts</a>
+  <a type="button" onclick="document.getElementById('wwc').style.color='#3d98fc'" class="nav-item nav-link active" class="nav-item nav-link active" href="#sed">Custom Fields</a>
+  <a type="button" onclick="document.getElementById('wwd').style.color='#3d98fc'" class="nav-item nav-link active" class="nav-item nav-link active" href="#see">Billing</a>
+  <a type="button" onclick="document.getElementById('wwe').style.color='#3d98fc'" class="nav-item nav-link active" class="nav-item nav-link active" href="#sef">Task</a>
 
-<section id="myDIV" class="container" >
+</div> </div></div> </nav>
+
+  
+
+<section  class="container" >
+
     <section class="m-5" >
     {{-- <h4 id="hdtpa"><b>Matters</b></h4>
 
@@ -43,8 +48,9 @@
      </ul> --}}
 
 
+
      
-     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top " id="nnav" >
+     {{-- <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top " id="nnav" >
          <a onclick="myFunction()" class="navbar-brand" href="#"><h4 ><b>Matters</b></h4></a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
            <span class="navbar-toggler-icon"></span>
@@ -72,7 +78,7 @@
            </div>
          </div>
        </nav>
-       
+        --}}
 
        <section  class="m-5"  >
 <br id="sea"><br><br><br>
@@ -345,7 +351,7 @@
 
                     <br><br><br><br><br><br><br><br><br><br><br><br><br>
                    {{-- bj --}}
-
+                 
 @endsection
 
 

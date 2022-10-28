@@ -79,7 +79,7 @@
                         <div class="modal-content">
 
                             <!-- Modal Header -->
-                            <div class="modal-header" style="background-color:#435ebe">
+                            <div class="modal-header">
                                 <h4 class="text-white">Edit Medicine</h4>
 
                             </div>
@@ -177,10 +177,10 @@
 
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-primary text-white"
-                                                style="width:15%;background-color:#435ebe"
+                                                style="width:15%;"
                                                 data-bs-dismiss="modal">Close</button>
                                             <button type="submit" class="btn btn-primary"
-                                                style="background-color:#435ebe;width:15%;">Update</button>
+                                                style="width:15%;">Update</button>
                                         </div>
                                 </div>
                                 <div class="container">
