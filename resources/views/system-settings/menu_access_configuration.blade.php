@@ -6,7 +6,7 @@
    <head>
 
       <style >
-          body
+          /* body
         {
           background-color: white;
         }
@@ -16,7 +16,7 @@
 }
 table{
     outline: 1px solid  gray;
-}
+} */
  /* tr:nth-child(odd)
 {
     background-color:rgb(198, 195, 211);
