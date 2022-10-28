@@ -656,8 +656,7 @@ class filemanagement extends Controller
     }
 
     public function filestatussummary(Request $request)
-    {
-       $id =$request['id']; 
+    { 
        $Date_To =$request['date_to'];
        $File =$request['file'];
        $Instruction_Category =$request['category'];
@@ -669,8 +668,6 @@ class filemanagement extends Controller
        $Details =$request['details'];
 
        DB::table('cra_file_status_summary')->insert([
-
-           'id' =>  $id,
            'Date_to' =>  $Date_To,
            'File' =>   $File,
            'Instruction_Category' =>   $Instruction_Category,
