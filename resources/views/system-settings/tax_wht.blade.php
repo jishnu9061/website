@@ -2,20 +2,8 @@
 @section('content')
 <html>
 
-      <style >
-          body
-        {
-          background-color: white;
-        }
-  th, td ,tr{
-               border: 1px solid  gray ;
-                border-collapse: collapse;
-}
-table{
-    outline: 1px solid  gray;
-}
- </style>
-   </head>
+<div class="container">
+  
    <body>
     {{-- heading --}}
     <h4 id="hdtpa"><b>Tax WHT</b></h4>

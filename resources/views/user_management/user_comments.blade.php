@@ -1,15 +1,14 @@
 @extends('layouts.hmsmain')
 @section('content')
-
 <html>
-
+<div class="container">
 
                 {{-- heading --}}
     <h4 id="hdtpa"><b>Comments</b></h4>
     <br><br>
                
      </div>
-            
+     <div class="container"> 
     <form> 
       
         <input type="text" class="form-control" id="" style="border: 1px solid rgb(13, 1, 56);" placeholder="Write your comments here...."><br><br>
@@ -25,4 +24,5 @@
    </body>
    </div>
 <br><br>
+</html>
 @endsection
