@@ -1,15 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
 
-
-    <div class="col-sm">
-
-
-
-    </div>
-   
-
-   
+<div class="container">
 <body>
 
   <div>

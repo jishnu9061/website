@@ -1,6 +1,6 @@
 @extends('layouts.hmsmain')
 @section('content')
-
+<div class="container">
 <body>
 
   <div>

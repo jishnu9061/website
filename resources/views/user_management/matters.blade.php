@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
 
-
+<div class="container">
     <h4 id="hdtpa"><b>Matters</b></h4>
 
 
@@ -46,7 +46,7 @@
        </nav> --}}
 
 
-
+     </div>
 
 
 

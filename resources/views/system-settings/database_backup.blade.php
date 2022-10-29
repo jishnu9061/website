@@ -1,6 +1,6 @@
 @extends('layouts.hmsmain')
 @section('content')
-
+<div class="container">
 
 
 
@@ -50,7 +50,7 @@
                         </tr>
                     </tbody>
                 </table>
-
+</div>
 
              
         @endsection

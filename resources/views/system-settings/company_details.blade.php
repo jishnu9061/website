@@ -4,12 +4,66 @@
 <div class="container">
 
     <head>
-
-        <style>
+    <style>
+.drop-zone {
+    max-width: 200px;
+    height: 200px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    color: #cccccc;
+    border: 4px dashed #009578;
+    border-radius: 10px;
+  }
+  
+  .drop-zone--over {
+    border-style: solid;
+  }
+  
+  .drop-zone__input {
+    display: none;
+  }
+  
+  .drop-zone__thumb {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #cccccc;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .drop-zone__thumb::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.75);
+    font-size: 14px;
+    text-align: center;
+  }
+  </style>
+    <!-- <script>
+            var loadFile = function(event) {
+                var image = document.getElementById('output');
+                image.src = URL.createObjectURL(event.target.files[0]);
+            };
+            </script> -->
+        <!-- <style>
         #upload_button input[type=file] {
             display: none;
         }
-        </style>
+        </style> -->
     </head>
 
     <body>
@@ -49,7 +103,7 @@
                                         <th>Company Name</th>
                                         <th>Company Address</th>
                                         <th>Town/City</th>
-                                        {{-- <th>Logo</th> --}}
+                                         <th>Logo</th> 
                                         <th>Action</th>
 
                                     </tr>
@@ -62,7 +116,7 @@
                                         <td>{{$company->company_name}}</td>
                                         <td>{{$company->address}}</td>
                                         <td>{{$company->town}}</td>
-                                        {{-- <td>{{$company->logo}}</td> --}}
+                                        <td></td> 
 
                                         <!-- <td>CRA</td>
     <td>Stima Investment Plaza 1,3rd Floor,Mushembi Rd, Parklands </td>
@@ -97,19 +151,94 @@
                                             <form method="post" action="{{ url('add_company_details') }}"
                                                 enctype="multipart/form-data">
                                                 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
+<!-- --------------------------------------image------------------------------------------------->
+                                                     <!-- <label>
+                                                    <input type="file"  accept="image/*" name="image" id="file"  style="display:none;"onchange="loadFile(event)" >
+                                                        <span class="btn btn-primary"><span
+                                                                class="fa fa-plus"></span>ADD LOGO</span>
+                                                    </label>
+                                                    <img id="output" width="10%" />	 -->
+                                                    <div class="drop-zone">
+    <span class="drop-zone__prompt">Drop file here or click to upload</span>
+    <input type="file" name="myFile" class="drop-zone__input">
+  </div>
 
+  <script>document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
+    const dropZoneElement = inputElement.closest(".drop-zone");
+  
+    dropZoneElement.addEventListener("click", (e) => {
+      inputElement.click();
+    });
+  
+    inputElement.addEventListener("change", (e) => {
+      if (inputElement.files.length) {
+        updateThumbnail(dropZoneElement, inputElement.files[0]);
+      }
+    });
+  
+    dropZoneElement.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      dropZoneElement.classList.add("drop-zone--over");
+    });
+  
+    ["dragleave", "dragend"].forEach((type) => {
+      dropZoneElement.addEventListener(type, (e) => {
+        dropZoneElement.classList.remove("drop-zone--over");
+      });
+    });
+  
+    dropZoneElement.addEventListener("drop", (e) => {
+      e.preventDefault();
+  
+      if (e.dataTransfer.files.length) {
+        inputElement.files = e.dataTransfer.files;
+        updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+      }
+  
+      dropZoneElement.classList.remove("drop-zone--over");
+    });
+  });
+  
+  /**
+   * Updates the thumbnail on a drop zone element.
+   *
+   * @param {HTMLElement} dropZoneElement
+   * @param {File} file
+   */
+  function updateThumbnail(dropZoneElement, file) {
+    let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+  
+    // First time - remove the prompt
+    if (dropZoneElement.querySelector(".drop-zone__prompt")) {
+      dropZoneElement.querySelector(".drop-zone__prompt").remove();
+    }
+  
+    // First time - there is no thumbnail element, so lets create it
+    if (!thumbnailElement) {
+      thumbnailElement = document.createElement("div");
+      thumbnailElement.classList.add("drop-zone__thumb");
+      dropZoneElement.appendChild(thumbnailElement);
+    }
+  
+    thumbnailElement.dataset.label = file.name;
+  
+    // Show thumbnail for image files
+    if (file.type.startsWith("image/")) {
+      const reader = new FileReader();
+  
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+        thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+      };
+    } else {
+      thumbnailElement.style.backgroundImage = null;
+    }
+  }
+  </script>
+<!-- --------------------------------------image------------------------------------------------->
 
                                                 @csrf
-                                                <div id="upload_button">
-                                                    <label>
-                                                        <input type="file" name="logo" ngf-select ng-model="new_files"
-                                                            ng-change="fs.uploadFiles(new_files)" multiple>
-                                                        <span class="btn btn-primary"> <span
-                                                                class="fa fa-plus"></span>&nbsp;&nbsp;ADD LOGO</span>
-                                                    </label>
-                                                </div>
-                                                <br><br>
-                                                <div class="row">
+                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="mb-1">
                                                             <label>Company Name</label>
@@ -228,6 +357,33 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">NHIF Code</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="nhifcode" id="nhifcode" value="" min="0" max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">NSSF Number</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="nnum" id="nnum" value="" min="0" max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                                                
                                                 <div class="row">
@@ -451,6 +607,12 @@
                                                     </div>
                                                 </div>
                                         </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
                                         </form>
                                     </div>
                                 </div>

@@ -1,7 +1,7 @@
 
 @extends('layouts.hmsmain')
 @section('content')
-
+<div class="container">
   {{-- heading --}}
   <h4 id="hdtpa"><b>Letter Category</b></h4>
   <br><br>
