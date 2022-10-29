@@ -1281,6 +1281,7 @@ Route::any('view_bill',"clientinvoicing@view_bill_item")->name('view_bill_item')
 Route::any('hrindex','hrindex@index')->name('hrindex');
 Route::any('accindex','accindex@index')->name('accindex');
 Route::any('new_communication','ClientManagement@add_communication')->name('add_communication');
+Route::any('calander',"Calender@index")->name('calander');
 
 
 
