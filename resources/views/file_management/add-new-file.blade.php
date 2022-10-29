@@ -5,6 +5,10 @@
 
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+
+
     
     <nav class="navbar navbar-expand-lg navbar-light   " id="nnav" >
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,23 +16,28 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav" >
+        {{-- style="border: solid 1px #4c7baa;" --}}
+        <div class="w3-sidebar w3-bar-block p-1" style="width:auto; height:auto; ">
 
-<div class="w3-sidebar w3-light-grey w3-bar-block p-1" style="width:auto; height:auto;">
-  <h3 class="w3-bar-item">Matter</h3>
-  <a type="button" onclick="document.getElementById('ww ').style.color='#3d98fc'" class="nav-item nav-link active" href="#sea">Matter</a>
-  <a type="button" onclick="document.getElementById('wwa').style.color='#3d98fc'" class="nav-item nav-link active" class="nav-item nav-link active" href="#seb">Notification</a>
-  <a type="button" onclick="document.getElementById('wwb').style.color='#3d98fc'" class="nav-item nav-link active" class="nav-item nav-link active" href="#sec">Contacts</a>
-  <a type="button" onclick="document.getElementById('wwc').style.color='#3d98fc'" class="nav-item nav-link active" class="nav-item nav-link active" href="#sed">Custom Fields</a>
-  <a type="button" onclick="document.getElementById('wwd').style.color='#3d98fc'" class="nav-item nav-link active" class="nav-item nav-link active" href="#see">Billing</a>
-  <a type="button" onclick="document.getElementById('wwe').style.color='#3d98fc'" class="nav-item nav-link active" class="nav-item nav-link active" href="#sef">Task</a>
+  
+
+
+
+  {{-- <h3 class="w3-bar-item">Matter</h3> --}}
+  <a style="border-left: solid 1px #4c7baa;" value="click me" onclick="this.style.color='#000000'; this.style.backgroundColor = '#4c7baa'" type="button" onclick="document.getElementById('ww ').style.color='#3d98fc'" class="nav-item nav-link active" href="#sea">Matter</a>
+  <a style="border-left: solid 1px #4c7baa;" value="click me" onclick="this.style.color='#000000'; this.style.backgroundColor = '#4c7baa'" type="button" onclick="document.getElementById('wwa').style.color='#3d98fc'" class="nav-item nav-link active"  href="#seb">Notification</a>
+  <a style="border-left: solid 1px #4c7baa;" type="button" onclick="document.getElementById('wwb').style.color='#3d98fc'" class="nav-item nav-link active"  href="#sec">Contacts</a>
+  <a style="border-left: solid 1px #4c7baa;" type="button" onclick="document.getElementById('wwc').style.color='#3d98fc'" class="nav-item nav-link active"  href="#sed">Custom Fields</a>
+  <a style="border-left: solid 1px #4c7baa;" type="button" onclick="document.getElementById('wwd').style.color='#3d98fc'" class="nav-item nav-link active"  href="#see">Billing</a>
+  <a style="border-left: solid 1px #4c7baa;" type="button" onclick="document.getElementById('wwe').style.color='#3d98fc'" class="nav-item nav-link active"  href="#sef">Task</a>
 
 </div> </div></div> </nav>
 
   
 
-<section  class="container" >
+<section   style="margin-left:100px; margin-right:100px;">
 
-    <section class="m-5" >
+    
     {{-- <h4 id="hdtpa"><b>Matters</b></h4>
 
 
@@ -80,9 +89,9 @@
        </nav>
         --}}
 
-       <section  class="m-5"  >
-<br id="sea"><br><br><br>
-       <form   class="p-5" style="background-color: #f8f9fa;" >
+       <section  class="ml-5 mr-5"  >
+<br id="sea">
+       <form   class="p-5 m-0" style="background-color: #f8f9fa;" >
         
         <h5 id="ww">Matter</h5>
         <div class="form">
@@ -347,7 +356,7 @@
                         
                     </section>
 
-                    </section> </section>
+                    </section> 
 
                     <br><br><br><br><br><br><br><br><br><br><br><br><br>
                    {{-- bj --}}
