@@ -2,10 +2,11 @@
 @extends('layouts.hmsmain')
 @section('content')
 <html>
+<div class="container">
    <head>
-
+  
       <style >
-          body
+          /* body
         {
           background-color: white;
         }
@@ -17,7 +18,7 @@
 }
 table{
     outline: 1px solid  gray ;
-}
+} */
 /* td:nth-child(odd) {
             background-color:rgb(198, 195, 211); 
         } */

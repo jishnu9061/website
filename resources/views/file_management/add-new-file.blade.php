@@ -35,7 +35,6 @@
 
   
 
-<section   style="margin-left:100px; margin-right:100px;">
 
     
     {{-- <h4 id="hdtpa"><b>Matters</b></h4>

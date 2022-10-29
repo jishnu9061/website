@@ -2,7 +2,7 @@
 @extends('layouts.hmsmain')
 @section('content')
 <html>
-
+<div class="container">
 
 
 
@@ -10,7 +10,7 @@
   <h4 id="hdtpa"><b>Manage Groups</b></h4>
   <br><br>
 
-     <br> -->
+     <br> 
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 {{-- <a href="{{('add_new_user_grp')}}"><button class="btn btn-primary">Add New Group</button></a> --}}
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New  Group</button>

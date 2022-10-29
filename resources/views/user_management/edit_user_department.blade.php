@@ -1,6 +1,6 @@
 @extends('layouts.hmsmain')
 @section('content')
-
+<div class="container">
 
         <div>
             <!-- <button class="btn btn-primary"
@@ -13,12 +13,14 @@
     <h4 id="hdtpa"><b>Edit Department</b></h4>
     <br><br>
 
-        </div>
+        
     </div>
     <div class="row">
         <div class="col-md-12">
             <form method="post" action="{{url('update_user_department')}}" id="form">
+       
                 @csrf
+             
                 <input type="hidden" name="id" value="{{$edit_department->id}}">
                 <div class="row">
                     <div class="col-md-6">
@@ -118,6 +120,7 @@
 </div>
 </div>
 
+</div>
 </div>
 
 

@@ -1,7 +1,7 @@
 
 @extends('layouts.hmsmain')
 @section('content')
-
+<div class="container">
 {{-- heading --}}
 <h4 id="hdtpa"><b>Description Selections</b></h4>
 <br><br>
@@ -126,7 +126,7 @@
  <input type="button" value="Back" style="background-color:rgb(13, 1, 56);color:white;" onclick="history.back()">
 </form> -->
 
-
+</div>
   @endsection
       
 

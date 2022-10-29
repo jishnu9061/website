@@ -1,6 +1,6 @@
 @extends('layouts.hmsmain')
 @section('content')
-
+<div class="container">
 {{-- heading --}}
 <h4 id="hdtpa"><b>Configuration Details</b></h4>
 <br><br>
@@ -385,6 +385,7 @@
         </div>
 </form>
         </body>
+</div>
 
 </html>
   @endsection
