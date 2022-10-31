@@ -46,14 +46,14 @@
                         </thead>
 
                         <tbody>
-
+                        @foreach($safe_management as $management)
                             <tr id="data">
 
-                                <td scope="row" class="text-center">1</td>
+                                <td scope="row" class="text-center">{{$management->id}}</td>
+                                <td scope="row" class="text-center">{{$management->date}}</td>
+                                <td scope="row" class="text-center">{{$management->client}}</td>
                                 <td scope="row" class="text-center"></td>
-                                <td scope="row" class="text-center"></td>
-                                <td scope="row" class="text-center"></td>
-                                <td scope="row" class="text-center"></td>
+                                <td scope="row" class="text-center">{{$management->file}}</td>
                                 <td scope="row" class="text-center"></td>
                                 <td scope="row" class="text-center"></td>
                                 <td scope="row" class="text-center"></td>
@@ -67,7 +67,7 @@
                                 </td>
                             </tr>
 
-
+                    @endforeach
 
                         </tbody>
 
@@ -96,7 +96,7 @@
                                 <!-- Modal body -->
                                 <div class="modal-body">
                                     <div class="container">
-                                        <form method="post" action="{{ url('add-corporate') }}"
+                                        <form method="post" action="{{ url('new_Request_staff_item') }}"
                                             enctype="multipart/form-data">
                                             @csrf
                                             <div class="row">

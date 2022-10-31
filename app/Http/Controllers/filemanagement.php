@@ -1412,14 +1412,41 @@ public function new_safe_management_list(Request $request)
     // return view('file_management.new_Safe_management');                                                             
 }
 
+
+
 public function Request_staff_item_list()
 {
-    return view('file_management.Request_staff_item');                                                             
+    $safe_management=DB::table('cra_request_safe_item')->get();
+        
+    return view('file_management.Request_staff_item',compact('safe_management'));
+                                                              
 }
 
-public function add_Request_staff_item_list()
+public function add_Request_staff_item_list(Request $request)
 {
-    return view('file_management.new_Request_staff_item');                                                             
+
+
+   
+    $date =$request['date'];
+    $client =$request['client'];
+    $file =$request['file'];
+    $send_instruction =$request['send_instruction'];
+    $approver =$request['approver'];
+   
+ 
+    DB::table('cra_request_safe_item')->insert([
+ 
+    
+     'date' => $date,
+     'client' => $client,
+     'file' => $file,
+     'send_instruction' => $send_instruction,
+     'approver' =>  $approver,
+     
+ ]);
+
+ return redirect('/Request_staff_item');
+    // return view('file_management.new_Request_staff_item');                                                             
 }
 
 public function Process_Request_list()
