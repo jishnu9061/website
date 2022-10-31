@@ -1,10 +1,11 @@
 @extends('layouts.hmsmain')
 @section('content')
 
-
+<html>
 {{-- <div class="spacer" style="height:40px;margin-top: 30px;"> --}}
 
-
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -18,10 +19,15 @@
         </div>
 
         <div id="mydatatable_filter" class="dataTables_filter">
-            <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
+            <label><input type="search" class="box" id="myInput" onkeyup="myFunction()" placeholder="search" aria-controls="mydatatable"></label>
         </div>
         <button class="btn btn-primary add-btn" Style="width:20%" data-toggle="modal" data-target="#myModal">Add New
             Complaint</button>
+
+
+            <!-- <input type="text"  placeholder="Search for Client" title="Type in a name"> -->
+
+
 
 
         <div class="tab-content" id="myTabContent">
@@ -30,6 +36,7 @@
                     <table class="table table-bordered" id="new-item">
                         <thead>
                             <tr>
+                          
                                 <th class="text-center"> No</th>
                                 <th class="text-center">Date</th>
                                 <th class="text-center">Client</th>
@@ -278,12 +285,29 @@
 
 
 
-                <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-                <script type="text/javascript" charset="utf8"
-                    src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
-                <script type="text/javascript" charset="utf8"
-                    src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js">
-                </script>
+                <script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("new-item");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[4];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+</body>
+</html>
+
 
 
                 @endsection
