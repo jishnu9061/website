@@ -15,13 +15,13 @@
 	<br>
     <h2>Journal</h2>
 
-        <a href="{{ url("create_transaction") }}"><button  class="btn btn-primary"> Create Transaction</button></a>
+        <a href="{{ url('create_transaction') }}"><button  class="btn btn-primary"> Create Transaction</button></a>
 
       <div class="table-responsive">
           <br>
           <table class="table table-striped ">
               <tr>
-                  <form method="post" action="{{ url("journal")}}">
+                  <form method="post" action="{{ url('journal')}}">
                       @csrf
                   <td>From Date</td>
                   <td><input type="date" value="{{ $journal_from }}"  name="journal_from" required  class="form-control"></td>

@@ -37,13 +37,13 @@ border-width:0px;
 <div class="container">
 
 	<br>
-    <h2 id="manufacturing123">MANUFACTURING,</h2><h2>TRADING AND PROFIT & LOSS ACCOUNT</h2>
+    <h2 id="manufacturing123"></h2><h2> PROFIT & LOSS ACCOUNT</h2>
 
       <div class="table-responsive">
           <br>
           <table class="table table-striped table">
               <tr>
-                  <form method="post" action="{{ url("profitandlossaccount")}}">
+                  <form method="post" action="{{ url('profitandlossaccount') }}">
                       @csrf
                   <td>From Date</td>
                   <td><input type="date" name="ledger_from" required value="{{$ledger_from}}"  class="form-control"></td>
@@ -87,7 +87,7 @@ border-width:0px;
 
 <table class="table table-striped">
     <tr>
-    <th colspan="5" class="text-center"> <h5 class="manufacturing_heading">MANUFACTURING,</h5><h5>TRADING AND PROFIT & LOSS ACCOUNT</h5></th>
+    <th colspan="5" class="text-center"> <h5 class="manufacturing_heading">MANUFACTURING,</h5><h5> PROFIT & LOSS ACCOUNT</h5></th>
     </tr>
     <tr>
         <th colspan="5">
