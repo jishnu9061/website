@@ -68,7 +68,8 @@
 
     html {
   scroll-behavior: smooth;
-}
+    }
+    
  
     </style>
 
@@ -1026,52 +1027,53 @@
               </nav> --}}
 
 
-<nav class="navbar navbar-expand-lg  sticky-top navbar-light bg-white  " >
-    <a id="backbtn" href="javascript:history.back()" style=" color: #070344;
-    font-size: 35px;" >
-    <i id="bkbtnicon" class="far fa-arrow-alt-circle-left"></i></a>
+            <nav class="navbar navbar-expand-lg  sticky-top navbar-light bg-white  " >
+            <a id="backbtn" href="javascript:history.back()" style=" color: #070344;
+            font-size: 35px;" >
+            <i id="bkbtnicon" class="far fa-arrow-alt-circle-left"></i></a>
 
-    <a class="navbar-brand pl-4" href="#">
-        <img src="assets/images/faces/lawemb.png"  height="40px" class="d-inline-block align-top" alt="">
-        
-      </a>
-      
- 
-      <div class="nav-item dropdown" >
-        <button   class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <img data-toggle="tooltip" data-placement="top" title="Menu" style="height: 35px; width: 35px;"  id="cr_logo" src="assets/images/Logo cra.png"  alt="CRA">
-        </button>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{{url('user_management')}}">User Management</a>
-          <a class="dropdown-item" href="{{url('client-index')}}">Client Management</a>
-          {{-- <div class="dropdown-divider"></div> --}}
-          <a class="dropdown-item" href="{{url('file_managementindex')}}">File Management</a>
-          <a class="dropdown-item" href="{{url('system_setup')}}">System Setup</a>
+            <a class="navbar-brand pl-4" href="#">
+                <img src="assets/images/faces/lawemb.png"  height="40px" class="d-inline-block align-top" alt="">
+                
+                </a>
+                
+    
+        <div class="nav-item dropdown" >
+            <button   class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img data-toggle="tooltip" data-placement="top" title="Menu" style="height: 35px; width: 35px;"  id="cr_logo" src="assets/images/Logo cra.png"  alt="CRA">
+            </button>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{{url('user_management')}}">User Management</a>
+            <a class="dropdown-item" href="{{url('client-index')}}">Client Management</a>
+            {{-- <div class="dropdown-divider"></div> --}}
+            <a class="dropdown-item" href="{{url('file_managementindex')}}">File Management</a>
+            <a class="dropdown-item" href="{{url('system_setup')}}">System Setup</a>
 
-          <a class="dropdown-item" href="{{url('hrindex')}}">HR</a>
-          <a class="dropdown-item" href="{{url('accindex')}}">Accounts</a>
-         
+            <a class="dropdown-item" href="{{url('hrindex')}}">HR</a>
+            
+            <a class="dropdown-item" href="{{url('accindex')}}">Accounts</a>
+            
+            </div>
         </div>
-    </div>
    
 
       
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-  <div class="collapse navbar-collapse ml-2" id="navbarTogglerDemo01">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a  class="font-bold text-uppercase nav-link" href="#">  {{ Auth::user()->name }} <span class="sr-only">(current)</span></a>
-        {{-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> --}}
-      </li>
+        <div class="collapse navbar-collapse ml-2" id="navbarTogglerDemo01">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a  class="font-bold text-uppercase nav-link" href="#">  {{ Auth::user()->name }} <span class="sr-only">(current)</span></a>
+                {{-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> --}}
+            </li>
 
 
-      
-      
-   
+            
+            
+        
   
 
 
@@ -1089,17 +1091,17 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
-      </li> --}}
-      <li class="nav-item">
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        </li> --}}
+        <li class="nav-item">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
           </form>
-        {{-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> --}}
-      </li>
-    </ul>
+            {{-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> --}}
+        </li>
+        </ul>
 
-    
+        
  
 
 
@@ -1107,15 +1109,15 @@
 
 
 
-  
-    <ul class="navbar-nav mr-auto lg-pl-3" >
-      
-        <li class="nav-item dropdown" >
-          <button   class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Create New <i class="fa fa-plus-square" ></i>
-          </button>
-  
-  
+        
+            <ul class="navbar-nav mr-auto lg-pl-3" >
+            
+            <li class="nav-item dropdown" >
+            <button   class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Create New <i class="fa fa-plus-square" ></i>
+            </button>
+    
+    
   
   
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -1134,34 +1136,34 @@
             <a class="dropdown-item" href="{{url('file_managementindex')}}">Event</a>
             <a class="dropdown-item" href="{{url('file_managementindex')}}">Note</a>
             
-          </div>
-        </li>
-     
-      </ul>
+            </div>
+            </li>
+        
+        </ul>
 
-    <div  id="navr" style="margin-right: .5%;"   >
+        <div  id="navr" style="margin-right: .5%;"   >
 
         
 
-        <div  style=" text-decoration: none; list-style:none;">
-     
-<button class="btn btn-primary">
-    <a  style="text-align: center" class="text-muted mb-0 " href="{{url('logt')}}"><i   class="fas fa-sign-out-alt"></i>LogOut</a>
-    
-</button>
-</div>
+                <div  style=" text-decoration: none; list-style:none;">
+            
+        <button class="btn btn-primary">
+            <a  style="text-align: center" class="text-muted mb-0 " href="{{url('logt')}}"><i   class="fas fa-sign-out-alt"></i>LogOut</a>
+            
+        </button>
+        </div>
 
 
 
 
 
-  </div>
-</nav>
+        </div>
+        </nav>
 
-    
-                   {{-- <a href="javascript:history.back()"  class="btn btn-primary" >Back</a>
-                <div style="margin-left: 83%;margin-top: -8%;">
-                <div class="avatar avatar-xl">
+            
+                        {{-- <a href="javascript:history.back()"  class="btn btn-primary" >Back</a>
+                    <div style="margin-left: 83%;margin-top: -8%;">
+                    <div class="avatar avatar-xl">
                     <img  style="margin-left: 28%;" src="assets/images/faces/CRAHqLogo.png" alt="Face 1">
                 </div>
                 <h5 class="font-bold"> {{ Auth::user()->name }}</h5>
@@ -1170,21 +1172,41 @@
               </div> --}}
 
            
-            <br>
+                    <br>
 
-<section class="container-fluid bg-white p-4 mt-2">
-            <div class="page-content">
-                <section class="row">
+        <section class="container-fluid bg-white p-4 mt-2">
+                    <div class="page-content">
+                        <section class="row">
                     <div class="col-12 col-lg-12">
                         @yield('content')
                     </div>
                 </section>
             </div>
-<br>
-            <footer>
+
+
+
+
+        <br>
+
+
+
+       
+
+ 
+
+
+
+
+            <footer id="ftr"  class="container bg-white p-4 mt-2 border-top" >
                 <div class="footer clearfix mb-0 text-muted">
                     <div class="float-start">
-                        <p>2022 &copy; Globaleyet</p>
+
+
+                        
+                        
+
+
+                        <p class="">2022 &copy; Globaleyet</p>
                     </div>
                     <div class="float-end">
                         
@@ -1193,9 +1215,170 @@
                 </div>
             </footer>
         </div>
-    </div>
+        </div>
+        <script>
+             getPagination('#table-id');
+	$('#maxRows').trigger('change');
+	function getPagination (table){
 
-</section>
+		  $('#maxRows').on('change',function(){
+		  	$('.pagination').html('');						// reset pagination div
+		  	var trnum = 0 ;									// reset tr counter 
+		  	var maxRows = parseInt($(this).val());			// get Max Rows from select option
+        
+		  	var totalRows = $(table+' tbody tr').length;		// numbers of rows 
+			 $(table+' tr:gt(0)').each(function(){			// each TR in  table and not the header
+			 	trnum++;									// Start Counter 
+			 	if (trnum > maxRows ){						// if tr number gt maxRows
+			 		
+			 		$(this).hide();							// fade it out 
+			 	}if (trnum <= maxRows ){$(this).show();}// else fade in Important in case if it ..
+			 });											//  was fade out to fade it in 
+			 if (totalRows > maxRows){						// if tr total rows gt max rows option
+			 	var pagenum = Math.ceil(totalRows/maxRows);	// ceil total(rows/maxrows) to get ..  
+			 												//	numbers of pages 
+			 	for (var i = 1; i <= pagenum ;){			// for each page append pagination li 
+			 	$('.pagination').append('<li data-page="'+i+'">\
+								      <span>'+ i++ +'<span class="sr-only">(current)</span></span>\
+								    </li>').show();
+			 	}											// end for i 
+     
+         
+			} 												// end if row count > max rows
+			$('.pagination li:first-child').addClass('active'); // add active class to the first li 
+        
+        
+        //SHOWING ROWS NUMBER OUT OF TOTAL DEFAULT
+       showig_rows_count(maxRows, 1, totalRows);
+        //SHOWING ROWS NUMBER OUT OF TOTAL DEFAULT
+
+        $('.pagination li').on('click',function(e){		// on click each page
+        e.preventDefault();
+				var pageNum = $(this).attr('data-page');	// get it's number
+				var trIndex = 0 ;							// reset tr counter
+				$('.pagination li').removeClass('active');	// remove active class from all li 
+				$(this).addClass('active');					// add active class to the clicked 
+        
+        
+        //SHOWING ROWS NUMBER OUT OF TOTAL
+       showig_rows_count(maxRows, pageNum, totalRows);
+        //SHOWING ROWS NUMBER OUT OF TOTAL
+        
+        
+        
+				 $(table+' tr:gt(0)').each(function(){		// each tr in table not the header
+				 	trIndex++;								// tr index counter 
+				 	// if tr index gt maxRows*pageNum or lt maxRows*pageNum-maxRows fade if out
+				 	if (trIndex > (maxRows*pageNum) || trIndex <= ((maxRows*pageNum)-maxRows)){
+				 		$(this).hide();		
+				 	}else {$(this).show();} 				//else fade in 
+				 }); 										// end of for each tr in table
+					});										// end of on click pagination list
+		});
+											// end of on select change 
+		 
+								// END OF PAGINATION 
+    
+	}	
+
+
+			
+
+// SI SETTING
+$(function(){
+	// Just to append id number for each row  
+default_index();
+					
+});
+
+//ROWS SHOWING FUNCTION
+function showig_rows_count(maxRows, pageNum, totalRows) {
+   //Default rows showing
+        var end_index = maxRows*pageNum;
+        var start_index = ((maxRows*pageNum)- maxRows) + parseFloat(1);
+        var string = 'Showing '+ start_index + ' to ' + end_index +' of ' + totalRows + ' entries';               
+        $('.rows_count').html(string);
+}
+
+// CREATING INDEX
+function default_index() {
+  $('table tr:eq(0)').prepend('<th> ID </th>')
+
+					var id = 0;
+
+					$('table tr:gt(0)').each(function(){	
+						id++
+						$(this).prepend('<td>'+id+'</td>');
+					});
+}
+
+// All Table search script
+function FilterkeyWord_all_table() {
+  
+// Count td if you want to search on all table instead of specific column
+
+  var count = $('.table').children('tbody').children('tr:first-child').children('td').length; 
+
+        // Declare variables
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("search_input_all");
+  var input_value =     document.getElementById("search_input_all").value;
+        filter = input.value.toLowerCase();
+  if(input_value !=''){
+        table = document.getElementById("table-id");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 1; i < tr.length; i++) {
+          
+          var flag = 0;
+           
+          for(j = 0; j < count; j++){
+            td = tr[i].getElementsByTagName("td")[j];
+            if (td) {
+             
+                var td_text = td.innerHTML;  
+                if (td.innerHTML.toLowerCase().indexOf(filter) > -1) {
+                //var td_text = td.innerHTML;  
+                //td.innerHTML = 'shaban';
+                  flag = 1;
+                } else {
+                  //DO NOTHING
+                }
+              }
+            }
+          if(flag==1){
+                     tr[i].style.display = "";
+          }else {
+             tr[i].style.display = "none";
+          }
+        }
+    }else {
+      //RESET TABLE
+      $('#maxRows').trigger('change');
+    }
+}
+        </script>    
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <section>
 
     <script src="{{asset('/')}}assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="{{asset('/')}}assets/js/bootstrap.bundle.min.js"></script>
@@ -1209,9 +1392,9 @@
     <script>
         var mquery = window.matchMedia("(max-width:767.98px)");
         </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
 
          <script>
@@ -1306,21 +1489,23 @@
              }
             </script>
 
+</section>
+
          <script>$("a.sidebar-link").click(function(){
             $("a.sidebar-link").css("background-color", "");
           $(this).css("background-color", "#F5E9D4");
         });</script>
 
-  {{-- <script> --}}
+                 {{-- <script> --}}
 
-            {{-- // const myElement = document.getElementById("subm");
-            // myElement.style.color = "red" --}}
-
-
-{{-- </script> --}}
-</body>
+                    {{-- // const myElement = document.getElementById("subm");
+                    // myElement.style.color = "red" --}}
 
 
-<!-- Mirrored from zuramai.github.io/mazer/demo/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 14 Aug 2021 11:16:21 GMT -->
+                {{-- </script> --}}
+        </body>
 
-</html>
+
+            <!-- Mirrored from zuramai.github.io/mazer/demo/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 14 Aug 2021 11:16:21 GMT -->
+
+        </html>

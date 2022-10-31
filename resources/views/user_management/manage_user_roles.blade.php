@@ -5,6 +5,15 @@
 <div class="container">
    <head>
 
+<style>
+
+       
+ /* tr:nth-child(odd)
+{
+    background-color:rgb(198, 195, 211);
+}   */
+          </style>
+
    </head>
    <body>
    <div>

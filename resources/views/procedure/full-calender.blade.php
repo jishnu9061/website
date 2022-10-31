@@ -2,13 +2,17 @@
 
 <head>
     {{-- <title>How to Use Fullcalendar in Laravel 8</title> --}}
+
+    <style>
+        .fc-time
+        {
+          display:none;
+        }
+
    
-   <style>
-     .fc-time
-     {
-       display:none;
-     }
-   </style>
+      </style>
+   
+
 </head>
 <body>
   
@@ -35,7 +39,7 @@
                     <form id="add-event" action="{{url('add_ot_patient')}}" method="post">
                         @csrf 
                         <div class="modal-body" id="slotdata">
-                            <div class="modal-header" style="background-color:#5e829d">
+                            <div class="modal-header" >
                                 <h4 style="text-align:center;" class="text-white"><b>Operation Theatre Booking</b></h4>
                             </div>
                             <div class="modal-body">
@@ -183,9 +187,9 @@
                         <div class="modal-footer">
                             {{-- <button type="submit" class="btn btn-success">Save</button>
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> --}}
-                            <button type="button" class="btn  text-white" data-bs-dismiss="modal"style="width:20%;background-color:#5e829d" data-dismiss="modal"> <i class="bx bx-x d-block d-sm-none"></i>
+                            <button type="button" class="btn  text-white" data-bs-dismiss="modal"style="width:20%;" data-dismiss="modal"> <i class="bx bx-x d-block d-sm-none"></i>
                                 <span class="d-none d-sm-block"></span>Close</button>
-                            <button type="submit" class="btn text-white" style="background-color:#5e829d;">Save</button>
+                            <button type="submit" class="btn text-white" >Save</button>
                         </div>
                     
                         </div>
@@ -213,7 +217,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-body">
-                            <div class="modal-header" style="background-color:#5e829d">
+                            <div class="modal-header" >
                                 <h4 style="text-align:center;" class="text-white"><b>Appointment Details</b></h4>
                             </div>
                             Doctor:
@@ -229,7 +233,7 @@
                         </div>
             
                         <div class="modal-footer">
-                            <button type="button" class="btn btn text-white" data-dismiss="modal" style="background-color:#5e829d;">Close</button>
+                            <button type="button" class="btn btn text-white" data-dismiss="modal" >Close</button>
                         </div>
                     </div>
                 </div>
@@ -321,9 +325,9 @@ $(document).ready(function () {
 });
   
 </script>
-{{-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> --}}
-{{-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> --}}
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> 
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
   
 </body>
 </html>
