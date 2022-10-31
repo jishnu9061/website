@@ -45,7 +45,7 @@
                             <td scope="row" class="text-center">{{$letter->received_form}}</td>
                             <td scope="row" class="text-center">{{$letter->category}}</td>
                             <td scope="row" class="text-center">{{$letter->letter_name}}</td>
-                            <td scope="row" class="text-center">{{$letter->delivered_to}}</td>
+                            <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center">
                                 <select name="" id="">
                                     <option value=""> <a href="">Action</a> </option>
