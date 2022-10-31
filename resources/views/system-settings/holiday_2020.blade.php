@@ -1,55 +1,19 @@
 @extends('layouts.hmsmain')
 @section('content')
 <html>
+  <div class="container">
     <head>
      
 
 
 
-  <style>
-     body
-        {
   
-          /* font-family:  Arial, Helvetica, sans-serif; */
-        }
-        /* h2
-        {
-           
-            font-size:large;
-            font-weight:bold;
-            color:rgb(13, 1, 56); 
-            background-color:rgb(177, 127, 62);
-            padding:15px;
-         } */
-         table {
-            /* font-family: arial, sans-serif; */
-            border-collapse: collapse;
-            width: 95%;
-            margin-left:25px;
-        }
-        td, th {
-            border: 1px solid rgb(240, 205, 10);
-            text-align: left;
-            padding: 8px;
-         }
-        th{
-             background-color:rgb(177, 127, 62);
-             color:rgb(13, 1, 56);
-         }
-         td{
-            color:rgb(13, 1, 56);
-         }
-         </style>
 </head>
 <body>
 <div>
-    <button class="btn btn-primary"
-    style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Weekend and Holidays</u></b></button>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-            crossorigin="anonymous">
-          </div>
-          <br>
+{{-- heading --}}
+<h4 id="hdtpa"><b>Weekend and Holidays</b></h4>
+<br><br>
   <form>
 
   <a href="{{url('add_new_holiday')}}"><button type="button" class="btn btn-primary add-btn"style="width:30%" > Add New Holiday / Weekend Date</button></a>

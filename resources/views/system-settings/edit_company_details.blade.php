@@ -42,7 +42,7 @@
 
 <!-- --------------------------------------image------------------------------------------------->
                                              <label>
-                                                    <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)"  value="{{$company_details->logo}}">
+                                                    <input type="file" accept="image/jpeg, image/png, image/jpg" name="image" id="file"  onchange="loadFile(event)"  value="{{$company_details->logo}}">
                                                         <span class="btn btn-primary"><span
                                                                 class="fa fa-plus"></span>Edit Logo</span>
                                                     </label>

@@ -5,10 +5,7 @@
         
 <div class="container">
 <html lang="en">
-<head>
-    
 
-</head>
 <body>
 
     <div>
