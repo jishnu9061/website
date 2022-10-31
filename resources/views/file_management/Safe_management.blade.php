@@ -50,17 +50,17 @@
                         </thead>
 
                         <tbody>
-
+                                @foreach($safe_management as $management)
                             <tr id="data">
 
+                                <td scope="row" class="text-center">{{$management->id}}</td>
+                                <td scope="row" class="text-center">{{$management->doc_no}}</td>
                                 <td scope="row" class="text-center"></td>
+                                <td scope="row" class="text-center">{{$management->client}}</td>
                                 <td scope="row" class="text-center"></td>
+                                <td scope="row" class="text-center">{{$management->file}}</td>
                                 <td scope="row" class="text-center"></td>
-                                <td scope="row" class="text-center"></td>
-                                <td scope="row" class="text-center"></td>
-                                <td scope="row" class="text-center"></td>
-                                <td scope="row" class="text-center"></td>
-                                <td scope="row" class="text-center"></td>
+                                <td scope="row" class="text-center">{{$management->document}}</td>
                                 <td scope="row" class="text-center"></td>
                                 <td scope="row" class="text-center"></td>
                                 <td scope="row" class="text-center">
@@ -73,7 +73,7 @@
                                 </td>
                             </tr>
 
-
+                            @endforeach
 
                         </tbody>
 
@@ -101,7 +101,7 @@
                                 <!-- Modal body -->
                                 <div class="modal-body">
                                     <div class="container">
-                                        <form method="post" action="{{ url('add-corporate') }}"
+                                        <form method="post" action="{{ url('new_Safe_management') }}"
                                             enctype="multipart/form-data">
                                             @csrf
 
@@ -191,7 +191,7 @@
                                                             <div class="input-group-prepend">
 
                                                             </div>
-                                                            <input type="text" class="form-control" name="ref_mo"
+                                                            <input type="text" class="form-control" name="ref_no"
                                                                 id="age">
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Incorporation is required
@@ -259,18 +259,19 @@
 
                                                 <tr id="data">
 
-                                                    <td scope="row" class="text-center" style="width:100px;"><input
-                                                            type="text" id="age"></td>
+                                                    <td 
+                                                    scope="row" class="text-center"  style="width:100px;"><input
+                                                            type="text" name="doc_no" id="age"></td>
 
                                                     <td scope="row">
-                                                        <select style="width:100%;">
+                                                        <select style="width:100%;" name="category">
                                                             <option >select</option>
                                                         </select>
                                                     </td>
 
 
-                                                    <td scope="row" class="text-center" style="width:40%;"><input
-                                                            type="text" style="width:100%;">
+                                                    <td scope="row" class="text-center"  style="width:40%;"><input
+                                                            type="text" name="document" style="width:100%;">
                                                     </td>
                                                     <td scope="row" class="text-center"><a href=""><i
                                                                 style="color:black;" class="fa fa-edit"

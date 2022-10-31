@@ -40,8 +40,9 @@
                     </thead>
 
                     <tbody>
-                        
+
                         @foreach($add_letter as $letter)
+                        
                         <tr id="data">
 
                             <td scope="row" class="text-center">{{$letter->id}}</td>
