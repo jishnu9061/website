@@ -45,7 +45,23 @@ class SystemSetup extends Controller
         $vat_no = $Request['vatnum'];
         $NHIF= $Request['nhifcode'];
         $NSSF_no = $Request['nnum'];
-        // $logo = $Request['image'];
+        $logo = $Request['image'];
+        
+        
+        
+        
+        // if($Request->hasfile('logo'))
+        // {
+        //     $file=$Request->file('logo');
+        //     $extension=$file->getClientOriginalExtension();
+        //     $filename=time() . '.' . $extension;
+        //     $file->move('img/logo_c/',$filename);
+        //     $company->logo=$filename;
+        // }
+        // else
+        // {
+        //     return $Request;
+        // }
          
        
 ///////////////////////////////////////////////////////////////////
@@ -62,7 +78,7 @@ class SystemSetup extends Controller
             'vat_no' => $vat_no,
             'NHIF' => $NHIF,
             'NSSF_no' => $NSSF_no,
-            // 'logo' => $logo,
+            'logo' => $logo,
         ]);
    
         return redirect('/company_details');
@@ -86,7 +102,7 @@ class SystemSetup extends Controller
         $vat_no = $Request['vatnum'];
         $NHIF = $Request['nhifcode'];
         $NSSF_no = $Request['nnum'];
-    // $logo = $Request['image'];
+    $logo = $Request['image'];
 //////////////////////////////////////////////////////////////////////////////////////////////
       
 /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -101,7 +117,7 @@ class SystemSetup extends Controller
             'vat_no' =>  $vat_no,
             'NHIF' =>  $NHIF,
             'NSSF_no' =>  $NSSF_no ,
-          // 'logo' => $logo,
+          'logo' => $logo,
             
         );
         DB::table('cra_company_details')->where('id', $id)->update( $update_company_details );

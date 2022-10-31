@@ -54,7 +54,7 @@
                                         <th>Company Name</th>
                                         <th>Company Address</th>
                                         <th>Town/City</th>
-                                         <!-- <th>Logo</th>  -->
+                                         <th>Logo</th> 
                                         <th>Action</th>
 
                                     </tr>
@@ -67,12 +67,9 @@
                                         <td>{{$company->company_name}}</td>
                                         <td>{{$company->address}}</td>
                                         <td>{{$company->town}}</td>
-                                        <!-- <td>{{$company->logo}}</td>  -->
+                                        <td>{{$company->logo}}</td> 
+                                        <!-- <td><img src="{{asset('img/logo_c/'.$company->logo)}}"width="100px;"height="100px;"alt="image"> -->
 
-                                        <!-- <td>CRA</td>
-    <td>Stima Investment Plaza 1,3rd Floor,Mushembi Rd, Parklands </td>
-    <td>Nairobi, Kenya</td>
-    <td></td>  -->
 
                                         <td scope="row" class="text-center"><a
                                                 href="{{url('edit_company_details',$company->id)}}">
@@ -109,6 +106,17 @@
                                                                 class="fa fa-plus"></span>ADD LOGO</span>
                                                     </label>
                                                     <img id="output" width="10%" />	
+
+
+
+<!--                                                     
+                                                    <label>add logo</label>
+                                                    <div class="input-group">
+                                                        <div class="custom-file">
+                                                           <input type="file"name="image"class="custom-file-input">
+                                                           <label class="custom-file-label">choose file</label> -->
+    </div>
+    </div>
 <!-- --------------------------------------image------------------------------------------------->
 
                                                 @csrf
