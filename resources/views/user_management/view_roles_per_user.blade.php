@@ -5,20 +5,7 @@
 <head>
   
     <style>
-    body {
-        background-color: white;
-    }
-
-    th,
-    td,
-    tr {
-        border: 1px solid gray;
-        border-collapse: collapse;
-    }
-
-    table {
-        outline: 1px solid gray;
-    }
+   
 
     /* tr:nth-child(odd)
 {
