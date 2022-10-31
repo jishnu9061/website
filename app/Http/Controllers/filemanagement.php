@@ -1007,12 +1007,44 @@ class filemanagement extends Controller
 
         public function incommingletters()
         {
-             return view('file_management.incomming-letters');
+            $add_letter=DB::table('cra_add_incomming_letters')->get();
+            return view('file_management.incomming-letters',compact('add_letter'));
+
         }
 
-        public function addincommingletters()
+        public function addincommingletters(Request $request)
         {
-             return view('file_management.add-incomming-letters');
+
+            $letter_date =$request['letter_date'];
+            $client =$request['client'];
+            $file =$request['file'];
+            $received_form =$request['received_form'];
+            $category =$request['category'];
+            $letter_name =$request['letter_name'];
+            $delivered_by =$request['delivered_by'];
+            $other =$request['other'];
+            $delivered_to =$request['delivered_to'];
+            $viewer =$request['viewer'];
+            $upload_copy =$request['upload_copy'];
+    
+            DB::table('cra_add_incomming_letters')->insert([
+    
+                
+                'letter_date' => $letter_date,
+                'client' =>  $client,
+                'file' => $file,
+                'received_form' => $received_form,
+                'category' => $category,
+                'letter_name' => $letter_name,
+                'delivered_by' => $delivered_by,
+                'other' =>  $other,
+                'delivered_to' => $delivered_to,
+                'viewer' =>  $viewer,
+                'upload_copy' => $upload_copy,
+    
+            ]);
+              return view('file_management.incomming-letters');
+            //  return view('file_management.add-incomming-letters');
         }
 
         public function safeitemrequest(Request $request)
@@ -1340,12 +1372,44 @@ public function destroyofficeinstruction($id)
 
 public function safe_management_list()
 {
-    return view('file_management.Safe_management');                                                             
+    $safe_management=DB::table('cra_new_safe_management')->get();
+        
+    return view('file_management.Safe_management',compact('safe_management'));
+    // return view('file_management.Safe_management');                                                             
 }
 
-public function new_safe_management_list()
+public function new_safe_management_list(Request $request)
 {
-    return view('file_management.new_Safe_management');                                                             
+
+
+   
+    $date =$request['date'];
+    $client =$request['client'];
+    $file =$request['file'];
+    $safe_name =$request['safe_name'];
+    $ref_no =$request['ref_no'];
+    $approver =$request['approver'];
+    $doc_no =$request['doc_no'];
+    $category =$request['category'];
+    $document =$request['document'];
+ 
+    DB::table('cra_new_safe_management')->insert([
+ 
+    
+     'date' => $date,
+     'client' => $client,
+     'file' => $file,
+     'safe_name' => $safe_name,
+     'ref_no' =>  $ref_no,
+     'approver' =>   $approver,
+     'doc_no' => $doc_no,
+     'category' => $category,
+     'document' => $document,
+ ]);
+
+ return redirect('/Safe_management');
+
+    // return view('file_management.new_Safe_management');                                                             
 }
 
 public function Request_staff_item_list()
