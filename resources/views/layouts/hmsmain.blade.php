@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRA</title>
-
+    
     <link rel="preconnect" href="https://fonts.gstatic.com/">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('/') }}assets/css/bootstrap.css">
@@ -46,6 +46,12 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script type="text/javascript" src="table.js"></script>
+
+<script>
+    $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
 <!-- b -->
     <style>
     #icon {
@@ -62,7 +68,8 @@
 
     html {
   scroll-behavior: smooth;
-}
+    }
+    
  
     </style>
 
@@ -412,7 +419,7 @@
                                     </li>
                                     
                                 </ul>
-                                </li>
+                               </li>
 
                                 <li class="submenu-item  has-sub" style="list-style:none;">
                                 <a href="{{url('user_management')}}" class='sidebar-link'>
@@ -428,15 +435,8 @@
                                             <span > Client Management</span>
                                         </a>
                                 </li>
-
-    
-
-                              
-
-                             
-
-
-                            @endif
+                            
+                                @endif
                             @if(Auth::user()->role == 'hospitaladmin')
                             <li class="submenu-item has-sub " style="list-style:none;">
                                         <a href="{{url('file_managementindex')}}" class='sidebar-link'>
@@ -515,55 +515,54 @@
                                         <i class="bi bi-grid-fill" style="font-weight: 400;" id="icon"></i>
                                             <span>HR</span>
                                     </a> --}}
-                                    @if (in_array(request()->path(),$hr))
+                                    {{-- @if (in_array(request()->path(),$hr))
                                         <ul class="submenu" style="display: block;">
                                         @else
                                             <ul class="submenu" style="display: none;">
 
-                                    @endif
+                                    @endif --}}
                                     
-                                    <li class="submenu-item ">
+                                    {{-- <li class="submenu-item ">
                                         <a href="{{url('addallowance')}}" class='sidebar-link'>
                                             <span id="subm">Settings</span>
                                         </a>
-                                    </li>
-                                    <li class="submenu-item ">
+                                    </li> --}}
+                                    {{-- <li class="submenu-item ">
                                         <a href="{{url('addstaffs')}}" class='sidebar-link'>
                                             <span id="subm">Add Staffs</span>
                                         </a>
-                                    </li>
-                                    <li class="submenu-item ">
+                                    </li> --}}
+                                    {{-- <li class="submenu-item ">
                                         <a href="{{url('staffs')}}" class='sidebar-link'>
                                             <span id="subm">Manage Staffs</span>
                                         </a>
-                                    </li>
-                                    <li class="submenu-item ">
+                                    </li> --}}
+                                    {{-- <li class="submenu-item ">
                                         <a href="{{url('loans')}}" class='sidebar-link'>
                                             <span id="subm">Loans</span>
                                         </a>
-                                    </li>
-                                    <li class="submenu-item ">
+                                    </li> --}}
+                                    {{-- <li class="submenu-item ">
                                         <a href="{{url('payslip')}}" class='sidebar-link'>
                                             <span id="subm">Payslip(Bulk)</span>
                                         </a>
-                                    </li>
+                                    </li> --}}
                                     {{-- <li class="submenu-item ">
                                         <a href="{{url('payslipbulk')}}" class='sidebar-link'>
                                             <span>Payslip(Individual)</span>
                                         </a>
                                     </li> --}}
-                                    <li class="submenu-item ">
+                                    {{-- <li class="submenu-item ">
                                         <a href="{{url('attendanceview')}}" class='sidebar-link'>
                                             <span id="subm">Attendance(Manual)</span>
                                         </a>
-                                    </li>
-                                    <li class="submenu-item ">
+                                    </li> --}}
+                                    {{-- <li class="submenu-item ">
                                         <a href="{{url('attendance')}}" class='sidebar-link'>
                                             <span id="subm">Attendance(CSV Upload)</span>
                                         </a>
-                                    </li>
-                                </ul>
-                                </li>
+                                    </li> --}}
+                                {{-- </li> --}}
                             @endif
                             
                             @if(Auth::user()->role == 'account' || Auth::user()->role == 'hospitaladmin')
@@ -584,7 +583,7 @@
 
                                            <span>Accounts</span>
                                        </a> --}}
-                                   @if (in_array(request()->path(), $accounts))
+                                   {{-- @if (in_array(request()->path(), $accounts))
                                        <ul class="submenu" style="display: block;">
                                      @else
                                      <ul class="submenu" style="display: none;">
@@ -659,8 +658,8 @@
                                                    <span  id="subm">Stock Items </span></a>
                                            </li>
                                        </ul>
-                                   </li>
-                                   @endif
+                                   {{-- </li> --}}
+                                   @endif 
                             @if(Auth::user()->role == 'store' || Auth::user()->role == 'hospitaladmin')
                                 @php
                                     $store=array("addsuppliers", "view_manufacturers","view_medicine", "view_medicine_category","view_medicine_type","view_unit","view_medicine_group","view_brand_name","view_generic_name","reorder","view_purchase","stock_details","accounting_method","payment_type");
@@ -1028,52 +1027,53 @@
               </nav> --}}
 
 
-<nav class="navbar navbar-expand-lg  sticky-top navbar-light bg-white  " >
-    <a id="backbtn" href="javascript:history.back()" style=" color: #070344;
-    font-size: 35px;" >
-    <i id="bkbtnicon" class="far fa-arrow-alt-circle-left"></i></a>
+            <nav class="navbar navbar-expand-lg  sticky-top navbar-light bg-white  " >
+            <a id="backbtn" href="javascript:history.back()" style=" color: #070344;
+            font-size: 35px;" >
+            <i id="bkbtnicon" class="far fa-arrow-alt-circle-left"></i></a>
 
-    <a class="navbar-brand pl-4" href="#">
-        <img src="assets/images/faces/lawemb.png"  height="40px" class="d-inline-block align-top" alt="">
-        
-      </a>
-      
- 
-      <div class="nav-item dropdown" >
-        <button   class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <img style="height: 35px; width: 35px;"  id="cr_logo" src="assets/images/Logo cra.png"  alt="CRA">
-        </button>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{{url('user_management')}}">User Management</a>
-          <a class="dropdown-item" href="{{url('client-index')}}">Client Management</a>
-          {{-- <div class="dropdown-divider"></div> --}}
-          <a class="dropdown-item" href="{{url('file_managementindex')}}">File Management</a>
-          <a class="dropdown-item" href="{{url('system_setup')}}">System Setup</a>
+            <a class="navbar-brand pl-4" href="#">
+                <img src="assets/images/faces/lawemb.png"  height="40px" class="d-inline-block align-top" alt="">
+                
+                </a>
+                
+    
+        <div class="nav-item dropdown" >
+            <button   class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img data-toggle="tooltip" data-placement="top" title="Menu" style="height: 35px; width: 35px;"  id="cr_logo" src="assets/images/Logo cra.png"  alt="CRA">
+            </button>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{{url('user_management')}}">User Management</a>
+            <a class="dropdown-item" href="{{url('client-index')}}">Client Management</a>
+            {{-- <div class="dropdown-divider"></div> --}}
+            <a class="dropdown-item" href="{{url('file_managementindex')}}">File Management</a>
+            <a class="dropdown-item" href="{{url('system_setup')}}">System Setup</a>
 
-          <a class="dropdown-item" href="{{url('hrindex')}}">HR</a>
-          <a class="dropdown-item" href="{{url('accindex')}}">Accounts</a>
-         
+            <a class="dropdown-item" href="{{url('hrindex')}}">HR</a>
+            
+            <a class="dropdown-item" href="{{url('accindex')}}">Accounts</a>
+            
+            </div>
         </div>
-    </div>
    
 
       
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-  <div class="collapse navbar-collapse ml-2" id="navbarTogglerDemo01" style="background-color: #ffffff; padding:5px; ">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a  class="font-bold text-uppercase nav-link" href="#">  {{ Auth::user()->name }} <span class="sr-only">(current)</span></a>
-        {{-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> --}}
-      </li>
+        <div class="collapse navbar-collapse ml-2" id="navbarTogglerDemo01">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a  class="font-bold text-uppercase nav-link" href="#">  {{ Auth::user()->name }} <span class="sr-only">(current)</span></a>
+                {{-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> --}}
+            </li>
 
 
-      
-      
-   
+            
+            
+        
   
 
 
@@ -1091,77 +1091,79 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
-      </li> --}}
-      <li class="nav-item">
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+        </li> --}}
+        <li class="nav-item">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
           </form>
-        {{-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> --}}
-      </li>
-    </ul>
+            {{-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> --}}
+        </li>
+        </ul>
 
-    
+        
  
 
 
 
-      <ul class="navbar-nav mr-auto lg-pl-3" >
-      
-      <li class="nav-item dropdown" >
-        <button   class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Create New
+
+
+
+        
+            <ul class="navbar-nav mr-auto lg-pl-3" >
+            
+            <li class="nav-item dropdown" >
+            <button   class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Create New <i class="fa fa-plus-square" ></i>
+            </button>
+    
+    
+  
+  
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{{url('user_management')}}">Time entry</a>
+            <a class="dropdown-item" href="{{url('client-index')}}">Expense entry</a>
+            {{-- <div class="dropdown-divider"></div> --}}
+            <a class="dropdown-item" href="{{url('file_managementindex')}}">Task</a>
+            <a class="dropdown-item" href="{{url('file_managementindex')}}">Matter</a>
+  
+            <a class="dropdown-item" href="{{url('file_managementindex')}}">Contact</a>
+            <a class="dropdown-item" href="{{url('file_managementindex')}}">Record payment</a>
+            <a class="dropdown-item" href="{{url('file_managementindex')}}">Client funds request</a>
+            <a class="dropdown-item" href="{{url('file_managementindex')}}">Email log</a>
+            <a class="dropdown-item" href="{{url('file_managementindex')}}">Phone log</a>
+            <a class="dropdown-item" href="{{url('file_managementindex')}}">Secure message</a>
+            <a class="dropdown-item" href="{{url('file_managementindex')}}">Event</a>
+            <a class="dropdown-item" href="{{url('file_managementindex')}}">Note</a>
+            
+            </div>
+            </li>
+        
+        </ul>
+
+        <div  id="navr" style="margin-right: .5%;"   >
+
+        
+
+                <div  style=" text-decoration: none; list-style:none;">
+            
+        <button class="btn btn-primary">
+            <a  style="text-align: center" class="text-muted mb-0 " href="{{url('logt')}}"><i   class="fas fa-sign-out-alt"></i>LogOut</a>
+            
         </button>
-
-
-
-
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{{url('user_management')}}">Time entry</a>
-          <a class="dropdown-item" href="{{url('client-index')}}">Expense entry</a>
-          {{-- <div class="dropdown-divider"></div> --}}
-          <a class="dropdown-item" href="{{url('file_managementindex')}}">Task</a>
-          <a class="dropdown-item" href="{{url('file_managementindex')}}">Matter</a>
-
-          <a class="dropdown-item" href="{{url('file_managementindex')}}">Contact</a>
-          <a class="dropdown-item" href="{{url('file_managementindex')}}">Record payment</a>
-          <a class="dropdown-item" href="{{url('file_managementindex')}}">Client funds request</a>
-          <a class="dropdown-item" href="{{url('file_managementindex')}}">Email log</a>
-          <a class="dropdown-item" href="{{url('file_managementindex')}}">Phone log</a>
-          <a class="dropdown-item" href="{{url('file_managementindex')}}">Secure message</a>
-          <a class="dropdown-item" href="{{url('file_managementindex')}}">Event</a>
-          <a class="dropdown-item" href="{{url('file_managementindex')}}">Note</a>
-          
         </div>
-      </li>
-   
-    </ul>
-
-
-  
-  
-
-    <div class="p-2" id="navr" style="margin-right: .5%;"   >
-
-        <div  style=" text-decoration: none; list-style:none;">
-     
-
-    <a style="text-align: center" class="text-muted mb-0 " href="{{url('logt')}}"> <i class="fas fa-sign-out-alt"></i> Log Out</a>
-    
- 
-</div>
 
 
 
 
 
-  </div>
-</nav>
+        </div>
+        </nav>
 
-    
-                   {{-- <a href="javascript:history.back()"  class="btn btn-primary" >Back</a>
-                <div style="margin-left: 83%;margin-top: -8%;">
-                <div class="avatar avatar-xl">
+            
+                        {{-- <a href="javascript:history.back()"  class="btn btn-primary" >Back</a>
+                    <div style="margin-left: 83%;margin-top: -8%;">
+                    <div class="avatar avatar-xl">
                     <img  style="margin-left: 28%;" src="assets/images/faces/CRAHqLogo.png" alt="Face 1">
                 </div>
                 <h5 class="font-bold"> {{ Auth::user()->name }}</h5>
@@ -1170,21 +1172,41 @@
               </div> --}}
 
            
-            <br>
+                    <br>
 
-<section class="container-fluid bg-white p-4 mt-2">
-            <div class="page-content">
-                <section class="row">
+        <section class="container-fluid bg-white p-4 mt-2">
+                    <div class="page-content">
+                        <section class="row">
                     <div class="col-12 col-lg-12">
                         @yield('content')
                     </div>
                 </section>
             </div>
-<br>
-            <footer>
+
+
+
+
+        <br>
+
+
+
+       
+
+ 
+
+
+
+
+            <footer id="ftr"  class="container bg-white p-4 mt-2 border-top" >
                 <div class="footer clearfix mb-0 text-muted">
                     <div class="float-start">
-                        <p>2022 &copy; Globaleyet</p>
+
+
+                        
+                        
+
+
+                        <p class="">2022 &copy; Globaleyet</p>
                     </div>
                     <div class="float-end">
                         
@@ -1193,9 +1215,27 @@
                 </div>
             </footer>
         </div>
-    </div>
+        </div>
 
-</section>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <section>
 
     <script src="{{asset('/')}}assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="{{asset('/')}}assets/js/bootstrap.bundle.min.js"></script>
@@ -1209,9 +1249,9 @@
     <script>
         var mquery = window.matchMedia("(max-width:767.98px)");
         </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
 
          <script>
@@ -1306,21 +1346,23 @@
              }
             </script>
 
+</section>
+
          <script>$("a.sidebar-link").click(function(){
             $("a.sidebar-link").css("background-color", "");
           $(this).css("background-color", "#F5E9D4");
         });</script>
 
-  {{-- <script> --}}
+                 {{-- <script> --}}
 
-            {{-- // const myElement = document.getElementById("subm");
-            // myElement.style.color = "red" --}}
-
-
-{{-- </script> --}}
-</body>
+                    {{-- // const myElement = document.getElementById("subm");
+                    // myElement.style.color = "red" --}}
 
 
-<!-- Mirrored from zuramai.github.io/mazer/demo/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 14 Aug 2021 11:16:21 GMT -->
+                {{-- </script> --}}
+        </body>
 
-</html>
+
+            <!-- Mirrored from zuramai.github.io/mazer/demo/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 14 Aug 2021 11:16:21 GMT -->
+
+        </html>

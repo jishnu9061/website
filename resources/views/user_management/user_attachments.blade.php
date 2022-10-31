@@ -2,7 +2,7 @@
 @section('content')
 
 <html>
-
+<div class="container">
 <head>
 
       <style>

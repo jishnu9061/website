@@ -45,6 +45,7 @@ class SystemSetup extends Controller
         $vat_no = $Request['vatnum'];
         $NHIF= $Request['nhifcode'];
         $NSSF_no = $Request['nnum'];
+        // $logo = $Request['image'];
        
 ///////////////////////////////////////////////////////////////////
       
@@ -60,7 +61,7 @@ class SystemSetup extends Controller
             'vat_no' => $vat_no,
             'NHIF' => $NHIF,
             'NSSF_no' => $NSSF_no,
-            // 'Add_Logo' => $Add_Logo,
+            // 'logo' => $logo,
         ]);
    
         return redirect('/company_details');
@@ -84,6 +85,7 @@ class SystemSetup extends Controller
         $vat_no = $Request['vatnum'];
         $NHIF = $Request['nhifcode'];
         $NSSF_no = $Request['nnum'];
+        // $logo = $Request['image'];
 //////////////////////////////////////////////////////////////////////////////////////////////
       
 /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -98,7 +100,7 @@ class SystemSetup extends Controller
             'vat_no' =>  $vat_no,
             'NHIF' =>  $NHIF,
             'NSSF_no' =>  $NSSF_no ,
-            // 'Add_Logo' =>  $Add_Logo,
+            // 'logo' => $logo,
             
         );
         DB::table('cra_company_details')->where('id', $id)->update( $update_company_details );

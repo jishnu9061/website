@@ -1,8 +1,6 @@
 @extends('layouts.hmsmain')
 @section('content')
- {{-- heading --}}
- <h4 id="hdtpa"><b>List of File Progress</b></h4>
- <br><br>
+
 
 <body>
     <div class="container">

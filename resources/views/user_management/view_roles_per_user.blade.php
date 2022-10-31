@@ -1,9 +1,10 @@
 @extends('layouts.hmsmain')
 @section('content')
 <html>
-
+<div class="container">
 <head>
   
+
     <style>
    
 
@@ -12,6 +13,7 @@
     background-color:rgb(198, 195, 211);
 }   */
     </style>
+
 </head>
 
 
