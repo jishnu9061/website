@@ -210,6 +210,16 @@
 
                             </select>
                         </div>
+                        <div class="form-group mb-3">
+                            <label> Budget </label>
+                            <select class="form-control" name="budget_cat" id="budget_cat" required>
+                                <option value=""> Select</option>
+                                @foreach($budget_cat as $budget):
+                                <option value="{{ $budget->id }}"> {{ $budget->budget_name }}</option>
+                                @endforeach;
+
+                            </select>
+                        </div>
 
 
                         <div class="form-group mb-3">

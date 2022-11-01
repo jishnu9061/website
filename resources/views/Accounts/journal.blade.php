@@ -145,13 +145,7 @@ $no=1;
 
                                 </td>
 
-
-
-
-
-
-
-                                </tr>
+ </tr>
                                     @endforeach
                                 </table>
                                 <br>
