@@ -145,12 +145,27 @@ class filemanagement extends Controller
     //document temblates
     public function template()
     {
+        $template_list=DB::table('cra_open_new_file_details')->get();
+        return view('file_management.template-category',compact('template_list'));
+
         return view('file_management.template-category');
     }
 
-    public function addtemplate()
+    public function addtemplate(Request $request)
     {
-        return view('file_management.add-template');
+        $doc_type=$request['doc_type'];
+        $title=$request['title'];
+        $to_upload=$request['to_upload'];
+
+        DB::table('cra_add_template')->insert([
+            'doc_type' =>  $doc_type,
+            'title' =>  $title,
+            'to_upload' =>  $to_upload,
+
+        ]);
+        
+        return redirect('/template-category');
+        // return view('file_management.add-template');
     }
 
 
@@ -881,14 +896,73 @@ class filemanagement extends Controller
          return view('file_management.document-manager');
      }
 
-     public function uploaddocument()
+     public function uploaddocument(Request $request)
      {
-         return view('file_management.upload-document');
+        
+        $client =$request['client'];
+        $file =$request['file'];
+        $other_file =$request['other_file'];
+        $document_category =$request['document_category'];
+        $document_title =$request['document_title'];
+        $nature_document =$request['nature_document'];
+        $search =$request['search'];
+        $document_owner =$request['document_owner'];
+        $final_aggrement =$request['final_aggrement'];
+        $document_upload =$request['document_upload'];
+        $folder_upload =$request['folder_upload'];
+       
+        
+
+        DB::table('cra_upload_document')->insert([
+
+           
+            'client' =>  $client,
+            'file' =>  $file,
+            'other_file' =>  $other_file,
+            'document_category' =>   $document_category,
+            'document_title' =>   $document_title,
+            'nature_document' =>  $nature_document,
+            'search' =>  $search,
+            'document_owner' =>  $document_owner,
+            'final_aggrement' =>  $final_aggrement,
+            'document_upload' =>  $document_upload,
+            'folder_upload' =>  $folder_upload,
+        
+        ]);
+        return redirect('/document-manager');
+   
      }
 
-     public function generatedocument()
+     public function generatedocument(Request $request)
      {
-         return view('file_management.generate-document');
+        
+        $client =$request['client'];
+        $file =$request['file'];
+        $document_category =$request['document_category'];
+        $document_title =$request['document_title'];
+        $nature_document =$request['nature_document'];
+        $search =$request['search'];
+        $document_owner =$request['document_owner'];
+        $viewer =$request['viewer'];
+        $document_template =$request['document_template'];
+        
+
+        DB::table('cra_generate_document')->insert([
+
+           
+            'client' =>  $client,
+            'file' =>  $file,
+            'document_category' =>   $document_category,
+            'document_title' =>   $document_title,
+            'nature_document' =>  $nature_document,
+            'search' =>  $search,
+            'document_owner' =>  $document_owner,
+            'viewer' =>  $viewer,
+            'document_template' =>  $document_template,
+        
+        ]);
+        return redirect('/document-manager');
+        //  return view('file_management.generate-document');
      }
  
 

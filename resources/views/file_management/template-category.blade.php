@@ -39,7 +39,9 @@
                            
                         </tr>
                     </thead>
+                    
                     <tbody>
+                        @foreach($template_list as $template)
                         <tr id="data">
                         
                             <td scope="row" class="text-center"></td>
@@ -50,6 +52,7 @@
                         <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                            </td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
 
@@ -72,7 +75,7 @@
                                     <!-- Modal body -->
                                     <div class="modal-body">
                                         <div class="container">
-                                            <form method="post" action="{{ url('template-category') }}"
+                                            <form method="post" action="{{ url('add-template') }}"
                                                 enctype="multipart/form-data">
                                                 @csrf
 

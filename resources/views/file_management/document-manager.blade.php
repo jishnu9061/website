@@ -108,7 +108,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="" id="cars">
+                                <select name="client" id="cars">
                         <option >---select---</option>
                         <option >client 1</option>
                         <option >client 2</option>
@@ -126,7 +126,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="" id="cars">
+                                <select name="file" id="cars">
                         <option >---select---</option>
                         <option >file 1</option>
                         <option >file 2</option>
@@ -142,7 +142,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="other_file" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -156,7 +156,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
+                                <select name="document_category" id="cars">
                         <option >---select---</option>
                         <option >category_1</option>
                         <option >category_2</option>
@@ -173,7 +173,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="document_title" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
                                 </div>
@@ -196,7 +196,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="nature_document"></textarea>
                             </div>
                         </div>
                     </div>
@@ -209,7 +209,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="search"></textarea>
                             </div>
                         </div>
                     </div>
@@ -231,7 +231,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
+                    <select name="document_owner" id="cars">
                         <option >---select---</option>
                         <option >doc_owner_1</option>
                         <option >doc_owner_2</option>
@@ -252,7 +252,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="text" class="form-control" name="final_aggrement" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -270,7 +270,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="file" class="form-control" name="website" id="confirm_password" required>
+                    <input type="file" class="form-control" name="document_upload" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -286,7 +286,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="file" class="form-control" name="website" id="confirm_password" required>
+                    <input type="file" class="form-control" name="folder_upload" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -374,7 +374,7 @@
                 <!-- Modal body -->
                 <div class="modal-body">
                     <div class="container">
-                        <form method="post" action="{{ url('upload-document') }}" enctype="multipart/form-data">
+                        <form method="post" action="{{ url('generate-document') }}" enctype="multipart/form-data">
 
 
                             <div class="row">
@@ -391,7 +391,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <select name="client" id="cars">
+                        <option >---select---</option>
+                        <option >client 1</option>
+                        <option >client 2</option>
+                        <option >client 3</option>
+                    </select>
                             </div>
                         </div>
                     </div>
@@ -404,7 +409,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <select name="file" id="cars">
+                        <option >---select---</option>
+                        <option >client 1</option>
+                        <option >client 2</option>
+                        <option >client 3</option>
+                    </select>
                             </div>
                         </div>
                     </div>
@@ -415,7 +425,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="document_category" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -427,7 +437,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="document_title" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
                                 </div>
@@ -450,7 +460,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="nature_document"></textarea>
                             </div>
                         </div>
                     </div>
@@ -463,7 +473,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="search"></textarea>
                             </div>
                         </div>
                     </div>
@@ -485,8 +495,11 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
+                    <select name="document_owner" id="cars">
+                    <option >---select---</option>
+                        <option >owner 1</option>
+                        <option >owner 2</option>
+                        <option >owner 3</option>
                     </select>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
@@ -503,7 +516,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="text" class="form-control" name="viewer" id="confirm_password"  >
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -517,7 +530,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="text" class="form-control" name="document_template" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
