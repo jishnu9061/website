@@ -1,9 +1,10 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container">
-	<br>
-    <h2>Add Budget Categories</h2>
-
+	
+    {{-- heading --}}
+  <h4 id="hdtpa"><b>Budget Categories</b></h4>
+  <br><br>
         <button  class="btn btn-primary "  data-toggle="modal" id="patient" data-bs-toggle="modal"
         data-bs-target="#default" style="width: 25%">Add</button>
 

@@ -1,8 +1,10 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container">
-	<br>
-    <h2>Account Types</h2>
+{{-- heading --}}
+  <h4 id="hdtpa"><b>Account Types</b></h4>
+  <br><br>
+  
 
         <button  class="btn btn-primary"  data-toggle="modal" id="patient" data-bs-toggle="modal"
         data-bs-target="#default"  class="btn btn-secondary">Create Account Type</button>
