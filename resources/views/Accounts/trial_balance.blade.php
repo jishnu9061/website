@@ -29,7 +29,7 @@
           <br>
           <table class="table table-striped table">
               <tr>
-                  <form method="post" action="{{ url(trialbalance')}}">
+                  <form method="post" action="{{ url('trialbalance')}}">
                       @csrf
                   <td>From Date</td>
                   <td><input type="date" name="ledger_from" required value="{{$ledger_from}}"  class="form-control"></td>
