@@ -1,8 +1,9 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container">
-	<br>
-    <h2>Add Groups</h2>
+{{-- heading --}}
+  <h4 id="hdtpa"><b>Add Groups</b></h4>
+  <br><br>
 
         <button  class="btn btn-primary "  data-toggle="modal" id="patient" data-bs-toggle="modal"
         data-bs-target="#default"  class="btn btn-secondary">Add Groups</button>

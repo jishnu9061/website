@@ -13,8 +13,10 @@
 <div class="container">
 
 	<br>
-    <h2>Journal</h2>
 
+    {{-- heading --}}
+  <h4 id="hdtpa"><b>Journal</b></h4>
+  <br><br>
         <a href="{{ url('create_transaction') }}"><button  class="btn btn-primary"> Create Transaction</button></a>
 
       <div class="table-responsive">

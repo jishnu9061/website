@@ -17,9 +17,12 @@
 
 	<br>
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <h3>Create Transaction</h3>
+    {{-- heading --}}
+  <h4 id="hdtpa"><b>Create Transaction</b></h4>
+  <br><br>
+    <!-- <h3>Create Transaction</h3> -->
     {{-- <br> --}}
-    <hr>
+    
     <form id="journal_form" method="POST" enctype="multipart/form-data">
 <div class="container-fluid">
     <div class="row">

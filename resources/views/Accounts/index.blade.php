@@ -15,7 +15,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link rel="stylesheet" href="{{ url('assets/css') }}/sweetalert.css">
 	<br>
-    <h2>Ledger Accounts</h2>
+    {{-- heading --}}
+  <h4 id="hdtpa"><b>Ledger Accounts</b></h4>
+  <br><br>
+   
 
         <button  class="btn btn-primary "  data-toggle="modal" id="patient" data-bs-toggle="modal"
         data-bs-target="#default"  class="btn btn-secondary">Add Account</button>
