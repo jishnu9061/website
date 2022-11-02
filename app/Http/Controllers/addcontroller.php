@@ -140,7 +140,8 @@ class addcontroller extends Controller
    	$allusers=DB::table('users')
        ->leftjoin('departments','departments.id','=','users.departments')
        ->orderby('users.created_at','DESC')->where('users.Hospital',$hospital)->get();
-   	return view('add.allstaffs',['allusers'=>$allusers]);
+    $leavetype=DB::table('leave_types')->get();
+   	return view('add.allstaffs',['allusers'=>$allusers,'leavetype'=>$leavetype]);
    }
 
    public function editstafff(Request $Request)
