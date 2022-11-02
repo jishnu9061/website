@@ -48,7 +48,7 @@ $no=1;
           <td id="expanse-name">{{ $exp_type->accounts_name }}</td>
           <td id="expanse_status">{{ $exp_type->category_name}}</td>
           <td id="expanse_status">{{ $exp_type->subcategory_name}}</td>
-          <td>{{ $exp_type->budget_name }}</td>
+          <td>{{ $exp_type->budget_name }} {{ $exp_type->budget_name }} </td>
           <td id="expanse_status">{{ $exp_type->accounts_desc}}</td>
 
                <input type="hidden" id="expanse_type_id" value="{{$exp_type->id}}" name="">

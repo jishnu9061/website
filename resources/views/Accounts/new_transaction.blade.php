@@ -194,23 +194,23 @@
 
                         <div class="form-group mb-3">
                             <label> Type </label>
-
-                            <select class="form-control" id="accounts-subcategory" required>
-                                <option value=""> Select</option>
-                                @foreach($subcategory as $subcat):
-                                <option value="{{ $subcat->id }}"> {{ $subcat->ledgeraccount_subcategories }} </option>
-                                @endforeach;
-                            </select>
-                        </div>
-
-                        <div class="form-group mb-3">
-                            <label> Group </label>
                             <select class="form-control" name="accounts_category" id="account-cat" required>
                                 <option value=""> Select</option>
                                 @foreach($category as $cat):
                                 <option value="{{ $cat->id }}"> {{ $cat->ledgeraccount_categories }}</option>
                                 @endforeach;
 
+                            </select>
+                            
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label> Group </label>
+                            <select class="form-control" id="accounts-subcategory" required>
+                                <option value=""> Select</option>
+                                @foreach($subcategory as $subcat):
+                                <option value="{{ $subcat->id }}"> {{ $subcat->ledgeraccount_subcategories }} </option>
+                                @endforeach;
                             </select>
                         </div>
                         <div class="form-group mb-3">
