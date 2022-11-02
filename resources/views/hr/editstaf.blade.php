@@ -7,7 +7,8 @@
                 {{ Session::get('detailupdate')}}
             </div>
         @endif
-        <h2>Manage {{$users->name}} [{{$users->uniqueid}}]</h2>
+        <h4 id="hdtpa"><b>Manage {{$users->name}} [{{$users->uniqueid}}]</b></h4>
+        {{-- <h2>Manage {{$users->name}} [{{$users->uniqueid}}]</h2> --}}
     </div>
     <h6>Basic Details</h6>
     <hr class="mb-4">

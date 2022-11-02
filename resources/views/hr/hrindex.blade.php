@@ -4,22 +4,18 @@
 <section >
    {{-- heading --}}
    <h4 id="hdtpa"><b>HR</b></h4>
-   <br><br>
- 
    <br>
 
         
-       {{--sub heading --}}
-    {{-- <h5 id="hdbtb">Maintenance</h5>
-    <br> --}}
+   
 
-            <div class="row sm">
-                <div class="col-sm-4 "> <a href="{{ url('addstaffs') }}"><img class="logo_size" src="assets\image\Bring up report.png"
-                    alt=""><button type="button" style="width:70%;"
-                    class="btn btn-primary btn_align_btn">Add Staffs</button></a></div>
-                    <div class="col-sm-4 "> <a href="{{ url('staffs') }}"><img class="logo_size"
-                        src="assets\image\File progress report.png" alt=""><button type="button" style="width:70%;"
-                        class="btn btn-primary btn_align_btn">Manage Staffs</button></a></div>
+   <div class="row sm">
+       <div class="col-sm-4 "> <a href="{{ url('staffs') }}"><img class="logo_size"
+           src="assets\image\File progress report.png" alt=""><button type="button" style="width:70%;"
+           class="btn btn-primary btn_align_btn">Manage Staffs</button></a></div>
+       <div class="col-sm-4 "> <a href="{{ url('addstaffs') }}"><img class="logo_size" src="assets\image\Bring up report.png"
+        alt=""><button type="button" style="width:70%;"
+        class="btn btn-primary btn_align_btn">Add Staffs</button></a></div>
                         <div class="col-sm-4"> <a href="{{ url('loans') }}"><img class="logo_size"
                             src="assets\image\File status report summary.png" alt=""><button type="button" style="width:70%;"
                             class="btn btn-primary btn_align_btn">Loans</button></a></div>
