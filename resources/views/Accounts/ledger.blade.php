@@ -27,10 +27,10 @@
 
       <div class="table-responsive">
           <br>
-          <table class="table table-striped table" style="background-color:rgb(177, 127, 62);color:white;">
+          <table class="table table-striped table" style="background-color:#E2E8EE;color:#1D1D50;">
           {{-- <table class="table table-striped table"> --}}
               <tr>
-                  <form method="post" action="{{ url("ledger")}}">
+                  <form method="post" action="{{ url('ledger')}}">
                       @csrf
                   <td>From Date</td>
                   <td><input type="date" name="ledger_from" required value="{{$ledger_from}}"  class="form-control"></td>

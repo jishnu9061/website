@@ -607,7 +607,7 @@ public function trialbalance(Request $request){
     ->select('*','ledgeraccounts.id as id')
     ->orderBy('ledgeraccounts.accounts_name','asc')
     ->get();
-
+    
 
     $ledger_from=$request->ledger_from;
     $ledger_to=$request->ledger_to;
