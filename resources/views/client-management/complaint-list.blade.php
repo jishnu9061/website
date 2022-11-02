@@ -45,16 +45,16 @@
                         <tbody>
                             @foreach( $complaint_list as $list)
                             <tr id="data">
-                                <td scope="row" class="text-center">{{$list->id}}</td>
+                                <td scope="row" class="text-center">{{$list->corporate_id }}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->date}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->client_type}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->files}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->customer_name}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->telephone_no}}</td>
                                 <td scope="row" class="text-center">{{$list->complaint_description}}</td>
-                                <td><a href="{{url('view-Complaint',$list->id)}}"><i style="color:black;"
+                                <td><a href="{{url('view-Complaint',$list->corporate_id )}}"><i style="color:black;"
                                             class="fa fa-eye" aria-hidden="true"></i></td></a>
-                                <td><a href="{{url('edit_complaint',$list->id)}}"><i style="color:black;"
+                                <td><a href="{{url('edit_complaint',$list->corporate_id )}}"><i style="color:black;"
                                             class="fa fa-edit" aria-hidden="true"></i></td>
                                 <td>
                                         <a onClick="return myFunction();"

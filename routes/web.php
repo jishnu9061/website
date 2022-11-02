@@ -1032,9 +1032,9 @@ Route::any('delete-client/{id}',"ClientManagement@deleteClient")->name('delete-c
 Route::any('add-corporate','ClientManagement@addCorporate')->name('add-corporate');
 // Route::any('store-corporate','ClientManagement@storeCorporate')->name('store-corporate');
 Route::any('corporate-list','ClientManagement@listCorporate')->name('corporate-list');
-Route::any('/edit_client/{id}','ClientManagement@edit_corporate')->name('edit_client');
+Route::any('/edit_client/{corporate_id}','ClientManagement@edit_corporate')->name('edit_client');
 Route::any('/update-corporate','ClientManagement@Update_corporate')->name('update-corporate');
-Route::any('/delete_client/{id}','ClientManagement@Corporate_destroy')->name('delete_client');
+Route::any('/delete_client/{corporate_id}','ClientManagement@Corporate_destroy')->name('delete_client');
 //end corporate
 //end Client-List
 
@@ -1042,8 +1042,8 @@ Route::any('/delete_client/{id}','ClientManagement@Corporate_destroy')->name('de
 Route::any('client-document','ClientManagement@document')->name('client-document');
 Route::any('create-document','ClientManagement@createDocument')->name('create-document');
 Route::any('add-document','ClientManagement@addDocument')->name('add-document');
-Route::any('view-document/{id}','ClientManagement@viewDocument')->name('view-document');
-Route::any('delete-document/{id}','ClientManagement@deleteDocument')->name('delete-document');
+Route::any('view-document/{document_id}','ClientManagement@viewDocument')->name('view-document');
+Route::any('delete-document/{document_id}','ClientManagement@deleteDocument')->name('delete-document');
 //end Client-Documents
 
 //Client-Pickup

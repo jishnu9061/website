@@ -22,7 +22,7 @@
         <div class="col-md-12">
             <form method="post" action="{{url('update-corporate')}}" id="form">
                 @csrf
-                <input type="hidden" name="id" value="{{$corporate_details->id}}">
+                <input type="hidden" name="corporate_id" value="{{$corporate_details->corporate_id}}">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
