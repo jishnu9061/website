@@ -36,7 +36,11 @@
                  <div class="col-sm-4"> <a href="{{ url('ledger') }}"><img class="logo_size"
                              src="assets\image\Ledger.png" alt=""><button type="button" style="width:70%;"
                              class="btn btn-primary btn_align_btn">Ledger</button></a></div>
-
+ <!-------------------------------------------new-------------------------------------------------------------------- -->
+ <div class="col-sm-4"> <a href="{{ url('i_e_stmnt') }}"><img class="logo_size"
+                                        src="assets\image\Balance Sheet.png" alt=""><button type="button" style="width:70%;"
+                                        class="btn btn-primary btn_align_btn">Income & Expenses Statement</button></a></div>
+  <!-------------------------------------------new-------------------------------------------------------------------- -->
                 <div class="col-sm-4"> <a href="{{ url('trialbalance') }}"><img class="logo_size"
                                 src="assets\image\Trial Balance.png" alt=""><button type="button" style="width:70%;"
                                 class="btn btn-primary btn_align_btn">Trial Balance</button></a></div>
@@ -46,9 +50,26 @@
                                     <div class="col-sm-4"> <a href="{{ url('balancesheet') }}"><img class="logo_size"
                                         src="assets\image\Balance Sheet.png" alt=""><button type="button" style="width:70%;"
                                         class="btn btn-primary btn_align_btn">Balance Sheet</button></a></div>
-                                        <div class="col-sm-4"> <a href="{{ url('stock_section') }}"><img class="logo_size"
+
+ <!-------------------------------------------new-------------------------------------------------------------------- -->
+                                        <div class="col-sm-4"> <a href="{{ url('budget_forecating') }}"><img class="logo_size"
+                                        src="assets\image\Balance Sheet.png" alt=""><button type="button" style="width:70%;"
+                                        class="btn btn-primary btn_align_btn">Budget Forecasting</button></a></div>
+                                        <div class="col-sm-4"> <a href="{{ url('taxes') }}"><img class="logo_size"
+                                        src="assets\image\Balance Sheet.png" alt=""><button type="button" style="width:70%;"
+                                        class="btn btn-primary btn_align_btn">Taxes</button></a></div>
+                                        <div class="col-sm-4"> <a href="{{ url('bank_reconciliation') }}"><img class="logo_size"
+                                        src="assets\image\Bank account detail.png" alt=""><button type="button" style="width:70%;"
+                                        class="btn btn-primary btn_align_btn">Bank Reconciliation</button></a></div>
+                                        <div class="col-sm-4"> <a href="{{ url('cash_flow_stmt') }}"><img class="logo_size"
+                                        src="assets\image\Invoice Items.png" alt=""><button type="button" style="width:70%;"
+                                        class="btn btn-primary btn_align_btn">Cash Flow Statement</button></a></div>
+
+ <!-------------------------------------------new-------------------------------------------------------------------- -->
+
+                                        <!-- <div class="col-sm-4"> <a href="{{ url('stock_section') }}"><img class="logo_size"
                                             src="assets\image\Stock Reciept.png" alt=""><button type="button" style="width:70%;"
-                                            class="btn btn-primary btn_align_btn">Stock Reciept</button></a></div>
+                                            class="btn btn-primary btn_align_btn">Stock Reciept</button></a></div>>
                                             <div class="col-sm-4"> <a href="{{ url('stock_issue') }}"><img class="logo_size"
                                                 src="assets\image\Stock issues.png" alt=""><button type="button" style="width:70%;"
                                                 class="btn btn-primary btn_align_btn">Stock Issue</button></a></div>
@@ -63,7 +84,7 @@
                                                             class="btn btn-primary btn_align_btn">Stock Sub Categories</button></a></div>
                                                             <div class="col-sm-4"> <a href="{{ url('stock_items') }}"><img class="logo_size"
                                                                 src="assets\image\Stock Items.png" alt=""><button type="button" style="width:70%;"
-                                                                class="btn btn-primary btn_align_btn">Stock Items</button></a></div>
+                                                                class="btn btn-primary btn_align_btn">Stock Items</button></a></div> -->
                                                                 
              </div>
            
