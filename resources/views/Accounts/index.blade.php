@@ -15,7 +15,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link rel="stylesheet" href="{{ url('assets/css') }}/sweetalert.css">
 	<br>
-    <h2>Ledger Accounts</h2>
+    {{-- heading --}}
+  <h4 id="hdtpa"><b>Ledger Accounts</b></h4>
+  <br><br>
+   
 
         <button  class="btn btn-primary "  data-toggle="modal" id="patient" data-bs-toggle="modal"
         data-bs-target="#default"  class="btn btn-secondary">Add Account</button>
@@ -45,7 +48,7 @@ $no=1;
           <td id="expanse-name">{{ $exp_type->accounts_name }}</td>
           <td id="expanse_status">{{ $exp_type->category_name}}</td>
           <td id="expanse_status">{{ $exp_type->subcategory_name}}</td>
-          <td>{{ $exp_type->budget_name }}</td>
+          <td>{{ $exp_type->budget_name }} {{ $exp_type->budget_name }} </td>
           <td id="expanse_status">{{ $exp_type->accounts_desc}}</td>
 
                <input type="hidden" id="expanse_type_id" value="{{$exp_type->id}}" name="">

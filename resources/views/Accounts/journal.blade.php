@@ -13,15 +13,17 @@
 <div class="container">
 
 	<br>
-    <h2>Journal</h2>
 
-        <a href="{{ url("create_transaction") }}"><button  class="btn btn-primary"> Create Transaction</button></a>
+    {{-- heading --}}
+  <h4 id="hdtpa"><b>Journal</b></h4>
+  <br><br>
+        <a href="{{ url('create_transaction') }}"><button  class="btn btn-primary"> Create Transaction</button></a>
 
       <div class="table-responsive">
           <br>
           <table class="table table-striped ">
               <tr>
-                  <form method="post" action="{{ url("journal")}}">
+                  <form method="post" action="{{ url('journal')}}">
                       @csrf
                   <td>From Date</td>
                   <td><input type="date" value="{{ $journal_from }}"  name="journal_from" required  class="form-control"></td>
@@ -145,13 +147,7 @@ $no=1;
 
                                 </td>
 
-
-
-
-
-
-
-                                </tr>
+ </tr>
                                     @endforeach
                                 </table>
                                 <br>

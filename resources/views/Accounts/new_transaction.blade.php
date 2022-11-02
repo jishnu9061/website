@@ -17,9 +17,12 @@
 
 	<br>
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <h3>Create Transaction</h3>
+    {{-- heading --}}
+  <h4 id="hdtpa"><b>Create Transaction</b></h4>
+  <br><br>
+    <!-- <h3>Create Transaction</h3> -->
     {{-- <br> --}}
-    <hr>
+    
     <form id="journal_form" method="POST" enctype="multipart/form-data">
 <div class="container-fluid">
     <div class="row">
@@ -191,7 +194,18 @@
 
                         <div class="form-group mb-3">
                             <label> Type </label>
+                            <select class="form-control" name="accounts_category" id="account-cat" required>
+                                <option value=""> Select</option>
+                                @foreach($category as $cat):
+                                <option value="{{ $cat->id }}"> {{ $cat->ledgeraccount_categories }}</option>
+                                @endforeach;
 
+                            </select>
+                            
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label> Group </label>
                             <select class="form-control" id="accounts-subcategory" required>
                                 <option value=""> Select</option>
                                 @foreach($subcategory as $subcat):
@@ -199,13 +213,12 @@
                                 @endforeach;
                             </select>
                         </div>
-
                         <div class="form-group mb-3">
-                            <label> Group </label>
-                            <select class="form-control" name="accounts_category" id="account-cat" required>
+                            <label> Budget </label>
+                            <select class="form-control" name="budget_cat" id="budget_cat" required>
                                 <option value=""> Select</option>
-                                @foreach($category as $cat):
-                                <option value="{{ $cat->id }}"> {{ $cat->ledgeraccount_categories }}</option>
+                                @foreach($budget_cat as $budget):
+                                <option value="{{ $budget->id }}"> {{ $budget->budget_name }}</option>
                                 @endforeach;
 
                             </select>

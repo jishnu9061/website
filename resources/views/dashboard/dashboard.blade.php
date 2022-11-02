@@ -1,18 +1,6 @@
 @extends('layouts.hmsmain')
 @section('content')
-<!DOCTYPE html>
-<html>
-<head>
-    {{-- <title>How to Use Fullcalendar in Laravel 8</title> --}}
-    
-    <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.js"></script>
    <style>
      .fc-time
      {
@@ -22,7 +10,7 @@
 </head>
 <body>
   
-<div class="container">
+
  {{-- {{request()->id}} --}}
  {{-- <h4>{{ $operation_t[0]->theatre_name }}</h4> --}}
     {{-- <br />
@@ -41,11 +29,11 @@
     {{-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"> --}}
         <div id="exampleModal" class="modal modal-top fade calendar-modal">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content" style="background-color:rgb(182, 127, 55)" >
+                <div class="modal-content"  >
                     <form id="add-event" action="{{url('add_ot_patient')}}" method="post">
                         @csrf 
                         <div class="modal-body" id="slotdata">
-                            <div class="modal-header" style="background-color:rgb(1, 1, 82)">
+                            <div class="modal-header" >
                                 <h4 style="text-align:center;" class="text-white"><b>Add Events</b></h4>
                             </div>
                             <div class="modal-body">
@@ -191,12 +179,12 @@
                               </div>
                             </div> --}}
                             </div>
-                        <div class="modal-footer" style="background-color:rgb(1, 1, 82)">
+                        <div class="modal-footer">
                             {{-- <button type="submit" class="btn btn-success">Save</button>
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> --}}
-                            <button type="button" class="btn  text-white" data-bs-dismiss="modal" style="background-color:rgb(182, 127, 55);width:30%" data-dismiss="modal"> <i class="bx bx-x d-block d-sm-none"></i>
+                            <button type="button" class="btn  text-white" data-bs-dismiss="modal" style="width:30%" data-dismiss="modal"> <i class="bx bx-x d-block d-sm-none"></i>
                                 <span class="d-none d-sm-block"></span><b>Close</b></button>
-                            <button type="submit" class="btn text-white" style="background-color:rgb(182, 127, 55);width:30%"><b>Save</b></button>
+                            <button type="submit" class="btn text-white" style="width:30%"><b>Save</b></button>
                         </div>
                     
                         </div>
@@ -333,8 +321,8 @@ $(document).ready(function () {
   
 </script>
 {{-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> --}}
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+{{-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> --}}
   
 </body>
 </html>

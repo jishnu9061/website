@@ -145,12 +145,27 @@ class filemanagement extends Controller
     //document temblates
     public function template()
     {
+        $template_list=DB::table('cra_open_new_file_details')->get();
+        return view('file_management.template-category',compact('template_list'));
+
         return view('file_management.template-category');
     }
 
-    public function addtemplate()
+    public function addtemplate(Request $request)
     {
-        return view('file_management.add-template');
+        $doc_type=$request['doc_type'];
+        $title=$request['title'];
+        $to_upload=$request['to_upload'];
+
+        DB::table('cra_add_template')->insert([
+            'doc_type' =>  $doc_type,
+            'title' =>  $title,
+            'to_upload' =>  $to_upload,
+
+        ]);
+        
+        return redirect('/template-category');
+        // return view('file_management.add-template');
     }
 
 
@@ -656,8 +671,7 @@ class filemanagement extends Controller
     }
 
     public function filestatussummary(Request $request)
-    {
-       $id =$request['id']; 
+    { 
        $Date_To =$request['date_to'];
        $File =$request['file'];
        $Instruction_Category =$request['category'];
@@ -669,8 +683,6 @@ class filemanagement extends Controller
        $Details =$request['details'];
 
        DB::table('cra_file_status_summary')->insert([
-
-           'id' =>  $id,
            'Date_to' =>  $Date_To,
            'File' =>   $File,
            'Instruction_Category' =>   $Instruction_Category,
@@ -884,14 +896,73 @@ class filemanagement extends Controller
          return view('file_management.document-manager');
      }
 
-     public function uploaddocument()
+     public function uploaddocument(Request $request)
      {
-         return view('file_management.upload-document');
+        
+        $client =$request['client'];
+        $file =$request['file'];
+        $other_file =$request['other_file'];
+        $document_category =$request['document_category'];
+        $document_title =$request['document_title'];
+        $nature_document =$request['nature_document'];
+        $search =$request['search'];
+        $document_owner =$request['document_owner'];
+        $final_aggrement =$request['final_aggrement'];
+        $document_upload =$request['document_upload'];
+        $folder_upload =$request['folder_upload'];
+       
+        
+
+        DB::table('cra_upload_document')->insert([
+
+           
+            'client' =>  $client,
+            'file' =>  $file,
+            'other_file' =>  $other_file,
+            'document_category' =>   $document_category,
+            'document_title' =>   $document_title,
+            'nature_document' =>  $nature_document,
+            'search' =>  $search,
+            'document_owner' =>  $document_owner,
+            'final_aggrement' =>  $final_aggrement,
+            'document_upload' =>  $document_upload,
+            'folder_upload' =>  $folder_upload,
+        
+        ]);
+        return redirect('/document-manager');
+   
      }
 
-     public function generatedocument()
+     public function generatedocument(Request $request)
      {
-         return view('file_management.generate-document');
+        
+        $client =$request['client'];
+        $file =$request['file'];
+        $document_category =$request['document_category'];
+        $document_title =$request['document_title'];
+        $nature_document =$request['nature_document'];
+        $search =$request['search'];
+        $document_owner =$request['document_owner'];
+        $viewer =$request['viewer'];
+        $document_template =$request['document_template'];
+        
+
+        DB::table('cra_generate_document')->insert([
+
+           
+            'client' =>  $client,
+            'file' =>  $file,
+            'document_category' =>   $document_category,
+            'document_title' =>   $document_title,
+            'nature_document' =>  $nature_document,
+            'search' =>  $search,
+            'document_owner' =>  $document_owner,
+            'viewer' =>  $viewer,
+            'document_template' =>  $document_template,
+        
+        ]);
+        return redirect('/document-manager');
+        //  return view('file_management.generate-document');
      }
  
 
@@ -1010,12 +1081,44 @@ class filemanagement extends Controller
 
         public function incommingletters()
         {
-             return view('file_management.incomming-letters');
+            $add_letter=DB::table('cra_add_incomming_letters')->get();
+            return view('file_management.incomming-letters',compact('add_letter'));
+
         }
 
-        public function addincommingletters()
+        public function addincommingletters(Request $request)
         {
-             return view('file_management.add-incomming-letters');
+
+            $letter_date =$request['letter_date'];
+            $client =$request['client'];
+            $file =$request['file'];
+            $received_form =$request['received_form'];
+            $category =$request['category'];
+            $letter_name =$request['letter_name'];
+            $delivered_by =$request['delivered_by'];
+            $other =$request['other'];
+            $delivered_to =$request['delivered_to'];
+            $viewer =$request['viewer'];
+            $upload_copy =$request['upload_copy'];
+    
+            DB::table('cra_add_incomming_letters')->insert([
+    
+                
+                'letter_date' => $letter_date,
+                'client' =>  $client,
+                'file' => $file,
+                'received_form' => $received_form,
+                'category' => $category,
+                'letter_name' => $letter_name,
+                'delivered_by' => $delivered_by,
+                'other' =>  $other,
+                'delivered_to' => $delivered_to,
+                'viewer' =>  $viewer,
+                'upload_copy' => $upload_copy,
+    
+            ]);
+              return view('file_management.incomming-letters');
+            //  return view('file_management.add-incomming-letters');
         }
 
         public function safeitemrequest(Request $request)
@@ -1343,22 +1446,81 @@ public function destroyofficeinstruction($id)
 
 public function safe_management_list()
 {
-    return view('file_management.Safe_management');                                                             
+    $safe_management=DB::table('cra_new_safe_management')->get();
+        
+    return view('file_management.Safe_management',compact('safe_management'));
+    // return view('file_management.Safe_management');                                                             
 }
 
-public function new_safe_management_list()
+public function new_safe_management_list(Request $request)
 {
-    return view('file_management.new_Safe_management');                                                             
+
+
+   
+    $date =$request['date'];
+    $client =$request['client'];
+    $file =$request['file'];
+    $safe_name =$request['safe_name'];
+    $ref_no =$request['ref_no'];
+    $approver =$request['approver'];
+    $doc_no =$request['doc_no'];
+    $category =$request['category'];
+    $document =$request['document'];
+ 
+    DB::table('cra_new_safe_management')->insert([
+ 
+    
+     'date' => $date,
+     'client' => $client,
+     'file' => $file,
+     'safe_name' => $safe_name,
+     'ref_no' =>  $ref_no,
+     'approver' =>   $approver,
+     'doc_no' => $doc_no,
+     'category' => $category,
+     'document' => $document,
+ ]);
+
+ return redirect('/Safe_management');
+
+    // return view('file_management.new_Safe_management');                                                             
 }
+
+
 
 public function Request_staff_item_list()
 {
-    return view('file_management.Request_staff_item');                                                             
+    $safe_management=DB::table('cra_request_safe_item')->get();
+        
+    return view('file_management.Request_staff_item',compact('safe_management'));
+                                                              
 }
 
-public function add_Request_staff_item_list()
+public function add_Request_staff_item_list(Request $request)
 {
-    return view('file_management.new_Request_staff_item');                                                             
+
+
+   
+    $date =$request['date'];
+    $client =$request['client'];
+    $file =$request['file'];
+    $send_instruction =$request['send_instruction'];
+    $approver =$request['approver'];
+   
+ 
+    DB::table('cra_request_safe_item')->insert([
+ 
+    
+     'date' => $date,
+     'client' => $client,
+     'file' => $file,
+     'send_instruction' => $send_instruction,
+     'approver' =>  $approver,
+     
+ ]);
+
+ return redirect('/Request_staff_item');
+    // return view('file_management.new_Request_staff_item');                                                             
 }
 
 public function Process_Request_list()

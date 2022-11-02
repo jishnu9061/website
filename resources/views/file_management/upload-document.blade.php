@@ -50,7 +50,13 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <select name="" id="cars">
+                        <option >---select---</option>
+                        <option >client 1</option>
+                        <option >client 2</option>
+                        <option >client 3</option>
+                    </select>
+                              
                             </div>
                         </div>
                     </div>
@@ -62,7 +68,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <select name="" id="cars">
+                        <option >---select---</option>
+                        <option >file 1</option>
+                        <option >file 2</option>
+                        <option >file 3</option>
+                    </select>
                             </div>
                         </div>
                     </div>
@@ -87,7 +98,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <select name="country" id="cars">
+                        <option >---select---</option>
+                        <option >category_1</option>
+                        <option >category_2</option>
+                        <option >category_3</option>
+                    </select>
                             </div>
                         </div>
                     </div>
@@ -158,7 +174,10 @@
 
                     </div>
                     <select name="country" id="cars">
-                        <option value="volvo"></option>
+                    <option >---select---</option>
+                        <option >doc_owner_1</option>
+                        <option >doc_owner_2</option>
+                        <option >doc_owner_3</option>
                     </select>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
@@ -237,7 +256,7 @@
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Upload</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
                         </div>
                     </div>
                 </div>

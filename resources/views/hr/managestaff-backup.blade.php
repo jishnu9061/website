@@ -46,6 +46,7 @@ $('#price').prop('readonly', true);
 });
 </script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
+
     <h2>Add staffs</h2>
     <hr class="mb-4">
 

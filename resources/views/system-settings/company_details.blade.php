@@ -4,12 +4,17 @@
 <div class="container">
 
     <head>
-
-        <style>
+    <script>
+            var loadFile = function(event) {
+                var image = document.getElementById('output');
+                image.src = URL.createObjectURL(event.target.files[0]);
+            };
+            </script>
+        <!-- <style>
         #upload_button input[type=file] {
             display: none;
         }
-        </style>
+        </style> -->
     </head>
 
     <body>
@@ -49,7 +54,7 @@
                                         <th>Company Name</th>
                                         <th>Company Address</th>
                                         <th>Town/City</th>
-                                        {{-- <th>Logo</th> --}}
+                                         <th>Logo</th> 
                                         <th>Action</th>
 
                                     </tr>
@@ -62,12 +67,9 @@
                                         <td>{{$company->company_name}}</td>
                                         <td>{{$company->address}}</td>
                                         <td>{{$company->town}}</td>
-                                        {{-- <td>{{$company->logo}}</td> --}}
+                                        <td>{{$company->logo}}</td> 
+                                        <!-- <td><img src="{{asset('img/logo_c/'.$company->logo)}}"width="100px;"height="100px;"alt="image"> -->
 
-                                        <!-- <td>CRA</td>
-    <td>Stima Investment Plaza 1,3rd Floor,Mushembi Rd, Parklands </td>
-    <td>Nairobi, Kenya</td>
-    <td></td>  -->
 
                                         <td scope="row" class="text-center"><a
                                                 href="{{url('edit_company_details',$company->id)}}">
@@ -97,19 +99,28 @@
                                             <form method="post" action="{{ url('add_company_details') }}"
                                                 enctype="multipart/form-data">
                                                 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
+<!-- --------------------------------------image------------------------------------------------->
+                                                     <label>
+                                                    <input type="file"  accept="image/*" name="image" id="file"  style="display:none;"onchange="loadFile(event)" >
+                                                        <span class="btn btn-primary"><span
+                                                                class="fa fa-plus"></span>ADD LOGO</span>
+                                                    </label>
+                                                    <img id="output" width="10%" />	
 
+
+
+<!--                                                     
+                                                    <label>add logo</label>
+                                                    <div class="input-group">
+                                                        <div class="custom-file">
+                                                           <input type="file"name="image"class="custom-file-input">
+                                                           <label class="custom-file-label">choose file</label> -->
+    </div>
+    </div>
+<!-- --------------------------------------image------------------------------------------------->
 
                                                 @csrf
-                                                <div id="upload_button">
-                                                    <label>
-                                                        <input type="file" name="logo" ngf-select ng-model="new_files"
-                                                            ng-change="fs.uploadFiles(new_files)" multiple>
-                                                        <span class="btn btn-primary"> <span
-                                                                class="fa fa-plus"></span>&nbsp;&nbsp;ADD LOGO</span>
-                                                    </label>
-                                                </div>
-                                                <br><br>
-                                                <div class="row">
+                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="mb-1">
                                                             <label>Company Name</label>
@@ -228,6 +239,33 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">NHIF Code</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="nhifcode" id="nhifcode" value="" min="0" max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">NSSF Number</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="nnum" id="nnum" value="" min="0" max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                                                
                                                 <div class="row">
@@ -451,6 +489,12 @@
                                                     </div>
                                                 </div>
                                         </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         </div>
                                         </form>
                                     </div>
                                 </div>

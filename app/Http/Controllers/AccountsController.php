@@ -244,13 +244,15 @@ class AccountsController extends Controller
         $account=DB::table('ledgeraccounts')
         ->Leftjoin('ledgeraccount_subcategories as a', 'a.id', '=', 'ledgeraccounts.accounts_subcategory')
         ->Leftjoin('ledgeraccount_categories as b', 'b.id', '=', 'ledgeraccounts.accounts_category')
+        ->Leftjoin('budget_types as c', 'c.id', '=', 'ledgeraccounts.budget_cat')
         ->select('*','ledgeraccounts.id as id')
         ->orderBy('ledgeraccounts.accounts_name', 'asc')
         ->get();
         $hospitals=DB::table('hospitals')->get();
         $category=DB::table('ledgeraccount_categories')->get();
         $subcategory=DB::table('ledgeraccount_subcategories')->get();
-        return view('Accounts.new_transaction',compact('account','hospitals','category','subcategory'));
+        $budget_cat=DB::table('budget_types')->get();
+        return view('Accounts.new_transaction',compact('account','hospitals','category','subcategory','budget_cat'));
     }
 
     public function create_new_journal(Request $request){
@@ -605,7 +607,7 @@ public function trialbalance(Request $request){
     ->select('*','ledgeraccounts.id as id')
     ->orderBy('ledgeraccounts.accounts_name','asc')
     ->get();
-
+    
 
     $ledger_from=$request->ledger_from;
     $ledger_to=$request->ledger_to;

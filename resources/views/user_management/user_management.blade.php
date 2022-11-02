@@ -10,7 +10,7 @@
     <h5 id="hdbtb">User Account</h5>
     <br>
 
-    
+  
   
   <div class="row sm">
 
@@ -21,7 +21,7 @@
     <div class="col-sm-4 " > <a href="{{url('manage_user_roles')}}"><img class="logo_size"src="assets\image\Manage user role.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" > Manage Roles</button></a></div>
     <div class="col-sm-4 " > <a href="{{url('manage_user_department')}}"><img class="logo_size"src="assets\image\Manage user Department.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" > Manage Departments</button></a></div>
     <!-- <div class="col-sm-4" > <a href="{{url('advocates_target')}}"><img class="logo_size"src="assets\image\Advocate target.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn" > Advocates Targets</button></a></div> -->
-    <div class="col-sm-4 " > <a href="{{url('manage_towns')}}"><img class="logo_size"src="assets\image\Manage user Department.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" > Manage Towns</button></a></div>
+    <div class="col-sm-4 " > <a href="{{url('manage_towns')}}"><img class="logo_size"src="assets\image\Towns.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" > Manage Towns</button></a></div>
     
 
 </div>
