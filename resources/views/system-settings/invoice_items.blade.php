@@ -162,7 +162,7 @@
                                 <option>9500====Other Income - Client gets Account Payable - Cooperative Bank</option>
                                 </select>
                                 <div class="col-md-1">
-                    {{-- <a href="{{url('add_gl_account')}}"> <i style="font-size:20px; color:rgb(13, 1, 56);" class="bi bi-plus-circle-fill"> </i></a> --}}
+                     <a href="{{url('add_gl_account')}}"> <i style="font-size:20px; color:rgb(13, 1, 56);" class="bi bi-plus-circle-fill"> </i></a> 
                 </div>
                                
                                 <div class="invalid-feedback" style="width: 100%;">

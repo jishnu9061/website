@@ -73,7 +73,7 @@
 
                                         <td scope="row" class="text-center"><a
                                                 href="{{url('edit_company_details',$company->id)}}">
-                                                <i style="  color:rgb(13, 1, 56);" class="fa fa-edit"
+                                                <i style=" color:rgb(13, 1, 56);" class="fa fa-edit"
                                                     aria-hidden="true"></i></td>
 
                                         @endforeach
