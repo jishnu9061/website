@@ -29,6 +29,7 @@
         <div class="col-sm-4"> <a href="{{ url('ledger_acounts') }}"><img class="logo_size"src="assets\image\Ledger account.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn">Ledger Account</button></a></div>
         <div class="col-sm-4"> <a href="{{ url('ledger') }}"><img class="logo_size"src="assets\image\Ledger.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn">Ledger Listing</button></a></div>
         <div class="col-sm-4"> <a href="{{ url('journal') }}"><img class="logo_size"src="assets\image\Journal.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn">Journal</button></a></div>
+        <div class="col-sm-4"> <a href="{{ url('') }}"><img class="logo_size"src="assets\image\Journal.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn">Profit & Loss Account</button></a></div>
 
  <!-------------------------------------------new-------------------------------------------------------------------- -->  
         <div class="col-sm-4"> <a href="{{ url('budget_forecating') }}"><img class="logo_size"src="assets\image\Balance Sheet.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn">Budget Forecasting</button></a></div>
