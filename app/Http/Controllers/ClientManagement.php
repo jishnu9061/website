@@ -278,14 +278,14 @@ class ClientManagement extends Controller
         return view('client-management.corporate-list',compact('corporate_list'));
     }
 
-    public function edit_corporate($id)
+    public function edit_corporate($corporate_id)
     {
-        $corporate_details= DB::table('cra_corporate_client_details')->where('id',$id)->first();
-        return view('client-management.edit_client',compact('corporate_details','id'));
+        $corporate_details= DB::table('cra_corporate_client_details')->where('corporate_id',$corporate_id)->first();
+        return view('client-management.edit_client',compact('corporate_details','corporate_id'));
     }
 
     public function Update_corporate(Request $Request){
-        $id     = $Request['id'];
+        $corporate_id = $Request['corporate_id'];
         $number = $Request['number'];
         $client_type = $Request['type'];
         $citizen_status = $Request['citizen'];
@@ -312,7 +312,7 @@ class ClientManagement extends Controller
         $mobile_no = $Request['no'];
         $person_email = $Request['person_email'];
 
-        DB::table('cra_corporate_client_details')->where('id',$id)->update([
+        DB::table('cra_corporate_client_details')->where('corporate_id',$corporate_id)->update([
             'Client_no' => $number,
             'Client_type' =>  $client_type,
             'Cityzen_status' => $citizen_status,
@@ -344,8 +344,8 @@ class ClientManagement extends Controller
     }
 
 
-    public function Corporate_destroy($id){
-        DB::table('cra_corporate_client_details')->where('id',$id)->delete();
+    public function Corporate_destroy($corporate_id){
+        DB::table('cra_corporate_client_details')->where('corporate_id',$corporate_id)->delete();
         return redirect('/corporate-list');
     }
 
@@ -355,7 +355,11 @@ class ClientManagement extends Controller
     
         
     public function document(){
-        $client_document = DB::table('cra_document_detials')->get();   
+        $client_document = DB::table('cra_document_detials')
+        ->select('*')  
+        ->leftjoin('cra_individual_client_details','cra_individual_client_details.documents_id','=','cra_document_detials.document_id')
+        ->get(); 
+  
         return view('client-management.client-document',compact('client_document'));
     }
 
@@ -393,14 +397,14 @@ class ClientManagement extends Controller
     }
 
 
-    public function viewDocument($id){
-        $view_document = DB::table('cra_document_detials')->where('id',$id)->first();  
-        return view('client-management.view-document',compact('view_document','id'));
+    public function viewDocument($document_id){
+        $view_document = DB::table('cra_document_detials')->where('document_id',$document_id )->first();  
+        return view('client-management.view-document',compact('view_document','document_id'));
     }
 
 
-    public function deleteDocument($id){
-         DB::table('cra_document_detials')->where('id',$id)->delete();  
+    public function deleteDocument($document_id){
+         DB::table('cra_document_detials')->where('document_id',$document_id)->delete();  
         return redirect('/client-document');
     }
 
