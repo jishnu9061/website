@@ -1373,4 +1373,15 @@ public function expense_report()
     return view('Accounts.view_expense_report');
 }
 
+public function budget_forecasting()
+{
+    return view('Accounts.budget_forecasting');
+}
+public function add_account()
+{
+    return view('Accounts.add_account');
+}
+
+
+
 }

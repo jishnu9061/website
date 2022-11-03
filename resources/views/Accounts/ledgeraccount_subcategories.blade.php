@@ -2,11 +2,11 @@
 @section('content')
 <div class="container">
 {{-- heading --}}
-  <h4 id="hdtpa"><b>Add Groups</b></h4>
+  <h4 id="hdtpa"><b>Add Account Category</b></h4>
   <br><br>
 
         <button  class="btn btn-primary "  data-toggle="modal" id="patient" data-bs-toggle="modal"
-        data-bs-target="#default"  class="btn btn-secondary">Add Groups</button>
+        data-bs-target="#default"  class="btn btn-secondary">Add Category</button>
 
       <div class="table-responsive">
 <table class="table table-striped" id="allpatients" style="margin-top: 40px;">
@@ -14,7 +14,7 @@
     <tr>
       <th scope="col">Sl</th>
       {{-- <th scope="col">Category</th> --}}
-      <th scope="col">Groups</th>
+      <th scope="col">Account Category</th>
       <th scope="col">Description </th>
       <th scope="col">Edit</th>
       <th scope="col">Delete</th>
@@ -63,7 +63,7 @@ $no=1;
 
 
 
-                                    <h5 class="modal-title bb" id="myModalLabel1"> Groups </h5>
+                                    <h2 class="text-centre"><b>Add Account Category</b></h2>
 
 
 

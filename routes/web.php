@@ -597,6 +597,11 @@ Route::any('/delete_ledger_budget_category/{id}','AccountsController@delete_ledg
 Route::any('/expense_report','AccountsController@expense_report')->name('expense_report');
 //vipin end
 
+//--------reshma------------accounts-----
+Route::any('/budget_forecasting','AccountsController@budget_forecasting')->name('budget_forecasting');
+Route::any('/add_account','AccountsController@add_account')->name('add_account');
+//--------reshma------------accounts-----
+
 Route::any('/get_subcat', 'AccountsController@get_subcat')->name('get_subcat');
 Route::any('/create_transaction', 'AccountsController@create_transaction')->name('create_transaction');
 Route::post('/create_new_journal', 'AccountsController@create_new_journal')->name('create_new_journal');

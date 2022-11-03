@@ -3,17 +3,17 @@
 <div class="container">
 	
     {{-- heading --}}
-  <h4 id="hdtpa"><b>Budget Categories</b></h4>
+  <h4 id="hdtpa"><b>Budget Category</b></h4>
   <br><br>
         <button  class="btn btn-primary "  data-toggle="modal" id="patient" data-bs-toggle="modal"
-        data-bs-target="#default" style="width: 25%">Add</button>
+        data-bs-target="#default" style="width: 25%">Add Category</button>
 
       <div class="table-responsive">
 <table class="table table-striped" id="allpatients" style="margin-top: 40px;">
   <thead>
     <tr>
       <th scope="col">Sl</th>
-      <th scope="col">Groups</th>
+      <th scope="col">Budget Category</th>
       <th scope="col">Description</th>
       <th scope="col">Edit</th>
       <th scope="col">Delete</th>
@@ -54,8 +54,8 @@
 
 
 
-            <h5 class="modal-title bb" id="myModalLabel1"> Add Budget Categories </h5>
-
+          
+            <h2 class="text-centre"><b>Add Budget Category</b></h2>
 
 
            <button type="button" class="close rounded-pill" data-bs-dismiss="modal" aria-label="Close">

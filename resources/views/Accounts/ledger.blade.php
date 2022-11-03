@@ -1,68 +1,104 @@
 @extends('layouts.hmsmain')
 @section('content')
+
+<div class="container">
  <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link rel="stylesheet" href="{{ url('assets/css') }}/sweetalert.css">
 
- <style>.swal-button {
+ <style>
+ .swal-button {
 
         width:fit-content;
 
+}
 
 
-
-
-      }
-
-      .ledger_table ,tr,td,th {
-
-        border-color:rgb(165, 162, 162);
-        border-width:2px;
-      }
     </style>
 
-<div class="container">
-
-	<br>
-    <h2>Ledger</h2>
-
-      <div class="table-responsive">
-          <br>
-          <table class="table table-striped table" style="background-color:#E2E8EE;color:#1D1D50;">
-          {{-- <table class="table table-striped table"> --}}
-              <tr>
-                  <form method="post" action="{{ url('ledger')}}">
-                      @csrf
-                  <td>From Date</td>
-                  <td><input type="date" name="ledger_from" required value="{{$ledger_from}}"  class="form-control"></td>
-                  <td>To Date</td>
-                  <td><input type="date"  name="ledger_to" required value="{{$ledger_to}}"  class="form-control"></td>
 
 
-              </tr>
-              <tr>
-                <td>Account</td>
-                <td colspan="2">
+{{-- heading --}}
+  <h4 id="hdtpa"><b>Ledger Accounts Listing</b></h4>
+  <br><br>
+  
+  <div class="row">
+    <div class="col-md-12 order-md-1">
+        <form method="post" action="{{ url('ledger')}}">
+             @csrf
+             
+             <div class="row">
+                <div class="col-md-4">
+                    <div class="mb-1">
+                        <label for="username">From Date</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="date" name="ledger_from" required value="{{$ledger_from}}"  class="form-control">
+            <div class="invalid-feedback" style="width: 100%;">
+                 required
+            </div>
+        </div>
+    </div>
+</div>
 
-                 <select class="form-control" name="ledger_account" >
+<div class="col-md-4">
+                <div class="mb-1">
+                    <label for="username">To Date</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+
+                        </div>
+                        <input type="date"  name="ledger_to" required value="{{$ledger_to}}"  class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="mb-1">
+                    <label for="username">Account</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+
+                        </div>
+                        <select class="form-control" name="ledger_account" >
                     <option value=""> Select Account</option>
                     @foreach($account as $acc):
                      <option value="{{ $acc->id }}" {{($ledger_account==$acc->id) ? "selected" :""}}  > {{ $acc->accounts_name." [ ".$acc->ledgeraccount_subcategories." ] " }}</option>
                     @endforeach;
 
                 </select>
+                </div>
+                </div>
+            </div>
 
-                </td>
-                <td>
-                 <button class="btn btn-primary" type="submit"  style="width:fit-content;">Search</button>
-                </td>
-
-              </tr>
-
-            </form>
-          </table>
+        </div>
 
 <br>
+<br>
+<div class="row">
+                        <div class="col-sm">
 
+                        </div>
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                           
+                            <button type="submit" class="btn btn-primary" float:right; Style="width:45%;">Search</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+                </div>                 
+
+
+
+                    <br>
+<br>
+
+
+
+      
 
 @foreach($ledger_account_result as $key)
 
