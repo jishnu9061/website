@@ -600,6 +600,7 @@ Route::any('/expense_report','AccountsController@expense_report')->name('expense
 //--------reshma------------accounts-----
 Route::any('/budget_forecasting','AccountsController@budget_forecasting')->name('budget_forecasting');
 Route::any('/add_account','AccountsController@add_account')->name('add_account');
+Route::any('/budget_forecat_dept','AccountsController@budget_forecat_dept')->name('budget_forecat_dept');
 //--------reshma------------accounts-----
 
 Route::any('/get_subcat', 'AccountsController@get_subcat')->name('get_subcat');

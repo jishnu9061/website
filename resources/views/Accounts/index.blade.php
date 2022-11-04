@@ -95,6 +95,13 @@ $no=1;
              </div>
               <form action="{{url('save_ledger_acounts')}}" method="post" >
                                      @csrf
+
+
+
+
+
+
+                                     
                                     <div class="modal-body">
 
                                          <div class="card-body">
@@ -134,17 +141,28 @@ $no=1;
                               @endforeach;
                            </select>
                         </div>
-
+<!-- 
                         <div class="form-group mb-3">
                             <label>Default Currency</label>
                            <select class="form-control" name="accounts_category" id="account_cat" required>
                                <option value=""> Select</option>
+                               <option>KES</option>
+                                <option>USD</option>
+                                <option>EUR</option>
+                                <option>GBP</option>
+                                <option>AUD</option>
+                                <option>CAD</option>
+                                <option>SEK</option>
+                                <option>DKK</option>
+                                <option>JPY</option>
+                                <option>CHF</option>
+                                <option>HKD</option> -->
                                <!-- @foreach($category as $cat):
                                 <option value="{{ $cat->id }}" > {{ $cat->ledgeraccount_categories }}</option>
                                @endforeach; -->
-
+<!-- 
                            </select>
-                        </div>
+                        </div> -->
                         <div class="form-group mb-3">
                             <label>Description </label>
 			                <textarea  class="form-control" name="accounts_desc">

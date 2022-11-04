@@ -1368,6 +1368,7 @@ public function delete_ledger_budget_category($id)
     DB::table('budget_types')->where('id',$id)->delete();
     return redirect(route('ledger_budget_category'));
 }
+//reshma
 public function expense_report()
 {
     return view('Accounts.view_expense_report');
@@ -1383,5 +1384,9 @@ public function add_account()
 }
 
 
-
+public function budget_forecat_dept()
+{
+    return view('Accounts.budget_forecat_dept');
+}
+//reshma
 }
