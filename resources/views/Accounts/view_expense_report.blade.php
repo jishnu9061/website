@@ -32,7 +32,7 @@
   <thead>
     <tr>
       <th scope="col">Sl</th>
-      <th scope="col">Receipts</th>
+      <th scope="col">Account No </th>
       <th scope="col">Staff Salaries and bonus</th>
       <th scope="col">Insurances</th>
       <th scope="col">Partners Benifits</th>
@@ -51,73 +51,23 @@
   </thead>
   <tbody>
       <tr>
-        <td>1</td>
-        <td>fdf</td>
-        <td>fdffd</td>
-        <td>fdfdfd</td>
-        <td>fdfdfd</td>
-        <td>fdfdfd</td>
-        <td>fdffdd</td>
-        <td>fdffd</td>
-        <td>fdfdf</td>
-        <td>fdfdfd</td>
-        <td>fdfdf</td>
-        <td>fdfd</td>
-        <td>fddfdfd</td>
-        <td>fdfd</td>
-        <td>fdfd</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
-      <tr>
-        <td>2</td>
-        <td>fdf</td>
-        <td>fdffd</td>
-        <td>fdfdfd</td>
-        <td>fdfdfd</td>
-        <td>fdfdfd</td>
-        <td>fdffdd</td>
-        <td>fdffd</td>
-        <td>fdfdf</td>
-        <td>fdfdfd</td>
-        <td>fdfdf</td>
-        <td>fdfd</td>
-        <td>fddfdfd</td>
-        <td>fdfd</td>
-        <td>fdfd</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>fdf</td>
-        <td>fdffd</td>
-        <td>fdfdfd</td>
-        <td>fdfdfd</td>
-        <td>fdfdfd</td>
-        <td>fdffdd</td>
-        <td>fdffd</td>
-        <td>fdfdf</td>
-        <td>fdfdfd</td>
-        <td>fdfdf</td>
-        <td>fdfd</td>
-        <td>fddfdfd</td>
-        <td>fdfd</td>
-        <td>fdfd</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>fdf</td>
-        <td>fdffd</td>
-        <td>fdfdfd</td>
-        <td>fdfdfd</td>
-        <td>fdfdfd</td>
-        <td>fdffdd</td>
-        <td>fdffd</td>
-        <td>fdfdf</td>
-        <td>fdfdfd</td>
-        <td>fdfdf</td>
-        <td>fdfd</td>
-        <td>fddfdfd</td>
-        <td>fdfd</td>
-        <td>fdfd</td>
-      </tr>
+    
   </tbody>
 </table>
 
