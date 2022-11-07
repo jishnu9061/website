@@ -48,8 +48,8 @@
                                 <thead>
                                     <tr>
                                         <!-- <th class="text-center"> <input type="checkbox"></th> -->
-                                        <th class="text-center">Actions</th>
-                                        <th class="text-center">Matter</th>
+                                        <th class="text-center">Client</th>
+                                        <th class="text-center"></th>
                                         <th class="text-center">Client</th>
                                         <th class="text-center">Responsible<br>Solicitor</th>
                                         <th class="text-center">Originating<br>Solicitor</th>
@@ -98,10 +98,6 @@
                                 <div class="modal-content" >
 
                                     <!-- Modal Header -->
-                                    <div class="modal-header" >
-                                        <h2 class="text-centre"><b>Add New File</b></h2>
-
-                                    </div>
 
                                     <!-- Modal body -->
                                     <div class="modal-body" style="background-color:white">
@@ -228,26 +224,13 @@
                 </div>
                 <br>
                 <div class="row">
-                <div class="col-md-6">
+               
+                    <div class="col-md-12">
                         <div class="mb-1">
-                            <label for="username">Address</label>
+                            <label for="username">Comments</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="address" value=""
-                                    id="confirm_password">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Password is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Address</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="telephone" value=""
-                                    id="confirm_password">
+                                <textarea class="form-control" id="form7Example7" rows="2"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -257,9 +240,26 @@
                     
                 </div>
                 <br>
+                <h4>Notification</h4>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-1">
+                            <label for="username">Email</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="narration" class="form-control" name="amount" value=""
+                                    id="confirm_password">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <br>
                 <h4>Contacts</h4>
                 <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Address</label>
                             <div class="input-group">
@@ -272,7 +272,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Address</label>
                             <div class="input-group">
@@ -286,9 +286,10 @@
                         </div>
                     </div>
                     </div>
+                    <br>
                     <h4>Cutom Fields</h4>
                     <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Address</label>
                             <div class="input-group">
@@ -301,18 +302,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Address</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="workflow" id="cars">
-                                    <option >Select</option>
-                                    <option >Residensial</option>
-                                    <option >Non Residensial</option>
-                                </select>
+                                <input type="email" class="form-control" name="email" value=""
+                                    id="confirm_password">
                             </div>
                         </div>
                     </div>
@@ -320,41 +318,49 @@
                 </div>
                 <br>
                 <h4>Billing</h4>
-                    <div class="row">
+                <div class="row">
                    
-                    <div class="col-md-4">
+                    <div class="col-md-12">
                         <div class="mb-1">
                             <label for="username">Address</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="workflow" id="cars">
-                                    <option >Select</option>
-                                    <option >Residensial</option>
-                                    <option >Non Residensial</option>
-                                </select>
+                                <input type="email" class="form-control" name="email" value=""
+                                    id="confirm_password">
                             </div>
                         </div>
                     </div>
-                    
                 </div>
                 <br>
                 <h4>Task</h4>
                     <div class="row">
-                    
-                    <div class="col-md-4">
+                    <div class="col-md-8">
                         <div class="mb-1">
                             <label for="username">Address</label>
                             <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <select name="workflow" id="cars">
+                                <div class="input-group-prepend"></div>
+                                <select name="approval_partner" id="cars">
                                     <option >Select</option>
                                     <option >Residensial</option>
                                     <option >Non Residensial</option>
                                 </select>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-2">
+                        <div class="mb-1">
+                            <label for="username"></label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <a href=""><i class="fa fa-plus" style="font-size:24px"></i></a>
                             </div>
                         </div>
                     </div>
