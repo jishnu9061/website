@@ -110,201 +110,257 @@
                                                 enctype="multipart/form-data">
 
                                                 @csrf
-                                                <div class="row">
+                                                <h4>Matter</h4>
+                <div class="row">
                    
                    
-                   <div class="col-md-6">
-                       <div class="mb-1">
-                           <label for="username">Client</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Email</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
-                               </div>
-                               <select name="client_type" id="cars">
-                                   <option>Select</option>
-                                   <option>Accord University</option>
-                                   <option>Accounts And Books</option>
-                               </select>
-                           </div>
-                       </div>
-                   </div>
-               
-               <div class="col-md-6">
-                       <div class="mb-1">
-                           <label for="username">Associate Handling</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend">
+                                </div>
+                                <input type="email" class="form-control" name="email" id="age" value="" min="0" max="99">
+                            </div>
+                        </div>
+                    </div>
+                
+                <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
-                               </div>
-                               <select name="associate_handling" id="cars" disabled>
-                                   <option >Corporate</option>
-                                   <option >Individual</option>
-                               </select>
-                           </div>
-                       </div>
-                   </div>
-</div>
+                                </div>
+                                <select name="associate_handling" id="cars" disabled>
+                                    <option >Corporate</option>
+                                    <option >Individual</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+<!-- </div>
 <br>
 
-               <div class="row">
-                   <div class="col-md-4">
-                       <div class="mb-1">
-                           <label for="username">Opening Date</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend"></div>
-                               <input type="date" class="form-control" name="opening_date" id="age" value="" min="0" max="99">
-                               <div class="invalid-feedback" style="width: 100%;">
-                                   Age is required.
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-md-4">
-                       <div class="mb-1">
-                           <label for="username">Client Ref.No or(Case No)</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend"></div>
-                               <input type="text" class="form-control" name="client_ref_no" id="age" value="" min="0" max="99">
-                               <div class="invalid-feedback" style="width: 100%;">
-                                   Age is required.
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-md-4">
-                       <div class="mb-1">
-                           <label for="username">Our File Ref No</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend"></div>
-                               <input type="text" class="form-control" name="our_file_ref_no" value=""
-                                   id="confirm_password">
-                               <div class="invalid-feedback" style="width: 100%;">
-                                   Password is required.
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-               <br>
-               <div class="row">
-                   <div class="col-md-4">
-                       <div class="mb-1">
-                           <label for="username">File Name/Subject</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend"></div>
-                               <input type="text" class="form-control" name="file_name" id="age" value=""
-                                min="0" max="99">
-                               <div class="invalid-feedback" style="width: 100%;">
-                                   Age is required.
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-md-4">
-                       <div class="mb-1">
-                           <label for="username">Approval Partner</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend">
+                <div class="row"> -->
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="date" class="form-control" name="opening_date" id="age" value="" min="0" max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Age is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="client_ref_no" id="age" value="" min="0" max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Age is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="our_file_ref_no" value=""
+                                    id="confirm_password">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="file_name" id="age" value=""
+                                 min="0" max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Age is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
-                               </div>
-                               <select name="approval_partner" id="cars">
-                                   <option >Select</option>
-                                   <option >Residensial</option>
-                                   <option >Non Residensial</option>
-                               </select>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-md-4">
-                       <div class="mb-1">
-                           <label for="username">Customer Name</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend"></div>
-                               <input type="text" class="form-control" name="customer_name" value=""
-                                   id="confirm_password">
-                               <div class="invalid-feedback" style="width: 100%;">
-                                   Password is required.
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-               <br>
-               <div class="row">
-               <div class="col-md-6">
-                       <div class="mb-1">
-                           <label for="username">Customer Address</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend"></div>
-                               <input type="text" class="form-control" name="address" value=""
-                                   id="confirm_password">
-                               <div class="invalid-feedback" style="width: 100%;">
-                                   Password is required.
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-md-6">
-                       <div class="mb-1">
-                           <label for="username">Customer Tel</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend"></div>
-                               <input type="text" class="form-control" name="telephone" value=""
-                                   id="confirm_password">
-                               <div class="invalid-feedback" style="width: 100%;">
-                                   Password is required.
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   
-               </div>
-               <br>
-               <div class="row">
-               <div class="col-md-4">
-                       <div class="mb-1">
-                           <label for="username">Customer E-mail</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend"></div>
-                               <input type="email" class="form-control" name="email" value=""
-                                   id="confirm_password">
-                               <div class="invalid-feedback" style="width: 100%;">
-                                   Password is required.
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-md-4">
-                       <div class="mb-1">
-                           <label for="username">Amount</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend"></div>
-                               <input type="narration" class="form-control" name="amount" value=""
-                                   id="confirm_password">
-                               <div class="invalid-feedback" style="width: 100%;">
-                                   Password is required.
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-md-4">
-                       <div class="mb-1">
-                           <label for="username">Workflow</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend">
+                                </div>
+                                <select name="approval_partner" id="cars">
+                                    <option >Select</option>
+                                    <option >Residensial</option>
+                                    <option >Non Residensial</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="customer_name" value=""
+                                    id="confirm_password">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="address" value=""
+                                    id="confirm_password">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="telephone" value=""
+                                    id="confirm_password">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <br>
+                <h4>Contacts</h4>
+                <div class="row">
+                <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="email" class="form-control" name="email" value=""
+                                    id="confirm_password">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="narration" class="form-control" name="amount" value=""
+                                    id="confirm_password">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <h4>Cutom Fields</h4>
+                    <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="email" class="form-control" name="email" value=""
+                                    id="confirm_password">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
-                               </div>
-                               <select name="workflow" id="cars">
-                                   <option >Select</option>
-                                   <option >Residensial</option>
-                                   <option >Non Residensial</option>
-                               </select>
-                           </div>
-                       </div>
-                   </div>
+                                </div>
+                                <select name="workflow" id="cars">
+                                    <option >Select</option>
+                                    <option >Residensial</option>
+                                    <option >Non Residensial</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <br>
+                <h4>Billing</h4>
+                    <div class="row">
                    
-               </div>
-               <br>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="workflow" id="cars">
+                                    <option >Select</option>
+                                    <option >Residensial</option>
+                                    <option >Non Residensial</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <br>
+                <h4>Task</h4>
+                    <div class="row">
+                    
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="workflow" id="cars">
+                                    <option >Select</option>
+                                    <option >Residensial</option>
+                                    <option >Non Residensial</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <br>
               
                    <div class="row">
                        <div class="col-sm">
