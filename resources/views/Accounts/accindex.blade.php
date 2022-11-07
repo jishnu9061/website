@@ -55,7 +55,7 @@
     <div class="col-sm-4"> <a href="{{ url('expense_report') }}"><img class="logo_size"src="assets\image\Expense Report.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn">Expense Report</button></a></div>
          <div class="col-sm-4"> <a href="{{ url('m_c_report') }}"><img class="logo_size"src="assets\image\Journal.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn">Monthly Comparative Report</button></a></div>
          <div class="col-sm-4"> <a href="{{ url('vat_report') }}"><img class="logo_size"src="assets\image\Journal.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn">V.A.T Report</button></a></div>
-         <div class="col-sm-4"> <a href="{{ url('') }}"><img class="logo_size"src="assets\image\Journal.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn">Fixed Deposit Report</button></a></div>
+         <!-- <div class="col-sm-4"> <a href="{{ url('') }}"><img class="logo_size"src="assets\image\Journal.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn">Fixed Deposit Report</button></a></div> -->
          <div class="col-sm-4"> <a href="{{ url('') }}"><img class="logo_size"src="assets\image\Journal.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn">Withholding Tax(WHT) Report</button></a></div>
          <div class="col-sm-4"> <a href="{{ url('') }}"><img class="logo_size"src="assets\image\Journal.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn">Withholding VAT(WHV) Report</button></a></div>
     </div>

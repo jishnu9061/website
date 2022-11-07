@@ -19,9 +19,11 @@ class AccountsController extends Controller
         ->select('*','ledgeraccount_categories.ledgeraccount_categories as category_name','ledgeraccount_subcategories.ledgeraccount_subcategories as subcategory_name'
         ,'ledgeraccount_categories.id as category_id','ledgeraccount_subcategories.id as subcategory_id','ledgeraccounts.id as id','budget_types.id as budget_id')
         ->get();
+        // dd($ledger_account);
         $category=DB::table('ledgeraccount_categories')->get();
         $subcategory=DB::table('ledgeraccount_subcategories')->get();
         $budget_cat=DB::table('budget_types')->get();
+      
         return view('Accounts.index',compact('ledger_account','category','subcategory','budget_cat'));
 
     }
@@ -34,6 +36,7 @@ class AccountsController extends Controller
                    'accounts_category'     =>   $request->accounts_category,
                    'accounts_subcategory'     =>   $request->accounts_subcategory,
                    'budget_cat' => $request->budget_cat,
+                   'default_currency' => $request->default_currency,
                    'accounts_desc'   =>   $request->accounts_desc,
                    'accounts_company'   =>   Auth::user()->Hospital,
             )
@@ -49,6 +52,7 @@ class AccountsController extends Controller
             'accounts_category'=>$request->accounts_category,
             'accounts_subcategory'=>$request->accounts_subcategory,
             'budget_cat'=>$request->editbudget_cat,
+            'default_currency' =>$request->default_currency,
             'accounts_desc'=>$request->accounts_desc);
         DB::table('ledgeraccounts')->where('id', $request->id)->update($data);
 
@@ -245,6 +249,8 @@ class AccountsController extends Controller
         ->Leftjoin('ledgeraccount_subcategories as a', 'a.id', '=', 'ledgeraccounts.accounts_subcategory')
         ->Leftjoin('ledgeraccount_categories as b', 'b.id', '=', 'ledgeraccounts.accounts_category')
         ->Leftjoin('budget_types as c', 'c.id', '=', 'ledgeraccounts.budget_cat')
+        // ->Leftjoin('default_currency as c', 'c.id', '=', 'ledgeraccounts.default_currency')
+        // ->Leftjoin('budget_types as c', 'c.id', '=', 'ledgeraccounts.budget_cat')
         ->select('*','ledgeraccounts.id as id')
         ->orderBy('ledgeraccounts.accounts_name', 'asc')
         ->get();
@@ -253,6 +259,7 @@ class AccountsController extends Controller
         $subcategory=DB::table('ledgeraccount_subcategories')->get();
         $budget_cat=DB::table('budget_types')->get();
         return view('Accounts.new_transaction',compact('account','hospitals','category','subcategory','budget_cat'));
+        return redirect(route('ledger_acounts'));
     }
 
     public function create_new_journal(Request $request){
@@ -452,18 +459,8 @@ class AccountsController extends Controller
                 );
                 DB::table('journal_items')->where('id', $key[2])->update($data);
               }
-
-
-
             }
-
-
-
-
             if(!empty($request->credit_to_account) && !empty($request->credit_amount) && !empty($request->transaction_id)){
-
-
-
                 foreach ( $request->credit_to_account as $idx => $val ) {
                 $add_credit_array[] = [ $val, $request->credit_amount[$idx]];
                   }
@@ -708,6 +705,7 @@ public function create_new_ledger_account(Request $request){
               'accounts_category'  =>   $request->account_cat,
               'accounts_company'   => Auth::user()->Hospital,
               'accounts_desc'  =>   $request->accounts_desc,
+              'default_account'  =>   $request->default_account,
          )
     );
     $accounts=DB::table('ledgeraccounts')
