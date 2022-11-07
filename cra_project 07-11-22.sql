@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 07, 2022 at 05:46 AM
+-- Generation Time: Nov 07, 2022 at 06:26 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -555,6 +555,37 @@ INSERT INTO `cra_add_file_progress` (`id`, `progress_date`, `next_action`, `clie
 (20, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (21, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (22, '2022-10-26', 'test action', 'demo1', '2022-11-02', NULL, 10, 'demo1', 'test', '03:04:00', '17:03:00', 'demo1', 'demo1', 3000, '0000-00-00 00:00:00', 'demo1', 'test', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_add_incomming_letters`
+--
+
+CREATE TABLE `cra_add_incomming_letters` (
+  `id` int(11) NOT NULL,
+  `letter_date` date DEFAULT NULL,
+  `client` varchar(255) DEFAULT NULL,
+  `file` varchar(255) DEFAULT NULL,
+  `received_form` varchar(255) DEFAULT NULL,
+  `category` varchar(255) DEFAULT NULL,
+  `letter_name` varchar(255) DEFAULT NULL,
+  `delivered_by` varchar(255) DEFAULT NULL,
+  `other` varchar(255) DEFAULT NULL,
+  `delivered_to` varchar(255) DEFAULT NULL,
+  `viewer` varchar(255) DEFAULT NULL,
+  `upload_copy` varchar(255) DEFAULT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  `branch_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_add_incomming_letters`
+--
+
+INSERT INTO `cra_add_incomming_letters` (`id`, `letter_date`, `client`, `file`, `received_form`, `category`, `letter_name`, `delivered_by`, `other`, `delivered_to`, `viewer`, `upload_copy`, `company_id`, `branch_id`) VALUES
+(1, '2022-10-02', 'demo 2', 'demo 2', 'cra', 'demo 2', 'case letter', 'demo 2', 'no', 'demo 3', 'select', 'C:\\xampp\\tmp\\phpA1E9.tmp', NULL, NULL),
+(2, '2022-10-02', 'demo 2', 'demo 2', 'cra', 'demo 2', 'case letter', 'demo 2', 'no', 'demo 3', 'select', 'C:\\xampp\\tmp\\phpFB32.tmp', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1482,6 +1513,35 @@ CREATE TABLE `cra_manage_user_department` (
   `company_id` int(11) DEFAULT NULL,
   `branch_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_new_safe_management`
+--
+
+CREATE TABLE `cra_new_safe_management` (
+  `id` int(11) NOT NULL,
+  `date` date DEFAULT NULL,
+  `client` varchar(255) DEFAULT NULL,
+  `file` varchar(255) DEFAULT NULL,
+  `safe_name` varchar(255) DEFAULT NULL,
+  `ref_no` varchar(255) DEFAULT NULL,
+  `approver` varchar(255) DEFAULT NULL,
+  `doc_no` varchar(255) DEFAULT NULL,
+  `category` varchar(255) DEFAULT NULL,
+  `document` varchar(255) DEFAULT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  `branch_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_new_safe_management`
+--
+
+INSERT INTO `cra_new_safe_management` (`id`, `date`, `client`, `file`, `safe_name`, `ref_no`, `approver`, `doc_no`, `category`, `document`, `company_id`, `branch_id`) VALUES
+(1, '2022-10-02', 'select', 'File 2', 'Safe 1', 'afssdf', 'Person 1', NULL, 'select', NULL, NULL, NULL),
+(2, '2022-10-14', 'Client 1', 'File 2', 'Safe 1', '4144', 'Person 1', '44444', 'select', '4mn41', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -10316,6 +10376,12 @@ ALTER TABLE `cra_add_file_progress`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cra_add_incomming_letters`
+--
+ALTER TABLE `cra_add_incomming_letters`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `cra_add_new_instructions`
 --
 ALTER TABLE `cra_add_new_instructions`
@@ -10523,6 +10589,12 @@ ALTER TABLE `cra_letter_types`
 -- Indexes for table `cra_manage_user_department`
 --
 ALTER TABLE `cra_manage_user_department`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_new_safe_management`
+--
+ALTER TABLE `cra_new_safe_management`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -11197,6 +11269,12 @@ ALTER TABLE `cra_add_file_progress`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
+-- AUTO_INCREMENT for table `cra_add_incomming_letters`
+--
+ALTER TABLE `cra_add_incomming_letters`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `cra_add_new_instructions`
 --
 ALTER TABLE `cra_add_new_instructions`
@@ -11404,6 +11482,12 @@ ALTER TABLE `cra_letter_types`
 -- AUTO_INCREMENT for table `cra_manage_user_department`
 --
 ALTER TABLE `cra_manage_user_department`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `cra_new_safe_management`
+--
+ALTER TABLE `cra_new_safe_management`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
