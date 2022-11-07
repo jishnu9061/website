@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 07, 2022 at 06:26 AM
+-- Generation Time: Nov 07, 2022 at 11:00 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -961,7 +961,8 @@ CREATE TABLE `cra_company_details` (
 
 INSERT INTO `cra_company_details` (`id`, `company_name`, `address`, `town`, `email`, `company_type`, `pin_no`, `vat_no`, `NHIF`, `NSSF_no`, `company_website`, `company_id`, `branch_id`) VALUES
 (1, 'test', 'fghf', 'ghfgh', 'fghf@gmail.com', 'LLP', '133555', '1456987', '2755', '75252', 'hg fh', NULL, NULL),
-(2, 'test', 'wrrewr', 'were', 'test@gmail.com', '---Select---', '133555', '1456987', '2755', '4644518', 'wer', NULL, NULL);
+(2, 'test', 'wrrewr', 'were', 'test@gmail.com', '---Select---', '133555', '1456987', '2755', '4644518', 'wer', NULL, NULL),
+(3, 'test', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1033,7 +1034,7 @@ INSERT INTO `cra_conversations` (`id`, `communication_date`, `client`, `file`, `
 --
 
 CREATE TABLE `cra_corporate_client_details` (
-  `id` int(11) NOT NULL,
+  `corporate_id` int(11) NOT NULL,
   `Client_no` varchar(255) DEFAULT NULL,
   `Client_type` varchar(255) DEFAULT NULL,
   `Cityzen_status` varchar(255) DEFAULT NULL,
@@ -1067,8 +1068,8 @@ CREATE TABLE `cra_corporate_client_details` (
 -- Dumping data for table `cra_corporate_client_details`
 --
 
-INSERT INTO `cra_corporate_client_details` (`id`, `Client_no`, `Client_type`, `Cityzen_status`, `Certificate_of_incorporation`, `Country`, `Telephone_No`, `Fax_no`, `Email_address`, `Website`, `Brought_in_By`, `Status_reporting_day`, `Client_source`, `Client_source_naration`, `Client_name`, `Client_industry`, `Pin_no`, `postal_address`, `postal_code`, `town`, `physical_address`, `notes`, `contact_person`, `designation`, `Mobile_no`, `email`, `company_id`, `branch_id`) VALUES
-(1, '1234', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL);
+INSERT INTO `cra_corporate_client_details` (`corporate_id`, `Client_no`, `Client_type`, `Cityzen_status`, `Certificate_of_incorporation`, `Country`, `Telephone_No`, `Fax_no`, `Email_address`, `Website`, `Brought_in_By`, `Status_reporting_day`, `Client_source`, `Client_source_naration`, `Client_name`, `Client_industry`, `Pin_no`, `postal_address`, `postal_code`, `town`, `physical_address`, `notes`, `contact_person`, `designation`, `Mobile_no`, `email`, `company_id`, `branch_id`) VALUES
+(5, '567', 'Corporate', 'Residensial', 'addd', 'South Africa', '0987654321', '12', 'mk@gmail.com', 'ww.india.com', 'Agent', 'Monday', 'Excisting Client', '123', 'dnj', 'Commerce', '1234567', 'kazhakutam', 98765, 'tvm', 'fghgf', 'h', 'arun', 'hio', 2147483647, 'mk@gmail.com', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -6527,7 +6528,7 @@ INSERT INTO `departments` (`id`, `depname`, `updated_at`, `created_at`, `hospita
 (39, 'Rehabilitation Department', '2022-02-15 06:35:35', '2022-02-15 06:35:35', 'kims intetrnational'),
 (40, 'cardiology', '2022-02-16 07:54:13', '2022-02-16 07:54:13', 'kims intetrnational'),
 (41, 'Outpatient department (OPD)', '2022-02-26 06:47:00', '2022-02-26 06:47:00', 'kims intetrnational'),
-(42, 'ENT', '2022-02-26 06:47:07', '2022-02-26 06:47:07', 'kims intetrnational');
+(42, 'Administration', '2022-02-26 06:47:07', '2022-02-26 06:47:07', 'kims intetrnational');
 
 -- --------------------------------------------------------
 
@@ -8464,7 +8465,25 @@ INSERT INTO `staff_leaves` (`id`, `staff_id`, `leave_type_id`, `allotted_leaves`
 (6, 2147483647, 3, 0, '0'),
 (7, 2147483647, 1, 0, '0'),
 (8, 2147483647, 2, 0, '0'),
-(9, 2147483647, 3, 0, '0');
+(9, 2147483647, 3, 0, '0'),
+(10, 2147483647, 1, 0, '0'),
+(11, 2147483647, 2, 0, '0'),
+(12, 2147483647, 3, 0, '0'),
+(13, 2147483647, 1, 0, '0'),
+(14, 2147483647, 2, 0, '0'),
+(15, 2147483647, 3, 0, '0'),
+(16, 2147483647, 1, 0, '0'),
+(17, 2147483647, 2, 0, '0'),
+(18, 2147483647, 3, 0, '0'),
+(19, 2147483647, 1, 0, '0'),
+(20, 2147483647, 2, 0, '0'),
+(21, 2147483647, 3, 0, '0'),
+(22, 2147483647, 1, 0, '0'),
+(23, 2147483647, 2, 0, '0'),
+(24, 2147483647, 3, 0, '0'),
+(25, 2147483647, 1, 0, '0'),
+(26, 2147483647, 2, 0, '0'),
+(27, 2147483647, 3, 0, '0');
 
 -- --------------------------------------------------------
 
@@ -10171,7 +10190,8 @@ INSERT INTO `userroles` (`id`, `name`, `previlages`, `ex`, `created_at`, `update
 (1, 'doctor', '', '', '2022-02-19 05:31:20', '2022-02-19 05:31:20', 'kims intetrnational'),
 (2, 'Display', '', '', '2022-02-19 05:32:03', '2022-02-19 05:32:03', 'kims intetrnational'),
 (3, 'nutrition', '', '', '2022-02-19 05:32:28', '2022-02-19 05:32:28', 'kims intetrnational'),
-(9, 'HR', '', '', '2022-03-30 01:46:37', '2022-03-30 01:46:37', 'kims intetrnational');
+(9, 'HR', '', '', '2022-03-30 01:46:37', '2022-03-30 01:46:37', 'kims intetrnational'),
+(26, 'Admin', '', '', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -10183,7 +10203,7 @@ CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `uniqueid` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `age` int(11) DEFAULT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -10191,7 +10211,7 @@ CREATE TABLE `users` (
   `address` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `date_of_joining` date DEFAULT NULL,
   `account_no` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `bank` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bank` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `ifsc` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -10218,7 +10238,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `uniqueid`, `name`, `email`, `age`, `email_verified_at`, `password`, `role`, `address`, `date_of_joining`, `account_no`, `bank`, `ifsc`, `remember_token`, `created_at`, `updated_at`, `Hospital`, `departments`, `medicaldepartments`, `phone`, `status`, `releving_date`, `allowance`, `serve`, `salary`, `yearsexp`, `dob`, `subrole`, `sex`, `consultation_fee`) VALUES
 (37, '0400037', 'kimshr', 'kimshr@gmail.com', 0, NULL, '$2y$10$ZYxNv0w57OfilD7zB3SJceN.lYwL90L8ZjvlCIIC2lRd/AwQVGWmK', 'HR', '', NULL, NULL, '', NULL, NULL, '2021-10-11 23:40:07', '2021-10-11 23:40:07', 'kims intetrnational', 0, 'Departments', NULL, NULL, NULL, '{\"_token\":\"9nhVUoR2CKlhMyxUzjFZU77UOBuKYYGfizlR39Jg\",\"staffid\":\"37\",\"allowancenamenewallowance\":\"newallowance\",\"allowancenametestallowance\":\"testallowance\",\"8\":\"on\",\"allowancenametravel_allowance\":\"travel allowance\"}', NULL, '20000', NULL, NULL, NULL, NULL, 0),
-(47, '0900047', 'kimsadmin', 'kimsadmin@gmail.com', 0, NULL, '$2y$10$LJAbGCLx1uDpnCJHoYdGFORN4Jk9ArjK2cd8oKO4vP1avcnbdiwc2', 'hospitaladmin', '', NULL, NULL, '', NULL, NULL, '2021-11-01 02:18:49', '2021-11-01 02:18:49', 'kims intetrnational', 0, NULL, '7894', 0, NULL, NULL, '--', '30000', NULL, NULL, NULL, NULL, 0),
+(47, '0900047', 'kimsadmin', 'kimsadmin@gmail.com', 0, NULL, '$2y$10$LJAbGCLx1uDpnCJHoYdGFORN4Jk9ArjK2cd8oKO4vP1avcnbdiwc2', 'hospitaladmin', '', NULL, NULL, '', NULL, NULL, '2021-11-01 02:18:49', '2021-11-01 02:18:49', 'kims intetrnational', 42, NULL, '7894', 0, NULL, NULL, '--', '30000', NULL, NULL, NULL, NULL, 0),
 (58, '1100058', 'test-d-clinic-staff', 'test-d-clinic-staff@gmail.com', 0, NULL, '$2y$10$e0eVcQVjn9YfkY2LvQ/57e5sbHyOaGQSA4h32mjd/M2eBnh03w/AK', 'lab', '', NULL, NULL, '', NULL, NULL, '2021-12-18 01:29:39', '2021-12-18 01:29:39', 'D-clinic', 0, NULL, '987', 0, NULL, NULL, NULL, '35000', 10, NULL, NULL, NULL, 0),
 (72, '1100072', 'wer', 'wer@gfg.hjj', 0, NULL, '$2y$10$T7TLOSqyhjFbrRtqsfyguO9CwsnQ1SYFx.ezd7n4oIL9iAK7QPXB6', 'Role', '', NULL, NULL, '', NULL, NULL, '2021-12-22 02:45:17', '2021-12-22 02:45:17', 'D-clinic', 0, NULL, '435', 0, NULL, NULL, NULL, '35000', NULL, NULL, NULL, NULL, 0),
 (75, '0900074', 'kimsstore', 'kimsstore@gmail.com', 0, NULL, '$2y$10$Kim4TEicyWP46RX8cgi87uARtdJNBaHBkKXhaxAeaQi6vf5sM8r/G', 'store', '', NULL, NULL, '', NULL, NULL, '2022-01-03 02:44:35', '2022-01-03 02:44:35', 'kims intetrnational', 0, NULL, '4', 0, NULL, NULL, NULL, '234', 34, '2022-01-12', NULL, NULL, 0),
@@ -10236,7 +10256,13 @@ INSERT INTO `users` (`id`, `uniqueid`, `name`, `email`, `age`, `email_verified_a
 (96, '0900090', 'nursetestdep', 'nursetestdep@gmail.com', 0, NULL, '$2y$10$gZHPvyhGvPVBIryOJhAfOupzRHeL/TTEirZL4gWiMNYTgMc8nOBZW', 'nurse', '', NULL, NULL, '', NULL, NULL, '2022-02-15 02:33:23', '2022-02-15 02:33:23', 'kims intetrnational', 0, 'Nursing Department', '54', 0, NULL, NULL, NULL, '30000', NULL, NULL, NULL, NULL, 0),
 (98, '0900098', 'cardiologydoctor', 'cardiologydoctor@gmail.com', 0, NULL, '$2y$10$6/y0TDrj2l6fH.7I9qa18eEEjsN0RKgUMoH3LdSVxa/MtZQzSPIxe', 'doctor', '', NULL, NULL, '', NULL, NULL, '2022-02-16 02:31:36', '2022-02-16 02:31:36', 'kims intetrnational', 0, NULL, '21', 0, NULL, NULL, NULL, '30000', NULL, NULL, NULL, NULL, 0),
 (99, '0900099', 'card', 'card@gmail.com', 0, NULL, '$2y$10$pQbgMXAq9Ri8pJNexLTuXeUpnfsfK7xx73EDrHlcU0Rml8JYgk3xu', 'doctor', '', NULL, NULL, '', NULL, NULL, '2022-02-16 02:33:37', '2022-02-16 02:33:37', 'kims intetrnational', 0, NULL, '4', 0, NULL, NULL, NULL, '20000', NULL, NULL, NULL, NULL, 0),
-(102, '0900102', 'Allan Joseph', 'allan@gmail.com', 28, NULL, '$2y$10$4p3dJvWHh6veejBtNNPv9OTfKCmMRUb.7X1PK/0.IvTPRKZivwlxi', NULL, 'Allan Villa', '0000-00-00', NULL, '', NULL, NULL, '2022-02-19 05:47:03', '2022-02-19 05:47:03', 'kims intetrnational', NULL, NULL, '9874561231', 1, '0000-00-00', NULL, NULL, '100000', NULL, NULL, NULL, NULL, NULL);
+(102, '0900102', 'Allan Joseph', 'allan@gmail.com', 28, NULL, '$2y$10$4p3dJvWHh6veejBtNNPv9OTfKCmMRUb.7X1PK/0.IvTPRKZivwlxi', NULL, 'Allan Villa', '0000-00-00', NULL, '', NULL, NULL, '2022-02-19 05:47:03', '2022-02-19 05:47:03', 'kims intetrnational', NULL, NULL, '9874561231', 1, '0000-00-00', NULL, NULL, '100000', NULL, NULL, NULL, NULL, NULL),
+(108, '0904000370103', 'test', NULL, NULL, NULL, '$2y$10$GFAikqxe02h61bXslfJZiOjjSEp8uA6p7LUzcM8iwHPgAS02UJdJG', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-11-07 03:16:39', '2022-11-07 03:16:39', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(109, '0904000370109', 'Abhilash', NULL, NULL, NULL, '$2y$10$4515LIFuB5LgQj2eGQVxw..N7R/vpw7V5hh6MyWNoUseIrXE1mYTm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-11-07 03:19:37', '2022-11-07 03:19:37', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(110, '0904000370110', 'test', NULL, NULL, NULL, '$2y$10$kQ2LTXuCuiyicJshbnTxIeqSNPzAZmBSbjYxUrQefUhhLhpFAIHAW', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-11-07 03:22:21', '2022-11-07 03:22:21', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(111, '0904000370111', 'Anish', NULL, NULL, NULL, '$2y$10$RVtB9B7LkIJ1s4qvwmD/6eFOEnGeP7gK79V4QRJi.5FTGkB7pgXre', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-11-07 03:22:59', '2022-11-07 03:22:59', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(112, '0904000370112', 'test', NULL, NULL, NULL, '$2y$10$HsPTIyWE4dU058BpgiwZvuDCuK/jbPfWcFzUofci66MImAMID0Tzi', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-11-07 03:46:44', '2022-11-07 03:46:44', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(113, '0904000370113', 'test', NULL, NULL, NULL, '$2y$10$Ectxq3dUZWZDLxVNuB1wn.8DmAFkHmOQ/TQ7Wvv6ykFS08/dtucKm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-11-07 03:47:37', '2022-11-07 03:47:37', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -10481,7 +10507,7 @@ ALTER TABLE `cra_conversations`
 -- Indexes for table `cra_corporate_client_details`
 --
 ALTER TABLE `cra_corporate_client_details`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`corporate_id`);
 
 --
 -- Indexes for table `cra_courts`
@@ -11356,7 +11382,7 @@ ALTER TABLE `cra_company_branch_details`
 -- AUTO_INCREMENT for table `cra_company_details`
 --
 ALTER TABLE `cra_company_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `cra_complaint_register`
@@ -11374,7 +11400,7 @@ ALTER TABLE `cra_conversations`
 -- AUTO_INCREMENT for table `cra_corporate_client_details`
 --
 ALTER TABLE `cra_corporate_client_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `corporate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `cra_courts`
@@ -11944,7 +11970,7 @@ ALTER TABLE `servedmedicines`
 -- AUTO_INCREMENT for table `staff_leaves`
 --
 ALTER TABLE `staff_leaves`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `stock_categories_acc`
@@ -12022,13 +12048,13 @@ ALTER TABLE `usermanagements`
 -- AUTO_INCREMENT for table `userroles`
 --
 ALTER TABLE `userroles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
 
 --
 -- AUTO_INCREMENT for table `visiters`
