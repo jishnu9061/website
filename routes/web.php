@@ -1027,9 +1027,8 @@ Route::any('advocates_target_2026','UserManagement@advocatestarget2026')->name('
 //Client-list
 Route::any('add-client',"ClientManagement@addNewClient")->name('add-client');
 Route::any('add_newclient',"ClientManagement@addNewclient")->name('add_newclient');
-// Route::any('store-client',"ClientManagement@storeClient")->name('store-client');
 Route::any('client_list','ClientManagement@view')->name('client_list');
-Route::any('/edit_person/{id}','ClientManagement@edit_person')->name('edit_person');
+Route::any('/edit_person/{individual_id}','ClientManagement@edit_person')->name('edit_person');
 Route::any('show-client/{id}','ClientManagement@show')->name('show-client');
 Route::any('client-index',"ClientManagement@index")->name('client-index');
 Route::any('update-client',"ClientManagement@updateClient")->name('update-client');
