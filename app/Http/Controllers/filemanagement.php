@@ -35,35 +35,35 @@ class filemanagement extends Controller
     public function addnew(Request $request)
     {
 
-        $Associate_handling=$request['associate_handling'];
-        $Client_type=$request['client_type'];
-        $opening_date=$request['opening_date'];
-        $Client_ref_no=$request['client_ref_no'];
-        $our_file_reference_no=$request['our_file_ref_no'];
-        $File_name=$request['file_name'];
-        $Approval_partner=$request['approval_partner'];
-        $Customer_name=$request['customer_name'];
-        $Address=$request['address'];
-        $Telephone=$request['telephone'];
+        $Client=$request['Client'];
         $email=$request['email'];
+        $phone=$request['phone'];
+        $address=$request['address'];
+        $file_type=$request['file_type'];
+        $open_date=$request['open_date'];
+        $close_date=$request['close_date'];
+        $comments=$request['comments'];
+        $notifi_email=$request['notifi_email'];
+        $con_phone=$request['con_phone'];
+        $con_email=$request['con_email'];
         $amount=$request['amount'];
-        $workflow=$request['workflow'];
+        $task=$request['task'];
 
         DB::table('cra_open_new_file_details')->insert([
             
-            'Associate_handling' => $Associate_handling,
-            'Client_type' => $Client_type,
-            'opening_date' => $opening_date,
-            'Client_ref_no' => $Client_ref_no,
-            'our_file_reference_no' => $our_file_reference_no,
-            'File_name' => $File_name,
-            'Approval_partner' => $Approval_partner,
-            'Customer_name' => $Customer_name,
-            'Address' => $Address,
-            'Telephone' => $Telephone,
+            'Client' => $Client,
             'email' => $email,
+            'phone' => $phone,
+            'address' => $address,
+            'file_type' => $file_type,
+            'open_date' => $open_date,
+            'close_date' => $close_date,
+            'comments' => $comments,
+            'notifi_email' => $notifi_email,
+            'con_phone' => $con_phone,
+            'con_email' => $con_email,
             'amount' => $amount,
-            'workflow' => $workflow,
+            'task' => $task,
         ]);
         return redirect('/file-list');
     }
