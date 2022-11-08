@@ -76,18 +76,37 @@
 }
 </style>
   
+
+
 <div class="container">
-  <div class="row align-items-start">
+  <div class="row">
     <div class="col">
     <div class="mb-3">
   <label for="idnumber" class="form-label">ID Number</label>
   <input type="number" class="form-control" id="idnumber">
    </div>
+   <div class="mb-3">
+    <label for="postapply" class="form-label">Post Apply</label>
+                <select class="form-select" id="postapply">
+                    <option selected>---select---</option>
+                    <!-- <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option> -->
+                  </select>
+     </div>
+     <div class="mb-3">
+     <label for="reviewperiodto" class="form-label">Review Period To</label>
+     <input type="date" class="form-control" id="reviewperiodto">
+    </div>
     </div>
     <div class="col">
     <div class="mb-3">
   <label for="name" class="form-label">Name</label>
   <input type="text" class="form-control" id="name">
+  </div>
+  <div class="mb-3">
+  <label for="currentsalary" class="form-label">Current Salary</label>
+  <input type="number" class="form-control" id="currentsalary">
 </div>
     </div>
     <div class="col">
@@ -100,34 +119,12 @@
                     <option value="3">Three</option> -->
                   </select>
   </div>
+  <div class="mb-3">
+  <label for="reviewperiodfrom" class="form-label">Review Period From</label>
+  <input type="date" class="form-control" id="reviewperiod">
+</div>
+    </div>
   </div>
-</div>
- 
-
-  <div class="row align-items-start">
-    <div class="col">
-    <div class="mb-3">
-    <label for="postapply" class="form-label">Post Apply</label>
-                <select class="form-select" id="postapply">
-                    <option selected>---select---</option>
-                    <!-- <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option> -->
-                  </select>
- </div>
-    </div>
-    <div class="col">
-    <div class="mb-3">
-  <label for="currentsalary" class="form-label">Current Salary</label>
-  <input type="number" class="form-control" id="currentsalary">
-</div>
-    </div>
-    <div class="col">
-    <div class="mb-3">
-  <label for="reviewperiod" class="form-label">Review Period</label>
-  <input type="text" class="form-control" id="reviewperiod">
-</div>
-</div>
 </div>
   
       <br>
@@ -139,7 +136,7 @@
           <tr>
             <th scope="col">Performance Category</th>
             <th scope="col">Rating Scale</th>
-            <th scope="col">Remarks</th>
+            <th scope="col">Total</th>
           </tr>
         </thead>
         <tbody>
@@ -187,7 +184,7 @@
                   </form>
                 
             </td>
-            <td><input type="text" class="form-control" id="remarks"></td>
+            <td><input type="text" class="form-control" id="total"></td>
           </tr>
           <tr>
             <th scope="row">Attendance</th>
@@ -233,7 +230,7 @@
                   </form>
                 
             </td>
-            <td><input type="text" class="form-control" id="remarks"></td>
+            <td><input type="text" class="form-control" id="total"></td>
           </tr>
           <tr>
             <th scope="row">Ability to meet Deadlines</th>
@@ -279,7 +276,7 @@
                   </form>
                 
             </td>
-            <td><input type="text" class="form-control" id="remarks"></td>
+            <td><input type="text" class="form-control" id="total"></td>
           </tr>
           <tr>
             <th scope="row">Organisational Skills</th>
@@ -325,7 +322,7 @@
                   </form>
                 
             </td>
-            <td><input type="text" class="form-control" id="remarks"></td>
+            <td><input type="text" class="form-control" id="total"></td>
           </tr>
           <tr>
             <th scope="row">Communication Skills</th>
@@ -371,7 +368,7 @@
                   </form>
                 
             </td>
-            <td><input type="text" class="form-control" id="remarks"></td>
+            <td><input type="text" class="form-control" id="total"></td>
           </tr>
           <tr>
             <th scope="row">Quality of Work</th>
@@ -417,7 +414,7 @@
                   </form>
                 
             </td>
-            <td><input type="text" class="form-control" id="remarks"></td>
+            <td><input type="text" class="form-control" id="total"></td>
           </tr>
             <th scope="row">Team Player Abilities</th>
             <td>
@@ -462,7 +459,7 @@
                   </form>
                 
             </td>
-            <td><input type="text" class="form-control" id="remarks"></td>
+            <td><input type="text" class="form-control" id="total"></td>
           </tr>
         </tbody>
       </table>
