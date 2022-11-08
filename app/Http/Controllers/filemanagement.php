@@ -32,6 +32,11 @@ class filemanagement extends Controller
         return redirect ('/file-list');
     }
 
+    public function addtask()
+{
+    return view('file_management.add-task');                                                             
+}
+
     public function addnew(Request $request)
     {
 
