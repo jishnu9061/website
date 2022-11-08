@@ -48,7 +48,7 @@
         }
     </style>
     <h4 id="hdtpa"><b>Staff Details</b></h4><br>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New Staff</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="width:20%">Add New Staff</button>
     <div class="header_wrap">
         <div class="num_rows">
             <div class="form-group">
@@ -127,22 +127,9 @@
                 <!-- Modal body -->
                 <div class="modal-body">
                     <div class="container">
-                        <form method="post" action="{{ url('add_company_details') }}" enctype="multipart/form-data">
+                        <form method="post" action="{{ url('addthestaffs') }}" enctype="multipart/form-data">
                             <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-                            <!-- --------------------------------------image------------------------------------------------->
-
-
-
-                            <!--
-                                            <label>add logo</label>
-                                            <div class="input-group">
-                                                <div class="custom-file">
-                                                   <input type="file"name="image"class="custom-file-input">
-                                                   <label class="custom-file-label">choose file</label> -->
-                    </div>
-                </div>
-                <!-- --------------------------------------image------------------------------------------------->
-
+                            <input type="text" class="form-control" name="name" id="name" value="{{strtoupper(uniqid())}}">     
                 @csrf
                 <div class="row">
                     <h5><u>Basic Details</u></h5>
@@ -165,7 +152,7 @@
                             <label>Email</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="email" class="form-control" name="address" id="address" value="">
+                                <input type="email" class="form-control" name="email" id="" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -177,7 +164,7 @@
                             <label>Phone Number</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="address" id="address" value="">
+                                <input type="text" class="form-control" name="phone_number" id="" value="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -243,7 +230,7 @@
                             <label for="username">Date Of Joining</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="password" id="password"
+                                <input type="date" class="form-control" name="date_of_joining" id="password"
                                     placeholder="staff Password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Passeord is required.
@@ -293,7 +280,7 @@
                           <label for="username">Years of experience</label>
                           <div class="input-group">
                               <div class="input-group-prepend"></div>
-                              <input type="number" class="form-control" name="yearsexp" id="username"
+                              <input type="number" class="form-control" name="experience" id="username"
                                   placeholder="Experience" min="0" max="70">
                               <div class="invalid-feedback" style="width: 100%;">
                                   Years of experience is required.

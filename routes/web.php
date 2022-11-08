@@ -77,7 +77,7 @@ Route::any('/clinicalnotes','bedsController@clinicalnotes');
 Route::any('/callthepatient{id}','hospitalController@callthepatient');
 Route::any('/addstaffs','addController@addstaffs');
 Route::any('/editstafff','addController@editstafff');
-Route::any('/addthestaffs','addController@addthestaffs');
+Route::any('/addthestaffs','addController@addstaffs');
 Route::any('/staffs','addController@allstaffs');
 Route::any('/managestaff{id}','hrcontroller@managestaff');
 Route::any('/managedepstaff{id}','departmentcontroller@managedepstaff');
@@ -90,6 +90,7 @@ Route::any('/paysalary','addController@paysalary');
 Route::any('/attendanceview','hrcontroller@attendanceview');
 Route::any('/monthwise','hrController@monthwise');
 Route::any('/attendancetostaff','hrController@attendancetostaff');
+Route::any('/new_staff','hrController@add_new_staff');
 
 
 Route::any('/consult','doctorController@consult');

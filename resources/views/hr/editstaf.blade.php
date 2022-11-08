@@ -8,7 +8,6 @@
             </div>
         @endif
         <h4 id="hdtpa"><b>Manage {{$users->name}} [{{$users->uniqueid}}]</b></h4>
-        {{-- <h2>Manage {{$users->name}} [{{$users->uniqueid}}]</h2> --}}
     </div>
     <h6>Basic Details</h6>
     <hr class="mb-4">
@@ -94,69 +93,53 @@
                             <div id="test" style="height:20px;"></div>
                         </div>
                     </div>
-                    <label for="username">Address</label>
-                        <textarea class="form-control" name="address">
-                            {{$users->address}}
-                        </textarea>
-                        <div id="test" style="height:20px;"></div>
-                        <div class="row">
-                            {{-- <div class="form-group col-md-3">
-                                <select class="custom-select my-1 mr-sm-2 btn btn-secondary dropdown-toggle me-2" name="rolename" id="inlineFormCustomSelectPref">
-                                    @if($users->role != ''))
-                                        <option selected>{{$users->role}}</option>
-                                    @endif
-                                    @foreach($roles as $role)
-                                        <option  class="dropdown-item" value="{{$role->name}}">{{$role->name}}</option>
-                                    @endforeach
-                                </select>
-                            </div> --}}
-                            {{-- <div class="form-group col-md-7">
-                                <select class="custom-select my-1 mr-sm-2 btn btn-secondary dropdown-toggle me-2" name="medname" id="inlineFormCustomSelectPref">
-                                    <option value="">Select</option>
-                                        @foreach($departments as $department)
-                                            <option value="{{$department->id}}" {{ ($department->id == $users->departments) ? "selected" : "" }} > {{ $department->depname }}</option>
-                                        @endforeach
-                                </select>
-                            </div> --}}
-                            <div class="form-group col-md-7">
-                            <label for="username">Joining Date</label>
-                            <div class="form-group col-md-7">
-                                <input class="form-control" type="text" name="date_of_joining" id="date_of_joining" value="{{ date('d-m-Y',strtotime($users->date_of_joining))}}">
-                            </div>
-                            </div>
-                            {{-- <div class="form-group col-md-7">
-                                <label for="username">Consulatation Fees</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                        <input type="number" class="form-control" name="cons_fee" id="cons_fee" value="{{$users->consultation_fee}}" placeholder="" min="0">
-                                            <div class="invalid-feedback" style="width: 100%;"></div>
-                                    </div>
-                            </div> --}}
-                            <div class="col-md-4 col-lg-2">
-                                <p class="card-title"><b>Sex</b></p>
-                                <div class="card-body">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="patienthere" id="flexRadioDefault1" {{ ($users->sex == 'male') ? "checked" : "" }}>
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Male
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="patienthere" id="flexRadioDefault1"
-                                            {{ ($users->sex == 'female') ? "checked" : "" }} >
-                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                    Female
-                                                </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="patienthere" id="flexRadioDefault1" {{ ($users->sex == 'others') ? "checked" : "" }}>
-                                            <label class="form-check-label" for="flexRadioDefault1">
-                                                Others
-                                            </label>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                                <label for="username">Address</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <textarea class="form-control" name="address" col="2">{{$users->address}}</textarea>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Age is required.
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                                <label for="username">Date Of Joining</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input class="form-control" type="text" name="date_of_joining" id="date_of_joining" value="{{ date('d-m-Y',strtotime($users->date_of_joining))}}">
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Passeord is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <br>
+                            <label>Sex:&nbsp;</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sex" id="inlineCheckbox1"
+                                    value="Male">
+                                <label class="form-check-label" for="inlineCheckbox1">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sex" id="inlineCheckbox1"
+                                    value="Female">
+                                <label class="form-check-label" for="inlineCheckbox1">Female</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sex" id="inlineCheckbox1"
+                                    value="Other">
+                                <label class="form-check-label" for="inlineCheckbox1">Other</label>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
                         <div style="height:50px;"></div>
                         <h6>Salary And Allowances</h6>
                         <hr class="mb-4">
