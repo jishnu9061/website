@@ -69,11 +69,7 @@ color: #999;
 
             
 
-            <div id="mydatatable_filter" class="dataTables_filter">
-                <label><b>Search:</b><input type="search" class="box" placeholder="search"
-                        aria-controls="mydatatable"></label>
-
-            </div>
+          
             <!-- <a href="{{url('file_new_instruction')}}"><button class="btn btn-primary add-btn" Style="width:200px;">Add
                 New Instructions</button></a> -->
             {{-- <a href="{{('add-corporate')}}"><button class="btn btn-primary">Add Instructions</button></a> --}}
