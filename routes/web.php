@@ -601,6 +601,9 @@ Route::any('/expense_report','AccountsController@expense_report')->name('expense
 Route::any('/budget_forecasting','AccountsController@budget_forecasting')->name('budget_forecasting');
 Route::any('/add_account','AccountsController@add_account')->name('add_account');
 Route::any('/budget_forecat_dept','AccountsController@budget_forecat_dept')->name('budget_forecat_dept');
+Route::any('/i_p_bank_bal','AccountsController@i_p_bank_bal')->name('i_p_bank_bal');
+Route::any('/reconcile_bank_entries','AccountsController@reconcile_bank_entries')->name('reconcile_bank_entries');
+Route::any('/bank_recon_report','AccountsController@bank_recon_report')->name('bank_recon_report');
 //--------reshma------------accounts-----
 
 Route::any('/get_subcat', 'AccountsController@get_subcat')->name('get_subcat');

@@ -258,8 +258,9 @@ class AccountsController extends Controller
         $category=DB::table('ledgeraccount_categories')->get();
         $subcategory=DB::table('ledgeraccount_subcategories')->get();
         $budget_cat=DB::table('budget_types')->get();
-        return view('Accounts.new_transaction',compact('account','hospitals','category','subcategory','budget_cat'));
-        return redirect(route('ledger_acounts'));
+    
+      return view('Accounts.new_transaction',compact('account','hospitals','category','subcategory','budget_cat'));
+       
     }
 
     public function create_new_journal(Request $request){
@@ -702,10 +703,12 @@ public function create_new_ledger_account(Request $request){
         array(
               'accounts_name'  => $request->accounts_name,
               'accounts_subcategory'   =>  $request->accounts_subcategory,
-              'accounts_category'  =>   $request->account_cat,
+              'accounts_category'  =>   $request->account_category,
+              'budget_cat'  =>   $request->budget_cat,
+              'default_currency'  =>   $request->default_currency,
               'accounts_company'   => Auth::user()->Hospital,
               'accounts_desc'  =>   $request->accounts_desc,
-              'default_account'  =>   $request->default_account,
+             // 'default_account'  =>   $request->default_account,
          )
     );
     $accounts=DB::table('ledgeraccounts')
@@ -1386,5 +1389,23 @@ public function budget_forecat_dept()
 {
     return view('Accounts.budget_forecat_dept');
 }
+
+public function i_p_bank_bal()
+{
+    return view('Accounts.i_p_bank_bal');
+}
+
+public function reconcile_bank_entries()
+{
+    return view('Accounts.reconcile_bank_entries');
+}
+public function bank_recon_report()
+{
+    return view('Accounts.bank_recon_report');
+}
+
+
+
+
 //reshma
 }
