@@ -93,18 +93,28 @@
     <div class="col">
     <div class="mb-3">
   <label for="presentposition" class="form-label">Present Position</label>
-  <input type="text" class="form-control" id="presentposition">
-</div>
-</div>
+                <select class="form-select" id="presentposition">
+                    <option selected>---select---</option>
+                    <!-- <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option> -->
+                  </select>
+  </div>
+  </div>
 </div>
  
 
   <div class="row align-items-start">
     <div class="col">
     <div class="mb-3">
-  <label for="postapply" class="form-label">Post Apply</label>
-  <input type="text" class="form-control" id="postapply">
-</div>
+    <label for="postapply" class="form-label">Post Apply</label>
+                <select class="form-select" id="postapply">
+                    <option selected>---select---</option>
+                    <!-- <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option> -->
+                  </select>
+ </div>
     </div>
     <div class="col">
     <div class="mb-3">
@@ -457,8 +467,7 @@
         </tbody>
       </table>
       </div>
-    </div>
-         <br>
+    </div>  
          <br>
          <div class="container">
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">(Note:
@@ -524,8 +533,16 @@
                 <div id="Note" class="form-text">(Note : Filled by the Reviewing Officer)</div>
               </div>
             </div>
+            <br>
+            <div class="container">
+                <div class="mx-auto" style="width: 200px;">
+                    <input class="btn btn-primary" type="submit" value="Submit">
+                  </div>
+                 <br>
+                 <hr>   
+            </div>
 
-
+            <br>
             <br>
             <br>
             <div class="container">
@@ -564,8 +581,6 @@
             <div class="container">
                 <div class="mx-auto" style="width: 200px;">
                     <input class="btn btn-primary" type="submit" value="Submit">
-                    <span class="p-3"></span>
-                    <input class="btn btn-primary" type="submit" value="Cancel">
                   </div>   
             </div>
     
