@@ -181,7 +181,10 @@
                     <i data-feather="x"></i>
                 </button>
             </div>
-            <form id="account_form" >
+            <!-- <form action="{{url('save_ledger_acounts')}}" method="post" > -->
+                                     @csrf
+
+      
                 <div class="modal-body">
 
                     <div class="card-body">
@@ -193,50 +196,71 @@
                         </div>
 
                         <div class="form-group mb-3">
-                            <label> Type </label>
-                            <select class="form-control" name="accounts_category" id="account-cat" required>
-                                <option value=""> Select</option>
-                                @foreach($category as $cat):
-                                <option value="{{ $cat->id }}"> {{ $cat->ledgeraccount_categories }}</option>
-                                @endforeach;
+                            <label>Account Type</label>
+                           <select class="form-control" id="account-cat" name="accounts_category"  required>
+                               <option value="">---Select---</option>
+                               @foreach($category as $cat):
+                                <option value="{{ $cat->id }}" > {{ $cat->ledgeraccount_categories }}</option>
+                               @endforeach;
 
-                            </select>
-                            
-                        </div>
-
-                        <div class="form-group mb-3">
-                            <label> Group </label>
-                            <select class="form-control" id="accounts-subcategory" required>
-                                <option value=""> Select</option>
-                                @foreach($subcategory as $subcat):
-                                <option value="{{ $subcat->id }}"> {{ $subcat->ledgeraccount_subcategories }} </option>
-                                @endforeach;
-                            </select>
+                           </select>
                         </div>
                         <div class="form-group mb-3">
-                            <label> Budget </label>
-                            <select class="form-control" name="budget_cat" id="budget_cat" required>
-                                <option value=""> Select</option>
-                                @foreach($budget_cat as $budget):
-                                <option value="{{ $budget->id }}"> {{ $budget->budget_name }}</option>
-                                @endforeach;
+                            <label>Account Category</label>
 
-                            </select>
+                           <select class="form-control" name="accounts_subcategory"  id="accounts-subcategory" required>
+                            <option value=""> ---Select---</option>
+                            @foreach($subcategory as $subcat):
+                            <option value="{{ $subcat->id }}" > {{ $subcat->ledgeraccount_subcategories }} </option>
+                           @endforeach;
+                        </select>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label> Budget Category </label>
+                           <select class="form-control" name="budget_cat" id="budget_cat" required>
+                               <option value=""> ---Select---</option>
+                               @foreach($budget_cat as $budget):
+                               <option value="{{ $budget->id }}" > {{ $budget->budget_name }} </option>
+                              @endforeach;
+                           </select>
                         </div>
 
+                     
+                        <div class="form-group mb-3">
+                            <label>Default Currency</label>
+                           <select class="form-control" name="default_currency"   id="default_currency" required>
+                               <option value=""> ---Select---</option>
+                               <option>KES</option>
+                                <option>USD</option>
+                                <option>EUR</option>
+                                <option>GBP</option>
+                                <option>AUD</option>
+                                <option>CAD</option>
+                                <option>SEK</option>
+                                <option>DKK</option>
+                                <option>JPY</option>
+                                <option>CHF</option>
+                                <option>HKD</option> 
+                               <!-- @foreach($category as $cat):
+                                <option value="{{ $cat->id }}" > {{ $cat->ledgeraccount_categories }}</option>
+                               @endforeach; -->
+                               </select>
 
+
+          
+                           
+                        </div> 
                         <div class="form-group mb-3">
                             <label>Description </label>
-                            <textarea class="form-control" name="accounts_desc" id="accounts-desc">
+			                <textarea  class="form-control"  name="accounts_desc" id="accounts-desc">
 
                             </textarea>
                         </div>
 
 
 
-                    </div>
-                </div>
-
+                        </div>
+                        </div>
 
                 <div class="modal-footer">
                     <button type="button" onclick="save_ledger_account()" class="btn btn-primary">Save</button>
@@ -583,6 +607,8 @@ function save_ledger_account(){
     var accounts_name=$('#accounts-name').val();
     var accounts_subcategory=$('#accounts-subcategory').val();
     var account_cat=$('#account-cat').val();
+    var budget_cat=$('#budget_cat').val();
+    var default_currency=$('#default_currency').val();
     var accounts_desc=$('#accounts-desc').val();
 
 
@@ -606,6 +632,8 @@ function save_ledger_account(){
                             accounts_name: accounts_name,
                             accounts_subcategory: accounts_subcategory,
                             account_cat: account_cat,
+                            budget_cat: budget_cat,
+                            default_currency:default_currency
                             accounts_desc: accounts_desc,
 
                         },
@@ -616,7 +644,7 @@ function save_ledger_account(){
                                swal({title: "Success!",
                                text: "Account Created!",
                                icon: "success",
-                               button: "OK"})
+                               button: "OK"});
 
 
 
@@ -631,6 +659,8 @@ function save_ledger_account(){
                              $('#accounts-name').val('');
                             $('#accounts-subcategory').val('');
                               $('#account-cat').val('');
+                              $('#budget_cat').val('');
+                              $('#default_currency').val('');
                             $('#accounts-desc').val('');
                             $('#default').modal('toggle');
 

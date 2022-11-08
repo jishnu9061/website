@@ -1027,9 +1027,8 @@ Route::any('advocates_target_2026','UserManagement@advocatestarget2026')->name('
 //Client-list
 Route::any('add-client',"ClientManagement@addNewClient")->name('add-client');
 Route::any('add_newclient',"ClientManagement@addNewclient")->name('add_newclient');
-// Route::any('store-client',"ClientManagement@storeClient")->name('store-client');
 Route::any('client_list','ClientManagement@view')->name('client_list');
-Route::any('/edit_person/{id}','ClientManagement@edit_person')->name('edit_person');
+Route::any('/edit_person/{individual_id}','ClientManagement@edit_person')->name('edit_person');
 Route::any('show-client/{id}','ClientManagement@show')->name('show-client');
 Route::any('client-index',"ClientManagement@index")->name('client-index');
 Route::any('update-client',"ClientManagement@updateClient")->name('update-client');
@@ -1291,6 +1290,7 @@ Route::any('view_job_applications','hrindex@view_job_applications')->name('view_
 Route::any('view_application_details','hrindex@view_application_details')->name('view_application_details');
 Route::any('create_job_post','hrindex@create_job_post')->name('create_job_post');
 Route::any('reviewed_details','hrindex@reviewed_details')->name('reviewed_details');
+Route::any('performance_form','hrindex@performance_form')->name('performance_form');
 Route::any('accindex','accindex@index')->name('accindex');
 Route::any('new_communication','ClientManagement@add_communication')->name('add_communication');
 Route::any('calander',"Calender@index")->name('calander');
