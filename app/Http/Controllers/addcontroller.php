@@ -498,55 +498,5 @@ class addcontroller extends Controller
       return view ('add.salary',['jsondata'=>$json,'id'=>'2']);
 
     }
-    public function add_new_staff(Request $Request){
-    $hospital=Auth::user()->Hospital;
-    $depatmntz=$Request['depname'];
-    $hospitaldata=DB::table('hospitals')->where('name',$hospital)->select('id')->first();
-    $hospitalid=$hospitaldata->id;
-    $hospitalid=$hospitaldata->id;
-    $hosid=str_pad($hospitalid, 2, "0", STR_PAD_LEFT);
-    $seldep=DB::table('users')
-    ->leftjoin('departments','departments.id','=','users.departments')
-    ->select('uniqueid')->first();
-    $seldepis=$seldep->uniqueid;
-    $seldepid=str_pad($seldepis, 2, "0", STR_PAD_LEFT);
-    $userz=DB::table('users')->where('Hospital',$hospital)->select('id')->orderby('created_at','DESC')->first();
-    $userzz=$userz->id;
-    $userzid=$userzz + 1;
-    $userzidd=str_pad($userzid, 4, "0", STR_PAD_LEFT);
-    $appendid=$hosid.$seldepid.$userzidd;
-    $employee_name = $Request['name'];
-    $employee_email = $Request['email'];
-    $employee_age = $Request['age'];
-    $employee_password = $Request['password'];
-    $employee_address = $Request['address'];
-    $employee_date_of_joining = $Request['date_of_joining'];
-    $employee_sex = $Request['sex'];
-    $employee_salary = $Request['salary'];
-    $employee_experience = $Request['experience'];
-    $employee_dob = $Request['dob'];
-    $employee_bank_name = $Request['bankname'];
-    $employee_account_number = $Request['account_number'];
-    $employee_ifsc = $Request['ifsc'];
-    $employee_leaves = $Request['leaves'];
 
-    DB::table('users')->insert([
-        'uniqueid' => $appendid ,
-        'name' => $employee_name,
-        'email' =>   $employee_email,
-        'age' => $client_ref_no,
-        'password	' =>$currency,
-        'address' => $exchange_rate,
-        'date_of_joining' =>  $approver,
-        'account_no' =>  $bank_account,
-        'bank' =>  $billing_information,
-        'ifsc' => $attender,
-        'phone' => $subject,
-        'salary' =>  $type,
-        'yearsexp' => $particulers_of_service_rendered,
-        'dob' => $amount ,
-        'sex' =>  $vat,
-    ]);
-    return redirect('/Quotation');
-}
 }
