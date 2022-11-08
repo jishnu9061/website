@@ -127,7 +127,7 @@
                 <!-- Modal body -->
                 <div class="modal-body">
                     <div class="container">
-                        <form method="post" action="{{ url('add_company_details') }}" enctype="multipart/form-data">
+                        <form method="post" action="{{ url('addthestaffs') }}" enctype="multipart/form-data">
                             <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
                             <!-- --------------------------------------image------------------------------------------------->
 
@@ -165,7 +165,7 @@
                             <label>Email</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="email" class="form-control" name="address" id="address" value="">
+                                <input type="email" class="form-control" name="email" id="address" value="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -177,7 +177,7 @@
                             <label>Phone Number</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="address" id="address" value="">
+                                <input type="text" class="form-control" name="phoneno" id="address" value="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
