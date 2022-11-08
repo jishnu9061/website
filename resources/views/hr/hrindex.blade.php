@@ -34,7 +34,7 @@
                 <div class="col-sm-4"> <a href="{{ url('attendance') }}"><img class="logo_size"
                             src="assets\image\Monthly Staff status report.png" alt=""><button type="button" style="width:70%;"
                             class="btn btn-primary btn_align_btn">Attendance(CSV Uploaded)</button></a></div>
-                            <div class="col-sm-4 "> <a href="{{ url('addstaffs') }}"><img class="logo_size" src="assets\image\Bring up report.png"
+                            <div class="col-sm-4 "> <a href="{{ url('performance_form') }}"><img class="logo_size" src="assets\image\Bring up report.png"
                             alt=""><button type="button" style="width:70%;"
                             class="btn btn-primary btn_align_btn">Perfomence</button></a></div>
             </div>
