@@ -1,11 +1,13 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Performance Form</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  </head>
+
+
+@extends('layouts.hmsmain')
+@section('content') 
+<div class="container">
+<h4 id="hdtpa"><b>Performance Appraisal Form</b></h4>
+    <br><br>
+    </div>
+    <br>
+
   <style>
   .stars-wrapper,
 .stars-display {
@@ -74,50 +76,53 @@
 }
 </style>
   
-  <body>
-    <div class="container">
-       <h1>Self Appraisal</h1>
-      </div>
+<div class="container">
+  <div class="row align-items-start">
+    <div class="col">
+    <div class="mb-3">
+  <label for="idnumber" class="form-label">ID Number</label>
+  <input type="number" class="form-control" id="idnumber">
+   </div>
+    </div>
+    <div class="col">
+    <div class="mb-3">
+  <label for="name" class="form-label">Name</label>
+  <input type="text" class="form-control" id="name">
+</div>
+    </div>
+    <div class="col">
+    <div class="mb-3">
+  <label for="presentposition" class="form-label">Present Position</label>
+  <input type="text" class="form-control" id="presentposition">
+</div>
+</div>
+</div>
+ 
+
+  <div class="row align-items-start">
+    <div class="col">
+    <div class="mb-3">
+  <label for="postapply" class="form-label">Post Apply</label>
+  <input type="text" class="form-control" id="postapply">
+</div>
+    </div>
+    <div class="col">
+    <div class="mb-3">
+  <label for="currentsalary" class="form-label">Current Salary</label>
+  <input type="number" class="form-control" id="currentsalary">
+</div>
+    </div>
+    <div class="col">
+    <div class="mb-3">
+  <label for="reviewperiod" class="form-label">Review Period</label>
+  <input type="text" class="form-control" id="reviewperiod">
+</div>
+</div>
+</div>
+  
       <br>
-    <div class="container">
-    <div class="container text-center">
-        <div class="row align-items-start">
-          <div class="col">
-            <label for="id number" class="form-label">ID Number</label>
-            <input type="text" class="form-control" id="id number">
-          </div>
-          <div class="col">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name">
-          </div>
-          <div class="col">
-            <label for="job title" class="form-label">Job Title</label>
-            <input type="text" class="form-control" id="job title">
-          </div>
-        </div>
-        <div class="row align-items-center">
-          <div class="col">
-            <label for="present position" class="form-label">Present Position</label>
-            <input type="text" class="form-control" id="present position">
-          </div>
-          <div class="col">
-            <label for="current salary" class="form-label">Current Salary</label>
-            <input type="text" class="form-control" id="current salary">
-          </div>
-          <div class="col">
-            <label for="reviewer" class="form-label">Reviewer</label>
-            <input type="text" class="form-control" id="reviewer">
-          </div>
-        </div>
-        <div class="row align-items-end">
-          <div class="col">
-            <label for="review period" class="form-label">Review Period</label>
-            <input type="text" class="form-control" id="review period">
-          </div>
-        </div>
-      </div>
       <br>
-      <br>
+      
       <div class="container">
       <table class="table">
         <thead>
@@ -560,9 +565,14 @@
                 <div class="mx-auto" style="width: 200px;">
                     <input class="btn btn-primary" type="submit" value="Submit">
                     <span class="p-3"></span>
-                    <button type="button" class="btn btn-secondary">Cancel</button>
+                    <input class="btn btn-primary" type="submit" value="Cancel">
                   </div>   
             </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  </body>
-</html>
+    
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="{{ url('assets/js') }}/jquery.min.js"></script>
+
+@endsection

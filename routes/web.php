@@ -1291,6 +1291,7 @@ Route::any('view_job_applications','hrindex@view_job_applications')->name('view_
 Route::any('view_application_details','hrindex@view_application_details')->name('view_application_details');
 Route::any('create_job_post','hrindex@create_job_post')->name('create_job_post');
 Route::any('reviewed_details','hrindex@reviewed_details')->name('reviewed_details');
+Route::any('performance_form','hrindex@performance_form')->name('performance_form');
 Route::any('accindex','accindex@index')->name('accindex');
 Route::any('new_communication','ClientManagement@add_communication')->name('add_communication');
 Route::any('calander',"Calender@index")->name('calander');
