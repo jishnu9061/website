@@ -31,6 +31,10 @@ class hrindex extends Controller
     {
         return view('hr.reviewed_details');
     }
+    public function performance_form()
+    {
+        return view('hr.performance_form');
+    }
 
    
      

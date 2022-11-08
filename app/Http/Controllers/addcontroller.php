@@ -131,7 +131,7 @@ class addcontroller extends Controller
         // dd($leavetype);
 
      $Request->session()->put('staffregistered','Staff Registered');
-     return redirect('/addstaffs');
+     return redirect('/staffs');
    }
 
    public function allstaffs()

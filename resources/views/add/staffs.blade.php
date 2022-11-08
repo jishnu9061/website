@@ -368,7 +368,7 @@
                         </div>
                     </div>
                     <hr class="mb-4">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block" type="submit">Add staffs</button>
+                    <button  class="btn btn-primary btn-lg btn-block" type="submit">Add staffs</button>
             </div>
         </div>
         </form>
