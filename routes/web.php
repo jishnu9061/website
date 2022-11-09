@@ -1159,6 +1159,8 @@ Route::any('add-template',"filemanagement@addtemplate")->name('add-template');
 
 //file progress
 Route::any('add-file-progress',"filemanagement@addprogress")->name('add-file-progress');
+// Route::any('file_corporate',"filemanagement@file_corporate")->name('file_corporate');
+
 Route::any('/edit-file-progress/{id}',"filemanagement@editprogress")->name('edit-file-progress');
 Route::any('/update_progress',"filemanagement@update_progress")->name('update_progress');
 Route::any('/delete-file-progress/{id}',"filemanagement@delete_progress")->name('delete-file-progress');
