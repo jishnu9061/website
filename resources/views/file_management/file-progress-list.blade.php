@@ -174,6 +174,7 @@
 
                             <tbody>
                                 @foreach($file_progress_list as $list)
+                               
 
                                 <tr id="data">
                                     <td scope="row" class="text-center">{{$list->id}}</td>
@@ -194,8 +195,8 @@
                                                     class="fas fa-trash-alt" aria-hidden="true"></i>
                                     </td>
                                 </tr>
-
                                 @endforeach
+                             
 
                             </tbody>
 
@@ -222,7 +223,6 @@
                     <div class="modal fade" id="myModal">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
-
                                 <!-- Modal Header -->
                                 <div class="modal-header">
                                     <h2 class="text-center"><b>Add File Progress</b></h2>
@@ -232,6 +232,7 @@
                                 <!-- Modal body -->
                                 <div class="modal-body">
                                     <div class="container">
+
                                         <form method="post" action="{{ url('add-file-progress') }}"
                                             enctype="multipart/form-data">
 
@@ -239,12 +240,16 @@
                                             <div class="row">
 
                                                 <div class="col-md-12 order-md-1">
-
+                                                @foreach($file_progress_list as $lists)
                                                     <form method="post" action="" id="form">
                                                         @csrf
-
+                                                        <!-- @foreach($file_progress_list as $list)
                                                         <input type="text" name="corporate_id"
-                                                            value="{{$corporate[0]->corporate_id}}">
+                                                            value="{{$list->id}}">
+                                                        @endforeach -->
+                                                        <input type="text" name="corporate_id"
+                                                            value="{{$lists->id}}">
+                                                        @endforeach
                                                         <div class="row">
                                                             <div class="col-md-4">
                                                                 <div class="mb-1">
@@ -637,8 +642,6 @@
                 </div>
             </div>
         </div>
-
-
         <br>
 
         <!--END ADD FILE PROGRESS -->
