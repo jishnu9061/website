@@ -50,7 +50,7 @@
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list_client->client_type}}
                                 </td>
                                 <td scope="row" class="text-center"><a href="{{url('view-client')}}">
-                                        <a href="{{url('create-document')}}"><button style="width:90%; ">Add
+                                        <a href="{{url('create-document',$list_client->individual_id)}}"><button style="width:90%; ">Add
                                                 Documents</button></a></td>
                                 <td><a href="{{url('show-client',$list_client->individual_id )}}"><i style="color:black;"
                                             class="fa fa-eye" aria-hidden="true"></i></td></a>
