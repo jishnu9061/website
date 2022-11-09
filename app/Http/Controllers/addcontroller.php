@@ -216,7 +216,8 @@ class addcontroller extends Controller
     }
 
     $Request->session()->put('detailupdate','Details Updated');
-    return back();
+    // return back();
+    return redirect('/staffs');
    }
    public function disableuser($id)
    {
