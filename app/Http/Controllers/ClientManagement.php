@@ -357,20 +357,20 @@ class ClientManagement extends Controller
     public function document(){
         $client_document = DB::table('cra_document_detials')
         ->select('*')  
-        ->leftjoin('cra_individual_client_details','cra_individual_client_details.individual_id','=','cra_document_detials.document_id')
+        ->leftjoin('cra_individual_client_details','cra_individual_client_details.individual_id','=','cra_document_detials.individual_id')
         ->get(); 
   
         return view('client-management.client-document',compact('client_document'));
     }
 
 
-    public function createDocument(){
-
-        return view('client-management.add-document');
+    public function createDocument($individual_id){
+        $client_doc = DB::table('cra_individual_client_details')->where('individual_id',$individual_id)->first();
+        return view('client-management.add-document',compact('client_doc','individual_id'));
     }
 
     public function addDocument(Request $Request){
-
+        $individual_id = $Request['individual_id'];
         $document_type = $Request['type'];
         $file = $Request['file'];
 
@@ -391,6 +391,7 @@ class ClientManagement extends Controller
 
             'document_type' =>  $document_type,
             'file' =>  $img,
+            'individual_id' => $individual_id 
         ]);
         return redirect('/client-document');
 

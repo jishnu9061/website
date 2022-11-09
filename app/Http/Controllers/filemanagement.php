@@ -223,8 +223,7 @@ class filemanagement extends Controller
     public function addprogress(Request $request )
 
     { 
-        $id =$request['id'];
-      
+        $corporate_id = $request['corporate_id'];
         $progress_date=$request['date_progress'];
         $next_action=$request['next_action'];      
         $bringup_date=$request['bringup_date'];
@@ -245,7 +244,8 @@ class filemanagement extends Controller
 
 
         DB::table('cra_add_file_progress')->insert([
-            
+
+            'corporate_id' => $corporate_id,
             'progress_date' => $progress_date,
             'next_action' => $next_action,
             'client_name' => $client_name,
@@ -344,14 +344,14 @@ class filemanagement extends Controller
 
     public function fileprogresslist()
     {
+        $corporate= DB::table('cra_corporate_client_details')->get();
          $file_progress_list = DB::table('cra_add_file_progress')
-        ->select('*')  
+        ->select('*','cra_corporate_client_details.corporate_id')  
         ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_file_progress.corporate_id')
-        ->get(); 
-
-        return view('file_management.file-progress-list',compact('file_progress_list'));
-        
+        ->get();    
+        return view('file_management.file-progress-list',compact('file_progress_list','corporate'));
     }
+
 
     public function addfileprogressaction(Request $request)
     {
