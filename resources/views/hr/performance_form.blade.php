@@ -107,7 +107,7 @@
   <div class="mb-3">
   <label for="currentsalary" class="form-label">Current Salary</label>
   <input type="number" class="form-control" id="currentsalary">
-</div>
+   </div>
     </div>
     <div class="col">
     <div class="mb-3">
@@ -118,18 +118,16 @@
                     <option value="2">Two</option>
                     <option value="3">Three</option> -->
                   </select>
-  </div>
-  <div class="mb-3">
-  <label for="reviewperiodfrom" class="form-label">Review Period From</label>
-  <input type="date" class="form-control" id="reviewperiod">
-</div>
+   </div>
+   <div class="mb-3">
+   <label for="reviewperiodfrom" class="form-label">Review Period From</label>
+   <input type="date" class="form-control" id="reviewperiodfrom">
     </div>
-  </div>
-</div>
-  
-      <br>
-      <br>
-      
+    </div>
+    </div>
+    
+    <br>
+    <br> 
       <div class="container">
       <table class="table">
         <thead>
@@ -563,7 +561,7 @@
             <div class="mb-3">
                 <label for="In case of different Opinion, please give the details," class="form-label">In case of different Opinion, please give the details,</label>
                  <textarea class="form-control" id="In case of different Opinion, please give the details," rows="3"></textarea>
-                <div id="Note" class="form-text">((Note : Filled by the Accepting Officer))</div>
+                <div id="Note" class="form-text">(Note : Filled by the Accepting Officer)</div>
               </div>
             </div>
             <br>
