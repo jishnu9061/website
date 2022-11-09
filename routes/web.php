@@ -1048,7 +1048,7 @@ Route::any('/delete_client/{corporate_id}','ClientManagement@Corporate_destroy')
 
 //Client-Documents
 Route::any('client-document','ClientManagement@document')->name('client-document');
-Route::any('create-document','ClientManagement@createDocument')->name('create-document');
+Route::any('create-document/{individual_id}','ClientManagement@createDocument')->name('create-document');
 Route::any('add-document','ClientManagement@addDocument')->name('add-document');
 Route::any('view-document/{document_id}','ClientManagement@viewDocument')->name('view-document');
 Route::any('delete-document/{document_id}','ClientManagement@deleteDocument')->name('delete-document');
