@@ -181,7 +181,7 @@
                     <i data-feather="x"></i>
                 </button>
             </div>
-            <!-- <form action="{{url('save_ledger_acounts')}}" method="post" > -->
+            <form id="account_form" >
                                      @csrf
 
       
@@ -585,11 +585,6 @@ if ($("#journal_form")[0].checkValidity()){
     }
 
 
-
-
-
-
-
 }
 else{
 //Validate Form
@@ -613,7 +608,7 @@ function save_ledger_account(){
     var default_currency=$('#default-currency').val();
     var accounts_desc=$('#accounts-desc').val();
 
-
+console.log($("#account_form")[0]);
 
     if ($("#account_form")[0].checkValidity()){
 

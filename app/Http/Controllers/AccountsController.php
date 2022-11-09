@@ -720,13 +720,12 @@ public function create_new_ledger_account(Request $request){
     ->select('*','ledgeraccounts.id as id')
     ->orderBy('ledgeraccounts.id', 'desc')
     ->get();
+    // return view('Accounts.create_transaction',compact('account','hospitals','category','subcategory','budget_cat'));
 
     return response()->json([
         'response' => "success",
         'accounts' => $accounts
     ]);
-
-
 
 }
 
