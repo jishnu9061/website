@@ -149,12 +149,12 @@
             <tr>
                 <th colspan="1">
 
-                </th>
                 <th ><button class="btn btn-primary" id="create_btn" style="float:right;" onclick="test()"  type="button">Create</button>
                     <button class="btn btn-primary" type="button" id="creating_btn" style="display:none;float:right;" disabled>
                         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                         Creating...
                       </button>
+                  
                 
                 </th>
             </tr>
@@ -604,12 +604,14 @@ $("#journal_form")[0].reportValidity();
 
 function save_ledger_account(){
 
+
+
     var accounts_name=$('#accounts-name').val();
     var accounts_subcategory=$('#accounts-subcategory').val();
-    var accounts_category=$('#accounts-cat').val();
-    var accounts_desc=$('#accounts-desc').val();
-    var default_currency=$('#default-currency').val();
+    var accounts_category=$('#account-cat').val();
     var budget_cat=$('#budget-cat').val();
+    var default_currency=$('#default-currency').val();
+    var accounts_desc=$('#accounts-desc').val();
 
 
 
@@ -658,7 +660,7 @@ function save_ledger_account(){
 
                              $('#accounts-name').val('');
                             $('#accounts-subcategory').val('');
-                              $('#accounts-cat').val('');
+                              $('#account-cat').val('');
                               $('#budget-cat').val('');
                               $('#default-currency').val('');
                             $('#accounts-desc').val('');
@@ -693,7 +695,16 @@ function save_ledger_account(){
 }
 
 </script>
+
+
 @endsection
+
+
+
+
+
+
+
 
 
 
