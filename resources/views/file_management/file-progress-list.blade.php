@@ -150,7 +150,7 @@
             </div>
 
 
-<<<<<<< Updated upstream
+
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <div class="table-responsive">
@@ -212,68 +212,6 @@
                         </nav>
                     </div>
                     <div class="rows_count">Showing 11 to 20 of 100</div>
-=======
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            <div class="table-responsive">
-        <table class="table table-striped table-class" id= "table-id">
-                        <thead>
-                            <tr>
-                                <th class="text-center">*</th>
-                                <th class="text-center">Action <br>Type</th>
-                                <th class="text-center">Progress <br>Date</th>
-                                <th class="text-center">Client</th>
-                                <th class="text-center">File Name</th>
-                                <th class="text-center">Description</th>
-                                <th class="text-center">Time<br>Taken</th>
-                                <th class="text-center">Charge<br>Out<br>Rate</th>
-                                <th class="text-center">Way Action<br>(Way Forward)</th>
-                                <th class="text-center">RGD<br>By</th>
-                                <th class="text-center">Action</th>
-                                <!-- <th class="text-center"><input type="checkbox" name="" id=""></th> -->
-                                <!-- <th class="text-center">Edit</th> -->
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                           
-
-                            <tr id="data">
-                                <td scope="row" class="text-center">{{$list->id}}</td>
-                                <td scope="row" class="text-center">{{$list->action_type}}</td>
-                                <td scope="row" class="text-center">{{$list->progress_date}}</td>
-                                <td scope="row" class="text-center">{{$list->Client_name}}</td>
-                                <td scope="row" class="text-center">{{$list->file_name}}</td>
-                                <td scope="row" class="text-center">{{$list->action_description}}</td>
-                                <td scope="row" class="text-center">{{$list->time_taken_hours}}</td>
-                                <td scope="row" class="text-center"></td>
-                                <td scope="row" class="text-center">{{$list->next_action}}</td>
-                                <td scope="row" class="text-center"></td>
-                                <!-- <td scope="row" class="text-center">{{$list->activity}}</td> -->
-                                <!-- <td scope="row" class="text-center"><input type="checkbox" name="" id=""></td> -->
-                                <td scope="row" class="text-center">
-                                    <a href=""><i style="color:black;"
-                                            class="fa fa-edit" aria-hidden="true"></i>
-                                            <a onClick="return myFunction();" href=""><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
-                                </td>
-                            </tr>
-
-                          @endforeach
-
-                        </tbody>
-
-                    </table>
-</div>
-<!--		Start Pagination -->
-<div class='pagination-container'>
-      <nav>
-        <ul class="pagination">
-         <!--	Here the JS Function Will Add the Rows -->
-        </ul>
-      </nav>
-    </div>
-    <div class="rows_count">Showing 11 to 20 of 100</div>
->>>>>>> Stashed changes
 
                     <!-- 		End of Container -->
 
