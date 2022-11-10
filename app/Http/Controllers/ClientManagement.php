@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Illuminate\Support\Facades\Storage;
 
 class ClientManagement extends Controller
 {
@@ -377,7 +378,7 @@ class ClientManagement extends Controller
         if(!empty($Request->file('file'))){
 
             $this->validate($Request ,[
-                'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg|max:2048',
+                'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg',
             ]);
         }
 
@@ -385,7 +386,7 @@ class ClientManagement extends Controller
         $Request->file->extension();
 
 
-    $test = $Request->file->move(public_path('images\files'),$img);
+        $Request->file->move(public_path('image'),$img);
 
         DB::table('cra_document_detials')->insert([
 
