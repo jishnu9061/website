@@ -1,21 +1,46 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container">
-	<br>
-    <h2>Account Types</h2>
+{{-- heading --}}
+  <h4 id="hdtpa"><b>Account Types</b></h4>
+  <br><br>
+  
 
         <button  class="btn btn-primary"  data-toggle="modal" id="patient" data-bs-toggle="modal"
-        data-bs-target="#default"  class="btn btn-secondary">Create Account Type</button>
+        data-bs-target="#default"  class="btn btn-secondary">Add Type</button>
+        <br>
+        <div class="container">
+    <div class="header_wrap">
+      <div class="num_rows">
+        <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
+         <select class  ="form-control" aria-label="Page navigation example" name="state" id="maxRows">
 
-      <div class="table-responsive">
-<table class="table table-striped" id="allpatients" style="margin-top: 40px;">
+          <option value="5">5</option>
+          <option value="10">10</option>
+           <option value="15">15</option>
+           <option value="20">20</option>
+           <option value="50">50</option>
+           <option value="70">70</option>
+           <option value="100">100</option>
+          <option value="5000">Show ALL Rows</option>
+          </select>
+         
+        </div>
+      </div>
+      <div class="tb_search">
+<input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
+      </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-class" id= "table-id">
   <thead>
     <tr>
       <th scope="col">Sl</th>
       <th scope="col">Account Type</th>
       <th scope="col">Description </th>
-      <th scope="col">Edit</th>
-      <th scope="col">Delete</th>
+      <th scope="col">Action</th>
+     
 
     </tr>
   </thead>
@@ -34,15 +59,14 @@ $no=1;
 
 
                 <a href="#" class="edits"    data-toggle="modal" id="amb_edit" data-bs-toggle="modal"
-                   data-bs-target="#edit"><i class="fas fa-edit" onclick="values_edit(`{{$ledcat->id}}`,`{{$ledcat->ledgeraccount_categories}}`,`{{$ledcat->ledgeraccount_categories_desc}}`);" >
+                   data-bs-target="#edit"><i  style=" color:rgb(13, 1, 56);" class="fas fa-edit" onclick="values_edit(`{{$ledcat->id}}`,`{{$ledcat->ledgeraccount_categories}}`,`{{$ledcat->ledgeraccount_categories_desc}}`);" >
                 </i></a>
                 @endif
-            </td>
-                   <td>
+            
                     @if($ledcat->categories_update_privilage==0)
 
          <a onclick="return confirm('Are you sure ?');" href="{{ url('delete_ledger_accounts_categories/'.$ledcat->id) }}">
-            <i class="fas fa-trash-alt"></i></a>
+            <i  style=" color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></a>
             @endif
         </td>
       </tr>
@@ -54,22 +78,27 @@ $no=1;
 </table>
       </div>
 </div>
+<!--		Start Pagination -->
+<div class='pagination-container'>
+      <nav>
+        <ul class="pagination">
+         <!--	Here the JS Function Will Add the Rows -->
+        </ul>
+      </nav>
+    </div>
+    <div class="rows_count">Showing 11 to 20 of 100</div>
 
+ <!-- 		End of Container -->
 
-
-  <div class="modal fade text-left" id="default" tabindex="-1" role="dialog"
+<div class="modal fade text-left" id="default" tabindex="-1" role="dialog"
                             aria-labelledby="myModalLabel1" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-header">
 
+<h2 class="text-centre"><b>Add Type</b></h2>
 
-
-                                    <h5 class="modal-title bb" id="myModalLabel1"> Add Account Types </h5>
-
-
-
-     <button type="button" class="close rounded-pill" data-bs-dismiss="modal" aria-label="Close">
+<button type="button" class="close rounded-pill" data-bs-dismiss="modal" aria-label="Close">
          <i data-feather="x"></i>
           </button>
              </div>

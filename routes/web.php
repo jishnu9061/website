@@ -155,7 +155,7 @@ Route::any('/callthepatient{id}', 'hospitalController@callthepatient');
 Route::any('/addstaffs', 'addController@addstaffs');
 Route::any('/editstafff', 'addController@editstafff');
 Route::any('/addthestaffs', 'addController@addthestaffs');
-Route::any('/staffs', 'addController@allstaffs');
+// Route::any('/staffs', 'addController@allstaffs');
 Route::any('/managestaff{id}', 'hrcontroller@managestaff');
 Route::any('/managedepstaff{id}', 'departmentcontroller@managedepstaff');
 Route::any('/disableuser{id}', 'addController@disableuser');
@@ -597,6 +597,15 @@ Route::any('/delete_ledger_budget_category/{id}','AccountsController@delete_ledg
 Route::any('/expense_report','AccountsController@expense_report')->name('expense_report');
 //vipin end
 
+//--------reshma------------accounts-----
+Route::any('/budget_forecasting','AccountsController@budget_forecasting')->name('budget_forecasting');
+Route::any('/add_account','AccountsController@add_account')->name('add_account');
+Route::any('/budget_forecat_dept','AccountsController@budget_forecat_dept')->name('budget_forecat_dept');
+Route::any('/i_p_bank_bal','AccountsController@i_p_bank_bal')->name('i_p_bank_bal');
+Route::any('/reconcile_bank_entries','AccountsController@reconcile_bank_entries')->name('reconcile_bank_entries');
+Route::any('/bank_recon_report','AccountsController@bank_recon_report')->name('bank_recon_report');
+//--------reshma------------accounts-----
+
 Route::any('/get_subcat', 'AccountsController@get_subcat')->name('get_subcat');
 Route::any('/create_transaction', 'AccountsController@create_transaction')->name('create_transaction');
 Route::post('/create_new_journal', 'AccountsController@create_new_journal')->name('create_new_journal');
@@ -1021,9 +1030,8 @@ Route::any('advocates_target_2026','UserManagement@advocatestarget2026')->name('
 //Client-list
 Route::any('add-client',"ClientManagement@addNewClient")->name('add-client');
 Route::any('add_newclient',"ClientManagement@addNewclient")->name('add_newclient');
-// Route::any('store-client',"ClientManagement@storeClient")->name('store-client');
 Route::any('client_list','ClientManagement@view')->name('client_list');
-Route::any('/edit_person/{id}','ClientManagement@edit_person')->name('edit_person');
+Route::any('/edit_person/{individual_id}','ClientManagement@edit_person')->name('edit_person');
 Route::any('show-client/{id}','ClientManagement@show')->name('show-client');
 Route::any('client-index',"ClientManagement@index")->name('client-index');
 Route::any('update-client',"ClientManagement@updateClient")->name('update-client');
@@ -1032,18 +1040,18 @@ Route::any('delete-client/{id}',"ClientManagement@deleteClient")->name('delete-c
 Route::any('add-corporate','ClientManagement@addCorporate')->name('add-corporate');
 // Route::any('store-corporate','ClientManagement@storeCorporate')->name('store-corporate');
 Route::any('corporate-list','ClientManagement@listCorporate')->name('corporate-list');
-Route::any('/edit_client/{id}','ClientManagement@edit_corporate')->name('edit_client');
+Route::any('/edit_client/{corporate_id}','ClientManagement@edit_corporate')->name('edit_client');
 Route::any('/update-corporate','ClientManagement@Update_corporate')->name('update-corporate');
-Route::any('/delete_client/{id}','ClientManagement@Corporate_destroy')->name('delete_client');
+Route::any('/delete_client/{corporate_id}','ClientManagement@Corporate_destroy')->name('delete_client');
 //end corporate
 //end Client-List
 
 //Client-Documents
 Route::any('client-document','ClientManagement@document')->name('client-document');
-Route::any('create-document','ClientManagement@createDocument')->name('create-document');
+Route::any('create-document/{individual_id}','ClientManagement@createDocument')->name('create-document');
 Route::any('add-document','ClientManagement@addDocument')->name('add-document');
-Route::any('view-document/{id}','ClientManagement@viewDocument')->name('view-document');
-Route::any('delete-document/{id}','ClientManagement@deleteDocument')->name('delete-document');
+Route::any('view-document/{document_id}','ClientManagement@viewDocument')->name('view-document');
+Route::any('delete-document/{document_id}','ClientManagement@deleteDocument')->name('delete-document');
 //end Client-Documents
 
 //Client-Pickup
@@ -1134,6 +1142,8 @@ Route::any('file-list',"filemanagement@views")->name('file-list');
 Route::any('/edit-file/{id}',"filemanagement@edit")->name('edit-file');
 Route::any('/update',"filemanagement@update")->name('update');
 
+Route::any('add-task',"filemanagement@addtask")->name('add-task');
+
 Route::any('/file_destroy/{id}',"filemanagement@file_destroy")->name('file_destroy');
 
 Route::any('add-new-file',"filemanagement@addnew")->name('add-new-file');
@@ -1149,6 +1159,8 @@ Route::any('add-template',"filemanagement@addtemplate")->name('add-template');
 
 //file progress
 Route::any('add-file-progress',"filemanagement@addprogress")->name('add-file-progress');
+// Route::any('file_corporate',"filemanagement@file_corporate")->name('file_corporate');
+
 Route::any('/edit-file-progress/{id}',"filemanagement@editprogress")->name('edit-file-progress');
 Route::any('/update_progress',"filemanagement@update_progress")->name('update_progress');
 Route::any('/delete-file-progress/{id}',"filemanagement@delete_progress")->name('delete-file-progress');
@@ -1279,17 +1291,24 @@ Route::any('view_bill',"clientinvoicing@view_bill_item")->name('view_bill_item')
 
 // hr module belji
 Route::any('hrindex','hrindex@index')->name('hrindex');
+Route::any('recruitment','hrindex@recruitment')->name('recruitment');
+Route::any('job_posts','hrindex@job_posts')->name('job_posts');
+Route::any('view_job_applications','hrindex@view_job_applications')->name('view_job_applications');
+Route::any('view_application_details','hrindex@view_application_details')->name('view_application_details');
+Route::any('create_job_post','hrindex@create_job_post')->name('create_job_post');
+Route::any('reviewed_details','hrindex@reviewed_details')->name('reviewed_details');
+Route::any('performance_form','hrindex@performance_form')->name('performance_form');
 Route::any('accindex','accindex@index')->name('accindex');
 Route::any('new_communication','ClientManagement@add_communication')->name('add_communication');
 Route::any('calander',"Calender@index")->name('calander');
 
+Route::any('over_time','hrindex@over_time_list')->name('over_time');
+Route::any('view_over_time','hrindex@viewover_time_list')->name('view_over_time');
+Route::any('add_assingment','hrindex@add_assignment')->name('add_assingment');
 
-
-
-
-
-
-
+Route::any('edit-assigment/{id}','hrindex@editassigment')->name('edit-assigment');
+Route::any('update-assigment','hrindex@updateassigment')->name('update-assigment');
+Route::any('drop-assigment/{id}','hrindex@dropassigment')->name('drop-assigment');
 
 
 

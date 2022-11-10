@@ -48,8 +48,8 @@
                                 <thead>
                                     <tr>
                                         <!-- <th class="text-center"> <input type="checkbox"></th> -->
-                                        <th class="text-center">Actions</th>
-                                        <th class="text-center">Matter</th>
+                                        <th class="text-center">Client</th>
+                                        <th class="text-center"></th>
                                         <th class="text-center">Client</th>
                                         <th class="text-center">Responsible<br>Solicitor</th>
                                         <th class="text-center">Originating<br>Solicitor</th>
@@ -98,10 +98,6 @@
                                 <div class="modal-content" >
 
                                     <!-- Modal Header -->
-                                    <div class="modal-header" >
-                                        <h2 class="text-centre"><b>Add New File</b></h2>
-
-                                    </div>
 
                                     <!-- Modal body -->
                                     <div class="modal-body" style="background-color:white">
@@ -110,201 +106,248 @@
                                                 enctype="multipart/form-data">
 
                                                 @csrf
-                                                <div class="row">
+                                                <h4>Matter</h4>
+                <div class="row">
                    
                    
-                   <div class="col-md-6">
-                       <div class="mb-1">
-                           <label for="username">Client</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Client</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
-                               </div>
-                               <select name="client_type" id="cars">
-                                   <option>Select</option>
-                                   <option>Accord University</option>
-                                   <option>Accounts And Books</option>
-                               </select>
-                           </div>
-                       </div>
-                   </div>
-               
-               <div class="col-md-6">
-                       <div class="mb-1">
-                           <label for="username">Associate Handling</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend">
+                                </div>
+                                <input type="text" class="form-control" name="client" id="age" value="" >
+                            </div>
+                        </div>
+                    </div>
+                
+                <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Email</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
-                               </div>
-                               <select name="associate_handling" id="cars" disabled>
-                                   <option >Corporate</option>
-                                   <option >Individual</option>
-                               </select>
-                           </div>
-                       </div>
-                   </div>
-</div>
+                                </div>
+                                <input type="email" class="form-control" name="email" id="age" value="" >
+                            </div>
+                        </div>
+                    </div>
+<!-- </div>
 <br>
 
-               <div class="row">
-                   <div class="col-md-4">
-                       <div class="mb-1">
-                           <label for="username">Opening Date</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend"></div>
-                               <input type="date" class="form-control" name="opening_date" id="age" value="" min="0" max="99">
-                               <div class="invalid-feedback" style="width: 100%;">
-                                   Age is required.
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-md-4">
-                       <div class="mb-1">
-                           <label for="username">Client Ref.No or(Case No)</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend"></div>
-                               <input type="text" class="form-control" name="client_ref_no" id="age" value="" min="0" max="99">
-                               <div class="invalid-feedback" style="width: 100%;">
-                                   Age is required.
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-md-4">
-                       <div class="mb-1">
-                           <label for="username">Our File Ref No</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend"></div>
-                               <input type="text" class="form-control" name="our_file_ref_no" value=""
-                                   id="confirm_password">
-                               <div class="invalid-feedback" style="width: 100%;">
-                                   Password is required.
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-               <br>
-               <div class="row">
-                   <div class="col-md-4">
-                       <div class="mb-1">
-                           <label for="username">File Name/Subject</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend"></div>
-                               <input type="text" class="form-control" name="file_name" id="age" value=""
-                                min="0" max="99">
-                               <div class="invalid-feedback" style="width: 100%;">
-                                   Age is required.
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-md-4">
-                       <div class="mb-1">
-                           <label for="username">Approval Partner</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend">
+                <div class="row"> -->
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Telephone</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="number" class="form-control" name="phone" id="age" value="" >
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Age is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="address" id="age" value="" >
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Age is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">File Type</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="file_type" value=""
+                                    id="confirm_password">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Opening Date</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="date" class="form-control" name="open_date" id="age" value=""
+                                 min="0" max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Age is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Close Date</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
-                               </div>
-                               <select name="approval_partner" id="cars">
-                                   <option >Select</option>
-                                   <option >Residensial</option>
-                                   <option >Non Residensial</option>
-                               </select>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-md-4">
-                       <div class="mb-1">
-                           <label for="username">Customer Name</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend"></div>
-                               <input type="text" class="form-control" name="customer_name" value=""
-                                   id="confirm_password">
-                               <div class="invalid-feedback" style="width: 100%;">
-                                   Password is required.
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-               <br>
-               <div class="row">
-               <div class="col-md-6">
-                       <div class="mb-1">
-                           <label for="username">Customer Address</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend"></div>
-                               <input type="text" class="form-control" name="address" value=""
-                                   id="confirm_password">
-                               <div class="invalid-feedback" style="width: 100%;">
-                                   Password is required.
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-md-6">
-                       <div class="mb-1">
-                           <label for="username">Customer Tel</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend"></div>
-                               <input type="text" class="form-control" name="telephone" value=""
-                                   id="confirm_password">
-                               <div class="invalid-feedback" style="width: 100%;">
-                                   Password is required.
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   
-               </div>
-               <br>
-               <div class="row">
-               <div class="col-md-4">
-                       <div class="mb-1">
-                           <label for="username">Customer E-mail</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend"></div>
-                               <input type="email" class="form-control" name="email" value=""
-                                   id="confirm_password">
-                               <div class="invalid-feedback" style="width: 100%;">
-                                   Password is required.
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-md-4">
-                       <div class="mb-1">
-                           <label for="username">Amount</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend"></div>
-                               <input type="narration" class="form-control" name="amount" value=""
-                                   id="confirm_password">
-                               <div class="invalid-feedback" style="width: 100%;">
-                                   Password is required.
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col-md-4">
-                       <div class="mb-1">
-                           <label for="username">Workflow</label>
-                           <div class="input-group">
-                               <div class="input-group-prepend">
+                                </div>
+                                <input type="date" class="form-control" name="close_date" id="age" value=""
+                                 min="0" max="99">
+                            </div>
+                        </div>
+                    </div>
+                    
+                <div class="row">
+               
+                    <div class="col-md-12">
+                        <div class="mb-1">
+                            <label for="username">Comments</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <textarea class="form-control" id="form7Example7" rows="2" name="comments"></textarea><br>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <br>
+                <h4>Notification</h4>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-1">
+                            <label for="username">Email</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
-                               </div>
-                               <select name="workflow" id="cars">
-                                   <option >Select</option>
-                                   <option >Residensial</option>
-                                   <option >Non Residensial</option>
-                               </select>
-                           </div>
-                       </div>
-                   </div>
+                                </div>
+                                <input type="email" class="form-control" name="notifi_email" value=""
+                                    id="confirm_password"><br>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                <h4>Contacts</h4>
+                <div class="row">
+                <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Telephone</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="number" class="form-control" name="con_phone" value=""
+                                    id="confirm_password">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Email</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="email" class="form-control" name="con_email" value=""><br>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <h4>Cutom Fields</h4>
+                    <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="email" class="form-control" name="email" value=""
+                                    id="confirm_password">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="email" class="form-control" name="email" value=""
+                                    id="confirm_password"><br>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <br>
+                <h4>Billing</h4>
+                <div class="row">
                    
-               </div>
-               <br>
+                    <div class="col-md-12">
+                        <div class="mb-1">
+                            <label for="username">Amount</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="amount" value=""
+                                    id="confirm_password"><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h4>Task</h4>
+                    <div class="row">
+                    <div class="col-md-8">
+                        <div class="mb-1">
+                            <label for="username">Task</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <select name="task" id="cars">
+                                    <option >Select</option>
+                                    <option >Residensial</option>
+                                    <option >Non Residensial</option>
+                                </select>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-2">
+                        <div class="mb-1">
+                            <label for="username"></label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <a href="{{url('add-task')}}" ><i class="fa fa-plus" style="font-size:24px"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <br>
               
                    <div class="row">
                        <div class="col-sm">
@@ -368,40 +411,261 @@
         <br>
 
                   <!-- COLUMNS -->
-                  <div class="modal fade" id="myModal-1">
+                   <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content" >
 
                                     <!-- Modal Header -->
-                                    <div class="modal-header" >
-                                </div>
 
                                     <!-- Modal body -->
-                                    <div class="modal-body" >
+                                    <div class="modal-body" style="background-color:white">
                                         <div class="container">
-                                            <form method="post" action="{{ url('') }}"
+                                            <form method="post" action="{{ url('add-new-file') }}"
                                                 enctype="multipart/form-data">
 
                                                 @csrf
+                                                <h4>Matter</h4>
+                <div class="row">
+                   
+                   
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Client</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
-    <form action="/action_page.php">
-        
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check1">
-      <label class="form-check-label" for="check1">Option 1</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check2">
-      <label class="form-check-label" for="check2">Option 2</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input">
-      <label class="form-check-label">Option 3</label>
-    </div>
-    
-   
-  </form>
-                                            
+                                </div>
+                                <input type="text" class="form-control" name="client" id="age" value="" >
+                            </div>
+                        </div>
+                    </div>
+                
+                <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Email</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="email" class="form-control" name="email" id="age" value="" >
+                            </div>
+                        </div>
+                    </div>
+<!-- </div>
+<br>
+
+                <div class="row"> -->
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Telephone</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="number" class="form-control" name="phone" id="age" value="" >
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Age is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="address" id="age" value="" >
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Age is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">File Type</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="file_type" value=""
+                                    id="confirm_password">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Opening Date</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="date" class="form-control" name="open_date" id="age" value=""
+                                 min="0" max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Age is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Close Date</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="date" class="form-control" name="close_date" id="age" value=""
+                                 min="0" max="99">
+                            </div>
+                        </div>
+                    </div>
+                    
+                <div class="row">
+               
+                    <div class="col-md-12">
+                        <div class="mb-1">
+                            <label for="username">Comments</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <textarea class="form-control" id="form7Example7" rows="2" name="comments"></textarea><br>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <br>
+                <h4>Notification</h4>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-1">
+                            <label for="username">Email</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="email" class="form-control" name="notifi_email" value=""
+                                    id="confirm_password"><br>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                <h4>Contacts</h4>
+                <div class="row">
+                <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Telephone</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="number" class="form-control" name="con_phone" value=""
+                                    id="confirm_password">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Email</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="email" class="form-control" name="con_email" value=""><br>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <h4>Cutom Fields</h4>
+                    <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="email" class="form-control" name="email" value=""
+                                    id="confirm_password">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="email" class="form-control" name="email" value=""
+                                    id="confirm_password"><br>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <br>
+                <h4>Billing</h4>
+                <div class="row">
+                   
+                    <div class="col-md-12">
+                        <div class="mb-1">
+                            <label for="username">Amount</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="amount" value=""
+                                    id="confirm_password"><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h4>Task</h4>
+                    <div class="row">
+                    <div class="col-md-8">
+                        <div class="mb-1">
+                            <label for="username">Task</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <select name="task" id="cars">
+                                    <option >Select</option>
+                                    <option >Residensial</option>
+                                    <option >Non Residensial</option>
+                                </select>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-2">
+                        <div class="mb-1">
+                            <label for="username"></label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <a href="" data-toggle="modal" data-target="#myModal-task"><i class="fa fa-plus" style="font-size:24px"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <br>
               
                    <div class="row">
                        <div class="col-sm">
@@ -412,8 +676,8 @@
                        </div>
                        <div class="col-sm">
                            <br>
-                           <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update Columns</button>
-                           <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                           <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
+                           <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
                        </div>
                    </div>
                </div>
@@ -422,8 +686,12 @@
    </div>
 </div>
 
+
+
+
+
 </div>
-<div class="modal" id="mymodalb">
+<div class="modal" id="mymodal">
    <div class="modal-dialog">
        <div class="modal-content">
            <div class="modal-header">
@@ -457,8 +725,6 @@
    </div>
 </div>
 </div>
-
-        <br>
 
                   <!-- END COLUMNS -->
 

@@ -39,6 +39,8 @@
 
 
     {{-- <h4 id="hdtpa"><b>Matters</b></h4>
+    
+    <!-- {{-- <h4 id="hdtpa"><b>Matters</b></h4>
 
 
      <br><br><br> --}}
@@ -54,12 +56,12 @@
          <li><a id="gg"  class="btn btn-primary " href="#seb">Notification</a> </li>
          <li><a id="gg"  class="btn btn-primary " href="#sea">Matter</a> </li>
 
-     </ul> --}}
+     </ul> --}} -->
 
 
 
      
-     {{-- <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top " id="nnav" >
+     <!-- {{-- <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top " id="nnav" >
          <a onclick="myFunction()" class="navbar-brand" href="#"><h4 ><b>Matters</b></h4></a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
            <span class="navbar-toggler-icon"></span>
@@ -87,7 +89,7 @@
            </div>
          </div>
        </nav>
-        --}}
+        --}} -->
 
        <section  class="ml-5 mr-5  "  >
 <br id="sea">

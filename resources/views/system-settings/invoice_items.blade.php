@@ -1,10 +1,55 @@
 
 @extends('layouts.hmsmain')
 @section('content')
+<head>
+<style>
+  .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.pagination {
+margin: 0;
+}
+
+.pagination li:hover{
+cursor: pointer;
+}
+
+.header_wrap {
+padding:30px 0;
+}
+.num_rows {
+width: 20%;
+float:left;
+}
+.tb_search{
+width: 20%;
+float:right;
+}
+.pagination-container {
+width: 70%;
+float:left;
+}
+
+.rows_count {
+width: 20%;
+float:right;
+text-align:right;
+color: #999;
+}
+</style>    
+</head>
 <div class="container">
   {{-- heading --}}
   <h4 id="hdtpa"><b>Invoice Items</b></h4>
-  <br><br>
+  <br>
 
            
 
@@ -17,12 +62,34 @@
                      
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
         <!-- <a href="{{('add_invoice_item')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add New Item</button></a><br> -->
+        <div class="container">
+    <div class="header_wrap">
+      <div class="num_rows">
+        <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
+         <select class  ="form-control" aria-label="Page navigation example" name="state" id="maxRows">
+
+          <option value="5">5</option>
+          <option value="10">10</option>
+           <option value="15">15</option>
+           <option value="20">20</option>
+           <option value="50">50</option>
+           <option value="70">70</option>
+           <option value="100">100</option>
+          <option value="5000">Show ALL Rows</option>
+          </select>
+         
+        </div>
+      </div>
+      <div class="tb_search">
+<input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
+      </div>
+    </div>
             <br>
        
         <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Invoice Item List</h3>
     <!-- <div class="container"> -->
-    <div class="table-responsive"> 
-      <table class="table table-bordered" id="new-item">
+    <div class="table-responsive">
+        <table class="table table-striped table-class" id= "table-id">
                   <thead>
                         <tr>
                         <th class="text-center" >No</th>
@@ -40,13 +107,13 @@
     <tbody>
     @foreach($invoice_item as $invoice)
  <tr>
-    <td  class="text-center" style="background-color:white;color:rgb(13, 1, 56);">{{ $invoice->id }}</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);">{{ $invoice->item_code }}</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);">{{ $invoice->item_category }}</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);">{{ $invoice->item_name }}</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);">{{ $invoice->description }}</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);">{{ $invoice->sales_tax_code }}</td>
-                        <td  style="background-color:white;color:rgb(13, 1, 56);">{{ $invoice->income_account }}</td>
+    <td  class="text-center" >{{ $invoice->id }}</td>
+                        <td >{{ $invoice->item_code }}</td>
+                        <td>{{ $invoice->item_category }}</td>
+                        <td >{{ $invoice->item_name }}</td>
+                        <td >{{ $invoice->description }}</td>
+                        <td >{{ $invoice->sales_tax_code }}</td>
+                        <td  >{{ $invoice->income_account }}</td>
                         <td  scope="row"class="text-center">
                         <a href="{{url('edit_invoice_item',$invoice->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                         <a href="{{url('delete_invoice_item',$invoice->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
@@ -56,6 +123,18 @@
                     @endforeach
                 </tbody>
 </table>
+</div>
+<!--		Start Pagination -->
+<div class='pagination-container'>
+      <nav>
+        <ul class="pagination">
+         <!--	Here the JS Function Will Add the Rows -->
+        </ul>
+      </nav>
+    </div>
+    <div class="rows_count">Showing 11 to 20 of 100</div>
+
+ <!-- 		End of Container -->
          <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
@@ -162,7 +241,7 @@
                                 <option>9500====Other Income - Client gets Account Payable - Cooperative Bank</option>
                                 </select>
                                 <div class="col-md-1">
-                    {{-- <a href="{{url('add_gl_account')}}"> <i style="font-size:20px; color:rgb(13, 1, 56);" class="bi bi-plus-circle-fill"> </i></a> --}}
+                     <a href="{{url('add_gl_account')}}"> <i style="font-size:20px; color:rgb(13, 1, 56);" class="bi bi-plus-circle-fill"> </i></a> 
                 </div>
                                
                                 <div class="invalid-feedback" style="width: 100%;">

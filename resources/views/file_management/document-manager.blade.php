@@ -1,6 +1,51 @@
 @extends('layouts.hmsmain')
 @section('content')
+<html>
+    <head>
+    <style>
+  .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.pagination {
+margin: 0;
+}
 
+.pagination li:hover{
+cursor: pointer;
+}
+
+.header_wrap {
+padding:30px 0;
+}
+.num_rows {
+width: 20%;
+float:left;
+}
+.tb_search{
+width: 20%;
+float:right;
+}
+.pagination-container {
+width: 70%;
+float:left;
+}
+
+.rows_count {
+width: 20%;
+float:right;
+text-align:right;
+color: #999;
+}
+</style>    
+    </head>
 
 <body>
     <div class="container">
@@ -8,7 +53,7 @@
         
         <div>{{-- heading --}}
     <h4 id="hdtpa"><b>Document Manager(DMS)</b></h4>
-    <br><br>
+    
             
             </div>
         <br>
@@ -28,10 +73,31 @@
             </div>
         </div>
         <br>
+        <div class="container">
+    <div class="header_wrap">
+      <div class="num_rows">
+        <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
+         <select class  ="form-control" aria-label="Page navigation example" name="state" id="maxRows">
 
+          <option value="5">5</option>
+          <option value="10">10</option>
+           <option value="15">15</option>
+           <option value="20">20</option>
+           <option value="50">50</option>
+           <option value="70">70</option>
+           <option value="100">100</option>
+          <option value="5000">Show ALL Rows</option>
+          </select>
+         
+        </div>
+      </div>
+      <div class="tb_search">
+<input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
+      </div>
+    </div>
 
-        <div class="table-responsive">
-        <div class="tab-content" id="myTabContent">
+    <div class="table-responsive">
+        <table class="table table-striped table-class" id= "table-id">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
                 <table class="table table-bordered" id="new-item">
@@ -64,16 +130,18 @@
                     </tbody>
 
                 </table>
-                 <br>
-                <nav aria-label="Page navigation example">
-                                <ul class="pagination">
-                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Previous</a></li>
-                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Next</a></li>
-                                </ul>
-                            </nav>
+</div>
+               <!--		Start Pagination -->
+    <div class='pagination-container'>
+      <nav>
+        <ul class="pagination">
+         <!--	Here the JS Function Will Add the Rows -->
+        </ul>
+      </nav>
+    </div>
+    <div class="rows_count">Showing 11 to 20 of 100</div>
+
+ <!-- 		End of Container -->
 
 
                                          <!-- START   FILE UPLOAD -->
@@ -108,7 +176,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="" id="cars">
+                                <select name="client" id="cars">
                         <option >---select---</option>
                         <option >client 1</option>
                         <option >client 2</option>
@@ -126,7 +194,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="" id="cars">
+                                <select name="file" id="cars">
                         <option >---select---</option>
                         <option >file 1</option>
                         <option >file 2</option>
@@ -142,7 +210,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="other_file" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -156,7 +224,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
+                                <select name="document_category" id="cars">
                         <option >---select---</option>
                         <option >category_1</option>
                         <option >category_2</option>
@@ -173,7 +241,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="document_title" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
                                 </div>
@@ -196,7 +264,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="nature_document"></textarea>
                             </div>
                         </div>
                     </div>
@@ -209,7 +277,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="search"></textarea>
                             </div>
                         </div>
                     </div>
@@ -231,7 +299,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
+                    <select name="document_owner" id="cars">
                         <option >---select---</option>
                         <option >doc_owner_1</option>
                         <option >doc_owner_2</option>
@@ -252,7 +320,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="text" class="form-control" name="final_aggrement" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -270,7 +338,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="file" class="form-control" name="website" id="confirm_password" required>
+                    <input type="file" class="form-control" name="document_upload" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -286,7 +354,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="file" class="form-control" name="website" id="confirm_password" required>
+                    <input type="file" class="form-control" name="folder_upload" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -374,7 +442,7 @@
                 <!-- Modal body -->
                 <div class="modal-body">
                     <div class="container">
-                        <form method="post" action="{{ url('upload-document') }}" enctype="multipart/form-data">
+                        <form method="post" action="{{ url('generate-document') }}" enctype="multipart/form-data">
 
 
                             <div class="row">
@@ -391,7 +459,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <select name="client" id="cars">
+                        <option >---select---</option>
+                        <option >client 1</option>
+                        <option >client 2</option>
+                        <option >client 3</option>
+                    </select>
                             </div>
                         </div>
                     </div>
@@ -404,7 +477,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <select name="file" id="cars">
+                        <option >---select---</option>
+                        <option >client 1</option>
+                        <option >client 2</option>
+                        <option >client 3</option>
+                    </select>
                             </div>
                         </div>
                     </div>
@@ -415,7 +493,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="document_category" id="confirm_password" required>
                             </div>
                         </div>
                     </div>
@@ -427,7 +505,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="website" id="confirm_password" required>
+                                <input type="text" class="form-control" name="document_title" id="confirm_password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Telephone Number is required.
                                 </div>
@@ -450,7 +528,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="nature_document"></textarea>
                             </div>
                         </div>
                     </div>
@@ -463,7 +541,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <textarea class="form-control" id="form7Example7" rows="3"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="search"></textarea>
                             </div>
                         </div>
                     </div>
@@ -485,8 +563,11 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <select name="country" id="cars">
-                        <option value="volvo"></option>
+                    <select name="document_owner" id="cars">
+                    <option >---select---</option>
+                        <option >owner 1</option>
+                        <option >owner 2</option>
+                        <option >owner 3</option>
                     </select>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
@@ -503,7 +584,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="text" class="form-control" name="viewer" id="confirm_password"  >
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -517,7 +598,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="website" id="confirm_password" required>
+                    <input type="text" class="form-control" name="document_template" id="confirm_password" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>

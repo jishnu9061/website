@@ -12,10 +12,13 @@
   }
 </style>
 <div class="container">
-    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <meta name="csrf-token" content="{{ csrf_token() }}"/>
     <link rel="stylesheet" href="{{ url('assets/css') }}/sweetalert.css">
 	<br>
-    <h2>Ledger Accounts</h2>
+    {{-- heading --}}
+  <h4 id="hdtpa"><b>Ledger Accounts</b></h4>
+  <br><br>
+   
 
         <button  class="btn btn-primary "  data-toggle="modal" id="patient" data-bs-toggle="modal"
         data-bs-target="#default"  class="btn btn-secondary">Add Account</button>
@@ -26,12 +29,13 @@
     <tr>
       <th scope="col">Sl</th>
       <th scope="col">Account Name</th>
-      <th scope="col">Type</th>
-      <th scope="col">Group</th>
-      <th scope="col">Budget</th>
+      <th scope="col">Account Type</th>
+      <th scope="col">Account Category</th>
+      <th scope="col">Budget Category</th>
+      <th scope="col">Default Currency</th>
       <th scope="col">Description </th>
-      <th scope="col">Edit</th>
-      <th scope="col">Delete</th>
+      <th scope="col">Action</th>
+    
 
     </tr>
   </thead>
@@ -45,24 +49,23 @@ $no=1;
           <td id="expanse-name">{{ $exp_type->accounts_name }}</td>
           <td id="expanse_status">{{ $exp_type->category_name}}</td>
           <td id="expanse_status">{{ $exp_type->subcategory_name}}</td>
-          <td>{{ $exp_type->budget_name }}</td>
+          <td id="expanse_status">{{ $exp_type->budget_name }}  </td>
+          <td id="expanse_status">{{ $exp_type->default_currency }}  </td>
           <td id="expanse_status">{{ $exp_type->accounts_desc}}</td>
 
                <input type="hidden" id="expanse_type_id" value="{{$exp_type->id}}" name="">
-               <td>
+               <td  scope="row"class="text-center">
 {{-- @if($exp_type->accounts_update_privilage==0) --}}
-
-
-                <a href="#" class="edits"    data-toggle="modal" id="amb_edit" data-bs-toggle="modal"
-                   data-bs-target="#edit"><i class="fas fa-edit" onclick="values_edit(`{{$exp_type->id}}`,`{{$exp_type->category_id}}`,`{{$exp_type->subcategory_id}}`,`{{$exp_type->accounts_name}}`,`{{$exp_type->accounts_desc}}`,'{{ $exp_type->budget_id }}');" >
+<a href="#" class="edits"    data-toggle="modal" id="amb_edit" data-bs-toggle="modal" data-bs-target="#edit">
+    <i style="color:rgb(13, 1, 56);" class="fa fa-edit" onclick="values_edit(`{{$exp_type->id}}`,`{{$exp_type->category_id}}`,`{{$exp_type->subcategory_id}}`,`{{$exp_type->accounts_name}}`,`{{$exp_type->accounts_desc}}`,'{{ $exp_type->budget_id }}',`{{$exp_type->default_currency}}`);" >
                        </i></a>
-  {{-- @endif --}}
-                    </td>
-                   <td>
+                       {{-- @endif --}}
 
-                    @if($exp_type->accounts_update_privilage==0)
-                    <a onclick="delete_function({{ $exp_type->id }})" ><i class="fas fa-trash-alt"></i></a>
+                       @if($exp_type->accounts_update_privilage==0)
+                    <a onclick="delete_function({{ $exp_type->id }})" ><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></a>
                     @endif
+                    
+                 
                 </td>
       </tr>
  @endforeach
@@ -83,8 +86,8 @@ $no=1;
                                     <div class="modal-header">
 
 
-
-                                    <h5 class="modal-title bb" id="myModalLabel1"> Add Ledger Accounts </h5>
+                                    <h2 class="text-centre"><b>Add Ledger Accounts</b></h2>
+                                   
 
 
 
@@ -94,7 +97,8 @@ $no=1;
              </div>
               <form action="{{url('save_ledger_acounts')}}" method="post" >
                                      @csrf
-                                    <div class="modal-body">
+
+<div class="modal-body">
 
                                          <div class="card-body">
 
@@ -105,9 +109,9 @@ $no=1;
                         </div>
 
                         <div class="form-group mb-3">
-                            <label>Type</label>
+                            <label>Account Type</label>
                            <select class="form-control" name="accounts_category" id="account_cat" required>
-                               <option value=""> Select</option>
+                               <option value="">---Select---</option>
                                @foreach($category as $cat):
                                 <option value="{{ $cat->id }}" > {{ $cat->ledgeraccount_categories }}</option>
                                @endforeach;
@@ -115,26 +119,48 @@ $no=1;
                            </select>
                         </div>
                         <div class="form-group mb-3">
-                            <label>Group</label>
+                            <label>Account Category</label>
 
                            <select class="form-control" name="accounts_subcategory"   required>
-                            <option value=""> Select</option>
+                            <option value=""> ---Select---</option>
                             @foreach($subcategory as $subcat):
                             <option value="{{ $subcat->id }}" > {{ $subcat->ledgeraccount_subcategories }} </option>
                            @endforeach;
                         </select>
                         </div>
                         <div class="form-group mb-3">
-                            <label> Budget </label>
+                            <label> Budget Category </label>
                            <select class="form-control" name="budget_cat" id="budget_cat"  required>
-                               <option value=""> Select</option>
+                               <option value=""> ---Select---</option>
                                @foreach($budget_cat as $budget):
                                <option value="{{ $budget->id }}" > {{ $budget->budget_name }} </option>
                               @endforeach;
                            </select>
                         </div>
+                        
 
+                        <div class="form-group mb-3">
+                            <label>Default Currency</label>
+                           <select class="form-control" name="default_currency"   id="default_currency" required>
+                               <option value=""> ---Select---</option>
+                               <option>KES</option>
+                                <option>USD</option>
+                                <option>EUR</option>
+                                <option>GBP</option>
+                                <option>AUD</option>
+                                <option>CAD</option>
+                                <option>SEK</option>
+                                <option>DKK</option>
+                                <option>JPY</option>
+                                <option>CHF</option>
+                                <option>HKD</option> 
+                               <!-- @foreach($category as $cat):
+                                <option value="{{ $cat->id }}" > {{ $cat->ledgeraccount_categories }}</option>
+                               @endforeach; -->
+                               </select>
 
+                           
+                        </div> 
                         <div class="form-group mb-3">
                             <label>Description </label>
 			                <textarea  class="form-control" name="accounts_desc">
@@ -171,9 +197,9 @@ $no=1;
                                 <div class="modal-content">
                                     <div class="modal-header">
 
+                                    <h2 class="text-centre"><b>Edit Ledger Accounts</b></h2>
 
-
-                                    <h5 class="modal-title bb" id="myModalLabel1">Edit Ledger Acconts</h5>
+                                  
 
 
 
@@ -196,9 +222,9 @@ $no=1;
                         </div>
 
                         <div class="form-group mb-3">
-                            <label> Type </label>
+                            <label> Account Type </label>
                            <select class="form-control" name="accounts_category" id="account_cat_edit" required>
-                               <option value=""> Select</option>
+                               <option value=""> ---Select---</option>
                                @foreach($category as $cat):
                                 <option value="{{ $cat->id }}" > {{ $cat->ledgeraccount_categories }}</option>
                                @endforeach;
@@ -206,24 +232,45 @@ $no=1;
                            </select>
                         </div>
                         <div class="form-group mb-3">
-                            <label> Group </label>
+                            <label> Account Category </label>
                            <select class="form-control" name="accounts_subcategory" id="account_subcat_edit"  required>
-                               <option value=""> Select</option>
+                               <option value=""> ---Select---</option>
                                @foreach($subcategory as $subcat):
                                <option value="{{ $subcat->id }}" > {{ $subcat->ledgeraccount_subcategories }} </option>
                               @endforeach;
                            </select>
                         </div>
                         <div class="form-group mb-3">
-                            <label> Budget </label>
+                            <label> Budget Category </label>
                             <select class="form-control" name="editbudget_cat" id="editbudget_cat"  required>
-                                <option value=""> Select</option>
+                                <option value=""> ---Select---</option>
                                 @foreach($budget_cat as $budget):
                                 <option value="{{ $budget->id }}" > {{ $budget->budget_name }} </option>
                                @endforeach;
                             </select>
                         </div>
+                        <div class="form-group mb-3">
+                            <label>Default Currency</label>
+                           <select class="form-control" name="default_currency"  id="edit_default_currency" required>
+                               <option value="">select</option>
+                               <option>KES</option>
+                                <option>USD</option>
+                                <option>EUR</option>
+                                <option>GBP</option>
+                                <option>AUD</option>
+                                <option>CAD</option>
+                                <option>SEK</option>
+                                <option>DKK</option>
+                                <option>JPY</option>
+                                <option>CHF</option>
+                                <option>HKD</option> 
+                               <!-- @foreach($category as $cat):
+                                <option value="{{ $cat->id }}" > {{ $cat->ledgeraccount_categories }}</option>
+                               @endforeach; -->
+                               </select>
 
+                           
+                        </div> 
                         <div class="form-group mb-3">
                             <label>Desctiption</label>
                             <textarea class="form-control" name="accounts_desc"   id="expanse-type-status">
@@ -235,7 +282,7 @@ $no=1;
 
 
                                     <div class="modal-footer">
-                                        <button type="submit" class="btn btn-primary" >Save</button>
+                                        <button type="submit" class="btn btn-primary" >Update</button>
                                         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
                                     </div>
                                       </form>
@@ -254,15 +301,16 @@ $no=1;
   </script>
 
   <script>
-    function values_edit(val1,val2,val3,val4,val5,val6){
+    function values_edit(val1,val2,val3,val4,val5,val6,val7){
 
-
+        $('#id').val(val1);
         $("#account_cat_edit").val(val2).change();
         $("#account_subcat_edit").val(val3).change();
         $("#expanse_type_name").val(val4);
        $("#expanse-type-status").val(val5);
-       $('#id').val(val1);
        $('#editbudget_cat').val(val6).change();
+       $("#edit_default_currency").val(val7).change();
+     
       };
 
 

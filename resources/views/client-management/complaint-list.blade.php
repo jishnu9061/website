@@ -1,10 +1,54 @@
 @extends('layouts.hmsmain')
 @section('content')
 
+<html>
+    <head>
+<style>
+  .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.pagination {
+margin: 0;
+}
 
-{{-- <div class="spacer" style="height:40px;margin-top: 30px;"> --}}
+.pagination li:hover{
+cursor: pointer;
+}
+
+.header_wrap {
+padding:30px 0;
+}
+.num_rows {
+width: 20%;
+float:left;
+}
+.tb_search{
+width: 20%;
+float:right;
+}
+.pagination-container {
+width: 70%;
+float:left;
+}
+
+.rows_count {
+width: 20%;
+float:right;
+text-align:right;
+color: #999;
+}
+</style> 
 
 
+       
 </head>
 
 <body>
@@ -17,19 +61,46 @@
             <br><br>
         </div>
 
-        <div id="mydatatable_filter" class="dataTables_filter">
-            <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
-        </div>
+      
         <button class="btn btn-primary add-btn" Style="width:20%" data-toggle="modal" data-target="#myModal">Add New
             Complaint</button>
+
+            <div class="container">
+    <div class="header_wrap">
+      <div class="num_rows">
+        <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
+         <select class  ="form-control" aria-label="Page navigation example" name="state" id="maxRows">
+
+          <option value="5">5</option>
+          <option value="10">10</option>
+           <option value="15">15</option>
+           <option value="20">20</option>
+           <option value="50">50</option>
+           <option value="70">70</option>
+           <option value="100">100</option>
+          <option value="5000">Show ALL Rows</option>
+          </select>
+         
+        </div>
+      </div>
+      <div class="tb_search">
+<input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
+      </div>
+    </div>
+
+
+            <!-- <input type="text"  placeholder="Search for Client" title="Type in a name"> -->
+
+
 
 
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                <div class="table-responsive">
-                    <table class="table table-bordered" id="new-item">
+            <div class="table-responsive">
+        <table class="table table-striped table-class" id= "table-id">
                         <thead>
                             <tr>
+                          
                                 <th class="text-center"> No</th>
                                 <th class="text-center">Date</th>
                                 <th class="text-center">Client</th>
@@ -45,7 +116,7 @@
                         <tbody>
                             @foreach( $complaint_list as $list)
                             <tr id="data">
-                                <td scope="row" class="text-center">{{$list->id}}</td>
+                                <td scope="row" class="text-center">{{$list->id }}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->date}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->client_type}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->files}}</td>
@@ -54,7 +125,7 @@
                                 <td scope="row" class="text-center">{{$list->complaint_description}}</td>
                                 <td><a href="{{url('view-Complaint',$list->id)}}"><i style="color:black;"
                                             class="fa fa-eye" aria-hidden="true"></i></td></a>
-                                <td><a href="{{url('edit_complaint',$list->id)}}"><i style="color:black;"
+                                <td><a href="{{url('edit_complaint',$list->id )}}"><i style="color:black;"
                                             class="fa fa-edit" aria-hidden="true"></i></td>
                                 <td>
                                         <a onClick="return myFunction();"
@@ -67,6 +138,17 @@
                         </tbody>
                     </table>
                 </div>
+                <!--		Start Pagination -->
+    <div class='pagination-container'>
+      <nav>
+        <ul class="pagination">
+         <!--	Here the JS Function Will Add the Rows -->
+        </ul>
+      </nav>
+    </div>
+    <div class="rows_count">Showing 11 to 20 of 100</div>
+
+ <!-- 		End of Container -->
                 <div class="modal fade" id="myModal">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
@@ -278,12 +360,29 @@
 
 
 
-                <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-                <script type="text/javascript" charset="utf8"
-                    src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
-                <script type="text/javascript" charset="utf8"
-                    src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js">
-                </script>
+                <script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("new-item");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[4];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+</body>
+</html>
+
 
 
                 @endsection

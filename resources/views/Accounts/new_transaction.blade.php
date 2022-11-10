@@ -17,9 +17,12 @@
 
 	<br>
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <h3>Create Transaction</h3>
+    {{-- heading --}}
+  <h4 id="hdtpa"><b>Create Transaction</b></h4>
+  <br><br>
+    <!-- <h3>Create Transaction</h3> -->
     {{-- <br> --}}
-    <hr>
+    
     <form id="journal_form" method="POST" enctype="multipart/form-data">
 <div class="container-fluid">
     <div class="row">
@@ -146,12 +149,12 @@
             <tr>
                 <th colspan="1">
 
-                </th>
                 <th ><button class="btn btn-primary" id="create_btn" style="float:right;" onclick="test()"  type="button">Create</button>
                     <button class="btn btn-primary" type="button" id="creating_btn" style="display:none;float:right;" disabled>
                         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                         Creating...
                       </button>
+                  
                 
                 </th>
             </tr>
@@ -179,6 +182,9 @@
                 </button>
             </div>
             <form id="account_form" >
+                                     @csrf
+
+      
                 <div class="modal-body">
 
                     <div class="card-body">
@@ -190,40 +196,71 @@
                         </div>
 
                         <div class="form-group mb-3">
-                            <label> Type </label>
+                            <label>Account Type</label>
+                           <select class="form-control" id="account-cat" name="accounts_category"  required>
+                               <option value="">---Select---</option>
+                               @foreach($category as $cat):
+                                <option value="{{ $cat->id }}" > {{ $cat->ledgeraccount_categories }}</option>
+                               @endforeach;
 
-                            <select class="form-control" id="accounts-subcategory" required>
-                                <option value=""> Select</option>
-                                @foreach($subcategory as $subcat):
-                                <option value="{{ $subcat->id }}"> {{ $subcat->ledgeraccount_subcategories }} </option>
-                                @endforeach;
-                            </select>
+                           </select>
                         </div>
-
                         <div class="form-group mb-3">
-                            <label> Group </label>
-                            <select class="form-control" name="accounts_category" id="account-cat" required>
-                                <option value=""> Select</option>
-                                @foreach($category as $cat):
-                                <option value="{{ $cat->id }}"> {{ $cat->ledgeraccount_categories }}</option>
-                                @endforeach;
+                            <label>Account Category</label>
 
-                            </select>
+                           <select class="form-control" name="accounts_subcategory"  id="accounts-subcategory" required>
+                            <option value=""> ---Select---</option>
+                            @foreach($subcategory as $subcat):
+                            <option value="{{ $subcat->id }}" > {{ $subcat->ledgeraccount_subcategories }} </option>
+                           @endforeach;
+                        </select>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label> Budget Category </label>
+                           <select class="form-control" name="budget_cat" id="budget-cat" required>
+                               <option value=""> ---Select---</option>
+                               @foreach($budget_cat as $budget):
+                               <option value="{{ $budget->id }}" > {{ $budget->budget_name }} </option>
+                              @endforeach;
+                           </select>
                         </div>
 
+                     
+                        <div class="form-group mb-3">
+                            <label>Default Currency</label>
+                           <select class="form-control" name="default_currency"   id="default-currency" required>
+                               <option value=""> ---Select---</option>
+                               <option>KES</option>
+                                <option>USD</option>
+                                <option>EUR</option>
+                                <option>GBP</option>
+                                <option>AUD</option>
+                                <option>CAD</option>
+                                <option>SEK</option>
+                                <option>DKK</option>
+                                <option>JPY</option>
+                                <option>CHF</option>
+                                <option>HKD</option> 
+                               <!-- @foreach($category as $cat):
+                                <option value="{{ $cat->id }}" > {{ $cat->ledgeraccount_categories }}</option>
+                               @endforeach; -->
+                               </select>
 
+
+          
+                           
+                        </div> 
                         <div class="form-group mb-3">
                             <label>Description </label>
-                            <textarea class="form-control" name="accounts_desc" id="accounts-desc">
+			                <textarea  class="form-control"  name="accounts_desc" id="accounts-desc">
 
                             </textarea>
                         </div>
 
 
 
-                    </div>
-                </div>
-
+                        </div>
+                        </div>
 
                 <div class="modal-footer">
                     <button type="button" onclick="save_ledger_account()" class="btn btn-primary">Save</button>
@@ -548,11 +585,6 @@ if ($("#journal_form")[0].checkValidity()){
     }
 
 
-
-
-
-
-
 }
 else{
 //Validate Form
@@ -567,12 +599,16 @@ $("#journal_form")[0].reportValidity();
 
 function save_ledger_account(){
 
+
+
     var accounts_name=$('#accounts-name').val();
     var accounts_subcategory=$('#accounts-subcategory').val();
-    var account_cat=$('#account-cat').val();
+    var accounts_category=$('#account-cat').val();
+    var budget_cat=$('#budget-cat').val();
+    var default_currency=$('#default-currency').val();
     var accounts_desc=$('#accounts-desc').val();
 
-
+console.log($("#account_form")[0]);
 
     if ($("#account_form")[0].checkValidity()){
 
@@ -592,7 +628,9 @@ function save_ledger_account(){
                         data: {
                             accounts_name: accounts_name,
                             accounts_subcategory: accounts_subcategory,
-                            account_cat: account_cat,
+                            accounts_category: accounts_category,
+                            budget_cat:budget_cat,
+                            default_currency:default_currency,
                             accounts_desc: accounts_desc,
 
                         },
@@ -618,6 +656,8 @@ function save_ledger_account(){
                              $('#accounts-name').val('');
                             $('#accounts-subcategory').val('');
                               $('#account-cat').val('');
+                              $('#budget-cat').val('');
+                              $('#default-currency').val('');
                             $('#accounts-desc').val('');
                             $('#default').modal('toggle');
 
@@ -653,6 +693,13 @@ function save_ledger_account(){
 
 
 @endsection
+
+
+
+
+
+
+
 
 
 

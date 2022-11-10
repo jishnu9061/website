@@ -35,16 +35,16 @@
                     </thead>
 
                     <tbody>
-
+                    @foreach($add_letter as $letter)
                         <tr id="data">
 
+                            <td scope="row" class="text-center">{{$letter->id}}</td>
+                            <td scope="row" class="text-center">{{$letter->letter_date}}</td>
+                            <td scope="row" class="text-center">{{$letter->client}}</td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$letter->received_form}}</td>
+                            <td scope="row" class="text-center">{{$letter->category}}</td>
+                            <td scope="row" class="text-center">{{$letter->letter_name}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center">
                                 <select name="" id="">
@@ -56,8 +56,9 @@
                         </tr>
 
 
-
+                     @endforeach
                     </tbody>
+                 
 
                 </table>
 
@@ -75,7 +76,7 @@
                                     <!-- Modal body -->
                                     <div class="modal-body">
                                         <div class="container">
-                                            <form method="post" action="{{ url('add-corporate') }}"
+                                            <form method="post" action="{{ url('add-incomming-letters') }}"
                                                 enctype="multipart/form-data">
                                                 @csrf
 
@@ -184,7 +185,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="delivered" id="cars">
+                                <select name="delivered_by" id="cars">
                                 <option>select</option>
                                                             <option>demo 2</option>
                                                             <option>demo 3</option>
@@ -211,7 +212,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="delivered" id="cars">
+                                <select name="delivered_to" id="cars">
                                 <option>select</option>
                                                             <option>demo 2</option>
                                                             <option>demo 3</option>

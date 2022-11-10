@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Illuminate\Support\Facades\Storage;
 
 class ClientManagement extends Controller
 {
@@ -98,10 +99,10 @@ class ClientManagement extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($individual_id)
     {   
-        $client_individual = DB::table('cra_individual_client_details')->where('id',$id)->first();
-        return view('client-management.view-client',compact('client_individual','id'));
+        $client_individual = DB::table('cra_individual_client_details')->where('individual_id',$individual_id)->first();
+        return view('client-management.view-client',compact('client_individual','individual_id'));
     }
 
     /**
@@ -110,10 +111,10 @@ class ClientManagement extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit_person($id)
+    public function edit_person($individual_id)
     {
-        $edit_client = DB::table('cra_individual_client_details')->where('id',$id)->first();
-        return view('client-management.edit_person',compact('edit_client','id'));
+        $edit_client = DB::table('cra_individual_client_details')->where('individual_id',$individual_id)->first();
+        return view('client-management.edit_person',compact('edit_client','individual_id'));
     }
 
     /**
@@ -278,14 +279,14 @@ class ClientManagement extends Controller
         return view('client-management.corporate-list',compact('corporate_list'));
     }
 
-    public function edit_corporate($id)
+    public function edit_corporate($corporate_id)
     {
-        $corporate_details= DB::table('cra_corporate_client_details')->where('id',$id)->first();
-        return view('client-management.edit_client',compact('corporate_details','id'));
+        $corporate_details= DB::table('cra_corporate_client_details')->where('corporate_id',$corporate_id)->first();
+        return view('client-management.edit_client',compact('corporate_details','corporate_id'));
     }
 
     public function Update_corporate(Request $Request){
-        $id     = $Request['id'];
+        $corporate_id = $Request['corporate_id'];
         $number = $Request['number'];
         $client_type = $Request['type'];
         $citizen_status = $Request['citizen'];
@@ -312,7 +313,7 @@ class ClientManagement extends Controller
         $mobile_no = $Request['no'];
         $person_email = $Request['person_email'];
 
-        DB::table('cra_corporate_client_details')->where('id',$id)->update([
+        DB::table('cra_corporate_client_details')->where('corporate_id',$corporate_id)->update([
             'Client_no' => $number,
             'Client_type' =>  $client_type,
             'Cityzen_status' => $citizen_status,
@@ -344,8 +345,8 @@ class ClientManagement extends Controller
     }
 
 
-    public function Corporate_destroy($id){
-        DB::table('cra_corporate_client_details')->where('id',$id)->delete();
+    public function Corporate_destroy($corporate_id){
+        DB::table('cra_corporate_client_details')->where('corporate_id',$corporate_id)->delete();
         return redirect('/corporate-list');
     }
 
@@ -355,52 +356,61 @@ class ClientManagement extends Controller
     
         
     public function document(){
-        $client_document = DB::table('cra_document_detials')->get();   
+        $client_document = DB::table('cra_document_detials')
+        ->select('*')  
+        ->leftjoin('cra_individual_client_details','cra_individual_client_details.individual_id','=','cra_document_detials.individual_id')
+        ->get(); 
+  
         return view('client-management.client-document',compact('client_document'));
     }
 
 
-    public function createDocument(){
-
-        return view('client-management.add-document');
+    public function createDocument($individual_id){
+        $client_doc = DB::table('cra_individual_client_details')->where('individual_id',$individual_id)->first();
+        return view('client-management.add-document',compact('client_doc','individual_id'));
     }
 
     public function addDocument(Request $Request){
-
+        $individual_id = $Request['individual_id'];
         $document_type = $Request['type'];
         $file = $Request['file'];
 
-        if(!empty($Request->file('file'))){
+        // if(!empty($Request->file('file'))){
 
-            $this->validate($Request ,[
-                'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg|max:2048',
-            ]);
-        }
+        //     $this->validate($Request ,[
+        //         'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg',
+        //     ]);
+        // }
 
-        $img = time() . '-' . $Request->file . '.' .
-        $Request->file->extension();
+        // $img = time() . '-' . $Request->file . '.' .
+        // $Request->file->extension();
 
 
-    $test = $Request->file->move(public_path('images\files'),$img);
+        // $Request->file->move(public_path('image'),$img);
+
+        $filename = time().$Request->file('file')->getClientOrginalName();
+        $path   =$Request->file('file')->storeAs('image',$$filename,'public');
+        $requestdata['file'] = '/storage/'.$path;
 
         DB::table('cra_document_detials')->insert([
 
             'document_type' =>  $document_type,
             'file' =>  $img,
+            'individual_id' => $individual_id 
         ]);
         return redirect('/client-document');
 
     }
 
 
-    public function viewDocument($id){
-        $view_document = DB::table('cra_document_detials')->where('id',$id)->first();  
-        return view('client-management.view-document',compact('view_document','id'));
+    public function viewDocument($document_id){
+        $view_document = DB::table('cra_document_detials')->where('document_id',$document_id )->first();  
+        return view('client-management.view-document',compact('view_document','document_id'));
     }
 
 
-    public function deleteDocument($id){
-         DB::table('cra_document_detials')->where('id',$id)->delete();  
+    public function deleteDocument($document_id){
+         DB::table('cra_document_detials')->where('document_id',$document_id)->delete();  
         return redirect('/client-document');
     }
 

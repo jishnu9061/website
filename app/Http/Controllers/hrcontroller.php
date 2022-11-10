@@ -128,10 +128,12 @@ class hrcontroller extends Controller
    $departments=DB::table('departments')->get();
   //  dd($departments);
    $medicaldepartments=DB::table('medicaldepartments')->get();
-   $leavetype=DB::table('staff_leaves')->where('staff_id',$id)
-   ->join('leave_types', 'staff_leaves.leave_type_id', '=', 'leave_types.id')
-   ->select('staff_leaves.*','leave_types.leave_type')
-   ->get();
+  //  $leavetype=DB::table('staff_leaves')->where('staff_id',$id)
+  //  ->join('leave_types', 'staff_leaves.leave_type_id', '=', 'leave_types.id')
+  //  ->select('staff_leaves.*','leave_types.leave_type')
+  //  ->get();
+  //  dd($leavetype);
+  $leavetype=DB::table('leave_types')->get();
    $staffstatus=DB::table('staffstatus')->get();
     return view('hr.editstaf',['users'=>$users,'staffdata'=>$staffdata,'allowancedata'=>$allowancedata,'loans'=>$loans,'schedule'=>$schedule,'staffid'=>$id,'deductiondata'=>$deductiondata,'nonfixdallowancedata'=>$particularallow,'particularreduct'=>$particularreduct,'$nonfixedallowancedata',$nonfixedallowancedata,'roles'=>$adminroles,'hospitals'=>$hospitals,'departments'=>$departments,'medicaldepartments'=>$medicaldepartments,'leavetype'=>$leavetype,'staffstatus'=>$staffstatus]);
    

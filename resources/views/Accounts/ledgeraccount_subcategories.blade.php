@@ -1,19 +1,43 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container">
-	<br>
-    <h2>Add Groups</h2>
+{{-- heading --}}
+  <h4 id="hdtpa"><b>Add Account Category</b></h4>
+  <br><br>
 
         <button  class="btn btn-primary "  data-toggle="modal" id="patient" data-bs-toggle="modal"
-        data-bs-target="#default"  class="btn btn-secondary">Add Groups</button>
+        data-bs-target="#default"  class="btn btn-secondary">Add Category</button>
+        <br>
+        <div class="container">
+    <div class="header_wrap">
+      <div class="num_rows">
+        <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
+         <select class  ="form-control" aria-label="Page navigation example" name="state" id="maxRows">
 
-      <div class="table-responsive">
-<table class="table table-striped" id="allpatients" style="margin-top: 40px;">
+          <option value="5">5</option>
+          <option value="10">10</option>
+           <option value="15">15</option>
+           <option value="20">20</option>
+           <option value="50">50</option>
+           <option value="70">70</option>
+           <option value="100">100</option>
+          <option value="5000">Show ALL Rows</option>
+          </select>
+         
+        </div>
+      </div>
+      <div class="tb_search">
+<input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
+      </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-class" id= "table-id">
   <thead>
     <tr>
       <th scope="col">Sl</th>
       {{-- <th scope="col">Category</th> --}}
-      <th scope="col">Groups</th>
+      <th scope="col">Account Category</th>
       <th scope="col">Description </th>
       <th scope="col">Edit</th>
       <th scope="col">Delete</th>
@@ -51,6 +75,17 @@ $no=1;
 </table>
       </div>
 </div>
+<!--		Start Pagination -->
+<div class='pagination-container'>
+      <nav>
+        <ul class="pagination">
+         <!--	Here the JS Function Will Add the Rows -->
+        </ul>
+      </nav>
+    </div>
+    <div class="rows_count">Showing 11 to 20 of 100</div>
+
+ <!-- 		End of Container -->
 
 
 
@@ -62,7 +97,7 @@ $no=1;
 
 
 
-                                    <h5 class="modal-title bb" id="myModalLabel1"> Groups </h5>
+                                    <h2 class="text-centre"><b>Add Account Category</b></h2>
 
 
 
@@ -88,7 +123,7 @@ $no=1;
                                             </div> --}}
 
                         <div class="form-group mb-3">
-                            <label>Group Name </label>
+                            <label>Account Category </label>
 			                <input type="text" class="form-control" name="ledgeraccount_subcategories" placeholder="" required>
                         </div>
                         <div class="form-group mb-3">
