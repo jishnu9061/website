@@ -26,9 +26,9 @@
                 <div class="col-sm-4"> <a href="{{ url('reviewed_details') }}"><img class="logo_size"
                             src="assets\image\File status report summary.png" alt=""><button type="button" style="width:70%;"
                             class="btn btn-primary btn_align_btn">Reviewed Applications</button></a></div>
-                <div class="col-sm-4"> <a href="{{ url('performance_form') }}"><img class="logo_size"
+                <!-- <div class="col-sm-4"> <a href="{{ url('performance_form') }}"><img class="logo_size"
                             src="assets\image\File status report summary.png" alt=""><button type="button" style="width:70%;"
-                            class="btn btn-primary btn_align_btn">Performance Form</button></a></div>
+                            class="btn btn-primary btn_align_btn">Performance Form</button></a></div> -->
                 <!-- <div class="col-sm-4"> <a href="{{ url('payslip') }}"><img class="logo_size"
                             src="assets\image\Monthly file status report.png" alt=""><button type="button" style="width:70%;"
                             class="btn btn-primary btn_align_btn">Payslip (Bulk)</button></a></div>

@@ -96,7 +96,7 @@ color: #999;
                             <tr id="data">
                                 <td scope="row" class="text-center">{{$list->client_number}}</td>
                                 <td scope="row" class="text-center">{{$list->client_name}}</td>
-                                <td scope="row" class="text-center" id="medicine_name_1">{{$list->file}}</td>
+                                <td scope="row" class="text-center" id="medicine_name_1"><img src="{{asset('/image/'.$list->file)}}" width="20px" height="20px" alt="image"></td>
                                 <td scope="row" class="text-center"><a
                                         href="{{url('view-document',$list->document_id)}}"><i style="color:black;"
                                             class="fa fa-eye" aria-hidden="true"></i>

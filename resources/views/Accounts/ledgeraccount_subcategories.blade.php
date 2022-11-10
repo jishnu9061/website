@@ -123,7 +123,7 @@ $no=1;
                                             </div> --}}
 
                         <div class="form-group mb-3">
-                            <label>Group Name </label>
+                            <label>Account Category </label>
 			                <input type="text" class="form-control" name="ledgeraccount_subcategories" placeholder="" required>
                         </div>
                         <div class="form-group mb-3">

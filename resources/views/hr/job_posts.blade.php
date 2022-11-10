@@ -1,104 +1,131 @@
 
 @extends('layouts.hmsmain')
 @section('content') 
-<div class="container">
-<h4 id="hdtpa"><b>Job Posts</b></h4>
-    <br><br>
-    </div>
-    <br>
 
-      <div class="container">
-         <nav class="navbar navbar-expand-lg bg-light">
-          <span class="p-3"></span>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder=" Job Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </nav>
-    <br>
-    <br>
+<h4 id="hdtpa"><b>View Job Posts</b></h4>
+    <br><br><br>
 
-  <div class="main-container">
+
+
+
       
-          <div class="container">
-            <div class="shadow auto bg-body rounded">  
-              <img src="assets/images/Logo cra.png" alt="CRA" id="logo" class="float-end" width="80">
-            <div class="p-3 mb-2 bg-light text-dark">
-              
-            <h3><b>Senior Advocate</b></h3>
-            <h5>CRA Advocate Team</h5>
-            <br>
-            <p i class="fa fa-map-marker"></i><span class="p-1"></span>Kenya </p><br>
-            <p i class="fa fa-graduation-cap"></i><span class="p-1"></span>LLB </p><br>
-            <p i class="fa fa-briefcase"></i><span class="p-1"></span>4-5 Years</p><br>
-            <p i class="fa fa-history"></i><span class="p-1"></span>Permanent</p>
-            <br><br>
-            <button type="button" class="btn btn-primary">Share<span class="p-1"></span><i class="fa fa-share-alt"></i></button>
-            <span class="p-2"></span>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">View Job<span class="p-1"></span><i class="fa fa-arrow-right"></i></button>
-           </div>
-           </div>
-          </div>
+  <nav class="navbar bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand">Job Posts</a>
+    <button class="btn btn-outline-success" type="button">View All</button> 
+  </div>
+  </nav>
+  <br>
+
+
+  <input class="btn btn-primary" type="button" value="Create Job Post" data-toggle="modal" data-target="#myModal">
+  <br>
+  <br>
+
+
+    <div class="table-responsive">  
+    <table class="table"> 
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Job Title</th>
+          <th scope="col">Location</th>
+          <th scope="col">Qualification</th>
+          <th scope="col">Work Experience</th>
+          <th scope="col">Action</th>
+          
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Senior Advocate</td>
+          <td>Nairobi</td>
+          <td>LLB</td>
+          <td>5</td>
+          <td><input class="btn btn-primary" type="button" value="View" data-toggle="modal" data-target="#myModal"></td>
+        </tr>
+      </tbody>
+    </table>
+   </div>
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
         
        
-          <div class="modal fade" id="myModal">
+
+   <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content" >
 
                                     <!-- Modal Header -->
                                     <div class="modal-header" >
-                                        <h2 class="text-centre"><b>View Job</b></h2>
+                                        <h2 class="text-centre"><b>Create Job Post</b></h2>
 
                                     </div>
 
                                     <!-- Modal body -->
                                     <div class="modal-body" >
                                         <div class="container">
-                                            <form method="post" action="{{url('add_letter_category')}}"
+                                            
+                                        <form method="post" action="{{url('add_letter_category')}}"
                                                 enctype="multipart/form-data"> 
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->    
-@csrf
-     
-<div class="container">
+
+      <div class="container">
         <div class="row">
           <div class="col">
             <div class="mb-3">
+            <form method="post" action="{{url('create_job_post')}}" id="form">
+                
                 <label for="job title" class="form-label">Job Title</label>
-                <input type="text" class="form-control" id="job title">
+                <select class="form-select" name="job_title">
+                    <option selected>---select---</option>
+                    <option value="junior Advocate">junior Advocate</option>
+                    <option value="Mid Senior Advocate">Mid Senior Advocate</option>
+                    <option value="Senior Advocate">Senior Advocate</option>
+                  </select>
             </div>
             <div class="mb-3">
                 <label for="qualification" class="form-label">Qualification</label>
-                <input type="text" class="form-control" id="qualification">
-                <!-- <select class="form-select" id="qualification">
-                    <option selected>---select---</option> 
-                     <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select> -->
+                <select class="form-select" name="qualification">
+                    <option selected>---select---</option>
+                    <option value="LLB">LLB</option>
+                    <option value="LLM">LLM</option>
+                  </select>
               </div>
             <div class="mb-3">
                 <label for="employment type" class="form-label">Employment Type</label>
-                <input type="text" class="form-control" id="employment type">
-                <!-- <select class="form-select" id="employment type">
+                <select class="form-select" name="employment_type">
                     <option selected>---select---</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select> -->
+                    <option value="Full-Time">Full-Time</option>
+                    <option value="Part-Time">Part-Time</option>
+                  </select>
             </div>  
             <div class="mb-3">
                 <label for="job type" class="form-label">Job Type</label>
-                <input type="text" class="form-control" id="job type">
-                <!-- <select class="form-select" id="job type">
+                <select class="form-select" name="job_type">
                     <option selected>---select---</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select> -->
+                    <option value="Permanent">Permanent</option>
+                    <option value="Temporary">Temporary</option>
+                  </select>
             </div>  
             <div class="mb-3">
                 <label for="starting date" class="form-label">Starting Date to Apply</label>
-                <input type="date" class="form-control" id="starting date" aria-describedby="startingdate">
+                <input type="date" class="form-control" name="start_date" aria-describedby="startingdate">
             </div>
          </div>
             
@@ -107,29 +134,39 @@
           <div class="col">
             <div class="mb-3">
                 <label for="job location" class="form-label">Job Location</label>
-                <input type="text" class="form-control" id="job location">
+                <select class="form-select" name="job_location">
+                    <option selected>---select---</option>
+                    <option value="Nairobi">Nairobi</option>
+                    <option value="Kenya">Kenya</option>
+                  </select>
             </div>
               <div class="mb-3">
                 <label for="work experience" class="form-label">Work Experience</label>
-                <input type="text" class="form-control" id="work experience">
+                <select class="form-select" name="work_experience">
+                    <option selected>---select---</option>
+                    <option value="0-1">0-1</option>
+                    <option value="1-2">1-2</option>
+                    <option value="2-3">2-3</option>
+                    <option value="3-4">3-4</option>
+                    <option value="4-5">4-5</option>
+                  </select>
           </div>
             <div class="mb-3">
                 <label for="job nature" class="form-label">Job Nature</label>
-                <input type="text" class="form-control" id="job nature">
-                <!-- <select class="form-select" id="job nature">
+                <select class="form-select" name="job_nature">
                     <option selected>---select---</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select> -->
+                    <option value="Onsite">Onsite</option>
+                    <option value="Hybrid">Hybrid</option>
+                    <option value="Remote">Remote</option>
+                  </select>
           </div>
           <div class="mb-3">
             <label for="salary range" class="form-label">Salary Range</label>
-            <input type="money" class="form-control" id="salary range">
+            <input type="money" class="form-control" name="salary_range" aria-describedby="salaryrange">
         </div>
         <div class="mb-3">
             <label for="ending date" class="form-label">Ending Date to Apply</label>
-            <input type="date" class="form-control" id="ending date">
+            <input type="date" class="form-control" name="end_date" aria-describedby="endingdate">
           </div> 
         </div>
         
@@ -137,23 +174,50 @@
      <!-- Job Description -->
         <div class="mb-3">
             <label for="job description" class="form-label">Job Description</label>
-            <textarea class="form-control" id="job description" rows="3"></textarea>
+            <textarea class="form-control" name="job_description" rows="3"></textarea>
           </div>
 
     <!-- Responsibilities -->
     <div class="mb-3">
         <label for="job responsibilities" class="form-label">Job Responsibilities</label>
-        <textarea class="form-control" id="job responsibilities" rows="3"></textarea>
+        <textarea class="form-control" name="job_responsibilities" rows="3"></textarea>
       </div>
 </div>
-<br> 
-<button type="button" class="btn btn-primary" style="width: 100px;">Delete</button>
+     
+
+    <!-- Buttons -->
     
-    </div> 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-</script>
-<script src="{{ url('assets/js') }}/jquery.min.js"></script>
+    <div class="container">
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary" style="width: 100px;">Submit</button>
+        <span class="p-3"></span>
+        <button type="button" class="btn btn-primary" style="width: 100px;">Cancel</button>
+      </div>    
+     </div>     
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @endsection
 
