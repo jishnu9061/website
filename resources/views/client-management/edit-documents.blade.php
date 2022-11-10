@@ -33,9 +33,9 @@
     </div>
     <div class="row">
         <div class="col-md-12 order-md-1">
-            <form method="post" action="{{url('add-document')}}" id="form" enctype="multipart/form-data">
+            <form method="post" action="{{url('update-document')}}" id="form" enctype="multipart/form-data">
                 @csrf
-                <input type="hidden" name="individual_id" value="{{ $client_doc->individual_id}}">
+                <input type="hidden" name="document_id" value="{{$edit_documents->document_id}}">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
@@ -45,8 +45,8 @@
 
                                 </div>
                                 <select name="type" id="cars">
-                                    <option>select</option>
-                                    <option>type11</option>
+                                    <option>{{$edit_documents->document_type}}</option>
+                                   
                                 </select>
                             </div>
                         </div>

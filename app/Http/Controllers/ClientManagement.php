@@ -382,20 +382,19 @@ class ClientManagement extends Controller
         //     ]);
         // }
 
-        // $img = time() . '-' . $Request->file . '.' .
-        // $Request->file->extension();
 
-
-        // $Request->file->move(public_path('image'),$img);
-
-        $filename = time().$Request->file('file')->getClientOrginalName();
-        $path   =$Request->file('file')->storeAs('image',$$filename,'public');
-        $requestdata['file'] = '/storage/'.$path;
+        if (request()->hasFile('file')){
+            $uploadedImage = $Request->file('file');
+            $imageName = time() . '.' . $file->getClientOriginalExtension();
+            $destinationPath = public_path('/images/file');
+            $uploadedImage->move($destinationPath, $imageName);
+            $file->file = $destinationPath . $imageName;
+        }
 
         DB::table('cra_document_detials')->insert([
 
             'document_type' =>  $document_type,
-            'file' =>  $img,
+            'file' =>   $imageName,
             'individual_id' => $individual_id 
         ]);
         return redirect('/client-document');
@@ -404,8 +403,37 @@ class ClientManagement extends Controller
 
 
     public function viewDocument($document_id){
-        $view_document = DB::table('cra_document_detials')->where('document_id',$document_id )->first();  
+        $view_document = DB::table('cra_document_detials')->where('document_id',$document_id)->first();  
         return view('client-management.view-document',compact('view_document','document_id'));
+    }
+
+    public function editDocument($document_id){
+        $edit_documents = DB::table('cra_document_detials')->where('document_id',$document_id)->first();
+        return view('client-management.edit-documents',compact('edit_documents','document_id'));
+    }
+
+    public function updatedocument(Request $Request){
+
+        $document_id  = $Request['document_id'];
+        $document_type = $Request['type'];
+        $file = $Request['file'];
+
+        
+        if (request()->hasFile('file')){
+            $uploadedImage = $Request->file('file');
+            $imageName = time() . '.' . $file->getClientOriginalExtension();
+            $destinationPath = public_path('/images/file');
+            $uploadedImage->move($destinationPath, $imageName);
+            $file->file = $destinationPath . $imageName;
+        }
+
+        
+        DB::table('cra_document_detials')->where('document_id',$document_id)->update([
+
+            'document_type' =>  $document_type,
+            'file' =>   $imageName,
+        ]);
+        return redirect('/client-document');
     }
 
 
