@@ -1296,13 +1296,13 @@ Route::any('accindex','accindex@index')->name('accindex');
 Route::any('new_communication','ClientManagement@add_communication')->name('add_communication');
 Route::any('calander',"Calender@index")->name('calander');
 
+Route::any('over_time','hrindex@over_time_list')->name('over_time');
+Route::any('view_over_time','hrindex@viewover_time_list')->name('view_over_time');
+Route::any('add_assingment','hrindex@add_assignment')->name('add_assingment');
 
-
-
-
-
-
-
+Route::any('edit-assigment/{id}','hrindex@editassigment')->name('edit-assigment');
+Route::any('update-assigment','hrindex@updateassigment')->name('update-assigment');
+Route::any('drop-assigment/{id}','hrindex@dropassigment')->name('drop-assigment');
 
 
 
