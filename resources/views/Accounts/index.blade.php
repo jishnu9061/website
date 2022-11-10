@@ -98,13 +98,7 @@ $no=1;
               <form action="{{url('save_ledger_acounts')}}" method="post" >
                                      @csrf
 
-
-
-
-
-
-                                     
-                                    <div class="modal-body">
+<div class="modal-body">
 
                                          <div class="card-body">
 

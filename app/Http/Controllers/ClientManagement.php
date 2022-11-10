@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Illuminate\Support\Facades\Storage;
 
 class ClientManagement extends Controller
 {
@@ -357,40 +358,45 @@ class ClientManagement extends Controller
     public function document(){
         $client_document = DB::table('cra_document_detials')
         ->select('*')  
-        ->leftjoin('cra_individual_client_details','cra_individual_client_details.individual_id','=','cra_document_detials.document_id')
+        ->leftjoin('cra_individual_client_details','cra_individual_client_details.individual_id','=','cra_document_detials.individual_id')
         ->get(); 
   
         return view('client-management.client-document',compact('client_document'));
     }
 
 
-    public function createDocument(){
-
-        return view('client-management.add-document');
+    public function createDocument($individual_id){
+        $client_doc = DB::table('cra_individual_client_details')->where('individual_id',$individual_id)->first();
+        return view('client-management.add-document',compact('client_doc','individual_id'));
     }
 
     public function addDocument(Request $Request){
-
+        $individual_id = $Request['individual_id'];
         $document_type = $Request['type'];
         $file = $Request['file'];
 
-        if(!empty($Request->file('file'))){
+        // if(!empty($Request->file('file'))){
 
-            $this->validate($Request ,[
-                'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg|max:2048',
-            ]);
-        }
+        //     $this->validate($Request ,[
+        //         'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg',
+        //     ]);
+        // }
 
-        $img = time() . '-' . $Request->file . '.' .
-        $Request->file->extension();
+        // $img = time() . '-' . $Request->file . '.' .
+        // $Request->file->extension();
 
 
-    $test = $Request->file->move(public_path('images\files'),$img);
+        // $Request->file->move(public_path('image'),$img);
+
+        $filename = time().$Request->file('file')->getClientOrginalName();
+        $path   =$Request->file('file')->storeAs('image',$$filename,'public');
+        $requestdata['file'] = '/storage/'.$path;
 
         DB::table('cra_document_detials')->insert([
 
             'document_type' =>  $document_type,
             'file' =>  $img,
+            'individual_id' => $individual_id 
         ]);
         return redirect('/client-document');
 

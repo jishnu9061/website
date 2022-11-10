@@ -149,12 +149,12 @@
             <tr>
                 <th colspan="1">
 
-                </th>
                 <th ><button class="btn btn-primary" id="create_btn" style="float:right;" onclick="test()"  type="button">Create</button>
                     <button class="btn btn-primary" type="button" id="creating_btn" style="display:none;float:right;" disabled>
                         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                         Creating...
                       </button>
+                  
                 
                 </th>
             </tr>
@@ -181,7 +181,7 @@
                     <i data-feather="x"></i>
                 </button>
             </div>
-            <!-- <form action="{{url('save_ledger_acounts')}}" method="post" > -->
+            <form id="account_form" >
                                      @csrf
 
       
@@ -217,7 +217,7 @@
                         </div>
                         <div class="form-group mb-3">
                             <label> Budget Category </label>
-                           <select class="form-control" name="budget_cat" id="budget_cat" required>
+                           <select class="form-control" name="budget_cat" id="budget-cat" required>
                                <option value=""> ---Select---</option>
                                @foreach($budget_cat as $budget):
                                <option value="{{ $budget->id }}" > {{ $budget->budget_name }} </option>
@@ -228,7 +228,7 @@
                      
                         <div class="form-group mb-3">
                             <label>Default Currency</label>
-                           <select class="form-control" name="default_currency"   id="default_currency" required>
+                           <select class="form-control" name="default_currency"   id="default-currency" required>
                                <option value=""> ---Select---</option>
                                <option>KES</option>
                                 <option>USD</option>
@@ -585,11 +585,6 @@ if ($("#journal_form")[0].checkValidity()){
     }
 
 
-
-
-
-
-
 }
 else{
 //Validate Form
@@ -604,14 +599,16 @@ $("#journal_form")[0].reportValidity();
 
 function save_ledger_account(){
 
+
+
     var accounts_name=$('#accounts-name').val();
     var accounts_subcategory=$('#accounts-subcategory').val();
-    var account_cat=$('#account-cat').val();
-    var budget_cat=$('#budget_cat').val();
-    var default_currency=$('#default_currency').val();
+    var accounts_category=$('#account-cat').val();
+    var budget_cat=$('#budget-cat').val();
+    var default_currency=$('#default-currency').val();
     var accounts_desc=$('#accounts-desc').val();
 
-
+console.log($("#account_form")[0]);
 
     if ($("#account_form")[0].checkValidity()){
 
@@ -631,9 +628,9 @@ function save_ledger_account(){
                         data: {
                             accounts_name: accounts_name,
                             accounts_subcategory: accounts_subcategory,
-                            account_cat: account_cat,
-                            budget_cat: budget_cat,
-                            default_currency:default_currency
+                            accounts_category: accounts_category,
+                            budget_cat:budget_cat,
+                            default_currency:default_currency,
                             accounts_desc: accounts_desc,
 
                         },
@@ -644,7 +641,7 @@ function save_ledger_account(){
                                swal({title: "Success!",
                                text: "Account Created!",
                                icon: "success",
-                               button: "OK"});
+                               button: "OK"})
 
 
 
@@ -659,8 +656,8 @@ function save_ledger_account(){
                              $('#accounts-name').val('');
                             $('#accounts-subcategory').val('');
                               $('#account-cat').val('');
-                              $('#budget_cat').val('');
-                              $('#default_currency').val('');
+                              $('#budget-cat').val('');
+                              $('#default-currency').val('');
                             $('#accounts-desc').val('');
                             $('#default').modal('toggle');
 
@@ -696,6 +693,13 @@ function save_ledger_account(){
 
 
 @endsection
+
+
+
+
+
+
+
 
 
 

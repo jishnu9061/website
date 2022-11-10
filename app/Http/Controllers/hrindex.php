@@ -1,9 +1,14 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use DB;
+
+use Illuminate\Support\Facades\DB;
+
 
 class hrindex extends Controller
 {
@@ -17,14 +22,50 @@ class hrindex extends Controller
         return view('hr.recruitment_index');
     }
 
-    public function create_job_post()
+
+  
+
+    public function create_job_post(Request $request)
+
     {
+        $job_title=$request['job_title'];
+        $job_location=$request['job_location'];
+        $qualification=$request['qualification'];
+        $work_experience=$request['work_experience'];
+        $employment_type=$request['employment_type'];
+        $job_nature=$request['job_nature'];
+        $job_type=$request['job_type'];
+        $salary_range=$request['salary_range'];
+        $start_date=$request['start_date'];
+        $end_date=$request['end_date'];
+        $job_description=$request['job_description'];
+        $job_responsibilities=$request['job_responsibilities'];
+        
+
+        DB::table('cra_hr_create_post')->insert([
+            
+            'job_title' => $job_title,
+            'job_location' => $job_location,
+            'qualification' => $qualification,
+            'work_experience' => $work_experience,
+            'employment_type' => $employment_type,
+            'job_nature' => $job_nature,
+            'job_type' => $job_type,
+            'salary_range' => $salary_range,
+            'start_date' => $start_date,
+            'end_date' => $end_date,
+            'job_description' => $job_description,
+            'job_responsibilities' => $job_responsibilities,
+            
+        ]);
         return view('hr.create_job_post');
     }
 
     public function job_posts()
     {
-        return view('hr.job_posts');
+        $job_details=DB::table('cra_hr_create_post')->get();
+        return view('hr.job_posts',['job_details'=> $job_details]);
+        // return view('hr.job_posts',compact('job_details'));
     }
 
     public function view_job_applications()

@@ -37,7 +37,7 @@ border-width:0px;
 <div class="container">
 
 	<br>
-    <h2 id="manufacturing123"></h2><h2> PROFIT & LOSS ACCOUNT</h2>
+    <h2 id="manufacturing123"></h2><h2> INCOME & EXPENDITURE STATEMENT</h2>
 
       <div class="table-responsive">
           <br>
@@ -87,7 +87,7 @@ border-width:0px;
 
 <table class="table table-striped">
     <tr>
-    <th colspan="5" class="text-center"> <h5 class="manufacturing_heading">MANUFACTURING,</h5><h5> PROFIT & LOSS ACCOUNT</h5></th>
+    <th colspan="5" class="text-center"> <h5 class="manufacturing_heading"></h5><h5> INCOME EXPENDITURE STATEMENT </h5></th>
     </tr>
     <tr>
         <th colspan="5">
@@ -608,7 +608,10 @@ display: none;
 
 
                 @endforeach
-@if(!empty($cr_manufacturing_bal))
+
+<!-- reshma edited -->
+
+<!-- @if(!empty($cr_manufacturing_bal))
                 <tr>
                     <td>
                       To Cost of Goods manufactured during the year transferred from Manufacturing A/c
@@ -617,7 +620,8 @@ display: none;
                         {{ $cr_manufacturing_bal }}
                     </td>
                 </tr>
-@endif
+@endif -->
+<!-- reshma edited -->
 
             </table>
         </th>
