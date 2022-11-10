@@ -47,6 +47,7 @@
             color: #999;
         }
     </style>
+    <div class='container'>
     <h4 id="hdtpa"><b>Staff Details</b></h4><br>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New Staff</button>
     <div class="header_wrap">
@@ -111,7 +112,7 @@
     <div class="rows_count">Showing 11 to 20 of 91</div>
 
     <!-- 		End of Container -->
-
+    </div>
 
     <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
     <div class="modal fade" id="myModal">
@@ -400,9 +401,8 @@
             </div>
             </form>
         </div>
-    </div>
-    </div>
-    </div>
+
+   
 
     </div>
     <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
