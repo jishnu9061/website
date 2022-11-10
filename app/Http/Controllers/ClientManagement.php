@@ -375,18 +375,22 @@ class ClientManagement extends Controller
         $document_type = $Request['type'];
         $file = $Request['file'];
 
-        if(!empty($Request->file('file'))){
+        // if(!empty($Request->file('file'))){
 
-            $this->validate($Request ,[
-                'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg',
-            ]);
-        }
+        //     $this->validate($Request ,[
+        //         'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg',
+        //     ]);
+        // }
 
-        $img = time() . '-' . $Request->file . '.' .
-        $Request->file->extension();
+        // $img = time() . '-' . $Request->file . '.' .
+        // $Request->file->extension();
 
 
-        $Request->file->move(public_path('image'),$img);
+        // $Request->file->move(public_path('image'),$img);
+
+        $filename = time().$Request->file('file')->getClientOrginalName();
+        $path   =$Request->file('file')->storeAs('image',$$filename,'public');
+        $requestdata['file'] = '/storage/'.$path;
 
         DB::table('cra_document_detials')->insert([
 
