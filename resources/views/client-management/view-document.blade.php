@@ -30,7 +30,7 @@
                     <td></td>
                 </tr>
                     <th>Client Document</th>
-                    <td><img src="{{asset('App/public/images/'.$view_document->file)}}" alt=""></td>
+                    <td><img src="{{asset('/images/file/'.$view_document->file)}}" width="80px" height="50px" alt="image"></td>
                 </tr>
             </tbody>
         </table>
