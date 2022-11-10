@@ -4,15 +4,20 @@
 <div class="container">
     
 <head>
-    
+<script>
+            var loadFile = function(event) {
+                var image = document.getElementById('output');
+                image.src = URL.createObjectURL(event.target.files[0]);
+            };
+            </script>
 </head>
 <body>
-<style>
+<!-- <style>
     #upload_button input[type=file] 
     {
         display:none;
     }
-        </style>
+        </style> -->
 
 
 
@@ -24,16 +29,27 @@
         
     </div>
    
-    <div id="upload_button">
-    <input type="file" name="image" ngf-select ng-model="new_files" ng-change="fs.uploadFiles(new_files)" value="{{$company_details->Add_Logo}}"multiple>
-    <span class="btn btn-primary"> <span class="fa fa-plus"></span>&nbsp;&nbsp;ADD LOGO</span> <br>
-    <br>
+   
+
+
+
     <!-- <input type="text" class="form-control" name="name" id="name" > -->
-</div>
+
     <div class="row">
         <div class="col-md-12">
             <form method="post"action="{{url('update_company_details')}}"  id="form">  
             <input type="hidden" name="id" value="{{$company_details->id}}">
+
+<!-- --------------------------------------image------------------------------------------------->
+                                             <label>
+                                                    <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)"  value="{{$company_details->logo}}">
+                                                        <span class="btn btn-primary"><span
+                                                                class="fa fa-plus"></span>Edit Logo</span>
+                                                    </label>
+                                                    <img id="output" width="10%" />	
+<!-- --------------------------------------image------------------------------------------------->
+
+
                 @csrf
                 <div class="row">
                     <div class="col-md-6">
@@ -69,7 +85,7 @@
                             <label for="username">Town/City</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="city" id="city" value="{{$company_details->town_city}}">
+                                <input type="text" class="form-control" name="city" id="city" value="{{$company_details->town}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>

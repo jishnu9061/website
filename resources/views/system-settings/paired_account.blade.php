@@ -1,7 +1,7 @@
 
 @extends('layouts.hmsmain')
 @section('content')
-
+<div class="container">
 
 <div>
             <button class="btn btn-primary"

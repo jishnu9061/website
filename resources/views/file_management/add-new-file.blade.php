@@ -36,7 +36,6 @@
 {{-- <a style="border-left: solid 1px #4c7baa;" value="click me" onclick="this.style.color='#000000'; this.style.backgroundColor = '#ebeff3'" type="button" onclick="document.getElementById('ww ').style.color='#3d98fc'" class=" nav-item nav-link active" href="#sea">Matter</a> --}}
 
 
-<section   style="margin-left:100px; margin-right:100px;">
 
 
     {{-- <h4 id="hdtpa"><b>Matters</b></h4>

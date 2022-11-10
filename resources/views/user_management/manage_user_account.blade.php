@@ -2,23 +2,9 @@
 @extends('layouts.hmsmain')
 @section('content')
 <html>
-
+<div class="container">
    <head>
 
-   <style>
-
-          body
-        {
-          background-color: white;
-        }
-
-             th, td ,tr{
-               border: 1px solid  gray ;
-                border-collapse: collapse;
-}
-
-
-          </style>
    </head>
    <body>
  <div>

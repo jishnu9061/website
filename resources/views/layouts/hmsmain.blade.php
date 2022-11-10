@@ -419,7 +419,7 @@
                                     </li>
                                     
                                 </ul>
-                                </li>
+                               </li>
 
                                 <li class="submenu-item  has-sub" style="list-style:none;">
                                 <a href="{{url('user_management')}}" class='sidebar-link'>
@@ -435,15 +435,8 @@
                                             <span > Client Management</span>
                                         </a>
                                 </li>
-
-    
-
-                              
-
-                             
-
-
-                            @endif
+                            
+                                @endif
                             @if(Auth::user()->role == 'hospitaladmin')
                             <li class="submenu-item has-sub " style="list-style:none;">
                                         <a href="{{url('file_managementindex')}}" class='sidebar-link'>
@@ -522,55 +515,54 @@
                                         <i class="bi bi-grid-fill" style="font-weight: 400;" id="icon"></i>
                                             <span>HR</span>
                                     </a> --}}
-                                    @if (in_array(request()->path(),$hr))
+                                    {{-- @if (in_array(request()->path(),$hr))
                                         <ul class="submenu" style="display: block;">
                                         @else
                                             <ul class="submenu" style="display: none;">
 
-                                    @endif
+                                    @endif --}}
                                     
-                                    <li class="submenu-item ">
+                                    {{-- <li class="submenu-item ">
                                         <a href="{{url('addallowance')}}" class='sidebar-link'>
                                             <span id="subm">Settings</span>
                                         </a>
-                                    </li>
-                                    <li class="submenu-item ">
+                                    </li> --}}
+                                    {{-- <li class="submenu-item ">
                                         <a href="{{url('addstaffs')}}" class='sidebar-link'>
                                             <span id="subm">Add Staffs</span>
                                         </a>
-                                    </li>
-                                    <li class="submenu-item ">
+                                    </li> --}}
+                                    {{-- <li class="submenu-item ">
                                         <a href="{{url('staffs')}}" class='sidebar-link'>
                                             <span id="subm">Manage Staffs</span>
                                         </a>
-                                    </li>
-                                    <li class="submenu-item ">
+                                    </li> --}}
+                                    {{-- <li class="submenu-item ">
                                         <a href="{{url('loans')}}" class='sidebar-link'>
                                             <span id="subm">Loans</span>
                                         </a>
-                                    </li>
-                                    <li class="submenu-item ">
+                                    </li> --}}
+                                    {{-- <li class="submenu-item ">
                                         <a href="{{url('payslip')}}" class='sidebar-link'>
                                             <span id="subm">Payslip(Bulk)</span>
                                         </a>
-                                    </li>
+                                    </li> --}}
                                     {{-- <li class="submenu-item ">
                                         <a href="{{url('payslipbulk')}}" class='sidebar-link'>
                                             <span>Payslip(Individual)</span>
                                         </a>
                                     </li> --}}
-                                    <li class="submenu-item ">
+                                    {{-- <li class="submenu-item ">
                                         <a href="{{url('attendanceview')}}" class='sidebar-link'>
                                             <span id="subm">Attendance(Manual)</span>
                                         </a>
-                                    </li>
-                                    <li class="submenu-item ">
+                                    </li> --}}
+                                    {{-- <li class="submenu-item ">
                                         <a href="{{url('attendance')}}" class='sidebar-link'>
                                             <span id="subm">Attendance(CSV Upload)</span>
                                         </a>
-                                    </li>
-                                </ul>
-                                </li>
+                                    </li> --}}
+                                {{-- </li> --}}
                             @endif
                             
                             @if(Auth::user()->role == 'account' || Auth::user()->role == 'hospitaladmin')
@@ -591,7 +583,7 @@
 
                                            <span>Accounts</span>
                                        </a> --}}
-                                   @if (in_array(request()->path(), $accounts))
+                                   {{-- @if (in_array(request()->path(), $accounts))
                                        <ul class="submenu" style="display: block;">
                                      @else
                                      <ul class="submenu" style="display: none;">
@@ -666,8 +658,8 @@
                                                    <span  id="subm">Stock Items </span></a>
                                            </li>
                                        </ul>
-                                   </li>
-                                   @endif
+                                   {{-- </li> --}}
+                                   @endif 
                             @if(Auth::user()->role == 'store' || Auth::user()->role == 'hospitaladmin')
                                 @php
                                     $store=array("addsuppliers", "view_manufacturers","view_medicine", "view_medicine_category","view_medicine_type","view_unit","view_medicine_group","view_brand_name","view_generic_name","reorder","view_purchase","stock_details","accounting_method","payment_type");
