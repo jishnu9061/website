@@ -243,7 +243,8 @@
                             <label for="username">Date Of Joining</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="password" id="password"
+                                <input type="date" class="form-control" name="
+                                " id="password"
                                     placeholder="staff Password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Passeord is required.
