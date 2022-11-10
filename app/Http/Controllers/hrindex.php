@@ -7,7 +7,9 @@ use Illuminate\Http\Request;
 
 use DB;
 
+
 // use Illuminate\Support\Facades\DB;
+
 
 
 class hrindex extends Controller

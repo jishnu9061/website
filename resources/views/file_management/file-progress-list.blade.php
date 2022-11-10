@@ -303,16 +303,10 @@
                                             <div class="row">
 
                                                 <div class="col-md-12 order-md-1">
-                                                @foreach($file_progress_list as $lists)
+                                               
                                                     <form method="post" action="" id="form">
                                                         @csrf
-                                                        <!-- @foreach($file_progress_list as $list)
-                                                        <input type="text" name="corporate_id"
-                                                            value="{{$list->id}}">
-                                                        @endforeach -->
-                                                        <input type="text" name="corporate_id"
-                                                            value="{{$lists->id}}">
-                                                        @endforeach
+                                                        
                                                         <div class="row">
                                                             <div class="col-md-4">
                                                                 <div class="mb-1">
