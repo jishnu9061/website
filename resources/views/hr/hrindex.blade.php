@@ -39,17 +39,5 @@
 
 <section >
 
-   {{-- heading --}}
-   
-    
-
-            
-              
-                
-           
-           
-
-     
-
 
 @endsection
