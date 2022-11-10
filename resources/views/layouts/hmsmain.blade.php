@@ -69,8 +69,6 @@
     html {
   scroll-behavior: smooth;
     }
-    
-    /* paggination */
 
     .pagination>li>span {
     position: relative;
@@ -113,6 +111,7 @@ float:right;
 text-align:right;
 color: #999;
 }
+    
  
     </style>
 
