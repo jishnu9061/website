@@ -8,9 +8,31 @@
         <button  class="btn btn-primary "  data-toggle="modal" id="patient" data-bs-toggle="modal"
         data-bs-target="#default" style="width: 25%">Add Category</button>
 
-      <div class="table-responsive">
-<table class="table table-striped" id="allpatients" style="margin-top: 40px;">
-  <thead>
+        <div class="container">
+    <div class="header_wrap">
+      <div class="num_rows">
+        <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
+         <select class  ="form-control" aria-label="Page navigation example" name="state" id="maxRows">
+
+          <option value="5">5</option>
+          <option value="10">10</option>
+           <option value="15">15</option>
+           <option value="20">20</option>
+           <option value="50">50</option>
+           <option value="70">70</option>
+           <option value="100">100</option>
+          <option value="5000">Show ALL Rows</option>
+          </select>
+         
+        </div>
+      </div>
+      <div class="tb_search">
+<input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
+      </div>
+    </div>
+<br>
+    <div class="table-responsive">
+        <table class="table table-striped table-class" id= "table-id">
     <tr>
       <th scope="col">Sl</th>
       <th scope="col">Budget Category</th>
@@ -46,6 +68,17 @@
 </table>
       </div>
 </div>
+<!--		Start Pagination -->
+<div class='pagination-container'>
+      <nav>
+        <ul class="pagination">
+         <!--	Here the JS Function Will Add the Rows -->
+        </ul>
+      </nav>
+    </div>
+    <div class="rows_count">Showing 11 to 20 of 100</div>
+
+ <!-- 		End of Container -->
 <div class="modal fade text-left" id="default" tabindex="-1" role="dialog"
                             aria-labelledby="myModalLabel1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
