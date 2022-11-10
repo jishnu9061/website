@@ -1190,8 +1190,8 @@ color: #999;
 
                 <div  style=" text-decoration: none; list-style:none;">
             
-        <button class="btn btn-primary">
-            <a  style="text-align: center" class="text-muted mb-0 " href="{{url('logt')}}"><i   class="fas fa-sign-out-alt"></i>LogOut</a>
+        <button class="btn btn-primary" style="text-align: center" class="text-muted mb-0 " href="{{url('logt')}}"><i class="fas fa-sign-out-alt"></i>LogOut
+            
             
         </button>
         </div>
