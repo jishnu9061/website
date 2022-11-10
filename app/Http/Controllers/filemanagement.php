@@ -179,7 +179,15 @@ class filemanagement extends Controller
     //manage files
     public function filearchive()
     {
-        return view('file_management.file-archive');
+
+        $file_progress_list = DB::table('cra_add_file_progress')
+        ->select('*')  
+        ->fulljoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_file_progress.id')
+        ->get();    
+        return view('file_management.file-archive',compact('file_progress_list'));
+
+        // return view('file_management.file-archive');
+
     }
 
     public function addboxno(Request $request)
@@ -344,22 +352,12 @@ class filemanagement extends Controller
 
     public function fileprogresslist()
     {
-<<<<<<< Updated upstream
-        $corporate= DB::table('cra_corporate_client_details')->get();
+       
          $file_progress_list = DB::table('cra_add_file_progress')
-        ->select('*','cra_corporate_client_details.corporate_id')  
-        ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_file_progress.corporate_id')
+        ->select('*')  
+        ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_file_progress.id')
         ->get();    
-        return view('file_management.file-progress-list',compact('file_progress_list','corporate'));
-=======
-        //  $file_progress_list = DB::table('cra_add_file_progress')
-        // ->select('*')  
-        // ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.id','=','cra_add_file_progress.corporate_id')
-        // ->get(); 
-
-        return view('file_management.file-progress-list');
-        
->>>>>>> Stashed changes
+        return view ('file_management.file-progress-list',compact('file_progress_list');
     }
 
 
