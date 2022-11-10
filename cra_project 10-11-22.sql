@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 09, 2022 at 06:01 AM
+-- Generation Time: Nov 10, 2022 at 08:22 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -6999,7 +6999,11 @@ INSERT INTO `journal_items` (`id`, `journal_items_transaction`, `journal_items_a
 (96, 48, '2022-08-22 09:13:13', 2, 0, 3, 3, 300),
 (97, 48, '2022-08-22 09:13:13', 2, 0, 44, 44, 100),
 (98, 49, '2022-08-22 13:10:16', 1, 44, 0, 44, 1000),
-(99, 49, '2022-08-22 13:10:16', 2, 0, 44, 44, 1000);
+(99, 49, '2022-08-22 13:10:16', 2, 0, 44, 44, 1000),
+(100, 50, '2022-11-09 12:09:40', 1, 55, 0, 55, 1000),
+(101, 50, '2022-11-09 12:09:40', 2, 0, 58, 58, 1000),
+(102, 51, '2022-11-10 04:27:37', 1, 55, 0, 55, 400),
+(103, 51, '2022-11-10 04:27:37', 2, 0, 56, 56, 400);
 
 -- --------------------------------------------------------
 
@@ -7055,7 +7059,9 @@ INSERT INTO `journal_transactions` (`id`, `journal_date`, `journal_addedon`, `jo
 (44, '2022-03-12 00:00:00', '2022-03-12 08:48:29', 'dsdsd', 37, '', 'kims intetrnational'),
 (46, '2022-08-12 00:00:00', '2022-08-12 13:20:22', 'demo', 47, '', 'kims intetrnational'),
 (48, '2022-08-22 00:00:00', '2022-08-22 09:13:13', 'fdfffd', 47, '', 'kims intetrnational'),
-(49, '2022-08-22 00:00:00', '2022-08-22 13:10:15', 'gg', 47, '', 'kims intetrnational');
+(49, '2022-08-22 00:00:00', '2022-08-22 13:10:15', 'gg', 47, '', 'kims intetrnational'),
+(50, '2022-11-09 00:00:00', '2022-11-09 12:09:40', 'bnb', 47, '', 'kims intetrnational'),
+(51, '2022-11-10 00:00:00', '2022-11-10 04:27:37', 'bnb', 47, '', 'kims intetrnational');
 
 -- --------------------------------------------------------
 
@@ -10334,7 +10340,7 @@ INSERT INTO `users` (`id`, `uniqueid`, `name`, `email`, `age`, `email_verified_a
 (130, '094000370130', 'test', 'test@gmail.com', NULL, NULL, '$2y$10$D1t9pAtmJvL8VfhdQlxsjON0oRMWBnOL9UizqrGFpVHmPKkryvreW', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-11-08 03:34:03', '2022-11-08 03:34:03', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0),
 (131, '094000370131', 'Allan Turing', 'allan1@gmail.com', 25, NULL, '$2y$10$dEPNciaVc6QvdXoj574oi.A9bXJnn5UdZZlFg3xJVBOC/LU60Tj0e', NULL, 'test address', '0000-00-00', '123456789', 'test bank', NULL, NULL, '2022-11-08 03:42:18', '2022-11-08 03:42:18', 'kims intetrnational', NULL, NULL, '789456123', 1, '0000-00-00', NULL, NULL, '10000', 1, '2022-11-10', NULL, NULL, NULL, NULL, NULL, 0, 0, 0),
 (132, '094000370132', 'yograj', 'yograj@gmail.com', NULL, NULL, '$2y$10$.PPYGz99kRiC/eTlayZPX./680o45kia7DrxNpqKGeDGpbR0LYbi.', NULL, NULL, '0000-00-00', NULL, NULL, NULL, NULL, '2022-11-08 03:48:25', '2022-11-08 03:48:25', 'kims intetrnational', NULL, NULL, '789456123', 1, '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0),
-(133, '094000370133', 'Reji', 'reji@gmail.com', 26, NULL, '$2y$10$0FG5ICh7QaQRWJnbaLWrxupL314UWTGqLHVSkD43c1HuAhoYxqc7u', NULL, 'test Address', '0000-00-00', NULL, NULL, NULL, NULL, '2022-11-08 05:22:09', '2022-11-08 05:22:09', 'kims intetrnational', NULL, NULL, '987456123', 1, '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0);
+(133, '094000370133', 'Reji', 'reji@gmail.com', 27, NULL, '$2y$10$UloP4oZnbTREQkFm/FI6YubYVWJTT2S3wzbUXLCjzDcJheOg6EtJq', NULL, 'test Address', '0000-00-00', NULL, NULL, NULL, NULL, '2022-11-08 05:22:09', '2022-11-08 05:22:09', 'kims intetrnational', NULL, NULL, '987456123', 3, '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -11802,13 +11808,13 @@ ALTER TABLE `journal`
 -- AUTO_INCREMENT for table `journal_items`
 --
 ALTER TABLE `journal_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
 
 --
 -- AUTO_INCREMENT for table `journal_transactions`
 --
 ALTER TABLE `journal_transactions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT for table `labcategory`
