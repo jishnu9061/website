@@ -30,9 +30,8 @@ class SystemSetup extends Controller
     {
         $company_details=DB::table('cra_company_details')->get();
         return view('system-settings.company_details',compact('company_details'));
-     
-     
     }
+
     public function addcompany(Request $Request)
     {
         $company_name= $Request['name'];
@@ -45,28 +44,24 @@ class SystemSetup extends Controller
         $vat_no = $Request['vatnum'];
         $NHIF= $Request['nhifcode'];
         $NSSF_no = $Request['nnum'];
-        // $logo = $Request['image'];
-        
-        
-        
-        
-        // if($Request->hasfile('logo'))
-        // {
-        //     $file=$Request->file('logo');
-        //     $extension=$file->getClientOriginalExtension();
-        //     $filename=time() . '.' . $extension;
-        //     $file->move('img/logo_c/',$filename);
-        //     $company->logo=$filename;
-        // }
-        // else
-        // {
-        //     return $Request;
-        // }
-         
-       
-///////////////////////////////////////////////////////////////////
-      
-////////////////////////////////////////////////////////////////////
+        $logo = $Request['image'];
+
+        if(!empty($Request->file('image'))){
+
+            $this->validate($Request ,[
+                'image' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg',
+            ]);
+        }
+
+
+        if (request()->hasFile('image')){
+            $uploadedImage = $Request->file('image');
+            $imageName = time() . '.' . $logo->getClientOriginalExtension();
+            $destinationPath = public_path('images');
+            $uploadedImage->move($destinationPath, $imageName);
+            $logo->file = $destinationPath . $imageName;
+        }
+
         DB::table('cra_company_details')->insert([
             'company_name' => $company_name,
             'address' => $address,
@@ -78,12 +73,20 @@ class SystemSetup extends Controller
             'vat_no' => $vat_no,
             'NHIF' => $NHIF,
             'NSSF_no' => $NSSF_no,
-            // 'logo' => $logo,
+            'logo' =>  $imageName,
         ]);
    
         return redirect('/company_details');
      
     }
+
+    public function deleteCompany($id){
+        $delete_details= DB::table('cra_company_details')->where('id',$id)->delete();
+        return redirect('/company_details');
+       
+    }
+
+    
     public function editcompany($id)
     {
      $company_details= DB::table('cra_company_details')->where('id',$id)->first();
