@@ -58,11 +58,7 @@ color: #999;
 
                                            {{-- heading --}}
      <h4 id="hdtpa"><b>Office Instructions</b></h4>
-     <br><br>
-        
- 
-     
-        <br>
+     <br>
 
         
         <!-- <a href="{{url('new_office_instructions')}}"><button class="btn btn-primary add-btn" Style="width:200px;">Add

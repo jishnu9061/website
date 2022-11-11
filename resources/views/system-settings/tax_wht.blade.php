@@ -51,7 +51,7 @@ color: #999;
    <body>
     {{-- heading --}}
     <h4 id="hdtpa"><b>Tax WHT</b></h4>
-    <br><br>
+    
 
             <br>
             <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
@@ -60,7 +60,7 @@ color: #999;
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Tax WHT</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      <br>
+                     
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
             <!-- <a href="{{('add_tax_wht')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Tax WHT</button></a><br><br> -->
             <div class="container">

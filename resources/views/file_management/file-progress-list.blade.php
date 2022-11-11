@@ -64,9 +64,9 @@
 
 
         </div>
-        <br>
-        <div style="display:flex; margin-bottom: 2%;  margin-top: 3%;">
-            <div class="dropdown" style="width:20%;">
+        
+        <div style="display:flex;   margin-top: 3%;">
+            <div class="dropdown" style="width:25%;">
                 <div class="btn btn-primary add-btn" type="button" style="width:97%;" id="dropdownMenuButton"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Add New Progress

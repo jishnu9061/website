@@ -62,7 +62,7 @@ color: #999;
         <div>
         {{-- heading --}}
     <h4 id="hdtpa"><b>Database Backup</b></h4>
-    <br>
+   
     <div class="container">
     <div class="header_wrap">
       <div class="num_rows">

@@ -55,7 +55,7 @@ color: #999;
   <div>
   {{-- heading --}}
     <h4 id="hdtpa"><b>Partner Revenue Share</b></h4>
-    <br><br>
+    <br>
      
    </div>
       
@@ -65,7 +65,7 @@ color: #999;
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New Entry</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      <br>
+                     
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <!-- <a href="{{url('add_partner_revenue')}}"><button class="btn btn-primary add-btn"style="width: 20%; margin-bottom:5%;">Add New Entry</button></a> -->
 <div class="container">

@@ -9,9 +9,7 @@
         @endif
 
     </div>
-    <div style="height: 50px;">
-
-    </div>
+  
     <script src="{{ url('assets/js') }}/jquery.min.js"></script>
     <script type="text/javascript">
     $(document).on('input', '#price', function() {
@@ -25,12 +23,8 @@
     </script>
     <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 
-    <div class="col-sm">
+    <div class="Container">
 
-
-    </div>
-    <!-- <h2 style="text-align:center;">Safe Register Report</h2></br></br> -->
-    <div>
     {{-- heading --}}
     <h4 id="hdtpa"><b>Safe Register Report</b></h4>
     <br>
@@ -39,7 +33,7 @@
  
        
         
-            </div>
+           
     <div>
 
         <br>
@@ -48,8 +42,8 @@
             <input class="btn btn-primary" type="button" value="This Week">
             <input class="btn btn-primary" type="button" value="Last Week">
             <input class="btn btn-primary" type="button" value="This Month">
-            <input class="btn btn-primary" type="button"  value="Last Month">
-            <input class="btn btn-primary" type="button"  style="width:12%" value="This Quater">
+            <input class="btn btn-primary" type="button" value="Last Month">
+            <input class="btn btn-primary" type="button" style="width:12%" value="This Quater">
             <input class="btn btn-primary" type="button" style="width:12%" value="Last Quater">
             <input class="btn btn-primary" type="button" value="This Year">
             <input class="btn btn-primary" type="button" value="Last Year">

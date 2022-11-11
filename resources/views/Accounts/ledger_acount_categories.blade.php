@@ -3,7 +3,7 @@
 <div class="container">
 {{-- heading --}}
   <h4 id="hdtpa"><b>Account Types</b></h4>
-  <br><br>
+  <br>
   
 
         <button  class="btn btn-primary"  data-toggle="modal" id="patient" data-bs-toggle="modal"

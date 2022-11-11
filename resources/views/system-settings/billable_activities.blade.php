@@ -61,7 +61,7 @@ color: #999;
         <div>
         {{-- heading --}}
     <h4 id="hdtpa"><b>Billable Activities</b></h4>
-    <br><br>
+    <br>
            
 </div>
             
@@ -71,7 +71,7 @@ color: #999;
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Activity</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      <br>
+                      
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 
 <div class="container">
