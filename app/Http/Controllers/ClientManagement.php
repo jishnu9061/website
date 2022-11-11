@@ -375,12 +375,12 @@ class ClientManagement extends Controller
         $document_type = $Request['type'];
         $file = $Request['file'];
 
-        if(!empty($Request->file('file'))){
+        // if(!empty($Request->file('file'))){
 
-            $this->validate($Request ,[
-                'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg',
-            ]);
-        }
+        //     $this->validate($Request ,[
+        //         'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg',
+        //     ]);
+        // }
 
 
         if (request()->hasFile('file')){

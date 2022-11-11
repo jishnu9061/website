@@ -703,9 +703,9 @@ Route::any('add_company_details','SystemSetup@addcompany')->name('add_company_de
 Route::any('edit_company_details/{id}','SystemSetup@editcompany')->name('edit_company_details');
 Route::any('/update_company_details','SystemSetup@updatecompany')->name('update_company_details');
 Route::any('view_company_details','SystemSetup@viewcompany')->name('view_company_details');
-Route::any('delete_company_details/{id}','SystemSetup@deleteCompany')->name('delete_company_details');
-//end
 
+
+//end
 //weekend and holiday
 Route::any('weekend_holiday','SystemSetup@holiday')->name('weekend_holiday');
 Route::any('add_new_holiday','SystemSetup@addholiday')->name('add_new_holiday');
