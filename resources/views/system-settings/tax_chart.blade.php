@@ -49,7 +49,7 @@ color: #999;
 
 {{-- heading --}}
 <h4 id="hdtpa"><b>Tax Chart</b></h4>
-<br><br>
+
    
 
             <br>
@@ -59,7 +59,7 @@ color: #999;
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Tax Chart</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      <br>
+                    
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 
 <div class="container">

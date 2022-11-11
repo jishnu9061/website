@@ -51,7 +51,8 @@ color: #999;
     <body>
   {{-- heading --}}
   <h4 id="hdtpa"><b>Files Pending Closure</b></h4>
-  <br><div class="container">
+  
+  <div class="container">
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->

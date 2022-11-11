@@ -72,7 +72,7 @@ color: #999;
                 <button type="submit" class="btn btn-primary float:right;" Style="width:11%;">Phone Log</button>
                 <button type="submit" class="btn btn-primary float:right;" Style="width:11%;">Email Log</button>
             </div>
-            <br>
+           
             <div class="container">
     <div class="header_wrap">
       <div class="num_rows">

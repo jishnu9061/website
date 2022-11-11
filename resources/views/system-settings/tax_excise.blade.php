@@ -55,7 +55,7 @@ color: #999;
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Tax Excise</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      <br>
+                     
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
             <!-- <a href="{{('add_tax_excise')}}"><button class="btn btn-primary "style="width=100%;height=100%;">Add Tax Excise</button></a><br><br> -->
             <div class="container">

@@ -49,7 +49,7 @@ color: #999;
     </head>
     <body>
   <h4 id="hdtpa"><b>Files Pending Approval</b></h4>
-  <br>
+  
   <div class="container">
     <div class="header_wrap">
       <div class="num_rows">
