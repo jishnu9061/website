@@ -31,7 +31,7 @@
       <th scope="col">Account Name</th>
       <th scope="col">Account Type</th>
       <th scope="col">Account Category</th>
-      <th scope="col">Budget Category</th>
+      <th scope="col">Budget Grouping</th>
       <th scope="col">Default Currency</th>
       <th scope="col">Description </th>
       <th scope="col">Action</th>
@@ -129,7 +129,7 @@ $no=1;
                         </select>
                         </div>
                         <div class="form-group mb-3">
-                            <label> Budget Category </label>
+                            <label> Budget Grouping </label>
                            <select class="form-control" name="budget_cat" id="budget_cat"  required>
                                <option value=""> ---Select---</option>
                                @foreach($budget_cat as $budget):

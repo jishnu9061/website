@@ -3,10 +3,10 @@
 <div class="container">
 	
     {{-- heading --}}
-  <h4 id="hdtpa"><b>Budget Category</b></h4>
-  <br>
+  <h4 id="hdtpa"><b>Budget Grouping</b></h4>
+  <br><br>
         <button  class="btn btn-primary "  data-toggle="modal" id="patient" data-bs-toggle="modal"
-        data-bs-target="#default" style="width: 25%">Add Category</button>
+        data-bs-target="#default" style="width: 25%">Add Budget Group</button>
 
         <div class="container">
     <div class="header_wrap">
@@ -35,10 +35,10 @@
         <table class="table table-striped table-class" id= "table-id">
     <tr>
       <th scope="col">Sl</th>
-      <th scope="col">Budget Category</th>
+      <th scope="col">Budget Grouping</th>
       <th scope="col">Description</th>
-      <th scope="col">Edit</th>
-      <th scope="col">Delete</th>
+      <th scope="col">Action</th>
+      <!-- <th scope="col">Delete</th> -->
 
     </tr>
   </thead>
@@ -53,15 +53,21 @@
             <td>{{ $key->budget_desc }}</td>
             <td>
                 @if($key->budget_update_privilage == 0)
-                <a href="#" class="edits" data-toggle="modal" data-bs-toggle="modal"
-                data-bs-target="#edit_budget" onclick="edit_values('{{ $key->id }}','{{ $key->budget_name }}','{{ $key->budget_desc }}')"><i class="fa fa-edit"></i></a>
+                <a href="#" class="edits" data-toggle="modal" data-bs-toggle="modal"data-bs-target="#edit_budget">
+                <i style="color:rgb(13, 1, 56);"class="fa fa-edit"onclick="edit_values('{{ $key->id }}','{{ $key->budget_name }}','{{ $key->budget_desc }}')"></i></a>
                 @endif
-            </td>
-            <td>
+         
+           
                 @if($key->budget_update_privilage == 0)
-                <a onclick="return confirm('Are you sure ?');" href="{{ url('delete_ledger_budget_category/'.$key->id) }}"><i class="fa fa-trash-alt"></i></a>
+                <a onclick="return confirm('Are you sure ?');" href="{{ url('delete_ledger_budget_category/'.$key->id) }}"><i style="color:rgb(13, 1, 56);" class="fa fa-trash-alt"></i></a>
                 @endif
             </td>
+
+
+
+
+
+
          </tr>
      @endforeach
   </tbody>
@@ -88,7 +94,7 @@
 
 
           
-            <h2 class="text-centre"><b>Add Budget Category</b></h2>
+            <h2 class="text-centre"><b>Add Budget Group</b></h2>
 
 
            <button type="button" class="close rounded-pill" data-bs-dismiss="modal" aria-label="Close">

@@ -216,7 +216,7 @@
                         </select>
                         </div>
                         <div class="form-group mb-3">
-                            <label> Budget Category </label>
+                            <label> Budget Grouping </label>
                            <select class="form-control" name="budget_cat" id="budget-cat" required>
                                <option value=""> ---Select---</option>
                                @foreach($budget_cat as $budget):
