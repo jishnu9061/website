@@ -51,7 +51,7 @@ color: #999;
     <div>
     {{-- heading --}}
     <h4 id="hdtpa"><b>Bank Account Details</b></h4>
-    <br><br>
+    <br>
     
  </div>
         
@@ -61,7 +61,7 @@ color: #999;
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New Account</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      <br>
+                      
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <div class="container">
     <div class="header_wrap">

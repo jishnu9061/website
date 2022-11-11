@@ -56,7 +56,7 @@ color: #999;
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Court</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      <br>
+                     
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
            

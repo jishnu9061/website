@@ -50,7 +50,7 @@ color: #999;
         
          {{-- heading --}}
          <h4 id="hdtpa"><b>Instructions Past TAT</b></h4>
-         <br>
+         
 
          <div class="container">
     <div class="header_wrap">

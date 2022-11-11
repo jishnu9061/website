@@ -50,7 +50,7 @@ color: #999;
   <div>
   {{-- heading --}}
     <h4 id="hdtpa"><b>Leave Days per Year</b></h4>
-    <br><br>
+   
      
    </div>
             <br>
@@ -60,7 +60,7 @@ color: #999;
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Leave Days</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      <br>
+                     
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 
 <!-- <a href="{{url('add_leave_days')}}"><button class="btn btn-primary add-btn"style="width: 20%; margin-bottom:5%;">Add Leave Days</button></a>-->

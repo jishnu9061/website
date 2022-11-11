@@ -55,8 +55,8 @@ color: #999;
         <div>
         {{-- heading --}}
     <h4 id="hdtpa"><b>Files Closed Report</b></h4>
-    <br>
-  
+   
+</div>
     <div class="container">
     <div class="header_wrap">
       <div class="num_rows">

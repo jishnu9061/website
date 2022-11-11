@@ -67,7 +67,7 @@ color: #999;
         
             </div>
            
-<h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">WakiliCMS Menu Configuration</h3>
+
 <div class="container">
     <div class="header_wrap">
       <div class="num_rows">
@@ -91,7 +91,7 @@ color: #999;
       </div>
     </div>
 <form>
-
+<h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">WakiliCMS Menu Configuration</h3>
 <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
     <thead>          
@@ -179,7 +179,7 @@ color: #999;
                         </div>
                         <div class="col-sm">
                             <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:53%;">Update</button>
                         
                             <br>
                             <br>

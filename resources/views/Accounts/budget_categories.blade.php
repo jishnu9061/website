@@ -4,7 +4,7 @@
 	
     {{-- heading --}}
   <h4 id="hdtpa"><b>Budget Category</b></h4>
-  <br><br>
+  <br>
         <button  class="btn btn-primary "  data-toggle="modal" id="patient" data-bs-toggle="modal"
         data-bs-target="#default" style="width: 25%">Add Category</button>
 

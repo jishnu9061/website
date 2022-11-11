@@ -52,7 +52,7 @@ color: #999;
 <div>
 {{-- heading --}}
     <h4 id="hdtpa"><b>Hourly Rates</b></h4>
-    <br><br>
+    <br>
      
    </div>
             
@@ -62,7 +62,7 @@ color: #999;
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add User Hourly Rates</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      <br>
+                    
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <!-- <a href="{{url('add_hourly_rates')}}"><button class="btn btn-primary add-btn"style="width: 25%; margin-bottom:5%;">Add User Hourly Rates</button></a>-->
 <div class="container">
