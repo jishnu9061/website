@@ -35,7 +35,7 @@
         <div class="col-md-12 order-md-1">
             <form method="post" action="{{url('add-document')}}" id="form" enctype="multipart/form-data">
                 @csrf
-                <input type="hidden" name="id" value="{{ $client_doc->id}}">
+                <input type="hidden" name="individual_id" value="{{ $client_doc->individual_id}}">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
