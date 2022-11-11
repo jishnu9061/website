@@ -109,7 +109,7 @@ color: #999;
                         <tbody>
                             @foreach( $client_list as $list_client)
                             <tr id="data">
-                                <td scope="row" class="text-center">{{$list_client->id}}</td>
+                                <td scope="row" class="text-center">{{$list_client->individual_id }}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list_client->client_number}}
                                 </td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list_client->client_name}}
@@ -120,14 +120,14 @@ color: #999;
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list_client->client_type}}
                                 </td>
                                 <td scope="row" class="text-center"><a href="{{url('view-client')}}">
-                                        <a href="{{url('create-document',$list_client->id)}}"><button style="width:90%; ">Add
+                                        <a href="{{url('create-document',$list_client->individual_id)}}"><button style="width:90%; ">Add
                                                 Documents</button></a></td>
-                                <td><a href="{{url('show-client',$list_client->id )}}"><i style="color:black;"
+                                <td><a href="{{url('show-client',$list_client->individual_id )}}"><i style="color:black;"
                                             class="fa fa-eye" aria-hidden="true"></i></td></a>
-                                <td><a href="{{url('edit_person',$list_client->id)}}"><i style="color:black;"
+                                <td><a href="{{url('edit_person',$list_client->individual_id)}}"><i style="color:black;"
                                             class="fa fa-edit" aria-hidden="true"></i></td>
                                 <td>
-                                <a onClick="return myFunction();" href="{{url('delete-client',$list_client->id)}}"
+                                <a onClick="return myFunction();" href="{{url('delete-client',$list_client->individual_id)}}"
                                         style="color:black;"><i class="fas fa-trash-alt"></i></a>
                                 </td>
                                 </td>

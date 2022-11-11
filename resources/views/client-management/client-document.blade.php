@@ -107,14 +107,14 @@
                                             src="{{asset('/images/file/'.$list->file)}}" width="80px" height="80px">
                                     </td>
                                     <td scope="row" class="text-center">
-                                        <a href="{{url('edit-documents',$list->id)}}"><i style="color:black;"
+                                        <a href="{{url('edit-documents',$list->document_id)}}"><i style="color:black;"
                                                 class="fa fa-pencil" aria-hidden="true"></i>
-                                            <a href="{{url('view-document',$list->id)}}"><i
+                                            <a href="{{url('view-document',$list->document_id)}}"><i
                                                     style="color:black;" class="fa fa-eye" aria-hidden="true"></i>
                                                 <input type="hidden" value="" id="medicine_id_hidden" class="applicate"
                                                     name="supplier_id_hidden">
                                                 <a onClick="return myFunction();"
-                                                    href="{{url('delete-document',$list->id)}}"
+                                                    href="{{url('delete-document',$list->document_id)}}"
                                                     style="color:black;"><i class="fas fa-trash-alt"></i></a>
                                     </td>
                                 </tr>
