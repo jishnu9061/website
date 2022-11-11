@@ -180,7 +180,7 @@
                         <th class="text-center">No</th>
                         <th class="text-center">Assignment</th>
                       
-                        <th class="text-center" Style="width:10%;">Edit</th>
+                        <th class="text-center" Style="width:10%;">Action</th>
 
                        
     </ul>

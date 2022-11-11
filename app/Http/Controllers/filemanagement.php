@@ -181,8 +181,8 @@ class filemanagement extends Controller
     {
 
         $file_progress_list = DB::table('cra_add_file_progress')
-        ->select('*')  
-        ->fulljoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_file_progress.id')
+        // ->select('*')  
+        // ->fulljoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_file_progress.id')
         ->get();    
         return view('file_management.file-archive',compact('file_progress_list'));
 
