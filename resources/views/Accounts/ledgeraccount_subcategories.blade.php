@@ -39,8 +39,8 @@
       {{-- <th scope="col">Category</th> --}}
       <th scope="col">Account Category</th>
       <th scope="col">Description </th>
-      <th scope="col">Edit</th>
-      <th scope="col">Delete</th>
+      <th scope="col">Action</th>
+      <!-- <th scope="col">Delete</th> -->
 
     </tr>
   </thead>
@@ -58,12 +58,11 @@ $no=1;
                <td>
     @if($ledcat->accountssub_update_privilage == 0)
                 <a href="#" class="edits"    data-toggle="modal" id="amb_edit" data-bs-toggle="modal"
-                   data-bs-target="#edit"><i class="fas fa-edit" onclick="values_edit(`{{$ledcat->id}}`,`{{$ledcat->cat_id}}`,`{{$ledcat->ledgeraccount_subcategories}}`,`{{$ledcat->ledgeraccount_subcategories_desc}}`);" ></i></a>
+                   data-bs-target="#edit"><i style="color:rgb(13, 1, 56);" class="fas fa-edit" onclick="values_edit(`{{$ledcat->id}}`,`{{$ledcat->cat_id}}`,`{{$ledcat->ledgeraccount_subcategories}}`,`{{$ledcat->ledgeraccount_subcategories_desc}}`);" ></i></a>
                    @endif
-                </td>
-                   <td>
+               
     @if($ledcat->accountssub_update_privilage == 0)
-                    <a onclick="return confirm('Are you sure ?');" href="{{ url('delete_ledger_accounts_subcategories/'.$ledcat->id) }}"><i class="fas fa-trash-alt"></i></a>
+                    <a onclick="return confirm('Are you sure ?');" href="{{ url('delete_ledger_accounts_subcategories/'.$ledcat->id) }}"><i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></a>
                     @endif
                 </td>
       </tr>

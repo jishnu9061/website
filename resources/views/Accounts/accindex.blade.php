@@ -17,7 +17,7 @@
    <div class="row sm">
     <div class="col-sm-4 "> <a href="{{url('ledger_acount_categories')}}"><img class="logo_size"src="assets\image\Account Type.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn"> Account Type</button></a></div>
      <div class="col-sm-4 "> <a href="{{ url('ledger_acount_subcategories') }}"><img class="logo_size" src="assets\image\Groups.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn">Account Category</button></a></div>
-     <div class="col-sm-4 "> <a href="{{ url('ledger_budget_category') }}"><img class="logo_size"src="assets\image\Budget Category.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn">Budget Category</button></a></div>
+     <div class="col-sm-4 "> <a href="{{ url('ledger_budget_category') }}"><img class="logo_size"src="assets\image\Budget Category.png" alt=""><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn">Budget Group</button></a></div>
     </div>
     <br>
         
