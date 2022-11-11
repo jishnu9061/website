@@ -209,7 +209,7 @@
                             <label>Account Category</label>
 
                            <select class="form-control" name="accounts_subcategory"  id="accounts-subcategory" required>
-                            <option value=""> Select</option>
+                            <option value=""> ---Select---</option>
                             @foreach($subcategory as $subcat):
                             <option value="{{ $subcat->id }}" > {{ $subcat->ledgeraccount_subcategories }} </option>
                            @endforeach;
