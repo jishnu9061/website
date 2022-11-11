@@ -35,7 +35,7 @@
         <div class="col-md-12 order-md-1">
             <form method="post" action="{{url('update-document')}}" id="form" enctype="multipart/form-data">
                 @csrf
-                <input type="hidden" name="document_id" value="{{$edit_documents->document_id}}">
+                <input type="hidden" name="document_id" value="{{$edit_documents->id}}">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">

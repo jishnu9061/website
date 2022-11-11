@@ -21,7 +21,7 @@
         <div class="col-md-12">
             <form method="post" action="{{url('update-client')}}">
                 @csrf
-                <input type="hidden" name="id" value ="{{$edit_client->individual_id}}">
+                <input type="hidden" name="id" value ="{{$edit_client->id}}">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
