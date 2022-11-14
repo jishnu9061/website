@@ -79,6 +79,17 @@
 
 
 <div class="container">
+ <input class="btn btn-primary" type="button" value="Add New KPI" data-toggle="modal" data-target="#myModal">
+ <br>
+ <br>
+ <br>
+</div>
+
+
+
+
+
+<div class="container">
   <div class="row">
     <div class="col">
     <div class="mb-3">
@@ -86,18 +97,9 @@
   <input type="number" class="form-control" id="idnumber">
    </div>
    <div class="mb-3">
-    <label for="postapply" class="form-label">Post Apply</label>
-                <select class="form-select" id="postapply">
-                    <option selected>---select---</option>
-                    <!-- <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option> -->
-                  </select>
-     </div>
-     <div class="mb-3">
-     <label for="reviewperiodto" class="form-label">Review Period To</label>
-     <input type="date" class="form-control" id="reviewperiodto">
-    </div>
+  <label for="currentsalary" class="form-label">Current Salary</label>
+  <input type="number" class="form-control" id="currentsalary">
+   </div>
     </div>
     <div class="col">
     <div class="mb-3">
@@ -105,23 +107,18 @@
   <input type="text" class="form-control" id="name">
   </div>
   <div class="mb-3">
-  <label for="currentsalary" class="form-label">Current Salary</label>
-  <input type="number" class="form-control" id="currentsalary">
-   </div>
+     <label for="reviewperiodfrom" class="form-label">Review Period From</label>
+     <input type="date" class="form-control" id="reviewperiodfrom">
+    </div>
     </div>
     <div class="col">
     <div class="mb-3">
-  <label for="presentposition" class="form-label">Present Position</label>
-                <select class="form-select" id="presentposition">
-                    <option selected>---select---</option>
-                    <!-- <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option> -->
-                  </select>
+  <label for="currentdesignation" class="form-label">Current Designation</label>
+  <input type="text" class="form-control" id="currentdesignation">          
    </div>
    <div class="mb-3">
-   <label for="reviewperiodfrom" class="form-label">Review Period From</label>
-   <input type="date" class="form-control" id="reviewperiodfrom">
+   <label for="reviewperiodto" class="form-label">Review Period To</label>
+   <input type="date" class="form-control" id="reviewperiodto">
     </div>
     </div>
     </div>
@@ -579,6 +576,43 @@
                   </div>   
             </div>
     
+
+
+
+
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
+          <div class="modal fade" id="myModal">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content" >
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header" >
+                                        <h2 class="text-centre"><b>Add KPI</b></h2>
+
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body" >
+                                        <div class="container">
+                                            <form method="post" action="{{url('add_letter_category')}}"
+                                                enctype="multipart/form-data"> 
+    
+
+
+          <div class="mb-3">
+           <div class="form-floating mb-3">
+           <input type="text" class="form-control" id="floatingInput" placeholder="Add new KPI">
+           <label for="floatingInput">KPI</label>
+          </div>
+
+
+      <div class="modal-footer" style="background-color:#d3e0ed;">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+        <button type="button" class="btn btn-primary" onclick="history.back()">Close</button>
+      </div>
+     </div>
+
+</form>
 
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
