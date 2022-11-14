@@ -188,11 +188,8 @@ color: #999;
 
                                                                 </div>
                                                                 <select name="client" id="cars">
-                                                                    <option>---select---</option>
-                                                                    <option>client-1</option>
-                                                                    <option>client-2</option>
-                                                                    <option>client-3</option>
-                                                                    <option>client-4</option>
+                                                                    <option></option>
+                                                                  
                                                                 </select>
                                                             </div>
                                                         </div>
