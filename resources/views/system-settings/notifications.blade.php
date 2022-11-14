@@ -17,7 +17,29 @@
    <body>
    {{-- heading --}}
   <h4 id="hdtpa"><b>WakiliCMS Notification Config</b></h4>
-  <br><br>
+
+  <div class="container">
+    <div class="header_wrap">
+      <div class="num_rows">
+        <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
+         <select class  ="form-control" aria-label="Page navigation example" name="state" id="maxRows">
+
+          <option value="5">5</option>
+          <option value="10">10</option>
+           <option value="15">15</option>
+           <option value="20">20</option>
+           <option value="50">50</option>
+           <option value="70">70</option>
+           <option value="100">100</option>
+          <option value="5000">Show ALL Rows</option>
+          </select>
+         
+        </div>
+      </div>
+      <div class="tb_search">
+<input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
+      </div>
+    </div>
 <!-- <div>
             <button class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>WakiliCMS Notification Config</u></b></span></button><br>
@@ -26,8 +48,9 @@
             <br>
             <br> -->
     <form>
-    <div class="table-responsive">   
-    <table class="table table-bordered" id="new-item">
+    <div class="table-responsive">
+        <table class="table table-striped table-class" id= "table-id">
+	
 <thead>
                         <tr>
                         <th class="text-center" >No</th>
@@ -46,6 +69,19 @@
                      </tr>
 </tbody>
                     </table>
+</div>
+<!--		Start Pagination -->
+<div class='pagination-container'>
+      <nav>
+        <ul class="pagination">
+         <!--	Here the JS Function Will Add the Rows -->
+        </ul>
+      </nav>
+    </div>
+    <div class="rows_count">Showing 11 to 20 of 100</div>
+
+ <!-- 		End of Container -->
+ 
                     <br>
                     <div class="class"style="text-align:center;">
                     <button type="submit" class="btn btn-primary float:right;" Style="width:10%;">Update</button>

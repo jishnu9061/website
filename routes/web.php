@@ -1048,10 +1048,13 @@ Route::any('/delete_client/{corporate_id}','ClientManagement@Corporate_destroy')
 
 //Client-Documents
 Route::any('client-document','ClientManagement@document')->name('client-document');
-Route::any('create-document','ClientManagement@createDocument')->name('create-document');
+Route::any('create-document/{individual_id}','ClientManagement@createDocument')->name('create-document');
 Route::any('add-document','ClientManagement@addDocument')->name('add-document');
 Route::any('view-document/{document_id}','ClientManagement@viewDocument')->name('view-document');
+Route::any('edit-documents/{document_id}','ClientManagement@editDocument')->name('edit-documents');
 Route::any('delete-document/{document_id}','ClientManagement@deleteDocument')->name('delete-document');
+Route::any('update-document','ClientManagement@updatedocument')->name('update-document');
+
 //end Client-Documents
 
 //Client-Pickup
@@ -1159,6 +1162,8 @@ Route::any('add-template',"filemanagement@addtemplate")->name('add-template');
 
 //file progress
 Route::any('add-file-progress',"filemanagement@addprogress")->name('add-file-progress');
+// Route::any('file_corporate',"filemanagement@file_corporate")->name('file_corporate');
+
 Route::any('/edit-file-progress/{id}',"filemanagement@editprogress")->name('edit-file-progress');
 Route::any('/update_progress',"filemanagement@update_progress")->name('update_progress');
 Route::any('/delete-file-progress/{id}',"filemanagement@delete_progress")->name('delete-file-progress');
@@ -1300,13 +1305,13 @@ Route::any('accindex','accindex@index')->name('accindex');
 Route::any('new_communication','ClientManagement@add_communication')->name('add_communication');
 Route::any('calander',"Calender@index")->name('calander');
 
+Route::any('over_time','hrindex@over_time_list')->name('over_time');
+Route::any('view_over_time','hrindex@viewover_time_list')->name('view_over_time');
+Route::any('add_assingment','hrindex@add_assignment')->name('add_assingment');
 
-
-
-
-
-
-
+Route::any('edit-assigment/{id}','hrindex@editassigment')->name('edit-assigment');
+Route::any('update-assigment','hrindex@updateassigment')->name('update-assigment');
+Route::any('drop-assigment/{id}','hrindex@dropassigment')->name('drop-assigment');
 
 
 

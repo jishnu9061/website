@@ -178,45 +178,45 @@ class addcontroller extends Controller
 
     DB::table('users')->where('id',$id)->update($data);
 
-    $leavetype = $Request->input('leave_type');
-    $leavetype_items = $Request->input('leaves');
-    $final_array=array_combine($leavetype,$leavetype_items);
+    // $leavetype = $Request->input('leave_type');
+    // $leavetype_items = $Request->input('leaves');
+    // $final_array=array_combine($leavetype,$leavetype_items);
 
-    foreach($final_array as $key => $value)
-    {
-      $fillleavslft=DB::table('staff_leaves')->where('id',$key)->select('allotted_leaves','leaves_left')->first();
-      $fildatxz=$fillleavslft->allotted_leaves;
+    // foreach($final_array as $key => $value)
+    // {
+    //   $fillleavslft=DB::table('staff_leaves')->where('id',$key)->select('allotted_leaves','leaves_left')->first();
+    //   $fildatxz=$fillleavslft->allotted_leaves;
 
-      $levlft=$fillleavslft->leaves_left;
-      $minuzx=$value-$fildatxz;
+    //   $levlft=$fillleavslft->leaves_left;
+    //   $minuzx=$value-$fildatxz;
 
-      $pluzx=$fildatxz-$value;
-      $ddie=substr($minuzx, 0, 1);
+    //   $pluzx=$fildatxz-$value;
+    //   $ddie=substr($minuzx, 0, 1);
 
-      if($ddie == '-')
-      {
+    //   if($ddie == '-')
+    //   {
 
-     $leevlftupdate=$levlft-$pluzx;
-     $ddiemhn=substr($leevlftupdate, 0, 1);
-     if($ddiemhn == '-')
-     {
-      $leevlftupdate=0;
-     }
-      }
-      else
-      {
-        $leevlftupdate=$levlft+$minuzx;
-      }
-        $data = array(
-            "allotted_leaves" => $value,
-            "leaves_left"=>$leevlftupdate,
+    //  $leevlftupdate=$levlft-$pluzx;
+    //  $ddiemhn=substr($leevlftupdate, 0, 1);
+    //  if($ddiemhn == '-')
+    //  {
+    //   $leevlftupdate=0;
+    //  }
+    //   }
+    //   else
+    //   {
+    //     $leevlftupdate=$levlft+$minuzx;
+    //   }
+    //     $data = array(
+    //         "allotted_leaves" => $value,
+    //         "leaves_left"=>$leevlftupdate,
 
-        );
-  DB::table('staff_leaves')->where('id',$key)->update($data);
-    }
+    //     );
+  // DB::table('staff_leaves')->where('id',$key)->update($data);
+  //   }
 
-    $Request->session()->put('detailupdate','Details Updated');
-    // return back();
+  //   // $Request->session()->put('detailupdate','Details Updated');
+  //   // return back();
     return redirect('/staffs');
    }
    public function disableuser($id)

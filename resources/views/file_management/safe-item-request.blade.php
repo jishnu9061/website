@@ -9,9 +9,7 @@
         @endif
 
     </div>
-    <div style="height: 50px;">
-
-    </div>
+  
     <script src="{{ url('assets/js') }}/jquery.min.js"></script>
     <script type="text/javascript">
     $(document).on('input', '#price', function() {

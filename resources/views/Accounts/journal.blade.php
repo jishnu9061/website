@@ -19,21 +19,59 @@
   <br><br>
         <a href="{{ url('create_transaction') }}"><button  class="btn btn-primary"> Create Transaction</button></a>
 
-      <div class="table-responsive">
-          <br>
-          <table class="table table-striped ">
-              <tr>
-                  <form method="post" action="{{ url('journal')}}">
-                      @csrf
-                  <td>From Date</td>
-                  <td><input type="date" value="{{ $journal_from }}"  name="journal_from" required  class="form-control"></td>
-                  <td>To Date</td>
-                  <td><input type="date" value="{{ $journal_to }}"   name="journal_to" required class="form-control"></td>
-                  <td><button class="btn btn-primary" type="submit" value="search" style="width:fit-content;">Search</button></td>
-                  {{--  <td><button class="btn btn-primary" type="button"  style="width:fit-content;">Refresh</button></td>  --}}
-                </form>
-              </tr>
-          </table>
+<br><br>
+        <form method="post" action="{{ url('journal')}}">
+
+
+        @csrf
+             
+             <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-1">
+                        <label for="username">From Date</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"></div>
+                            <input type="date" value="{{ $journal_from }}"  name="journal_from" required  class="form-control">
+            <div class="invalid-feedback" style="width: 100%;">
+                 required
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6">
+                <div class="mb-1">
+                    <label for="username">To Date</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+
+                        </div>
+                        <input type="date" value="{{ $journal_to }}"   name="journal_to" required class="form-control">
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="row">
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                           
+                            <button type="submit" class="btn btn-primary" float:right; Style="width:45%;">Search</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+                </div>                 
+
+<br>
+<div class="container">
+<div class="table-responsive">
+     
 <table class="table table-striped" id="allpatients" style="margin-top: 40px; margin-bottom:0px; border-color:black; padding:0;">
   <thead>
     <tr>
@@ -44,7 +82,7 @@
          <table class="table  border-none shadow-none" style="margin-bottom:0px" >
       <tr>
 
-      <th>Purticulars</th>
+      <th>Particulars</th>
       <th></th>
       <th></th>
       <th></th>
@@ -64,19 +102,7 @@
       <th scope="col">Action</th>
 
     </tr>
-       <tr>
-      <th scope="col"></th>
-      <th scope="col"></th>
-        <th>
-
-    <table class="table table" >
-
-      </table>
-        </th>
-      <th scope="col"></th>
-      <th scope="col"></th>
-
-    </tr>
+      
   </thead>
   <tbody>
 @php
@@ -176,12 +202,12 @@ $no=1;
 <div style="float:right; margin-top:10px;">
 {!! $journal_transaction->links() !!}
 {{--  {!! $journal_transaction->appends(['journal_from' => '10-12-2022',])->links() !!}  --}}
-Showing {{ $journal_transaction->firstItem() }}–{{ $journal_transaction->lastItem() }} of {{ $journal_transaction->total() }} results
+Showing {{ $journal_transaction->firstItem() }}–{{ $journal_transaction->lastItem() }} of {{ $journal_transaction->total() }}results
 </div>
 
       </div>
 </div>
-
+</div>
 
 
 

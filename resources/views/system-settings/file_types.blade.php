@@ -52,8 +52,7 @@ color: #999;
    <body>
 <div>{{-- heading --}}
     <h4 id="hdtpa"><b>File Types</b></h4>
-    <br><br>
-           
+    <br>
             
      </div>
             
@@ -64,7 +63,7 @@ color: #999;
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New File Type</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      <br>
+                     
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
         <!-- <a href="{{('add_file_types')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add New File Type</button></a> <br> -->
 

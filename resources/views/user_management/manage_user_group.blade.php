@@ -53,7 +53,7 @@ color: #999;
 
    {{-- heading --}}
   <h4 id="hdtpa"><b>Manage Groups</b></h4>
-  <br><br>
+  <br>
 
   <div class="container"> 
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
@@ -62,7 +62,7 @@ color: #999;
 <div class="tab-content" id="myTabContent">
  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-
+<div class="container"> 
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->

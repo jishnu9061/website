@@ -237,8 +237,8 @@
                 <tr>
                     @foreach ($leavetype as $data)
                         <td>{{ $data->leave_type }}
-                            <input type="text" name="leave_type[]"
-                                value="{{ $data->id }}">
+                            {{-- <input type="text" name="leave_type[]"
+                                value="{{ $data->id }}"> --}}
                         </td>
                         <td><input type="number" class="form-control leaves" name="leaves[]"
                                 value="0" min="0" max="365" width="auto">
@@ -261,7 +261,7 @@
                         @foreach ($staffstatus as $key )
                             <option value="{{ $key->status}}" {{ ($key->status == $users->status) ? "selected" : "" }}>{{ $key->name}}</option>
                         @endforeach
-                        <div class="invalid-feedback" style="width: 100%;">
+                        <div class="invalid-feedback" style="width:60%;">
                         </div>
                     </select>
                 </div>

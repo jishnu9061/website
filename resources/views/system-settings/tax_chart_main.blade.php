@@ -7,10 +7,10 @@
    <body>
     {{-- heading --}}
 <h4 id="hdtpa"><b>Tax Charts</b></h4>
-<br><br>
+
    
 
-            <br>
+          
      
 <div class="row sm">
     <div class="col-sm-4 " ><a href="{{url('tax_chart')}}"><button type="button" style="width:70%;"class="btn btn-primary btn_align_btn"> Tax Chart</button></a></div>

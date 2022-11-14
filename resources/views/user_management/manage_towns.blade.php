@@ -56,7 +56,7 @@ color: #999;
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Manage Towns </u></b></span></button><br> -->
                 {{-- heading --}}
     <h4 id="hdtpa"><b>Manage Towns</b></h4>
-    <br><br>
+    <br>
            
      </div>
             
@@ -66,7 +66,7 @@ color: #999;
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Town</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      <br>
+                    
 <!---------------------------------------------------- MODAL ---------------------------------------------------------------------->
     <!-- <a href="{{('add_user_department')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Department</button></a> -->
     <div class="container">

@@ -55,7 +55,7 @@ color: #999;
         <div>
         {{-- heading --}}
     <h4 id="hdtpa"><b>List of Progress</b></h4>
-    <br><br></div>
+    </div>
     <!-- <div id="mydatatable_filter" class="dataTables_filter">
                     <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
 
