@@ -1313,6 +1313,19 @@ Route::any('edit-assigment/{id}','hrindex@editassigment')->name('edit-assigment'
 Route::any('update-assigment','hrindex@updateassigment')->name('update-assigment');
 Route::any('drop-assigment/{id}','hrindex@dropassigment')->name('drop-assigment');
 
+//Store & Inventory
+Route::any('Store_&_Inventory_index','store@index')->name('Store_&_Inventory_index');
+
+
+
+
+
+//Purchase Management
+
+Route::any('purchase_index','PurchaseManagement@index_purchase')->name('purchase_index');
+
+
+
 
 
 ?>
