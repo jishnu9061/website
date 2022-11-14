@@ -102,8 +102,8 @@
                                 @foreach($client_document as $list)
                              
                                 <tr id="data">
-                                    <td scope="row" class="text-center">{{$list->id}}</td>
-                                    <td scope="row" class="text-center">{{$list->document_type}}</td>
+                                    <td scope="row" class="text-center">{{$list->client_number}}</td>
+                                    <td scope="row" class="text-center">{{$list->client_name}}</td>
                                     <td scope="row" class="text-center" id="medicine_name_1"><img
                                             src="{{asset('/images/file/'.$list->file)}}" width="80px" height="80px">
                                     </td>
