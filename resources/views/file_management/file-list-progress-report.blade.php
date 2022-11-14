@@ -104,12 +104,12 @@ color: #999;
                     </thead>
 
                     <tbody>
-
+                    @foreach($file_progress_list as $list)
                         <tr id="data">
 
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$list->id}}</td>
+                            <td scope="row" class="text-center">{{$list->Client_name}}</td>
+                            <td scope="row" class="text-center">{{$list->file_name}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
@@ -124,7 +124,7 @@ color: #999;
                         </tr>
 
 
-
+                        @endforeach
                     </tbody>
 
                 </table>

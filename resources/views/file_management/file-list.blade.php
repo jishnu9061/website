@@ -48,7 +48,7 @@
                                 <thead>
                                     <tr>
                                         <!-- <th class="text-center"> <input type="checkbox"></th> -->
-                                        <th class="text-center">Client</th>
+                                      
                                         <th class="text-center"></th>
                                         <th class="text-center">Client</th>
                                         <th class="text-center">Responsible<br>Solicitor</th>
