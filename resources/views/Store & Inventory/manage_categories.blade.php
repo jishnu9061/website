@@ -62,10 +62,9 @@
                                     <tr>
                                         <th class="text-center">Product Name</th>
                                         <th class="text-center">Product Type</th>
+                                        <th class="text-center">Total Quantity</th>
                                         <th class="text-center">Unit</th>
-                                        <th class="text-center">Quantity</th>
                                         <th class="text-center">Unit Price</th>
-                                        <th class="text-center">Total</th>
                                         <th class="text-center">Action</th>
 
                                     </tr>
@@ -74,7 +73,6 @@
 
 
                                     <tr id="data">
-                                        <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
