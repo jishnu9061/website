@@ -19,6 +19,10 @@ class store extends Controller
     {
         return view('Store & Inventory.manage_items');
     }
+    public function stock_list_report()
+    {
+        return view('Store & Inventory.stock_list_report');
+    }
 
 }
 

@@ -62,11 +62,13 @@ color: #999;
 
        
 
-        <div>
+        <div class="container">
             <button type="button" class="btn btn-primary complaint_btn" data-toggle="modal" data-target="#myModal"> Add
                 Follow
                 Up</button></a>
         </div>
+          <br>
+
         <div class="container">
     <div class="header_wrap">
       <div class="num_rows">
@@ -105,7 +107,7 @@ color: #999;
                             <th class="text-center"> Follow Up Type</th>
                             <th class="text-center">Client Name</th>
                             <th class="text-center">Description</th>
-                            <th class="text-center">Next BU Date</th>
+                            <th class="text-center">Next Date</th>
                             <th class="text-center">Alert Period</th>
                             <th class="text-center">Responsible Staff</th>
                             <th class="text-center">Registered By</th>
@@ -125,11 +127,13 @@ color: #999;
                             <td scope="row" class="text-center" id="medicine_name_1">{{$list->alert_period}}</td>
                             <td scope="row" class="text-center" id="medicine_name_1">{{$list->staff_responsible}}</td>
                             <td scope="row" class="text-center" id="medicine_name_1">{{$list->registered_by}}</td>
-                            <td><a href="{{url('edit-follow',$list->id)}}"><i style="color:black;" class="fa fa-edit"
-                                        aria-hidden="true"></i></a>
-                                <a onClick="return myFunction();" href="{{url('delete-follow',$list->id)}}"
-                                    style="color:black;"><i class="fas fa-trash-alt"></i></a>
-                            </td>
+                            <td scope="row" class="text-center">
+                                    <a href="{{url('edit-Quotation',$list->id)}}"><i style="color:black;"
+                                            class="fa fa-edit"  aria-hidden="true"></i></a>
+                                            <span class="m-1"></span>
+                                    <a onClick="return myFunction();" href="{{url('delete-Quotation',$list->id)}}"
+                                        style="color:black;"><i class="fas fa-trash-alt"></i></a>
+                                </td>
 
                         </tr>
                         @endforeach

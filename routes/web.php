@@ -1317,6 +1317,7 @@ Route::any('drop-assigment/{id}','hrindex@dropassigment')->name('drop-assigment'
 Route::any('Store_&_Inventory_index','store@index')->name('Store_&_Inventory_index');
 Route::any('manage_categories','store@list_manage_categories')->name('manage_categories');
 Route::any('manage_items','store@list_manage_items')->name('manage_items');
+Route::any('stock_list_report','store@stock_list_report')->name('stock_list_report');
 
 
 

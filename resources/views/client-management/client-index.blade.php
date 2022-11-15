@@ -6,12 +6,12 @@
 
         {{-- heading --}}
         <h4 id="hdtpa"><b>Client Management Details</b></h4>
-        <br><br>
+        <br>
 
         {{-- sub heading --}}
         <h5 id="hdbtb">Client
             Management</h5>
-        <br>
+      
 
 
         <div class="row sm">
@@ -79,7 +79,7 @@
 
         {{-- sub heading --}}
         <h5 id="hdbtb">Client Relationship</h5>
-        <br>
+        
             <div class="row sm">
             <div class="col-sm-4 "><img class="logo_size" src="image\logo\Customer registeration.png" alt=""><a
                     href="{{ url('view-registration') }}"><button type="button" style="width:70%;"
