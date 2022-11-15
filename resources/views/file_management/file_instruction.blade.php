@@ -142,9 +142,9 @@ color: #999;
                                     <td scope="row" class="text-center">{{$instruction->receiver}}</td>
                                     <td scope="row" class="text-center">{{$instruction->details}}</td>
                                     <td scope="row" class="text-center">{{$instruction->amount}}</td>
-                                    <td scope="row" class="text-center">{{$instruction->client}}</td>
-                                    <td scope="row" class="text-center">{{$instruction->file}}</td>
-                                    <td scope="row" class="text-center"></td>
+                                    <td scope="row" class="text-center">{{$instruction->Client_name}}</td>
+                                    <td scope="row" class="text-center">{{$instruction->file_name}}</td>
+                                    <td scope="row" class="text-center">{{$instruction->turn_around}}</td>
                                     <td scope="row" class="text-center"></td>
                                     <td scope="row" class="text-center"><a href="{{url('edit_file_instruction',$instruction->id)}}"><i
                                                 style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
@@ -168,8 +168,7 @@ color: #999;
 
  <!-- 		End of Container -->
 
-                
-
+   
                 <!-- The Modal -->
                 <div class="modal fade" id="myModal">
                     <div class="modal-dialog modal-lg">
@@ -192,7 +191,7 @@ color: #999;
 
                                         <div class="row">
 
-
+                                      
 
                                             <div class="col-md-4">
                                                 <div class="mb-1">
