@@ -95,16 +95,18 @@ color: #999;
 
                     <tbody>
 
+                    @foreach($file_close_report as $report)
+
                         <tr id="data">
 
+                            <td scope="row" class="text-center">{{$report->id}}</td>
+                            <td scope="row" class="text-center">{{$report->Client_name}}</td>
+                            <td scope="row" class="text-center">{{$report->file_name}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$report->Responsible_Advocate}}</td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$report->Date_From}}</td>
                             <td scope="row" class="text-center">
                                 <select name="" id="">
                                     <option value=""> <a href="">Action</a> </option>
@@ -113,7 +115,7 @@ color: #999;
                             </td>
                         </tr>
 
-
+                    @endforeach
 
                     </tbody>
 

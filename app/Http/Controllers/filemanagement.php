@@ -1043,12 +1043,28 @@ class filemanagement extends Controller
 
        public function fileopenreport()
        {
-           return view('file_management.file-opened-report');
+
+        $file_open_report=DB::table('cra_file_report')
+         ->select('*')
+         ->leftjoin('cra_add_file_progress','cra_add_file_progress.id','=','cra_file_report.id')
+         ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_file_report.id')
+         ->get();    
+        return view('file_management.file-opened-report',compact('file_open_report'));
+
+        //    return view('file_management.file-opened-report');
        }
 
        public function fileclosedreport()
        {
-           return view('file_management.file-closed-report');
+
+        $file_close_report=DB::table('cra_file_report')
+         ->select('*')
+         ->leftjoin('cra_add_file_progress','cra_add_file_progress.id','=','cra_file_report.id')
+         ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_file_report.id')
+         ->get();    
+        return view('file_management.file-closed-report',compact('file_close_report'));
+
+        //    return view('file_management.fsile-closed-report');
        }
 
        public function filepending()
