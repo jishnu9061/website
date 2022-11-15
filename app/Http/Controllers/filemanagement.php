@@ -181,8 +181,8 @@ class filemanagement extends Controller
     {
 
         $file_progress_list = DB::table('cra_add_file_progress')
-        // ->select('*')  
-        // ->fulljoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_file_progress.id')
+       ->select('*')  
+       ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_file_progress.id')
         ->get();    
         return view('file_management.file-archive',compact('file_progress_list'));
 
@@ -791,7 +791,14 @@ class filemanagement extends Controller
 
      public function diarymanagement()
      {
-        $event=DB::table('cra_add_event')->get();
+        // $event=DB::table('cra_add_event')->get();
+        $event = DB::table('cra_add_event')
+        ->select('*')  
+        ->leftjoin('cra_add_file_progress','cra_add_file_progress.id','=','cra_add_event.id')
+       ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_event.id')
+    //    ->where('cra_add_event.id',$id)
+         ->get();    
+
          return view('file_management.diary-management',compact('event'));
      }
 
@@ -1261,8 +1268,11 @@ public function view_new_instructions(Request $request)
 public function new_file_instructions()
 {
 
-    $new_file_instruction=DB::table('cra_add_new_instructions')->get();
-        
+    $new_file_instruction=DB::table('cra_add_new_instructions')
+    ->select('*')
+    ->leftjoin('cra_add_file_progress','cra_add_file_progress.id','=','cra_add_new_instructions.id')
+    ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_new_instructions.id')
+    ->get();    
         return view('file_management.file_instruction',compact('new_file_instruction'));
     // return view('file_management.file_instruction');
 }

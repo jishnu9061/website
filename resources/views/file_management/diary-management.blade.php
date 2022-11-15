@@ -123,11 +123,11 @@ color: #999;
 
                             <td scope="row" class="text-center">{{$list->id}}</td>
                             <td scope="row" class="text-center">{{$list->Title}}</td>
-                            <td scope="row" class="text-center">{{$list->Client}}</td>
+                            <td scope="row" class="text-center">{{$list->Client_name}}</td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center">{{$list->File}}</td>
+                            <td scope="row" class="text-center">{{$list->file_name}}</td>
                             <td scope="row" class="text-center">{{$list->Start_Date}}</td>
-                            <td scope="row" class="text-center">{{$list->End_Date}}</td>
+                            <td scope="row" class="text-center">{{$list->Time_End}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center">
                             <button style="background-color:#FFFBF4;"class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -145,7 +145,7 @@ color: #999;
                         </tr>
 <!-- <div> -->
 
-@endforeach 
+                        @endforeach 
                     </tbody>
 
                 </table>
