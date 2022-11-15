@@ -111,16 +111,17 @@ color: #999;
                     <tbody>
 
                         <tr id="data">
+                        @foreach($file_close_report as $report)
 
+                            <td scope="row" class="text-center">{{$report->id}}</td>
+                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$report->Client_name}}</td>
+                            <td scope="row" class="text-center">{{$report->file_name}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$report->Responsible_Advocate}}</td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$report->Date_To}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center">
@@ -132,7 +133,7 @@ color: #999;
                             </td>
                         </tr>
 
-
+                    @endforeach
 
                     </tbody>
 
