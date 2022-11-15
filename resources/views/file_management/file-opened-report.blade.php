@@ -95,7 +95,7 @@ color: #999;
 
                     <tbody>
 
-                    @foreach($file_close_report as $report)
+                    @foreach($file_open_report as $report)
 
                         <tr id="data">
 
