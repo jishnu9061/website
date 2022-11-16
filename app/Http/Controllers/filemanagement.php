@@ -15,8 +15,12 @@ class filemanagement extends Controller
 
     public function views()
     {
-        $file_list=DB::table('cra_open_new_file_details')->get();
-        return view('file_management.file-list',compact('file_list'));
+        $file_list = DB::table('cra_open_new_file_details')
+        ->select('*')  
+        ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_open_new_file_details.id')
+        ->get();    
+        return view ('file_management.file-list',compact('file_list'));
+        // return view('file_management.file-list',compact('file_list'));
     }
 
     public function edit($id)
@@ -1093,7 +1097,14 @@ class filemanagement extends Controller
 
        public function instructionspast()
        {
-           return view('file_management.instructions-past');
+
+        $instruction_past=DB::table('cra_file_report')
+        ->select('*')
+        ->leftjoin('cra_add_file_progress','cra_add_file_progress.id','=','cra_file_report.id')
+        ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_file_report.id')
+        ->get();    
+       return view('file_management.instructions-past',compact('instruction_past'));
+        //    return view('file_management.instructions-past');
        }
        //File Reports
 

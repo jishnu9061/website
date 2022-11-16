@@ -101,13 +101,13 @@ color: #999;
 
 
                     <tbody>
-
+                    @foreach($instruction_past as $instruction)
                         <tr id="data">
 
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$instruction->id}}</td>
+                            <td scope="row" class="text-center">{{$instruction->Date_From}}</td>
+                            <td scope="row" class="text-center">{{$instruction->Client_name}}</td>
+                            <td scope="row" class="text-center">{{$instruction->file_name}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
@@ -125,7 +125,7 @@ color: #999;
                             </td>
                         </tr>
 
-
+                        @endforeach
 
                     </tbody>
 
