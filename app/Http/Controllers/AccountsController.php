@@ -556,7 +556,7 @@ public function ledger(Request $request){
 
 
     $account=DB::table('ledgeraccounts')
-    ->Leftjoin('ledgeraccount_subcategories as a', 'a.id', '=', 'ledgeraccounts.accounts_subcategory')
+    ->Leftjoin('ledgeraccount_categories as a', 'a.id', '=', 'ledgeraccounts.accounts_category')
     ->select('*','ledgeraccounts.id as id')
     ->orderBy('ledgeraccounts.accounts_name','asc')
     ->get();
@@ -571,7 +571,7 @@ public function ledger(Request $request){
         if(!empty($request->ledger_account)){
 
             $ledger_account_result=DB::table('ledgeraccounts')
-            ->Leftjoin('ledgeraccount_subcategories as a', 'a.id', '=', 'ledgeraccounts.accounts_subcategory')
+            ->Leftjoin('ledgeraccount_categories as a', 'a.id', '=', 'ledgeraccounts.accounts_category')
             ->where('ledgeraccounts.id',$request->ledger_account)
             ->where('accounts_company',Auth::user()->Hospital)
             ->select('*','ledgeraccounts.id as id')
@@ -580,7 +580,7 @@ public function ledger(Request $request){
         }else{
 
             $ledger_account_result=DB::table('ledgeraccounts')
-            ->Leftjoin('ledgeraccount_subcategories as a', 'a.id', '=', 'ledgeraccounts.accounts_subcategory')
+            ->Leftjoin('ledgeraccount_categories as a', 'a.id', '=', 'ledgeraccounts.accounts_category')
             ->where('accounts_company',Auth::user()->Hospital)
             ->select('*','ledgeraccounts.id as id')
             ->get();
