@@ -58,8 +58,8 @@ color: #999;
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
          <select class  ="form-control" aria-label="Page navigation example" name="state" id="maxRows">
 
-          <option value="5">5</option>
-          <option value="10">10</option>
+           <option value="5"> 5 </option>
+           <option value="10">10</option>
            <option value="15">15</option>
            <option value="20">20</option>
            <option value="50">50</option>
@@ -98,17 +98,17 @@ color: #999;
                     </thead>
 
                     <tbody>
-
+                    @foreach($file_pending_closure as $pending)
                         <tr id="data">
 
+                            <td scope="row" class="text-center">{{$pending->id}}</td>
+                            <td scope="row" class="text-center">{{$pending->Client_name}}</td>
+                            <td scope="row" class="text-center">{{$pending->id}}</td>
+                            <td scope="row" class="text-center">{{$pending->file_name}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$pending->Responsible_Advocate}}</td>
+                            <td scope="row" class="text-center">{{$pending->Date_From}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center">
@@ -120,7 +120,7 @@ color: #999;
                             <td scope="row" class="text-center"> <input type="checkbox" name="" id=""></td>
                         </tr>
 
-
+                        @endforeach
 
                     </tbody>
 

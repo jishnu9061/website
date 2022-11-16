@@ -95,16 +95,16 @@ color: #999;
                     </thead>
 
                     <tbody>
-
+                    @foreach($file_pending_approval as $approval)
                         <tr id="data">
 
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$approval->id}}</td>
+                            <td scope="row" class="text-center">{{$approval->Client_name}}</td>
+                            <td scope="row" class="text-center">{{$approval->id}}</td>
+                            <td scope="row" class="text-center">{{$approval->file_name}}</td>
+                            <td scope="row" class="text-center">{{$approval->id}}</td>
+                            <td scope="row" class="text-center">{{$approval->Responsible_Advocate}}</td>
+                            <td scope="row" class="text-center">{{$approval->Date_From}}</td>
                             <td scope="row" class="text-center">
                                 <select name="" id="">
                                 <option value=""> <a href="">Action</a> </option>
@@ -115,7 +115,7 @@ color: #999;
                             <!-- <td scope="row" class="text-center"> <input type="checkbox" name="" id=""></td> -->
                         </tr>
 
-
+                        @endforeach
 
                     </tbody>
 
