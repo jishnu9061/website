@@ -357,10 +357,9 @@ class ClientManagement extends Controller
         
     public function document(){
         $client_document = DB::table('cra_document_detials')
-           ->get(); 
-        // ->select('*')  
-        // ->leftjoin('cra_individual_client_details','cra_individual_client_details.individual_id','=','cra_document_detials.individual_id')
-        // ->get(); 
+        ->select('*')  
+        ->leftjoin('cra_individual_client_details','cra_individual_client_details.id','=','cra_document_detials.id')
+        ->get(); 
   
         return view('client-management.client-document',compact('client_document'));
     }
@@ -591,7 +590,11 @@ class ClientManagement extends Controller
     //customer Followup
     public function followup(){
         $followup = DB::table('cra_customer_followup')->get();
-        return view('client-management.follow-up',compact('followup'));
+        $client_join = DB::table('cra_corporate_client_details')
+        ->leftjoin('cra_individual_client_details','cra_individual_client_details.client_name','=','cra_corporate_client_details.corporate_id')
+        ->get();
+        
+        return view('client-management.follow-up',compact('followup','client_join'));
     }
 
     public function addFollowup(Request $Request){
@@ -667,7 +670,9 @@ class ClientManagement extends Controller
     //service-at-pickup
 
     public function service(){
-        $service = DB::table('cra_client_service_at_reception')->get();
+        $service = DB::table('cra_client_service_at_reception')
+        ->leftjoin('cra_company_branch_details','cra_company_branch_details.id','=','cra_client_service_at_reception.id')
+        ->get();
         return view('client-management.client-service',compact('service'));
     }
 

@@ -113,7 +113,7 @@
       <div class="text-center">
         <button type="submit" class="btn btn-primary" style="width: 100px;">Submit</button>
         <span class="p-3"></span>
-        <button type="button" class="btn btn-primary" style="width: 100px;">Cancel</button>
+        <button type="button" class="btn btn-primary" style="width: 100px;"  onclick="history.back()"   >Cancel</button>
       </div>    
      </div>     
 

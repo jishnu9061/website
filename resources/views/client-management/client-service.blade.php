@@ -111,18 +111,18 @@ color: #999;
                         <tbody>
                             @foreach( $service as $list_service)
                             <tr id="data" style="width:100%;">
-                                <td class="text-center"></td>
+                                <td class="text-center">{{$list_service->branch_name}}</td>
                                 <td class="text-center" id="medicine_name_1">{{$list_service->client_name}}</td>
-                                <td class="text-center" id="medicine_name_1">{{$list_service->mobile}}</td>
+                                <td class="text-center" id="medicine_name_1">{{$list_service->phone}}</td>
 
-                                <td class="text-center" id="medicine_name_1"></td>
-                                <td class="text-center" id="medicine_name_1"></td>
-                                <td class="text-center" id="medicine_name_1"></td>
-                                <td class="text-center" id="medicine_name_1"></td>
+                                <td class="text-center" id="medicine_name_1">test1</td>
+                                <td class="text-center" id="medicine_name_1">test2</td>
+                                <td class="text-center" id="medicine_name_1">test3</td>
+                                <td class="text-center" id="medicine_name_1">{{$list_service->amount_paid}}</td>
 
-                                <td class="text-center" id="medicine_name_1"></td>
-                                <td class="text-center" id="medicine_name_1"></td>
-                                <td class="text-center" id="medicine_name_1"></td>
+                                <td class="text-center" id="medicine_name_1">{{$list_service->receipt_no}}</td>
+                                <td class="text-center" id="medicine_name_1">{{$list_service->payment_method}}</td>
+                                <td class="text-center" id="medicine_name_1">test4</td>
                                 <td class="text-center" id="medicine_name_1">
                                     <a href="{{url('edit-service',$list_service->id)}}"><i style="color:black;"
                                             class="fa fa-edit" aria-hidden="true"></i></a>

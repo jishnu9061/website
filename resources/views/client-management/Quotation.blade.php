@@ -67,8 +67,11 @@ color: #999;
         <!-- <div id="mydatatable_filter" class="dataTables_filter">
             <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
         </div> -->
+      <div class="container">
         <button class="btn btn-primary add-btn" style="width:20%;" data-toggle="modal" data-target="#myModal">Add
             Quotation</button></a>
+       </div>
+       <br>
             
  <div class="container">
     <div class="header_wrap">
@@ -102,8 +105,8 @@ color: #999;
 	
                         <thead>
                             <tr>
-                                <th class="text-center"> No</th>
-                                <th class="text-center"> Issue Date</th>
+                                <th class="text-center">No</th>
+                                <th class="text-center">Issue Date</th>
                                 <th class="text-center">Document No</th>
                                 <th class="text-center">Client</th>
                                 <th class="text-center">Amount</th>
@@ -120,14 +123,13 @@ color: #999;
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->customer}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->amount}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1"></td>
-                                <td>
+                                <td scope="row" class="text-center">
                                     <a href="{{url('edit-Quotation',$list->id)}}"><i style="color:black;"
-                                            class="fa fa-edit" aria-hidden="true"></i></a>
+                                            class="fa fa-edit"  aria-hidden="true"></i></a>
+                                            <span class="m-2"></span>
                                     <a onClick="return myFunction();" href="{{url('delete-Quotation',$list->id)}}"
                                         style="color:black;"><i class="fas fa-trash-alt"></i></a>
                                 </td>
-
-
                             </tr>
                             @endforeach
                         </tbody>
@@ -338,6 +340,7 @@ color: #999;
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <br>
                                                     <br>
                                                     <!-- <h2 style="text-align:center;"> Quotation Items</h2> -->
                                                     <div>

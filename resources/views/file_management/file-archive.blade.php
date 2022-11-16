@@ -111,13 +111,15 @@ color: #999;
                         </tr>
                     </thead>
                     <tbody>
+
+                    @foreach($file_progress_list as $list)
                         <tr id="data">
+                            <td scope="row" class="text-center">{{$list->id}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$list->Client_name}}</td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$list->file_name}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
@@ -131,6 +133,7 @@ color: #999;
                                         <a onClick="return myFunction();" href="" style="color:black;"><i
                                                 class="fas fa-trash-alt"></i></a></td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
               

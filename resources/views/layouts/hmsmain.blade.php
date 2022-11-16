@@ -618,6 +618,19 @@ color: #999;
                                             <span>Accounts</span>
                                     </a>
                             </li>
+                            <li class="submenu-item" style="list-style:none;">
+                                    <a href="{{url('Store_&_Inventory_index')}}" class='sidebar-link'>
+                                        <i class="fas fa-shopping-cart" id="icon"></i>
+                                            <span>Store & Inventory</span>
+                                    </a>
+                            </li>
+                            </li>
+                            <li class="submenu-item" style="list-style:none;">
+                                    <a href="{{url('purchase_index')}}" class='sidebar-link'>
+                                        <i class="far fa-clipboard" id="icon"></i>
+                                            <span>Purchase Management</span>
+                                    </a>
+                            </li>
 {{-- 
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('home')}}" class="sidebar-link">
@@ -1235,7 +1248,7 @@ color: #999;
        
 
  
-
+<!-- Footer -->
 
 
 
@@ -1256,6 +1269,9 @@ color: #999;
                     </div>
                 </div>
             </footer>
+
+            <!-- /footer -->
+
         </div>
         </div>
         <script>
