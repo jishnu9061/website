@@ -1069,12 +1069,26 @@ class filemanagement extends Controller
 
        public function filepending()
        {
-           return view('file_management.file-pending');
+        $file_pending_closure=DB::table('cra_file_report')
+        ->select('*')
+        ->leftjoin('cra_add_file_progress','cra_add_file_progress.id','=','cra_file_report.id')
+        ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_file_report.id')
+        ->get();    
+       return view('file_management.file-pending',compact('file_pending_closure'));
+        //    return view('file_management.file-pending');
        }
 
        public function filependingapproval()
        {
-           return view('file_management.file-pending-approval');
+
+        $file_pending_approval=DB::table('cra_file_report')
+        ->select('*')
+        ->leftjoin('cra_add_file_progress','cra_add_file_progress.id','=','cra_file_report.id')
+        ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_file_report.id')
+        ->get();    
+       return view('file_management.file-pending-approval',compact('file_pending_approval'));
+
+        //    return view('file_management.file-pending-approval');
        }
 
        public function instructionspast()
