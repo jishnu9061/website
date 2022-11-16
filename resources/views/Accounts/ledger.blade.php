@@ -62,7 +62,7 @@
                         <select class="form-control" name="ledger_account" >
                     <option value=""> Select Account</option>
                     @foreach($account as $acc):
-                     <option value="{{ $acc->id }}" {{($ledger_account==$acc->id) ? "selected" :""}}  > {{ $acc->accounts_name." [ ".$acc->ledgeraccount_subcategories." ] " }}</option>
+                     <option value="{{ $acc->id }}" {{($ledger_account==$acc->id) ? "selected" :""}}  > {{ $acc->accounts_name." [ ".$acc->ledgeraccount_categories." ] " }}</option>
                     @endforeach;
 
                 </select>
@@ -153,7 +153,7 @@
 <tr>
 <th colspan="2">
  <h6 class="text-center">
- {{ strtoupper($key->accounts_name." [ ".$key->ledgeraccount_subcategories." ] ") }}
+ {{ strtoupper($key->accounts_name." [ ".$key->ledgeraccount_categories." ] ") }}
  </h6>
 </th>
 </tr>
@@ -207,7 +207,7 @@
                         </td>
                         <td>
 
-                @switch($key->accounts_subcategory)
+                @switch($key->accounts_category)
                     @case(2)
                 {{ "To Trading Account c/d" }}
                         @break
@@ -299,7 +299,7 @@
                           {{-- {{ "By Balance c/d" }} --}}
 
 
-                          @switch($key->accounts_subcategory)
+                          @switch($key->accounts_category)
                           @case(2)
                       {{ "By Trading Account c/d" }}
                               @break

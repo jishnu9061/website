@@ -13,9 +13,9 @@ class AccountsController extends Controller
     public function ledger_acounts(){
 
         $ledger_account=DB::table('ledgeraccounts')
-        ->leftJoin('ledgeraccount_categories', 'ledgeraccount_categories.id', '=', 'ledgeraccounts.accounts_category')
-        ->leftJoin('ledgeraccount_subcategories', 'ledgeraccount_subcategories.id', '=', 'ledgeraccounts.accounts_subcategory')
-        ->leftjoin('budget_types','budget_types.id','=','ledgeraccounts.budget_cat')
+        ->leftJoin('ledgeraccount_categories', 'ledgeraccount_categories.id', '=', 'ledgeraccounts.accounts_category')//a/c types
+        ->leftJoin('ledgeraccount_subcategories', 'ledgeraccount_subcategories.id', '=', 'ledgeraccounts.accounts_subcategory')//a/c category
+        ->leftjoin('budget_types','budget_types.id','=','ledgeraccounts.budget_cat')//budget category
         ->select('*','ledgeraccount_categories.ledgeraccount_categories as category_name','ledgeraccount_subcategories.ledgeraccount_subcategories as subcategory_name','budget_types.budget_name as budget_name'
         ,'ledgeraccount_categories.id as category_id','ledgeraccount_subcategories.id as subcategory_id','ledgeraccounts.id as id','budget_types.id as budget_id')
         ->get();
@@ -254,6 +254,7 @@ class AccountsController extends Controller
         ->select('*','ledgeraccounts.id as id')
         ->orderBy('ledgeraccounts.accounts_name', 'asc')
         ->get();
+        // dd($account);
         $hospitals=DB::table('hospitals')->get();
         $category=DB::table('ledgeraccount_categories')->get();
         $subcategory=DB::table('ledgeraccount_subcategories')->get();
