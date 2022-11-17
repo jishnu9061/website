@@ -44,6 +44,7 @@
 $no=1;
 @endphp
  @foreach($ledger_account as $exp_type)
+ {{dd($ledger_account )}}
       <tr class="product_data" class="data">
           <td id="name">{{$no++ }}</td>
           <td id="expanse-name">{{ $exp_type->accounts_name }}</td>

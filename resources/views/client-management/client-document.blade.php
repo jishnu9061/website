@@ -112,10 +112,12 @@
                                     <td scope="row" class="text-center">
                                         <a href="{{url('edit-documents',$list->id)}}"><i style="color:black;"
                                                 class="fa fa-pencil" aria-hidden="true"></i>
+                                                <span class="m-2"><span>
                                             <a href="{{url('view-document',$list->id)}}"><i
                                                     style="color:black;" class="fa fa-eye" aria-hidden="true"></i>
                                                 <input type="hidden" value="" id="medicine_id_hidden" class="applicate"
                                                     name="supplier_id_hidden">
+                                                    <span class="m-2"><span>
                                                 <a onClick="return myFunction();"
                                                     href="{{url('delete-document',$list->id)}}"
                                                     style="color:black;"><i class="fas fa-trash-alt"></i></a>

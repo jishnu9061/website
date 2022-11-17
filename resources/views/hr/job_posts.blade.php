@@ -1,27 +1,33 @@
 
 @extends('layouts.hmsmain')
 @section('content') 
+<div class="container">
+<h4 id="hdtpa"><b> Job Posts</b></h4>
+    <br>
 
-<h4 id="hdtpa"><b>View Job Posts</b></h4>
-    <br><br><br>
-
-
-
-
-      
-  <nav class="navbar bg-light">
+<!-- <nav class="navbar bg-light">
   <div class="container-fluid">
+   <nav class="navbar bg-light" style="height:50%";>
     <a class="navbar-brand">Job Posts</a>
     <button class="btn btn-outline-success" type="button">View All</button> 
+   </nav>
   </div>
   </nav>
-  <br>
+  <br> -->
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
+           
+{{-- <a href="{{('create_job_post')}}"><button class="btn btn-primary">Create Job Post</button></a> --}}
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Create Job Post</button>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                     
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 
 
-  <input class="btn btn-primary" type="button" value="Create Job Post" data-toggle="modal" data-target="#myModal">
+ 
+  <!-- <input class="btn btn-primary" type="button" value="Create Job Post" data-toggle="modal" data-target="#myModal1">
   <br>
-  <br>
-  <div class="container">
+  <br> -->
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -50,7 +56,7 @@
         <table class="table table-striped table-class" id= "table-id">
       <thead>
         <tr>
-          <th scope="col">#</th>
+          <th scope="col">sl no</th>
           <th scope="col">Job Title</th>
           <th scope="col">Location</th>
           <th scope="col">Qualification</th>
@@ -59,13 +65,30 @@
           
       </thead>
       <tbody>
+      @foreach($job_details as $job)
         <tr>
-          <th scope="row">1</th>
-          <td>Senior Advocate</td>
-          <td>Nairobi</td>
-          <td>LLB</td>
-          <td>5</td>
-          <td><input class="btn btn-primary" type="button" value="View" data-toggle="modal" data-target="#myModal"></td>
+      
+          <td>{{$job->id}}</td>
+          <td>{{$job->job_title}}</td>
+          <td>{{$job->job_location}}</td>
+          <td>{{$job->qualification}}</td>
+          <td>{{$job->work_experience}}</td>
+          <!-- <td><input class="btn btn-primary" type="button" value="View" data-toggle="modal" data-target="#myModal2"></td> -->
+          <td class="text-center">
+                      <div class="dropdown">
+                            <button style="background-color:#FFFBF4;"class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               Action
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a href="{{url('view_job_post',$job->id)}}" class="dropdown-item" >View</a>
+                            <a href="{{url('edit_job_post',$job->id)}}" class="dropdown-item" >Edit</a>
+                            <a href="{{url('delete_job_post',$job->id)}}" class="dropdown-item" >Delete</a>
+                            
+                            </div>
+                        </div> 
+
+                       </td>
+                       @endforeach
         </tr>
       </tbody>
     </table>
@@ -90,19 +113,8 @@
 
 
    
-
-
-
-
-
-
-
-
-
-        
-       
-
-   <div class="modal fade" id="myModal">
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
+<div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content" >
 
@@ -115,23 +127,27 @@
                                     <!-- Modal body -->
                                     <div class="modal-body" >
                                         <div class="container">
-                                            
-                                        <form method="post" action="{{url('add_letter_category')}}"
+                                            <form method="post" action="{{ url('create_job_post') }}"
                                                 enctype="multipart/form-data"> 
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->    
 
-      <div class="container">
+
+       
+       
+       @csrf
         <div class="row">
           <div class="col">
             <div class="mb-3">
-            <form method="post" action="{{url('create_job_post')}}" id="form">
+            <!-- <form method="post" action="{{url('create_job_post')}}"> -->
                 
                 <label for="job title" class="form-label">Job Title</label>
-                <select class="form-select" name="job_title">
+                <input type="text" class="form-control" name="job_title" aria-describedby="jobtitle">
+                <!-- <select class="form-select" name="job_title">
                     <option selected>---select---</option>
                     <option value="junior Advocate">junior Advocate</option>
                     <option value="Mid Senior Advocate">Mid Senior Advocate</option>
                     <option value="Senior Advocate">Senior Advocate</option>
-                  </select>
+                  </select> -->
             </div>
             <div class="mb-3">
                 <label for="qualification" class="form-label">Qualification</label>
@@ -221,38 +237,26 @@
 
     <!-- Buttons -->
     
-    <div class="container">
-      <div class="text-center">
-        <button type="submit" class="btn btn-primary" style="width: 100px;">Submit</button>
-        <span class="p-3"></span>
-        <button type="button" class="btn btn-primary" style="width: 100px;">Cancel</button>
-      </div>    
-     </div>     
+    <div class="row">
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>  
 
 </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>     
+</div>     
+</div>     
+</div>     
+</div>    
 @endsection
 
   

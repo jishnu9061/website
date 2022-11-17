@@ -1,8 +1,15 @@
 @extends('layouts.hmsmain')
 @section('content')
+
+{{-- heading --}}
+   <h4 id="hdtpa"><b>Payslip</b></h4>
+   <br>
+   <br>
+
+
 <form action="{{url('generatepayslip')}}">
     @csrf
-<div class="row" style="background-color: #e0eaf4; padding:20px;">
+<div class="row" >
 <div class="col-md-3">
 <select id="b" class="form-control" name="year">
 
@@ -31,8 +38,8 @@
 </select>	
 </div>
 <div class="col-md-6">
-<button type="submit" class="btn btn-secondary btn-block">Generate Payslip
-           </button>
+
+  <button type="submit" class="btn btn-primary"> Generate Payslip </button>
 
 </div>
 </div>

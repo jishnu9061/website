@@ -61,11 +61,14 @@ color: #999;
             <br>
         </div>
 
-      
-        <button class="btn btn-primary add-btn" Style="width:20%" data-toggle="modal" data-target="#myModal">Add New
+        <div class="container">
+         <button class="btn btn-primary add-btn" Style="width:20%" data-toggle="modal" data-target="#myModal">Add New
             Complaint</button>
+        </div>
+        
+          <br>
 
-            <div class="container">
+    <div class="container">       
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -84,7 +87,7 @@ color: #999;
         </div>
       </div>
       <div class="tb_search">
-<input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
+      <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
     </div>
 
@@ -108,7 +111,7 @@ color: #999;
                                 <th class="text-center">Customer Institution</th>
                                 <th class="text-center">Contact</th>
                                 <th class="text-center">Complaint Description</th>
-                                <th class="text-center">VIew</th>
+                                <th class="text-center">View</th>
                                 <th class="text-center">Edit</th>
                                 <th class="text-center">Delete</th>
                             </tr>
@@ -339,7 +342,7 @@ color: #999;
                                                             <br>
                                                             <button type="submit" class="btn btn-primary float:right;"
                                                                 Style="width:45%;">Submit</button>
-                                                            <button type="button" class="btn btn-primary float:left"
+                                                            <button type="button" class="btn btn-primary float:left" data-dismiss="modal"
                                                                 Style="width:45%;">Cancel</button>
                                                         </div>
                                                     </div>

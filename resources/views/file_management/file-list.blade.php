@@ -19,7 +19,7 @@
                 <input class="btn btn-primary" type="button" value="Pending">
                 <input class="btn btn-primary" type="button" value="Closed">
              </div>
-<br>
+   <br>
 
                 <div id="mydatatable_filter" class="dataTables_filter">
                     <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
@@ -37,10 +37,11 @@
                     </button
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Filter
                   </button> -->
-                </div><br>
+                </div>
                 {{-- <a href="{{('add-corporate')}}"><button class="btn btn-primary">Add Corporate</button></a> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">New
-                  File</button><br>
+                  File</button>
+                <br><br>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <div class="table-responsive">
@@ -48,38 +49,39 @@
                                 <thead>
                                     <tr>
                                         <!-- <th class="text-center"> <input type="checkbox"></th> -->
+                                      
+                                        <th class="text-center">*</th>
+                                        <th class="text-center">File No</th>
                                         <th class="text-center">Client</th>
-                                        <th class="text-center"></th>
-                                        <th class="text-center">Client</th>
-                                        <th class="text-center">Responsible<br>Solicitor</th>
-                                        <th class="text-center">Originating<br>Solicitor</th>
-                                        <th class="text-center">Matter<br>Notifications</th>
-                                        <th class="text-center">Practice Area</th>
-                                        <th class="text-center">Open Date</th>
-                                        <th class="text-center">Close Date</th>
-                                        <th class="text-center">Pending Date</th>
-                                        <th class="text-center">State Of Limitations Date</th>
-                                        <th class="text-center">Last<br>Activity</th>
+                                        <th class="text-center">File Name</th>
+                                        <th class="text-center">File Open</th>
+                                        <th class="text-center">Responsible<br>Advocate</th>
+                                        <th class="text-center">Most Recent Progress</th>
+                                        <th class="text-center">Date Closed</th>
+                                        <th class="text-center">File&Fee Balances</th>
+                                        <th class="text-center">Status</th>
+                                        <th class="text-center">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!-- @foreach ($file_list as $file) -->
+                                @foreach($file_list as $list)
+                                    
                                         <tr id="data">
+                                          
+                                            <td scope="row">{{$list->id}}</td>
+                                            <td scope="row">{{$list->id}}</td>
+                                            <td scope="row">{{$list->Client_name}}</td>
+                                            <td scope="row">{{$list->file_name}}</td>
+                                            <td scope="row">{{$list->opening_date}}</td>
+                                            <td scope="row">{{$list->responsible_advocate}}</td>
+                                            <td scope="row">{{$list->recent_progress}}</td>
+                                            <td scope="row">{{$list->closing_date}}</td>
+                                            <td scope="row">{{$list->amount}}</td>
+                                            <td scope="row">{{$list->status}}</td>
+                                            <td scope="row"></td>
                                             <!-- <td scope="row"></td> -->
-                                            <td scope="row"></td>
-                                            <td scope="row"></td>
-                                            <td scope="row"></td>
-                                            <td scope="row"></td>
-                                            <td scope="row"></td>
-                                            <td scope="row"></td>
-                                            <td scope="row"></td>
-                                            <td scope="row"></td>
-                                            <td scope="row"></td>
-                                            <td scope="row"></td>
-                                            <td scope="row"></td>
-                                            <td scope="row"></td>
                                         </tr>
-                                    <!-- @endforeach -->
+                                        @endforeach
                                 </tbody>
                             </table>
                             <br>

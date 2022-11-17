@@ -73,10 +73,12 @@ color: #999;
 
             </div> -->
 
-           
+        <div class="container">
             {{-- <a href="{{('add-corporate')}}"><button class="btn btn-primary">Add Corporate</button></a> --}}
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add
                 Corporate</button>
+         </div>
+
 
                 <div class="container">
     <div class="header_wrap">
@@ -108,8 +110,8 @@ color: #999;
 	
                             <thead>
                                 <tr>
-                                    <th class="text-center"> No</th>
-                                    <th class="text-center">Client_name</th>
+                                    <th class="text-center">No</th>
+                                    <th class="text-center">Client Name</th>
                                     <th class="text-center">Designation</th>
                                     <th class="text-center">Mobile No</th>
                                     <th class="text-center">Email Address</th>
@@ -135,10 +137,10 @@ color: #999;
                                     <td scope="row" class="text-center" id="medicine_name_1">
                                         <a href="{{ url('edit_client', $list->corporate_id)}}"><i style="color:black;"
                                                 class="fa fa-edit" aria-hidden="true"></i>
+                                                <span class="m-3"></span>
                                                 <a onClick="return myFunction();"
                                                     href="{{ url('delete_client', $list->corporate_id)}}"
                                                     style="color:black;"><i class="fas fa-trash-alt"></i></a>
-                                    </td>
                                     </td>
                                 </tr>
                                 @endforeach
@@ -553,8 +555,8 @@ color: #999;
                                                     <br><br>
                                                     <div class="modal-footer">
                                                         <button type="submit" class="btn btn-primary"
-                                                            style="width:15%;background-color:white;color:black">save</button>
-                                                        <button type="button" class="btn btn-primary"
+                                                            style="width:15%;background-color:white;color:black">Save</button>
+                                                        <button type="button" class="btn btn-primary" data-dismiss="modal"
                                                             style="width:15%;background-color:white;color:black">Cancel</button>
                                                     </div>
 

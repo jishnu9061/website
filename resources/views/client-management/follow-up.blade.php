@@ -67,6 +67,105 @@
 
 
 
+        <div class="container">
+            <button type="button" class="btn btn-primary complaint_btn" data-toggle="modal" data-target="#myModal"> Add
+                Follow
+                Up</button></a>
+        </div>
+          <br>
+
+        <div class="container">
+    <div class="header_wrap">
+      <div class="num_rows">
+        <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
+         <select class  ="form-control" aria-label="Page navigation example" name="state" id="maxRows">
+
+          <option value="5">5</option>
+          <option value="10">10</option>
+           <option value="15">15</option>
+           <option value="20">20</option>
+           <option value="50">50</option>
+           <option value="70">70</option>
+           <option value="100">100</option>
+          <option value="5000">Show ALL Rows</option>
+          </select>
+         
+        </div>
+      </div>
+      <div class="tb_search">
+<input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
+      </div>
+    </div>
+
+
+
+
+
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="table-responsive">
+        <table class="table table-striped table-class" id= "table-id">
+	
+                    <thead>
+                        <tr>
+                            <th class="text-center">No</th>
+                            <th class="text-center">Follow Up date</th>
+                            <th class="text-center"> Follow Up Type</th>
+                            <th class="text-center">Client Name</th>
+                            <th class="text-center">Description</th>
+                            <th class="text-center">Next Date</th>
+                            <th class="text-center">Alert Period</th>
+                            <th class="text-center">Responsible Staff</th>
+                            <th class="text-center">Registered By</th>
+                            <th class="text-center">Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($followup as $list)
+                        <tr id="data">
+                            <td scope="row" class="text-center" id="medicine_name_1">{{$list->id}}</td>
+                            <td scope="row" class="text-center" id="medicine_name_1">{{$list->followup_date}}</td>
+                            <td scope="row" class="text-center" id="medicine_name_1">{{$list->followup_type}}</td>
+                            <td scope="row" class="text-center" id="medicine_name_1">{{$list->customer}}</td>
+                            <td scope="row" class="text-center" id="medicine_name_1">{{$list->description}}</td>
+                            <td scope="row" class="text-center" id="medicine_name_1">{{$list->next_bringup_date}}</td>
+                            <td scope="row" class="text-center" id="medicine_name_1">{{$list->alert_period}}</td>
+                            <td scope="row" class="text-center" id="medicine_name_1">{{$list->staff_responsible}}</td>
+                            <td scope="row" class="text-center" id="medicine_name_1">{{$list->registered_by}}</td>
+                            <td scope="row" class="text-center">
+                                    <a href="{{url('edit-Quotation',$list->id)}}"><i style="color:black;"
+                                            class="fa fa-edit"  aria-hidden="true"></i></a>
+                                            <span class="m-1"></span>
+                                    <a onClick="return myFunction();" href="{{url('delete-Quotation',$list->id)}}"
+                                        style="color:black;"><i class="fas fa-trash-alt"></i></a>
+                                </td>
+
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+</div>
+<!--		Start Pagination -->
+<div class='pagination-container'>
+      <nav>
+        <ul class="pagination">
+         <!--	Here the JS Function Will Add the Rows -->
+        </ul>
+      </nav>
+    </div>
+    <div class="rows_count">Showing 11 to 20 of 100</div>
+
+ <!-- 		End of Container -->
+ 
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h2 class="text-center"><b>Add FollowUp</b></h2>
+
+
             <div>
                 <button type="button" class="btn btn-primary complaint_btn" data-toggle="modal" data-target="#myModal">
                     Add

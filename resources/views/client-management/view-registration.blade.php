@@ -62,10 +62,14 @@ color: #999;
 
         </div>
 
-        <div>
+        <div class="container">
             <button type="button" class="btn btn-primary complaint_btn btn " data-toggle="modal"
                 data-target="#myModal">Register Client</button></a>
-                <div class="container">
+         </div>
+  
+         <br>
+
+    <div class="container">
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -120,6 +124,7 @@ color: #999;
                                 <td scope="row" class="text-center"><a
                                         href="{{url('edit-registration',$registration->id)}}"><i style="color:black;"
                                             class="fa fa-edit" aria-hidden="true"></i>
+                                            <span class="m-2"></span>
                                             <a onClick="return myFunction();"
                                                 href="{{url('delete-registration',$registration->id)}}" style="color:black;"><i
                                                     class="fas fa-trash-alt"></i></a>

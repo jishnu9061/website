@@ -5,6 +5,7 @@
 
 
 
+<div class="container">
 
             
         {{-- heading --}}
@@ -21,7 +22,7 @@
         {{-- <a href="{{('add-corporate')}}"><button class="btn btn-primary">Register Safe Item</button></a> --}}
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Register Safe
             Item</button>
-            <div class="container">
+           
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -42,7 +43,7 @@
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+   
 	
        
 	 <div class="table-responsive">
@@ -52,7 +53,7 @@
                     <table class="table table-bordered" id="new-item">
                         <thead style="font-size:15px; width:100%;">
                             <tr>
-                                <th class="text-center">*</th>
+                                <!-- <th class="text-center">*</th> -->
                                 <th class="text-center">Doc<br>No</th>
                                 <th class="text-center">Registered By</th>
                                 <th class="text-center">Client</th>
@@ -75,7 +76,7 @@
                                 @foreach($safe_management as $management)
                             <tr id="data">
 
-                                <td scope="row" class="text-center">{{$management->id}}</td>
+                                <!-- <td scope="row" class="text-center">{{$management->id}}</td> -->
                                 <td scope="row" class="text-center">{{$management->doc_no}}</td>
                                 <td scope="row" class="text-center"></td>
                                 <td scope="row" class="text-center">{{$management->client}}</td>
@@ -85,14 +86,14 @@
                                 <td scope="row" class="text-center">{{$management->document}}</td>
                                 <td scope="row" class="text-center"></td>
                                 <td scope="row" class="text-center"></td>
-                                <td scope="row" class="text-center">
-                                    <select name="" id="">
-                                        <option value=""> <a href="">Action</a> </option>
-                                        <option value=""> <a href=""></a>View</option>
-                                        <option value=""> <a href=""></a>Edit</option>
-                                        <option value=""> <a href=""></a>Delete</option>
-                                    </select>
-                                </td>
+                                <td  scope="row"class="text-center">
+                        <a href=""><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" ></i>
+
+                        <a href=""> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
+						
+						<a href=""> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i>
+						
+						</td>
                             </tr>
 
                             @endforeach

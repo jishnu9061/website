@@ -55,6 +55,7 @@ color: #999;
             <div>
                 
     <h4 id="hdtpa"><b>File Archive</b></h4>
+</div>
     <br>
   
 <!--  
@@ -66,7 +67,7 @@ color: #999;
                 {{-- <a href="{{('add-box-no')}}"><button class="btn btn-primary">Add Box No</button></a> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Box No</button>
                 <br>
-                <div class="container">
+                
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -87,7 +88,7 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+   
 
 
         <div class="tab-content" id="myTabContent">
@@ -97,31 +98,31 @@ color: #999;
         <table class="table table-striped table-class" id= "table-id">
                     <thead>
                         <tr>
-                            <th class="text-center">*</th>
+                            <!-- <th class="text-center">*</th> -->
                             <th class="text-center">Archive No</th>
                             <th class="text-center">Archive Date</th>
                             <th class="text-center">Client Name</th>
                             <th class="text-center">File Number</th>
-                            <th class="text-center">File Name</th>
-                            <th class="text-center">File Closed</br>Number</th>
+                            <!-- <th class="text-center">File Name</th> -->
+                            <th class="text-center">File Closed Number</th>
                             <th class="text-center">Date Closed</th>
-                            <th class="text-center">Edit</th>
-                            <th class="text-center">View</th>
+                            
                             <th class="text-center">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
+
+                    @foreach($file_progress_list as $list)
                         <tr id="data">
+                            <!-- <td scope="row" class="text-center">{{$list->id}}</td> -->
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$list->Client_name}}</td>
+                            <td scope="row" class="text-center"></td>
+                            <!-- <td scope="row" class="text-center">{{$list->file_name}}</td> -->
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
+                          
                             <td scope="row" class="text-center"><a href=""><i style="color:black;" class="fa fa-eye"
                                         aria-hidden="true"></i>
                                     <input type="hidden" value="" id="medicine_id_hidden" class="applicate"
@@ -131,6 +132,7 @@ color: #999;
                                         <a onClick="return myFunction();" href="" style="color:black;"><i
                                                 class="fas fa-trash-alt"></i></a></td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
               
