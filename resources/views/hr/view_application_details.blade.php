@@ -3,7 +3,7 @@
 @section('content') 
 <div class="container">
 <h4 id="hdtpa"><b>View Application Details</b></h4>
-    <br><br>
+
     </div>
     <br>
 

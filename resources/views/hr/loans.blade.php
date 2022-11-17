@@ -14,33 +14,41 @@
    </div>
 @endif
 
+
+{{-- heading --}}
+   <h4 id="hdtpa"><b>Loans</b></h4>
+   <br>
+   <br>
+
 <form method="post" action="{{url('addloan')}}">
     @csrf
-<div class="row">
-                                            <div class="col-md-3">
-                          <div class="form-group mb-3">
-                            <label>Employees Id</label>
-                      <input type="text" class="form-control" name="id" placeholder="" required>
-                        </div>
-                                            </div>
-                                            <div class="col-md-3">
-                         <div class="form-group mb-3">
-                            <label>Loan Amount</label>
-                      <input type="text" class="form-control" name="amount" placeholder="" required>
-                        </div>
-                                            </div>
-                                             <div class="col-md-3">
-                           <div class="form-group mb-3">
-                            <label>Loan Term</label>
-                      <input type="text" class="form-control" name="term" placeholder="" required>
-                        </div>
-                                            </div>
-                                             <div class="col-md-3">
-                            <div class="form-group mb-3">
-                            <button type="submit"  class="btn btn-block btn-secondary" style="margin-top:24px;">Add</button>
-                        </div>
-                                            </div>
+                    <div class="row">
+                                    <div class="col-md-3">
+                                          <div class="form-group mb-3">
+                                            <label>Employees Id</label>
+                                            <input type="text" class="form-control" name="id" placeholder="" required>
+                                          </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group mb-3">
+                                           <label>Loan Amount</label>
+                                           <input type="text" class="form-control" name="amount" placeholder="" required>
+                                         </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group mb-3">
+                                         <label>Loan Term</label>
+                                         <input type="text" class="form-control" name="term" placeholder="" required>
                                         </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group mb-3">
+                                         <button type="submit"  class="btn btn-block btn-primary" style="margin-top:24px;">Add</button>
+                                        </div>
+                                    </div>
+                        </div>
+
+                        
                                         <div class="container">
     <div class="header_wrap">
       <div class="num_rows">

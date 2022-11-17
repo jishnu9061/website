@@ -6,7 +6,7 @@
 
         {{-- heading --}}
         <h4 id="hdtpa"><b>Client Management Details</b></h4>
-        <br>
+        <br><br>
 
         {{-- sub heading --}}
         <h5 id="hdbtb">Client

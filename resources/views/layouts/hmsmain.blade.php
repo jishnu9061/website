@@ -1254,19 +1254,13 @@ color: #999;
 
             <footer id="ftr"  class="container bg-white p-4 mt-2 border-top" >
                 <div class="footer clearfix mb-0 text-muted">
-                    <div class="float-start">
-
-
-                        
-                        
-
-
+                    <div class="container text-center"> 
                         <p class="">2022 &copy; Globaleyet</p>
                     </div>
-                    <div class="float-end">
+                    <!-- <div class="float-end">
                         
                         <p> <a class="pr-3" href="#"><i style="color: green;" class="	fa fa-level-up"></i> </a>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a href="https://www.globaleyet.com/">globaleyet</a></p>
-                    </div>
+                    </div> -->
                 </div>
             </footer>
 
