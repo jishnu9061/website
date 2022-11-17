@@ -50,7 +50,7 @@
                                     <tr>
                                         <!-- <th class="text-center"> <input type="checkbox"></th> -->
                                       
-                                        <th class="text-center">*</th>
+                                        <!-- <th class="text-center">*</th> -->
                                         <th class="text-center">File No</th>
                                         <th class="text-center">Client</th>
                                         <th class="text-center">File Name</th>
@@ -66,12 +66,12 @@
                                 <tbody>
                                 @foreach($file_list as $list)
                                     
-                                        <tr id="data">
+                                        <tr id="data" class="text-center">
                                           
-                                            <td scope="row">{{$list->id}}</td>
+                                            <!-- <td scope="row">{{$list->id}}</td> -->
                                             <td scope="row">{{$list->id}}</td>
                                             <td scope="row">{{$list->Client_name}}</td>
-                                            <td scope="row">{{$list->file_name}}</td>
+                                            <td scope="row">{{$list->File_name}}</td>
                                             <td scope="row">{{$list->opening_date}}</td>
                                             <td scope="row">{{$list->responsible_advocate}}</td>
                                             <td scope="row">{{$list->recent_progress}}</td>
@@ -102,7 +102,7 @@
                                     <!-- Modal Header -->
 
                                     <!-- Modal body -->
-                                    <div class="modal-body" style="background-color:white">
+                                    <div class="modal-body" >
                                         <div class="container">
                                             <form method="post" action="{{ url('add-new-file') }}"
                                                 enctype="multipart/form-data">
