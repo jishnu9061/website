@@ -4,61 +4,21 @@
 <html>
   
         <style>
-  .pagination>li>span {
-    position: relative;
-    float: left;
-    padding: 6px 12px;
-    margin-left: -1px;
-    line-height: 1.42857143;
-    color: #337ab7;
-    text-decoration: none;
-    background-color: #fff;
-    border: 1px solid #ddd;
-}
-.pagination {
-margin: 0;
-}
 
-.pagination li:hover{
-cursor: pointer;
-}
-
-.header_wrap {
-padding:30px 0;
-}
-.num_rows {
-width: 20%;
-float:left;
-}
-.tb_search{
-width: 20%;
-float:right;
-}
-.pagination-container {
-width: 70%;
-float:left;
-}
-
-.rows_count {
-width: 20%;
-float:right;
-text-align:right;
-color: #999;
-}
 </style>  
-   
+<body>
 <div class="container">
  
-   <body>
+  
 
-    <div>
+    
             <!-- <button class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Manage Towns </u></b></span></button><br> -->
                 {{-- heading --}}
     <h4 id="hdtpa"><b>Manage Towns</b></h4>
     <br>
            
-     </div>
+     
             
             <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
            
@@ -69,7 +29,7 @@ color: #999;
                     
 <!---------------------------------------------------- MODAL ---------------------------------------------------------------------->
     <!-- <a href="{{('add_user_department')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Department</button></a> -->
-    <div class="container">
+   
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -90,7 +50,7 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+   
 
 
     <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">List of Towns</h3>

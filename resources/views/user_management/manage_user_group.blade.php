@@ -4,65 +4,25 @@
 
     
 <style>
-  .pagination>li>span {
-    position: relative;
-    float: left;
-    padding: 6px 12px;
-    margin-left: -1px;
-    line-height: 1.42857143;
-    color: #337ab7;
-    text-decoration: none;
-    background-color: #fff;
-    border: 1px solid #ddd;
-}
-.pagination {
-margin: 0;
-}
-
-.pagination li:hover{
-cursor: pointer;
-}
-
-.header_wrap {
-padding:30px 0;
-}
-.num_rows {
-width: 20%;
-float:left;
-}
-.tb_search{
-width: 20%;
-float:right;
-}
-.pagination-container {
-width: 70%;
-float:left;
-}
-
-.rows_count {
-width: 20%;
-float:right;
-text-align:right;
-color: #999;
-}
+ 
 </style>  
     
 
 
-
+<div class="container"> 
 
    {{-- heading --}}
   <h4 id="hdtpa"><b>Manage Groups</b></h4>
   <br>
 
-  <div class="container"> 
+  
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 {{-- <a href="{{('add_new_user_grp')}}"><button class="btn btn-primary">Add New Group</button></a> --}}
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New  Group</button>
 <div class="tab-content" id="myTabContent">
  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-<div class="container"> 
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -83,7 +43,7 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+   
 
 
    <div class="table-responsive">   
@@ -92,7 +52,7 @@ color: #999;
       <thead>
 
                         <tr>
-                        <th class="text-center" >Group ID</th>
+                        <!-- <th class="text-center" >Group ID</th> -->
                         <th class="text-center" >Group Code</th>
                         <th class="text-center" >Group Name</th>
                         <th class="text-center" >Group Roles</th>
@@ -107,13 +67,13 @@ color: #999;
              @foreach($user_group as $group)
              
                     <tr>
-                        <td class="text-center">{{$group->id}}</td>
+                        <!-- <td class="text-center">{{$group->id}}</td> -->
                         <td class="text-center">{{$group->group_code}}</td>
                         <td class="text-center">{{$group->group_name}}</td>
                         <td class="text-center">{{$group->group_role}}</td>
                         <td class="text-center"></td>
                         <td class="text-center"></td>
-                        <td  scope="row"class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
+                        <td  scope="row"class="text-center">
                         <a href="{{url('edit_new_user_grp',$group->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                         <a href="{{url('user_group_destroy',$group->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
                        
