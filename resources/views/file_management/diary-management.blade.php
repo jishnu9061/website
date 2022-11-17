@@ -72,7 +72,7 @@ color: #999;
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add
                 Event</button>
         
-                <div class="container">
+               
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -93,7 +93,7 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+  
 
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -103,11 +103,11 @@ color: #999;
 	
                     <thead >
                         <tr>
-                            <th class="text-center">*</th>
+                            <!-- <th class="text-center">*</th> -->
                             <th class="text-center">Title</th>
                             <th class="text-center">Client</th>
                             <th class="text-center">File No</th>
-                            <th class="text-center">File Name</th>
+                            <!-- <th class="text-center">File Name</th> -->
                             <th class="text-center">Start</th>
                             <th class="text-center">End</th>
                             <th class="text-center">Submitted <br>By</th>
@@ -121,27 +121,21 @@ color: #999;
                     @foreach($event as $list)
                         <tr id="data">
 
-                            <td scope="row" class="text-center">{{$list->id}}</td>
+                            <!-- <td scope="row" class="text-center">{{$list->id}}</td> -->
                             <td scope="row" class="text-center">{{$list->Title}}</td>
                             <td scope="row" class="text-center">{{$list->Client_name}}</td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center">{{$list->file_name}}</td>
+                            <!-- <td scope="row" class="text-center">{{$list->file_name}}</td> -->
                             <td scope="row" class="text-center">{{$list->Start_Date}}</td>
                             <td scope="row" class="text-center">{{$list->Time_End}}</td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center">
-                            <button style="background-color:#FFFBF4;"class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                               Action
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                           
-                                <a href="{{url('edit_event',$list->id)}}" class="dropdown-item" >Edit</a>
-                            
-                           
-                                <a href="{{url('event_delete',$list->id)}}" class="dropdown-item" >Delete</a>
-                        
-                               
-                            </td>
+
+                            <td  scope="row"class="text-center">
+                        <a href="{{url('edit_event',$list->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit"></i>
+                        <a href="{{url('event_delete',$list->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
+						
+
+                          
                         </tr>
 <!-- <div> -->
 

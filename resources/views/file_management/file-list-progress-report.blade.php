@@ -60,7 +60,7 @@ color: #999;
                     <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
 
         </div> -->
-        <div class="container">
+       
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -81,7 +81,7 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+    
 
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -90,13 +90,13 @@ color: #999;
 	
                     <thead >
                         <tr>
-                            <th class="text-center">*</th>
+                            <!-- <th class="text-center">*</th> -->
                             <th class="text-center">Client</th>
                             <th class="text-center">File No& Name</th>
                             <th class="text-center">Date Opened</th>
                             <th class="text-center">Responsible Advocate</th>
                             <th class="text-center">Most Recent Progress</th>
-                            <th class="text-center">Next Progress</th>
+                            <!-- <th class="text-center">Next Progress</th> -->
                             <th class="text-center">Status</th>
                             <th class="text-center">Action</th>
 
@@ -107,20 +107,18 @@ color: #999;
                     @foreach($file_progress_list as $list)
                         <tr id="data">
 
-                            <td scope="row" class="text-center">{{$list->id}}</td>
+                            <!-- <td scope="row" class="text-center">{{$list->id}}</td> -->
                             <td scope="row" class="text-center">{{$list->Client_name}}</td>
                             <td scope="row" class="text-center">{{$list->file_name}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
+                            <!-- <td scope="row" class="text-center"></td> -->
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center">
-                                <select name="" id="">
-                                    <option value=""> <a href="">View</a> </option>
-                               
-                                </select>
-                            </td>
+                            <td  scope="row"class="text-center">
+                        <a href=""><i  style="  color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i>
+                        </td>
+						
                         </tr>
 
 
