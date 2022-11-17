@@ -65,9 +65,19 @@
           <td>Mark</td>
           <td>Otto</td>
           <td>mark@gmail.com</td>
-          <td>1234567891</td>
+          <td>98-34567891</td>
           <td>LLB</td>
           <td>5</td>
+          <td><input class="btn btn-primary" type="button" value="Details" data-toggle="modal" data-target="#myModal"></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>John</td>
+          <td>Paul</td>
+          <td>jp@gmail.com</td>
+          <td>98-76543210</td>
+          <td>LLB</td>
+          <td>1</td>
           <td><input class="btn btn-primary" type="button" value="Details" data-toggle="modal" data-target="#myModal"></td>
         </tr>
       </tbody>

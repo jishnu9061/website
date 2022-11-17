@@ -14,12 +14,7 @@ class SystemSetup extends Controller
      */
 
 
-
-
-
-
- 
-        public function index()
+   public function index()
     {
        return view('system-settings.system_setup');
      
@@ -209,6 +204,10 @@ class SystemSetup extends Controller
         return view('system-settings.other_confgn');
     }
         //////////////////////// COMPANY_BRANCH///////////////////////////////////
+        
+        
+        
+        
         public function branch()
         {
             $branch_details=DB::table('cra_company_branch_details')->get();
