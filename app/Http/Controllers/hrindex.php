@@ -150,6 +150,14 @@ public function view_job_post($id)
     {
         return view('hr.view_job_applications');
     }
+    public function view_job_appl_details_1()
+    {
+        return view('hr.view_job_appl_details_1');
+    }
+    public function view_job_appl_details_2()
+    {
+        return view('hr.view_job_appl_details_2');
+    }
 
     public function reviewed_details()
     {

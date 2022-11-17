@@ -1304,6 +1304,8 @@ Route::any('/view_job_post/{id}','hrindex@view_job_post')->name('view_job_post')
 //reshma
 Route::any('view_job_applications','hrindex@view_job_applications')->name('view_job_applications');
 Route::any('view_application_details','hrindex@view_application_details')->name('view_application_details');
+Route::any('view_job_appl_details_1','hrindex@view_job_appl_details_1')->name('view_job_appl_details_1');
+Route::any('view_job_appl_details_2','hrindex@view_job_appl_details_2')->name('view_job_appl_details_2');
 Route::any('create_job_post','hrindex@create_job_post')->name('create_job_post');
 Route::any('reviewed_details','hrindex@reviewed_details')->name('reviewed_details');
 Route::any('performance_form','hrindex@performance_form')->name('performance_form');

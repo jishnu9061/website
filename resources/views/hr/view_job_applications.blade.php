@@ -14,13 +14,13 @@
       </nav>
       </div>
       <br> -->
-      
+<!--       
   <div class="container-fluid">
     <nav class="navbar bg-light" style="height:50%";>
      <a class="navbar-brand"><b>Senior Advocate</b> Job Applications</a>
      <button class="btn btn-outline-success" type="button">View All</button> 
     </nav>
-  </div>
+  </div> -->
 
 
 <div class="container">
@@ -68,7 +68,8 @@
           <td>98-34567891</td>
           <td>LLB</td>
           <td>5</td>
-          <td><input class="btn btn-primary" type="button" value="Details" data-toggle="modal" data-target="#myModal"></td>
+          <td> <a href="{{url('view_job_appl_details_1')}}"class="btn btn-primary" type="button">Details</td>
+          <!-- <td><input class="btn btn-primary" type="button" value="Details" data-toggle="modal" data-target="#myModal"></td> -->
         </tr>
         <tr>
           <th scope="row">2</th>
@@ -78,7 +79,8 @@
           <td>98-76543210</td>
           <td>LLB</td>
           <td>1</td>
-          <td><input class="btn btn-primary" type="button" value="Details" data-toggle="modal" data-target="#myModal"></td>
+          <td> <a href="{{url('view_job_appl_details_2')}}"class="btn btn-primary" type="button">Details</td>
+          <!-- <td><input class="btn btn-primary" type="button" value="Details" data-toggle="modal" data-target="#Modal2"></td> -->
         </tr>
       </tbody>
     </table>
@@ -93,66 +95,10 @@
     </div>
     <div class="rows_count">Showing 11 to 20 of 100</div>
 
- <!-- 		End of Container -->
-   <div class="modal fade" id="myModal">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content" >
 
-                                    <!-- Modal Header -->
-                                    <div class="modal-header" >
-                                        <h2 class="text-centre"><b>View Application Details</b></h2>
 
-                                    </div>
 
-                                    <!-- Modal body -->
-                                    <div class="modal-body" >
-                                        <div class="container">
-                                            <form method="post" action="{{url('add_letter_category')}}"
-                                                enctype="multipart/form-data"> 
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->    
-@csrf
-<form>  
-        <div class="mb-3">
-            <label for="firstname" class="form-label">First Name</label>
-            <input type="text" class="form-control" id="firstname">
-            </div>
-        <div class="mb-3">
-            <label for="lastname" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="lastname">
-            </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email">
-            </div>
-      
-        <div class="mb-3">
-            <label for="phone" class="form-label">Phone Number</label>
-            <input type="text" class="form-control" id="phone">
-            </div>
 
-        <div class="mb-3">
-                <label for="qualification" class="form-label">Qualification</label>
-                <input type="text" class="form-control" id="qualification">
-                </div>
-    
-        <div class="mb-3">
-                <label for="work experience" class="form-label">Work Experience</label>
-                <input type="text" class="form-control" id="work experience">
-                </div>
-      
-        <div class="mb-3">
-            <label for="formFile" class="form-label">Upload CV</label>
-            <input class="form-control" type="file" id="formFile">
-            <div class="form-text">Select CV file (TXT, PDF or  Word DOC)</div>
-            </div>
-
-        </form>
-
-        <div class="text-center">
-            <button type="submit" class="btn btn-success">Accepted</button>
-            <span class="p-3"></span>
-            <button type="submit" class="btn btn-danger">Rejected</button>
-        </div>
 
 
 
