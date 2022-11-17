@@ -64,6 +64,22 @@
                             </div>
                         </div>
                     </div>
+                    <br><br>
+                    <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Client Type</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="client" id="cars">
+                                    <option>{{$edit_documents->client_types}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
                 <br>
                 <div class="row">
