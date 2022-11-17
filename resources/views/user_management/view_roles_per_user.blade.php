@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
 <html>
-<div class="container">
+
 <head>
   
 
@@ -23,12 +23,12 @@
             <!-- <button class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>View
                         Roles </u></b></span></button><br> -->
+                        <div class="container">
                         {{-- heading --}}
     <h4 id="hdtpa"><b>View Roles</b></h4>
     <br>
            
-        </div>
-        <div class="container">
+       
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -49,7 +49,7 @@
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+   
    
        
 <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Roles per User</h3>

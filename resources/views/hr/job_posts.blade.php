@@ -7,8 +7,10 @@
 
 <!-- <nav class="navbar bg-light">
   <div class="container-fluid">
+   <nav class="navbar bg-light" style="height:50%";>
     <a class="navbar-brand">Job Posts</a>
     <button class="btn btn-outline-success" type="button">View All</button> 
+   </nav>
   </div>
   </nav>
   <br> -->
@@ -139,12 +141,13 @@
             <!-- <form method="post" action="{{url('create_job_post')}}"> -->
                 
                 <label for="job title" class="form-label">Job Title</label>
-                <select class="form-select" name="job_title">
+                <input type="text" class="form-control" name="job_title" aria-describedby="jobtitle">
+                <!-- <select class="form-select" name="job_title">
                     <option selected>---select---</option>
                     <option value="junior Advocate">junior Advocate</option>
                     <option value="Mid Senior Advocate">Mid Senior Advocate</option>
                     <option value="Senior Advocate">Senior Advocate</option>
-                  </select>
+                  </select> -->
             </div>
             <div class="mb-3">
                 <label for="qualification" class="form-label">Qualification</label>

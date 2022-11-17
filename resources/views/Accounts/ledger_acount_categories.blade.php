@@ -126,9 +126,9 @@ $no=1;
                         </div>
 
 
-                                    <div class="modal-footer">
+                                    <div class="modal-footer" style="background-color:#d3e0ed;">
                                         <button type="submit" class="btn btn-primary" >Save</button>
-                                        <button type="button" class="btn btn-alert" data-bs-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
                                     </div>
                                       </form>
 
@@ -182,7 +182,7 @@ $no=1;
                         </div>
 
 
-                                    <div class="modal-footer">
+                                    <div class="modal-footer" style="background-color:#" >
                                         <button type="submit" class="btn btn-primary" >Update</button>
                                         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
                                     </div>

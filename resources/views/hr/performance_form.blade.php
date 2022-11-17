@@ -601,8 +601,7 @@
 
           <div class="mb-3">
            <div class="form-floating mb-3">
-           <input type="text" class="form-control" id="floatingInput" placeholder="Add new KPI">
-           <label for="floatingInput">KPI</label>
+           <input type="text" class="form-control" id="floatingInput"> 
           </div>
 
 

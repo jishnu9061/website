@@ -58,7 +58,7 @@ color: #999;
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-<div class="container">
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -79,21 +79,21 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+   
 <div class="table-responsive">
-<table class="table table-striped table-class" id= "table-id">
+<table style="width:200%" class="table table-striped table-class" id= "table-id">
   <thead>
   <tr>
-                        <th class="text-center" >User Code</th>
-                        <th class="text-center" >Name</th>
+                        <!-- <th class="text-center" >User Code</th> -->
+                        <!-- <th class="text-center" >Name</th> -->
                         <th class="text-center" >User Name</th>
-                        <th class="text-center" >User Group</th>
+                        <!-- <th class="text-center" >User Group</th> -->
                         <th class="text-center" >E-mail</th>
-                        <th class="text-center" >Telephone</th>
+                        <!-- <th class="text-center" >Telephone</th> -->
                         <th class="text-center" >Log Status</th>
                         <th class="text-center" >IP Address</th>
-                        <th class="text-center" >Last Logout Time</th>
-                        <th class="text-center" >Status</th>
+                        <th class="text-center" >Logout Time</th>
+                        <!-- <th class="text-center" >Status</th> -->
                         <th class="text-center" >Action</th>
                        
                     </tr>
@@ -102,24 +102,31 @@ color: #999;
 @foreach ($user_list as $list)
                     <tr>
                        
-                        <td class="text-center">{{$list->user_code}}</td>
-                        <td class="text-center">{{$list->first_name}}</td>
+                        <!-- <td class="text-center">{{$list->user_code}}</td>
+                        <td class="text-center">{{$list->first_name}}</td> -->
                         <td class="text-center">{{$list->user_name}}</td>
-                        <td class="text-center">{{$list->user_group}}</td>
+                        <!-- <td class="text-center">{{$list->user_group}}</td> -->
                         <td class="text-center">{{$list->email_address}}</td>
-                        <td class="text-center">{{$list->telephone_no}}</td>
+                        <!-- <td class="text-center">{{$list->telephone_no}}</td> -->
+                        <td class="text-center"></td>
+                        <!-- <td class="text-center"></td> -->
                         <td class="text-center"></td>
                         <td class="text-center"></td>
-                        <td class="text-center"></td>
-                        <td class="text-center"></td>
-                        <td class="text-center">
+                        <td  scope="row"class="text-center">
+                        <a href="{{url('user_edit',$list->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <a href="{{url('user_destroy',$list->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
+                        <a href="user_attachments"><i  style="  color:rgb(13, 1, 56);" class="fas fa-paperclip" aria-hidden="true"></i>
+                        <a href="user_comments"><i  style="  color:rgb(13, 1, 56);" class="fas fa-comment" aria-hidden="true"></i>
+                    </td>
+
+                        <!-- <td class="text-center">
                       <div class="dropdown">
-                            <button style="background-color:#FFFBF4;"class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                Action
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a href="{{url('user_edit',$list->id)}}" class="dropdown-item" >Edit</a>
-                                <!-- <a href="user_view" class="dropdown-item" >View</a> -->
+                                <a href="user_view" class="dropdown-item" >View</a>
                                 <a href="user_attachments"class="dropdown-item" >Attachment</a>
                                 <a href="user_comments" class="dropdown-item" >Comments</a>
                                 <a href="{{url('user_destroy',$list->id)}}" class="dropdown-item" >Delete</a>
@@ -127,7 +134,7 @@ color: #999;
                             </div>
                         </div> 
 
-                       </td>
+                       </td> -->
                      
                      
                      </tr>

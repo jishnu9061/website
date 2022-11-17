@@ -2,7 +2,7 @@
 @section('content') 
 <div class="container">
 <h4 id="hdtpa"><b>View job Application</b></h4>
-    <br><br>
+  
     </div>
     <br>
 
@@ -14,13 +14,15 @@
       </nav>
       </div>
       <br> -->
-      <nav class="navbar bg-light">
+      
   <div class="container-fluid">
-    <a class="navbar-brand"><b>Senior Advocate</b> Job Applications</a>
-    <button class="btn btn-outline-success" type="button">View All</button> 
+    <nav class="navbar bg-light" style="height:50%";>
+     <a class="navbar-brand"><b>Senior Advocate</b> Job Applications</a>
+     <button class="btn btn-outline-success" type="button">View All</button> 
+    </nav>
   </div>
-</nav>
-<br>
+
+
 <div class="container">
     <div class="header_wrap">
       <div class="num_rows">

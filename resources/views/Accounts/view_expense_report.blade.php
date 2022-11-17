@@ -50,12 +50,12 @@
     </div>
 
     <div class="table-responsive">
-        <table class="table table-striped table-class" id= "table-id">
+        <table style="width:300%" class="table table-striped table-class" id= "table-id">
   <thead>
     <tr>
       <th scope="col">Sl</th>
       <th scope="col">Account No </th>
-      <th scope="col">Staff Salaries and bonus</th>
+      <th scope="col">Staff Salaries and Bonus</th>
       <th scope="col">Insurances</th>
       <th scope="col">Partners Benifits</th>
       <th scope="col">Assets</th>
@@ -71,7 +71,7 @@
 
     </tr>
   </thead>
-  <tbody>
+  <tbody style="height: 50px;">
       <tr>
         <td></td>
         <td></td>

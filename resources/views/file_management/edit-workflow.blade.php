@@ -22,13 +22,11 @@
             <!-- <h2>Add Event</h2>
             <hr class="mb-4">. -->
             <div>
-            <div class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Edit Work Flow</u></b></span></div><br>
-         
-
-        
-            </div>
-        </div>
+        {{-- heading --}}
+    <h4 id="hdtpa"><b>Edit Work Flow</b></h4>
+    <br>
+</div>
+            
     </div>
     <div class="row">
 

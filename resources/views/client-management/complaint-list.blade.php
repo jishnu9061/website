@@ -342,7 +342,7 @@ color: #999;
                                                             <br>
                                                             <button type="submit" class="btn btn-primary float:right;"
                                                                 Style="width:45%;">Submit</button>
-                                                            <button type="button" class="btn btn-primary float:left"
+                                                            <button type="button" class="btn btn-primary float:left" data-dismiss="modal"
                                                                 Style="width:45%;">Cancel</button>
                                                         </div>
                                                     </div>
