@@ -69,7 +69,7 @@ color: #999;
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                 Add Workflow</button>
 
-                <div class="container">
+               
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -90,7 +90,7 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+   
              
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">   <br>
@@ -123,17 +123,13 @@ color: #999;
                             <td scope="row" class="text-center">{{$list->Duration}}</td>
                             <td scope="row" class="text-center"></td>
                          
+                            <td  scope="row"class="text-center">
+                        <a href="{{url('edit-workflow',$list->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" ></i>
+                        <a href="{{url('delete-workflow',$list->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
+                        <a href="{{url('edit-workflow',$list->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-eye" ></i>
+                    </td>
                             
-                            <td scope="row" class="text-center">
-                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                               Action
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                           
-                                <a href="{{url('edit-workflow',$list->id)}}" class="dropdown-item" >Edit</a>
-                                <a href="" class="dropdown-item" >View</a>
-                                <a href="{{url('delete-workflow',$list->id)}}" class="dropdown-item" >Delete</a>
-                            </td>
+                          
                         </tr>
                         @endforeach
                     </tbody>
