@@ -47,7 +47,8 @@ color: #999;
 </style>    
 </head>
 <div class="container">
-  {{-- heading --}}
+  {{-- heading --}} 
+  <div class="container">
   <h4 id="hdtpa"><b>Invoice Items</b></h4>
   <br>
 
@@ -62,7 +63,7 @@ color: #999;
                      
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
         <!-- <a href="{{('add_invoice_item')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add New Item</button></a><br> -->
-        <div class="container">
+       
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -83,8 +84,8 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
-            <br>
+    
+           
        
         <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Invoice Item List</h3>
     <!-- <div class="container"> -->
@@ -92,7 +93,7 @@ color: #999;
         <table class="table table-striped table-class" id= "table-id">
                   <thead>
                         <tr>
-                        <th class="text-center" >No</th>
+                        <!-- <th class="text-center" >No</th> -->
                         <th class="text-center">Item Code</th>
                         <th class="text-center" >Item Category</th>
                         <th class="text-center">Item Name</th>
@@ -107,7 +108,7 @@ color: #999;
     <tbody>
     @foreach($invoice_item as $invoice)
  <tr>
-    <td  class="text-center" >{{ $invoice->id }}</td>
+    <!-- <td  class="text-center" >{{ $invoice->id }}</td> -->
                         <td >{{ $invoice->item_code }}</td>
                         <td>{{ $invoice->item_category }}</td>
                         <td >{{ $invoice->item_name }}</td>
@@ -116,6 +117,7 @@ color: #999;
                         <td  >{{ $invoice->income_account }}</td>
                         <td  scope="row"class="text-center">
                         <a href="{{url('edit_invoice_item',$invoice->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <span class="m-2"></span>
                         <a href="{{url('delete_invoice_item',$invoice->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                            </td>
                       

@@ -53,13 +53,13 @@
 </head>
 
 <body>
-    <div class="container">
-        <div>
+   
             <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Document Details</u></b></div><br><br> -->
             {{-- heading --}}
-            <h4 id="hdtpa"><b>Document Details</b></h4>
-            <br>
             <div class="container">
+            <h4 id="hdtpa"><b>Document Details</b></h4>
+            
+            
                 <div class="header_wrap">
                     <div class="num_rows">
                         <div class="form-group">
@@ -75,13 +75,12 @@
                                 <option value="100">100</option>
                                 <option value="5000">Show ALL Rows</option>
                             </select>
-
                         </div>
                     </div>
                     <div class="tb_search">
                         <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()"
                             placeholder="Search.." class="form-control">
-                    </div>
+                    
                 </div>
 
 

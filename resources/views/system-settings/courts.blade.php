@@ -46,8 +46,9 @@ color: #999;
 }
 </style>  
 </head>
-<div class="container">
+
   {{-- heading --}}
+  <div class="container">
   <h4 id="hdtpa"><b>Court List</b></h4>
   <br>
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
@@ -69,7 +70,7 @@ color: #999;
         <!-- <a href="{{('add_court')}}"><button class="btn btn-primary add-btn">Add Court</button></a> -->
         <!-- <a href="{{('add_court_category')}}"><button class="btn btn-primary add-btn">Add New Court Category</button></a><br><br> -->
 
-        <div class="container">
+        
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -90,12 +91,12 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+    
     <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
                   <thead>
                         <tr>
-                        <th class="text-center" >No</th>
+                        <!-- <th class="text-center" >No</th> -->
                         <th class="text-center" >Court Category</th>
                         <th class="text-center" >Court Name</th>
                         <th class="text-center" >Action</th>
@@ -105,30 +106,22 @@ color: #999;
     <tbody>
     @foreach($court as $court_details)
                     
-                    <tr>
-                        <td>{{$court_details->id}}</td>
-                      
+                    <tr class="text-center">
+                        <!-- <td>{{$court_details->id}}</td> -->
                         <td>{{$court_details->court_category}}</td>
                         <td>{{$court_details->court_name}}</td>
                         <td  scope="row"class="text-center">
                         <a href="{{url('edit_court',$court_details->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <span class="m-2"></span>
                         <a href="{{url('delete_court',$court_details->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                            </td>
                     </tr>
 
                     @endforeach 
-    </tbody>
-                </table>
-                <div class="class"style="text-align:right;">
-                <select style="width:10%;height:100%;color:rgb(13, 1, 56);font-size:small;background-color:#FFFBF4;"type="text" value="" name="type">
-    <!-- <option>Delete Court</option> -->
-    <option>Active Category</option>
-</select>
-<input type="button"value="Go" name="close"style="color:rgb(13, 1, 56);background-color:#FFFBF4; ">
-    </div>
-    </div>
-
-  <!--		Start Pagination -->
+         </tbody>
+         </table>
+                <br>
+                <!--		Start Pagination -->
   <div class='pagination-container'>
       <nav>
         <ul class="pagination">
@@ -139,6 +132,18 @@ color: #999;
     <div class="rows_count">Showing 11 to 20 of 100</div>
 
  <!-- 		End of Container -->
+
+
+                <!-- <div class="class"style="text-align:right;">
+                <select style="width:10%;height:100%;color:rgb(13, 1, 56);font-size:small;background-color:#FFFBF4;"type="text" value="" name="type">
+     <option>Delete Court</option> -->
+    <!-- <option>Active Category</option>
+</select>
+<input type="button"value="Go" name="close"style="color:rgb(13, 1, 56);background-color:#FFFBF4; ">
+    </div>
+    </div> -->
+
+  
       <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">

@@ -52,23 +52,23 @@ color: #999;
 </head>
 
 <body>
-    <div class="container">
-        <div>
+    
+      
             <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;">
             <b><u>Complaint Register</u></b> -->
             {{-- heading --}}
+            <div class="container">
             <h4 id="hdtpa"><b>Complaint Register</b></h4>
             <br>
-        </div>
+        
 
-        <div class="container">
-         <button class="btn btn-primary add-btn" Style="width:20%" data-toggle="modal" data-target="#myModal">Add New
-            Complaint</button>
+        <div>
+         <button class="btn btn-primary add-btn" Style="width:20%" data-toggle="modal" data-target="#myModal">Add New Complaint</button>
         </div>
         
-          <br>
+         
 
-    <div class="container">       
+           
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -89,8 +89,7 @@ color: #999;
       <div class="tb_search">
       <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
-
+    
 
             <!-- <input type="text"  placeholder="Search for Client" title="Type in a name"> -->
 
@@ -104,33 +103,34 @@ color: #999;
                         <thead>
                             <tr>
                           
-                                <th class="text-center"> No</th>
+                                <!-- <th class="text-center"> No</th> -->
                                 <th class="text-center">Date</th>
                                 <th class="text-center">Client</th>
                                 <th class="text-center">Files</th>
                                 <th class="text-center">Customer Institution</th>
                                 <th class="text-center">Contact</th>
                                 <th class="text-center">Complaint Description</th>
-                                <th class="text-center">View</th>
-                                <th class="text-center">Edit</th>
-                                <th class="text-center">Delete</th>
+                                <th class="text-center">Actions</th>
+                                <!-- <th class="text-center">Edit</th>
+                                <th class="text-center">Delete</th> -->
                             </tr>
                         </thead>
                         <tbody>
                             @foreach( $complaint_list as $list)
                             <tr id="data">
-                                <td scope="row" class="text-center">{{$list->id }}</td>
+                                <!-- <td scope="row" class="text-center">{{$list->id }}</td> -->
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->date}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->client_type}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->files}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->customer_name}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->telephone_no}}</td>
                                 <td scope="row" class="text-center">{{$list->complaint_description}}</td>
-                                <td><a href="{{url('view-Complaint',$list->id)}}"><i style="color:black;"
-                                            class="fa fa-eye" aria-hidden="true"></i></td></a>
-                                <td><a href="{{url('edit_complaint',$list->id )}}"><i style="color:black;"
-                                            class="fa fa-edit" aria-hidden="true"></i></td>
-                                <td>
+                                <td class="text-center"><a href="{{url('view-Complaint',$list->id)}}"><i style="color:black;"
+                                            class="fa fa-eye" aria-hidden="true"></i></a>
+                                            <span class="m-1"></span>
+                                <a href="{{url('edit_complaint',$list->id )}}"><i style="color:black;"
+                                            class="fa fa-edit" aria-hidden="true"></i>
+                                            <span class="m-1"></span>
                                         <a onClick="return myFunction();"
                                             href="{{url('delete-Complaint',$list->id)}}" style="color:black;"><i
                                                 class="fas fa-trash-alt"></i></a>

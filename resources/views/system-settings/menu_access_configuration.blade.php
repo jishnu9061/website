@@ -54,21 +54,21 @@ color: #999;
 
    <body>
    
-   <div class="container">
+   
     <!-- <h2 >Court List</h2><br>
     <a href="{{url('add_court')}}"  class="btn btn-primary"style="color:white;background-color:rgb(13, 1, 56);" >Add Court</a><br><br> -->
     <!-- <h2 style="text-align:center; text-shadow: 2px 1px;">Menu Access Configuration</h2>
  <hr class="mb-4">. -->
- <div>
+ 
  {{-- heading --}}
+ <div class="container">
     <h4 id="hdtpa"><b>Menu Access Configuration</b></h4>
-    <br><br>
+    <br>
             
         
-            </div>
-           
+            
 
-<div class="container">
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -89,14 +89,14 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+    
 <form>
 <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">WakiliCMS Menu Configuration</h3>
 <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
     <thead>          
                         <tr>
-                        <th class="text-center" >*</th>
+                        <!-- <th class="text-center" >*</th> -->
                         <th class="text-center" >Description</th>
                         <th class="text-center" >ADM</th>
                         <th class="text-center">PTN</th>
@@ -122,7 +122,7 @@ color: #999;
                 <tbody>
             
                     <tr>
-                        <td  class="text-center" >1</td>
+                        <!-- <td  class="text-center" >1</td> -->
                         <td class="text-center" ></td>
                         <td  class="text-center" ></td>
                         <td class="text-center" ></td>
@@ -136,7 +136,7 @@ color: #999;
                         <td class="text-center" ></td>
                         <td  class="text-center" ></td>
                         <td class="text-center"></td>
-                     <td  class="text-center" ></td>
+                        <td class="text-center" ></td>
                         <td class="text-center" ></td>
                         <td  class="text-center"></td>
                         <td class="text-center" ></td>
@@ -164,27 +164,15 @@ color: #999;
 
 
 
-<div class="row">
-         <div class="col-sm">
-
-                        </div>
+<div class="row">   
+                        
                         <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-                          
-                        </div>
-                        <div class="col-sm">
-                            <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:53%;">Update</button>
+    
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:40%;">Update</button>
                         
                             <br>
-                            <br>
                         </div>
-                    </div>
+                    
         </div>
 
 </div>

@@ -54,27 +54,31 @@
 </head>
 
 <body>
-    <div class="container">
+    
         <!-- <h1  style="color: #070344;  text-align:center;"><b>Customer Follow Up</b></h1> -->
-        <div>
-            <div>
+        
+            
                 <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
                 <b><u>Client Follow Up</u></b></span> -->
                 {{-- heading --}}
+                <div class="container">
                 <h4 id="hdtpa"><b>Client Follow Up</b></h4>
+<<<<<<< Updated upstream
 
             </div><br>
+=======
+                
+            <br>
+>>>>>>> Stashed changes
 
 
 
-        <div class="container">
-            <button type="button" class="btn btn-primary complaint_btn" data-toggle="modal" data-target="#myModal"> Add
-                Follow
-                Up</button></a>
+        <div>
+            <button type="button" class="btn btn-primary complaint_btn" data-toggle="modal" data-target="#myModal"> Add Follow Up</button>
         </div>
-          <br>
+          
 
-        <div class="container">
+        
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -95,7 +99,7 @@
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+    
 
 
 

@@ -1,14 +1,16 @@
 @extends('layouts.hmsmain')
 @section('content')
-<div class="container">
+
 	
     {{-- heading --}}
+    <div class="container">
   <h4 id="hdtpa"><b>Budget Grouping</b></h4>
-  <br><br>
+  <br>
+
         <button  class="btn btn-primary "  data-toggle="modal" id="patient" data-bs-toggle="modal"
         data-bs-target="#default" style="width: 25%">Add Budget Group</button>
 
-        <div class="container">
+        
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -29,12 +31,12 @@
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+    
 <br>
     <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
-    <tr>
-      <th scope="col">Sl</th>
+    <tr class="text-center">
+      <!-- <th scope="col">Sl</th> -->
       <th scope="col">Budget Grouping</th>
       <th scope="col">Description</th>
       <th scope="col">Action</th>
@@ -47,8 +49,8 @@
     $no=1;
     @endphp
      @foreach ($budget_cat as $key )
-         <tr>
-            <td>{{ $no++}}</td>
+         <tr class="text-center">
+            <!-- <td>{{ $no++}}</td> -->
             <td>{{ $key->budget_name }}</td>
             <td>{{ $key->budget_desc }}</td>
             <td>

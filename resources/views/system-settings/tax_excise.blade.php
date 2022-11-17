@@ -45,8 +45,9 @@ color: #999;
 }
 </style>  
 </head>
+
+{{-- heading --}}  
 <div class="container">
-{{-- heading --}}
 <h4 id="hdtpa"><b>Tax Excise</b></h4>
 <br>
           <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
@@ -58,7 +59,7 @@ color: #999;
                      
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
             <!-- <a href="{{('add_tax_excise')}}"><button class="btn btn-primary "style="width=100%;height=100%;">Add Tax Excise</button></a><br><br> -->
-            <div class="container">
+          
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -79,7 +80,7 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+    
 
 
             
@@ -88,22 +89,23 @@ color: #999;
                             <thead>
                            
                             <tr>
-                                <th class="text-center" >No</th>
+                                <!-- <th class="text-center" >No</th> -->
                                 <th class="text-center" >Tax Name</th>
-                                <th class="text-center" >Tax Value(%)</th>
+                                <th class="text-center" >Tax Value (%)</th>
                                 <th class="text-center" >Status</th>
                                 <th class="text-center" >Action</th>
                             </tr>
                         </thead>
                         <tbody>
                         @foreach($tax_excise as $excise_tax)
-                            <tr>
-                                <td> {{$excise_tax->id}}</td>
+                            <tr class="text-center">
+                                <!-- <td> {{$excise_tax->id}}</td> -->
                                 <td>{{$excise_tax->Tax_name}}</td>
                                 <td> {{$excise_tax->Tax_value}}</td>
                                 <td>{{$excise_tax->Status}}</td>
                                 <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
                                  <a href="{{url('edit_tax_excise',$excise_tax->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                                 <span class="m-2"></span>
                                  <a href="{{url('delete_tax_excise',$excise_tax->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
                             </tr>
                             @endforeach

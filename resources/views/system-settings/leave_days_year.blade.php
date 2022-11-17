@@ -47,12 +47,13 @@ color: #999;
 }
 </style>   
 </head>
-  <div>
+  
   {{-- heading --}}
-    <h4 id="hdtpa"><b>Leave Days per Year</b></h4>
+  <div class="container">
+    <h4 id="hdtpa"><b>Leave Days Per Year</b></h4>
    
      
-   </div>
+   
             <br>
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
            
@@ -64,7 +65,7 @@ color: #999;
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 
 <!-- <a href="{{url('add_leave_days')}}"><button class="btn btn-primary add-btn"style="width: 20%; margin-bottom:5%;">Add Leave Days</button></a>-->
-<div class="container">
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -85,15 +86,14 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
-     
-<h6 style="text-align:center; ">Leave Days Per Year</h6>
+   
+<!-- <h6 style="text-align:center; ">Leave Days Per Year</h6> -->
 
 <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
                     <thead>
                         <tr>
-                            <th class="text-center">*</th>
+                            <!-- <th class="text-center">*</th> -->
                             <th class="text-center">Year</th>
                             <th class="text-center">Annual Leave Days</th>
                             <th class="text-center">Saturday</th>
@@ -109,7 +109,7 @@ color: #999;
                     @foreach($leave_days as $leave)
                         <tr id="data">
                            
-                            <td scope="row" class="text-center">{{ $leave->id }}</td>
+                            <!-- <td scope="row" class="text-center">{{ $leave->id }}</td> -->
                             <td scope="row" class="text-center">{{ $leave->year }}</td>
                             <td scope="row" class="text-center">{{ $leave->annual_leave_day }}</td>
                             <td scope="row" class="text-center">{{ $leave->satuday_working_days }}</td>
@@ -120,6 +120,7 @@ color: #999;
                             <td scope="row" class="text-center"></td>
                             <td  scope="row"class="text-center">
                         <a href="{{url('edit_leave_days',$leave->id )}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <span class="m-1"></span
                         <a href="{{url('delete_leave_days',$leave->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                            </td>
            </tr>

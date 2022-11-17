@@ -48,6 +48,7 @@ color: #999;
 <div class="container">
 
 {{-- heading --}}
+<div class="container">
 <h4 id="hdtpa"><b>Tax Chart</b></h4>
 
    
@@ -62,7 +63,7 @@ color: #999;
                     
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 
-<div class="container">
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -83,12 +84,12 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+    
     <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
 <thead>
  <tr>
-                    <th class="text-center" >No</th>
+                    <!-- <th class="text-center" >No</th> -->
                     <th class="text-center" >Tax Brand</th>
                     <th class="text-center" >Lower Limit</th>
                     <th class="text-center">Upper Limit</th>
@@ -101,8 +102,8 @@ color: #999;
   
                     @foreach($tax_chart as $chart_tax)
             
-                    <tr>
-                        <td>{{$chart_tax->id}}</td>
+                    <tr class="text-center">
+                        <!-- <td>{{$chart_tax->id}}</td> -->
                         <td>{{$chart_tax->tax_brand}}</td>
                         <td>{{$chart_tax->lower_limit}}</td>
                         <td>{{$chart_tax->upper_limit}}</td>
@@ -110,6 +111,7 @@ color: #999;
                         <td>{{$chart_tax->status}}</td>
                         <td  scope="row"class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
                         <a href="{{url('edit_tax_chart',$chart_tax->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <span class="m-2"></span>
                         <a href="{{url('delete_tax_chart',$chart_tax->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
                   
                         </tr>

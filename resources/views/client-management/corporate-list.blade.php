@@ -56,15 +56,16 @@ color: #999;
 
 <body>
 
-    <div class="container">
-        <div>
+    
+        
             <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;">
                 <b><u>Corporate Client List</u></b> -->
             {{-- heading --}}
+            <div class="container">
             <h4 id="hdtpa"><b>Corporate Client List</b></h4>
             <br>
-        </div>
-        <div>
+        
+        
             <!-- <div class="btn btn-primary"
                     style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Corporate Client List</u></b></span></div><br>
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -73,14 +74,13 @@ color: #999;
 
             </div> -->
 
-        <div class="container">
+        <div>
             {{-- <a href="{{('add-corporate')}}"><button class="btn btn-primary">Add Corporate</button></a> --}}
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add
-                Corporate</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Corporate</button>
          </div>
 
 
-                <div class="container">
+                
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -553,13 +553,11 @@ color: #999;
 
                                                     </div>
                                                     <br><br>
-                                                    <div class="modal-footer">
+                                                    <div class="modal-footer" style="background-color:#d3e0ed;">
                                                         <button type="submit" class="btn btn-primary"
-                                                            style="width:15%;background-color:white;color:black">Save</button>
+                                                            style="width:15%;">Save</button>
                                                         <button type="button" class="btn btn-primary" data-dismiss="modal"
-                                                            style="width:15%;background-color:white;color:black">Cancel</button>
-                                                    </div>
-
+                                                            style="width:15%;">Cancel</button>
                                                 </div>
                                         </form>
                                     </div>

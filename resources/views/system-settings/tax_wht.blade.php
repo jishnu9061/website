@@ -46,10 +46,11 @@ color: #999;
 }
 </style>  
 </head>
-<div class="container">
+
   
    <body>
     {{-- heading --}}
+    <div class="container">
     <h4 id="hdtpa"><b>Tax WHT</b></h4>
     
 
@@ -63,7 +64,7 @@ color: #999;
                      
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
             <!-- <a href="{{('add_tax_wht')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Tax WHT</button></a><br><br> -->
-            <div class="container">
+            
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -84,14 +85,14 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+    
     
     <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
             <thead>
 
                             <tr>
-                                <th class="text-center" >No</th>
+                                <!-- <th class="text-center" >No</th> -->
                                 <th class="text-center" >Tax Name</th>
                                 <th class="text-center" >Tax Value(%)</th>
                                 <th class="text-center" >Status</th>
@@ -101,13 +102,14 @@ color: #999;
                         
                         <tbody>
                         @foreach($tax_wht as $wht_tax)
-                            <tr>
-                                <td> {{$wht_tax->id}}</td>
+                            <tr class="text-center">
+                                <!-- <td> {{$wht_tax->id}}</td> -->
                                 <td> {{$wht_tax->Tax_name}}</td>
                                 <td > {{$wht_tax->Tax_value}}</td>
                                 <td > {{$wht_tax->Status}}</td>
                                 <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
                                  <a href="{{url('edit_tax_wht',$wht_tax->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                                 <span class="m-2"></span>
                                  <a href="{{url('delete_tax_wht',$wht_tax->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
                             </tr>
                             @endforeach

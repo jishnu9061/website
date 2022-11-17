@@ -51,19 +51,19 @@ color: #999;
 
 <body>
 
-    <div class="col-sm">
+    
 
 
-
-    </div>
-    <div class="container">
+    
+    
         <!-- <h3 class="text-center" style="color: #070344;"><b>File List</b></h3> -->
         <div>
         {{-- heading --}}
+        <div class="container">
     <h4 id="hdtpa"><b>Billable Activities</b></h4>
     <br>
            
-</div>
+
             
        <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
            
@@ -74,7 +74,7 @@ color: #999;
                       
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 
-<div class="container">
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -95,17 +95,17 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+    
             <h6 style="text-align:center; color:#1D1D50;">List of Billable/Non Billable Activities</h6>
             <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
                     <thead>
                         <tr>
-                            <th class="text-center">No</th>
+                            <!-- <th class="text-center">No</th> -->
                             <th class="text-center">Type</th>
                             <!-- <th class="text-center">Code</th> -->
                             <th class="text-center">Activity Name</th>
-                            <th class="text-center">Cost(Kshs)</th>
+                            <th class="text-center">Cost (Kshs)</th>
                             <th class="text-center">Status</th>
                             <th class="text-center">Action</th>
            </tr>
@@ -113,13 +113,14 @@ color: #999;
                     <tbody>
                     @foreach($billable_activities as $activity)
                         <tr id="data">
-                            <td>{{$activity->id}}</td>
+                            <!-- <td>{{$activity->id}}</td> -->
                             <td>{{$activity->type}}</td>
                             <td>{{$activity->activity_name}}</td>
                             <td>{{$activity->cost}}</td>
                             <td></td>
                             <td  scope="row"class="text-center">
                         <a href="{{url('edit_billable_activities',$activity->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <span class="m-2"></span>
                         <a href="{{url('delete_billable_activities',$activity->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                            </td>
          </tr>

@@ -48,19 +48,20 @@ color: #999;
 
     </head>
 <body>
-    <div class="container">
-        <div>
+    
+        
             <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;">
             <b><u>Individual Client List</u></b> -->
             {{-- heading --}}
+            <div class="container">
             <h4 id="hdtpa"><b>Individual Client List</b></h4>
             <br>
-        </div>
+        
 
 
 
 
-        <div class="container">
+        
         <button class="btn btn-primary add-btn" data-toggle="modal" data-target="#myModal">Add Client</button></a>
 
         
@@ -82,10 +83,9 @@ color: #999;
         </div>
       </div>
       <div class="tb_search">
-<input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
+        <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
-
+    
 
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -94,22 +94,22 @@ color: #999;
 	
                         <thead>
                             <tr>
-                                <th class="text-center"> No</th>
+                                <!-- <th class="text-center"> No</th> -->
                                 <th class="text-center"> Client No</th>
                                 <th class="text-center">Client Name</th>
                                 <th class="text-center">Email Address</th>
                                 <th class="text-center">Services Offered</th>
                                 <th class="text-center">Status</th>
                                 <th class="text-center">Add Documents</th>
-                                <th class="text-center">View</th>
-                                <th class="text-center">Edit</th>
-                                <th class="text-center">Delete</th>
+                                <th class="text-center">Actions</th>
+                                <!-- <th class="text-center">Edit</th>
+                                <th class="text-center">Delete</th> -->
                             </tr>
                         </thead>
                         <tbody>
                             @foreach( $client_list as $list_client)
-                            <tr id="data">
-                                <td scope="row" class="text-center">{{$list_client->id }}</td>
+                            <tr class="text-center" id="data">
+                                <!-- <td scope="row" class="text-center">{{$list_client->id }}</td> -->
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list_client->client_number}}
                                 </td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list_client->client_name}}
@@ -120,16 +120,17 @@ color: #999;
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list_client->client_type}}
                                 </td>
                                 <td scope="row" class="text-center"><a href="{{url('view-client')}}">
-                                        <a href="{{url('create-document',$list_client->id)}}"><button style="width:90%; ">Add
-                                                Documents</button></a></td>
-                                <td class="text-center"><a href="{{url('show-client',$list_client->id )}}"><i style="color:black;"
-                                            class="fa fa-eye" aria-hidden="true"></i></td></a>
-                                <td class="text-center"><a href="{{url('edit_person',$list_client->id)}}"><i style="color:black;"
-                                            class="fa fa-edit" aria-hidden="true"></i></td>
-                                <td class="text-center">
+                                        <a href="{{url('create-document',$list_client->id)}}"><button style="width:90%; ">Add Documents</button></a>
+                                </td>        
+                                <td> <a href="{{url('show-client',$list_client->id )}}"><i style="color:black;"
+                                            class="fa fa-eye" aria-hidden="true"></i></a>
+                                            <span class="m-1"></span>
+                                <a href="{{url('edit_person',$list_client->id)}}"><i style="color:black;"
+                                            class="fa fa-edit" aria-hidden="true"></i></a>
+                                            <span class="m-1"></span>
                                 <a onClick="return myFunction();" href="{{url('delete-client',$list_client->id)}}"
                                         style="color:black;"><i class="fas fa-trash-alt"></i></a>
-                                </td>
+                                
                                 </td>
 
                             </tr>

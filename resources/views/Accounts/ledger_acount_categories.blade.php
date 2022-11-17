@@ -1,7 +1,8 @@
 @extends('layouts.hmsmain')
 @section('content')
-<div class="container">
+
 {{-- heading --}}
+<div class="container">
   <h4 id="hdtpa"><b>Account Types</b></h4>
   <br>
   
@@ -9,7 +10,7 @@
         <button  class="btn btn-primary"  data-toggle="modal" id="patient" data-bs-toggle="modal"
         data-bs-target="#default"  class="btn btn-secondary">Add Type</button>
         <br>
-        <div class="container">
+        
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -30,13 +31,13 @@
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+    
 
     <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
   <thead>
-    <tr>
-      <th scope="col">Sl</th>
+    <tr class="text-center">
+      <!-- <th scope="col">Sl</th> -->
       <th scope="col">Account Type</th>
       <th scope="col">Description </th>
       <th scope="col">Action</th>
@@ -49,8 +50,8 @@
 $no=1;
 @endphp
  @foreach($ledgeraccount_categories as $ledcat)
-      <tr class="product_data" class="data">
-          <td id="name">{{$no++ }}</td>
+      <tr class="text-center product_data data">
+          <!-- <td id="name">{{$no++ }}</td> -->
           <td id="expanse-name">{{ $ledcat->ledgeraccount_categories }}</td>
           <td id="expanse_status">{{ $ledcat->ledgeraccount_categories_desc}}</td>
           <input type="hidden" id="id" value="{{ $ledcat->id }}" name="">

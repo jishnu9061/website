@@ -49,12 +49,13 @@ color: #999;
 </head>
 <body>
 
-  <div>
+  
   {{-- heading --}}
+  <div class="container">
     <h4 id="hdtpa"><b>Transport Zones</b></h4>
     <br>
     
-   </div>
+   
 
            
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
@@ -67,7 +68,7 @@ color: #999;
                      
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 
-<div class="container">
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -88,14 +89,14 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>           
+               
 <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">List of Transport Zones</h3>
 
 <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
                     <thead>
                         <tr>
-                            <th class="text-center">No</th>
+                            <!-- <th class="text-center">No</th> -->
                             <th class="text-center">Zone Name</th>
                             <th class="text-center">Zone Area</th>
                             <th class="text-center">Cost(Kshs)</th>
@@ -105,14 +106,15 @@ color: #999;
                     </thead>
                     <tbody>
                     @foreach($transport_zone as $detail)
-                        <tr id="data">
-                            <td>{{$detail->id }}</td>
+                        <tr class="text-center" id="data">
+                            <!-- <td>{{$detail->id }}</td> -->
                             <td>{{$detail->zone_name }}</td>
                             <td>{{$detail->zone_areas }}</td>
                             <td>{{$detail->cost }}</td>
                             <td></td>
                             <td>
                         <a href="{{url('edit_transport_zone',$detail->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <span class="m-2"></span>
                         <a href="{{url('delete_transport_zone',$detail->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                            </td>
 </tr>
