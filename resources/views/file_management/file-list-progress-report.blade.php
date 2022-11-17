@@ -90,9 +90,9 @@ color: #999;
 	
                     <thead >
                         <tr>
-                            <th class="text-center">*</th>
+                            <th class="text-center">#</th>
                             <th class="text-center">Client</th>
-                            <th class="text-center">File No& Name</th>
+                            <th class="text-center">File No & Name</th>
                             <th class="text-center">Date Opened</th>
                             <th class="text-center">Responsible Advocate</th>
                             <th class="text-center">Most Recent Progress</th>

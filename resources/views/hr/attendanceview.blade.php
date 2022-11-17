@@ -1,6 +1,13 @@
 
 @extends('layouts.hmsmain')
 @section('content')
+
+{{-- heading --}}
+   <h4 id="hdtpa"><b>Attendance (Manual)</b></h4>
+   <br>
+   <br>
+
+
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <form method="post" action="monthwise">
         @csrf
@@ -48,7 +55,7 @@
 
 </div>
 </form>
-<table class="table table-bordered">
+<table class="table table-bordered table-responsive">
 	<th id="dayget">
         <td><b>Employee Name</b></td>
         <td><b>Employee Id</b></td>

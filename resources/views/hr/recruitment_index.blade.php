@@ -3,9 +3,8 @@
 
 <section >
    {{-- heading --}}
-   <h4 id="hdtpa"><b>HR</b></h4>
-   <br><br>
- 
+   <h4 id="hdtpa"><b>Recruitment</b></h4>
+   <br>
    <br>
 
         

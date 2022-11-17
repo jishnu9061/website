@@ -19,7 +19,7 @@
                 <input class="btn btn-primary" type="button" value="Pending">
                 <input class="btn btn-primary" type="button" value="Closed">
              </div>
-<br>
+   <br>
 
                 <div id="mydatatable_filter" class="dataTables_filter">
                     <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
@@ -37,10 +37,11 @@
                     </button
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Filter
                   </button> -->
-                </div><br>
+                </div>
                 {{-- <a href="{{('add-corporate')}}"><button class="btn btn-primary">Add Corporate</button></a> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">New
-                  File</button><br>
+                  File</button>
+                <br><br>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <div class="table-responsive">

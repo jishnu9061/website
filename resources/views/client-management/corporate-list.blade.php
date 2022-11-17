@@ -551,8 +551,8 @@ color: #999;
                                                     <br><br>
                                                     <div class="modal-footer">
                                                         <button type="submit" class="btn btn-primary"
-                                                            style="width:15%;background-color:white;color:black">save</button>
-                                                        <button type="button" class="btn btn-primary"
+                                                            style="width:15%;background-color:white;color:black">Save</button>
+                                                        <button type="button" class="btn btn-primary" data-dismiss="modal"
                                                             style="width:15%;background-color:white;color:black">Cancel</button>
                                                     </div>
 

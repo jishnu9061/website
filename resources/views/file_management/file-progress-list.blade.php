@@ -154,19 +154,19 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <div class="table-responsive">
-                        <table class="table table-striped table-class" id="table-id">
+                        <table style="width: 200%;" class="table table-striped table-class" id="table-id">
                             <thead>
                                 <tr>
                                     <th class="text-center">*</th>
-                                    <th class="text-center">Action <br>Type</th>
-                                    <th class="text-center">Progress <br>Date</th>
+                                    <th class="text-center">Action Type</th>
+                                    <th class="text-center">Progress Date</th>
                                     <th class="text-center">Client</th>
                                     <th class="text-center">File Name</th>
                                     <th class="text-center">Description</th>
-                                    <th class="text-center">Time<br>Taken</th>
-                                    <th class="text-center">Charge<br>Out<br>Rate</th>
-                                    <th class="text-center">Way Action<br>(Way Forward)</th>
-                                    <th class="text-center">RGD<br>By</th>
+                                    <th class="text-center">Time Taken</th>
+                                    <th class="text-center">Charge Out Rate</th>
+                                    <th class="text-center">Way Action (Way Forward)</th>
+                                    <th class="text-center">RGD By</th>
                                     <th class="text-center">Action</th>
                                     <!-- <th class="text-center"><input type="checkbox" name="" id=""></th> -->
                                     <!-- <th class="text-center">Edit</th> -->

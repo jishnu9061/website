@@ -14,12 +14,13 @@
             <form method="post" action="{{url('create_job_post')}}" id="form">
                 @csrf
                 <label for="job title" class="form-label">Job Title</label>
-                <select class="form-select" name="job_title">
+                <input type="text" class="form-control" name="job_title" aria-describedby="jobtitle">
+                <!-- <select class="form-select" name="job_title">
                     <option selected>---select---</option>
                     <option value="junior Advocate">junior Advocate</option>
                     <option value="Mid Senior Advocate">Mid Senior Advocate</option>
                     <option value="Senior Advocate">Senior Advocate</option>
-                  </select>
+                  </select> -->
             </div>
             <div class="mb-3">
                 <label for="qualification" class="form-label">Qualification</label>
