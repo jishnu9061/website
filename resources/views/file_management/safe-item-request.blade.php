@@ -282,7 +282,7 @@
                             <br>
                             
                             <button type="submit" class="btn btn-primary float:right;"  value="Submit" Style="width:45%;">View Report</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;" onclick="history.back()">Close</button>
                         </div>
                     </div>
                 </div>

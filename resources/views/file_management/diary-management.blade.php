@@ -130,12 +130,14 @@ color: #999;
                             <td scope="row" class="text-center">{{$list->Time_End}}</td>
                             <td scope="row" class="text-center"></td>
 
+
                             <td  scope="row"class="text-center">
                         <a href="{{url('edit_event',$list->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit"></i>
                         <a href="{{url('event_delete',$list->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
 						
 
                           
+
                         </tr>
 <!-- <div> -->
 
