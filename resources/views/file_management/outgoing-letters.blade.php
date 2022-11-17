@@ -1,6 +1,9 @@
 @extends('layouts.hmsmain')
 @section('content')
 
+<div class="container">
+
+
                                            {{-- heading --}}
                                            <h4 id="hdtpa"><b>Clients Outgoing Letters</b></h4>
                                            <br><br>
@@ -14,7 +17,7 @@
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                 Add Outgoing Letter</button>
                 
-                <div class="container">
+                
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -35,7 +38,7 @@
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+   
         
                 
         <div class="tab-content" id="myTabContent">
@@ -45,7 +48,7 @@
         <table class="table table-striped table-class" id= "table-id">
                     <thead >
                         <tr>
-                            <th class="text-center">*</th>
+                            <!-- <th class="text-center">*</th> -->
                             <th class="text-center">Date</th>
                             <th class="text-center">Originator</th>
                             <th class="text-center">Letter Name</th>
@@ -67,7 +70,7 @@
                         
                         <tr id="data">
 
-                            <td scope="row" class="text-center">{{$letter->id}}</td>
+                            <!-- <td scope="row" class="text-center">{{$letter->id}}</td> -->
                             <td scope="row" class="text-center">{{$letter->letter_date}}</td>
                             <td scope="row" class="text-center">{{$letter->originator}}</td>
                             <td scope="row" class="text-center">{{$letter->letter_name}}</td>
@@ -77,12 +80,14 @@
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center">
-                                <select name="" id="">
-                                    <option value=""> <a href="">Action</a> </option>
-                                    <option value=""> <a href=""></a> </option>
-                                </select>
-                            </td>
+                            <td  scope="row"class="text-center">
+                        <a href=""><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" ></i>
+
+                        <a href=""> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
+						
+						<a href=""> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i>
+						
+						</td>
                             <td scope="row" class="text-center"><input type="checkbox" name="" id=""></td>
                         </tr>
                     @endforeach
