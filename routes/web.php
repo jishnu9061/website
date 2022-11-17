@@ -1053,9 +1053,9 @@ Route::any('add-corporate-document','ClientManagement@addCorporatedocument')->na
 Route::any('client-document','ClientManagement@document')->name('client-document');
 Route::any('create-document/{individual_id}','ClientManagement@createDocument')->name('create-document');
 Route::any('add-document','ClientManagement@addDocument')->name('add-document');
-Route::any('view-document/{document_id}','ClientManagement@viewDocument')->name('view-document');
-Route::any('edit-documents/{document_id}','ClientManagement@editDocument')->name('edit-documents');
-Route::any('delete-document/{document_id}','ClientManagement@deleteDocument')->name('delete-document');
+Route::any('view-document/{id}','ClientManagement@viewDocument')->name('view-document');
+Route::any('edit-documents/{id}','ClientManagement@editDocument')->name('edit-documents');
+Route::any('delete-document/{id}','ClientManagement@deleteDocument')->name('delete-document');
 Route::any('update-document','ClientManagement@updatedocument')->name('update-document');
 //end Client-Documents
 

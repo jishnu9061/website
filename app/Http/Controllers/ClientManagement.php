@@ -313,7 +313,7 @@ class ClientManagement extends Controller
 
             'document_type' =>  $type,
             'file' =>   $imageName,
-            'client_type'=> $client_type,
+            'client_types'=> $client_type,
             'id' => $corporate_id 
         ]);
         return redirect('/client-document');
