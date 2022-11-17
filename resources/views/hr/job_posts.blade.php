@@ -55,8 +55,7 @@
     <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
       <thead>
-        <tr>
-          <th scope="col">sl no</th>
+        <tr  class="text-center">
           <th scope="col">Job Title</th>
           <th scope="col">Location</th>
           <th scope="col">Qualification</th>
@@ -66,15 +65,21 @@
       </thead>
       <tbody>
       @foreach($job_details as $job)
-        <tr>
-      
-          <td>{{$job->id}}</td>
+        <tr class="text-center" >
           <td>{{$job->job_title}}</td>
           <td>{{$job->job_location}}</td>
           <td>{{$job->qualification}}</td>
           <td>{{$job->work_experience}}</td>
-          <!-- <td><input class="btn btn-primary" type="button" value="View" data-toggle="modal" data-target="#myModal2"></td> -->
           <td class="text-center">
+            <a href="{{url('view_job_post',$job->id)}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i>
+            <a href="{{url('edit_job_post',$job->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" ></i>
+            <a href="{{url('delete_job_post',$job->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
+          </td>
+          {{-- <td><a href="{{url('view_job_post',$job->id)}}" class="dropdown-item" >View<
+            <a href="{{url('edit_job_post',$job->id)}}" class="dropdown-item" >Edit</a>
+            <a href="{{url('delete_job_post',$job->id)}}" class="dropdown-item" >Delete</a></td> --}}
+          <!-- <td><input class="btn btn-primary" type="button" value="View" data-toggle="modal" data-target="#myModal2"></td> -->
+          {{-- <td class="text-center">
                       <div class="dropdown">
                             <button style="background-color:#FFFBF4;"class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                Action
@@ -87,7 +92,7 @@
                             </div>
                         </div> 
 
-                       </td>
+                       </td> --}}
                        @endforeach
         </tr>
       </tbody>

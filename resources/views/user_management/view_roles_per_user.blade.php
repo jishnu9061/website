@@ -70,8 +70,8 @@
                 <tbody>
 
                     <tr>
-                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center" style="color:rgb(13, 1, 56);"></td>
+                        <td class="text-center" style="color:rgb(13, 1, 56);">094000370133</td>
+                        <td class="text-center" style="color:rgb(13, 1, 56);">Reji</td>
                         <td class="text-center" style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center" style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center"><a href="{{url('edit_view_roles')}}"><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td>
