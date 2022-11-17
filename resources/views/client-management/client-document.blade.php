@@ -93,6 +93,7 @@
                                 <tr>
                                     <th class="text-center"> Client No</th>
                                     <th class="text-center"> Client Name</th>
+                                    <th class="text-center"> Client type</th>
                                     <th class="text-center"> Client Document</th>
                                     <th class="text-center">Action</th>
 
@@ -104,6 +105,7 @@
                                 <tr id="data">
                                     <td scope="row" class="text-center">{{$list->client_number}}</td>
                                     <td scope="row" class="text-center">{{$list->client_name}}</td>
+                                    <td scope="row" class="text-center">{{$list->client_types}}</td>
                                     <td scope="row" class="text-center" id="medicine_name_1"><img
                                             src="{{asset('/images/file/'.$list->file)}}" width="80px" height="80px">
                                     </td>

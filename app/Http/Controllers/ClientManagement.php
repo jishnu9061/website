@@ -78,6 +78,10 @@ class ClientManagement extends Controller
             'physical_address' =>   $physical_address,
             'notes' => $Notes,
         ]);
+
+        DB::table('cra_mixed_table')->insertGetId([
+            'client_name' =>    $client_name,
+        ]);
         
         return redirect('/client_list');
     }
@@ -270,8 +274,52 @@ class ClientManagement extends Controller
         'email' =>$person_email,
     ]);
 
-    return redirect("/corporate-list");
-}
+    DB::table('cra_mixed_table')->insertGetId([
+        'Client_name' =>    $client_name,
+    ]);
+
+    return redirect("/corporate-list"); 
+
+    }
+
+    public function CorporateDocument($corporate_id){
+        $corporate_docs= DB::table('cra_corporate_client_details')->where('corporate_id',$corporate_id)->first();
+        return view('client-management.corporate-document',compact('corporate_docs','corporate_id'));
+    }
+
+   
+
+    public function addCorporatedocument(Request $request){
+        $corporate_id   = $request['corporate_id'];
+        $type = $request['type'];
+        $file = $request['file'];
+        $client_type = $request['client'];
+
+        if(!empty($request->file('file'))){
+
+            $this->validate($request,[
+                'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+            ]);
+        }
+        if(request()->hasfile('file')){
+            $uploadedImage = $request->file('file');
+            $imageName     = time() .'.'. $file->getClientOriginalExtension();
+            $destinationPath = public_path('images/file');
+            $uploadedImage->move($destinationPath,$imageName);
+            $file->file    = $destinationPath.$imageName;
+        }
+
+        DB::table('cra_document_detials')->insert([
+
+            'document_type' =>  $type,
+            'file' =>   $imageName,
+            'client_type'=> $client_type,
+            'id' => $corporate_id 
+        ]);
+        return redirect('/client-document');
+
+
+    }
 
     public function listCorporate(){
 
@@ -373,14 +421,15 @@ class ClientManagement extends Controller
     public function addDocument(Request $Request){
         $individual_id = $Request['individual_id'];
         $document_type = $Request['type'];
+        $client_type  = $Request['client'];
         $file = $Request['file'];
 
-        // if(!empty($Request->file('file'))){
+        if(!empty($Request->file('file'))){
 
-        //     $this->validate($Request ,[
-        //         'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg',
-        //     ]);
-        // }
+            $this->validate($Request ,[
+                'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg',
+            ]);
+        }
 
 
         if (request()->hasFile('file')){
@@ -395,6 +444,7 @@ class ClientManagement extends Controller
 
             'document_type' =>  $document_type,
             'file' =>   $imageName,
+            'client_types'=>$client_type,
             'id' => $individual_id 
         ]);
         return redirect('/client-document');
@@ -416,6 +466,7 @@ class ClientManagement extends Controller
 
         $id  = $Request['document_id'];
         $document_type = $Request['type'];
+        $client_type =  $Request['client'];
         $file = $Request['file'];
 
         
@@ -432,6 +483,7 @@ class ClientManagement extends Controller
 
             'document_type' =>  $document_type,
             'file' =>   $imageName,
+            'client_types' =>$client_type, 
         ]);
         return redirect('/client-document');
     }
@@ -590,11 +642,8 @@ class ClientManagement extends Controller
     //customer Followup
     public function followup(){
         $followup = DB::table('cra_customer_followup')->get();
-        $client_join = DB::table('cra_corporate_client_details')
-        ->leftjoin('cra_individual_client_details','cra_individual_client_details.client_name','=','cra_corporate_client_details.corporate_id')
-        ->get();
-        
-        return view('client-management.follow-up',compact('followup','client_join'));
+        $client   = DB::table('cra_mixed_table')->get();
+        return view('client-management.follow-up',compact('followup','client'));
     }
 
     public function addFollowup(Request $Request){

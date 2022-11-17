@@ -181,7 +181,11 @@
                                     <!-- <td scope="row" class="text-center">{{$list->id}}</td>
                                     <td scope="row" class="text-center">{{$list->action_type}}</td> -->
                                     <td scope="row" class="text-center">{{$list->progress_date}}</td>
+
+                                    <td scope="row" class="text-center">{{$list->client_name}}</td>
+
                                     <!-- <td scope="row" class="text-center">{{$list->Client_name}}</td> -->
+
                                     <td scope="row" class="text-center">{{$list->file_name}}</td>
                                     <td scope="row" class="text-center">{{$list->action_description}}</td>
                                     <td scope="row" class="text-center">{{$list->time_taken_hours}}</td>
@@ -191,8 +195,14 @@
                                     <!-- <td scope="row" class="text-center">{{$list->activity}}</td> -->
                                     <!-- <td scope="row" class="text-center"><input type="checkbox" name="" id=""></td> -->
                                     <td scope="row" class="text-center">
+
+                                        <a href="{{url('edit-file-progress',$list->id)}}"><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
+                                        
+                                            <a onClick="return myFunction();" href="{{url('delete-file-progress',$list->id)}}"><i style="  color:rgb(13, 1, 56);"
+
                                         <a href="edit-file-progress."><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
                                             <a onClick="return myFunction();" href=""><i style="  color:rgb(13, 1, 56);"
+
                                                     class="fas fa-trash-alt" aria-hidden="true"></i>
                                     </td>
                                 </tr>
@@ -236,15 +246,12 @@
 
                                         <form method="post" action="{{ url('add-file-progress') }}"
                                             enctype="multipart/form-data">
-
+                                            @csrf
 
                                             <div class="row">
 
                                                 <div class="col-md-12 order-md-1">
                                                
-                                                    <form method="post" action="" id="form">
-                                                        @csrf
-                                                        
                                                         <div class="row">
                                                             <div class="col-md-4">
                                                                 <div class="mb-1">

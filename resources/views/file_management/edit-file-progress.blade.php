@@ -38,9 +38,10 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <select name="client_name" id="cars">
+                                    <input type="text" class="form-control" name="client_name" value="{{ $edit_progress->client_name}}">
+                                    <!-- <select name="client_name" id="cars">
                                         <option >{{ $edit_progress->client_name}}</option>
-                                    </select>
+                                    </select> -->
                                 </div>
                             </div>
                         </div>
