@@ -81,7 +81,7 @@ color: #999;
       </div>
    
 <div class="table-responsive">
-<table style="width:200%" class="table table-striped table-class" id= "table-id">
+<table  class="table table-striped table-class" id= "table-id">
   <thead>
   <tr>
                         <!-- <th class="text-center" >User Code</th> -->
@@ -115,7 +115,7 @@ color: #999;
                         <td  scope="row"class="text-center">
                         <a href="{{url('user_edit',$list->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                         <a href="{{url('user_destroy',$list->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
-                        <a href="user_attachments"><i  style="  color:rgb(13, 1, 56);" class="fas fa-paperclip" aria-hidden="true"></i>
+                        {{-- <a href="user_attachments"><i  style="  color:rgb(13, 1, 56);" class="fas fa-paperclip" aria-hidden="true"></i> --}}
                         <a href="user_comments"><i  style="  color:rgb(13, 1, 56);" class="fas fa-comment" aria-hidden="true"></i>
                     </td>
 
