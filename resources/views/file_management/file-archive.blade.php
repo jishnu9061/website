@@ -95,7 +95,7 @@ color: #999;
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <br>
             <div class="table-responsive">
-        <table style="width: 200%;" class="table table-striped table-class" id= "table-id">
+        <table class="table table-striped table-class" id= "table-id">
                     <thead>
                         <tr>
                             <!-- <th class="text-center">*</th> -->
@@ -106,7 +106,7 @@ color: #999;
                             <!-- <th class="text-center">File Name</th> -->
                             <th class="text-center">File Closed Number</th>
                             <th class="text-center">Date Closed</th>
-
+                            
                             <th class="text-center">Actions</th>
                         </tr>
                     </thead>
@@ -119,24 +119,16 @@ color: #999;
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center">{{$list->Client_name}}</td>
                             <td scope="row" class="text-center"></td>
-
                             <!-- <td scope="row" class="text-center">{{$list->file_name}}</td> -->
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                           
-
-                            <td scope="row" class="text-center">{{$list->file_name}}</td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-
                             <td scope="row" class="text-center"><a href=""><i style="color:black;" class="fa fa-eye"
                                         aria-hidden="true"></i>
-                                        <span class="m-2"></span>
                                     <input type="hidden" value="" id="medicine_id_hidden" class="applicate"
                                         name="supplier_id_hidden">
                                     <a href="{{url('edit-box-no')}}"><i style="color:black;" class="fa fa-edit"
                                             aria-hidden="true"></i>
-                                            <span class="m-2"></span>
                                         <a onClick="return myFunction();" href="" style="color:black;"><i
                                                 class="fas fa-trash-alt"></i></a></td>
                         </tr>
