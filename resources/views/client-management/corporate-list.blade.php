@@ -113,6 +113,7 @@ color: #999;
                                     <th class="text-center">Designation</th>
                                     <th class="text-center">Mobile No</th>
                                     <th class="text-center">Email Address</th>
+                                    <th class="text-center">Add Documents</th>
                                     <th class="text-center">Action</th>
                                 </tr>
                             </thead>
@@ -128,6 +129,9 @@ color: #999;
                                         {{ $list->Mobile_no }}</td>
                                     <td scope="row" class="text-center" id="medicine_name_1">{{ $list->Email_address }}
                                     </td>
+                                    <td scope="row" class="text-center">
+                                        <a href="{{url('corporate-document',$list->corporate_id)}}"><button style="width:90%; ">Add
+                                                Documents</button></a></td>
                                     <td scope="row" class="text-center" id="medicine_name_1">
                                         <a href="{{ url('edit_client', $list->corporate_id)}}"><i style="color:black;"
                                                 class="fa fa-edit" aria-hidden="true"></i>

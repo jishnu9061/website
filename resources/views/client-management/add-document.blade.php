@@ -24,7 +24,7 @@
     <script src="{{ url('assets/js') }}/jquery.min.js"></script>
     <div>
         {{-- heading --}}
-        <h4 id="hdtpa"><b>Add Document</b></h4>
+        <h4 id="hdtpa"><b>Add Individual Document</b></h4>
         <br><br>
 
 
@@ -61,6 +61,22 @@
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Client Type</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="client" id="cars">
+                                    <option>{{$client_doc->client_type}}</option>
+                                </select>
                             </div>
                         </div>
                     </div>
