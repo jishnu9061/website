@@ -49,27 +49,28 @@ color: #999;
     </head>
 
 <body>
-    <div class="container">
+   
         <!-- <h2 style="color: #070344;  text-align:center;"><b>Customer Registration</b></h2> -->
-        <div>
-            <div>
+        
+            
                 <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
                 <b><u>Client Registration</u></b></span> -->
                 {{-- heading --}}
+                <div class="container">
                 <h4 id="hdtpa"><b>Client Registration</b></h4>
                 <br>
-            </div>
+            
 
-        </div>
+        
 
-        <div class="container">
+        <div>
             <button type="button" class="btn btn-primary complaint_btn btn " data-toggle="modal"
                 data-target="#myModal">Register Client</button></a>
          </div>
   
-         <br>
+       
 
-    <div class="container">
+    
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -90,7 +91,7 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+    
             
       
 
@@ -114,14 +115,14 @@ color: #999;
                         <tbody>
                             @foreach($view_registration as $registration)
 
-                            <tr id="data">
+                            <tr class="text-center" id="data" >
                                 <td>{{$registration->id}}</td>
                                 <td>{{$registration->customer_name}}</td>
                                 <td>{{$registration->customer_address}}</td>
                                 <td>{{$registration->mobile_no}}</td>
                                 <td>{{$registration->physical_address}}</td>
                                 <td>{{$registration->registration_date}}</td>
-                                <td scope="row" class="text-center"><a
+                                <td scope="row"><a
                                         href="{{url('edit-registration',$registration->id)}}"><i style="color:black;"
                                             class="fa fa-edit" aria-hidden="true"></i>
                                             <span class="m-2"></span>

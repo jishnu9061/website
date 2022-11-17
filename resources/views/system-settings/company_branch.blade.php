@@ -48,6 +48,7 @@ color: #999;
 
 </head>
 {{-- heading --}}
+<div class="container">
 <h4 id="hdtpa"><b>Company Branch</b></h4>
 <br>
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
@@ -60,7 +61,7 @@ color: #999;
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
         <!-- <a href="{{('add_company_branch')}}"><button class="btn btn-primary add-btn">Add Branch </button></a><br><br> -->
       
-        <div class="container">
+        
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -81,13 +82,13 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+    
     
     <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
    <thead>
-  <tr>
-    <th>Sl No</th>
+  <tr class="text-center">
+    <!-- <th>Sl No</th> -->
     <th>Branch No</th>
     <th>Branch Code</th>
     <th>Branch Name</th>
@@ -97,14 +98,15 @@ color: #999;
   </tr>
   <tbody>
   @foreach($branch_details as $branch)
-  <tr>
-  <td>{{$branch->id}}</td>
+  <tr class="text-center">
+  <!-- <td>{{$branch->id}}</td> -->
     <td>{{$branch->branch_no}}</td>
     <td>{{$branch->branch_code}}</td>
     <td>{{$branch->branch_name}}</td>
     <td style="color:green;font-weight:bold;"></td>
-    <td  scope="row"class="text-center">
+    <td  scope="row">
                         <a href="{{url('edit_company_branch',$branch->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <span class="m-2"></span>
                         <a href="{{url('delete_company_branch',$branch->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                            </td>
     @endforeach
@@ -112,21 +114,9 @@ color: #999;
         </tbody>
  
   
-</table><br><br>
-
-<div class="class"style="text-align:right;">
-                <select style="width:10%;height:100%;color:rgb(13, 1, 56);font-size:small;background-color:#FFFBF4;"type="text" value="" >
-    <option>Activate Category</option>
-    <option>De-Activate Category</option>
-    <!-- <option>Delete Category</option> -->
-</select>
-<input type="button"value="Go" name="close"style="background-color:#FFFBF4;color: rgb(13, 1, 56); ">
-    </div>
-    </div>
-    <br>
-    <br>
-    </div>
-    <!--		Start Pagination -->
+</table>
+<br>
+<!--		Start Pagination -->
     <div class='pagination-container'>
       <nav>
         <ul class="pagination">
@@ -137,6 +127,20 @@ color: #999;
     <div class="rows_count">Showing 11 to 20 of 100</div>
 
  <!-- 		End of Container -->
+
+<!-- <div class="class"style="text-align:right;">
+                <select style="width:10%;height:100%;color:rgb(13, 1, 56);font-size:small;background-color:#FFFBF4;"type="text" value="" >
+    <option>Activate Category</option>
+    <option>De-Activate Category</option>
+    <option>Delete Category</option> -->
+<!-- </select>
+<input type="button"value="Go" name="close"style="background-color:#FFFBF4;color: rgb(13, 1, 56); ">
+    </div>
+    </div>
+    <br>
+    <br>
+    </div> -->
+    
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">

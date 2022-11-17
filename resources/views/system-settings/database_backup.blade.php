@@ -57,13 +57,13 @@ color: #999;
 
 
     </div>
-    <div class="container">
+    
        
-        <div>
         {{-- heading --}}
+        <div class="container">
     <h4 id="hdtpa"><b>Database Backup</b></h4>
    
-    <div class="container">
+    
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -84,7 +84,7 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+    
             
 
         
@@ -99,7 +99,7 @@ color: #999;
 	
                     <thead>
                         <tr>
-                            <th class="text-center">No</th>
+                            <!-- <th class="text-center">No</th> -->
                             <th class="text-center">Date</th>
                             <th class="text-center">Time</th>
                             <th class="text-center">File</th>
@@ -110,7 +110,7 @@ color: #999;
                     </thead>
                     <tbody>
                         <tr id="data">
-                            <td scope="row" class="text-center"></td>
+                            <!-- <td scope="row" class="text-center"></td> -->
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>

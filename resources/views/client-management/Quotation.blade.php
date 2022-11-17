@@ -48,32 +48,35 @@ color: #999;
     </head>
 
 <body>
-    <div class="container">
+    
         <!-- <h3 class="text-center" style="color: #070344; "><b>New Quotation</b></h3> -->
-        <div>
+       
+        
             <!--             
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>New
                         Quotation</u></b></span></div><br> -->
             <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous"> -->
-            {{-- heading --}}
+            {{-- heading --}} 
+            <div class="container">
             <h4 id="hdtpa"><b>New Quotation</b></h4>
             <br>
 
-        </div>
+        
+            
        
 
         <!-- <div id="mydatatable_filter" class="dataTables_filter">
             <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
         </div> -->
-      <div class="container">
+         <div>
         <button class="btn btn-primary add-btn" style="width:20%;" data-toggle="modal" data-target="#myModal">Add
             Quotation</button></a>
-       </div>
-       <br>
+         </div>
+       
             
- <div class="container">
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->

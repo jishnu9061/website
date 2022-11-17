@@ -48,12 +48,13 @@ color: #999;
 </style>  
    </head>
    <body>
-    <div>
+   
     {{-- heading --}}
+    <div class="container">
     <h4 id="hdtpa"><b>Bank Account Details</b></h4>
     <br>
     
- </div>
+ 
         
         <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
            
@@ -63,7 +64,7 @@ color: #999;
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                       
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-<div class="container">
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -84,13 +85,13 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
-    <h6 style="text-align:center; ">Bank Account Details</h6>
+   
+    <!-- <h6 style="text-align:center; ">Bank Account Details</h6> -->
     <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
 	     <thead>
                         <tr>
-                            <th class="text-center">No</th>
+                            <!-- <th class="text-center">No</th> -->
                             <th class="text-center">Bank</th>
                             <th class="text-center">Branch</th>
                             <th class="text-center">Account Name</th>
@@ -107,7 +108,7 @@ color: #999;
                     <tbody>
 @foreach($bank_details as $detail)
                         <tr id="data">
-                            <td scope="row" class="text-center">{{ $detail->id }}</td>
+                            <!-- <td scope="row" class="text-center">{{ $detail->id }}</td> -->
                             <td scope="row" class="text-center">{{ $detail->bank }}</td>
                             <td scope="row" class="text-center">{{ $detail->branch }}</td>
                             <td scope="row" class="text-center">{{ $detail->account_name }}</td>
@@ -119,6 +120,7 @@ color: #999;
                             <td scope="row" class="text-center">{{ $detail->bank_gl_ac }}</td>
                             <td  scope="row"class="text-center">
                         <a href="{{url('edit_bank_account',$detail->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <span class="m-1"></span>
                         <a href="{{url('delete_bank_account',$detail->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                            </td>
                         </tr>

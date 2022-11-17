@@ -49,12 +49,13 @@ color: #999;
 </style>      
     </head>
 
-<div>
+
 {{-- heading --}}
+<div class="container">
     <h4 id="hdtpa"><b>Hourly Rates</b></h4>
     <br>
      
-   </div>
+   
             
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
            
@@ -65,7 +66,7 @@ color: #999;
                     
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <!-- <a href="{{url('add_hourly_rates')}}"><button class="btn btn-primary add-btn"style="width: 25%; margin-bottom:5%;">Add User Hourly Rates</button></a>-->
-<div class="container">
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -86,16 +87,16 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+    
 
-            <h6 style="text-align:center; ">Hourly Rates</h6>
+            <!-- <h6 style="text-align:center; ">Hourly Rates</h6> -->
 
             <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
                     <thead>
                         <tr>
                             
-                            <th class="text-center">*</th>
+                            <!-- <th class="text-center">*</th> -->
                             <th class="text-center">User / Staff</th>
                             <th class="text-center">Currency</th>
                             <th class="text-center">Amount</th>                           
@@ -106,12 +107,13 @@ color: #999;
                     @foreach($hourly_rate as $rate)
                         <tr id="data">
                         
-                            <td scope="row" class="text-center">{{ $rate->id }}</td>
+                            <!-- <td scope="row" class="text-center">{{ $rate->id }}</td> -->
                             <td scope="row" class="text-center">{{ $rate->user_staff }}</td>
                             <td scope="row" class="text-center">{{ $rate->currency }}</td>
                             <td scope="row" class="text-center">{{ $rate->amount }}</td>
                             <td  scope="row"class="text-center">
                         <a href="{{url('edit_hourly_rates',$rate->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <span class="m-2"></span>
                         <a href="{{url('delete_hourly_rates',$rate->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                            </td>
                         </tr>

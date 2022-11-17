@@ -52,12 +52,13 @@ color: #999;
 <body>
 
 
-  <div>
+  
   {{-- heading --}}
+  <div class="container">
     <h4 id="hdtpa"><b>Partner Revenue Share</b></h4>
     <br>
      
-   </div>
+   
       
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
            
@@ -68,7 +69,7 @@ color: #999;
                      
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <!-- <a href="{{url('add_partner_revenue')}}"><button class="btn btn-primary add-btn"style="width: 20%; margin-bottom:5%;">Add New Entry</button></a> -->
-<div class="container">
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -89,14 +90,14 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
-        <h6 style="text-align:center; ">Partner Revenue Share</h6>
+  
+        <!-- <h6 style="text-align:center; ">Partner Revenue Share</h6> -->
         <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
                     <thead>
                         <tr>
                             
-                            <th class="text-center">sl no</th>
+                            <!-- <th class="text-center">sl no</th> -->
                             <th class="text-center">Year</th>
                             <th class="text-center">Partner</th>
                             <th class="text-center">Total</th>                           
@@ -105,9 +106,9 @@ color: #999;
                     </thead>
                     <tbody>
                     @foreach($revenue_share as $partner)
-                        <tr id="data">
-                        
-                            <td scope="row" class="text-center">{{ $partner->id }}</td>
+                        <tr id="data"> 
+                            
+                            <!-- <td scope="row" class="text-center">{{ $partner->id }}</td> -->
                             <td scope="row" class="text-center">{{ $partner->year }}</td>
                             <td scope="row" class="text-center">{{ $partner->partner }}</td>
                             <td scope="row" class="text-center">{{ $partner->total }}</td>

@@ -46,8 +46,9 @@ color: #999;
 }
 </style>  
 
-<div class="container">
+
 {{-- heading --}}
+<div class="container">
 <h4 id="hdtpa"><b>Description Selections</b></h4>
 <br>
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
@@ -60,7 +61,7 @@ color: #999;
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
   <!-- <a href="{{('add_desc_sel')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Description Selection</button></a><br><br> -->
 
-  <div class="container">
+  
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -81,12 +82,12 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div> 
+     
     <div class="table-responsive">
         <table class="table table-striped table-class" id="table-id">
                   <thead>
                         <tr>
-                        <th class="text-center" >No</th>
+                        <!-- <th class="text-center" >No</th> -->
                         <th class="text-center">Description Selection Name</th>
                         <th class="text-center" >Selection Description</th>
                         <th class="text-center" >Status</th>
@@ -97,31 +98,23 @@ color: #999;
       @foreach($description_selection as $description)
       
                     </tr>
-                    <tr>
-                        <td>{{$description->id}}</td>
+                    <tr class="text-center">
+                        <!-- <td>{{$description->id}}</td> -->
                         <td>{{$description->Description_Selection_Name}}</td>
                         <td >{{$description->Selection_Description}}</td>
                         <td class="text-center" ></td>
                         
-                        <td  scope="row"class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
+                        <td  scope="row"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
                         <a href="{{url('edit_desc_sel',$description->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <span class="m-2"></span>
                         <a href="{{url('delete_desc_sel',$description->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
                     </tr>
                     @endforeach
       </tbody>
                    
                 </table>
-                <div class="class"style="text-align:right;">
-                <select style="width:10%;height:100%;color:rgb(13, 1, 56);font-size:small;background-color:#FFFBF4;"type="text" value="" >
-    <option>Activate Category</option>
-    <option>De-Activate Category</option>
-   
-</select>
-<input type="button"value="Go" name="close"style="background-color:#FFFBF4;color: rgb(13, 1, 56); ">
-    </div>
-    </div>
-
-   <!--		Start Pagination -->
+                <br>
+                <!--		Start Pagination -->
    <div class='pagination-container'>
       <nav>
         <ul class="pagination">
@@ -132,6 +125,17 @@ color: #999;
     <div class="rows_count">Showing 11 to 20 of 100</div>
 
  <!-- 		End of Container -->
+                <!-- <div class="class"style="text-align:right;">
+                <select style="width:10%;height:100%;color:rgb(13, 1, 56);font-size:small;background-color:#FFFBF4;"type="text" value="" >
+    <option>Activate Category</option>
+    <option>De-Activate Category</option>
+   
+</select>
+<input type="button"value="Go" name="close"style="background-color:#FFFBF4;color: rgb(13, 1, 56); ">
+    </div>
+    </div> -->
+
+   
   <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
   <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">

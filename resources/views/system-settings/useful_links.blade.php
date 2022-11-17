@@ -59,11 +59,12 @@ color: #999;
     <!-- <h2 style="text-align:center; text-shadow: 2px 1px;">Useful Link</h2>
        
         <hr class="mb-4">. -->
-        <div>
-        {{-- heading --}}
+        
+        {{-- heading --}} 
+        <div class="container">
     <h4 id="hdtpa"><b>Useful Link</b></h4>
-    <br>
-    <div class="container">
+    
+   
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -84,11 +85,11 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+  
 
-        </div>
+       
         
-    <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Useful Links</h3>
+    <!-- <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Useful Links</h3> -->
     <!-- <div class="container"> -->
      
     <div class="table-responsive">
@@ -96,7 +97,7 @@ color: #999;
 	
                   <thead>
                         <tr>
-                        <th class="text-center" >*</th>
+                        <!-- <th class="text-center" >*</th> -->
                         <th class="text-center">Link</th>
                         <th class="text-center" >Action</th>
                         
@@ -104,7 +105,7 @@ color: #999;
 <thead>
     <tbody>
                     <tr>
-                        <td  class="text-center" ></td>
+                        <!-- <td  class="text-center" ></td> -->
                         <td  class="text-center" ></td>
                         <td  class="text-center"></td>
                     </tr>

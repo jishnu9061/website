@@ -52,11 +52,11 @@ color: #999;
     </head>
 
 <body>
-    <div class="container">
-        <div>
+   
             <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Client
                     Conversation</u></b></div><br><br> -->
             {{-- heading --}}
+            <div class="container">
             <h4 id="hdtpa"><b>Client Conversation</b></h4>
             <br>
 
@@ -75,7 +75,7 @@ color: #999;
            
             <br>
 
-            <div class="container">
+            
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -96,7 +96,7 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+    
 
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="table-responsive">

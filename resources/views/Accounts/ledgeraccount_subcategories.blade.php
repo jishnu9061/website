@@ -1,14 +1,15 @@
 @extends('layouts.hmsmain')
 @section('content')
-<div class="container">
+
 {{-- heading --}}
+ <div class="container">
   <h4 id="hdtpa"><b>Add Account Category</b></h4>
-  <br><br>
+  <br>
 
         <button  class="btn btn-primary "  data-toggle="modal" id="patient" data-bs-toggle="modal"
         data-bs-target="#default"  class="btn btn-secondary">Add Category</button>
         <br>
-        <div class="container">
+       
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -29,13 +30,13 @@
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+    
 
     <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
   <thead>
-    <tr>
-      <th scope="col">Sl</th>
+    <tr class="text-center">
+      <!-- <th scope="col">Sl</th> -->
       {{-- <th scope="col">Category</th> --}}
       <th scope="col">Account Category</th>
       <th scope="col">Description </th>
@@ -49,8 +50,8 @@
 $no=1;
 @endphp
  @foreach($ledgeraccount_subcategories as $ledcat)
-      <tr class="product_data" class="data">
-          <td id="name">{{$no++ }}</td>
+      <tr class="text-center product_data data">
+          <!-- <td id="name">{{$no++ }}</td> -->
           {{-- <td id="expanse-name">{{ $ledcat->ledgeraccount_categories }}</td> --}}
           <td id="expanse-name">{{ $ledcat->ledgeraccount_subcategories }}</td>
           <td id="expanse_status">{{ $ledcat->ledgeraccount_subcategories_desc }}</td>
@@ -60,7 +61,7 @@ $no=1;
                 <a href="#" class="edits"    data-toggle="modal" id="amb_edit" data-bs-toggle="modal"
                    data-bs-target="#edit"><i style="color:rgb(13, 1, 56);" class="fas fa-edit" onclick="values_edit(`{{$ledcat->id}}`,`{{$ledcat->cat_id}}`,`{{$ledcat->ledgeraccount_subcategories}}`,`{{$ledcat->ledgeraccount_subcategories_desc}}`);" ></i></a>
                    @endif
-               
+               <span class="m-2"></span>
     @if($ledcat->accountssub_update_privilage == 0)
                     <a onclick="return confirm('Are you sure ?');" href="{{ url('delete_ledger_accounts_subcategories/'.$ledcat->id) }}"><i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></a>
                     @endif

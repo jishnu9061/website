@@ -89,11 +89,11 @@
                     href="{{ url('follow-up') }}"><button type="button" style="width:70%;"
                         class="btn btn-primary btn_align_btn">Client
                         Follow Up</button></a></div>
-            <div class="col-sm-4 "><img class="logo_size" src="image\logo\Customer Follow up report.png"
+            <!-- <div class="col-sm-4 "><img class="logo_size" src="image\logo\Customer Follow up report.png"
                     alt=""><a href=""><button type="button" style="width:70%;"
                         class="btn btn-primary btn_align_btn">Client
                         Follow Up Report</button></a>
-            </div>
+            </div> -->
             <div class="col-sm-4 "><img class="logo_size" src="image\logo\Customer Quotation.png" alt=""><a
                     href="{{ url('Quotation') }}"><button type="button" style="width:70%;"
                         class="btn btn-primary btn_align_btn">
