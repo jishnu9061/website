@@ -73,6 +73,8 @@ color: #999;
                 <button type="submit" class="btn btn-primary float:right;" Style="width:11%;">Email Log</button>
             </div>
            
+            <br>
+
             <div class="container">
     <div class="header_wrap">
       <div class="num_rows">
@@ -137,8 +139,9 @@ color: #999;
                                 <td scope="row" class="text-center" id="medicine_name_1">
                                     {{$communication->	person_handling}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1">Active</td>
-                                <td><a href="{{url('edit-communication',$communication->id)}}"><i style="color:black;"
+                                <td class="text-center"><a href="{{url('edit-communication',$communication->id)}}"><i style="color:black;"
                                             class="fa fa-edit" aria-hidden="true"></i></a>
+                                            <span class="m-1"><span>
                                         <a onClick="return myFunction();"
                                             href="{{url('delete-communication',$communication->id)}}" style="color:black;"><i
                                                 class="fas fa-trash-alt"></i></a>

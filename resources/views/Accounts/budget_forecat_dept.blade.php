@@ -47,13 +47,13 @@
 
           <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Department Budget Projection - 2022</h3>
           <div class="table-responsive">
-          <table class="table table-bordered" id="new-item">
+          <table style="width:200%" class="table table-bordered" id="new-item">
             <thead>
               <tr>
                 <th>Sl No:</th>
                 <th>Account Number</th>
                 <th>Account Name</th>
-                <th>Actual Income & Expense 2021</th>
+                <th>Income & Expense 2021</th>
                 <th>Jan 2022</th>
                 <th>Feb 2022</th>
                 <th>Mar 2022</th>

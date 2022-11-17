@@ -124,7 +124,7 @@
             </div>
         </div>
 
-        <div class="container">
+       
             <div class="header_wrap">
                 <div class="num_rows">
                     <div class="form-group">
@@ -147,7 +147,7 @@
                     <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.."
                         class="form-control">
                 </div>
-            </div>
+         
 
 
 
@@ -157,15 +157,15 @@
                         <table class="table table-striped table-class" id="table-id">
                             <thead>
                                 <tr>
-                                    <th class="text-center">*</th>
-                                    <th class="text-center">Action <br>Type</th>
+                                    <!-- <th class="text-center">*</th> -->
+                                    <!-- <th class="text-center">Action <br>Type</th> -->
                                     <th class="text-center">Progress <br>Date</th>
-                                    <th class="text-center">Client</th>
+                                    <!-- <th class="text-center">Client</th> -->
                                     <th class="text-center">File Name</th>
                                     <th class="text-center">Description</th>
-                                    <th class="text-center">Time<br>Taken</th>
-                                    <th class="text-center">Charge<br>Out<br>Rate</th>
-                                    <th class="text-center">Way Action<br>(Way Forward)</th>
+                                    <th class="text-center">Time Taken</th>
+                                    <th class="text-center">Charge Out Rate</th>
+                                    <th class="text-center">Action Way</th>
                                     <th class="text-center">RGD<br>By</th>
                                     <th class="text-center">Action</th>
                                     <!-- <th class="text-center"><input type="checkbox" name="" id=""></th> -->
@@ -178,10 +178,14 @@
                                
 
                                 <tr id="data">
-                                    <td scope="row" class="text-center">{{$list->id}}</td>
-                                    <td scope="row" class="text-center">{{$list->action_type}}</td>
+                                    <!-- <td scope="row" class="text-center">{{$list->id}}</td>
+                                    <td scope="row" class="text-center">{{$list->action_type}}</td> -->
                                     <td scope="row" class="text-center">{{$list->progress_date}}</td>
+
                                     <td scope="row" class="text-center">{{$list->client_name}}</td>
+
+                                    <!-- <td scope="row" class="text-center">{{$list->Client_name}}</td> -->
+
                                     <td scope="row" class="text-center">{{$list->file_name}}</td>
                                     <td scope="row" class="text-center">{{$list->action_description}}</td>
                                     <td scope="row" class="text-center">{{$list->time_taken_hours}}</td>
@@ -191,9 +195,14 @@
                                     <!-- <td scope="row" class="text-center">{{$list->activity}}</td> -->
                                     <!-- <td scope="row" class="text-center"><input type="checkbox" name="" id=""></td> -->
                                     <td scope="row" class="text-center">
+
                                         <a href="{{url('edit-file-progress',$list->id)}}"><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
                                         
                                             <a onClick="return myFunction();" href="{{url('delete-file-progress',$list->id)}}"><i style="  color:rgb(13, 1, 56);"
+
+                                        <a href="edit-file-progress."><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
+                                            <a onClick="return myFunction();" href=""><i style="  color:rgb(13, 1, 56);"
+
                                                     class="fas fa-trash-alt" aria-hidden="true"></i>
                                     </td>
                                 </tr>
@@ -384,11 +393,9 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4">
-                                                </div>
-                                                <div id="test" style="height:20px;"></div>
-                                            </div>
+                                               
                                     </div>
+                                    <br>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="mb-1">

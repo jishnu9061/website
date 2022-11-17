@@ -3,7 +3,7 @@
 
 <section >
    {{-- heading --}}
-   <h4 id="hdtpa"><b>HR</b></h4>
+   <h4 id="hdtpa"><b>Recruitment</b></h4>
    <br><br>
  
    <br>
@@ -14,12 +14,12 @@
     <br> --}}
 
             <div class="row sm">
-                <div class="col-sm-4 "> <a href="{{url('create_job_post')}}"><img class="logo_size"
+                <!-- <div class="col-sm-4 "> <a href="{{url('create_job_post')}}"><img class="logo_size"
                             src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
-                            class="btn btn-primary btn_align_btn">Create New Job Post</button></a></div>
+                            class="btn btn-primary btn_align_btn">Create New Job Post</button></a></div> -->
                             <div class="col-sm-4 "> <a href="{{url('job_posts')}}"><img class="logo_size"
                             src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
-                            class="btn btn-primary btn_align_btn">View Job Post</button></a></div>
+                            class="btn btn-primary btn_align_btn">Job Post Details</button></a></div>
                 <div class="col-sm-4 "> <a href="{{ url('view_job_applications') }}"><img class="logo_size" src="assets\image\Bring up report.png"
                             alt=""><button type="button" style="width:70%;"
                             class="btn btn-primary btn_align_btn">View Job Applications</button></a></div>

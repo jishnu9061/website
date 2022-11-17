@@ -60,10 +60,10 @@ color: #999;
 
 
 
-        
+        <div class="container">
         <button class="btn btn-primary add-btn" data-toggle="modal" data-target="#myModal">Add Client</button></a>
 
-        <div class="container">
+        
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -101,7 +101,7 @@ color: #999;
                                 <th class="text-center">Services Offered</th>
                                 <th class="text-center">Status</th>
                                 <th class="text-center">Add Documents</th>
-                                <th class="text-center">VIew</th>
+                                <th class="text-center">View</th>
                                 <th class="text-center">Edit</th>
                                 <th class="text-center">Delete</th>
                             </tr>
@@ -122,11 +122,11 @@ color: #999;
                                 <td scope="row" class="text-center"><a href="{{url('view-client')}}">
                                         <a href="{{url('create-document',$list_client->id)}}"><button style="width:90%; ">Add
                                                 Documents</button></a></td>
-                                <td><a href="{{url('show-client',$list_client->id )}}"><i style="color:black;"
+                                <td class="text-center"><a href="{{url('show-client',$list_client->id )}}"><i style="color:black;"
                                             class="fa fa-eye" aria-hidden="true"></i></td></a>
-                                <td><a href="{{url('edit_person',$list_client->id)}}"><i style="color:black;"
+                                <td class="text-center"><a href="{{url('edit_person',$list_client->id)}}"><i style="color:black;"
                                             class="fa fa-edit" aria-hidden="true"></i></td>
-                                <td>
+                                <td class="text-center">
                                 <a onClick="return myFunction();" href="{{url('delete-client',$list_client->id)}}"
                                         style="color:black;"><i class="fas fa-trash-alt"></i></a>
                                 </td>
@@ -480,8 +480,8 @@ color: #999;
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="submit" class="btn btn-primary"
-                                                        style="width:15%;background-color:white;color:black">save</button>
-                                                    <button type="button" class="btn btn-primary"
+                                                        style="width:15%;background-color:white;color:black">Save</button>
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal"
                                                         style="width:15%;background-color:white;color:black">Cancel</button>
                                                 </div>
                                             </div>

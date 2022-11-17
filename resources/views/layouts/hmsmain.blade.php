@@ -618,6 +618,19 @@ color: #999;
                                             <span>Accounts</span>
                                     </a>
                             </li>
+                            <li class="submenu-item" style="list-style:none;">
+                                    <a href="{{url('Store_&_Inventory_index')}}" class='sidebar-link'>
+                                        <i class="fas fa-shopping-cart" id="icon"></i>
+                                            <span>Store & Inventory</span>
+                                    </a>
+                            </li>
+                            </li>
+                            <li class="submenu-item" style="list-style:none;">
+                                    <a href="{{url('purchase_index')}}" class='sidebar-link'>
+                                        <i class="far fa-clipboard" id="icon"></i>
+                                            <span>Purchase Management</span>
+                                    </a>
+                            </li>
 {{-- 
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('home')}}" class="sidebar-link">
@@ -1235,27 +1248,24 @@ color: #999;
        
 
  
-
+<!-- Footer -->
 
 
 
             <footer id="ftr"  class="container bg-white p-4 mt-2 border-top" >
                 <div class="footer clearfix mb-0 text-muted">
-                    <div class="float-start">
-
-
-                        
-                        
-
-
+                    <div class="container text-center"> 
                         <p class="">2022 &copy; Globaleyet</p>
                     </div>
-                    <div class="float-end">
+                    <!-- <div class="float-end">
                         
                         <p> <a class="pr-3" href="#"><i style="color: green;" class="	fa fa-level-up"></i> </a>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a href="https://www.globaleyet.com/">globaleyet</a></p>
-                    </div>
+                    </div> -->
                 </div>
             </footer>
+
+            <!-- /footer -->
+
         </div>
         </div>
         <script>

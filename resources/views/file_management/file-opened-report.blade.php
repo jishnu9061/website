@@ -5,53 +5,15 @@
   <html>
     <head>
     <style>
-  .pagination>li>span {
-    position: relative;
-    float: left;
-    padding: 6px 12px;
-    margin-left: -1px;
-    line-height: 1.42857143;
-    color: #337ab7;
-    text-decoration: none;
-    background-color: #fff;
-    border: 1px solid #ddd;
-}
-.pagination {
-margin: 0;
-}
-
-.pagination li:hover{
-cursor: pointer;
-}
-
-.header_wrap {
-padding:30px 0;
-}
-.num_rows {
-width: 20%;
-float:left;
-}
-.tb_search{
-width: 20%;
-float:right;
-}
-.pagination-container {
-width: 70%;
-float:left;
-}
-
-.rows_count {
-width: 20%;
-float:right;
-text-align:right;
-color: #999;
-}
+  
 </style> 
     </head>
     <body>
+  <div class="container">
+
   <h4 id="hdtpa"><b>Files Opened Report</b></h4>
   
-  <div class="container">
+  
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -72,7 +34,7 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+    
 
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -80,7 +42,7 @@ color: #999;
         <table class="table table-striped table-class" id= "table-id">
                     <thead >
                         <tr>
-                            <th class="text-center">*</th>
+                            <!-- <th class="text-center">*</th> -->
                             <th class="text-center">Client</th>
                             <th class="text-center">File No</th>
                             <th class="text-center">File Name</th>
@@ -95,25 +57,24 @@ color: #999;
 
                     <tbody>
 
+                    @foreach($file_open_report as $report)
+
                         <tr id="data">
 
+                            <!-- <td scope="row" class="text-center">{{$report->id}}</td> -->
+                            <td scope="row" class="text-center">{{$report->Client_name}}</td>
+                            <td scope="row" class="text-center">{{$report->file_name}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$report->Responsible_Advocate}}</td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center">
-                                <select name="" id="">
-                                    <option value=""> <a href="">Action</a> </option>
-                                    <option value=""> <a href=""></a> </option>
-                                </select>
-                            </td>
+                            <td scope="row" class="text-center">{{$report->Date_From}}</td>
+                            <td  scope="row"class="text-center">
+                      
+                        <a href=""> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i></td>
                         </tr>
 
-
+                    @endforeach
 
                     </tbody>
 

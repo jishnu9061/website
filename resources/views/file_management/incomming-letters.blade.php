@@ -2,6 +2,8 @@
 @section('content')
 
  {{-- heading --}}
+ <div class="container">
+
  <h4 id="hdtpa"><b>Clients Incomming Letters</b></h4>
  
 
@@ -12,7 +14,7 @@
                 {{-- <a href="{{('add-corporate')}}"><button class="btn btn-primary">Add Incomming Letter</button></a> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Incomming Letter</button>
         <br>
-        <div class="container">
+        
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -33,7 +35,7 @@
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+   
 
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -42,7 +44,7 @@
         <table class="table table-striped table-class" id= "table-id">
                     <thead >
                         <tr>
-                            <th class="text-center">*</th>
+                            <!-- <th class="text-center">*</th> -->
                             <th class="text-center">Date</th>
                             <th class="text-center">Client</th>
                             <th class="text-center">File No.</th>
@@ -60,7 +62,7 @@
                     @foreach($add_letter as $letter)
                         <tr id="data">
 
-                            <td scope="row" class="text-center">{{$letter->id}}</td>
+                            <!-- <td scope="row" class="text-center">{{$letter->id}}</td> -->
                             <td scope="row" class="text-center">{{$letter->letter_date}}</td>
                             <td scope="row" class="text-center">{{$letter->client}}</td>
                             <td scope="row" class="text-center"></td>
@@ -68,12 +70,14 @@
                             <td scope="row" class="text-center">{{$letter->category}}</td>
                             <td scope="row" class="text-center">{{$letter->letter_name}}</td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center">
-                                <select name="" id="">
-                                    <option value=""> <a href="">Action</a> </option>
-                                    <option value=""> <a href=""></a> </option>
-                                </select>
-                            </td>
+                            <td  scope="row"class="text-center">
+                        <a href=""><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" ></i>
+
+                        <a href=""> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
+						
+						<a href=""> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i>
+						
+						</td>
                             <td scope="row" class="text-center"><input type="checkbox" name="" id=""></td>
                         </tr>
 

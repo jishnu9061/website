@@ -1297,7 +1297,13 @@ Route::any('view_bill',"clientinvoicing@view_bill_item")->name('view_bill_item')
 // hr module belji
 Route::any('hrindex','hrindex@index')->name('hrindex');
 Route::any('recruitment','hrindex@recruitment')->name('recruitment');
+//reshma
 Route::any('job_posts','hrindex@job_posts')->name('job_posts');
+Route::any('edit_job_post/{id}','hrindex@edit_job_post')->name('edit_job_post');
+Route::any('/update_job_post','hrindex@update_job_post')->name('update_job_post');
+Route::any('/delete_job_post/{id}','hrindex@delete_job_post')->name('delete_job_post');
+Route::any('/view_job_post/{id}','hrindex@view_job_post')->name('view_job_post');
+//reshma
 Route::any('view_job_applications','hrindex@view_job_applications')->name('view_job_applications');
 Route::any('view_application_details','hrindex@view_application_details')->name('view_application_details');
 Route::any('create_job_post','hrindex@create_job_post')->name('create_job_post');
@@ -1314,6 +1320,24 @@ Route::any('add_assingment','hrindex@add_assignment')->name('add_assingment');
 Route::any('edit-assigment/{id}','hrindex@editassigment')->name('edit-assigment');
 Route::any('update-assigment','hrindex@updateassigment')->name('update-assigment');
 Route::any('drop-assigment/{id}','hrindex@dropassigment')->name('drop-assigment');
+
+//Store & Inventory
+Route::any('Store_&_Inventory_index','store@index')->name('Store_&_Inventory_index');
+Route::any('manage_categories','store@list_manage_categories')->name('manage_categories');
+Route::any('manage_items','store@list_manage_items')->name('manage_items');
+Route::any('stock_list_report','store@stock_list_report')->name('stock_list_report');
+
+
+
+
+
+
+
+//Purchase Management
+
+Route::any('purchase_index','PurchaseManagement@index_purchase')->name('purchase_index');
+
+
 
 
 
