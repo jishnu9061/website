@@ -4,53 +4,15 @@
  <html>
     <head>
     <style>
-  .pagination>li>span {
-    position: relative;
-    float: left;
-    padding: 6px 12px;
-    margin-left: -1px;
-    line-height: 1.42857143;
-    color: #337ab7;
-    text-decoration: none;
-    background-color: #fff;
-    border: 1px solid #ddd;
-}
-.pagination {
-margin: 0;
-}
-
-.pagination li:hover{
-cursor: pointer;
-}
-
-.header_wrap {
-padding:30px 0;
-}
-.num_rows {
-width: 20%;
-float:left;
-}
-.tb_search{
-width: 20%;
-float:right;
-}
-.pagination-container {
-width: 70%;
-float:left;
-}
-
-.rows_count {
-width: 20%;
-float:right;
-text-align:right;
-color: #999;
-}
+ 
 </style>    
     </head>
+ <div class="container">
+
  <h4 id="hdtpa"><b>Process Request</b></h4>
  
 
- <div class="container">
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -71,7 +33,7 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+   
 
        
             <div class="table-responsive">
@@ -85,7 +47,7 @@ color: #999;
                             <th class="text-center">File Name</th>
                             <th class="text-center">Documents</th>
                             <th class="text-center">Approved By</th>
-                            <th class="text-center">Action</th>
+                           
 
                             </th>
 
@@ -97,7 +59,6 @@ color: #999;
 
                         <tr id="data">
 
-                            <td scope="row" class="text-center">1</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
@@ -105,6 +66,7 @@ color: #999;
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
+                           
 
 
                         </tr>
