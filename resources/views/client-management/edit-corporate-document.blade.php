@@ -24,7 +24,7 @@
     <script src="{{ url('assets/js') }}/jquery.min.js"></script>
     <div>
         {{-- heading --}}
-        <h4 id="hdtpa"><b>Add Individual Document</b></h4>
+        <h4 id="hdtpa"><b>Add Document</b></h4>
         <br><br>
 
 
@@ -33,9 +33,9 @@
     </div>
     <div class="row">
         <div class="col-md-12 order-md-1">
-            <form method="post" action="{{url('add-document')}}" id="form" enctype="multipart/form-data">
+            <form method="post" action="{{url('update-document-details')}}" id="form" enctype="multipart/form-data">
                 @csrf
-                <input type="hidden" name="individual_id" value="{{$client_doc->id}}">
+                <input type="hidden" name="id" value="{{$edit_corporate_document->id}}">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
@@ -45,8 +45,8 @@
 
                                 </div>
                                 <select name="type" id="cars">
-                                    <option>select</option>
-                                    <option>type11</option>
+                                    <option>{{$edit_corporate_document->document_type}}</option>
+
                                 </select>
                             </div>
                         </div>
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                 </div>
-                <br>
+                <br><br>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
@@ -75,29 +75,30 @@
 
                                 </div>
                                 <select name="client" id="cars">
-                                    <option>{{$client_doc->client_type}}</option>
+                                    <option>{{$edit_corporate_document->client_types}}</option>
                                 </select>
                             </div>
                         </div>
                     </div>
                 </div>
-                <br>
-                <div class="row">
-                    <div class="col-sm">
-
-                    </div>
-                    <div class="col-sm">
-
-                    </div>
-                    <div class="col-sm">
-                        <br>
-                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Submit</button>
-                        <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
-                    </div>
-                </div>
         </div>
-        </form>
+        <br>
+        <div class="row">
+            <div class="col-sm">
+
+            </div>
+            <div class="col-sm">
+
+            </div>
+            <div class="col-sm">
+                <br>
+                <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Submit</button>
+                <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+            </div>
+        </div>
     </div>
+    </form>
+</div>
 </div>
 </div>
 
@@ -278,9 +279,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Salary is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -307,9 +308,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Years of experience is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -332,9 +333,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 dob is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 /div>
 
             {
@@ -366,9 +367,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Bank Name is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -394,9 +395,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Account number is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -419,9 +420,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 IFSC Code is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-12" >
                 <
                 div class = "mb-1" >
@@ -462,7 +463,7 @@ $(document).on('input', '#percent', function() {
 
                 <
                 /tr> < /
-                table > {
+            table > {
                     {
                         -- < input type = "text"
                         class = "form-control"
@@ -479,7 +480,7 @@ $(document).on('input', '#percent', function() {
                         -- < /div> --}} < /
                         div > <
                             /div> < /
-                            div >
+                        div >
 
                             <
                             /div> <
@@ -521,9 +522,9 @@ $(document).on('input', '#percent', function() {
 
                             <
                             /tbody> < /
-                            table > <
+                        table > <
                             /div> < /
-                            div > <
+                        div > <
                             script src = "{{ url('assets/js') }}/jquery.min.js" >
 </script>
 <script type="text/javascript">

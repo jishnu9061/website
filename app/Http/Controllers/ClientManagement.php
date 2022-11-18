@@ -247,7 +247,7 @@ class ClientManagement extends Controller
     $person_email = $Request['person_email'];
 
     DB::table('cra_corporate_client_details')->insert([
-        'Client_no' => $number,
+        'client_number' => $number,
         'Client_type' =>  $client_type,
         'Cityzen_status' => $citizen_status,
         'Certificate_of_incorporation' =>  $corporation,
@@ -260,7 +260,7 @@ class ClientManagement extends Controller
         'Status_reporting_day' =>  $status,
         'Client_source' => $source,
         'Client_source_naration' =>  $client_narration,
-        'Client_name' =>    $client_name,
+        'client_name' =>    $client_name,
         'Client_industry' =>   $industry,
         'Pin_no' =>    $pin_no,
         'postal_address' =>   $address,
@@ -275,7 +275,7 @@ class ClientManagement extends Controller
     ]);
 
     DB::table('cra_mixed_table')->insertGetId([
-        'Client_name' =>    $client_name,
+        'client_name' =>    $client_name,
     ]);
 
     return redirect("/corporate-list"); 
@@ -285,6 +285,19 @@ class ClientManagement extends Controller
     public function CorporateDocument($corporate_id){
         $corporate_docs= DB::table('cra_corporate_client_details')->where('corporate_id',$corporate_id)->first();
         return view('client-management.corporate-document',compact('corporate_docs','corporate_id'));
+    }
+
+    public function viewCorporateDocument(){
+        $view_corporate_document = DB::table('cra_document_detials')
+        ->join('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_document_detials.id')
+        ->get();
+       
+        return view('client-management.corporate-document-detail',compact('view_corporate_document'));
+    }
+
+    public function editCorporateDocument($id){
+            $edit_corporate_document = DB::table('cra_document_detials')->where('id',$id)->first();
+            return view('client-management.edit-corporate-document',compact('edit_corporate_document','id'));
     }
 
    
@@ -316,9 +329,43 @@ class ClientManagement extends Controller
             'client_types'=> $client_type,
             'id' => $corporate_id 
         ]);
-        return redirect('/client-document');
+        return redirect('/corporate-document-detail');
 
 
+    }
+
+    public function updateDocumentDetails(Request $request){
+        $id   = $request['id'];
+        $type = $request['type'];
+        $file = $request['file'];
+        $client_type = $request['client'];
+
+        if(!empty($request->file('file'))){
+
+            $this->validate($request,[
+                'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+            ]);
+        }
+        if(request()->hasfile('file')){
+            $uploadedImage = $request->file('file');
+            $imageName     = time() .'.'. $file->getClientOriginalExtension();
+            $destinationPath = public_path('images/file');
+            $uploadedImage->move($destinationPath,$imageName);
+            $file->file    = $destinationPath.$imageName;
+        }
+
+        DB::table('cra_document_detials')->where('id',$id)->update([
+
+            'document_type' =>  $type,
+            'file' =>   $imageName,
+            'client_types'=> $client_type,
+        ]);
+        return redirect('/corporate-document-details');
+    }
+
+    public function viewDocummentDetails($id){
+        $view_document_details = DB::table('cra_document_detials')->where('id',$id)->first();
+        return view('client-management.view-corporate-document',compact('view_document_details','id'));
     }
 
     public function listCorporate(){
@@ -362,7 +409,7 @@ class ClientManagement extends Controller
         $person_email = $Request['person_email'];
 
         DB::table('cra_corporate_client_details')->where('corporate_id',$corporate_id)->update([
-            'Client_no' => $number,
+            'client_number' => $number,
             'Client_type' =>  $client_type,
             'Cityzen_status' => $citizen_status,
             'Certificate_of_incorporation' =>  $corporation,
@@ -375,7 +422,7 @@ class ClientManagement extends Controller
             'Status_reporting_day' =>  $status,
             'Client_source' => $source,
             'Client_source_naration' =>  $client_narration,
-            'Client_name' =>    $client_name,
+            'client_name' =>    $client_name,
             'Client_industry' =>   $industry,
             'Pin_no' =>    $pin_no,
             'postal_address' =>   $address,
@@ -406,9 +453,8 @@ class ClientManagement extends Controller
     public function document(){
         $client_document = DB::table('cra_document_detials')
         ->select('*')  
-        ->leftjoin('cra_individual_client_details','cra_individual_client_details.id','=','cra_document_detials.id')
+        ->join('cra_individual_client_details','cra_individual_client_details.id','=','cra_document_detials.id')
         ->get(); 
-  
         return view('client-management.client-document',compact('client_document'));
     }
 

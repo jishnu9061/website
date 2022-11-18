@@ -122,9 +122,9 @@ color: #999;
                             <tbody>
                                 @foreach ($corporate_list as $list)
                                 <tr id="data">
-                                    <td scope="row" class="text-center">{{ $list->Client_no }}</td>
+                                    <td scope="row" class="text-center">{{ $list->client_number}}</td>
                                     <td scope="row" class="text-center" id="medicine_name_1">
-                                        {{ $list->Client_name }}</td>
+                                        {{ $list->client_name}}</td>
                                     <td scope="row" class="text-center" id="medicine_name_1">
                                         {{ $list->designation }}</td>
                                     <td scope="row" class="text-center" id="medicine_name_1">
