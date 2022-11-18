@@ -63,7 +63,7 @@
                         <th class="text-center">Full Name</th>
                         <th class="text-center">User Group</th>
                         <th class="text-center">User Roles</th>
-                        <th class="text-center">Edit</th>
+                        <!-- <th class="text-center">Edit</th> -->
 
                     </tr>
                 </thead>
@@ -74,7 +74,7 @@
                         <td class="text-center" style="color:rgb(13, 1, 56);">Reji</td>
                         <td class="text-center" style="color:rgb(13, 1, 56);"></td>
                         <td class="text-center" style="color:rgb(13, 1, 56);"></td>
-                        <td class="text-center"><a href="{{url('edit_view_roles')}}"><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td>
+                        <!-- <td class="text-center"><a href="{{url('edit_view_roles')}}"><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i></td> -->
 
 
                     </tr>

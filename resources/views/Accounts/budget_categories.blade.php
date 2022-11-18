@@ -33,13 +33,14 @@
       </div>
     
 <br>
-    <div class="table-responsive">
+<div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
+          <thead>
     <tr class="text-center">
       <!-- <th scope="col">Sl</th> -->
-      <th scope="col">Budget Grouping</th>
-      <th scope="col">Description</th>
-      <th scope="col">Action</th>
+      <th>Budget Grouping</th>
+      <th>Description</th>
+      <th>Action</th>
       <!-- <th scope="col">Delete</th> -->
 
     </tr>

@@ -78,7 +78,7 @@
       <th scope="col">Sl</th>
       <th scope="col">Date</th>
         <th>
-
+        
          <table class="table  border-none shadow-none" style="margin-bottom:0px" >
       <tr>
 
@@ -185,10 +185,18 @@ $no=1;
                     {{ $jr->journal_hospital}}
 
                  </td>  --}}
-                 <td>
 
-                    <a href="{{ url('edit_journal/').$jr->transaction_id }}" class="edits" ><i class="fas fa-edit" ></i></a>
-                   <a onclick="delete_journal({{$jr->transaction_id}})"><i class="fas fa-trash-alt"></i></a></td>
+
+                 <td  scope="row"class="text-center">
+                        <a href="{{ url('edit_journal/').$jr->transaction_id }}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" ></i>
+
+                        <a onclick="delete_journal({{$jr->transaction_id}})"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
+						
+						
+						
+						</td>
+
+                
       </tr>
  @endforeach
 
@@ -208,6 +216,7 @@ Showing {{ $journal_transaction->firstItem() }}–{{ $journal_transaction->lastI
       </div>
 </div>
 </div>
+
 
 
 

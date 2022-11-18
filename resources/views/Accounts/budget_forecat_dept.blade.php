@@ -16,7 +16,7 @@
            
   {{-- <a href="{{('')}}"><button class="btn btn-primary">Create New Budget</button></a> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Create New Budget</button>
-                <div class="container">
+                
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -37,7 +37,7 @@
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+   
                 
     <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
@@ -46,8 +46,11 @@
 
 
           <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Department Budget Projection - 2022</h3>
+         
+          <!-- <table style="width:200%" class="table table-bordered" id="new-item"> -->
+
           <div class="table-responsive">
-          <table style="width:200%" class="table table-bordered" id="new-item">
+        <table class="table table-striped table-class" style="width:200%" id= "table-id">
             <thead>
               <tr>
                 <th>Sl No:</th>
@@ -104,7 +107,7 @@
                         
              </tr>
            </tbody>
-</table><br><br>
+</table>
 </div>
 <!--		Start Pagination -->
 <div class='pagination-container'>
@@ -117,17 +120,27 @@
     <div class="rows_count">Showing 11 to 20 of 100</div>
 
  <!-- 		End of Container -->
-<div class="row">
+
+
+ <div class="row">
                         <div class="col-sm">
 
                         </div>
-                       
+                        <div class="col-sm">
+
+                        </div>
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Print</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;" data-dismiss="modal" >Cancel</button>
                         </div>
                     </div>
+
+
+
+
+
+
 </div >
 <div>
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->

@@ -65,7 +65,7 @@ color: #999;
             <button class="btn btn-primary add-btn" data-toggle="modal" data-target="#myModal" style="width:20%">New
                 Client
                 Pickup</button>
-                <div class="container">
+           
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -86,7 +86,7 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+   
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <div class="table-responsive">
