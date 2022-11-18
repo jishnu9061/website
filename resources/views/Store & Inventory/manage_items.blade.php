@@ -25,7 +25,7 @@
 
         <div>
           
-            <div class="container">
+          
                 <div class="header_wrap">
                     <div class="num_rows">
                         <div class="form-group">
@@ -48,7 +48,7 @@
                         <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()"
                             placeholder="Search.." class="form-control">
                     </div>
-                </div>
+                
 
 
 
@@ -59,10 +59,12 @@
 
                                 <thead>
                                     <tr>
-                                        <th class="text-center">Purchase Date</th>
+                                      
 
                                         <th class="text-center">Product name</th>
                                         <th class="text-center">Product Type</th>
+                                        <th class="text-center">Purchase Date</th>
+                                        
                                         <th class="text-center">Quantity</th>
                                         <th class="text-center">Quantity Available</th>
                                         <th class="text-center">Unit</th>
