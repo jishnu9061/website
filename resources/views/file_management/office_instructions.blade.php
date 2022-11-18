@@ -75,8 +75,8 @@
                     <tbody>
                         @foreach ( $new_office_instruction as $instruction)
                         <tr id="data">
-                            <td scope="row" class="text-center">{{$instruction->id}}</td>   
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center"></td>   
+                            <td scope="row" class="text-center">{{$instruction->id}}</td>
                             <td scope="row" class="text-center">{{$instruction->date}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center">{{$instruction->receiver}}</td>
