@@ -81,6 +81,44 @@ thead, tbody, tfoot, tr, td, th {
     border-width: 2px;
 }
 
+.btn-outline-primary{
+  
+    background: #ffffff;
+     color: #1D1D50;
+     background-blend-mode: soft-light, normal;
+    border: 0.5px solid rgba(157, 168, 176, 0.4);
+    box-sizing: border-box;
+    border-radius: 4.58px;
+}
+
+.btn-outline-primary:hover {
+    color: rgb(255, 255, 255);
+  background-color : #4A4A78;
+    
+}
+
+.btn-outline-primary:focus {
+    color: rgb(255, 255, 255);
+  background-color : #4A4A78;
+    
+}
+
+.btn-outline-primary:active {
+    color: rgb(255, 255, 255);
+  background-color : #4A4A78;
+    
+}
+
+
+
+.btn-outline-primary:hover::after, .btn-outline-primary:focus::after {
+    color: rgb(255, 255, 255);
+  background-color : #4A4A78;
+    
+}
+    
+    
+
 // body {
 //     margin: 0;
 //     font-family: "Nunito";

@@ -546,7 +546,7 @@ color: #999;
                             
                                 <li class="submenu-item" style="list-style:none;">
                                     <a href="{{url('hrindex')}}" class='sidebar-link'>
-                                        <i class="bi bi-grid-fill" id="icon"></i>
+                                        <i class="fa fa-th-large" id="icon"></i>
                                             <span>HR</span>
                                     </a>
                             </li>
@@ -620,8 +620,8 @@ color: #999;
                             </li>
                             <li class="submenu-item" style="list-style:none;">
                                     <a href="{{url('Store_&_Inventory_index')}}" class='sidebar-link'>
-                                        <i class="fas fa-shopping-cart" id="icon"></i>
-                                            <span>Store & Inventory</span>
+                                        <i class="fas fa-database" id="icon"></i>
+                                        <span>Store & Inventory</span>
                                     </a>
                             </li>
                             </li>
@@ -1202,10 +1202,10 @@ color: #999;
 
                 <div  style=" text-decoration: none; list-style:none;">
             
-        <button class="btn btn-primary" style="text-align: center" class="text-muted mb-0 " href="{{url('logt')}}"><i class="fas fa-sign-out-alt"></i>LogOut
+        <a type="button" class="btn btn-outline-primary" style="text-align: center" class="text-muted mb-0 " href="{{url('logt')}}"><i class="fas fa-sign-out-alt"></i>LogOut
             
             
-        </button>
+        </a>
         </div>
 
 

@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
 
-<section >
+
    {{-- heading --}}
    <h4 id="hdtpa"><b>Recruitment</b></h4>
    <br><br>
@@ -53,7 +53,7 @@
            
            
 
-            </section>
+    
 
 
 @endsection
