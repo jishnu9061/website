@@ -191,7 +191,7 @@
                                     <td scope="row" class="text-center">{{$list->time_taken_hours}}</td>
                                     <td scope="row" class="text-center"></td>
                                     <td scope="row" class="text-center">{{$list->next_action}}</td>
-                                    <td scope="row" class="text-center"></td>
+                                    
                                     <!-- <td scope="row" class="text-center">{{$list->activity}}</td> -->
                                     <!-- <td scope="row" class="text-center"><input type="checkbox" name="" id=""></td> -->
                                     <td scope="row" class="text-center">
@@ -200,8 +200,6 @@
                                         
                                             <a onClick="return myFunction();" href="{{url('delete-file-progress',$list->id)}}"><i style="  color:rgb(13, 1, 56);"
 
-                                        <a href="edit-file-progress."><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
-                                            <a onClick="return myFunction();" href=""><i style="  color:rgb(13, 1, 56);"
 
                                                     class="fas fa-trash-alt" aria-hidden="true"></i>
                                     </td>

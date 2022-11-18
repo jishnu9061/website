@@ -53,7 +53,7 @@
                             <th class="text-center">Letter Name</th>
                             <th class="text-center">Delivered To</th>
                             <th class="text-center">Action</th>
-                            <th class="text-center"> <input type="checkbox" name="" id=""> </th>
+                            <!-- <th class="text-center"> <input type="checkbox" name="" id=""> </th> -->
 
                         </tr>
                     </thead>
@@ -78,7 +78,7 @@
 						<a href=""> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i>
 						
 						</td>
-                            <td scope="row" class="text-center"><input type="checkbox" name="" id=""></td>
+                            <!-- <td scope="row" class="text-center"><input type="checkbox" name="" id=""></td> -->
                         </tr>
 
 

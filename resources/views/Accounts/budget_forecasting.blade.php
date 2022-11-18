@@ -18,7 +18,7 @@
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Create New Budget</button>
                 <br>
 
-                <div class="container">
+                
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -39,7 +39,7 @@
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+   
                 
                 <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
