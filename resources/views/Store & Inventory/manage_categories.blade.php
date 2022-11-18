@@ -26,7 +26,7 @@
         <div>
             <button type="button" class="btn btn-primary complaint_btn btn " data-toggle="modal"
                 data-target="#myModal">Add Product</button></a>
-            <div class="container">
+            
                 <div class="header_wrap">
                     <div class="num_rows">
                         <div class="form-group">
@@ -49,7 +49,7 @@
                         <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()"
                             placeholder="Search.." class="form-control">
                     </div>
-                </div>
+               
 
 
 

@@ -27,7 +27,6 @@
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-</div>
 
 
              <div class="table-responsive">
@@ -71,10 +70,7 @@
       </tbody>
     </table>
    </div>
-
-
-
- <!--		Start Pagination -->
+   <!--		Start Pagination -->
  <div class='pagination-container'>
       <nav>
         <ul class="pagination">
