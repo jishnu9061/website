@@ -109,8 +109,8 @@ color: #999;
 
                             <!-- <td scope="row" class="text-center">{{$list->id}}</td> -->
                             <td scope="row" class="text-center">{{$list->Client_name}}</td>
-                            <td scope="row" class="text-center">{{$list->~}}</td>
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$list->file_name}}</td>
+                            <td scope="row" class="text-center">{{$list->progress_date}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                             <!-- <td scope="row" class="text-center"></td> -->
