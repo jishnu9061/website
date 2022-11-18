@@ -71,13 +71,13 @@
                                             <!-- <td scope="row">{{$list->id}}</td> -->
                                             <td scope="row">{{$list->id}}</td>
                                             <td scope="row">{{$list->Client_name}}</td>
-                                            <td scope="row">{{$list->File_name}}</td>
-                                            <td scope="row">{{$list->opening_date}}</td>
-                                            <td scope="row">{{$list->responsible_advocate}}</td>
-                                            <td scope="row">{{$list->recent_progress}}</td>
-                                            <td scope="row">{{$list->closing_date}}</td>
+                                            <td scope="row">{{$list->file_name}}</td>
+                                            <td scope="row">{{$list->open_date}}</td>
+                                            <td scope="row"></td>
+                                            <td scope="row"></td>
+                                            <td scope="row">{{$list->close_date}}</td>
                                             <td scope="row">{{$list->amount}}</td>
-                                            <td scope="row">{{$list->status}}</td>
+                                            <td scope="row"></td>
                                             <td scope="row"></td>
                                             <!-- <td scope="row"></td> -->
                                         </tr>
@@ -165,10 +165,10 @@
                     </div>
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">File Type</label>
+                            <label for="username">File Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="file_type" value=""
+                                <input type="text" class="form-control" name="file_name" value=""
                                     id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
