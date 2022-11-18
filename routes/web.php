@@ -1045,7 +1045,10 @@ Route::any('/update-corporate','ClientManagement@Update_corporate')->name('updat
 Route::any('/delete_client/{corporate_id}','ClientManagement@Corporate_destroy')->name('delete_client');
 Route::any('/corporate-document/{corporate_id}','ClientManagement@CorporateDocument')->name('corporate-document');
 Route::any('add-corporate-document','ClientManagement@addCorporatedocument')->name('add-corporate-document');
-
+Route::any('corporate-document-details','ClientManagement@viewCorporateDocument')->name('corporate-document-details');
+Route::any('edit-corporate-document/{id}','ClientManagement@editCorporateDocument')->name('edit-corporate-document');
+Route::any('update-document-details','ClientManagement@updateDocumentDetails')->name('update-document-details');
+Route::any('view-document-details/{id}','ClientManagement@viewDocummentDetails')->name('view-document-details');
 //end corporate
 //end Client-List
 
