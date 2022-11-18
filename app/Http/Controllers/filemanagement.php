@@ -44,7 +44,7 @@ class filemanagement extends Controller
     public function addnew(Request $request)
     {
 
-        $Client=$request['Client'];
+        $client=$request['client'];
         $email=$request['email'];
         $phone=$request['phone'];
         $address=$request['address'];
@@ -60,7 +60,7 @@ class filemanagement extends Controller
 
         DB::table('cra_open_new_file_details')->insert([
             
-            'Client' => $Client,
+            'client' => $client,
             'email' => $email,
             'phone' => $phone,
             'address' => $address,
