@@ -92,7 +92,6 @@ class filemanagement extends Controller
         $email=$request['email'];
         $amount=$request['amount'];
         $workflow=$request['workflow'];
-
         $responsible_advocate=$request['responsibleadvocate'];
         $recent_progress=$request['recentprogress'];
         $closing_date=$request['closedate'];
@@ -235,7 +234,7 @@ class filemanagement extends Controller
     public function addprogress(Request $request )
 
     { 
-     
+        $corporate_id = $request['corporate_id'];
         $progress_date=$request['date_progress'];
         $next_action=$request['next_action'];      
         $bringup_date=$request['bringup_date'];
@@ -257,6 +256,7 @@ class filemanagement extends Controller
 
         DB::table('cra_add_file_progress')->insert([
 
+            'corporate_id' => $corporate_id,
             'progress_date' => $progress_date,
             'next_action' => $next_action,
             'client_name' => $client_name,
@@ -940,10 +940,39 @@ class filemanagement extends Controller
         $search =$request['search'];
         $document_owner =$request['document_owner'];
         $final_aggrement =$request['final_aggrement'];
+
         $document_upload =$request['document_upload'];
         $folder_upload =$request['folder_upload'];
+
+        if(!empty($request->file('document_upload'))){
+
+            $this->validate($request,[
+                'document_upload' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+            ]);
+        }
+        if(request()->hasfile('document_upload')){
+            $uploadedImage = $request->file('document_upload');
+            $imageName     = time() .'.'. $document_upload->getClientOriginalExtension();
+            $destinationPath = public_path('image');
+            $uploadedImage->move($destinationPath,$imageName);
+            $document_upload->file    = $destinationPath.$imageName;
+        }
+
+        if(!empty($request->file('folder_upload'))){
+
+            $this->validate($request,[
+                'folder_upload' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+            ]);
+        }
+        if(request()->hasfile('folder_upload')){
+            $uploadedImage = $request->file('folder_upload');
+            $imageName     = time() .'.'. $document_upload->getClientOriginalExtension();
+            $destinationPath = public_path('image');
+            $uploadedImage->move($destinationPath,$imageName);
+            $folder_upload->file    = $destinationPath.$imageName;
+        }
        
-        
+        // dd(( $imageName ));
 
         DB::table('cra_upload_document')->insert([
 
@@ -957,8 +986,8 @@ class filemanagement extends Controller
             'search' =>  $search,
             'document_owner' =>  $document_owner,
             'final_aggrement' =>  $final_aggrement,
-            'document_upload' =>  $document_upload,
-            'folder_upload' =>  $folder_upload,
+            'document_upload' =>   $imageName ,
+            'folder_upload' =>  $imageName,
         
         ]);
         return redirect('/document-manager');
