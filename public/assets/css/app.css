@@ -310,8 +310,8 @@
 }
 
 .btn.btn-primary {
-    color: #fff;
-    background: #FFFBF4;
+    /* color: #05629B; */
+    background: #ffffff;
     /* background: linear-gradient(0deg, rgb(177,127,62), rgb(177, 127, 62)), linear-gradient(102.78deg, rgba(55, 77, 109, 0.15) -1.58%, rgba(55, 77, 109, 0.15) 114.31%); */
     color: #1D1D50;
     /* background: linear-gradient(0deg, rgb(1, 1, 82), rgb(6, 6, 58)), linear-gradient(102.78deg, rgba(55, 77, 109, 0.15) -1.58%, rgba(55, 77, 109, 0.15) 114.31%); */
@@ -320,6 +320,8 @@
     box-sizing: border-box;
     border-radius: 4.58px;
 }
+
+
 
 .btn.btn-primary:hover {
     color: rgb(255, 255, 255);
@@ -1352,17 +1354,7 @@ background: #dee2e6;
                     /* color: #00474d; */
                 /* } */
 
-                .btn.btn-primary {
-                    color: #05629B;
-                    background: #ffffff;
-                    /* background: linear-gradient(0deg, rgb(177,127,62), rgb(177, 127, 62)), linear-gradient(102.78deg, rgba(55, 77, 109, 0.15) -1.58%, rgba(55, 77, 109, 0.15) 114.31%); */
-                    color: #1D1D50;
-                    /* background: linear-gradient(0deg, rgb(1, 1, 82), rgb(6, 6, 58)), linear-gradient(102.78deg, rgba(55, 77, 109, 0.15) -1.58%, rgba(55, 77, 109, 0.15) 114.31%); */
-                    background-blend-mode: soft-light, normal;
-                    border: 0.5px solid rgba(157, 168, 176, 0.4);
-                    box-sizing: border-box;
-                    border-radius: 4.58px;
-                }
+
                 .btn_margin{
                     margin:20px;
                 }

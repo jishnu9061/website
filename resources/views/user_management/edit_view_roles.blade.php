@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
 
-<div class="container">
+
 
         <div>
             <!-- <button class="btn btn-primary"
@@ -127,7 +127,7 @@
                             <label for="username">E-mail Address</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="email" class="form-control" name="" id="username" value="" required></br>
+                                <input type="email" class="form-control" name="" id="username" value="" required><br>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
