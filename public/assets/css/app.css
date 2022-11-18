@@ -2892,6 +2892,11 @@ display: block; */
     display: none;
 }
 
+/* #ftr {
+    margin-left: 300px;
+    padding: 2rem;
+} */
+
 #main {
     margin-left: 300px;
     padding: 2rem;
