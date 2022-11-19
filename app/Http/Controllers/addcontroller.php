@@ -59,7 +59,7 @@ class addcontroller extends Controller
       $check_if_duplicate_exisit = User::where('uniqueid', $uniqId)->first();
 
       // dd($appendid);
-      $stame=$Request['name'];
+      $stame=$Request['name'];1
       $al_email=$Request['email'];
       $staffs=new User();
       $staffs->name=$Request['name'];
