@@ -375,10 +375,10 @@ color: #999;
       </ul><!-- End Profile Dropdown Items -->
     </li><!-- End Profile Nav -->
 
-  </ul>
-</nav><!-- End Icons Navigation --> --}}
+    </ul>
+    </nav><!-- End Icons Navigation --> --}}
 
-{{-- </header><!-- End Header --> --}}
+    {{-- </header><!-- End Header --> --}}
 
 
 
@@ -404,7 +404,8 @@ color: #999;
                 </div>
                 <div class="sidebar-menu">
                     <ul class="menu">
-                        <li class="sidebar-title">Dashboard</li>
+                        <li  class="sidebar-title" style="color: #1D1D50; text-align:center; font-size:16px; ">DASHBOARD
+                        </li>
                             {{-- @if(Auth::user()->role == 'superadmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="#" class='sidebar-link'>
@@ -1077,7 +1078,7 @@ color: #999;
               </nav> --}}
 
 
-                                        <nav class="navbar navbar-expand-lg  sticky-top navbar-light bg-white  " >
+                                        <nav class="navbar navbar-expand-lg  sticky-top navbar-light bg-white">
                                             <a id="backbtn" href="javascript:history.back()" style=" color: #070344;
                                             font-size: 35px;" >
                                             <i id="bkbtnicon" class="far fa-arrow-alt-circle-left"></i></a>
@@ -1088,7 +1089,7 @@ color: #999;
                                             </a>
                                                 
                                     
-                                            <div class="nav-item dropdown" >
+                                            <div class="nav-item dropdown">
                                             <button   class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <img data-toggle="tooltip" data-placement="top" title="Menu" style="height: 35px; width: 35px;"  id="cr_logo" src="assets/images/Logo cra.png"  alt="CRA">
                                             </button>
@@ -1113,45 +1114,45 @@ color: #999;
 
                                             <div class="collapse navbar-collapse ml-2" id="navbarTogglerDemo01">
                                                             <ul class="navbar-nav mr-auto">
-                                                            <li class="nav-item active">
-                                                                <a  class="font-bold text-uppercase nav-link" href="#">  {{ Auth::user()->name }} <span class="sr-only">(current)</span></a>
-                                                                {{-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> --}}
-                                                            </li>
+                                                                <li class="nav-item active">
+                                                                    <a  class="font-bold text-uppercase nav-link" href="#">  {{ Auth::user()->name }} <span class="sr-only">(current)</span></a>
+                                                                    {{-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> --}}
+                                                                </li>
 
-                                                            <li class="nav-item">
-                                                                <form class="form-inline my-2 my-lg-0">
-                                                                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                                                                <button class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
-                                                            </form>
-                                                                {{-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> --}}
-                                                            </li>
+                                                                <li class="nav-item">
+                                                                    <form class="form-inline my-2 my-lg-0">
+                                                                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                                                            <button class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+                                                                    </form>
+                                                                    {{-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> --}}
+                                                                </li>
                                                             </ul>
 
-                                                            <ul class="navbar-nav mr-auto lg-pl-3" >
+                                                                     <ul class="navbar-nav mr-auto lg-pl-3" >
                                                             
-                                                            <li class="nav-item dropdown" >
-                                                            <button   class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                Create New <i class="fa fa-plus-square" ></i>
-                                                            </button>
-                                                    
-
-                                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                                <a class="dropdown-item" href="{{url('user_management')}}">Time entry</a>
-                                                                <a class="dropdown-item" href="{{url('client-index')}}">Expense entry</a>
-                                                                {{-- <div class="dropdown-divider"></div> --}}
-                                                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Task</a>
-                                                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Matter</a>
-                                                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Contact</a>
-                                                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Record payment</a>
-                                                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Client funds request</a>
-                                                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Email log</a>
-                                                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Phone log</a>
-                                                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Secure message</a>
-                                                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Event</a>
-                                                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Note</a>
+                                                                        <li class="nav-item dropdown" >
+                                                                                <button   class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                    Create New <i class="fa fa-plus-square" ></i>
+                                                                                </button>
                                                                 
-                                                                </div>
-                                                                    </li>
+
+                                                                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                                                    <a class="dropdown-item" href="{{url('user_management')}}">Time entry</a>
+                                                                                    <a class="dropdown-item" href="{{url('client-index')}}">Expense entry</a>
+                                                                                    {{-- <div class="dropdown-divider"></div> --}}
+                                                                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Task</a>
+                                                                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Matter</a>
+                                                                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Contact</a>
+                                                                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Record payment</a>
+                                                                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Client funds request</a>
+                                                                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Email log</a>
+                                                                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Phone log</a>
+                                                                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Secure message</a>
+                                                                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Event</a>
+                                                                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Note</a>
+                                                                                    
+                                                                                </div>
+                                                                        </li>
                                                                     </ul>
 
                                                                     <div  id="navr" style="margin-right: .5%;"   >
@@ -1175,34 +1176,28 @@ color: #999;
                                                                                 <h6 class="text-muted mb-0"><a href="{{url('logt')}}"> <i class="fas fa-sign-out-alt"></i> </i> Log Out</a></h6>
                                                                             
                                                                             </div> --}}
-
-           
                                                 <br>
-
                                                 <section class="container-fluid bg-white p-4 mt-2">
-                                                    {{-- <div class="page-content"> --}}
-                                                            <section class="row">
-                                                                    <div class="col-12 col-lg-12">
-                                                                        @yield('content')
-
-                                                                        <br>
-                                                                        <footer id="ftr"  class="container-fluid bg-white p-4 mt-2 border-top" >
-                                                                            <div class="footer clearfix mb-0 text-muted">
-                                                                                <div class="container text-center"> 
-                                                                                    <p class="">2022 &copy; Globaleyet</p>
-                                                                                </div>
-                                                                                <!-- <div class="float-end">
-                                                                                    
-                                                                                    <p> <a class="pr-3" href="#"><i style="color: green;" class="	fa fa-level-up"></i> </a>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a href="https://www.globaleyet.com/">globaleyet</a></p>
-                                                                                </div> -->
-                                                                            </div>
-                                                                        </footer>
-
-                                                                        
-                                                                    </div>
-                                                            </section>
+                                                    <section class="row">
+                                                        <div class="col-12 col-lg-12">
+                                                            @yield('content')
+                                                        </div>
+                                                    </section>
                                                 </section>
-                                                    {{-- </div> --}}           
+
+                                                <br>
+                                                <footer id="ftr"  class="container-fluid bg-white p-4 mt-2 border-top" >
+                                                    <div class="footer clearfix mb-0 text-muted">
+                                                        
+                                                        <div class="container text-center"> 
+                                                            <p class="">2022 &copy; Globaleyet</p>
+                                                        </div>
+                                                        <!-- <div class="float-end">
+                                                            
+                                                            <p> <a class="pr-3" href="#"><i style="color: green;" class="	fa fa-level-up"></i> </a>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a href="https://www.globaleyet.com/">globaleyet</a></p>
+                                                        </div> -->
+                                                    </div>
+                                                </footer>
 
                     </div>
                 </div>
@@ -1355,127 +1350,12 @@ color: #999;
 
    
 
-
-
-
-    <section>
-
-    <script src="{{asset('/')}}assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="{{asset('/')}}assets/js/bootstrap.bundle.min.js"></script>
-
-    <script src="{{asset('/')}}assets/vendors/apexcharts/apexcharts.js"></script>
-    <script src="{{asset('/')}}assets/js/pages/dashboard.js"></script>
-
-    <script src="{{asset('/')}}assets/js/main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
-    <script>
-        var mquery = window.matchMedia("(max-width:767.98px)");
-        </script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
-
-         <script>
-             $(document).ready(function () {
-                 var SITEURL = "{{ url('/') }}";
-                 $.ajaxSetup({
-                     headers: {
-                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                     }
-                 });
-                 var calendar = $('#full_calendar_events').fullCalendar({
-                     editable: true,
-                     editable: true,
-                     events: SITEURL + "/calendar-event",
-                     displayEventTime: true,
-                     eventRender: function (event, element, view) {
-                         if (event.allDay === 'true') {
-                             event.allDay = true;
-                         } else {
-                             event.allDay = false;
-                         }
-                     },
-                     selectable: true,
-                     selectHelper: true,
-                     select: function (event_start, event_end, allDay) {
-                         var event_name = prompt('Event Name:');
-                         if (event_name) {
-                             var event_start = $.fullCalendar.formatDate(event_start, "Y-MM-DD HH:mm:ss");
-                             var event_end = $.fullCalendar.formatDate(event_end, "Y-MM-DD HH:mm:ss");
-                             $.ajax({
-                                 url: SITEURL + "/calendar-crud-ajax",
-                                 data: {
-                                     event_name: event_name,
-                                     event_start: event_start,
-                                     event_end: event_end,
-                                     type: 'create'
-                                 },
-                                 type: "POST",
-                                 success: function (data) {
-                                     displayMessage("Event created.");
-                                     calendar.fullCalendar('renderEvent', {
-                                         id: data.id,
-                                         title: event_name,
-                                         start: event_start,
-                                         end: event_end,
-                                         allDay: allDay
-                                     }, true);
-                                     calendar.fullCalendar('unselect');
-                                 }
-                             });
-                         }
-                     },
-                     eventDrop: function (event, delta) {
-                         var event_start = $.fullCalendar.formatDate(event.start, "Y-MM-DD");
-                         var event_end = $.fullCalendar.formatDate(event.end, "Y-MM-DD");
-                         $.ajax({
-                             url: SITEURL + '/calendar-crud-ajax',
-                             data: {
-                                 title: event.event_name,
-                                 start: event_start,
-                                 end: event_end,
-                                 id: event.id,
-                                 type: 'edit'
-                             },
-                             type: "POST",
-                             success: function (response) {
-                                 displayMessage("Event updated");
-                             }
-                         });
-                     },
-                     eventClick: function (event) {
-                         var eventDelete = confirm("Are you sure?");
-                         if (eventDelete) {
-                             $.ajax({
-                                 type: "POST",
-                                 url: SITEURL + '/calendar-crud-ajax',
-                                 data: {
-                                     id: event.id,
-                                     type: 'delete'
-                                 },
-                                 success: function (response) {
-                                     calendar.fullCalendar('removeEvents', event.id);
-                                     displayMessage("Event removed");
-                                 }
-                             });
-                         }
-                     }
-                 });
-             });
-             function displayMessage(message) {
-                 toastr.success(message, 'Event');
-             }
-            </script>
-
-</section>
-
-                        <script>$("a.sidebar-link").click(function(){
+                    <script>
+                    $("a.sidebar-link").click(function(){
                             $("a.sidebar-link").css("background-color", "");
                         $(this).css("background-color", "#F5E9D4");
                         });
-                        </script>
+                    </script>
 
                  {{-- <script> --}}
 
