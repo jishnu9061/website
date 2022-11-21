@@ -1158,6 +1158,20 @@ class filemanagement extends Controller
            $originator =$request['originator'];
            $viewers =$request['viewers'];
            $upload_copy =$request['upload_copy'];
+
+           if(!empty($request->file('upload_copy'))){
+
+            $this->validate($request,[
+                'upload_copy' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+            ]);
+        }
+        if(request()->hasfile('upload_copy')){
+            $uploadedImage = $request->file('upload_copy');
+            $imageName     = time() .'.'. $upload_copy->getClientOriginalExtension();
+            $destinationPath = public_path('image');
+            $uploadedImage->move($destinationPath,$imageName);
+            $upload_copy->file    = $destinationPath.$imageName;
+        }
    
            DB::table('cra_add_outgoing_letter')->insert([
    
@@ -1198,6 +1212,21 @@ class filemanagement extends Controller
             $delivered_to =$request['delivered_to'];
             $viewer =$request['viewer'];
             $upload_copy =$request['upload_copy'];
+
+            if(!empty($request->file('upload_copy'))){
+
+                $this->validate($request,[
+                    'upload_copy' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+                ]);
+            }
+            if(request()->hasfile('upload_copy')){
+                $uploadedImage = $request->file('upload_copy');
+                $imageName     = time() .'.'. $upload_copy->getClientOriginalExtension();
+                $destinationPath = public_path('image');
+                $uploadedImage->move($destinationPath,$imageName);
+                $upload_copy->file    = $destinationPath.$imageName;
+            }
+    
     
             DB::table('cra_add_incomming_letters')->insert([
     
