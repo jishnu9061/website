@@ -33,6 +33,7 @@ class filemanagement extends Controller
     public function file_destroy($id)
     {
         $edit =DB::table('cra_open_new_file_details')->where('id',$id)->delete();
+        
         return redirect ('/file-list');
     }
 
