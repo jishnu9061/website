@@ -1330,7 +1330,16 @@ Route::any('drop-assigment/{id}','hrindex@dropassigment')->name('drop-assigment'
 Route::any('Store_&_Inventory_index','store@index')->name('Store_&_Inventory_index');
 Route::any('manage_categories','store@list_manage_categories')->name('manage_categories');
 Route::any('manage_items','store@list_manage_items')->name('manage_items');
-Route::any('stock_list_report','store@stock_list_report')->name('stock_list_report');
+Route::any('stock_list','store@stock_list_tab')->name('stock_list');
+Route::any('request_item','store@request_items')->name('request_item');
+Route::any('item_movement','store@item_movement_report')->name('item_movement');
+Route::any('view_item_movement','store@view_item_movement_report')->name('view_item_movement');
+Route::any('re_order','store@re_order_list')->name('re_order');
+
+
+
+
+
 
 
 
