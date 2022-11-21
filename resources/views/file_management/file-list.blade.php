@@ -80,8 +80,7 @@
                                             <td scope="row"></td>
                                             <td scope="row"><a href=""><i style="color:black;" class="fa fa-eye"
                                         aria-hidden="true"></i>
-                                    <input type="hidden" value="" id="medicine_id_hidden" class="applicate"
-                                        name="supplier_id_hidden">
+                                   
                                     <a href="{{url('edit-file')}}"><i style="color:black;" class="fa fa-edit"
                                             aria-hidden="true"></i>
                                         <a onClick="return myFunction();" href="{{url('file_destroy')}}" style="color:black;"><i
