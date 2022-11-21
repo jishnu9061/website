@@ -9,8 +9,7 @@
         <br><br>
 
         {{-- sub heading --}}
-        <h5 id="hdbtb">Client
-            Management</h5>
+        <h5 id="hdbtb">Client Management</h5>
       
 
 
@@ -40,7 +39,7 @@
                         aria-haspopup="true" aria-expanded="false" class="btn btn-primary btn_align_btn">Client
                         list</button></a>
 
-                    <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item " href="{{ url('corporate-list') }}"> Corporate Client</a>
                         <a class="dropdown-item" href="{{ url('client_list') }}">Individual Client</a>
                     </div>
