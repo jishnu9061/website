@@ -19,7 +19,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="number" id="username"
-                                    value="{{$corporate_details->Client_no}}">
+                                    value="{{$corporate_details->client_number}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -210,7 +210,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="name"
-                                    value="{{$corporate_details->Client_name}}" id="confirm_password">
+                                    value="{{$corporate_details->client_name}}" id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
