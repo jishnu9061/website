@@ -18,125 +18,11 @@
                 <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
                 <b><u>Client Registration</u></b></span> -->
                 {{-- heading --}}
-                <h4 id="hdtpa"><b>Item Request</b></h4>
+                <h4 id="hdtpa"><b>Edit Item Request</b></h4>
                 <br>
             </div>
 
-        </div>
-        <div>
-            <button type="button" class="btn btn-primary complaint_btn btn " data-toggle="modal"
-                data-target="#myModal">Request Item</button></a>
-            <!--filter-->
-            <div class="tb_search">
-
-                <select name="town" id="search_input_all" onkeyup="FilterkeyWord_all_table()" class="form-control"
-                    style="width:100%;">
-                    <option>---select--- </option>
-                    <option>pen</option>
-                    <option>pencil</option>
-                    <option>Book</option>
-                </select>
-
-            </div>
-            <br>
-
-            <!--filter end-->
-
-
-            <div class="header_wrap">
-                <div class="num_rows">
-                    <div class="form-group">
-                        <!--		Show Numbers Of Rows 		-->
-                        <select class="form-control" aria-label="Page navigation example" name="state" id="maxRows">
-
-                            <option value="5">5</option>
-                            <option value="10">10</option>
-                            <option value="15">15</option>
-                            <option value="20">20</option>
-                            <option value="50">50</option>
-                            <option value="70">70</option>
-                            <option value="100">100</option>
-                            <option value="5000">Show ALL Rows</option>
-                        </select>
-
-                    </div>
-                </div>
-                <div class="tb_search">
-                    <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.."
-                        class="form-control">
-                </div>
-
-
-
-
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
-                        <div class="table-responsive">
-                            <table class="table table-striped table-class" id="table-id">
-
-                                <thead>
-                                    <tr>
-                                        <th class="text-center">Request Date</th>
-                                        <th class="text-center">User Request</th>
-                                        <th class="text-center">Item Rerusted</th>
-                                        <th class="text-center">Quantity</th>
-                                        <th class="text-center">Status</th>
-                                        <th class="text-center">Action</th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-
-                                    <tr id="data">
-                                        <td scope="row" class="text-center"></td>
-                                        <td scope="row" class="text-center"></td>
-                                        <td scope="row" class="text-center"></td>
-                                        <td scope="row" class="text-center"></td>
-                                        <td scope="row" class="text-center"></td>
-                                        <td  scope="row"class="text-center">
-                        <a href="edit_request_item"><i  style="  color:rgb(13, 1, 56);"class="fa fa-edit" ></i>
-
-                        <a href=""> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
-						
-						
-						
-						</td>
-
-                                    </tr>
-
-                                </tbody>
-
-                            </table>
-                        </div>
-
-                        <!--		Start Pagination -->
-                        <div class='pagination-container'>
-                            <nav>
-                                <ul class="pagination">
-                                    <!--	Here the JS Function Will Add the Rows -->
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="rows_count">Showing 11 to 20 of 100</div>
-
-                        <!-- 		End of Container -->
-
-
-                        <div class="modal fade" id="myModal">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-
-                                    <!-- Modal Header -->
-                                    <div class="modal-header">
-                                        <h2 class="text-center"><b>Add Request</b></h2>
-
-                                    </div>
-
-                                    <!-- Modal body -->
-                                    <div class="modal-body">
-                                        <div class="container">
+           
                                             <div class="row">
                                                 <div class="col-md-12 order-md-1">
                                                     <form method="post" action="{{url('add-registration')}}" id="form">
@@ -312,6 +198,7 @@
 
                                                             </table>
                                                         </div>
+                                                        <br>
                                                         <div>
                                                             <button type="button" class="btn btn-primary float:left;"
                                                                 Style="width:20%;">Add</button>
@@ -327,7 +214,7 @@
                                                                 <br>
                                                                 <button type="submit"
                                                                     class="btn btn-primary float:right;"
-                                                                    Style="width:50%;">Request</button>
+                                                                    Style="width:50%;">Update</button>
                                                                 <button type="button" class="btn btn-primary float:left"
                                                                     Style="width:45%;"
                                                                     data-dismiss="modal">Cancel</button>
@@ -343,6 +230,24 @@
                         </div>
                     </div>
 
+
+                        <!-- 		End of Container -->
+
+
+                        <div class="modal fade" id="myModal">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+
+                                    <!-- Modal Header -->
+
+                                    <div class="modal-header">
+                                        <h2 class="text-center"><b>Add Request</b></h2>
+
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                      
 
                     <!-- The Modal -->
                     <div class="modal fade" id="editmed">
