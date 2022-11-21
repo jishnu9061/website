@@ -26,6 +26,9 @@
         <div>
             <button type="button" class="btn btn-primary complaint_btn btn " data-toggle="modal"
                 data-target="#myModal">Add Product</button></a>
+
+                <button type="button" class="btn btn-primary complaint_btn btn " data-toggle="modal"
+                data-target="#myModal1">Add Category</button></a>
             
                 <div class="header_wrap">
                     <div class="num_rows">
@@ -63,7 +66,8 @@
                                         <th class="text-center">Item Name</th>
                                         <th class="text-center">Item Type</th>
                                         <th class="text-center">Quantity In Stock</th>
-                                        <th class="text-center">Unit</th>
+                                        <th class="text-center">Category</th>
+                                         <th class="text-center">Unit</th>
                                         <th class="text-center">Unit Price</th>
                                         <th class="text-center">Action</th>
 
@@ -78,8 +82,10 @@
                                         <td></td>
                                         <td></td>
                                         <td></td>
+
+                                        <td></td>
                                         <td  scope="row"class="text-center">
-                        <a href=""><i  style="  color:rgb(13, 1, 56);"class="fa fa-edit" ></i>
+                        <a href="edit_manage_categories"><i  style="  color:rgb(13, 1, 56);"class="fa fa-edit" ></i>
 
                         <a href=""> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
 						
@@ -142,6 +148,30 @@
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <div class="mb-1">
+                                                                    <label for="username">Category</label>
+                                                                    <div class="input-group">
+                                                                        <div class="input-group-prepend"></div>
+
+                                                                        <select name="town" id="username"
+                                                                            style="width:100%;">
+                                                                            <option>---select--- </option>
+                                                                            <option>stationery </option>
+                                                                            <option>furniture</option>
+                                                                            <option>library</option>
+                                                                          
+
+
+                                                                        </select>
+                                                                        <div class="invalid-feedback"
+                                                                            style="width: 100%;">
+                                                                            Town is required.
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="mb-1">
                                                                     <label for="username">Item Type</label>
                                                                     <div class="input-group">
                                                                         <div class="input-group-prepend"></div>
@@ -164,9 +194,16 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
+                                                           
 
 
-                                                            <div class="col-md-4">
+                                                            
+                                                        </div>
+
+
+                                                        <br>
+                                                        <div class="row">
+                                                        <div class="col-md-4">
                                                                 <div class="mb-1">
                                                                     <label for="username">Unit</label>
                                                                     <div class="input-group">
@@ -189,18 +226,13 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-
-
-                                                        <br>
-                                                        <div class="row">
                                                             <div class="col-md-4">
                                                                 <div class="mb-1">
                                                                     <label for="username">Quantity</label>
                                                                     <div class="input-group">
                                                                         <div class="input-group-prepend"></div>
                                                                         <input type="text" class="form-control"
-                                                                            name="email" id="username" value=""
+                                                                            name="quantity" id="username" value=""
                                                                             placeholder="" required>
                                                                         <div class="invalid-feedback"
                                                                             style="width: 100%;">
@@ -216,7 +248,7 @@
                                                                     <div class="input-group">
                                                                         <div class="input-group-prepend"></div>
                                                                         <input type="text" class="form-control"
-                                                                            name="email" id="username" value=""
+                                                                            name="unit" id="username" value=""
                                                                             placeholder="" required>
                                                                         <div class="invalid-feedback"
                                                                             style="width: 100%;">
@@ -225,21 +257,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-md-4">
-                                                                <div class="mb-1">
-                                                                    <label for="username">Total Price</label>
-                                                                    <div class="input-group">
-                                                                        <div class="input-group-prepend"></div>
-                                                                        <input type="text" class="form-control"
-                                                                            name="email" id="username" value=""
-                                                                            placeholder="" required>
-                                                                        <div class="invalid-feedback"
-                                                                            style="width: 100%;">
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                          
 
                                                         </div>
                                                         <br>
@@ -277,7 +295,90 @@
                     </div>
 
 
+
+
+
+
+
                     <!-- The Modal -->
+
+
+                    <div class="modal fade" id="myModal1">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h2 class="text-center"><b>Add Category</b></h2>
+
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-12 order-md-1">
+                                                    <form method="post" action="{{url('add-registration')}}" id="form">
+                                                        @csrf
+                                                        <div class="row">
+                                                        <div class="col-md-12">
+                                                                <div class="mb-1">
+                                                                    <label for="username">Category Type</label>
+                                                                    <div class="input-group">
+                                                                        <div class="input-group-prepend"></div>
+                                                                        <input type="text" class="form-control"
+                                                                            name="email" id="username" value=""
+                                                                            placeholder="" required>
+                                                                        <div class="invalid-feedback"
+                                                                            style="width: 100%;">
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                           
+                                                        </div>
+                                                     
+
+                                                        <br>
+                                                        
+
+                                                        <!-- <h4 style="text-align:center">Contact Persons</h4> -->
+
+
+
+                                                        <div class="row">
+                                                            <div class="col-sm">
+
+                                                            </div>
+                                                            <div class="col-sm">
+
+                                                            </div>
+                                                            <div class="col-sm">
+                                                                <br>
+                                                                <button type="submit"
+                                                                    class="btn btn-primary float:right;"
+                                                                    Style="width:50%;">Save</button>
+                                                                <button type="button" class="btn btn-primary float:left"
+                                                                    Style="width:45%;"
+                                                                    data-dismiss="modal">Cancel</button>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
                     <div class="modal fade" id="editmed">
                         <div class="modal-dialog modal-xl">
                             <div class="modal-content">

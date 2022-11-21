@@ -45,6 +45,16 @@ class store extends Controller
         return view('Store & Inventory.re_order');
         
     }
+    public function edit_list_manage_categories()
+    {
+        return view('Store & Inventory.edit_manage_categories');
+        
+    }
+    public function edit_request_items()
+    {
+        return view('Store & Inventory.edit_request_item');
+        
+    }
 
 
 }
