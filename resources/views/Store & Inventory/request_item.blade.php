@@ -5,6 +5,7 @@
 <head>
     <style>
 
+
     </style>
 
 </head>
@@ -17,54 +18,70 @@
                 <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
                 <b><u>Client Registration</u></b></span> -->
                 {{-- heading --}}
-                <h4 id="hdtpa"><b>Manage Categories</b></h4>
+                <h4 id="hdtpa"><b>Item Request</b></h4>
                 <br>
             </div>
 
         </div>
-
         <div>
             <button type="button" class="btn btn-primary complaint_btn btn " data-toggle="modal"
-                data-target="#myModal">Add Product</button></a>
-            
-                <div class="header_wrap">
-                    <div class="num_rows">
-                        <div class="form-group">
-                            <!--		Show Numbers Of Rows 		-->
-                            <select class="form-control" aria-label="Page navigation example" name="state" id="maxRows">
+                data-target="#myModal">Request Item</button></a>
+            <!--filter-->
+            <div class="tb_search">
 
-                                <option value="5">5</option>
-                                <option value="10">10</option>
-                                <option value="15">15</option>
-                                <option value="20">20</option>
-                                <option value="50">50</option>
-                                <option value="70">70</option>
-                                <option value="100">100</option>
-                                <option value="5000">Show ALL Rows</option>
-                            </select>
+                <select name="town" id="search_input_all" onkeyup="FilterkeyWord_all_table()" class="form-control"
+                    style="width:100%;">
+                    <option>---select--- </option>
+                    <option>pen</option>
+                    <option>pencil</option>
+                    <option>Book</option>
+                </select>
 
-                        </div>
+            </div>
+            <br>
+
+            <!--filter end-->
+
+
+            <div class="header_wrap">
+                <div class="num_rows">
+                    <div class="form-group">
+                        <!--		Show Numbers Of Rows 		-->
+                        <select class="form-control" aria-label="Page navigation example" name="state" id="maxRows">
+
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                            <option value="70">70</option>
+                            <option value="100">100</option>
+                            <option value="5000">Show ALL Rows</option>
+                        </select>
+
                     </div>
-                    <div class="tb_search">
-                        <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()"
-                            placeholder="Search.." class="form-control">
-                    </div>
-               
+                </div>
+                <div class="tb_search">
+                    <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.."
+                        class="form-control">
+                </div>
+
 
 
 
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
                         <div class="table-responsive">
                             <table class="table table-striped table-class" id="table-id">
 
                                 <thead>
                                     <tr>
-                                        <th class="text-center">Item Name</th>
-                                        <th class="text-center">Item Type</th>
-                                        <th class="text-center">Quantity In Stock</th>
-                                        <th class="text-center">Unit</th>
-                                        <th class="text-center">Unit Price</th>
+                                        <th class="text-center">Request Date</th>
+                                        <th class="text-center">User Request</th>
+                                        <th class="text-center">Item Rerusted</th>
+                                        <th class="text-center">Quantity</th>
+                                        <th class="text-center">Status</th>
                                         <th class="text-center">Action</th>
 
                                     </tr>
@@ -73,11 +90,11 @@
 
 
                                     <tr id="data">
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td scope="row" class="text-center"></td>
+                                        <td scope="row" class="text-center"></td>
+                                        <td scope="row" class="text-center"></td>
+                                        <td scope="row" class="text-center"></td>
+                                        <td scope="row" class="text-center"></td>
                                         <td  scope="row"class="text-center">
                         <a href=""><i  style="  color:rgb(13, 1, 56);"class="fa fa-edit" ></i>
 
@@ -113,7 +130,7 @@
 
                                     <!-- Modal Header -->
                                     <div class="modal-header">
-                                        <h2 class="text-center"><b>Add Product</b></h2>
+                                        <h2 class="text-center"><b>Add Request</b></h2>
 
                                     </div>
 
@@ -127,10 +144,10 @@
                                                         <div class="row">
                                                             <div class="col-md-4">
                                                                 <div class="mb-1">
-                                                                    <label for="username">Item Name</label>
+                                                                    <label for="username">Date</label>
                                                                     <div class="input-group">
                                                                         <div class="input-group-prepend"></div>
-                                                                        <input type="text" class="form-control"
+                                                                        <input type="date" class="form-control"
                                                                             name="email" id="username" value=""
                                                                             placeholder="" required>
                                                                         <div class="invalid-feedback"
@@ -142,17 +159,39 @@
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <div class="mb-1">
-                                                                    <label for="username">Item Type</label>
+                                                                    <label for="username">User Request</label>
                                                                     <div class="input-group">
                                                                         <div class="input-group-prepend"></div>
 
                                                                         <select name="town" id="username"
                                                                             style="width:100%;">
                                                                             <option>---select--- </option>
-                                                                            <option>Book </option>
-                                                                            <option>Pen</option>
-                                                                            <option>Pencil</option>
-                                                                            <option>pin</option>
+                                                                            <option>name 1 </option>
+                                                                            <option>name 2</option>
+                                                                            <option>name 3</option>
+
+
+                                                                        </select>
+                                                                        <div class="invalid-feedback"
+                                                                            style="width: 100%;">
+                                                                            Town is required.
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="mb-1">
+                                                                    <label for="username">Branch</label>
+                                                                    <div class="input-group">
+                                                                        <div class="input-group-prepend"></div>
+
+                                                                        <select name="town" id="username"
+                                                                            style="width:100%;">
+                                                                            <option>---select--- </option>
+                                                                            <option>name 1 </option>
+                                                                            <option>name 2</option>
+                                                                            <option>name 3</option>
 
 
                                                                         </select>
@@ -166,89 +205,117 @@
                                                             </div>
 
 
-                                                            <div class="col-md-4">
-                                                                <div class="mb-1">
-                                                                    <label for="username">Unit</label>
-                                                                    <div class="input-group">
-                                                                        <div class="input-group-prepend"></div>
-
-                                                                        <select name="town" id="username"
-                                                                            style="width:100%;">
-                                                                            <option>---select--- </option>
-                                                                            <option>Package</option>
-                                                                            <option>Paket</option>
-                                                                            <option>Kg</option>
-
-
-                                                                        </select>
-                                                                        <div class="invalid-feedback"
-                                                                            style="width: 100%;">
-                                                                            Town is required.
-                                                                        </div>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-
-                                                        <br>
-                                                        <div class="row">
-                                                            <div class="col-md-4">
-                                                                <div class="mb-1">
-                                                                    <label for="username">Quantity</label>
-                                                                    <div class="input-group">
-                                                                        <div class="input-group-prepend"></div>
-                                                                        <input type="text" class="form-control"
-                                                                            name="email" id="username" value=""
-                                                                            placeholder="" required>
-                                                                        <div class="invalid-feedback"
-                                                                            style="width: 100%;">
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-4">
-                                                                <div class="mb-1">
-                                                                    <label for="username">Unit Price</label>
-                                                                    <div class="input-group">
-                                                                        <div class="input-group-prepend"></div>
-                                                                        <input type="text" class="form-control"
-                                                                            name="email" id="username" value=""
-                                                                            placeholder="" required>
-                                                                        <div class="invalid-feedback"
-                                                                            style="width: 100%;">
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <div class="mb-1">
-                                                                    <label for="username">Total Price</label>
-                                                                    <div class="input-group">
-                                                                        <div class="input-group-prepend"></div>
-                                                                        <input type="text" class="form-control"
-                                                                            name="email" id="username" value=""
-                                                                            placeholder="" required>
-                                                                        <div class="invalid-feedback"
-                                                                            style="width: 100%;">
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
 
                                                         </div>
                                                         <br>
-                                                        
+                                                        <div>
+                                                            <h4 id="hdtpa"><b>Item </b></h4>
+                                                        </div>
+                                                        <br>
 
-                                                        <!-- <h4 style="text-align:center">Contact Persons</h4> -->
+                                                        <div class="table-responsive">
+                                                            <table class="table table-striped table-class"
+                                                                id="table-id">
+
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="text-center">Category</th>
+                                                                        <th class="text-center">Item Type</th>
+                                                                        <th class="text-center">Item Name</th>
+                                                                        <th class="text-center">Quantity</th>
 
 
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
 
+                                                                    <td scope="row" class="text-center">
+                                                                        <div class="mb-1">
+
+                                                                            <div class="input-group">
+                                                                                <div class="input-group-prepend"></div>
+
+                                                                                <select name="town" id="username"
+                                                                                    style="width:100%;">
+                                                                                    <option>---select--- </option>
+                                                                                    <option>name 1 </option>
+                                                                                    <option>name 2</option>
+                                                                                    <option>name 3</option>
+
+
+                                                                                </select>
+                                                                                <div class="invalid-feedback"
+                                                                                    style="width: 100%;">
+                                                                                    Town is required.
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+
+                                                                    <td scope="row" class="text-center">
+                                                                        <div class="mb-1">
+
+                                                                            <div class="input-group">
+                                                                                <div class="input-group-prepend"></div>
+
+                                                                                <select name="town" id="username"
+                                                                                    style="width:100%;">
+                                                                                    <option>---select--- </option>
+                                                                                    <option>name 1 </option>
+                                                                                    <option>name 2</option>
+                                                                                    <option>name 3</option>
+
+
+                                                                                </select>
+                                                                                <div class="invalid-feedback"
+                                                                                    style="width: 100%;">
+                                                                                    Town is required.
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td scope="row" class="text-center">
+
+
+                                                                        <div style="width: 100%" ;>
+                                                                            <div class="input-group-prepend"></div>
+                                                                            <input type="text" class="form-control"
+                                                                                name="text" id="username" value=""
+                                                                                placeholder="" required>
+                                                                            <div class="invalid-feedback"
+                                                                                style="width: 100%;">
+
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                    </td>
+
+                                                                    <td scope="row" class="text-center">
+                                                                        <div style="width: 100%" ;>
+                                                                            <div class="input-group-prepend"></div>
+                                                                            <input type="text" class="form-control"
+                                                                                name="text" id="username" value=""
+                                                                                placeholder="" required>
+                                                                            <div class="invalid-feedback"
+                                                                                style="width: 100%;">
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+
+                                                                    </tr>
+
+                                                                </tbody>
+
+                                                            </table>
+                                                        </div>
+                                                        <div>
+                                                            <button type="button" class="btn btn-primary float:left;"
+                                                                Style="width:20%;">Add</button>
+                                                        </div>
                                                         <div class="row">
                                                             <div class="col-sm">
 
@@ -260,7 +327,7 @@
                                                                 <br>
                                                                 <button type="submit"
                                                                     class="btn btn-primary float:right;"
-                                                                    Style="width:50%;">Save</button>
+                                                                    Style="width:50%;">Request</button>
                                                                 <button type="button" class="btn btn-primary float:left"
                                                                     Style="width:45%;"
                                                                     data-dismiss="modal">Cancel</button>
@@ -408,6 +475,10 @@
 
                 <!-- End delete confirmation message -->
             </div>
+
+
+
+            <!--filter-->
             <script>
             function myFunction() {
                 if (!confirm("Are you sure to delete this"))
