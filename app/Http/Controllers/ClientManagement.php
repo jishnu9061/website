@@ -103,10 +103,10 @@ class ClientManagement extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($individual_id)
+    public function show($id)
     {   
-        $client_individual = DB::table('cra_individual_client_details')->where('individual_id',$individual_id)->first();
-        return view('client-management.view-client',compact('client_individual','individual_id'));
+        $client_individual = DB::table('cra_individual_client_details')->where('id',$id)->first();
+        return view('client-management.view-client',compact('client_individual','id'));
     }
 
     /**

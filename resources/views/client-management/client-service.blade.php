@@ -113,7 +113,7 @@ color: #999;
                             <tr id="data" style="width:100%;">
                                 <td class="text-center">{{$list_service->branch_name}}</td>
                                 <td class="text-center" id="medicine_name_1">{{$list_service->client_name}}</td>
-                                <td class="text-center" id="medicine_name_1">{{$list_service->phone}}</td>
+                                <td class="text-center" id="medicine_name_1">{{$list_service->mobile}}</td>
 
                                 <td class="text-center" id="medicine_name_1">test1</td>
                                 <td class="text-center" id="medicine_name_1">test2</td>
