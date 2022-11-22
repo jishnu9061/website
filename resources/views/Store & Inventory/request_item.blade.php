@@ -31,7 +31,7 @@
 
                 <select name="town" id="search_input_all" onkeyup="FilterkeyWord_all_table()" class="form-control"
                     style="width:100%;">
-                    <option>---select--- </option>
+                    <option value="" disabled selected hidden>Category<option>
                     <option>pen</option>
                     <option>pencil</option>
                     <option>Book</option>
@@ -139,13 +139,14 @@
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-md-12 order-md-1">
-                                                    <form method="post" action="{{url('add-registration')}}" id="form">
+                                                    <form method="post" action="" id="form">
                                                         @csrf
                                                         <div class="row">
                                                             <div class="col-md-4">
                                                                 <div class="mb-1">
                                                                     <label for="username">Date</label>
                                                                     <div class="input-group">
+
                                                                         <div class="input-group-prepend"></div>
                                                                         <input type="date" class="form-control"
                                                                             name="email" id="username" value=""
@@ -358,7 +359,7 @@
                                 <!-- Modal body -->
                                 <div class="modal-body">
                                     <div class="container">
-                                        <form method="post" action="{{url('update_medicine')}}"
+                                        <form method="post" action=""
                                             enctype="multipart/form-data">
                                             @csrf
                                             <h4 class="text-center"><b>Medicine Details</b></h4><br>
