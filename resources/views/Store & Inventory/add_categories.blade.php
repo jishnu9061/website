@@ -137,7 +137,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="box_no" id="age">
+                                <input type="text" class="form-control" name="category_name" id="age">
                             </div>
                         </div>
                     </div>

@@ -34,7 +34,7 @@
                                                                     <div class="input-group">
                                                                         <div class="input-group-prepend"></div>
                                                                         <input type="date" class="form-control"
-                                                                            name="email" id="username" value=""
+                                                                            name="date" id="username" value=""
                                                                             placeholder="" required>
                                                                         <div class="invalid-feedback"
                                                                             style="width: 100%;">
@@ -49,7 +49,7 @@
                                                                     <div class="input-group">
                                                                         <div class="input-group-prepend"></div>
 
-                                                                        <select name="town" id="username"
+                                                                        <select name="user_request" id="username"
                                                                             style="width:100%;">
                                                                             <option>---select--- </option>
                                                                             <option>name 1 </option>
@@ -72,7 +72,7 @@
                                                                     <div class="input-group">
                                                                         <div class="input-group-prepend"></div>
 
-                                                                        <select name="town" id="username"
+                                                                        <select name="branch" id="username"
                                                                             style="width:100%;">
                                                                             <option>---select--- </option>
                                                                             <option>name 1 </option>
@@ -122,7 +122,7 @@
                                                                             <div class="input-group">
                                                                                 <div class="input-group-prepend"></div>
 
-                                                                                <select name="town" id="username"
+                                                                                <select name="category" id="username"
                                                                                     style="width:100%;">
                                                                                     <option>---select--- </option>
                                                                                     <option>name 1 </option>
@@ -146,7 +146,7 @@
                                                                             <div class="input-group">
                                                                                 <div class="input-group-prepend"></div>
 
-                                                                                <select name="town" id="username"
+                                                                                <select name="item_type" id="username"
                                                                                     style="width:100%;">
                                                                                     <option>---select--- </option>
                                                                                     <option>name 1 </option>
@@ -166,10 +166,10 @@
                                                                     <td scope="row" class="text-center">
 
 
-                                                                        <div style="width: 100%" ;>
+                                                                        <div style="width: 100%";>
                                                                             <div class="input-group-prepend"></div>
                                                                             <input type="text" class="form-control"
-                                                                                name="text" id="username" value=""
+                                                                                name="item_name" id="username" value=""
                                                                                 placeholder="" required>
                                                                             <div class="invalid-feedback"
                                                                                 style="width: 100%;">
@@ -181,10 +181,10 @@
                                                                     </td>
 
                                                                     <td scope="row" class="text-center">
-                                                                        <div style="width: 100%" ;>
+                                                                        <div style="width: 100%";>
                                                                             <div class="input-group-prepend"></div>
                                                                             <input type="text" class="form-control"
-                                                                                name="text" id="username" value=""
+                                                                                name="quantity" id="username" value=""
                                                                                 placeholder="" required>
                                                                             <div class="invalid-feedback"
                                                                                 style="width: 100%;">
@@ -200,10 +200,7 @@
                                                             </table>
                                                         </div>
                                                         <br>
-                                                        <div>
-                                                            <button type="button" class="btn btn-primary float:left;"
-                                                                Style="width:20%;">Add</button>
-                                                        </div>
+                                                       
                                                         <div class="row">
                                                             <div class="col-sm">
 
@@ -225,162 +222,8 @@
                                                 </form>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                        <!-- 		End of Container -->
-
-
-                        <div class="modal fade" id="myModal">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-
-                                    <!-- Modal Header -->
-
-                                    <div class="modal-header">
-                                        <h2 class="text-center"><b>Add Request</b></h2>
-
-                                    </div>
-
-                                    <!-- Modal body -->
-                                    <div class="modal-body">
-                                      
-
-                    <!-- The Modal -->
-                    <div class="modal fade" id="editmed">
-                        <div class="modal-dialog modal-xl">
-                            <div class="modal-content">
-
-                                <!-- Modal Header -->
-                                <div class="modal-header" style="background-color:#435ebe">
-                                    <h4 class="text-white">Edit Medicine</h4>
-
-                                </div>
-
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                    <div class="container">
-                                        <form method="post" action="{{url('update_medicine')}}"
-                                            enctype="multipart/form-data">
-                                            @csrf
-                                            <h4 class="text-center"><b>Medicine Details</b></h4><br>
-                                            <div class="row">
-                                                <div class="col-sm">
-                                                    <label for="">Brand Name</label>
-
-                                                </div>
-                                                <div class="col-sm">
-                                                    <label for="">Medicine Name</label>
-                                                    <input type="text" id="edit_medicine_name" name="medicine_name"
-                                                        class="form-control" required><br>
-                                                </div>
-                                                <div class="col-sm">
-                                                    <div class="col-sm">
-                                                        <label for="">Medicine Group</label>
-
-                                                    </div>
-
-                                                </div>
-                                                <div class="col-sm">
-                                                    <label for="">Medicine Category Name</label>
-
-
-                                                </div>
-
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm">
-                                                    <label for="">Generic name</label>
-
-                                                </div>
-                                                <div class="col-sm">
-                                                    <label>Manufacturer Name</label>
-
-                                                </div>
-                                                <div class="col-sm">
-                                                    <label>Supplier Name</label>
-
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm">
-                                                    <label for="">Minimum Level</label>
-                                                    <input type="text" id="edit_minimum_level" name="minimum_level"
-                                                        class="form-control"><br>
-                                                </div>
-                                                <div class="col-sm">
-                                                    <label>Reorder Level</label>
-                                                    <input type="text" name="reorder" id="edit_reorder"
-                                                        class="form-control" placeholder=""><br>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm">
-                                                    <label class="text-color:white;">Unit/Packing</Label>
-                                                    <input type="text" name="unit_packing" id="edit_unit_packing"
-                                                        class="form-control" placeholder=""><br>
-                                                </div>
-                                                <div class="col-sm">
-                                                    <label>Upload Medicine Image</label>
-                                                    <input type="file" name="editimage" id="edit_image"
-                                                        class="form-control" placeholder="Image"><br>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm">
-                                                    <label>Medicine Composition</label>
-                                                    <textarea class="form-control" id="edit_medicine_details1"
-                                                        name="medicine_detailss" rows="3" placeholder=""></textarea><br>
-                                                </div>
-                                                <div class="col-sm">
-                                                    <label>Notes</label>
-                                                    <textarea class="form-control" id="edit_medicine_note"
-                                                        name="medicine_note" rows="3" placeholder=""></textarea><br>
-                                                </div>
-                                            </div>
-                                            <br>
-
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <input type="hidden" class="form-control" id="edit_id"
-                                                        name="method_id">
-
-                                                </div>
-                                            </div>
-
-
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-primary text-white"
-                                                    style="width:15%;background-color:#435ebe"
-                                                    data-bs-dismiss="modal">Close</button>
-                                                <button type="submit" class="btn btn-primary"
-                                                    style="background-color:#435ebe;width:15%;">Update</button>
-                                            </div>
-                                    </div>
-                                    <div class="container">
-
-                                    </div>
-                                </div>
-
-                                </form>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <br>
-                <!-- Supplier modal Edit End -->
-
-                <!-- Delete  confirmation Message -->
-
-                <!-- End delete confirmation message -->
-            </div>
+                             
+         
 
 
 

@@ -30,7 +30,7 @@
                                     <label for="username">Item Name</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="email" id="username" value=""
+                                        <input type="text" class="form-control" name="item_name" id="username" value=""
                                             placeholder="" required>
                                         <div class="invalid-feedback" style="width: 100%;">
 
@@ -44,7 +44,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend"></div>
 
-                                        <select name="town" id="username" style="width:100%;">
+                                        <select name="category" id="username" style="width:100%;">
                                             <option>---select--- </option>
                                             <option>stationery </option>
                                             <option>furniture</option>
@@ -66,7 +66,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend"></div>
 
-                                        <select name="town" id="username" style="width:100%;">
+                                        <select name="item_type" id="username" style="width:100%;">
                                             <option>---select--- </option>
                                             <option>Book </option>
                                             <option>Pen</option>
@@ -97,7 +97,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend"></div>
 
-                                        <select name="town" id="username" style="width:100%;">
+                                        <select name="unit" id="username" style="width:100%;">
                                             <option>---select--- </option>
                                             <option>Package</option>
                                             <option>Paket</option>
@@ -131,7 +131,7 @@
                                     <label for="username">Unit Price</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="unit" id="username" value=""
+                                        <input type="text" class="form-control" name="unit_price" id="username" value=""
                                             placeholder="" required>
                                         <div class="invalid-feedback" style="width: 100%;">
 

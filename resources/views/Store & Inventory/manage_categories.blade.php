@@ -10,23 +10,24 @@
 </head>
 
 <body>
-    
+    <div class="container">
         <!-- <h2 style="color: #070344;  text-align:center;"><b>Customer Registration</b></h2> -->
-        
-            
+        <div>
+            <div>
                 <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
                 <b><u>Client Registration</u></b></span> -->
                 {{-- heading --}}
-                <div class="container">
                 <h4 id="hdtpa"><b>Manage Categories</b></h4>
                 <br>
-            
+            </div>
 
-       
+        </div>
 
         <div>
             <button type="button" class="btn btn-primary complaint_btn btn " data-toggle="modal"
                 data-target="#myModal">Add Product</button></a>
+
+               <a href="add_categories"> <button type="button" class="btn btn-primary complaint_btn btn ">Category</button></a>
             
                 <div class="header_wrap">
                     <div class="num_rows">
@@ -50,7 +51,7 @@
                         <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()"
                             placeholder="Search.." class="form-control">
                     </div>
-                </div>
+               
 
 
 
@@ -61,10 +62,11 @@
 
                                 <thead>
                                     <tr>
-                                        <th class="text-center">Product Name</th>
-                                        <th class="text-center">Product Type</th>
-                                        <th class="text-center">Total Quantity</th>
-                                        <th class="text-center">Unit</th>
+                                        <th class="text-center">Item Name</th>
+                                        <th class="text-center">Item Type</th>
+                                        <th class="text-center">Quantity In Stock</th>
+                                        <th class="text-center">Category</th>
+                                         <th class="text-center">Unit</th>
                                         <th class="text-center">Unit Price</th>
                                         <th class="text-center">Action</th>
 
@@ -130,11 +132,11 @@
                                                         <div class="row">
                                                             <div class="col-md-4">
                                                                 <div class="mb-1">
-                                                                    <label for="username">Product Name</label>
+                                                                    <label for="username">Item Name</label>
                                                                     <div class="input-group">
                                                                         <div class="input-group-prepend"></div>
                                                                         <input type="text" class="form-control"
-                                                                            name="email" id="username" value=""
+                                                                            name="item_name" id="username" value=""
                                                                             placeholder="" required>
                                                                         <div class="invalid-feedback"
                                                                             style="width: 100%;">
@@ -145,11 +147,11 @@
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <div class="mb-1">
-                                                                    <label for="username">Product Type</label>
+                                                                    <label for="username">Category</label>
                                                                     <div class="input-group">
                                                                         <div class="input-group-prepend"></div>
 
-                                                                        <select name="town" id="username"
+                                                                        <select name="category" id="username"
                                                                             style="width:100%;">
                                                                             <option>---select--- </option>
                                                                             <option>stationery </option>
@@ -173,12 +175,15 @@
                                                                     <div class="input-group">
                                                                         <div class="input-group-prepend"></div>
 
-                                                                        <select name="town" id="username"
+                                                                        <select name="item_type" id="username"
                                                                             style="width:100%;">
                                                                             <option>---select--- </option>
-                                                                            <option>Assest </option>
-                                                                            <option>Stationary</option>
-                                                                           
+                                                                            <option>Book </option>
+                                                                            <option>Pen</option>
+                                                                            <option>Pencil</option>
+                                                                            <option>pin</option>
+
+
                                                                         </select>
                                                                         <div class="invalid-feedback"
                                                                             style="width: 100%;">
@@ -203,11 +208,12 @@
                                                                     <div class="input-group">
                                                                         <div class="input-group-prepend"></div>
 
-                                                                        <select name="town" id="username"
+                                                                        <select name="unit" id="username"
                                                                             style="width:100%;">
                                                                             <option>---select--- </option>
-                                                                            <option>Dozen</option>
-                                                                            <option>Boxes</option>
+                                                                            <option>Package</option>
+                                                                            <option>Paket</option>
+                                                                            <option>Kg</option>
 
 
                                                                         </select>
@@ -241,7 +247,7 @@
                                                                     <div class="input-group">
                                                                         <div class="input-group-prepend"></div>
                                                                         <input type="text" class="form-control"
-                                                                            name="unit" id="username" value=""
+                                                                            name="unit_price" id="username" value=""
                                                                             placeholder="" required>
                                                                         <div class="invalid-feedback"
                                                                             style="width: 100%;">

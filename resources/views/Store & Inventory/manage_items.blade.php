@@ -128,7 +128,7 @@
                                                                     <div class="input-group">
                                                                         <div class="input-group-prepend"></div>
                                                                         <input type="text" class="form-control"
-                                                                            name="email" id="username" value=""
+                                                                            name="product_name" id="username" value=""
                                                                             placeholder="" required>
                                                                         <div class="invalid-feedback"
                                                                             style="width: 100%;">
@@ -143,7 +143,7 @@
                                                                     <div class="input-group">
                                                                         <div class="input-group-prepend"></div>
 
-                                                                        <select name="town" id="username"
+                                                                        <select name="product_type" id="username"
                                                                             style="width:100%;">
                                                                             <option>---select--- </option>
                                                                             <option>Book </option>
@@ -169,7 +169,7 @@
                                                                     <div class="input-group">
                                                                         <div class="input-group-prepend"></div>
 
-                                                                        <select name="town" id="username"
+                                                                        <select name="unit" id="username"
                                                                             style="width:100%;">
                                                                             <option>---select--- </option>
                                                                             <option>Package</option>
@@ -197,7 +197,7 @@
                                                                     <div class="input-group">
                                                                         <div class="input-group-prepend"></div>
                                                                         <input type="text" class="form-control"
-                                                                            name="email" id="username" value=""
+                                                                            name="quantity" id="username" value=""
                                                                             placeholder="" required>
                                                                         <div class="invalid-feedback"
                                                                             style="width: 100%;">
@@ -213,7 +213,7 @@
                                                                     <div class="input-group">
                                                                         <div class="input-group-prepend"></div>
                                                                         <input type="text" class="form-control"
-                                                                            name="email" id="username" value=""
+                                                                            name="unit_price" id="username" value=""
                                                                             placeholder="" required>
                                                                         <div class="invalid-feedback"
                                                                             style="width: 100%;">
@@ -228,7 +228,7 @@
                                                                     <div class="input-group">
                                                                         <div class="input-group-prepend"></div>
                                                                         <input type="text" class="form-control"
-                                                                            name="email" id="username" value=""
+                                                                            name="total_price" id="username" value=""
                                                                             placeholder="" required>
                                                                         <div class="invalid-feedback"
                                                                             style="width: 100%;">
