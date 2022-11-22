@@ -43,7 +43,7 @@
                         <div class="row" >
                         <div class="col-sm">
                             <br>
-                           <a href="{{ url('view_item_movement') }}"> <button type="button" class="btn btn-primary float:right" Style="width:10%;">View</button></a>
+                           <a href="{{ url('') }}"> <button type="button" class="btn btn-primary float:right" Style="width:10%;">View</button></a>
                             <button type="button"class="btn btn-primary float:right" Style="width:10%;">Cancel</button>
                         </div>
                         </div>
