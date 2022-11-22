@@ -11,6 +11,15 @@ class PurchaseManagement extends Controller
     {
         return view('purchase_management.purchase_index');
     }
+    public function purchase_order()
+    {
+        return view('purchase_management.purchase_order');
+    }
+    public function purchase_order_report()
+    {
+        return view('purchase_management.purchase_order_report');
+    }
+
 
 }
 

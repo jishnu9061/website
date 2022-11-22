@@ -1358,6 +1358,8 @@ Route::any('edit_categories','store@list_edit_categories')->name('edit_categorie
 //Purchase Management
 
 Route::any('purchase_index','PurchaseManagement@index_purchase')->name('purchase_index');
+Route::any('purchase_order','PurchaseManagement@purchase_order')->name('purchase_order');
+Route::any('purchase_order_report','PurchaseManagement@purchase_order_report')->name('purchase_order_report');
 
 
 
