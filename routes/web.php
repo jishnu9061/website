@@ -1360,6 +1360,9 @@ Route::any('edit_categories','store@list_edit_categories')->name('edit_categorie
 Route::any('purchase_index','PurchaseManagement@index_purchase')->name('purchase_index');
 Route::any('purchase_order','PurchaseManagement@purchase_order')->name('purchase_order');
 Route::any('purchase_order_report','PurchaseManagement@purchase_order_report')->name('purchase_order_report');
+Route::any('vendor_performance_report','PurchaseManagement@vendor_performance_report')->name('vendor_performance_report');
+
+Route::any('cost_variation_report','PurchaseManagement@cost_variation_report')->name('cost_variation_report');
 
 
 
