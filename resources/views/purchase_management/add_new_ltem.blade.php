@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row align-items-start">
               <div class="col">
-                <div class="mb-3">
+                <div class="mb-3" >
                     <label class="form-label">Item No</label>
                     <input type="text" class="form-control">
                     </div>
