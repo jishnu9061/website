@@ -5,7 +5,7 @@
 {{-- heading --}}
              <h4 id="hdtpa"><b>Stock List Report</b></h4>
 
-<br>
+
 <div class="header_wrap">
     <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -30,11 +30,11 @@
 
 
              <div class="table-responsive">
-        <table class="table table-striped table-class" id="table-id">
+        <table class="table table-striped table-class text-center " id="table-id">
       <thead>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">Item Name</th>
+          <!-- <th scope="col">#</th> -->
+          <th colspan="2" class="table-active">Item Name</th>
           <th colspan="2" class="table-active">Opening Stock</th>
           <th colspan="2" class="table-active">Purchase</th>
           <th colspan="2" class="table-active">Balance</th>

@@ -1341,6 +1341,8 @@ Route::any('stock_list_report','store@stock_list_report')->name('stock_list_repo
 //Purchase Management
 
 Route::any('purchase_index','PurchaseManagement@index_purchase')->name('purchase_index');
+Route::any('purchase_order','PurchaseManagement@purchase_order')->name('purchase_order');
+Route::any('purchase_order_report','PurchaseManagement@purchase_order_report')->name('purchase_order_report');
 
 
 

@@ -16,9 +16,10 @@
 
 
 {{-- heading --}}
+<div class="container">
    <h4 id="hdtpa"><b>Loans</b></h4>
    <br>
-   <br>
+   
 
 <form method="post" action="{{url('addloan')}}">
     @csrf
@@ -41,15 +42,15 @@
                                          <input type="text" class="form-control" name="term" placeholder="" required>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-3" style="margin-top:3%">
                                         <div class="form-group mb-3">
-                                         <button type="submit"  class="btn btn-block btn-primary" style="margin-top:24px;">Add</button>
+                                         <button type="submit"  class="btn btn-primary" >Add</button>
                                         </div>
                                     </div>
                         </div>
 
                         
-                                        <div class="container">
+                                        
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -70,13 +71,13 @@
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+    
 
 </form>
  <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
             <thead>
-                <tr>
+                <tr class="text-center">
                     <th>
                         Employee Id
                     </th>
@@ -107,7 +108,7 @@
             </thead>
             <tbody>
             @foreach($loans as $loan)
-                <tr>
+                <tr class="text-center">
                     <td>{{$loan->uniqueid}}</td>
                     <td>{{$loan->totalamount}}</td>
                     <td>{{$loan->amountpaid}}</td>
@@ -119,7 +120,9 @@
                     <form method="post" action="{{url('loandelete'.$loan->id)}}">
 					@csrf
 					<input type="hidden" name="delete">
-					<td><button type="submit" onclick="return confirm('Are you sure?')" class="fa fa-trash"></button></td>
+                    
+					<td><a type="submit" onclick="return confirm('Are you sure?');"href="{{url('loandelete'.$loan->id)}}">
+                    <i  style=" color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></a></td>
 					</form>
                     
                 </tr>
