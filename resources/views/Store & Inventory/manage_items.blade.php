@@ -24,11 +24,6 @@
 
         <div>
           
-<<<<<<< Updated upstream
-          
-=======
-            
->>>>>>> Stashed changes
                 <div class="header_wrap">
                     <div class="num_rows">
                         <div class="form-group">
