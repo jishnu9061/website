@@ -10,22 +10,25 @@
 </head>
 
 <body>
-    <div class="container">
+    
         <!-- <h2 style="color: #070344;  text-align:center;"><b>Customer Registration</b></h2> -->
-        <div>
-            <div>
+        
                 <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
                 <b><u>Client Registration</u></b></span> -->
                 {{-- heading --}}
+                <div class="container">
                 <h4 id="hdtpa"><b>Manage Items</b></h4>
-                <br>
-            </div>
+                
 
-        </div>
+        
 
         <div>
           
+<<<<<<< Updated upstream
           
+=======
+            
+>>>>>>> Stashed changes
                 <div class="header_wrap">
                     <div class="num_rows">
                         <div class="form-group">

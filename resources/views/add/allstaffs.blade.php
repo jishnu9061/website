@@ -76,7 +76,7 @@
     <div class="table-responsive">
         <table class="table table-striped table-class" id="table-id">
             <thead>
-                <tr>
+                <tr class="text-center">
                     <!-- <th>Sl No</th> -->
                     <th>User Id</th>
                     <th>Name</th>
@@ -88,7 +88,7 @@
             </thead>
             <tbody>
                 @foreach ($allusers as $alluser)
-                    <tr>
+                    <tr class="text-center">
                         <input id="t_id" type="hidden" value="{{ $alluser->id }}">
                         <td>{{ $alluser->uniqueid }}</td>
                         <td>{{ $alluser->name }}</td>

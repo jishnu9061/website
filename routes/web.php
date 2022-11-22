@@ -1355,6 +1355,8 @@ Route::any('edit_request_item','store@edit_request_items')->name('edit_request_i
 //Purchase Management
 
 Route::any('purchase_index','PurchaseManagement@index_purchase')->name('purchase_index');
+Route::any('purchase_order','PurchaseManagement@purchase_order')->name('purchase_order');
+Route::any('purchase_order_report','PurchaseManagement@purchase_order_report')->name('purchase_order_report');
 
 
 
