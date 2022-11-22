@@ -27,8 +27,7 @@
             <button type="button" class="btn btn-primary complaint_btn btn " data-toggle="modal"
                 data-target="#myModal">Add Product</button></a>
 
-                <button type="button" class="btn btn-primary complaint_btn btn " data-toggle="modal"
-                data-target="#myModal1">Add Category</button></a>
+               <a href="add_categories"> <button type="button" class="btn btn-primary complaint_btn btn ">Category</button></a>
             
                 <div class="header_wrap">
                     <div class="num_rows">
@@ -128,7 +127,7 @@
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-md-12 order-md-1">
-                                                    <form method="post" action="{{url('add-registration')}}" id="form">
+                                                    <form method="post" action="" id="form">
                                                         @csrf
                                                         <div class="row">
                                                             <div class="col-md-4">
@@ -137,7 +136,7 @@
                                                                     <div class="input-group">
                                                                         <div class="input-group-prepend"></div>
                                                                         <input type="text" class="form-control"
-                                                                            name="email" id="username" value=""
+                                                                            name="name" id="username" value=""
                                                                             placeholder="" required>
                                                                         <div class="invalid-feedback"
                                                                             style="width: 100%;">
@@ -318,7 +317,7 @@
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-md-12 order-md-1">
-                                                    <form method="post" action="{{url('add-registration')}}" id="form">
+                                                    <form method="post" action="{{url('')}}" id="form">
                                                         @csrf
                                                         <div class="row">
                                                         <div class="col-md-12">

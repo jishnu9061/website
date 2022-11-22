@@ -25,9 +25,9 @@
         <!--filter-->
         <div class="tb_search">
 
-            <select name="town" id="search_input_all" onkeyup="FilterkeyWord_all_table()" class="form-control"
+            <select name="town"  id="search_input_all" onkeyup="FilterkeyWord_all_table()" class="form-control"
                 style="width:100%;">
-                <option>---select--- </option>
+                <option value="" disabled selected hidden>Category<option>
                 <option>pen</option>
                 <option>pencil</option>
                 <option>Book</option>

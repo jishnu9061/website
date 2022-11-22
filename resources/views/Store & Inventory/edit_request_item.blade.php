@@ -94,11 +94,12 @@
 
                                                         </div>
                                                         <br>
+                                                        <br>
                                                         <div>
                                                             <h4 id="hdtpa"><b>Item </b></h4>
                                                         </div>
                                                         <br>
-
+                                                        <br>
                                                         <div class="table-responsive">
                                                             <table class="table table-striped table-class"
                                                                 id="table-id">
