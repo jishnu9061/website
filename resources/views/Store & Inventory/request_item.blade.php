@@ -125,7 +125,7 @@
 
 
                         <div class="modal fade" id="myModal">
-                            <div class="modal-dialog modal-lg">
+                        <div class="modal-dialog modal-xl">
                                 <div class="modal-content">
 
                                     <!-- Modal Header -->
@@ -149,7 +149,7 @@
 
                                                                         <div class="input-group-prepend"></div>
                                                                         <input type="date" class="form-control"
-                                                                            name="email" id="username" value=""
+                                                                            name="date" id="username" value=""
                                                                             placeholder="" required>
                                                                         <div class="invalid-feedback"
                                                                             style="width: 100%;">
@@ -164,7 +164,7 @@
                                                                     <div class="input-group">
                                                                         <div class="input-group-prepend"></div>
 
-                                                                        <select name="town" id="username"
+                                                                        <select name="user_request" id="username"
                                                                             style="width:100%;">
                                                                             <option>---select--- </option>
                                                                             <option>name 1 </option>
@@ -187,7 +187,7 @@
                                                                     <div class="input-group">
                                                                         <div class="input-group-prepend"></div>
 
-                                                                        <select name="town" id="username"
+                                                                        <select name="branch" id="username"
                                                                             style="width:100%;">
                                                                             <option>---select--- </option>
                                                                             <option>name 1 </option>
@@ -236,7 +236,7 @@
                                                                             <div class="input-group">
                                                                                 <div class="input-group-prepend"></div>
 
-                                                                                <select name="town" id="username"
+                                                                                <select name="category" id="username"
                                                                                     style="width:100%;">
                                                                                     <option>---select--- </option>
                                                                                     <option>name 1 </option>
@@ -260,7 +260,7 @@
                                                                             <div class="input-group">
                                                                                 <div class="input-group-prepend"></div>
 
-                                                                                <select name="town" id="username"
+                                                                                <select name="item_type" id="username"
                                                                                     style="width:100%;">
                                                                                     <option>---select--- </option>
                                                                                     <option>name 1 </option>
@@ -283,7 +283,7 @@
                                                                         <div style="width: 100%" ;>
                                                                             <div class="input-group-prepend"></div>
                                                                             <input type="text" class="form-control"
-                                                                                name="text" id="username" value=""
+                                                                                name="item_name" id="username" value=""
                                                                                 placeholder="" required>
                                                                             <div class="invalid-feedback"
                                                                                 style="width: 100%;">
@@ -298,7 +298,7 @@
                                                                         <div style="width: 100%" ;>
                                                                             <div class="input-group-prepend"></div>
                                                                             <input type="text" class="form-control"
-                                                                                name="text" id="username" value=""
+                                                                                name="quantity" id="username" value=""
                                                                                 placeholder="" required>
                                                                             <div class="invalid-feedback"
                                                                                 style="width: 100%;">
@@ -313,10 +313,7 @@
 
                                                             </table>
                                                         </div>
-                                                        <div>
-                                                            <button type="button" class="btn btn-primary float:left;"
-                                                                Style="width:20%;">Add</button>
-                                                        </div>
+                                                       
                                                         <div class="row">
                                                             <div class="col-sm">
 

@@ -23,7 +23,7 @@
                                 <div class="input-group-prepend" >
 
                                 </div>
-                                <select name="file" id="cars">
+                                <select name="item" id="cars">
                                 <option>All item</option>
                                
                                     <option>item 1</option>
@@ -39,17 +39,23 @@
 
                         </div>
                         <br>
-                        <div class="container">
-                        <div class="row" >
-                        <div class="col-sm">
-                            <br>
-                           <a href="{{ url('') }}"> <button type="button" class="btn btn-primary float:right" Style="width:10%;">View</button></a>
-                            <button type="button"class="btn btn-primary float:right" Style="width:10%;">Cancel</button>
-                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+
+                            </div>
+                            <div class="col-sm">
+
+                            </div>
+                            <div class="col-sm">
+                                <br>
+                                <a href="{{ url('') }}"> <button type="button" class="btn btn-primary float:right;"
+                                    Style="width:50%;">View</button></a>
+                                <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                                    data-dismiss="modal">Cancel</button>
+                            </div>
                         </div>
 
-                    </div>
-                    </div>
+</div>
 
 
 
