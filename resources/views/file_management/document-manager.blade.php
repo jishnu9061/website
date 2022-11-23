@@ -72,11 +72,12 @@
                     </thead>
 
                     <tbody>
-
+                    @foreach($new_document as $document)
                         <tr id="data">
+                      
 
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center"> <img src="{{asset('/image/'.$document->document_upload)}}" width="80px" height="50px" alt="image"></td>
+                            <td scope="row" class="text-center"> <img src="{{asset('/image/'.$document->folder_upload)}}" width="80px" height="50px" alt="image"></td>
                           
                             <td  scope="row"class="text-center">
                         <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
@@ -84,7 +85,7 @@
                            </td>
                         </tr>
 
-
+                        @endforeach
 
                     </tbody>
 
