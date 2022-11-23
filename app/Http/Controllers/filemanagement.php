@@ -185,12 +185,31 @@ class filemanagement extends Controller
         return redirect('/file-archive');
     }
 
-    public function editboxno()
+    public function editboxno($id)
     {
-
+        $edit =DB::table('cra_add_box')->where('id',$id)->first();
+        return view('file_management.edit-box-no',compact('edit','id'));
         
-        return view('file_management.edit-box-no');
+        // return view('file_management.edit-box-no');
     }
+
+    public function updatebox(Request $request)
+    {
+        $id=$request['id'];
+        $Box_type=$request['box_type'];
+        $Box_number=$request['box_no'];
+
+        DB::table('cra_add_box')->where('id',$id)->update([
+            'type' =>  $Box_type,
+            'number' =>  $Box_number,
+
+        ]);
+        
+        return redirect('/file-archive');
+    }
+
+
+    
     //manage files
 
     //file progress
@@ -779,6 +798,7 @@ class filemanagement extends Controller
         ->select('*')  
         ->leftjoin('cra_add_file_progress','cra_add_file_progress.id','=','cra_add_event.id')
        ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_event.id')
+       
     //    ->where('cra_add_event.id',$id)
          ->get();    
 

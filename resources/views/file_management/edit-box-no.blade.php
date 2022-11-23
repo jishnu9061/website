@@ -29,8 +29,9 @@
 
         <div class="col-md-12 order-md-1">
 
-            <form method="post" action="" id="form">
+            <form method="post" action="{{url('update-box')}}" id="form">
                 @csrf
+                <input type="hidden" value="{{$id}}" name="id">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
@@ -40,8 +41,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="country" id="cars">
-                                    <option value="volvo"></option>
+                                <select name="box_type" id="cars">
+                                    <option>{{ $edit->type}}</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -57,7 +58,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="incorporation" id="age">
+                                <input type="text" class="form-control" name="box_no" value="{{ $edit->number}}" id="age">
                             </div>
                         </div>
                     </div>
