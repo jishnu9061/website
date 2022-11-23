@@ -71,11 +71,12 @@
                                             <!-- <td scope="row">{{$list->id}}</td> -->
                                             <td scope="row">{{$list->id}}</td>
                                             <td scope="row">{{$list->Client_name}}</td>
-                                            <td scope="row">{{$list->file_name}}</td>
-                                            <td scope="row">{{$list->open_date}}</td>
-                                            <!-- <td scope="row"></td>
-                                            <td scope="row"></td> -->
-                                            <td scope="row">{{$list->close_date}}</td>
+                                            <td scope="row">{{$list->File_name}}</td>
+                                            <td scope="row">{{$list->opening_date}}</td>
+                                            <td scope="row">{{$list->responsible_advocate}}</td>
+                                            <td scope="row">{{$list->recent_progress}}</td>
+                                            <td scope="row">{{$list->closing_date}}</td>
+
                                             <td scope="row">{{$list->amount}}</td>
                                             <td scope="row"></td>
                                             <td scope="row"><a href="{{url('view-list',$list->id)}}"><i style="color:black;" class="fa fa-eye"
