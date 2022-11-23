@@ -3,7 +3,7 @@
 
                 
     <h4 id="hdtpa"><b>File List</b></h4>
-    <br><br>
+    
             </div>
             <div>
                 <!-- <div class="btn btn-primary"
@@ -38,7 +38,7 @@
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Filter
                   </button> -->
                 </div>
-                {{-- <a href="{{('add-corporate')}}"><button class="btn btn-primary">Add Corporate</button></a> --}}
+               
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">New
                   File</button>
                 <br><br>
