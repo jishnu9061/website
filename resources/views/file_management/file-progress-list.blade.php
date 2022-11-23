@@ -160,7 +160,7 @@
                                     <!-- <th class="text-center">*</th> -->
                                     <!-- <th class="text-center">Action <br>Type</th> -->
                                     <th class="text-center">Date</th>
-                                    <!-- <th class="text-center">Client</th> -->
+                                    <th class="text-center">Client</th> 
                                     <th class="text-center">File Name</th>
                                     <th class="text-center">Description</th>
                                     <th class="text-center">Time Taken</th>
@@ -182,7 +182,7 @@
                                     <td scope="row" class="text-center">{{$list->action_type}}</td> -->
                                     <td scope="row" class="text-center">{{$list->progress_date}}</td>
 
-                                    <td scope="row" class="text-center">{{$list->client_name}}</td>
+                                    <td scope="row" class="text-center">{{$list->Client_name}}</td>
 
                                     <!-- <td scope="row" class="text-center">{{$list->Client_name}}</td> -->
 
@@ -191,6 +191,7 @@
                                     <td scope="row" class="text-center">{{$list->time_taken_hours}}</td>
                                     <td scope="row" class="text-center"></td>
                                     <td scope="row" class="text-center">{{$list->next_action}}</td>
+                                    <td scope="row" class="text-center"></td>
                                     <!-- <td scope="row" class="text-center">{{$list->activity}}</td> -->
                                     <!-- <td scope="row" class="text-center"><input type="checkbox" name="" id=""></td> -->
                                     <td scope="row" class="text-center">

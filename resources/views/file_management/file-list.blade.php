@@ -21,8 +21,8 @@
              </div>
    <br>
 
-                <div id="mydatatable_filter" class="dataTables_filter">
-                    <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
+                <div id="" class="">
+                    <!-- <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label> -->
                     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-1">Columns
                   </button>
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalb">Filter
@@ -41,11 +41,35 @@
                
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">New
                   File</button>
-                <br><br>
+               
+
+                <div class="header_wrap">
+                <div class="num_rows">
+                    <div class="form-group">
+                        <!--		Show Numbers Of Rows 		-->
+                        <select class="form-control" aria-label="Page navigation example" name="state" id="maxRows">
+
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                            <option value="70">70</option>
+                            <option value="100">100</option>
+                            <option value="5000">Show ALL Rows</option>
+                        </select>
+
+                    </div>
+                </div>
+                <div class="tb_search">
+                    <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.."
+                        class="form-control">
+                </div>
+         
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <div class="table-responsive">
-                            <table class="table table-bordered" id="new-item">
+                            <table class="table table-bordered" id="">
                                 <thead>
                                     <tr>
                                         <!-- <th class="text-center"> <input type="checkbox"></th> -->
@@ -66,7 +90,7 @@
                                 <tbody>
                                 @foreach($file_list as $list)
                                     
-                                        <tr id="data" class="text-center">
+                                        <tr id="" class="text-center">
                                           
                                             <!-- <td scope="row">{{$list->id}}</td> -->
                                             <td scope="row">{{$list->id}}</td>
@@ -91,7 +115,7 @@
                                 </tbody>
                             </table>
                             <br>
-                            <nav aria-label="Page navigation example">
+                            <!-- <nav aria-label="Page navigation example">
                                 <ul class="pagination">
                                     <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Previous</a></li>
                                     <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">1</a></li>
@@ -99,7 +123,7 @@
                                     <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">3</a></li>
                                     <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Next</a></li>
                                 </ul>
-                            </nav>
+                            </nav> -->
                         </div>
                         <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
@@ -1567,7 +1591,7 @@
                                     event.preventDefault();
                             }
                         </script>
-                        <script>
+                        <!-- <script>
                             $(function() {
                                 $("#new-item").dataTable();
                             })
@@ -1578,7 +1602,7 @@
                             $(document).ready(function() {
                                 $('.searchingBook').select2();
                             });
-                        </script>
+                        </script> -->
                         {{-- search booking script end --}}
                         <!-- Delete  confirmation Message -->
                         <script>
@@ -1591,8 +1615,8 @@
 
                         <script src="{{ url('assets/js') }}/jquery.min.js"></script>
                         <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
-                        <script type="text/javascript" charset="utf8"
-                            src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+                        <!-- <script type="text/javascript" charset="utf8"
+                            src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script> -->
 
                         {{-- Supplier Edit start --}}
 
