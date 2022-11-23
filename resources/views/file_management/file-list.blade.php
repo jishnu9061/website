@@ -55,8 +55,8 @@
                                         <th class="text-center">Client</th>
                                         <th class="text-center">File Name</th>
                                         <th class="text-center">File Open</th>
-                                        <th class="text-center">Responsible<br>Advocate</th>
-                                        <th class="text-center">Most Recent Progress</th>
+                                        <!-- <th class="text-center">Responsible<br>Advocate</th>
+                                        <th class="text-center">Most Recent Progress</th> -->
                                         <th class="text-center">Date Closed</th>
                                         <th class="text-center">File&Fee Balances</th>
                                         <th class="text-center">Status</th>
@@ -71,20 +71,20 @@
                                             <!-- <td scope="row">{{$list->id}}</td> -->
                                             <td scope="row">{{$list->id}}</td>
                                             <td scope="row">{{$list->Client_name}}</td>
-
                                             <td scope="row">{{$list->File_name}}</td>
                                             <td scope="row">{{$list->opening_date}}</td>
                                             <td scope="row">{{$list->responsible_advocate}}</td>
                                             <td scope="row">{{$list->recent_progress}}</td>
                                             <td scope="row">{{$list->closing_date}}</td>
+
                                             <td scope="row">{{$list->amount}}</td>
                                             <td scope="row"></td>
-                                            <td scope="row"><a href=""><i style="color:black;" class="fa fa-eye"
+                                            <td scope="row"><a href="{{url('view-list',$list->id)}}"><i style="color:black;" class="fa fa-eye"
                                         aria-hidden="true"></i>
                                    
-                                    <a href="{{url('edit-file')}}"><i style="color:black;" class="fa fa-edit"
+                                    <a href="{{url('edit-file',$list->id)}}"><i style="color:black;" class="fa fa-edit"
                                             aria-hidden="true"></i>
-                                        <a onClick="return myFunction();" href="{{url('file_destroy')}}" style="color:black;"><i
+                                        <a onClick="return myFunction();" href="{{url('file_destroy',$list->id)}}" style="color:black;"><i
                                                 class="fas fa-trash-alt"></i></a></td>
                                             <!-- <td scope="row"></td> -->
                                         </tr>
@@ -117,9 +117,25 @@
                                                 @csrf
                                                 <h4>Matter</h4>
                 <div class="row">
+
+                <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Associative Handling</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="assoc_handling" id="cars">
+                                    <option >Select</option>
+                                    <option >Residensial</option>
+                                    <option >Non Residensial</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
                    
                    
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Client</label>
                             <div class="input-group">
@@ -131,7 +147,7 @@
                         </div>
                     </div>
                 
-                <div class="col-md-6">
+                <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Email</label>
                             <div class="input-group">
@@ -183,9 +199,50 @@
                             </div>
                         </div>
                     </div>
+                
+                <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Responsible Advocate</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="advocate" id="age" value=""
+                                 min="0" max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Age is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Most Recent Progress</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="recent_progress" id="age" value=""
+                                 min="0" max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Age is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Work Flow</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="work_flow" id="age" value=""
+                                 min="0" max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Age is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <br>
+               
                 <div class="row">
+               
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Opening Date</label>
@@ -277,7 +334,7 @@
                     </div>
                     </div>
                     
-                    <h4>Cutom Fields</h4>
+                    <!-- <h4>Cutom Fields</h4>
                     <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
@@ -306,7 +363,7 @@
                     </div>
                     
                 </div>
-                <br>
+                <br> -->
                 <h4>Billing</h4>
                 <div class="row">
                    

@@ -23,6 +23,14 @@ class filemanagement extends Controller
         // return view('file_management.file-list',compact('file_list'));
     }
 
+    public function viewlist($id)
+    {
+        $view_list = DB::table('cra_open_new_file_details')->where('id',$id)->first();
+        return view('file_management.view-list',compact('view_list','id'));
+                                                                  
+    }
+
+
     public function edit($id)
     {
     
@@ -895,7 +903,10 @@ class filemanagement extends Controller
 
      public function documentmanager()
      {
-         return view('file_management.document-manager');
+        $new_document=DB::table('cra_upload_document')->get();
+        
+        return view('file_management.document-manager',compact('new_document'));
+        //  return view('file_management.document-manager');
      }
 
      public function uploaddocument(Request $request)
