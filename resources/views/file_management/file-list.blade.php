@@ -86,7 +86,7 @@
                                             aria-hidden="true"></i>
                                         <a onClick="return myFunction();" href="{{url('file_destroy',$list->id)}}" style="color:black;"><i
                                                 class="fas fa-trash-alt"></i></a></td>
-                                            <!-- <td scope="row"></td> -->
+                                            
                                         </tr>
                                         @endforeach
                                 </tbody>
