@@ -32,6 +32,10 @@
                     <td>{{$view_list ->id}}</td>
                 </tr>
                 <tr>
+                    <th>Associative Handling:</th>
+                    <td>{{$view_list ->assoc_handling}}</td>
+                </tr>
+                <tr>
                     <th>Client Name:</th>
                     <td>{{$view_list ->client}}</td>
                 </tr>
@@ -49,6 +53,18 @@
                 <tr>
                     <th>File Name:</th>
                     <td>{{$view_list ->file_name}}</td>
+                </tr>
+                <tr>
+                    <th>Responsible Advocate:</th>
+                    <td>{{$view_list ->advocate}}</td>
+                </tr>
+                <tr>
+                    <th>Recent Progress:</th>
+                    <td>{{$view_list ->recent_progress}}</td>
+                </tr>
+                <tr>
+                    <th>Work Flow:</th>
+                    <td>{{$view_list ->work_flow}}</td>
                 </tr>
                 <tr>
                     <th>Opening Date:</th>
