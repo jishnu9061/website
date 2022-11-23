@@ -186,7 +186,7 @@
                            <label for="username">Address</label>
                            <div class="input-group">
                                <div class="input-group-prepend"></div>
-                               <input type="email" class="form-control" name="email" value="{{ $edit->client_name}}"
+                               <input type="email" class="form-control" name="email" value="{{ $edit->client}}"
                                    id="confirm_password">
                                <div class="invalid-feedback" style="width: 100%;">
                                    Password is required.
@@ -201,7 +201,7 @@
                                <div class="input-group-prepend">
 
                                </div>
-                               <input type="email" class="form-control" name="email" value="{{ $edit->client_name}}"
+                               <input type="email" class="form-control" name="email" value="{{ $edit->client}}"
                                    id="confirm_password"><br>
                            </div>
                        </div>
