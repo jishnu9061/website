@@ -7,7 +7,7 @@
           <br>
 
 
-        <div class="container"  Style="width:50%; float:center;">
+        <!-- <div class="container"  Style="width:50%; float:center;">
 
          <div class="mb-3">
            <label class="form-label">Supplier</label>
@@ -28,12 +28,43 @@
                         <span class="m-2"></span>
                         <button type="button" class="btn btn-primary">Cancel</button>
 
-                    </div>
+                    </div> -->
                     
                     
 
 
+  <div>                 
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">Add New Supplier</button>
+  </div>
+  
 
+<br>
+ <!-- table -->
+ <div class="table-responsive">
+ <table class="table">
+            <thead>
+              <tr class="text-center">
+                <th scope="col">Item Name</th>
+                <th scope="col">Supplier</th>
+                <th scope="col">Actions</th>
+                <th scope="col">Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="text-center">
+
+                <td></td>
+                <td></td>
+                <td><a href="#"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span>
+                      <a href="#"><i style="color:rgb(13, 1, 56);" class="fa fa-edit" ></i><span class="m-1"></span>
+                      <a href="#"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
+                <td><button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#myModal">Details</button></td>
+        
+              </tr>
+             
+            </tbody>
+          </table> 
+        </div>
 
 
 
@@ -50,7 +81,7 @@
   
                                 <div class="modal-header">
                                 <div class="container">
-                <h4><b>Vendor Performance Report</b></h4>
+                <h4><b>Vendor Details</b></h4>
                 <br>
 
                                

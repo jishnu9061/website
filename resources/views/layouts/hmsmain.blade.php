@@ -658,7 +658,7 @@ color: #999;
                             <li class="submenu-item" style="list-style:none;">
                                     <a href="{{url('purchase_index')}}" class='sidebar-link'>
                                         <i class="far fa-clipboard" id="icon"></i>
-                                            <span>Purchase Management</span>
+                                            <span>Procurement Management</span>
                                     </a>
                             </li>
                                     {{-- 
