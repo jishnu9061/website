@@ -6,7 +6,6 @@
        {{-- heading --}}
        <h4 id="hdtpa"><b>New Client Services</b></h4>
        <br><br>
-   gg
     <div class="row">
         <div class="col-md-12">
             <form method="post" action="" id="form">

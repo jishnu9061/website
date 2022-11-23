@@ -48,17 +48,12 @@ class addcontroller extends Controller
       ->leftjoin('departments','departments.id','=','users.departments')
       ->select('uniqueid')->first();
       $seldepis=$seldep->uniqueid;
-    //  $seldepid=str_pad($seldepis, 2, "0", STR_PAD_LEFT);
+      $seldepid=str_pad($seldepis, 2, "0", STR_PAD_LEFT);
    	  $userz=DB::table('users')->where('Hospital',$hospital)->select('id')->orderby('created_at','DESC')->first();
-     // $userzz=$userz->id;
-    //  $userzid=$userzz + 1;
-     // $userzidd=str_pad($userzid, 4, "0", STR_PAD_LEFT);
-      //$appendid=$hosid.$seldepid.$userzidd;
-
-      $uniqId=random_int(100000,999999);
-      $check_if_duplicate_exisit = User::where('uniqueid', $uniqId)->first();
-
-      // dd($appendid);
+      $userzz=$userz->id;
+      $userzid=$userzz + 1;
+      $userzidd=str_pad($userzid, 4, "0", STR_PAD_LEFT);
+      $appendid=$hosid.$seldepid.$userzidd;
       $stame=$Request['name'];
       $al_email=$Request['email'];
       $staffs=new User();
@@ -75,7 +70,7 @@ class addcontroller extends Controller
       $staffs->bank= $Request['bankname'];
       $staffs->ifsc= $Request['ifsc'];
       $staffs->consultation_fee=$Request['cons_fee'];
-      $staffs->uniqueid=$uniqId;
+      $staffs->uniqueid=$appendid;
       $staffs->salary=$Request['salary'];
       $staffs->sex=$Request['patienthere'];
       $staffs->yearsexp=$Request['yearsexp'];

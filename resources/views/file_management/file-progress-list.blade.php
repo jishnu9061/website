@@ -152,9 +152,9 @@
 
 
             <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-pane fade show active" id=" " role="tabpanel" aria-labelledby="home-tab">
                     <div class="table-responsive">
-                        <table class="table table-striped table-class" id="table-id">
+                        <table class="table table-striped table-class" id="">
                             <thead>
                                 <tr>
                                     <!-- <th class="text-center">*</th> -->
@@ -191,14 +191,13 @@
                                     <td scope="row" class="text-center">{{$list->time_taken_hours}}</td>
                                     <td scope="row" class="text-center"></td>
                                     <td scope="row" class="text-center">{{$list->next_action}}</td>
-                                    
                                     <!-- <td scope="row" class="text-center">{{$list->activity}}</td> -->
                                     <!-- <td scope="row" class="text-center"><input type="checkbox" name="" id=""></td> -->
                                     <td scope="row" class="text-center">
 
                                         <a href="{{url('edit-file-progress',$list->id)}}"><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
                                         
-                                            <a onClick="return myFunction();" href="{{url('delete-file-progress',$list->id)}}"><i style="  color:rgb(13, 1, 56);"
+                                            <a onClick="return myFunction();" href="{{url('delete-file-progress',$list->id)}}"><i style="  color:rgb(13, 1, 56)";
 
 
                                                     class="fas fa-trash-alt" aria-hidden="true"></i>
@@ -2705,86 +2704,5 @@
     </div>
     </div>
 
-    <!-- END CONVEYENCE SHEET -->
-
-    <!-- Supplier modal Edit End -->
-
-    <!-- Delete  confirmation Message -->
-
-    <!-- End delete confirmation message -->
-    </div>
-    <script>
-    function myFunction() {
-        if (!confirm("Are you sure to delete this"))
-            event.preventDefault();
-    }
-    </script>
-    <script>
-    $(function() {
-        $("#new-item").dataTable();
-    })
-    </script>
-
-    {{-- Search booking script --}}
-    <script>
-    $(document).ready(function() {
-        $('.searchingBook').select2();
-    });
-    </script>
-    {{-- search booking script end --}}
-    <!-- Delete  confirmation Message -->
-    <script>
-    function myFunction() {
-        if (!confirm("Are you sure to delete this"))
-            event.preventDefault();
-    }
-    </script>
-    <!-- End delete confirmation message -->
-
-    <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-    <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js">
-    </script>
-    <script type="text/javascript" charset="utf8"
-        src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
-
-    {{-- Supplier Edit start --}}
-
-    <script>
-    $(document).on('click', '#edit_medicine_details', function() {
-
-        var medicine_id_hidden = $(this).closest('#data').find('#medicine_id_hidden').val();
-        var medicine_name = $(this).closest('#data').find('#medicine_name_1').val();
-        var medicine_brand_name = $(this).closest('#data').find('#medicine_brand_name').val();
-        var medicine_group = $(this).closest('#data').find('#medicine_group').val();
-        var medicicine_category_name = $(this).closest('#data').find('#medicine_category_name1').val();
-        var medicine_generic_name = $(this).closest('#data').find('#medicine_generic_name').val();
-        var medicine_manufactuure_name = $(this).closest('#data').find('#medicine_manufactuure_name').val();
-        var medicine_supplier_name = $(this).closest('#data').find('#medicine_supplier_name').val();
-        var medicine_minimum_level = $(this).closest('#data').find('#medicine_minimum_level').val();
-        var medicine_reorder_level = $(this).closest('#data').find('#medicine_reorder_level').val();
-        var medicine_unit_packing = $(this).closest('#data').find('#medicine_unit_packing').val();
-        var medicine_composition = $(this).closest('#data').find('#medicine_composition').val();
-        var medicine_notes = $(this).closest('#data').find('#medicine_notes').val();
-        var medicine_images = $(this).closest('#data').find('#medicine_images').val();
-
-
-
-        $("#edit_id").val(medicine_id_hidden);
-        $("#edit_medicine_name").val(medicine_name);
-        $("#edit_brand_name").val(medicine_brand_name);
-        $("#edit_medicine_group").val(medicine_group);
-        $("#edit_category_name").val(medicine_category_name);
-        $("#edit_generic_name").val(medicicine_genric_name);
-        $("#edit_manufacture_name").val(medicine_manufactuure_name);
-        $("#edit_supplier_name").val(medicine_supplier_name);
-        $("#edit_minimum_level").val(medicine_minimum_level);
-        $("#edit_reorder").val(medicine_reorder_level);
-        $("#edit_minimum_level").val(medicine_minimum_level);
-        $("#edit_unit_packing").val(medicine_unit_packing);
-        $("#edit_medicine_details1").val(medicine_composition);
-        $("#edit_medicine_note").val(medicine_notes);
-        $("#edit_image").val(medicine_images);
-    });
-    </script>
-    {{-- Supplier Edit End --}}
+   
     @endsection

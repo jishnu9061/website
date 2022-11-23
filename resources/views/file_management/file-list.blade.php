@@ -79,7 +79,13 @@
                                             <td scope="row">{{$list->closing_date}}</td>
                                             <td scope="row">{{$list->amount}}</td>
                                             <td scope="row"></td>
-                                            <td scope="row"></td>
+                                            <td scope="row"><a href=""><i style="color:black;" class="fa fa-eye"
+                                        aria-hidden="true"></i>
+                                   
+                                    <a href="{{url('edit-file')}}"><i style="color:black;" class="fa fa-edit"
+                                            aria-hidden="true"></i>
+                                        <a onClick="return myFunction();" href="{{url('file_destroy')}}" style="color:black;"><i
+                                                class="fas fa-trash-alt"></i></a></td>
                                             <!-- <td scope="row"></td> -->
                                         </tr>
                                         @endforeach

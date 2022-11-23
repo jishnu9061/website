@@ -46,7 +46,12 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script type="text/javascript" src="table.js"></script>
-
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Simple Javascript Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
     $(function () {
   $('[data-toggle="tooltip"]').tooltip()
@@ -54,6 +59,7 @@
 </script>
 <!-- b -->
     <style>
+        
     #icon {
     color: #1D1D50
     } 
@@ -111,8 +117,32 @@ float:right;
 text-align:right;
 color: #999;
 }
+
+/* time */
+.timerx{
+    border-radius: 8px;
+    float: left;
+
+    padding:  10px;
+    border: 1px solid #ddd;
     
- 
+}
+#timer {
+    padding-left:  15px;
+    font-size:20px;
+    margin:0 auto;
+    width:120px;
+  }
+  
+  #controls {
+    margin:0 auto;
+    width:120px;    
+  }
+  
+  #controls button {
+    font-size:10px;
+  }
+
     </style>
 
     </head>
@@ -1155,6 +1185,26 @@ color: #999;
                                                                         </li>
                                                                     </ul>
 
+
+                                                                    <div  id="navr" style="margin-right: 10%;"   >
+<div class="timerx">
+<div id="timer">
+      <span id="hours">00:</span>
+      <span id="mins">00:</span>
+      <span id="seconds">00</span>  
+    </div>
+    
+    <div id="controls">
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="reset">Reset</button>
+    </div>
+  
+</div>
+
+               </div>
+
+
                                                                     <div  id="navr" style="margin-right: .5%;"   >
 
                                                                     <div  style=" text-decoration: none; list-style:none;">
@@ -1202,8 +1252,53 @@ color: #999;
                     </div>
                 </div>
 
+<!-- time -->
+                <script src="script.js"></script>
+  <script>
+  var hours =0;
+var mins =0;
+var seconds =0;
 
+$('#start').click(function(){
+      startTimer();
+});
 
+$('#stop').click(function(){
+      clearTimeout(timex);
+});
+
+$('#reset').click(function(){
+      hours =0;      mins =0;      seconds =0;
+  $('#hours','#mins').html('00:');
+  $('#seconds').html('00');
+});
+
+function startTimer(){
+  timex = setTimeout(function(){
+      seconds++;
+    if(seconds >59){seconds=0;mins++;
+       if(mins>59) {
+       mins=0;hours++;
+         if(hours <10) {$("#hours").text('0'+hours+':')} else $("#hours").text(hours+':');
+        }
+                       
+    if(mins<10){                     
+      $("#mins").text('0'+mins+':');}       
+       else $("#mins").text(mins+':');
+                   }    
+    if(seconds <10) {
+      $("#seconds").text('0'+seconds);} else {
+      $("#seconds").text(seconds);
+      }
+     
+    
+      startTimer();
+  },1000);
+}
+    
+  
+  </script>
+  <!-- time -->
                                                 <script>
                                                                 getPagination('#table-id');
                                                                 $('#maxRows').trigger('change');

@@ -33,6 +33,7 @@ class filemanagement extends Controller
     public function file_destroy($id)
     {
         $edit =DB::table('cra_open_new_file_details')->where('id',$id)->delete();
+        
         return redirect ('/file-list');
     }
 
@@ -79,69 +80,38 @@ class filemanagement extends Controller
     public function update(Request $request)
     {
         $id =$request['id'];
-        $Associate_handling=$request['associate_handling'];
-        $Client_type=$request['client_type'];
-        $opening_date=$request['opening_date'];
-        $Client_ref_no=$request['client_ref_no'];
-        $our_file_reference_no=$request['our_file_ref_no'];
-        $File_name=$request['file_name'];
-        $Approval_partner=$request['approval_partner'];
-        $Customer_name=$request['customer_name'];
-        $Address=$request['address'];
-        $Telephone=$request['telephone'];
+        $client=$request['client'];
         $email=$request['email'];
+        $phone=$request['phone'];
+        $address=$request['address'];
+        $file_type=$request['file_type'];
+        $open_date=$request['open_date'];
+        $close_date=$request['close_date'];
+        $comments=$request['comments'];
+        $notifi_email=$request['notifi_email'];
+        $con_phone=$request['con_phone'];
+        $con_email=$request['con_email'];
         $amount=$request['amount'];
-        $workflow=$request['workflow'];
-        $responsible_advocate=$request['responsibleadvocate'];
-        $recent_progress=$request['recentprogress'];
-        $closing_date=$request['closedate'];
-        $file_balance=$request['filebalance'];
-        $paid_amount=$request['paidamount'];
-        $balance_fee=$request['feebalance'];
-        $status=$request['status'];
-
-        // $update_new_file= array(
-        
-        //     'Associate_handling' => $Associate_handling,
-        //     'Client_type' => $Client_type,
-        //     'opening_date' => $opening_date,
-        //     'Client_ref_no' => $Client_ref_no,
-        //     'our_file_reference_no' => $our_file_reference_no,
-        //     'File_name' => $File_name,
-        //     'Approval_partner' => $Approval_partner,
-        //     'Customer_name' => $Customer_name,
-        //     'Address' => $Address,
-        //     'Telephone' => $Telephone,
-        //     'email' => $email,
-        //     'amount' => $amount,
-        //     'workflow' => $workflow,
-        // );
+        $task=$request['task'];
 
         DB::table('cra_open_new_file_details')->where('id',$id)->update([
-            'Associate_handling' => $Associate_handling,
-            'Client_type' => $Client_type,
-            'opening_date' => $opening_date,
-            'Client_ref_no' => $Client_ref_no,
-            'our_file_reference_no' => $our_file_reference_no,
-            'File_name' => $File_name,
-            'Approval_partner' => $Approval_partner,
-            'Customer_name' => $Customer_name,
-            'Address' => $Address,
-            'Telephone' => $Telephone,
+
+           
+            'client' => $client,
             'email' => $email,
+            'phone' => $phone,
+            'address' => $address,
+            'file_type' => $file_type,
+            'open_date' => $open_date,
+            'close_date' => $close_date,
+            'comments' => $comments,
+            'notifi_email' => $notifi_email,
+            'con_phone' => $con_phone,
+            'con_email' => $con_email,
             'amount' => $amount,
-            'workflow' => $workflow,
-
-            'responsible_advocate' => $responsible_advocate,
-            'recent_progress' => $recent_progress,
-            'closing_date' => $closing_date,
-            'file_balance' => $file_balance,
-            'paid_amount' => $paid_amount,
-            'balance_fee' => $balance_fee,
-            'status' => $status,
-
-
+            'task' => $task,
         ]);
+      
 
         return redirect('/file-list');
 
@@ -1158,6 +1128,20 @@ class filemanagement extends Controller
            $originator =$request['originator'];
            $viewers =$request['viewers'];
            $upload_copy =$request['upload_copy'];
+
+           if(!empty($request->file('upload_copy'))){
+
+            $this->validate($request,[
+                'upload_copy' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+            ]);
+        }
+        if(request()->hasfile('upload_copy')){
+            $uploadedImage = $request->file('upload_copy');
+            $imageName     = time() .'.'. $upload_copy->getClientOriginalExtension();
+            $destinationPath = public_path('image');
+            $uploadedImage->move($destinationPath,$imageName);
+            $upload_copy->file    = $destinationPath.$imageName;
+        }
    
            DB::table('cra_add_outgoing_letter')->insert([
    
@@ -1198,6 +1182,21 @@ class filemanagement extends Controller
             $delivered_to =$request['delivered_to'];
             $viewer =$request['viewer'];
             $upload_copy =$request['upload_copy'];
+
+            if(!empty($request->file('upload_copy'))){
+
+                $this->validate($request,[
+                    'upload_copy' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+                ]);
+            }
+            if(request()->hasfile('upload_copy')){
+                $uploadedImage = $request->file('upload_copy');
+                $imageName     = time() .'.'. $upload_copy->getClientOriginalExtension();
+                $destinationPath = public_path('image');
+                $uploadedImage->move($destinationPath,$imageName);
+                $upload_copy->file    = $destinationPath.$imageName;
+            }
+    
     
             DB::table('cra_add_incomming_letters')->insert([
     

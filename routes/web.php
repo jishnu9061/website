@@ -1330,7 +1330,24 @@ Route::any('drop-assigment/{id}','hrindex@dropassigment')->name('drop-assigment'
 Route::any('Store_&_Inventory_index','store@index')->name('Store_&_Inventory_index');
 Route::any('manage_categories','store@list_manage_categories')->name('manage_categories');
 Route::any('manage_items','store@list_manage_items')->name('manage_items');
-Route::any('stock_list_report','store@stock_list_report')->name('stock_list_report');
+Route::any('stock_list','store@stock_list_tab')->name('stock_list');
+Route::any('request_item','store@request_items')->name('request_item');
+Route::any('item_movement','store@item_movement_report')->name('item_movement');
+Route::any('view_item_movement','store@view_item_movement_report')->name('view_item_movement');
+Route::any('re_order','store@re_order_list')->name('re_order');
+Route::any('edit_manage_categories','store@edit_list_manage_categories')->name('edit_manage_categories');
+Route::any('edit_request_item','store@edit_request_items')->name('edit_request_item');
+Route::any('add_categories','store@list_add_categories')->name('add_categories');
+Route::any('edit_categories','store@list_edit_categories')->name('edit_categories');
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1341,6 +1358,11 @@ Route::any('stock_list_report','store@stock_list_report')->name('stock_list_repo
 //Purchase Management
 
 Route::any('purchase_index','PurchaseManagement@index_purchase')->name('purchase_index');
+Route::any('purchase_order','PurchaseManagement@purchase_order')->name('purchase_order');
+Route::any('purchase_order_report','PurchaseManagement@purchase_order_report')->name('purchase_order_report');
+Route::any('vendor_performance_report','PurchaseManagement@vendor_performance_report')->name('vendor_performance_report');
+
+Route::any('cost_variation_report','PurchaseManagement@cost_variation_report')->name('cost_variation_report');
 
 
 

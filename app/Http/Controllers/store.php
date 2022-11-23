@@ -23,6 +23,45 @@ class store extends Controller
     {
         return view('Store & Inventory.stock_list_report');
     }
+    public function stock_list_tab()
+    {
+        return view('Store & Inventory.stock_list');
+    }
+    public function request_items()
+    {
+        return view('Store & Inventory.request_item');
+    }
+    public function item_movement_report()
+    {
+        return view('Store & Inventory.item_movement');
+    }
+    public function view_item_movement_report()
+    {
+        return view('Store & Inventory.view_item_movement');
+        
+    }
+    public function re_order_list()
+    {
+        return view('Store & Inventory.re_order');
+        
+    }
+    public function edit_list_manage_categories()
+    {
+        return view('Store & Inventory.edit_manage_categories');
+        
+    }
+    public function edit_request_items()
+    {
+        return view('Store & Inventory.edit_request_item');
+        
+    }
+    public function list_add_categories()
+    {
+        return view('Store & Inventory.add_categories');
+        
+    }
+    
+
 
 }
 
