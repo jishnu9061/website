@@ -1157,7 +1157,8 @@ Route::any('/file_destroy/{id}',"filemanagement@file_destroy")->name('file_destr
 Route::any('add-new-file',"filemanagement@addnew")->name('add-new-file');
 Route::any('file-archive',"filemanagement@filearchive")->name('file-archive');
 Route::any('add-box-no',"filemanagement@addboxno")->name('add-box-no');
-Route::any('edit-box-no',"filemanagement@editboxno")->name('edit-box-no');
+Route::any('/edit-box-no/{id}',"filemanagement@editboxno")->name('edit-box-no');
+Route::any('/update-box',"filemanagement@updatebox")->name('update-box');
 //manage files
 
 //document templates

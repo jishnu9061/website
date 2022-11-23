@@ -115,22 +115,22 @@ color: #999;
                     @foreach($file_progress_list as $list)
                         <tr id="data">
                             <!-- <td scope="row" class="text-center">{{$list->id}}</td> -->
-                            <td scope="row" class="text-center">Box No :{{$list->number}}</td>
-                            <!-- <td scope="row" class="text-center"></td> -->
-                            <!-- <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td> -->
-                            <!-- <td scope="row" class="text-center"></td> -->
-                            <!-- <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td> -->
+                             <td scope="row" class="text-center">Box No :<b>{{$list->number}}</b></td>
+                             <td scope="row" class="text-center"></td> 
+                             <td scope="row" class="text-center"></td>
+                             <td scope="row" class="text-center"></td> 
+                             <td scope="row" class="text-center"></td> 
+                             <td scope="row" class="text-center"></td>
                           
-                            <!-- <td scope="row" class="text-center"><a href=""><i style="color:black;" class="fa fa-eye"
+                          
+                            <td scope="row" class="text-center"><a href=""><i style="color:black;" class="fa fa-eye"
                                         aria-hidden="true"></i>
                                     <input type="hidden" value="" id="medicine_id_hidden" class="applicate"
                                         name="supplier_id_hidden">
-                                    <a href="{{url('edit-box-no')}}"><i style="color:black;" class="fa fa-edit"
+                                    <a href="{{url('edit-box-no',$list->id)}}"><i style="color:black;" class="fa fa-edit"
                                             aria-hidden="true"></i>
                                         <a onClick="return myFunction();" href="" style="color:black;"><i
-                                                class="fas fa-trash-alt"></i></a></td> -->
+                                                class="fas fa-trash-alt"></i></a></td> 
                         </tr>
                         @endforeach
                     </tbody>
