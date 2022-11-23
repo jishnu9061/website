@@ -81,9 +81,9 @@
                                             <td scope="row"><a href=""><i style="color:black;" class="fa fa-eye"
                                         aria-hidden="true"></i>
                                    
-                                    <a href="{{url('edit-file')}}"><i style="color:black;" class="fa fa-edit"
+                                    <a href="{{url('edit-file',$list->id)}}"><i style="color:black;" class="fa fa-edit"
                                             aria-hidden="true"></i>
-                                        <a onClick="return myFunction();" href="{{url('file_destroy')}}" style="color:black;"><i
+                                        <a onClick="return myFunction();" href="{{url('file_destroy',$list->id)}}" style="color:black;"><i
                                                 class="fas fa-trash-alt"></i></a></td>
                                             <!-- <td scope="row"></td> -->
                                         </tr>
