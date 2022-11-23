@@ -78,7 +78,7 @@
                                             <td scope="row">{{$list->close_date}}</td>
                                             <td scope="row">{{$list->amount}}</td>
                                             <td scope="row"></td>
-                                            <td scope="row"><a href=""><i style="color:black;" class="fa fa-eye"
+                                            <td scope="row"><a href="{{url('view-list',$list->id)}}"><i style="color:black;" class="fa fa-eye"
                                         aria-hidden="true"></i>
                                    
                                     <a href="{{url('edit-file',$list->id)}}"><i style="color:black;" class="fa fa-edit"
