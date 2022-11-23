@@ -239,10 +239,8 @@
                                                                                 <select name="category" id="username"
                                                                                     style="width:100%;">
                                                                                     <option>---select--- </option>
-                                                                                    <option>name 1 </option>
-                                                                                    <option>name 2</option>
-                                                                                    <option>name 3</option>
-
+                                                                                    <option>Stationary</option>
+                                                                                    <option>Assets</option>
 
                                                                                 </select>
                                                                                 <div class="invalid-feedback"
@@ -263,9 +261,9 @@
                                                                                 <select name="item_type" id="username"
                                                                                     style="width:100%;">
                                                                                     <option>---select--- </option>
-                                                                                    <option>name 1 </option>
-                                                                                    <option>name 2</option>
-                                                                                    <option>name 3</option>
+                                                                                    <option>Book </option>
+                                                                                    <option>Paper</option>
+                                                                                    <option>Chair</option>
 
 
                                                                                 </select>

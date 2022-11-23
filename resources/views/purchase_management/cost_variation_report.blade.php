@@ -7,7 +7,7 @@
           <br>
 
 
-        <div class="container" Style="float:center;">
+        <div class="container" Style="width:50%; float:center;">
 
          <div class="mb-3">
            <label class="form-label">Inventory Item</label>

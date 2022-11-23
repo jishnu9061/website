@@ -11,7 +11,7 @@
                 <b><u>Client Registration</u></b></span> -->
                 {{-- heading --}}
                
-                <h4 id="hdtpa"><b>Local Purchase Order</b></h4>
+                <h4 id="hdtpa"><b>New Purchase Order</b></h4>
                 <br>
             
 
@@ -21,9 +21,9 @@
             <div class="container">
             <button type="button" class="btn btn-primary" data-toggle="modal"
                 data-target="#myModal">Add New Purchase</button></a>
-                <span class="m-2"></span>
-            <button type="button" class="btn btn-primary" data-toggle="modal"
-                data-target="#myModal1">Add New Item</button></a>
+                
+            <!-- <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#myModal1">Add New Item</button></a> -->
           
                 <div class="header_wrap">
                     <div class="num_rows">
@@ -63,7 +63,7 @@
                                         <th class="text-center">Suppliers</th>
                                         <th class="text-center">Unit</th>
                                         <th class="text-center">Status</th>
-                                        <th class="text-center">Action</th>
+                                        <th class="text-center">View</th>
 
                                     </tr>
                                 </thead>
@@ -76,12 +76,9 @@
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                        <td scope="row" class="text-center"><a href=""><i style="color:black;"
-                                                    class="fa fa-edit" aria-hidden="true"></i>
-                                                <a onClick="return myFunction();" href="" style="color:black;"><i
-                                                        class="fas fa-trash-alt"></i></a>
-                                                <input type="hidden" value="" id="medicine_id_hidden" class="applicate"
-                                                    name="supplier_id_hidden">
+                                        <td scope="row" class="text-center">
+                                        <a href="{{url('view_purchase_order')}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i>
+                                        </td>
 
                                     </tr>
 
@@ -115,7 +112,7 @@
 
                                     <!-- Modal Header -->
                                     <div class="modal-header" >
-                                        <h2><b>Purchase Order Request</b></h2>
+                                        <h2><b>Add New Purchase</b></h2>
 
                                     </div>
 
@@ -130,7 +127,7 @@
   <div class="row">
     <div class="col">
     <label for="exampleFormControlInput1" class="form-label">Purchase Date</label>
-  <input type="date" class="form-control" id="exampleFormControlInput1" >
+  <input type="date" class="form-control" >
   <br>
   <label for="exampleFormControlInput1" class="form-label">Supplier</label>
     <select class="form-select" aria-label="Default select example">
@@ -140,34 +137,64 @@
     </select>
 </div>
    <div class="col">
-        <label for="exampleFormControlInput1" class="form-label">Purchase Order Number</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" >
+   <label for="exampleFormControlInput1" class="form-label">Purchase Order Number</label>
+  <input type="text" class="form-control" >
     
   <br>
   <label for="exampleFormControlInput1" class="form-label">Status</label>
-  <input type="Text" class="form-control" id="exampleFormControlInput1" value="Order-Placed" >
+  <input class="form-control" type="text" placeholder="Order-Placed" aria-label="Disabled input example" disabled>
     
     </div>
     <div class="col">
   <label for="exampleFormControlInput1" class="form-label">Payment Type</label>
-    <select class="form-select" aria-label="Default select example">
+  <select class="form-select" aria-label="Default select example">
         <option selected>---select---</option>
         <option value="1">Cash</option>
-        <option value="2">E-Money</option>
-        <option value="3">Bank Transfer</option>
-    </select>
-    </div>
+        <option value="2">Bank Transfer</option>
+    </select>  
   </div>
 </div>
+<br>
+<br>
 
+<div class="text-center">
+<h4><b>Purchase Items</b></h4>
+</div>
+<br>
+ <!-- table -->
+ <div class="table-responsive">
+ <table class="table">
+            <thead>
+              <tr class="text-center">
+                <th scope="col">Item ID</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+                <th scope="col">Total</th>
+                <th><button type="button" class="btn btn-primary">Add</button></th> 
+        
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="text-center">
 
-
-
-
-
-
-
-
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+                <td><button type="button" class="btn btn-secondary">Remove</button></td>
+                
+              </tr>
+              <tr>
+              <td colspan="4" ><h6 style="float:right"><b> Grand Total </b></h6></td>
+              <td colspan="2"><input type="text" class="form-control"></td>
+              </tr>
+             
+            </tbody>
+          </table> 
+        </div>
+        
 
 
 
@@ -180,122 +207,6 @@
                 <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                 
             </div>
-
-
-
-
-   </form>
-   </div>
-   </div>
-
-   </div>
-   </div>
-</div>
-
-                      <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-                      <div class="modal fade" id="myModal1">
-                            <div class="modal-dialog modal-xl">
-                                <div class="modal-content" >
-
-                                    <!-- Modal Header -->
-                                    <div class="modal-header" >
-                                        <h2><b>Add New L.P.O Item</b></h2>
-
-                                    </div>
-
-                                    <!-- Modal body -->
-                                    <div class="modal-body" >
-                                        <div class="container">
-                                            <form method="post" action="{{ url('create_job_post') }}"
-                                                enctype="multipart/form-data"> 
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->    
-    
-<div class="container">
-  <div class="row">
-    <div class="col">
-    <label for="exampleFormControlInput1" class="form-label">Item ID</label>
-  <input type="text" class="form-control" id="exampleFormControlInput1" >
-  <br>
-  <label for="exampleFormControlInput1" class="form-label">Supplier</label>
-    <select class="form-select" aria-label="Default select example">
-        <option selected>---select---</option>
-        <option value="1">Supplier 1</option>
-        <option value="2">Supplier2</option>
-    </select>
-</div>
-   <div class="col">
-        <label for="exampleFormControlInput1" class="form-label">Date</label>
-        <input type="date" class="form-control" id="exampleFormControlInput1" >
-    
-  <br>
-  <label for="exampleFormControlInput1" class="form-label">Approver</label>
-   <select class="form-select" aria-label="Default select example">
-        <option selected>---select---</option>
-        <option value="1">Approver 1</option>
-        <option value="2">Approver2</option>
-    </select>
-    
-    </div>
-    <div class="col">
-  <label for="exampleFormControlInput1" class="form-label">Delivery Date</label>
-  <input type="date" class="form-control" id="exampleFormControlInput1" >  
-  <br>
-  <label for="exampleFormControlInput1" class="form-label">Description</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> 
-    </div>
-  </div>
-</div>
-<br>
-<br>
-
-<div class="text-center">
-<h4><b>L.P.O Items</b></h4>
-</div>
-<br>
- <!-- table -->
- <div class="table-responsive">
- <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Item ID</th>
-                <th scope="col">Item Name</th>
-                <th scope="col">Description</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Price</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-
-                <td></td>
-                <td></td>
-                <td><textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea></td>
-                <td></td>
-                <td></td>
-        
-              </tr>
-             
-            </tbody>
-          </table> 
-        </div>
-           
-
-
-
-
-
-
-
-
-<!-- Modal Footer -->
-            <div class="modal-footer" style="background-color:#d3e0ed">
-
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                
-            </div>
-
-
 
 
    </form>
