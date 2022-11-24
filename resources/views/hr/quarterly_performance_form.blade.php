@@ -616,7 +616,7 @@
                   <div class="mb-3">                                       
                     <option selected>Select department</option>
                     <option value="1">HR</option>
-                    <option value="2">Advocate</option>
+                    <option value="2">Legal Advisor</option>
                     <option value="3">Receptionist</option>
                 </select>
                 <input class="form-control form-control-lg" type="text" placeholder="Enter the KPI" aria-label=".form-control-lg example">
