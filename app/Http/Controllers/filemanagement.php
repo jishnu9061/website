@@ -628,6 +628,7 @@ class filemanagement extends Controller
         
     }
 
+<<<<<<< Updated upstream
     public function viewfilelistreport($id)
     {
         $view_list = DB::table('cra_add_file_progress')
@@ -638,6 +639,20 @@ class filemanagement extends Controller
 
         return view('file_management.view-file-list-progress',compact('view_list','id'));
                                                                   
+=======
+    public function viewfilelisprogress()
+    {
+
+        $view_list = DB::table('cra_add_file_progress')
+        ->select('*')  
+        ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_file_progress.id')
+        ->leftjoin('cra_open_new_file_details','cra_open_new_file_details.id','=','cra_add_file_progress.id')
+        ->get();    
+        return view ('file_management.view-file-list-progress',compact('view_list'));
+
+        // return view('file_management.file-list-progress-report');
+        
+>>>>>>> Stashed changes
     }
 
     public function staffmonthlystatusreport(Request $request)

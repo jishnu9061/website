@@ -22,15 +22,16 @@
             </div>
             <div class="row">
                 <div class="col-md-12 order-md-1">
-                    <form method="post" action="{{url('add-registration')}}" id="form">
+                    <form method="post" action="{{url('update_product')}}" id="form">
                         @csrf
                         <div class="row">
+                            <input type="hidden" name="id" value="{{$edit_category->id}}">
                             <div class="col-md-4">
                                 <div class="mb-1">
                                     <label for="username">Item Name</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="item_name" id="username" value=""
+                                        <input type="text" class="form-control" name="item_name" id="username" value="{{$edit_category->item_name}}"
                                             placeholder="" required>
                                         <div class="invalid-feedback" style="width: 100%;">
 
@@ -45,6 +46,7 @@
                                         <div class="input-group-prepend"></div>
 
                                         <select name="category" id="username" style="width:100%;">
+                                        <option >{{$edit_category->category}}</option>
                                             <option>---select--- </option>
                                             <option>stationery </option>
                                             <option>furniture</option>
@@ -67,6 +69,7 @@
                                         <div class="input-group-prepend"></div>
 
                                         <select name="item_type" id="username" style="width:100%;">
+                                        <option>{{$edit_category->item_type}}</option>
                                             <option>---select--- </option>
                                             <option>Book </option>
                                             <option>Pen</option>
@@ -98,6 +101,7 @@
                                         <div class="input-group-prepend"></div>
 
                                         <select name="unit" id="username" style="width:100%;">
+                                        <option >{{$edit_category->unit}}</option>
                                             <option>---select--- </option>
                                             <option>Package</option>
                                             <option>Paket</option>
@@ -117,7 +121,7 @@
                                     <label for="username">Quantity</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="quantity" id="username" value=""
+                                        <input type="text" class="form-control" name="quantity" id="username" value="{{$edit_category->quantity}}"
                                             placeholder="" required>
                                         <div class="invalid-feedback" style="width: 100%;">
 
@@ -131,7 +135,7 @@
                                     <label for="username">Unit Price</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="unit_price" id="username" value=""
+                                        <input type="text" class="form-control" name="unit_price" id="username" value="{{$edit_category->unit_price}}"
                                             placeholder="" required>
                                         <div class="invalid-feedback" style="width: 100%;">
 

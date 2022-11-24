@@ -30,6 +30,7 @@
 
                     <tr>
                         <th style="width:30%">Client :</th>
+<<<<<<< Updated upstream
                         <td>{{$view_list->client_name}}</td>
                     </tr>
                     <tr>
@@ -47,6 +48,25 @@
                     <tr>
                         <th>Most Recent Progress:</th>
                         <td></td>
+=======
+                        <td>{{$view_list->Client_name}}</td>
+                    </tr>
+                    <tr>
+                        <th>File No & Name :</th>
+                        <td>{{$view_list->file_name}}</td>
+                    </tr>
+                    <tr>
+                        <th>Date Opened :</th>
+                        <td>{{$view_list->progress_date}}</td>
+                    </tr>
+                    <tr>
+                        <th>Responsible Advocate:</th>
+                        <td>{{$view_list->advocate}}</td>
+                    </tr>
+                    <tr>
+                        <th>Most Recent Progress:</th>
+                        <td>{{$view_list->recent_progress}}</td>
+>>>>>>> Stashed changes
                     </tr>
 
                 </tbody>

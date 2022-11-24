@@ -1211,7 +1211,11 @@ Route::any('generate-document',"filemanagement@generatedocument")->name('generat
 Route::any('client-monthly-file-status','filemanagement@clientmonthlystatus')->name('client-monthly-file-status');
 Route::any('staff-monthly-status-report',"filemanagement@staffmonthlystatusreport")->name('staff-monthly-status-report');
 Route::any('file-list-progress-report',"filemanagement@filelistprogressreport")->name('file-list-progress-report');
+<<<<<<< Updated upstream
 Route::any('view-file-list-progress/{id}','filemanagement@viewfilelistreport')->name('view-file-list-progress');
+=======
+Route::any('view-file-list-progress/{id}','filemanagement@viewfilelisprogress')->name('view-file-list-progress');
+>>>>>>> Stashed changes
 Route::any('bringup',"filemanagement@bringup")->name('bringup');
 Route::any('file-progress-report',"filemanagement@fileprogressreport")->name('file-progress-report');
 Route::any('file-status-summary',"filemanagement@filestatussummary")->name('file-status-summary');
@@ -1331,7 +1335,14 @@ Route::any('drop-assigment/{id}','hrindex@dropassigment')->name('drop-assigment'
 
 //Store & Inventory
 Route::any('Store_&_Inventory_index','store@index')->name('Store_&_Inventory_index');
+
 Route::any('manage_categories','store@list_manage_categories')->name('manage_categories');
+Route::any('add_product','store@addproduct')->name('add_product');
+Route::any('/edit_product/{id}','store@editproduct')->name('edit_product');
+Route::any('update_product','store@updateproduct')->name('update_product');
+Route::any('/delete_product/{id}','store@deleteproduct')->name('delete_product');
+
+
 Route::any('manage_items','store@list_manage_items')->name('manage_items');
 Route::any('stock_list','store@stock_list_tab')->name('stock_list');
 Route::any('request_item','store@request_items')->name('request_item');
