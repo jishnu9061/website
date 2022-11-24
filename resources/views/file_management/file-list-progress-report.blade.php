@@ -116,7 +116,8 @@ color: #999;
                             <!-- <td scope="row" class="text-center"></td> -->
                             <td scope="row" class="text-center"></td>
                             <td  scope="row"class="text-center">
-                        <a href=""><i  style="  color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i>
+                            <a href="{{url('view-file-list-progress',$list->id)}}"><i style="color:black;" class="fa fa-eye"
+                                        aria-hidden="true"></i>
                         </td>
 						
                         </tr>

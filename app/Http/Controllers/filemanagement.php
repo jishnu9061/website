@@ -628,6 +628,18 @@ class filemanagement extends Controller
         
     }
 
+    public function viewfilelistreport($id)
+    {
+        $view_list = DB::table('cra_add_file_progress')
+        ->select('*')  
+        ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_file_progress.id')
+        ->get(); 
+        
+
+        return view('file_management.view-file-list-progress',compact('view_list','id'));
+                                                                  
+    }
+
     public function staffmonthlystatusreport(Request $request)
     {
         $id =$request['id'];

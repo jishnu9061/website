@@ -1211,6 +1211,7 @@ Route::any('generate-document',"filemanagement@generatedocument")->name('generat
 Route::any('client-monthly-file-status','filemanagement@clientmonthlystatus')->name('client-monthly-file-status');
 Route::any('staff-monthly-status-report',"filemanagement@staffmonthlystatusreport")->name('staff-monthly-status-report');
 Route::any('file-list-progress-report',"filemanagement@filelistprogressreport")->name('file-list-progress-report');
+Route::any('view-file-list-progress/{id}','filemanagement@viewfilelistreport')->name('view-file-list-progress');
 Route::any('bringup',"filemanagement@bringup")->name('bringup');
 Route::any('file-progress-report',"filemanagement@fileprogressreport")->name('file-progress-report');
 Route::any('file-status-summary',"filemanagement@filestatussummary")->name('file-status-summary');
