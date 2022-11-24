@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 24, 2022 at 05:02 AM
+-- Generation Time: Nov 18, 2022 at 10:20 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -29,15 +29,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `cra_open_new_file_details` (
   `id` int(11) NOT NULL,
-  `assoc_handling` varchar(255) DEFAULT NULL,
   `client` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `phone` varchar(255) NOT NULL,
   `address` varchar(255) NOT NULL,
   `file_name` varchar(255) NOT NULL,
-  `advocate` varchar(255) DEFAULT NULL,
-  `recent_progress` varchar(255) DEFAULT NULL,
-  `work_flow` varchar(255) DEFAULT NULL,
   `open_date` date NOT NULL,
   `close_date` date DEFAULT NULL,
   `comments` varchar(255) NOT NULL,
@@ -52,8 +48,8 @@ CREATE TABLE `cra_open_new_file_details` (
 -- Dumping data for table `cra_open_new_file_details`
 --
 
-INSERT INTO `cra_open_new_file_details` (`id`, `assoc_handling`, `client`, `email`, `phone`, `address`, `file_name`, `advocate`, `recent_progress`, `work_flow`, `open_date`, `close_date`, `comments`, `notifi_email`, `con_phone`, `con_email`, `amount`, `task`) VALUES
-(1, NULL, '1121', 'zxc@gmail.com', '5252525252', 'cr advocayes', 'cra project', NULL, NULL, NULL, '2022-11-26', '2022-11-18', 'GHDH', 'cra@gmail.com', 2147483647, 'qw@gmail.com', '741025', 'Residensial');
+INSERT INTO `cra_open_new_file_details` (`id`, `client`, `email`, `phone`, `address`, `file_name`, `open_date`, `close_date`, `comments`, `notifi_email`, `con_phone`, `con_email`, `amount`, `task`) VALUES
+(1, '1121', 'hfdfd@gmail.com', '5252525252', 'cr advocayes', 'advocate file', '2022-11-09', '2022-11-05', 'thft', 'a@gmail.com', 2147483647, 'a@gmail.com', '45557', 'Residensial');
 
 --
 -- Indexes for dumped tables
