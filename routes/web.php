@@ -1306,6 +1306,7 @@ Route::any('view_bill',"clientinvoicing@view_bill_item")->name('view_bill_item')
 Route::any('hrindex','hrindex@index')->name('hrindex');
 Route::any('recruitment','hrindex@recruitment')->name('recruitment');
 //reshma
+Route::any('performance_department','hrindex@performance_department')->name('performance_department');
 Route::any('job_posts','hrindex@job_posts')->name('job_posts');
 Route::any('edit_job_post/{id}','hrindex@edit_job_post')->name('edit_job_post');
 Route::any('/update_job_post','hrindex@update_job_post')->name('update_job_post');

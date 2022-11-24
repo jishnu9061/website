@@ -18,6 +18,10 @@ class hrindex extends Controller
     {
         return view('hr.hrindex');
     }
+    public function performance_department()
+    {
+        return view('hr.performance_department');
+    }
 
     public function recruitment()
     {
