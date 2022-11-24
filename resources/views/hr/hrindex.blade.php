@@ -17,7 +17,7 @@
             <div class="col-sm-4 "> <a href="{{url('recruitment')}}"><img class="logo_size"
                 src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
                 class="btn btn-primary btn_align_btn">Recruitment</button></a></div>
-            <div class="col-sm-4 "> <a href="{{ url('performance_form') }}"><img class="logo_size" src="assets\image\Bring up report.png"
+            <div class="col-sm-4 "> <a href="{{ url('quarterly_performance_form') }}"><img class="logo_size" src="assets\image\Bring up report.png"
                 alt=""><button type="button" style="width:70%;"
                 class="btn btn-primary btn_align_btn">Performance</button></a></div>
             <div class="col-sm-4"> <a href="{{ url('loans') }}"><img class="logo_size"
