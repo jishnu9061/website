@@ -129,13 +129,57 @@ class store extends Controller
         
     }
 
+
+ public function editcategory($id)
+    {
+
+        $edit=DB::table('cra_add_categories')->where('id',$id)->first();
+        return view('Store & Inventory.edit_category',compact('edit','id'));
+        
+    }
+
+    public function newcategories(Request $request)
+    {
+
+        $category_name=$request['category_name'];
+        DB::table('cra_add_categories')->insert([ 
+            'category_name' => $category_name,  
+       ]);
+
+        return redirect('/add_categories');
+        
+        
+    }
+
     public function list_add_categories()
     {
-        return view('Store & Inventory.add_categories');
+
+        $list_category=DB::table('cra_add_categories')->get();
+        return view('Store & Inventory.add_categories',compact('list_category'));
         
     }
     
+    public function updatecategory(Request $request)
+    {
 
+        $id=$request['id'];
+        $category_name=$request['category_name'];
+        
+        DB::table('cra_add_categories')->where('id',$id)->update([
+
+            'category_name'=>$category_name,
+        ]);
+        return redirect('/add_categories');
+        
+    }
+
+    public function deletecategory($id)
+    {
+
+        $delete=DB::table('cra_add_categories')->where('id',$id)->delete();
+        return view('Store & Inventory.add_categories',compact('delete','id'));
+        
+    }
 
 }
 
