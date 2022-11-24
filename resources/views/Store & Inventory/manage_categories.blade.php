@@ -154,9 +154,9 @@
                                                                         <select name="category" id="username"
                                                                             style="width:100%;">
                                                                             <option>---select--- </option>
-                                                                            <option>stationery </option>
-                                                                            <option>furniture</option>
-                                                                            <option>library</option>
+                                                                            <option>Stationary </option>
+                                                                            <option>Assets</option>
+                                                                
                                                                           
 
 
@@ -211,9 +211,9 @@
                                                                         <select name="unit" id="username"
                                                                             style="width:100%;">
                                                                             <option>---select--- </option>
-                                                                            <option>Package</option>
-                                                                            <option>Paket</option>
-                                                                            <option>Kg</option>
+                                                                            <option>Dozen</option>
+                                                                            <option>Boxes</option>
+                                                                            <option>Sets</option>
 
 
                                                                         </select>

@@ -219,20 +219,56 @@
 
                                                         <div class="table-responsive">
 
+                                                            <table class="table table-striped table-class"
+                                                                id="table-id">
+
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="text-center">Category</th>
+                                                                        <th class="text-center">Item Type</th>
+                                                                        <th class="text-center">Item Name</th>
+                                                                        <th class="text-center">Quantity</th>
+
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    <td scope="row" class="text-center">
+                                                                        <div class="mb-1">
+
+                                                                            <div class="input-group">
+                                                                                <div class="input-group-prepend"></div>
+
+                                                                                <select name="category" id="username"
+                                                                                    style="width:100%;">
+                                                                                    <option>---select--- </option>
+                                                                                    <option>Stationary</option>
+                                                                                    <option>Assets</option>
+
+                                                                                </select>
+                                                                                <div class="invalid-feedback"
+                                                                                    style="width: 100%;">
+                                                                                    Town is required.
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+
+
                                                             <table class="table table-striped" id="demoA">
                                                                 <tr>
 
 
-                                                                    <th>CategoryT</th>
-                                                                    <th>Item Type</th>
-                                                                    <th>Item Name</th>
-                                                                    <th>Quantity</th>
-                                                                    <th>ADD</th>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td width="35%"><select class="form-control"
-                                                                            id="credit-to-select">
-                                                                            <option value=""> Select Account</option>
+
+                                                                                <select name="item_type" id="username"
+                                                                                    style="width:100%;">
+                                                                                    <option>---select--- </option>
+                                                                                    <option>Book </option>
+                                                                                    <option>Paper</option>
+                                                                                    <option>Chair</option>
+
 
                                                                             <option value=""> </option>
 

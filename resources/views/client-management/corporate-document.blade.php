@@ -37,7 +37,7 @@
                 @csrf
                 <input type="hidden" name="corporate_id" value="{{$corporate_docs->corporate_id}}">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Document Type</label>
                             <div class="input-group">
@@ -51,7 +51,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">File Upload</label>
                             <div class="input-group">
@@ -64,19 +64,41 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-2">
+                        <div class="mb-1">
+                            <td>
+                                <button type="button" class="add_Row adRow" id="add_Row">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </td>
+                        </div>
+                    </div>
                 </div>
                 <br>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Client Type</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="client" id="cars">
-                                    <option>{{$corporate_docs->Client_type}}</option>
-                                </select>
+
+                                <input type="text" class="form-control" name="client" id="username"
+                                    value="{{$corporate_docs->Client_type}}" placeholder="File" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Date</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+
+                                <input type="date" class="form-control" name="date" id="username"
+                                    value="" required>
                             </div>
                         </div>
                     </div>
@@ -113,6 +135,43 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
 </script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    var counter = 0;
+
+    $("#add_Row").on("click", function() {
+        var newRow = $("<div>");
+        var cols = "";
+
+        cols +=
+            '<td><select name="type" class="form-control" style="width:100%;><option value="">Select</option></select></td>'
+       
+
+        cols +=
+            '<td><button type="button" class="add_Row adRow ibtnDel " style="width:auto;"><i class="fas fa-backspace"></i></button></a></td>';
+       
+        newRow.append(cols);
+
+        var defVal = $("select[name=acctname]").find(":selected").val();
+        if (defVal) {
+            $("select[name=accountName]").find(`option[value=${defVal}]`).hide();
+        }
+        $("table.order-list").append(newRow);
+        setValCashVal('accountName'.concat(counter));
+        bindScript();
+        counter++;
+    });
+
+    // delete function
+    $("table.order-list").on("click", ".ibtnDel", function(_event) {
+        $(this).closest("tr").remove();
+        counter -= 1
+    });
+
+});
+</script>
+
 <script type="text/javascript">
 $(function() {
     $('[data-toggle="popover"]').popover()
