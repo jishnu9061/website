@@ -76,24 +76,24 @@
                                 </thead>
                                 <tbody>
 
-
+                                @foreach($list_category as $list)
                                     <tr id="data">
-                                        <td scope="row" class="text-center"></td>
+                                        <td scope="row" class="text-center">{{$list->category_name}}</td>
                                         <td scope="row" class="text-center"></td>
 
                                         <td scope="row" class="text-center">
-                                            <a href="edit_request_item"><i style="  color:rgb(13, 1, 56);"
-                                                    class="fa fa-edit"></i>
+                                            <a href="{{url('edit_category',$list->id,)}}"><i style="  color:rgb(13, 1, 56);"
+                                                    class="fa fa-edit"></i></a>
 
-                                                <a href=""> <i style="color:rgb(13, 1, 56);"
-                                                        class="fas fa-trash-alt"></i>
+                                                <a href="{{url('delete_category',$list->id,)}}"> <i style="color:rgb(13, 1, 56);"
+                                                        class="fas fa-trash-alt"></i></a>
 
 
 
                                         </td>
 
                                     </tr>
-
+                                @endforeach
                                 </tbody>
 
                             </table>
@@ -127,7 +127,7 @@
                                         <div class="container">
                                            
 
-                                                <form method="post" action="" id="form">
+                                                <form method="post" action="{{url('new_categories')}}" id="form">
                                                     @csrf
                                                     <div class="row">
                                                     <div class="col-md-12">
