@@ -25,7 +25,7 @@
                        
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">View Report</button>       
                         <span class="m-2"></span>
-                        <button type="button" class="btn btn-primary">Cancel</button>
+                        <button type="button" class="btn btn-primary" onclick="history.back()">Cancel</button>
 
                     </div>
                     
