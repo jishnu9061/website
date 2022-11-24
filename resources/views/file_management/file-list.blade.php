@@ -97,8 +97,13 @@
                                             <td scope="row">{{$list->Client_name}}</td>
                                             <td scope="row">{{$list->file_name}}</td>
                                             <td scope="row">{{$list->open_date}}</td>
+
                                             <!-- <td scope="row">{{$list->advocate}}</td> -->
                                             <!-- <td scope="row">{{$list->recent_progress}}</td> -->
+
+                                            <td scope="row">{{$list->advocate}}</td>
+                                            <td scope="row">{{$list->recent_progress}}</td>
+
                                             <td scope="row">{{$list->close_date}}</td>
 
                                             <td scope="row">{{$list->amount}}</td>
