@@ -661,6 +661,12 @@ color: #999;
                                             <span>Procurement Management</span>
                                     </a>
                             </li>
+                            <li class="submenu-item" style="list-style:none;">
+                                    <a href="{{url('practice_area_index')}}" class='sidebar-link'>
+                                        <i class="fa fa-bar-chart" id="icon"></i>
+                                            <span>Practice Area Management</span>
+                                    </a>
+                            </li>
                                     {{-- 
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('home')}}" class="sidebar-link">

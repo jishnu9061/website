@@ -1397,6 +1397,12 @@ Route::any('edit_purchase','PurchaseManagement@edit_purchase')->name('edit_purch
 
 
 
+//practice Area Management
+Route::any('practice_area_index','PracticeAreaManagement@practice_area_index')->name('practice_area_index');
+
+
+
+
 
 ?>
 
