@@ -104,7 +104,7 @@
 
                                                 <tr>
                                                     <td class="" style="width:25%">Category</td>
-                                                    <td class="">Item Type</td>
+                                                    
                                                  
                                                     <td class="">Item Name</td>
                                                     <td class="">Quantity</td>
@@ -124,8 +124,7 @@
                                                                     </option>
                                                            
                                                             </select></td>
-                                                        <td><input type="text" name="batch_no[]" id="batch_no_"
-                                                                class="form-control" placeholder="Item Type"></td>
+                                                       
                                                         <td><input type="text" name="quantity[]" id="quantity_"
                                                                 class="form-control"></td>
                                                         <td><input type="text" name="price[]" id="price_"

@@ -79,10 +79,17 @@
                                 @foreach($list_category as $list)
                                     <tr id="data">
 
+<<<<<<< Updated upstream
                                        
                                        
 
                                         <td scope="row" class="text-center">{{$list->category_name}}</td>
+=======
+                                        <td scope="row" class="text-center">{{$list->category_name}}</td>
+                                       
+
+                                     
+>>>>>>> Stashed changes
                                        
 
 

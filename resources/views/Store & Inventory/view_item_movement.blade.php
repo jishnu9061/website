@@ -27,10 +27,7 @@
 
         @csrf
         <tbody>
-            <tr>
-                <th style="width:30%">Item:</th>
-                <td></td>
-            </tr>
+            
             <tr>
                 <th>Item Name</th>
                 <td></td>
@@ -38,16 +35,13 @@
             <th>Category</th>
             <td></td>
             </tr>
-            </tr>
-            <th>Product Type</th>
-            <td></td>
-            </tr>
+           
             </tr>
             <th>Quantity in Store</th>
             <td></td>
             </tr>
             <tr>
-                <th>Re-order</th>
+                <th>Re-order level</th>
                 <td></td>
             </tr>
           

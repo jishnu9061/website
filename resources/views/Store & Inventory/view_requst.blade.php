@@ -50,11 +50,7 @@
             <th>Item Name</th>
             <td></td>
             </tr>
-            <tr>
-                <th>Item Type</th>
-                <tr></td>
-                
-            </tr>
+            
             <tr>
                 <th >Quantity</th>
                 <td></td>
