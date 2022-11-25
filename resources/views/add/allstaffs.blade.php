@@ -229,18 +229,6 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Address</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <textarea class="form-control" name="address" col="2"></textarea>
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Age is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="mb-1">
                             <label for="username">Date Of Joining</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
@@ -263,12 +251,8 @@
                                 <option value="3">Other</option>
                             </select>
                         </div>
-                    </div>    
-                           
                     </div>
-                    <br>
-                    <div class="row">
-                       <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label>Roles:&nbsp;</label>
                             <select class="form-select" aria-label="Default select example">
@@ -279,8 +263,12 @@
                                 <option value="Legal Advicer">Legal Advicer</option>
                             </select>
                         </div>
+                    </div>    
+                           
                     </div>
-                    <div class="col-md-3">
+                    <br>
+                    <div class="row">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label>Departments:&nbsp;</label>
                             <select class="form-select" aria-label="Default select example">
@@ -291,7 +279,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label>Status:&nbsp;</label>
                             <select class="form-select" aria-label="Default select example">
@@ -303,7 +291,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Status Date</label>
                             <div class="input-group">
@@ -418,6 +406,48 @@
                             </div>
                         </div>
                     </div> --}}
+                    <br>
+                    <div class="row">
+                        <h5><u>Address</u></h5>
+                        <br>
+                        <br>
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                                <label>Name</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="text" class="form-control" name="name" id="name" value="">
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Required Field.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                                <label>Email</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="email" class="form-control" name="email" id="address" value="">
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Required Field.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                                <label>Phone Number</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="text" class="form-control" name="phoneno" id="address" value="">
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Required Field.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
                     <div class="row">
                         <div class="col-sm">
 
