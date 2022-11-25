@@ -64,7 +64,7 @@
                                 <thead>
                                     <tr>
                                         <th class="text-center">Item Name</th>
-                                        <th class="text-center">Item Type</th>
+                                      
                                         <th class="text-center">Quantity In Stock</th>
                                         <th class="text-center">Category</th>
                                         <th class="text-center">Unit</th>
@@ -78,7 +78,7 @@
                                     @foreach($category_list as $list)
                                     <tr>
                                         <td class="text-center">{{$list->item_name}}</td>
-                                        <td class="text-center">{{$list->item_type}}</td>
+                                        
                                         <td class="text-center">{{$list->quantity}}</td>
                                         <td class="text-center">{{$list->category}}</td>
                                         <td class="text-center">{{$list->unit}}</td>
@@ -166,39 +166,10 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-md-4">
-                                                                <div class="mb-1">
-                                                                    <label for="username">Item Type</label>
-                                                                    <div class="input-group">
-                                                                        <div class="input-group-prepend"></div>
-
-                                                                        <select name="item_type" id="username"
-                                                                            style="width:100%;">
-                                                                            <option>---select--- </option>
-                                                                            <option>Book </option>
-                                                                            <option>Pen</option>
-                                                                            <option>Pencil</option>
-                                                                            <option>pin</option>
+                                                          
 
 
-                                                                        </select>
-                                                                        <div class="invalid-feedback"
-                                                                            style="width: 100%;">
-                                                                            Town is required.
-                                                                        </div>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-
-
-
-                                                        </div>
-
-
-                                                        <br>
-                                                        <div class="row">
+                                                       
                                                             <div class="col-md-4">
                                                                 <div class="mb-1">
                                                                     <label for="username">Unit</label>

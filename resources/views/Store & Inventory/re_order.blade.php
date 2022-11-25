@@ -70,7 +70,7 @@
                                        
                                         <td class="text-center"></td>
                                         <td scope="row" class="text-center">
-                                            <a href=""><i style="  color:rgb(13, 1, 56);"
+                                            <a href="view_item_details"><i style="  color:rgb(13, 1, 56);"
                                                     class="fa fa-eye"></i>
 
                                                

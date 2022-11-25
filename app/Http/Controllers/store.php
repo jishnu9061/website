@@ -118,6 +118,12 @@ class store extends Controller
         
     }
 
+    public function viewitemdetails()
+    {
+        return view('Store & Inventory.view_item_details');
+        
+    }
+
     public function edit_list_manage_categories()
     {
         return view('Store & Inventory.edit_manage_categories');

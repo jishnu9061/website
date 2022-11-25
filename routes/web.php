@@ -1349,6 +1349,7 @@ Route::any('request_item','store@request_items')->name('request_item');
 Route::any('item_movement','store@item_movement_report')->name('item_movement');
 Route::any('view_item_movement','store@view_item_movement_report')->name('view_item_movement');
 Route::any('re_order','store@re_order_list')->name('re_order');
+Route::any('view_item_details','store@viewitemdetails')->name('view_item_details');
 Route::any('edit_manage_categories','store@edit_list_manage_categories')->name('edit_manage_categories');
 Route::any('edit_request_item','store@edit_request_items')->name('edit_request_item');
 Route::any('add_categories','store@list_add_categories')->name('add_categories');
