@@ -23,17 +23,7 @@
 
         </div>
         <!--filter-->
-        <div class="tb_search">
-
-            <select name="town"  id="search_input_all" onkeyup="FilterkeyWord_all_table()" class="form-control"
-                style="width:100%;">
-                <option value="" disabled selected hidden>Category<option>
-                <option>pen</option>
-                <option>pencil</option>
-                <option>Book</option>
-            </select>
-
-        </div>
+   
         <br>
 
         <!--filter end-->
@@ -74,7 +64,7 @@
                             <thead>
                                 <tr>
                                     <th class="text-center">Category</th>
-                                    <th class="text-center">Item Type</th>
+                                  
                                     <th class="text-center">Item Name</th>
                                     <th class="text-center">Quantity In Stock</th>
                                     <th class="text-center">Re-oder level</th>
@@ -87,7 +77,7 @@
 
                                 <tr id="data">
                                     <td></td>
-                                    <td></td>
+                                 
                                     <td></td>
                                     <td></td>
                                     <td></td>

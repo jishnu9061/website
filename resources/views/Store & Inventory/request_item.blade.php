@@ -226,12 +226,11 @@
 
                                         <div class="col-sm">
 
-
                                             <table class="table table-striped table-class" id="tab_logic">
 
                                                 <tr>
                                                     <td class="" style="width:25%">Category</td>
-                                                    <td class="">Item Type</td>
+                                                    
                                                  
                                                     <td class="">Item Name</td>
                                                     <td class="">Quantity</td>
@@ -251,8 +250,7 @@
                                                                     </option>
                                                            
                                                             </select></td>
-                                                        <td><input type="text" name="batch_no[]" id="batch_no_"
-                                                                class="form-control" placeholder="Item Type"></td>
+                                                     
                                                         <td><input type="text" name="quantity[]" id="quantity_"
                                                                 class="form-control"></td>
                                                         <td><input type="text" name="price[]" id="price_"
@@ -273,103 +271,6 @@
                                                     
                                                        
                                                     </table>
-
-                                                            <table class="table table-striped table-class"
-                                                                id="table-id">
-
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th class="text-center">Category</th>
-                                                                        <th class="text-center">Item Type</th>
-                                                                        <th class="text-center">Item Name</th>
-                                                                        <th class="text-center">Quantity</th>
-
-
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-
-                                                                    <td scope="row" class="text-center">
-                                                                        <div class="mb-1">
-
-                                                                            <div class="input-group">
-                                                                                <div class="input-group-prepend"></div>
-
-                                                                                <select name="category" id="username"
-                                                                                    style="width:100%;">
-                                                                                    <option>---select--- </option>
-                                                                                    <option>Stationary</option>
-                                                                                    <option>Assets</option>
-
-                                                                                </select>
-                                                                                <div class="invalid-feedback"
-                                                                                    style="width: 100%;">
-                                                                                    Town is required.
-                                                                                </div>
-
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-
-
-                                                            <table class="table table-striped" id="demoA">
-                                                                <tr>
-
-
-
-                                                                                <select name="item_type" id="username"
-                                                                                    style="width:100%;">
-                                                                                    <option>---select--- </option>
-                                                                                    <option>Book </option>
-                                                                                    <option>Paper</option>
-                                                                                    <option>Chair</option>
-
-
-                                                                            <option value=""> </option>
-
-
-                                                                        </select></td>
-                                                                    <td width="35%"><select class="form-control"
-                                                                            id="credit-to-select">
-                                                                            <option value=""> Select Account</option>
-
-                                                                            <option value=""> </option>
-
-
-                                                                        </select></td>
-                                                                    <td width="100%"><input type="text"
-                                                                            id="credit_amount" class="form-control">
-                                                                    </td>
-                                                                    <td><input type="text" id="credit_amount"
-                                                                            class="form-control"></td>
-                                                                    <td><input type="button" class="form-control" value="+"
-                                                                            onclick="addRow()" /></td>
-                                                                </tr>
-                                                            </table>
-</div>
-
-
-                                                            <div class="row">
-                                                                <div class="col-sm">
-
-                                                                </div>
-                                                                <div class="col-sm">
-
-                                                                </div>
-                                                                <div class="col-sm">
-                                                                    <br>
-                                                                    <button type="submit"
-                                                                        class="btn btn-primary float:right;"
-                                                                        Style="width:50%;">Request</button>
-                                                                    <button type="button"
-                                                                        class="btn btn-primary float:left"
-                                                                        Style="width:45%;"
-                                                                        data-dismiss="modal">Cancel</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-
                                                 </div>
                                             </div>
                                         </div>
