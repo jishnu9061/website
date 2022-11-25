@@ -135,9 +135,14 @@
                                                                     <label for="username">Item Name</label>
                                                                     <div class="input-group">
                                                                         <div class="input-group-prepend"></div>
-                                                                        <input type="text" class="form-control"
-                                                                            name="item_name" value="" placeholder=""
-                                                                            required>
+                                                                      
+                                                                            <select name="item_name" id="username"
+                                                                            style="width:100%;">
+                                                                            <option>---select--- </option>
+
+                                                                            <option>Stationary </option>
+                                                                            <option>Assets</option>
+                                                                        </select>
                                                                         <div class="invalid-feedback"
                                                                             style="width: 100%;">
 
