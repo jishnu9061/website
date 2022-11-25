@@ -171,6 +171,10 @@ public function view_job_post($id)
     {
         return view('hr.quarterly_performance_form');
     }
+    public function mid_year_performance()
+    {
+        return view('hr.mid_year_performance');
+    }
     public function annual_performance_form()
     {
         return view('hr.annual_performance_form');
