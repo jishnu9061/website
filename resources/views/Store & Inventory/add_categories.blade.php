@@ -67,8 +67,8 @@
 
                                 <thead>
                                     <tr>
-                                        <th class="text-center">Product Category</th>
-                                        <th class="text-center">Quantity In Stock</th>
+                                        <th class="text-center">Product Categorys</th>
+                                       
 
                                         <th class="text-center">Action</th>
 
@@ -78,8 +78,13 @@
 
                                 @foreach($list_category as $list)
                                     <tr id="data">
+
+                                        <td scope="row" class="text-center"></td>
+                                       
+
                                         <td scope="row" class="text-center">{{$list->category_name}}</td>
                                         <td scope="row" class="text-center"></td>
+
 
                                         <td scope="row" class="text-center">
                                             <a href="{{url('edit_category',$list->id,)}}"><i style="  color:rgb(13, 1, 56);"

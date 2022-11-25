@@ -158,6 +158,11 @@ class store extends Controller
         return view('Store & Inventory.add_categories',compact('list_category'));
         
     }
+    public function list_view_requst()
+    {
+        return view('Store & Inventory.view_requst');
+        
+    }
     
     public function updatecategory(Request $request)
     {
