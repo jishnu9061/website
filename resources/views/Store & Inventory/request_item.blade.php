@@ -24,22 +24,11 @@
 
         </div>
         <div>
-            <button type="button" class="btn btn-primary complaint_btn btn " data-toggle="modal"
-                data-target="#myModal">Request Item</button></a>
+            <!-- <button type="button" class="btn btn-primary complaint_btn btn " data-toggle="modal"
+                data-target="#myModal">Request Item</button></a> -->
             <!--filter-->
-            <div class="tb_search">
-
-                <select name="town" id="search_input_all" onkeyup="FilterkeyWord_all_table()" class="form-control"
-                    style="width:100%;">
-                    <option value="" disabled selected hidden>Category
-                    <option>
-                    <option>pen</option>
-                    <option>pencil</option>
-                    <option>Book</option>
-                </select>
-
-            </div>
-            <br>
+           
+           
 
             <!--filter end-->
 
@@ -95,18 +84,14 @@
                                         <td scope="row" class="text-center"></td>
                                         <td scope="row" class="text-center"></td>
                                         <td scope="row" class="text-center"></td>
-                                        <td scope="row" class="text-center"><select name="" id="">
-                                            <option value="approved">Approved</option>
-                                            <option value="rejected">Rejected</option>
-
-                                        </select></td>
+                                        <td scope="row" class="text-center"></td>
                                         <td scope="row" class="text-center">
-                                            <a href="edit_request_item"><i style="  color:rgb(13, 1, 56);"
-                                                    class="fa fa-edit"></i>
+                                            <!-- <a href="edit_request_item"><i style="  color:rgb(13, 1, 56);"
+                                                    class="fa fa-edit"></i> -->
                                                     <a href="view_requst"> <i style="color:rgb(13, 1, 56);"
-                                                        class="fa fa-eye "></i>
-                                                <a href=""> <i style="color:rgb(13, 1, 56);"
-                                                        class="fas fa-trash-alt"></i>
+                                                        class="far fa-arrow-alt-circle-right "></i>
+                                                <!-- <a href=""> <i style="color:rgb(13, 1, 56);"
+                                                        class="fas fa-trash-alt"></i> -->
 
 
 
@@ -250,9 +235,17 @@
                                                                     </option>
                                                            
                                                             </select></td>
+                                                            <td><select class="form-select" aria-label="select example"
+                                                                name="item_name[]" id="item_name">
+                                                                <option value="">Select</option>
+                                                              
+                                                                    <option value="">
+                                                                    
+                                                                    </option>
+                                                           
+                                                            </select></td>
                                                      
-                                                        <td><input type="text" name="quantity[]" id="quantity_"
-                                                                class="form-control"></td>
+                                                       
                                                         <td><input type="text" name="price[]" id="price_"
                                                                 class="form-control calculate" placeholder="0"></td>
                                                      
