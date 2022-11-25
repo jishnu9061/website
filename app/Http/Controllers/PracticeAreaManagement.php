@@ -20,4 +20,8 @@ class PracticeAreaManagement extends Controller
     {
         return view('practiceareamanagement.family_law');
     }
+    public function general_practice()
+    {
+        return view('practiceareamanagement.general_practice');
+    }
 }
