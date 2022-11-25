@@ -124,9 +124,17 @@
                                                                     </option>
                                                            
                                                             </select></td>
+                                                            <td><select class="form-select" aria-label="select example"
+                                                                name="item_name[]" id="item_name">
+                                                                <option value="">Select</option>
+                                                              
+                                                                    <option value="">
+                                                                    
+                                                                    </option>
+                                                           
+                                                            </select></td>
                                                        
-                                                        <td><input type="text" name="quantity[]" id="quantity_"
-                                                                class="form-control"></td>
+                                                       
                                                         <td><input type="text" name="price[]" id="price_"
                                                                 class="form-control calculate" placeholder="0"></td>
                                                      
