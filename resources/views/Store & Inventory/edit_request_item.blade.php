@@ -11,27 +11,24 @@
 </head>
 
 <body>
-    <div class="container">
-        <!-- <h2 style="color: #070344;  text-align:center;"><b>Customer Registration</b></h2> -->
-        <div>
-            <div>
-                <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
-                <b><u>Client Registration</u></b></span> -->
+    
+        
+<div class="container">
+              
                 {{-- heading --}}
                 <h4 id="hdtpa"><b>Edit Item Request</b></h4>
                 <br>
-            </div>
-
-           
+            
                                             <div class="row">
                                                 <div class="col-md-12 order-md-1">
-                                                    <form method="post" action="{{url('add-registration')}}" id="form">
+                                                    <form method="post" action="" id="form">
                                                         @csrf
                                                         <div class="row">
                                                             <div class="col-md-4">
                                                                 <div class="mb-1">
                                                                     <label for="username">Date</label>
                                                                     <div class="input-group">
+
                                                                         <div class="input-group-prepend"></div>
                                                                         <input type="date" class="form-control"
                                                                             name="date" id="username" value=""
@@ -68,7 +65,7 @@
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <div class="mb-1">
-                                                                    <label for="username">Branch</label>
+                                                                    <label for="username">Department</label>
                                                                     <div class="input-group">
                                                                         <div class="input-group-prepend"></div>
 
@@ -94,224 +91,209 @@
 
                                                         </div>
                                                         <br>
-                                                        <br>
                                                         <div>
                                                             <h4 id="hdtpa"><b>Item </b></h4>
                                                         </div>
                                                         <br>
-                                                        <br>
-                                                        <div class="table-responsive">
-                                                            <table class="table table-striped table-class"
-                                                                id="table-id">
-
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th class="text-center">Category</th>
-                                                                        <th class="text-center">Item Type</th>
-                                                                        <th class="text-center">Item Name</th>
-                                                                        <th class="text-center">Quantity</th>
-
-
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-
-                                                                    <td scope="row" class="text-center">
-                                                                        <div class="mb-1">
-
-                                                                            <div class="input-group">
-                                                                                <div class="input-group-prepend"></div>
-
-                                                                                <select name="category" id="username"
-                                                                                    style="width:100%;">
-                                                                                    <option>---select--- </option>
-                                                                                    <option>name 1 </option>
-                                                                                    <option>name 2</option>
-                                                                                    <option>name 3</option>
-
-
-                                                                                </select>
-                                                                                <div class="invalid-feedback"
-                                                                                    style="width: 100%;">
-                                                                                    Town is required.
-                                                                                </div>
-
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-
-                                                                    <td scope="row" class="text-center">
-                                                                        <div class="mb-1">
-
-                                                                            <div class="input-group">
-                                                                                <div class="input-group-prepend"></div>
-
-                                                                                <select name="item_type" id="username"
-                                                                                    style="width:100%;">
-                                                                                    <option>---select--- </option>
-                                                                                    <option>name 1 </option>
-                                                                                    <option>name 2</option>
-                                                                                    <option>name 3</option>
-
-
-                                                                                </select>
-                                                                                <div class="invalid-feedback"
-                                                                                    style="width: 100%;">
-                                                                                    Town is required.
-                                                                                </div>
-
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td scope="row" class="text-center">
-
-
-                                                                        <div style="width: 100%";>
-                                                                            <div class="input-group-prepend"></div>
-                                                                            <input type="text" class="form-control"
-                                                                                name="item_name" id="username" value=""
-                                                                                placeholder="" required>
-                                                                            <div class="invalid-feedback"
-                                                                                style="width: 100%;">
-
-                                                                            </div>
-                                                                        </div>
-
-
-                                                                    </td>
-
-                                                                    <td scope="row" class="text-center">
-                                                                        <div style="width: 100%";>
-                                                                            <div class="input-group-prepend"></div>
-                                                                            <input type="text" class="form-control"
-                                                                                name="quantity" id="username" value=""
-                                                                                placeholder="" required>
-                                                                            <div class="invalid-feedback"
-                                                                                style="width: 100%;">
-
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-
-                                                                    </tr>
-
-                                                                </tbody>
-
-                                                            </table>
-                                                        </div>
-                                                        <br>
                                                        
-                                                        <div class="row">
-                                                            <div class="col-sm">
+                                    <div class="row clearfix">
 
-                                                            </div>
-                                                            <div class="col-sm">
+                                        <div class="col-sm">
 
-                                                            </div>
-                                                            <div class="col-sm">
-                                                                <br>
-                                                                <button type="submit"
-                                                                    class="btn btn-primary float:right;"
-                                                                    Style="width:50%;">Update</button>
-                                                                <button type="button" class="btn btn-primary float:left"
-                                                                    Style="width:45%;"
-                                                                    data-dismiss="modal">Cancel</button>
-                                                            </div>
-                                                        </div>
+                                            <table class="table table-striped table-class" id="tab_logic">
+
+                                                <tr>
+                                                    <td class="" style="width:25%">Category</td>
+                                                    <td class="">Item Type</td>
+                                                 
+                                                    <td class="">Item Name</td>
+                                                    <td class="">Quantity</td>
+                                                  
+                                                    <td> <input type="button" class="btn btn-primary" id="add_Row"
+                                                            style="background-color:#607080;width:100%;" value="Add">
+                                                    </td>
+                                                </tr>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><select class="form-select" aria-label="select example"
+                                                                name="item_name[]" id="item_name">
+                                                                <option value="">Select</option>
+                                                              
+                                                                    <option value="">
+                                                                    
+                                                                    </option>
+                                                           
+                                                            </select></td>
+                                                        <td><input type="text" name="batch_no[]" id="batch_no_"
+                                                                class="form-control" placeholder="Item Type"></td>
+                                                        <td><input type="text" name="quantity[]" id="quantity_"
+                                                                class="form-control"></td>
+                                                        <td><input type="text" name="price[]" id="price_"
+                                                                class="form-control calculate" placeholder="0"></td>
+                                                     
+                                                        </td>
+                                                        <td><button type="button"
+                                                                class="add-Row ibtnDel btn btn-primary text-white "
+                                                                style="background-color:#607080;width:100%;color:white;">Remove</button>
+</td>
+                                                    </tr>
+                                            </table>
+                                            <div class="row">
+                                                <div class="col-sm">
                                                 </div>
-                                                </form>
+                                                <div class="col-sm">
+                                                    <table class="table table-bordered">
+                                                    
+                                                       
+                                                    </table>
+                                                </div>
                                             </div>
                                         </div>
-                             
-         
+                                    </div>
+                                 
+
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary float:left" Style="width:10%;"onclick="history.back()">Cancel</button>
+                                    <button type="submit" class="btn btn-primary float:right;" Style="width:10%;">Update</button>
+            </div>
 
 
+        </div>
 
-            <!--filter-->
+        </div>
+
+
+        </form>
+
+        </div>
+        </div>
+        </div>
+
+        </div>
+        <br>
+     
+
+                
+
+            <br>
+            <!-- Supplier modal Edit End -->
+
+            <!-- Delete  confirmation Message -->
             <script>
-            function myFunction() {
-                if (!confirm("Are you sure to delete this"))
-                    event.preventDefault();
-            }
+                function myFunction() {
+                    if (!confirm("Are you sure to delete this"))
+                        event.preventDefault();
+                }
             </script>
-            <script>
-            $(function() {
-                $("#new-item").dataTable();
-            })
-            </script>
 
-            {{-- Search booking script --}}
-            <script>
+            <!-- End delete confirmation message -->
+        </div>
+
+        {{-- Search booking script --}}
+        <script>
             $(document).ready(function() {
                 $('.searchingBook').select2();
             });
-            </script>
-            {{-- search booking script end --}}
-            <!-- Delete  confirmation Message -->
-            <script>
+        </script>
+        {{-- search booking script end --}}
+        <!-- Delete  confirmation Message -->
+        <script>
             function myFunction() {
                 if (!confirm("Are you sure to delete this"))
                     event.preventDefault();
             }
-            </script>
-            <!-- End delete confirmation message -->
+        </script>
+        <!-- End delete confirmation message -->
 
-            <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-            <script type="text/javascript" charset="utf8"
-                src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js">
-            </script>
-            <script type="text/javascript" charset="utf8"
-                src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js">
-            </script>
+        <script src="{{ url('assets/js') }}/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/js/select2.min.js" defer></script>
+        <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" charset="utf8"
+            src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 
-            {{-- Supplier Edit start --}}
+        <script type="text/javascript">
+            $(document).ready(function() {
 
-            <script>
-            $(document).on('click', '#edit_medicine_details', function() {
+                // add new product row on invoice
+                var cloned = $('#tab_logic tr:last').clone();
+                $("#add_Row").click(function(e) {
+                    e.preventDefault();
+                    cloned.clone().appendTo('#tab_logic');
+                });
+                $("table.order-list").on("click", ".ibtnDel", function(_event) {
+                    $(this).closest("tr").remove();
+                    counter -= 1
+                });
+                calculateTotal();
 
-                var medicine_id_hidden = $(this).closest('#data').find('#medicine_id_hidden')
-                    .val();
-                var medicine_name = $(this).closest('#data').find('#medicine_name_1').val();
-                var medicine_brand_name = $(this).closest('#data').find('#medicine_brand_name')
-                    .val();
-                var medicine_group = $(this).closest('#data').find('#medicine_group').val();
-                var medicicine_category_name = $(this).closest('#data').find(
-                    '#medicine_category_name1').val();
-                var medicine_generic_name = $(this).closest('#data').find(
-                    '#medicine_generic_name').val();
-                var medicine_manufactuure_name = $(this).closest('#data').find(
-                    '#medicine_manufactuure_name').val();
-                var medicine_supplier_name = $(this).closest('#data').find(
-                    '#medicine_supplier_name').val();
-                var medicine_minimum_level = $(this).closest('#data').find(
-                    '#medicine_minimum_level').val();
-                var medicine_reorder_level = $(this).closest('#data').find(
-                    '#medicine_reorder_level').val();
-                var medicine_unit_packing = $(this).closest('#data').find(
-                    '#medicine_unit_packing').val();
-                var medicine_composition = $(this).closest('#data').find(
-                    '#medicine_composition').val();
-                var medicine_notes = $(this).closest('#data').find('#medicine_notes').val();
-                var medicine_images = $(this).closest('#data').find('#medicine_images').val();
+                $('#tab_logic').on('change keyup paste', '.calculate', function() {
+                    updateTotals(this);
+                    calculateTotal();
+                });
 
+                function updateTotals(elem) {
+                    var tr = $(elem).closest('tr'),
+                        quantity = $('[name="quantity[]"]', tr).val(),
+                        price = $('[name="price[]"]', tr).val(),
+                        percent = $('[name="total[]"]', tr).val(),
+                        subtotal = parseInt(quantity) * parseFloat(price);
+                    $('.calculate-sub', tr).val(subtotal.toFixed(2));
+                }
 
+                function calculateTotal() {
+                    // updateTotals();
+                    var grandTotal = 0.0;
+                    var totalQuantity = 0;
+                    $('.calculate-sub').each(function() {
+                        grandTotal = ($(this).val());
+                        if ($.isNumeric(grandTotal)) {
 
-                $("#edit_id").val(medicine_id_hidden);
-                $("#edit_medicine_name").val(medicine_name);
-                $("#edit_brand_name").val(medicine_brand_name);
-                $("#edit_medicine_group").val(medicine_group);
-                $("#edit_category_name").val(medicine_category_name);
-                $("#edit_generic_name").val(medicicine_genric_name);
-                $("#edit_manufacture_name").val(medicine_manufactuure_name);
-                $("#edit_supplier_name").val(medicine_supplier_name);
-                $("#edit_minimum_level").val(medicine_minimum_level);
-                $("#edit_reorder").val(medicine_reorder_level);
-                $("#edit_minimum_level").val(medicine_minimum_level);
-                $("#edit_unit_packing").val(medicine_unit_packing);
-                $("#edit_medicine_details1").val(medicine_composition);
-                $("#edit_medicine_note").val(medicine_notes);
-                $("#edit_image").val(medicine_images);
+                            totalQuantity += parseFloat(grandTotal);
+                        }
+                    });
+
+                    $('.invoice-sub-total').val(parseFloat(totalQuantity).toFixed(2));
+                }
+
             });
-            </script>
-            {{-- Supplier Edit End --}}
-            @endsection
+        </script>
+
+        <script>
+            $(function() {
+                $("#allsupplier").dataTable();
+            })
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                $(".select_group").select2();
+                // $("#description").wysihtml5();
+            });
+
+            // delete function
+            $("table.order-list").on("click", ".ibtnDel", function(_event) {
+                $(this).closest("tr").remove();
+                counter -= 1
+            });
+        </script>
+        <script>
+            $(document).ready(function() {
+
+                $('#grand-total').keyup(function() {
+                    recalc();
+                });
+
+                $('#advance-amount').keyup(function() {
+                    recalc();
+                });
+
+                function recalc() {
+                    var grandTotal = $("#grand-total").val();
+                    var advanceAmount = $("#advance-amount").val();
+                    var result = grandTotal - advanceAmount;
+
+                    $("#result").val(result);
+                }
+            });
+        </script>
+    @endsection

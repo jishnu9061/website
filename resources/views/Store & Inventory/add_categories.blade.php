@@ -67,8 +67,8 @@
 
                                 <thead>
                                     <tr>
-                                        <th class="text-center">Product Category</th>
-                                        <th class="text-center">Quantity In Stock</th>
+                                        <th class="text-center">Product Categorys</th>
+                                       
 
                                         <th class="text-center">Action</th>
 
@@ -79,7 +79,7 @@
 
                                     <tr id="data">
                                         <td scope="row" class="text-center"></td>
-                                        <td scope="row" class="text-center"></td>
+                                       
 
                                         <td scope="row" class="text-center">
                                             <a href="edit_request_item"><i style="  color:rgb(13, 1, 56);"

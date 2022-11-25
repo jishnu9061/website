@@ -1339,6 +1339,8 @@ Route::any('edit_manage_categories','store@edit_list_manage_categories')->name('
 Route::any('edit_request_item','store@edit_request_items')->name('edit_request_item');
 Route::any('add_categories','store@list_add_categories')->name('add_categories');
 Route::any('edit_categories','store@list_edit_categories')->name('edit_categories');
+Route::any('view_requst','store@list_view_requst')->name('view_requst');
+
 
 
 
