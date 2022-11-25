@@ -1402,6 +1402,7 @@ Route::any('edit_purchase','PurchaseManagement@edit_purchase')->name('edit_purch
 Route::any('practice_area_index','PracticeAreaManagement@practice_area_index')->name('practice_area_index');
 Route::any('personal_injury','PracticeAreaManagement@personalinjury')->name('personal_injury');
 Route::any('family_law','PracticeAreaManagement@family_law')->name('family_law');
+Route::any('general_practice','PracticeAreaManagement@general_practice')->name('general_practice');
 
 
 

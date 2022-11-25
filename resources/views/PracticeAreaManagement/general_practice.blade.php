@@ -3,8 +3,8 @@
 
 
 {{-- heading --}}
-   <div class="container" >            
-               <h4 id="hdtpa"><b>Family Law</b></h4>
+   <div class="container">            
+               <h4 id="hdtpa"><b>General Practice</b></h4>
                <br>
 
 
@@ -44,8 +44,8 @@
       <th scope="col">Matter Type</th>
       <th scope="col">Other Party</th>
       <th scope="col">Description</th>
-      <th scope="col">Attorney</th>
-      <th scope="col">View</th>
+      <th scope="col">Matter Stage</th>
+      
     </tr>
   </thead>
   <tbody>
@@ -57,7 +57,6 @@
       <td></td>
       <td></td>
       <td></td>
-      <td><a href=""> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i></td>
 
     </tr>
     
