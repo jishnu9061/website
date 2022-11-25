@@ -83,10 +83,10 @@
           <a class="nav-link" aria-current="page" href="{{ url('quarterly_performance_form') }}">Quarterly Performance</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ url('mid_year_performance') }}">Mid-Year Performance</a>
+          <a class="nav-link active" href="{{ url('mid_year_performance') }}">Mid-Year Performance</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="{{ url('annual_performance_form') }}">Annual Performance</a>
+          <a class="nav-link" href="{{ url('annual_performance_form') }}">Annual Performance</a>
         </li>
       </ul>
 
@@ -102,7 +102,7 @@
 
 
 <div class="text-center">
-<h5><b>Annual Performance Report</b></h5>
+<h5><b>Mid-Year Performance Report</b></h5>
 </div>
 <br>
 

@@ -1320,6 +1320,7 @@ Route::any('view_job_appl_details_2','hrindex@view_job_appl_details_2')->name('v
 Route::any('create_job_post','hrindex@create_job_post')->name('create_job_post');
 Route::any('reviewed_details','hrindex@reviewed_details')->name('reviewed_details');
 Route::any('quarterly_performance_form','hrindex@quarterly_performance_form')->name('quarterly_performance_form');
+Route::any('mid_year_performance','hrindex@mid_year_performance')->name('mid_year_performance');
 Route::any('annual_performance_form','hrindex@annual_performance_form')->name('annual_performance_form');
 Route::any('accindex','accindex@index')->name('accindex');
 Route::any('new_communication','ClientManagement@add_communication')->name('add_communication');
@@ -1400,6 +1401,7 @@ Route::any('edit_purchase','PurchaseManagement@edit_purchase')->name('edit_purch
 //practice Area Management
 Route::any('practice_area_index','PracticeAreaManagement@practice_area_index')->name('practice_area_index');
 Route::any('personal_injury','PracticeAreaManagement@personalinjury')->name('personal_injury');
+Route::any('family_law','PracticeAreaManagement@family_law')->name('family_law');
 
 
 
