@@ -79,11 +79,11 @@
                                 @foreach($list_category as $list)
                                     <tr id="data">
 
-                                        <td scope="row" class="text-center"></td>
+                                       
                                        
 
                                         <td scope="row" class="text-center">{{$list->category_name}}</td>
-                                        <td scope="row" class="text-center"></td>
+                                       
 
 
                                         <td scope="row" class="text-center">
