@@ -60,7 +60,7 @@
                                     <tr>
                                         <th class="text-center">Order Number</th>
                                         <th class="text-center">Date</th>
-                                        <th class="text-center">Suppliers</th>
+                                        <th class="text-center">Vendor</th>
                                         <th class="text-center">Unit</th>
                                         <th class="text-center">Status</th>
                                         <th class="text-center">View</th>
@@ -70,12 +70,12 @@
                                 <tbody>
 
 
-                                    <tr id="data">
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                    <tr class="text-center">
+                                        <td>62C67947652DC</td>
+                                        <td>23-11-2022</td>
+                                        <td>ABC Ltd</td>
+                                        <td>10</td>
+                                        <td>Order-Placed</td>
                                         <td scope="row" class="text-center">
                                         <a href="{{url('view_purchase_order')}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i>
                                         </td>

@@ -4,7 +4,7 @@
 
 
 <div class="container">
-    <h4 id="hdtpa"><b>View Supplier Details</b></h4>
+    <h4 id="hdtpa"><b>View Vendor Details</b></h4>
     <br>
     
 
@@ -12,13 +12,13 @@
       <table class="table">
   <thead>
     <tr>
-      <th colspan="2">Supplier Details</th>
+      <th colspan="2">Vendor Details</th>
       
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td scope="row">Supplier Name</td>
+      <td scope="row">Vendor Name</td>
       <td><input class="form-control" type="text" placeholder="Bin"  aria-label="Disabled input example" disabled></td>
  
     </tr>
@@ -55,11 +55,6 @@
     <tr>
       <td scope="row">Pincode</td>
       <td><input class="form-control" type="text" placeholder="123 456" aria-label="Disabled input example" disabled></td>
-    
-    </tr>
-    <tr>
-      <td scope="row">Supplier Detials</td>
-      <td><input class="form-control" type="text" placeholder="qwertyuioplkjhgfdsazxcvbnm" aria-label="Disabled input example" disabled></td>
     
     </tr>
   

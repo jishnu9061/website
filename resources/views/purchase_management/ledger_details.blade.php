@@ -19,7 +19,7 @@
                 <th scope="col">Advance</th>
                 <th scope="col">Balance</th>
                 <th scope="col">Update Amount</th>
-                <th scope="col">Paid Details</th>
+                <th scope="col">Details</th>
         
               </tr>
             </thead>
@@ -47,17 +47,17 @@
               
               </tr>
               <tr>
-              <td colspan="4"></td>
+              <td colspan="5"></td>
             <td><input type="text"  placeholder="Grand Total" class="form-control" disabled></td>
             <td><input type="text"  placeholder="3000" class="form-control" disabled></td>
               </tr>
               <tr>
-              <td colspan="4"></td>
+              <td colspan="5"></td>
             <td><input type="text"  placeholder="Total Advance" class="form-control" disabled></td>
             <td><input type="text"  placeholder="900" class="form-control" disabled></td>
               </tr>
               <tr>
-              <td colspan="4"></td>
+              <td colspan="5"></td>
             <td><input type="text"  placeholder="Total Balance" class="form-control" disabled></td>
             <td><input type="text"  placeholder="2100" class="form-control" disabled></td>
               </tr>
@@ -72,7 +72,10 @@
 
             <div class="text-center">
 
-                <button type="button" class="btn btn-primary" style="width:20%">Print</button>
+                <button type="button" class="btn btn-primary" >Print</button>
+                <span class="m-2"></span>
+                <button type="button" class="btn btn-primary" onclick="history.back()">Close</button>
+
                 
             </div>
 

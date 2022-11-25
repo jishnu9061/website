@@ -1389,8 +1389,10 @@ Route::any('purchase_order_report','PurchaseManagement@purchase_order_report')->
 Route::any('vendor_performance_report','PurchaseManagement@vendor_performance_report')->name('vendor_performance_report');
 Route::any('view_supplier','PurchaseManagement@view_supplier')->name('view_supplier');
 Route::any('edit_supplier','PurchaseManagement@edit_supplier')->name('edit_supplier');
-Route::any('cost_variation_report','PurchaseManagement@cost_variation_report')->name('cost_variation_report');
+// Route::any('cost_variation_report','PurchaseManagement@cost_variation_report')->name('cost_variation_report');
 Route::any('ledger_details','PurchaseManagement@ledger_details')->name('ledger_details');
+Route::any('purchase_view','PurchaseManagement@purchase_view')->name('purchase_view');
+Route::any('edit_purchase','PurchaseManagement@edit_purchase')->name('edit_purchase');
 
 
 
