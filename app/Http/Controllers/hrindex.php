@@ -18,6 +18,10 @@ class hrindex extends Controller
     {
         return view('hr.hrindex');
     }
+    public function performance_department()
+    {
+        return view('hr.performance_department');
+    }
 
     public function recruitment()
     {
@@ -163,9 +167,13 @@ public function view_job_post($id)
     {
         return view('hr.reviewed_details');
     }
-    public function performance_form()
+    public function quarterly_performance_form()
     {
-        return view('hr.performance_form');
+        return view('hr.quarterly_performance_form');
+    }
+    public function annual_performance_form()
+    {
+        return view('hr.annual_performance_form');
     }
     public function over_time_list()
     {

@@ -4,7 +4,7 @@
 @section('content') 
 <div class="container">
 <h4 id="hdtpa"><b>Performance Appraisal Form</b></h4>
-    <br><br>
+    <br>
     </div>
     <br>
 
@@ -77,15 +77,31 @@
 </style>
   
 
+<div class="container">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="{{ url('quarterly_performance_form') }}">Quarterly Performance</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ url('annual_performance_form') }}">Annual Performance</a>
+        </li>
+      </ul>
+
+    <br>
+
+
 
 <div class="container">
  <input class="btn btn-primary" type="button" value="Add New KPI" data-toggle="modal" data-target="#myModal">
  <br>
  <br>
- <br>
 </div>
 
 
+<div class="text-center">
+<h5><b>Annual Performance Report</b></h5>
+</div>
+<br>
 
 
 
@@ -595,23 +611,25 @@
                                     <div class="modal-body" >
                                         <div class="container">
                                             <form method="post" action="{{url('add_letter_category')}}"
-                                                enctype="multipart/form-data"> 
-    
-
-
-          <div class="mb-3">
-           <div class="form-floating mb-3">
-           <input type="text" class="form-control" id="floatingInput"> 
-          </div>
-
+                                                enctype="multipart/form-data">
+                                                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                  <div class="mb-3">                                       
+                    <option selected>Select department</option>
+                    <option value="1">HR</option>
+                    <option value="2">Legal Advisor</option>
+                    <option value="3">Receptionist</option>
+                </select>
+                <input class="form-control form-control-lg" type="text" placeholder="Enter the KPI" aria-label=".form-control-lg example">
+                  </div>
 
       <div class="modal-footer" style="background-color:#d3e0ed;">
         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
-        <button type="button" class="btn btn-primary" onclick="history.back()">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
       </div>
      </div>
 
 </form>
+</div>
 
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">

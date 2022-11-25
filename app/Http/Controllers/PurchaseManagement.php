@@ -27,9 +27,21 @@ class PurchaseManagement extends Controller
     {
         return view('purchase_management.vendor_performance_report');
     }
+    public function view_supplier()
+    {
+        return view('purchase_management.view_supplier');
+    }
+    public function edit_supplier()
+    {
+        return view('purchase_management.edit_supplier');
+    }
     public function cost_variation_report()
     {
         return view('purchase_management.cost_variation_report');
+    }
+    public function ledger_details()
+    {
+        return view('purchase_management.ledger_details');
     }
 
 

@@ -1211,6 +1211,10 @@ Route::any('generate-document',"filemanagement@generatedocument")->name('generat
 Route::any('client-monthly-file-status','filemanagement@clientmonthlystatus')->name('client-monthly-file-status');
 Route::any('staff-monthly-status-report',"filemanagement@staffmonthlystatusreport")->name('staff-monthly-status-report');
 Route::any('file-list-progress-report',"filemanagement@filelistprogressreport")->name('file-list-progress-report');
+
+
+Route::any('view-file-list-progress/{id}','filemanagement@viewfilelisprogress')->name('view-file-list-progress');
+
 Route::any('bringup',"filemanagement@bringup")->name('bringup');
 Route::any('file-progress-report',"filemanagement@fileprogressreport")->name('file-progress-report');
 Route::any('file-status-summary',"filemanagement@filestatussummary")->name('file-status-summary');
@@ -1302,6 +1306,7 @@ Route::any('view_bill',"clientinvoicing@view_bill_item")->name('view_bill_item')
 Route::any('hrindex','hrindex@index')->name('hrindex');
 Route::any('recruitment','hrindex@recruitment')->name('recruitment');
 //reshma
+Route::any('performance_department','hrindex@performance_department')->name('performance_department');
 Route::any('job_posts','hrindex@job_posts')->name('job_posts');
 Route::any('edit_job_post/{id}','hrindex@edit_job_post')->name('edit_job_post');
 Route::any('/update_job_post','hrindex@update_job_post')->name('update_job_post');
@@ -1314,7 +1319,8 @@ Route::any('view_job_appl_details_1','hrindex@view_job_appl_details_1')->name('v
 Route::any('view_job_appl_details_2','hrindex@view_job_appl_details_2')->name('view_job_appl_details_2');
 Route::any('create_job_post','hrindex@create_job_post')->name('create_job_post');
 Route::any('reviewed_details','hrindex@reviewed_details')->name('reviewed_details');
-Route::any('performance_form','hrindex@performance_form')->name('performance_form');
+Route::any('quarterly_performance_form','hrindex@quarterly_performance_form')->name('quarterly_performance_form');
+Route::any('annual_performance_form','hrindex@annual_performance_form')->name('annual_performance_form');
 Route::any('accindex','accindex@index')->name('accindex');
 Route::any('new_communication','ClientManagement@add_communication')->name('add_communication');
 Route::any('calander',"Calender@index")->name('calander');
@@ -1329,7 +1335,14 @@ Route::any('drop-assigment/{id}','hrindex@dropassigment')->name('drop-assigment'
 
 //Store & Inventory
 Route::any('Store_&_Inventory_index','store@index')->name('Store_&_Inventory_index');
+
 Route::any('manage_categories','store@list_manage_categories')->name('manage_categories');
+Route::any('add_product','store@addproduct')->name('add_product');
+Route::any('/edit_product/{id}','store@editproduct')->name('edit_product');
+Route::any('update_product','store@updateproduct')->name('update_product');
+Route::any('/delete_product/{id}','store@deleteproduct')->name('delete_product');
+
+
 Route::any('manage_items','store@list_manage_items')->name('manage_items');
 Route::any('stock_list','store@stock_list_tab')->name('stock_list');
 Route::any('request_item','store@request_items')->name('request_item');
@@ -1339,8 +1352,16 @@ Route::any('re_order','store@re_order_list')->name('re_order');
 Route::any('edit_manage_categories','store@edit_list_manage_categories')->name('edit_manage_categories');
 Route::any('edit_request_item','store@edit_request_items')->name('edit_request_item');
 Route::any('add_categories','store@list_add_categories')->name('add_categories');
+
 Route::any('edit_categories','store@list_edit_categories')->name('edit_categories');
 Route::any('view_requst','store@list_view_requst')->name('view_requst');
+
+
+Route::any('new_categories','store@newcategories')->name('new_categories');
+
+Route::any('/edit_category/{id}','store@editcategory')->name('edit_category');
+Route::any('update_category','store@updatecategory')->name('update_category');
+Route::any('/delete_category/{id}','store@deletecategory')->name('delete_category');
 
 
 
@@ -1365,7 +1386,10 @@ Route::any('purchase_order','PurchaseManagement@purchase_order')->name('purchase
 Route::any('view_purchase_order','PurchaseManagement@view_purchase_order')->name('view_purchase_order');
 Route::any('purchase_order_report','PurchaseManagement@purchase_order_report')->name('purchase_order_report');
 Route::any('vendor_performance_report','PurchaseManagement@vendor_performance_report')->name('vendor_performance_report');
+Route::any('view_supplier','PurchaseManagement@view_supplier')->name('view_supplier');
+Route::any('edit_supplier','PurchaseManagement@edit_supplier')->name('edit_supplier');
 Route::any('cost_variation_report','PurchaseManagement@cost_variation_report')->name('cost_variation_report');
+Route::any('ledger_details','PurchaseManagement@ledger_details')->name('ledger_details');
 
 
 
