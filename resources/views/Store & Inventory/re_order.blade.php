@@ -5,249 +5,102 @@
 <head>
     <style>
 
+
     </style>
 
 </head>
 
 <body>
     <div class="container">
-        <!-- <h2 style="color: #070344;  text-align:center;"><b>Customer Registration</b></h2> -->
+
         <div>
             <div>
-                <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
-                <b><u>Client Registration</u></b></span> -->
+
                 {{-- heading --}}
-                <h4 id="hdtpa"><b>Item Details</b></h4>
+                <h4 id="hdtpa"><b>Re-order Report</b></h4>
                 <br>
             </div>
 
         </div>
+        <!--filter-->
 
-        <div>
-           
-            <div class="header_wrap">
-                <div class="num_rows">
-                    <div class="form-group">
-                        <!--		Show Numbers Of Rows 		-->
-                        <select class="form-control" aria-label="Page navigation example" name="state" id="maxRows">
+        <br>
 
-                            <option value="5">5</option>
-                            <option value="10">10</option>
-                            <option value="15">15</option>
-                            <option value="20">20</option>
-                            <option value="50">50</option>
-                            <option value="70">70</option>
-                            <option value="100">100</option>
-                            <option value="5000">Show ALL Rows</option>
-                        </select>
+        <!--filter end-->
+        <div class="header_wrap">
+            <div class="num_rows">
+                <div class="form-group">
+                    <!--		Show Numbers Of Rows 		-->
+                    <select class="form-control" aria-label="Page navigation example" name="state" id="maxRows">
 
-                    </div>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="70">70</option>
+                        <option value="100">100</option>
+                        <option value="5000">Show ALL Rows</option>
+                    </select>
+
                 </div>
-                <div class="tb_search">
-                    <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.."
-                        class="form-control">
-                </div>
+            </div>
+            <div class="tb_search">
+                <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.."
+                    class="form-control">
+            </div>
+
+        </div>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-class" id="table-id">
+
+                        <thead>
+                            <tr>
+                                <th class="text-center">Category</th>
+                                <th class="text-center">Item Type</th>
+                                <th class="text-center">Item Name</th>
+                                <th class="text-center">Quantity In Stock</th>
+                                <th class="text-center">Re-oder level</th>
 
 
+                            </tr>
+                        </thead>
+                        <tbody>
 
 
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <div class="table-responsive">
-                            <table class="table table-striped table-class" id="table-id">
+                            <tr id="data">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
 
-                                <thead>
-                                    <tr>
-                                        <th class="text-center">Item Name</th>
-                                       
-                                        <th class="text-center">Action</th>
+                            </tr>
 
-                                    </tr>
-                                </thead>
-                                <tbody>
+                        </tbody>
 
-                                    <tr>
-                                       
-                                        <td class="text-center"></td>
-                                        <td scope="row" class="text-center">
-                                            <a href="view_item_details"><i style="  color:rgb(13, 1, 56);"
-                                                    class="fa fa-eye"></i>
+                    </table>
 
-                                               
-                                        </td>
-                                  
-                                    </tr>
-
-
-                                </tbody>
-
-                            </table>
-                        </div>
-
-                        <!--		Start Pagination -->
-                        <div class='pagination-container'>
-                            <nav>
-                                <ul class="pagination">
-                                    <!--	Here the JS Function Will Add the Rows -->
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="rows_count">Showing 11 to 20 of 100</div>
-
-                        <!-- 		End of Container -->
-
-
-                        <div class="modal fade" id="myModal">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-
-                                    <!-- Modal Header -->
-                                    <div class="modal-header">
-                                        <h2 class="text-center"><b>Add Item</b></h2>
-
-                                    </div>
-
-                                    <!-- Modal body -->
-                                    <div class="modal-body">
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-md-12 order-md-1">
-                                                    <form method="post" action="{{ url('') }}" id="form">
-                                                        @csrf
-                                                        <div class="row">
-                                                            <div class="col-md-4">
-                                                                <div class="mb-1">
-                                                                    <label for="username">Item Name</label>
-                                                                    <div class="input-group">
-                                                                        <div class="input-group-prepend"></div>
-                                                                        <input type="text" class="form-control"
-                                                                            name="item_name" value="" placeholder=""
-                                                                            required>
-                                                                        <div class="invalid-feedback"
-                                                                            style="width: 100%;">
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                          
-                                                            
-                                                        </div>
-
-
-                                                       
-                                                        <!-- <h4 style="text-align:center">Contact Persons</h4> -->
-
-
-
-                                                        <div class="row">
-                                                            <div class="col-sm">
-
-                                                            </div>
-                                                            <div class="col-sm">
-
-                                                            </div>
-                                                            <div class="col-sm">
-                                                                <br>
-                                                                <button type="submit"
-                                                                    class="btn btn-primary float:right;"
-                                                                    Style="width:50%;">Save</button>
-                                                                <button type="button" class="btn btn-primary float:left"
-                                                                    Style="width:45%;"
-                                                                    data-dismiss="modal">Cancel</button>
-                                                            </div>
-                                                        </div>
-                                                </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-                    <!-- The Modal -->
-
-
-                    <div class="modal fade" id="myModal1">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-
-                                <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <h2 class="text-center"><b>Add Category</b></h2>
-
-                                </div>
-
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-12 order-md-1">
-                                                <form method="post" action="{{url('')}}" id="form">
-                                                    @csrf
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="mb-1">
-                                                                <label for="username">Category Type</label>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend"></div>
-                                                                    <input type="text" class="form-control" name="email"
-                                                                        id="username" value="" placeholder="" required>
-                                                                    <div class="invalid-feedback" style="width: 100%;">
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-
-
-                                                    <br>
-
-
-                                                    <!-- <h4 style="text-align:center">Contact Persons</h4> -->
-
-
-
-                                                    <div class="row">
-                                                        <div class="col-sm">
-
-                                                        </div>
-                                                        <div class="col-sm">
-
-                                                        </div>
-                                                        <div class="col-sm">
-                                                            <br>
-                                                            <button type="submit" class="btn btn-primary float:right;"
-                                                                Style="width:50%;">Save</button>
-                                                            <button type="button" class="btn btn-primary float:left"
-                                                                Style="width:45%;" data-dismiss="modal">Cancel</button>
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
+                <!--		Start Pagination -->
+                <div class='pagination-container'>
+                    <nav>
+                        <ul class="pagination">
+                            <!--	Here the JS Function Will Add the Rows -->
+                        </ul>
+                    </nav>
+                </div>
+                <div class="rows_count">Showing 11 to 20 of 100</div>
 
 
+                <!-- 		End of Container -->
 
 
-
+                <!-- The Modal -->
                 <div class="modal fade" id="editmed">
                     <div class="modal-dialog modal-xl">
                         <div class="modal-content">
@@ -377,6 +230,10 @@
 
             <!-- End delete confirmation message -->
         </div>
+
+
+
+        <!--filter-->
         <script>
         function myFunction() {
             if (!confirm("Are you sure to delete this"))

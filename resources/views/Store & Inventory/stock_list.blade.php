@@ -64,7 +64,7 @@
                             <thead>
                                 <tr>
                                     <th class="text-center">Category</th>
-                                  
+                                    <th class="text-center">Item Type</th>
                                     <th class="text-center">Item Name</th>
                                     <th class="text-center">Quantity In Stock</th>
                                     <th class="text-center">Re-oder level</th>
@@ -77,7 +77,7 @@
 
                                 <tr id="data">
                                     <td></td>
-                                 
+                                    <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>

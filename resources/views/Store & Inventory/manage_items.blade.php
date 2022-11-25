@@ -48,10 +48,6 @@
                 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.."
                     class="form-control">
             </div>
-
-
-
-
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <div class="table-responsive">
@@ -60,15 +56,11 @@
                             <thead>
                                 <tr>
 
-
+                                    <th class="text-center">Item Type</th>
                                     <th class="text-center">Item Name</th>
 
                                     <th class="text-center">Category</th>
                                     <th class="text-center">Action</th>
-
-
-
-
                                 </tr>
                             </thead>
                             <tbody>
@@ -78,9 +70,7 @@
                                     <td></td>
                                     <td></td>
                                     <td></td>
-
-
-
+                                    <td></td>
                                 </tr>
 
                             </tbody>
@@ -99,9 +89,6 @@
                     <div class="rows_count">Showing 11 to 20 of 100</div>
 
                     <!-- 		End of Container -->
-
-
-
                     <div class="modal fade" id="myModal">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
@@ -120,9 +107,54 @@
                                         <form method="post" action="" id="form">
                                             @csrf
                                             <div class="row">
-                                                <div class="col-md-12">
+
+                                                <div class="col-md-6">
+                                                    <div class="mb-1">
+                                                        <label for="username">Category</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend"></div>
+
+                                                            <select name="category" id="username" style="width:100%;">
+                                                                <option>---select--- </option>
+                                                                <option>stationery </option>
+                                                                <option>furniture</option>
+                                                                <option>library</option>
+                                                            </select>
+                                                            <div class="invalid-feedback" style="width: 100%;">
+                                                                Town is required.
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
                                                     <div class="mb-1">
                                                         <label for="username">Item Type</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend"></div>
+
+                                                            <select name="category" id="username" style="width:100%;">
+                                                                <option>---select--- </option>
+                                                                <option>book </option>
+                                                                <option>file</option>
+                                                                <option>pen</option>
+                                                            </select>
+                                                            <div class="invalid-feedback" style="width: 100%;">
+                                                                Town is required.
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="mb-1">
+                                                        <label for="username">Item Name</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend">
 
@@ -132,11 +164,19 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                             
+                                                <div class="col-md-6">
+                                                    <div class="mb-1">
+                                                        <label for="username">Reorder Level</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
 
-
+                                                            </div>
+                                                            <input type="text" class="form-control" name="item"
+                                                                id="age">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <br>
 
                                             <div class="row">
                                                 <div class="col-sm">

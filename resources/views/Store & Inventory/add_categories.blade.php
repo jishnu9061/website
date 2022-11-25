@@ -55,10 +55,6 @@
                     <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.."
                         class="form-control">
                 </div>
-
-
-
-
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
@@ -78,23 +74,13 @@
 
                                     @foreach($list_category as $list)
                                     <tr id="data">
-
-
-
-
                                         <td scope="row" class="text-center">{{$list->category_name}}</td>
-
-
-
                                         <td scope="row" class="text-center">
                                             <a href="{{url('edit_category',$list->id,)}}"><i
                                                     style="  color:rgb(13, 1, 56);" class="fa fa-edit"></i></a>
 
                                             <a href="{{url('delete_category',$list->id,)}}"> <i
                                                     style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></a>
-
-
-
                                         </td>
 
                                     </tr>
@@ -130,8 +116,6 @@
                                     <!-- Modal body -->
                                     <div class="modal-body">
                                         <div class="container">
-
-
                                             <form method="post" action="{{url('new_categories')}}" id="form">
                                                 @csrf
                                                 <div class="row">
