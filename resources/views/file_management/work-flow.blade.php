@@ -98,13 +98,13 @@ color: #999;
         <table class="table table-striped table-class" id= "table-id">
                     <thead>
                         <tr>
-                            <th class="text-center">*</th>
-                            <th class="text-center">Date</br>Created</th>
-                            <th class="text-center">Workflow Name</th>
-                            <th class="text-center">Workflow Comments</th>
+                            
+                            <th class="text-center">Date</th>
+                            <th class="text-center">Name</th>
+                            <th class="text-center">Comments</th>
                             <th class="text-center">Start Report</th>
                             <th class="text-center">Start Name</th>
-                            <th class="text-center">Duration(days)</th>
+                            <th class="text-center">Duration (days)</th>
                             <th class="text-center">Created By</th>
                            
                      
@@ -113,15 +113,15 @@ color: #999;
                     </thead>
                     <tbody>
                         @foreach($flow as $list)
-                        <tr id="data">
-                            <td scope="row" class="text-center">{{$list->id}}</td>
-                            <td scope="row" class="text-center">{{$list->Date_Created}}</td>
-                            <td scope="row" class="text-center">{{$list->Workflow_Name}}</td>
-                            <td scope="row" class="text-center">{{$list->Workflow_Comments}}</td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center">{{$list->Duration}}</td>
-                            <td scope="row" class="text-center"></td>
+                        <tr>
+                            
+                            <td  class="text-center">{{$list->Date_Created}}</td>
+                            <td  class="text-center">{{$list->Workflow_Name}}</td>
+                            <td  class="text-center">{{$list->Workflow_Comments}}</td>
+                            <td  class="text-center"></td>
+                            <td  class="text-center"></td>
+                            <td  class="text-center">{{$list->Duration}}</td>
+                            <td  class="text-center"></td>
                          
                             <td  scope="row"class="text-center">
                         <a href="{{url('edit-workflow',$list->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" ></i>

@@ -1149,7 +1149,7 @@ Route::any('file_managementindex',"filemanagement@index")->name('file_management
 Route::any('file-list',"filemanagement@views")->name('file-list');
 Route::any('/edit-file/{id}',"filemanagement@edit")->name('edit-file');
 Route::any('/update',"filemanagement@update")->name('update');
-
+Route::any('view-list/{id}','filemanagement@viewlist')->name('view-list');
 Route::any('add-task',"filemanagement@addtask")->name('add-task');
 
 Route::any('/file_destroy/{id}',"filemanagement@file_destroy")->name('file_destroy');
@@ -1157,7 +1157,8 @@ Route::any('/file_destroy/{id}',"filemanagement@file_destroy")->name('file_destr
 Route::any('add-new-file',"filemanagement@addnew")->name('add-new-file');
 Route::any('file-archive',"filemanagement@filearchive")->name('file-archive');
 Route::any('add-box-no',"filemanagement@addboxno")->name('add-box-no');
-Route::any('edit-box-no',"filemanagement@editboxno")->name('edit-box-no');
+Route::any('/edit-box-no/{id}',"filemanagement@editboxno")->name('edit-box-no');
+Route::any('/update-box',"filemanagement@updatebox")->name('update-box');
 //manage files
 
 //document templates
@@ -1361,7 +1362,10 @@ Route::any('view_requst','store@list_view_requst')->name('view_requst');
 
 Route::any('purchase_index','PurchaseManagement@index_purchase')->name('purchase_index');
 Route::any('purchase_order','PurchaseManagement@purchase_order')->name('purchase_order');
+Route::any('view_purchase_order','PurchaseManagement@view_purchase_order')->name('view_purchase_order');
 Route::any('purchase_order_report','PurchaseManagement@purchase_order_report')->name('purchase_order_report');
+Route::any('vendor_performance_report','PurchaseManagement@vendor_performance_report')->name('vendor_performance_report');
+Route::any('cost_variation_report','PurchaseManagement@cost_variation_report')->name('cost_variation_report');
 
 
 
