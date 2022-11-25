@@ -54,6 +54,7 @@ class store extends Controller
         $category=$request['category'];
         $item_type=$request['item_type'];
         $unit=$request['unit'];
+
         $quantity=$request['quantity'];
         $unit_price=$request['unit_price'];
 

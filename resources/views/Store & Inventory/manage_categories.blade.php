@@ -154,19 +154,9 @@
                                                                         <select name="category" id="username"
                                                                             style="width:100%;">
                                                                             <option>---select--- </option>
-<<<<<<< Updated upstream
+
                                                                             <option>Stationary </option>
                                                                             <option>Assets</option>
-                                                                
-                                                                          
-=======
-                                                                            <option>stationery </option>
-                                                                            <option>furniture</option>
-                                                                            <option>library</option>
-
->>>>>>> Stashed changes
-
-
                                                                         </select>
                                                                         <div class="invalid-feedback"
                                                                             style="width: 100%;">
@@ -218,9 +208,9 @@
                                                                         <select name="unit" id="username"
                                                                             style="width:100%;">
                                                                             <option>---select--- </option>
-                                                                            <option>Dozen</option>
-                                                                            <option>Boxes</option>
-                                                                            <option>Sets</option>
+                                                                            <option value="Dozen">Dozen</option>
+                                                                            <option value="Boxes">Boxes</option>
+                                                                            <option value="Sets">Sets</option>
 
 
                                                                         </select>
