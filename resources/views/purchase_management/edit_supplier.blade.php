@@ -4,7 +4,7 @@
 
 
 <div class="container">
-    <h4 id="hdtpa"><b>Edit Supplier Details</b></h4>
+    <h4 id="hdtpa"><b>Edit Vendor Details</b></h4>
     <br>
     
 
@@ -13,7 +13,7 @@
   
   <tbody>
     <tr>
-      <td scope="row">Supplier Name</td>
+      <td scope="row">Vendor Name</td>
       <td><input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Bin"></td>
  
     </tr>
@@ -51,10 +51,6 @@
       <td scope="row">Pincode</td>
       <td><input type="text" class="form-control" id="exampleFormControlInput1" placeholder="123 456"></td>
     
-    </tr>
-    <tr>
-      <td scope="row">Supplier Detials</td>
-      <td><input type="text" class="form-control" id="exampleFormControlInput1" placeholder="qwertyuioplkjhgfdsazxcvbnm"></td>
     </tr>
   
   </tbody>

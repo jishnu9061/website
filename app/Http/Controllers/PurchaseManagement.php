@@ -35,13 +35,21 @@ class PurchaseManagement extends Controller
     {
         return view('purchase_management.edit_supplier');
     }
-    public function cost_variation_report()
-    {
-        return view('purchase_management.cost_variation_report');
-    }
+    // public function cost_variation_report()
+    // {
+    //     return view('purchase_management.cost_variation_report');
+    // }
     public function ledger_details()
     {
         return view('purchase_management.ledger_details');
+    }
+    public function purchase_view()
+    {
+        return view('purchase_management.purchase_view');
+    }
+    public function edit_purchase()
+    {
+        return view('purchase_management.edit_purchase');
     }
 
 

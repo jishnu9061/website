@@ -35,9 +35,10 @@
  <table class="table">
             <thead>
               <tr class="text-center">
-                <th scope="col">Supplier</th>
+                <th scope="col">Vendor</th>
                 <th scope="col">Phone Number</th>
                 <th scope="col">Actions</th>
+                <th scope="col">Payment Details</th>
                 
               </tr>
             </thead>
@@ -49,7 +50,7 @@
                 <td><a href="{{url('view_supplier')}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-2"></span>
                       <a href="{{url('edit_supplier')}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit" ></i><span class="m-2"></span>
                       <a href="#"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
-                
+                <td> <a href="{{url('ledger_details')}}" button type="button" class="btn btn-primary">View</button></td>
               </tr>
              
             </tbody>
