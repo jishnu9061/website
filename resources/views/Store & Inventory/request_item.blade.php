@@ -68,8 +68,8 @@
                                 <thead>
                                     <tr>
                                         <th class="text-center">Request Date</th>
-                                        <th class="text-center">User Request</th>
-                                        <th class="text-center">Item Rerusted</th>
+                                        <th class="text-center">User Requested</th>
+                                        <th class="text-center">Item Reruested</th>
                                         <th class="text-center">Quantity</th>
                                         <th class="text-center">Status</th>
                                         <th class="text-center">Action</th>
