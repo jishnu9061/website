@@ -1,13 +1,12 @@
 @extends('layouts.hmsmain')
 @section('content')
 
-
 {{-- heading --}}
-   <div class="container" >            
-               <h4 id="hdtpa"><b>Family Law</b></h4>
+               
+               <h4 id="hdtpa"><b>Estate Planing</b></h4>
                <br>
 
-
+      
                <div class="header_wrap">
                     <div class="num_rows">
                         <div class="form-group">
@@ -40,12 +39,13 @@
     <tr>
       
       <th scope="col">File No</th>
-      <th scope="col">Client Name</th>
+      <th scope="col">Client</th>
       <th scope="col">Matter Type</th>
-      <th scope="col">Other Party</th>
-      <th scope="col">Description</th>
-      <th scope="col">Attorney</th>
-    
+      <th scope="col">Estate Details</th>
+      <th scope="col">Trust</th>
+      <th scope="col">Property Details</th>
+      <th scope="col">Accountant</th>
+      <th scope="col">Financial Advisor</th>
     </tr>
   </thead>
   <tbody>
@@ -57,7 +57,9 @@
       <td></td>
       <td></td>
       <td></td>
-      
+      <td></td>
+      <td></td>
+
     </tr>
     
   </tbody>
@@ -79,6 +81,14 @@
                         <!-- 		End of Container -->
 
 
-</div>
+
+
+
+
+
+
+
+
+
 
 @endsection

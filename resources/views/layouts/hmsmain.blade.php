@@ -664,7 +664,7 @@ color: #999;
                             <li class="submenu-item" style="list-style:none;">
                                     <a href="{{url('practice_area_index')}}" class='sidebar-link'>
                                         <i class="fa fa-bar-chart" id="icon"></i>
-                                            <span>Practice Area Management</span>
+                                            <span>Practice Management</span>
                                     </a>
                             </li>
                                     {{-- 
