@@ -116,7 +116,7 @@
 
     <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
     <div class="modal fade" id="myModal">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-xl">
             <div class="modal-content">
 
                 <!-- Modal Header -->
@@ -135,11 +135,11 @@
 
 
                             <!--
-                                                <label>add logo</label>
-                                                <div class="input-group">
-                                                    <div class="custom-file">
-                                                       <input type="file"name="image"class="custom-file-input">
-                                                       <label class="custom-file-label">choose file</label> -->
+                                                    <label>add logo</label>
+                                                    <div class="input-group">
+                                                        <div class="custom-file">
+                                                           <input type="file"name="image"class="custom-file-input">
+                                                           <label class="custom-file-label">choose file</label> -->
                     </div>
                 </div>
                 <!-- --------------------------------------image------------------------------------------------->
@@ -149,7 +149,7 @@
                     <h5><u>Basic Details</u></h5>
                     <br>
                     <br>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="mb-1">
                             <label>Name</label>
                             <div class="input-group">
@@ -161,7 +161,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="mb-1">
                             <label>Email</label>
                             <div class="input-group">
@@ -173,19 +173,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="mb-1">
                             <label>Phone Number</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="phoneno" id="address" value="">
+                                <input type="text" class="form-control" name="phoneno" id="phone_no" value="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="mb-1">
                             <label for="username">Age</label>
                             <div class="input-group">
@@ -198,7 +198,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
                         <div class="mb-1">
                             <label for="username">Password</label>
                             <div class="input-group">
@@ -211,7 +213,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="mb-1">
                             <label for="username">Confirm Password</label>
                             <div class="input-group">
@@ -223,17 +225,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="test" style="height:20px;"></div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="mb-1">
                             <label for="username">Date Of Joining</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="
-                                "
+                                <input type="date" class="form-control" name="doj"
                                     id="password" placeholder="staff Password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Passeord is required.
@@ -241,10 +239,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="mb-1">
                             <label>Gender:&nbsp;</label>
-                            <select class="form-select" aria-label="Default select example">
+                            <select class="form-select" aria-label="Default select example" name="gender">
                                 <option selected>Select</option>
                                 <option value="1">Male</option>
                                 <option value="2">Female</option>
@@ -252,26 +250,12 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label>Roles:&nbsp;</label>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Select</option>
-                                <option value="Admisistrative Head">Admisistrative Head</option>
-                                <option value="Accountant">Accountant</option>
-                                <option value="HR Manager">HR Manager</option>
-                                <option value="Legal Advicer">Legal Advicer</option>
-                            </select>
-                        </div>
-                    </div>    
-                           
-                    </div>
-                    <br>
-                    <div class="row">
-                    <div class="col-md-4">
+                </div>
+                <div class="row">    
+                    <div class="col-md-3">
                         <div class="mb-1">
                             <label>Departments:&nbsp;</label>
-                            <select class="form-select" aria-label="Default select example">
+                            <select class="form-select" aria-label="Default select example" name="departments">
                                 <option selected>Select</option>
                                 <option value="Legal Department">Legal Department</option>
                                 <option value="HR Department">HR Department</option>
@@ -279,10 +263,24 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>Roles&nbsp;</label>
+                            <select class="form-select" aria-label="Default select example" name="roles">
+                                <option selected>Account Manager</option>
+                                <option value="Active">HR Manager</option>
+                                <option value="Inactive">Jr.Advocate</option>
+                                <option value="Resigned">Sr.Advocate</option>
+                                <option value="Suspended">Hr Executive</option>
+                                <option value="Suspended">Receptionist</option>
+                            </select>
+                        </div>
+                        <div id="test" style="height:20px;"></div>
+                    </div>
+                    <div class="col-md-3">
                         <div class="mb-1">
                             <label>Status:&nbsp;</label>
-                            <select class="form-select" aria-label="Default select example">
+                            <select class="form-select" aria-label="Default select example" name="status">
                                 <option selected>Select</option>
                                 <option value="Active">Active</option>
                                 <option value="Inactive">Inactive</option>
@@ -290,17 +288,262 @@
                                 <option value="Suspended">Suspended</option>
                             </select>
                         </div>
+                        <div id="test" style="height:20px;"></div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="mb-1">
                             <label for="username">Status Date</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="
-                                "
+                                <input type="date" class="form-control" name="status_date"
                                     id="password" placeholder="staff Password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Passeord is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <h5><u>Address</u></h5>
+                    <br>
+                    <br>
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>Postal Address</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="address" id="name"
+                                    value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>Branch</label>
+                            <select class="form-select" aria-label="Default select example" name="branch">
+                                <option selected>Select</option>
+                                <option value="Nairobi">Nairobi</option>
+                                <option value="Mombasa">Mombasa</option>
+                                <option value="Kisumu">Kisumu</option>
+                                <option value="Nakuru
+                                ">Nakuru</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>Postal Code</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="postal_code" id="address"
+                                    value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>Town/City</label>
+                            <select class="form-select" aria-label="Default select example" name="town">
+                                <option selected>Select</option>
+                                <option value="Nairobi">Nairobi</option>
+                                <option value="Mombasa">Mombasa</option>
+                                <option value="Kisumu">Kisumu</option>
+                                <option value="Nakuru">Nakuru</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <h5><u>Account Details</u></h5>
+                    <br>
+                    <br>
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>Basic Salary(Kshs)</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="salary" id="name"
+                                    value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>Partners Drawing</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="partner" id="name"
+                                    value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>N.S.S.F Number</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="NSSF" id="address"
+                                    value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>N.H.I.F Number</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="NHIF" id="address"
+                                    value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>CRA PIN Number</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="cra_pin" id="name"
+                                    value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>Should be taxed?</label>
+                            <select class="form-select" aria-label="Default select example" name="tax">
+                                <option selected value="Yes">Yes</option>
+                                <option value="Active">N0</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>Payroll Deductions</label>
+                            <select class="form-select" aria-label="Default select example" name="deduction">
+                                <option selected value="From Salary">From Salary</option>
+                                {{-- <option value="Active">N0</option> --}}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>Company NSSF Contribution</label>
+                            <select class="form-select" aria-label="Default select example" name="contribution">
+                                <option selected value="Deduct From Company">Deduct From Company</option>
+                                {{-- <option value="Active">Nairobi</option>
+                                <option value="Inactive">Mombasa</option>
+                                <option value="Resigned">Kisumu</option>
+                                <option value="Suspended">Nakuru</option> --}}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>Leave Days per Year</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="leave_days" id="name"
+                                    value="21" disabled>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>Pension Rate(as % of Basic)</label>
+                            <select class="form-select" aria-label="Default select example" name="pension_rate">
+                                <option selected value="5%">5%</option>
+                                {{-- <option value="Active">N0</option> --}}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <h5><u>Bank Details</u></h5>
+                    <br>
+                    <br>
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>Bank Name</label>
+                            <select class="form-select" aria-label="Default select example" name="bank">
+                                <option selected value="">Select</option>
+                                <option value="UBA Kenya Bank Ltd">UBA Kenya Bank Ltd</option>
+                                <option value="Inactive">The Co-operative Bank</option>
+                                <option value="Resigned">Suntra Investment Bank Ltd</option>
+                                <option value="Suspended">Sterling Investment Bank</option>
+                                <option value="Suspended">Prime Bank</option>
+                                <option value="Suspended">Paramount Bank</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>Account Number</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="account_number" id="name"
+                                    value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>Branch</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="bank_branch" id="address"
+                                    value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>Branch Code</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="branch_code" id="address"
+                                    value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
                                 </div>
                             </div>
                         </div>
@@ -313,8 +556,8 @@
                             <label for="username">Upload CV</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="file" class="form-control" name="file"
-                                    id="password" placeholder="staff Password" required>
+                                <input type="file" class="form-control" name="cv" id="password"
+                                    placeholder="staff Password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Passeord is required.
                                 </div>
@@ -323,252 +566,153 @@
                     </div>
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Upload Signature</label>
+                            <label for="username">Passport size Photograph</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="file" class="form-control" name=""
-                                    id="password" placeholder="staff Password" required>
+                                <input type="file" class="form-control" name="photo" id="password"
+                                    placeholder="staff Password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Passeord is required.
                                 </div>
                             </div>
                         </div>
-                    </div>    
-                           
                     </div>
-
-                           
-                   
-                    {{-- {{ Session::forget('staffregistered') }}
-                    {{ Session::forget('leavevalidat') }}
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">Bank Name</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend"></div>
-                                    <input type="text" class="form-control" name="bankname" id="username"
-                                        placeholder="Bank Name">
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                        Bank Name is required.
-                                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Signature</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="file" class="form-control" name="signature" id="password"
+                                    placeholder="staff Password" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Passeord is required.
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">Account Number</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend"></div>
-                                    <input type="number" class="form-control" name="accountnumber" id="username"
-                                        placeholder="Account Number" min="0">
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                        Account number is required.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">IFSC code</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend"></div>
-                                    <input type="text" class="form-control" name="ifsc" id="username"
-                                        placeholder="Ifsc Code">
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                        IFSC Code is required.
-                                    </div>
-                                </div>
-                            </div>
-                        </div> --}}
-                        {{-- <div class="col-md-12">
-                            <div class="mb-1">
-                                <br>
-                                <h5><u>No: of Leaves(Annual)</u></h5>
-                                <div id="messagelevave" style="width:20px; float:right;padding-bottom:10px;height:30px;">
-                                </div>
-                                <div class="input-group">
-                                    <div class="input-group-prepend"></div>
-                                    <table class="table" style="width:65%">
-                                        <tr>
-                                            @foreach ($leavetype as $data)
-                                                <td>{{ $data->leave_type }}
-                                                    <input type="hidden" name="leave_type[]"
-                                                        value="{{ $data->id }}">
-                                                </td>
-                                                <td><input type="number" class="form-control leaves" name="leaves[]"
-                                                        value="0" min="0" max="365" width="auto">
-                                                </td>
-                                            @endforeach
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
-                    <br>
-                    <div class="row">
-                        <h5><u>Address</u></h5>
-                        <br>
-                        <br>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label>Name</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend"></div>
-                                    <input type="text" class="form-control" name="name" id="name" value="">
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                        Required Field.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label>Email</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend"></div>
-                                    <input type="email" class="form-control" name="email" id="address" value="">
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                        Required Field.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label>Phone Number</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend"></div>
-                                    <input type="text" class="form-control" name="phoneno" id="address" value="">
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                        Required Field.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>    
-                    <div class="row">
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-                            <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
-                            <button type="button" class="btn btn-primary float:left" onclick="history.back()"
-                                Style="width:45%;" data-dismiss="modal">Cancel</button>
                         </div>
                     </div>
                 </div>
-                </form>
+                <br>
+                <div class="row">
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+                        <br>
+                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                            data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
             </div>
-
-
-
+            </form>
         </div>
-        <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
-        <script type="text/javascript" charset="utf8"
-            src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
-        <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-        <script type="text/javascript">
-            $('#password, #confirm_password').on('keyup', function() {
-                var v = $('#password').val();
-                var b = $('#confirm_password').val()
-                if (v != b) {
-                    $('#test').html('Not Matching').css('color', 'red');
-                } else {
-                    $('#test').html('Matching').css('color', 'green');
-                }
-                if ($('#password').val() == $('#confirm_password').val()) {
 
-                    $('#message').html('Matching').css('color', 'green');
-                } else
-                    $('#message').html('Not Matching').css('color', 'red');
+
+
+    </div>
+    <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+    <script src="{{ url('assets/js') }}/jquery.min.js"></script>
+    <script type="text/javascript">
+        $('#password, #confirm_password').on('keyup', function() {
+            var v = $('#password').val();
+            var b = $('#confirm_password').val()
+            if (v != b) {
+                $('#test').html('Not Matching').css('color', 'red');
+            } else {
+                $('#test').html('Matching').css('color', 'green');
+            }
+            if ($('#password').val() == $('#confirm_password').val()) {
+
+                $('#message').html('Matching').css('color', 'green');
+            } else
+                $('#message').html('Not Matching').css('color', 'red');
+        });
+    </script>
+    <script>
+        $('.leaves').on('keyup', function() {
+            var total = 0;
+            $('.leaves').each(function(index, element) {
+                total = total + parseFloat($(element).val());
             });
-        </script>
-        <script>
-            $('.leaves').on('keyup', function() {
-                var total = 0;
-                $('.leaves').each(function(index, element) {
-                    total = total + parseFloat($(element).val());
-                });
-                if (total > 365) {
-                    $('#messageleave').html('No ' + total + ' days in a Year').css('color', 'red');
-                } else {
-                    $('#messageleave').html('');
-                }
+            if (total > 365) {
+                $('#messageleave').html('No ' + total + ' days in a Year').css('color', 'red');
+            } else {
+                $('#messageleave').html('');
+            }
 
 
-            });
-        </script>
-        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                $('#form').validate({
-                    rules: {
-                        name: {
-                            required: true
-                        },
-                        email: {
-                            required: true,
-                            email: true
-                        },
-                        phoneno: {
-                            required: true
-                        }
-                        number: {
-                            required: true,
-                            digits: true
-
-                        },
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#form').validate({
+                rules: {
+                    name: {
+                        required: true
                     },
-                    errorElement: 'span',
-                    errorPlacement: function(error, element) {
-                        error.addClass('invalid-feedback');
-                        element.closest('.form-group').append(error);
+                    email: {
+                        required: true,
+                        email: true
                     },
-                    highlight: function(element, errorClass, validClass) {
-                        $(element).addClass('is-invalid');
-                    },
-                    unhighlight: function(element, errorClass, validClass) {
-                        $(element).removeClass('is-invalid');
+                    phoneno: {
+                        required: true
                     }
-                });
+                    number: {
+                        required: true,
+                        digits: true
+
+                    },
+                },
+                errorElement: 'span',
+                errorPlacement: function(error, element) {
+                    error.addClass('invalid-feedback');
+                    element.closest('.form-group').append(error);
+                },
+                highlight: function(element, errorClass, validClass) {
+                    $(element).addClass('is-invalid');
+                },
+                unhighlight: function(element, errorClass, validClass) {
+                    $(element).removeClass('is-invalid');
+                }
             });
-        </script>
-        <script>
-            $(function() {
-                $("#allpatients").dataTable();
-            })
-        </script>
-        <script>
-            $(document).on('click', '#stafedit', function() {
-                //var itemvalue = $(this).val();
-                var t_id = $(this).closest('#data').find('#t_id').val();
-                var t_name = $(this).closest('#data').find('#t_name').text();
-                var t_role = $(this).closest('#data').find('#t_role').text();
-                var t_department = $(this).closest('#data').find('#t_department').text();
-                var t_email = $(this).closest('#data').find('#t_email').text();
-                var t_phone = $(this).closest('#data').find('#t_phone').text();
-                var t_sex = $(this).closest('#data').find('#t_sex').text();
-                var t_dob = $(this).closest('#data').find('#t_dob').text();
+        });
+    </script>
+    <script>
+        $(function() {
+            $("#allpatients").dataTable();
+        })
+    </script>
+    <script>
+        $(document).on('click', '#stafedit', function() {
+            //var itemvalue = $(this).val();
+            var t_id = $(this).closest('#data').find('#t_id').val();
+            var t_name = $(this).closest('#data').find('#t_name').text();
+            var t_role = $(this).closest('#data').find('#t_role').text();
+            var t_department = $(this).closest('#data').find('#t_department').text();
+            var t_email = $(this).closest('#data').find('#t_email').text();
+            var t_phone = $(this).closest('#data').find('#t_phone').text();
+            var t_sex = $(this).closest('#data').find('#t_sex').text();
+            var t_dob = $(this).closest('#data').find('#t_dob').text();
 
 
-                $("#Id").val(t_id);
-                $("#Name").val(t_name);
-                $("#Role").val(t_role);
-                $('#Phone').val(t_phone);
-                $("#Email").val(t_email);
-                $("#Salary").val(driver_n);
-                $("#Experience").val(driver_n);
-                $("#Department").val(t_department);
-                $("#Sex").val(t_sex);
-                $("#Dob").val(t_dob);
+            $("#Id").val(t_id);
+            $("#Name").val(t_name);
+            $("#Role").val(t_role);
+            $('#Phone').val(t_phone);
+            $("#Email").val(t_email);
+            $("#Salary").val(driver_n);
+            $("#Experience").val(driver_n);
+            $("#Department").val(t_department);
+            $("#Sex").val(t_sex);
+            $("#Dob").val(t_dob);
 
 
-            });
-        </script>
-    @endsection
+        });
+    </script>
+@endsection
