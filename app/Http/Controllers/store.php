@@ -192,6 +192,11 @@ class store extends Controller
         return view('Store & Inventory.add_categories',compact('delete','id'));
         
     }
+    public function list_issue_requst()
+    {
+        return view('Store & Inventory.issue_view_requst');
+        
+    }
 
 }
 

@@ -18,7 +18,7 @@
                 <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
                 <b><u>Client Registration</u></b></span> -->
                 {{-- heading --}}
-                <h4 id="hdtpa"><b>Category</b></h4>
+                <h4 id="hdtpa"><b>Manage Categories</b></h4>
                 <br>
             </div>
 

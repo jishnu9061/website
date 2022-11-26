@@ -11,12 +11,10 @@
 </head>
 
 <body>
-
-
     <div class="container">
 
         {{-- heading --}}
-        <h4 id="hdtpa"><b>View Item Request</b></h4>
+        <h4 id="hdtpa"><b>Issued Item Details</b></h4>
         <br>
 
         <div class="row">
@@ -24,32 +22,21 @@
                 <form method="post" action="" id="form">
                     @csrf
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="mb-1">
-                                <label for="username">RequestedDate</label>
+                                <label for="username">Issued Date</label>
                                 <div class="input-group">
 
                                     <div class="input-group-prepend"></div>
                                     <input type="date" class="form-control" name="date" id="username" value=""
                                         placeholder="" required>
                                     <div class="invalid-feedback" style="width: 100%;">
-
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">Requested By</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
 
-                                    </div>
-                                    <input type="text" class="form-control" name="category_name" id="age">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="mb-1">
                                 <label for="username">Department</label>
                                 <div class="input-group">
@@ -60,27 +47,51 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-3">
+                            <div class="mb-1">
+                                <label for="username">Issued By</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+
+                                    </div>
+                                    <select name="by" id="">
+                                        <option value="">Name 1</option>
+                                        <option value="">Name 2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-1">
+                                <label for="username">Status</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+
+                                    </div>
+                                    <select name="status" id="">
+                                        <option value="">Pending</option>
+                                        <option value="">Processing</option>
+                                        <option value="">Requested</option>
+                                        <option value="">Issued</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <br>
                     <div>
                         <h4 id="hdtpa"><b>Item </b></h4>
                     </div>
                     <br>
-
                     <div class="row clearfix">
-
                         <div class="col-sm">
-
                             <table class="table table-striped table-class" id="tab_logic">
-
                                 <tr>
                                     <td class="" style="width:25%">Category</td>
                                     <td class="">Item Type</td>
                                     <td class="">item Name</td>
                                     <td class="">Quantity</td>
-                                    <!-- <td class="">View</td> -->
-
-
+                                    <td class="">Issued Quantity</td>
                                 </tr>
                                 <tbody>
                                     <tr>
@@ -97,10 +108,8 @@
                                         <td><input type="text" name="price[]" id="price_"
                                                 class="form-control calculate"></td>
 
-                                        </td>
-                                        <!-- <td><a href="issue_view_requst"><button type="button" class="add-Row ibtnDel btn btn-primary text-white "
-                                                style="background-color:#607080;width:100%;color:black;">Next</button></a>
-                                        </td> -->
+                                        <td><input type="text" name="price[]" id="price_"
+                                                class="form-control calculate"></td>
                                     </tr>
                             </table>
                             <div class="row">
@@ -125,10 +134,9 @@
 
                         </div>
                         <div class="col-sm">
-                            <!-- <button type="button" class="btn btn-primary float:left" Style="width:45%;"
-                                onclick="history.back()">Cancel</button> -->
-                                <a href="issue_view_requst"><button type="button"class="btn btn-primary float:left"style="float:right;width:50%;margin-right:10%;"
-                                Style="width:100%;">Next</button></a>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                                onclick="history.back()">Cancel</button>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
                         </div>
                     </div>
             </div>

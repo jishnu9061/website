@@ -1364,6 +1364,8 @@ Route::any('new_categories','store@newcategories')->name('new_categories');
 Route::any('/edit_category/{id}','store@editcategory')->name('edit_category');
 Route::any('update_category','store@updatecategory')->name('update_category');
 Route::any('/delete_category/{id}','store@deletecategory')->name('delete_category');
+Route::any('issue_view_requst','store@list_issue_requst')->name('issue_view_requst');
+
 
 
 
