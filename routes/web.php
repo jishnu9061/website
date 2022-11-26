@@ -1334,6 +1334,16 @@ Route::any('edit-assigment/{id}','hrindex@editassigment')->name('edit-assigment'
 Route::any('update-assigment','hrindex@updateassigment')->name('update-assigment');
 Route::any('drop-assigment/{id}','hrindex@dropassigment')->name('drop-assigment');
 
+Route::any('bank_names','hrindex@bank_names')->name('bank_names');
+
+
+
+
+
+
+
+
+
 //Store & Inventory
 Route::any('Store_&_Inventory_index','store@index')->name('Store_&_Inventory_index');
 
@@ -1402,9 +1412,19 @@ Route::any('edit_purchase','PurchaseManagement@edit_purchase')->name('edit_purch
 
 //practice Area Management
 Route::any('practice_area_index','PracticeAreaManagement@practice_area_index')->name('practice_area_index');
+Route::any('practice_area','PracticeAreaManagement@practice_area')->name('practice_area');
+Route::any('matter_type','PracticeAreaManagement@matter_type')->name('matter_type');
 Route::any('personal_injury','PracticeAreaManagement@personalinjury')->name('personal_injury');
 Route::any('family_law','PracticeAreaManagement@family_law')->name('family_law');
 Route::any('general_practice','PracticeAreaManagement@general_practice')->name('general_practice');
+Route::any('estate_plan','PracticeAreaManagement@estate_plan')->name('estate_plan');
+Route::any('real_estate','PracticeAreaManagement@real_estate')->name('real_estate');
+Route::any('criminal_law','PracticeAreaManagement@criminal_law')->name('criminal_law');
+Route::any('civil_litigation','PracticeAreaManagement@civil_litigation')->name('civil_litigation');
+Route::any('business_law','PracticeAreaManagement@business_law')->name('business_law');
+Route::any('guardianship_law','PracticeAreaManagement@guardianship_law')->name('guardianship_law');
+Route::any('probate_law','PracticeAreaManagement@probate_law')->name('probate_law');
+
 
 
 

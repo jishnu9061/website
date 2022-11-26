@@ -4,10 +4,13 @@
 
 {{-- heading --}}
    <div class="container" >            
-               <h4 id="hdtpa"><b>Family Law</b></h4>
+               <h4 id="hdtpa"><b>Banks</b></h4>
                <br>
 
+               <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#myModal">Add New Bank</button></a>
 
+            <br>
                <div class="header_wrap">
                     <div class="num_rows">
                         <div class="form-group">
@@ -39,13 +42,10 @@
   <thead>
     <tr>
       
-      <th scope="col">File No</th>
-      <th scope="col">Client Name</th>
-      <th scope="col">Matter Type</th>
-      <th scope="col">Other Party</th>
-      <th scope="col">Description</th>
-      <th scope="col">Attorney</th>
-    
+      <th scope="col">Bank Name</th>
+      <th scope="col">Branch</th> 
+      <th scope="col">Actions</th> 
+
     </tr>
   </thead>
   <tbody>
@@ -53,11 +53,12 @@
       
       <td></td>
       <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      
+      <td> 
+        
+        <a href="{{url('edit_supplier')}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit" ></i>
+        <span class="m-2"></span>
+        <a href="#"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
+
     </tr>
     
   </tbody>
@@ -80,5 +81,46 @@
 
 
 </div>
+
+
+
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
+<div class="modal fade" id="myModal">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content" >
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header" >
+                                        <h2 class="text-centre"><b>Add Bank</b></h2>
+
+                                    </div>
+
+                                    <!-- Modal body -->
+            <div class="modal-body" >
+            <div class="container">
+                <form>
+                                        
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Bank Name</label>
+                  <input type="text" class="form-control"  placeholder="">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Branch</label>
+                  <input type="text" class="form-control"  placeholder="">
+                </div>
+
+      <div class="modal-footer" style="background-color:#d3e0ed;">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+     </div>
+
+</form>
+</div>
+
+
+
+
+
 
 @endsection

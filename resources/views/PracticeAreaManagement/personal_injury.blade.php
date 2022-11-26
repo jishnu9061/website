@@ -17,14 +17,14 @@
             <div>
               
                 {{-- heading --}}
-                <h4 id="hdtpa"><b>Personal Injury Matterts</b></h4>
+                <h4 id="hdtpa"><b>Personal Injury</b></h4>
                 <br>
             </div>
 
         </div>
         <!--filter-->
    
-        <br>
+      
 
         <!--filter end-->
 
@@ -63,9 +63,9 @@
 
                             <thead>
                                 <tr>
-                                    <th class="text-center">Tags</th>
-                                    <th class="text-center">Internal Reference</th>
-                                    <th class="text-center">Client</th>
+                                    
+                                    <th class="text-center">File No</th>
+                                    <th class="text-center">Client Name</th>
                                     <th class="text-center">Matter Type</th>
                                     <th class="text-center">Other Party</th>
                                     <th class="text-center">Description</th>
@@ -77,11 +77,11 @@
 
 
                                 <tr id="data">
+                                    
                                     <td class="text-center"></td>
                                     <td class="text-center"></td>
                                     <td class="text-center"></td>
                                     <td class="text-center"></td>
-                                    <td class="text-center"></td>g
                                     <td class="text-center"></td>
                                     <td class="text-center"></td>
 

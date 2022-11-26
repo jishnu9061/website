@@ -179,6 +179,10 @@ public function view_job_post($id)
     {
         return view('hr.annual_performance_form');
     }
+    public function bank_names()
+    {
+        return view('hr.bank_names');
+    }
     public function over_time_list()
     {
         return view('hr.over_time');
