@@ -78,12 +78,12 @@
 
                                 <tr id="data">
                                     
-                                    <td class="text-center"></td>
-                                    <td class="text-center"></td>
-                                    <td class="text-center"></td>
-                                    <td class="text-center"></td>
-                                    <td class="text-center"></td>
-                                    <td class="text-center"></td>
+                                    <td class="text-center">12H6575Z</td>
+                                    <td class="text-center">Ben</td>
+                                    <td class="text-center">Personal Injury (Advanced)</td>
+                                    <td class="text-center">Smith</td>
+                                    <td class="text-center">Incident Date: 26-11-2022 at kenya</td>
+                                    <td class="text-center">Negotation</td>
 
                                 </tr>
 

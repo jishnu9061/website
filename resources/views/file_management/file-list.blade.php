@@ -77,12 +77,12 @@
                                         <!-- <th class="text-center">*</th> -->
                                         <th class="text-center">File No</th>
                                         <th class="text-center">Client</th>
-                                        <th class="text-center">File Name</th>
+                                        <th class="text-center">File No</th>
                                         <th class="text-center">File Open</th>
                                         <!-- <th class="text-center">Responsible<br>Advocate</th>
                                         <th class="text-center">Most Recent Progress</th> -->
                                         <th class="text-center">Date Closed</th>
-                                        <th class="text-center">File&Fee Balances</th>
+                                        <th class="text-center">File & Fee Balances</th>
                                         <th class="text-center">Status</th>
                                         <th class="text-center">Action</th>
                                     </tr>
@@ -129,7 +129,7 @@
                             </nav> -->
                         </div>
                         <div class="modal fade" id="myModal">
-                            <div class="modal-dialog modal-lg">
+                            <div class="modal-dialog modal-xl">
                                 <div class="modal-content" >
 
                                     <!-- Modal Header -->
@@ -164,12 +164,12 @@
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Client</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="text" class="form-control" name="client" id="age" value="" >
-                            </div>
+                            <select class="form-select" aria-label="Default select example">
+                             <option selected>---select---</option>
+                             <option value="1">client1</option>
+                             <option value="2">client2</option>
+                             <option value="3">client3</option>
+                            </select>
                         </div>
                     </div>
                 
@@ -214,7 +214,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">File Name</label>
+                            <label for="username">File No</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="file_name" value=""
@@ -270,21 +270,30 @@
                 <div class="row">
                
                     <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Opening Date</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="open_date" id="age" value=""
-                                 min="0" max="99">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Age is required.
-                                </div>
-                            </div>
+                    <div class="mb-1">
+                     <label for="">Practice Area</label>
+                    <div class="input-group">
+                    <div class="input-group-prepend">
+                         </div>
+                          <select>
+                                <option value="select">---select---</option>
+                                <option value="Family Law">Family Law</option>
+                                <option value="Personal Injury">Personal Injury</option>
+                                <option value="General Practice">General Practice</option>
+                                <option value="Estate Planning">Estate Planning</option>
+                                <option value="Real Estate">Real Estate</option>
+                                <option value="Criminal Law">Criminal Law</option>
+                                <option value="Civil Litigation">Civil Litigation</option>
+                                <option value="Business Law">Business Law</option>
+                                <option value="Guardianship Law">Guardianship Law</option>
+                                <option value="Probate Law">Probate Law</option>
+                         </select>
                         </div>
+                    </div>                                             
                     </div>
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Close Date</label>
+                            <label for="username">Opening Date</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
@@ -294,7 +303,23 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Closing Date </label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="date" class="form-control" name="close_date" id="age" value=""
+                                 min="0" max="99">
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+
                     
+                      
+                   
                 <div class="row">
                
                     <div class="col-md-12">
@@ -330,7 +355,7 @@
                         </div>
                     </div>
                     </div>
-                    
+                   <br> 
                 <h4>Contacts</h4>
                 <div class="row">
                 <div class="col-md-6">
@@ -397,7 +422,7 @@
                         <div class="mb-1">
                             <label for="username">Amount</label>
                             <div class="input-group">
-                                <div class="input-group-prepend">
+                                <div class="inpu    t-group-prepend">
 
                                 </div>
                                 <input type="text" class="form-control" name="amount" value=""

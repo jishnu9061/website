@@ -152,7 +152,7 @@ color: #999;
  <!-- 		End of Container -->
  
             <div class="modal fade" id="myModal">
-                <div class="modal-dialog modal-lg">
+                <div class="modal-dialog modal-xl">
                     <div class="modal-content">
 
                         <!-- Modal Header -->
@@ -391,18 +391,28 @@ color: #999;
                                             </div>
                                             <br>
                                             <div class="row">
-                                                <div class="col-md-4">
+                                            <div class="col-md-4">
                                                     <div class="mb-1">
-                                                        <label for="username">Pin No</label>
+                                                        <label for="">Practice Area</label>
                                                         <div class="input-group">
-                                                            <div class="input-group-prepend"></div>
-                                                            <input type="text" class="form-control" name="pin" id="age"
-                                                                value="" min="0" max="99">
-                                                            <div class="invalid-feedback" style="width: 100%;">
-                                                                Age is required.
+                                                            <div class="input-group-prepend">
                                                             </div>
+                                                            <select>
+                                                                <option value="select">---select---</option>
+                                                                <option value="Family Law">Family Law</option>
+                                                                <option value="Personal Injury">Personal Injury</option>
+                                                                <option value="General Practice">General Practice</option>
+                                                                <option value="Estate Planning">Estate Planning</option>
+                                                                <option value="Real Estate">Real Estate</option>
+                                                                <option value="Criminal Law">Criminal Law</option>
+                                                                <option value="Civil Litigation">Civil Litigation</option>
+                                                                <option value="Business Law">Business Law</option>
+                                                                <option value="Guardianship Law">Guardianship Law</option>
+                                                                <option value="Probate Law">Probate Law</option>
+                                                            </select>
                                                         </div>
                                                     </div>
+                            
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="mb-1">
@@ -433,8 +443,22 @@ color: #999;
                                             </div>
                                             <br>
                                             <div class="row">
-                                                <div class="col-md-4">
+                                            <div class="col-md-4">
                                                     <div class="mb-1">
+                                                        <label for="username">Pin No</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend"></div>
+                                                            <input type="text" class="form-control" name="pin" id="age"
+                                                                value="" min="0" max="99">
+                                                            <div class="invalid-feedback" style="width: 100%;">
+                                                                Age is required.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                               
+                                                </div>
+                                                <div class="col-md-4">
+                                                <div class="mb-1">
                                                         <label for="username">Town</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
@@ -445,9 +469,10 @@ color: #999;
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <div class="mb-1">
+                                                <div class="mb-1">
                                                         <label for="username">Physical Address</label>
                                                         <div class="input-group">
                                                             <textarea class="form-control" id="form7Example7" rows="3"
@@ -457,9 +482,12 @@ color: #999;
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    
                                                 </div>
-                                                <div class="col-md-4">
-                                                    <div class="mb-1">
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-md-4">
+                                            <div class="mb-1">
                                                         <label for="username">Notes</label>
                                                         <div class="input-group">
                                                             <textarea class="form-control" id="form7Example7" rows="3"
@@ -470,21 +498,14 @@ color: #999;
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
 
                                             <div class="row">
-                                                <div class="col-sm">
-
-                                                </div>
-                                                <div class="col-sm">
-                                                    <br>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="submit" class="btn btn-primary"
-                                                        style="width:15%;background-color:white;color:black">Save</button>
-                                                    <button type="button" class="btn btn-primary" data-dismiss="modal"
-                                                        style="width:15%;background-color:white;color:black">Cancel</button>
-                                                </div>
+                                             <div class="col-sm">
+                                                <div class="modal-footer" style="background-color:#d3e0ed;">
+                                                    <button type="submit" class="btn btn-primary">Save</button>
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                                                </div> 
+                                             </div>
                                             </div>
                                         </form>
                                     </div>

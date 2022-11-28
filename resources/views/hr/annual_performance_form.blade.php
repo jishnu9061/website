@@ -119,6 +119,15 @@
   <label for="currentsalary" class="form-label">Current Salary</label>
   <input type="number" class="form-control" id="currentsalary">
    </div>
+   <div class="mb-3">
+  <label for="Default select example" class="form-label">Department</label>
+  <select class="form-select" aria-label="Default select example">
+  <option selected>--- select ---</option>
+  <option value="1">HR</option>
+  <option value="2">Legal</option>
+  <option value="3">Receptionist</option>
+</select>
+   </div>
     </div>
     <div class="col">
     <div class="mb-3">
@@ -155,10 +164,56 @@
         </thead>
         <tbody>
           <tr>
-            <th scope="row">Ability at the Position</th>
+            <td>Ability at the Position</td>
             <td>
               <div class="container">
-                <!-- SVG sprite for use in the form element -->
+               
+                <svg id="svg-sprite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" style="display: none;">
+                  <symbol id="star-icon">
+                    <title>star</title>
+                    <path d="M20 7h-7L10 .5 7 7H0l5.46 5.47-1.64 7 6.18-3.7 6.18 3.73-1.63-7z" />
+                  </symbol>
+                </svg>
+                
+                  <form id="my-form-1" method="POST">
+                      <div class="stars-wrapper">
+                        <input id="one-star-rating-1" type="radio" name="reviewRating" value="1">
+                       
+                        <input id="two-star-rating-1" type="radio" name="reviewRating" value="2">
+                        
+                        <input id="three-star-rating-1" type="radio" name="reviewRating" value="3">
+                        
+                        <input id="four-star-rating-1" type="radio" name="reviewRating" value="4">
+                        
+                        <input id="five-star-rating-1" type="radio" name="reviewRating" value="5">
+                        
+                        <div class="stars-display">
+                          <svg viewBox="0 0 20 20" width="30" height="30">
+                            <use href="#star-icon"></use>
+                          </svg>
+                          <svg viewBox="0 0 20 20" width="30" height="30">
+                            <use href="#star-icon"></use>
+                          </svg>
+                          <svg viewBox="0 0 20 20" width="30" height="30">
+                            <use href="#star-icon"></use>
+                          </svg>
+                          <svg viewBox="0 0 20 20" width="30" height="30">
+                            <use href="#star-icon"></use>
+                          </svg>
+                          <svg viewBox="0 0 20 20" width="30" height="30">
+                            <use href="#star-icon"></use>
+                          </svg>
+                        </div>
+                  </form>
+                
+            </td>
+            <td><input type="text" class="form-control" id="total"></td>
+          </tr>
+          <!-- <tr>
+            <td>Attendance</td>
+            <td>
+              <div class="container">
+               
                 <svg id="svg-sprite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" style="display: none;">
                   <symbol id="star-icon">
                     <title>star</title>
@@ -201,10 +256,10 @@
             <td><input type="text" class="form-control" id="total"></td>
           </tr>
           <tr>
-            <th scope="row">Attendance</th>
+            <td>Ability to meet Deadlines</td>
             <td>
               <div class="container">
-                <!-- SVG sprite for use in the form element -->
+               
                 <svg id="svg-sprite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" style="display: none;">
                   <symbol id="star-icon">
                     <title>star</title>
@@ -247,10 +302,10 @@
             <td><input type="text" class="form-control" id="total"></td>
           </tr>
           <tr>
-            <th scope="row">Ability to meet Deadlines</th>
+            <td>Organisational Skills</td>
             <td>
               <div class="container">
-                <!-- SVG sprite for use in the form element -->
+               
                 <svg id="svg-sprite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" style="display: none;">
                   <symbol id="star-icon">
                     <title>star</title>
@@ -293,10 +348,10 @@
             <td><input type="text" class="form-control" id="total"></td>
           </tr>
           <tr>
-            <th scope="row">Organisational Skills</th>
+            <td>Communication Skills</td>
             <td>
               <div class="container">
-                <!-- SVG sprite for use in the form element -->
+               
                 <svg id="svg-sprite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" style="display: none;">
                   <symbol id="star-icon">
                     <title>star</title>
@@ -339,10 +394,10 @@
             <td><input type="text" class="form-control" id="total"></td>
           </tr>
           <tr>
-            <th scope="row">Communication Skills</th>
+            <td>Quality of Work</td>
             <td>
               <div class="container">
-                <!-- SVG sprite for use in the form element -->
+               
                 <svg id="svg-sprite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" style="display: none;">
                   <symbol id="star-icon">
                     <title>star</title>
@@ -384,56 +439,10 @@
             </td>
             <td><input type="text" class="form-control" id="total"></td>
           </tr>
-          <tr>
-            <th scope="row">Quality of Work</th>
+            <td>Team Player Abilities</td>
             <td>
               <div class="container">
-                <!-- SVG sprite for use in the form element -->
-                <svg id="svg-sprite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" style="display: none;">
-                  <symbol id="star-icon">
-                    <title>star</title>
-                    <path d="M20 7h-7L10 .5 7 7H0l5.46 5.47-1.64 7 6.18-3.7 6.18 3.73-1.63-7z" />
-                  </symbol>
-                </svg>
-                
-                  <form id="my-form-1" method="POST">
-                      <div class="stars-wrapper">
-                        <input id="one-star-rating-1" type="radio" name="reviewRating" value="1">
-                       
-                        <input id="two-star-rating-1" type="radio" name="reviewRating" value="2">
-                        
-                        <input id="three-star-rating-1" type="radio" name="reviewRating" value="3">
-                        
-                        <input id="four-star-rating-1" type="radio" name="reviewRating" value="4">
-                        
-                        <input id="five-star-rating-1" type="radio" name="reviewRating" value="5">
-                        
-                        <div class="stars-display">
-                          <svg viewBox="0 0 20 20" width="30" height="30">
-                            <use href="#star-icon"></use>
-                          </svg>
-                          <svg viewBox="0 0 20 20" width="30" height="30">
-                            <use href="#star-icon"></use>
-                          </svg>
-                          <svg viewBox="0 0 20 20" width="30" height="30">
-                            <use href="#star-icon"></use>
-                          </svg>
-                          <svg viewBox="0 0 20 20" width="30" height="30">
-                            <use href="#star-icon"></use>
-                          </svg>
-                          <svg viewBox="0 0 20 20" width="30" height="30">
-                            <use href="#star-icon"></use>
-                          </svg>
-                        </div>
-                  </form>
-                
-            </td>
-            <td><input type="text" class="form-control" id="total"></td>
-          </tr>
-            <th scope="row">Team Player Abilities</th>
-            <td>
-              <div class="container">
-                <!-- SVG sprite for use in the form element -->
+               
                 <svg id="svg-sprite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" style="display: none;">
                   <symbol id="star-icon">
                     <title>star</title>
@@ -474,7 +483,7 @@
                 
             </td>
             <td><input type="text" class="form-control" id="total"></td>
-          </tr>
+          </tr> -->
         </tbody>
       </table>
       </div>
