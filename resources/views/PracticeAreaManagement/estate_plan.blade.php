@@ -51,14 +51,14 @@
   <tbody>
     <tr>
       
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>72G6585K</td>
+      <td>John</td>
+      <td>Estate Planning</td>
+      <td>Executor:George</td>
+      <td>John</td>
+      <td>4456 Kenya</td>
+      <td>Smith</td>
+      <td>SmithRubble inverstments</td>
 
     </tr>
     
