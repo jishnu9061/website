@@ -1320,6 +1320,7 @@ Route::any('view_job_appl_details_2','hrindex@view_job_appl_details_2')->name('v
 Route::any('create_job_post','hrindex@create_job_post')->name('create_job_post');
 Route::any('reviewed_details','hrindex@reviewed_details')->name('reviewed_details');
 Route::any('quarterly_performance_form','hrindex@quarterly_performance_form')->name('quarterly_performance_form');
+Route::any('add_kpi','hrindex@add_kpi')->name('add_kpi');
 Route::any('mid_year_performance','hrindex@mid_year_performance')->name('mid_year_performance');
 Route::any('annual_performance_form','hrindex@annual_performance_form')->name('annual_performance_form');
 Route::any('accindex','accindex@index')->name('accindex');
