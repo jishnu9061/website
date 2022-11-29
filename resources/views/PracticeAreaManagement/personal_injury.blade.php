@@ -27,7 +27,8 @@
       
 
         <!--filter end-->
-
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">New
+                  File</button>
 
         <div class="header_wrap">
             <div class="num_rows">
@@ -70,23 +71,31 @@
                                     <th class="text-center">Other Party</th>
                                     <th class="text-center">Description</th>
                                     <th class="text-center">Matter Stage</th>
+                                    <th class="text-center">Action</th>
 
                                 </tr>
                             </thead>
                             <tbody>
-
+                            @foreach($view_injury as $list)
 
                                 <tr id="data">
                                     
-                                    <td class="text-center">12H6575Z</td>
-                                    <td class="text-center">Ben</td>
-                                    <td class="text-center">Personal Injury (Advanced)</td>
-                                    <td class="text-center">Smith</td>
-                                    <td class="text-center">Incident Date: 26-11-2022 at kenya</td>
-                                    <td class="text-center">Negotation</td>
+                                    <td class="text-center">{{$list->id}}</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center">{{$list->matter_type}}</td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"><a href=""><i style="color:black;" class="fa fa-eye"
+                                        aria-hidden="true"></i>
+                                   
+                                    <a href="{{url('edit_injury',$list->id)}}"><i style="color:black;" class="fa fa-edit"
+                                            aria-hidden="true"></i>
+                                        <a onClick="return myFunction();" href="{{url('delete_injury',$list->id)}}" style="color:black;"><i
+                                                class="fas fa-trash-alt"></i></a></td>
 
                                 </tr>
-
+                            @endforeach
                             </tbody>
 
                         </table>
@@ -105,6 +114,245 @@
                     
 
                     <!-- 		End of Container -->
+
+     <!-- <-------------------------------------PERSONAL INJURY START-------------------------------------------------------------> 
+     <div class="modal fade" id="myModal">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content" >
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h2 class="text-center"><b>Matter Details</b></h2>
+
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <form method="post" action="{{ url('add_injury') }}"
+                                                enctype="multipart/form-data">
+                                                @csrf
+
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Matter Info</label>
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="matter_info" id="age">
+                                <!-- <select name="box_type" id="cars">
+                                <option>select</option>
+                                                            <option>Box Type 1</option>
+                                                            <option>Box Type 2</option>
+                                                            <option>Box Type 3</option>
+                                                            <option>Box Type 4</option>
+                                                            
+                                </select> -->
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Matter Type</label>
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="matter_type" id="age">
+                                <!-- <select name="box_type" id="cars">
+                                <option>select</option>
+                                                            <option>Box Type 1</option>
+                                                            <option>Box Type 2</option>
+                                                            <option>Box Type 3</option>
+                                                            <option>Box Type 4</option>
+                                                            
+                                </select> -->
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h4>Plaintiff</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Incident Details</label>
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="incident" id="age">
+                                <!-- <select name="box_type" id="cars">
+                                <option>select</option>
+                                                            <option>Box Type 1</option>
+                                                            <option>Box Type 2</option>
+                                                            <option>Box Type 3</option>
+                                                            <option>Box Type 4</option>
+                                                            
+                                </select> -->
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Damage Details</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="damage" id="age">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Health Insurer</label>
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="insurer" id="age">
+                                <!-- <select name="box_type" id="cars">
+                                <option>select</option>
+                                                            <option>Box Type 1</option>
+                                                            <option>Box Type 2</option>
+                                                            <option>Box Type 3</option>
+                                                            <option>Box Type 4</option>
+                                                            
+                                </select> -->
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Insurence Policy Details</label>
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="policy_detail" id="age">
+                                <!-- <select name="box_type" id="cars">
+                                <option>select</option>
+                                                            <option>Box Type 1</option>
+                                                            <option>Box Type 2</option>
+                                                            <option>Box Type 3</option>
+                                                            <option>Box Type 4</option>
+                                                            
+                                </select> -->
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Defendant</label>
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="defendent" id="age">
+                                <!-- <select name="box_type" id="cars">
+                                <option>select</option>
+                                                            <option>Box Type 1</option>
+                                                            <option>Box Type 2</option>
+                                                            <option>Box Type 3</option>
+                                                            <option>Box Type 4</option>
+                                                            
+                                </select> -->
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+              
+                <div class="row">
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
+                            <button type="button" class="btn btn-primary float:right;" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</div>
+<div class="modal" id="mymodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-body">
+                    <form action="">
+                        <div>
+                            <input type="text" name="type" class="form-control" placeholder="Client Type">
+                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="modal" id="my">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-body">
+                    <form action="">
+                        <div>
+                            <input type="text" name="type" class="form-control" placeholder="Country">
+                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+       
+
+            <br>
+     <!-- <-------------------------------------PERSONAL INJURY END----------------------------------------------------------------> 
 
 
                 <!-- The Modal -->
