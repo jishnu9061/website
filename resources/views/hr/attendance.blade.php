@@ -9,12 +9,13 @@
 @endif
 
 {{-- heading --}}
+<div class="container">
    <h4 id="hdtpa"><b>Attendance CSV</b></h4>
    <br>
    <br>
 <form method="POST" action="{{route('importProject')}}" enctype="multipart/form-data">
    @csrf
-<div class="container">	
+	
 <div class="row" id="data">
   <label>Upload Csv</label>
 

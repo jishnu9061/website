@@ -48,21 +48,18 @@ color: #999;
 </style>    
     </head>
 <body>
-    <div class="container">
+   
         <div class="col-sm">
 
 
 
 
-<div>
+    <div class="container">
     <h4 id="hdtpa"><b>Over Time</b></h4>
     <br>
- </div>
-
-            
-
-         
-                <div class="container">
+ 
+      
+              
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -81,9 +78,9 @@ color: #999;
         </div>
       </div>
       <div class="tb_search">
-<input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
+      <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>
+    
 	
 
             <div class="tab-content" id="myTabContent">
@@ -120,9 +117,9 @@ color: #999;
                             </tbody>
                         </table>
                         <br>
-</div>
-<!--		Start Pagination -->
-<div class='pagination-container'>
+  </div>
+ <!--		Start Pagination -->
+ <div class='pagination-container'>
       <nav>
         <ul class="pagination">
          <!--	Here the JS Function Will Add the Rows -->

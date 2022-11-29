@@ -3,9 +3,10 @@
 @section('content')
 
 {{-- heading --}}
+  <div class="container">
    <h4 id="hdtpa"><b>Attendance (Manual)</b></h4>
    <br>
-   <br>
+
 
 
 <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -53,10 +54,34 @@
     <button type="submit" class="btn btn-primary form-control">Submit</button>
 </div>
 
-</div>
 </form>
-<table class="table table-bordered table-responsive">
-	<th id="dayget">
+
+<div class="header_wrap">
+      <div class="num_rows">
+        <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
+         <select class  ="form-control" aria-label="Page navigation example" name="state" id="maxRows">
+
+          <option value="5">5</option>
+          <option value="10">10</option>
+           <option value="15">15</option>
+           <option value="20">20</option>
+           <option value="50">50</option>
+           <option value="70">70</option>
+           <option value="100">100</option>
+          <option value="5000">Show ALL Rows</option>
+          </select>
+         
+        </div>
+      </div>
+      <div class="tb_search">
+       <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
+      </div>
+
+<!-- <table class="table table-bordered table-responsive"> -->
+<div class="table-responsive">
+        <table class="table table-striped table-class" id= "table-id">
+
+	<th class="text-center" id="dayget">
         <td><b>Employee Name</b></td>
         <td><b>Employee Id</b></td>
 	@for($i=1;$i<=$daysinmonth;$i++)
@@ -66,7 +91,7 @@
 
 	</th>
     @foreach($attendancedata as $staff)
-	<tr class="data" id="datax">
+	<tr class="data; text-center" id="datax">
     <td></td>
 
     <td>{{$staff->staffname}}</td>
@@ -107,6 +132,21 @@ style="padding: 0.25px;
     @endforeach
 
 	</table>
+</div>  
+    <br>
+
+    <!--		Start Pagination -->
+    <div class='pagination-container'>
+      <nav>
+        <ul class="pagination">
+         <!--	Here the JS Function Will Add the Rows -->
+        </ul>
+      </nav>
+    </div>
+    <div class="rows_count">Showing 11 to 20 of 100</div>
+
+ <!-- 		End of Container -->
+
     <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 
  

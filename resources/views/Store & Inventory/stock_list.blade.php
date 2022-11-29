@@ -12,11 +12,10 @@
 
 <body>
     <div class="container">
-        <!-- <h2 style="color: #070344;  text-align:center;"><b>Customer Registration</b></h2> -->
+       
         <div>
             <div>
-                <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
-                <b><u>Client Registration</u></b></span> -->
+              
                 {{-- heading --}}
                 <h4 id="hdtpa"><b>Stock List</b></h4>
                 <br>
@@ -24,17 +23,7 @@
 
         </div>
         <!--filter-->
-        <div class="tb_search">
-
-            <select name="town" id="search_input_all" onkeyup="FilterkeyWord_all_table()" class="form-control"
-                style="width:100%;">
-                <option>---select--- </option>
-                <option>pen</option>
-                <option>pencil</option>
-                <option>Book</option>
-            </select>
-
-        </div>
+   
         <br>
 
         <!--filter end-->
@@ -63,7 +52,7 @@
                     class="form-control">
             </div>
 
-
+</div>
 
 
             <div class="tab-content" id="myTabContent">
@@ -74,7 +63,7 @@
 
                             <thead>
                                 <tr>
-                                    <th class="text-center">Item Category</th>
+                                    <th class="text-center">Category</th>
                                     <th class="text-center">Item Type</th>
                                     <th class="text-center">Item Name</th>
                                     <th class="text-center">Quantity In Stock</th>
@@ -104,8 +93,9 @@
                             </tbody>
 
                         </table>
+                        
                     </div>
-
+                    
                     <!--		Start Pagination -->
                     <div class='pagination-container'>
                         <nav>
@@ -115,165 +105,9 @@
                         </nav>
                     </div>
                     <div class="rows_count">Showing 11 to 20 of 100</div>
+                    
 
                     <!-- 		End of Container -->
-
-
-                    <div class="modal fade" id="myModal">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-
-                                <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <h2 class="text-center"><b>Add Product</b></h2>
-
-                                </div>
-
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-12 order-md-1">
-                                                <form method="post" action="{{url('add-registration')}}" id="form">
-                                                    @csrf
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                            <div class="mb-1">
-                                                                <label for="username">Product Name</label>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend"></div>
-                                                                    <input type="text" class="form-control" name="email"
-                                                                        id="username" value="" placeholder="" required>
-                                                                    <div class="invalid-feedback" style="width: 100%;">
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="mb-1">
-                                                                <label for="username">Product Type</label>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend"></div>
-
-                                                                    <select name="town" id="username"
-                                                                        style="width:100%;">
-                                                                        <option>---select--- </option>
-                                                                        <option>Book </option>
-                                                                        <option>Pen</option>
-                                                                        <option>Pencil</option>
-                                                                        <option>pin</option>
-
-
-                                                                    </select>
-                                                                    <div class="invalid-feedback" style="width: 100%;">
-                                                                        Town is required.
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-
-                                                        <div class="col-md-4">
-                                                            <div class="mb-1">
-                                                                <label for="username">Unit</label>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend"></div>
-
-                                                                    <select name="town" id="username"
-                                                                        style="width:100%;">
-                                                                        <option>---select--- </option>
-                                                                        <option>Package</option>
-                                                                        <option>Paket</option>
-                                                                        <option>Kg</option>
-
-
-                                                                    </select>
-                                                                    <div class="invalid-feedback" style="width: 100%;">
-                                                                        Town is required.
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-
-                                                    <br>
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                            <div class="mb-1">
-                                                                <label for="username">Quantity</label>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend"></div>
-                                                                    <input type="text" class="form-control" name="email"
-                                                                        id="username" value="" placeholder="" required>
-                                                                    <div class="invalid-feedback" style="width: 100%;">
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-md-4">
-                                                            <div class="mb-1">
-                                                                <label for="username">Unit Price</label>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend"></div>
-                                                                    <input type="text" class="form-control" name="email"
-                                                                        id="username" value="" placeholder="" required>
-                                                                    <div class="invalid-feedback" style="width: 100%;">
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="mb-1">
-                                                                <label for="username">Total Price</label>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend"></div>
-                                                                    <input type="text" class="form-control" name="email"
-                                                                        id="username" value="" placeholder="" required>
-                                                                    <div class="invalid-feedback" style="width: 100%;">
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                    <br>
-
-                                                    <!-- <h4 style="text-align:center">Contact Persons</h4> -->
-
-
-
-                                                    <div class="row">
-                                                        <div class="col-sm">
-
-                                                        </div>
-                                                        <div class="col-sm">
-
-                                                        </div>
-                                                        <div class="col-sm">
-                                                            <br>
-                                                            <button type="submit" class="btn btn-primary float:right;"
-                                                                Style="width:50%;">Save</button>
-                                                            <button type="button" class="btn btn-primary float:left"
-                                                                Style="width:45%;" data-dismiss="modal">Cancel</button>
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
 
                 <!-- The Modal -->

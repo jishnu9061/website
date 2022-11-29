@@ -71,8 +71,8 @@
           <td>{{$job->qualification}}</td>
           <td>{{$job->work_experience}}</td>
           <td class="text-center">
-            <a href="{{url('view_job_post',$job->id)}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i>
-            <a href="{{url('edit_job_post',$job->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" ></i>
+            <a href="{{url('view_job_post',$job->id)}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span>
+            <a href="{{url('edit_job_post',$job->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" ></i><span class="m-1"></span>
             <a href="{{url('delete_job_post',$job->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
           </td>
           {{-- <td><a href="{{url('view_job_post',$job->id)}}" class="dropdown-item" >View<
@@ -86,7 +86,9 @@
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a href="{{url('view_job_post',$job->id)}}" class="dropdown-item" >View</a>
+                            
                             <a href="{{url('edit_job_post',$job->id)}}" class="dropdown-item" >Edit</a>
+                            
                             <a href="{{url('delete_job_post',$job->id)}}" class="dropdown-item" >Delete</a>
                             
                             </div>
@@ -174,8 +176,11 @@
                 <label for="job type" class="form-label">Job Type</label>
                 <select class="form-select" name="job_type">
                     <option selected>---select---</option>
-                    <option value="Permanent">Permanent</option>
-                    <option value="Temporary">Temporary</option>
+                    <option value="legaladvisor">Legal Advisor</option>
+                    <option value="hr">Hr</option>
+                    <option value="Accountant">Accountant</option>
+                    <option value="receptionist">Receptionist</option>
+                    
                   </select>
             </div>  
             <div class="mb-3">

@@ -18,6 +18,10 @@ class hrindex extends Controller
     {
         return view('hr.hrindex');
     }
+    public function performance_department()
+    {
+        return view('hr.performance_department');
+    }
 
     public function recruitment()
     {
@@ -46,10 +50,10 @@ public function job_posts()
         $end_date=$request['end_date'];
         $job_description=$request['job_description'];
         $job_responsibilities=$request['job_responsibilities'];
-        
+
 
         DB::table('cra_hr_create_post')->insert([
-            
+
             'job_title' => $job_title,
             'job_location' => $job_location,
             'qualification' => $qualification,
@@ -62,7 +66,7 @@ public function job_posts()
             'end_date' => $end_date,
             'job_description' => $job_description,
             'job_responsibilities' => $job_responsibilities,
-            
+
         ]);
         return redirect('/job_posts');
         //return view('hr.create_job_post');
@@ -86,8 +90,8 @@ public function update_job_post(Request $request){
         $end_date=$request['end_date'];
         $job_description=$request['job_description'];
         $job_responsibilities=$request['job_responsibilities'];
-        
-    
+
+
     $update_job_post = array(
         'job_title' => $job_title,
             'job_location' => $job_location,
@@ -126,8 +130,8 @@ public function view_job_post($id)
         $end_date=$request['end_date'];
         $job_description=$request['job_description'];
         $job_responsibilities=$request['job_responsibilities'];
-        
-    
+
+
     $update_job_post = array(
         'job_title' => $job_title,
             'job_location' => $job_location,
@@ -163,9 +167,40 @@ public function view_job_post($id)
     {
         return view('hr.reviewed_details');
     }
-    public function performance_form()
+
+
+    public function quarterly_performance_form()
     {
-        return view('hr.performance_form');
+        $add_kpi=DB::table('cra_add_kpi')->get();
+        return view('hr.quarterly_performance_form',compact('add_kpi'));
+
+    }
+    public function add_kpi(Request $Request)
+    {
+        $select_department= $Request['department'];
+        $enter_kpi = $Request['kpi'];
+
+        DB::table('cra_add_kpi')->insert([
+            'select_department' => $select_department,
+            'enter_kpi' => $enter_kpi,
+        ]);
+
+        return redirect('/quarterly_performance_form');
+
+    }
+
+
+    public function mid_year_performance()
+    {
+        return view('hr.mid_year_performance');
+    }
+    public function annual_performance_form()
+    {
+        return view('hr.annual_performance_form');
+    }
+    public function bank_names()
+    {
+        return view('hr.bank_names');
     }
     public function over_time_list()
     {
@@ -181,10 +216,10 @@ public function view_job_post($id)
     public function add_assignment(Request $Request)
     {
         $Assignment = $Request['assignment'];
-     
+
 
         DB::table('cra_add_task')->insert([
-            
+
             'assignment' =>  $Assignment,
          ]);
          return redirect('/view_over_time');
@@ -194,15 +229,15 @@ public function view_job_post($id)
         $edit_assigment = DB::table('cra_add_task')->where('id',$id)->first();
         return view('hr.edit-assigment',compact('edit_assigment','id'));
    }
-   
+
 public function updateassigment(Request $Request)
 {
     $id = $Request['id'];
      $Assignment = $Request['assignment'];
-     
+
 
     DB::table('cra_add_task')->where('id',$id)->update([
-        
+
         'assignment' =>  $Assignment,
      ]);
      return redirect('/view_over_time');
@@ -215,11 +250,11 @@ public function dropassigment($id){
 
 
 
-   
-   
-    
 
-    
+
+
+
+
 
 
 }

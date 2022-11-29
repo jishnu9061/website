@@ -1149,7 +1149,7 @@ Route::any('file_managementindex',"filemanagement@index")->name('file_management
 Route::any('file-list',"filemanagement@views")->name('file-list');
 Route::any('/edit-file/{id}',"filemanagement@edit")->name('edit-file');
 Route::any('/update',"filemanagement@update")->name('update');
-
+Route::any('view-list/{id}','filemanagement@viewlist')->name('view-list');
 Route::any('add-task',"filemanagement@addtask")->name('add-task');
 
 Route::any('/file_destroy/{id}',"filemanagement@file_destroy")->name('file_destroy');
@@ -1157,7 +1157,8 @@ Route::any('/file_destroy/{id}',"filemanagement@file_destroy")->name('file_destr
 Route::any('add-new-file',"filemanagement@addnew")->name('add-new-file');
 Route::any('file-archive',"filemanagement@filearchive")->name('file-archive');
 Route::any('add-box-no',"filemanagement@addboxno")->name('add-box-no');
-Route::any('edit-box-no',"filemanagement@editboxno")->name('edit-box-no');
+Route::any('/edit-box-no/{id}',"filemanagement@editboxno")->name('edit-box-no');
+Route::any('/update-box',"filemanagement@updatebox")->name('update-box');
 //manage files
 
 //document templates
@@ -1210,6 +1211,10 @@ Route::any('generate-document',"filemanagement@generatedocument")->name('generat
 Route::any('client-monthly-file-status','filemanagement@clientmonthlystatus')->name('client-monthly-file-status');
 Route::any('staff-monthly-status-report',"filemanagement@staffmonthlystatusreport")->name('staff-monthly-status-report');
 Route::any('file-list-progress-report',"filemanagement@filelistprogressreport")->name('file-list-progress-report');
+
+
+Route::any('view-file-list-progress/{id}','filemanagement@viewfilelisprogress')->name('view-file-list-progress');
+
 Route::any('bringup',"filemanagement@bringup")->name('bringup');
 Route::any('file-progress-report',"filemanagement@fileprogressreport")->name('file-progress-report');
 Route::any('file-status-summary',"filemanagement@filestatussummary")->name('file-status-summary');
@@ -1301,6 +1306,7 @@ Route::any('view_bill',"clientinvoicing@view_bill_item")->name('view_bill_item')
 Route::any('hrindex','hrindex@index')->name('hrindex');
 Route::any('recruitment','hrindex@recruitment')->name('recruitment');
 //reshma
+Route::any('performance_department','hrindex@performance_department')->name('performance_department');
 Route::any('job_posts','hrindex@job_posts')->name('job_posts');
 Route::any('edit_job_post/{id}','hrindex@edit_job_post')->name('edit_job_post');
 Route::any('/update_job_post','hrindex@update_job_post')->name('update_job_post');
@@ -1313,7 +1319,10 @@ Route::any('view_job_appl_details_1','hrindex@view_job_appl_details_1')->name('v
 Route::any('view_job_appl_details_2','hrindex@view_job_appl_details_2')->name('view_job_appl_details_2');
 Route::any('create_job_post','hrindex@create_job_post')->name('create_job_post');
 Route::any('reviewed_details','hrindex@reviewed_details')->name('reviewed_details');
-Route::any('performance_form','hrindex@performance_form')->name('performance_form');
+Route::any('quarterly_performance_form','hrindex@quarterly_performance_form')->name('quarterly_performance_form');
+Route::any('add_kpi','hrindex@add_kpi')->name('add_kpi');
+Route::any('mid_year_performance','hrindex@mid_year_performance')->name('mid_year_performance');
+Route::any('annual_performance_form','hrindex@annual_performance_form')->name('annual_performance_form');
 Route::any('accindex','accindex@index')->name('accindex');
 Route::any('new_communication','ClientManagement@add_communication')->name('add_communication');
 Route::any('calander',"Calender@index")->name('calander');
@@ -1326,15 +1335,53 @@ Route::any('edit-assigment/{id}','hrindex@editassigment')->name('edit-assigment'
 Route::any('update-assigment','hrindex@updateassigment')->name('update-assigment');
 Route::any('drop-assigment/{id}','hrindex@dropassigment')->name('drop-assigment');
 
+Route::any('bank_names','hrindex@bank_names')->name('bank_names');
+
+
+
+
+
+
+
+
+
 //Store & Inventory
 Route::any('Store_&_Inventory_index','store@index')->name('Store_&_Inventory_index');
+
 Route::any('manage_categories','store@list_manage_categories')->name('manage_categories');
+Route::any('add_product','store@addproduct')->name('add_product');
+Route::any('/edit_product/{id}','store@editproduct')->name('edit_product');
+Route::any('update_product','store@updateproduct')->name('update_product');
+Route::any('/delete_product/{id}','store@deleteproduct')->name('delete_product');
+
+
 Route::any('manage_items','store@list_manage_items')->name('manage_items');
 Route::any('stock_list','store@stock_list_tab')->name('stock_list');
 Route::any('request_item','store@request_items')->name('request_item');
 Route::any('item_movement','store@item_movement_report')->name('item_movement');
 Route::any('view_item_movement','store@view_item_movement_report')->name('view_item_movement');
 Route::any('re_order','store@re_order_list')->name('re_order');
+Route::any('view_item_details','store@viewitemdetails')->name('view_item_details');
+Route::any('edit_manage_categories','store@edit_list_manage_categories')->name('edit_manage_categories');
+Route::any('edit_request_item','store@edit_request_items')->name('edit_request_item');
+Route::any('add_categories','store@list_add_categories')->name('add_categories');
+
+Route::any('edit_categories','store@list_edit_categories')->name('edit_categories');
+Route::any('view_requst','store@list_view_requst')->name('view_requst');
+
+
+Route::any('new_categories','store@newcategories')->name('new_categories');
+
+Route::any('/edit_category/{id}','store@editcategory')->name('edit_category');
+Route::any('update_category','store@updatecategory')->name('update_category');
+Route::any('/delete_category/{id}','store@deletecategory')->name('delete_category');
+Route::any('issue_view_requst','store@list_issue_requst')->name('issue_view_requst');
+
+
+
+
+
+
 
 
 
@@ -1350,6 +1397,35 @@ Route::any('re_order','store@re_order_list')->name('re_order');
 //Purchase Management
 
 Route::any('purchase_index','PurchaseManagement@index_purchase')->name('purchase_index');
+Route::any('purchase_order','PurchaseManagement@purchase_order')->name('purchase_order');
+Route::any('view_purchase_order','PurchaseManagement@view_purchase_order')->name('view_purchase_order');
+Route::any('purchase_order_report','PurchaseManagement@purchase_order_report')->name('purchase_order_report');
+Route::any('vendor_performance_report','PurchaseManagement@vendor_performance_report')->name('vendor_performance_report');
+Route::any('view_supplier','PurchaseManagement@view_supplier')->name('view_supplier');
+Route::any('edit_supplier','PurchaseManagement@edit_supplier')->name('edit_supplier');
+// Route::any('cost_variation_report','PurchaseManagement@cost_variation_report')->name('cost_variation_report');
+Route::any('ledger_details','PurchaseManagement@ledger_details')->name('ledger_details');
+Route::any('purchase_view','PurchaseManagement@purchase_view')->name('purchase_view');
+Route::any('edit_purchase','PurchaseManagement@edit_purchase')->name('edit_purchase');
+
+
+
+
+//practice Area Management
+Route::any('practice_area_index','PracticeAreaManagement@practice_area_index')->name('practice_area_index');
+Route::any('practice_area','PracticeAreaManagement@practice_area')->name('practice_area');
+Route::any('matter_type','PracticeAreaManagement@matter_type')->name('matter_type');
+Route::any('personal_injury','PracticeAreaManagement@personalinjury')->name('personal_injury');
+Route::any('family_law','PracticeAreaManagement@family_law')->name('family_law');
+Route::any('general_practice','PracticeAreaManagement@general_practice')->name('general_practice');
+Route::any('estate_plan','PracticeAreaManagement@estate_plan')->name('estate_plan');
+Route::any('real_estate','PracticeAreaManagement@real_estate')->name('real_estate');
+Route::any('criminal_law','PracticeAreaManagement@criminal_law')->name('criminal_law');
+Route::any('civil_litigation','PracticeAreaManagement@civil_litigation')->name('civil_litigation');
+Route::any('business_law','PracticeAreaManagement@business_law')->name('business_law');
+Route::any('guardianship_law','PracticeAreaManagement@guardianship_law')->name('guardianship_law');
+Route::any('probate_law','PracticeAreaManagement@probate_law')->name('probate_law');
+
 
 
 
