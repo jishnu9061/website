@@ -134,4 +134,28 @@ class PracticeAreaManagement extends Controller
     {
         return view('PracticeAreaManagement.edit_family_law');
     }
+    public function view_general_practice()
+    {
+        return view('PracticeAreaManagement.view_general_practice');
+    }
+    public function edit_general_practice()
+    {
+        return view('PracticeAreaManagement.edit_general_practice');
+    }
+    public function view_estate_plan()
+    {
+        return view('PracticeAreaManagement.view_estate_plan');
+    }
+    public function edit_estate_plan()
+    {
+        return view('PracticeAreaManagement.edit_estate_plan');
+    }
+    public function view_real_estate()
+    {
+        return view('PracticeAreaManagement.view_real_estate');
+    }
+    public function edit_real_estate()
+    {
+        return view('PracticeAreaManagement.edit_real_estate');
+    }
 }

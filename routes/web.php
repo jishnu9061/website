@@ -1441,6 +1441,12 @@ Route::any('guardianship_law','PracticeAreaManagement@guardianship_law')->name('
 Route::any('probate_law','PracticeAreaManagement@probate_law')->name('probate_law');
 Route::any('view_family_law','PracticeAreaManagement@view_family_law')->name('view_family_law');
 Route::any('edit_family_law','PracticeAreaManagement@edit_family_law')->name('edit_family_law');
+Route::any('view_general_practice','PracticeAreaManagement@view_general_practice')->name('view_general_practice');
+Route::any('edit_general_practice','PracticeAreaManagement@edit_general_practice')->name('edit_general_practice');
+Route::any('view_estate_plan','PracticeAreaManagement@view_estate_plan')->name('view_estate_plan');
+Route::any('edit_estate_plan','PracticeAreaManagement@edit_estate_plan')->name('edit_estate_plan');
+Route::any('view_real_estate','PracticeAreaManagement@view_real_estate')->name('view_real_estate');
+Route::any('edit_real_estate','PracticeAreaManagement@edit_real_estate')->name('edit_real_estate');
 
 
 
