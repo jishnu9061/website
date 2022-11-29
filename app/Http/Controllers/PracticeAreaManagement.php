@@ -60,4 +60,12 @@ class PracticeAreaManagement extends Controller
     {
         return view('PracticeAreaManagement.probate_law');
     }
+    public function view_family_law()
+    {
+        return view('PracticeAreaManagement.view_family_law');
+    }
+    public function edit_family_law()
+    {
+        return view('PracticeAreaManagement.edit_family_law');
+    }
 }
