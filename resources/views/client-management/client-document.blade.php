@@ -105,17 +105,17 @@
                                 <td scope="row" class="text-center">{{$list->client_number}}</td>
                                 <td scope="row" class="text-center">{{$list->client_name}}</td>
                                 <td scope="row" class="text-center">{{$list->client_types}}</td>
-                                <td scope="row" class="text-center" id="medicine_name_1"><a href="{{url('view-document',$list->id)}}"><button type="button"
-                                        class="btn btn-primary float:right;" Style="width:45%;">View Document</button></a>
+                                <td scope="row" class="text-center" id="medicine_name_1"><a
+                                        href="{{url('view-document',$list->id)}}"><button type="button"
+                                            class="btn btn-primary float:right;" Style="width:45%;">View
+                                            Document</button></a>
                                 </td>
                                 <td scope="row" class="text-center">
                                     <a href="{{url('edit-documents',$list->id)}}"><i style="color:black;"
                                             class="fa fa-pencil" aria-hidden="true"></i>
-                                       
-                                                            <a onClick="return myFunction();"
-                                                                href="{{url('delete-document',$list->id)}}"
-                                                                style="color:black;"><i
-                                                                    class="fas fa-trash-alt"></i></a>
+
+                                        <a onClick="return myFunction();" href="{{url('delete-document',$list->id)}}"
+                                            style="color:black;"><i class="fas fa-trash-alt"></i></a>
                                 </td>
                             </tr>
                             @endforeach

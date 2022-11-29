@@ -37,89 +37,17 @@
                 @csrf
                 <input type="hidden" name="corporate_id" value="{{$corporate_docs->corporate_id}}">
 
-                <div id="div">
-                    <div class="row input-form-row">
-                        <div class="input-form-column">
-                            <div class="col-md-4">
-                                <div class="mb-1">
-                                    <label for="username">Document Type</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            
-                                            </div>
-                                            <select name="type[]" id="cars">
-                                                <option>select</option>
-                                                <option>type1</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="username">File Upload</label>
-                                        <div class="input-group">
-                                    <div class="input-group-prepend"></div>
-                                    <input type="file" class="form-control" name="file[]" id="username" value=""
-                                    placeholder="File" required>
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                        Name is required.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="col-md-2">
-                            <div class="mb-1">
-                                <td>
-                                    <button type="button" class="addForm" onclick='addForm()' id="add">Add
-                                    </button>
-                                </td>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-4">
-
-                <div class="row">
-
-                    <div class="col-md-6">
-
-                        <div class="mb-1">
-                            <label for="username">Client Type</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-
-                                <input type="text" class="form-control" name="client" id="username"
-                                    value="{{$corporate_docs->Client_type}}" placeholder="File" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Date</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-
-                                <input type="date" class="form-control" name="date" id="username" value="" required>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
                 <div class="row">
                     <div class="col-md-12">
                         <table class="table table-striped  order-list" id="tab_logic">
-                            <thead >
+                            <thead>
                                 <tr>
                                     <th>Document Type</th>
                                     <th>File Upload</th>
                                     <th>Add</th>
+                                    <th></th>
+                                    <th>Date</th>
+
 
 
                                 </tr>
@@ -127,34 +55,40 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td style="width:45%;"> <select class="form-control select_group product"
-                                            data-row-id="row_3" id="              product_detailes" name="testname[]"
-                                            style="width:100%;">
+                                    <td style="width:45%;">
+
+                                        <select class="form-control select_group product" data-row-id="row_3"
+                                            id="product_detailes" name="testname[]" style="width:100%;">
                                             <option selected>Select</option>
                                             <option value="assets">Type 1</option>
-
                                         </select>
                                     </td>
-                                    <td style="width:45%;">    <input type="file" class="form-control" name="file" id="username" value=""
-                                    placeholder="File" required>
+                                    <td style="width:45%;"> <input type="file" class="form-control" name="file"
+                                            id="username" value="" placeholder="File" required>
                                     </td>
+                                    <td> <input type="button" class="btn btn-primary float:right;" id="add_Row"
+                                            value="Add">
                                     </td>
-
-
-
-
-
-                                    <td> <input type="button" class="btn btn-primary float:right;" id="add_Row" value="Add"></td>
+                                    <td>
+                                        <input type="hidden" class="form-control" name="client" id="username"
+                                            value="{{$corporate_docs->Client_type}}" placeholder="File" required>
+                                    </td>
+                                    <td>
+                                        <input type="date" class="form-control" name="date" id="username" 
+                                            required>
+                                    </td>
+                                    <td>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
 
                 </div>
-              
+
                 <br>
 
-              
+
                 <div class="row">
                     <div class="col-sm">
 
@@ -168,8 +102,8 @@
                         <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
                     </div>
                 </div>
+            </form>
         </div>
-        </form>
     </div>
 </div>
 </div>
@@ -189,9 +123,9 @@ $(document).ready(function() {
         var cols = "";
 
         cols +=
-            '<td><select name="testname[]" class="form-control select2" style="width:100%;><option value="">Select</option> <option value=""> </option></select></td>'
+            '<td><select name="testname[]" class="form-control select2" style="width:100%;><option value="">select</option> <option value="">type1</option></select></td>'
         cols +=
-            '<td><select name="testname[]" class="form-control select2" style="width:100%;><option value="">Select</option> <option value=""> </option></select></td>'
+            '<td><input type="file" class="form-control" name="file" id="username" placeholder="File" ></td>'
 
 
         cols +=
@@ -210,40 +144,6 @@ $(document).ready(function() {
 
     // delete function
     $("table.order-list").on("click", ".ibtnDel", function(_event) {
-        $(this).closest("tr").remove();
-        counter -= 1
-    });
-
-});
-</script>
-<script type="text/javascript">
-$(document).ready(function() {
-    var counter = 0;
-
-    $("#add_Row_again").on("click", function() {
-
-        var newRow = $("<tr>");
-        var cols = "";
-
-        cols +=
-            '<td><select name="profilename[]" class="form-control select2" style="width:100%;><option value="">Select</option> <option value=""></option></select></td>'
-
-        cols +=
-            '<td><button type="button" class="add_Row adRow ibtnDel " style="width:30%;"><i class="fas fa-backspace"></i></button></a></td>';
-        newRow.append(cols);
-
-        var defVal = $("select[name=acctname]").find(":selected").val();
-        if (defVal) {
-            $("select[name=accountName]").find(`option[value=${defVal}]`).hide();
-        }
-        $("table.order-list2").append(newRow);
-        setValCashVal('accountName'.concat(counter));
-        bindScript();
-        counter++;
-    });
-
-    // delete function
-    $("table.order-list2").on("click", ".ibtnDel", function(_event) {
         $(this).closest("tr").remove();
         counter -= 1
     });
@@ -270,95 +170,13 @@ $(document).on('click', '#h', function() {
 </script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 
-<script  src="../Jquery/jquery.multiselect.js"></script>
-<script  src="../Jquery/prettify.js"></script>
-<link  href="../Jquery/jquery.multiselect.css" rel="stylesheet"/>
-<link  href="../Jquery/style.css" rel="stylesheet" />
-<link  href="../Jquery/prettify.css" rel="stylesheet" />
-
-<script src="jquery.js">
+<script src="../Jquery/jquery.multiselect.js"></script>
+<script src="../Jquery/prettify.js"></script>
+<link href="../Jquery/jquery.multiselect.css" rel="stylesheet" />
+<link href="../Jquery/style.css" rel="stylesheet" />
+<link href="../Jquery/prettify.css" rel="stylesheet" />
 
 
-
-
-        cols +=
-            '<td><select name="type" class="form-control" style="width:100%;><option value="">Select</option></select></td>'
-
-
-        cols +=
-            '<td><button type="button" class="add_Row adRow ibtnDel " style="width:auto;"><i class="fas fa-backspace"></i></button></a></td>';
-
-        newRow.append(cols);
-
-
-</script>
-<script>
-    function addForm() {
-
-    console.log('form');
-    const formRow = document.getElementsByClassName('input-form-row');
-    const formColumn = document.getElementsByClassName('input-form-column');
-    
-    // let formRowChildren = formRow.length;
-
-    // formRowChildren ++;
-
-    console.log(formColumn, formRow);
-
-    const node = document.createElement("li");
-
-// Create a text node:
-const textnode = document.createTextNode("Water");
-
-    for (i = 0; i < formRowChildren; i++){
-        // formRow[0].appendChild(<div>sss</div>)
-    }
-
-}
-</script>
-<!-- <script>
-$("document").ready(function() {
-    $("#add").click(function() {
-        $("#div").append( <div class="row">
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">Document Type</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-
-                                    </div>
-                                    <select name="type[]" id="cars">
-                                        <option>select</option>
-                                        <option>type1</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-1">
-                                <label for="username">File Upload</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend"></div>
-                                    <input type="file[]" class="form-control" name="file" id="username" value=""
-                                        placeholder="File" required>
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                        Name is required.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="mb-1">
-                                <td>
-                                    <button type="button" class="" id="add">Add
-                                    </button>
-                                </td>
-                            </div>
-                        </div>
-                    </div>);
-    });
-});
-</script> -->
 
 <script type="text/javascript">
 $(function() {

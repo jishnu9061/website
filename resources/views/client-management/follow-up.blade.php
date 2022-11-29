@@ -142,10 +142,10 @@
                                 </td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->registered_by}}</td>
                                 <td scope="row" class="text-center">
-                                    <a href="{{url('edit-Quotation',$list->id)}}"><i style="color:black;"
+                                    <a href="{{url('edit-follow',$list->id)}}"><i style="color:black;"
                                             class="fa fa-edit" aria-hidden="true"></i></a>
                                     <span class="m-1"></span>
-                                    <a onClick="return myFunction();" href="{{url('delete-Quotation',$list->id)}}"
+                                    <a onClick="return myFunction();" href="{{url('delete-follow',$list->id)}}"
                                         style="color:black;"><i class="fas fa-trash-alt"></i></a>
                                 </td>
 
