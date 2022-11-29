@@ -77,13 +77,10 @@ class store extends Controller
         return view('Store & Inventory.manage_categories',compact('delete_category','id'));
     }
 
-
-
-
-
     public function list_manage_items()
     {
-        return view('Store & Inventory.manage_items');
+        $manage_list = DB::table('cra_manage_items')->get();
+        return view('Store & Inventory.manage_items',compact('manage_list') );
     }
 
     public function stock_list_report()
@@ -185,11 +182,19 @@ class store extends Controller
         
     }
 
+    public function deleteClient($id)
+    {
+        DB::table('cra_individual_client_details')->where('id',$id)->delete();
+        return redirect('/client_list');
+    }
+
+
     public function deletecategory($id)
     {
 
         $delete=DB::table('cra_add_categories')->where('id',$id)->delete();
-        return view('Store & Inventory.add_categories',compact('delete','id'));
+        
+        return redirect('/add_categories');
         
     }
     public function list_issue_requst()
@@ -197,6 +202,60 @@ class store extends Controller
         return view('Store & Inventory.issue_view_requst');
         
     }
+    public function add_manage_items(Request $request)
+    {
+      
+        $Category=$request['category'];
+        $type=$request['type'];
+        $name=$request['name'];
+        $level=$request['level'];
+       
+        DB::table('cra_manage_items')->insert([
+            'Category' =>  $Category,
+            'Item_Type' =>   $type,
+            'Item_Name' =>    $name,
+            'Reorder_Level' =>   $level,
+ ]);
+ return redirect('/manage_items');
+    }
+
+
+    public function editmanage_items($id)
+    {
+        $edit=DB::table('cra_manage_items')->where('id',$id)->first();
+        return view('Store & Inventory.edit_manage_items',compact('edit','id'));
+        
+    }
+
+    public function update_manage_items(Request $request)
+    {
+        $id=$request['id'];
+       
+        $Category=$request['category'];
+        $type=$request['type'];
+        $name=$request['name'];
+        $level=$request['level'];
+
+
+        DB::table('cra_manage_items')->where('id',$id)->update([
+
+            'Category' =>  $Category,
+            'Item_Type' =>   $type,
+            'Item_Name' =>    $name,
+            'Reorder_Level' =>   $level,
+        ]);
+
+       return redirect('/manage_items');
+    }
+
+
+    public function drop_manage_items($id)
+    {
+        $delete_category = DB::table('cra_manage_items')->where('id',$id)->delete();
+        // return view('Store & Inventory.manage_items',compact('delete_category','id'));
+        return redirect('/manage_items');
+    }
+
 
 }
 

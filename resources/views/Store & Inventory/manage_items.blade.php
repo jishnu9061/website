@@ -65,14 +65,22 @@
                             </thead>
                             <tbody>
 
-
+                            @foreach($manage_list as $list)
+                          
                                 <tr id="data">
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
+                                    <td>{{$list->Category}}</td>
+                                    <td>{{$list->Item_Type}}</td>
+                                    <td>{{$list->Item_Name}}</td>
+                                    <td  scope="row"class="text-center">
+                        <a href="{{url('edit_manage_items',$list->id)}}"> <i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" ></i>
 
+                        <a href="{{url('drop_manage_items',$list->id)}}"> <i style=" color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
+						
+					
+						
+						</td>
+                                </tr>
+                                @endforeach
                             </tbody>
 
                         </table>
@@ -104,7 +112,7 @@
                                     <div class="container">
 
 
-                                        <form method="post" action="" id="form">
+                                        <form method="post" action="addmanage_items" id="form">
                                             @csrf
                                             <div class="row">
 
@@ -133,7 +141,7 @@
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
 
-                                                            <select name="category" id="username" style="width:100%;">
+                                                            <select name="type" id="username" style="width:100%;">
                                                                 <option>---select--- </option>
                                                                 <option>book </option>
                                                                 <option>file</option>
@@ -159,7 +167,7 @@
                                                             <div class="input-group-prepend">
 
                                                             </div>
-                                                            <input type="text" class="form-control" name="item"
+                                                            <input type="text" class="form-control" name="name"
                                                                 id="age">
                                                         </div>
                                                     </div>
@@ -171,7 +179,7 @@
                                                             <div class="input-group-prepend">
 
                                                             </div>
-                                                            <input type="text" class="form-control" name="item"
+                                                            <input type="text" class="form-control" name="level"
                                                                 id="age">
                                                         </div>
                                                     </div>

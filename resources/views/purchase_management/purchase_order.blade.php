@@ -162,65 +162,269 @@
 </div>
 <br>
  <!-- table -->
- <div class="table-responsive">
- <table class="table">
-            <thead>
-              <tr class="text-center">
-                <th scope="col">Item ID</th>
-                <th scope="col">Item Name</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Price</th>
-                <th scope="col">Total</th>
-                <th><button type="button" class="btn btn-primary">Add</button></th> 
-        
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="text-center">
 
-                <td><input type="text" class="form-control"></td>
-                <td><input type="text" class="form-control"></td>
-                <td><input type="text" class="form-control"></td>
-                <td><input type="text" class="form-control"></td>
-                <td><input type="text" class="form-control"></td>
-                <td><button type="button" class="btn btn-secondary">Remove</button></td>
-                
-              </tr>
-              <tr>
-              <td colspan="4" ><h6 style="float:right"><b> Grand Total </b></h6></td>
-              <td colspan="2"><input type="text" class="form-control"></td>
-              </tr>
-             
-            </tbody>
-          </table> 
-        </div>
-        
+                                    <div class="row clearfix">
+
+                                        <div class="col-sm">
+
+                                            <table class="table table-bordered order-list" id="tab_logic">
+
+                                                <tr> <td class="">Item ID</td>
+                                                    <td class="" style="width:25%">Item Name</td>
+                                                    <td class="">Quantity</td>
+                                                    <td class="">Price</td>
+                                                    <td class="">Total</td>
+                                                    <td> <input type="button" class="btn btn-primary" id="add_Row"
+                                                            style="background-color:#607080;width:100%;" value="Add">
+                                                    </td>
+                                                </tr>
+                                                <tbody>
+                                                    <tr>
+                                                        
+                                                        <td><input type="text" name="batch_no[]" id="batch_no_"
+                                                                class="form-control" placeholder="Batch No"></td>
+                                                                <td><select class="form-select" aria-label="select example"
+                                                                name="item_name[]" id="item_name">
+                                                                <option value="">Select</option>
+                                                              
+                                                                    <option value="">
+                                                                      
+                                                                    </option>
+                                                             
+                                                            </select></td>
+                                                        <td><input type="text" name="quantity[]" id="quantity_"
+                                                                class="form-control text-right calculate"></td>
+                                                        <td><input type="text" name="price[]" id="price_"
+                                                                class="form-control calculate" placeholder="0.00"></td>
+                                                        <td><input type="text" name="total[]" id="total_"
+                                                                class="form-control calculate-sub" placeholder="0.00">
+                                                        </td>
+                                                        <td><button type="button"
+                                                                class="add-Row ibtnDel btn btn-primary text-white "
+                                                                style="background-color:#607080;width:100%;color:white;">Remove</button>
+                                                        <td>
+                                                    </tr>
+                                            </table>
+                                            <div class="row">
+                                                <div class="col-sm">
+                                                </div>
+                                                <div class="col-sm">
+                                                    <table class="table table-bordered">
+                                                       
+                                                        <tr>
+                                                            <td scope="col">Grand Total</td>
+                                                            <td><input type="text"
+                                                                    class="form-control invoice-sub-total" value=""
+                                                                    name="grand_totall" id="grand_totall_" readonly>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal fade" id="myModal-2">
+                                        <div class="modal-dialog modal-xm">
+                                            <div class="modal-content">
+
+                                                <!-- Modal Header -->
+                                                <div class="modal-header" style="background-color:#607080">
+                                                    <h4 class="text-white"><b>Advance Payment</b></h4>
+
+                                                </div>
+
+                                                <!-- Modal body -->
+                                                <div class="modal-body">
+                                                    <div class="container">
+                                                        <form method="post" action="{{ url('purchase_order') }}"
+                                                            enctype="multipart/form-data">
+                                                            @csrf
+                                                            <div class="col-sm">
+                                                                <label for="">Grand Total</label>
+                                                                <input type="text"
+                                                                    class="form-control invoice-sub-total"
+                                                                    placeholder="Grand Total " id="grand-total"
+                                                                    name="grand_total" value="0" readonly><br>
+                                                                <label for="">Advance Amount</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Advance Amount" id="advance-amount"
+                                                                    name="advance_amount" value="0"><br>
+                                                                <label for="">Pending Amount</label>
+                                                                <input type="text" class="form-control"
+                                                                    value{{ 0 }} placeholder=""
+                                                                    id="result" name="pending_amount" value="0"
+                                                                    readonly><br>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-primary text-white"
+                                                                    onclick="window.history.back()"
+                                                                    style="background-color:#607080;width:20%;">Close</button>
+                                                                <button type="submit" class="btn btn-primary"
+                                                                    style="background-color:#607080;width:20%;">Save</button>
+                                                            </div>
+                                                    </div>
+
+                                                </div>
 
 
+                                </form>
 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="hidden" class="form-control" id="edit_id" name="medicine_id">
+                </div>
+            </div>
 
-
-<!-- Modal Footer -->
-            <div class="modal-footer" style="background-color:#d3e0ed">
-                
-                <button type="submit" class="btn btn-primary">Save</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary text-white" style="width:10%;background-color:#607080"
+                    data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"
+                    style="background-color:#607080;width:10%;"data-toggle="modal"
+                    data-target="#myModal-2"><b>Save</b></button>
             </div>
 
 
-   </form>
-   </div>
-   </div>
+        </div>
 
-   </div>
-   </div>
-</div>
+        </div>
 
 
+        </form>
 
+        </div>
+        </div>
+        </div>
 
-       @csrf
+        </div>
+        <br>
+       
+            <br>
+            <!-- Supplier modal Edit End -->
+
+            <!-- Delete  confirmation Message -->
+            <script>
+                function myFunction() {
+                    if (!confirm("Are you sure to delete this"))
+                        event.preventDefault();
+                }
+            </script>
+
+            <!-- End delete confirmation message -->
+        </div>
+
+        {{-- Search booking script --}}
+        <script>
+            $(document).ready(function() {
+                $('.searchingBook').select2();
+            });
+        </script>
+        {{-- search booking script end --}}
+        <!-- Delete  confirmation Message -->
+        <script>
+            function myFunction() {
+                if (!confirm("Are you sure to delete this"))
+                    event.preventDefault();
+            }
+        </script>
+        <!-- End delete confirmation message -->
+
+        <script src="{{ url('assets/js') }}/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/js/select2.min.js" defer></script>
+        <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" charset="utf8"
+            src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+                // add new product row on invoice
+                var cloned = $('#tab_logic tr:last').clone();
+                $("#add_Row").click(function(e) {
+                    e.preventDefault();
+                    cloned.clone().appendTo('#tab_logic');
+                });
+                $("table.order-list").on("click", ".ibtnDel", function(_event) {
+                    $(this).closest("tr").remove();
+                    counter -= 1
+                });
+                calculateTotal();
+
+                $('#tab_logic').on('change keyup paste', '.calculate', function() {
+                    updateTotals(this);
+                    calculateTotal();
+                });
+
+                function updateTotals(elem) {
+                    var tr = $(elem).closest('tr'),
+                        quantity = $('[name="quantity[]"]', tr).val(),
+                        price = $('[name="price[]"]', tr).val(),
+                        percent = $('[name="total[]"]', tr).val(),
+                        subtotal = parseInt(quantity) * parseFloat(price);
+                    $('.calculate-sub', tr).val(subtotal.toFixed(2));
+                }
+
+                function calculateTotal() {
+                    // updateTotals();
+                    var grandTotal = 0.0;
+                    var totalQuantity = 0;
+                    $('.calculate-sub').each(function() {
+                        grandTotal = ($(this).val());
+                        if ($.isNumeric(grandTotal)) {
+
+                            totalQuantity += parseFloat(grandTotal);
+                        }
+                    });
+
+                    $('.invoice-sub-total').val(parseFloat(totalQuantity).toFixed(2));
+                }
+
+            });
+        </script>
+
+        <script>
+            $(function() {
+                $("#allsupplier").dataTable();
+            })
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                $(".select_group").select2();
+                // $("#description").wysihtml5();
+            });
+
+            // delete function
+            $("table.order-list").on("click", ".ibtnDel", function(_event) {
+                $(this).closest("tr").remove();
+                counter -= 1
+            });
+        </script>
+        <script>
+            $(document).ready(function() {
+
+                $('#grand-total').keyup(function() {
+                    recalc();
+                });
+
+                $('#advance-amount').keyup(function() {
+                    recalc();
+                });
+
+                function recalc() {
+                    var grandTotal = $("#grand-total").val();
+                    var advanceAmount = $("#advance-amount").val();
+                    var result = grandTotal - advanceAmount;
+
+                    $("#result").val(result);
+                }
+            });
+        </script>
+ 
         
             {{-- Supplier Edit End --}}
             @endsection
