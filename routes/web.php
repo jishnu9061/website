@@ -1434,6 +1434,8 @@ Route::any('civil_litigation','PracticeAreaManagement@civil_litigation')->name('
 Route::any('business_law','PracticeAreaManagement@business_law')->name('business_law');
 Route::any('guardianship_law','PracticeAreaManagement@guardianship_law')->name('guardianship_law');
 Route::any('probate_law','PracticeAreaManagement@probate_law')->name('probate_law');
+Route::any('view_family_law','PracticeAreaManagement@view_family_law')->name('view_family_law');
+Route::any('edit_family_law','PracticeAreaManagement@edit_family_law')->name('edit_family_law');
 
 
 
