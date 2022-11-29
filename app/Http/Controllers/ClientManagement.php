@@ -307,6 +307,7 @@ class ClientManagement extends Controller
         $type = $request['type'];
         $file = $request['file'];
         $client_type = $request['client'];
+        $date  = $request['date'];
 
 
         if(!empty($request->file('file'))){
@@ -327,7 +328,8 @@ class ClientManagement extends Controller
             'document_type' =>  $type,
             'file' =>   $imageName,
             'client_types'=> $client_type,
-            'corporate_id' => $corporate_id 
+            'corporate_id' => $corporate_id,
+            'date'     =>  $date
         ]);
         return redirect('/corporate-document-details');
 
@@ -469,6 +471,7 @@ class ClientManagement extends Controller
         $document_type = $Request['type'];
         $client_type  = $Request['client'];
         $file = $Request['file'];
+        $date = $Request['date'];
 
         if(!empty($Request->file('file'))){
 
@@ -491,7 +494,8 @@ class ClientManagement extends Controller
             'document_type' =>  $document_type,
             'file' =>   $imageName,
             'client_types'=>$client_type,
-            'individual_id' => $individual_id 
+            'individual_id' => $individual_id,
+            'date'  => $date
         ]);
         return redirect('/client-document');
 

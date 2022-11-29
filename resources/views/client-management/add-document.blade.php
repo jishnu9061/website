@@ -37,7 +37,7 @@
                 @csrf
                 <input type="hidden" name="individual_id" value="{{$client_doc->id}}">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Document Type</label>
                             <div class="input-group">
@@ -51,7 +51,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">File Upload</label>
                             <div class="input-group">
@@ -67,7 +67,7 @@
                 </div>
                 <br>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Client Type</label>
                             <div class="input-group">
@@ -77,6 +77,19 @@
                                 <select name="client" id="cars">
                                     <option>{{$client_doc->client_type}}</option>
                                 </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Date</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+
+                                <input type="date" class="form-control" name="date" id="username"
+                                    value="" required>
                             </div>
                         </div>
                     </div>
