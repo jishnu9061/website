@@ -119,7 +119,7 @@
                                     <!-- Modal body -->
                                     <div class="modal-body" >
                                         <div class="container">
-                                            <form method="post" action="{{ url('create_job_post') }}"
+                                            <form method="post" action="{{ url('purchase_order') }}"
                                                 enctype="multipart/form-data"> 
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->    
     
@@ -182,7 +182,7 @@
                                                     <tr>
                                                         
                                                         <td><input type="text" name="batch_no[]" id="batch_no_"
-                                                                class="form-control" placeholder="Batch No"></td>
+                                                                class="form-control" placeholder="Item No"></td>
                                                                 <td><select class="form-select" aria-label="select example"
                                                                 name="item_name[]" id="item_name">
                                                                 <option value="">Select</option>
@@ -248,7 +248,7 @@
                                                                 <label for="">Advance Amount</label>
                                                                 <input type="text" class="form-control"
                                                                     placeholder="Advance Amount" id="advance-amount"
-                                                                    name="advance_amount" value="0"><br>
+                                                                    name="advance_amount" value=""><br>
                                                                 <label for="">Pending Amount</label>
                                                                 <input type="text" class="form-control"
                                                                     value{{ 0 }} placeholder=""
@@ -260,7 +260,7 @@
                                                                     onclick="window.history.back()"
                                                                     style="background-color:#607080;width:20%;">Close</button>
                                                                 <button type="submit" class="btn btn-primary"
-                                                                    style="background-color:#607080;width:20%;">Save</button>
+                                                                    style="background-color:#607080;width:20%;" >Save</button>
                                                             </div>
                                                     </div>
 
