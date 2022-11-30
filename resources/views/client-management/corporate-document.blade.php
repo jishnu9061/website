@@ -39,7 +39,7 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <table class="table table-striped  order-list" id="tab_logic">
+                        <table class="table table-striped  order-list" id="table_field">
                             <thead>
                                 <tr>
                                     <th>Document Type</th>
@@ -63,11 +63,11 @@
                                             <option value="assets">Type 1</option>
                                         </select>
                                     </td>
-                                    <td style="width:45%;"> <input type="file" class="form-control" name="file"
+                                    <td style="width:45%;"> <input type="file" class="form-control" name="file[]"
                                             id="username" value="" placeholder="File" required>
                                     </td>
-                                    <td> <input type="button" class="btn btn-primary float:right;" id="add_Row"
-                                            value="Add">
+                                    <td> <input type="button" class="btn btn-dark float:right;" id="add"
+                                            value="ADD">
                                     </td>
                                     <td>
                                         <input type="hidden" class="form-control" name="client" id="username"
@@ -114,42 +114,33 @@
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 
 <!-- Table add row -->
+
+
 <script type="text/javascript">
-$(document).ready(function() {
-    var counter = 0;
 
-    $("#add_Row").on("click", function() {
-        var newRow = $("<tr>");
-        var cols = "";
+    $(document).ready(function(){
 
-        cols +=
-            '<td><select name="testname[]" class="form-control select2" style="width:100%;><option value="">select</option> <option value="">type1</option></select></td>'
-        cols +=
-            '<td><input type="file" class="form-control" name="file" id="username" placeholder="File" ></td>'
+        var html = '<tr><td style="width:45%;"> <select class="form-control select_group product"data-row-id="row_3" id="product_detailes" name="testname[]" style="width:100%;"><option selected>Select</option><option value="assets">Type 1</option></select></td><td style="width:45%;"> <input type="file" class="form-control" name="file[]" multiple="multiple" required></td></td><td> <input type="button" class="btn btn-danger float:right;" name="remove" id="remove" value="remove"></td><td><input type="hidden" class="form-control" name="client" id="username"value="{{$corporate_docs->Client_type}}" placeholder="File" required></td></tr>';
+         
+        var num = 4;
+        var X = 1;
 
+        $("#add").click(function(){
+            if(X <= num){
+                $("#table_field").append(html);
+                X++;
+            }
+        });
 
-        cols +=
-            '<td><button type="button" class="add_Row adRow ibtnDel " style="width:auto;"><i class="fas fa-backspace"></i></button></a></td>';
-        newRow.append(cols);
-
-        var defVal = $("select[name=acctname]").find(":selected").val();
-        if (defVal) {
-            $("select[name=accountName]").find(`option[value=${defVal}]`).hide();
-        }
-        $("table.order-list").append(newRow);
-        setValCashVal('accountName'.concat(counter));
-        bindScript();
-        counter++;
+        $("#table_field").on('click','#remove',function(){
+            $(this).closest('tr').remove();
+        });
     });
 
-    // delete function
-    $("table.order-list").on("click", ".ibtnDel", function(_event) {
-        $(this).closest("tr").remove();
-        counter -= 1
-    });
-
-});
 </script>
+
+
+
 <script>
 $(function() {
     $('[data-toggle="popover"]').popover()

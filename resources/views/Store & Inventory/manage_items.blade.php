@@ -68,9 +68,9 @@
                                 @foreach($manage_list as $list)
 
                                 <tr id="data">
-                                    <td>{{$list->Category}}</td>
                                     <td>{{$list->Item_Type}}</td>
                                     <td>{{$list->Item_Name}}</td>
+                                    <td>{{$list->Category}}</td>
                                     <td scope="row" class="text-center">
                                         <a href="{{url('edit_manage_items',$list->id)}}"> <i
                                                 style="  color:rgb(13, 1, 56);" class="fa fa-edit"></i>
@@ -81,6 +81,7 @@
 
 
                                     </td>
+
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -125,10 +126,12 @@
                                                             <div class="input-group-prepend"></div>
 
                                                             <select name="category" id="username" style="width:100%;">
-                                                                <option>---select--- </option>
-                                                                <option>stationery </option>
-                                                                <option>furniture</option>
-                                                                <option>library</option>
+                                                                <option>---select---</option>
+                                                                @if(count($get_items))
+                                                                @foreach($get_items as $lists)
+                                                                <option>{{$get_items[0]->category_name}}</option>
+                                                                @endforeach
+                                                                @endif
                                                             </select>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Town is required.
@@ -142,8 +145,9 @@
                                                         <label for="username">Item Type</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="text" name="type" list="cityname"  style="width:100%;">
-                                                            <datalist id="cityname" style="width:100%;" >
+                                                            <input type="text" name="type" list="cityname"
+                                                                style="width:100%;">
+                                                            <datalist id="cityname" style="width:100%;">
                                                                 <option value="Book">
                                                                 <option value="Pen">
                                                                 <option value="Ink">
@@ -159,7 +163,7 @@
                                     </div>
                                     <br>
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <div class="mb-1">
                                                 <label for="username">Item Name</label>
                                                 <div class="input-group">
@@ -170,7 +174,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <div class="mb-1">
                                                 <label for="username">Reorder Level</label>
                                                 <div class="input-group">
@@ -181,8 +185,19 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                        <div class="col-md-4">
+                                            <div class="mb-1">
+                                                <label for="username">Store Level</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
 
+                                                    </div>
+                                                    <input type="text" class="form-control" name="store" id="age">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
                                     <div class="row">
                                         <div class="col-sm">
 
