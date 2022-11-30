@@ -87,13 +87,110 @@ class PracticeAreaManagement extends Controller
         $destroy= DB::table('cra_add_injury')->where('id',$id)->delete();
 
         return redirect('/personal_injury');
-        // return view('PracticeAreaManagement.family_law');
+       
     }
 
     public function family_law()
     {
-        return view('PracticeAreaManagement.family_law');
+
+        $view_law=DB::table('cra_family_law')->get();
+
+        return view('PracticeAreaManagement.family_law',compact('view_law'));
     }
+
+    public function addfamilylaw(Request $request)
+    {
+        $file_no = $request['file_no'];
+        $client_name = $request['client_name'];
+        $matter_type = $request['matter_type'];
+        $other_party = $request['other_party'];
+        $attorney = $request['attorney'];
+        $case_details = $request['case_details'];
+        $marrige = $request['marrige'];
+        $property = $request['property'];
+        $child_details = $request['child_details'];
+        $support_detail = $request['support_detail'];
+
+        if(!empty($request->file('support_detail'))){
+
+            $this->validate($request,[
+                'support_detail' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+            ]);
+        }
+        if(request()->hasfile('support_detail')){
+            $uploadedImage = $request->file('support_detail');
+            $imageName     = time() .'.'. $support_detail->getClientOriginalExtension();
+            $destinationPath = public_path('image');
+            $uploadedImage->move($destinationPath,$imageName);
+            $support_detail->file    = $destinationPath.$imageName;
+        }
+
+        DB::table('cra_family_law')->insert([
+            'file_no' => $file_no,
+            'client_name' => $client_name,
+            'matter_type' => $matter_type,
+            'other_party' => $other_party,
+            'attorney' => $attorney,
+            'case_details' => $case_details,
+            'marrige' => $marrige,
+            'property' => $property,
+            'child_details' => $child_details,
+            'support_detail' => $support_detail
+        ]);
+
+        return redirect('/family_law');
+    }
+
+    public function view_family_law()
+    {
+        return view('PracticeAreaManagement.view_family_law');
+    }
+
+    public function edit_family_law($id)
+    {
+       $edit=DB::table('cra_family_law')->where('id',$id)->first();
+        return view('PracticeAreaManagement.edit_family_law',compact('edit','id'));
+    }
+
+    public function updatefamilylaw(Request $request)
+    {
+        $id = $request['id'];
+        $file_no = $request['file_no'];
+        $client_name = $request['client_name'];
+        $matter_type = $request['matter_type'];
+        $other_party = $request['other_party'];
+        $attorney = $request['attorney'];
+        $case_details = $request['case_details'];
+        $marrige = $request['marrige'];
+        $property = $request['property'];
+        $child_details = $request['child_details'];
+        $support_detail = $request['support_detail'];
+
+        DB::table('cra_family_law')->where('id',$id)->update([
+            'id' => $id,
+            'file_no' => $file_no,
+            'client_name' => $client_name,
+            'matter_type' => $matter_type,
+            'other_party' => $other_party,
+            'attorney' => $attorney,
+            'case_details' => $case_details,
+            'marrige' => $marrige,
+            'property' => $property,
+            'child_details' => $child_details,
+            'support_detail' => $support_detail
+        ]);
+
+        return redirect('/family_law');
+    }
+
+    public function deletelaw($id)
+    {
+
+        $delete_law=DB::table('cra_family_law')->where('id',$id)->delete();
+
+        return redirect('/family_law');
+    }
+
 
     public function general_practice()
     {
@@ -161,6 +258,19 @@ class PracticeAreaManagement extends Controller
         $case_details = $request['case_details'];
         $witness = $request['witness'];
         $detail = $request['detail'];
+        if(!empty($request->file('detail'))){
+
+            $this->validate($request,[
+                'detail' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+            ]);
+        }
+        if(request()->hasfile('detail')){
+            $uploadedImage = $request->file('detail');
+            $imageName     = time() .'.'. $detail->getClientOriginalExtension();
+            $destinationPath = public_path('image');
+            $uploadedImage->move($destinationPath,$imageName);
+            $detail->file    = $destinationPath.$imageName;
+        }
 
         DB::table('cra_add_general_practice')->where('id',$id)->update([
 
@@ -215,14 +325,7 @@ class PracticeAreaManagement extends Controller
     {
         return view('PracticeAreaManagement.probate_law');
     }
-    public function view_family_law()
-    {
-        return view('PracticeAreaManagement.view_family_law');
-    }
-    public function edit_family_law()
-    {
-        return view('PracticeAreaManagement.edit_family_law');
-    }
+   
     public function view_general_practice()
     {
         return view('PracticeAreaManagement.view_general_practice');
