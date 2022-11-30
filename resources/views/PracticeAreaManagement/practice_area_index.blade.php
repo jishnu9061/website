@@ -61,9 +61,9 @@
             <div class="col-sm-4 "> <a href="{{ url('practice_area') }}"><img class="logo_size"
                         src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
                         class="btn btn-primary btn_align_btn">Practice Area</button></a></div>
-            <div class="col-sm-4 "> <a href="{{ url('matter_type') }}"><img class="logo_size"
+            <!-- <div class="col-sm-4 "> <a href="{{ url('matter_type') }}"><img class="logo_size"
                         src="assets\image\File list progress report.png" alt=""><button type="button"
-                        style="width:70%;" class="btn btn-primary btn_align_btn">Matter Type</button></a></div>
+                        style="width:70%;" class="btn btn-primary btn_align_btn">Matter Type</button></a></div> -->
 
 
     </div>                  

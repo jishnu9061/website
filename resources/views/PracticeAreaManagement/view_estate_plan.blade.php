@@ -6,7 +6,7 @@
                <h4 id="hdtpa"><b>View Estate Planning</b></h4>
                <br>
 
-
+<form action="">
 
                <div class="row align-items-start">
         <div class="col">
@@ -65,10 +65,10 @@
     <div class="col">
        
     </div>
-</div>
 
-   
-   
+
+ </form>  
+ </div>  
     
    
       <!-- <div class="mb-3">
