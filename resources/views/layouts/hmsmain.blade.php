@@ -119,29 +119,44 @@ color: #999;
 }
 
 /* time */
-.timerx{
-    border-radius: 8px;
-    float: left;
-
-    padding:  10px;
-    border: 1px solid #ddd;
-    
+#stopwatch-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0px auto 0;
+  width: fit-content;
+  padding: 10px 20px;
+  border:6px;
+  border-radius: 5px;
 }
-#timer {
-    padding-left:  15px;
-    font-size:20px;
-    margin:0 auto;
-    width:120px;
-  }
-  
-  #controls {
-    margin:0 auto;
-    width:120px;    
-  }
-  
-  #controls button {
-    font-size:10px;
-  }
+ 
+#stopwatch {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 20px;
+}
+ 
+#buttons-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+ 
+#buttons-container button {
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  background-color:#1e1f60;
+  border: none;
+  border-radius: 5px;
+  font-size:15px;
+  margin: 0 10px;
+  padding: 3px 8px;
+}
+ 
+#buttons-container button:active {
+  opacity: 0.7;
+}
 
     </style>
 
@@ -1191,24 +1206,13 @@ color: #999;
                                                                         </li>
                                                                     </ul>
 
-
-                                                                    <div  id="navr" style="margin-right: 10%;"   >
-<div class="timerx">
-<div id="timer">
-      <span id="hours">00:</span>
-      <span id="mins">00:</span>
-      <span id="seconds">00</span>  
+                                                                    <div id="stopwatch-container">
+      <p id="stopwatch">00:00:00:00</p>
+      <div id="buttons-container">
+        <button onclick="main()" id="main-btn" class="btn">Start</button>
+        <button onclick="reset()" id="reset-btn" class="btn">Reset</button>
+      </div>
     </div>
-    
-    <div id="controls">
-    <button id="start">Start</button>
-    <button id="stop">Stop</button>
-    <button id="reset">Reset</button>
-    </div>
-  
-</div>
-
-               </div>
 
 
                                                                     <div  id="navr" style="margin-right: .5%;"   >
@@ -1259,51 +1263,67 @@ color: #999;
                 </div>
 
 <!-- time -->
-                <script src="script.js"></script>
-  <script>
-  var hours =0;
-var mins =0;
-var seconds =0;
-
-$('#start').click(function(){
-      startTimer();
-});
-
-$('#stop').click(function(){
-      clearTimeout(timex);
-});
-
-$('#reset').click(function(){
-      hours =0;      mins =0;      seconds =0;
-  $('#hours','#mins').html('00:');
-  $('#seconds').html('00');
-});
-
-function startTimer(){
-  timex = setTimeout(function(){
-      seconds++;
-    if(seconds >59){seconds=0;mins++;
-       if(mins>59) {
-       mins=0;hours++;
-         if(hours <10) {$("#hours").text('0'+hours+':')} else $("#hours").text(hours+':');
-        }
-                       
-    if(mins<10){                     
-      $("#mins").text('0'+mins+':');}       
-       else $("#mins").text(mins+':');
-                   }    
-    if(seconds <10) {
-      $("#seconds").text('0'+seconds);} else {
-      $("#seconds").text(seconds);
-      }
-     
-    
-      startTimer();
-  },1000);
+<script>
+//globle variables
+var stopwatch = document.getElementById('stopwatch');
+var mainButton = document.getElementById('main-btn');
+var startTime=0;
+var elapsedTime=0;
+var timeoutId=null;
+ 
+//method to operate start and stop function
+function main(){
+  if (mainButton.innerHTML === 'Start') {
+  startTime = Date.now();
+    startStopwatch();
+    mainButton.innerHTML = 'Stop';
+  } else {
+    elapsedTime += Date.now() - startTime;
+    clearTimeout(timeoutId);
+    mainButton.innerHTML = 'Start';
+  }
 }
-    
+ 
+//method to reset the stopwatch
+function reset() {
+  elapsedTime = 0;
+  startTime = Date.now();
+  clearTimeout(timeoutId);
+  mainButton.innerHTML = 'Start';
+  displayTime(0, 0, 0, 0);  
+}
+ 
+//method to start the stopwatch
+function startStopwatch() {
   
-  </script>
+  //run setTimeout() and save id
+  timeoutId = setTimeout(function(){
+    //calculate elapsed time
+    const time = Date.now() - startTime + elapsedTime;
+     
+    //calculate different time measurements based on elapsed time
+    const milliseconds = parseInt((time%1000)/10)
+    const seconds = parseInt((time/1000)%60)
+    const minutes = parseInt((time/(1000*60))%60)
+    const hour = parseInt((time/(1000*60*60))%24);
+     
+    //display time
+    displayTime(hour, minutes, seconds, milliseconds);
+     
+    //calling same method again recursively 
+    startStopwatch();
+  }, 100);
+}
+ 
+//method to display time in '00:00:00:00' format
+function displayTime(hour, minutes, seconds, milliseconds) {
+    hour = hour < 10 ? '0'+hour : hour ;
+    minutes = minutes < 10 ? '0'+minutes : minutes ;
+    seconds = seconds < 10 ? '0'+seconds : seconds ;
+    milliseconds = milliseconds < 10 ? '0'+milliseconds : milliseconds ;
+    stopwatch.innerHTML = hour+':'+minutes+':'+seconds+':'+milliseconds;
+}
+</script>
   <!-- time -->
                                                 <script>
                                                                 getPagination('#table-id');
