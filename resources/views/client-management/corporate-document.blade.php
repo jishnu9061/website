@@ -58,12 +58,12 @@
                                     <td style="width:45%;">
 
                                         <select class="form-control select_group product" data-row-id="row_3"
-                                            id="product_detailes" name="testname[]" style="width:100%;">
+                                            id="product_detailes" name="testname" style="width:100%;">
                                             <option selected>Select</option>
                                             <option value="assets">Type 1</option>
                                         </select>
                                     </td>
-                                    <td style="width:45%;"> <input type="file" class="form-control" name="file[]"
+                                    <td style="width:45%;"> <input type="file" class="form-control" name="file"
                                             id="username" value="" placeholder="File" required>
                                     </td>
                                     <td> <input type="button" class="btn btn-dark float:right;" id="add"

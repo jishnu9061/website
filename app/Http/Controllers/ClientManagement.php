@@ -304,7 +304,7 @@ class ClientManagement extends Controller
 
     public function addCorporatedocument(Request $request){
         $corporate_id   = $request['corporate_id'];
-        $type = $request['type'];
+        $type = $request['testname'];
         $file = $request['file'];
         $client_type = $request['client'];
         $date   = $request['date'];
@@ -468,9 +468,9 @@ class ClientManagement extends Controller
 
     public function addDocument(Request $Request){
         $individual_id = $Request['individual_id'];
-        $document_type = $Request['testname[$key]'];
+        $document_type = $Request['testname'];
         $client_type  = $Request['client'];
-        $file = $Request['file[$key]'];
+        $file = $Request['file'];
         $date = $Request['date'];
 
         if(!empty($Request->file('file'))){

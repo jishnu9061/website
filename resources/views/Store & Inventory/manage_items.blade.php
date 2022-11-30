@@ -106,7 +106,7 @@
 
                                 <!-- Modal Header -->
                                 <div class="modal-header">
-                                    <h2 class="text-center"><b>Add Category</b></h2>
+                                    <h2 class="text-center"><b>Add Items</b></h2>
 
                                 </div>
 
