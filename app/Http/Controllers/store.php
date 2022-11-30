@@ -79,7 +79,7 @@ class store extends Controller
 
     public function list_manage_items()
     {
-        $get_items   = DB::table('cra_add_categories')->get();
+        $get_items  = DB::table('cra_add_categories')->get();
         $manage_list = DB::table('cra_manage_items')->get();
         return view('Store & Inventory.manage_items',compact('manage_list','get_items') );
     }
