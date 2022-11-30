@@ -129,7 +129,7 @@
                                                                 <option>---select---</option>
                                                                 @if(count($get_items))
                                                                 @foreach($get_items as $lists)
-                                                                <option>{{$get_items[0]->category_name}}</option>
+                                                                <option>{{$lists->category_name}}</option>
                                                                 @endforeach
                                                                 @endif
                                                             </select>
