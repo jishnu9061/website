@@ -1376,6 +1376,15 @@ Route::any('/edit_category/{id}','store@editcategory')->name('edit_category');
 Route::any('update_category','store@updatecategory')->name('update_category');
 Route::any('/delete_category/{id}','store@deletecategory')->name('delete_category');
 Route::any('issue_view_requst','store@list_issue_requst')->name('issue_view_requst');
+Route::any('addmanage_items','store@add_manage_items')->name('addmanage_items');
+Route::any('/edit_manage_items/{id}','store@editmanage_items')->name('edit_manage_items');
+Route::any('update_manage_items','store@update_manage_items')->name('update_manage_items');
+Route::any('/drop_manage_items/{id}','store@drop_manage_items')->name('drop_manage_items');
+
+
+
+
+
 
 
 
@@ -1416,6 +1425,11 @@ Route::any('practice_area_index','PracticeAreaManagement@practice_area_index')->
 Route::any('practice_area','PracticeAreaManagement@practice_area')->name('practice_area');
 Route::any('matter_type','PracticeAreaManagement@matter_type')->name('matter_type');
 Route::any('personal_injury','PracticeAreaManagement@personalinjury')->name('personal_injury');
+Route::any('add_injury','PracticeAreaManagement@addinjury')->name('add_injury');
+Route::any('/edit_injury/{id}','PracticeAreaManagement@editinjury')->name('edit_injury');
+Route::any('/update_injury','PracticeAreaManagement@updateinjury')->name('update_injury');
+Route::any('/delete_injury/{id}','PracticeAreaManagement@deleteinjury')->name('delete_injury');
+
 Route::any('family_law','PracticeAreaManagement@family_law')->name('family_law');
 Route::any('general_practice','PracticeAreaManagement@general_practice')->name('general_practice');
 Route::any('estate_plan','PracticeAreaManagement@estate_plan')->name('estate_plan');
@@ -1425,6 +1439,14 @@ Route::any('civil_litigation','PracticeAreaManagement@civil_litigation')->name('
 Route::any('business_law','PracticeAreaManagement@business_law')->name('business_law');
 Route::any('guardianship_law','PracticeAreaManagement@guardianship_law')->name('guardianship_law');
 Route::any('probate_law','PracticeAreaManagement@probate_law')->name('probate_law');
+Route::any('view_family_law','PracticeAreaManagement@view_family_law')->name('view_family_law');
+Route::any('edit_family_law','PracticeAreaManagement@edit_family_law')->name('edit_family_law');
+Route::any('view_general_practice','PracticeAreaManagement@view_general_practice')->name('view_general_practice');
+Route::any('edit_general_practice','PracticeAreaManagement@edit_general_practice')->name('edit_general_practice');
+Route::any('view_estate_plan','PracticeAreaManagement@view_estate_plan')->name('view_estate_plan');
+Route::any('edit_estate_plan','PracticeAreaManagement@edit_estate_plan')->name('edit_estate_plan');
+Route::any('view_real_estate','PracticeAreaManagement@view_real_estate')->name('view_real_estate');
+Route::any('edit_real_estate','PracticeAreaManagement@edit_real_estate')->name('edit_real_estate');
 
 
 
