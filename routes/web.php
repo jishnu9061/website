@@ -1453,6 +1453,12 @@ Route::any('view_estate_plan','PracticeAreaManagement@view_estate_plan')->name('
 Route::any('edit_estate_plan','PracticeAreaManagement@edit_estate_plan')->name('edit_estate_plan');
 Route::any('view_real_estate','PracticeAreaManagement@view_real_estate')->name('view_real_estate');
 Route::any('edit_real_estate','PracticeAreaManagement@edit_real_estate')->name('edit_real_estate');
+Route::any('view_criminal_law','PracticeAreaManagement@view_criminal_law')->name('view_criminal_law');
+Route::any('edit_criminal_law','PracticeAreaManagement@edit_criminal_law')->name('edit_criminal_law');
+Route::any('view_civil_litigation','PracticeAreaManagement@view_civil_litigation')->name('view_civil_litigation');
+Route::any('edit_civil_litigation','PracticeAreaManagement@edit_civil_litigation')->name('edit_civil_litigation');
+Route::any('view_business_law','PracticeAreaManagement@view_business_law')->name('view_business_law');
+Route::any('edit_business_law','PracticeAreaManagement@edit_business_law')->name('edit_business_law');
 
 
 

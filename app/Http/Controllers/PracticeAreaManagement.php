@@ -244,4 +244,28 @@ class PracticeAreaManagement extends Controller
     {
         return view('PracticeAreaManagement.edit_real_estate');
     }
+    public function view_criminal_law()
+    {
+        return view('PracticeAreaManagement.view_criminal_law');
+    }
+    public function edit_criminal_law()
+    {
+        return view('PracticeAreaManagement.edit_criminal_law');
+    }
+    public function view_civil_litigation()
+    {
+        return view('PracticeAreaManagement.view_civil_litigation');
+    }
+    public function edit_civil_litigation()
+    {
+        return view('PracticeAreaManagement.edit_civil_litigation');
+    }
+    public function view_business_law()
+    {
+        return view('PracticeAreaManagement.view_business_law');
+    }
+    public function edit_business_law()
+    {
+        return view('PracticeAreaManagement.edit_business_law');
+    }
 }
