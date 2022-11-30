@@ -106,18 +106,14 @@
                                 <td scope="row" class="text-center">{{$list->client_number}}</td>
                                 <td scope="row" class="text-center">{{$list->client_name}}</td>
                                 <td scope="row" class="text-center">{{$list->client_types}}</td>
-                                <td scope="row" class="text-center" id="medicine_name_1"><img
-                                        src="{{asset('/images/file/'.$list->file)}}" width="80px" height="80px">
+                                <td scope="row" class="text-center" id="medicine_name_1"><a
+                                        href="{{url('view-document-details',$list->id)}}"><button type="button"
+                                            class="btn btn-primary float:right;" Style="width:45%;">View
+                                            Document</button></a>
                                 </td>
                                 <td scope="row" class="text-center">
                                     <a href="{{url('edit-corporate-document',$list->id)}}"><i style="color:black;" class="fa fa-pencil" aria-hidden="true"></i>
-                                        <span class="m-2"><span>
-                                                <a href="{{url('view-document-details',$list->id)}}"><i style="color:black;" class="fa fa-eye"
-                                                        aria-hidden="true"></i>
-                                                    <input type="hidden" value="" id="medicine_id_hidden"
-                                                        class="applicate" name="supplier_id_hidden">
-                                                    <span class="m-2"><span>
-                                                            <a onClick="return myFunction();" href=""
+                                                            <a onClick="return myFunction();" href="{{url('delete-document',$list->id)}}"
                                                                 style="color:black;"><i
                                                                     class="fas fa-trash-alt"></i></a>
                                 </td>

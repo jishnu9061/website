@@ -304,12 +304,13 @@ class ClientManagement extends Controller
 
     public function addCorporatedocument(Request $request){
         $corporate_id   = $request['corporate_id'];
-        $type = $request['type'];
+        $type = $request['testname'];
         $file = $request['file'];
         $client_type = $request['client'];
-
+        $date   = $request['date'];
 
         if(!empty($request->file('file'))){
+
             $this->validate($request,[
                 'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
             ]);
@@ -327,10 +328,11 @@ class ClientManagement extends Controller
             'document_type' =>  $type,
             'file' =>   $imageName,
             'client_types'=> $client_type,
-            'corporate_id' => $corporate_id 
+            'date'   => $date,
+            'corporate_id' => $corporate_id
+
         ]);
         return redirect('/corporate-document-details');
-
 
     }
 
@@ -466,9 +468,10 @@ class ClientManagement extends Controller
 
     public function addDocument(Request $Request){
         $individual_id = $Request['individual_id'];
-        $document_type = $Request['type'];
+        $document_type = $Request['testname'];
         $client_type  = $Request['client'];
         $file = $Request['file'];
+        $date = $Request['date'];
 
         if(!empty($Request->file('file'))){
 
@@ -491,7 +494,8 @@ class ClientManagement extends Controller
             'document_type' =>  $document_type,
             'file' =>   $imageName,
             'client_types'=>$client_type,
-            'individual_id' => $individual_id 
+            'individual_id' => $individual_id,
+            'date'  => $date
         ]);
         return redirect('/client-document');
 
