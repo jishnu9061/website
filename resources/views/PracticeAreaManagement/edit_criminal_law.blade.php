@@ -3,28 +3,28 @@
 
 {{-- heading --}}
    <div class="container" >            
-               <h4 id="hdtpa"><b>Edit Estate Planning</b></h4>
+               <h4 id="hdtpa"><b>Edit Criminal Law</b></h4>
                <br>
 
-
 <form action="">
+
                <div class="row align-items-start">
         <div class="col">
            <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">File No</label>
-                    <input type="text" class="form-control" placeholder="72G6585K	">
+                    <label for="exampleFormControlInput1" class="form-label">Matter Info</label>
+                    <input type="text" class="form-control" placeholder="OH-Felony-ER">
            </div>
            </div>
         <div class="col">
            <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Client Name</label>
-                    <input type="text" class="form-control" placeholder="John">
+                    <label for="exampleFormControlInput1" class="form-label">Defendant</label>
+                    <input type="text" class="form-control" placeholder="Larry James">
            </div>
         </div>
     <div class="col">
        <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
-                    <input type="text" class="form-control" placeholder="Estate Planning">
+                    <input type="text" class="form-control" placeholder="Felony">
         </div>
     </div>
   </div>
@@ -32,44 +32,39 @@
   <div class="row align-items-cener">
     <div class="col">
       <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Estate Details</label>
-                    <textarea class="form-control" rows="2" placeholder="Executor: George"></textarea>
+                    <label for="exampleFormControlInput1" class="form-label">Prosecutor</label>
+                    <textarea class="form-control" rows="2" placeholder="Cuyahoga Prosecutor's office"></textarea>
                         </div>
     </div>
     <div class="col">
        <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Trust</label>
-                    <textarea class="form-control" rows="2" placeholder="John"></textarea>
+                    <label for="exampleFormControlInput1" class="form-label">Case Details</label>
+                    <textarea class="form-control" rows="2" placeholder="Cuyahoga Criminal 2015-F-123456"></textarea>
                         </div>
     </div>
     <div class="col">
      <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Property Details</label>
-                    <textarea class="form-control" rows="2" placeholder="4456 Kenya"></textarea>
+                    <label for="exampleFormControlInput1" class="form-label">Investigator Details</label>
+                    <textarea class="form-control" rows="2" placeholder="Chris Investigator"></textarea>
                         </div>
     </div>
   </div>
   <div class="row align-items-end">
     <div class="col">
       <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Accountant</label>
-                    <textarea class="form-control" rows="2" placeholder="Chris"></textarea>
+                    <label for="exampleFormControlInput1" class="form-label">Victim Details</label>
+                    <textarea class="form-control" rows="2" placeholder="John"></textarea>
                         </div>
     </div>
     <div class="col">
-    <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Financial Advisor</label>
-                    <textarea class="form-control" rows="2" placeholder="Smith Investments"></textarea>
-                        </div>
+      
     </div>
     <div class="col">
-       
+      
     </div>
 </div>
 
    
-   
-    
    
       <!-- <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Supporting Details</label>
@@ -80,13 +75,13 @@
   </div> -->
 
 
+
   <div class="conatainer" style="float:right;">
         <br>
                  <button type="button" class="btn btn-primary">Update</button>
                  <button type="button" class="btn btn-primary" onclick="history.back();">Close</button>
 
     </div>
-
 </form>
-</div>
+
 @endsection

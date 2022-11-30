@@ -7,7 +7,7 @@
                <br>
 
 
-
+<form action="">
                <div class="row align-items-start">
         <div class="col">
            <div class="mb-3">
@@ -89,6 +89,6 @@
                  <button type="button" class="btn btn-primary" onclick="history.back();">Close</button>
 
     </div>
-
+</form>
 
 @endsection
