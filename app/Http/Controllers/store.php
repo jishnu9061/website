@@ -92,7 +92,8 @@ class store extends Controller
 
     public function stock_list_tab()
     {
-        return view('Store & Inventory.stock_list');
+        $stock_list_tab = DB::table('cra_manage_items')->get();
+        return view('Store & Inventory.stock_list',compact('stock_list_tab'));
     }
 
     public function request_items()
@@ -211,12 +212,14 @@ class store extends Controller
         $type=$request['type'];
         $name=$request['name'];
         $level=$request['level'];
+        $stock=$request['stock'];
        
         DB::table('cra_manage_items')->insert([
             'Category' =>  $Category,
             'Item_Type' =>   $type,
             'Item_Name' =>    $name,
             'Reorder_Level' =>   $level,
+            'stock'   => $stock
  ]);
  return redirect('/manage_items');
     }

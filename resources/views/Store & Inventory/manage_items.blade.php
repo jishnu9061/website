@@ -187,12 +187,12 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="mb-1">
-                                                <label for="username">Store Level</label>
+                                                <label for="username">Stock Level</label>
                                                 <div class="input-group">
                                                     <div class="input-group-prepend">
 
                                                     </div>
-                                                    <input type="text" class="form-control" name="store" id="age">
+                                                    <input type="text" class="form-control" name="stock" id="age">
                                                 </div>
                                             </div>
                                         </div>

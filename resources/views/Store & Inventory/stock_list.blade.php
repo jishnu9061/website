@@ -73,23 +73,16 @@
                                 </tr>
                             </thead>
                             <tbody>
-
-
+                                @foreach($stock_list_tab as $lists)
                                 <tr id="data">
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td scope="row" class="text-center">
-
-
-
-
-                                    </td>
-
+                                    <td>{{$lists->Category}}</td>
+                                    <td>{{$lists->Item_Type}}</td>
+                                    <td>{{$lists->Item_Name}}</td>
+                                    <td>{{$lists->stock}}</td>
+                                    <td>{{$lists->Reorder_Level}}</td>
+                                    <td ></td>
                                 </tr>
-
+                                @endforeach
                             </tbody>
 
                         </table>
