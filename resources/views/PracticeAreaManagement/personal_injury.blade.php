@@ -28,7 +28,7 @@
 
         <!--filter end-->
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">New
-                  File</button>
+                  Details</button>
 
         <div class="header_wrap">
             <div class="num_rows">
@@ -166,6 +166,11 @@
 
                                 </div>
                                 <input type="text" class="form-control" name="matter_type" id="age">
+                                <datalist id="cityname" style="width:100%;" >
+                                                                <option value="Book">
+                                                                <option value="Pen">
+                                                                <option value="Ink">
+                                                            </datalist>
                                 <!-- <select name="box_type" id="cars">
                                 <option>select</option>
                                                             <option>Box Type 1</option>
