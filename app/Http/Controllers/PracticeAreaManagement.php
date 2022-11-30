@@ -94,10 +94,99 @@ class PracticeAreaManagement extends Controller
     {
         return view('PracticeAreaManagement.family_law');
     }
+
     public function general_practice()
     {
-        return view('PracticeAreaManagement.general_practice');
+
+        $view_practice = DB::table('cra_add_general_practice')->get();
+        return view('PracticeAreaManagement.general_practice',compact('view_practice'));
     }
+    
+    public function addpractice(Request $request)
+    {
+
+        $file_no = $request['file_no'];
+        $client_name = $request['client_name'];
+        $matter_type = $request['matter_type'];
+        $other_party =$request['other_party'];
+        $attorney = $request['attorney'];
+        $case_details = $request['case_details'];
+        $witness = $request['witness'];
+        $detail =$request['detail'];
+
+        if(!empty($request->file('detail'))){
+
+            $this->validate($request,[
+                'detail' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+            ]);
+        }
+        if(request()->hasfile('detail')){
+            $uploadedImage = $request->file('detail');
+            $imageName     = time() .'.'. $detail->getClientOriginalExtension();
+            $destinationPath = public_path('image');
+            $uploadedImage->move($destinationPath,$imageName);
+            $detail->file    = $destinationPath.$imageName;
+        }
+
+        DB::table('cra_add_general_practice')->insert([
+
+            'file_no' => $file_no,
+            'client_name' => $client_name,
+            'matter_type' => $matter_type,
+            'other_party' => $other_party,
+            'attorney' => $attorney,
+            'case_details' => $case_details,
+            'witness' => $witness,
+            'detail' => $detail,
+
+        ]);
+        return redirect('/general_practice');
+    }
+
+    public function edit_general_practice($id)
+    {
+
+        $edit=DB::table('cra_add_general_practice')->where('id',$id)->first();
+        return view('PracticeAreaManagement.edit_general_practice',compact('edit','id'));
+    }
+
+    public function updatepractice(Request $request)
+    {
+        $id = $request['id'];
+        $file_no = $request['file_no'];
+        $client_name = $request['client_name'];
+        $matter_type = $request['matter_type'];
+        $other_party = $request['other_party'];
+        $attorney = $request['attorney'];
+        $case_details = $request['case_details'];
+        $witness = $request['witness'];
+        $detail = $request['detail'];
+
+        DB::table('cra_add_general_practice')->where('id',$id)->update([
+
+            'id' => $id,
+            'file_no' => $file_no,
+            'client_name' => $client_name,
+            'other_party' => $other_party,
+            'attorney' => $attorney,
+            'case_details' => $case_details,
+            'witness' => $witness,
+            'detail' => $detail
+
+
+        ]);
+        
+        return redirect('/general_practice');
+    }
+    
+    public function deletepractice($id)
+    {
+
+        $delete=DB::table('cra_add_general_practice')->where('id',$id)->delete();
+        return redirect('/general_practice');
+    }
+
+
     public function estate_plan()
     {
         return view('PracticeAreaManagement.estate_plan');
@@ -138,10 +227,7 @@ class PracticeAreaManagement extends Controller
     {
         return view('PracticeAreaManagement.view_general_practice');
     }
-    public function edit_general_practice()
-    {
-        return view('PracticeAreaManagement.edit_general_practice');
-    }
+    
     public function view_estate_plan()
     {
         return view('PracticeAreaManagement.view_estate_plan');
