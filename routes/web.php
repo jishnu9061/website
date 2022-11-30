@@ -1431,6 +1431,11 @@ Route::any('/update_injury','PracticeAreaManagement@updateinjury')->name('update
 Route::any('/delete_injury/{id}','PracticeAreaManagement@deleteinjury')->name('delete_injury');
 
 Route::any('family_law','PracticeAreaManagement@family_law')->name('family_law');
+Route::any('add_family_law','PracticeAreaManagement@addfamilylaw')->name('add_family_law');
+Route::any('/edit_family_law/{id}','PracticeAreaManagement@edit_family_law')->name('edit_family_law');
+Route::any('/update_family_law','PracticeAreaManagement@updatefamilylaw')->name('update_family_law');
+Route::any('/delete_law/{id}','PracticeAreaManagement@deletelaw')->name('delete_law');
+
 Route::any('general_practice','PracticeAreaManagement@general_practice')->name('general_practice');
 Route::any('add_practice','PracticeAreaManagement@addpractice')->name('add_practice');
 Route::any('/edit_general_practice/{id}','PracticeAreaManagement@edit_general_practice')->name('edit_general_practice');
