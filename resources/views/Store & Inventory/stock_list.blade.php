@@ -68,7 +68,7 @@
                                     <th class="text-center">Item Name</th>
                                     <th class="text-center">Quantity In Stock</th>
                                     <th class="text-center">Re-oder level</th>
-                                    <th class="text-center">Action</th>
+                                    <th class="text-center">Status</th>
 
                                 </tr>
                             </thead>

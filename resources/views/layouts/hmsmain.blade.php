@@ -120,14 +120,15 @@ color: #999;
 
 /* time */
 #stopwatch-container {
+  border:5px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin: 0px auto 0;
   width: fit-content;
-  padding: 10px 20px;
-  border:6px;
-  border-radius: 5px;
+  padding: 7px 10px;
+    border-radius: 5px;
+    border: 1px solid #b9b9b9; 
 }
  
 #stopwatch {
@@ -146,7 +147,7 @@ color: #999;
   outline: none;
   cursor: pointer;
   color: #fff;
-  background-color:#1e1f60;
+  background-color:#a4a4a4;
   border: none;
   border-radius: 5px;
   font-size:15px;
