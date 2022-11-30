@@ -126,12 +126,12 @@
                                                             <div class="input-group-prepend"></div>
 
                                                             <select name="category" id="username" style="width:100%;">
-                                                                <option>---select---</option>
+                                                                <option>select</option>
                                                                 @if(count($get_items))
                                                                 @foreach($get_items as $lists)
-                                                                <option>{{$lists->category_name}}</option>
-                                                                @endforeach
-                                                                @endif
+                                                                <option>{{$lists->category_name}}</option> 
+                                                                @endforeach  
+                                                                @endif        
                                                             </select>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Town is required.

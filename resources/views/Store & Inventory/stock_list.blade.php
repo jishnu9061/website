@@ -73,7 +73,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($stock_list_tab as $lists)
+                               @foreach($stock_list_tab as $lists)
                                 <tr id="data">
                                     <td>{{$lists->Category}}</td>
                                     <td>{{$lists->Item_Type}}</td>
@@ -82,7 +82,7 @@
                                     <td>{{$lists->Reorder_Level}}</td>
                                     <td ></td>
                                 </tr>
-                                @endforeach
+                              @endforeach
                             </tbody>
 
                         </table>
