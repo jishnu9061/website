@@ -1207,13 +1207,13 @@ color: #999;
                                                                         </li>
                                                                     </ul>
 
-                                                                    <div id="stopwatch-container">
+                                                                    <!-- <div id="stopwatch-container">
       <p id="stopwatch">00:00:00:00</p>
       <div id="buttons-container">
         <button onclick="main()" id="main-btn" class="btn">Start</button>
         <button onclick="reset()" id="reset-btn" class="btn">Reset</button>
       </div>
-    </div>
+    </div> -->
 
 
                                                                     <div  id="navr" style="margin-right: .5%;"   >

@@ -135,7 +135,7 @@
 
                                                 <div class="row">
                     <div class="col-md-6">
-                        <div class="mb-1">
+                        <div class="mb-3">
                             <label for="username">Matter Info</label>
 
                             <div class="input-group">
@@ -158,7 +158,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="mb-1">
+                        <div class="mb-3">
                             <label for="username">Matter Type</label>
 
                             <div class="input-group">
@@ -186,11 +186,12 @@
                         </div>
                     </div>
                 </div>
-                <br>
+                
                 <h4>Plaintiff</h4>
+                <br>
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="mb-1">
+                        <div class="mb-3">
                             <label for="username">Incident Details</label>
 
                             <div class="input-group">
@@ -214,7 +215,7 @@
                     </div>
                
                     <div class="col-md-6">
-                        <div class="mb-1">
+                        <div class="mb-3">
                             <label for="username">Damage Details</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
@@ -225,7 +226,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="mb-1">
+                        <div class="mb-3">
                             <label for="username">Health Insurer</label>
 
                             <div class="input-group">
@@ -248,7 +249,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="mb-1">
+                        <div class="mb-3">
                             <label for="username">Insurence Policy Details</label>
 
                             <div class="input-group">
@@ -275,7 +276,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="mb-1">
+                        <div class="mb-3">
                             <label for="username">Defendant</label>
 
                             <div class="input-group">
@@ -297,7 +298,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                
                 <br>
               
                 <div class="row">

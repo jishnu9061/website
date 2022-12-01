@@ -157,11 +157,15 @@
                         </div>
     </div>
     <div class="col">
-      
+          <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Supporting Details</label>
+                    <span class="m-2"></span>
+                    <input type="file" class="form-control" >
+                        </div>
     </div>
-    <div class="col">
+    <!-- <div class="col">
        
-    </div>
+    </div> -->
 
 
     <div class="row">
@@ -169,11 +173,7 @@
       
     </div>
   </div>
-      <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Supporting Details</label>
-                    <span class="m-2"></span>
-                    <input type="file" class="form-control" >
-                        </div>
+  
       </div>
   </div>
 
