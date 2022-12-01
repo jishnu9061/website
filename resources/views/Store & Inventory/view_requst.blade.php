@@ -16,7 +16,7 @@
     <div class="container">
 
         {{-- heading --}}
-        <h4 id="hdtpa"><b>Requested Details</b></h4>
+        <h4 id="hdtpa"><b>View Request Items</b></h4>
         <br>
 
         <div class="row">
@@ -26,7 +26,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
-                                <label for="username">RequestedDate</label>
+                                <label for="username">Requested Date</label>
                                 <div class="input-group">
 
                                     <div class="input-group-prepend"></div>
@@ -62,27 +62,28 @@
                         </div>
                     </div>
                     <br>
-                    <div>
-                        <h4 id="hdtpa"><b>Item Details</b></h4>
+                    <br>
+                    <div class="text-center">
+                        <h4><b>Item Details </b></h4>
                     </div>
                     <br>
-
+                 
                     <div class="row clearfix">
-
+                     <div class="table-responsive">
                         <div class="col-sm">
 
                             <table class="table table-striped table-class" id="tab_logic">
-
+                            <tbody  class="text-center">
                                 <tr>
-                                    <td class="" style="width:25%">Category</td>
-                                    <td class="">Item Type</td>
-                                    <td class="">item Name</td>
-                                    <td class="">Quantity</td>
+                                    <th class="" style="width:25%">Category</th>
+                                    <th class="">Item Type</th>
+                                    <th class="">item Name</th>
+                                    <th class="">Quantity</th>
                                     <!-- <td class="">View</td> -->
 
 
                                 </tr>
-                                <tbody>
+                                
                                     <tr>
                                         <td><input type="text" name="price[]" id="price_"
                                                 class="form-control calculate" disabled value="Stationary"></td>
@@ -135,10 +136,7 @@
             </form>
         </div>
     </div>
-    </div>
-
-    </div>
-    <br>
+    
 
     <!-- Supplier modal Edit End -->
 

@@ -63,7 +63,7 @@
                                     <th class="text-center">Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="text-center">
 
                                 @foreach($manage_list as $list)
 
@@ -71,14 +71,13 @@
                                     <td>{{$list->Item_Type}}</td>
                                     <td>{{$list->Item_Name}}</td>
                                     <td>{{$list->Category}}</td>
-                                    <td scope="row" class="text-center">
+                                    <td scope="row" >
+
                                         <a href="{{url('edit_manage_items',$list->id)}}"> <i
                                                 style="  color:rgb(13, 1, 56);" class="fa fa-edit"></i>
-
+                                      <span class="m-2"></span>
                                             <a href="{{url('drop_manage_items',$list->id)}}"> <i
                                                     style=" color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
-
-
 
                                     </td>
 
@@ -118,8 +117,7 @@
                                         <form method="post" action="addmanage_items" id="form">
                                             @csrf
                                             <div class="row">
-
-                                                <div class="col-md-6">
+                                                 <div class="col-md-6">
                                                     <div class="mb-1">
                                                         <label for="username">Category</label>
                                                         <div class="input-group">
@@ -154,14 +152,10 @@
                                                             </datalist>
                                                         </div>
                                                     </div>
-                                                </div>
                                             </div>
 
-
-
-
                                     </div>
-                                    <br>
+                                    
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="mb-1">
@@ -198,21 +192,14 @@
                                         </div>
                                     </div>
                                     <br>
-                                    <div class="row">
-                                        <div class="col-sm">
-
-                                        </div>
-                                        <div class="col-sm">
-
-                                        </div>
-                                        <div class="col-sm">
+                                    
+                                        
+                                    
                                             <br>
-                                            <button type="submit" class="btn btn-primary float:right;"
-                                                Style="width:45%;">Add</button>
-                                            <button type="button" class="btn btn-primary float:right;"
-                                                data-dismiss="modal">Cancel</button>
-                                        </div>
-                                    </div>
+                                            <button type="submit" class="btn btn-primary">Add</button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                                        
+                                    
                                 </div>
                                 </form>
                             </div>

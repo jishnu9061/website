@@ -106,10 +106,11 @@
 
 <br>
 <!-- button -->
+<div class="text-center">
 <button type="button" class="btn btn-primary">Print</button>
 <span class="m-2"></span>
 <button type="button" class="btn btn-primary" onclick="history.back()" >Close</button>
-
+</div>
 
 </div>
 
