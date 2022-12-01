@@ -43,6 +43,9 @@
             <div class="col-sm-4 "> <a href="{{ url('probate_law') }}"><img class="logo_size"
                         src="assets\image\File list progress report.png" alt=""><button type="button"
                         style="width:70%;" class="btn btn-primary btn_align_btn">Probate Law</button></a></div>
+            <div class="col-sm-4 "> <a href="{{ url('workers_compensation') }}"><img class="logo_size"
+                        src="assets\image\File list progress report.png" alt=""><button type="button"
+                        style="width:70%;" class="btn btn-primary btn_align_btn">Workers Compensation</button></a></div>
             
             
     

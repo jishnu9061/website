@@ -107,7 +107,7 @@
                       <div class="container">
                         <form method="post" enctype="multipart/form-data"> 
                         <div class="container">
-  <div class="row align-items-start">
+      <div class="row">
     <div class="col">
            <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Matter Info</label>
@@ -128,7 +128,7 @@
     </div>
   </div>
   
-  <div class="row align-items-cener">
+  <div class="row">
     <div class="col">
       <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Defendent</label>
@@ -148,7 +148,7 @@
                         </div>
     </div>
   </div>
-  <div class="row align-items-end">
+  <div class="row">
     <div class="col">
       <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Plaintiff's Insurer</label>
@@ -168,7 +168,7 @@
                         </div>  
     </div>
     </div>
-  <div class="row align-items-end">
+    <div class="row">
     <div class="col">
       <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Defendant's Insurer</label>
@@ -189,7 +189,7 @@
     </div>
 
 
-    <div class="row align-items-end">
+    <div class="row">
     <div class="col">
       
     </div>

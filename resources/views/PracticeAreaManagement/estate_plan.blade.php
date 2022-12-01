@@ -104,7 +104,7 @@
                       <div class="container">
                         <form method="post" enctype="multipart/form-data"> 
                         <div class="container">
-  <div class="row align-items-start">
+    <div class="row">
     <div class="col">
            <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">File No</label>
@@ -125,7 +125,7 @@
     </div>
   </div>
   
-  <div class="row align-items-cener">
+  <div class="row">
     <div class="col">
       <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Estate Details</label>
@@ -146,7 +146,7 @@
     </div>
   </div>
  
-  <div class="row align-items-cener">
+  <div class="row">
     <div class="col">
       <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Accountant</label>
@@ -164,7 +164,7 @@
     </div>
     </div>
 
-    <div class="row align-items-end">
+    <div class="row">
     <div class="col">
       
     </div>

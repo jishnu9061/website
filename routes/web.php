@@ -1454,6 +1454,7 @@ Route::any('civil_litigation','PracticeAreaManagement@civil_litigation')->name('
 Route::any('business_law','PracticeAreaManagement@business_law')->name('business_law');
 Route::any('guardianship_law','PracticeAreaManagement@guardianship_law')->name('guardianship_law');
 Route::any('probate_law','PracticeAreaManagement@probate_law')->name('probate_law');
+Route::any('workers_compensation','PracticeAreaManagement@workers_compensation')->name('workers_compensation');
 Route::any('view_family_law','PracticeAreaManagement@view_family_law')->name('view_family_law');
 Route::any('edit_family_law','PracticeAreaManagement@edit_family_law')->name('edit_family_law');
 Route::any('view_general_practice','PracticeAreaManagement@view_general_practice')->name('view_general_practice');
@@ -1468,6 +1469,12 @@ Route::any('view_civil_litigation','PracticeAreaManagement@view_civil_litigation
 Route::any('edit_civil_litigation','PracticeAreaManagement@edit_civil_litigation')->name('edit_civil_litigation');
 Route::any('view_business_law','PracticeAreaManagement@view_business_law')->name('view_business_law');
 Route::any('edit_business_law','PracticeAreaManagement@edit_business_law')->name('edit_business_law');
+Route::any('view_guardianship_law','PracticeAreaManagement@view_guardianship_law')->name('view_guardianship_law');
+Route::any('edit_guardianship_law','PracticeAreaManagement@edit_guardianship_law')->name('edit_guardianship_law');
+Route::any('view_probate_law','PracticeAreaManagement@view_probate_law')->name('view_probate_law');
+Route::any('edit_probate_law','PracticeAreaManagement@edit_probate_law')->name('edit_probate_law');
+Route::any('view_workers_compensation','PracticeAreaManagement@view_workers_compensation')->name('view_workers_compensation');
+Route::any('edit_workers_compensation','PracticeAreaManagement@edit_workers_compensation')->name('edit_workers_compensation');
 
 
 

@@ -3,12 +3,11 @@
 
 {{-- heading --}}
                
-               <h4 id="hdtpa"><b>Probate Law</b></h4>
+               <h4 id="hdtpa"><b>Workers Compensation</b></h4>
                <br>
 
-
                <input class="btn btn-primary" type="button" value="Add New Matter" data-toggle="modal" data-target="#myModal">
- <br>
+             <br>
 
 
                <div class="header_wrap">
@@ -43,24 +42,26 @@
     <tr>
       
       <th scope="col">Matter Info</th>
-      <th scope="col">Executor / Administator</th> 
+      <th scope="col">Petitioner</th>
       <th scope="col">Matter Type</th>
-      <th scope="col">Deceased</th>
+      <th scope="col">Respondent</th>
+      <th scope="col">Insurer</th>
       <th scope="col">Actions</th>
-    
     </tr>
   </thead>
   <tbody>
     <tr>
       
-      <td>602V-0218-GR/RW</td>
-      <td>Isabel Collier</td>
-      <td>Decedent's Estate</td>
-      <td>Ken Collier</td>
-      <td><a href="{{ url('view_probate_law') }}"><i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-2"></span>
-                      <a href="{{ url('edit_probate_law') }}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit" ></i><span class="m-2"></span>
+      <td>604VL-0218-WR</td>
+      <td>Victor</td>
+      <td>Workers Compensation Claim</td>
+      <td>Tower Construction HR Manager Gina</td>
+      <td>BCBs contact Smith</td>
+      <td><a href="{{ url('view_workers_compensation') }}"><i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span>
+                      <a href="{{ url('edit_workers_compensation') }}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit" ></i><span class="m-1"></span>
                       <a href="#"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
-      
+
+
     </tr>
     
   </tbody>
@@ -79,16 +80,13 @@
                         </div>
                         <div class="rows_count">Showing 11 to 20 of 100</div>
 
-                        <!-- 		End of Container -->
+                        <!-- End of Container -->
 
 
 
 
 
-
-
- 
-
+  
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
@@ -114,7 +112,7 @@
     </div>
     <div class="col">
         <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Executor / Administator</label>
+                    <label for="exampleFormControlInput1" class="form-label">Petitioner</label>
                     <input type="text" class="form-control" placeholder="">
                         </div>
     </div>
@@ -129,23 +127,60 @@
   <div class="row">
     <div class="col">
       <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Deceased</label>
+                    <label for="exampleFormControlInput1" class="form-label">Respondent</label>
                     <input type="text" class="form-control" placeholder="">
                         </div>
     </div>
     <div class="col">
        <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Attorney</label>
+                    <input type="text" class="form-control" placeholder="">
+                        </div>
+    </div>
+    <div class="col">
+     <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Insurer</label>
+                    <textarea class="form-control" rows="2"></textarea>
+                        </div>
+    </div>
+  </div>
+ 
+  <div class="row">
+    <div class="col">
+      <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Adjuster</label>
+                    <input type="text" class="form-control" placeholder="">
+                        </div>
+    </div>
+    <div class="col">
+    <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Case Details</label>
                     <textarea class="form-control" rows="2"></textarea>
                         </div>
     </div>
     <div class="col">
     <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Estate Details</label>
-                    <textarea class="form-control" rows="2"></textarea>
+    <label for="exampleFormControlInput1" class="form-label">Employee Doctor</label>
+                    <input type="text" class="form-control" placeholder="">
                         </div>
     </div>
+    <div class="row">
+    <div class="col">
+           <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Employment & Benefit Details</label>
+                    <input type="text" class="form-control" placeholder="">
+                        </div>
+    </div>
+    <div class="col">
+        
+             
+    </div>
+    <div class="col">
+   
+    </div>
   </div>
+  
+
   <div class="row">
     <div class="col">
       
@@ -160,6 +195,7 @@
   </div>
 
 
+
       <div class="modal-footer" style="background-color:#d3e0ed;">
         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
@@ -168,10 +204,6 @@
 
 </form>
 </div>
-
-
-
-
 
 
 

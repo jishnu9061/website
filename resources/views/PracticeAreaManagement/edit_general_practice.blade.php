@@ -9,7 +9,7 @@
       <form action="{{url('update_practice')}}" enctype="multipart/form-data" method="post">
         @csrf
 
-    <div class="row align-items-start">
+        <div class="row">
         <input type="hidden" name="id" value="{{$edit->id}}">
         <div class="col">
             <div class="mb-3">
@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <div class="row align-items-cener">
+    <div class="row">
         <div class="col">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Other Party</label>
@@ -51,7 +51,7 @@
             </div>
         </div>
     </div>
-    <div class="row align-items-end">
+    <div class="row">
         <div class="col">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Witness</label>
