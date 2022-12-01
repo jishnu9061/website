@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2022 at 09:50 AM
+-- Generation Time: Dec 01, 2022 at 11:54 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -415,6 +415,25 @@ CREATE TABLE `callambulance` (
   `from` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `to` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_add_bank_name`
+--
+
+CREATE TABLE `cra_add_bank_name` (
+  `id` int(11) NOT NULL,
+  `bank_name` varchar(255) DEFAULT NULL,
+  `branch` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_add_bank_name`
+--
+
+INSERT INTO `cra_add_bank_name` (`id`, `bank_name`, `branch`) VALUES
+(3, 'kenya', 'cra');
 
 -- --------------------------------------------------------
 
@@ -1349,6 +1368,25 @@ INSERT INTO `cra_document_detials` (`id`, `document_type`, `file`, `client_types
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `cra_estate_planning`
+--
+
+CREATE TABLE `cra_estate_planning` (
+  `id` int(11) NOT NULL,
+  `file_no` varchar(255) DEFAULT NULL,
+  `client_name` varchar(255) DEFAULT NULL,
+  `matter_type` varchar(255) DEFAULT NULL,
+  `estate_details` varchar(255) DEFAULT NULL,
+  `trust` varchar(255) DEFAULT NULL,
+  `property_details` varchar(255) DEFAULT NULL,
+  `accoundant` varchar(255) DEFAULT NULL,
+  `financier` varchar(255) DEFAULT NULL,
+  `support` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `cra_family_law`
 --
 
@@ -1371,7 +1409,7 @@ CREATE TABLE `cra_family_law` (
 --
 
 INSERT INTO `cra_family_law` (`id`, `file_no`, `client_name`, `matter_type`, `other_party`, `attorney`, `case_details`, `marrige`, `property`, `child_details`, `support_detail`) VALUES
-(3, 'frgbsfd', 'fdgfd', 'fgfg', 'fggf', 'fggfg', 'ffgfg', 'fgsgf', 'fggfg', 'fggfg', 'C:\\xampp\\tmp\\php7415.tmp'),
+(3, 'frgbsfd', 'fdgfd', 'fgfg', 'fggf', 'fggfg', 'test', NULL, NULL, NULL, NULL),
 (4, '445', 'fhgchf', '787878', 'fytrf', '45454', '777', 'afd', 'dafds', 'sddf', 'C:\\xampp\\tmp\\php5AD5.tmp');
 
 -- --------------------------------------------------------
@@ -11854,6 +11892,12 @@ ALTER TABLE `callambulance`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cra_add_bank_name`
+--
+ALTER TABLE `cra_add_bank_name`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `cra_add_box`
 --
 ALTER TABLE `cra_add_box`
@@ -12061,6 +12105,12 @@ ALTER TABLE `cra_description_selection`
 -- Indexes for table `cra_document_detials`
 --
 ALTER TABLE `cra_document_detials`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_estate_planning`
+--
+ALTER TABLE `cra_estate_planning`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -12806,6 +12856,12 @@ ALTER TABLE `callambulance`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `cra_add_bank_name`
+--
+ALTER TABLE `cra_add_bank_name`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `cra_add_box`
 --
 ALTER TABLE `cra_add_box`
@@ -13014,6 +13070,12 @@ ALTER TABLE `cra_description_selection`
 --
 ALTER TABLE `cra_document_detials`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `cra_estate_planning`
+--
+ALTER TABLE `cra_estate_planning`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `cra_family_law`

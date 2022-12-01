@@ -16,7 +16,7 @@
     <div class="container">
 
         {{-- heading --}}
-        <h4 id="hdtpa"><b>View Item Request</b></h4>
+        <h4 id="hdtpa"><b>Requested Details</b></h4>
         <br>
 
         <div class="row">
@@ -30,8 +30,8 @@
                                 <div class="input-group">
 
                                     <div class="input-group-prepend"></div>
-                                    <input type="date" class="form-control" name="date" id="username" value=""
-                                        placeholder="" required>
+                                    <input type="text" class="form-control" name="date" id="username" value="01/12/22"
+                                        placeholder="" required disabled>
                                     <div class="invalid-feedback" style="width: 100%;">
 
                                     </div>
@@ -45,7 +45,7 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <input type="text" class="form-control" name="category_name" id="age">
+                                    <input type="text" class="form-control" name="category_name" id="age"  value="Department Head" disabled>
                                 </div>
                             </div>
                         </div>
@@ -56,14 +56,14 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <input type="text" class="form-control" name="category_name" id="age">
+                                    <input type="text" class="form-control" name="category_name" value="Hr Department" id="age" disabled>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <br>
                     <div>
-                        <h4 id="hdtpa"><b>Item </b></h4>
+                        <h4 id="hdtpa"><b>Item Details</b></h4>
                     </div>
                     <br>
 
@@ -85,17 +85,17 @@
                                 <tbody>
                                     <tr>
                                         <td><input type="text" name="price[]" id="price_"
-                                                class="form-control calculate"></td>
+                                                class="form-control calculate" disabled value="Stationary"></td>
 
                                         <td><input type="text" name="price[]" id="price_"
-                                                class="form-control calculate"></td>
+                                                class="form-control calculate" disabled value="Book"></td>
 
                                         <td><input type="text" name="price[]" id="price_"
-                                                class="form-control calculate"></td>
+                                                class="form-control calculate" disabled value="Book 150 pages"></td>
 
 
                                         <td><input type="text" name="price[]" id="price_"
-                                                class="form-control calculate"></td>
+                                                class="form-control calculate" disabled Value="5"></td>
 
                                         </td>
                                         <!-- <td><a href="issue_view_requst"><button type="button" class="add-Row ibtnDel btn btn-primary text-white "

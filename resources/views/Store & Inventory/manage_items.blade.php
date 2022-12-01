@@ -24,7 +24,7 @@
 
         <div>
             <button type="button" class="btn btn-primary complaint_btn btn " data-toggle="modal"
-                data-target="#myModal">Add type</button></a>
+                data-target="#myModal">Add New Item</button></a>
         </div>
         <div class="header_wrap">
             <div class="num_rows">
@@ -67,7 +67,7 @@
 
                                 @foreach($manage_list as $list)
 
-                                <tr id="data">
+                                <tr id="data" class="text-center">
                                     <td>{{$list->Item_Type}}</td>
                                     <td>{{$list->Item_Name}}</td>
                                     <td>{{$list->Category}}</td>
