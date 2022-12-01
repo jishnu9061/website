@@ -200,8 +200,51 @@ public function view_job_post($id)
     }
     public function bank_names()
     {
-        return view('hr.bank_names');
+
+        $bank_list = DB::table('cra_add_bank_name')->get();
+        return view('hr.bank_names',compact('bank_list'));
     }
+
+    public function addbanknames(Request $request)
+    {
+        $bank_name = $request['bank_name'];
+        $branch = $request['branch'];
+
+        DB::table('cra_add_bank_name')->insert([
+            'bank_name' => $bank_name,
+            'branch' => $branch,
+        ]);
+        return redirect('/bank_names');
+    }
+
+    public function editbanknames($id)
+    {
+        $edit_bank=DB::table('cra_add_bank_name')->where('id',$id)->first();
+        return view('hr.edit_bank_name',compact('edit_bank','id'));
+    }
+
+    public function updatebankname(Request $request)
+    {
+        $id = $request['id'];
+        $bank_name = $request['bank_name'];
+        $branch = $request['branch'];
+
+        DB::table('cra_add_bank_name')->where('id',$id)->update([
+
+            'id' => $id,
+            'bank_name' => $bank_name,
+            'branch' => $branch,
+        ]);
+       return redirect('/bank_names');
+    }
+
+    public function deletebank($id)
+    {
+        $delete_bank = DB::table('cra_add_bank_name')->where('id',$id)->delete();
+        return redirect('/bank_names');
+    }
+
+
     public function over_time_list()
     {
         return view('hr.over_time');

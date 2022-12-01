@@ -49,18 +49,17 @@
     </tr>
   </thead>
   <tbody>
+    @foreach($bank_list as $list)
     <tr>
-      
-      <td></td>
-      <td></td>
+      <td>{{$list->bank_name}}</td>
+      <td>{{$list->branch}}</td>
       <td> 
         
-        <a href="{{url('edit_supplier')}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit" ></i>
+        <a href="{{url('edit_bank_name',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit" ></i>
         <span class="m-2"></span>
-        <a href="#"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
-
+        <a href="{{url('delete_bank',$list->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
     </tr>
-    
+    @endforeach
   </tbody>
 </table>
 </div>
@@ -98,19 +97,20 @@
                                     <!-- Modal body -->
             <div class="modal-body" >
             <div class="container">
-                <form>
+                <form action="{{url('add_bank_names')}}" method="post">
+                  @csrf
                                         
                 <div class="mb-3">
                   <label for="exampleFormControlInput1" class="form-label">Bank Name</label>
-                  <input type="text" class="form-control"  placeholder="">
+                  <input type="text" class="form-control" name="bank_name"  placeholder="">
                 </div>
                 <div class="mb-3">
                   <label for="exampleFormControlInput1" class="form-label">Branch</label>
-                  <input type="text" class="form-control"  placeholder="">
+                  <input type="text" class="form-control"  placeholder="" name="branch">
                 </div>
 
       <div class="modal-footer" style="background-color:#d3e0ed;">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
       </div>
      </div>
