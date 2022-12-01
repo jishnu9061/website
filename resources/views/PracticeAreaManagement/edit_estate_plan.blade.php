@@ -35,19 +35,19 @@
     <div class="col">
       <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Estate Details</label>
-                    <textarea class="form-control" rows="2" placeholder="" value="{{$edit->estate_details}}" name="estate_details"></textarea>
+                    <textarea class="form-control" rows="2" placeholder="" value="" name="estate_details">{{$edit->estate_details}}</textarea>
                         </div>
     </div>
     <div class="col">
        <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Trust</label>
-                    <textarea class="form-control" rows="2" placeholder="" value="{{$edit->trust}}" name="trust"></textarea>
+                    <textarea class="form-control" rows="2" placeholder="" value="" name="trust">{{$edit->trust}}</textarea>
                         </div>
     </div>
     <div class="col">
      <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Property Details</label>
-                    <textarea class="form-control" rows="2" placeholder="" value="{{$edit->property_details}}" name="property_details"></textarea>
+                    <textarea class="form-control" rows="2" placeholder="" value="" name="property_details">{{$edit->property_details}}</textarea>
                         </div>
     </div>
   </div>
@@ -55,13 +55,13 @@
     <div class="col">
       <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Accountant</label>
-                    <textarea class="form-control" rows="2" placeholder="" value="{{$edit->accoundant}}" name="accoundant"></textarea>
+                    <textarea class="form-control" rows="2" placeholder="" value="" name="accoundant">{{$edit->accoundant}}</textarea>
                         </div>
     </div>
     <div class="col">
     <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Financial Advisor</label>
-                    <textarea class="form-control" rows="2" placeholder="" value="{{$edit->financier}}" name="financier"></textarea>
+                    <textarea class="form-control" rows="2" placeholder="" value="" name="financier">{{$edit->financier}}</textarea>
                         </div>
     </div>
     <div class="col">

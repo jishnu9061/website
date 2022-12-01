@@ -50,7 +50,7 @@
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Case Details</label>
                     <textarea class="form-control" rows="2" placeholder="" name="case_details"
-                        value="{{$edit->case_details}}"></textarea>
+                        value="">{{$edit->case_details}}</textarea>
                 </div>
             </div>
         </div>
@@ -60,21 +60,21 @@
       <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Marriage Details</label>
                     <textarea class="form-control" rows="2" placeholder=" " name="marrige"
-                        value="{{$edit->marrige}}"></textarea>
+                        value="">{{$edit->marrige}}</textarea>
                 </div>
             </div>
             <div class="col">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Property Details</label>
                     <textarea class="form-control" rows="2" placeholder=" " name="property"
-                        value="{{$edit->property}}"></textarea>
+                        value="">{{$edit->property}}</textarea>
                 </div>
             </div>
             <div class="col">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Child Details</label>
                     <textarea class="form-control" rows="2" placeholder=" " name="chile_details"
-                        value="{{$edit->child_details}}"></textarea>
+                        value="">{{$edit->child_details}}</textarea>
                 </div>
 
             </div>
