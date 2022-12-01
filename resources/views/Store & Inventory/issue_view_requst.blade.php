@@ -96,20 +96,20 @@
                                 <tbody>
                                     <tr>
                                         <td><input type="text" name="price[]" id="price_"
-                                                class="form-control calculate"></td>
+                                                class="form-control calculate" value="Stationary"></td>
 
                                         <td><input type="text" name="price[]" id="price_"
-                                                class="form-control calculate"></td>
+                                                class="form-control calculate" value="Book"></td>
 
                                         <td><input type="text" name="price[]" id="price_"
-                                                class="form-control calculate"></td>
+                                                class="form-control calculate" value="Book 150 pages"></td>
 
 
                                         <td><input type="text" name="price[]" id="price_"
-                                                class="form-control calculate"></td>
+                                                class="form-control calculate" value="10"></td>
 
                                         <td><input type="text" name="price[]" id="price_"
-                                                class="form-control calculate"></td>
+                                                class="form-control calculate" value="5"></td>
                                     </tr>
                             </table>
                             <div class="row">
