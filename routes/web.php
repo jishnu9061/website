@@ -1448,6 +1448,12 @@ Route::any('/delete_practice/{id}','PracticeAreaManagement@deletepractice')->nam
 
 
 Route::any('estate_plan','PracticeAreaManagement@estate_plan')->name('estate_plan');
+Route::any('add_estate_plan','PracticeAreaManagement@addestateplan')->name('add_estate_plan');
+Route::any('/edit_estate_plan/{id}','PracticeAreaManagement@edit_estate_plan')->name('edit_estate_plan');
+Route::any('update_estate_plan','PracticeAreaManagement@updateestateplan')->name('update_estate_plan');
+Route::any('/delete_estate_plan/{id}','PracticeAreaManagement@deleteestateplan')->name('delete_estate_plan');
+
+
 Route::any('real_estate','PracticeAreaManagement@real_estate')->name('real_estate');
 Route::any('criminal_law','PracticeAreaManagement@criminal_law')->name('criminal_law');
 Route::any('civil_litigation','PracticeAreaManagement@civil_litigation')->name('civil_litigation');

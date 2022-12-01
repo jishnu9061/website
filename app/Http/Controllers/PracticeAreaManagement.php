@@ -298,8 +298,119 @@ class PracticeAreaManagement extends Controller
 
     public function estate_plan()
     {
-        return view('PracticeAreaManagement.estate_plan');
+
+        $view_plan = DB::table('cra_estate_planning')->get();
+        return view('PracticeAreaManagement.estate_plan',compact('view_plan'));
     }
+
+    public function addestateplan(Request $request)
+    {
+        $file_no = $request['file_no'];
+        $client_name = $request['client_name'];
+        $matter_type = $request['matter_type'];
+        $estate_details =$request['estate_details'];
+        $trust = $request['trust'];
+        $property_details = $request['property_details'];
+        $accoundant = $request['accoundant'];
+        $financier =$request['financier'];
+        $support =$request['support'];
+
+        if(!empty($request->file('support'))){
+
+            $this->validate($request,[
+                'support' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+            ]);
+        }
+        if(request()->hasfile('support')){
+            $uploadedImage = $request->file('support');
+            $imageName     = time() .'.'. $support->getClientOriginalExtension();
+            $destinationPath = public_path('image');
+            $uploadedImage->move($destinationPath,$imageName);
+            $support->file    = $destinationPath.$imageName;
+        }
+
+        DB::table('cra_estate_planning')->insert([
+
+            'file_no' => $file_no,
+            'client_name' => $client_name,
+            'matter_type' => $matter_type,
+            'estate_details' => $estate_details,
+            'trust' => $trust,
+            'property_details' => $property_details,
+            'accoundant' => $accoundant,
+            'financier' => $financier,
+            'support' => $support,
+        
+        ]);
+
+
+        return redirect('/estate_plan');
+    }
+
+    public function edit_estate_plan($id)
+    {
+        $edit=DB::table('cra_estate_planning')->where('id',$id)->first();
+
+        return view('PracticeAreaManagement.edit_estate_plan',compact('edit','id'));
+    }
+
+    public function updateestateplan(Request $request)
+    {
+        $id=$request['id'];
+        $file_no = $request['file_no'];
+        $client_name = $request['client_name'];
+        $matter_type = $request['matter_type'];
+        $estate_details =$request['estate_details'];
+        $trust = $request['trust'];
+        $property_details = $request['property_details'];
+        $accoundant = $request['accoundant'];
+        $financier =$request['financier'];
+        $support =$request['support'];
+
+        if(!empty($request->file('support'))){
+
+            $this->validate($request,[
+                'support' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+            ]);
+        }
+        if(request()->hasfile('support')){
+            $uploadedImage = $request->file('support');
+            $imageName     = time() .'.'. $support->getClientOriginalExtension();
+            $destinationPath = public_path('image');
+            $uploadedImage->move($destinationPath,$imageName);
+            $support->file    = $destinationPath.$imageName;
+        }
+
+        DB::table('cra_estate_planning')->where('id',$id)->update([
+
+            'id' => $id,
+            'file_no' => $file_no,
+            'client_name' => $client_name,
+            'matter_type' => $matter_type,
+            'estate_details' => $estate_details,
+            'trust' => $trust,
+            'property_details' => $property_details,
+            'accoundant' => $accoundant,
+            'financier' => $financier,
+            'support' => $support,
+        
+        ]);
+
+
+        return redirect('/estate_plan');
+    }
+
+    public function deleteestateplan($id)
+    {
+        $delete_plan=DB::table('cra_estate_planning')->where('id',$id)->delete();
+
+        return redirect('/estate_plan');
+    }
+
+
+
+
+
     public function real_estate()
     {
         return view('PracticeAreaManagement.real_estate');
@@ -339,10 +450,7 @@ class PracticeAreaManagement extends Controller
     {
         return view('PracticeAreaManagement.view_estate_plan');
     }
-    public function edit_estate_plan()
-    {
-        return view('PracticeAreaManagement.edit_estate_plan');
-    }
+    
     public function view_real_estate()
     {
         return view('PracticeAreaManagement.view_real_estate');
