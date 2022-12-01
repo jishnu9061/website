@@ -8,7 +8,7 @@
 
 
 <form action="">
-               <div class="row align-items-start">
+       <div class="row">
         <div class="col">
            <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">File No</label>
@@ -29,7 +29,7 @@
     </div>
   </div>
   
-  <div class="row align-items-cener">
+  <div class="row">
     <div class="col">
       <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Estate Details</label>
@@ -49,7 +49,7 @@
                         </div>
     </div>
   </div>
-  <div class="row align-items-end">
+  <div class="row">
     <div class="col">
       <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Accountant</label>
