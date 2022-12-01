@@ -277,7 +277,7 @@
 
                     </div>
                     <textarea class="form-control" name="details" id="form7Example7"
-                        value="{{ $edit_file_instruction->details}}" rows="3"></textarea>
+                        value="" rows="3">{{ $edit_file_instruction->details}}</textarea>
                 </div>
             </div>
         </div>

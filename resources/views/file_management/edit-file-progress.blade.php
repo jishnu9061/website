@@ -71,7 +71,7 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <textarea class="form-control" id="form7Example7" rows="3" name="next_action" value="{{ $edit_progress->next_action}}"></textarea>
+                                    <textarea class="form-control" id="form7Example7" rows="3" name="next_action" value="">{{ $edit_progress->next_action}}</textarea>
                                 </div>
                             </div>
                         </div>
@@ -188,7 +188,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <textarea class="form-control" id="form7Example7" rows="3" name="action_description" value="{{ $edit_progress->action_description}}"></textarea>
+                        <textarea class="form-control" id="form7Example7" rows="3" name="action_description" value="">{{ $edit_progress->action_description}}</textarea>
                     </div>
                 </div>
             </div>
