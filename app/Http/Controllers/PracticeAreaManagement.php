@@ -295,4 +295,108 @@ class PracticeAreaManagement extends Controller
         $delete=DB::table('cra_add_general_practice')->where('id',$id)->delete();
         return redirect('/general_practice');
     }
+
+    public function estate_plan()
+    {
+        return view('PracticeAreaManagement.estate_plan');
+    }
+    public function real_estate()
+    {
+        return view('PracticeAreaManagement.real_estate');
+    }
+    public function criminal_law()
+    {
+        return view('PracticeAreaManagement.criminal_law');
+    }
+    public function civil_litigation()
+    {
+        return view('PracticeAreaManagement.civil_litigation');
+    }
+    public function business_law()
+    {
+        return view('PracticeAreaManagement.business_law');
+    }
+    public function guardianship_law()
+    {
+        return view('PracticeAreaManagement.guardianship_law');
+    }
+    public function probate_law()
+    {
+        return view('PracticeAreaManagement.probate_law');
+    }
+
+    public function workers_compensation()
+    {
+        return view('PracticeAreaManagement.workers_compensation');
+    }
+   
+    public function view_general_practice()
+    {
+        return view('PracticeAreaManagement.view_general_practice');
+    }
+    
+    public function view_estate_plan()
+    {
+        return view('PracticeAreaManagement.view_estate_plan');
+    }
+    public function edit_estate_plan()
+    {
+        return view('PracticeAreaManagement.edit_estate_plan');
+    }
+    public function view_real_estate()
+    {
+        return view('PracticeAreaManagement.view_real_estate');
+    }
+    public function edit_real_estate()
+    {
+        return view('PracticeAreaManagement.edit_real_estate');
+    }
+    public function view_criminal_law()
+    {
+        return view('PracticeAreaManagement.view_criminal_law');
+    }
+    public function edit_criminal_law()
+    {
+        return view('PracticeAreaManagement.edit_criminal_law');
+    }
+    public function view_civil_litigation()
+    {
+        return view('PracticeAreaManagement.view_civil_litigation');
+    }
+    public function edit_civil_litigation()
+    {
+        return view('PracticeAreaManagement.edit_civil_litigation');
+    }
+    public function view_business_law()
+    {
+        return view('PracticeAreaManagement.view_business_law');
+    }
+    public function edit_business_law()
+    {
+        return view('PracticeAreaManagement.edit_business_law');
+    }
+    public function view_guardianship_law()
+    {
+        return view('PracticeAreaManagement.view_guardianship_law');
+    }
+    public function edit_guardianship_law()
+    {
+        return view('PracticeAreaManagement.edit_guardianship_law');
+    }
+    public function view_probate_law()
+    {
+        return view('PracticeAreaManagement.view_probate_law');
+    }
+    public function edit_probate_law()
+    {
+        return view('PracticeAreaManagement.edit_probate_law');
+    }
+    public function view_workers_compensation()
+    {
+        return view('PracticeAreaManagement.view_workers_compensation');
+    }
+    public function edit_workers_compensation()
+    {
+        return view('PracticeAreaManagement.edit_workers_compensation');
+    }
 }
