@@ -122,14 +122,14 @@
 
         var html = '<tr><td style="width:45%;"> <select class="form-control select_group product"data-row-id="row_3" id="product_detailes" name="testname[]" style="width:100%;"><option selected>Select</option><option value="assets">Type 1</option></select></td><td style="width:45%;"> <input type="file" class="form-control" name="file[]" multiple="multiple" required></td></td><td> <input type="button" class="btn btn-danger float:right;" name="remove" id="remove" value="remove"></td><td><input type="hidden" class="form-control" name="client" id="username"value="{{$corporate_docs->Client_type}}" placeholder="File" required></td></tr>';
          
-        var num = 4;
-        var X = 1;
+       
+      
 
         $("#add").click(function(){
-            if(X <= num){
+            
                 $("#table_field").append(html);
-                X++;
-            }
+              
+            
         });
 
         $("#table_field").on('click','#remove',function(){
