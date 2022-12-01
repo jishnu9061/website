@@ -121,7 +121,7 @@
                            <label for="username">Comments</label>
                            <div class="input-group">
                                <div class="input-group-prepend"></div>
-                               <textarea class="form-control" id="form7Example7" rows="2" name="comments" value="{{ $edit->comments}}"></textarea><br>
+                               <textarea class="form-control" id="form7Example7" rows="2" name="comments" value="">{{ $edit->comments}}</textarea><br>
                                <div class="invalid-feedback" style="width: 100%;">
                                    Password is required.
                                </div>
