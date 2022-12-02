@@ -105,71 +105,101 @@
                         <form method="post" enctype="multipart/form-data"> 
                         <div class="container">
     <div class="row">
-    <div class="col">
+    <div class="col-md-4">
            <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Matter Info</label>
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
                     <input type="text" class="form-control" placeholder="">
                         </div>
+                        </div>
     </div>
-    <div class="col">
+    <div class="col-md-4">
         <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Petitioner</label>
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
                     <input type="text" class="form-control" placeholder="">
                         </div>
+                        </div>
     </div>
-    <div class="col">
+    <div class="col-md-4">
        <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
                     <input type="text" class="form-control" placeholder="">
+                        </div>
                         </div>
     </div>
   </div>
   
   <div class="row">
-    <div class="col">
+    <div class="col-md-4">
       <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Disabled Person</label>
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
                     <input type="text" class="form-control" placeholder="">
                         </div>
-    </div>
-    <div class="col">
-       <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Attorney</label>
-                    <textarea class="form-control" rows="2"></textarea>
                         </div>
     </div>
-    <div class="col">
+    <div class="col-md-4">
+       <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Attorney</label>
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <textarea class="form-control" rows="2"></textarea>
+                        </div>
+                        </div>
+    </div>
+    <div class="col-md-4">
     <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Disability Details</label>
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
                     <textarea class="form-control" rows="2"></textarea>
+                        </div>
                         </div>
     </div>
   </div>
   <div class="row">
-    <div class="col">
+    <div class="col-md-4">
            <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Case Details</label>
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
                     <textarea class="form-control" rows="2"></textarea>
                         </div>
+                        </div>
     </div>
-    <div class="col">
+    <div class="col-md-4">
         <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Guardian</label>
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
                     <input type="text" class="form-control" placeholder="">
                         </div>
+                        </div>
     </div>
-    <div class="col">
+    <div class="col-md-4">
        <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Attorney</label>
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
                     <textarea class="form-control" rows="2"></textarea>
+                        </div>
                         </div>
     </div>
   </div>
   <div class="row">
-    <div class="col">
+    <div class="col-md-4">
            <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Guardian Details</label>
+                    <div class="input-group">
+                                    <div class="input-group-prepend"></div>
                     <textarea class="form-control" rows="2"></textarea>
+                        </div>
                         </div>
     </div>
     <div class="col">

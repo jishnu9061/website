@@ -89,6 +89,12 @@ class PracticeAreaManagement extends Controller
         return redirect('/personal_injury');
        
     }
+    public function view_injury()
+    {
+
+        return view('PracticeAreaManagement.view_injury');
+       
+    }
 
     public function family_law()
     {
