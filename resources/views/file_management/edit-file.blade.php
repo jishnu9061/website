@@ -28,7 +28,7 @@
                                <div class="input-group-prepend">
 
                                </div>
-                               <input type="text" class="form-control" name="client" id="age" value="{{ $edit->client}}" >
+                               <input type="text" class="form-control" name="client" id="age" value="{{$edit->client}}" >
                            </div>
                        </div>
                    </div>
@@ -40,7 +40,7 @@
                                <div class="input-group-prepend">
 
                                </div>
-                               <input type="email" class="form-control" name="email" id="age" value="{{ $edit->email}}" >
+                               <input type="email" class="form-control" name="email" id="age" value="{{$edit->email}}" >
                            </div>
                        </div>
                    </div>
@@ -53,7 +53,7 @@
                            <label for="username">Telephone</label>
                            <div class="input-group">
                                <div class="input-group-prepend"></div>
-                               <input type="number" class="form-control" name="phone" id="age" value="{{ $edit->phone}}" >
+                               <input type="number" class="form-control" name="phone" id="age" value="{{$edit->phone}}" >
                                <div class="invalid-feedback" style="width: 100%;">
                                    Age is required.
                                </div>
@@ -65,7 +65,7 @@
                            <label for="username">Address</label>
                            <div class="input-group">
                                <div class="input-group-prepend"></div>
-                               <input type="text" class="form-control" name="address" id="age" value="{{ $edit->address}}" >
+                               <input type="text" class="form-control" name="address" id="age" value="{{$edit->address}}" >
                                <div class="invalid-feedback" style="width: 100%;">
                                    Age is required.
                                </div>
@@ -77,7 +77,7 @@
                            <label for="username">File Name</label>
                            <div class="input-group">
                                <div class="input-group-prepend"></div>
-                               <input type="text" class="form-control" name="file_name" value="{{ $edit->file_name}}"
+                               <input type="text" class="form-control" name="file_name" value="{{$edit->file_name}}"
                                    id="confirm_password">
                                <div class="invalid-feedback" style="width: 100%;">
                                    Password is required.
@@ -121,7 +121,7 @@
                            <label for="username">Comments</label>
                            <div class="input-group">
                                <div class="input-group-prepend"></div>
-                               <textarea class="form-control" id="form7Example7" rows="2" name="comments" value="">{{ $edit->comments}}</textarea><br>
+                               <textarea class="form-control" id="form7Example7" rows="2" name="comments" value="">{{$edit->comments}}</textarea><br>
                                <div class="invalid-feedback" style="width: 100%;">
                                    Password is required.
                                </div>
