@@ -106,58 +106,82 @@
                           @csrf
                         <div class="container">
     <div class="row">
-    <div class="col">
+    <div class="col-md-4">
            <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">File No</label>
+                    <div class="input-group">
+                <div class="input-group-prepend"></div>
                     <input type="text" class="form-control" placeholder="" name="file_no">
                         </div>
-    </div>
-    <div class="col">
-        <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Client Name</label>
-                    <input type="text" class="form-control" placeholder="" name="client_name">
                         </div>
     </div>
-    <div class="col">
+    <div class="col-md-4">
+        <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Client Name</label>
+                    <div class="input-group">
+                <div class="input-group-prepend"></div>
+                    <input type="text" class="form-control" placeholder="" name="client_name">
+                        </div>
+                        </div>
+    </div>
+    <div class="col-md-4">
        <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
+                    <div class="input-group">
+                <div class="input-group-prepend"></div>
                     <input type="text" class="form-control" placeholder="" name="matter_type">
+                        </div>
                         </div>
     </div>
   </div>
   
   <div class="row">
-    <div class="col">
+    <div class="col-md-4">
       <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Estate Details</label>
+                    <div class="input-group">
+                <div class="input-group-prepend"></div>
                     <textarea class="form-control" rows="2" placeholder="" name="estate_details"></textarea>
                         </div>
-    </div>
-    <div class="col">
-       <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Trust</label>
-                    <textarea class="form-control" rows="2" placeholder="" name="trust"></textarea>
                         </div>
     </div>
-    <div class="col">
+    <div class="col-md-4">
+       <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Trust</label>
+                    <div class="input-group">
+                <div class="input-group-prepend"></div>
+                    <textarea class="form-control" rows="2" placeholder="" name="trust"></textarea>
+                        </div>
+                        </div>
+    </div>
+    <div class="col-md-4">
      <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Property Details</label>
+                    <div class="input-group">
+                <div class="input-group-prepend"></div>
                     <textarea class="form-control" rows="2" name="property_details"></textarea>
+                        </div>
                         </div>
     </div>
   </div>
  
   <div class="row">
-    <div class="col">
+    <div class="col-md-4">
       <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Accountant</label>
+                    <div class="input-group">
+                <div class="input-group-prepend"></div>
                     <input type="text" class="form-control" placeholder="" name="accoundant">
                         </div>
+                        </div>
     </div>
-    <div class="col">
+    <div class="col-md-4">
     <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Financial Advisor</label>
+                    <div class="input-group">
+                <div class="input-group-prepend"></div>
                     <input type="text" class="form-control" placeholder="" name="financier">
+                        </div>
                         </div>
     </div>
     <div class="col">
