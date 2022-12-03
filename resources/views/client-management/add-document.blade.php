@@ -1,109 +1,145 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container">
-    <div class="py-5 text-center">
-        @if(Session::has('staffregistered'))
-        <div class="alert alert-dark" role="alert">
-            {{ Session::get('staffregistered')}}
-        </div>
-        @endif
 
+    @if(Session::has('staffregistered'))
+    <div class="alert alert-dark" role="alert">
+        {{ Session::get('staffregistered')}}
     </div>
-    <div style="height: 50px;"></div>
-    <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-    <script type="text/javascript">
-    $(document).on('input', '#price', function() {
-        $('#percent').prop('readonly', true);
+    @endif
 
-    });
-    $(document).on('input', '#percent', function() {
-        $('#price').prop('readonly', true);
+</div>
 
-    });
-    </script>
-    <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-    <div>
-        {{-- heading --}}
-        <h4 id="hdtpa"><b>Add Individual Document</b></h4>
-        <br><br>
+<script src="{{ url('assets/js') }}/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).on('input', '#price', function() {
+    $('#percent').prop('readonly', true);
+
+});
+$(document).on('input', '#percent', function() {
+    $('#price').prop('readonly', true);
+
+});
+</script>
+<script src="{{ url('assets/js') }}/jquery.min.js"></script>
+<div>
+    {{-- heading --}}
+    <h4 id="hdtpa"><b>Add Individual Document</b></h4>
+
+    <br>
+</div>
 
 
 
-        <br>
-    </div>
-    <div class="row">
-        <div class="col-md-12 order-md-1">
-            <form method="post" action="{{url('add-document')}}" id="form" enctype="multipart/form-data">
-                @csrf
-                <input type="hidden" name="individual_id" value="{{$client_doc->id}}">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Document Type</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
+<div class="row">
+    <div class="col-md-12 order-md-1">
+        <form method="post" action="{{url('add-document')}}" id="form" enctype="multipart/form-data">
+            @csrf
+            <input type="hidden" name="individual_id" value="{{$client_doc->id}}">
 
-                                </div>
-                                <select name="type" id="cars">
-                                    <option>select</option>
-                                    <option>type11</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">File Upload</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="file" class="form-control" name="file" id="username" value=""
-                                    placeholder="File" required>
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Name is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-striped  order-list" id="table_field">
+                        <thead>
+                            <tr>
+                                <th>Document Type</th>
+                                <th>File Upload</th>
+                                <th>Add</th>
+                                <th></th>
+                                <th>Date</th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="width:45%;"> <select class="form-control select_group product"
+                                        data-row-id="row_3" id="product_detailes" name="testname[]"
+                                        style="width:100%;">
+                                        <option selected>Select</option>
+                                        <option value="assets">Type 1
+                                        </option>
+
+                                    </select>
+                                </td>
+                                <td style="width:45%;"> <input type="file" class="form-control" name="file[]"
+                                        multiple="multiple" required>
+                                </td>
+                                </td>
+
+                                <td> <input type="button" class="btn btn-primary float:right;" id="add" value="Add">
+                                </td>
+                                <td>
+                                    <input type="hidden" class="form-control" name="client" id="username"
+                                        value="{{$client_doc->client_type}}" placeholder="File" required>
+                                </td>
+                                <td>
+                                    <input type="date" class="form-control" name="date" id="username" required>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Client Type</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
 
-                                </div>
-                                <select name="client" id="cars">
-                                    <option>{{$client_doc->client_type}}</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+
+            <br>
+            <div class="row">
+                <div class="col-sm">
+
                 </div>
-                <br>
-                <div class="row">
-                    <div class="col-sm">
+                <div class="col-sm">
 
-                    </div>
-                    <div class="col-sm">
-
-                    </div>
-                    <div class="col-sm">
-                        <br>
-                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Submit</button>
-                        <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
-                    </div>
                 </div>
-        </div>
+                <div class="col-sm">
+                    <br>
+                    <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Submit</button>
+                    <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                </div>
+            </div>
         </form>
     </div>
 </div>
-</div>
 
-</div>
 
-</div>
+
+
+
+<script src="{{ url('assets/js') }}/jquery.min.js"></script>
+
+<!-- Table add row -->
+
+<script type="text/javascript">
+$(document).ready(function() {
+    var html =
+        '<tr><td style="width:45%;"> <select class="form-control select_group product"data-row-id="row_3" id="product_detailes" name="testname[]" style="width:100%;"><option selected>Select</option><option value="assets">Type 1</option></select></td><td style="width:45%;"> <input type="file" class="form-control" name="file[]" multiple="multiple" required></td></td><td> <input type="button" class="btn btn-danger float:right;" name="remove" id="remove" value="remove"></td><td><input type="hidden" class="form-control" name="client" id="username"value="{{$client_doc->client_type}}" placeholder="File" required></td></tr>';
+    var max = 4;
+    var X = 1;
+
+    $("#add").click(function() {
+        if(X <= max){
+            $("#table_field").append(html);
+            X++;
+        }
+       
+    });
+
+    $("#table_field").on('click','#remove',function(){
+        $(this).closest('tr').remove();
+        X--;
+    });
+});
+</script>
+
+<script>
+$(function() {
+    $('[data-toggle="popover"]').popover()
+})
+$(document).on('click', '#h', function() {
+    //var itemvalue = $(this).val();
+    var vw = $(this).closest('#data').find('#name').text();
+    $("#gfh").val(h);
+});
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
@@ -278,9 +314,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Salary is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -307,9 +343,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Years of experience is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -332,9 +368,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 dob is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 /div>
 
             {
@@ -366,9 +402,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Bank Name is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -394,9 +430,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Account number is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -419,9 +455,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 IFSC Code is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-12" >
                 <
                 div class = "mb-1" >
@@ -462,7 +498,7 @@ $(document).on('input', '#percent', function() {
 
                 <
                 /tr> < /
-                table > {
+            table > {
                     {
                         -- < input type = "text"
                         class = "form-control"
@@ -479,7 +515,7 @@ $(document).on('input', '#percent', function() {
                         -- < /div> --}} < /
                         div > <
                             /div> < /
-                            div >
+                        div >
 
                             <
                             /div> <
@@ -521,9 +557,9 @@ $(document).on('input', '#percent', function() {
 
                             <
                             /tbody> < /
-                            table > <
+                        table > <
                             /div> < /
-                            div > <
+                        div > <
                             script src = "{{ url('assets/js') }}/jquery.min.js" >
 </script>
 <script type="text/javascript">
@@ -680,7 +716,8 @@ $(document).on('click', '#testing1', function() {
                                     div > <
                                     /form> < /
                                     div > <
-                                    script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
+                                    script src =
+                                    "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
 </script>
 <script type="text/javascript">
 $('#password, #confirm_password').on('keyup', function() {

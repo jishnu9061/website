@@ -110,7 +110,7 @@ color: #999;
 	
                             <thead>
                                 <tr>
-                                    <th class="text-center">No</th>
+                                    <th class="text-center">Client No</th>
                                     <th class="text-center">Client Name</th>
                                     <th class="text-center">Designation</th>
                                     <th class="text-center">Mobile No</th>
@@ -121,6 +121,7 @@ color: #999;
                             </thead>
                             <tbody>
                                 @foreach ($corporate_list as $list)
+                              
                                 <tr id="data">
                                     <td scope="row" class="text-center">{{ $list->client_number}}</td>
                                     <td scope="row" class="text-center" id="medicine_name_1">
@@ -137,7 +138,6 @@ color: #999;
                                     <td scope="row" class="text-center" id="medicine_name_1">
                                         <a href="{{ url('edit_client', $list->corporate_id)}}"><i style="color:black;"
                                                 class="fa fa-edit" aria-hidden="true"></i>
-                                                <span class="m-3"></span>
                                                 <a onClick="return myFunction();"
                                                     href="{{ url('delete_client', $list->corporate_id)}}"
                                                     style="color:black;"><i class="fas fa-trash-alt"></i></a>

@@ -23,18 +23,7 @@
 
         </div>
         <!--filter-->
-        <div class="tb_search">
-
-            <select name="town"  id="search_input_all" onkeyup="FilterkeyWord_all_table()" class="form-control"
-                style="width:100%;">
-                <option value="" disabled selected hidden>Category<option>
-                <option>pen</option>
-                <option>pencil</option>
-                <option>Book</option>
-            </select>
-
-        </div>
-        <br>
+   
 
         <!--filter end-->
 
@@ -78,28 +67,21 @@
                                     <th class="text-center">Item Name</th>
                                     <th class="text-center">Quantity In Stock</th>
                                     <th class="text-center">Re-oder level</th>
-                                    <th class="text-center">Action</th>
+                                    {{-- <th class="text-center">Status</th> --}}
 
                                 </tr>
                             </thead>
                             <tbody>
-
-
-                                <tr id="data">
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td scope="row" class="text-center">
-
-
-
-
-                                    </td>
-
+                               @foreach($stock_list_tab as $lists)
+                                <tr id="data" class="text-center">
+                                    <td>{{$lists->Category}}</td>
+                                    <td>{{$lists->Item_Type}}</td>
+                                    <td>{{$lists->Item_Name}}</td>
+                                    <td>{{$lists->stock}}</td>
+                                    <td>{{$lists->Reorder_Level}}</td>
+                                    {{-- <td ></td> --}}
                                 </tr>
-
+                              @endforeach
                             </tbody>
 
                         </table>

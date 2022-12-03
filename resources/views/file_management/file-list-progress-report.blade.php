@@ -111,12 +111,13 @@ color: #999;
                             <td scope="row" class="text-center">{{$list->Client_name}}</td>
                             <td scope="row" class="text-center">{{$list->file_name}}</td>
                             <td scope="row" class="text-center">{{$list->progress_date}}</td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$list->advocate}}</td>
+                            <td scope="row" class="text-center">{{$list->recent_progress}}</td>
                             <!-- <td scope="row" class="text-center"></td> -->
                             <td scope="row" class="text-center"></td>
                             <td  scope="row"class="text-center">
-                        <a href=""><i  style="  color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i>
+                            <a href="{{url('view-file-list-progress',$list->id)}}"><i style="color:black;" class="fa fa-eye"
+                                        aria-hidden="true"></i>
                         </td>
 						
                         </tr>

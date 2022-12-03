@@ -16,7 +16,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <form method="post" action="" id="form">  
+            <form method="post" action="{{url('update')}}" id="form">  
                 @csrf
                 <div class="row">
                    
@@ -121,7 +121,7 @@
                            <label for="username">Comments</label>
                            <div class="input-group">
                                <div class="input-group-prepend"></div>
-                               <textarea class="form-control" id="form7Example7" rows="2" name="comments" value="{{ $edit->comments}}"></textarea><br>
+                               <textarea class="form-control" id="form7Example7" rows="2" name="comments" value="">{{ $edit->comments}}</textarea><br>
                                <div class="invalid-feedback" style="width: 100%;">
                                    Password is required.
                                </div>
@@ -186,7 +186,7 @@
                            <label for="username">Address</label>
                            <div class="input-group">
                                <div class="input-group-prepend"></div>
-                               <input type="email" class="form-control" name="email" value="{{ $edit->client_name}}"
+                               <input type="email" class="form-control" name="email" value="{{ $edit->client}}"
                                    id="confirm_password">
                                <div class="invalid-feedback" style="width: 100%;">
                                    Password is required.
@@ -201,7 +201,7 @@
                                <div class="input-group-prepend">
 
                                </div>
-                               <input type="email" class="form-control" name="email" value="{{ $edit->client_name}}"
+                               <input type="email" class="form-control" name="email" value="{{ $edit->client}}"
                                    id="confirm_password"><br>
                            </div>
                        </div>

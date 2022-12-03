@@ -3,7 +3,7 @@
 
                 
     <h4 id="hdtpa"><b>File List</b></h4>
-    <br><br>
+    
             </div>
             <div>
                 <!-- <div class="btn btn-primary"
@@ -21,8 +21,8 @@
              </div>
    <br>
 
-                <div id="mydatatable_filter" class="dataTables_filter">
-                    <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
+                <div id="" class="">
+                    <!-- <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label> -->
                     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-1">Columns
                   </button>
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalb">Filter
@@ -38,14 +38,38 @@
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Filter
                   </button> -->
                 </div>
-                {{-- <a href="{{('add-corporate')}}"><button class="btn btn-primary">Add Corporate</button></a> --}}
+               
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">New
                   File</button>
-                <br><br>
+               
+
+                <div class="header_wrap">
+                <div class="num_rows">
+                    <div class="form-group">
+                        <!--		Show Numbers Of Rows 		-->
+                        <select class="form-control" aria-label="Page navigation example" name="state" id="maxRows">
+
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                            <option value="70">70</option>
+                            <option value="100">100</option>
+                            <option value="5000">Show ALL Rows</option>
+                        </select>
+
+                    </div>
+                </div>
+                <div class="tb_search">
+                    <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.."
+                        class="form-control">
+                </div>
+         
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <div class="table-responsive">
-                            <table class="table table-bordered" id="new-item">
+                            <table class="table table-bordered" id="">
                                 <thead>
                                     <tr>
                                         <!-- <th class="text-center"> <input type="checkbox"></th> -->
@@ -53,12 +77,12 @@
                                         <!-- <th class="text-center">*</th> -->
                                         <th class="text-center">File No</th>
                                         <th class="text-center">Client</th>
-                                        <th class="text-center">File Name</th>
+                                        <th class="text-center">File No</th>
                                         <th class="text-center">File Open</th>
-                                        <th class="text-center">Responsible<br>Advocate</th>
-                                        <th class="text-center">Most Recent Progress</th>
+                                        <!-- <th class="text-center">Responsible<br>Advocate</th>
+                                        <th class="text-center">Most Recent Progress</th> -->
                                         <th class="text-center">Date Closed</th>
-                                        <th class="text-center">File&Fee Balances</th>
+                                        <th class="text-center">File & Fee Balances</th>
                                         <th class="text-center">Status</th>
                                         <th class="text-center">Action</th>
                                     </tr>
@@ -66,32 +90,35 @@
                                 <tbody>
                                 @foreach($file_list as $list)
                                     
-                                        <tr id="data" class="text-center">
+                                        <tr id="" class="text-center">
                                           
                                             <!-- <td scope="row">{{$list->id}}</td> -->
                                             <td scope="row">{{$list->id}}</td>
                                             <td scope="row">{{$list->Client_name}}</td>
                                             <td scope="row">{{$list->file_name}}</td>
                                             <td scope="row">{{$list->open_date}}</td>
-                                            <td scope="row"></td>
-                                            <td scope="row"></td>
+
+                                            <!-- <td scope="row">{{$list->advocate}}</td> -->
+                                            <!-- <td scope="row">{{$list->recent_progress}}</td> -->
+
                                             <td scope="row">{{$list->close_date}}</td>
+
                                             <td scope="row">{{$list->amount}}</td>
                                             <td scope="row"></td>
-                                            <td scope="row"><a href=""><i style="color:black;" class="fa fa-eye"
+                                            <td scope="row"><a href="{{url('view-list',$list->id)}}"><i style="color:black;" class="fa fa-eye"
                                         aria-hidden="true"></i>
                                    
-                                    <a href="{{url('edit-file')}}"><i style="color:black;" class="fa fa-edit"
+                                    <a href="{{url('edit-file',$list->id)}}"><i style="color:black;" class="fa fa-edit"
                                             aria-hidden="true"></i>
-                                        <a onClick="return myFunction();" href="{{url('file_destroy')}}" style="color:black;"><i
+                                        <a onClick="return myFunction();" href="{{url('file_destroy',$list->id)}}" style="color:black;"><i
                                                 class="fas fa-trash-alt"></i></a></td>
-                                            <!-- <td scope="row"></td> -->
+                                            
                                         </tr>
                                         @endforeach
                                 </tbody>
                             </table>
                             <br>
-                            <nav aria-label="Page navigation example">
+                            <!-- <nav aria-label="Page navigation example">
                                 <ul class="pagination">
                                     <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Previous</a></li>
                                     <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">1</a></li>
@@ -99,10 +126,10 @@
                                     <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">3</a></li>
                                     <li class="page-item"><a class="page-link" href="#"style="color:#1D1D50;">Next</a></li>
                                 </ul>
-                            </nav>
+                            </nav> -->
                         </div>
                         <div class="modal fade" id="myModal">
-                            <div class="modal-dialog modal-lg">
+                            <div class="modal-dialog modal-xl">
                                 <div class="modal-content" >
 
                                     <!-- Modal Header -->
@@ -116,21 +143,37 @@
                                                 @csrf
                                                 <h4>Matter</h4>
                 <div class="row">
-                   
-                   
-                    <div class="col-md-6">
+
+                <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Client</label>
+                            <label for="username">Associative Handling</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="client" id="age" value="" >
+                                <select name="assoc_handling" id="cars">
+                                    <option >Select</option>
+                                    <option >Residensial</option>
+                                    <option >Non Residensial</option>
+                                </select>
                             </div>
                         </div>
                     </div>
+                   
+                   
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Client</label>
+                            <select class="form-select" aria-label="Default select example">
+                             <option selected>---select---</option>
+                             <option value="1">client1</option>
+                             <option value="2">client2</option>
+                             <option value="3">client3</option>
+                            </select>
+                        </div>
+                    </div>
                 
-                <div class="col-md-6">
+                <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Email</label>
                             <div class="input-group">
@@ -171,7 +214,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">File Name</label>
+                            <label for="username">File No</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="file_name" value=""
@@ -182,15 +225,13 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-4">
+                
+                <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Opening Date</label>
+                            <label for="username">Responsible Advocate</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="open_date" id="age" value=""
+                                <input type="text" class="form-control" name="advocate" id="age" value=""
                                  min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
@@ -200,7 +241,59 @@
                     </div>
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Close Date</label>
+                            <label for="username">Most Recent Progress</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="recent_progress" id="age" value=""
+                                 min="0" max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Age is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Work Flow</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="work_flow" id="age" value=""
+                                 min="0" max="99">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Age is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="row">
+               
+                    <div class="col-md-4">
+                    <div class="mb-1">
+                     <label for="">Practice Area</label>
+                    <div class="input-group">
+                    <div class="input-group-prepend">
+                         </div>
+                          <select>
+                                <option value="select">---select---</option>
+                                <option value="Family Law">Family Law</option>
+                                <option value="Personal Injury">Personal Injury</option>
+                                <option value="General Practice">General Practice</option>
+                                <option value="Estate Planning">Estate Planning</option>
+                                <option value="Real Estate">Real Estate</option>
+                                <option value="Criminal Law">Criminal Law</option>
+                                <option value="Civil Litigation">Civil Litigation</option>
+                                <option value="Business Law">Business Law</option>
+                                <option value="Guardianship Law">Guardianship Law</option>
+                                <option value="Probate Law">Probate Law</option>
+                         </select>
+                        </div>
+                    </div>                                             
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Opening Date</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
@@ -210,7 +303,23 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Closing Date </label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="date" class="form-control" name="close_date" id="age" value=""
+                                 min="0" max="99">
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+
                     
+                      
+                   
                 <div class="row">
                
                     <div class="col-md-12">
@@ -246,7 +355,7 @@
                         </div>
                     </div>
                     </div>
-                    
+                   <br> 
                 <h4>Contacts</h4>
                 <div class="row">
                 <div class="col-md-6">
@@ -276,7 +385,7 @@
                     </div>
                     </div>
                     
-                    <h4>Cutom Fields</h4>
+                    <!-- <h4>Cutom Fields</h4>
                     <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
@@ -305,7 +414,7 @@
                     </div>
                     
                 </div>
-                <br>
+                <br> -->
                 <h4>Billing</h4>
                 <div class="row">
                    
@@ -313,7 +422,7 @@
                         <div class="mb-1">
                             <label for="username">Amount</label>
                             <div class="input-group">
-                                <div class="input-group-prepend">
+                                <div class="inpu    t-group-prepend">
 
                                 </div>
                                 <input type="text" class="form-control" name="amount" value=""
@@ -1510,7 +1619,7 @@
                                     event.preventDefault();
                             }
                         </script>
-                        <script>
+                        <!-- <script>
                             $(function() {
                                 $("#new-item").dataTable();
                             })
@@ -1521,7 +1630,7 @@
                             $(document).ready(function() {
                                 $('.searchingBook').select2();
                             });
-                        </script>
+                        </script> -->
                         {{-- search booking script end --}}
                         <!-- Delete  confirmation Message -->
                         <script>
@@ -1534,8 +1643,8 @@
 
                         <script src="{{ url('assets/js') }}/jquery.min.js"></script>
                         <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
-                        <script type="text/javascript" charset="utf8"
-                            src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+                        <!-- <script type="text/javascript" charset="utf8"
+                            src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script> -->
 
                         {{-- Supplier Edit start --}}
 

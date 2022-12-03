@@ -289,7 +289,7 @@ class ClientManagement extends Controller
 
     public function viewCorporateDocument(){
         $view_corporate_document = DB::table('cra_document_detials')
-        ->join('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_document_detials.id')
+        ->join('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_document_detials.corporate_id')
         ->get();
        
         return view('client-management.corporate-document-detail',compact('view_corporate_document'));
@@ -304,9 +304,10 @@ class ClientManagement extends Controller
 
     public function addCorporatedocument(Request $request){
         $corporate_id   = $request['corporate_id'];
-        $type = $request['type'];
+        $type = $request['testname'];
         $file = $request['file'];
         $client_type = $request['client'];
+        $date   = $request['date'];
 
         if(!empty($request->file('file'))){
 
@@ -327,10 +328,11 @@ class ClientManagement extends Controller
             'document_type' =>  $type,
             'file' =>   $imageName,
             'client_types'=> $client_type,
-            'id' => $corporate_id 
-        ]);
-        return redirect('/corporate-document-detail');
+            'date'   => $date,
+            'corporate_id' => $corporate_id
 
+        ]);
+        return redirect('/corporate-document-details');
 
     }
 
@@ -453,7 +455,7 @@ class ClientManagement extends Controller
     public function document(){
         $client_document = DB::table('cra_document_detials')
         ->select('*')  
-        ->join('cra_individual_client_details','cra_individual_client_details.id','=','cra_document_detials.id')
+        ->join('cra_individual_client_details','cra_individual_client_details.id','=','cra_document_detials.individual_id')
         ->get(); 
         return view('client-management.client-document',compact('client_document'));
     }
@@ -466,9 +468,10 @@ class ClientManagement extends Controller
 
     public function addDocument(Request $Request){
         $individual_id = $Request['individual_id'];
-        $document_type = $Request['type'];
+        $document_type = $Request['testname'];
         $client_type  = $Request['client'];
         $file = $Request['file'];
+        $date = $Request['date'];
 
         if(!empty($Request->file('file'))){
 
@@ -491,7 +494,8 @@ class ClientManagement extends Controller
             'document_type' =>  $document_type,
             'file' =>   $imageName,
             'client_types'=>$client_type,
-            'id' => $individual_id 
+            'individual_id' => $individual_id,
+            'date'  => $date
         ]);
         return redirect('/client-document');
 

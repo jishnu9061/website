@@ -44,13 +44,13 @@ text-align:right;
 color: #999;
 }
 </style>
-  
+<div class="container">
 {{-- heading --}}
     <h4 id="hdtpa"><b>Manage Accounts</b></h4>
     <br>
-</div>
+
  
-  <div class="container">
+
     <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
            
                 {{-- <a href="{{('reg_new_user')}}"><button class="btn btn-primary">Add New User</button></a> --}}

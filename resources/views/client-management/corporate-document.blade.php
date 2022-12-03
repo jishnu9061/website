@@ -36,52 +36,59 @@
             <form method="post" action="{{url('add-corporate-document')}}" id="form" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" name="corporate_id" value="{{$corporate_docs->corporate_id}}">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Document Type</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
 
-                                </div>
-                                <select name="type" id="cars">
-                                    <option>select</option>
-                                    <option>type1</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">File Upload</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="file" class="form-control" name="file" id="username" value=""
-                                    placeholder="File" required>
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Name is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Client Type</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
+                    <div class="col-md-12">
+                        <table class="table table-striped  order-list" id="table_field">
+                            <thead>
+                                <tr>
+                                    <th>Document Type</th>
+                                    <th>File Upload</th>
+                                    <th>Add</th>
+                                    <th></th>
+                                    <th>Date</th>
 
-                                </div>
-                                <select name="client" id="cars">
-                                    <option>{{$corporate_docs->Client_type}}</option>
-                                </select>
-                            </div>
-                        </div>
+
+
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="width:45%;">
+
+                                        <select class="form-control select_group product" data-row-id="row_3"
+                                            id="product_detailes" name="testname" style="width:100%;">
+                                            <option selected>Select</option>
+                                            <option value="assets">Type 1</option>
+                                        </select>
+                                    </td>
+                                    <td style="width:45%;"> <input type="file" class="form-control" name="file"
+                                            id="username" value="" placeholder="File" required>
+                                    </td>
+                                    <td> <input type="button" class="btn btn-dark float:right;" id="add"
+                                            value="ADD">
+                                    </td>
+                                    <td>
+                                        <input type="hidden" class="form-control" name="client" id="username"
+                                            value="{{$corporate_docs->Client_type}}" placeholder="File" required>
+                                    </td>
+                                    <td>
+                                        <input type="date" class="form-control" name="date" id="username" 
+                                            required>
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
+
                 </div>
+
                 <br>
+
+
                 <div class="row">
                     <div class="col-sm">
 
@@ -95,8 +102,8 @@
                         <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
                     </div>
                 </div>
+            </form>
         </div>
-        </form>
     </div>
 </div>
 </div>
@@ -104,6 +111,46 @@
 </div>
 
 </div>
+<script src="{{ url('assets/js') }}/jquery.min.js"></script>
+
+<!-- Table add row -->
+
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+
+        var html = '<tr><td style="width:45%;"> <select class="form-control select_group product"data-row-id="row_3" id="product_detailes" name="testname[]" style="width:100%;"><option selected>Select</option><option value="assets">Type 1</option></select></td><td style="width:45%;"> <input type="file" class="form-control" name="file[]" multiple="multiple" required></td></td><td> <input type="button" class="btn btn-danger float:right;" name="remove" id="remove" value="remove"></td><td><input type="hidden" class="form-control" name="client" id="username"value="{{$corporate_docs->Client_type}}" placeholder="File" required></td></tr>';
+         
+       
+      
+
+        $("#add").click(function(){
+            
+                $("#table_field").append(html);
+              
+            
+        });
+
+        $("#table_field").on('click','#remove',function(){
+            $(this).closest('tr').remove();
+        });
+    });
+
+</script>
+
+
+
+<script>
+$(function() {
+    $('[data-toggle="popover"]').popover()
+})
+$(document).on('click', '#h', function() {
+    //var itemvalue = $(this).val();
+    var vw = $(this).closest('#data').find('#name').text();
+    $("#gfh").val(h);
+});
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
@@ -113,6 +160,15 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
 </script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
+
+<script src="../Jquery/jquery.multiselect.js"></script>
+<script src="../Jquery/prettify.js"></script>
+<link href="../Jquery/jquery.multiselect.css" rel="stylesheet" />
+<link href="../Jquery/style.css" rel="stylesheet" />
+<link href="../Jquery/prettify.css" rel="stylesheet" />
+
+
+
 <script type="text/javascript">
 $(function() {
     $('[data-toggle="popover"]').popover()
@@ -733,4 +789,5 @@ $(document).ready(function() {
     });
 });
 </script>
+
 @endsection

@@ -10,268 +10,210 @@
 </head>
 
 <body>
-    <div class="container">
-        <!-- <h2 style="color: #070344;  text-align:center;"><b>Customer Registration</b></h2> -->
-        <div>
-            <div>
-                <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
+
+    <!-- <h2 style="color: #070344;  text-align:center;"><b>Customer Registration</b></h2> -->
+
+    <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
                 <b><u>Client Registration</u></b></span> -->
-                {{-- heading --}}
-                <h4 id="hdtpa"><b>Manage Items</b></h4>
-                <br>
-            </div>
+    {{-- heading --}}
+    <div class="container">
+        <h4 id="hdtpa"><b>Manage Items</b></h4>
 
-        </div>
+        <br>
+
 
         <div>
+            <button type="button" class="btn btn-primary complaint_btn btn " data-toggle="modal"
+                data-target="#myModal">Add New Item</button></a>
+        </div>
+        <div class="header_wrap">
+            <div class="num_rows">
+                <div class="form-group">
+                    <!--		Show Numbers Of Rows 		-->
+                    <select class="form-control" aria-label="Page navigation example" name="state" id="maxRows">
 
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="70">70</option>
+                        <option value="100">100</option>
+                        <option value="5000">Show ALL Rows</option>
+                    </select>
 
-            <div class="header_wrap">
-                <div class="num_rows">
-                    <div class="form-group">
-                        <!--		Show Numbers Of Rows 		-->
-                        <select class="form-control" aria-label="Page navigation example" name="state" id="maxRows">
+                </div>
+            </div>
+            <div class="tb_search">
+                <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.."
+                    class="form-control">
+            </div>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-class" id="table-id">
 
-                            <option value="5">5</option>
-                            <option value="10">10</option>
-                            <option value="15">15</option>
-                            <option value="20">20</option>
-                            <option value="50">50</option>
-                            <option value="70">70</option>
-                            <option value="100">100</option>
-                            <option value="5000">Show ALL Rows</option>
-                        </select>
+                            <thead>
+                                <tr>
 
+                                    <th class="text-center">Category</th>
+                                    <th class="text-center">Item Type</th>
+
+                                    <th class="text-center">Item Name</th>
+                                    <th class="text-center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+
+                                @foreach($manage_list as $list)
+
+                                <tr id="data" class="text-center">
+                                    <td>{{$list->Item_Type}}</td>
+                                    <td>{{$list->Item_Name}}</td>
+                                    <td>{{$list->Category}}</td>
+                                    <td scope="row">
+
+                                        <a href="{{url('edit_manage_items',$list->id)}}"> <i
+                                                style="  color:rgb(13, 1, 56);" class="fa fa-edit"></i>
+                                            <span class="m-2"></span>
+                                            <a href="{{url('drop_manage_items',$list->id)}}"> <i
+                                                    style=" color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
+
+                                    </td>
+
+                                </tr>
+                                @endforeach
+                            </tbody>
+
+                        </table>
                     </div>
-                </div>
-                <div class="tb_search">
-                    <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.."
-                        class="form-control">
-                </div>
+
+                    <!--		Start Pagination -->
+                    <div class='pagination-container'>
+                        <nav>
+                            <ul class="pagination">
+                                <!--	Here the JS Function Will Add the Rows -->
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="rows_count">Showing 11 to 20 of 100</div>
+
+                    <!-- 		End of Container -->
+                    <div class="modal fade" id="myModal">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h2 class="text-center"><b>Add Items</b></h2>
+
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <div class="container">
 
 
-
-
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <div class="table-responsive">
-                            <table class="table table-striped table-class" id="table-id">
-
-                                <thead>
-                                    <tr>
-
-
-                                        <th class="text-center">Product name</th>
-                                        <th class="text-center">Product Type</th>
-                                        <th class="text-center">Category</th>
-
-                                        <th class="text-center">Purchase Date</th>
-
-                                        <th class="text-center">Quantity Available</th>
-                                        <th class="text-center">Unit</th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-
-                                    <tr id="data">
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-
-                                        <td></td>
-                                        <td></td>
-
-
-                                    </tr>
-
-                                </tbody>
-
-                            </table>
-                        </div>
-
-                        <!--		Start Pagination -->
-                        <div class='pagination-container'>
-                            <nav>
-                                <ul class="pagination">
-                                    <!--	Here the JS Function Will Add the Rows -->
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="rows_count">Showing 11 to 20 of 100</div>
-
-                        <!-- 		End of Container -->
-
-
-                        <div class="modal fade" id="myModal">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-
-                                    <!-- Modal Header -->
-                                    <div class="modal-header">
-                                        <h2 class="text-center"><b>Add Product</b></h2>
-
-                                    </div>
-
-                                    <!-- Modal body -->
-                                    <div class="modal-body">
-                                        <div class="container">
+                                        <form method="post" action="addmanage_items" id="form">
+                                            @csrf
                                             <div class="row">
-                                                <div class="col-md-12 order-md-1">
-                                                    <form method="post" action="{{url('add-registration')}}" id="form">
-                                                        @csrf
-                                                        <div class="row">
-                                                            <div class="col-md-4">
-                                                                <div class="mb-1">
-                                                                    <label for="username">Product Name</label>
-                                                                    <div class="input-group">
-                                                                        <div class="input-group-prepend"></div>
-                                                                        <input type="text" class="form-control"
-                                                                            name="email" id="username" value=""
-                                                                            placeholder="" required>
-                                                                        <div class="invalid-feedback"
-                                                                            style="width: 100%;">
+                                                <div class="col-md-6">
+                                                    <div class="mb-1">
+                                                        <label for="username">Category</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend"></div>
 
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <div class="mb-1">
-                                                                    <label for="username">Product Type</label>
-                                                                    <div class="input-group">
-                                                                        <div class="input-group-prepend"></div>
-
-                                                                        <select name="town" id="username"
-                                                                            style="width:100%;">
-                                                                            <option>---select--- </option>
-                                                                            <option>Book </option>
-                                                                            <option>Pen</option>
-                                                                            <option>Pencil</option>
-                                                                            <option>pin</option>
-
-
-                                                                        </select>
-                                                                        <div class="invalid-feedback"
-                                                                            style="width: 100%;">
-                                                                            Town is required.
-                                                                        </div>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-
-                                                            <div class="col-md-4">
-                                                                <div class="mb-1">
-                                                                    <label for="username">Unit</label>
-                                                                    <div class="input-group">
-                                                                        <div class="input-group-prepend"></div>
-
-                                                                        <select name="town" id="username"
-                                                                            style="width:100%;">
-                                                                            <option>---select--- </option>
-                                                                            <option>Package</option>
-                                                                            <option>Paket</option>
-                                                                            <option>Kg</option>
-
-
-                                                                        </select>
-                                                                        <div class="invalid-feedback"
-                                                                            style="width: 100%;">
-                                                                            Town is required.
-                                                                        </div>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-
-                                                        <br>
-                                                        <div class="row">
-                                                            <div class="col-md-4">
-                                                                <div class="mb-1">
-                                                                    <label for="username">Quantity</label>
-                                                                    <div class="input-group">
-                                                                        <div class="input-group-prepend"></div>
-                                                                        <input type="text" class="form-control"
-                                                                            name="email" id="username" value=""
-                                                                            placeholder="" required>
-                                                                        <div class="invalid-feedback"
-                                                                            style="width: 100%;">
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-4">
-                                                                <div class="mb-1">
-                                                                    <label for="username">Unit Price</label>
-                                                                    <div class="input-group">
-                                                                        <div class="input-group-prepend"></div>
-                                                                        <input type="text" class="form-control"
-                                                                            name="email" id="username" value=""
-                                                                            placeholder="" required>
-                                                                        <div class="invalid-feedback"
-                                                                            style="width: 100%;">
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <div class="mb-1">
-                                                                    <label for="username">Total Price</label>
-                                                                    <div class="input-group">
-                                                                        <div class="input-group-prepend"></div>
-                                                                        <input type="text" class="form-control"
-                                                                            name="email" id="username" value=""
-                                                                            placeholder="" required>
-                                                                        <div class="invalid-feedback"
-                                                                            style="width: 100%;">
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                            <select name="category" id="username" style="width:100%;">
+                                                                <option>select</option>
+                                                                @if(count($get_items))
+                                                                @foreach($get_items as $lists)
+                                                                <option>{{$lists->category_name}}</option>
+                                                                @endforeach
+                                                                @endif
+                                                            </select>
+                                                            <div class="invalid-feedback" style="width: 100%;">
+                                                                Town is required.
                                                             </div>
 
                                                         </div>
-                                                        <br>
-
-                                                        <!-- <h4 style="text-align:center">Contact Persons</h4> -->
-
-
-
-                                                        <div class="row">
-                                                            <div class="col-sm">
-
-                                                            </div>
-                                                            <div class="col-sm">
-
-                                                            </div>
-                                                            <div class="col-sm">
-                                                                <br>
-                                                                <button type="submit"
-                                                                    class="btn btn-primary float:right;"
-                                                                    Style="width:50%;">Save</button>
-                                                                <button type="button" class="btn btn-primary float:left"
-                                                                    Style="width:45%;"
-                                                                    data-dismiss="modal">Cancel</button>
-                                                            </div>
-                                                        </div>
+                                                    </div>
                                                 </div>
-                                                </form>
+                                                <div class="col-md-6">
+                                                    <div class="mb-1">
+                                                        <label for="username">Item Type</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend"></div>
+                                                            <input type="text" name="type" list="cityname"
+                                                                style="width:100%;">
+                                                            <datalist id="cityname" style="width:100%;">
+                                                                <option value="Book">
+                                                                <option value="Pen">
+                                                                <option value="Ink">
+                                                            </datalist>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
                                             </div>
-                                        </div>
+
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="mb-1">
+                                                        <label for="username">Item Name</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+
+                                                            </div>
+                                                            <input type="text" class="form-control" name="name"
+                                                                id="age">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="mb-1">
+                                                        <label for="username">Reorder Level</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+
+                                                            </div>
+                                                            <input type="text" class="form-control" name="level"
+                                                                id="age">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="mb-1">
+                                                        <label for="username">Stock Level</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+
+                                                            </div>
+                                                            <input type="text" class="form-control" name="stock"
+                                                                id="age">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+
+                                           
+
+
+
+                                            <br>
+                                            <button type="submit" class="btn btn-primary">Add</button>
+                                            <button type="button" class="btn btn-primary"
+                                                data-dismiss="modal">Cancel</button>
+
+
                                     </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
+
                     </div>
+
 
 
                     <!-- The Modal -->
