@@ -152,8 +152,8 @@
     </div>
     
     <br>
-    <br> 
-      <div class="container">
+    <div class="container">
+      <div class="table-responsive">
       <table class="table">
         <thead>
           <tr>
@@ -166,7 +166,7 @@
           <tr>
             <td>Ability at the Position</td>
             <td>
-              <div class="container">
+              <div class="table-responsive">
                 
                 <svg id="svg-sprite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" style="display: none;">
                   <symbol id="star-icon">
@@ -174,19 +174,19 @@
                     <path d="M20 7h-7L10 .5 7 7H0l5.46 5.47-1.64 7 6.18-3.7 6.18 3.73-1.63-7z" />
                   </symbol>
                 </svg>
-                
+
                   <form id="my-form-1" method="POST">
                       <div class="stars-wrapper">
                         <input id="one-star-rating-1" type="radio" name="reviewRating" value="1">
-                       
+
                         <input id="two-star-rating-1" type="radio" name="reviewRating" value="2">
-                        
+
                         <input id="three-star-rating-1" type="radio" name="reviewRating" value="3">
-                        
+
                         <input id="four-star-rating-1" type="radio" name="reviewRating" value="4">
-                        
+
                         <input id="five-star-rating-1" type="radio" name="reviewRating" value="5">
-                        
+
                         <div class="stars-display">
                           <svg viewBox="0 0 20 20" width="30" height="30">
                             <use href="#star-icon"></use>
@@ -204,8 +204,10 @@
                             <use href="#star-icon"></use>
                           </svg>
                         </div>
+                        </div>
                   </form>
-                
+                 </div>
+
             </td>
             <td><input type="text" class="form-control" id="total"></td>
           </tr>
@@ -220,19 +222,19 @@
                     <path d="M20 7h-7L10 .5 7 7H0l5.46 5.47-1.64 7 6.18-3.7 6.18 3.73-1.63-7z" />
                   </symbol>
                 </svg>
-                
+
                   <form id="my-form-1" method="POST">
                       <div class="stars-wrapper">
                         <input id="one-star-rating-1" type="radio" name="reviewRating" value="1">
-                       
+
                         <input id="two-star-rating-1" type="radio" name="reviewRating" value="2">
-                        
+
                         <input id="three-star-rating-1" type="radio" name="reviewRating" value="3">
-                        
+
                         <input id="four-star-rating-1" type="radio" name="reviewRating" value="4">
-                        
+
                         <input id="five-star-rating-1" type="radio" name="reviewRating" value="5">
-                        
+
                         <div class="stars-display">
                           <svg viewBox="0 0 20 20" width="30" height="30">
                             <use href="#star-icon"></use>
@@ -251,7 +253,7 @@
                           </svg>
                         </div>
                   </form>
-                
+
             </td>
             <td><input type="text" class="form-control" id="total"></td>
           </tr>
@@ -266,19 +268,19 @@
                     <path d="M20 7h-7L10 .5 7 7H0l5.46 5.47-1.64 7 6.18-3.7 6.18 3.73-1.63-7z" />
                   </symbol>
                 </svg>
-                
+
                   <form id="my-form-1" method="POST">
                       <div class="stars-wrapper">
                         <input id="one-star-rating-1" type="radio" name="reviewRating" value="1">
-                       
+
                         <input id="two-star-rating-1" type="radio" name="reviewRating" value="2">
-                        
+
                         <input id="three-star-rating-1" type="radio" name="reviewRating" value="3">
-                        
+
                         <input id="four-star-rating-1" type="radio" name="reviewRating" value="4">
-                        
+
                         <input id="five-star-rating-1" type="radio" name="reviewRating" value="5">
-                        
+
                         <div class="stars-display">
                           <svg viewBox="0 0 20 20" width="30" height="30">
                             <use href="#star-icon"></use>
@@ -297,7 +299,7 @@
                           </svg>
                         </div>
                   </form>
-                
+
             </td>
             <td><input type="text" class="form-control" id="total"></td>
           </tr>
@@ -312,19 +314,19 @@
                     <path d="M20 7h-7L10 .5 7 7H0l5.46 5.47-1.64 7 6.18-3.7 6.18 3.73-1.63-7z" />
                   </symbol>
                 </svg>
-                
+
                   <form id="my-form-1" method="POST">
                       <div class="stars-wrapper">
                         <input id="one-star-rating-1" type="radio" name="reviewRating" value="1">
-                       
+
                         <input id="two-star-rating-1" type="radio" name="reviewRating" value="2">
-                        
+
                         <input id="three-star-rating-1" type="radio" name="reviewRating" value="3">
-                        
+
                         <input id="four-star-rating-1" type="radio" name="reviewRating" value="4">
-                        
+
                         <input id="five-star-rating-1" type="radio" name="reviewRating" value="5">
-                        
+
                         <div class="stars-display">
                           <svg viewBox="0 0 20 20" width="30" height="30">
                             <use href="#star-icon"></use>
@@ -343,7 +345,7 @@
                           </svg>
                         </div>
                   </form>
-                
+
             </td>
             <td><input type="text" class="form-control" id="total"></td>
           </tr>
@@ -358,19 +360,19 @@
                     <path d="M20 7h-7L10 .5 7 7H0l5.46 5.47-1.64 7 6.18-3.7 6.18 3.73-1.63-7z" />
                   </symbol>
                 </svg>
-                
+
                   <form id="my-form-1" method="POST">
                       <div class="stars-wrapper">
                         <input id="one-star-rating-1" type="radio" name="reviewRating" value="1">
-                       
+
                         <input id="two-star-rating-1" type="radio" name="reviewRating" value="2">
-                        
+
                         <input id="three-star-rating-1" type="radio" name="reviewRating" value="3">
-                        
+
                         <input id="four-star-rating-1" type="radio" name="reviewRating" value="4">
-                        
+
                         <input id="five-star-rating-1" type="radio" name="reviewRating" value="5">
-                        
+
                         <div class="stars-display">
                           <svg viewBox="0 0 20 20" width="30" height="30">
                             <use href="#star-icon"></use>
@@ -389,7 +391,7 @@
                           </svg>
                         </div>
                   </form>
-                
+
             </td>
             <td><input type="text" class="form-control" id="total"></td>
           </tr>
@@ -404,19 +406,19 @@
                     <path d="M20 7h-7L10 .5 7 7H0l5.46 5.47-1.64 7 6.18-3.7 6.18 3.73-1.63-7z" />
                   </symbol>
                 </svg>
-                
+
                   <form id="my-form-1" method="POST">
                       <div class="stars-wrapper">
                         <input id="one-star-rating-1" type="radio" name="reviewRating" value="1">
-                       
+
                         <input id="two-star-rating-1" type="radio" name="reviewRating" value="2">
-                        
+
                         <input id="three-star-rating-1" type="radio" name="reviewRating" value="3">
-                        
+
                         <input id="four-star-rating-1" type="radio" name="reviewRating" value="4">
-                        
+
                         <input id="five-star-rating-1" type="radio" name="reviewRating" value="5">
-                        
+
                         <div class="stars-display">
                           <svg viewBox="0 0 20 20" width="30" height="30">
                             <use href="#star-icon"></use>
@@ -435,7 +437,7 @@
                           </svg>
                         </div>
                   </form>
-                
+
             </td>
             <td><input type="text" class="form-control" id="total"></td>
           </tr>
@@ -449,19 +451,19 @@
                     <path d="M20 7h-7L10 .5 7 7H0l5.46 5.47-1.64 7 6.18-3.7 6.18 3.73-1.63-7z" />
                   </symbol>
                 </svg>
-        
+
                   <form id="my-form-1" method="POST">
                       <div class="stars-wrapper">
                         <input id="one-star-rating-1" type="radio" name="reviewRating" value="1">
-                       
+
                         <input id="two-star-rating-1" type="radio" name="reviewRating" value="2">
-                        
+
                         <input id="three-star-rating-1" type="radio" name="reviewRating" value="3">
-                        
+
                         <input id="four-star-rating-1" type="radio" name="reviewRating" value="4">
-                        
+
                         <input id="five-star-rating-1" type="radio" name="reviewRating" value="5">
-                        
+
                         <div class="stars-display">
                           <svg viewBox="0 0 20 20" width="30" height="30">
                             <use href="#star-icon"></use>
@@ -480,14 +482,14 @@
                           </svg>
                         </div>
                   </form>
-                
+
             </td>
             <td><input type="text" class="form-control" id="total"></td>
           </tr> -->
         </tbody>
       </table>
       </div>
-    </div>  
+      </div>
          <br>
          <div class="container">
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">(Note:
