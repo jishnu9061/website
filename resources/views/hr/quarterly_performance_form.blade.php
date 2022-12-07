@@ -154,6 +154,7 @@
     <br>
     <br>
       <div class="container">
+      <div class="table-responsive">
       <table class="table">
         <thead>
           <tr>
@@ -166,7 +167,7 @@
           <tr>
             <td>Ability at the Position</td>
             <td>
-              <div class="container">
+              <div class="table-responsive">
                 
                 <svg id="svg-sprite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" style="display: none;">
                   <symbol id="star-icon">
@@ -204,7 +205,9 @@
                             <use href="#star-icon"></use>
                           </svg>
                         </div>
+                        </div>
                   </form>
+                 </div>
 
             </td>
             <td><input type="text" class="form-control" id="total"></td>
@@ -487,7 +490,8 @@
         </tbody>
       </table>
       </div>
-    </div>
+      </div>
+    
          <br>
          <div class="container">
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">(Note:
