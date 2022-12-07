@@ -214,7 +214,7 @@
 
                         </div>
                         <select name="item_type" id="cars">
-                            <option >{{ $edit_progress->item_type}}</option>
+                            <option >{{$edit_progress->item_type}}</option>
                         </select>
                         <div class="invalid-feedback" style="width: 100%;">
                             Number is required.
@@ -231,7 +231,7 @@
 
                         </div>
                         <select name="currency" id="cars">
-                            <option >{{ $edit_progress->currency}}</option>
+                            <option >{{$edit_progress->currency}}</option>
                         </select>
                         <div class="invalid-feedback" style="width: 100%;">
                             Number is required.
@@ -279,7 +279,7 @@
 
                     </div>
                     <select name="activity_type" id="cars">
-                        <option >{{ $edit_progress->activity_type}}</option>
+                        <option >{{$edit_progress->activity_type}}</option>
                     </select>
                 </div>
             </div>

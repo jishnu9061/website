@@ -53,20 +53,22 @@
             </tr>
         </thead>
         <tbody>
+            @foreach($criminal_law as $list)
             <tr>
 
-                <td>OH-Felony-ER</td>
-                <td>Larry James</td>
-                <td>Felony</td>
-                <td>Cuyahoga Prosecutor's office</td>
-                <td>Cuyahoga Criminal 2015-F-123456</td>
+                <td>{{$list->matter_info}}</td>
+                <td>{{$list->defendent}}</td>
+                <td>{{$list->matter_type}}</td>
+                <td>{{$list->prosecutor}}</td>
+                <td>{{$list->case_detail}}</td>
                 <td><a href="{{ url('view_criminal_law') }}"><i style="color:rgb(13, 1, 56);"
                             class="fa fa-eye"></i><span class="m-2"></span>
-                        <a href="{{ url('edit_criminal_law') }}"><i style="color:rgb(13, 1, 56);"
+                        <a href="{{ url('edit_criminal_law', $list->id) }}"><i style="color:rgb(13, 1, 56);"
                                 class="fa fa-edit"></i><span class="m-2"></span>
-                            <a href="#"> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></td>
+                            <a href="{{ url('delete_criminal_law', $list->id) }}"> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></td>
 
             </tr>
+            @endforeach
 
         </tbody>
     </table>
@@ -108,7 +110,8 @@
             <!-- Modal body -->
             <div class="modal-body">
                 <div class="container">
-                    <form method="post" enctype="multipart/form-data">
+                    <form method="post" action="{{url('add_criminal_law')}}" enctype="multipart/form-data">
+                        @csrf
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-4">
@@ -118,7 +121,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" placeholder="">
+                                            <input type="text" class="form-control" placeholder="" name="matter_info">
                                         </div>
                                     </div>
                                 </div>
@@ -129,7 +132,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" placeholder="">
+                                            <input type="text" class="form-control" placeholder="" name="defendent">
                                         </div>
                                     </div>
                                 </div>
@@ -140,7 +143,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" placeholder="">
+                                            <input type="text" class="form-control" placeholder="" name="matter_type">
                                         </div>
                                     </div>
                                 </div>
@@ -154,7 +157,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" rows="2"></textarea>
+                                            <textarea class="form-control" rows="2" name="prosecutor"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -165,7 +168,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" rows="2"></textarea>
+                                            <textarea class="form-control" rows="2" name="case_detail"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -177,7 +180,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" rows="2"></textarea>
+                                            <textarea class="form-control" rows="2" name="investigator"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -192,7 +195,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" rows="2"></textarea>
+                                            <textarea class="form-control" rows="2" name="victim"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -205,7 +208,7 @@
 
                                             </div>
                                             <span class="m-2"></span>
-                                            <input type="file" class="form-control">
+                                            <input type="file" class="form-control" name="support_detail">
                                         </div>
                                     </div>
                                 </div>
@@ -226,7 +229,7 @@
 
 
                 <div class="modal-footer" style="background-color:#d3e0ed;">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+                    <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
                     <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                 </div>
             </div>

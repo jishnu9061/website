@@ -51,22 +51,24 @@
             </tr>
         </thead>
         <tbody>
+            @foreach($view_estate as $list)
             <tr>
 
-                <td>62G5585W</td>
-                <td>Sell</td>
-                <td>Patrick</td>
-                <td>Dewey Cheatum</td>
-                <td>1522, Los Angles pin:123 456</td>
-                <td>Joan Ferrata</td>
+                <td>{{$list->file_no}}</td>
+                <td>{{$list->matter_type}}</td>
+                <td>{{$list->buyer}}</td>
+                <td>{{$list->attroney}}</td>
+                <td>{{$list->property}}</td>
+                <td>{{$list->selling_realtor}}</td>
                 <td><a href="{{ url('view_real_estate') }}"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i><span
                             class="m-1"></span>
-                        <a href="{{ url('edit_real_estate') }}"><i style="color:rgb(13, 1, 56);"
+                        <a href="{{ url('edit_real_estate',$list->id) }}"><i style="color:rgb(13, 1, 56);"
                                 class="fa fa-edit"></i><span class="m-1"></span>
-                            <a href="#"> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></td>
+                            <a href="{{ url('delete_real_estate',$list->id) }}"> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></td>
 
 
             </tr>
+            @endforeach
 
         </tbody>
     </table>
@@ -105,7 +107,8 @@
             <!-- Modal body -->
             <div class="modal-body">
                 <div class="container">
-                    <form method="post" enctype="multipart/form-data">
+                    <form method="post" action="{{url('add_real_estate')}}" enctype="multipart/form-data">
+                    @csrf
                         <div class="container">
 
                             <div class="row">
@@ -116,7 +119,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" placeholder="">
+                                            <input type="text" class="form-control" name="file_no" placeholder="">
                                         </div>
                                     </div>
                                 </div>
@@ -127,7 +130,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" placeholder="">
+                                            <input type="text" class="form-control" name="client_name"  placeholder="">
                                         </div>
                                     </div>
                                 </div>
@@ -138,7 +141,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" placeholder="">
+                                            <input type="text" class="form-control" name="matter_type"  placeholder="">
                                         </div>
                                     </div>
                                 </div>
@@ -153,7 +156,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" placeholder="">
+                                            <input type="text" class="form-control" name="buyer"  placeholder="">
                                         </div>
                                     </div>
                                 </div>
@@ -164,7 +167,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" placeholder="">
+                                            <input type="text" class="form-control" name="attroney"  placeholder="">
                                         </div>
                                     </div>
 
@@ -177,7 +180,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" rows="2"></textarea>
+                                            <textarea class="form-control" rows="2" name="property" ></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -193,7 +196,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" rows="2"></textarea>
+                                            <textarea class="form-control" rows="2" name="close_statement" ></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -204,7 +207,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" rows="2"></textarea>
+                                            <textarea class="form-control" rows="2" name="listing_realtor" ></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -215,7 +218,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" rows="2"></textarea>
+                                            <textarea class="form-control" rows="2" name="selling_realtor" ></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -229,7 +232,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" placeholder="">
+                                            <input type="text" class="form-control" placeholder="" name="company_title">
                                         </div>
                                     </div>
                                 </div>
@@ -242,7 +245,7 @@
 
                                             </div>
                                          
-                                            <input type="file" class="form-control">
+                                            <input type="file" class="form-control" name="support_detail" >
                                         </div>
                                     </div>
                                 </div>
@@ -250,7 +253,7 @@
                       
 
                         <div class="modal-footer" style="background-color:#d3e0ed;">
-                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+                            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
                             <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                         </div>
                 </div>
