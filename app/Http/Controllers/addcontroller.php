@@ -74,7 +74,7 @@ class addcontroller extends Controller
       $staffs->releving_date=$Request['releving_date'];
       $staffs->departments= $Request['depname'];
       $staffs->medicaldepartments= $Request['depname'];
-      $staffs->cv= $Request['cv'];
+      // $staffs->cv= $Request['cv'];
       if($Request->hasFile('cv')){
         $this->validate($Request,[
             'cv' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
