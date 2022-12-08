@@ -75,11 +75,12 @@
                                @foreach($stock_list_tab as $lists)
                                 <tr id="data" class="text-center">
                                     <td>{{$lists->Category}}</td>
+
                                     <td>{{$lists->Item_Type}}</td>
                                     <td>{{$lists->Item_Name}}</td>
                                     <td>{{$lists->stock}}</td>
                                     <td>{{$lists->Reorder_Level}}</td>
-                                    {{-- <td ></td> --}}
+
                                 </tr>
                               @endforeach
                             </tbody>

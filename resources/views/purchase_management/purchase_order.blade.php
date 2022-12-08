@@ -101,11 +101,6 @@
                     <!-- 		End of Container -->
 
 
-
-
-
-
-
                     <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
                     <div class="modal fade" id="myModal">
                         <div class="modal-dialog modal-xl">
@@ -114,6 +109,69 @@
                                 <!-- Modal Header -->
                                 <div class="modal-header">
                                     <h2><b>Add New Purchase</b></h2>
+<div class="text-center">
+<h4><b>Purchase Items</b></h4>
+</div>
+<br>
+ <!-- table -->
+
+                                    <div class="row clearfix">
+
+                                        <div class="col-sm">
+
+                                            <table class="table table-bordered order-list" id="tab_logic">
+
+                                               
+                                                
+                                                
+                                                <tbody>
+                                                    <tr>
+                                                        
+                                                        <td><input type="text" name="batch_no[]" id="batch_no_"
+                                                                class="form-control" placeholder="Item No"></td>
+                                                                <td><select class="form-select" aria-label="select example"
+                                                                name="item_name[]" id="item_name">
+                                                                <option value="">Select</option>
+                                                              
+                                                                    <option value="">
+                                                                      
+                                                                    </option>
+                                                             
+                                                            </select></td>
+                                                        <td><input type="text" name="quantity[]" id="quantity_"
+                                                                class="form-control text-right calculate"></td>
+                                                        <td><input type="text" name="price[]" id="price_"
+                                                                class="form-control calculate" placeholder="0.00"></td>
+                                                        <td><input type="text" name="total[]" id="total_"
+                                                                class="form-control calculate-sub" placeholder="0.00">
+                                                        </td>
+                                                        <td><button type="button"
+                                                                class="add-Row ibtnDel btn btn-primary text-white "
+                                                                style="background-color:#607080;width:100%;color:white;">Remove</button>
+                                                        <td>
+                                                    </tr>
+                                            </table>
+                                            <div class="row">
+                                                <div class="col-sm">
+                                                </div>
+                                                <div class="col-sm">
+                                                    <table class="table table-bordered">
+                                                       
+                                                        <tr>
+                                                            <td scope="col">Grand Total</td>
+                                                            <td><input type="text"
+                                                                    class="form-control invoice-sub-total" value=""
+                                                                    name="grand_totall" id="grand_totall_" readonly>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal fade" id="myModal-2">
+                                        <div class="modal-dialog modal-xm">
+                                            <div class="modal-content">
 
                                 </div>
 
