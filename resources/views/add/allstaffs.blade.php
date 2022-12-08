@@ -154,7 +154,7 @@
                             <label>Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="name" id="name" value="">
+                                <input type="text" class="form-control" name="name" id="name" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -166,7 +166,7 @@
                             <label>Email</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="email" class="form-control" name="email" id="address" value="">
+                                <input type="email" class="form-control" name="email" id="address" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -206,7 +206,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="password" class="form-control" name="password" id="password"
-                                    placeholder="staff Password">
+                                    placeholder="staff Password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Passeord is required.
                                 </div>
@@ -219,7 +219,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="password" class="form-control" name="password" id="confirm_password"
-                                    placeholder="Confirm Password">
+                                    placeholder="Confirm Password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
