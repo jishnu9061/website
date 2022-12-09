@@ -766,7 +766,7 @@ Route::any('/delete_desc_sel/{id}','SystemSetup@deletedescsel')->name('delete_de
 
 //end
 //tax chart
-Route::any('tax_chart_main','SystemSetup@taxchartmain')->name('tax_chart_main');
+Route::any('tax_chart_main','   @taxchartmain')->name('tax_chart_main');
 Route::any('tax_chart','SystemSetup@taxchart')->name('tax_chart');
 Route::any('add_tax_chart','SystemSetup@addtaxchart')->name('add_tax_chart');
 Route::any('edit_tax_chart/{id}','SystemSetup@edittaxchart')->name('edit_tax_chart');

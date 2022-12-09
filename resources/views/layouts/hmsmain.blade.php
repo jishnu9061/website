@@ -430,8 +430,8 @@ color: #999;
 
     <div id="app">
 
-        <div id="sidebar" class="active">
-            <div class="sidebar-wrapper active">
+        <div id="sidebar" class="active" >
+            <div class="sidebar-wrapper active" style="border-radius: 0px 50px 50px 0px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
 
                 <div class="sidebar-header">
                     <div class="d-flex justify-content-between">
@@ -448,10 +448,9 @@ color: #999;
                         </div> --}}
                     </div>
                 </div>
-                <div class="sidebar-menu">
+                <div class="sidebar-menu" >
                     <ul class="menu">
-                        <li  class="sidebar-title" style="color: #1D1D50; text-align:center; font-size:16px; ">DASHBOARD
-                        </li>
+                        <li  class="sidebar-title" style="color: #1D1D50; text-align:center; font-size:16px; ">DASHBOARD</li>
                             {{-- @if(Auth::user()->role == 'superadmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="#" class='sidebar-link'>
@@ -512,15 +511,16 @@ color: #999;
                                 <li class="submenu-item  has-sub" style="list-style:none;">
                                 <a href="{{url('user_management')}}" class='sidebar-link'>
                                     <i  class="fa-regular fa-user" id="icon"></i>
-                                            <span > User Management</span>
+                                            <span> User Management</span>
                                         </a>
+                                   
                                 </li>
                                 
 
                                 <li class="submenu-item has-sub " style="list-style:none;">
-                                        <a id="sblm" href="{{url('client-index')}}" class='sidebar-link' >
+                                        <a id="sblm" href="{{url('client-index')}}" class='sidebar-link'>
                                         <i  class="fa fa-university" id="icon"></i>
-                                            <span > Client Management</span>
+                                            <span>Client Management</span>
                                         </a>
                                 </li>
                             
@@ -598,17 +598,7 @@ color: #999;
                             </li>
 
 
-                                {{-- <li class="sidebar-item  has-sub">
-                                    <a href="{{url('home')}}" class='sidebar-link'>
-                                        <i class="bi bi-grid-fill" style="font-weight: 400;" id="icon"></i>
-                                            <span>HR</span>
-                                    </a> --}}
-                                    {{-- @if (in_array(request()->path(),$hr))
-                                        <ul class="submenu" style="display: block;">
-                                        @else
-                                            <ul class="submenu" style="display: none;">
-
-                                    @endif --}}
+                             
                                     
                                     {{-- <li class="submenu-item ">
                                         <a href="{{url('addallowance')}}" class='sidebar-link'>
@@ -1130,7 +1120,7 @@ color: #999;
               </nav> --}}
 
 
-                                        <nav class="navbar navbar-expand-lg  sticky-top navbar-light bg-white">
+                                        <nav class=" newstyle navbar navbar-expand-lg  sticky-top navbar-light bg-white">
                                             <a id="backbtn" href="javascript:history.back()" style=" color: #070344;
                                             font-size: 35px;" >
                                             <i id="bkbtnicon" class="far fa-arrow-alt-circle-left"></i></a>
@@ -1238,16 +1228,16 @@ color: #999;
                                                                             
                                                                             </div> --}}
                                                 <br>
-                                                <section class="container-fluid bg-white p-4 mt-2">
-                                                    <section class="row">
-                                                        <div class="col-12 col-lg-12">
+                                                <section class="newstyle container-fluid bg-white p-4 mt-2">
+                                                    <section class="row" >
+                                                        <div class="col-12 col-lg-12" >
                                                             @yield('content')
                                                         </div>
                                                     </section>
                                                 </section>
 
                                                 <br>
-                                                <footer id="ftr"  class="container-fluid bg-white p-4 mt-2 border-top" >
+                                                <footer id="ftr"  class="newstyle container-fluid bg-white p-4 mt-2 border-top">
                                                     <div class="footer clearfix mb-0 text-muted">
                                                         
                                                         <div class="container text-center"> 
@@ -1478,6 +1468,25 @@ function displayTime(hour, minutes, seconds, milliseconds) {
                         $(this).css("background-color", "#F5E9D4");
                         });
                     </script>
+
+
+<script>
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("sidebar-link");
+    var i;
+    
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
+      });
+    }
+    </script>
 
                  {{-- <script> --}}
 
