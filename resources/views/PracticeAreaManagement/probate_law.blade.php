@@ -51,17 +51,19 @@
     </tr>
   </thead>
   <tbody>
+    @foreach($view_list as $list)
     <tr>
       
-      <td>602V-0218-GR/RW</td>
-      <td>Isabel Collier</td>
-      <td>Decedent's Estate</td>
-      <td>Ken Collier</td>
+      <td>{{$list->matter_info}}</td>
+      <td>{{$list->executor}}</td>
+      <td>{{$list->matter_type}}</td>
+      <td>{{$list->deceased}}</td>
       <td><a href="{{ url('view_probate_law') }}"><i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-2"></span>
-                      <a href="{{ url('edit_probate_law') }}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit" ></i><span class="m-2"></span>
-                      <a href="#"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
+                      <a href="{{ url('edit_probate_law',$list->id) }}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit" ></i><span class="m-2"></span>
+                      <a href="{{ url('delete_probate_law',$list->id) }}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
       
     </tr>
+    @endforeach
     
   </tbody>
 </table>
@@ -103,7 +105,8 @@
                                     <!-- Modal body -->
                   <div class="modal-body" >
                       <div class="container">
-                        <form method="post" enctype="multipart/form-data"> 
+                        <form method="post" action="{{url('add_probate_law')}}" enctype="multipart/form-data"> 
+                            @csrf
                         <div class="container">
     <div class="row">
     <div class="col-md-4">
@@ -111,7 +114,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Matter Info</label>
                     <div class="input-group">
                 <div class="input-group-prepend"></div>
-                    <input type="text" class="form-control" placeholder="">
+                    <input type="text" class="form-control" placeholder="" name="matter_info">
                         </div>
                         </div>
     </div>
@@ -120,7 +123,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Executor / Administator</label>
                     <div class="input-group">
                 <div class="input-group-prepend"></div>
-                    <input type="text" class="form-control" placeholder="">
+                    <input type="text" class="form-control" placeholder="" name="executor">
                         </div>
                         </div>
     </div>
@@ -129,7 +132,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
                     <div class="input-group">
                 <div class="input-group-prepend"></div>
-                    <input type="text" class="form-control" placeholder="">
+                    <input type="text" class="form-control" placeholder="" name="matter_type">
                         </div>
                         </div>
     </div>
@@ -141,7 +144,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Deceased</label>
                     <div class="input-group">
                 <div class="input-group-prepend"></div>
-                    <input type="text" class="form-control" placeholder="">
+                    <input type="text" class="form-control" placeholder="" name="deceased">
                         </div>
                         </div>
     </div>
@@ -150,7 +153,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Case Details</label>
                     <div class="input-group">
                 <div class="input-group-prepend"></div>
-                    <textarea class="form-control" rows="2"></textarea>
+                    <textarea class="form-control" rows="2" name="case_details"></textarea>
                         </div>
                         </div>
     </div>
@@ -159,7 +162,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Estate Details</label>
                     <div class="input-group">
                 <div class="input-group-prepend"></div>
-                    <textarea class="form-control" rows="2"></textarea>
+                    <textarea class="form-control" rows="2" name="estate_details"></textarea>
                         </div>
                         </div>
     </div>
@@ -172,14 +175,14 @@
       <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Supporting Details</label>
                     <span class="m-2"></span>
-                    <input type="file" class="form-control" >
+                    <input type="file" class="form-control" name="supporting_details" >
                         </div>
       </div>
   </div>
 
 
       <div class="modal-footer" style="background-color:#d3e0ed;">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
       </div>
      </div>

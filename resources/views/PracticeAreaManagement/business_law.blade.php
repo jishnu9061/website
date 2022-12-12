@@ -51,20 +51,22 @@
             </tr>
         </thead>
         <tbody>
+            @foreach($view_business as $list)
             <tr>
 
-                <td>2017-10-279</td>
-                <td>Hank Wiliams</td>
-                <td>Corporation</td>
-                <td>Country Roads Albums</td>
-                <td>Purpose: Producer of county music</td>
-                <td><a href="{{ url('view_business_law') }}"><i style="color:rgb(13, 1, 56);"
+                <td>{{$list->matter_info}}</td>
+                <td>{{$list->client_name}}</td>
+                <td>{{$list->matter_type}}</td>
+                <td>{{$list->corporation}}</td>
+                <td>{{$list->case_details}}</td>
+                <td><a href="{{url('view_business_law') }}"><i style="color:rgb(13, 1, 56);"
                             class="fa fa-eye"></i><span class="m-2"></span>
-                        <a href="{{ url('edit_business_law') }}"><i style="color:rgb(13, 1, 56);"
+                        <a href="{{url('edit_business_law',$list->id) }}"><i style="color:rgb(13, 1, 56);"
                                 class="fa fa-edit"></i><span class="m-2"></span>
-                            <a href="#"> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></td>
+                            <a href="{{url('delete_business_law',$list->id) }}"> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></td>
 
             </tr>
+            @endforeach
 
         </tbody>
     </table>
@@ -106,7 +108,8 @@
             <!-- Modal body -->
             <div class="modal-body">
                 <div class="container">
-                    <form method="post" enctype="multipart/form-data">
+                    <form method="post" action="{{url('add_business_law')}}" enctype="multipart/form-data">
+                        @csrf
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-4">
@@ -116,7 +119,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" placeholder="">
+                                            <input type="text" class="form-control" name="matter_info" placeholder="">
                                         </div>
                                     </div>
                                 </div>
@@ -127,7 +130,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" placeholder="">
+                                            <input type="text" class="form-control" name="client_name" placeholder="">
                                         </div>
                                     </div>
                                 </div>
@@ -138,7 +141,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" placeholder="">
+                                            <input type="text" class="form-control" name="matter_type" placeholder="">
                                         </div>
                                     </div>
                                 </div>
@@ -152,18 +155,18 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" rows="2"></textarea>
+                                            <textarea class="form-control" rows="2" name="corporation"></textarea>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label">Case Details</label>
+                                        <label for="exampleFormControlInput1" class="form-label" >Case Details</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" rows="2"></textarea>
+                                            <textarea class="form-control" rows="2" name="case_details"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -177,7 +180,7 @@
 
                                             </div>
                                             <span class="m-2"></span>
-                                            <input type="file" class="form-control">
+                                            <input type="file" class="form-control" name="supporting">
                                         </div>
                                     </div>
                                 </div>
@@ -185,7 +188,7 @@
 
 
                             <div class="modal-footer" style="background-color:#d3e0ed;">
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                             </div>
                         </div>
