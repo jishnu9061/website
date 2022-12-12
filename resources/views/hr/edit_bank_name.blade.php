@@ -52,17 +52,12 @@
             </div>
 
 
-            <div class="row">
-                <div class="col-sm">
-
-                </div>
-                <div class="col-sm">
-
-                </div>
+            <div class="row text-center">
+               
                 <div class="col-sm">
                     <br>
-                    <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">update</button>
-                    <button type="button" class="btn btn-primary float:right;" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary float:right;" >Update</button>
+                    <button type="button" class="btn btn-primary float:right;" onclick="history.back();">Cancel</button>
                 </div>
             </div>
     

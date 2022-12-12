@@ -24,7 +24,6 @@
         </div>
         <!--filter-->
 
-        <br>
 
         <!--filter end-->
         <div class="header_wrap">

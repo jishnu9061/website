@@ -81,7 +81,8 @@ h1,
     margin-bottom: 0.5rem;
     font-weight: 700;
     line-height: 1.2;
-    color: #05629B;
+    color: #1D1D50;
+    /* color: #05629B; */
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
@@ -362,8 +363,8 @@ textarea {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
-    background: rgb(227 237 249);
-    color: #607080;
+    /* background: rgb(227 237 249); */
+    color: #495057;
     border: 0.5px solid rgba(157, 168, 176, 0.4);
     border-radius: 3px;
 }

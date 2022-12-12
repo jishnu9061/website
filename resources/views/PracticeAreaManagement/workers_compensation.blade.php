@@ -104,80 +104,114 @@
                         <form method="post" enctype="multipart/form-data"> 
                         <div class="container">
     <div class="row">
-    <div class="col">
+    <div class="col-md-4">
            <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Matter Info</label>
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
                     <input type="text" class="form-control" placeholder="">
                         </div>
+                        </div>
     </div>
-    <div class="col">
+    <div class="col-md-4">
         <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Petitioner</label>
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
                     <input type="text" class="form-control" placeholder="">
                         </div>
+                        </div>
     </div>
-    <div class="col">
+    <div class="col-md-4">
        <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
                     <input type="text" class="form-control" placeholder="">
+                        </div>
                         </div>
     </div>
   </div>
   
   <div class="row">
-    <div class="col">
+    <div class="col-md-4">
       <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Respondent</label>
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
                     <input type="text" class="form-control" placeholder="">
                         </div>
+                        </div>
     </div>
-    <div class="col">
+    <div class="col-md-4">
        <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Attorney</label>
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
                     <input type="text" class="form-control" placeholder="">
                         </div>
+                        </div>
     </div>
-    <div class="col">
+    <div class="col-md-4">
      <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Insurer</label>
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
                     <textarea class="form-control" rows="2"></textarea>
+                        </div>
                         </div>
     </div>
   </div>
  
   <div class="row">
-    <div class="col">
+    <div class="col-md-4">
       <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Adjuster</label>
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
                     <input type="text" class="form-control" placeholder="">
                         </div>
+                        </div>
     </div>
-    <div class="col">
+    <div class="col-md-4">
     <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Case Details</label>
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
                     <textarea class="form-control" rows="2"></textarea>
                         </div>
+                        </div>
     </div>
-    <div class="col">
+    <div class="col-md-4">
     <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Employee Doctor</label>
+                   <div class="input-group">
+                   <div class="input-group-prepend"></div>
                     <input type="text" class="form-control" placeholder="">
+                        </div>
                         </div>
     </div>
     <div class="row">
-    <div class="col">
+    <div class="col-md-4">
            <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Employment & Benefit Details</label>
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
                     <input type="text" class="form-control" placeholder="">
+                        </div>
                         </div>
     </div>
     <div class="col">
-        
+         <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Supporting Details</label>
+                    <span class="m-2"></span>
+                    <input type="file" class="form-control" >
+                        </div>
+      </div>
              
-    </div>
-    <div class="col">
+    <!-- <div class="col">
    
-    </div>
+    </div> -->
   </div>
   
 
@@ -186,14 +220,8 @@
       
     </div>
   </div>
-      <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Supporting Details</label>
-                    <span class="m-2"></span>
-                    <input type="file" class="form-control" >
-                        </div>
-      </div>
+     
   </div>
-
 
 
       <div class="modal-footer" style="background-color:#d3e0ed;">
