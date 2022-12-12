@@ -303,12 +303,11 @@ class ClientManagement extends Controller
    
 
     public function addCorporatedocument(Request $request){
-
         $corporate_id   = $request['corporate_id'];
-        $type           = $request['testname'];
-        $file           = $request['file'];
-        $client_type    = $request['client'];
-        $date           = $request['date'];
+        $type = $request['testname'];
+        $file = $request['file'];
+        $client_type = $request['client'];
+        $date   = $request['date'];
 
         if(!empty($request->file('file'))){
 
@@ -317,20 +316,20 @@ class ClientManagement extends Controller
             ]);
         }
         if(request()->hasfile('file')){
-            $uploadedImage   = $request->file('file');
-            $imageName       = time() .'.'. $file->getClientOriginalExtension();
+            $uploadedImage = $request->file('file');
+            $imageName     = time() .'.'. $file->getClientOriginalExtension();
             $destinationPath = public_path('images/file');
             $uploadedImage->move($destinationPath,$imageName);
-            $file->file      = $destinationPath.$imageName;
+            $file->file    = $destinationPath.$imageName;
         }
 
         DB::table('cra_document_detials')->insert([
 
             'document_type' =>  $type,
-            'file'          =>   $imageName,
-            'client_types'  => $client_type,
-            'date'          => $date,
-            'corporate_id'  => $corporate_id
+            'file' =>   $imageName,
+            'client_types'=> $client_type,
+            'date'   => $date,
+            'corporate_id' => $corporate_id
 
         ]);
         return redirect('/corporate-document-details');
@@ -338,10 +337,9 @@ class ClientManagement extends Controller
     }
 
     public function updateDocumentDetails(Request $request){
-
-        $id          = $request['id'];
-        $type        = $request['type'];
-        $file        = $request['file'];
+        $id   = $request['id'];
+        $type = $request['type'];
+        $file = $request['file'];
         $client_type = $request['client'];
 
         if(!empty($request->file('file'))){
@@ -351,18 +349,18 @@ class ClientManagement extends Controller
             ]);
         }
         if(request()->hasfile('file')){
-            $uploadedImage   = $request->file('file');
-            $imageName       = time() .'.'. $file->getClientOriginalExtension();
+            $uploadedImage = $request->file('file');
+            $imageName     = time() .'.'. $file->getClientOriginalExtension();
             $destinationPath = public_path('images/file');
             $uploadedImage->move($destinationPath,$imageName);
-            $file->file      = $destinationPath.$imageName;
+            $file->file    = $destinationPath.$imageName;
         }
 
         DB::table('cra_document_detials')->where('id',$id)->update([
 
             'document_type' =>  $type,
-            'file'          =>   $imageName,
-            'client_types  '=> $client_type,
+            'file' =>   $imageName,
+            'client_types'=> $client_type,
         ]);
         return redirect('/corporate-document-details');
     }
@@ -469,12 +467,11 @@ class ClientManagement extends Controller
     }
 
     public function addDocument(Request $Request){
-        
-        $individual_id = $Request->individual_id;
-        $document_type = $Request->testname;
-        $client_type   = $Request->client;
-        $file          = $Request->file;
-        $date          = $Request->date;
+        $individual_id = $Request['individual_id'];
+        $document_type = $Request['testname'];
+        $client_type  = $Request['client'];
+        $file = $Request['file'];
+        $date = $Request['date'];
 
         if(!empty($Request->file('file'))){
 
@@ -486,26 +483,20 @@ class ClientManagement extends Controller
 
         if (request()->hasFile('file')){
             $uploadedImage = $Request->file('file');
-            $imageName     = time() . '.' . $file->getClientOriginalExtension();
+            $imageName = time() . '.' . $file->getClientOriginalExtension();
             $destinationPath = public_path('/images/file');
             $uploadedImage->move($destinationPath, $imageName);
-            $file->file    = $destinationPath . $imageName;
+            $file->file = $destinationPath . $imageName;
         }
 
-        for($i=0; $i<count($individual_id); $i++){
+        DB::table('cra_document_detials')->insert([
 
-            $datasaver = [
-                'document_type' =>  $document_type[$i],
-                'file' =>   $imageName[$i],
-                'client_types'=>$client_type[$i],
-                'individual_id' => $individual_id[$i],
-                'date'  => $date[$i]
-            ];
-        }
-        
-      
-        DB::table('cra_document_detials')->insert($datasaver);
-
+            'document_type' =>  $document_type,
+            'file' =>   $imageName,
+            'client_types'=>$client_type,
+            'individual_id' => $individual_id,
+            'date'  => $date
+        ]);
         return redirect('/client-document');
 
     }
