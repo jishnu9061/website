@@ -125,7 +125,7 @@
      margin: 20px 0 20px;
      padding: 30px;
 }
-}
+
  ul, li, ol{
      list-style: none;
      margin: 0px;
@@ -2199,7 +2199,7 @@
 }
  .new-account-login h5 {
      font-size: 18px;
-     color: #1111111;
+     color: #111111;
      font-weight: 600;
 }
  .new-account-login h5 a:hover{
