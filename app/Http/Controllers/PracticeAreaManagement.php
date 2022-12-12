@@ -1107,17 +1107,117 @@ class PracticeAreaManagement extends Controller
 
     public function workers_compensation()
     {
-        return view('PracticeAreaManagement.workers_compensation');
+        $view_employee = DB::table('cra_workers_compensation')->get();
+        return view('PracticeAreaManagement.workers_compensation',compact('view_employee'));
+    }
+
+    public function addworkerscompensation(Request $request)
+    {
+        $matter_info = $request['matter_info'];
+        $petitioner = $request['petitioner'];
+        $matter_type = $request['matter_type'];
+        $respondent =$request['respondent'];
+        $attroney = $request['attroney'];
+        $insurer = $request['insurer'];
+        $adjuster = $request['adjuster'];
+        $case_detail = $request['case_detail'];
+        $employee_doctor =$request['employee_doctor'];
+        $benefit_detail = $request['benefit_detail'];
+        $supporting_details = $request['supporting_details'];
+      
+       
+
+        if(!empty($request->file('supporting_details'))){
+
+            $this->validate($request,[
+                'supporting_details' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+            ]);
+        }
+        if(request()->hasfile('supporting_details')){
+            $uploadedImage = $request->file('supporting_details');
+            $imageName     = time() .'.'. $supporting_details->getClientOriginalExtension();
+            $destinationPath = public_path('image');
+            $uploadedImage->move($destinationPath,$imageName);
+            $supporting_details->file    = $destinationPath.$imageName;
+        }
+
+        DB::table('cra_workers_compensation')->insert([
+            
+            'matter_info' => $matter_info,
+            'petitioner' => $petitioner,
+            'matter_type' => $matter_type,
+            'respondent' => $respondent,
+            'attroney' => $attroney,
+            'insurer' => $insurer,
+            'adjuster' => $adjuster,
+            'case_detail' => $case_detail,
+            'employee_doctor' => $employee_doctor,
+            'benefit_detail' => $benefit_detail,
+            'supporting_details' => $supporting_details,
+            
+          
+        ]);
+
+        return redirect('/workers_compensation');
     }
     public function view_workers_compensation()
     {
         return view('PracticeAreaManagement.view_workers_compensation');
     }
-    public function edit_workers_compensation()
+
+    public function edit_workers_compensation($id)
     {
-        return view('PracticeAreaManagement.edit_workers_compensation');
+        $edit = DB::table('cra_workers_compensation')->where('id',$id)->first();
+        return view('PracticeAreaManagement.edit_workers_compensation',compact('edit','id'));
+      
     }
-   
+
+    public function updateworkerscompensation(Request $request)
+    {
+        $id = $request['id'];
+        $matter_info = $request['matter_info'];
+        $petitioner = $request['petitioner'];
+        $matter_type = $request['matter_type'];
+        $respondent =$request['respondent'];
+        $attroney = $request['attroney'];
+        $insurer = $request['insurer'];
+        $adjuster = $request['adjuster'];
+        $case_detail = $request['case_detail'];
+        $employee_doctor =$request['employee_doctor'];
+        $benefit_detail = $request['benefit_detail'];
+        $supporting_details = $request['supporting_details'];
+      
+       
+
+       
+        DB::table('cra_workers_compensation')->where('id',$id)->update([
+            
+            'id' => $id,
+            'matter_info' => $matter_info,
+            'petitioner' => $petitioner,
+            'matter_type' => $matter_type,
+            'respondent' => $respondent,
+            'attroney' => $attroney,
+            'insurer' => $insurer,
+            'adjuster' => $adjuster,
+            'case_detail' => $case_detail,
+            'employee_doctor' => $employee_doctor,
+            'benefit_detail' => $benefit_detail,
+          
+            
+          
+        ]);
+
+        return redirect('/workers_compensation');
+    }
+
+    public function deleteworkerscompensation($id)
+    {
+        $destroy_workers = DB::table('cra_workers_compensation')->where('id',$id)->delete();
+        return redirect('/workers_compensation');
+
+    }
+
     public function view_general_practice()
     {
         return view('PracticeAreaManagement.view_general_practice');

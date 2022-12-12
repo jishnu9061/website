@@ -1443,6 +1443,7 @@ Route::any('/delete_law/{id}','PracticeAreaManagement@deletelaw')->name('delete_
 
 Route::any('general_practice','PracticeAreaManagement@general_practice')->name('general_practice');
 Route::any('add_practice','PracticeAreaManagement@addpractice')->name('add_practice');
+Route::any('view_general_practice','PracticeAreaManagement@view_general_practice')->name('view_general_practice');
 Route::any('/edit_general_practice/{id}','PracticeAreaManagement@edit_general_practice')->name('edit_general_practice');
 Route::any('/update_practice','PracticeAreaManagement@updatepractice')->name('update_practice');
 Route::any('/delete_practice/{id}','PracticeAreaManagement@deletepractice')->name('delete_practice');
@@ -1492,20 +1493,24 @@ Route::any('/delete_guardian/{id}','PracticeAreaManagement@deleteguardian')->nam
 
 Route::any('probate_law','PracticeAreaManagement@probate_law')->name('probate_law');
 Route::any('add_probate_law','PracticeAreaManagement@addprobatelaw')->name('add_probate_law');
+Route::any('view_probate_law','PracticeAreaManagement@view_probate_law')->name('view_probate_law');
 Route::any('/edit_probate_law/{id}','PracticeAreaManagement@edit_probate_law')->name('edit_probate_law');
 Route::any('update_probate_law','PracticeAreaManagement@updateprobatelaw')->name('update_probate_law');
 Route::any('/delete_probate_law/{id}','PracticeAreaManagement@deleteprobatelaw')->name('delete_probate_law');
 
 Route::any('workers_compensation','PracticeAreaManagement@workers_compensation')->name('workers_compensation');
-Route::any('view_general_practice','PracticeAreaManagement@view_general_practice')->name('view_general_practice');
-
-
-
-
-Route::any('view_probate_law','PracticeAreaManagement@view_probate_law')->name('view_probate_law');
-
+Route::any('add_workers_compensation','PracticeAreaManagement@addworkerscompensation')->name('add_workers_compensation');
+Route::any('/edit_workers_compensation/{id}','PracticeAreaManagement@edit_workers_compensation')->name('edit_workers_compensation');
+Route::any('update_workers_compensation','PracticeAreaManagement@updateworkerscompensation')->name('update_workers_compensation');
+Route::any('/delete_workers_compensation/{id}','PracticeAreaManagement@deleteworkerscompensation')->name('delete_workers_compensation');
 Route::any('view_workers_compensation','PracticeAreaManagement@view_workers_compensation')->name('view_workers_compensation');
-Route::any('edit_workers_compensation','PracticeAreaManagement@edit_workers_compensation')->name('edit_workers_compensation');
+
+
+
+
+
+
+
 
 
 
