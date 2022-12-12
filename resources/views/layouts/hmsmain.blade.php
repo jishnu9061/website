@@ -1488,7 +1488,7 @@ function displayTime(hour, minutes, seconds, milliseconds) {
     }
     </script>
 
-                 {{-- <script> --}}
+                  <script> 
 
                     {{-- // const myElement = document.getElementById("subm");
                     // myElement.style.color = "red" --}}
