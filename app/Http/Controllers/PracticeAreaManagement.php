@@ -778,26 +778,344 @@ class PracticeAreaManagement extends Controller
     public function deletecivillitigation($id)
     {
         $delete_plan=DB::table('cra_civil_litigation')->where('id',$id)->delete();
-        return redirect('/real_estate');
+        return redirect('/civil_litigation');
     }
 
 
     public function business_law()
     {
-        return view('PracticeAreaManagement.business_law');
+        $view_business = DB::table('cra_business_law')->get();
+        return view('PracticeAreaManagement.business_law',compact('view_business'));
     }
+
+    public function addbusinesslaw(Request $request)
+    {
+
+        $matter_info = $request['matter_info'];
+        $client_name = $request['client_name'];
+        $matter_type = $request['matter_type'];
+        $corporation =$request['corporation'];
+        $case_details = $request['case_details'];
+        $supporting =$request['supporting'];
+
+        if(!empty($request->file('supporting'))){
+
+            $this->validate($request,[
+                'supporting' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+            ]);
+        }
+        if(request()->hasfile('supporting')){
+            $uploadedImage = $request->file('supporting');
+            $imageName     = time() .'.'. $supporting->getClientOriginalExtension();
+            $destinationPath = public_path('image');
+            $uploadedImage->move($destinationPath,$imageName);
+            $supporting->file    = $destinationPath.$imageName;
+        }
+
+        DB::table('cra_business_law')->insert([
+
+            'matter_info' => $matter_info,
+            'client_name' => $client_name,
+            'matter_type' => $matter_type,
+            'corporation' => $corporation,
+            'case_details' => $case_details,
+            'supporting' => $supporting,
+        
+        ]);
+
+        return redirect('/business_law');
+    }
+
+    public function edit_business_law($id)
+    {
+        $edit=DB::table('cra_business_law')->where('id',$id)->first();
+        return view('PracticeAreaManagement.edit_business_law',compact('edit','id'));
+    }
+
+    public function updatebusinesslaw(Request $request)
+    {
+        $id = $request['id'];
+        $matter_info = $request['matter_info'];
+        $client_name = $request['client_name'];
+        $matter_type = $request['matter_type'];
+        $corporation =$request['corporation'];
+        $case_details = $request['case_details'];
+        $supporting =$request['supporting'];
+
+        if(!empty($request->file('supporting'))){
+
+            $this->validate($request,[
+                'supporting' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+            ]);
+        }
+        if(request()->hasfile('supporting')){
+            $uploadedImage = $request->file('supporting');
+            $imageName     = time() .'.'. $supporting->getClientOriginalExtension();
+            $destinationPath = public_path('image');
+            $uploadedImage->move($destinationPath,$imageName);
+            $supporting->file    = $destinationPath.$imageName;
+        }
+
+        DB::table('cra_business_law')->where('id',$id)->update([
+
+            'id' => $id,
+            'matter_info' => $matter_info,
+            'client_name' => $client_name,
+            'matter_type' => $matter_type,
+            'corporation' => $corporation,
+            'case_details' => $case_details,
+            'supporting' => $supporting,
+        
+        ]);
+
+        return redirect('/business_law');
+    }
+
+    public function deletebusinesslaw($id)
+    {
+        $delete_business = DB::table('cra_business_law')->where('id',$id)->delete();
+        return redirect('/business_law');
+    }
+    public function view_business_law()
+    {
+        return view('PracticeAreaManagement.view_business_law');
+    }
+
     public function guardianship_law()
     {
-        return view('PracticeAreaManagement.guardianship_law');
+        $guardian_list = DB::table('cra_guardianship_law')->get();
+        return view('PracticeAreaManagement.guardianship_law',compact('guardian_list'));
     }
+
+    public function addguardian(Request $request)
+    {
+
+        $matter_info = $request['matter_info'];
+        $petitioner = $request['petitioner'];
+        $matter_type = $request['matter_type'];
+        $disable_person =$request['disable_person'];
+        $attroney = $request['attroney'];
+        $disadility_details = $request['disadility_details'];
+        $case_details = $request['case_details'];
+        $guardian =$request['guardian'];
+        $guardian_details =$request['guardian_details'];
+        $support_details =$request['support_details'];
+       
+
+        if(!empty($request->file('support_details'))){
+
+            $this->validate($request,[
+                'support_details' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+            ]);
+        }
+        if(request()->hasfile('support_detail')){
+            $uploadedImage = $request->file('support_details');
+            $imageName     = time() .'.'. $support_details->getClientOriginalExtension();
+            $destinationPath = public_path('image');
+            $uploadedImage->move($destinationPath,$imageName);
+            $support_details->file    = $destinationPath.$imageName;
+        }
+
+        DB::table('cra_guardianship_law')->insert([
+
+            'matter_info' => $matter_info,
+            'petitioner' => $petitioner,
+            'matter_type' => $matter_type,
+            'disable_person' => $disable_person,
+            'attroney' => $attroney,
+            'disadility_details' => $disadility_details,
+            'case_details' => $case_details,
+            'guardian' => $guardian,
+            'guardian_details' => $guardian_details,
+            'support_details' => $support_details,
+          
+        ]);
+
+
+        return redirect('/guardianship_law');
+    }
+
+    public function view_guardianship_law()
+    {
+        return view('PracticeAreaManagement.view_guardianship_law');
+    }
+
+    public function edit_guardianship_law($id)
+    {
+        $edit = DB::table('cra_guardianship_law')->where('id',$id)->first();
+        return view('PracticeAreaManagement.edit_guardianship_law',compact('edit','id'));
+    }
+
+    public function updateguardian(Request $request)
+    {
+
+        $id = $request['id'];
+        $matter_info = $request['matter_info'];
+        $petitioner = $request['petitioner'];
+        $matter_type = $request['matter_type'];
+        $disable_person =$request['disable_person'];
+        $attroney = $request['attroney'];
+        $disadility_details = $request['disadility_details'];
+        $case_details = $request['case_details'];
+        $guardian =$request['guardian'];
+        $guardian_details =$request['guardian_details'];
+        $support_details =$request['support_details'];
+       
+
+        if(!empty($request->file('support_details'))){
+
+            $this->validate($request,[
+                'support_details' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+            ]);
+        }
+        if(request()->hasfile('support_detail')){
+            $uploadedImage = $request->file('support_details');
+            $imageName     = time() .'.'. $support_details->getClientOriginalExtension();
+            $destinationPath = public_path('image');
+            $uploadedImage->move($destinationPath,$imageName);
+            $support_details->file    = $destinationPath.$imageName;
+        }
+
+        DB::table('cra_guardianship_law')->where('id',$id)->update([
+            'id' => $id,
+            'matter_info' => $matter_info,
+            'petitioner' => $petitioner,
+            'matter_type' => $matter_type,
+            'disable_person' => $disable_person,
+            'attroney' => $attroney,
+            'disadility_details' => $disadility_details,
+            'case_details' => $case_details,
+            'guardian' => $guardian,
+            'guardian_details' => $guardian_details,
+            'support_details' => $support_details,
+          
+        ]);
+
+
+        return redirect('/guardianship_law');
+    }
+
+    public function deleteguardian($id)
+    {
+        $delete_guardian = DB::table('cra_guardianship_law')->where('id',$id)->delete();
+        return redirect('/guardianship_law');
+    }
+
     public function probate_law()
     {
-        return view('PracticeAreaManagement.probate_law');
+        $view_list = DB::table('cra_probate_law')->get();
+        return view('PracticeAreaManagement.probate_law',compact('view_list'));
+    }
+
+    public function addprobatelaw(Request $request)
+    {
+        $matter_info = $request['matter_info'];
+        $executor = $request['executor'];
+        $matter_type = $request['matter_type'];
+        $deceased =$request['deceased'];
+        $case_details = $request['case_details'];
+        $estate_details = $request['estate_details'];
+        $supporting_details = $request['supporting_details'];
+      
+       
+
+        if(!empty($request->file('supporting_details'))){
+
+            $this->validate($request,[
+                'supporting_details' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+            ]);
+        }
+        if(request()->hasfile('supporting_details')){
+            $uploadedImage = $request->file('supporting_details');
+            $imageName     = time() .'.'. $supporting_details->getClientOriginalExtension();
+            $destinationPath = public_path('image');
+            $uploadedImage->move($destinationPath,$imageName);
+            $supporting_details->file    = $destinationPath.$imageName;
+        }
+
+        DB::table('cra_probate_law')->insert([
+
+            'matter_info' => $matter_info,
+            'executor' => $executor,
+            'matter_type' => $matter_type,
+            'deceased' => $deceased,
+            'case_details' => $case_details,
+            'estate_details' => $estate_details,
+            'supporting_details' => $supporting_details,
+            
+          
+        ]);
+        return redirect('/probate_law');
+    }
+
+    public function edit_probate_law($id)
+    {
+        $edit = DB::table('cra_probate_law')->where('id',$id)->first();
+        return view('PracticeAreaManagement.edit_probate_law',compact('edit','id'));
+
+    }
+
+    public function updateprobatelaw(Request $request)
+    {
+        $id = $request['id'];
+        $matter_info = $request['matter_info'];
+        $executor = $request['executor'];
+        $matter_type = $request['matter_type'];
+        $deceased =$request['deceased'];
+        $case_details = $request['case_details'];
+        $estate_details = $request['estate_details'];
+        $supporting_details = $request['supporting_details'];
+      
+       
+
+        if(!empty($request->file('supporting_details'))){
+
+            $this->validate($request,[
+                'supporting_details' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+            ]);
+        }
+        if(request()->hasfile('supporting_details')){
+            $uploadedImage = $request->file('supporting_details');
+            $imageName     = time() .'.'. $supporting_details->getClientOriginalExtension();
+            $destinationPath = public_path('image');
+            $uploadedImage->move($destinationPath,$imageName);
+            $supporting_details->file    = $destinationPath.$imageName;
+        }
+
+        DB::table('cra_probate_law')->where('id',$id)->update([
+            
+            'id' => $id,
+            'matter_info' => $matter_info,
+            'executor' => $executor,
+            'matter_type' => $matter_type,
+            'deceased' => $deceased,
+            'case_details' => $case_details,
+            'estate_details' => $estate_details,
+            'supporting_details' => $supporting_details,
+            
+          
+        ]);
+        return redirect('/probate_law');
+    }
+
+    public function deleteprobatelaw($id)
+    {
+        $destroy_law = DB::table('cra_probate_law')->where('id',$id)->delete();
+        return redirect('/probate_law');
+
     }
 
     public function workers_compensation()
     {
         return view('PracticeAreaManagement.workers_compensation');
+    }
+    public function view_workers_compensation()
+    {
+        return view('PracticeAreaManagement.view_workers_compensation');
+    }
+    public function edit_workers_compensation()
+    {
+        return view('PracticeAreaManagement.edit_workers_compensation');
     }
    
     public function view_general_practice()
@@ -810,39 +1128,10 @@ class PracticeAreaManagement extends Controller
         return view('PracticeAreaManagement.view_estate_plan');
     }
     
-   
-   
-    
-    public function view_business_law()
-    {
-        return view('PracticeAreaManagement.view_business_law');
-    }
-    public function edit_business_law()
-    {
-        return view('PracticeAreaManagement.edit_business_law');
-    }
-    public function view_guardianship_law()
-    {
-        return view('PracticeAreaManagement.view_guardianship_law');
-    }
-    public function edit_guardianship_law()
-    {
-        return view('PracticeAreaManagement.edit_guardianship_law');
-    }
     public function view_probate_law()
     {
         return view('PracticeAreaManagement.view_probate_law');
     }
-    public function edit_probate_law()
-    {
-        return view('PracticeAreaManagement.edit_probate_law');
-    }
-    public function view_workers_compensation()
-    {
-        return view('PracticeAreaManagement.view_workers_compensation');
-    }
-    public function edit_workers_compensation()
-    {
-        return view('PracticeAreaManagement.edit_workers_compensation');
-    }
+  
+   
 }

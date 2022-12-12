@@ -65,7 +65,7 @@
                             class="fa fa-eye"></i><span class="m-1"></span>
                         <a href="{{ url('edit_civil_litigation',$list->id)}}"><i style="color:rgb(13, 1, 56);"
                                 class="fa fa-edit"></i><span class="m-1"></span>
-                            <a href="{{ url('update_civil_litigation',$list->id)}}"> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></td>
+                            <a onClick="return myFunction();"  href="{{ url('delete_civil_litigation',$list->id)}}"> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></td>
 
             </tr>
             @endforeach
