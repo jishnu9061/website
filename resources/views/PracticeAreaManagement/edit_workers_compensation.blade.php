@@ -7,15 +7,18 @@
     <br>
 
 
-    <form action="">
+    <form method="post" enctype="multipart/form-data" action="{{url('update_workers_compensation')}}">
+        @csrf
         <div class="container">
             <div class="row">
+                <input type="hidden" value="{{$edit->id}}" name="id">
                 <div class="col-md-4">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Matter Info</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
-                            <input type="text" class="form-control" placeholder="604VL-0218-WR">
+                            <input type="text" class="form-control" placeholder="" name="matter_info"
+                                value="{{$edit->matter_info}}">
                         </div>
                     </div>
                 </div>
@@ -24,7 +27,8 @@
                         <label for="exampleFormControlInput1" class="form-label">Petitioner</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
-                            <input type="text" class="form-control" placeholder="Victor">
+                            <input type="text" class="form-control" placeholder="" name="petitioner"
+                                value="{{$edit->petitioner}}">
                         </div>
                     </div>
                 </div>
@@ -33,12 +37,12 @@
                         <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
-                            <input type="text" class="form-control" placeholder="Workers Compensation Claim">
+                            <input type="text" class="form-control" placeholder="" name="matter_type"
+                                value="{{$edit->matter_type}}">
                         </div>
                     </div>
                 </div>
             </div>
-
 
             <div class="row">
                 <div class="col-md-4">
@@ -46,7 +50,8 @@
                         <label for="exampleFormControlInput1" class="form-label">Respondent</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
-                            <input type="text" class="form-control" placeholder="Tower Construction HR Manager Gina">
+                            <input type="text" class="form-control" placeholder="" name="respondent"
+                                value="{{$edit->respondent}}">
                         </div>
                     </div>
                 </div>
@@ -55,8 +60,8 @@
                         <label for="exampleFormControlInput1" class="form-label">Attorney</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
-                            <input type="text" class="form-control"
-                                placeholder="McCarthy and Associates Managing Partner Adam McCarthy">
+                            <input type="text" class="form-control" placeholder="" name="attroney"
+                                value="{{$edit->attroney}}">
                         </div>
                     </div>
                 </div>
@@ -65,12 +70,11 @@
                         <label for="exampleFormControlInput1" class="form-label">Insurer</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
-                            <textarea class="form-control" rows="2">BCBs contact Smith</textarea>
+                            <textarea class="form-control" rows="2" name="insurer">{{$edit->insurer}}</textarea>
                         </div>
                     </div>
                 </div>
             </div>
-
 
             <div class="row">
                 <div class="col-md-4">
@@ -78,7 +82,8 @@
                         <label for="exampleFormControlInput1" class="form-label">Adjuster</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
-                            <input type="text" class="form-control" placeholder="Danial Lee">
+                            <input type="text" class="form-control" placeholder="" name="adjuster"
+                                value="{{$edit->adjuster}}">
                         </div>
                     </div>
                 </div>
@@ -87,8 +92,7 @@
                         <label for="exampleFormControlInput1" class="form-label">Case Details</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
-                            <textarea class="form-control"
-                                rows="2">Claim Number: 123546987 Accident Date: 12/01/2016 17 WC 6525 Court</textarea>
+                            <textarea class="form-control" rows="2" name="case_detail">{{$edit->case_detail}}</textarea>
                         </div>
                     </div>
                 </div>
@@ -97,7 +101,21 @@
                         <label for="exampleFormControlInput1" class="form-label">Employee Doctor</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
-                            <input type="text" class="form-control" placeholder="Northwestern Hospital">
+                            <input type="text" class="form-control" placeholder="" name="employee_doctor"
+                                value="{{$edit->employee_doctor}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Employment &
+                                Benefit Details</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" placeholder="" name="benefit_detail"
+                                    value="{{$edit->benefit_detail}}">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -105,33 +123,13 @@
 
 
 
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Employment & Benefit
-                            Details</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend"></div>
-                            <input type="text" class="form-control" placeholder="Site Coordinator">
-                        </div>
-                    </div>
-                    <div class="col">
 
-                    </div>
-                    <div class="col">
+            <div class="conatainer" style="float:right;">
+                <br>
+                <button type="submit" class="btn btn-primary">Update</button>
+                <button type="button" class="btn btn-primary" onclick="history.back();">Close</button>
 
-                    </div>
-                </div>
-
-
-
-
-                <div class="conatainer" style="float:right;">
-                    <br>
-                    <button type="button" class="btn btn-primary">Update</button>
-                    <button type="button" class="btn btn-primary" onclick="history.back();">Close</button>
-
-                </div>
+            </div>
     </form>
 </div>
 
