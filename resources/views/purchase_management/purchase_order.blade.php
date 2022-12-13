@@ -389,8 +389,6 @@ $(document).ready(function() {
          $('.calculate_price',div).val( subtotals.toFixed(2));
     }
 
-
-
 });
 </script>
 
