@@ -319,7 +319,7 @@
     background-blend-mode: soft-light, normal;
     border: 0.5px solid rgba(157, 168, 176, 0.4);
     box-sizing: border-box;
-    border-radius: 4.58px;
+    border-radius: 10px;
 }
 
 
@@ -2203,28 +2203,21 @@ button, button
 }
 
 
-
-
-
-
-
-
-
-
-
 .sidebar-wrapper .menu .sidebar-link {
     display: block;
     padding: 0.4rem 1rem;
     font-size: 1.2rem;
     display: flex;
     align-items: center;
-    border-radius: 2rem;
+    border-radius:  2rem;
     transition: all 0.5s;
     text-decoration: none;
-
+    margin-bottom: 10px;
     color: #1D1D50;
-    background-color: rgb(253, 235, 185);
-    box-shadow: inset 0 0 10px #000000;
+    background-color: #d9c198(255, 255, 255);
+    box-shadow: inset 0 0 7px #0000004d;
+    border :0.1px solid #0606067d ;
+    
 }
 
 
@@ -2239,11 +2232,16 @@ button, button
 }
 
 .sidebar-wrapper .menu .sidebar-link:hover {
-    background-color: #F5E9D4;
+    background-color: #1D1D50;
+    color: white;
+}
+.sidebar-wrapper .menu .sidebar-link:hover #icon {
+   
+    color: white;
 }
 
 .sidebar-wrapper .menu .sidebar-link:active {
-    background-color: #f8e4ae;
+    background-color: #ffffff;
 }
 
 
