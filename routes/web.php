@@ -1385,28 +1385,6 @@ Route::any('/edit_manage_items/{id}','store@editmanage_items')->name('edit_manag
 Route::any('update_manage_items','store@update_manage_items')->name('update_manage_items');
 Route::any('/drop_manage_items/{id}','store@drop_manage_items')->name('drop_manage_items');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Purchase Management
 
 Route::any('purchase_index','PurchaseManagement@index_purchase')->name('purchase_index');
