@@ -227,20 +227,20 @@
                                                                         action="{{ url('purchase_order') }}"
                                                                         enctype="multipart/form-data">
                                                                         @csrf
-                                                                        <div class="col-sm">
+                                                                        <div class="col-sm" id="form_logic">
                                                                             <label for="">Grand Total</label>
                                                                             <input type="text"
                                                                                 class="form-control invoice-sub-total"
                                                                                 placeholder="Grand Total "
                                                                                 id="grand-total" name="grand_total"
-                                                                                value="0" readonly><br>
+                                                                                value="0" readonly><brform_logic>
                                                                             <label for="">Advance Amount</label>
-                                                                            <input type="text" class="form-control"
+                                                                            <input type="text" class="form-control total"
                                                                                 placeholder="Advance Amount"
                                                                                 id="advance-amount"
                                                                                 name="advance_amount" value=""><br>
                                                                             <label for="">Pending Amount</label>
-                                                                            <input type="text" class="form-control"
+                                                                            <input type="text" class="form-control calculate_price"
                                                                                 value{{ 0 }} placeholder="" id="result"
                                                                                 name="pending_amount" value="0"
                                                                                 readonly><br>
@@ -374,6 +374,22 @@ $(document).ready(function() {
 
         $('.invoice-sub-total').val(parseFloat(totalQuantity).toFixed(2));
     }
+
+    $("#form_logic").on('change keyup paste','.total',function(){
+        calculateprice(this);
+    });
+
+    function calculateprice(elem){
+
+         var div       = $(elem).closest('div'),
+         GrandTotal    = $('[name="grand_total"]',div).val(),
+         AdvanceAmount = $('[name="advance_amount"]',div).val(),
+         PendingAmount = $('[name="pending_amount"]',div).val(),
+         subtotals     = parseInt(GrandTotal) - parseFloat(AdvanceAmount);
+         $('.calculate_price',div).val( subtotals.toFixed(2));
+    }
+
+
 
 });
 </script>
