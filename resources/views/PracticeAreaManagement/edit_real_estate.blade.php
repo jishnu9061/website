@@ -2,79 +2,149 @@
 @section('content')
 
 {{-- heading --}}
-   <div class="container" >            
-               <h4 id="hdtpa"><b>Edit Real Estate</b></h4>
-               <br>
+<div class="container">
+    <h4 id="hdtpa"><b>Edit Real Estate</b></h4>
+    <br>
 
 
-<form action="">
-<div class="row">
-        <div class="col">
-           <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">File No</label>
-                    <input type="text" class="form-control" placeholder="62G5585W">
-           </div>
-           </div>
-        <div class="col">
-           <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
-                    <input type="text" class="form-control" placeholder="Sell">
-           </div>
+    <form action="{{url('update_real_estate')}}" method="post">
+        @csrf
+        <div class="container">
+
+            <div class="row">
+            <input type="hidden" value="{{$edit->id}}" name="id">
+                <div class="col-md-4">
+                    <div class="mb-1">
+                        <label for="exampleFormControlInput1" class="form-label">File No</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+
+                            </div>
+                            <input type="text" class="form-control" name="file_no" value="{{$edit->file_no}}" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-1">
+                        <label for="exampleFormControlInput1" class="form-label">Client Name</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+
+                            </div>
+                            <input type="text" class="form-control" name="client_name" value="{{$edit->client_name}}"  placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-1">
+                        <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+
+                            </div>
+                            <input type="text" class="form-control" name="matter_type" value="{{$edit->matter_type}}"  placeholder="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mb-1">
+
+                        <label for="exampleFormControlInput1" class="form-label">Buyer</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+
+                            </div>
+                            <input type="text" class="form-control" name="buyer" value="{{$edit->buyer}}"  placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-1">
+                        <label for="exampleFormControlInput1" class="form-label">Attorney</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+
+                            </div>
+                            <input type="text" class="form-control" name="attroney" value="{{$edit->attroney}}"  placeholder="">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-1">
+                        <label for="exampleFormControlInput1" class="form-label">Property
+                            Details</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+
+                            </div>
+                            <textarea class="form-control" rows="2" name="property">{{$edit->property}}</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mb-1">
+
+                        <label for="exampleFormControlInput1" class="form-label">Closing
+                            Statement</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+
+                            </div>
+                            <textarea class="form-control" rows="2" name="close_statement">{{$edit->close_statement}}</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-1">
+                        <label for="exampleFormControlInput1" class="form-label">Listing Realtor</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+
+                            </div>
+                            <textarea class="form-control" rows="2" name="listing_realtor">{{$edit->listing_realtor}}</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-1">
+                        <label for="exampleFormControlInput1" class="form-label">Selling Realtor</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+
+                            </div>
+                            <textarea class="form-control" rows="2" name="selling_realtor">{{$edit->selling_realtor}}</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-1">
+                        <label for="exampleFormControlInput1" class="form-label">Company Title</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+
+                            </div>
+                            <input type="text" class="form-control" placeholder="" value="{{$edit->file_no}}"  name="company_title">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    <div class="col">
-       <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Buyer</label>
-                    <input type="text" class="form-control" placeholder="Patrick">
-        </div>
-    </div>
-  </div>
-  
-  <div class="row">
-    <div class="col">
-      <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Attorney</label>
-                    <input type="text" class="form-control" placeholder="Dewey Cheatum">
-                        </div>
-    </div>
-    <div class="col">
-       <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Property Details</label>
-                    <textarea class="form-control" rows="2" placeholder="1522, Los Angles pin:123 456"></textarea>
-                        </div>
-    </div>
-    <div class="col">
-     <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Closing Statement</label>
-                    <textarea class="form-control" rows="2" placeholder="Total Payable:$233,025.15"></textarea>
-                        </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Listing Realtor</label>
-                    <textarea class="form-control" rows="2" placeholder="Chris Doe"></textarea>
-                        </div>
-    </div>
-    <div class="col">
-    <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Selling Realtor</label>
-                    <textarea class="form-control" rows="2" placeholder="John Smith"></textarea>
-                        </div>
-    </div>
-    <div class="col">
-    <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Company Title</label>
-                    <textarea class="form-control" rows="2" placeholder="Fidelity National"></textarea>
-                        </div>
-    </div>
-</div>
 
-   
-   
-    
-   
-      <!-- <div class="mb-3">
+
+
+
+
+        <!-- <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Supporting Details</label>
                     <span class="m-2"></span>
                     <input type="file" class="form-control" >
@@ -83,12 +153,12 @@
   </div> -->
 
 
-  <div class="conatainer" style="float:right;">
-        <br>
-                 <button type="button" class="btn btn-primary">Update</button>
-                 <button type="button" class="btn btn-primary" onclick="history.back();">Close</button>
+        <div class="conatainer" style="float:right;">
+            <br>
+            <button type="submit" class="btn btn-primary">Update</button>
+            <button type="button" class="btn btn-primary" onclick="history.back();">Close</button>
 
-    </div>
-</form>
+        </div>
+    </form>
 
-@endsection
+    @endsection

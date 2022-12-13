@@ -31,13 +31,7 @@ class addcontroller extends Controller
    }
    public function addthestaffs(Request $Request)
    {
-      $leavetype_items = $Request->input('leaves');
-      // $erere= array_sum($leavetype_items);
-      // if($erere > 366)
-      // {
-      //   $Request->session()->put('leavevalidat','Sum of number of leaves alloted must be less than 366');
-      //   return back();
-      // }
+     
    	  $hospital=Auth::user()->Hospital;
       $depatmntz=$Request['depname'];
    	  $hospitaldata=DB::table('hospitals')->where('name',$hospital)->select('id')->first();
@@ -49,44 +43,15 @@ class addcontroller extends Controller
       ->select('uniqueid')->first();
       $seldepis=$seldep->uniqueid;
       $seldepid=str_pad($seldepis, 2, "0", STR_PAD_LEFT);
-   	  // $userz=DB::table('users')->where('Hospital',$hospital)->select('id')->orderby('created_at','DESC')->first();
-      // $userzz=$userz->id;
-      // $userzid=$userzz + 1;
-      // $userzidd=str_pad($userzid, 4, "0", STR_PAD_LEFT);
-      // $appendid=$hosid.$seldepid.$userzidd;
-      $uniqId=random_int(100000,999999);
+   	  $uniqId=random_int(100000,999999);
       $check_if_duplicate_exisit = User::where('uniqueid', $uniqId)->first();
       // dd($uniqId);
      
       $stame=$Request['name'];
       $al_email=$Request['email'];
       $staffs=new User();
-  //     if(!empty($Request->file('file'))){
-  //       $this->validate($Request,[
-  //           'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
-  //       ]);
-  //   }
-  //   if(request()->hasfile('file')){
-  //       $uploadedImage = $Request->file('file');
-  //       $imageName     = time() .'.'. $file->getClientOriginalExtension();
-  //       $destinationPath = public_path('images/file');
-  //       $uploadedImage->move($destinationPath,$imageName);
-  //       $file->file    = $destinationPath.$imageName;
-  //   }
-  //   if(!empty($Request->file('signature'))){
-  //     $this->validate($Request,[
-  //         'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
-  //     ]);
-  // }
-  // if(request()->hasfile('signature')){
-  //     $uploadedImage = $Request->file('signature');
-  //     $imageName     = time() .'.'.  $signature->getClientOriginalExtension();
-  //     $destinationPath = public_path('images/signature');
-  //     $uploadedImage->move($destinationPath,$imageName);
-  //     $file->file    = $destinationPath.$imageName;
-  // }
-      $staffs->file=$Request['file'];
       $staffs->name=$Request['name'];
+      $staffs->sex=$Request['sex'];
       $staffs->email=$Request['email'];
       $staffs->age=$Request['age'];
       $staffs->phone=$Request['phoneno'];
@@ -97,69 +62,62 @@ class addcontroller extends Controller
       $staffs->date_of_joining= $Request['date_of_joining'];
       $staffs->account_no= $Request['accountnumber'];
       $staffs->bank= $Request['bankname'];
-      $staffs->ifsc= $Request['ifsc'];
-      $staffs->consultation_fee=$Request['cons_fee'];
+      // $staffs->ifsc= $Request['ifsc'];
+      // $staffs->consultation_fee=$Request['cons_fee'];
       $staffs->uniqueid= $uniqId;
       $staffs->salary=$Request['salary'];
       $staffs->sex=$Request['patienthere'];
-      $staffs->yearsexp=$Request['yearsexp'];
+      // $staffs->yearsexp=$Request['yearsexp'];
       $staffs->dob=$Request['dob'];
       $staffs->Hospital=$hospital;
       $staffs->status=$Request['status'];
       $staffs->releving_date=$Request['releving_date'];
       $staffs->departments= $Request['depname'];
       $staffs->medicaldepartments= $Request['depname'];
-      $staffs->save();
-      $a=DB::table('users')->where('email',$al_email)->first();
-      $b=$a->uniqueid;
-      $inputx = $Request->input('category');
-      if($inputx)
-      {
-        foreach($inputx as $service)
-        {
-          $staffs=new giveallowance();
-          $staffs->allowanceid=$service;
-          $staffs->staffid=$b;
-          $staffs->type='reduction';
-          $staffs->save();
-        }
-        $inputer = $Request->input('allowz');
-        foreach($inputer as $servicer)
-        {
-          $staffs=new giveallowance();
-          $staffs->allowanceid=$servicer;
-          $staffs->staffid=$b;
-          $staffs->type='allowance';
-          $staffs->save();
+      // $staffs->cv= $Request['cv'];
+      if($Request->hasFile('cv')){
+        $this->validate($Request,[
+            'cv' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+        ]);
+        if(request()->hasfile('cv')){
+          $uploadedImage = $Request->file('cv');
+          $imageName     = time() .'.'. $uploadedImage->getClientOriginalExtension();
+          $destinationPath = public_path('images/file');
+          $image_location="/CRA/public/images/file/";
+          $uploadedImage->move($destinationPath,$imageName);
+          $staffs->cv    =  $image_location.$imageName;
         }
       }
-      // $date=Carbon::now();
-      // $todays= $date->toDateString();
-      // $year= $date->format('Y');
-      // $month= $date->format('m');
-      // $monthminusone=$month-1;
-      // $leavetype = $Request->input('leave_type');
-      // $final_array=array_combine($leavetype,$leavetype_items);
-      // foreach($final_array as $key => $value)
-      // {
-      //   $aq=$value/12;
-      //   $monthlft=12-$monthminusone;
-      //   $leevleft=$monthlft*$aq;
-      //   $realleevlft=round($leevleft);
-      //     $data = array(
-      //           "leave_type_id" => $key,
-      //           "allotted_leaves" => $value,
-      //           "staff_id" => $b,
-      //           "leaves_left" => $realleevlft,
-      //     );
-      //   DB::table('staff_leaves')->insert($data);
-      // }
-      //   // print_r($leavetype);
-        // print_r($leavetype_items);
-        // die;
-        // dd($leavetype);
-
-     $Request->session()->put('staffregistered','Staff Registered');
+     
+    if($Request->hasFile('photo')){
+      $this->validate($Request,[
+          'photo' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+      ]);
+      if(request()->hasfile('photo')){
+        $uploadedImage = $Request->file('photo');
+        $imageName     = time() .'.'. $uploadedImage->getClientOriginalExtension();
+        $destinationPath = public_path('images/file');
+        $image_location="/CRA/public/images/file/";
+        $uploadedImage->move($destinationPath,$imageName);
+        $staffs->photo    =  $image_location.$imageName;
+    }
+    }
+ 
+  if($Request->hasFile('signature')){
+    $this->validate($Request,[
+        'signature' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+    ]);
+  }
+if(request()->hasfile('signature')){
+    $uploadedImage = $Request->file('signature');
+    $imageName     = time() .'.'. $uploadedImage->getClientOriginalExtension();
+    $destinationPath = public_path('images/file');
+    $image_location="/CRA/public/images/file/";
+    $uploadedImage->move($destinationPath,$imageName);
+    $staffs->signature    =  $image_location.$imageName;
+}
+    $staffs->save();
+    $Request->session()->put('staffregistered','Staff Registered');
      return redirect('/staffs');
    }
 

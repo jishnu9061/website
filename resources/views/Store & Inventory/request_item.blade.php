@@ -18,7 +18,7 @@
                 <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
                 <b><u>Client Registration</u></b></span> -->
                 {{-- heading --}}
-                <h4 id="hdtpa"><b>Item Request</b></h4>
+                <h4 id="hdtpa"><b>Requested Item Details</b></h4>
                 <br>
             </div>
 
@@ -67,12 +67,12 @@
 
                                 <thead>
                                     <tr>
-                                        <th class="text-center">Request Date</th>
-                                        <th class="text-center">User Requested</th>
-                                        <th class="text-center">Item Reruested</th>
-                                        <th class="text-center">Quantity</th>
-                                        <th class="text-center">Status</th>
-                                        <th class="text-center">Action</th>
+                                        <th class="text-center">Requested Date</th>
+                                        <th class="text-center">Department</th>
+                                        <th class="text-center">Requested By</th>
+                                        {{-- <th class="text-center">Quantity</th>
+                                        <th class="text-center">Status</th> --}}
+                                        <th class="text-center">View</th>
 
                                     </tr>
                                 </thead>
@@ -80,16 +80,14 @@
 
 
                                     <tr id="data">
-                                        <td scope="row" class="text-center"></td>
-                                        <td scope="row" class="text-center"></td>
-                                        <td scope="row" class="text-center"></td>
-                                        <td scope="row" class="text-center"></td>
-                                        <td scope="row" class="text-center"></td>
+                                        <td scope="row" class="text-center">01/12/22</td>
+                                        <td scope="row" class="text-center">Hr Department</td>
+                                        <td scope="row" class="text-center">Department Head</td>
                                         <td scope="row" class="text-center">
                                             <!-- <a href="edit_request_item"><i style="  color:rgb(13, 1, 56);"
                                                     class="fa fa-edit"></i> -->
-                                                    <a href="view_requst"> <i style="color:rgb(13, 1, 56);"
-                                                        class="far fa-arrow-alt-circle-right "></i>
+                                                    <a href="view_requst"><i style="color:rgb(13, 1, 56);"
+                                                    class="fa fa-eye"></i>
                                                 <!-- <a href=""> <i style="color:rgb(13, 1, 56);"
                                                         class="fas fa-trash-alt"></i> -->
 

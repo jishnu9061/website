@@ -1,13 +1,14 @@
+
+
+
+
+
 /*
 * Mazer, Technology Innovations Bootstrap HTML5 Landing Page
 *
 * File: app.scss
 *
 * If you want to edit the components, just go to _variables.scss
-*/
-                /**
-
-                
 
 ====== TABLE OF CONTENTS =======
 1. Bootstrap & Variables Inside
@@ -1052,41 +1053,9 @@ button, button
     box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1);
 }
 
-.modal .modal-content {
-    padding: 20px;
-    background: #d3e0ed;
-    box-shadow: 2.75px 2.75px 4.58333px rgb(39 59 74 / 20%);
-    backdrop-filter: blur(116px);
-    border-radius: 4.58333px;
-}
 
-.modal .modal-full {
-    max-width: 94%;
-}
 
-.modal .white {
-    color: white;
-}
 
-.modal .modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.modal .modal-header .modal-title {
-    font-size: 1.1rem;
-}
-
-.modal .modal-header .close {
-    padding: 7px 10px;
-    border-radius: 50%;
-    background: none;
-    border: none;
-}
-
-/* .modal .modal-header .close:hover {
-background: #dee2e6;
                 .alert {
                     border: none;
                 }
@@ -1210,8 +1179,17 @@ background: #dee2e6;
 
                 .alert-light-info {
                     background-color: #e6fdff;
-                }
+                } 
 
+
+          
+
+
+
+
+
+
+                /*  
                 .avatar {
                     display: inline-flex;
                     border-radius: 50%;
@@ -2236,15 +2214,17 @@ background: #dee2e6;
 
 .sidebar-wrapper .menu .sidebar-link {
     display: block;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 1rem;
     font-size: 1.2rem;
     display: flex;
     align-items: center;
-    border-radius: 0.5rem;
+    border-radius: 2rem;
     transition: all 0.5s;
     text-decoration: none;
 
     color: #1D1D50;
+    background-color: rgb(253, 235, 185);
+    box-shadow: inset 0 0 10px #000000;
 }
 
 
@@ -2998,10 +2978,7 @@ display: block; */
     padding: 2rem;
 } */
 
-#main {
-    margin-left: 300px;
-    padding: 2rem;
-}
+
 
 @media screen and (max-width: 1199px) {
     #main {
@@ -3018,9 +2995,9 @@ display: block; */
     margin: 0;
 }
 
-#main #main-content {
+/* #main #main-content {
     padding: 2rem;
-}
+} */
 
 .page-heading {
     margin: 0 0 2rem;
@@ -3257,8 +3234,8 @@ h6 {
   # Main
   --------------------------------------------------------------*/
 #main {
-    margin-top: 60px;
-    padding: 20px 30px;
+    
+    padding: 10px 20px;
     transition: all 0.3s;
 }
 
@@ -4510,9 +4487,9 @@ h6 {
     margin: 0;
 }
 
-#main #main-content {
+/* #main #main-content {
     padding: 2rem;
-}
+} */
 
 .page-heading {
     margin: 0 0 2rem;
@@ -4748,8 +4725,8 @@ h6 {
   # Main
   --------------------------------------------------------------*/
 #main {
-    margin-top: 60px;
-    padding: 20px 30px;
+    /* margin-top: 60px; */
+    /* padding: 20px 30px; */
     transition: all 0.3s;
 }
 

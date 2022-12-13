@@ -53,7 +53,7 @@
             </thead>
             <tbody>
 
-            @foreach($view_practice as $list)
+                @foreach($view_practice as $list)
                 <tr>
 
                     <td>{{$list->file_no}}</td>
@@ -66,10 +66,11 @@
                                 class="fa fa-eye"></i><span class="m-2"></span>
                             <a href="{{ url('edit_general_practice',$list->id) }}"><i style="color:rgb(13, 1, 56);"
                                     class="fa fa-edit"></i><span class="m-2"></span>
-                                <a href="{{ url('delete_practice',$list->id) }}"> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></td>
+                                <a href="{{ url('delete_practice',$list->id) }}"> <i style="color:rgb(13, 1, 56);"
+                                        class="fas fa-trash-alt"></i></td>
 
                 </tr>
-            @endforeach
+                @endforeach
             </tbody>
         </table>
     </div>
@@ -116,69 +117,88 @@
 
                         @csrf
                         <div class="row">
-                            <div class="col">
-                                <div class="mb-3">
+                            <div class="col-md-4">
+                                <div class="mb-1">
                                     <label for="exampleFormControlInput1" class="form-label">File No</label>
-                                    <input type="text" class="form-control" name="file_no" placeholder="">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control" name="file_no" placeholder="">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col">
-                                <div class="mb-3">
+                            <div class="col-md-4">
+                                <div class="mb-1">
                                     <label for="exampleFormControlInput1" class="form-label">Client Name</label>
-                                    <input type="text" class="form-control" name="client_name" placeholder="">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control" name="client_name" placeholder="">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col">
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
+                       
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                                <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
                                     <input type="text" class="form-control" name="matter_type" placeholder="">
                                 </div>
                             </div>
                         </div>
+                </div>
+                <br>
 
-                        <div class="row">
-                            <div class="col">
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Other Party</label>
-                                    <input type="text" class="form-control" name="other_party" placeholder="">
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Attorney</label>
-                                    <input type="text" class="form-control" name="attorney" placeholder="">
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Case Details</label>
-                                    <textarea class="form-control" name="case_details" rows="2"></textarea>
-                                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="exampleFormControlInput1" class="form-label">Other Party</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="other_party" placeholder="">
                             </div>
                         </div>
-
-                        <div class="row">
-                            <div class="col">
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Witness</label>
-                                    <input type="text" class="form-control" name="witness" placeholder="">
-                                </div>
-                            </div>
-                          
-                          
-                        </div>
-
-                        <div class="row">
-                            <div class="col">
-
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="exampleFormControlInput1" class="form-label">Attorney</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="attorney" placeholder="">
                             </div>
                         </div>
-                        <div class="mb-3">
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="exampleFormControlInput1" class="form-label">Case Details</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <textarea class="form-control" name="case_details" rows="2"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="exampleFormControlInput1" class="form-label">Witness</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="witness" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="mb-1">
                             <label for="exampleFormControlInput1" class="form-label">Supporting Details</label>
                             <span class="m-2"></span>
                             <input type="file" class="form-control" name="detail">
                         </div>
-                
+                    </div>
+                </div>
+
+
             </div>
 
 

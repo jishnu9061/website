@@ -9,53 +9,74 @@
       <form action="{{url('update_practice')}}" enctype="multipart/form-data" method="post">
         @csrf
 
-        <div class="row">
-        <input type="hidden" name="id" value="{{$edit->id}}">
-        <div class="col">
+    <div class="row">
+        <div class="col-md-4">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">File No</label>
-                <input type="text" class="form-control" name="file_no" value="{{$edit->file_no}}" placeholder="">
+                <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <input type="text" class="form-control" placeholder="52B6577Z">
+                </div>
             </div>
         </div>
-        <div class="col">
+        <div class="col-md-4">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Client Name</label>
-                <input type="text" class="form-control" name="client_name"  placeholder="" value="{{$edit->client_name}}">
+                <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <input type="text" class="form-control" placeholder="Michael">
+                </div>
             </div>
         </div>
-        <div class="col">
+        <div class="col-md-4">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
-                <input type="text" class="form-control" name="matter_type"  placeholder="" value="{{$edit->matter_type}}">
+                <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <input type="text" class="form-control" placeholder="Civil Dispute">
+                </div>
             </div>
         </div>
     </div>
 
     <div class="row">
-        <div class="col">
+        <div class="col-md-4">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Other Party</label>
-                <input type="text" class="form-control" name="other_party"  placeholder="" value="{{$edit->other_party}}">
+                <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <input type="text" class="form-control" placeholder="Jones">
+                </div>
             </div>
         </div>
-        <div class="col">
+        <div class="col-md-4">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Attorney</label>
-                <input type="text" class="form-control" name="attorney"  placeholder="" value="{{$edit->attorney}}">
+                <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <input type="text" class="form-control" placeholder="Samuel">
+                </div>
             </div>
         </div>
-        <div class="col">
+        <div class="col-md-4">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Case Details</label>
-                <textarea class="form-control" rows="2" name="case_details"  placeholder="" value="{{$edit->case_details}}"></textarea>
+                <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <textarea class="form-control" rows="2"
+                        placeholder="Filed Date: 5/2/2019 Service by: Currier Los Angles"></textarea>
+                </div>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col">
+        <div class="col-md-4">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Witness</label>
-                <textarea class="form-control" rows="2" name="witness"  placeholder="" value="{{$edit->witness}}"></textarea>
+                <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <textarea class="form-control" rows="2" placeholder="Chris"></textarea>
+                </div>
             </div>
         </div>
         <div class="col">
@@ -65,7 +86,6 @@
 
         </div>
     </div>
-
 
 
     <!-- <div class="mb-3">

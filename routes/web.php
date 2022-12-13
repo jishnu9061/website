@@ -77,7 +77,7 @@ Route::any('/clinicalnotes','bedsController@clinicalnotes');
 Route::any('/callthepatient{id}','hospitalController@callthepatient');
 Route::any('/addstaffs','addController@addstaffs');
 Route::any('/editstafff','addController@editstafff');
-Route::any('/addthestaffs','addController@addthestaffs');
+Route::post('/addthestaffs','addController@addthestaffs');
 Route::any('/staffs','addController@allstaffs');
 Route::any('/managestaff{id}','hrcontroller@managestaff');
 Route::any('/managedepstaff{id}','departmentcontroller@managedepstaff');
@@ -766,7 +766,7 @@ Route::any('/delete_desc_sel/{id}','SystemSetup@deletedescsel')->name('delete_de
 
 //end
 //tax chart
-Route::any('tax_chart_main','SystemSetup@taxchartmain')->name('tax_chart_main');
+Route::any('tax_chart_main','   @taxchartmain')->name('tax_chart_main');
 Route::any('tax_chart','SystemSetup@taxchart')->name('tax_chart');
 Route::any('add_tax_chart','SystemSetup@addtaxchart')->name('add_tax_chart');
 Route::any('edit_tax_chart/{id}','SystemSetup@edittaxchart')->name('edit_tax_chart');
@@ -1409,6 +1409,7 @@ Route::any('matter_type','PracticeAreaManagement@matter_type')->name('matter_typ
 Route::any('personal_injury','PracticeAreaManagement@personalinjury')->name('personal_injury');
 Route::any('add_injury','PracticeAreaManagement@addinjury')->name('add_injury');
 Route::any('/edit_injury/{id}','PracticeAreaManagement@editinjury')->name('edit_injury');
+Route::any('view_injury','PracticeAreaManagement@view_injury')->name('view_injury');
 Route::any('/update_injury','PracticeAreaManagement@updateinjury')->name('update_injury');
 Route::any('/delete_injury/{id}','PracticeAreaManagement@deleteinjury')->name('delete_injury');
 
@@ -1427,16 +1428,32 @@ Route::any('/delete_practice/{id}','PracticeAreaManagement@deletepractice')->nam
 
 
 Route::any('estate_plan','PracticeAreaManagement@estate_plan')->name('estate_plan');
+Route::any('add_estate_plan','PracticeAreaManagement@addestateplan')->name('add_estate_plan');
+Route::any('/edit_estate_plan/{id}','PracticeAreaManagement@edit_estate_plan')->name('edit_estate_plan');
+Route::any('update_estate_plan','PracticeAreaManagement@updateestateplan')->name('update_estate_plan');
+Route::any('/delete_estate_plan/{id}','PracticeAreaManagement@deleteestateplan')->name('delete_estate_plan');
+
+
 Route::any('real_estate','PracticeAreaManagement@real_estate')->name('real_estate');
+Route::any('add_real_estate','PracticeAreaManagement@addrealestate')->name('add_real_estate');
+Route::any('view_real_estate','PracticeAreaManagement@view_real_estate')->name('view_real_estate');
+Route::any('/edit_real_estate/{id}','PracticeAreaManagement@edit_real_estate')->name('edit_real_estate');
+Route::any('update_real_estate','PracticeAreaManagement@updaterealestate')->name('update_real_estate');
+Route::any('/delete_real_estate/{id}','PracticeAreaManagement@deleterealestate')->name('delete_real_estate');
+
 Route::any('criminal_law','PracticeAreaManagement@criminal_law')->name('criminal_law');
+Route::any('add_criminal_law','PracticeAreaManagement@addcriminallaw')->name('add_criminal_law');
+Route::any('view_criminal_law','PracticeAreaManagement@view_criminal_law')->name('view_criminal_law');
+Route::any('/edit_criminal_law/{id}','PracticeAreaManagement@edit_criminal_law')->name('edit_criminal_law');
+Route::any('update_criminal_law','PracticeAreaManagement@updatecriminallaw')->name('add_criminal_law');
+Route::any('/delete_criminal_law/{id}','PracticeAreaManagement@deletecriminallaw')->name('delete_criminal_law');
+
+
 Route::any('civil_litigation','PracticeAreaManagement@civil_litigation')->name('civil_litigation');
-
-
 Route::any('add_civil_litigation','PracticeAreaManagement@addcivillitigation')->name('add_civil_litigation');
 Route::any('/edit_civil_litigation/{id}','PracticeAreaManagement@edit_civil_litigation')->name('edit_civil_litigation');
 Route::any('update_civil_litigation','PracticeAreaManagement@updatecivillitigation')->name('update_civil_litigation');
 Route::any('/delete_civil_litigation/{id}','PracticeAreaManagement@deletecivillitigation')->name('update_civil_litigation');
-
 
 Route::any('business_law','PracticeAreaManagement@business_law')->name('business_law');
 Route::any('add_business_law','PracticeAreaManagement@addbusinesslaw')->name('add_business_law');
@@ -1470,24 +1487,6 @@ Route::any('view_workers_compensation','PracticeAreaManagement@view_workers_comp
 
 
 
-
-
-Route::any('view_estate_plan','PracticeAreaManagement@view_estate_plan')->name('view_estate_plan');
-Route::any('edit_estate_plan','PracticeAreaManagement@edit_estate_plan')->name('edit_estate_plan');
-Route::any('view_real_estate','PracticeAreaManagement@view_real_estate')->name('view_real_estate');
-Route::any('edit_real_estate','PracticeAreaManagement@edit_real_estate')->name('edit_real_estate');
-Route::any('view_criminal_law','PracticeAreaManagement@view_criminal_law')->name('view_criminal_law');
-Route::any('edit_criminal_law','PracticeAreaManagement@edit_criminal_law')->name('edit_criminal_law');
-Route::any('view_civil_litigation','PracticeAreaManagement@view_civil_litigation')->name('view_civil_litigation');
-Route::any('edit_civil_litigation','PracticeAreaManagement@edit_civil_litigation')->name('edit_civil_litigation');
-Route::any('view_business_law','PracticeAreaManagement@view_business_law')->name('view_business_law');
-Route::any('edit_business_law','PracticeAreaManagement@edit_business_law')->name('edit_business_law');
-Route::any('view_guardianship_law','PracticeAreaManagement@view_guardianship_law')->name('view_guardianship_law');
-Route::any('edit_guardianship_law','PracticeAreaManagement@edit_guardianship_law')->name('edit_guardianship_law');
-Route::any('view_probate_law','PracticeAreaManagement@view_probate_law')->name('view_probate_law');
-Route::any('edit_probate_law','PracticeAreaManagement@edit_probate_law')->name('edit_probate_law');
-Route::any('view_workers_compensation','PracticeAreaManagement@view_workers_compensation')->name('view_workers_compensation');
-Route::any('edit_workers_compensation','PracticeAreaManagement@edit_workers_compensation')->name('edit_workers_compensation');
 
 
 
