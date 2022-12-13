@@ -7,116 +7,83 @@
                <br>
 
 
-               <form action="">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Matter Info</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend"></div>
-                        <input type="text" class="form-control" placeholder="679VL-0618">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Petitioner</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend"></div>
-                        <input type="text" class="form-control" placeholder="Jessica Robinson">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend"></div>
-                        <input type="text" class="form-control" placeholder="Guardinship of a Disabled Person">
-                    </div>
-                </div>
-            </div>
+<form action="">
+     <div class="row">
+        <div class="col">
+           <div class="mb-3">
+           <label for="exampleFormControlInput1" class="form-label">Matter Info</label>
+                    <input type="text" class="form-control" placeholder="679VL-0618">
+           </div>
+           </div>
+        <div class="col">
+           <div class="mb-3">
+           <label for="exampleFormControlInput1" class="form-label">Petitioner</label>
+                    <input type="text" class="form-control" placeholder="Jessica Robinson">
+           </div>
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Disabled Person</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend"></div>
-                        <input type="text" class="form-control" placeholder="Charles Newman">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Attorney</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend"></div>
-                        <textarea class="form-control"
-                            rows="2">Law Office of Greg Peters Attorney Greg Peters</textarea>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Disability Details</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend"></div>
-                        <textarea class="form-control" rows="2">Dementia</textarea>
-                    </div>
-                </div>
-            </div>
+    <div class="col">
+       <div class="mb-3">
+       <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
+                    <input type="text" class="form-control" placeholder="Guardinship of a Disabled Person">
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="mb-3">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Disabled Person</label>
+                    <input type="text" class="form-control" placeholder="Charles Newman">
+                        </div>
+    </div>
+    <div class="col">
+    <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Attorney</label>
+                    <textarea class="form-control" rows="2">Law Office of Greg Peters Attorney Greg Peters</textarea>
+                        </div>
+    </div>
+    <div class="col">
+    <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Disability Details</label>
+                    <textarea class="form-control" rows="2">Dementia</textarea>
+                        </div>  
+    </div>
+    </div>
+    <div class="row">
+    <div class="col">
+           <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Case Details</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend"></div>
-                        <textarea class="form-control" rows="2">Brown 666-333</textarea>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="mb-3">
+                    <textarea class="form-control" rows="2">Brown 666-333</textarea>
+                        </div>
+    </div>
+    <div class="col">
+        <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Guardian</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend"></div>
-                        <input type="text" class="form-control" placeholder="Janet Newman">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Janet Newman">
+                        </div>
+    </div>
+    <div class="col">
+       <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Attorney</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend"></div>
-                        <textarea class="form-control" rows="2">Law Office of Glenn Evans contact Glenn Evans</textarea>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="mb-3">
+                    <textarea class="form-control" rows="2">Law Office of Glenn Evans contact Glenn Evans</textarea>
+                        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+           <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Guardian Details</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend"></div>
-                        <textarea class="form-control"
-                            rows="2">Guardian of the Person Petition Field: 8/07/2018</textarea>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-
-
-            </div>
-            <div class="col">
-
-            </div>
-        </div>
-
+                    <textarea class="form-control" rows="2">Guardian of the Person Petition Field: 8/07/2018</textarea>
+                        </div>
+    </div>
+    <div class="col">
+        
+             
+    </div>
+    <div class="col">
    
+    </div>
+  </div>
+
   <div class="conatainer" style="float:right;">
         <br>
         <button type="submit" class="btn btn-primary">Update</button>
@@ -126,7 +93,6 @@
 
 
 </form>
-</div>
    
    
       <!-- <div class="mb-3">

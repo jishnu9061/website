@@ -236,7 +236,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <textarea class="form-control" id="form7Example7" name="detail" value="" rows="3">{{$edit_office_instruction->detail}}</textarea>
+                    <textarea class="form-control" id="form7Example7" name="detail" value="{{$edit_office_instruction->detail}}" rows="3"></textarea>
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container" >
-    <div class="py-5">
+    <div class="py-5 text-center">
         @if(Session::has('staffregistered'))
         <div class="alert alert-dark" role="alert">
             {{ Session::get('staffregistered')}}
@@ -34,7 +34,7 @@
                 <input type="hidden" value="{{$edit->id}}" name="id">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="mb-3">
+                        <div class="mb-1">
                             <label for="username">Matter Info</label>
 
                             <div class="input-group">
@@ -57,7 +57,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="mb-3">
+                        <div class="mb-1">
                             <label for="username">Matter Type</label>
 
                             <div class="input-group">
@@ -81,14 +81,10 @@
                     </div>
                 </div>
                 <br>
-                <br>
-                <div class="text-center">
-                  <h4>Plaintiff</h4>
-                </div>
-                <br>
+                <h4>Plaintiff</h4>
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="mb-3">
+                        <div class="mb-1">
                             <label for="username">Incident Details</label>
 
                             <div class="input-group">
@@ -112,7 +108,7 @@
                     </div>
                
                     <div class="col-md-6">
-                        <div class="mb-3">
+                        <div class="mb-1">
                             <label for="username">Damage Details</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
@@ -123,7 +119,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="mb-3">
+                        <div class="mb-1">
                             <label for="username">Health Insurer</label>
 
                             <div class="input-group">
@@ -146,7 +142,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="mb-3">
+                        <div class="mb-1">
                             <label for="username">Insurence Policy Details</label>
 
                             <div class="input-group">
@@ -173,7 +169,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="mb-3">
+                        <div class="mb-1">
                             <label for="username">Defendant</label>
 
                             <div class="input-group">

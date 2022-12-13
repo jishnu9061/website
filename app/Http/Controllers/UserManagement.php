@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-// use DB;
+use DB;
 
 class UserManagement extends Controller
 {
@@ -27,17 +26,17 @@ class UserManagement extends Controller
 
     public function userdestroy($id)
     {
-        $user_destroy = DB::table('cra_reg_new_user')->where('id',$id)->delete();
+        $user_destroy =DB::table('cra_reg_new_user')->where('id',$id)->delete();
         return redirect ('/manage_user_account');
     }
 
-    public function useredit($id)    {
+    public function useredit($id)
+    {
 
         $edit =DB::table('cra_reg_new_user')->where('id',$id)->first();
         return view('user_management.user_edit',compact('edit','id'));
         // return view('user_management.user_edit');
     }
-
 
 
     public function regnewuser(Request $request)

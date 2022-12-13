@@ -51,7 +51,7 @@
                 @csrf
 
 
-                <input type="hidden" name="id" value="{{$edit_file_instruction->id}}">
+                <input type="hidden" name="id" value="{{ $edit_file_instruction->id}}">
 
                 <div class="row">
 
@@ -83,12 +83,12 @@
 
                                 </div>
                                 <select name="client" id="cars">
-                                    <option>{{$edit_file_instruction->client}}</option>
+                                    <option>{{ $edit_file_instruction->client}}</option>
                                     <option>select...</option>
-                                    <option>Demo 1</option>
-                                    <option>Demo 2</option>
-                                    <option>Demo 3</option>
-                                    <option>Demo 4</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                                 </select>
                             </div>
                         </div>
@@ -102,13 +102,13 @@
 
                                 </div>
                                 <select name="file" id="cars">
-                                    <option>{{$edit_file_instruction->file}}</option>
+                                    <option>{{ $edit_file_instruction->file}}</option>
                                     <option>select...</option>
-                                    <option>Demo 1</option>
-                                    <option>Demo 2</option>
-                                    <option>Demo 3</option>
-                                    <option>Demo 4</option>
-                                </select>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option> 
+                    </select>
                             </div>
                         </div>
                     </div>
@@ -128,12 +128,12 @@
 
                                 </div>
                                 <select name="instruction" id="cars">
-                                    <option>{{$edit_file_instruction->instruction}}</option>
+                                    <option>{{ $edit_file_instruction->instruction}}</option>
                                     <option>select...</option>
-                                    <option>Demo 1</option>
-                                    <option>Demo 2</option>
-                                    <option>Demo 3</option>
-                                    <option>Demo 4</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                                 </select>
                             </div>
                         </div>
@@ -146,7 +146,7 @@
 
                                 </div>
                                 <select name="category" id="cars">
-                                    <option>{{$edit_file_instruction->category}}</option>
+                                    <option>{{ $edit_file_instruction->category}}</option>
                                     <option value="volvo"></option>
                                 </select>
                             </div>
@@ -161,12 +161,12 @@
 
                                 </div>
                                 <select name="receiver" id="cars">
-                                    <option>{{$edit_file_instruction->receiver}}</option>
+                                    <option>{{ $edit_file_instruction->receiver}}</option>
                                     <option>select...</option>
-                                    <option>Demo 1</option>
-                                    <option>Demo 2</option>
-                                    <option>Demo 3</option>
-                                    <option>Demo 4</option>
+                        <option>Demo 1</option>
+                        <option>Demo 2</option>
+                        <option>Demo 3</option>
+                        <option>Demo 4</option>
                                 </select>
                             </div>
                         </div>
@@ -189,7 +189,7 @@
 
                     </div>
                     <select name="currency" id="cars">
-                        <option>{{$edit_file_instruction->currency}}</option>
+                        <option>{{ $edit_file_instruction->currency}}</option>
                         <option>select...</option>
                         <option>Demo 1</option>
                         <option>Demo 2</option>
@@ -223,7 +223,7 @@
 
                     </div>
                     <select name="turn_around" id="cars">
-                        <option>{{$edit_file_instruction->turn_around}}</option>
+                        <option>{{ $edit_file_instruction->turn_around}}</option>
                         <option>select...</option>
                         <option>Demo 1</option>
                         <option>Demo 2</option>
@@ -241,7 +241,7 @@
 
                     </div>
                     <select name="priority" id="cars">
-                        <option>{{$edit_file_instruction->priority}}</option>
+                        <option>{{ $edit_file_instruction->priority}}</option>
                         <option>select...</option>
                         <option>Demo 1</option>
                         <option>Demo 2</option>
@@ -259,8 +259,8 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="amount" value="{{ $edit_file_instruction->amount}}"
-                        id="age">
+                    <input type="text" class="form-control" name="amount"
+                        value="{{ $edit_file_instruction->amount}}" id="age">
                     <div class="invalid-feedback" style="width: 100%;">
                         Incorporation is required
                     </div>
@@ -276,8 +276,8 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <textarea class="form-control" name="details" id="form7Example7" value=""
-                        rows="3">{{ $edit_file_instruction->details}}</textarea>
+                    <textarea class="form-control" name="details" id="form7Example7"
+                        value="{{ $edit_file_instruction->details}}" rows="3"></textarea>
                 </div>
             </div>
         </div>

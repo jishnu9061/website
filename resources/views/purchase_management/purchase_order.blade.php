@@ -10,7 +10,7 @@
 <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px">
                 <b><u>Client Registration</u></b></span> -->
 {{-- heading --}}
-  <div class="container">
+
 <h4 id="hdtpa"><b>New Purchase Order</b></h4>
 <br>
 
@@ -18,7 +18,7 @@
 
 
 <div>
-  
+    <div class="container">
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New
             Purchase</button></a>
 
@@ -101,6 +101,11 @@
                     <!-- 		End of Container -->
 
 
+
+
+
+
+
                     <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
                     <div class="modal fade" id="myModal">
                         <div class="modal-dialog modal-xl">
@@ -109,69 +114,6 @@
                                 <!-- Modal Header -->
                                 <div class="modal-header">
                                     <h2><b>Add New Purchase</b></h2>
-<div class="text-center">
-<h4><b>Purchase Items</b></h4>
-</div>
-<br>
- <!-- table -->
-
-                                    <div class="row clearfix">
-
-                                        <div class="col-sm">
-
-                                            <table class="table table-bordered order-list" id="tab_logic">
-
-                                               
-                                                
-                                                
-                                                <tbody>
-                                                    <tr>
-                                                        
-                                                        <td><input type="text" name="batch_no[]" id="batch_no_"
-                                                                class="form-control" placeholder="Item No"></td>
-                                                                <td><select class="form-select" aria-label="select example"
-                                                                name="item_name[]" id="item_name">
-                                                                <option value="">Select</option>
-                                                              
-                                                                    <option value="">
-                                                                      
-                                                                    </option>
-                                                             
-                                                            </select></td>
-                                                        <td><input type="text" name="quantity[]" id="quantity_"
-                                                                class="form-control text-right calculate"></td>
-                                                        <td><input type="text" name="price[]" id="price_"
-                                                                class="form-control calculate" placeholder="0.00"></td>
-                                                        <td><input type="text" name="total[]" id="total_"
-                                                                class="form-control calculate-sub" placeholder="0.00">
-                                                        </td>
-                                                        <td><button type="button"
-                                                                class="add-Row ibtnDel btn btn-primary text-white "
-                                                                style="background-color:#607080;width:100%;color:white;">Remove</button>
-                                                        <td>
-                                                    </tr>
-                                            </table>
-                                            <div class="row">
-                                                <div class="col-sm">
-                                                </div>
-                                                <div class="col-sm">
-                                                    <table class="table table-bordered">
-                                                       
-                                                        <tr>
-                                                            <td scope="col">Grand Total</td>
-                                                            <td><input type="text"
-                                                                    class="form-control invoice-sub-total" value=""
-                                                                    name="grand_totall" id="grand_totall_" readonly>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal fade" id="myModal-2">
-                                        <div class="modal-dialog modal-xm">
-                                            <div class="modal-content">
 
                                 </div>
 
@@ -228,20 +170,23 @@
                                                 </div>
                                                 <br>
                                                 <!-- table -->
-                                                <div class="table-responsive">
+
                                                 <div class="row clearfix">
 
                                                     <div class="col-sm">
 
                                                         <table class="table table-bordered order-list" id="tab_logic">
 
-                                                            <tr class="text-center">
-                                                                <th class="">Item ID</th>
-                                                                <th class="" style="width:25%">Item Name</th>
-                                                                <th class="">Quantity</th>
-                                                                <th class="">Price</th>
-                                                                <th class="">Total</th>
-                                                                <td> <input type="button" class="btn btn-primary" id="add" value="Add">
+                                                            <tr>
+                                                                <td class="">Item ID</td>
+                                                                <td class="" style="width:25%">Item Name</td>
+                                                                <td class="">Quantity</td>
+                                                                <td class="">Price</td>
+                                                                <td class="">Total</td>
+                                                                <td> <input type="button" class="btn btn-primary"
+                                                                        id="add"
+                                                                        style="background-color:#607080;width:100%;"
+                                                                        value="Add">
                                                                 </td>
                                                             </tr>
 
@@ -264,15 +209,14 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    </div>
                                                 </div>
                                                 <div class="modal fade" id="myModal-2">
                                                     <div class="modal-dialog modal-xm">
                                                         <div class="modal-content">
 
                                                             <!-- Modal Header -->
-                                                            <div class="modal-header">
-                                                                <h4><b>Advance Payment</b></h4>
+                                                            <div class="modal-header" style="background-color:#607080">
+                                                                <h4 class="text-white"><b>Advance Payment</b></h4>
 
                                                             </div>
 
@@ -301,11 +245,14 @@
                                                                                 name="pending_amount" value="0"
                                                                                 readonly><br>
                                                                         </div>
-                                                                        <div class="modal-footer" style="background-color:#d3e0ed;">
+                                                                        <div class="modal-footer">
                                                                             <button type="button"
-                                                                                class="btn btn-primary" data-dismiss="modal">Close</button>
+                                                                                class="btn btn-primary text-white"
+                                                                                onclick="window.history.back()"
+                                                                                style="background-color:#607080;width:20%;">Close</button>
                                                                             <button type="submit"
-                                                                                class="btn btn-primary">Save</button>
+                                                                                class="btn btn-primary"
+                                                                                style="background-color:#607080;width:20%;">Save</button>
                                                                         </div>
                                                                 </div>
 
@@ -325,11 +272,11 @@
                         </div>
                     </div>
 
-                    <div class="modal-footer" style="background-color:#d3e0ed;">
-                        <button type="button" class="btn btn-primary"
-                        data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" 
-                            data-toggle="modal" data-target="#myModal-2"> Save </button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary text-white"
+                            style="width:10%;background-color:#607080" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" style="background-color:#607080;width:10%;"
+                            data-toggle="modal" data-target="#myModal-2"><b>Save</b></button>
                     </div>
 
 

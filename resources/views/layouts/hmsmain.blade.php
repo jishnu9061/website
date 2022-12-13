@@ -444,13 +444,8 @@
 
         <div id="app">
 
-
             <div id="sidebar" class="active">
                 <div class="sidebar-wrapper active">
-
-        <div id="sidebar" class="active" >
-            <div class="sidebar-wrapper active" style="border-radius: 0px 50px 50px 0px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
-
 
                     <div class="sidebar-header">
                         <div class="d-flex justify-content-between">
@@ -467,18 +462,11 @@
                         </div> --}}
                         </div>
                     </div>
-
                     <div class="sidebar-menu">
                         <ul class="menu">
                             <li class="sidebar-title" style="color: #1D1D50; text-align:center; font-size:16px; ">
                                 DASHBOARD
                             </li>
-
-                </div>
-                <div class="sidebar-menu" >
-                    <ul class="menu">
-                        <li  class="sidebar-title" style="color: #1D1D50; text-align:center; font-size:16px; ">DASHBOARD</li>
-
                             {{-- @if(Auth::user()->role == 'superadmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="#" class='sidebar-link'>
@@ -544,45 +532,12 @@
                                 </ul>
                         </li>
 
-
                         <li class="submenu-item  has-sub" style="list-style:none;">
                             <a href="{{url('user_management')}}" class='sidebar-link'>
                                 <i class="fa-regular fa-user" id="icon"></i>
                                 <span> User Management</span>
                             </a>
                         </li>
-
-
-                                <li class="submenu-item  has-sub" style="list-style:none;">
-                                <a href="{{url('user_management')}}" class='sidebar-link'>
-                                    <i  class="fa-regular fa-user" id="icon"></i>
-                                            <span> User Management</span>
-                                        </a>
-                                   
-                                </li>
-                                
-
-                                <li class="submenu-item has-sub " style="list-style:none;">
-                                        <a id="sblm" href="{{url('client-index')}}" class='sidebar-link'>
-                                        <i  class="fa fa-university" id="icon"></i>
-                                            <span>Client Management</span>
-                                        </a>
-                                </li>
-                            
-                                @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
-                            <li class="submenu-item has-sub " style="list-style:none;">
-                                        <a href="{{url('file_managementindex')}}" class='sidebar-link'>
-                                        <i class="far fa-folder" id="icon" style="font-weight: 300;"></i>
-                                            <span>File Management</span>
-                                        </a>
-                                </li>
-                            @endif
-                            @if(Auth::user()->role == 'hr' || Auth::user()->role == 'hospitaladmin')
-                                @php
-                                    $hr = array("addallowance", "addstaffs", "staffs","loans","payslip","attendance","attendanceview","payslipbulk","generatepayslip","managestaff");
-                                @endphp
-                              
 
 
                         <li class="submenu-item has-sub " style="list-style:none;">
@@ -667,7 +622,6 @@
                         </li>
 
 
-
                         {{-- <li class="sidebar-item  has-sub">
                                     <a href="{{url('home')}}" class='sidebar-link'>
                         <i class="bi bi-grid-fill" style="font-weight: 400;" id="icon"></i>
@@ -681,11 +635,6 @@
                                     @endif --}}
 
                         {{-- <li class="submenu-item ">
-
-                             
-                                    
-                                    {{-- <li class="submenu-item ">
-
                                         <a href="{{url('addallowance')}}" class='sidebar-link'>
                         <span id="subm">Settings</span>
                         </a>
@@ -1209,7 +1158,6 @@
               </nav> --}}
 
 
-
                 <nav class="navbar navbar-expand-lg  sticky-top navbar-light bg-white">
                     <a id="backbtn" href="javascript:history.back()" style=" color: #070344;
                                             font-size: 35px;">
@@ -1305,24 +1253,8 @@
                             </div>
                         </div>
 
-                                        <nav class=" newstyle navbar navbar-expand-lg  sticky-top navbar-light bg-white">
-                                            <a id="backbtn" href="javascript:history.back()" style=" color: #070344;
-                                            font-size: 35px;" >
-                                            <i id="bkbtnicon" class="far fa-arrow-alt-circle-left"></i></a>
-
-
-
 
                         <div id="navr" style="margin-right: .5%;">
-
-                                                                    <!-- <div id="stopwatch-container">
-      <p id="stopwatch">00:00:00:00</p>
-      <div id="buttons-container">
-        <button onclick="main()" id="main-btn" class="btn">Start</button>
-        <button onclick="reset()" id="reset-btn" class="btn">Reset</button>
-      </div>
-    </div> -->
-
 
                             <div style=" text-decoration: none; list-style:none;">
 
@@ -1341,7 +1273,6 @@
                                                                                     <div class="avatar avatar-xl">
                                                                                     <img  style="margin-left: 28%;" src="assets/images/faces/CRAHqLogo.png" alt="Face 1">
                                                                                 </div>
-
                                                                                 <h5 class="font-bold"> {{ Auth::user()->name }}
                 </h5>
                 <h6 class="text-muted mb-0"><a href="{{url('logt')}}"> <i class="fas fa-sign-out-alt"></i> </i> Log
@@ -1365,29 +1296,6 @@
                         <p class="">2022 &copy; Globaleyet</p>
                     </div>
                     <!-- <div class="float-end">
-
-                                                                                <h5 class="font-bold"> {{ Auth::user()->name }}</h5>
-                                                                                <h6 class="text-muted mb-0"><a href="{{url('logt')}}"> <i class="fas fa-sign-out-alt"></i> </i> Log Out</a></h6>
-                                                                            
-                                                                            </div> --}}
-                                                <br>
-                                                <section class="newstyle container-fluid bg-white p-4 mt-2">
-                                                    <section class="row" >
-                                                        <div class="col-12 col-lg-12" >
-                                                            @yield('content')
-                                                        </div>
-                                                    </section>
-                                                </section>
-
-                                                <br>
-                                                <footer id="ftr"  class="newstyle container-fluid bg-white p-4 mt-2 border-top">
-                                                    <div class="footer clearfix mb-0 text-muted">
-                                                        
-                                                        <div class="container text-center"> 
-                                                            <p class="">2022 &copy; Globaleyet</p>
-                                                        </div>
-                                                        <!-- <div class="float-end">
-
                                                             
                                                             <p> <a class="pr-3" href="#"><i style="color: green;" class="	fa fa-level-up"></i> </a>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a href="https://www.globaleyet.com/">globaleyet</a></p>
                                                         </div> -->
@@ -1489,7 +1397,6 @@
                         $('.pagination').append('<li data-page="' + i + '">\
                                                                                         <span>' + i++ + '<span class="sr-only">(current)</span></span>\
                                                                                         </li>').show();
-
                     } // end for i 
 
 
@@ -1624,158 +1531,6 @@
         {{-- <script> --}}
 
         {{-- // const myElement = document.getElementById("subm");
-
-                                                                    }											// end for i 
-                                                        
-                                                            
-                                                                } 												// end if row count > max rows
-                                                                $('.pagination li:first-child').addClass('active'); // add active class to the first li 
-                                                                
-                                                                
-                                                                //SHOWING ROWS NUMBER OUT OF TOTAL DEFAULT
-                                                                showig_rows_count(maxRows, 1, totalRows);
-                                                                    //SHOWING ROWS NUMBER OUT OF TOTAL DEFAULT
-
-                                                                    $('.pagination li').on('click',function(e){		// on click each page
-                                                                    e.preventDefault();
-                                                                            var pageNum = $(this).attr('data-page');	// get it's number
-                                                                            var trIndex = 0 ;							// reset tr counter
-                                                                            $('.pagination li').removeClass('active');	// remove active class from all li 
-                                                                            $(this).addClass('active');					// add active class to the clicked 
-                                                                    
-                                                                    
-                                                                    //SHOWING ROWS NUMBER OUT OF TOTAL
-                                                                showig_rows_count(maxRows, pageNum, totalRows);
-                                                                    //SHOWING ROWS NUMBER OUT OF TOTAL
-                                                                    
-                                                        
-                                                        
-                                                                $(table+' tr:gt(0)').each(function(){		// each tr in table not the header
-                                                                    trIndex++;								// tr index counter 
-                                                                    // if tr index gt maxRows*pageNum or lt maxRows*pageNum-maxRows fade if out
-                                                                    if (trIndex > (maxRows*pageNum) || trIndex <= ((maxRows*pageNum)-maxRows)){
-                                                                        $(this).hide();		
-                                                                    }else {$(this).show();} 				//else fade in 
-                                                                }); 										// end of for each tr in table
-                                                                    });										// end of on click pagination list
-                                                                });
-                                                                                            // end of on select change 
-                                                        
-                                                                                // END OF PAGINATION 
-                                                                    
-                                                                    }	
-
-
-                                                                            
-
-                                                                // SI SETTING
-                                                                $(function(){
-                                                                    // Just to append id number for each row  
-                                                                default_index();
-                                                                                    
-                                                                });
-
-                                                                //ROWS SHOWING FUNCTION
-                                                                function showig_rows_count(maxRows, pageNum, totalRows) {
-                                                                //Default rows showing
-                                                                        var end_index = maxRows*pageNum;
-                                                                        var start_index = ((maxRows*pageNum)- maxRows) + parseFloat(1);
-                                                                        var string = 'Showing '+ start_index + ' to ' + end_index +' of ' + totalRows + ' entries';               
-                                                                        $('.rows_count').html(string);
-                                                                }
-
-                                                                // CREATING INDEX
-                                                                // function default_index() {
-                                                                //   $('table tr:eq(0)').prepend('<th> ID </th>')
-
-                                                                // 					var id = 0;
-
-                                                                // 					$('table tr:gt(0)').each(function(){	
-                                                                // 						id++
-                                                                // 						$(this).prepend('<td>'+id+'</td>');
-                                                                // 					});
-                                                                // }
-
-                                                                // All Table search script
-                                                                function FilterkeyWord_all_table() {
-                                                                
-                                                                // Count td if you want to search on all table instead of specific column
-
-                                                                var count = $('.table').children('tbody').children('tr:first-child').children('td').length; 
-
-                                                                        // Declare variables
-                                                                var input, filter, table, tr, td, i;
-                                                                input = document.getElementById("search_input_all");
-                                                                var input_value =     document.getElementById("search_input_all").value;
-                                                                        filter = input.value.toLowerCase();
-                                                                if(input_value !=''){
-                                                                        table = document.getElementById("table-id");
-                                                                tr = table.getElementsByTagName("tr");
-
-                                                                // Loop through all table rows, and hide those who don't match the search query
-                                                                for (i = 1; i < tr.length; i++) {
-                                                                
-                                                                var flag = 0;
-                                                                
-                                                                for(j = 0; j < count; j++){
-                                                                    td = tr[i].getElementsByTagName("td")[j];
-                                                                    if (td) {
-                                                                    
-                                                                        var td_text = td.innerHTML;  
-                                                                        if (td.innerHTML.toLowerCase().indexOf(filter) > -1) {
-                                                                        //var td_text = td.innerHTML;  
-                                                                        //td.innerHTML = 'shaban';
-                                                                        flag = 1;
-                                                                        } else {
-                                                                        //DO NOTHING
-                                                                        }
-                                                                    }
-                                                                    }
-                                                                if(flag==1){
-                                                                            tr[i].style.display = "";
-                                                                }else {
-                                                                    tr[i].style.display = "none";
-                                                                }
-                                                                }
-                                                                    }else {
-                                                                    //RESET TABLE
-                                                                    $('#maxRows').trigger('change');
-                                                                    }
-                                                                }
-                                                </script>    
-
-   
-
-                    <script>
-                    $("a.sidebar-link").click(function(){
-                            $("a.sidebar-link").css("background-color", "");
-                        $(this).css("background-color", "#F5E9D4");
-                        });
-                    </script>
-
-
-<script>
-    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-    var dropdown = document.getElementsByClassName("sidebar-link");
-    var i;
-    
-    for (i = 0; i < dropdown.length; i++) {
-      dropdown[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var dropdownContent = this.nextElementSibling;
-        if (dropdownContent.style.display === "block") {
-          dropdownContent.style.display = "none";
-        } else {
-          dropdownContent.style.display = "block";
-        }
-      });
-    }
-    </script>
-
-                 {{-- <script> --}}
-
-                    {{-- // const myElement = document.getElementById("subm");
-
                     // myElement.style.color = "red" --}}
         {{-- </script> --}}
     </body>

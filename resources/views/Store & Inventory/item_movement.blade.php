@@ -41,7 +41,7 @@
             <a href="{{ url('view_item_movement') }}"> <button type="button" class="btn btn-primary float:right;"
                     Style="width:50%;">View</button></a>
             <button type="button" class="btn btn-primary float:left" Style="width:45%;"
-                onclick="history.back();">Cancel</button>
+                data-dismiss="modal">Cancel</button>
         </div>
     </div>
 

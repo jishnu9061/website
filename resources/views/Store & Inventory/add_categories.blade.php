@@ -78,7 +78,7 @@
                                         <td scope="row" class="text-center">
                                             <a href="{{url('edit_category',$list->id,)}}"><i
                                                     style="  color:rgb(13, 1, 56);" class="fa fa-edit"></i></a>
-                                             <span class="m-2"></span>
+
                                             <a href="{{url('delete_category',$list->id,)}}"> <i
                                                     style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></a>
                                         </td>
@@ -134,18 +134,27 @@
 
 
                                                 </div>
-                                                   
+                                                <br>
+
+                                                <div class="row">
+                                                    <div class="col-sm">
+
+                                                    </div>
+                                                    <div class="col-sm">
+
+                                                    </div>
+                                                    <div class="col-sm">
                                                         <br>
-                                                        <br>
-                                                        <button type="submit" class="btn btn-primary">Add</button>
-                                                        <button type="button" class="btn btn-primary"
+                                                        <button type="submit" class="btn btn-primary float:right;"
+                                                            Style="width:45%;">Add</button>
+                                                        <button type="button" class="btn btn-primary float:right;"
                                                             data-dismiss="modal">Cancel</button>
-                                               
+                                                    </div>
+                                                </div>
                                         </div>
                                         </form>
                                     </div>
                                 </div>
-                            </div>
                             </div>
 
                         </div>

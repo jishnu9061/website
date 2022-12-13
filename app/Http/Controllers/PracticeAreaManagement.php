@@ -89,12 +89,6 @@ class PracticeAreaManagement extends Controller
         return redirect('/personal_injury');
        
     }
-    public function view_injury()
-    {
-
-        return view('PracticeAreaManagement.view_injury');
-       
-    }
 
     public function family_law()
     {
@@ -304,484 +298,20 @@ class PracticeAreaManagement extends Controller
 
     public function estate_plan()
     {
-
-        $view_plan = DB::table('cra_estate_planning')->get();
-        return view('PracticeAreaManagement.estate_plan',compact('view_plan'));
+        return view('PracticeAreaManagement.estate_plan');
     }
-
-    public function addestateplan(Request $request)
-    {
-        $file_no = $request['file_no'];
-        $client_name = $request['client_name'];
-        $matter_type = $request['matter_type'];
-        $estate_details =$request['estate_details'];
-        $trust = $request['trust'];
-        $property_details = $request['property_details'];
-        $accoundant = $request['accoundant'];
-        $financier =$request['financier'];
-        $support =$request['support'];
-
-        if(!empty($request->file('support'))){
-
-            $this->validate($request,[
-                'support' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
-            ]);
-        }
-        if(request()->hasfile('support')){
-            $uploadedImage = $request->file('support');
-            $imageName     = time() .'.'. $support->getClientOriginalExtension();
-            $destinationPath = public_path('image');
-            $uploadedImage->move($destinationPath,$imageName);
-            $support->file    = $destinationPath.$imageName;
-        }
-
-        DB::table('cra_estate_planning')->insert([
-
-            'file_no' => $file_no,
-            'client_name' => $client_name,
-            'matter_type' => $matter_type,
-            'estate_details' => $estate_details,
-            'trust' => $trust,
-            'property_details' => $property_details,
-            'accoundant' => $accoundant,
-            'financier' => $financier,
-            'support' => $support,
-        
-        ]);
-
-
-        return redirect('/estate_plan');
-    }
-
-    public function edit_estate_plan($id)
-    {
-        $edit=DB::table('cra_estate_planning')->where('id',$id)->first();
-
-        return view('PracticeAreaManagement.edit_estate_plan',compact('edit','id'));
-    }
-
-    public function updateestateplan(Request $request)
-    {
-        $id=$request['id'];
-        $file_no = $request['file_no'];
-        $client_name = $request['client_name'];
-        $matter_type = $request['matter_type'];
-        $estate_details =$request['estate_details'];
-        $trust = $request['trust'];
-        $property_details = $request['property_details'];
-        $accoundant = $request['accoundant'];
-        $financier =$request['financier'];
-        $support =$request['support'];
-
-        if(!empty($request->file('support'))){
-
-            $this->validate($request,[
-                'support' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
-            ]);
-        }
-        if(request()->hasfile('support')){
-            $uploadedImage = $request->file('support');
-            $imageName     = time() .'.'. $support->getClientOriginalExtension();
-            $destinationPath = public_path('image');
-            $uploadedImage->move($destinationPath,$imageName);
-            $support->file    = $destinationPath.$imageName;
-        }
-
-        DB::table('cra_estate_planning')->where('id',$id)->update([
-
-            'id' => $id,
-            'file_no' => $file_no,
-            'client_name' => $client_name,
-            'matter_type' => $matter_type,
-            'estate_details' => $estate_details,
-            'trust' => $trust,
-            'property_details' => $property_details,
-            'accoundant' => $accoundant,
-            'financier' => $financier,
-            'support' => $support,
-        
-        ]);
-
-
-        return redirect('/estate_plan');
-    }
-
-    public function deleteestateplan($id)
-    {
-        $delete_plan=DB::table('cra_estate_planning')->where('id',$id)->delete();
-
-        return redirect('/estate_plan');
-    }
-
-
-
-
-
     public function real_estate()
     {
-        $view_estate=DB::table('cra_real_estate')->get();
-        return view('PracticeAreaManagement.real_estate',compact('view_estate'));
+        return view('PracticeAreaManagement.real_estate');
     }
-
-    public function addrealestate(Request $request)
-    {
-        $file_no = $request['file_no'];
-        $client_name = $request['client_name'];
-        $matter_type = $request['matter_type'];
-        $buyer =$request['buyer'];
-        $attroney = $request['attroney'];
-        $property = $request['property'];
-        $close_statement = $request['close_statement'];
-        $listing_realtor =$request['listing_realtor'];
-        $selling_realtor =$request['selling_realtor'];
-        $company_title =$request['company_title'];
-        $support_detail =$request['support_detail'];
-
-        if(!empty($request->file('support_detail'))){
-
-            $this->validate($request,[
-                'support_detail' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
-            ]);
-        }
-        if(request()->hasfile('support_detail')){
-            $uploadedImage = $request->file('support_detail');
-            $imageName     = time() .'.'. $support_detail->getClientOriginalExtension();
-            $destinationPath = public_path('image');
-            $uploadedImage->move($destinationPath,$imageName);
-            $support_detail->file    = $destinationPath.$imageName;
-        }
-
-        DB::table('cra_real_estate')->insert([
-
-            'file_no' => $file_no,
-            'client_name' => $client_name,
-            'matter_type' => $matter_type,
-            'buyer' => $buyer,
-            'attroney' => $attroney,
-            'property' => $property,
-            'close_statement' => $close_statement,
-            'listing_realtor' => $listing_realtor,
-            'selling_realtor' => $selling_realtor,
-            'company_title' => $company_title,
-            'support_detail' => $support_detail,
-        
-        ]);
-
-
-        return redirect('/real_estate');
-    }
-
-    public function edit_real_estate($id)
-    {
-        $edit = DB::table('cra_real_estate')->where('id',$id)->first();
-        return view('PracticeAreaManagement.edit_real_estate',compact('edit','id'));
-    }
-
-    public function updaterealestate(Request $request)
-    {
-        $id = $request['id'];
-        $file_no = $request['file_no'];
-        $client_name = $request['client_name'];
-        $matter_type = $request['matter_type'];
-        $buyer =$request['buyer'];
-        $attroney = $request['attroney'];
-        $property = $request['property'];
-        $close_statement = $request['close_statement'];
-        $listing_realtor =$request['listing_realtor'];
-        $selling_realtor =$request['selling_realtor'];
-        $company_title =$request['company_title'];
-        $support_detail =$request['support_detail'];
-
-        if(!empty($request->file('support_detail'))){
-
-            $this->validate($request,[
-                'support_detail' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
-            ]);
-        }
-        if(request()->hasfile('support_detail')){
-            $uploadedImage = $request->file('support_detail');
-            $imageName     = time() .'.'. $support_detail->getClientOriginalExtension();
-            $destinationPath = public_path('image');
-            $uploadedImage->move($destinationPath,$imageName);
-            $support_detail->file    = $destinationPath.$imageName;
-        }
-
-        DB::table('cra_real_estate')->where('id',$id)->update([
-
-            'id' => $id,
-            'file_no' => $file_no,
-            'client_name' => $client_name,
-            'matter_type' => $matter_type,
-            'buyer' => $buyer,
-            'attroney' => $attroney,
-            'property' => $property,
-            'close_statement' => $close_statement,
-            'listing_realtor' => $listing_realtor,
-            'selling_realtor' => $selling_realtor,
-            'company_title' => $company_title,
-            'support_detail' => $support_detail,
-        
-        ]);
-
-
-        return redirect('/real_estate');
-    }
-
-    public function deleterealestate($id)
-    {
-        $delete_plan=DB::table('cra_real_estate')->where('id',$id)->delete();
-
-        return redirect('/real_estate');
-    }
-    public function view_real_estate()
-    {
-        return view('PracticeAreaManagement.view_real_estate');
-    }
-
-
-
     public function criminal_law()
     {
-        $criminal_law=DB::table('cra_criminal_law')->get();
-        return view('PracticeAreaManagement.criminal_law',compact('criminal_law'));
+        return view('PracticeAreaManagement.criminal_law');
     }
-    public function addcriminallaw(Request $request)
-    {
-        $matter_info = $request['matter_info'];
-        $defendent = $request['defendent'];
-        $matter_type = $request['matter_type'];
-        $prosecutor =$request['prosecutor'];
-        $case_detail = $request['case_detail'];
-        $investigator = $request['investigator'];
-        $victim = $request['victim'];
-        $support_detail =$request['support_detail'];
-
-        if(!empty($request->file('support_detail'))){
-
-            $this->validate($request,[
-                'support_detail' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
-            ]);
-        }
-        if(request()->hasfile('support_detail')){
-            $uploadedImage = $request->file('support_detail');
-            $imageName     = time() .'.'. $support_detail->getClientOriginalExtension();
-            $destinationPath = public_path('image');
-            $uploadedImage->move($destinationPath,$imageName);
-            $support_detail->file    = $destinationPath.$imageName;
-        }
-
-        DB::table('cra_criminal_law')->insert([
-
-            'matter_info' => $matter_info,
-            'defendent' => $defendent,
-            'matter_type' => $matter_type,
-            'prosecutor' => $prosecutor,
-            'case_detail' => $case_detail,
-            'investigator' => $investigator,
-            'victim' => $victim,
-            'support_detail' => $support_detail,
-        
-        ]);
-
-
-        return redirect('/criminal_law');
-    }
-
-    public function view_criminal_law()
-    {
-        return view('PracticeAreaManagement.view_criminal_law');
-    }
-
-    public function edit_criminal_law($id)
-    {
-        $edit=DB::table('cra_criminal_law')->where('id',$id)->first();
-        return view('PracticeAreaManagement.edit_criminal_law',compact('edit','id'));
-    }
-
-    public function updatecriminallaw(Request $request)
-    {
-        $id = $request['id'];
-        $matter_info = $request['matter_info'];
-        $defendent = $request['defendent'];
-        $matter_type = $request['matter_type'];
-        $prosecutor =$request['prosecutor'];
-        $case_detail = $request['case_detail'];
-        $investigator = $request['investigator'];
-        $victim = $request['victim'];
-        $support_detail =$request['support_detail'];
-
-        if(!empty($request->file('support_detail'))){
-
-            $this->validate($request,[
-                'support_detail' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
-            ]);
-        }
-        if(request()->hasfile('support_detail')){
-            $uploadedImage = $request->file('support_detail');
-            $imageName     = time() .'.'. $support_detail->getClientOriginalExtension();
-            $destinationPath = public_path('image');
-            $uploadedImage->move($destinationPath,$imageName);
-            $support_detail->file    = $destinationPath.$imageName;
-        }
-
-        DB::table('cra_criminal_law')->where('id',$id)->update([
-            
-            'id' => $id,
-            'matter_info' => $matter_info,
-            'defendent' => $defendent,
-            'matter_type' => $matter_type,
-            'prosecutor' => $prosecutor,
-            'case_detail' => $case_detail,
-            'investigator' => $investigator,
-            'victim' => $victim,
-            'support_detail' => $support_detail,
-        
-        ]);
-
-
-        return redirect('/criminal_law');
-    }
-
-    public function deletecriminallaw($id)
-    {
-        $delete_plan=DB::table('cra_criminal_law')->where('id',$id)->delete();
-        return redirect('/real_estate');
-    }
-
-
-
     public function civil_litigation()
     {
-        $view_litigation = DB::table('cra_civil_litigation')->get();
-        return view('PracticeAreaManagement.civil_litigation',compact('view_litigation'));
+        return view('PracticeAreaManagement.civil_litigation');
     }
-
-    public function addcivillitigation(Request $request)
-    {
-
-        $matter_info = $request['matter_info'];
-        $plaintiff = $request['plaintiff'];
-        $matter_type = $request['matter_type'];
-        $defendent =$request['defendent'];
-        $attroney = $request['attroney'];
-        $case_detail = $request['propecase_detailrty'];
-        $insurer = $request['insurer'];
-        $witness =$request['witness'];
-        $expert =$request['expert'];
-        $def_insurer =$request['def_insurer'];
-        $def_witness =$request['def_witness'];
-        $def_expert =$request['def_expert'];
-        $support_detail =$request['support_detail'];
-
-        if(!empty($request->file('support_detail'))){
-
-            $this->validate($request,[
-                'support_detail' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
-            ]);
-        }
-        if(request()->hasfile('support_detail')){
-            $uploadedImage = $request->file('support_detail');
-            $imageName     = time() .'.'. $support_detail->getClientOriginalExtension();
-            $destinationPath = public_path('image');
-            $uploadedImage->move($destinationPath,$imageName);
-            $support_detail->file    = $destinationPath.$imageName;
-        }
-
-        DB::table('cra_civil_litigation')->insert([
-
-            'matter_info' => $matter_info,
-            'plaintiff' => $plaintiff,
-            'matter_type' => $matter_type,
-            'defendent' => $defendent,
-            'attroney' => $attroney,
-            'case_detail' => $case_detail,
-            'insurer' => $insurer,
-            'witness' => $witness,
-            'expert' => $expert,
-            'def_insurer' => $def_insurer,
-            'def_witness' => $def_witness,
-            'def_expert' => $def_expert,
-            'support_detail' => $support_detail,
-        
-        ]);
-
-
-        return redirect('/civil_litigation');
-    }
-
-    public function view_civil_litigation()
-    {
-        return view('PracticeAreaManagement.view_civil_litigation');
-    }
-    public function edit_civil_litigation($id)
-    {
-        $edit = DB::table('cra_civil_litigation')->where('id',$id)->first();
-        return view('PracticeAreaManagement.edit_civil_litigation',compact('edit','id'));
-    }
-
-
-    public function updatecivillitigation(Request $request)
-    {
-
-        $id = $request['id'];
-        $matter_info = $request['matter_info'];
-        $plaintiff = $request['plaintiff'];
-        $matter_type = $request['matter_type'];
-        $defendent =$request['defendent'];
-        $attroney = $request['attroney'];
-        $case_detail = $request['propecase_detailrty'];
-        $insurer = $request['insurer'];
-        $witness =$request['witness'];
-        $expert =$request['expert'];
-        $def_insurer =$request['def_insurer'];
-        $def_witness =$request['def_witness'];
-        $def_expert =$request['def_expert'];
-        $support_detail =$request['support_detail'];
-
-        if(!empty($request->file('support_detail'))){
-
-            $this->validate($request,[
-                'support_detail' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
-            ]);
-        }
-        if(request()->hasfile('support_detail')){
-            $uploadedImage = $request->file('support_detail');
-            $imageName     = time() .'.'. $support_detail->getClientOriginalExtension();
-            $destinationPath = public_path('image');
-            $uploadedImage->move($destinationPath,$imageName);
-            $support_detail->file    = $destinationPath.$imageName;
-        }
-
-        DB::table('cra_civil_litigation')->where('id',$id)->update([
-
-            'id' => $id,
-            'matter_info' => $matter_info,
-            'plaintiff' => $plaintiff,
-            'matter_type' => $matter_type,
-            'defendent' => $defendent,
-            'attroney' => $attroney,
-            'case_detail' => $case_detail,
-            'insurer' => $insurer,
-            'witness' => $witness,
-            'expert' => $expert,
-            'def_insurer' => $def_insurer,
-            'def_witness' => $def_witness,
-            'def_expert' => $def_expert,
-            'support_detail' => $support_detail,
-        
-        ]);
-
-
-        return redirect('/civil_litigation');
-    }
-
-    public function deletecivillitigation($id)
-    {
-        $delete_plan=DB::table('cra_civil_litigation')->where('id',$id)->delete();
-        return redirect('/real_estate');
-    }
-
-
     public function business_law()
     {
         return view('PracticeAreaManagement.business_law');
@@ -809,10 +339,34 @@ class PracticeAreaManagement extends Controller
     {
         return view('PracticeAreaManagement.view_estate_plan');
     }
-    
-   
-   
-    
+    public function edit_estate_plan()
+    {
+        return view('PracticeAreaManagement.edit_estate_plan');
+    }
+    public function view_real_estate()
+    {
+        return view('PracticeAreaManagement.view_real_estate');
+    }
+    public function edit_real_estate()
+    {
+        return view('PracticeAreaManagement.edit_real_estate');
+    }
+    public function view_criminal_law()
+    {
+        return view('PracticeAreaManagement.view_criminal_law');
+    }
+    public function edit_criminal_law()
+    {
+        return view('PracticeAreaManagement.edit_criminal_law');
+    }
+    public function view_civil_litigation()
+    {
+        return view('PracticeAreaManagement.view_civil_litigation');
+    }
+    public function edit_civil_litigation()
+    {
+        return view('PracticeAreaManagement.edit_civil_litigation');
+    }
     public function view_business_law()
     {
         return view('PracticeAreaManagement.view_business_law');
