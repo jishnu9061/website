@@ -431,7 +431,7 @@ color: #999;
     <div id="app">
 
         <div id="sidebar" class="active" >
-            <div class="sidebar-wrapper active" style="border-radius: 0px 50px 50px 0px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
+            <div class="sidebar-wrapper active" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
 
                 <div class="sidebar-header">
                     <div class="d-flex justify-content-between">
@@ -1120,7 +1120,7 @@ color: #999;
               </nav> --}}
 
 
-                                        <nav class=" newstyle navbar navbar-expand-lg  sticky-top navbar-light bg-white">
+                                        <nav class=" newstyle1 navbar navbar-expand-lg  sticky-top navbar-light bg-white">
                                             <a id="backbtn" href="javascript:history.back()" style=" color: #070344;
                                             font-size: 35px;" >
                                             <i id="bkbtnicon" class="far fa-arrow-alt-circle-left"></i></a>
@@ -1237,7 +1237,7 @@ color: #999;
                                                 </section>
 
                                                 <br>
-                                                <footer id="ftr"  class="newstyle container-fluid bg-white p-4 mt-2 border-top">
+                                                <footer id="ftr"  class="newstyle2 container-fluid bg-white p-4 mt-2 border-top">
                                                     <div class="footer clearfix mb-0 text-muted">
                                                         
                                                         <div class="container text-center"> 
