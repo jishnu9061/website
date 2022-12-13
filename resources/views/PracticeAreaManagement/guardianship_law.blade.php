@@ -50,18 +50,19 @@
     </tr>
   </thead>
   <tbody>
+    @foreach($guardian_list as $list)
     <tr>
       
-      <td>679VL-0618</td>
-      <td>Jessica Robinson</td>
-      <td>Guardinship of a Disabled Person</td>
-      <td>Charles Newman</td>
+      <td>{{$list->matter_info}}</td>
+      <td>{{$list->petitioner}}</td>
+      <td>{{$list->matter_type}}</td>
+      <td>{{$list->disable_person}}</td>
       <td><a href="{{ url('view_guardianship_law') }}"><i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-2"></span>
-                      <a href="{{ url('edit_guardianship_law') }}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit" ></i><span class="m-2"></span>
-                      <a href="#"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
+                      <a href="{{ url('edit_guardianship_law',$list->id) }}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit" ></i><span class="m-2"></span>
+                      <a href="{{ url('delete_guardian',$list->id) }}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
       
     </tr>
-    
+    @endforeach
   </tbody>
 </table>
 </div>
@@ -102,25 +103,44 @@
                                     <!-- Modal body -->
                   <div class="modal-body" >
                       <div class="container">
-                        <form method="post" enctype="multipart/form-data"> 
+                        <form method="post" action="{{url('add_guardian')}}" enctype="multipart/form-data"> 
+                          @csrf
                         <div class="container">
     <div class="row">
     <div class="col">
            <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Matter Info</label>
+
                     <input type="text" class="form-control" placeholder="">
+
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <input type="text" class="form-control" placeholder="" name="matter_info">
+
                         </div>
     </div>
     <div class="col">
         <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Petitioner</label>
+
                     <input type="text" class="form-control" placeholder="">
+
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <input type="text" class="form-control" placeholder="" name="petitioner">
+
                         </div>
     </div>
     <div class="col">
        <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
+
                     <input type="text" class="form-control" placeholder="">
+
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <input type="text" class="form-control" placeholder="" name="matter_type">
+
                         </div>
     </div>
   </div>
@@ -129,19 +149,37 @@
     <div class="col">
       <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Disabled Person</label>
+
                     <input type="text" class="form-control" placeholder="">
+
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <input type="text" class="form-control" placeholder="" name="disable_person">
+
                         </div>
     </div>
     <div class="col">
        <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Attorney</label>
+
                     <textarea class="form-control" rows="2"></textarea>
+
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <textarea class="form-control" rows="2" name="attroney"></textarea>
+
                         </div>
     </div>
     <div class="col">
     <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Disability Details</label>
+
                     <textarea class="form-control" rows="2"></textarea>
+
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <textarea class="form-control" rows="2" name="disadility_details"></textarea>
+
                         </div>
     </div>
   </div>
@@ -149,12 +187,19 @@
     <div class="col">
            <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Case Details</label>
+
                     <textarea class="form-control" rows="2"></textarea>
+
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <textarea class="form-control" rows="2" name="case_details"></textarea>
+
                         </div>
     </div>
     <div class="col">
         <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Guardian</label>
+
                     <input type="text" class="form-control" placeholder="">
                         </div>
     </div>
@@ -162,18 +207,43 @@
        <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Attorney</label>
                     <textarea class="form-control" rows="2"></textarea>
+
+                    <div class="input-group">
+                    <div class="input-group-prepend"></div>
+                    <input type="text" class="form-control" placeholder="" name="guardian">
+
                         </div>
     </div>
+
   </div>
   <div class="row">
     <div class="col">
            <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Guardian Details</label>
                     <textarea class="form-control" rows="2"></textarea>
+
+    <div class="col-md-4">
+           <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Guardian Details</label>
+                    <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                    <textarea class="form-control" rows="2" name="guardian_details"></textarea>
+
                         </div>
     </div>
+  </div>
+  <div class="row">
+  
     <div class="col">
+
         
+
+       <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Supporting Details</label>
+                    <span class="m-2"></span>
+                    <input type="file" class="form-control" name="support_details" >
+                        </div> 
+
              
     </div>
     <div class="col">
@@ -197,7 +267,7 @@
 
 
       <div class="modal-footer" style="background-color:#d3e0ed;">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
       </div>
      </div>

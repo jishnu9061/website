@@ -35,7 +35,7 @@ $(document).on('input', '#percent', function() {
     <div class="col-md-12 order-md-1">
         <form method="post" action="{{url('add-document')}}" id="form" enctype="multipart/form-data">
             @csrf
-            <input type="hidden" name="individual_id[]" value="{{$client_doc->id}}">
+            <input type="hidden" name="individual_id" value="{{$client_doc->id}}">
 
             <div class="row">
                 <div class="col-md-12">
@@ -44,33 +44,37 @@ $(document).on('input', '#percent', function() {
                             <tr>
                                 <th>Document Type</th>
                                 <th>File Upload</th>
+                                <th>Add</th>
                                 <th></th>
                                 <th>Date</th>
-                                <th>Add</th>
                             </tr>
 
                         </thead>
                         <tbody>
                             <tr>
                                 <td style="width:45%;"> <select class="form-control select_group product"
-                                        data-row-id="row_3" id="product_detailes" name="testname[]" style="width:100%;">
+                                        data-row-id="row_3" id="product_detailes" name="testname[]"
+                                        style="width:100%;">
                                         <option selected>Select</option>
                                         <option value="assets">Type 1
                                         </option>
 
                                     </select>
                                 </td>
-                                <td style="width:45%;">
-                                    <input type="file" class="form-control" name="file[]"  required>
+                                <td style="width:45%;"> <input type="file" class="form-control" name="file[]"
+                                        multiple="multiple" required>
+                                </td>
+                                </td>
+
+                                <td> <input type="button" class="btn btn-primary float:right;" id="add" value="Add">
                                 </td>
                                 <td>
-                                    <input type="hidden" class="form-control" name="client[]" id="username"
+                                    <input type="hidden" class="form-control" name="client" id="username"
                                         value="{{$client_doc->client_type}}" placeholder="File" required>
                                 </td>
                                 <td>
-                                    <input type="date" class="form-control" name="date[]" id="username" required>
+                                    <input type="date" class="form-control" name="date" id="username" required>
                                 </td>
-                                <td> <input type="button" class="btn btn-primary float:right;" id="add" value="Add">
                             </tr>
                         </tbody>
                     </table>
@@ -107,19 +111,19 @@ $(document).on('input', '#percent', function() {
 <script type="text/javascript">
 $(document).ready(function() {
     var html =
-        '<tr><td style="width:45%;"> <input type="hidden" name="individual_id[]" value="{{$client_doc->id}}"><select class="form-control select_group product"data-row-id="row_3" id="product_detailes" name="testname[]" style="width:100%;"><option selected>Select</option><option value="assets">Type 1</option></select></td><td style="width:45%;"> <input type="file" class="form-control" name="file[]"  required></td></td><td><input type="hidden" class="form-control" name="client[]" id="username"value="{{$client_doc->client_type}}" placeholder="File" required></td>  <td><input type="date" class="form-control" name="date[]" id="username" required></td><td><input type="button" class="btn btn-danger float:right;" name="remove" id="remove" value="remove"></td></tr>';
+        '<tr><td style="width:45%;"> <select class="form-control select_group product"data-row-id="row_3" id="product_detailes" name="testname[]" style="width:100%;"><option selected>Select</option><option value="assets">Type 1</option></select></td><td style="width:45%;"> <input type="file" class="form-control" name="file[]" multiple="multiple" required></td></td><td> <input type="button" class="btn btn-danger float:right;" name="remove" id="remove" value="remove"></td><td><input type="hidden" class="form-control" name="client" id="username"value="{{$client_doc->client_type}}" placeholder="File" required></td></tr>';
     var max = 4;
     var X = 1;
 
     $("#add").click(function() {
-        if (X <= max) {
+        if(X <= max){
             $("#table_field").append(html);
             X++;
         }
-
+       
     });
 
-    $("#table_field").on('click', '#remove', function() {
+    $("#table_field").on('click','#remove',function(){
         $(this).closest('tr').remove();
         X--;
     });

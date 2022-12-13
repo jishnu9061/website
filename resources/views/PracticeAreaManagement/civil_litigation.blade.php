@@ -38,6 +38,7 @@
 
 
 <div class="table-responsive">
+
 <table class="table text-center">
   <thead>
     <tr>
@@ -67,6 +68,42 @@
     
   </tbody>
 </table>
+
+    <table class="table text-center">
+        <thead>
+            <tr>
+
+                <th scope="col">Matter Info</th>
+                <th scope="col">Plaintiff</th>
+                <th scope="col">Matter Type</th>
+                <th scope="col">Defendent</th>
+                <th scope="col">Attroney</th>
+                <th scope="col">Actions</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+        @foreach($view_litigation as $list)
+            <tr>
+
+                <td>{{$list->matter_info}}</td>
+                <td>{{$list->plaintiff}}</td>
+                <td>{{$list->matter_type}}</td>
+                <td>{{$list->defendent}}</td>
+                <td>{{$list->attroney}}</td>
+                <td><a href="{{ url('view_civil_litigation') }}"><i style="color:rgb(13, 1, 56);"
+                            class="fa fa-eye"></i><span class="m-1"></span>
+                        <a href="{{ url('edit_civil_litigation',$list->id)}}"><i style="color:rgb(13, 1, 56);"
+                                class="fa fa-edit"></i><span class="m-1"></span>
+                            <a onClick="return myFunction();"  href="{{ url('delete_civil_litigation',$list->id)}}"> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></td>
+
+            </tr>
+            @endforeach
+
+        </tbody>
+    </table>
+
 </div>
 
 
