@@ -31,7 +31,7 @@
 
             <form method="post" action="{{url('update-box')}}" id="form">
                 @csrf
-                <input type="hidden" value="{{$id}}" name="id">
+                <input type="hidden" value="{{$edit->id}}" name="id">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">

@@ -7,79 +7,96 @@
     <br>
 
     <form action="{{url('update_family_law')}}" method="post">
-      @csrf
+        @csrf
+
         <div class="row">
-            <input type="hidden" name="id" value="{{$edit->id}}">
-            <div class="col">
+            <div class="col-md-4">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">File No</label>
-                    <input type="text" class="form-control" placeholder="" name="file_no" value="{{$edit->file_no}}">
+                    <div class="input-group">
+                        <div class="input-group-prepend"></div>
+                        <input type="text" class="form-control" placeholder="12T654C">
+                    </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-md-4">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Client Name</label>
-                    <input type="text" class="form-control" placeholder="" name="client_name"
-                        value="{{$edit->client_name}}">
+                    <div class="input-group">
+                        <div class="input-group-prepend"></div>
+                        <input type="text" class="form-control" placeholder="Alen">
+                    </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-md-4">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
-                    <input type="text" class="form-control" placeholder="" name="matter_type"
-                        value="{{$edit->matter_type}}">
+                    <div class="input-group">
+                        <div class="input-group-prepend"></div>
+                        <input type="text" class="form-control" placeholder="Pre Decree">
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col">
+            <div class="col-md-4">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Other Party</label>
-                    <input type="text" class="form-control" placeholder="" name="other_party"
-                        value="{{$edit->other_party}}">
+                    <div class="input-group">
+                        <div class="input-group-prepend"></div>
+                        <input type="text" class="form-control" placeholder="Smith">
+                    </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-md-4">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Attorney</label>
-                    <input type="text" class="form-control" placeholder="" name="attorney" value="{{$edit->attorney}}">
+                    <div class="input-group">
+                        <div class="input-group-prepend"></div>
+                        <input type="text" class="form-control" placeholder="David">
+                    </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-md-4">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Case Details</label>
-                    <textarea class="form-control" rows="2" placeholder="" name="case_details"
-                        value="{{$edit->case_details}}"></textarea>
+                    <div class="input-group">
+                        <div class="input-group-prepend"></div>
+                        <textarea class="form-control" rows="2" placeholder="Divorce"></textarea>
+                    </div>
                 </div>
             </div>
         </div>
-
-  <div class="row">
-    <div class="col">
-      <div class="mb-3">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Marriage Details</label>
-                    <textarea class="form-control" rows="2" placeholder=" " name="marrige"
-                        value="{{$edit->marrige}}"></textarea>
+                    <div class="input-group">
+                        <div class="input-group-prepend"></div>
+                        <textarea class="form-control" rows="2" placeholder="Marriage Details"></textarea>
+                    </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-md-4">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Property Details</label>
-                    <textarea class="form-control" rows="2" placeholder=" " name="property"
-                        value="{{$edit->property}}"></textarea>
+                    <div class="input-group">
+                        <div class="input-group-prepend"></div>
+                        <textarea class="form-control" rows="2" placeholder="Property Details"></textarea>
+                    </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-md-4">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Child Details</label>
-                    <textarea class="form-control" rows="2" placeholder=" " name="chile_details"
-                        value="{{$edit->child_details}}"></textarea>
+                    <div class="input-group">
+                        <div class="input-group-prepend"></div>
+                        <textarea class="form-control" rows="2" placeholder="Child Details"></textarea>
+                    </div>
                 </div>
-
             </div>
         </div>
-
 
         <div class="conatainer" style="float:right;">
             <br>

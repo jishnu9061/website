@@ -117,67 +117,92 @@
                       @csrf
                         <div class="container">
                         <div class="row">
-                                <div class="col">
+                                <div class="col-md-4">
                                     <div class="mb-3">
                                         <label for="exampleFormControlInput1" class="form-label">File No</label>
+                                        <div class="input-group">
+                                        <div class="input-group-prepend"></div>
                                         <input type="text" class="form-control" placeholder="" name="file_no">
                                     </div>
-                                </div>
-                                <div class="col">
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Client Name</label>
-                                        <input type="text" class="form-control" placeholder="" name="client_name">
                                     </div>
                                 </div>
-                                <div class="col">
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Client Name</label>
+                                        <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control" placeholder="" name="client_name">
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
                                     <div class="mb-3">
                                         <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
+                                        <div class="input-group">
+                                        <div class="input-group-prepend"></div>
                                         <input type="text" class="form-control" placeholder="" name="matter_type">
                                     </div>
                                 </div>
+                                </div>
                             </div>
 
                             <div class="row">
-                                <div class="col">
+                                <div class="col-md-4">
                                     <div class="mb-3">
                                         <label for="exampleFormControlInput1" class="form-label">Other Party</label>
+                                        <div class="input-group">
+                                        <div class="input-group-prepend"></div>
                                         <input type="text" class="form-control" placeholder="" name="other_party">
                                     </div>
-                                </div>
-                                <div class="col">
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Attorney</label>
-                                        <input type="text" class="form-control" placeholder="" name="attorney">
                                     </div>
                                 </div>
-                                <div class="col">
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Attorney</label>
+                                        <div class="input-group">
+                                        <div class="input-group-prepend"></div>
+                                        <input type="text" class="form-control" placeholder="" name="attorney">
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
                                     <div class="mb-3">
                                         <label for="exampleFormControlInput1" class="form-label">Case Details</label>
+                                        <div class="input-group">
+                                        <div class="input-group-prepend"></div>
                                         <textarea class="form-control" rows="2" name="case_details"></textarea>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col">
+                                <div class="col-md-4">
                                     <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Marriage
-                                            Details</label>
+                                        <label for="exampleFormControlInput1" class="form-label">Marriage Details</label>
+                                            <div class="input-group">
+                                            <div class="input-group-prepend"></div>
                                         <textarea class="form-control" rows="2" name="marrige"></textarea>
                                     </div>
+                                    </div>
                                 </div>
-                                <div class="col">
+                                <div class="col-md-4">
                                     <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Property
-                                            Details</label>
+                                        <label for="exampleFormControlInput1" class="form-label">Property Details</label>
+                                        <div class="input-group">
+                                        <div class="input-group-prepend"></div>
                                         <textarea class="form-control" rows="2" name="property"></textarea>
                                     </div>
+                                    </div>
                                 </div>
-                                <div class="col">
+                                <div class="col-md-4">
                                     <div class="mb-3">
                                         <label for="exampleFormControlInput1" class="form-label">Child Details</label>
+                                        <div class="input-group">
+                                        <div class="input-group-prepend"></div>
                                         <textarea class="form-control" rows="2" name="child_details"></textarea>
                                     </div>
-
+                                    </div>
+                                </div>
                                 </div>
 
 
