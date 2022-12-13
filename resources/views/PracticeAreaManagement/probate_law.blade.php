@@ -109,61 +109,79 @@
                             @csrf
                         <div class="container">
     <div class="row">
-    <div class="col-md-4">
-           <div class="mb-1">
+    <div class="col">
+           <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Matter Info</label>
+
+                    <input type="text" class="form-control" placeholder="">
+
                     <div class="input-group">
                 <div class="input-group-prepend"></div>
                     <input type="text" class="form-control" placeholder="" name="matter_info">
-                        </div>
+
                         </div>
     </div>
-    <div class="col-md-4">
-        <div class="mb-1">
+    <div class="col">
+        <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Executor / Administator</label>
+
+                    <input type="text" class="form-control" placeholder="">
+
                     <div class="input-group">
                 <div class="input-group-prepend"></div>
                     <input type="text" class="form-control" placeholder="" name="executor">
-                        </div>
+
                         </div>
     </div>
-    <div class="col-md-4">
-       <div class="mb-1">
+    <div class="col">
+       <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
+
+                    <input type="text" class="form-control" placeholder="">
+
                     <div class="input-group">
                 <div class="input-group-prepend"></div>
                     <input type="text" class="form-control" placeholder="" name="matter_type">
-                        </div>
+
                         </div>
     </div>
   </div>
   
   <div class="row">
-    <div class="col-md-4">
+    <div class="col">
       <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Deceased</label>
+
+                    <input type="text" class="form-control" placeholder="">
+
                     <div class="input-group">
                 <div class="input-group-prepend"></div>
                     <input type="text" class="form-control" placeholder="" name="deceased">
-                        </div>
+
                         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col">
        <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Case Details</label>
+
+                    <textarea class="form-control" rows="2"></textarea>
+
                     <div class="input-group">
                 <div class="input-group-prepend"></div>
                     <textarea class="form-control" rows="2" name="case_details"></textarea>
-                        </div>
+
                         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col">
     <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Estate Details</label>
+
+                    <textarea class="form-control" rows="2"></textarea>
+
                     <div class="input-group">
                 <div class="input-group-prepend"></div>
                     <textarea class="form-control" rows="2" name="estate_details"></textarea>
-                        </div>
+
                         </div>
     </div>
   </div>

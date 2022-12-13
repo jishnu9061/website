@@ -154,7 +154,7 @@
                             <label>Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="name" id="name" value="" required>
+                                <input type="text" class="form-control" name="name" id="name" value="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -166,7 +166,7 @@
                             <label>Email</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="email" class="form-control" name="email" id="address" value="" required>
+                                <input type="email" class="form-control" name="email" id="address" value="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -224,7 +224,6 @@
                                     Password is required.
                                 </div>
                             </div>
-                            <div id="test" style="height:20px;"></div>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -233,7 +232,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="date" class="form-control" name="doj"
-                                    id="password" placeholder="staff Password">
+                                    id="password" placeholder="staff Password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Passeord is required.
                                 </div>
@@ -243,11 +242,11 @@
                     <div class="col-md-3">
                         <div class="mb-1">
                             <label>Gender:&nbsp;</label>
-                            <select class="form-select" aria-label="Default select example" name="sex">
-                                <option>Select</option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                                <option value="Other">Other</option>
+                            <select class="form-select" aria-label="Default select example" name="gender">
+                                <option selected>Select</option>
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                                <option value="3">Other</option>
                             </select>
                         </div>
                     </div>
@@ -268,7 +267,7 @@
                         <div class="mb-1">
                             <label>Roles&nbsp;</label>
                             <select class="form-select" aria-label="Default select example" name="roles">
-                                <option>Select</option>
+                                <option selected>Account Manager</option>
                                 <option value="Active">HR Manager</option>
                                 <option value="Inactive">Jr.Advocate</option>
                                 <option value="Resigned">Sr.Advocate</option>
@@ -276,7 +275,7 @@
                                 <option value="Suspended">Receptionist</option>
                             </select>
                         </div>
-                        {{-- <div id="test" style="height:20px;"></div> --}}
+                        <div id="test" style="height:20px;"></div>
                     </div>
                     <div class="col-md-3">
                         <div class="mb-1">
@@ -289,7 +288,7 @@
                                 <option value="Suspended">Suspended</option>
                             </select>
                         </div>
-                       
+                        <div id="test" style="height:20px;"></div>
                     </div>
                     <div class="col-md-3">
                         <div class="mb-1">
@@ -297,7 +296,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="date" class="form-control" name="status_date"
-                                    id="password" placeholder="staff Password">
+                                    id="password" placeholder="staff Password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Passeord is required.
                                 </div>
@@ -558,7 +557,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="file" class="form-control" name="cv" id="password"
-                                    placeholder="staff Password">
+                                    placeholder="staff Password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Passeord is required.
                                 </div>
@@ -571,7 +570,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="file" class="form-control" name="photo" id="password"
-                                    placeholder="staff Password">
+                                    placeholder="staff Password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Passeord is required.
                                 </div>
@@ -584,7 +583,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="file" class="form-control" name="signature" id="password"
-                                    placeholder="staff Password">
+                                    placeholder="staff Password" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Passeord is required.
                                 </div>
@@ -618,7 +617,7 @@
     <script type="text/javascript" charset="utf8"
         src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
     <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-    {{-- <script type="text/javascript">
+    <script type="text/javascript">
         $('#password, #confirm_password').on('keyup', function() {
             var v = $('#password').val();
             var b = $('#confirm_password').val()
@@ -633,8 +632,8 @@
             } else
                 $('#message').html('Not Matching').css('color', 'red');
         });
-    </script> --}}
-    {{-- <script>
+    </script>
+    <script>
         $('.leaves').on('keyup', function() {
             var total = 0;
             $('.leaves').each(function(index, element) {
@@ -648,7 +647,7 @@
 
 
         });
-    </script> --}}
+    </script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <script>
         $(document).ready(function() {

@@ -14,7 +14,7 @@
     <div class="container">
 
         {{-- heading --}}
-        <h4 id="hdtpa"><b>Issued Items</b></h4>
+        <h4 id="hdtpa"><b>Issued Item Details</b></h4>
         <br>
 
         <div class="row">
@@ -79,62 +79,74 @@
                         </div>
                     </div>
                     <br>
-                    <br>
-                    <div class="text-center">
-                        <h4><b>Item Details </b></h4>
+                    <div>
+                        <h4 id="hdtpa"><b>Item </b></h4>
                     </div>
                     <br>
                     <div class="row clearfix">
                         <div class="col-sm">
                             <table class="table table-striped table-class" id="tab_logic">
-                            <tbody  class="text-center">
                                 <tr>
-                                    <th class="" style="width:25%">Category</th>
-                                    <th class="">Item Type</th>
-                                    <th class="">item Name</th>
-                                    <th class="">Quantity</th>
-                                    <th class="">Issued Quantity</th>
+                                    <td class="" style="width:25%">Category</td>
+                                    <td class="">Item Type</td>
+                                    <td class="">item Name</td>
+                                    <td class="">Quantity</td>
+                                    <td class="">Issued Quantity</td>
                                 </tr>
-                                
+                                <tbody>
                                     <tr>
                                         <td><input type="text" name="price[]" id="price_"
-                                                class="form-control calculate" value="Stationary"></td>
+                                                class="form-control calculate"></td>
 
                                         <td><input type="text" name="price[]" id="price_"
-                                                class="form-control calculate" value="Book"></td>
+                                                class="form-control calculate"></td>
 
                                         <td><input type="text" name="price[]" id="price_"
-                                                class="form-control calculate" value="Book 150 pages"></td>
+                                                class="form-control calculate"></td>
 
 
                                         <td><input type="text" name="price[]" id="price_"
-                                                class="form-control calculate" value="10"></td>
+                                                class="form-control calculate"></td>
 
                                         <td><input type="text" name="price[]" id="price_"
-                                                class="form-control calculate" value="5"></td>
+                                                class="form-control calculate"></td>
                                     </tr>
                             </table>
-                           
+                            <div class="row">
+                                <div class="col-sm">
+                                </div>
+                                <div class="col-sm">
+                                    <table class="table table-bordered">
+
+
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <br>
 
                     <div class="row">
-                        
-                        <div class="col-sm">    
-                            <button type="submit" class="btn btn-primary float:right;">Save</button>
-                            <span class="m-2"></span>
-                            <button type="button" class="btn btn-primary float:left" onclick="history.back()">Cancel</button>
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                                onclick="history.back()">Cancel</button>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
                         </div>
                     </div>
             </div>
             </form>
         </div>
-    
-    
+    </div>
+    </div>
 
-    
-   
+    </div>
+    <br>
 
     <!-- Supplier modal Edit End -->
 

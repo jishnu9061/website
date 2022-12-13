@@ -108,6 +108,106 @@
                     <form method="post" enctype="multipart/form-data" action="{{url('add_workers_compensation')}}">
                         @csrf
                         <div class="container">
+
+    <div class="row">
+    <div class="col">
+           <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Matter Info</label>
+                    <input type="text" class="form-control" placeholder="">
+                        </div>
+    </div>
+    <div class="col">
+        <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Petitioner</label>
+                    <input type="text" class="form-control" placeholder="">
+                        </div>
+    </div>
+    <div class="col">
+       <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
+                    <input type="text" class="form-control" placeholder="">
+                        </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col">
+      <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Respondent</label>
+                    <input type="text" class="form-control" placeholder="">
+                        </div>
+    </div>
+    <div class="col">
+       <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Attorney</label>
+                    <input type="text" class="form-control" placeholder="">
+                        </div>
+    </div>
+    <div class="col">
+     <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Insurer</label>
+                    <textarea class="form-control" rows="2"></textarea>
+                        </div>
+    </div>
+  </div>
+ 
+  <div class="row">
+    <div class="col">
+      <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Adjuster</label>
+                    <input type="text" class="form-control" placeholder="">
+                        </div>
+    </div>
+    <div class="col">
+    <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Case Details</label>
+                    <textarea class="form-control" rows="2"></textarea>
+                        </div>
+    </div>
+    <div class="col">
+    <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Employee Doctor</label>
+                    <input type="text" class="form-control" placeholder="">
+                        </div>
+    </div>
+    <div class="row">
+    <div class="col">
+           <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Employment & Benefit Details</label>
+                    <input type="text" class="form-control" placeholder="">
+                        </div>
+    </div>
+    <div class="col">
+        
+             
+    </div>
+    <div class="col">
+   
+    </div>
+  </div>
+  
+
+  <div class="row">
+    <div class="col">
+      
+    </div>
+  </div>
+      <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Supporting Details</label>
+                    <span class="m-2"></span>
+                    <input type="file" class="form-control" >
+                        </div>
+      </div>
+  </div>
+
+
+
+      <div class="modal-footer" style="background-color:#d3e0ed;">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+     </div>
+
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="mb-3">
@@ -237,6 +337,7 @@
                                 <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                             </div>
                         </div>
+
 
                     </form>
                 </div>

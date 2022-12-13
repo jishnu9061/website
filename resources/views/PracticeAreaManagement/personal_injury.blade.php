@@ -86,10 +86,11 @@
                                     <td class="text-center"></td>
                                     <td class="text-center"></td>
                                     <td class="text-center"></td>
-                                    <td class="text-center"><a href="{{url('view_injury')}}"><i style="color:black;" class="fa fa-eye"
+                                    <td class="text-center"><a href=""><i style="color:black;" class="fa fa-eye"
                                         aria-hidden="true"></i>
+                                   
                                     <a href="{{url('edit_injury',$list->id)}}"><i style="color:black;" class="fa fa-edit"
-                                            aria-hidden="true"></i> 
+                                            aria-hidden="true"></i>
                                         <a onClick="return myFunction();" href="{{url('delete_injury',$list->id)}}" style="color:black;"><i
                                                 class="fas fa-trash-alt"></i></a></td>
 
@@ -134,7 +135,7 @@
 
                                                 <div class="row">
                     <div class="col-md-6">
-                        <div class="mb-3">
+                        <div class="mb-1">
                             <label for="username">Matter Info</label>
 
                             <div class="input-group">
@@ -157,7 +158,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="mb-3">
+                        <div class="mb-1">
                             <label for="username">Matter Type</label>
 
                             <div class="input-group">
@@ -185,12 +186,11 @@
                         </div>
                     </div>
                 </div>
-                
-                <h4>Plaintiff</h4>
                 <br>
+                <h4>Plaintiff</h4>
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="mb-3">
+                        <div class="mb-1">
                             <label for="username">Incident Details</label>
 
                             <div class="input-group">
@@ -214,7 +214,7 @@
                     </div>
                
                     <div class="col-md-6">
-                        <div class="mb-3">
+                        <div class="mb-1">
                             <label for="username">Damage Details</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
@@ -225,7 +225,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="mb-3">
+                        <div class="mb-1">
                             <label for="username">Health Insurer</label>
 
                             <div class="input-group">
@@ -248,7 +248,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="mb-3">
+                        <div class="mb-1">
                             <label for="username">Insurence Policy Details</label>
 
                             <div class="input-group">
@@ -275,7 +275,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="mb-3">
+                        <div class="mb-1">
                             <label for="username">Defendant</label>
 
                             <div class="input-group">
@@ -297,7 +297,7 @@
                             </div>
                         </div>
                     </div>
-                
+                </div>
                 <br>
               
                 <div class="row">

@@ -428,6 +428,22 @@ color: #999;
 
 
 
+            <div id="sidebar" class="active">
+                <div class="sidebar-wrapper active">
+
+                    <div class="sidebar-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="logo">
+                                <a href="{{ url('home') }}">
+                                    <!-- {{-- <img src="assets/images/logo/logo.png" alt="Logo" srcset=""> --}} -->
+
+                                    <img id="cr_logo" src="assets/images/Logo cra.png" alt="CRA">
+
+                                </a>
+                            </div>
+                            {{-- <div class="toggler">
+
+
     <div id="app">
 
         <div id="sidebar" class="active" >
@@ -444,13 +460,22 @@ color: #999;
                             </a>
                         </div>
                         {{-- <div class="toggler">
+
                             <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
                         </div> --}}
                     </div>
+
+                    <div class="sidebar-menu">
+                        <ul class="menu">
+                            <li class="sidebar-title" style="color: #1D1D50; text-align:center; font-size:16px; ">
+                                DASHBOARD
+                            </li>
+
                 </div>
                 <div class="sidebar-menu" >
                     <ul class="menu">
                         <li  class="sidebar-title" style="color: #1D1D50; text-align:center; font-size:16px; ">DASHBOARD</li>
+
                             {{-- @if(Auth::user()->role == 'superadmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="#" class='sidebar-link'>
@@ -506,6 +531,50 @@ color: #999;
                                     </li>
                                     
                                 </ul>
+
+                        </li>
+
+                        <li class="submenu-item  has-sub" style="list-style:none;">
+                            <a href="{{url('user_management')}}" class='sidebar-link'>
+                                <i class="fa-regular fa-user" id="icon"></i>
+                                <span> User Management</span>
+                            </a>
+                        </li>
+
+
+                        <li class="submenu-item has-sub " style="list-style:none;">
+                            <a id="sblm" href="{{url('client-index')}}" class='sidebar-link'>
+                                <i class="fa fa-university" id="icon"></i>
+                                <span> Client Management</span>
+                            </a>
+                        </li>
+
+                        @endif
+                        @if(Auth::user()->role == 'hospitaladmin')
+                        <li class="submenu-item has-sub " style="list-style:none;">
+                            <a href="{{url('file_managementindex')}}" class='sidebar-link'>
+                                <i class="far fa-folder" id="icon" style="font-weight: 300;"></i>
+                                <span>File Management</span>
+                            </a>
+                        </li>
+                        @endif
+                        @if(Auth::user()->role == 'hr' || Auth::user()->role == 'hospitaladmin')
+                        @php
+                        $hr = array("addallowance", "addstaffs",
+                        "staffs","loans","payslip","attendance","attendanceview","payslipbulk","generatepayslip","managestaff");
+                        @endphp
+
+
+                        <li class="submenu-item has-sub" style="list-style:none;">
+                            <a href="{{url('system_setup')}}" class='sidebar-link'>
+                                <i class="fa fa-gear" id="icon"></i>
+                                <span>System Setup</span>
+                            </a>
+                        </li>
+
+
+                        <!-- <ul class="submenu">
+
                                 </li>
 
                                 <li class="submenu-item  has-sub" style="list-style:none;">
@@ -548,6 +617,7 @@ color: #999;
                         
 
                                     <!-- <ul class="submenu">
+
 
                                     <li class="submenu-item ">
                                         <a href="{{url('system_setup')}}" class='sidebar-link'>
@@ -598,9 +668,33 @@ color: #999;
                             </li>
 
 
+                        <li class="submenu-item" style="list-style:none;">
+                            <a href="{{url('hrindex')}}" class='sidebar-link'>
+                                <i class="fa fa-th-large" id="icon"></i>
+                                <span>HR</span>
+                            </a>
+                        </li>
+
+
+                        {{-- <li class="sidebar-item  has-sub">
+                                    <a href="{{url('home')}}" class='sidebar-link'>
+                        <i class="bi bi-grid-fill" style="font-weight: 400;" id="icon"></i>
+                        <span>HR</span>
+                        </a> --}}
+                        {{-- @if (in_array(request()->path(),$hr))
+                                        <ul class="submenu" style="display: block;">
+                                        @else
+                                            <ul class="submenu" style="display: none;">
+
+                                    @endif --}}
+
+                        {{-- <li class="submenu-item ">
+
+
                              
                                     
                                     {{-- <li class="submenu-item ">
+
                                         <a href="{{url('addallowance')}}" class='sidebar-link'>
                                             <span id="subm">Settings</span>
                                         </a>
@@ -1120,6 +1214,111 @@ color: #999;
               </nav> --}}
 
 
+
+                <nav class="navbar navbar-expand-lg  sticky-top navbar-light bg-white">
+                    <a id="backbtn" href="javascript:history.back()" style=" color: #070344;
+                                            font-size: 35px;">
+                        <i id="bkbtnicon" class="far fa-arrow-alt-circle-left"></i></a>
+
+                    <a class="navbar-brand pl-4" href="#">
+                        <img src="assets/images/faces/lawemb.png" height="40px" class="d-inline-block align-top" alt="">
+
+                    </a>
+
+
+                    <div class="nav-item dropdown">
+                        <button class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img data-toggle="tooltip" data-placement="top" title="Menu"
+                                style="height: 35px; width: 35px;" id="cr_logo" src="assets/images/Logo cra.png"
+                                alt="CRA">
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{url('user_management')}}">User Management</a>
+                            <a class="dropdown-item" href="{{url('client-index')}}">Client Management</a>
+                            {{-- <div class="dropdown-divider"></div> --}}
+                            <a class="dropdown-item" href="{{url('file_managementindex')}}">File Management</a>
+                            <a class="dropdown-item" href="{{url('system_setup')}}">System Setup</a>
+
+                            <a class="dropdown-item" href="{{url('hrindex')}}">HR</a>
+
+                            <a class="dropdown-item" href="{{url('accindex')}}">Accounts</a>
+
+                        </div>
+                    </div>
+
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse ml-2" id="navbarTogglerDemo01">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="font-bold text-uppercase nav-link" href="#"> {{ Auth::user()->name }} <span
+                                        class="sr-only">(current)</span></a>
+                                {{-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> --}}
+                            </li>
+
+                            <li class="nav-item">
+                                <form class="form-inline my-2 my-lg-0">
+                                    <input class="form-control mr-sm-2" type="search" placeholder="Search"
+                                        aria-label="Search">
+                                    <button class="btn btn-primary my-2 my-sm-0" type="submit"><i
+                                            class="fa fa-search"></i></button>
+                                </form>
+                                {{-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> --}}
+                            </li>
+                        </ul>
+
+                        <ul class="navbar-nav mr-auto lg-pl-3">
+
+                            <li class="nav-item dropdown">
+                                <button class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Create New <i class="fa fa-plus-square"></i>
+                                </button>
+
+
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{url('user_management')}}">Time entry</a>
+                                    <a class="dropdown-item" href="{{url('client-index')}}">Expense entry</a>
+                                    {{-- <div class="dropdown-divider"></div> --}}
+                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Task</a>
+                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Matter</a>
+                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Contact</a>
+                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Record payment</a>
+                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Client funds
+                                        request</a>
+                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Email log</a>
+                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Phone log</a>
+                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Secure message</a>
+                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Event</a>
+                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Note</a>
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div id="stopwatch-container">
+                            <p id="stopwatch">00:00:00:00</p>
+                            <div id="buttons-container">
+                                <button onclick="main()" id="main-btn" class="btn">Start</button>
+                                <button onclick="reset()" id="reset-btn" class="btn">Reset</button>
+                            </div>
+                        </div>
+
+
+                        <div id="navr" style="margin-right: .5%;">
+
+                            <div style=" text-decoration: none; list-style:none;">
+
+                                <a type="button" class="btn btn-outline-primary" style="text-align: center"
+                                    class="text-muted mb-0 " href="{{url('logt')}}"><i
+                                        class="fas fa-sign-out-alt"></i>LogOut
+
                                         <nav class=" newstyle navbar navbar-expand-lg  sticky-top navbar-light bg-white">
                                             <a id="backbtn" href="javascript:history.back()" style=" color: #070344;
                                             font-size: 35px;" >
@@ -1208,6 +1407,7 @@ color: #999;
 
                                                                     <div  id="navr" style="margin-right: .5%;"   >
 
+
                                                                     <div  style=" text-decoration: none; list-style:none;">
                                             
                                                                     <a type="button" class="btn btn-outline-primary" style="text-align: center" class="text-muted mb-0 " href="{{url('logt')}}"><i class="fas fa-sign-out-alt"></i>LogOut
@@ -1223,6 +1423,31 @@ color: #999;
                                                                                     <div class="avatar avatar-xl">
                                                                                     <img  style="margin-left: 28%;" src="assets/images/faces/CRAHqLogo.png" alt="Face 1">
                                                                                 </div>
+
+                                                                                <h5 class="font-bold"> {{ Auth::user()->name }}
+                </h5>
+                <h6 class="text-muted mb-0"><a href="{{url('logt')}}"> <i class="fas fa-sign-out-alt"></i> </i> Log
+                        Out</a></h6>
+
+            </div> --}}
+            <br>
+            <section class="container-fluid bg-white p-4 mt-2">
+                <section class="row">
+                    <div class="col-12 col-lg-12">
+                        @yield('content')
+                    </div>
+                </section>
+            </section>
+
+            <br>
+            <footer id="ftr" class="container-fluid bg-white p-4 mt-2 border-top">
+                <div class="footer clearfix mb-0 text-muted">
+
+                    <div class="container text-center">
+                        <p class="">2022 &copy; Globaleyet</p>
+                    </div>
+                    <!-- <div class="float-end">
+
                                                                                 <h5 class="font-bold"> {{ Auth::user()->name }}</h5>
                                                                                 <h6 class="text-muted mb-0"><a href="{{url('logt')}}"> <i class="fas fa-sign-out-alt"></i> </i> Log Out</a></h6>
                                                                             
@@ -1244,6 +1469,7 @@ color: #999;
                                                             <p class="">2022 &copy; Globaleyet</p>
                                                         </div>
                                                         <!-- <div class="float-end">
+
                                                             
                                                             <p> <a class="pr-3" href="#"><i style="color: green;" class="	fa fa-level-up"></i> </a>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a href="https://www.globaleyet.com/">globaleyet</a></p>
                                                         </div> -->
@@ -1341,6 +1567,142 @@ function displayTime(hour, minutes, seconds, milliseconds) {
                                                                     $('.pagination').append('<li data-page="'+i+'">\
                                                                                         <span>'+ i++ +'<span class="sr-only">(current)</span></span>\
                                                                                         </li>').show();
+
+                    } // end for i 
+
+
+                } // end if row count > max rows
+                $('.pagination li:first-child').addClass('active'); // add active class to the first li 
+
+
+                //SHOWING ROWS NUMBER OUT OF TOTAL DEFAULT
+                showig_rows_count(maxRows, 1, totalRows);
+                //SHOWING ROWS NUMBER OUT OF TOTAL DEFAULT
+
+                $('.pagination li').on('click', function(e) { // on click each page
+                    e.preventDefault();
+                    var pageNum = $(this).attr('data-page'); // get it's number
+                    var trIndex = 0; // reset tr counter
+                    $('.pagination li').removeClass('active'); // remove active class from all li 
+                    $(this).addClass('active'); // add active class to the clicked 
+
+
+                    //SHOWING ROWS NUMBER OUT OF TOTAL
+                    showig_rows_count(maxRows, pageNum, totalRows);
+                    //SHOWING ROWS NUMBER OUT OF TOTAL
+
+
+
+                    $(table + ' tr:gt(0)').each(function() { // each tr in table not the header
+                        trIndex++; // tr index counter 
+                        // if tr index gt maxRows*pageNum or lt maxRows*pageNum-maxRows fade if out
+                        if (trIndex > (maxRows * pageNum) || trIndex <= ((maxRows * pageNum) -
+                                maxRows)) {
+                            $(this).hide();
+                        } else {
+                            $(this).show();
+                        } //else fade in 
+                    }); // end of for each tr in table
+                }); // end of on click pagination list
+            });
+            // end of on select change 
+
+            // END OF PAGINATION 
+
+        }
+
+
+
+
+        // SI SETTING
+        $(function() {
+            // Just to append id number for each row  
+            default_index();
+
+        });
+
+        //ROWS SHOWING FUNCTION
+        function showig_rows_count(maxRows, pageNum, totalRows) {
+            //Default rows showing
+            var end_index = maxRows * pageNum;
+            var start_index = ((maxRows * pageNum) - maxRows) + parseFloat(1);
+            var string = 'Showing ' + start_index + ' to ' + end_index + ' of ' + totalRows + ' entries';
+            $('.rows_count').html(string);
+        }
+
+        // CREATING INDEX
+        // function default_index() {
+        //   $('table tr:eq(0)').prepend('<th> ID </th>')
+
+        // 					var id = 0;
+
+        // 					$('table tr:gt(0)').each(function(){	
+        // 						id++
+        // 						$(this).prepend('<td>'+id+'</td>');
+        // 					});
+        // }
+
+        // All Table search script
+        function FilterkeyWord_all_table() {
+
+            // Count td if you want to search on all table instead of specific column
+
+            var count = $('.table').children('tbody').children('tr:first-child').children('td').length;
+
+            // Declare variables
+            var input, filter, table, tr, td, i;
+            input = document.getElementById("search_input_all");
+            var input_value = document.getElementById("search_input_all").value;
+            filter = input.value.toLowerCase();
+            if (input_value != '') {
+                table = document.getElementById("table-id");
+                tr = table.getElementsByTagName("tr");
+
+                // Loop through all table rows, and hide those who don't match the search query
+                for (i = 1; i < tr.length; i++) {
+
+                    var flag = 0;
+
+                    for (j = 0; j < count; j++) {
+                        td = tr[i].getElementsByTagName("td")[j];
+                        if (td) {
+
+                            var td_text = td.innerHTML;
+                            if (td.innerHTML.toLowerCase().indexOf(filter) > -1) {
+                                //var td_text = td.innerHTML;  
+                                //td.innerHTML = 'shaban';
+                                flag = 1;
+                            } else {
+                                //DO NOTHING
+                            }
+                        }
+                    }
+                    if (flag == 1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            } else {
+                //RESET TABLE
+                $('#maxRows').trigger('change');
+            }
+        }
+        </script>
+
+
+
+        <script>
+        $("a.sidebar-link").click(function() {
+            $("a.sidebar-link").css("background-color", "");
+            $(this).css("background-color", "#F5E9D4");
+        });
+        </script>
+
+        {{-- <script> --}}
+
+        {{-- // const myElement = document.getElementById("subm");
+
                                                                     }											// end for i 
                                                         
                                                             
@@ -1491,6 +1853,7 @@ function displayTime(hour, minutes, seconds, milliseconds) {
                   <script> 
 
                     {{-- // const myElement = document.getElementById("subm");
+
                     // myElement.style.color = "red" --}}
                 {{-- </script> --}}
         </body>

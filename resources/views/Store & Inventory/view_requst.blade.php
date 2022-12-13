@@ -16,7 +16,7 @@
     <div class="container">
 
         {{-- heading --}}
-        <h4 id="hdtpa"><b>View Request Items</b></h4>
+        <h4 id="hdtpa"><b>View Item Request</b></h4>
         <br>
 
         <div class="row">
@@ -26,12 +26,12 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
-                                <label for="username">Requested Date</label>
+                                <label for="username">RequestedDate</label>
                                 <div class="input-group">
 
                                     <div class="input-group-prepend"></div>
-                                    <input type="text" class="form-control" name="date" id="username" value="01/12/22"
-                                        placeholder="" required disabled>
+                                    <input type="date" class="form-control" name="date" id="username" value=""
+                                        placeholder="" required>
                                     <div class="invalid-feedback" style="width: 100%;">
 
                                     </div>
@@ -45,7 +45,7 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <input type="text" class="form-control" name="category_name" id="age"  value="Department Head" disabled>
+                                    <input type="text" class="form-control" name="category_name" id="age">
                                 </div>
                             </div>
                         </div>
@@ -56,47 +56,46 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <input type="text" class="form-control" name="category_name" value="Hr Department" id="age" disabled>
+                                    <input type="text" class="form-control" name="category_name" id="age">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <br>
-                    <br>
-                    <div class="text-center">
-                        <h4><b>Item Details </b></h4>
+                    <div>
+                        <h4 id="hdtpa"><b>Item </b></h4>
                     </div>
                     <br>
-                 
+
                     <div class="row clearfix">
-                     <div class="table-responsive">
+
                         <div class="col-sm">
 
                             <table class="table table-striped table-class" id="tab_logic">
-                            <tbody  class="text-center">
+
                                 <tr>
-                                    <th class="" style="width:25%">Category</th>
-                                    <th class="">Item Type</th>
-                                    <th class="">item Name</th>
-                                    <th class="">Quantity</th>
+                                    <td class="" style="width:25%">Category</td>
+                                    <td class="">Item Type</td>
+                                    <td class="">item Name</td>
+                                    <td class="">Quantity</td>
                                     <!-- <td class="">View</td> -->
 
 
                                 </tr>
-                                
+                                <tbody>
                                     <tr>
                                         <td><input type="text" name="price[]" id="price_"
-                                                class="form-control calculate" disabled value="Stationary"></td>
+                                                class="form-control calculate"></td>
 
                                         <td><input type="text" name="price[]" id="price_"
-                                                class="form-control calculate" disabled value="Book"></td>
+                                                class="form-control calculate"></td>
 
                                         <td><input type="text" name="price[]" id="price_"
-                                                class="form-control calculate" disabled value="Book 150 pages"></td>
+                                                class="form-control calculate"></td>
 
 
                                         <td><input type="text" name="price[]" id="price_"
-                                                class="form-control calculate" disabled Value="5"></td>
+                                                class="form-control calculate"></td>
 
                                         </td>
                                         <!-- <td><a href="issue_view_requst"><button type="button" class="add-Row ibtnDel btn btn-primary text-white "
@@ -136,7 +135,10 @@
             </form>
         </div>
     </div>
-    
+    </div>
+
+    </div>
+    <br>
 
     <!-- Supplier modal Edit End -->
 

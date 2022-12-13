@@ -1,6 +1,6 @@
 @extends('layouts.hmsmain')
 @section('content')
-<div class="container">
+<div class="container" >
     <div class="py-5 text-center">
         @if(Session::has('staffregistered'))
         <div class="alert alert-dark" role="alert">
@@ -21,6 +21,8 @@
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous">
+
+        
             </div>
 
         </div>
