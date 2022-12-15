@@ -159,9 +159,7 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div id="test" style="height:20px;"></div>
-</div>
+  
 </div>
 
 
@@ -183,18 +181,13 @@
                         <button  class="btn btn-primary float:left"style="width:45%">Cancel</button>
                       </div>
                     </div>
-                  </div>
-
-
-
-</div>
+</form>
 
 
 
 
 
-</div>
-</div>
+
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
 $(function() {

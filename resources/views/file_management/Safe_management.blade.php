@@ -46,11 +46,11 @@
    
 	
        
-	 <div class="table-responsive">
-        <table class="table table-striped table-class" id= "table-id">
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">   <br>
+            <div class="table-responsive">
                 
-                    <table class="table table-bordered" id="new-item">
+            <table class="table table-striped table-class" id= "table-id"> 
                         <thead style="font-size:15px; width:100%;">
                             <tr>
                                 <!-- <th class="text-center">*</th> -->

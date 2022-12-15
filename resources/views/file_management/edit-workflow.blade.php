@@ -125,47 +125,13 @@
                            <button type="button" class="btn btn-primary float:right;" data-dismiss="modal">Cancel</button>
                        </div>
                    </div>
-               </div>
+             
            </form>
        </div>
    </div>
 </div>
 
-</div>
-<div class="modal" id="mymodal">
-   <div class="modal-dialog">
-       <div class="modal-content">
-           <div class="modal-header">
-               <div class="modal-body">
-                   <form action="">
-                       <div>
-                           <input type="text" name="type" class="form-control" placeholder="Client Type">
-                           <button class="btn btn-primary sub_btnn" type="submit">submit</button>
-                       </div>
-                   </form>
-               </div>
-           </div>
-       </div>
-   </div>
-</div>
-</div>
-<div class="modal" id="my">
-   <div class="modal-dialog">
-       <div class="modal-content">
-           <div class="modal-header">
-               <div class="modal-body">
-                   <form action="">
-                       <div>
-                           <input type="text" name="type" class="form-control" placeholder="Country">
-                           <button class="btn btn-primary sub_btnn" type="submit">submit</button>
-                       </div>
-                   </form>
-               </div>
-           </div>
-       </div>
-   </div>
-</div>
-</div>
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
