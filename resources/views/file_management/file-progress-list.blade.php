@@ -211,6 +211,10 @@
 
                         </table>
                     </div>
+                    </div>
+
+                    </div>
+
                     <!--		Start Pagination -->
                     <div class='pagination-container'>
                         <nav>
@@ -220,6 +224,7 @@
                         </nav>
                     </div>
                     <div class="rows_count">Showing 11 to 20 of 100</div>
+</div>
 
                     <!-- 		End of Container -->
 
@@ -323,9 +328,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                </div>
-
+                                                  
 
                                             </div>
                                             <br>
@@ -524,7 +527,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                  
                                     <br>
                                     <div id="test" style="height:20px;"></div>
 
@@ -598,13 +601,13 @@
                                                 data-dismiss="modal">Cancel</button>
                                         </div>
                                     </div>
-                                </div>
+                              
                                 </form>
                             </div>
                         </div>
                     </div>
 
-                </div>
+             
                 <div class="modal" id="mymodal">
                     <div class="modal-dialog">
                         <div class="modal-content">
