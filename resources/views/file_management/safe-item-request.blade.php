@@ -285,7 +285,7 @@
                             <button type="button" class="btn btn-primary float:left" Style="width:45%;" onclick="history.back()">Close</button>
                         </div>
                     </div>
-                </div>
+</form>
 
 
 

@@ -282,11 +282,8 @@
                         <button type="submit" class="btn btn-primary float:left"style="width:45%">Close</button>
                       </div>
                     </div>
-                  </div>
+                 
 
-
-
-</div>
 
 </form>
 </div>
