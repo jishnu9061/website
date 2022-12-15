@@ -196,14 +196,13 @@
                             <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
                         </div>
                     </div>
-              
+                </div>
             </form>
         </div>
     </div>
 </div>
 
-</body>
-</html>
+</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

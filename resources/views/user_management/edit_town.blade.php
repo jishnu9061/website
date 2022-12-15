@@ -1,7 +1,9 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container">
-   
+    <div class="">
+
+        <div>
             <!-- <div class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>
                         Edit Town</u></b></span></div><br><br><br>
@@ -35,7 +37,7 @@
                             </div>
                         </div>
                     </div>
-                  
+                    </div>
                  
 
                 <div class="row">
@@ -51,12 +53,13 @@
                         <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
                     </div>
                 </div>
-       
+        </div>
         </form>
     </div>
 </div>
-</body>
-</html>
+</div>
+
+</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

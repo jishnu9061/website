@@ -1,7 +1,8 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container">
-   
+    <div class="py-5 text-center">
+
 
    
         <div>
@@ -96,7 +97,9 @@
                             </div>
                         </div>
                     </div>
-                       
+                        </div>
+                    </div>
+                </div>
                 <br>
                 <div class="row">
                     <div class="col-md-4">
@@ -227,14 +230,16 @@
                             <button type="button" class="btn btn-primary float:left" Style="width:45%;">close</button>
                         </div>
                     </div>
-              
+                </div>
             </form>
         </div>
     </div>
 </div>
 
-</body>
-</html>
+</div>
+
+
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
