@@ -266,7 +266,7 @@
                             <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
                         </div>
                     </div>
-                </div>
+</form>
 
 
 
@@ -277,8 +277,8 @@
 
 
 
-</div>
-</div>
+
+
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
 $(function() {

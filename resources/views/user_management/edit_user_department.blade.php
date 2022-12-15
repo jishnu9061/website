@@ -14,7 +14,7 @@
     <br><br>
 
         
-    </div>
+   
     <div class="row">
         <div class="col-md-12">
             <form method="post" action="{{url('update_user_department')}}" id="form">
@@ -114,14 +114,14 @@
 
                     </div>
                 </div>
-        </div>
+        
         </form>
     </div>
 </div>
 </div>
 
-</div>
-</div>
+</body>
+</html>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

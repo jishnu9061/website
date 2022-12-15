@@ -34,17 +34,17 @@
 
 .newstyle1
 {
-    border-radius: 20px 20px 20px 20px ;background:#ffffff; box-shadow : 0 4px 8px 0 rgba(0, 0, 0, 0.092), 0 6px 20px 0 rgba(0, 0, 0, 0.116);
+    border-radius: 10px 10px 10px 10px  ;background:#ffffff; box-shadow : 0 4px 8px 0 rgba(0, 0, 0, 0.092), 0 6px 20px 0 rgba(0, 0, 0, 0.116);
 }
 
 .newstyle
 {
-    border-radius: 20px 20px 20px 20px ;background:#ffffff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.092), 0 6px 20px 0 rgba(0, 0, 0, 0.116);
+    border-radius: 10px 10px 10px 10px ;background:#ffffff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.092), 0 6px 20px 0 rgba(0, 0, 0, 0.116);
 }
 
 .newstyle2
 {
-    border-radius: 20px 20px 20px 20px ;background:#ffffff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.092), 0 6px 20px 0 rgba(0, 0, 0, 0.116);
+    border-radius: 10px 10px 10px 10px  ;background:#ffffff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.092), 0 6px 20px 0 rgba(0, 0, 0, 0.116);
 }
 
 #backbuttonst {
@@ -98,7 +98,14 @@ text-shadow: 2px 1px;
     line-height: 1;
     font-weight: 600;
 }
-
+.doc-button
+{
+    border-radius: 10px;
+    background-color: #aed3ff;
+    color: #003169;
+    width: 90%;
+    border: 1px solid  #7cafe9;
+}
 
 .button {
     border-radius: 5px;
