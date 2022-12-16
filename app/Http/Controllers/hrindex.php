@@ -291,8 +291,20 @@ public function dropassigment($id){
     return redirect('/view_over_time');
 }
 
+public function task_allocation()
+{
+    return view('hr.task_allocation');
+}
 
+public function view_task_allocation()
+{
+    return view('hr.view_task_allocation');
+}
 
+public function edit_task_allocation()
+{
+    return view('hr.edit_task_allocation');
+}
 
 
 

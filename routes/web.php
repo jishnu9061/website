@@ -1341,7 +1341,9 @@ Route::any('/edit_bank_name/{id}','hrindex@editbanknames')->name('edit_bank_name
 Route::any('/update_bank','hrindex@updatebankname')->name('update_bank');
 Route::any('/delete_bank/{id}','hrindex@deletebank')->name('delete_bank');
 
-
+Route::any('task_allocation','hrindex@task_allocation')->name('task_allocation');
+Route::any('view_task_allocation','hrindex@view_task_allocation')->name('view_task_allocation');
+Route::any('edit_task_allocation','hrindex@edit_task_allocation')->name('edit_task_allocation');
 
 
 
