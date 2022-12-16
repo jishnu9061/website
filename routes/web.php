@@ -1486,6 +1486,17 @@ Route::any('/delete_workers_compensation/{id}','PracticeAreaManagement@deletewor
 Route::any('view_workers_compensation','PracticeAreaManagement@view_workers_compensation')->name('view_workers_compensation');
 
 
+//Elibrary
+Route::any('libraryindex','Elibrary@index')->name('libraryindex');
+Route::any('subject','Elibrary@subjects')->name('subject');
+Route::any('editsubject','Elibrary@editsubjects')->name('editsubject');
+Route::any('file','Elibrary@files')->name('file');
+Route::any('editfile','Elibrary@editfiles')->name('editfile');
+
+
+
+
+
 
 
 
