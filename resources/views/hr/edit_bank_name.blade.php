@@ -17,7 +17,50 @@
 
         <form method="post" action="{{url('update_bank')}}" id="form">
             @csrf
-            <div class="row">
+            <div class="form-row">
+                <input type="hidden" name="id" value="{{$edit_bank->id}}">
+                <div class="form-group col-md-4">
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="inputEmail4">Bank Name</label>
+                    <input type="text" class="form-control" id="w3review" value="{{$edit_bank->bank_name}}"
+                        name="bank_name" id="username">
+
+                    <br>
+
+                    <label for="inputEmail4">Branch</label>
+                    <input type="text" class="form-control" id="inputEmail4" value="{{$edit_bank->branch}}"
+                        name="branch" id="username">
+
+                </div>
+
+                <div class="form-group col-md-4">
+                </div>
+            </div>
+
+            <br>
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                </div>
+                
+                <div class="form-group col-md-4">
+                    <button type="submit" class="btn btn-primary float:right;">Update</button>
+                    <button type="button" class="btn btn-primary float:right;" onclick="history.back();">Cancel</button>
+                </div>
+
+                <div class="form-group col-md-4">
+                </div>
+            </div>
+
+
+
+
+
+
+            <!-- 
+             <div class="row">
                 <input type="hidden" name="id" value="{{$edit_bank->id}}">
                 <div class="col-md-12">
                     <div class="mb-1">
@@ -26,8 +69,8 @@
                             <div class="input-group-prepend">
 
                             </div>
-                            <input type="text" id="w3review" rows="4" cols="50" class="form-control" value="{{$edit_bank->bank_name}}" name="bank_name"
-                                id="username" >
+                            <input type="text" id="w3review" rows="4" cols="50" class="form-control"
+                                value="{{$edit_bank->bank_name}}" name="bank_name" id="username">
 
                             <br>
                         </div>
@@ -41,8 +84,8 @@
                             <div class="input-group-prepend">
 
                             </div>
-                            <input type="text"  class="form-control" value="{{$edit_bank->branch}}" name="branch"
-                                id="username" >
+                            <input type="text" class="form-control" value="{{$edit_bank->branch}}" name="branch"
+                                id="username">
 
                             <br>
                         </div>
@@ -53,16 +96,16 @@
 
 
             <div class="row text-center">
-               
+
                 <div class="col-sm">
                     <br>
-                    <button type="submit" class="btn btn-primary float:right;" >Update</button>
+                    <button type="submit" class="btn btn-primary float:right;">Update</button>
                     <button type="button" class="btn btn-primary float:right;" onclick="history.back();">Cancel</button>
                 </div>
-            </div>
-    
-    </form>
+            </div> -->
+
+        </form>
     </div>
-    
- 
+
+
     @endsection

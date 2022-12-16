@@ -35,6 +35,9 @@
             <div class="col-sm-4 "> <a href="{{ url('over_time') }}"><img class="logo_size"
                  src="assets\image\File list progress report.png" alt=""><button type="button"
                  style="width:70%;" class="btn btn-primary btn_align_btn"> Over Time</button></a></div>
+            <div class="col-sm-4 "> <a href="{{ url('task_allocation') }}"><img class="logo_size"
+                 src="assets\image\File list progress report.png" alt=""><button type="button"
+                 style="width:70%;" class="btn btn-primary btn_align_btn"> Task Allocation</button></a></div>
             
                             
          </div>
