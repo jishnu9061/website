@@ -40,6 +40,17 @@ class Elibrary extends Controller
         return view('Elibrary.editfile');
     }
 
+    public function sites()
+    {
+        return view('Elibrary.site');
+    }
+
+    public function editsites()
+    {
+        return view('Elibrary.editsite');
+    }
+
+
 
 
 

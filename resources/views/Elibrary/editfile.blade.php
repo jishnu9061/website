@@ -122,9 +122,8 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <textarea rows="4" cols="50" class="form-control" name="user" id="age">
-                                       
-                                        </textarea>
+                                        <textarea rows="4" cols="50" name="paddress"
+                                                                    class="form-control" type="text"></textarea>
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required
                                         </div>

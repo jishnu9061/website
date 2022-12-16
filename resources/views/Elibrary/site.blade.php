@@ -4,10 +4,10 @@
 
 {{-- heading --}}
 <div class="container">
-    <h4 id="hdtpa"><b>File Upload</b></h4>
+    <h4 id="hdtpa"><b>legal sites and libraries</b></h4>
     <br>
 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add File
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add site
     </button></a>
 
     <br>
@@ -41,9 +41,8 @@
         <table class="table text-center">
             <thead>
                 <tr>
-
-                    <th scope="col">Subject</th>
-                    <th scope="col">Book/File Name</th>
+                <th scope="col">Title</th>
+                    <th scope="col">Site URL</th>
                     <th scope="col">Description</th>
                     <th scope="col">Action</th>
 
@@ -57,9 +56,10 @@
                     <td></td>
                     <td></td>
                     <td>
-                        <a href="editfile"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
-                            <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i><span class="m-2"></span>
-                            <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-download"></i>
+                        <a href="editsite"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span
+                                class="m-2"></span>
+                            <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
+
                     </td>
 
                 </tr>
@@ -94,7 +94,7 @@
 
             <!-- Modal Header -->
             <div class="modal-header">
-                <h2 class="text-centre"><b>Add File</b></h2>
+                <h2 class="text-centre"><b>Add Subject</b></h2>
                 <br>
             </div>
 
@@ -104,43 +104,9 @@
                     <form>
 
                         <div class="row">
-
-                            <div class="col-md-4">
+                        <div class="col-md-6">
                                 <div class="mb-1">
-                                    <label for="username">Date Of Upload</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-
-                                        </div>
-                                        <input type="date" class="form-control" name="user" id="age">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                            Incorporation is required
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="mb-1">
-                                    <label for="username">Subject</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-
-                                        </div>
-                                        <select name="event" id="cars">
-                                            <option>---select---</option>
-                                            <option>family law</option>
-                                            <option>insurance</option>
-                                            <option>accident</option>
-                                            <option>event </option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="mb-1">
-                                    <label for="username">Book/File Name</label>
+                                    <label for="username">Title</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
 
@@ -153,59 +119,25 @@
                                 </div>
                             </div>
 
+                            <div class="col-md-6">
+                                <div class="mb-1">
+                                    <label for="username">Site URL</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+
+                                        </div>
+                                        <input type="url" class="form-control" name="user" id="age">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Incorporation is required
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                           
                         </div>
                         <br>
                         <div class="row">
-
-                            <div class="col-md-4">
-                                <div class="mb-1">
-                                    <label for="username">Auther</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-
-                                        </div>
-                                        <input type="text" class="form-control" name="user" id="age">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                            Incorporation is required
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="mb-1">
-                                    <label for="username">Publisher</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-
-                                        </div>
-                                        <input type="text" class="form-control" name="user" id="age">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                            Incorporation is required
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="mb-1">
-                                    <label for="username">Uploaded By</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-
-                                        </div>
-                                        <input type="text" class="form-control" name="user" id="age">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                            Incorporation is required
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <br>
-                        <div class="row">
-
                             <div class="col-md-12">
                                 <div class="mb-1">
                                     <label for="username">Discription</label>
@@ -229,29 +161,7 @@
 
 
 
-                        <div class="row">
 
-                            <h5 id="hdbtb">Upload </h5>
-
-                        </div>
-                        <br>
-                        <div class="row">
-
-                            <div class="col-md-6">
-                                <div class="mb-1">
-                                    <label for="username">Upload E-file</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-
-                                        </div>
-                                        <input type="file" class="form-control" name="user" id="age">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                            Incorporation is required
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
 
                         <div class="row">

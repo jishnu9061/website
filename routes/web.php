@@ -1492,6 +1492,10 @@ Route::any('subject','Elibrary@subjects')->name('subject');
 Route::any('editsubject','Elibrary@editsubjects')->name('editsubject');
 Route::any('file','Elibrary@files')->name('file');
 Route::any('editfile','Elibrary@editfiles')->name('editfile');
+Route::any('site','Elibrary@sites')->name('site');
+Route::any('editsite','Elibrary@editsites')->name('editsite');
+
+
 
 
 
