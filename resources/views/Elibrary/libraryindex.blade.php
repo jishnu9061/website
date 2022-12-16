@@ -44,10 +44,9 @@ Repository
         
             <div class="row sm">
             <div class="col-sm-4 "><img class="logo_size" src="image\logo\Customer registeration.png" alt=""><a
-                    href="{{ url('view-registration') }}"><button type="button" style="width:70%;"
+                    href="{{ url('site') }}"><button type="button" style="width:70%;"
                         class="btn btn-primary btn_align_btn">
-                        legal sites and
-libraries</button></a></div>
+                        legal sites</button></a></div>
             
         </div>
     @endsection
