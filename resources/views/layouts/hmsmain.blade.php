@@ -662,47 +662,6 @@
                         </li> --}}
                         {{-- <li class="submenu-item ">
                                         <a href="{{url('attendance')}}" class='sidebar-link'>
-<<<<<<< Updated upstream
-                        <span id="subm">Attendance(CSV Upload)</span>
-                        </a>
-                        </li> --}}
-                        {{-- </li> --}}
-                        @endif
-
-                        @if(Auth::user()->role == 'account' || Auth::user()->role == 'hospitaladmin')
-                        @php
-                        $accounts = array("ledger_acount_categories",
-                        "ledger_acount_subcategories","ledger_budget_category",
-                        "ledger_acounts","expense_report","journal","ledger","trialbalance","profitandlossaccount","balancesheet","stock_section","stock_issue","store_ledger","stock_categories","stock_subcategories","stock_items");
-                        @endphp
-
-                        <li class="submenu-item" style="list-style:none;">
-                            <a href="{{url('accindex')}}" class='sidebar-link'>
-                                <i class="fa fa-chart-line" id="icon"></i>
-                                <span>Accounts</span>
-                            </a>
-                        </li>
-                        <li class="submenu-item" style="list-style:none;">
-                            <a href="{{url('Store_&_Inventory_index')}}" class='sidebar-link'>
-                                <i class="fas fa-database" id="icon"></i>
-                                <span>Store & Inventory</span>
-                            </a>
-                        </li>
-                        </li>
-                        <li class="submenu-item" style="list-style:none;">
-                            <a href="{{url('purchase_index')}}" class='sidebar-link'>
-                                <i class="far fa-clipboard" id="icon"></i>
-                                <span>Procurement Management</span>
-                            </a>
-                        </li>
-                        <li class="submenu-item" style="list-style:none;">
-                            <a href="{{url('practice_area_index')}}" class='sidebar-link'>
-                                <i class="fa fa-bar-chart" id="icon"></i>
-                                <span>Practice Management</span>
-                            </a>
-                        </li>
-                        {{-- 
-=======
                                             <span id="subm">Attendance(CSV Upload)</span>
                                         </a>
                                     </li> --}}
@@ -746,7 +705,6 @@
                                     </a>
                             </li>
                                     {{-- 
->>>>>>> Stashed changes
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('home')}}" class="sidebar-link">
                         <i class="fa fa-chart-line" style="font-weight: 400;" id="icon"></i>
