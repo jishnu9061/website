@@ -64,7 +64,8 @@
                             class="m-1"></span>
                         <a href="{{ url('edit_real_estate',$list->id) }}"><i style="color:rgb(13, 1, 56);"
                                 class="fa fa-edit"></i><span class="m-1"></span>
-                            <a href="{{ url('delete_real_estate',$list->id) }}"> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></td>
+                            <a href="{{ url('delete_real_estate',$list->id) }}"> <i style="color:rgb(13, 1, 56);"
+                                    class="fas fa-trash-alt"></i></td>
 
 
             </tr>
@@ -108,12 +109,12 @@
             <div class="modal-body">
                 <div class="container">
                     <form method="post" action="{{url('add_real_estate')}}" enctype="multipart/form-data">
-                    @csrf
+                        @csrf
                         <div class="container">
 
                             <div class="row">
-                            <div class="col-md-4">
-                                            <div class="mb-1">
+                                <div class="col-md-4">
+                                    <div class="mb-1">
                                         <label for="exampleFormControlInput1" class="form-label">File No</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
@@ -124,109 +125,109 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                            <div class="mb-1">
+                                    <div class="mb-1">
                                         <label for="exampleFormControlInput1" class="form-label">Client Name</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" name="client_name"  placeholder="">
+                                            <input type="text" class="form-control" name="client_name" placeholder="">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                            <div class="mb-1">
+                                    <div class="mb-1">
                                         <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" name="matter_type"  placeholder="">
+                                            <input type="text" class="form-control" name="matter_type" placeholder="">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <br>
                             <div class="row">
-                            <div class="col-md-4">
-                                            <div class="mb-1">
-                                  
+                                <div class="col-md-4">
+                                    <div class="mb-1">
+
                                         <label for="exampleFormControlInput1" class="form-label">Buyer</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" name="buyer"  placeholder="">
+                                            <input type="text" class="form-control" name="buyer" placeholder="">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                            <div class="mb-1">
+                                    <div class="mb-1">
                                         <label for="exampleFormControlInput1" class="form-label">Attorney</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" name="attroney"  placeholder="">
+                                            <input type="text" class="form-control" name="attroney" placeholder="">
                                         </div>
                                     </div>
 
                                 </div>
                                 <div class="col-md-4">
-                                            <div class="mb-1">
+                                    <div class="mb-1">
                                         <label for="exampleFormControlInput1" class="form-label">Property
                                             Details</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" rows="2" name="property" ></textarea>
+                                            <textarea class="form-control" rows="2" name="property"></textarea>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <br>
                             <div class="row">
-                            <div class="col-md-4">
-                                            <div class="mb-1">
-                                   
+                                <div class="col-md-4">
+                                    <div class="mb-1">
+
                                         <label for="exampleFormControlInput1" class="form-label">Closing
                                             Statement</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" rows="2" name="close_statement" ></textarea>
+                                            <textarea class="form-control" rows="2" name="close_statement"></textarea>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                            <div class="mb-1">
+                                    <div class="mb-1">
                                         <label for="exampleFormControlInput1" class="form-label">Listing Realtor</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" rows="2" name="listing_realtor" ></textarea>
+                                            <textarea class="form-control" rows="2" name="listing_realtor"></textarea>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                            <div class="mb-1">
+                                    <div class="mb-1">
                                         <label for="exampleFormControlInput1" class="form-label">Selling Realtor</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" rows="2" name="selling_realtor" ></textarea>
+                                            <textarea class="form-control" rows="2" name="selling_realtor"></textarea>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <br>
                             <div class="row">
-                            <div class="col-md-6">
-                                            <div class="mb-1">
+                                <div class="col-md-6">
+                                    <div class="mb-1">
                                         <label for="exampleFormControlInput1" class="form-label">Company Title</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
@@ -237,33 +238,36 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                            <div class="mb-1">
+                                    <div class="mb-1">
                                         <label for="exampleFormControlInput1" class="form-label">Supporting
                                             Details</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
                                             </div>
-                                         
-                                            <input type="file" class="form-control" name="support_detail" >
+
+                                            <input type="file" class="form-control" name="support_detail">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                      
+                            <br>
+                            <br>
 
-                        <div class="modal-footer" style="background-color:#d3e0ed;">
-                            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+                            <div class="container text-center">
+                                <button type="submit" class="btn btn-primary" style="width:15%">Save</button>
+                                <button type="button" class="btn btn-primary" style="width:15%"
+                                    data-dismiss="modal">Close</button>
+                            </div>
                         </div>
+
+                    </form>
                 </div>
 
-                </form>
-            </div>
 
 
 
 
 
-
-            @endsection
+                @endsection
