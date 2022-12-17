@@ -72,16 +72,16 @@
                                 </div>
                                 <select name="group_role" id="cars">
                                     <option value="">{{$edit_user->group_role}}</option>
-                                    <option>--selects--</option>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
+                                    <option>Select</option>
+                                    <option>Role 1</option>
+                                    <option>Role 2</option>
+                                    <option>Role 3</option>
+                                    <option>Role 4</option>
+                                    <option>Role 5</option>
+                                    <option>Role 6</option>
+                                    <option>Role 7</option>
+                                    <option>Role 8</option>
+                                    <option>Role 9</option>
                                 </select>
                             </div>
                         </div>
