@@ -94,7 +94,7 @@
                                           
                                             <!-- <td scope="row">{{$list->id}}</td> -->
                                             <td scope="row">{{$list->id}}</td>
-                                            <td scope="row">{{$list->Client_name}}</td>
+                                            <td scope="row">{{$list->client_name}}</td>
                                             <td scope="row">{{$list->file_name}}</td>
                                             <td scope="row">{{$list->open_date}}</td>
 

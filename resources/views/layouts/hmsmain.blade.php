@@ -564,23 +564,17 @@
                         @endphp
 
 
-                        <li class="submenu-item has-sub" style="list-style:none;">
-                            <a href="{{url('system_setup')}}" class='sidebar-link'>
-                                <i class="fa fa-gear" id="icon"></i>
-                                <span>System Setup</span>
-                            </a>
-                        </li>
 
 
                         <!-- <ul class="submenu">
-
-                                    <li class="submenu-item ">
-                                        <a href="{{url('system_setup')}}" class='sidebar-link'>
-                                            <span id="subm">Setup</span>
+                            
+                            <li class="submenu-item ">
+                                <a href="{{url('system_setup')}}" class='sidebar-link'>
+                                    <span id="subm">Setup</span>
                                         </a>
                                     </li>
-
-                                   
+                                    
+                                    
                                     <li class="submenu-item ">
                                         <a href="{{url('company_details')}}" class='sidebar-link'>
                                             <span id="subm">Company</span>
@@ -592,128 +586,134 @@
                                             <span id="subm">Holidays</span>
                                         </a>
                                     </li> -->
-
-                        <!-- <li class="submenu-item ">
+                                    
+                                    <!-- <li class="submenu-item ">
                                         <a href="{{url('configu_ration')}}" class='sidebar-link'>
                                             <span id="subm">Configurations</span>
                                         </a>
                                     </li> -->
-
-                        <!-- <li class="submenu-item ">
+                                    
+                                    <!-- <li class="submenu-item ">
                                         <a href="{{url('other_confgn')}}" class='sidebar-link'>
                                             <span id="subm">Other Configurations</span>
                                         </a>
                                     </li> -->
-
-                        <!-- <li class="submenu-item ">
+                                    
+                                    <!-- <li class="submenu-item ">
                                         <a href="{{url('company_branch')}}" class='sidebar-link'>
                                             <span id="subm">Company Branch</span>
                                         </a>
                                     </li> -->
-
-                        <!-- </ul>
-                                </li> -->
-
-
-                        <li class="submenu-item" style="list-style:none;">
-                            <a href="{{url('hrindex')}}" class='sidebar-link'>
-                                <i class="fa fa-th-large" id="icon"></i>
-                                <span>HR</span>
-                            </a>
-                        </li>
-
-
-
-
-                        {{-- <li class="submenu-item ">
+                                    
+                                    <!-- </ul>
+                                    </li> -->
+                                    
+                                    
+                                    <li class="submenu-item" style="list-style:none;">
+                                        <a href="{{url('hrindex')}}" class='sidebar-link'>
+                                            <i class="fa fa-th-large" id="icon"></i>
+                                            <span>HR</span>
+                                        </a>
+                                    </li>
+                                    
+                                    
+                                    
+                                    
+                                    {{-- <li class="submenu-item ">
                                         <a href="{{url('addallowance')}}" class='sidebar-link'>
-                        <span id="subm">Settings</span>
-                        </a>
-                        </li> --}}
-                        {{-- <li class="submenu-item ">
+                                            <span id="subm">Settings</span>
+                                        </a>
+                                    </li> --}}
+                                    {{-- <li class="submenu-item ">
                                         <a href="{{url('addstaffs')}}" class='sidebar-link'>
-                        <span id="subm">Add Staffs</span>
-                        </a>
-                        </li> --}}
-                        {{-- <li class="submenu-item ">
+                                            <span id="subm">Add Staffs</span>
+                                        </a>
+                                    </li> --}}
+                                    {{-- <li class="submenu-item ">
                                         <a href="{{url('staffs')}}" class='sidebar-link'>
-                        <span id="subm">Manage Staffs</span>
-                        </a>
-                        </li> --}}
-                        {{-- <li class="submenu-item ">
+                                            <span id="subm">Manage Staffs</span>
+                                        </a>
+                                    </li> --}}
+                                    {{-- <li class="submenu-item ">
                                         <a href="{{url('loans')}}" class='sidebar-link'>
-                        <span id="subm">Loans</span>
-                        </a>
-                        </li> --}}
-                        {{-- <li class="submenu-item ">
+                                            <span id="subm">Loans</span>
+                                        </a>
+                                    </li> --}}
+                                    {{-- <li class="submenu-item ">
                                         <a href="{{url('payslip')}}" class='sidebar-link'>
-                        <span id="subm">Payslip(Bulk)</span>
-                        </a>
-                        </li> --}}
-                        {{-- <li class="submenu-item ">
+                                            <span id="subm">Payslip(Bulk)</span>
+                                        </a>
+                                    </li> --}}
+                                    {{-- <li class="submenu-item ">
                                         <a href="{{url('payslipbulk')}}" class='sidebar-link'>
-                        <span>Payslip(Individual)</span>
-                        </a>
-                        </li> --}}
-                        {{-- <li class="submenu-item ">
+                                            <span>Payslip(Individual)</span>
+                                        </a>
+                                    </li> --}}
+                                    {{-- <li class="submenu-item ">
                                         <a href="{{url('attendanceview')}}" class='sidebar-link'>
-                        <span id="subm">Attendance(Manual)</span>
-                        </a>
-                        </li> --}}
-                        {{-- <li class="submenu-item ">
+                                            <span id="subm">Attendance(Manual)</span>
+                                        </a>
+                                    </li> --}}
+                                    {{-- <li class="submenu-item ">
                                         <a href="{{url('attendance')}}" class='sidebar-link'>
                                             <span id="subm">Attendance(CSV Upload)</span>
                                         </a>
                                     </li> --}}
-                                {{-- </li> --}}
-                            @endif
-                            
-                            @if(Auth::user()->role == 'account' || Auth::user()->role == 'hospitaladmin')
-                                @php
+                                    {{-- </li> --}}
+                                    @endif
+                                    
+                                    @if(Auth::user()->role == 'account' || Auth::user()->role == 'hospitaladmin')
+                                    @php
                                     $accounts = array("ledger_acount_categories", "ledger_acount_subcategories","ledger_budget_category", "ledger_acounts","expense_report","journal","ledger","trialbalance","profitandlossaccount","balancesheet","stock_section","stock_issue","store_ledger","stock_categories","stock_subcategories","stock_items");
-                                @endphp
+                                    @endphp
 
-                                       <li class="submenu-item" style="list-style:none;">
-                                    <a href="{{url('accindex')}}" class='sidebar-link'>
-                                        <i class="fa fa-chart-line" id="icon"></i>
-                                            <span>Accounts</span>
-                                    </a>
-                            </li>
-                            <li class="submenu-item" style="list-style:none;">
-                                    <a href="{{url('Store_&_Inventory_index')}}" class='sidebar-link'>
-                                        <i class="fas fa-database" id="icon"></i>
-                                        <span>Store & Inventory</span>
-                                    </a>
-                            </li>
-                            </li>
-                            <li class="submenu-item" style="list-style:none;">
-                                    <a href="{{url('purchase_index')}}" class='sidebar-link'>
-                                        <i class="far fa-clipboard" id="icon"></i>
-                                            <span>Procurement </span>
-                                    </a>
-                            </li>
-                            <li class="submenu-item" style="list-style:none;">
-                                    <a href="{{url('practice_area_index')}}" class='sidebar-link'>
-                                        <i class="fa fa-bar-chart" id="icon"></i>
-                                            <span>Practice Management</span>
-                                    </a>
-                            </li>
-                            <li class="submenu-item" style="list-style:none;">
-                                    <a href="{{url('libraryindex')}}" class='sidebar-link'>
-                                        <i class="fa fa-book" id="icon"></i>
-                                            <span>E- Library</span>
-                                    </a>
-                            </li>
-                                    {{-- 
-                            <li class="sidebar-item  has-sub">
-                                <a href="{{url('home')}}" class="sidebar-link">
-                        <i class="fa fa-chart-line" style="font-weight: 400;" id="icon"></i>
-
-                        <span>Accounts</span>
-                        </a> --}}
-                        {{-- @if (in_array(request()->path(), $accounts))
-                                       <ul class="submenu" style="display: block;">
-                                     @else
+<li class="submenu-item" style="list-style:none;">
+    <a href="{{url('accindex')}}" class='sidebar-link'>
+        <i class="fa fa-chart-line" id="icon"></i>
+        <span>Accounts</span>
+    </a>
+</li>
+<li class="submenu-item" style="list-style:none;">
+    <a href="{{url('Store_&_Inventory_index')}}" class='sidebar-link'>
+        <i class="fas fa-database" id="icon"></i>
+        <span>Store & Inventory</span>
+    </a>
+</li>
+</li>
+<li class="submenu-item" style="list-style:none;">
+    <a href="{{url('purchase_index')}}" class='sidebar-link'>
+        <i class="far fa-clipboard" id="icon"></i>
+        <span>Procurement </span>
+    </a>
+</li>
+<li class="submenu-item" style="list-style:none;">
+    <a href="{{url('practice_area_index')}}" class='sidebar-link'>
+        <i class="fa fa-bar-chart" id="icon"></i>
+        <span>Practice Management</span>
+    </a>
+</li>
+<li class="submenu-item" style="list-style:none;">
+    <a href="{{url('libraryindex')}}" class='sidebar-link'>
+        <i class="fa fa-book" id="icon"></i>
+        <span>E- Library</span>
+    </a>
+</li>
+<li class="submenu-item has-sub" style="list-style:none;">
+    <a href="{{url('system_setup')}}" class='sidebar-link'>
+        <i class="fa fa-gear" id="icon"></i>
+        <span>System Setup</span>
+    </a>
+</li>
+{{-- 
+    <li class="sidebar-item  has-sub">
+        <a href="{{url('home')}}" class="sidebar-link">
+            <i class="fa fa-chart-line" style="font-weight: 400;" id="icon"></i>
+            
+            <span>Accounts</span>
+        </a> --}}
+        {{-- @if (in_array(request()->path(), $accounts))
+            <ul class="submenu" style="display: block;">
+                @else
                                      <ul class="submenu" style="display: none;">
                                       @endif
                                            <li class="submenu-item  ">
