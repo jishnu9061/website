@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
     <h4 id="hdtpa"><b> View Tender Details </b></h4>
-    <br>
+    <br><br>
 
     <form>
         <div class="form-row">
