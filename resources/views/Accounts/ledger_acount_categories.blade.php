@@ -6,8 +6,8 @@
         <br>
 
 
-        <button type="button" class="btn btn-primary" tabindex="-1"  data-toggle="modal" id="patient" data-bs-toggle="modal"
-            data-bs-target="#default">Add Type</button>
+        {{-- <button type="button" class="btn btn-primary" tabindex="-1"  data-toggle="modal" id="patient" data-bs-toggle="modal"
+            data-bs-target="#default">Add Type</button> --}}
         <button type="button" class="btn btn-primary" data-toggle="modal" data-bs-toggle="modal" data-target="#myModal">Add Type</button>
         <br>
 
@@ -122,13 +122,14 @@
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                      
     
                         </div>
                         <div class="modal-footer" style="background-color:#d3e0ed;">
                           <button type="submit" class="btn btn-primary">Save</button>
                           <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
                       </div>
+                    </form>  
                     </div>
                 </div>
             </div>
@@ -136,7 +137,7 @@
       </div>  
 
 
-        <div class="modal fade text-left" id="default" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1"
+        {{-- <div class="modal fade text-left" id="default" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -180,7 +181,7 @@
 
                 </div>
             </div>
-        </div>
+        </div> --}}
 
 
 

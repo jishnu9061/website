@@ -191,7 +191,8 @@ class AccountsController extends Controller
 
     public function ledger_acount_subcategories(){
         $categories=DB::table('ledgeraccount_categories')->get();
-        $ledgeraccount_subcategories=DB::table('ledgeraccount_subcategories')->leftJoin('ledgeraccount_categories', 'ledgeraccount_categories.id', '=', 'ledgeraccount_subcategories.ledgeraccount_categories')
+        $ledgeraccount_subcategories=DB::table('ledgeraccount_subcategories')
+        ->leftJoin('ledgeraccount_categories', 'ledgeraccount_categories.id', '=', 'ledgeraccount_subcategories.ledgeraccount_categories')
         ->select('ledgeraccount_subcategories.id as id','ledgeraccount_subcategories.ledgeraccount_categories as cat_id','ledgeraccount_categories.ledgeraccount_categories as ledgeraccount_categories','ledgeraccount_subcategories','ledgeraccount_subcategories_desc','accountssub_update_privilage')
         ->get();
         return view('Accounts.ledgeraccount_subcategories',compact('categories','ledgeraccount_subcategories'));
