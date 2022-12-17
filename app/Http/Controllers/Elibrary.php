@@ -60,6 +60,11 @@ class Elibrary extends Controller
         return view('Elibrary.editprecedence');
     }
 
+    public function viewfiles()
+    {
+        return view('Elibrary.viewfile');
+    }
+
 
 
 
