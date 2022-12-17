@@ -181,11 +181,7 @@
                                     <!-- <td scope="row" class="text-center">{{$list->id}}</td>
                                     <td scope="row" class="text-center">{{$list->action_type}}</td> -->
                                     <td scope="row" class="text-center">{{$list->progress_date}}</td>
-
-                                    <td scope="row" class="text-center">{{$list->Client_name}}</td>
-
-                                    <!-- <td scope="row" class="text-center">{{$list->Client_name}}</td> -->
-
+                                    <td scope="row" class="text-center">{{$list->client_name}}</td>
                                     <td scope="row" class="text-center">{{$list->file_name}}</td>
                                     <td scope="row" class="text-center">{{$list->action_description}}</td>
                                     <td scope="row" class="text-center">{{$list->time_taken_hours}}</td>

@@ -36,6 +36,24 @@
             <form method="post" action="{{url('add-corporate-document')}}" id="form" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" name="corporate_id" value="{{$corporate_docs->corporate_id}}">
+                <div class="row">
+                <div class="col-md-3">
+                                                                <div class="mb-1">
+                                                                    
+                                                                    <div class="input-group">
+                                                                        <div class="input-group-prepend"></div>
+                                                                        <input type="date" class="form-control"
+                                                                            name="quantity" id="username" value=""
+                                                                            placeholder="" required>
+                                                                        <div class="invalid-feedback"
+                                                                            style="width: 100%;">
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div> 
+                </div>
+                <br>
 
                 <div class="row">
                     <div class="col-md-12">
@@ -45,11 +63,7 @@
                                     <th>Document Type</th>
                                     <th>File Upload</th>
                                     <th>Add</th>
-                                    <th></th>
-                                    <th>Date</th>
-
-
-
+                                  
                                 </tr>
 
                             </thead>
@@ -69,16 +83,12 @@
                                     <td> <input type="button" class="btn btn-dark float:right;" id="add"
                                             value="ADD">
                                     </td>
-                                    <td>
+                                    
                                         <input type="hidden" class="form-control" name="client" id="username"
                                             value="{{$corporate_docs->Client_type}}" placeholder="File" required>
-                                    </td>
-                                    <td>
-                                        <input type="date" class="form-control" name="date" id="username" 
-                                            required>
-                                    </td>
-                                    <td>
-                                    </td>
+                                   
+                                   
+                                   
                                 </tr>
                             </tbody>
                         </table>
@@ -120,7 +130,7 @@
 
     $(document).ready(function(){
 
-        var html = '<tr><td style="width:45%;"> <select class="form-control select_group product"data-row-id="row_3" id="product_detailes" name="testname[]" style="width:100%;"><option selected>Select</option><option value="assets">Type 1</option></select></td><td style="width:45%;"> <input type="file" class="form-control" name="file[]" multiple="multiple" required></td></td><td> <input type="button" class="btn btn-danger float:right;" name="remove" id="remove" value="remove"></td><td><input type="hidden" class="form-control" name="client" id="username"value="{{$corporate_docs->Client_type}}" placeholder="File" required></td></tr>';
+        var html = '<tr><td style="width:45%;"> <select class="form-control select_group product"data-row-id="row_3" id="product_detailes" name="testname[]" style="width:100%;"><option selected>Select</option><option value="assets">Type 1</option></select></td><td style="width:45%;"> <input type="file" class="form-control" name="file[]" multiple="multiple" required></td></td><td> <input type="button" class="btn btn-danger float:right;" name="remove" id="remove" value="remove"></td><input type="hidden" class="form-control" name="client" id="username"value="{{$corporate_docs->Client_type}}" placeholder="File" required></tr>';
          
        
       
