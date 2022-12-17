@@ -148,7 +148,7 @@
                         <div class="mb-1">
                             <label for="username">Action Plan</label>
                             <div class="input-group">
-                                <textarea class="form-control" id="form7Example7" rows="3" name="plan"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="plan">{{$edit_complaint->action_plan}}</textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Action Plan is required.
                                 </div>
@@ -159,7 +159,7 @@
                         <div class="mb-1">
                             <label for="username">Complaint Description</label>
                             <div class="input-group">
-                                <textarea class="form-control" id="form7Example7" rows="3" name="Description"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="Description">{{$edit_complaint->complaint_description}}</textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Complaint Description is required.
                                 </div>

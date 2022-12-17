@@ -295,7 +295,7 @@
                             <label for="username">Physical Address</label>
                             <div class="input-group">
                                 <textarea class="form-control" id="form7Example7" rows="3"
-                                    name="physicaladdress"></textarea>
+                                    name="physicaladdress">{{$corporate_details->physical_address}}</textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Postal Address is required.
                                 </div>
@@ -306,7 +306,7 @@
                         <div class="mb-1">
                             <label for="username">Notes</label>
                             <div class="input-group">
-                                <textarea class="form-control" id="form7Example7" rows="3" name="notes"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="notes">{{$corporate_details->physical_address}}</textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Postal Address is required.
                                 </div>
