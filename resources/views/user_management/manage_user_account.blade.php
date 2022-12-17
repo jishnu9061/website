@@ -407,10 +407,10 @@ color: #999;
                                     <option>Jr.Advocate</option>
                                     <option>Hr Manager</option>
                                     <option>Hr Executive</option>
-                                    <option>Accountant</option>
+                                    <option>Account</option>
                                     <option>Account Manager</option>
                                     <option>Receptionist</option>
-                                    <option>Legal Head</option>
+                                    <option>Department Head</option>
                                 </select>
                               
                                 <div class="invalid-feedback" style="width: 100%;">
