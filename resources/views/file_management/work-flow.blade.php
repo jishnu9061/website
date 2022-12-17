@@ -125,8 +125,8 @@ color: #999;
                          
                             <td  scope="row"class="text-center">
                         <a href="{{url('edit-workflow',$list->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" ></i>
-                        <a href="{{url('delete-workflow',$list->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
-                        <a href="{{url('edit-workflow',$list->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-eye" ></i>
+                        <a onClick="return myFunction();" href="{{url('delete-workflow',$list->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
+                        {{-- <a href="{{url('edit-workflow',$list->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-eye" ></i> --}}
                     </td>
                             
                           
