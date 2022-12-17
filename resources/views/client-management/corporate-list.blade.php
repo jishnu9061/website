@@ -133,7 +133,7 @@ color: #999;
                                     <td scope="row" class="text-center" id="medicine_name_1">{{ $list->Email_address }}
                                     </td>
                                     <td scope="row" class="text-center">
-                                        <a href="{{url('corporate-document',$list->corporate_id)}}"><button style="width:90%; ">Add
+                                        <a href="{{url('corporate-document',$list->corporate_id)}}"><button class="doc-button">Add
                                                 Documents</button></a></td>
                                     <td scope="row" class="text-center" id="medicine_name_1">
                                         <a href="{{ url('edit_client', $list->corporate_id)}}"><i style="color:black;"

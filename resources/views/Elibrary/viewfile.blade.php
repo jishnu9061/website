@@ -64,7 +64,7 @@ th{ width:30%;
                     </tr>
                     <tr>
                         <th>E-file:</th>
-                        <td><button class="doc-button" style="width:20%; float:right; margin-right:5px;">Download</button></td>
+                        <td><button class="doc-button  fa fa-download" style="width:20%; padding:7px; float:right; margin-right:5px;"><span class="m-2"></span> Download</button></td>
                     </tr>
 
                 </tbody>
