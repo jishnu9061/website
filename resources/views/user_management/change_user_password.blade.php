@@ -59,17 +59,16 @@
                                 </div>
                             </div>
                         </div>
-                   
+                    </div>
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label>Confirm Password:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="password"  id="" name="confirm_password"value=""class="form-control"style="width:100%;">
+                                <input type="password"  id="" name="new_password"value=""class="form-control"style="width:100%;">
                                 <div class="invalid-feedback" style="width: 100%;">
-                                    Required Field.
+                                Required Field.
                                 </div>
-                            </div>
                         </div>
                      </div>
                     </div>
