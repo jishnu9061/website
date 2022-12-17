@@ -91,6 +91,7 @@
 
         html {
             scroll-behavior: smooth;
+            position: fixed;
            
         }
 
