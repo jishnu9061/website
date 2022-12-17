@@ -2014,7 +2014,7 @@ button, button
                 }
 
                 .dataTable-input:focus {
-                    color: #555252;
+                    color: #ffffff;
                     background-color: white;
                     border-color: #5a8dee;
                     outline: 0;
@@ -2023,10 +2023,10 @@ button, button
 
                 .modal .modal-content {
                     padding: 20px;
-                    background: #d3e0ed;
+                    background: #ffffff;
                     box-shadow: 2.75px 2.75px 4.58333px rgb(39 59 74 / 20%);
                     backdrop-filter: blur(116px);
-                    border-radius: 4.58333px;
+                    border-radius: 9px;
                 }
 
                 .modal .modal-full {

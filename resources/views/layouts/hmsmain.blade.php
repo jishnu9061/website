@@ -84,11 +84,13 @@
         }
 
         body {
-            background-color: #F4F4F6
+            background-color: #F4F4F6;
+        
         }
 
         html {
             scroll-behavior: smooth;
+           
         }
 
         .pagination>li>span {
