@@ -1501,7 +1501,13 @@ Route::any('editprecedence','Elibrary@editprecedences')->name('editprecedence');
 
 
 
-
+//Tender Management
+Route::any('tender_index','TenderManagement@tender_index')->name('tender_index');
+Route::any('tender_details','TenderManagement@tender_details')->name('tender_details');
+Route::any('view_tender_details','TenderManagement@view_tender_details')->name('view_tender_details');
+Route::any('edit_tender_details','TenderManagement@edit_tender_details')->name('edit_tender_details');
+Route::any('apply_tender','TenderManagement@apply_tender')->name('apply_tender');
+Route::any('view_apply_tender','TenderManagement@view_apply_tender')->name('view_apply_tender');
 
 
 
