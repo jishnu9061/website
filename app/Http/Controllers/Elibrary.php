@@ -50,6 +50,16 @@ class Elibrary extends Controller
         return view('Elibrary.editsite');
     }
 
+    public function precedences()
+    {
+        return view('Elibrary.precedence');
+    }
+
+    public function editprecedences()
+    {
+        return view('Elibrary.editprecedence');
+    }
+
 
 
 

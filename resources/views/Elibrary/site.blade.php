@@ -4,7 +4,7 @@
 
 {{-- heading --}}
 <div class="container">
-    <h4 id="hdtpa"><b>legal sites and libraries</b></h4>
+    <h4 id="hdtpa"><b>legal sites </b></h4>
     <br>
 
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add site
@@ -94,7 +94,7 @@
 
             <!-- Modal Header -->
             <div class="modal-header">
-                <h2 class="text-centre"><b>Add Subject</b></h2>
+                <h2 class="text-centre"><b>legal sites</b></h2>
                 <br>
             </div>
 
