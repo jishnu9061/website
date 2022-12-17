@@ -11682,9 +11682,15 @@ fieldset:disabled .btn {
 /* Handle */
 ::-webkit-scrollbar-thumb {
     
-    background: #e7e8d4b9;
+    
     border-radius: 10px;
-    width: thin;
+    background-color: rgba(245, 245, 233, 0.174);
+    
+    /* border-style:inset; */
+    /* border: #E0CB63 solid .1px; */
+    
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1);
+    
 }
 
 

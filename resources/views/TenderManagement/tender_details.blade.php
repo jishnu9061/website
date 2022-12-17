@@ -5,7 +5,9 @@
 {{-- heading --}}
 <div class="container">
     <h4 id="hdtpa"><b>Tender Details</b></h4>
-    <br>
+ 
+    <br><br>
+    
 
 
     <input class="btn btn-primary" type="button" value="Add New Tender" data-toggle="modal" data-target="#myModal">
