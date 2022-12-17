@@ -85,6 +85,7 @@
 
         body {
             background-color: #F4F4F6;
+            position: fixed;
         
         }
 
