@@ -4,6 +4,12 @@
 .btn-width {
     width: 10%;
 }
+tbody{
+
+}
+th{ width:30%;
+
+}
 </style>
 <div>
 
@@ -19,7 +25,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
             {{-- heading --}}
-            <h4 id="hdtpa"><b>File List</b></h4>
+            <h4 id="hdtpa"><b>File Discription</b></h4>
             <br><br>
         </div>
         <div class="table-responsive">
@@ -29,24 +35,36 @@
                 <tbody>
 
                     <tr>
-                        <th style="width:30%">Client :</th>
-                        <td>{{$view_list->client_name}}</td>
-                    </tr>
-                    <tr>
-                        <th>File No & Name :</th>
+                        <th>Date Of Upload :</th>
                         <td></td>
                     </tr>
                     <tr>
-                        <th>Date Opened :</th>
+                        <th>Subject :</th>
                         <td></td>
                     </tr>
                     <tr>
-                        <th>Responsible Advocate:</th>
+                        <th>Book/File Name :</th>
                         <td></td>
                     </tr>
                     <tr>
-                        <th>Most Recent Progress:</th>
+                        <th>Auther :</th>
                         <td></td>
+                    </tr>
+                    <tr>
+                        <th>Publisher :</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Uploaded By :</th>
+                        <td></td>
+                    </tr>
+                    <tr style="height:200%;">
+                        <th>Discription:</th>
+                        <td ></td>
+                    </tr>
+                    <tr>
+                        <th>E-file:</th>
+                        <td><button class="doc-button" style="width:20%; float:right; margin-right:5px;">Download</button></td>
                     </tr>
 
                 </tbody>

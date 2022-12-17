@@ -59,7 +59,7 @@
                     <td>
                         <a href="editfile"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
                             <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i><span class="m-2"></span>
-                            <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-download"></i>
+                            <a href="viewfile"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
                     </td>
 
                 </tr>

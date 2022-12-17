@@ -26,8 +26,8 @@
                         aria-haspopup="true" aria-expanded="false" class="btn btn-primary btn_align_btn">Client
                         list</button></a>
 
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item " href="{{ url('corporate-list') }}"> Corporate Client</a>
+                    <div class="dropdown-menu" style="width:70%;" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item "  href="{{ url('corporate-list') }}"> Corporate Client</a>
                         <a class="dropdown-item" href="{{ url('client_list') }}">Individual Client</a>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                         type="button" style="width:70%;" id="dropdownMenuButton" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false" class="btn btn-primary btn_align_btn">Document Details</button></a>
 
-                    <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
+                        <div class="dropdown-menu" style="width:70%;" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item " href="{{url('corporate-document-details')}}"> Corporate Client Details</a>
                         <a class="dropdown-item" href="{{url('client-document')}}">Individual Client Details</a>
                     </div>
