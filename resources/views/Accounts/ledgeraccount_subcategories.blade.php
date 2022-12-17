@@ -6,8 +6,9 @@
   <h4 id="hdtpa"><b>Add Account Category</b></h4>
   <br>
 
-        <button  class="btn btn-primary "  data-toggle="modal" id="patient" data-bs-toggle="modal"
-        data-bs-target="#default"  class="btn btn-secondary">Add Category</button>
+        {{-- <button  class="btn btn-primary "  data-toggle="modal" id="patient" data-bs-toggle="modal"
+        data-bs-target="#default"  class="btn btn-secondary">Add Category</button> --}}
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-bs-toggle="modal" data-target="#myModal">Add Category</button>
         <br>
        
     <div class="header_wrap">
@@ -89,7 +90,7 @@ $no=1;
 
 
 
-  <div class="modal fade text-left" id="default" tabindex="-1" role="dialog"
+  {{-- <div class="modal fade text-left" id="default" tabindex="-1" role="dialog"
                             aria-labelledby="myModalLabel1" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
@@ -122,7 +123,7 @@ $no=1;
                                                </select>
                                             </div> --}}
 
-                        <div class="form-group mb-3">
+                        {{-- <div class="form-group mb-3">
                             <label>Account Category </label>
 			                <input type="text" class="form-control" name="ledgeraccount_subcategories" placeholder="" required>
                         </div>
@@ -136,21 +137,61 @@ $no=1;
 
 
                         </div>
-                        </div>
 
 
                                     <div class="modal-footer" style="background-color:#d3e0ed;">
                                         <button type="submit" class="btn btn-primary" >Save</button>
                                         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
                                     </div>
-                                      </form>
+                                     
 
 
                                 </div>
+                            </form>        
+                        </div> --}}
+                        <div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+            
+                                      <h2 class="text-centre"><b>Add Category</b></h2>
+                                    </div>
+                                    <div class="modal-body">
+                                      <form action="{{ url('save_ledger_acounts_subcategories') }}" method="post">
+                                        @csrf
+                                        <div class="modal-body">
+                                            <div class="card-body">
+                                                <div class="form-group mb-3">
+                                                    <label>Account Category </label>
+                                                   <select class="form-control" name="ledgeraccount_categories"  required>
+                                                       <option value=""> Select</option>
+                                                       @foreach($categories as $cat):
+                                                        <option value="{{ $cat->id }}" > {{ $cat->ledgeraccount_categories }}</option>
+                                                       @endforeach;
+    
+                                                   </select>
+                                                </div>
+                                                <div class="form-group mb-3">
+                                                    <label>Description </label>
+                                                    <textarea class="form-control" name="ledgeraccount_categories_desc">
+                                                    </textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                  
+                
+                                    </div>
+                                    <div class="modal-footer" style="background-color:#d3e0ed;">
+                                      <button type="submit" class="btn btn-primary">Save</button>
+                                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
+                                  </div>
+                                </form>  
+                                </div>
                             </div>
                         </div>
-
-
+                    </div>
+                  </div>  
+            
 
 
 
