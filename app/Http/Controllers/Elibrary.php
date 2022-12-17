@@ -65,6 +65,11 @@ class Elibrary extends Controller
         return view('Elibrary.viewfile');
     }
 
+    public function viewprecedences()
+    {
+        return view('Elibrary.viewprecedence');
+    }
+
 
 
 
