@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2022 at 11:54 AM
+-- Generation Time: Dec 17, 2022 at 07:09 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -761,7 +761,9 @@ CREATE TABLE `cra_add_user_department` (
 --
 
 INSERT INTO `cra_add_user_department` (`id`, `department_code`, `department_name`, `h_o_d`, `perfomance_report`, `company_id`, `branch_id`) VALUES
-(6, '1234', 'HR Department', 'George Njoroge', 'Yes', NULL, NULL);
+(6, '1234', 'HR Department', 'George Njoroge', 'Yes', NULL, NULL),
+(7, '12345', 'Finance', 'Evans Munene', 'Yes', NULL, NULL),
+(8, '321', 'Legal Depatment', 'select', '--select--', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -784,8 +786,7 @@ CREATE TABLE `cra_add_user_group` (
 --
 
 INSERT INTO `cra_add_user_group` (`id`, `group_code`, `group_name`, `default_menu`, `group_role`, `company_id`, `branch_id`) VALUES
-(1, '123456', 'cra', 'Dashboard', '--select group roles--', NULL, NULL),
-(2, '12356', 'test112', 'Office Administration', '--select group roles--', NULL, NULL);
+(9, '12356', 'ghf', 'File Management', 'Role 3', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -930,6 +931,45 @@ INSERT INTO `cra_bringup` (`id`, `Client`, `File`, `Registered_By`, `Responsible
 (14, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (15, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (16, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_business_law`
+--
+
+CREATE TABLE `cra_business_law` (
+  `id` int(11) NOT NULL,
+  `matter_info` varchar(255) NOT NULL,
+  `client_name` varchar(255) NOT NULL,
+  `matter_type` varchar(255) NOT NULL,
+  `corporation` varchar(255) NOT NULL,
+  `case_details` varchar(255) NOT NULL,
+  `supporting` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_civil_litigation`
+--
+
+CREATE TABLE `cra_civil_litigation` (
+  `id` int(11) NOT NULL,
+  `matter_info` varchar(255) NOT NULL,
+  `plaintiff` varchar(255) NOT NULL,
+  `matter_type` varchar(255) NOT NULL,
+  `defendent` varchar(255) NOT NULL,
+  `attroney` varchar(255) NOT NULL,
+  `case_detail` varchar(255) DEFAULT NULL,
+  `insurer` varchar(255) NOT NULL,
+  `witness` varchar(255) NOT NULL,
+  `expert` varchar(255) NOT NULL,
+  `def_insurer` varchar(255) NOT NULL,
+  `def_witness` varchar(255) NOT NULL,
+  `def_expert` varchar(255) NOT NULL,
+  `support_detail` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -1152,7 +1192,7 @@ INSERT INTO `cra_conversations` (`id`, `communication_date`, `client`, `file`, `
 
 CREATE TABLE `cra_corporate_client_details` (
   `corporate_id` int(11) NOT NULL,
-  `Client_no` varchar(255) DEFAULT NULL,
+  `client_number` varchar(255) DEFAULT NULL,
   `Client_type` varchar(255) DEFAULT NULL,
   `Cityzen_status` varchar(255) DEFAULT NULL,
   `Certificate_of_incorporation` varchar(255) DEFAULT NULL,
@@ -1165,7 +1205,7 @@ CREATE TABLE `cra_corporate_client_details` (
   `Status_reporting_day` varchar(255) DEFAULT NULL,
   `Client_source` varchar(255) DEFAULT NULL,
   `Client_source_naration` varchar(255) DEFAULT NULL,
-  `Client_name` varchar(255) DEFAULT NULL,
+  `client_name` varchar(255) DEFAULT NULL,
   `Client_industry` varchar(255) DEFAULT NULL,
   `Pin_no` varchar(255) DEFAULT NULL,
   `postal_address` varchar(255) DEFAULT NULL,
@@ -1185,7 +1225,7 @@ CREATE TABLE `cra_corporate_client_details` (
 -- Dumping data for table `cra_corporate_client_details`
 --
 
-INSERT INTO `cra_corporate_client_details` (`corporate_id`, `Client_no`, `Client_type`, `Cityzen_status`, `Certificate_of_incorporation`, `Country`, `Telephone_No`, `Fax_no`, `Email_address`, `Website`, `Brought_in_By`, `Status_reporting_day`, `Client_source`, `Client_source_naration`, `Client_name`, `Client_industry`, `Pin_no`, `postal_address`, `postal_code`, `town`, `physical_address`, `notes`, `contact_person`, `designation`, `Mobile_no`, `email`, `company_id`, `branch_id`) VALUES
+INSERT INTO `cra_corporate_client_details` (`corporate_id`, `client_number`, `Client_type`, `Cityzen_status`, `Certificate_of_incorporation`, `Country`, `Telephone_No`, `Fax_no`, `Email_address`, `Website`, `Brought_in_By`, `Status_reporting_day`, `Client_source`, `Client_source_naration`, `client_name`, `Client_industry`, `Pin_no`, `postal_address`, `postal_code`, `town`, `physical_address`, `notes`, `contact_person`, `designation`, `Mobile_no`, `email`, `company_id`, `branch_id`) VALUES
 (1, '567', 'Corporate', 'Residensial', 'addd', 'South Africa', '0987654321', '12', 'mk@gmail.com', 'ww.india.com', 'Agent', 'Monday', 'Excisting Client', '123', 'dnj', 'Commerce', '1234567', 'kazhakutam', 98765, 'tvm', 'fghgf', 'h', 'arun', 'hio', 2147483647, 'mk@gmail.com', NULL, NULL),
 (6, '12345', 'Corporate', 'Residensial', 'fdgfgf', 'Kenya', '987456123', '7894357415', 'test@gmail.com', 'test@test.com', 'Agent', 'Monday', 'Excisting Client', 'bfyt fytf', 'Abhilash', 'Construction', '789456', 'Address 1', 123456, 'nairobi', 'test address', 'test notes', 'test1', 'HR', 789456123, 'test1@gmail.com', NULL, NULL),
 (7, '1234', 'Corporate', 'Select', NULL, 'Select', NULL, NULL, NULL, NULL, 'Select', 'Select', 'Select', NULL, 'new one', 'Select', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
@@ -1203,6 +1243,24 @@ CREATE TABLE `cra_courts` (
   `court_name` varchar(255) DEFAULT NULL,
   `company_id` int(11) DEFAULT NULL,
   `branch_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_criminal_law`
+--
+
+CREATE TABLE `cra_criminal_law` (
+  `id` int(11) NOT NULL,
+  `matter_info` varchar(255) NOT NULL,
+  `defendent` varchar(255) NOT NULL,
+  `matter_type` varchar(255) NOT NULL,
+  `prosecutor` varchar(255) NOT NULL,
+  `case_detail` varchar(255) NOT NULL,
+  `investigator` varchar(255) NOT NULL,
+  `victim` varchar(255) NOT NULL,
+  `support_detail` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -1351,19 +1409,12 @@ CREATE TABLE `cra_document_detials` (
   `document_type` varchar(200) DEFAULT NULL,
   `file` varchar(200) DEFAULT NULL,
   `client_types` varchar(200) DEFAULT NULL,
+  `date` date NOT NULL,
+  `corporate_id` int(11) DEFAULT NULL,
+  `individual_id` int(11) DEFAULT NULL,
   `company_id` int(11) DEFAULT NULL,
   `branch_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `cra_document_detials`
---
-
-INSERT INTO `cra_document_detials` (`id`, `document_type`, `file`, `client_types`, `company_id`, `branch_id`) VALUES
-(1, 'type1', '1669260140.pdf', 'Corporate', NULL, NULL),
-(2, 'type11', '1668678839.jpg', 'individual', NULL, NULL),
-(3, 'type11', '1669260216.pdf', 'individual', NULL, NULL),
-(5, 'type1', '1668678237.jpg', 'Corporate', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1383,6 +1434,13 @@ CREATE TABLE `cra_estate_planning` (
   `financier` varchar(255) DEFAULT NULL,
   `support` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_estate_planning`
+--
+
+INSERT INTO `cra_estate_planning` (`id`, `file_no`, `client_name`, `matter_type`, `estate_details`, `trust`, `property_details`, `accoundant`, `financier`, `support`) VALUES
+(3, 'test', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1409,7 +1467,6 @@ CREATE TABLE `cra_family_law` (
 --
 
 INSERT INTO `cra_family_law` (`id`, `file_no`, `client_name`, `matter_type`, `other_party`, `attorney`, `case_details`, `marrige`, `property`, `child_details`, `support_detail`) VALUES
-(3, 'frgbsfd', 'fdgfd', 'fgfg', 'fggf', 'fggfg', 'test', NULL, NULL, NULL, NULL),
 (4, '445', 'fhgchf', '787878', 'fytrf', '45454', '777', 'afd', 'dafds', 'sddf', 'C:\\xampp\\tmp\\php5AD5.tmp');
 
 -- --------------------------------------------------------
@@ -1542,6 +1599,26 @@ CREATE TABLE `cra_file_types` (
 
 INSERT INTO `cra_file_types` (`id`, `file_type`, `short_name`, `retainer_period`, `approvers`, `company_id`, `branch_id`) VALUES
 (3, NULL, NULL, NULL, 'Choose Approver...', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_guardianship_law`
+--
+
+CREATE TABLE `cra_guardianship_law` (
+  `id` int(11) NOT NULL,
+  `matter_info` varchar(255) DEFAULT NULL,
+  `petitioner` varchar(255) NOT NULL,
+  `matter_type` varchar(255) NOT NULL,
+  `disable_person` varchar(255) NOT NULL,
+  `attroney` varchar(255) NOT NULL,
+  `disadility_details` varchar(255) NOT NULL,
+  `case_details` varchar(255) NOT NULL,
+  `guardian` varchar(255) NOT NULL,
+  `guardian_details` varchar(255) NOT NULL,
+  `support_details` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -1901,6 +1978,44 @@ CREATE TABLE `cra_payment_item` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `cra_probate_law`
+--
+
+CREATE TABLE `cra_probate_law` (
+  `id` int(11) NOT NULL,
+  `matter_info` varchar(255) DEFAULT NULL,
+  `executor` varchar(255) DEFAULT NULL,
+  `matter_type` varchar(255) DEFAULT NULL,
+  `deceased` varchar(255) DEFAULT NULL,
+  `case_details` varchar(255) DEFAULT NULL,
+  `estate_details` varchar(255) DEFAULT NULL,
+  `supporting_details` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_real_estate`
+--
+
+CREATE TABLE `cra_real_estate` (
+  `id` int(11) NOT NULL,
+  `file_no` varchar(255) NOT NULL,
+  `client_name` varchar(255) NOT NULL,
+  `matter_type` varchar(255) NOT NULL,
+  `buyer` varchar(255) NOT NULL,
+  `attroney` varchar(255) NOT NULL,
+  `property` varchar(255) NOT NULL,
+  `close_statement` varchar(255) NOT NULL,
+  `listing_realtor` varchar(255) NOT NULL,
+  `selling_realtor` varchar(255) NOT NULL,
+  `company_title` varchar(255) NOT NULL,
+  `support_detail` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `cra_reg_new_user`
 --
 
@@ -1931,7 +2046,8 @@ CREATE TABLE `cra_reg_new_user` (
 --
 
 INSERT INTO `cra_reg_new_user` (`id`, `user_code`, `first_name`, `last_name`, `initial`, `user_name`, `password`, `re_type_password`, `post_address`, `town_name`, `telephone_no`, `mobile_no`, `email_address`, `departments`, `upload_signature`, `user_group`, `user_role`, `company_id`, `branch_id`) VALUES
-(7, '1234', 'Allams', NULL, 'sss', 'allan1234', '123456', NULL, 'Allan Villaa', 'Nairobii', NULL, '7894561241', 'allan123@gmail.com', 'HRM & Admin', 'cra_add_user_roles.sql', 'Support', 'Department Head', NULL, NULL);
+(7, '1234', 'Allams', NULL, 'sss', 'allan1234', '123456', NULL, 'Allan Villaa', 'Nairobii', NULL, '7894561241', 'allan123@gmail.com', 'HRM & Admin', 'cra_add_user_roles.sql', 'Support', 'Department Head', NULL, NULL),
+(8, '123', 'test', 'hh', 'hjkh', 'tea123', '123', '123', 'test address', 'test city', '7894456123', '7894561231', 'test@gmail.com', 'Administration', 'C:\\xampp\\tmp\\phpE28D.tmp', 'Advocate', 'Jr.Advocate', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -2277,6 +2393,27 @@ CREATE TABLE `cra_weekend_and_holiday` (
 
 INSERT INTO `cra_weekend_and_holiday` (`id`, `Date`, `Day`, `company_id`, `branch_id`) VALUES
 (1, '2022-10-27', '15', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_workers_compensation`
+--
+
+CREATE TABLE `cra_workers_compensation` (
+  `id` int(11) NOT NULL,
+  `matter_info` varchar(255) DEFAULT NULL,
+  `petitioner` varchar(255) DEFAULT NULL,
+  `matter_type` varchar(255) DEFAULT NULL,
+  `respondent` varchar(255) DEFAULT NULL,
+  `attroney` varchar(255) DEFAULT NULL,
+  `insurer` varchar(255) DEFAULT NULL,
+  `adjuster` varchar(255) DEFAULT NULL,
+  `case_detail` varchar(255) DEFAULT NULL,
+  `employee_doctor` varchar(255) DEFAULT NULL,
+  `benefit_detail` varchar(255) DEFAULT NULL,
+  `supporting_details` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -7302,21 +7439,18 @@ CREATE TABLE `departments` (
   `depname` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `updated_at` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `hospital` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `branch_id` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `company_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `departments`
 --
 
-INSERT INTO `departments` (`id`, `depname`, `updated_at`, `created_at`, `hospital`) VALUES
-(36, 'Medical Departments', '2022-02-15 06:31:43', '2022-02-15 06:31:43', 'kims intetrnational'),
-(37, 'Nursing Department', '2022-02-15 06:35:16', '2022-02-15 06:35:16', 'kims intetrnational'),
-(38, 'Paramedical Department', '2022-02-15 06:35:23', '2022-02-15 06:35:23', 'kims intetrnational'),
-(39, 'Rehabilitation Department', '2022-02-15 06:35:35', '2022-02-15 06:35:35', 'kims intetrnational'),
-(40, 'cardiology', '2022-02-16 07:54:13', '2022-02-16 07:54:13', 'kims intetrnational'),
-(41, 'Outpatient department (OPD)', '2022-02-26 06:47:00', '2022-02-26 06:47:00', 'kims intetrnational'),
-(42, 'Administration', '2022-02-26 06:47:07', '2022-02-26 06:47:07', 'kims intetrnational');
+INSERT INTO `departments` (`id`, `depname`, `updated_at`, `created_at`, `branch_id`, `company_id`) VALUES
+(1, 'HR Department', '', '', NULL, 0),
+(2, 'Legal Department', '', '', NULL, 0),
+(3, 'Finance Department', '', '', NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -8111,7 +8245,7 @@ CREATE TABLE `ledgeraccount_categories` (
 --
 
 INSERT INTO `ledgeraccount_categories` (`id`, `ledgeraccount_categories`, `categories_update_privilage`, `ledgeraccount_categories_desc`) VALUES
-(40, 'Accounts Payable', 1, NULL),
+(40, 'Accounts Payable', 1, 'test'),
 (41, 'Accounts Receivable', 1, NULL),
 (42, 'Bank', 1, NULL),
 (43, 'Cost of Goods Sold', 1, NULL),
@@ -8125,7 +8259,9 @@ INSERT INTO `ledgeraccount_categories` (`id`, `ledgeraccount_categories`, `categ
 (51, 'Other Curebt Assets', 1, NULL),
 (52, 'Other Current Liability', 1, NULL),
 (53, 'Other Expense', 1, NULL),
-(54, 'Other Income', 1, NULL);
+(54, 'Other Income', 1, NULL),
+(63, 'test', 0, 'one'),
+(64, 'test', 0, 'hhhhhhhhhhhhhhhh');
 
 -- --------------------------------------------------------
 
@@ -9109,17 +9245,13 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `rolename`, `hospital`, `departments`, `category`, `extra`, `previlage`) VALUES
-(1, 'labtechnician', '', '', '', '', ''),
-(2, 'storemanager', '', '', '', '', ''),
-(3, 'billingstaff', '', '', '', '', ''),
-(4, 'hospitaladmin', '', '', '', '', ''),
-(7, 'Doctor', '', '', '', '', ''),
-(8, 'pharma', '', '', '', '', ''),
-(10, 'lab', '', '', '', '', ''),
-(12, 'counter', '', '', '', '', ''),
-(13, 'store', '', '', '', '', ''),
-(14, 'casuality', '', '', '', '', ''),
-(15, 'nurse', '', '', '', '', ''),
+(1, 'Sr.Advocate', '', '', '', '', ''),
+(2, 'Jr.Advocate', '', '', '', '', ''),
+(3, 'HR Executive', '', '', '', '', ''),
+(4, 'Super Admin', '', '', '', '', ''),
+(7, 'Accountant', '', '', '', '', ''),
+(8, 'Reseptionist', '', '', '', '', ''),
+(10, 'Store Head', '', '', '', '', ''),
 (16, 'Department Admin', '', '', '', '', '');
 
 -- --------------------------------------------------------
@@ -11117,11 +11249,12 @@ CREATE TABLE `userroles` (
 --
 
 INSERT INTO `userroles` (`id`, `name`, `previlages`, `ex`, `created_at`, `updated_at`, `hospital`) VALUES
-(1, 'doctor', '', '', '2022-02-19 05:31:20', '2022-02-19 05:31:20', 'kims intetrnational'),
-(2, 'Display', '', '', '2022-02-19 05:32:03', '2022-02-19 05:32:03', 'kims intetrnational'),
-(3, 'nutrition', '', '', '2022-02-19 05:32:28', '2022-02-19 05:32:28', 'kims intetrnational'),
-(9, 'HR', '', '', '2022-03-30 01:46:37', '2022-03-30 01:46:37', 'kims intetrnational'),
-(26, 'Admin', '', '', NULL, NULL, NULL);
+(1, 'Advocate', '', '', '2022-02-19 05:31:20', '2022-02-19 05:31:20', 'kims intetrnational'),
+(2, 'HR Manager', '', '', '2022-02-19 05:32:03', '2022-02-19 05:32:03', 'kims intetrnational'),
+(3, 'HR Exicutive', '', '', '2022-02-19 05:32:28', '2022-02-19 05:32:28', 'kims intetrnational'),
+(9, 'Accountant', '', '', '2022-03-30 01:46:37', '2022-03-30 01:46:37', 'kims intetrnational'),
+(26, 'Store Head', '', '', NULL, NULL, NULL),
+(27, 'Department Head', '', '', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -11171,7 +11304,7 @@ CREATE TABLE `users` (
   `account` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `bank_branch` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `branch_code` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `cv` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `cv` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `photo` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `signature` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `deduction` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -11776,7 +11909,28 @@ INSERT INTO `users` (`id`, `uniqueid`, `name`, `email`, `age`, `email_verified_a
 (612, '356108', 'test', 'test@gmail.com', 25, NULL, '$2y$10$1JUi9/n/aJGhAH4J5hzyBujHRLfIJLka2u1ax0Pvyc83I4XAmy2Um', NULL, 'test', NULL, NULL, NULL, NULL, '2022-11-30 03:19:17', '2022-11-30 03:19:17', 'kims intetrnational', NULL, NULL, '789456131', NULL, '123456789', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Active'),
 (613, '197231', 'Bell', 'bell@gmail.cpm', 25, NULL, '$2y$10$S//kDNt2jXqyMMv/GwCQ0.3SAJHGvbZDVMJ9eqIO0DnY9aMTa8mbO', '1', NULL, NULL, NULL, NULL, NULL, '2022-11-30 03:57:51', '2022-11-30 03:57:51', 'kims intetrnational', NULL, 'test address', '7894561231', NULL, '15000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Active'),
 (614, '786990', NULL, NULL, NULL, NULL, '$2y$10$cNta7.QRw9GWVkzxogp9VOKJx9BdTNCQfbEd6Dp/bo9XNbs9/iRuS', NULL, NULL, NULL, NULL, NULL, NULL, '2022-11-30 04:25:44', '2022-11-30 04:25:44', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Select'),
-(698, '381555', 'wett', 'ngug@gmail.com', 30, NULL, '$2y$10$xbl.wzd1n4yYjjDFacuN8eBmLhebSZlA302VehpjmGpqaB4wEAfdS', NULL, 'yyf', NULL, NULL, NULL, NULL, '2022-11-30 04:29:30', '2022-11-30 04:29:30', 'kims intetrnational', NULL, NULL, '123456789', NULL, '1500', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Active');
+(698, '381555', 'wett', 'ngug@gmail.com', 30, NULL, '$2y$10$xbl.wzd1n4yYjjDFacuN8eBmLhebSZlA302VehpjmGpqaB4wEAfdS', NULL, 'yyf', NULL, NULL, NULL, NULL, '2022-11-30 04:29:30', '2022-11-30 04:29:30', 'kims intetrnational', NULL, NULL, '123456789', NULL, '1500', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Active'),
+(699, '955497', 'gfddd', 'fdfgf@gmail.com', NULL, NULL, '123', 'Account Manager', NULL, '2022-12-06', NULL, NULL, NULL, NULL, NULL, 'kims intetrnational', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Select', '2022-12-08', 'Select', NULL, 'Select', NULL, NULL, NULL, NULL, 'Yes', 'From Salary', 'Deduct From Company', NULL, '5%', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Select'),
+(700, '562399', NULL, NULL, NULL, NULL, '123', 'Account Manager', NULL, '2022-12-09', NULL, NULL, NULL, NULL, NULL, 'kims intetrnational', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Select', '2022-12-17', 'Select', NULL, 'Select', NULL, NULL, NULL, NULL, 'Yes', 'From Salary', 'Deduct From Company', NULL, '5%', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Select'),
+(701, '231902', NULL, NULL, NULL, NULL, '$2y$10$OjDZOcD/.m6NpLu5u8YAmO3Q2iQK4bjNEdKd9MHyPuLPISA6f.1PK', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-07 00:47:22', '2022-12-07 00:47:22', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Select'),
+(702, '548934', 'fb f y', 'fbubfk@gmail.com', 29, NULL, '$2y$10$jFbQ8Sepo1vHZEK73eXXDeyrxMON8XmlxW3V1w1CQuDsmb0ZGPGdu', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-07 04:36:09', '2022-12-07 04:36:09', 'kims intetrnational', NULL, NULL, '789456123', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Active'),
+(703, '469762', 'yvfyvtf', 'tyfy@gmail.com', NULL, NULL, '$2y$10$MJ8nRWALqAcAbA.b2A3BkO/zkxKvXNyc1qRa0JfLsfQmdjmFlEhMK', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-07 21:28:16', '2022-12-07 21:28:16', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Active'),
+(704, '320590', NULL, NULL, NULL, NULL, '$2y$10$ts8GiVSf8A5SF4q4KMgKXOZwBy.eieYP6tjKGpbFkx0I.8ywuMCZu', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-07 21:36:54', '2022-12-07 21:36:54', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Select'),
+(705, '911964', 'test', NULL, NULL, NULL, '$2y$10$X67GrEM4Nzk4IIDSgn.aNOEeYcrGCax0sUsf/olelD8vkVMC3dN2O', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-07 22:58:39', '2022-12-07 22:58:39', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Select'),
+(706, '923282', 'test', NULL, NULL, NULL, NULL, 'Select', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'kims intetrnational', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Select', NULL, 'Select', NULL, NULL, NULL, NULL, 'Yes', 'From Salary', 'Deduct From Company', NULL, '5%', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Select'),
+(707, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(708, '490969', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL),
+(709, '791539', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL),
+(710, '993611', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL),
+(711, '552667', 'addd', NULL, NULL, NULL, '$2y$10$yijsaYQHF.TrWGIXSfCkHumIpfNbdWDL9U3zaX2.AM9XIlUEPxWXW', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-08 01:20:23', '2022-12-08 01:20:23', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Select'),
+(712, '375806', 'addd', NULL, NULL, NULL, '$2y$10$3rZzgkvh2sNgLtuUMAGPr.7yV30oQX4rC.hG6npnS5gothYLmqW4q', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-08 01:26:05', '2022-12-08 01:26:05', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Select'),
+(713, '289548', 'gdffhf', NULL, NULL, NULL, '$2y$10$PPXOblVopJ2DF68a486VPunDHNrHhpdlOcYyyTJzX1Yllh9n.2ob.', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-08 01:32:19', '2022-12-08 01:32:19', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'C:\\xampp\\ht', NULL, NULL, NULL, 'Select'),
+(714, '856736', 'fgghf', NULL, NULL, NULL, '$2y$10$O8AqfxrwXBU.81uS7J0s1eYzDSw79irr54p8Qk7y80sAisq27W47e', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-08 01:38:43', '2022-12-08 01:38:43', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '/CRA/public', NULL, NULL, NULL, 'Select'),
+(715, '274934', 'asfsfss', NULL, NULL, NULL, '$2y$10$IpCBlul3ecFv75.EsLFi6.V7qlXLVCB5YN/66KpDDdv5gl4vcPnbq', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-08 01:41:41', '2022-12-08 01:41:41', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '/CRA/public/images/file/1670483501.pdf', NULL, NULL, NULL, 'Select'),
+(716, '121838', 'sdgggd', NULL, NULL, NULL, '$2y$10$CRcyFcSJe8gBfX0Kcu422eVKKJZOrqIm5p6yrGOku0yoEMW3xMx5a', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-08 02:06:37', '2022-12-08 02:06:37', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '/CRA/public/images/file/1670484997.pdf', NULL, NULL, NULL, 'Select'),
+(717, '620108', 'fsddsgd', NULL, NULL, NULL, '$2y$10$ULxRZG8FfDvpPUS9zza7GuGS74dVc5XAyOuPeQp.YYs0R7yI23vJK', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-08 02:12:28', '2022-12-08 02:12:28', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '/CRA/public/images/file/1670485348.jfif', NULL, NULL, 'Select'),
+(718, '176324', 'gfghfhfh', NULL, NULL, NULL, '$2y$10$US6c.EQZMntmteCdlwiZruC2oIJYDz.junKFiGKRKACoKAsD33eHm', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-08 02:13:36', '2022-12-08 02:13:36', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '/CRA/public/images/file/1670485416.pdf', '/CRA/public/images/file/1670485416.jfif', NULL, NULL, 'Select'),
+(719, '347690', NULL, NULL, NULL, NULL, '$2y$10$KbNeirfni9fLFrx4nKrevObtkvTt41Jy4KAnkjVmodMlPeRvCdMRW', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-08 02:15:43', '2022-12-08 02:15:43', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '/CRA/public/images/file/1670485543.pdf', '/CRA/public/images/file/1670485543.jfif', '/CRA/public/images/file/1670485543.jpg', NULL, 'Select');
 
 -- --------------------------------------------------------
 
@@ -12018,6 +12172,18 @@ ALTER TABLE `cra_bringup`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cra_business_law`
+--
+ALTER TABLE `cra_business_law`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_civil_litigation`
+--
+ALTER TABLE `cra_civil_litigation`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `cra_client_monthly_file_status_report`
 --
 ALTER TABLE `cra_client_monthly_file_status_report`
@@ -12069,6 +12235,12 @@ ALTER TABLE `cra_corporate_client_details`
 -- Indexes for table `cra_courts`
 --
 ALTER TABLE `cra_courts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_criminal_law`
+--
+ALTER TABLE `cra_criminal_law`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -12141,6 +12313,12 @@ ALTER TABLE `cra_file_status_summary`
 -- Indexes for table `cra_file_types`
 --
 ALTER TABLE `cra_file_types`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_guardianship_law`
+--
+ALTER TABLE `cra_guardianship_law`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -12234,6 +12412,18 @@ ALTER TABLE `cra_payment_item`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cra_probate_law`
+--
+ALTER TABLE `cra_probate_law`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_real_estate`
+--
+ALTER TABLE `cra_real_estate`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `cra_reg_new_user`
 --
 ALTER TABLE `cra_reg_new_user`
@@ -12315,6 +12505,12 @@ ALTER TABLE `cra_transport_zone`
 -- Indexes for table `cra_weekend_and_holiday`
 --
 ALTER TABLE `cra_weekend_and_holiday`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_workers_compensation`
+--
+ALTER TABLE `cra_workers_compensation`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -12943,19 +13139,19 @@ ALTER TABLE `cra_add_task`
 -- AUTO_INCREMENT for table `cra_add_user_department`
 --
 ALTER TABLE `cra_add_user_department`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `cra_add_user_group`
 --
 ALTER TABLE `cra_add_user_group`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `cra_add_user_roles`
 --
 ALTER TABLE `cra_add_user_roles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `cra_bank_details`
@@ -12980,6 +13176,18 @@ ALTER TABLE `cra_book_a_court`
 --
 ALTER TABLE `cra_bringup`
   MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `cra_business_law`
+--
+ALTER TABLE `cra_business_law`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `cra_civil_litigation`
+--
+ALTER TABLE `cra_civil_litigation`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `cra_client_monthly_file_status_report`
@@ -13036,6 +13244,12 @@ ALTER TABLE `cra_courts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
+-- AUTO_INCREMENT for table `cra_criminal_law`
+--
+ALTER TABLE `cra_criminal_law`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `cra_currency_list`
 --
 ALTER TABLE `cra_currency_list`
@@ -13069,13 +13283,13 @@ ALTER TABLE `cra_description_selection`
 -- AUTO_INCREMENT for table `cra_document_detials`
 --
 ALTER TABLE `cra_document_detials`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `cra_estate_planning`
 --
 ALTER TABLE `cra_estate_planning`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `cra_family_law`
@@ -13106,6 +13320,12 @@ ALTER TABLE `cra_file_status_summary`
 --
 ALTER TABLE `cra_file_types`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `cra_guardianship_law`
+--
+ALTER TABLE `cra_guardianship_law`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `cra_hourly_rate`
@@ -13198,10 +13418,22 @@ ALTER TABLE `cra_payment_item`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `cra_probate_law`
+--
+ALTER TABLE `cra_probate_law`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `cra_real_estate`
+--
+ALTER TABLE `cra_real_estate`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `cra_reg_new_user`
 --
 ALTER TABLE `cra_reg_new_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `cra_request_safe_item`
@@ -13282,6 +13514,12 @@ ALTER TABLE `cra_weekend_and_holiday`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `cra_workers_compensation`
+--
+ALTER TABLE `cra_workers_compensation`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `cra_work_flow`
 --
 ALTER TABLE `cra_work_flow`
@@ -13297,7 +13535,7 @@ ALTER TABLE `dailyattendances`
 -- AUTO_INCREMENT for table `departments`
 --
 ALTER TABLE `departments`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `dutyschedule`
@@ -13417,7 +13655,7 @@ ALTER TABLE `ledgeraccounts`
 -- AUTO_INCREMENT for table `ledgeraccount_categories`
 --
 ALTER TABLE `ledgeraccount_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT for table `ledgeraccount_subcategories`
@@ -13705,13 +13943,13 @@ ALTER TABLE `usermanagements`
 -- AUTO_INCREMENT for table `userroles`
 --
 ALTER TABLE `userroles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=699;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=720;
 
 --
 -- AUTO_INCREMENT for table `visiters`
