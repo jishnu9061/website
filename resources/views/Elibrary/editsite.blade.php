@@ -4,7 +4,7 @@
 
 {{-- heading --}}
 <div class="container">
-    <h4 id="hdtpa"><b>legal sites and libraries</b></h4>
+    <h4 id="hdtpa"><b>legal sites</b></h4>
     <br>
     <br>
 </div>
