@@ -112,7 +112,7 @@ color: #999;
                             <th class="text-center">End</th>
                             <th class="text-center">Submitted <br>By</th>
 
-                            <th class="text-center">Action</th>
+                            {{-- <th class="text-center">Action</th> --}}
 
                         </tr>
                     </thead>
@@ -123,7 +123,7 @@ color: #999;
 
                             <!-- <td scope="row" class="text-center">{{$list->id}}</td> -->
                             <td scope="row" class="text-center">{{$list->Title}}</td>
-                            <td scope="row" class="text-center">{{$list->Client_name}}</td>
+                            <td scope="row" class="text-center">{{$list->client_name}}</td>
                             <td scope="row" class="text-center">{{$list->id}}</td>
                             <!-- <td scope="row" class="text-center">{{$list->file_name}}</td> -->
                             <td scope="row" class="text-center">{{$list->Start_Date}}</td>
@@ -131,9 +131,9 @@ color: #999;
                             <td scope="row" class="text-center"></td>
 
 
-                            <td  scope="row"class="text-center">
+                            {{-- <td  scope="row"class="text-center">
                         <a href="{{url('edit_event',$list->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit"></i>
-                        <a href="{{url('event_delete',$list->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
+                        <a href="{{url('event_delete',$list->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td> --}}
 						
 
                           

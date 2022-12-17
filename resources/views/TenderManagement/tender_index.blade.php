@@ -14,7 +14,7 @@
                 src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
                 class="btn btn-primary btn_align_btn">Apply Tender</button></a>
     </div>
-    
+
 
 
 

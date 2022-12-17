@@ -65,7 +65,8 @@
                             class="fa fa-eye"></i><span class="m-2"></span>
                         <a href="{{ url('edit_criminal_law', $list->id) }}"><i style="color:rgb(13, 1, 56);"
                                 class="fa fa-edit"></i><span class="m-2"></span>
-                            <a href="{{ url('delete_criminal_law', $list->id) }}"> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></td>
+                            <a href="{{ url('delete_criminal_law', $list->id) }}"> <i style="color:rgb(13, 1, 56);"
+                                    class="fas fa-trash-alt"></i></td>
 
             </tr>
             @endforeach
@@ -207,38 +208,29 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <span class="m-2"></span>
                                             <input type="file" class="form-control" name="support_detail">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="col">
-       
-    </div> -->
+
+                            <br>
+                            <br>
 
 
-                            <div class="row">
-                                <div class="col">
-
-                                </div>
+                            <div class="container text-center">
+                                <button type="submit" class="btn btn-primary" style="width:15%">Save</button>
+                                <button type="button" class="btn btn-primary" style="width:15%"
+                                    data-dismiss="modal">Close</button>
                             </div>
-
                         </div>
-                </div>
 
-
-                <div class="modal-footer" style="background-color:#d3e0ed;">
-                    <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </form>
                 </div>
             </div>
 
-            </form>
-        </div>
 
 
 
 
-
-        @endsection
+            @endsection

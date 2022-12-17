@@ -5,8 +5,10 @@
 {{-- heading --}}
 <div class="container">
     <h4 id="hdtpa"><b>Tender Details</b></h4>
+ 
     <br><br>
     
+
 
     <input class="btn btn-primary" type="button" value="Add New Tender" data-toggle="modal" data-target="#myModal">
     <br>
@@ -63,7 +65,8 @@
                     <td><span class="badge bg-success">Opened</span></td>
                     <td><a href="view_tender_details"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i><span
                                 class="m-2"></span>
-                            <a href="edit_tender_details"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
+                            <a href="edit_tender_details"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span
+                                    class="m-2"></span>
                                 <a href=""> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></td>
 
                 </tr>
@@ -164,10 +167,22 @@
                                 </div>
                             </div>
 
-                            <div class="modal-footer" style="background-color:#d3e0ed;">
-                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                            <div class="row">
+                                <div class="col-sm">
+
+                                </div>
+                                <div class="col-sm">
+
+                                </div>
+                                <div class="col-sm">
+                                    <br>
+                                    <button type="submit" class="btn btn-primary float:right;"
+                                        Style="width:50%;">Save</button>
+                                    <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                                        data-dismiss="modal">Close</button>
+                                </div>
                             </div>
+                            
                         </div>
 
                     </form>
