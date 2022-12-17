@@ -11673,7 +11673,7 @@ fieldset:disabled .btn {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #F4F4F6;
+    background: #ffffff00;
     /* border-radius: 10px; */
     
     /* Track */       
@@ -11682,8 +11682,9 @@ fieldset:disabled .btn {
 /* Handle */
 ::-webkit-scrollbar-thumb {
     
-    background: #E7E8D4;
-    /* border-radius: 10px; */
+    background: #e7e8d4b9;
+    border-radius: 10px;
+    width: thin;
 }
 
 
