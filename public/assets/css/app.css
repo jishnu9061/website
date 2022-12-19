@@ -2015,48 +2015,12 @@ button, button
 
                 .dataTable-input:focus {
                     color: #ffffff;
-                    background-color: #E7E8D4;
+                    background-color: white;
                     border-color: #5a8dee;
                     outline: 0;
                     box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1);
                 }
 
-                .modal .modal-content {
-                    padding: 20px;
-                    background: #ffffff;
-                    box-shadow: 2.75px 2.75px 4.58333px rgb(39 59 74 / 20%);
-                    backdrop-filter: blur(116px);
-                    border-radius: 9px;
-                }
-
-                .modal .modal-full {
-                    max-width: 94%;
-                }
-
-                .modal .white {
-                    color: white;
-                }
-
-                .modal .modal-header {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                }
-
-                .modal .modal-header .modal-title {
-                    font-size: 1.1rem;
-                }
-
-                .modal .modal-header .close {
-                    padding: 7px 10px;
-                    border-radius: 50%;
-                    background: none;
-                    border: none;
-                }
-
-                /* .modal .modal-header .close:hover {
-    background: #dee2e6;
-} */
 
 
 

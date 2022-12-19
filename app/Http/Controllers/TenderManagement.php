@@ -31,4 +31,8 @@ class TenderManagement extends Controller
     {
         return view('TenderManagement.view_apply_tender');
     }
+    public function tender_applied_details()
+    {
+        return view('TenderManagement.tender_applied_details');
+    }
 }

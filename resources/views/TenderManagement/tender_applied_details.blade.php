@@ -4,8 +4,8 @@
 
 {{-- heading --}}
 <div class="container">
-    <h4 id="hdtpa"><b> Apply Tender </b></h4>
-    <br><br>
+    <h4 id="hdtpa"><b>Tender Applied Details</b></h4>
+    <br>
 
 
     <div class="header_wrap">
@@ -39,11 +39,9 @@
             <thead>
                 <tr>
 
-                    <th scope="col">From Date</th>
-                    <th scope="col">To Date</th>
+                    <th scope="col">Supplier Name</th>
                     <th scope="col">Item</th>
                     <th scope="col">Description</th>
-                    <th scope="col">Status</th>
                     <th scope="col">Action</th>
 
                 </tr>
@@ -52,16 +50,14 @@
 
                 <tr>
 
-                    <td>17-12-2022</td>
-                    <td>31-12-2022</td>
-                    <td>Chairs</td>
-                    <td>Teak wooden material chairs required. </td>
-                    <td><span class="badge bg-success">Opened</span></td>
-                    <td><a href="view_apply_tender"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <a href=""><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
                     </td>
 
                 </tr>
-
 
             </tbody>
         </table>
@@ -82,11 +78,10 @@
     <!-- 		End of Container -->
 
 
-
-
 </div>
 
-<div class="container">
- 
-</div>
+
+
+
+
 @endsection

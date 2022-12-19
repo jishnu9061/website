@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
     <h4 id="hdtpa"><b> View Tender Details </b></h4>
-    <br>
+    <br><br>
 
     <form>
         <div class="form-row">
@@ -78,7 +78,7 @@
                 <div class="container">
                     <form method="post" enctype="multipart/form-data" action="{{url('')}}">
                         @csrf
-                        <div class="table-responsive">
+                        <div class="container">
                             <div class="text-center">
                                 <table class="table">
                                     <thead>
@@ -151,10 +151,22 @@
                                 </table>
 
                             </div>
-                            <div class="modal-footer" style="background-color:#d3e0ed;">
-                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Apply</button>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                            <div class="row">
+                                <div class="col-sm">
+
+                                </div>
+                                <div class="col-sm">
+
+                                </div>
+                                <div class="col-sm">
+                                    <br>
+                                    <button type="submit" class="btn btn-primary float:right;"
+                                        Style="width:50%;">Apply</button>
+                                    <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                                        data-dismiss="modal">Close</button>
+                                </div>
                             </div>
+
                         </div>
 
                     </form>

@@ -59,11 +59,12 @@
                 <td>{{$list->matter_type}}</td>
                 <td>{{$list->corporation}}</td>
                 <td>{{$list->case_details}}</td>
-                <td><a href="{{url('view_business_law') }}"><i style="color:rgb(13, 1, 56);"
-                            class="fa fa-eye"></i><span class="m-2"></span>
+                <td><a href="{{url('view_business_law') }}"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i><span
+                            class="m-2"></span>
                         <a href="{{url('edit_business_law',$list->id) }}"><i style="color:rgb(13, 1, 56);"
                                 class="fa fa-edit"></i><span class="m-2"></span>
-                            <a href="{{url('delete_business_law',$list->id) }}"> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></td>
+                            <a href="{{url('delete_business_law',$list->id) }}"> <i style="color:rgb(13, 1, 56);"
+                                    class="fas fa-trash-alt"></i></td>
 
             </tr>
             @endforeach
@@ -146,7 +147,7 @@
                                     </div>
                                 </div>
                             </div>
-</br>
+                            </br>
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="mb-1">
@@ -161,7 +162,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-1">
-                                        <label for="exampleFormControlInput1" class="form-label" >Case Details</label>
+                                        <label for="exampleFormControlInput1" class="form-label">Case Details</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
@@ -185,11 +186,14 @@
                                     </div>
                                 </div>
                             </div>
+                            <br>
+                            <br>
 
 
-                            <div class="modal-footer" style="background-color:#d3e0ed;">
-                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                            <div class="container text-center">
+                                <button type="submit" class="btn btn-primary" style="width:15%">Save</button>
+                                <button type="button" class="btn btn-primary" style="width:15%"
+                                    data-dismiss="modal">Close</button>
                             </div>
                         </div>
 
