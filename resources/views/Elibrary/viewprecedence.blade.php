@@ -25,7 +25,7 @@ th{ width:30%;
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
             {{-- heading --}}
-            <h4 id="hdtpa"><b>File Description</b></h4>
+            <h4 id="hdtpa"><b>View Repository</b></h4>
             <br><br>
         </div>
         <div class="table-responsive">
@@ -36,36 +36,36 @@ th{ width:30%;
                     
 
                     <tr>
-                        <th>Date Of Upload :</th>
+                        <th>File No :</th>
                         <td></td>
                     </tr>
                     <tr>
-                        <th>Uploaded By :</th>
+                        <th>Client Name :</th>
                         <td></td>
                     </tr>
                     <tr>
-                        <th>Subject :</th>
+                        <th>File Handled By :</th>
                         <td></td>
                     </tr>
                     <tr>
-                        <th>Book/File Name :</th>
+                        <th>Date From :</th>
                         <td></td>
                     </tr>
                     <tr>
-                        <th>Auther :</th>
+                        <th>Date To :</th>
                         <td></td>
                     </tr>
                     <tr>
-                        <th>Publisher :</th>
+                        <th>File Status :</th>
                         <td></td>
                     </tr>
                   
-                    <tr style="height:200%;">
-                        <th>Discription:</th>
+                    <tr>
+                        <th>File Discription:</th>
                         <td ></td>
                     </tr>
                     <tr>
-                        <th>E-file:</th>
+                        <th>Upload File :</th>
                         <td><button class="doc-button  fa fa-download" style="width:20%; padding:7px; float:right; margin-right:5px;"><span class="m-2"></span> Download</button></td>
                     </tr>
 

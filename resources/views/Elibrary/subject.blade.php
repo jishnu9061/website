@@ -43,6 +43,7 @@
                 <tr>
 
                     <th scope="col">Subject</th>
+                    <th scope="col">Category</th>
                     <th scope="col">Description</th>
                     <th scope="col">Action</th>
 
@@ -52,6 +53,7 @@
 
                 <tr>
 
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td>

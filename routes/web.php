@@ -1498,6 +1498,8 @@ Route::any('site','Elibrary@sites')->name('site');
 Route::any('editsite','Elibrary@editsites')->name('editsite');
 Route::any('precedence','Elibrary@precedences')->name('precedence');
 Route::any('editprecedence','Elibrary@editprecedences')->name('editprecedence');
+Route::any('viewprecedence','Elibrary@viewprecedences')->name('viewprecedence');
+
 
 
 
