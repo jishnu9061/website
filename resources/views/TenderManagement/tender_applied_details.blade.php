@@ -43,6 +43,7 @@
                     <th scope="col">Item</th>
                     <th scope="col">Description</th>
                     <th scope="col">Action</th>
+                    <th scope="col">Status</th>
 
                 </tr>
             </thead>
@@ -50,12 +51,13 @@
 
                 <tr>
 
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>ABC woods Pvt.Ltd</td>
+                    <td>Chairs</td>
+                    <td>Teak wooden material chairs</td>
                     <td>
-                        <a href=""><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
+                        <a href="view_tender_applied"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
                     </td>
+                    <td><span class="badge bg-success">Accepted</span></td>
 
                 </tr>
 
@@ -79,8 +81,6 @@
 
 
 </div>
-
-
 
 
 
