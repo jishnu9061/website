@@ -34,17 +34,24 @@
 
 .newstyle1
 {
-    border-radius: 10px 10px 10px 10px  ;background:#ffffff; box-shadow : 0 4px 8px 0 rgba(0, 0, 0, 0.092), 0 6px 20px 0 rgba(0, 0, 0, 0.116);
+    border-radius: 10px 10px 10px 10px  ;
+    background:#ffffff;
+    box-shadow : 0 4px 8px 0 rgba(0, 0, 0, 0.092), 0 6px 20px 0 rgba(0, 0, 0, 0.116);
 }
 
 .newstyle
 {
-    border-radius: 10px 10px 10px 10px ;background:#ffffff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.092), 0 6px 20px 0 rgba(0, 0, 0, 0.116);
+    border-radius: 10px 10px 10px 10px ;
+    background:#ffffff; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.092), 0 6px 20px 0 rgba(0, 0, 0, 0.116);
 }
 
 .newstyle2
 {
-    border-radius: 10px 10px 10px 10px  ;background:#ffffff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.092), 0 6px 20px 0 rgba(0, 0, 0, 0.116);
+    border-radius: 10px 10px 10px 10px  ;
+    background:#ffffff; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.092), 0 6px 20px 0 rgba(0, 0, 0, 0.116);
+   
 }
 
 #backbuttonst {
