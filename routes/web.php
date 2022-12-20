@@ -1356,6 +1356,10 @@ Route::any('monthviewsheet','hrindex@monthviewsheets')->name('monthviewsheet');
 
 
 
+Route::any('internal_memos','hrindex@internal_memos')->name('internal_memos');
+Route::any('view_memo','hrindex@view_memo')->name('view_memo');
+Route::any('edit_memo','hrindex@edit_memo')->name('edit_memo');
+
 
 
 
