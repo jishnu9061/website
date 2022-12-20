@@ -32,9 +32,12 @@
             <div class="col-sm-4"> <a href="{{ url('attendance') }}"><img class="logo_size"
                  src="assets\image\Monthly Staff status report.png" alt=""><button type="button" style="width:70%;"
                  class="btn btn-primary btn_align_btn">Attendance (CSV Uploaded)</button></a></div>
-            <div class="col-sm-4 "> <a href="{{ url('over_time') }}"><img class="logo_size"
+            <!-- <div class="col-sm-4 "> <a href="{{ url('over_time') }}"><img class="logo_size"
                  src="assets\image\File list progress report.png" alt=""><button type="button"
-                 style="width:70%;" class="btn btn-primary btn_align_btn"> Over Time</button></a></div>
+                 style="width:70%;" class="btn btn-primary btn_align_btn"> Over Time</button></a></div> -->
+                 <div class="col-sm-4 "> <a href="{{ url('timesheet') }}"><img class="logo_size"
+                 src="assets\image\File list progress report.png" alt=""><button type="button"
+                 style="width:70%;" class="btn btn-primary btn_align_btn"> Time sheet</button></a></div>
             <div class="col-sm-4 "> <a href="{{ url('task_allocation') }}"><img class="logo_size"
                  src="assets\image\File list progress report.png" alt=""><button type="button"
                  style="width:70%;" class="btn btn-primary btn_align_btn"> Task Allocation</button></a></div>

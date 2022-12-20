@@ -1344,6 +1344,17 @@ Route::any('/delete_bank/{id}','hrindex@deletebank')->name('delete_bank');
 Route::any('task_allocation','hrindex@task_allocation')->name('task_allocation');
 Route::any('view_task_allocation','hrindex@view_task_allocation')->name('view_task_allocation');
 Route::any('edit_task_allocation','hrindex@edit_task_allocation')->name('edit_task_allocation');
+Route::any('timesheet','hrindex@timesheets')->name('timesheet');
+Route::any('timesheetweek','hrindex@timesheetweeks')->name('timesheetweek');
+Route::any('viewsheet','hrindex@viewsheets')->name('viewsheet');
+Route::any('timesheetmonth','hrindex@timesheetmonths')->name('timesheetmonth');
+Route::any('monthviewsheet','hrindex@monthviewsheets')->name('monthviewsheet');
+
+
+
+
+
+
 
 
 
