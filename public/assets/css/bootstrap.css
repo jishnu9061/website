@@ -11671,25 +11671,25 @@ fieldset:disabled .btn {
     height: 10px;
 }
 
-/* Track */
+
 ::-webkit-scrollbar-track {
-    background: #ffffff00;
+    /* background: #ffffff00; */
     /* border-radius: 10px; */
     
     /* Track */       
 }
 
-/* Handle */
+
 ::-webkit-scrollbar-thumb {
     
     
-    border-radius: 10px;
-    background-color: rgba(245, 245, 233, 0.174);
+    /* border-radius: 10px;
+    background-color: rgba(245, 245, 233, 0.174); */
     
     /* border-style:inset; */
     /* border: #E0CB63 solid .1px; */
     
-    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1); */
     
 }
 

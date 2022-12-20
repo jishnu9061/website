@@ -462,7 +462,8 @@
                                 <a href="{{ url('home') }}">
                                     <!-- {{-- <img src="assets/images/logo/logo.png" alt="Logo" srcset=""> --}} -->
 
-                                    <img id="cr_logo" src="assets/images/Logo cra.png" alt="CRA">
+                                    <img id="cr_logo" src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA">
+                                    
 
                                 </a>
                             </div>
@@ -1165,13 +1166,14 @@
               </nav> --}}
 
 
-                <nav class=" newstyle1 navbar navbar-expand-lg  sticky-top navbar-light bg-white">
+                <nav  class=" newstyle1 navbar navbar-expand-lg  sticky-top navbar-light bg-white">
                     <a id="backbtn" href="javascript:history.back()" style=" color: #070344;
                                             font-size: 35px;">
                         <i id="bkbtnicon" class="far fa-arrow-alt-circle-left"></i></a>
 
                     <a class="navbar-brand pl-4" href="#">
-                        <img src="assets/images/faces/lawemb.png" height="40px" class="d-inline-block align-top" alt="">
+                        <img src="{{asset('/') }}assets//images/faces/lawemb.png" height="40px" class="d-inline-block align-top" alt="">
+                        
 
                     </a>
 
@@ -1180,7 +1182,7 @@
                         <button class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img data-toggle="tooltip" data-placement="top" title="Menu"
-                                style="height: 35px; width: 35px;" id="cr_logo" src="assets/images/Logo cra.png"
+                                style="height: 35px; width: 35px;" id="cr_logo" src="{{asset('/') }}assets//images/Logo cra.png"
                                 alt="CRA">
                         </button>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -1251,15 +1253,20 @@
                                 </div>
                             </li>
                         </ul>
+    
+                      
+                  
+                        
 
-                        <!-- <div id="stopwatch-container">
-      <p id="stopwatch">00:00:00:00</p>
+                    
+                        {{-- <div id="stopwatch-container" >
+      <p  id="stopwatch">00:00:00:00 </p>
       <div id="buttons-container">
         <button onclick="main()" id="main-btn" class="btn">Start</button>
         <button onclick="reset()" id="reset-btn" class="btn">Reset</button>
       </div>
-    </div> -->
-
+    </div> 
+</div>    --}}
 
                         <div id="navr" style="margin-right: .5%;">
 
