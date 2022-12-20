@@ -306,7 +306,30 @@ public function edit_task_allocation()
     return view('hr.edit_task_allocation');
 }
 
+public function timesheets()
+{
+    return view('hr.timesheet');
+}
 
+public function timesheetweeks()
+{
+    return view('hr.timesheetweek');
+}
+
+public function viewsheets()
+{
+    return view('hr.viewsheet');
+}
+
+public function timesheetmonths()
+{
+    return view('hr.timesheetmonth');
+}
+
+public function monthviewsheets()
+{
+    return view('hr.monthviewsheet');
+}
 
 
 
