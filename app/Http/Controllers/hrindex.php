@@ -331,6 +331,20 @@ public function monthviewsheets()
     return view('hr.monthviewsheet');
 }
 
+public function internal_memos()
+{
+    return view('hr.internal_memos');
+}
+public function view_memo()
+{
+    return view('hr.view_memo');
+}
+public function edit_memo()
+{
+    return view('hr.edit_memo');
+}
+
+
 
 
 

@@ -62,7 +62,7 @@
                         <tr>
                            
                             <th class="text-center">Template Category</th>
-                            <th class="text-center">Status</th>
+                            <th class="text-center">Title</th>
                             <th class="text-center">Action</th>
                            
                         </tr>
@@ -124,17 +124,17 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Document Type</label>
+                            <label for="username">Template Category</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="doc_type" id="cars">
+                                <select name="template" id="cars">
                                 <option>---select---</option>
-                                                            <option>doc_type 2</option>
-                                                            <option>doc_type 3</option>
-                                                            <option>doc_type 1</option>
-                                                            <option>doc_type 4</option>
+                                                            <option>template 1</option>
+                                                            <option>template 2</option>
+                                                            <option>template 3</option>
+                                                            <option>template 4</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -144,7 +144,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Template Title</label>
+                            <label for="username"> Title </label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 

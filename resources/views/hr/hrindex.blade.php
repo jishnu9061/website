@@ -57,8 +57,11 @@
         <div class="row sm">
 
                 <div class="col-sm-4 "> <a href="{{url('bank_names')}}"><img class="logo_size"
-                 src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
+                 src="assets\image\Bank account detail.png" alt=""><button type="button" style="width:70%;"
                  class="btn btn-primary btn_align_btn">Add Bank</button></a></div>
+                <div class="col-sm-4 "> <a href="{{url('internal_memos')}}"><img class="logo_size"
+                 src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
+                 class="btn btn-primary btn_align_btn">Internal Memos</button></a></div>
                         
         </div>
         </div>
