@@ -5,9 +5,9 @@
 {{-- heading --}}
 <div class="container">
     <h4 id="hdtpa"><b>Tender Details</b></h4>
- 
+
     <br><br>
-    
+
 
 
     <input class="btn btn-primary" type="button" value="Add New Tender" data-toggle="modal" data-target="#myModal">
@@ -133,7 +133,7 @@
                                     <label for="inputCity">Item</label>
                                     <input type="text" class="form-control">
                                 </div>
-                                <div class="form-group col-md-3">
+                                <div class="form-group col-md-4">
                                     <label for="inputCity">Category</label>
                                     <select class="form-select form-select-lg mb-3"
                                         aria-label=".form-select-lg example">
@@ -143,7 +143,7 @@
 
                                     </select>
                                 </div>
-                                <div class="form-group col-md-3">
+                                <div class="form-group col-md-2">
                                     <label for="inputZip">Quantity</label>
                                     <input type="text" class="form-control">
                                 </div>
@@ -176,13 +176,12 @@
                                 </div>
                                 <div class="col-sm">
                                     <br>
-                                    <button type="submit" class="btn btn-primary float:right;"
-                                        Style="width:50%;">Save</button>
-                                    <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                                    <button type="submit" class="btn btn-primary " Style="width:50%;">Save</button>
+                                    <button type="button" class="btn btn-primary " Style="width:45%;"
                                         data-dismiss="modal">Close</button>
                                 </div>
                             </div>
-                            
+
                         </div>
 
                     </form>

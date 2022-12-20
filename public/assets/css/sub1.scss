@@ -167,6 +167,19 @@ thead, tbody, tfoot, tr, td, th {
     display: flex;
     justify-content: space-between;
     align-items: center;
+   
+}
+
+.modal .modal-header h2 {
+    text-align: center;
+   width: 100%;
+
+}
+.modal .modal-header h2 b {
+    text-align: center;
+    color: #1D1D50;
+   
+
 }
 
 .modal .modal-header .modal-title {

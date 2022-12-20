@@ -81,13 +81,13 @@
                         <div class="container">
                             <div class="text-center">
                                 <table class="table">
-                                    <thead>
+                                   <tbody>
                                         <tr>
-                                            <th colspan="2">Tender Details Form</th>
+                                            <td colspan="2"><h5> Tender Details Form </h5></td>
 
                                         </tr>
-                                    </thead>
-                                    <tbody>
+                                   
+                                    
                                         <tr>
                                             <td scope="row">Date</td>
                                             <td><input class="form-control" type="text" placeholder=""
@@ -160,9 +160,9 @@
                                 </div>
                                 <div class="col-sm">
                                     <br>
-                                    <button type="submit" class="btn btn-primary float:right;"
+                                    <button type="submit" class="btn btn-primary "
                                         Style="width:50%;">Apply</button>
-                                    <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                                    <button type="button" class="btn btn-primary " Style="width:45%;"
                                         data-dismiss="modal">Close</button>
                                 </div>
                             </div>

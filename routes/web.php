@@ -1498,6 +1498,8 @@ Route::any('site','Elibrary@sites')->name('site');
 Route::any('editsite','Elibrary@editsites')->name('editsite');
 Route::any('precedence','Elibrary@precedences')->name('precedence');
 Route::any('editprecedence','Elibrary@editprecedences')->name('editprecedence');
+Route::any('viewprecedence','Elibrary@viewprecedences')->name('viewprecedence');
+
 
 
 
@@ -1509,6 +1511,7 @@ Route::any('edit_tender_details','TenderManagement@edit_tender_details')->name('
 Route::any('apply_tender','TenderManagement@apply_tender')->name('apply_tender');
 Route::any('view_apply_tender','TenderManagement@view_apply_tender')->name('view_apply_tender');
 Route::any('tender_applied_details','TenderManagement@tender_applied_details')->name('tender_applied_details');
+Route::any('view_tender_applied','TenderManagement@view_tender_applied')->name('view_tender_applied');
 
 
 
