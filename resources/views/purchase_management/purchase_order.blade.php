@@ -120,8 +120,7 @@
                                 <!-- Modal body -->
                                 <div class="modal-body">
                                     <div class="container">
-                                        <form method="post" action="{{ url('purchase_order') }}"
-                                            enctype="multipart/form-data">
+                                        <form method="post" action="" enctype="multipart/form-data">
                                             <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 
                                             <div class="container">
@@ -171,7 +170,7 @@
                                                 <br>
                                                 <!-- table -->
 
-                                                <div class="row clearfix">
+                                                <div class="row clearfix container">
 
                                                     <div class="col-sm">
 
@@ -233,17 +232,20 @@
                                                                                 class="form-control invoice-sub-total"
                                                                                 placeholder="Grand Total "
                                                                                 id="grand-total" name="grand_total"
-                                                                                value="0" readonly><brform_logic>
-                                                                            <label for="">Advance Amount</label>
-                                                                            <input type="text" class="form-control total"
-                                                                                placeholder="Advance Amount"
-                                                                                id="advance-amount"
-                                                                                name="advance_amount" value=""><br>
-                                                                            <label for="">Pending Amount</label>
-                                                                            <input type="text" class="form-control calculate_price"
-                                                                                value{{ 0 }} placeholder="" id="result"
-                                                                                name="pending_amount" value="0"
-                                                                                readonly><br>
+                                                                                value="0" readonly>
+                                                                            <brform_logic>
+                                                                                <label for="">Advance Amount</label>
+                                                                                <input type="text"
+                                                                                    class="form-control total"
+                                                                                    placeholder="Advance Amount"
+                                                                                    id="advance-amount"
+                                                                                    name="advance_amount" value=""><br>
+                                                                                <label for="">Pending Amount</label>
+                                                                                <input type="text"
+                                                                                    class="form-control calculate_price"
+                                                                                    value{{ 0 }} placeholder=""
+                                                                                    id="result" name="pending_amount"
+                                                                                    value="0" readonly><br>
                                                                         </div>
                                                                         <div class="modal-footer">
                                                                             <button type="button"
@@ -334,7 +336,7 @@ function myFunction() {
 $(document).ready(function() {
 
     var html =
-        '<tr>   <td><input type="text" name="batch_no[]"id="batch_no_" class="form-control"placeholder="Item No"></td>    <td><select class="form-select" aria-label="select example" name="item_name[]" id="item_name"> <option value="">Select</option><option value=""></option></select></td>   <td><input type="text" name="quantity[]" id="quantity_" class="form-control text-right calculate"></td>   <td><input type="text" name="price[]" id="price_" class="form-control calculate" placeholder="0.00"></td>   <td><input type="text" name="total[]" id="total_" class="form-control calculate-sub" placeholder="0.00"></td>    <td><button type="button" class="add-Row ibtnDel btn btn-primary text-white" id="remove"  style="background-color:#607080;width:100%;color:white;">Remove</button><td></tr>';
+        '<tr> <td><input type="text" name="batch_no[]"id="batch_no_" class="form-control"placeholder="Item No"></td>    <td><select class="form-select" aria-label="select example" name="item_name[]" id="item_name"> <option value="">Select</option><option value=""></option></select></td>   <td><input type="text" name="quantity[]" id="quantity_" class="form-control text-right calculate"></td>   <td><input type="text" name="price[]" id="price_" class="form-control calculate" placeholder="0.00"></td>   <td><input type="text" name="total[]" id="total_" class="form-control calculate-sub" placeholder="0.00"></td>    <td><button type="button" class="add-Row ibtnDel btn btn-primary text-white" id="remove"  style="background-color:#607080;width:100%;color:white;">Remove</button><td></tr>';
 
     $("#add").click(function() {
         $("#tab_logic").append(html);
@@ -357,12 +359,13 @@ $(document).ready(function() {
             price = $('[name="price[]"]', tr).val(),
             percent = $('[name="total[]"]', tr).val(),
             subtotal = parseInt(quantity) * parseFloat(price);
+        console.log(tr);
         $('.calculate-sub', tr).val(subtotal.toFixed(2));
     }
 
     function calculateTotal() {
         // updateTotals();
-        var grandTotal = 0.0;
+
         var totalQuantity = 0;
         $('.calculate-sub').each(function() {
             grandTotal = ($(this).val());
@@ -375,18 +378,18 @@ $(document).ready(function() {
         $('.invoice-sub-total').val(parseFloat(totalQuantity).toFixed(2));
     }
 
-    $("#form_logic").on('change keyup paste','.total',function(){
+    $("#form_logic").on('change keyup paste', '.total', function() {
         calculateprice(this);
     });
 
-    function calculateprice(elem){
+    function calculateprice(elem) {
 
-         var div       = $(elem).closest('div'),
-         GrandTotal    = $('[name="grand_total"]',div).val(),
-         AdvanceAmount = $('[name="advance_amount"]',div).val(),
-         PendingAmount = $('[name="pending_amount"]',div).val(),
-         subtotals     = parseInt(GrandTotal) - parseFloat(AdvanceAmount);
-         $('.calculate_price',div).val( subtotals.toFixed(2));
+        var div = $(elem).closest('div'),
+            GrandTotal = $('[name="grand_total"]', div).val(),
+            AdvanceAmount = $('[name="advance_amount"]', div).val(),
+            PendingAmount = $('[name="pending_amount"]', div).val(),
+            subtotals = parseInt(GrandTotal) - parseFloat(AdvanceAmount);
+        $('.calculate_price', div).val(subtotals.toFixed(2));
     }
 
 });

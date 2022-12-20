@@ -303,35 +303,35 @@ class ClientManagement extends Controller
    
 
     public function addCorporatedocument(Request $request){
-        $corporate_id   = $request['corporate_id'];
-        $type = $request['testname'];
-        $file = $request['file'];
-        $client_type = $request['client'];
-        $date   = $request['date'];
+       
+       $testname    = count($request->input('testname'));
+       $insertdoc   = [];
 
-        if(!empty($request->file('file'))){
 
-            $this->validate($request,[
-                'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
-            ]);
-        }
+       for($i = 0; $i < $testname; $i++){
+         
+        $file = $request->file('file')[$i];
+
         if(request()->hasfile('file')){
-            $uploadedImage = $request->file('file');
+            $uploadedImage = $file;
             $imageName     = time() .'.'. $file->getClientOriginalExtension();
             $destinationPath = public_path('images/file');
             $uploadedImage->move($destinationPath,$imageName);
             $file->file    = $destinationPath.$imageName;
         }
 
-        DB::table('cra_document_detials')->insert([
+        $insertdoc[] = [
 
-            'document_type' =>  $type,
-            'file' =>   $imageName,
-            'client_types'=> $client_type,
-            'date'   => $date,
-            'corporate_id' => $corporate_id
+            'document_type' => $request->input('testname')[$i],
+            'file'          =>  $imageName,
+            'client_types'  =>  $request->input('client'),
+            'date'          =>  $request->input('date')[$i],
+            'corporate_id'  =>  $request->input('corporate_id')
+        ];
 
-        ]);
+       }
+
+        DB::table('cra_document_detials')->insert($insertdoc);
         return redirect('/corporate-document-details');
 
     }
@@ -466,37 +466,38 @@ class ClientManagement extends Controller
         return view('client-management.add-document',compact('client_doc','id'));
     }
 
-    public function addDocument(Request $Request){
-        $individual_id = $Request['individual_id'];
-        $document_type = $Request['testname'];
-        $client_type  = $Request['client'];
-        $file = $Request['file'];
-        $date = $Request['date'];
+    public function addDocument(Request $request){
 
-        if(!empty($Request->file('file'))){
+        $testname = count($request->input('testname'));
+        $insertdoc   = [];
 
-            $this->validate($Request ,[
-                'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg',
-            ]);
+       
+
+       
+        for($i = 0; $i < $testname; $i++){
+
+            $file = $request->file('file')[$i];
+
+            if (request()->hasFile('file')){
+                $uploadedImage = $file;
+                $imageName = time() . '.' . $file->getClientOriginalExtension();
+                $destinationPath = public_path('/images/file');
+                $uploadedImage->move($destinationPath, $imageName);
+                $file->file = $destinationPath . $imageName;
+            }
+
+            $insertdoc[] = [
+                'file'          => $imageName,
+                'document_type' => $request->input('testname')[$i],
+                'client_types'  => $request->input('client'),
+                'individual_id' => $request->input('individual_id'),
+                'date'          => $request->input('date')[$i],
+
+            ];
         }
 
-
-        if (request()->hasFile('file')){
-            $uploadedImage = $Request->file('file');
-            $imageName = time() . '.' . $file->getClientOriginalExtension();
-            $destinationPath = public_path('/images/file');
-            $uploadedImage->move($destinationPath, $imageName);
-            $file->file = $destinationPath . $imageName;
-        }
-
-        DB::table('cra_document_detials')->insert([
-
-            'document_type' =>  $document_type,
-            'file' =>   $imageName,
-            'client_types'=>$client_type,
-            'individual_id' => $individual_id,
-            'date'  => $date
-        ]);
+        DB::table('cra_document_detials')->insert($insertdoc);
+        
         return redirect('/client-document');
 
     }

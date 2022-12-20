@@ -44,9 +44,9 @@
                                 <tr>
                                     <th>Document Type</th>
                                     <th>File Upload</th>
-                                    <th>Add</th>
                                     <th></th>
                                     <th>Date</th>
+                                    <th>ADD</th>
 
 
 
@@ -58,26 +58,24 @@
                                     <td style="width:45%;">
 
                                         <select class="form-control select_group product" data-row-id="row_3"
-                                            id="product_detailes" name="testname" style="width:100%;">
+                                            id="product_detailes" name="testname[]" style="width:100%;">
                                             <option selected>Select</option>
                                             <option value="assets">Type 1</option>
                                         </select>
                                     </td>
-                                    <td style="width:45%;"> <input type="file" class="form-control" name="file"
+                                    <td style="width:45%;"> <input type="file" class="form-control" name="file[]"
                                             id="username" value="" placeholder="File" required>
                                     </td>
-                                    <td> <input type="button" class="btn btn-dark float:right;" id="add"
-                                            value="ADD">
-                                    </td>
                                     <td>
-                                        <input type="hidden" class="form-control" name="client" id="username"
+                                        <input type="hidden" class="form-control" name="client[]" id="username"
                                             value="{{$corporate_docs->Client_type}}" placeholder="File" required>
                                     </td>
                                     <td>
-                                        <input type="date" class="form-control" name="date" id="username" 
+                                        <input type="date" class="form-control" name="date[]" id="username" 
                                             required>
                                     </td>
-                                    <td>
+                                    <td> <input type="button" class="btn btn-primary float:right;" id="add"
+                                            value="ADD">
                                     </td>
                                 </tr>
                             </tbody>
@@ -120,7 +118,7 @@
 
     $(document).ready(function(){
 
-        var html = '<tr><td style="width:45%;"> <select class="form-control select_group product"data-row-id="row_3" id="product_detailes" name="testname[]" style="width:100%;"><option selected>Select</option><option value="assets">Type 1</option></select></td><td style="width:45%;"> <input type="file" class="form-control" name="file[]" multiple="multiple" required></td></td><td> <input type="button" class="btn btn-danger float:right;" name="remove" id="remove" value="remove"></td><td><input type="hidden" class="form-control" name="client" id="username"value="{{$corporate_docs->Client_type}}" placeholder="File" required></td></tr>';
+        var html = '<tr><td style="width:45%;"> <select class="form-control select_group product"data-row-id="row_3" id="product_detailes" name="testname[]" style="width:100%;"><option selected>Select</option><option value="assets">Type 1</option></select></td><td style="width:45%;"> <input type="file" class="form-control" name="file[]" multiple="multiple" required></td></td><td><input type="hidden" class="form-control" name="client" id="username"value="{{$corporate_docs->Client_type}}" placeholder="File" required></td><td><input type="date" class="form-control" name="date" id="username" required></td><td> <input type="button" class="btn btn-danger float:right;" name="remove" id="remove" value="remove"></td></tr>';
          
        
       

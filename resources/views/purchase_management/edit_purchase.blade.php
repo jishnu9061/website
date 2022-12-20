@@ -64,33 +64,33 @@
   </thead>
   <tbody>
     <tr>
-      <td><input class="form-control" type="text" value="Paper" aria-label="Disabled input example" disabled readonly></td>
-      <td><input class="form-control" type="text" value="C15P125" aria-label="Disabled input example" disabled readonly></td>
-      <td><input class="form-control" type="text" value="40" aria-label="Disabled input example" disabled readonly></td>
-      <td><input class="form-control" type="text" value="200" aria-label="Disabled input example" disabled readonly></td>
-      <td><input class="form-control" type="text" value="200" aria-label="Disabled input example" disabled readonly></td>
+      <td><input class="form-control" type="text" value="Paper" aria-label="Disabled input example"  ></td>
+      <td><input class="form-control" type="text" value="C15P125" aria-label="Disabled input example" ></td>
+      <td><input class="form-control" type="text" value="40" aria-label="Disabled input example" ></td>
+      <td><input class="form-control" type="text" value="200" aria-label="Disabled input example" ></td>
+      <td><input class="form-control" type="text" value="200" aria-label="Disabled input example" ></td>
     </tr>
    
     <tr>  
             <td colspan="3"></td>
-            <td><input type="text"  placeholder="Grand Total" class="form-control" disabled></td>
-            <td><input type="text"  placeholder="200" class="form-control" disabled></td>
+            <td><input type="text"  placeholder="Grand Total" class="form-control" ></td>
+            <td><input type="text"  placeholder="200" class="form-control" ></td>
           </tr>
         
           <tr>
            
            
             <td colspan="3"></td>
-            <td><input type="text"  placeholder="Advance Amount" class="form-control" disabled></td>
-            <td><input type="text"  placeholder="50" class="form-control" disabled></td>
+            <td><input type="text"  placeholder="Advance Amount" class="form-control" ></td>
+            <td><input type="text"  placeholder="50" class="form-control" ></td>
           </tr>
         
           <tr>
            
             
             <td colspan="3"></td>
-            <td><input type="text"  placeholder="Payment Amount" class="form-control" disabled></td>
-            <td><input type="text"  placeholder="150" class="form-control" disabled></td>
+            <td><input type="text"  placeholder="Payment Amount" class="form-control" ></td>
+            <td><input type="text"  placeholder="150" class="form-control" ></td>
           </tr>
   </tbody>
 </table>
