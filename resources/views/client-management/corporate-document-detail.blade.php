@@ -54,6 +54,10 @@
 
 <body>
 
+    <div>
+        <button type="submit" class="btn btn-primary" style="background-color:#435ebe;width:15%;">Add</button>
+    </div>
+
     <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Document Details</u></b></div><br><br> -->
     {{-- heading --}}
     <div class="container">
@@ -112,10 +116,10 @@
                                             Document</button></a>
                                 </td>
                                 <td scope="row" class="text-center">
-                                    <a href="{{url('edit-corporate-document',$list->id)}}"><i style="color:black;" class="fa fa-pencil" aria-hidden="true"></i>
-                                                            <a onClick="return myFunction();" href="{{url('delete-document',$list->id)}}"
-                                                                style="color:black;"><i
-                                                                    class="fas fa-trash-alt"></i></a>
+                                    <a href="{{url('edit-corporate-document',$list->id)}}"><i style="color:black;"
+                                            class="fa fa-pencil" aria-hidden="true"></i>
+                                        <a onClick="return myFunction();" href="{{url('delete-document',$list->id)}}"
+                                            style="color:black;"><i class="fas fa-trash-alt"></i></a>
                                 </td>
                             </tr>
                             @endforeach
