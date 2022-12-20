@@ -53,7 +53,7 @@
         </thead>
         <tbody>
 
-        @foreach($view_litigation as $list)
+            @foreach($view_litigation as $list)
             <tr>
 
                 <td>{{$list->matter_info}}</td>
@@ -65,7 +65,8 @@
                             class="fa fa-eye"></i><span class="m-1"></span>
                         <a href="{{ url('edit_civil_litigation',$list->id)}}"><i style="color:rgb(13, 1, 56);"
                                 class="fa fa-edit"></i><span class="m-1"></span>
-                            <a onClick="return myFunction();"  href="{{ url('delete_civil_litigation',$list->id)}}"> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></td>
+                            <a onClick="return myFunction();" href="{{ url('delete_civil_litigation',$list->id)}}"> <i
+                                    style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></td>
 
             </tr>
             @endforeach
@@ -261,31 +262,38 @@
                                         </div>
                                     </div>
                                 </div>
-                                </br>
+                            </div>
 
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="mb-1">
-                                            <label for="exampleFormControlInput1" class="form-label">Supporting
-                                                Details</label>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="mb-1">
+                                        <label for="exampleFormControlInput1" class="form-label">Supporting
+                                            Details</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
 
-                                                </div>
-                                                <span class="m-2"></span>
-                                                <input type="file" class="form-control" name="support_detail">
                                             </div>
+                                            <input type="file" class="form-control" name="support_detail">
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="row">
-                                <div class="modal-footer" style="background-color:#d3e0ed;">
-                                    <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                <div class="col-md-4">
+                                    <div class="mb-1">
+                                    </div>
                                 </div>
                             </div>
-</div>
+                        </div>
+                        <br>
+                        <br>
+
+
+                        <div class="container text-center">
+                            <button type="submit" class="btn btn-primary" style="width:15%">Save</button>
+                            <button type="button" class="btn btn-primary" style="width:15%"
+                                data-dismiss="modal">Close</button>
+                        </div>
+
+
                     </form>
                 </div>
 

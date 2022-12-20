@@ -139,3 +139,60 @@ thead, tbody, tfoot, tr, td, th {
 
 // }
 
+.modal .modal-content {
+    padding: 20px;
+    background: linear-gradient(to top, #cacaca 0%,  #d8dada 30%, #e8f5f5 40%,rgb(255, 255, 255)78%);
+    mix-blend-mode: color-dodge;
+    // background: rgba(132, 209, 241, 0.6);
+    box-shadow: 2.75px 2.75px 4.58333px rgb(39 59 74 / 20%);
+    backdrop-filter: blur(116px);
+    border-radius: 9px;
+    opacity: .9;
+    
+}
+
+.modal .modal-full {
+    max-width: 94%;
+    
+}
+
+.modal .white {
+    color:  white;
+    
+    
+}
+
+.modal .modal-header {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.modal .modal-header h2 {
+    text-align: center;
+   width: 100%;
+
+}
+.modal .modal-header h2 b {
+    text-align: center;
+    color: #1D1D50;
+   
+
+}
+
+.modal .modal-header .modal-title {
+    font-size: 1.1rem;
+}
+
+.modal .modal-header .close {
+    padding: 7px 10px;
+    border-radius: 50%;
+    background: none;
+    border: none;
+}
+
+/* .modal .modal-header .close:hover {
+background: #dee2e6;
+} */

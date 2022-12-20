@@ -14,29 +14,49 @@
     border-radius: 25px;
     background-color: #f8f9fa;
     padding: 1%;
-    width:100%;  
+    width:100%; 
     text-align:center;
     box-shadow: inset 0 0 10px #d3d0ca;
 }
 
 #hdbtb{
     /* border: 0.5px solid rgba(157, 168, 176, 0.4); */
+    margin: auto;
+    width: 90%;
     
-    background-color: #f8f9fa;
+    
+    
+    background-color: #ffffff;
     padding: .5%;
-    width:100%;
+   
+   
     border-radius: 25px;
     /* float: left! */
     text-align: center;
-    
+    box-shadow: 0 0 5px #00000026; 
+}
+
+.newstyle1
+{
+    border-radius: 10px 10px 10px 10px  ;
+    background:#ffffff;
+    box-shadow : 0 4px 8px 0 rgba(0, 0, 0, 0.092), 0 6px 20px 0 rgba(0, 0, 0, 0.116);
 }
 
 .newstyle
 {
-    border-radius: 25px;background:#ffffff; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px 10px 10px 10px ;
+    background:#ffffff; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.092), 0 6px 20px 0 rgba(0, 0, 0, 0.116);
 }
 
-
+.newstyle2
+{
+    border-radius: 10px 10px 10px 10px  ;
+    background:#ffffff; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.092), 0 6px 20px 0 rgba(0, 0, 0, 0.116);
+   
+}
 
 #backbuttonst {
 
@@ -89,7 +109,19 @@ text-shadow: 2px 1px;
     line-height: 1;
     font-weight: 600;
 }
-
+.doc-button
+{
+    border-radius: 10px;
+    background-color: #aed3ff;
+    color: #003169;
+    width: 90%;
+    border: 1px solid  #7cafe9;
+}
+.doc-button:hover
+{
+background-color: #f8f9fa;
+color: #003169;
+}
 
 .button {
     border-radius: 5px;

@@ -50,7 +50,7 @@
             </tr>
         </thead>
         <tbody>
-          @foreach($view_employee as $list)
+            @foreach($view_employee as $list)
             <tr>
 
                 <td>{{$list->matter_info}}</td>
@@ -62,7 +62,8 @@
                             class="fa fa-eye"></i><span class="m-1"></span>
                         <a href="{{ url('edit_workers_compensation',$list->id) }}"><i style="color:rgb(13, 1, 56);"
                                 class="fa fa-edit"></i><span class="m-1"></span>
-                            <a href="{{ url('delete_workers_compensation',$list->id) }}"> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></td>
+                            <a href="{{ url('delete_workers_compensation',$list->id) }}"> <i
+                                    style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></td>
 
 
             </tr>
@@ -192,7 +193,8 @@
                                         <label for="exampleFormControlInput1" class="form-label">Employee Doctor</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend"></div>
-                                            <input type="text" class="form-control" placeholder="" name="employee_doctor">
+                                            <input type="text" class="form-control" placeholder=""
+                                                name="employee_doctor">
                                         </div>
                                     </div>
                                 </div>
@@ -203,11 +205,12 @@
                                                 Benefit Details</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend"></div>
-                                                <input type="text" class="form-control" placeholder="" name="benefit_detail">
+                                                <input type="text" class="form-control" placeholder=""
+                                                    name="benefit_detail">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col-md-8">
                                         <div class="mb-3">
                                             <label for="exampleFormControlInput1" class="form-label">Supporting
                                                 Details</label>
@@ -215,35 +218,33 @@
                                             <input type="file" class="form-control" name="supporting_details">
                                         </div>
                                     </div>
-
-                                    <!-- <div class="col">
-   
-    </div> -->
                                 </div>
 
-
-                                <div class="row">
-                                    <div class="col">
-
-                                    </div>
-                                </div>
-                                </div>
-                            
-                
-
-
-                            <div class="modal-footer" style="background-color:#d3e0ed;">
-                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                             </div>
-                        </div>
 
-                    </form>
+
+
+                        </div>
+                        <br>
+                        <br>
+
+
+
+
+
+                        <div class="container text-center">
+                            <button type="submit" class="btn btn-primary" style="width:15%">Save</button>
+                            <button type="button" class="btn btn-primary" style="width:15%"
+                                data-dismiss="modal">Close</button>
+                        </div>
                 </div>
 
+                </form>
+            </div>
 
 
 
 
 
-                @endsection
+
+            @endsection

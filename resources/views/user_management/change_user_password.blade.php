@@ -8,7 +8,7 @@
     <h4 id="hdtpa"><b>Change Password</b></h4>
     <br><br>
           
-     </div>
+    
            
     <p style="color:red;text-align:center;"> Password must be atleast 8 character long, Contain atleast 1 capital letter,<br> atleast 1 numeric character and atleast 1 special character</p>
 
@@ -65,11 +65,10 @@
                             <label>Confirm Password:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="password"  id="" name="confirm_password"value=""class="form-control"style="width:100%;">
+                                <input type="password"  id="" name="new_password"value=""class="form-control"style="width:100%;">
                                 <div class="invalid-feedback" style="width: 100%;">
-                                    Required Field.
+                                Required Field.
                                 </div>
-                            </div>
                         </div>
                      </div>
                     </div>
@@ -87,12 +86,13 @@
                     <button type="submit" class="btn btn-primary float:right;" Style="width:50%;">Save</button>
                     <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
 </div > 
-                           
+</div>  
+              
                             <br>
                             <br>
                         </div>
                     </div>
-        </div>
+       
 </form>  
 </body>
         </div>

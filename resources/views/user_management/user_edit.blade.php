@@ -205,15 +205,14 @@
                                 <div class="input-group-prepend"></div>
                                     <select name="user_role" id="cars">
                                         <option>{{ $edit->user_role}}</option>
-                            
-                                        <option>Add Client</option>
-                                        <option>Edit Client</option>
-                                        <option>View Client</option>
-                                        <option>Open New File</option>
-                                        <option>Edit File Type</option>
-                                        <option>View File Detais</option>
-                                        <option>Edit File Progress</option>
-                                        <option>Add Progress</option>   
+                                        <option>Sr. Advocate</option>
+                                        <option>Jr. Advocate</option>
+                                        <option>Hr Manager</option>
+                                        <option>Hr Executive</option>
+                                        <option>Account</option>
+                                        <option>Account Manager</option>
+                                        <option>Receptionist</option>
+                                        <option>Department Head</option>   
                                     
                                     </select>
                             

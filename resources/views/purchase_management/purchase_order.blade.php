@@ -183,9 +183,7 @@
                                                                 <td class="">Price</td>
                                                                 <td class="">Total</td>
                                                                 <td> <input type="button" class="btn btn-primary"
-                                                                        id="add"
-                                                                        style="background-color:#607080;width:100%;"
-                                                                        value="Add">
+                                                                        id="add" value="Add" Style="width:100%;">
                                                                 </td>
                                                             </tr>
 
@@ -214,8 +212,8 @@
                                                         <div class="modal-content">
 
                                                             <!-- Modal Header -->
-                                                            <div class="modal-header" style="background-color:#607080">
-                                                                <h4 class="text-white"><b>Advance Payment</b></h4>
+                                                            <div class="modal-header">
+                                                                <h4><b>Advance Payment</b></h4>
 
                                                             </div>
 
@@ -233,7 +231,11 @@
                                                                                 placeholder="Grand Total "
                                                                                 id="grand-total" name="grand_total"
                                                                                 value="0" readonly>
+
                                                                             <brform_logic>
+
+                                                                            <brform_logic> <br>
+
                                                                                 <label for="">Advance Amount</label>
                                                                                 <input type="text"
                                                                                     class="form-control total"
@@ -247,14 +249,13 @@
                                                                                     id="result" name="pending_amount"
                                                                                     value="0" readonly><br>
                                                                         </div>
-                                                                        <div class="modal-footer">
-                                                                            <button type="button"
-                                                                                class="btn btn-primary text-white"
-                                                                                onclick="window.history.back()"
-                                                                                style="background-color:#607080;width:20%;">Close</button>
+
+                                                                        <div>
                                                                             <button type="submit"
+                                                                                class="btn btn-primary">Save</button>
+                                                                            <button type="button"
                                                                                 class="btn btn-primary"
-                                                                                style="background-color:#607080;width:20%;">Save</button>
+                                                                                data-dismiss="modal">Close</button>
                                                                         </div>
                                                                 </div>
 
@@ -273,13 +274,27 @@
                             <input type="hidden" class="form-control" id="edit_id" name="medicine_id">
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-sm">
 
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary text-white"
-                            style="width:10%;background-color:#607080" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" style="background-color:#607080;width:10%;"
-                            data-toggle="modal" data-target="#myModal-2"><b>Save</b></button>
+                        </div>
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary" Style="width:50%;" data-toggle="modal"
+                                data-target="#myModal-2">Save</button>
+                            <button type="button" class="btn btn-primary" Style="width:45%;"
+                                data-dismiss="modal">Close</button>
+                        </div>
                     </div>
+                    <!-- <div>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-2"> Save
+                        </button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+                    </div> -->
 
 
                 </div>

@@ -148,7 +148,7 @@
                         <div class="mb-1">
                             <label for="username">Action Plan</label>
                             <div class="input-group">
-                                <textarea class="form-control" id="form7Example7" rows="3" name="plan"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="plan">{{$edit_complaint->action_plan}}</textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Action Plan is required.
                                 </div>
@@ -159,7 +159,7 @@
                         <div class="mb-1">
                             <label for="username">Complaint Description</label>
                             <div class="input-group">
-                                <textarea class="form-control" id="form7Example7" rows="3" name="Description"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3" name="Description">{{$edit_complaint->complaint_description}}</textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Complaint Description is required.
                                 </div>
@@ -181,47 +181,12 @@
                             <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
                         </div>
                     </div>
-                </div>
+                
             </form>
         </div>
     </div>
 </div>
 
-</div>
-<div class="modal" id="mymodal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-body">
-                    <form action="">
-                        <div>
-                            <input type="text" name="type" class="form-control" placeholder="Client Type">
-                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<div class="modal" id="my">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-body">
-                    <form action="">
-                        <div>
-                            <input type="text" name="type" class="form-control" placeholder="Country">
-                            <button class="btn btn-primary sub_btnn" type="submit">submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">

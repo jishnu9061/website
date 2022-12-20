@@ -296,8 +296,7 @@ color: #999;
                                                             <br>
                                                             <button type="submit" class="btn btn-primary float:right;"
                                                                 Style="width:45%;">Save</button>
-                                                            <button type="button" class="btn btn-primary float:left"
-                                                                Style="width:45%;">Cancel</button>
+                                                                <button type="button" class="btn btn-primary float:left" Style="width:45%;" data-dismiss="modal">Close</button>
                                                         </div>
                                                     </div>
                                                 </div>

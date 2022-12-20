@@ -200,11 +200,13 @@
 
 
             </div>
+            <br>
+            <br>
 
 
-            <div class="modal-footer" style="background-color:#d3e0ed;">
-                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            <div class="container text-center">
+                <button type="submit" class="btn btn-primary" style="width:15%">Save</button>
+                <button type="button" class="btn btn-primary" style="width:15%" data-dismiss="modal">Close</button>
             </div>
         </div>
 

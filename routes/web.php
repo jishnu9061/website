@@ -1341,7 +1341,9 @@ Route::any('/edit_bank_name/{id}','hrindex@editbanknames')->name('edit_bank_name
 Route::any('/update_bank','hrindex@updatebankname')->name('update_bank');
 Route::any('/delete_bank/{id}','hrindex@deletebank')->name('delete_bank');
 
-
+Route::any('task_allocation','hrindex@task_allocation')->name('task_allocation');
+Route::any('view_task_allocation','hrindex@view_task_allocation')->name('view_task_allocation');
+Route::any('edit_task_allocation','hrindex@edit_task_allocation')->name('edit_task_allocation');
 
 
 
@@ -1482,6 +1484,36 @@ Route::any('/edit_workers_compensation/{id}','PracticeAreaManagement@edit_worker
 Route::any('update_workers_compensation','PracticeAreaManagement@updateworkerscompensation')->name('update_workers_compensation');
 Route::any('/delete_workers_compensation/{id}','PracticeAreaManagement@deleteworkerscompensation')->name('delete_workers_compensation');
 Route::any('view_workers_compensation','PracticeAreaManagement@view_workers_compensation')->name('view_workers_compensation');
+
+
+//Elibrary
+Route::any('libraryindex','Elibrary@index')->name('libraryindex');
+Route::any('subject','Elibrary@subjects')->name('subject');
+Route::any('editsubject','Elibrary@editsubjects')->name('editsubject');
+Route::any('file','Elibrary@files')->name('file');
+Route::any('editfile','Elibrary@editfiles')->name('editfile');
+Route::any('viewfile','Elibrary@viewfiles')->name('viewfile');
+
+Route::any('site','Elibrary@sites')->name('site');
+Route::any('editsite','Elibrary@editsites')->name('editsite');
+Route::any('precedence','Elibrary@precedences')->name('precedence');
+Route::any('editprecedence','Elibrary@editprecedences')->name('editprecedence');
+Route::any('viewprecedence','Elibrary@viewprecedences')->name('viewprecedence');
+
+
+
+
+//Tender Management
+Route::any('tender_index','TenderManagement@tender_index')->name('tender_index');
+Route::any('tender_details','TenderManagement@tender_details')->name('tender_details');
+Route::any('view_tender_details','TenderManagement@view_tender_details')->name('view_tender_details');
+Route::any('edit_tender_details','TenderManagement@edit_tender_details')->name('edit_tender_details');
+Route::any('apply_tender','TenderManagement@apply_tender')->name('apply_tender');
+Route::any('view_apply_tender','TenderManagement@view_apply_tender')->name('view_apply_tender');
+Route::any('tender_applied_details','TenderManagement@tender_applied_details')->name('tender_applied_details');
+Route::any('view_tender_applied','TenderManagement@view_tender_applied')->name('view_tender_applied');
+
+
 
 
 

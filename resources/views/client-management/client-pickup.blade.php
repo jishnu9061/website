@@ -318,8 +318,7 @@ color: #999;
                                                         <div class="col-sm">
                                                             <button type="submit" class="btn btn-primary float:right"
                                                                 style="width:45%">Save</button>
-                                                            <button type="submit" class="btn btn-primary float:left"
-                                                                style="width:45%">Cancel</button>
+                                                                <button type="button" class="btn btn-primary float:left" Style="width:45%;" data-dismiss="modal">Close</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -435,11 +434,9 @@ color: #999;
 
 
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-primary text-white"
-                                                    style="width:15%;background-color:#435ebe"
-                                                    data-bs-dismiss="modal">Close</button>
                                                 <button type="submit" class="btn btn-primary"
                                                     style="background-color:#435ebe;width:15%;">Update</button>
+                                                <button type="button" class="btn btn-primary float:left" Style="width:45%;" data-dismiss="modal">Close</button>
                                             </div>
                                     </div>
                                     <div class="container">

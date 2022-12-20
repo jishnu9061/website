@@ -72,16 +72,16 @@
                                 </div>
                                 <select name="group_role" id="cars">
                                     <option value="">{{$edit_user->group_role}}</option>
-                                    <option>--selects--</option>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
-                                    <option></option>
+                                    <option>Select</option>
+                                    <option>Role 1</option>
+                                    <option>Role 2</option>
+                                    <option>Role 3</option>
+                                    <option>Role 4</option>
+                                    <option>Role 5</option>
+                                    <option>Role 6</option>
+                                    <option>Role 7</option>
+                                    <option>Role 8</option>
+                                    <option>Role 9</option>
                                 </select>
                             </div>
                         </div>
@@ -101,16 +101,16 @@
                         <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
                     </div>
                 </div>
-        </div>
+       
         </form>
     </div>
 </div>
 </div>
 
-</div>
+
 
 </body>
-</div>
+
 </html>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">

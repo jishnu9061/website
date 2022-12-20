@@ -181,11 +181,7 @@
                                     <!-- <td scope="row" class="text-center">{{$list->id}}</td>
                                     <td scope="row" class="text-center">{{$list->action_type}}</td> -->
                                     <td scope="row" class="text-center">{{$list->progress_date}}</td>
-
-                                    <td scope="row" class="text-center">{{$list->Client_name}}</td>
-
-                                    <!-- <td scope="row" class="text-center">{{$list->Client_name}}</td> -->
-
+                                    <td scope="row" class="text-center">{{$list->client_name}}</td>
                                     <td scope="row" class="text-center">{{$list->file_name}}</td>
                                     <td scope="row" class="text-center">{{$list->action_description}}</td>
                                     <td scope="row" class="text-center">{{$list->time_taken_hours}}</td>
@@ -211,6 +207,10 @@
 
                         </table>
                     </div>
+                    </div>
+
+                    </div>
+
                     <!--		Start Pagination -->
                     <div class='pagination-container'>
                         <nav>
@@ -220,6 +220,7 @@
                         </nav>
                     </div>
                     <div class="rows_count">Showing 11 to 20 of 100</div>
+</div>
 
                     <!-- 		End of Container -->
 
@@ -323,9 +324,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                </div>
-
+                                                  
 
                                             </div>
                                             <br>
@@ -524,7 +523,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                  
                                     <br>
                                     <div id="test" style="height:20px;"></div>
 
@@ -598,13 +597,13 @@
                                                 data-dismiss="modal">Cancel</button>
                                         </div>
                                     </div>
-                                </div>
+                              
                                 </form>
                             </div>
                         </div>
                     </div>
 
-                </div>
+             
                 <div class="modal" id="mymodal">
                     <div class="modal-dialog">
                         <div class="modal-content">

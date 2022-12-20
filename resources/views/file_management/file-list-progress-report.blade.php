@@ -98,7 +98,7 @@ color: #999;
                             <th class="text-center">Most Recent Progress</th>
                             <!-- <th class="text-center">Next Progress</th> -->
                             <th class="text-center">Status</th>
-                            <th class="text-center">Action</th>
+                            {{-- <th class="text-center">Action</th> --}}
 
                         </tr>
                     </thead>
@@ -108,17 +108,17 @@ color: #999;
                         <tr id="data">
 
                             <!-- <td scope="row" class="text-center">{{$list->id}}</td> -->
-                            <td scope="row" class="text-center">{{$list->Client_name}}</td>
+                            <td scope="row" class="text-center">{{$list->client_name}}</td>
                             <td scope="row" class="text-center">{{$list->file_name}}</td>
                             <td scope="row" class="text-center">{{$list->progress_date}}</td>
                             <td scope="row" class="text-center">{{$list->advocate}}</td>
                             <td scope="row" class="text-center">{{$list->recent_progress}}</td>
                             <!-- <td scope="row" class="text-center"></td> -->
                             <td scope="row" class="text-center"></td>
-                            <td  scope="row"class="text-center">
+                            {{-- <td  scope="row"class="text-center">
                             <a href="{{url('view-file-list-progress',$list->id)}}"><i style="color:black;" class="fa fa-eye"
                                         aria-hidden="true"></i>
-                        </td>
+                        </td> --}}
 						
                         </tr>
 

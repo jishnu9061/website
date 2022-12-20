@@ -36,7 +36,24 @@ $(document).on('input', '#percent', function() {
         <form method="post" action="{{url('add-document')}}" id="form" enctype="multipart/form-data">
             @csrf
             <input type="hidden" name="individual_id" value="{{$client_doc->id}}">
+            <div class="row">
+                <div class="col-md-3">
+                                                                <div class="mb-1">
+                                                                    
+                                                                    <div class="input-group">
+                                                                        <div class="input-group-prepend"></div>
+                                                                        <input type="date" class="form-control"
+                                                                            name="quantity" id="username" value=""
+                                                                            placeholder="" required>
+                                                                        <div class="invalid-feedback"
+                                                                            style="width: 100%;">
 
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div> 
+                </div>
+                <br>
             <div class="row">
                 <div class="col-md-12">
                     <table class="table table-striped  order-list" id="table_field">
@@ -44,8 +61,11 @@ $(document).on('input', '#percent', function() {
                             <tr>
                                 <th>Document Type</th>
                                 <th>File Upload</th>
+
                                 <th></th>
                                 <th>Date</th>
+
+
                                 <th>Add</th>
                             </tr>
 
@@ -64,6 +84,7 @@ $(document).on('input', '#percent', function() {
                                 <td style="width:45%;"> <input type="file" class="form-control" name="file[]"
                                         multiple="multiple" required>
                                 </td>
+
                                 <td>
                                     <input type="hidden" class="form-control" name="client[]" id="username"
                                         value="{{$client_doc->client_type}}" placeholder="File" required>
@@ -73,6 +94,17 @@ $(document).on('input', '#percent', function() {
                                 </td>
                                 <td> <input type="button" class="btn btn-primary float:right;" id="add" value="Add">
                                 </td>
+
+                                </td>
+
+                                <td> <input type="button" class="btn btn-primary float:right;" id="add" value="Add">
+                                </td>
+                               
+                                    <input type="hidden" class="form-control" name="client" id="username"
+                                        value="{{$client_doc->client_type}}" placeholder="File" required>
+                               
+                              
+
                             </tr>
                         </tbody>
                     </table>
@@ -109,7 +141,11 @@ $(document).on('input', '#percent', function() {
 <script type="text/javascript">
 $(document).ready(function() {
     var html =
+
         '<tr><td style="width:45%;"> <select class="form-control select_group product"data-row-id="row_3" id="product_detailes" name="testname[]" style="width:100%;"><option selected>Select</option><option value="assets">Type 1</option></select></td><td style="width:45%;"> <input type="file" class="form-control" name="file[]" multiple="multiple" required></td></td><td><input type="text" class="form-control" name="client" id="username"value="{{$client_doc->client_type}}" placeholder="File" required></td><td><input type="date" class="form-control" name="date" id="username" required></td> <td> <input type="button" class="btn btn-danger float:right;" name="remove" id="remove" value="remove"></td></tr>';
+
+        '<tr><td style="width:45%;"> <select class="form-control select_group product"data-row-id="row_3" id="product_detailes" name="testname[]" style="width:100%;"><option selected>Select</option><option value="assets">Type 1</option></select></td><td style="width:45%;"> <input type="file" class="form-control" name="file[]" multiple="multiple" required></td></td><td> <input type="button" class="btn btn-danger float:right;" name="remove" id="remove" value="remove"></td><input type="hidden" class="form-control" name="client" id="username"value="{{$client_doc->client_type}}" placeholder="File" required></tr>';
+
     var max = 4;
     var X = 1;
 
