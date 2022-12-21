@@ -1504,15 +1504,27 @@ Route::any('view_workers_compensation','PracticeAreaManagement@view_workers_comp
 //Elibrary
 Route::any('libraryindex','Elibrary@index')->name('libraryindex');
 Route::any('subject','Elibrary@subjects')->name('subject');
-Route::any('editsubject','Elibrary@editsubjects')->name('editsubject');
+Route::any('add_subject','Elibrary@addsubjects')->name('add_subject');
+Route::any('/editsubject/{id}','Elibrary@editsubjects')->name('editsubject');
+Route::any('update_subject','Elibrary@updatesubjects')->name('update_subject');
+
 Route::any('file','Elibrary@files')->name('file');
-Route::any('editfile','Elibrary@editfiles')->name('editfile');
+Route::any('add_file','Elibrary@addfiles')->name('add_file');
+Route::any('/editfile/{id}','Elibrary@editfiles')->name('editfile');
+Route::any('update_file','Elibrary@updatefiles')->name('updatee_file');
+Route::any('/delete_file/{id}','Elibrary@deletefiles')->name('deletefile');
 Route::any('viewfile','Elibrary@viewfiles')->name('viewfile');
 
 Route::any('site','Elibrary@sites')->name('site');
-Route::any('editsite','Elibrary@editsites')->name('editsite');
+Route::any('add_site','Elibrary@addsites')->name('add_site');
+Route::any('update_site','Elibrary@updatesites')->name('update_site');
+Route::any('/editsite/{id}','Elibrary@editsites')->name('editsite');
+
 Route::any('precedence','Elibrary@precedences')->name('precedence');
-Route::any('editprecedence','Elibrary@editprecedences')->name('editprecedence');
+Route::any('add_precedence','Elibrary@addprecedences')->name('add_precedence');
+Route::any('/editprecedence/{id}','Elibrary@editprecedences')->name('editprecedence');
+Route::any('update_precedence','Elibrary@updateprecedences')->name('update_precedence');
+Route::any('/delete_precedence/{id}','Elibrary@deleteprecedence')->name('delete_precedence');
 Route::any('viewprecedence','Elibrary@viewprecedences')->name('viewprecedence');
 
 

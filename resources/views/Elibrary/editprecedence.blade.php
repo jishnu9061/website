@@ -8,9 +8,12 @@
     <br>
 </div>
 <div class="container">
-    <form>
+    <form action="{{url('update_precedence')}}" method="post">
+        @csrf
 
         <div class="row">
+
+        <input type="hidden" name="id" value="{{$edit->id}}">
 
             <div class="col-md-4">
                 <div class="mb-1">
@@ -19,7 +22,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <input type="text" class="form-control" name="user" id="age">
+                        <input type="text" class="form-control" name="file_no" value="{{$edit->file_no}}" id="age">
                         <div class="invalid-feedback" style="width: 100%;">
                             Incorporation is required
                         </div>
@@ -34,7 +37,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <input type="text" class="form-control" name="user" id="age">
+                        <input type="text" class="form-control" name="client_name" value="{{$edit->client_name}}" id="age">
                         <div class="invalid-feedback" style="width: 100%;">
                             Incorporation is required
                         </div>
@@ -49,7 +52,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <input type="text" class="form-control" name="user" id="age">
+                        <input type="text" class="form-control" name="file_handle" value="{{$edit->file_handle}}" id="age">
                         <div class="invalid-feedback" style="width: 100%;">
                             Incorporation is required
                         </div>
@@ -67,7 +70,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <input type="date" class="form-control" name="user" id="age">
+                        <input type="date" class="form-control" name="date_from" value="{{$edit->date_from}}" id="age">
                         <div class="invalid-feedback" style="width: 100%;">
                             Incorporation is required
                         </div>
@@ -82,7 +85,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <input type="date" class="form-control" name="user" id="age">
+                        <input type="date" class="form-control" name="date_to" value="{{$edit->date_to}}" id="age">
                         <div class="invalid-feedback" style="width: 100%;">
                             Incorporation is required
                         </div>
@@ -97,7 +100,8 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <select name="event" id="cars">
+                        <select name="file_status" id="cars">
+                            <option>{{$edit->file_status}}</option>
                             <option>---select---</option>
                             <option>Active</option>
                             <option>Pending</option>
@@ -117,7 +121,8 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <textarea rows="4" cols="50" name="paddress" class="form-control" type="text"></textarea>
+                        <textarea rows="4" cols="50" name="file_discription" class="form-control"
+                            type="text">{{$edit->file_discription}}</textarea>
                         <div class="invalid-feedback" style="width: 100%;">
                             Incorporation is required
                         </div>
@@ -136,7 +141,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <input type="file" class="form-control" name="user" id="age">
+                        <input type="file" class="form-control" name="upload_file" value="{{$edit->upload_file}}" id="age">
                         <div class="invalid-feedback" style="width: 100%;">
                             Incorporation is required
                         </div>

@@ -44,26 +44,28 @@
 
                     <th scope="col">Subject</th>
                     <th scope="col">Category</th>
-                    <th scope="col">Description</th>
+                    <th scope="col">Discription</th>
                     <th scope="col">Action</th>
 
                 </tr>
             </thead>
             <tbody>
+                @foreach($view_subject as $list)
 
                 <tr>
 
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>{{$list->sub_name}}</td>
+                    <td>{{$list->category}}</td>
+                    <td>{{$list->discription}}</td>
                     <td>
-                        <a href="editsubject"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span
+                        <a href="{{url('editsubject',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span
                                 class="m-2"></span>
                             <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
 
                     </td>
 
                 </tr>
+                @endforeach
 
             </tbody>
         </table>
@@ -102,7 +104,8 @@
             <!-- Modal body -->
             <div class="modal-body">
                 <div class="container">
-                    <form>
+                    <form action="{{url('add_subject')}}" method="post">
+                        @csrf
 
                         <div class="row">
 
@@ -113,7 +116,7 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <input type="text" class="form-control" name="user" id="age">
+                                        <input type="text" class="form-control" name="sub_name" id="age">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required
                                         </div>
@@ -128,7 +131,7 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <input type="text" class="form-control" name="user" id="age">
+                                        <input type="text" class="form-control" name="category" id="age">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required
                                         </div>
@@ -145,7 +148,7 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <textarea rows="4" cols="50" name="paddress"
+                                        <textarea rows="4" cols="50" name="discription"
                                                                     class="form-control" type="text"></textarea>
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required
