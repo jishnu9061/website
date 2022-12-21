@@ -23,5 +23,17 @@ class OfficeAdministration extends Controller
     {
         return view('OfficeAdministration.supplier_expense_report');
     }
-    
+    public function pay_supplier_invoice()
+    {
+        return view('OfficeAdministration.pay_supplier_invoice');
+    }
+    public function supplier_credit_notes()
+    {
+        return view('OfficeAdministration.supplier_credit_notes');
+    }
+    public function supplier_invoice()
+    {
+        return view('OfficeAdministration.supplier_invoice');
+    }
+
 }
