@@ -28,59 +28,52 @@
         <br><br>
 
 
-
-        <br>
     </div>
+
+
     <div class="row">
         <div class="col-md-12 order-md-1">
             <form method="post" action="{{url('update-document')}}" id="form" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" name="document_id" value="{{$edit_documents->id}}">
+
+                <br>
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Document Type</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
+                    <div class="col-md-12">
+                        <table class="table table-striped  order-list" id="table_field">
+                            <thead>
+                                <tr>
+                                    <th>Document Type</th>
+                                    <th>File Upload</th>
+                                    <th>Date</th>
+                                    <th></th>
+                                </tr>
 
-                                </div>
-                                <select name="type" id="cars">
-                                    <option>{{$edit_documents->document_type}}</option>
-                                   
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">File Upload</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="file" class="form-control" name="file" id="username" value=""
-                                    placeholder="File" required>
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Name is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br><br>
-                    <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Client Type</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="width:45%;"> <select class="form-control select_group product"
+                                            data-row-id="row_3" id="product_detailes" name="testname"
+                                            style="width:100%;">
+                                            <option selected>{{$edit_documents->document_type}}</option>
 
-                                </div>
-                                <select name="client" id="cars">
-                                    <option>{{$edit_documents->client_types}}</option>
-                                </select>
-                            </div>
-                        </div>
+                                        </select>
+                                    </td>
+                                    <td style="width:45%;"> <input type="file" class="form-control" name="file"
+                                            multiple="multiple" required>
+                                    </td>
+                                    <td>
+                                        <input type="date" class="form-control" name="date" id="username" required>
+                                    </td>
+                                    <input type="hidden" class="form-control" name="client" id="username"
+                                        value="{{$edit_documents->client_types}}" placeholder="File" required>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
+
                 </div>
-                </div>
+
                 <br>
                 <div class="row">
                     <div class="col-sm">
@@ -95,9 +88,14 @@
                         <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
                     </div>
                 </div>
+            </form>
         </div>
-        </form>
     </div>
+
+
+
+
+
 </div>
 </div>
 
@@ -278,9 +276,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Salary is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -307,9 +305,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Years of experience is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -332,9 +330,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 dob is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 /div>
 
             {
@@ -366,9 +364,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Bank Name is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -394,9 +392,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Account number is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -419,9 +417,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 IFSC Code is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-12" >
                 <
                 div class = "mb-1" >
@@ -462,7 +460,7 @@ $(document).on('input', '#percent', function() {
 
                 <
                 /tr> < /
-                table > {
+            table > {
                     {
                         -- < input type = "text"
                         class = "form-control"
@@ -479,7 +477,7 @@ $(document).on('input', '#percent', function() {
                         -- < /div> --}} < /
                         div > <
                             /div> < /
-                            div >
+                        div >
 
                             <
                             /div> <
@@ -521,9 +519,9 @@ $(document).on('input', '#percent', function() {
 
                             <
                             /tbody> < /
-                            table > <
+                        table > <
                             /div> < /
-                            div > <
+                        div > <
                             script src = "{{ url('assets/js') }}/jquery.min.js" >
 </script>
 <script type="text/javascript">

@@ -370,6 +370,8 @@ class ClientManagement extends Controller
         return view('client-management.view-corporate-document',compact('view_document_details','id'));
     }
 
+    //end document//
+
     public function listCorporate(){
 
         $corporate_list=DB::table('cra_corporate_client_details')->get();
@@ -453,10 +455,11 @@ class ClientManagement extends Controller
     
         
     public function document(){
-        $client_document = DB::table('cra_document_detials')
-        ->select('*')  
-        ->join('cra_individual_client_details','cra_individual_client_details.id','=','cra_document_detials.individual_id')
-        ->get(); 
+        $client_document = DB::table('cra_individual_client_details')
+        ->select('*')
+        ->join('cra_document_detials','cra_document_detials.individual_id','=','cra_individual_client_details.id')
+        ->get();
+       
         return view('client-management.client-document',compact('client_document'));
     }
 
@@ -516,7 +519,7 @@ class ClientManagement extends Controller
     public function updatedocument(Request $Request){
 
         $id  = $Request['document_id'];
-        $document_type = $Request['type'];
+        $document_type = $Request['testname'];
         $client_type =  $Request['client'];
         $file = $Request['file'];
 

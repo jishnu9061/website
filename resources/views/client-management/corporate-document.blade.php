@@ -36,23 +36,7 @@
             <form method="post" action="{{url('add-corporate-document')}}" id="form" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" name="corporate_id" value="{{$corporate_docs->corporate_id}}">
-                <div class="row">
-                <div class="col-md-3">
-                                                                <div class="mb-1">
-                                                                    
-                                                                    <div class="input-group">
-                                                                        <div class="input-group-prepend"></div>
-                                                                        <input type="date" class="form-control"
-                                                                            name="quantity" id="username" value=""
-                                                                            placeholder="" required>
-                                                                        <div class="invalid-feedback"
-                                                                            style="width: 100%;">
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div> 
-                </div>
+               
                 <br>
 
                 <div class="row">
@@ -62,17 +46,9 @@
                                 <tr>
                                     <th>Document Type</th>
                                     <th>File Upload</th>
-
                                     <th></th>
                                     <th>Date</th>
                                     <th>ADD</th>
-
-
-
-
-                                    <th>Add</th>
-                                  
-
                                 </tr>
 
                             </thead>
@@ -95,23 +71,12 @@
                                             value="{{$corporate_docs->Client_type}}" placeholder="File" required>
                                     </td>
                                     <td>
-                                        <input type="date" class="form-control" name="date[]" id="username" 
-                                            required>
+                                        <input type="date" class="form-control" name="date[]" id="username" required>
                                     </td>
-                                    <td> <input type="button" class="btn btn-primary float:right;" id="add"
-                                            value="ADD">
+                                    <td> <input type="button" class="btn btn-primary float:right;" id="add" value="ADD">
                                     </td>
-
-                                    <td> <input type="button" class="btn btn-dark float:right;" id="add"
-                                            value="ADD">
-                                    </td>
-                                    
-                                        <input type="hidden" class="form-control" name="client" id="username"
-                                            value="{{$corporate_docs->Client_type}}" placeholder="File" required>
-                                   
-                                   
-                                   
-
+                                    <input type="hidden" class="form-control" name="client" id="username"
+                                        value="{{$corporate_docs->Client_type}}" placeholder="File" required>
                                 </tr>
                             </tbody>
                         </table>
@@ -150,30 +115,24 @@
 
 
 <script type="text/javascript">
+$(document).ready(function() {
 
-    $(document).ready(function(){
+
+    var html =
+        '<tr><td style="width:45%;"> <select class="form-control select_group product"data-row-id="row_3" id="product_detailes" name="testname[]" style="width:100%;"><option selected>Select</option><option value="assets">Type 1</option></select></td><td style="width:45%;"> <input type="file" class="form-control" name="file[]" multiple="multiple" required></td></td><td><input type="hidden" class="form-control" name="client" id="username"value="{{$corporate_docs->Client_type}}" placeholder="File" required></td><td><input type="date" class="form-control" name="date" id="username" required></td><td> <input type="button" class="btn btn-danger float:right;" name="remove" id="remove" value="remove"></td></tr>';
 
 
-        var html = '<tr><td style="width:45%;"> <select class="form-control select_group product"data-row-id="row_3" id="product_detailes" name="testname[]" style="width:100%;"><option selected>Select</option><option value="assets">Type 1</option></select></td><td style="width:45%;"> <input type="file" class="form-control" name="file[]" multiple="multiple" required></td></td><td><input type="hidden" class="form-control" name="client" id="username"value="{{$corporate_docs->Client_type}}" placeholder="File" required></td><td><input type="date" class="form-control" name="date" id="username" required></td><td> <input type="button" class="btn btn-danger float:right;" name="remove" id="remove" value="remove"></td></tr>';
+    $("#add").click(function() {
 
-        var html = '<tr><td style="width:45%;"> <select class="form-control select_group product"data-row-id="row_3" id="product_detailes" name="testname[]" style="width:100%;"><option selected>Select</option><option value="assets">Type 1</option></select></td><td style="width:45%;"> <input type="file" class="form-control" name="file[]" multiple="multiple" required></td></td><td> <input type="button" class="btn btn-danger float:right;" name="remove" id="remove" value="remove"></td><input type="hidden" class="form-control" name="client" id="username"value="{{$corporate_docs->Client_type}}" placeholder="File" required></tr>';
+        $("#table_field").append(html);
 
-         
-       
-      
 
-        $("#add").click(function(){
-            
-                $("#table_field").append(html);
-              
-            
-        });
-
-        $("#table_field").on('click','#remove',function(){
-            $(this).closest('tr').remove();
-        });
     });
 
+    $("#table_field").on('click', '#remove', function() {
+        $(this).closest('tr').remove();
+    });
+});
 </script>
 
 

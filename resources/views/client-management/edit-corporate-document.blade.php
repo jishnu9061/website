@@ -26,78 +26,74 @@
         {{-- heading --}}
         <h4 id="hdtpa"><b>Add Document</b></h4>
         <br><br>
-
-
-
-        <br>
     </div>
+    
+
+
     <div class="row">
         <div class="col-md-12 order-md-1">
             <form method="post" action="{{url('update-document-details')}}" id="form" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" name="id" value="{{$edit_corporate_document->id}}">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Document Type</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
 
-                                </div>
-                                <select name="type" id="cars">
-                                    <option>{{$edit_corporate_document->document_type}}</option>
-
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">File Upload</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="file" class="form-control" name="file" id="username" value=""
-                                    placeholder="File" required>
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Name is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br><br>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Client Type</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <select name="client" id="cars">
-                                    <option>{{$edit_corporate_document->client_types}}</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-sm">
-
-            </div>
-            <div class="col-sm">
-
-            </div>
-            <div class="col-sm">
                 <br>
-                <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Submit</button>
-                <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
-            </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-striped  order-list" id="table_field">
+                            <thead>
+                                <tr>
+                                    <th>Document Type</th>
+                                    <th>File Upload</th>
+                                    <th>Date</th>
+                                    <th></th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="width:45%;"> <select class="form-control select_group product"
+                                            data-row-id="row_3" id="product_detailes" name="testname"
+                                            style="width:100%;">
+                                            <option selected>{{$edit_corporate_document->document_type}}</option>
+
+                                        </select>
+                                    </td>
+                                    <td style="width:45%;"> <input type="file" class="form-control" name="file"
+                                            multiple="multiple" required>
+                                    </td>
+                                    <td>
+                                        <input type="date" class="form-control" name="date" id="username" required>
+                                    </td>
+                                    <input type="hidden" class="form-control" name="client" id="username"
+                                        value="{{$edit_corporate_document->client_types}}" placeholder="File" required>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <br>
+                <div class="row">
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+                        <br>
+                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Submit</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
-    </form>
+
+
+
+
 </div>
 </div>
 </div>

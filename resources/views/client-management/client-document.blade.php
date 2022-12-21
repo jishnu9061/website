@@ -99,7 +99,9 @@
                             </tr>
                         </thead>
                         <tbody>
+                            
                             @foreach($client_document as $list)
+                            
 
                             <tr id="data">
                                 <td scope="row" class="text-center">{{$list->client_number}}</td>
