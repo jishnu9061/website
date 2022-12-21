@@ -1547,6 +1547,9 @@ Route::any('office_admin_index','OfficeAdministration@office_admin_index')->name
 Route::any('creditor_list','OfficeAdministration@creditor_list')->name('creditor_list');
 Route::any('creditors_aging_report','OfficeAdministration@creditors_aging_report')->name('creditors_aging_report');
 Route::any('supplier_expense_report','OfficeAdministration@supplier_expense_report')->name('supplier_expense_report');
+Route::any('pay_supplier_invoice','OfficeAdministration@pay_supplier_invoice')->name('pay_supplier_invoice');
+Route::any('supplier_credit_notes','OfficeAdministration@supplier_credit_notes')->name('supplier_credit_notes');
+Route::any('supplier_invoice','OfficeAdministration@supplier_invoice')->name('supplier_invoice');
 
 
 
