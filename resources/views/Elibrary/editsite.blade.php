@@ -10,9 +10,11 @@
 </div>
 
                 <div class="container">
-                    <form>
+                <form action="{{url('update_site')}}" method="post">
+                        @csrf
 
                         <div class="row">
+                            <input type="hidden" name="id" value="{{$edit->id}}">
                         <div class="col-md-6">
                                 <div class="mb-1">
                                     <label for="username">Title</label>
@@ -20,7 +22,7 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <input type="text" class="form-control" name="user" id="age">
+                                        <input type="text" class="form-control" name="title" value="{{$edit->title}}" id="age">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required
                                         </div>
@@ -35,7 +37,7 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <input type="url" class="form-control" name="user" id="age">
+                                        <input type="url" class="form-control" name="site_url" value="{{$edit->site_url}}" id="age">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required
                                         </div>
@@ -54,8 +56,8 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <textarea rows="4" cols="50" name="paddress"
-                                                                    class="form-control" type="text"></textarea>
+                                        <textarea rows="4" cols="50" name="discription"
+                                                                    class="form-control" type="text">{{$edit->discription}}</textarea>
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required
                                         </div>

@@ -51,16 +51,16 @@
                 </tr>
             </thead>
             <tbody>
-
+            @foreach($view as $list)
                 <tr>
 
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>{{$list->file_no}}</td>
+                    <td>{{$list->client_name}}</td>
+                    <td>{{$list->file_discription}}</td>
                     <td>
-                        <a href="editprecedence"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span
+                        <a href="{{url('editprecedence',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span
                                 class="m-2"></span>
-                            <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
+                            <a href="{{url('delete_precedence',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
                             </i><span
                                 class="m-2"></span>
                             <a href="viewprecedence"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
@@ -68,6 +68,7 @@
                     </td>
 
                 </tr>
+                @endforeach
 
             </tbody>
         </table>
@@ -106,7 +107,8 @@
             <!-- Modal body -->
             <div class="modal-body">
                 <div class="container">
-                    <form>
+                    <form action="{{url('add_precedence')}}" method="post">
+                        @csrf
 
                         <div class="row">
 
@@ -117,7 +119,7 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <input type="text" class="form-control" name="user" id="age">
+                                        <input type="text" class="form-control" name="file_no" id="age">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required
                                         </div>
@@ -132,7 +134,7 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <input type="text" class="form-control" name="user" id="age">
+                                        <input type="text" class="form-control" name="client_name" id="age">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required
                                         </div>
@@ -147,7 +149,7 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <input type="text" class="form-control" name="user" id="age">
+                                        <input type="text" class="form-control" name="file_handle" id="age">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required
                                         </div>
@@ -165,7 +167,7 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <input type="date" class="form-control" name="user" id="age">
+                                        <input type="date" class="form-control" name="date_from" id="age">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required
                                         </div>
@@ -180,7 +182,7 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <input type="date" class="form-control" name="user" id="age">
+                                        <input type="date" class="form-control" name="date_to" id="age">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required
                                         </div>
@@ -195,7 +197,7 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <select name="event" id="cars">
+                                        <select name="file_status" id="cars">
                                             <option>---select---</option>
                                             <option>Active</option>
                                             <option>Pending</option>
@@ -215,7 +217,7 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <textarea rows="4" cols="50" name="paddress" class="form-control"
+                                        <textarea rows="4" cols="50" name="file_discription" class="form-control"
                                             type="text"></textarea>
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required
@@ -235,7 +237,7 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <input type="file" class="form-control" name="user" id="age">
+                                        <input type="file" class="form-control" name="upload_file" id="age">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required
                                         </div>

@@ -49,20 +49,21 @@
                 </tr>
             </thead>
             <tbody>
-
+                @foreach($view_site as $list)
                 <tr>
 
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>{{$list->title}}</td>
+                    <td>{{$list->site_url}}</td>
+                    <td>{{$list->discription}}</td>
                     <td>
-                        <a href="editsite"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span
+                        <a href="{{url('editsite',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span
                                 class="m-2"></span>
                             <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
 
                     </td>
 
                 </tr>
+                @endforeach
 
             </tbody>
         </table>
@@ -101,7 +102,8 @@
             <!-- Modal body -->
             <div class="modal-body">
                 <div class="container">
-                    <form>
+                    <form action="{{url('add_site')}}" method="post">
+                        @csrf
 
                         <div class="row">
                         <div class="col-md-6">
@@ -111,7 +113,7 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <input type="text" class="form-control" name="user" id="age">
+                                        <input type="text" class="form-control" name="title" id="age">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required
                                         </div>
@@ -126,7 +128,7 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <input type="url" class="form-control" name="user" id="age">
+                                        <input type="url" class="form-control" name="site_url" id="age">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required
                                         </div>
@@ -145,7 +147,7 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <textarea rows="4" cols="50" name="paddress"
+                                        <textarea rows="4" cols="50" name="discription"
                                                                     class="form-control" type="text"></textarea>
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required

@@ -50,19 +50,21 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach($view_file as $list)
 
                 <tr>
 
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>{{$list->subject}}</td>
+                    <td>{{$list->file_name}}</td>
+                    <td>{{$list->discription}}</td>
                     <td>
-                        <a href="editfile"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
-                            <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i><span class="m-2"></span>
+                        <a href="{{url('editfile',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
+                            <a href="{{url('delete_file',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i><span class="m-2"></span>
                             <a href="viewfile"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
                     </td>
 
                 </tr>
+                @endforeach
 
             </tbody>
         </table>
@@ -101,7 +103,8 @@
             <!-- Modal body -->
             <div class="modal-body">
                 <div class="container">
-                    <form>
+                    <form action="{{url('add_file')}}" method="post">
+                        @csrf
 
                         <div class="row">
 
@@ -112,7 +115,7 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <input type="date" class="form-control" name="user" id="age">
+                                        <input type="date" class="form-control" name="upload_date" id="age">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required
                                         </div>
@@ -127,7 +130,7 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <select name="event" id="cars">
+                                        <select name="subject" id="cars">
                                             <option>---select---</option>
                                             <option>family law</option>
                                             <option>insurance</option>
@@ -145,7 +148,7 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <input type="text" class="form-control" name="user" id="age">
+                                        <input type="text" class="form-control" name="file_name" id="age">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required
                                         </div>
@@ -164,7 +167,7 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <input type="text" class="form-control" name="user" id="age">
+                                        <input type="text" class="form-control" name="auther" id="age">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required
                                         </div>
@@ -179,7 +182,7 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <input type="text" class="form-control" name="user" id="age">
+                                        <input type="text" class="form-control" name="publisher" id="age">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required
                                         </div>
@@ -194,7 +197,7 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <input type="text" class="form-control" name="user" id="age">
+                                        <input type="text" class="form-control" name="upload_by" id="age">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required
                                         </div>
@@ -213,7 +216,7 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <textarea rows="4" cols="50" name="paddress"
+                                        <textarea rows="4" cols="50" name="discription"
                                                                     class="form-control" type="text"></textarea>
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required
@@ -244,7 +247,7 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <input type="file" class="form-control" name="user" id="age">
+                                        <input type="file" class="form-control" name="e_file" id="age">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required
                                         </div>
