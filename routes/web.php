@@ -1529,7 +1529,11 @@ Route::any('tender_applied_details','TenderManagement@tender_applied_details')->
 Route::any('view_tender_applied','TenderManagement@view_tender_applied')->name('view_tender_applied');
 
 
-
+//Office Administration
+Route::any('office_admin_index','OfficeAdministration@office_admin_index')->name('office_admin_index');
+Route::any('creditor_list','OfficeAdministration@creditor_list')->name('creditor_list');
+Route::any('creditors_aging_report','OfficeAdministration@creditors_aging_report')->name('creditors_aging_report');
+Route::any('supplier_expense_report','OfficeAdministration@supplier_expense_report')->name('supplier_expense_report');
 
 
 

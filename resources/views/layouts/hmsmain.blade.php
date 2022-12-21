@@ -729,7 +729,17 @@
                                     <span>System Setup</span>
                                 </a>
                             </li>
+                            <li class="submenu-item has-sub" style="list-style:none;">
+                                <a href="{{url('office_admin_index')}}" class='sidebar-link'>
+                                    <i class="fa fa-briefcase" id="icon"></i>
+                                    <span>Office Administration</span>
+                                </a>
+                            </li>
                         
+
+
+
+
                            
                             {{-- @if (in_array(request()->path(), $accounts))
                                        <ul class="submenu" style="display: block;">

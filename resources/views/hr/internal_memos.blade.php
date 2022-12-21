@@ -160,7 +160,8 @@
                                             <label for="exampleFormControlInput1" class="form-label">Description</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend"></div>
-                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                    rows="3"></textarea>
                                             </div>
                                         </div>
                                     </div>
