@@ -338,5 +338,13 @@ public function sites()
         return redirect('/site');
     }
 
+    public function deletesites($id)
+    {
+        $delete_site = DB::table('cra_site')->where('id',$id)->delete();
+
+        return redirect('/site');
+
+    }
+
 
 }

@@ -1504,6 +1504,7 @@ Route::any('site','Elibrary@sites')->name('site');
 Route::any('add_site','Elibrary@addsites')->name('add_site');
 Route::any('update_site','Elibrary@updatesites')->name('update_site');
 Route::any('/editsite/{id}','Elibrary@editsites')->name('editsite');
+Route::any('/delete_site/{id}','Elibrary@deletesites')->name('delete_site');
 
 Route::any('precedence','Elibrary@precedences')->name('precedence');
 Route::any('add_precedence','Elibrary@addprecedences')->name('add_precedence');

@@ -58,7 +58,7 @@
                     <td>
                         <a href="{{url('editsite',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span
                                 class="m-2"></span>
-                            <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
+                            <a href="{{url('delete_site',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
 
                     </td>
 
