@@ -12,10 +12,10 @@
 <div class="container">
     <ul class="nav nav-tabs">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{ url('timesheetweek') }}">Week</a>
+            <a class="nav-link active" aria-current="page" href="{{ url('timesheetweek') }}" style="font-size:17px;">Week</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ url('timesheetmonth') }}">Month</a>
+            <a class="nav-link" href="{{ url('timesheetmonth') }}"  style="font-size:15px;">Month</a>
         </li>
       
     </ul>
