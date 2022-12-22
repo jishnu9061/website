@@ -1564,6 +1564,22 @@ Route::any('Payment','OfficeAdministration@Payments')->name('Payment');
 Route::any('budget','OfficeAdministration@budgets')->name('budget');
 Route::any('supplier_monthly_schedule','OfficeAdministration@supplier_monthly_schedule')->name('supplier_monthly_schedule');
 Route::any('suppliers_list','OfficeAdministration@suppliers_list')->name('suppliers_list');
+Route::any('contractual_supplier','OfficeAdministration@contractual_suppliers')->name('contractual_supplier');
+Route::any('payments_transfer','OfficeAdministration@payments_transfers')->name('payments_transfer');
+Route::any('payment_report','OfficeAdministration@payment_reports')->name('payment_report');
+Route::any('petty_payment','OfficeAdministration@petty_payments')->name('petty_payment');
+Route::any('petty_report','OfficeAdministration@petty_reports')->name('petty_report');
+Route::any('settled_fee','OfficeAdministration@settled_fees')->name('settled_fee');
+Route::any('settlement_report','OfficeAdministration@settlement_reports')->name('settlement_report');
+Route::any('undeposited_fund','OfficeAdministration@undeposited_funds')->name('undeposited_fund');
+
+
+
+
+
+
+
+
 
 
 
