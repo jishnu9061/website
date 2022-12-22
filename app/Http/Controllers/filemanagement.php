@@ -1632,6 +1632,53 @@ public function new_safe_management_list(Request $request)
     // return view('file_management.new_Safe_management');                                                             
 }
 
+public function editsafemanagement_list($id)
+{
+    $edit_management =DB::table('cra_new_safe_management')->where('id',$id)->first();
+    return view('file_management.edit_Safe_management',compact('edit_management','id'));                                                           
+}
+
+public function updatesafemanagement_list(Request $request)
+{
+
+
+    $id = $request['id'];
+    $date =$request['date'];
+    $client =$request['client'];
+    $file =$request['file'];
+    $safe_name =$request['safe_name'];
+    $ref_no =$request['ref_no'];
+    $approver =$request['approver'];
+    $doc_no =$request['doc_no'];
+    $category =$request['category'];
+    $document =$request['document'];
+ 
+    DB::table('cra_new_safe_management')->where('id',$id)->update([
+ 
+    'id' => $id,
+     'date' => $date,
+     'client' => $client,
+     'file' => $file,
+     'safe_name' => $safe_name,
+     'ref_no' =>  $ref_no,
+     'approver' =>   $approver,
+     'doc_no' => $doc_no,
+     'category' => $category,
+     'document' => $document,
+ ]);
+
+ return redirect('/Safe_management');
+
+    // return view('file_management.new_Safe_management');                                                             
+}
+
+public function deletesafemanagement($id)
+{
+    $destroy_file =DB::table('cra_new_safe_management')->where('id',$id)->delete();
+    return redirect ('/Safe_management');
+}
+
+
 
 
 public function Request_staff_item_list()

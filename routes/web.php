@@ -1265,6 +1265,9 @@ Route::any('/file_new_instruction',"filemanagement@add_new_file_instructions")->
 Route::any('/Safe_management',"filemanagement@safe_management_list")->name('safe_management_list');
 
 Route::any('/new_Safe_management',"filemanagement@new_safe_management_list")->name('new_safe_management_list');
+Route::any('/edit_Safe_management/{id}',"filemanagement@editsafemanagement_list")->name('edit_Safe_management');
+Route::any('/update_Safe_management',"filemanagement@updatesafemanagement_list")->name('update_Safe_management');
+Route::any('/delete_Safe_management/{id}',"filemanagement@deletesafemanagement")->name('edit_Safe_management');
 
 Route::any('/Request_staff_item',"filemanagement@Request_staff_item_list")->name('Request_staff_item_list');
 
