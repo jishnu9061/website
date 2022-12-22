@@ -50,18 +50,18 @@
             </thead>
             <tbody>
 
+                @foreach($apply_tender as $list)
                 <tr>
-
-                    <td>17-12-2022</td>
-                    <td>31-12-2022</td>
-                    <td>Chairs</td>
-                    <td>Teak wooden material chairs required. </td>
+                    <td>{{$list->from_date}}</td>
+                    <td>{{$list->to_date}}</td>
+                    <td>{{$list->item}}</td>
+                    <td>{{$list->description}}</td>
                     <td><span class="badge bg-success">Opened</span></td>
-                    <td><a href="view_apply_tender"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
+                    <td><a href="{{url('view_apply_tender',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
                     </td>
 
                 </tr>
-
+                @endforeach
 
             </tbody>
         </table>

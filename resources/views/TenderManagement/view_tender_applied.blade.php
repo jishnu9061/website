@@ -22,60 +22,59 @@
 
                             <tr>
                                 <td scope="row">Date</td>
-                                <td><input class="form-control" type="text" placeholder="" aria-label="input example">
+                                <td><input class="form-control" type="text" value="{{$view_tender_applied->date}}" aria-label="input example">
                                 </td>
 
                             </tr>
                             <tr>
                                 <td scope="row">Item Name</td>
-                                <td><input class="form-control" type="text" placeholder="" aria-label="input example">
+                                <td><input class="form-control" type="text"  value="{{$view_tender_applied->item_name}}" aria-label="input example">
                                 </td>
                             </tr>
                             <tr>
                                 <td scope="row">Quantity</td>
-                                <td><input class="form-control" type="text" placeholder="" aria-label="input example">
+                                <td><input class="form-control" type="text"  value="{{$view_tender_applied->quantity}}" aria-label="input example">
                                 </td>
                             </tr>
                             <tr>
                                 <td scope="row">Supplier Name</td>
-                                <td><input class="form-control" type="text" placeholder="" aria-label="input example">
+                                <td><input class="form-control" type="text"  value="{{$view_tender_applied->supplier_name}}" aria-label="input example">
                                 </td>
                             </tr>
                             <tr>
                                 <td scope="row">Mobile No.</td>
-                                <td><input class="form-control" type="text" placeholder="" aria-label="input example">
+                                <td><input class="form-control" type="text"  value="{{$view_tender_applied->mobile_no}}" aria-label="input example">
                                 </td>
                             </tr>
                             <tr>
                                 <td scope="row">Address</td>
-                                <td><input class="form-control" type="text" placeholder="" aria-label="input example">
+                                <td><input class="form-control" type="text"  value="{{$view_tender_applied->address}}" aria-label="input example">
                                 </td>
                             </tr>
                             <tr>
                                 <td scope="row">Description</td>
-                                <td><textarea class="form-control" rows="2" placeholder=""></textarea></td>
+                                <td><textarea class="form-control" rows="2" ></textarea></td>
                             </tr>
                             <tr>
                                 <td scope="row">Supporting Documents</td>
-                                <td><input type="file" class="form-control">
-                                    <!-- <label class="input-group-text" for="inputGroupFile02">Upload</label> -->
+                                <td>
                                 </td>
 
                             </tr>
                             <tr>
                                 <td scope="row">Period of Contract (in Days)</td>
-                                <td><input class="form-control" type="text" placeholder="" aria-label="input example">
+                                <td><input class="form-control" type="text"  value="{{$view_tender_applied->period_of_contract}}" aria-label="input example">
                                 </td>
                             </tr>
                             <tr>
                                 <td scope="row">Total Cost of Tender</td>
-                                <td><input class="form-control" type="text" placeholder="" aria-label="input example">
+                                <td><input class="form-control" type="text"  value="{{$view_tender_applied->cost_of_tender}}" aria-label="input example">
                                 </td>
                             </tr>
 
                             <tr>
                                 <td scope="row">Payment Type</td>
-                                <td><input class="form-control" type="text" placeholder="" aria-label="input example">
+                                <td><input class="form-control" type="text"  value="{{$view_tender_applied->payment_type}}" aria-label="input example">
                                 </td>
                             </tr>
 

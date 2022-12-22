@@ -55,23 +55,24 @@
                 </tr>
             </thead>
             <tbody>
-
+                @foreach($tender_details as $list)
                 <tr>
-
-                    <td>17-12-2022</td>
-                    <td>31-12-2022</td>
-                    <td>Chairs</td>
-                    <td>Teak wooden material chairs required. </td>
+                    <td>{{$list->from_date}}</td>
+                    <td>{{$list->to_date}}</td>
+                    <td>{{$list->item}}</td>
+                    <td>{{$list->description}}</td>
                     <td><span class="badge bg-success">Opened</span></td>
-                    <td><a href="view_tender_details"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i><span
+                    <td>
+                        <a href="{{url('view_tender_details',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i><span
                                 class="m-2"></span>
-                            <a href="edit_tender_details"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span
-                                    class="m-2"></span>
-                                <a href=""> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></td>
-
+                            <a href="{{url('edit_tender_details',$list->id)}}"><i style="color:rgb(13, 1, 56);"
+                                    class="fa fa-edit"></i><span class="m-2"></span>
+                                <a href="{{url('delete_tender_details',$list->id)}}"> <i style="color:rgb(13, 1, 56);"
+                                        class="fas fa-trash-alt"></i>
+                    </td>
                 </tr>
 
-
+                @endforeach
             </tbody>
         </table>
     </div>
@@ -113,17 +114,17 @@
             <!-- Modal body -->
             <div class="modal-body">
                 <div class="container">
-                    <form method="post" enctype="multipart/form-data" action="{{url('')}}">
+                    <form method="post" enctype="multipart/form-data" action="{{url('store_tender')}}">
                         @csrf
                         <div class="container">
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputEmail4">From Date</label>
-                                    <input type="date" class="form-control">
+                                    <input type="date" class="form-control" name="from_date">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputEmail4">To Date</label>
-                                    <input type="date" class="form-control">
+                                    <input type="date" class="form-control" name="to_date">
                                 </div>
                             </div>
 
@@ -131,21 +132,21 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputCity">Item</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="item">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputCity">Category</label>
-                                    <select class="form-select form-select-lg mb-3"
-                                        aria-label=".form-select-lg example">
+                                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                                        name="Category">
                                         <option selected>--- select ---</option>
-                                        <option value="1">Furniture</option>
-                                        <option value="2">Stationary</option>
+                                        <option>Furniture</option>
+                                        <option>Stationary</option>
 
                                     </select>
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="inputZip">Quantity</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="Quantity">
                                 </div>
                             </div>
 
@@ -153,7 +154,7 @@
                             <div class="form-row">
                                 <div class="form-group col-md-12">
                                     <label for="inputAddress">Description</label>
-                                    <textarea class="form-control" rows="3"></textarea>
+                                    <textarea class="form-control" rows="3" name="Description"></textarea>
                                 </div>
                             </div>
 

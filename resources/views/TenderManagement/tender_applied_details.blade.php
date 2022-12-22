@@ -48,19 +48,17 @@
                 </tr>
             </thead>
             <tbody>
-
+                @foreach($tender_applied_details as $list)
                 <tr>
-
-                    <td>ABC woods Pvt.Ltd</td>
-                    <td>Chairs</td>
-                    <td>Teak wooden material chairs</td>
+                    <td>{{$list->supplier_name}}</td>
+                    <td>{{$list->item_name}}</td>
+                    <td>{{$list->description}}</td>
                     <td>
-                        <a href="view_tender_applied"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
+                        <a href="{{url('view_tender_applied',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
                     </td>
                     <td><span class="badge bg-success">Accepted</span></td>
-
                 </tr>
-
+                @endforeach
             </tbody>
         </table>
     </div>
