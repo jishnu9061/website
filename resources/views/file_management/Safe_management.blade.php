@@ -87,9 +87,9 @@
                                 <td scope="row" class="text-center"></td>
                                 <td scope="row" class="text-center"></td>
                                 <td  scope="row"class="text-center">
-                        <a href=""><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" ></i>
+                        <a href="{{url('edit_Safe_management',$management->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" ></i>
 
-                        <a href=""> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
+                        <a href="{{url('delete_Safe_management',$management->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
 						
 						<a href=""> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i>
 						

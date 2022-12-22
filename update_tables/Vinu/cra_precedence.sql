@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2022 at 12:31 PM
+-- Generation Time: Dec 22, 2022 at 08:21 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -24,17 +24,19 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cra_business_law`
+-- Table structure for table `cra_precedence`
 --
 
-CREATE TABLE `cra_business_law` (
+CREATE TABLE `cra_precedence` (
   `id` int(11) NOT NULL,
-  `matter_info` varchar(255) NOT NULL,
-  `client_name` varchar(255) NOT NULL,
-  `matter_type` varchar(255) NOT NULL,
-  `corporation` varchar(255) NOT NULL,
-  `case_details` varchar(255) NOT NULL,
-  `supporting` varchar(255) NOT NULL
+  `file_no` varchar(255) DEFAULT NULL,
+  `client_name` varchar(255) DEFAULT NULL,
+  `file_handle` varchar(100) DEFAULT NULL,
+  `date_from` date DEFAULT NULL,
+  `date_to` date DEFAULT NULL,
+  `file_status` varchar(255) DEFAULT NULL,
+  `file_discription` varchar(255) DEFAULT NULL,
+  `upload_file` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -42,9 +44,9 @@ CREATE TABLE `cra_business_law` (
 --
 
 --
--- Indexes for table `cra_business_law`
+-- Indexes for table `cra_precedence`
 --
-ALTER TABLE `cra_business_law`
+ALTER TABLE `cra_precedence`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -52,10 +54,10 @@ ALTER TABLE `cra_business_law`
 --
 
 --
--- AUTO_INCREMENT for table `cra_business_law`
+-- AUTO_INCREMENT for table `cra_precedence`
 --
-ALTER TABLE `cra_business_law`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `cra_precedence`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
