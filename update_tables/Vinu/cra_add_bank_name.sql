@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 22, 2022 at 08:20 AM
+-- Generation Time: Dec 01, 2022 at 06:10 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -24,31 +24,30 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cra_subject`
+-- Table structure for table `cra_add_bank_name`
 --
 
-CREATE TABLE `cra_subject` (
+CREATE TABLE `cra_add_bank_name` (
   `id` int(11) NOT NULL,
-  `sub_name` varchar(255) DEFAULT NULL,
-  `category` varchar(255) DEFAULT NULL,
-  `discription` varchar(255) DEFAULT NULL
+  `bank_name` varchar(255) DEFAULT NULL,
+  `branch` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `cra_subject`
+-- Dumping data for table `cra_add_bank_name`
 --
 
-INSERT INTO `cra_subject` (`id`, `sub_name`, `category`, `discription`) VALUES
-(1, '1234', 'fdfdg', 'fdfdgfgd');
+INSERT INTO `cra_add_bank_name` (`id`, `bank_name`, `branch`) VALUES
+(3, 'kenya', 'cra');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `cra_subject`
+-- Indexes for table `cra_add_bank_name`
 --
-ALTER TABLE `cra_subject`
+ALTER TABLE `cra_add_bank_name`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -56,10 +55,10 @@ ALTER TABLE `cra_subject`
 --
 
 --
--- AUTO_INCREMENT for table `cra_subject`
+-- AUTO_INCREMENT for table `cra_add_bank_name`
 --
-ALTER TABLE `cra_subject`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `cra_add_bank_name`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

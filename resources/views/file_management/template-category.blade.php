@@ -76,7 +76,7 @@
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                             <td  scope="row"class="text-center">
-                        <a href="{{url('edit_template',$template->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <a href="{{url('edit_template')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                         <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
                            </td>
                         </tr>

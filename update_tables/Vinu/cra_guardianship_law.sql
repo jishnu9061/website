@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 22, 2022 at 08:21 AM
+-- Generation Time: Dec 12, 2022 at 12:32 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -24,19 +24,21 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cra_file`
+-- Table structure for table `cra_guardianship_law`
 --
 
-CREATE TABLE `cra_file` (
+CREATE TABLE `cra_guardianship_law` (
   `id` int(11) NOT NULL,
-  `upload_date` varchar(255) DEFAULT NULL,
-  `subject` varchar(255) DEFAULT NULL,
-  `file_name` varchar(255) DEFAULT NULL,
-  `auther` varchar(255) DEFAULT NULL,
-  `publisher` varchar(255) DEFAULT NULL,
-  `upload_by` varchar(255) DEFAULT NULL,
-  `discription` varchar(255) DEFAULT NULL,
-  `e_file` varchar(255) DEFAULT NULL
+  `matter_info` varchar(255) DEFAULT NULL,
+  `petitioner` varchar(255) NOT NULL,
+  `matter_type` varchar(255) NOT NULL,
+  `disable_person` varchar(255) NOT NULL,
+  `attroney` varchar(255) NOT NULL,
+  `disadility_details` varchar(255) NOT NULL,
+  `case_details` varchar(255) NOT NULL,
+  `guardian` varchar(255) NOT NULL,
+  `guardian_details` varchar(255) NOT NULL,
+  `support_details` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -44,9 +46,9 @@ CREATE TABLE `cra_file` (
 --
 
 --
--- Indexes for table `cra_file`
+-- Indexes for table `cra_guardianship_law`
 --
-ALTER TABLE `cra_file`
+ALTER TABLE `cra_guardianship_law`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -54,10 +56,10 @@ ALTER TABLE `cra_file`
 --
 
 --
--- AUTO_INCREMENT for table `cra_file`
+-- AUTO_INCREMENT for table `cra_guardianship_law`
 --
-ALTER TABLE `cra_file`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `cra_guardianship_law`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
