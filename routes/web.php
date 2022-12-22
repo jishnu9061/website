@@ -1562,6 +1562,8 @@ Route::any('cheque','OfficeAdministration@cheques')->name('cheque');
 Route::any('file_office','OfficeAdministration@file_offices')->name('file_office');
 Route::any('Payment','OfficeAdministration@Payments')->name('Payment');
 Route::any('budget','OfficeAdministration@budgets')->name('budget');
+Route::any('supplier_monthly_schedule','OfficeAdministration@supplier_monthly_schedule')->name('supplier_monthly_schedule');
+Route::any('suppliers_list','OfficeAdministration@suppliers_list')->name('suppliers_list');
 
 
 

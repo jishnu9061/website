@@ -33,11 +33,11 @@
                 src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
                 class="btn btn-primary btn_align_btn">Supplier Invoice</button></a>
     </div>
-    <div class="col-sm-4 "> <a href="{{ url('') }}"><img class="logo_size"
+    <div class="col-sm-4 "> <a href="{{ url('supplier_monthly_schedule') }}"><img class="logo_size"
                 src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
                 class="btn btn-primary btn_align_btn">Supplier Monthly Schedule</button></a>
     </div>
-    <div class="col-sm-4 "> <a href="{{ url('') }}"><img class="logo_size"
+    <div class="col-sm-4 "> <a href="{{ url('suppliers_list') }}"><img class="logo_size"
                 src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
                 class="btn btn-primary btn_align_btn">Supplier List</button></a>
     </div>
