@@ -36,4 +36,30 @@ class OfficeAdministration extends Controller
         return view('OfficeAdministration.supplier_invoice');
     }
 
+
+    public function balances()
+    {
+        return view('OfficeAdministration.balance');
+    }
+
+    public function cheques()
+    {
+        return view('OfficeAdministration.cheque');
+    }
+
+    public function file_offices()
+    {
+        return view('OfficeAdministration.file_office');
+    }
+
+    public function Payments()
+    {
+        return view('OfficeAdministration.Payment');
+    }
+
+    public function budgets()
+    {
+        return view('OfficeAdministration.budget');
+    }
+    
 }

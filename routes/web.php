@@ -1550,6 +1550,16 @@ Route::any('supplier_expense_report','OfficeAdministration@supplier_expense_repo
 Route::any('pay_supplier_invoice','OfficeAdministration@pay_supplier_invoice')->name('pay_supplier_invoice');
 Route::any('supplier_credit_notes','OfficeAdministration@supplier_credit_notes')->name('supplier_credit_notes');
 Route::any('supplier_invoice','OfficeAdministration@supplier_invoice')->name('supplier_invoice');
+Route::any('balance','OfficeAdministration@balances')->name('balance');
+Route::any('cheque','OfficeAdministration@cheques')->name('cheque');
+Route::any('file_office','OfficeAdministration@file_offices')->name('file_office');
+Route::any('Payment','OfficeAdministration@Payments')->name('Payment');
+Route::any('budget','OfficeAdministration@budgets')->name('budget');
+
+
+
+
+
 
 
 
