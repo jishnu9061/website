@@ -26,6 +26,7 @@
 <br>
 <br>
 <div>
+<div class="continer" style="width:70%; margin-left: auto; margin-right: auto;">
     <form method="post" action="" id="form">
         @csrf
 
@@ -63,6 +64,7 @@
 
 
         </div>
+</div>
 
         <br>
 

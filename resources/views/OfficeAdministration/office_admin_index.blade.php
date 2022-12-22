@@ -73,35 +73,35 @@
                 class="btn btn-primary btn_align_btn">Monthly Budget planner</button></a>
     </div>
 
-    <div class="col-sm-4 "> <a href="{{ url('') }}"><img class="logo_size"
+    <div class="col-sm-4 "> <a href="{{ url('contractual_supplier') }}"><img class="logo_size"
                 src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
                 class="btn btn-primary btn_align_btn">Non-Contractual Suppliers Voucher</button></a>
     </div>
-    <div class="col-sm-4 "> <a href="{{ url('') }}"><img class="logo_size"
+    <div class="col-sm-4 "> <a href="{{ url('payments_transfer') }}"><img class="logo_size"
                 src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
                 class="btn btn-primary btn_align_btn">Office Payments Transfers</button></a>
     </div>
-    <div class="col-sm-4 "> <a href="{{ url('') }}"><img class="logo_size"
+    <div class="col-sm-4 "> <a href="{{ url('payment_report') }}"><img class="logo_size"
                 src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
                 class="btn btn-primary btn_align_btn">Payment Reports</button></a>
     </div>
-    <div class="col-sm-4 "> <a href="{{ url('') }}"><img class="logo_size"
+    <div class="col-sm-4 "> <a href="{{ url('petty_payment') }}"><img class="logo_size"
                 src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
                 class="btn btn-primary btn_align_btn">Petty Cash Payments</button></a>
     </div>
-    <div class="col-sm-4 "> <a href="{{ url('') }}"><img class="logo_size"
+    <div class="col-sm-4 "> <a href="{{ url('petty_report') }}"><img class="logo_size"
                 src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
                 class="btn btn-primary btn_align_btn">Petty Cash Report</button></a>
     </div>
-    <div class="col-sm-4 "> <a href="{{ url('') }}"><img class="logo_size"
+    <div class="col-sm-4 "> <a href="{{ url('settled_fee') }}"><img class="logo_size"
                 src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
                 class="btn btn-primary btn_align_btn">Settled Paid Legal Fees </button></a>
     </div>
-    <div class="col-sm-4 "> <a href="{{ url('') }}"><img class="logo_size"
+    <div class="col-sm-4 "> <a href="{{ url('settlement_report') }}"><img class="logo_size"
                 src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
                 class="btn btn-primary btn_align_btn">Settlement Report</button></a>
     </div>
-    <div class="col-sm-4 "> <a href="{{ url('') }}"><img class="logo_size"
+    <div class="col-sm-4 "> <a href="{{ url('undeposited_fund') }}"><img class="logo_size"
                 src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
                 class="btn btn-primary btn_align_btn">Undeposited Funds Report</button></a>
     </div>

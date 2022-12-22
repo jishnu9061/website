@@ -68,6 +68,44 @@ class OfficeAdministration extends Controller
     public function suppliers_list()
     {
         return view('OfficeAdministration.suppliers_list');
+
+    public function contractual_suppliers()
+    {
+        return view('OfficeAdministration.contractual_supplier');
+    }
+
+    public function payments_transfers()
+    {
+        return view('OfficeAdministration.payments_transfer');
+    }
+
+    public function payment_reports()
+    {
+        return view('OfficeAdministration.payment_report');
+    }
+
+    public function petty_payments()
+    {
+        return view('OfficeAdministration.petty_payment');
+    }
+    public function petty_reports()
+    {
+        return view('OfficeAdministration.petty_report');
+    }
+
+    public function settled_fees()
+    {
+        return view('OfficeAdministration.settled_fee');
+    }
+
+    public function settlement_reports()
+    {
+        return view('OfficeAdministration.settlement_report');
+    }
+
+    public function undeposited_funds()
+    {
+        return view('OfficeAdministration.undeposited_fund');
     }
     
 }
