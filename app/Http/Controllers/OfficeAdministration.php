@@ -68,7 +68,7 @@ class OfficeAdministration extends Controller
     public function suppliers_list()
     {
         return view('OfficeAdministration.suppliers_list');
-
+    }
     public function contractual_suppliers()
     {
         return view('OfficeAdministration.contractual_supplier');
