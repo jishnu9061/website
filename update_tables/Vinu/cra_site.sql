@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2022 at 12:32 PM
+-- Generation Time: Dec 22, 2022 at 08:20 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -24,18 +24,14 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cra_probate_law`
+-- Table structure for table `cra_site`
 --
 
-CREATE TABLE `cra_probate_law` (
+CREATE TABLE `cra_site` (
   `id` int(11) NOT NULL,
-  `matter_info` varchar(255) DEFAULT NULL,
-  `executor` varchar(255) DEFAULT NULL,
-  `matter_type` varchar(255) DEFAULT NULL,
-  `deceased` varchar(255) DEFAULT NULL,
-  `case_details` varchar(255) DEFAULT NULL,
-  `estate_details` varchar(255) DEFAULT NULL,
-  `supporting_details` varchar(255) DEFAULT NULL
+  `title` varchar(255) DEFAULT NULL,
+  `site_url` varchar(255) DEFAULT NULL,
+  `discription` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -43,9 +39,9 @@ CREATE TABLE `cra_probate_law` (
 --
 
 --
--- Indexes for table `cra_probate_law`
+-- Indexes for table `cra_site`
 --
-ALTER TABLE `cra_probate_law`
+ALTER TABLE `cra_site`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -53,9 +49,9 @@ ALTER TABLE `cra_probate_law`
 --
 
 --
--- AUTO_INCREMENT for table `cra_probate_law`
+-- AUTO_INCREMENT for table `cra_site`
 --
-ALTER TABLE `cra_probate_law`
+ALTER TABLE `cra_site`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
