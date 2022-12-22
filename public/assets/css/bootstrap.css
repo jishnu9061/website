@@ -11672,8 +11672,8 @@ fieldset:disabled .btn {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
-    width: 10px;
+    width: 12px;
+    width: 12px;
     height: 10px;
 }
 
@@ -11687,10 +11687,8 @@ fieldset:disabled .btn {
 
 
 ::-webkit-scrollbar-thumb {
-    
-    
-    /* border-radius: 10px;
-    background-color: rgba(245, 245, 233, 0.174); */
+    border-radius: 10px;
+    background-color:rgba(255, 224, 137,.4)
     
     /* border-style:inset; */
     /* border: #E0CB63 solid .1px; */

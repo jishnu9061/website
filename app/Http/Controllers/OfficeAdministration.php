@@ -61,5 +61,13 @@ class OfficeAdministration extends Controller
     {
         return view('OfficeAdministration.budget');
     }
+    public function supplier_monthly_schedule()
+    {
+        return view('OfficeAdministration.supplier_monthly_schedule');
+    }
+    public function suppliers_list()
+    {
+        return view('OfficeAdministration.suppliers_list');
+    }
     
 }
