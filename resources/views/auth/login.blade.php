@@ -16,29 +16,31 @@
     <link rel="stylesheet" href="assets/css/pages/auth.css">
 </head>
 
-<style>.vl {
-    border-left: 1px solid rgb(0, 0, 0);
+<style>
+.vl {
+    border-left: 1px solid rgb(185, 161, 138);
     height: 700px;
     
         border-radius:10px 10px 10px 10px;
         opacity: 10%;
         /* box-shadow: 10px 10px 5px 12px lightblue; */
         
-  }</style>
+  }
+  </style>
 
-<body>
+<body style="background-color: rgb(245, 241, 234) ;">
 
    
     
     <div id="auth">
         <div class="row h-100" >
-     <div class="col-lg-5 " >
+     <div class="col-lg-6 " >
         <div id="auth-left" >
             <div class="auth-logo " >
                 <img class="mx-auto d-block"  id="cr_logo" src="assets/images/Logo cra.png" alt="" style="width:45%;height:45%; ">
             </div>
 
-            <div class="" style="text-align: center">   <h5 style="font-size: 200%" class="auth-title">Log in.</h5>
+            <div class="" style="text-align: center">   <h5 style="font-size: 200%" class="auth-title">Log in</h5>
             {{-- <p class="auth-subtitle mb-4">Log in with your data that you entered during registration.</p>  --}}
         </div>
 
@@ -96,7 +98,7 @@
         
 
 
-        <div class="align-items-center col-lg-7  d-flex justify-content-center">
+        <div class="align-items-center col-lg-6  d-flex justify-content-center">
             <div class="vl"></div>
          
               <img  id="auth-right" src="assets/images/bg/loginimage.jpg" style="border-radius: 50px; " class="  mx-auto d-block" alt="Responsive image">
