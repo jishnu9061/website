@@ -48,8 +48,8 @@
             <thead>
                 <tr>
 
-                    <th scope="col">Supplier ID</th>
-                    <th scope="col">Supplier Name</th>
+                    <th scope="col">G/L Account</th>
+                    <th scope="col">Supplier</th>
                     <th scope="col">Total Due</th>
                     <th scope="col">Actions</th>
 

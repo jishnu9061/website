@@ -66,7 +66,7 @@
         <script type="text/javascript" src="table.js"></script>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-       
+
         <title>Make Simple Javascript Timer</title>
         <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -88,16 +88,16 @@
         body {
             background-color: #F4F4F6;
             font-family: 'Be Vietnam Pro';
-        
+
         }
 
         html {
             scroll-behavior: smooth;
-           
-           
 
-            
-           
+
+
+
+
         }
 
         .pagination>li>span {
@@ -461,17 +461,19 @@
 
             <div id="sidebar" class="active">
                 <div class="sidebar-wrapper active"
-                    style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius:0px 60px 0px 0px ; ">
+                    style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius:0px 0px 0px 0px ; ">
 
                     <div class="sidebar-header">
                         <div class="d-flex justify-content-between">
-                           
-                            <div class="logo" style="background-color:#dfc79d; border-radius:100% 100% 100% 100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height:125px;width:125px; margin-left:25px;">
+
+                            <div class="logo"
+                                style="background-color:#dfc79d; border-radius:100% 100% 100% 100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height:125px;width:125px; margin-left:25px;">
                                 <a href="{{ url('home') }}">
                                     <!-- {{-- <img src="assets/images/logo/logo.png" alt="Logo" srcset=""> --}} -->
 
-                                    <img id="cr_logo" src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA" style="margin-top:16px;">
-                                    
+                                    <img id="cr_logo" src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA"
+                                        style="margin-top:16px;">
+
 
                                 </a>
                             </div>
@@ -736,12 +738,16 @@
                                     <span>Office Administration</span>
                                 </a>
                             </li>
-                        
 
 
 
 
-                           
+                            <!-- CRA Dashboard End -->
+
+
+
+
+
                             {{-- @if (in_array(request()->path(), $accounts))
                                        <ul class="submenu" style="display: block;">
                                      @else
@@ -1184,14 +1190,15 @@
               </nav> --}}
 
 
-                <nav  class=" newstyle1 navbar navbar-expand-lg  sticky-top navbar-light bg-white">
+                <nav class=" newstyle1 navbar navbar-expand-lg  sticky-top navbar-light bg-white">
                     <a id="backbtn" href="javascript:history.back()" style=" color: #070344;
                                             font-size: 35px;">
                         <i id="bkbtnicon" class="far fa-arrow-alt-circle-left"></i></a>
 
                     <a class="navbar-brand pl-4" href="#">
-                        <img src="{{asset('/') }}assets//images/faces/lawemb.png" height="40px" class="d-inline-block align-top" alt="">
-                        
+                        <img src="{{asset('/') }}assets//images/faces/lawemb.png" height="40px"
+                            class="d-inline-block align-top" alt="">
+
 
                     </a>
 
@@ -1200,20 +1207,27 @@
                         <button class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img data-toggle="tooltip" data-placement="top" title="Menu"
-                                style="height: 35px; width: 35px;" id="cr_logo" src="{{asset('/') }}assets//images/Logo cra.png"
-                                alt="CRA">
+                                style="height: 35px; width: 35px;" id="cr_logo"
+                                src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA">
                         </button>
+
+
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{url('user_management')}}">User Management</a>
                             <a class="dropdown-item" href="{{url('client-index')}}">Client Management</a>
-                            {{-- <div class="dropdown-divider"></div> --}}
                             <a class="dropdown-item" href="{{url('file_managementindex')}}">File Management</a>
-                            <a class="dropdown-item" href="{{url('system_setup')}}">System Setup</a>
-
                             <a class="dropdown-item" href="{{url('hrindex')}}">HR</a>
-
                             <a class="dropdown-item" href="{{url('accindex')}}">Accounts</a>
+                            <a class="dropdown-item" href="{{url('Store_&_Inventory_index')}}">Store & Inventory</a>
+                            <a class="dropdown-item" href="{{url('purchase_index')}}">Procurement</a>
+                            <a class="dropdown-item" href="{{url('practice_area_index')}}">Practice Management</a>
+                            <a class="dropdown-item" href="{{url('libraryindex')}}">E-Library</a>
+                            <a class="dropdown-item" href="{{url('tender_index')}}">Tender Management</a>
+                            <a class="dropdown-item" href="{{url('system_setup')}}">System Setup</a>
+                            <a class="dropdown-item" href="{{url('office_admin_index')}}">Office Administration</a>
 
+
+                            {{-- <div class="dropdown-divider"></div> --}}
                         </div>
                     </div>
 
@@ -1255,28 +1269,27 @@
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{url('user_management')}}">Time entry</a>
                                     <a class="dropdown-item" href="{{url('client-index')}}">Expense entry</a>
-                                    {{-- <div class="dropdown-divider"></div> --}}
                                     <a class="dropdown-item" href="{{url('file_managementindex')}}">Task</a>
                                     <a class="dropdown-item" href="{{url('file_managementindex')}}">Matter</a>
                                     <a class="dropdown-item" href="{{url('file_managementindex')}}">Contact</a>
                                     <a class="dropdown-item" href="{{url('file_managementindex')}}">Record payment</a>
-                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Client funds
-                                        request</a>
+                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Client funds request</a>
                                     <a class="dropdown-item" href="{{url('file_managementindex')}}">Email log</a>
                                     <a class="dropdown-item" href="{{url('file_managementindex')}}">Phone log</a>
                                     <a class="dropdown-item" href="{{url('file_managementindex')}}">Secure message</a>
                                     <a class="dropdown-item" href="{{url('file_managementindex')}}">Event</a>
                                     <a class="dropdown-item" href="{{url('file_managementindex')}}">Note</a>
 
+                                    {{-- <div class="dropdown-divider"></div> --}}
                                 </div>
                             </li>
                         </ul>
-    
-                      
-                  
-                        
 
-                    
+
+
+
+
+
                         {{-- <div id="stopwatch-container" >
       <p  id="stopwatch">00:00:00:00 </p>
       <div id="buttons-container">

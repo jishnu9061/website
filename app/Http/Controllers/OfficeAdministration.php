@@ -107,5 +107,29 @@ class OfficeAdministration extends Controller
     {
         return view('OfficeAdministration.undeposited_fund');
     }
+    public function view_supplier_credit()
+    {
+        return view('OfficeAdministration.view_supplier_credit');
+    }
+    public function edit_supplier_credit()
+    {
+        return view('OfficeAdministration.edit_supplier_credit');
+    }
+    public function view_supplier_invoice()
+    {
+        return view('OfficeAdministration.view_supplier_invoice');
+    }
+    public function edit_supplier_invoice()
+    {
+        return view('OfficeAdministration.edit_supplier_invoice');
+    }
+    public function view_supplier_list()
+    {
+        return view('OfficeAdministration.view_supplier_list');
+    }
+    public function edit_supplier_list()
+    {
+        return view('OfficeAdministration.edit_supplier_list');
+    }
     
 }
