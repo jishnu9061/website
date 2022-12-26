@@ -3,7 +3,7 @@
 
 <section >
    {{-- heading --}}
-   <h4 id="hdtpa"><b>File Management Details</b></h4>
+   <h4 id="hdtpa"><b>File Management</b></h4>
    <br><br>
  
 

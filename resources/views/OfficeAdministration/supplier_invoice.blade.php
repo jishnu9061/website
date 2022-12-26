@@ -45,12 +45,8 @@
                                 <th class="text-center">Invoice No.</th>
                                 <th class="text-center">Invoice Date</th>
                                 <th class="text-center">Exp Account</th>
-                                <th class="text-center">Description</th>
-                                <th class="text-center">Currency</th>
                                 <th class="text-center">Total Amount</th>
                                 <th class="text-center">Amount Paid</th>
-                                <th class="text-center">Balance</th>
-                                <th class="text-center">Posted By</th>
                                 <th class="text-center">Approved By</th>
                                 <th class="text-center">Status</th>
                                 <th class="text-center">Actions</th>
@@ -68,13 +64,11 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
                                 <td><span class="badge bg-success">Approved</span></td>
-                                <td><a href="{{ url('') }}"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
-                                        <a href="{{ url('') }}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i>
+                                <td><a href="{{ url('view_supplier_invoice') }}"><i style="color:rgb(13, 1, 56);"
+                                            class="fa fa-eye"></i>
+                                        <a href="{{ url('edit_supplier_invoice') }}"><i style="color:rgb(13, 1, 56);"
+                                                class="fa fa-edit"></i>
                                             <a href="{{url('')}}"> <i style="color:rgb(13, 1, 56);"
                                                     class="fas fa-trash-alt"></i></td>
 
@@ -96,10 +90,6 @@
                 <div class="rows_count">Showing 11 to 20 of 100</div>
 
                 <!-- 		End of Container -->
-
-
-
-
 
             </div>
         </div>
@@ -300,29 +290,18 @@
 
                                     <div class="form-group col-md-4">
                                         <div class="mb-3">
-                                            <label for="inputEmail4">Client</label>
+                                            <label for="inputEmail4">Partner Drawings Item</label>
                                             <select class="form-select" aria-label="Default select example">
-                                                <option selected>choose a client</option>
-                                                <option value="1">client 1</option>
-                                                <option value="2">client 2</option>
-                                                <option value="3">client 3</option>
+                                                <option selected>--- select ---</option>
+                                                <option value="1">item 1</option>
+                                                <option value="2">item 2</option>
+                                                <option value="3">item 3</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="form-row">
-                                    <div class="form-group col-md-4">
-                                        <div class="mb-3">
-                                            <label for="inputEmail4">Partner Drawings Account</label>
-                                            <select class="form-select" aria-label="Default select example">
-                                                <option selected>--- select ---</option>
-                                                <option value="1">Acc 1</option>
-                                                <option value="2">Acc 2</option>
-                                                <option value="3">Acc 3</option>
-                                            </select>
-                                        </div>
-                                    </div>
                                     <div class="form-group col-md-4">
                                         <div class="mb-3">
                                             <label for="inputEmail4">Partner Drawings Item</label>
@@ -341,15 +320,6 @@
                                             <div class="form-text">(inclusive of VAT & Excise Duty)</div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="form-group col-md-8">
-                                        <div class="mb-3">
-                                            <label for="inputEmail4">Description</label>
-                                            <textarea class="form-control" rows="3"></textarea>
-                                        </div>
-                                    </div>
                                     <div class="form-group col-md-4">
                                         <div class="mb-3">
                                             <label for="inputEmail4">VAT Tax</label>
@@ -361,11 +331,25 @@
                                             </select>
                                         </div>
                                     </div>
-
                                 </div>
 
+                                <div class="form-row">
+                                    <div class="form-group col-md-8">
+                                        <div class="mb-3">
+                                            <label for="inputEmail4">Description</label>
+                                            <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <div class="mb-3">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <button type="button" class="btn btn-primary">Add Voucher</button>
                             </div>
-                            <button type="button" class="btn btn-primary">Add Voucher</button>
+
 
 
                             <br>

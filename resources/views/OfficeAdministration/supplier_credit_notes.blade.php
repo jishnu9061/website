@@ -65,8 +65,12 @@
                                 <td></td>
                                 <td></td>
                                 <td scope="row" class="text-center">
-                                    <a href="{{url('')}}"> <i style="color:rgb(13, 1, 56);"
-                                            class="fa fa-eye"></i>
+                                    <a href="{{url('view_supplier_credit')}}"> <i style="color:rgb(13, 1, 56);"
+                                            class="fa fa-eye"></i> <span class="m-1"></span>
+                                        <a href="{{ url('edit_supplier_credit') }}"><i style="color:rgb(13, 1, 56);"
+                                                class="fa fa-edit"></i> <span class="m-1"></span>
+                                            <a href="{{url('')}}"> <i style="color:rgb(13, 1, 56);"
+                                                    class="fas fa-trash-alt"></i>
                                 </td>
 
                             </tr>
@@ -280,7 +284,8 @@
 
                                     </div>
                                     <div class="col-sm">
-                                        <button type="submit" class="btn btn-primary " Style="width:50%;">Post Credit Note</button>
+                                        <button type="submit" class="btn btn-primary " Style="width:50%;">Post Credit
+                                            Note</button>
                                         <button type="button" class="btn btn-primary " Style="width:45%;"
                                             data-dismiss="modal">Close</button>
                                     </div>

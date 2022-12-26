@@ -5,11 +5,11 @@
 
 
         {{-- heading --}}
-        <h4 id="hdtpa"><b>Client Management Details</b></h4>
+        <h4 id="hdtpa"><b>Client Management</b></h4>
         <br><br>
 
         {{-- sub heading --}}
-        <h5 id="hdbtb">Client Management</h5>
+        <h5 id="hdbtb">Client Management Details</h5>
       
 
 

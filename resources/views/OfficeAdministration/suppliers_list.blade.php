@@ -38,51 +38,34 @@
             <thead>
                 <tr>
 
-                    <th scope="col">Supplier ID</th>
-                    <th scope="col">Supplier Name</th>
+                    <th scope="col">Supplier</th>
                     <th scope="col">PIN No.</th>
-                    <th scope="col">Address</th>
                     <th scope="col">Telephone</th>
                     <th scope="col">Email</th>
                     <th scope="col">G/L Account</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Action</th>
+                    <th scope="col">Actions</th>
 
                 </tr>
             </thead>
             <tbody>
                 <tr>
 
-                    <td>02065</td>
                     <td>ABC CONSULT</td>
                     <td>P051462895P</td>
-                    <td>136-00621, Nairobi</td>
                     <td>0713515179</td>
                     <td>2consultabc@gmail.com</td>
                     <td>9010</td>
                     <td><span class="badge bg-success">ACTIVE</span> </td>
-                    <td><a href="{{ url('') }}"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
-                            <a href="{{ url('') }}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i>
+                    <td><a href="{{ url('view_supplier_list') }}"><i style="color:rgb(13, 1, 56);"
+                                class="fa fa-eye"></i>
+                            <a href="{{ url('edit_supplier_list') }}"><i style="color:rgb(13, 1, 56);"
+                                    class="fa fa-edit"></i>
                                 <a href="{{url('')}}"> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
                     </td>
 
                 </tr>
-                <tr>
 
-                    <td>02065</td>
-                    <td>ABERDARE DOWNSTREAM MINERAL WATER</td>
-                    <td>A001125054F</td>
-                    <td>716870-0062, Nairobi</td>
-                    <td>0202094880</td>
-                    <td>aberdaremineralwater@gmail.com</td>
-                    <td>9013</td>
-                    <td><span class="badge bg-success">ACTIVE</span></td>
-                    <td><a href="{{ url('') }}"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
-                            <a href="{{ url('') }}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i>
-                                <a href="{{url('')}}"> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
-                    </td>
-
-                </tr>
             </tbody>
         </table>
     </div>
@@ -188,20 +171,20 @@
                                     </div>
                                 </div>
                                 <div class="form-row">
-                                    <div class="form-group col-md-12">
+                                    <div class="form-group col-md-8">
                                         <div class="mb-2">
                                             <label for="inputEmail4">Physical Address</label>
                                             <textarea class="form-control" rows="2"></textarea>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-row">
                                     <div class="form-group col-md-4">
                                         <div class="mb-2">
                                             <label for="inputEmail4">Website</label>
                                             <input type="text" class="form-control">
                                         </div>
                                     </div>
+                                </div>
+                                <div class="form-row">
                                     <div class="form-group col-md-4">
                                         <div class="mb-2">
                                             <label for="inputEmail4">Payment Terms</label>
@@ -212,6 +195,9 @@
                                                 <option value="3">90 Days</option>
                                             </select>
                                         </div>
+                                    </div>
+                                    <div class="form-group col-md-4">
+
                                     </div>
                                 </div>
                                 <hr>
@@ -255,13 +241,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-
-
-
-
-
 
 
                             </div>

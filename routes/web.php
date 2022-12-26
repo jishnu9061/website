@@ -1572,6 +1572,12 @@ Route::any('petty_report','OfficeAdministration@petty_reports')->name('petty_rep
 Route::any('settled_fee','OfficeAdministration@settled_fees')->name('settled_fee');
 Route::any('settlement_report','OfficeAdministration@settlement_reports')->name('settlement_report');
 Route::any('undeposited_fund','OfficeAdministration@undeposited_funds')->name('undeposited_fund');
+Route::any('view_supplier_credit','OfficeAdministration@view_supplier_credit')->name('view_supplier_credit');
+Route::any('edit_supplier_credit','OfficeAdministration@edit_supplier_credit')->name('edit_supplier_credit');
+Route::any('view_supplier_invoice','OfficeAdministration@view_supplier_invoice')->name('view_supplier_invoice');
+Route::any('edit_supplier_invoice','OfficeAdministration@edit_supplier_invoice')->name('edit_supplier_invoice');
+Route::any('view_supplier_list','OfficeAdministration@view_supplier_list')->name('view_supplier_list');
+Route::any('edit_supplier_list','OfficeAdministration@edit_supplier_list')->name('edit_supplier_list');
 
 
 
