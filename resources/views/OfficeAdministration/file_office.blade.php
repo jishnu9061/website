@@ -183,7 +183,7 @@
                             <th style="width:20%;">Client</th>
                             <th style="width:20%;">File</th>
                             <th style="width:15%;">Txn Type</th>
-                            <th style="width:27%;">Discription</th>
+                            <th style="width:27%;">Description</th>
                             <th style="width:10%;">Amount</th>
 
                             <th>ADD</th>
