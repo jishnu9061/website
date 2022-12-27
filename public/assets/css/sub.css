@@ -133,12 +133,13 @@ color: #003169;
 
   @media only screen and (max-width: 1000px) {
     #navbarTogglerDemo01 {
-        padding:30px;
+        padding:20px;
         border-right: 5px solid #f8f9fa;
         border-left: 5px solid #f8f9fa;
         border-bottom: 5px solid #f8f9fa;
         background-color: #f8f9fa;
         background-image: linear-gradient(to top, rgba(0,0,0,.1) , rgb(255, 255, 255));
+        height: 330px;
        
   }
 

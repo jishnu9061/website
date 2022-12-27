@@ -925,12 +925,7 @@
                         <i id="bkbtnicon" class="far fa-arrow-alt-circle-left"></i></a>
                     <!--  -->
 
-                    <a class="navbar-brand pl-4" href="#">
-                        <img src="{{asset('/') }}assets//images/faces/lawemb.png" height="40px"
-                            class="d-inline-block align-top" alt="">
-
-
-                    </a>
+                   <span class="m-3"></span>
 
                     <!-- Nav ToolTip -->
                     <div class="nav-item dropdown">
@@ -966,18 +961,19 @@
                         aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
+                    <span class="m-1"></span>
                     <div class="collapse navbar-collapse ml-2" id="navbarTogglerDemo01">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
                                 <a class="font-bold text-uppercase nav-link" href="#"> {{ Auth::user()->name }} <span
                                         class="sr-only">(current)</span></a>
                             </li>
-
+                            <span class="m-1"></span>
                             <li class="nav-item">
                                 <form class="form-inline my-2 my-lg-0">
                                     <input class="form-control mr-sm-2" type="search" placeholder="Search"
                                         aria-label="Search">
+
                                     <button class="btn btn-primary my-2 my-sm-0" type="submit"><i
                                             class="fa fa-search"></i></button>
                                 </form>
@@ -1022,6 +1018,12 @@
                     </div> -->
 
                         <!-- LogOut Button  -->
+                        <div>
+                        <a class="navbar-brand pl-4" href="#">
+                        <img src="{{asset('/') }}assets//images/faces/lawemb.png" height="40px"
+                            class="d-inline-block align-top" alt="">
+                         </a>
+                        </div>
 
                         <div id="navr" style="margin-right: .5%;">
 
