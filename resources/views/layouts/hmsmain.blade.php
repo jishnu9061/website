@@ -1273,7 +1273,8 @@
                                     <a class="dropdown-item" href="{{url('file_managementindex')}}">Matter</a>
                                     <a class="dropdown-item" href="{{url('file_managementindex')}}">Contact</a>
                                     <a class="dropdown-item" href="{{url('file_managementindex')}}">Record payment</a>
-                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Client funds request</a>
+                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Client funds
+                                        request</a>
                                     <a class="dropdown-item" href="{{url('file_managementindex')}}">Email log</a>
                                     <a class="dropdown-item" href="{{url('file_managementindex')}}">Phone log</a>
                                     <a class="dropdown-item" href="{{url('file_managementindex')}}">Secure message</a>
@@ -1592,15 +1593,14 @@
         }
         </script>
 
-        <script>
-        {
+        <!-- <script>
+        const myElement = document.getElementById("subm");
+        myElement.style.color = "red" {
             {
-                -- // const myElement = document.getElementById("subm");
-                // myElement.style.color = "red" --}}
-                {
-                    {
-                        --
-        </script> --}}
+
+            }
+        }
+        </script> -->
     </body>
 
 
