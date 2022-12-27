@@ -181,7 +181,7 @@
                                 <th style="width:10%;">Valid Date</th>
                                 <th style="width:20%;">Account Type</th>
                                 <th style="width:20%;">Account To Allocate to</th>
-                                <th style="width:27%;">Discription</th>
+                                <th style="width:27%;">Description</th>
                                 <th style="width:10%;">Amount</th>
                                 <th style="width:10%;">VAT</th>
 
