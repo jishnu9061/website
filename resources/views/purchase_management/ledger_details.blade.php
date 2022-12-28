@@ -2,7 +2,7 @@
 @section('content')
 
 {{-- heading --}}
-<h4 id="hdtpa"><b>Vendor Ledger Details</b></h4>
+<h4 id="hdtpa"><b>Payment Details</b></h4>
 <br>
 
 
