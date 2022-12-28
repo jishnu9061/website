@@ -71,7 +71,7 @@ class LoginController extends Controller
             return back();
         }     
         elseif($dd != "true"){
- \Session::put('errors', 'Invalid Details..!!');
+            \Session::put('errors', 'Invalid Details..!!');
             return back();
         }
         if($request->session()->has('justlogin'))

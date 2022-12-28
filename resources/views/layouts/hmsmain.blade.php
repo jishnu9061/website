@@ -1333,9 +1333,10 @@
                 </section>
             </section>
 
-            <br>
+            <br><br><br><br><br>
             <footer id="ftr" class="newstyle2 container-fluid bg-white p-4 mt-2 border-top">
-                <div class="footer clearfix mb-0 text-muted">
+                
+                <div class="footer clearfix mb-0 text-muted ">
 
                     <div class="container text-center">
                         <p class="">2022 &copy; Globaleyet</p>
@@ -1592,15 +1593,10 @@
         }
         </script>
 
-        <script>
-        {
-            {
-                -- // const myElement = document.getElementById("subm");
-                // myElement.style.color = "red" --}}
-                {
-                    {
-                        --
-        </script> --}}
+{{-- const myElement = document.getElementById("subm");
+myElement.style.color = "red"  --}}
+
+    
     </body>
 
 
