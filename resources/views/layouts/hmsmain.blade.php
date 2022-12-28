@@ -72,6 +72,14 @@
         <link href='https://fonts.googleapis.com/css?family=Alexandria' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Atkinson Hyperlegible' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Carter One' rel='stylesheet'>
+
+
+
+
+      
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
         <script>
         $(function() {
             $('[data-toggle="tooltip"]').tooltip()
@@ -187,12 +195,71 @@
         #buttons-container button:active {
             opacity: 0.7;
         }
+
+
+
+        .progress {
+  background: rgb(252, 245, 184);
+  display: block;
+  height: 5px;
+  text-align: center;
+  transition: width .3s;
+  width: 0;
+}
+
+.progress.hide {
+  opacity: 0;
+  transition: opacity 1.3s;
+}
         </style>
 
     </head>
 
     <body>
+        <div class="progress"></div>
+        <script>
+            var data = [];
+for (var i = 0; i < 100000; i++) {
+    var tmp = [];
+    for (var i = 0; i < 100000; i++) {
+        tmp[i] = 'hue';
+    }
+    data[i] = tmp;
+};
+$.ajax({
+    xhr: function () {
+        var xhr = new window.XMLHttpRequest();
+        xhr.upload.addEventListener("progress", function (evt) {
+            if (evt.lengthComputable) {
+                var percentComplete = evt.loaded / evt.total;
+                console.log(percentComplete);
+                $('.progress').css({
+                    width: percentComplete * 100 + '%'
+                });
+                if (percentComplete === 1) {
+                    $('.progress').addClass('hide');
+                }
+            }
+        }, false);
+        xhr.addEventListener("progress", function (evt) {
+            if (evt.lengthComputable) {
+                var percentComplete = evt.loaded / evt.total;
+                console.log(percentComplete);
+                $('.progress').css({
+                    width: percentComplete * 100 + '%'
+                });
+            }
+        }, false);
+        return xhr;
+    },
+    type: 'POST',
+    url: "/echo/html",
+    data: data,
+    success: function (data) {}
+});
+        </script>
 
+        
         <div id="app">
 
             <div id="sidebar" class="active">
