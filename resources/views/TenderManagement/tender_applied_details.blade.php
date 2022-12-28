@@ -42,7 +42,7 @@
                     <th scope="col">Supplier Name</th>
                     <th scope="col">Item</th>
                     <th scope="col">Description</th>
-                    <th scope="col">Action</th>
+                    <th scope="col">View</th>
                     <th scope="col">Status</th>
 
                 </tr>
@@ -56,7 +56,7 @@
                     <td>
                         <a href="{{url('view_tender_applied',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
                     </td>
-                    <td><span class="badge bg-success">Accepted</span></td>
+                    <td></td>
                 </tr>
                 @endforeach
             </tbody>
