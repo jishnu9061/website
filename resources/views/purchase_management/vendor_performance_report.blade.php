@@ -37,7 +37,7 @@
               <tr class="text-center">
                 <th scope="col">Supplier  Name</th>
                 <th scope="col">Phone Number</th>
-                <th scope="col">Vendor Details</th>
+                <th scope="col">Supplier Details</th>
                 <th scope="col">Payment Details</th>
                 
               </tr>
