@@ -1052,17 +1052,17 @@
                 <br>
                 <section class="newstyle container-fluid bg-white p-4 mt-2">
                     <section class="row">
-                        <div class="col-12 col-lg-12">
+                        <div class="col-12 col-lg-12" style="min-height: 100vh">
                             @yield('content')
                         </div>
                     </section>
                 </section>
 
 
-            <br><br><br><br><br>
-            <footer id="ftr" class="newstyle2 container-fluid bg-white p-4 mt-2 border-top">
+    
+            <footer id="ftr" class="newstyle2 container-fluid bg-white p-4 mt-5 border-top">
                 
-                <div class="footer clearfix mb-0 text-muted ">
+                <div class="footer clearfix  text-muted ">
 
 
                         <div class="container text-center">
