@@ -428,11 +428,10 @@ button, button
 
 .logo_size{
     width:15%;
+    filter: grayscale(50%);
+    /* filter: hue-rotate(10deg); */
 }
-.add-btn{
-    width:15%;
-    color:yellow;
-}
+
 .clr{
     color:#000;
 }
@@ -1398,9 +1397,7 @@ button, button
                     height:60px;
                     padding-top:-20px;
                 }
-                .logo_size{
-                    width:15%;
-                }
+            
                 .add-btn{
                     width:16%;
                     color:yellow;
@@ -4189,7 +4186,8 @@ h6 {
 .dataTable-table:not(.table-borderless) thead th {
     border-bottom: 1px solid #dedede !important;
     color: #1D1D50;
-    background-color: #E2E8EE;
+    /* background-color: #E2E8EE; */
+    background-color: #d0d3cd;
     border-radius: 5px;
 }
 

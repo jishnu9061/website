@@ -48,7 +48,7 @@
                         @csrf
           @if(Session::has('errors'))
 
-           <div class="alert alert-dark" role="alert">
+           <div class="alert alert-danger" role="alert">
               {{ Session::get('errors')}}
            </div>
                           
@@ -99,7 +99,7 @@
 
 
         <div class="align-items-center col-lg-6  d-flex justify-content-center">
-            <div class="vl"></div>
+            <div class="vl "></div>
          
               <img  id="auth-right" src="assets/images/bg/loginimage.jpg" style="border-radius: 50px; " class="  mx-auto d-block" alt="Responsive image">
 
