@@ -18,7 +18,7 @@
                         
             <div class="col-sm-4 "> <a href="{{ url('supplier') }}"><img class="logo_size"
                         src="assets\image\Bring up report.png" alt=""><button type="button" style="width:70%;"
-                        class="btn btn-primary btn_align_btn">Add Supplier </button></a></div>
+                        class="btn btn-primary btn_align_btn">Supplier </button></a></div>
 
             <!-- <div class="col-sm-4"> <a href="{{ url('cost_variation_report') }}"><img class="logo_size"
                         src="assets\image\File status report summary.png" alt=""><button type="button"
