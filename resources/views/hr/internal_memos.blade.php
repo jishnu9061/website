@@ -106,7 +106,7 @@
                                             <label for="exampleFormControlInput1" class="form-label">Date</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend"></div>
-                                                <input type="text" class="form-control" placeholder=""
+                                                <input type="date" class="form-control" placeholder=""
                                                     name="matter_info">
                                             </div>
                                         </div>
