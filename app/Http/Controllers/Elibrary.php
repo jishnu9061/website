@@ -67,6 +67,12 @@ class Elibrary extends Controller
        return redirect('/subject');
     }
 
+    public function deletesubjects($id)
+    {
+        $edit=DB::table('cra_subject')->where('id',$id)->delete();
+        return redirect('/subject');
+    }
+
 
 
 

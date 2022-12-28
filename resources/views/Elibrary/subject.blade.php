@@ -60,7 +60,7 @@
                     <td>
                         <a href="{{url('editsubject',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span
                                 class="m-2"></span>
-                            <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
+                            <a href="{{url('deletesubject',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
 
                     </td>
 
