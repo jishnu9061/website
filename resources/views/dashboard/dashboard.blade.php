@@ -57,7 +57,7 @@
 <br>
 <br> -->
 
-<div id="calender"></div>
+<div class="p-5" style="background-color: #d6dbe95e" id="calender"></div>
 
 
 {{-- {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
@@ -79,7 +79,7 @@
                         <div class="row">
                             <div class="col-md-4 col-lg-12">
                                 <div class="form-group">
-                                    <label style="color:white">Date</label>
+                                    <label >Date</label>
                                     <input type="text" id="enamez" class="form-control" name="sur_date">
                                 </div>
                             </div>
@@ -90,7 +90,7 @@
                             {{-- </div> --}}
                             <div class="col-md-8 col-lg-12">
                                 <div class="form-group">
-                                    <label style="color:white">Event Name</label>
+                                    <label >Event Name</label>
                                     <input type="text" value="" class="form-control" name="sur_title"
                                         style="text-align:center;">
                                     {{-- @php
@@ -127,7 +127,7 @@
                                             date_default_timezone_set("Asia/Calcutta");   //India time (GMT+5:30)
                                           ?>
                                 <div class="form-group">
-                                    <label style="color:white">Start Time</label>
+                                    <label >Start Time</label>
                                     <input type="time" name="start_time" id="start_time" class="form-control" required>
                                 </div>
                             </div>
@@ -136,7 +136,7 @@
                                             date_default_timezone_set("Asia/Calcutta");   //India time (GMT+5:30)
                                           ?>
                                 <div class="form-group">
-                                    <label style="color:white">End Time</label>
+                                    <label >End Time</label>
                                     <input type="time" name="end_time" id="end_time" class="form-control" required>
                                 </div>
                             </div>
@@ -227,10 +227,10 @@
 <div class="modal-footer">
     {{-- <button type="submit" class="btn btn-success">Save</button>
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> --}}
-    <button type="button" class="btn  text-white" data-bs-dismiss="modal" style="width:30%" data-dismiss="modal"> <i
+    <button type="button" class="btn  btn-primary" data-bs-dismiss="modal" style="width:30%" data-dismiss="modal"> <i
             class="bx bx-x d-block d-sm-none"></i>
         <span class="d-none d-sm-block"></span><b>Close</b></button>
-    <button type="submit" class="btn text-white" style="width:30%"><b>Save</b></button>
+    <button type="submit" class="btn btn-primary" style="width:30%"><b>Save</b></button>
 </div>
 
 </div>
