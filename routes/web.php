@@ -1418,6 +1418,10 @@ Route::any('edit_supplier','PurchaseManagement@edit_supplier')->name('edit_suppl
 Route::any('ledger_details','PurchaseManagement@ledger_details')->name('ledger_details');
 Route::any('purchase_view','PurchaseManagement@purchase_view')->name('purchase_view');
 Route::any('edit_purchase','PurchaseManagement@edit_purchase')->name('edit_purchase');
+Route::any('supplier','PurchaseManagement@suppliers')->name('supplier');
+
+
+
 
 
 

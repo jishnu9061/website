@@ -1,78 +1,87 @@
 @extends('layouts.hmsmain')
 @section('content')
+<style>
+.btn-width {
+    width: 10%;
+}
+tbody{
 
+}
+th{ width:30%;
 
+}
+</style>
+<div>
 
-<div class="container">
-    <h4 id="hdtpa"><b>View Vendor Details</b></h4>
-    <br>
-    
-
-       <div class="text-center">
-      <table class="table">
-  <thead>
-    <tr>
-      <th colspan="2">Vendor Details</th>
-      
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td scope="row">Vendor Name</td>
-      <td><input class="form-control" type="text" placeholder="Bin"  aria-label="Disabled input example" disabled></td>
- 
-    </tr>
-    <tr>
-      <td scope="row">Email ID</td>
-      <td><input class="form-control" type="email" placeholder="bin@gmail.com" aria-label="Disabled input example" disabled></td>
-    
-    </tr>
-    <tr>
-      <td scope="row">Phone Number</td>
-      <td><input class="form-control" type="text" placeholder="1234567891" aria-label="Disabled input example" disabled></td>
-      
-    </tr>
-    <tr>
-      <td scope="row">Fax</td>
-      <td><input class="form-control" type="text" placeholder="102" aria-label="Disabled input example" disabled></td>
-    
-    </tr>
-    <tr>
-      <td scope="row">Address</td>
-      <td><input class="form-control" type="text" placeholder="abcdefgh" aria-label="Disabled input example" disabled></td>
-    
-    </tr>
-    <tr>
-      <td scope="row">City</td>
-      <td><input class="form-control" type="text" placeholder="abcde" aria-label="Disabled input example" disabled></td>
-    
-    </tr>
-    <tr>
-      <td scope="row">State</td>
-      <td><input class="form-control" type="text" placeholder="fghij" aria-label="Disabled input example" disabled></td>
-    
-    </tr>
-    <tr>
-      <td scope="row">Pincode</td>
-      <td><input class="form-control" type="text" placeholder="123 456" aria-label="Disabled input example" disabled></td>
-    
-    </tr>
-  
-  </tbody>
-</table>
-<br>
-            <button type="button" class="btn btn-primary">Print</button>
-               <span class="m-2"></span>
-            <button type="button" class="btn btn-primary" onclick="history.back()">Close</button>
 
 </div>
 <br>
+<div class="container">
+    <!-- <h3 style="text-align:center">View Pickup Reception</h3><br><br> -->
+    <div>
+        <div>
+            <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>View
+                    Pickup Reception</u></b></div><br><br>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+            {{-- heading --}}
+            <h4 id="hdtpa"><b>Supplier  Details</b></h4>
+            <br><br>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-hover" style="border: 1px solid">
+
+                @csrf
+                <tbody>
+                    
+
+                    <tr>
+                        <th>Supplier  Name</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Product Supply</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>TAX ID</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Contact No</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Address</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>City</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>State</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>PIN code</th>
+                        <td></td>
+                    </tr>
+                    <tr style="height:200%;">
+                        <th>Product Details</th>
+                        <td></td>
+                    </tr>
+                   
+
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 
 
-
-
-
-
-
-@endsection
+    @endsection
