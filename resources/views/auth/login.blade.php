@@ -18,7 +18,7 @@
 
 <style>
 .vl {
-    border-left: 1px solid rgb(185, 161, 138);
+    border-left: 1.5px solid rgb(0, 0, 0);
     height: 700px;
     
         border-radius:10px 10px 10px 10px;
