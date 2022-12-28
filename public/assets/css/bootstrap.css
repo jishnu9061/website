@@ -11672,9 +11672,11 @@ fieldset:disabled .btn {
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
-    width: 12px;
-    height: 10px;
+    width: 5px;
+    height: 1vh;
+
+   
+  
 }
 
 
@@ -11689,8 +11691,8 @@ fieldset:disabled .btn {
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
 
-    background-color:rgba(245, 224, 137,.3)
-
+    background-color:#7C7F7F50;
+    
     
     /* border-style:inset; */
     /* border: #E0CB63 solid .1px; */
@@ -11700,9 +11702,11 @@ fieldset:disabled .btn {
 }
 ::-webkit-scrollbar-thumb:hover {
     border-radius: 10px;
-    background-color:rgba(0, 0, 0,.2)
+    background-color:#7C7F7F60;
    
     
 }
+
+
 
 

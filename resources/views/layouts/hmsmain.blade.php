@@ -69,6 +69,9 @@
         <title>Make Simple Javascript Timer</title>
         <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Alexandria' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Atkinson Hyperlegible' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Carter One' rel='stylesheet'>
         <script>
         $(function() {
             $('[data-toggle="tooltip"]').tooltip()
@@ -86,7 +89,11 @@
 
         body {
             background-color: #F4F4F6;
-            font-family: 'Be Vietnam Pro';
+            /* font-family: 'Be Vietnam Pro';
+            font-family: 'Alexandria'; */
+            font-family: 'Atkinson Hyperlegible';
+            /* font-family: 'Carter One'; */
+            /* font-size: 22px; */
 
         }
 
