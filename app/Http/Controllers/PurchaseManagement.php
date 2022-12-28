@@ -52,6 +52,13 @@ class PurchaseManagement extends Controller
         return view('purchase_management.edit_purchase');
     }
 
+    public function suppliers()
+    {
+        return view('purchase_management.supplier');
+    }
+
+    
+
 
 }
 

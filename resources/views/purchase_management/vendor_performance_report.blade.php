@@ -2,7 +2,7 @@
 @section('content')
 
   <div class="container">
-  <h4 id="hdtpa"><b>Vendor Details</b></h4>
+  <h4 id="hdtpa"><b>Payment Details</b></h4>
   
 
           <div class="header_wrap">
@@ -35,9 +35,9 @@
  <table class="table">
             <thead>
               <tr class="text-center">
-                <th scope="col">Vendor</th>
+                <th scope="col">Supplier  Name</th>
                 <th scope="col">Phone Number</th>
-                <th scope="col">Actions</th>
+                <th scope="col">Supplier Details</th>
                 <th scope="col">Payment Details</th>
                 
               </tr>
@@ -47,10 +47,9 @@
               
                 <td>Bin</td>
                 <td>1234567891</td>
-                <td><a href="{{url('view_supplier')}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-2"></span>
-                      <a href="{{url('edit_supplier')}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit" ></i><span class="m-2"></span>
-                      <a href="#"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
-                <td> <a href="{{url('ledger_details')}}" button type="button" class="btn btn-primary">View</button></td>
+                <td><a href="{{url('view_supplier')}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-2"></span></td>
+                     
+                <td> <a href="{{url('ledger_details')}}" button type="button" class="btn btn-primary">Show Payment</button></td>
               </tr>
              
             </tbody>
