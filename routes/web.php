@@ -1510,6 +1510,7 @@ Route::any('subject','Elibrary@subjects')->name('subject');
 Route::any('add_subject','Elibrary@addsubjects')->name('add_subject');
 Route::any('/editsubject/{id}','Elibrary@editsubjects')->name('editsubject');
 Route::any('update_subject','Elibrary@updatesubjects')->name('update_subject');
+Route::any('/deletesubject/{id}','Elibrary@deletesubjects')->name('deletesubject');
 
 Route::any('file','Elibrary@files')->name('file');
 Route::any('add_file','Elibrary@addfiles')->name('add_file');

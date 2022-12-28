@@ -11688,12 +11688,18 @@ fieldset:disabled .btn {
 
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color:#d0d3cd80 
+    background-color:rgba(245, 224, 137,.3)
     
     /* border-style:inset; */
     /* border: #E0CB63 solid .1px; */
     
     /* box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1); */
+    
+}
+::-webkit-scrollbar-thumb:hover {
+    border-radius: 10px;
+    background-color:rgba(0, 0, 0,.2)
+   
     
 }
 

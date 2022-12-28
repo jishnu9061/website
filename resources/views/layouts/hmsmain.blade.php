@@ -27,16 +27,15 @@
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        {{-- vipin --}}
+
         {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" /> --}}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
-        {{-- vipin --}}
+
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css"
             href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
-        <!-- vinu -->
 
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
@@ -93,11 +92,6 @@
 
         html {
             scroll-behavior: smooth;
-
-
-
-
-
         }
 
         .pagination>li>span {
@@ -191,271 +185,6 @@
     </head>
 
     <body>
-
-        <!-- ======= Header ======= -->
-        {{-- <header id="header" class="header fixed-top d-flex align-items-center"> --}}
-
-        <!-- <div class="d-flex align-items-center justify-content-between">
-  <a href="index.html" class="logo d-flex align-items-center">
-    <img class="cr_logo" src="assets/img/cr_logo.jpeg" alt="">
-    <span class="d-none d-lg-block">CR</span>
-  </a>
-  <i class="bi bi-list toggle-sidebar-btn"></i>
-</div> -->
-        <!-- End Logo -->
-
-        {{-- <div class="search-bar">
-  <form class="search-form d-flex align-items-center" method="POST" action="#">
-    <input type="text" name="query" placeholder="Search..." title="Enter search keyword">
-    <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-  </form>
-</div><!-- End Search Bar --> --}}
-
-
-
-        {{-- <nav class="header-nav ms-auto">
-  <ul class="d-flex align-items-center">
-
-    <li class="nav-item d-block d-lg-none">
-      <a class="nav-link nav-icon search-bar-toggle " href="#">
-        <i class="bi bi-search"></i>
-      </a>
-    </li><!-- End Search Icon--> --}}
-
-
-
-
-
-
-
-        {{-- 
-    <li class="nav-item  pe-3">
-
-      <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-        <!-- <img src="add-icon--line-iconset--iconsmind-29.png" alt="Profile" class="rounded-circle"> -->
-        <span class="d-none d-md-block dropdown-toggle ps-2">Quick Link</span>
-      </a><!-- End Profile Iamge Icon -->
-
-    
-    </li><!-- End Profile Nav --> --}}
-
-
-        {{-- <li class="nav-item  pe-3">
-
-      <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-        {{-- <img src="add-icon--line-iconset--iconsmind-29.png" alt="Profile" class="rounded-circle"> --}}
-        {{-- <span class="d-none d-md-block  ps-2">Addon</span>
-      </a><!-- End Profile Iamge Icon --> --}}
-
-
-        {{-- </li><!-- End Profile Nav --> --}}
-        {{-- <li class="nav-item dropdown">
-
-      <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-        <i class="bi bi-bell"></i>
-        <span class="badge bg-primary badge-number">4</span>
-      </a><!-- End Notification Icon -->
-
-      
-
-      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
-        <li class="dropdown-header">
-          You have 4 new notifications
-          <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-        <li class="notification-item">
-          <i class="bi bi-exclamation-circle text-warning"></i>
-          <div>
-            <h4>Lorem Ipsum</h4>
-            <p>Quae dolorem earum veritatis oditseno</p>
-            <p>30 min. ago</p>
-          </div>
-        </li>
-
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-        <li class="notification-item">
-          <i class="bi bi-x-circle text-danger"></i>
-          <div>
-            <h4>Atque rerum nesciunt</h4>
-            <p>Quae dolorem earum veritatis oditseno</p>
-            <p>1 hr. ago</p>
-          </div>
-        </li>
-
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-        <li class="notification-item">
-          <i class="bi bi-check-circle text-success"></i>
-          <div>
-            <h4>Sit rerum fuga</h4>
-            <p>Quae dolorem earum veritatis oditseno</p>
-            <p>2 hrs. ago</p>
-          </div>
-        </li>
-
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-        <li class="notification-item">
-          <i class="bi bi-info-circle text-primary"></i>
-          <div>
-            <h4>Dicta reprehenderit</h4>
-            <p>Quae dolorem earum veritatis oditseno</p>
-            <p>4 hrs. ago</p>
-          </div>
-        </li>
-
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-        <li class="dropdown-footer">
-          <a href="#">Show all notifications</a>
-        </li>
-
-      </ul><!-- End Notification Dropdown Items -->
-
-    </li><!-- End Notification Nav -->
-
-    <li class="nav-item dropdown">
-
-      <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-        <i class="bi bi-chat-left-text"></i>
-        <span class="badge bg-success badge-number">3</span>
-      </a><!-- End Messages Icon -->
-
-      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
-        <li class="dropdown-header">
-          You have 3 new messages
-          <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-        <li class="message-item">
-          <a href="#">
-            <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
-            <div>
-              <h4>Maria Hudson</h4>
-              <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-              <p>4 hrs. ago</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-
-        
-        <li class="message-item">
-          <a href="#">
-            <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
-            <div>
-              <h4>Anna Nelson</h4>
-              <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-              <p>6 hrs. ago</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-        <li class="message-item">
-          <a href="#">
-            <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
-            <div>
-              <h4>David Muldon</h4>
-              <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-              <p>8 hrs. ago</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-        <li class="dropdown-footer">
-          <a href="#">Show all messages</a>
-        </li>
-
-      </ul><!-- End Messages Dropdown Items -->
-
-    </li><!-- End Messages Nav -->
-
-    <li class="nav-item dropdown pe-3">
-
-      <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-        <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-        <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
-      </a><!-- End Profile Iamge Icon -->
-
-      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-        <li class="dropdown-header">
-          <h6>Kevin Anderson</h6>
-          <span>Web Designer</span>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-        <li>
-          <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-            <i class="bi bi-person"></i>
-            <span>My Profile</span>
-          </a>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-        <li>
-          <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-            <i class="bi bi-gear"></i>
-            <span>Account Settings</span>
-          </a>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-        <li>
-          <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-            <i class="bi bi-question-circle"></i>
-            <span>Need Help?</span>
-          </a>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-        <li>
-          <a class="dropdown-item d-flex align-items-center" href="#">
-            <i class="bi bi-box-arrow-right"></i>
-            <span>Sign Out</span>
-          </a>
-        </li>
-
-      </ul><!-- End Profile Dropdown Items -->
-    </li><!-- End Profile Nav -->
-
-    </ul>
-    </nav><!-- End Icons Navigation --> --}}
-
-        {{-- </header><!-- End Header --> --}}
-
-
 
         <div id="app">
 
@@ -1175,7 +904,7 @@
 
             <div id="main">
 
-                {{-- <header class="mb-3"> --}}
+                <!-- {{-- <header class="mb-3"> --}}
                 {{-- <a href="#" class="burger-btn d-block d-xl-none">
                     <i class="bi bi-justify fs-3"></i>
                 </a> --}}
@@ -1187,22 +916,18 @@
 
                 {{-- <nav  class=" navbar navbar-light bg-light" id="ff">
               <a class="navbar-brand" href="#">Fixed top</a>
-              </nav> --}}
+              </nav> --}} -->
 
-
+                <!-- Nav Back Button -->
                 <nav class=" newstyle1 navbar navbar-expand-lg  sticky-top navbar-light bg-white">
                     <a id="backbtn" href="javascript:history.back()" style=" color: #070344;
                                             font-size: 35px;">
                         <i id="bkbtnicon" class="far fa-arrow-alt-circle-left"></i></a>
+                    <!--  -->
 
-                    <a class="navbar-brand pl-4" href="#">
-                        <img src="{{asset('/') }}assets//images/faces/lawemb.png" height="40px"
-                            class="d-inline-block align-top" alt="">
+                   <span class="m-3"></span>
 
-
-                    </a>
-
-
+                    <!-- Nav ToolTip -->
                     <div class="nav-item dropdown">
                         <button class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -1226,34 +951,32 @@
                             <a class="dropdown-item" href="{{url('system_setup')}}">System Setup</a>
                             <a class="dropdown-item" href="{{url('office_admin_index')}}">Office Administration</a>
 
-
-                            {{-- <div class="dropdown-divider"></div> --}}
                         </div>
                     </div>
+                    <!--  -->
 
-
+                    <!--Nav Hamburger -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
                         aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
+                    <span class="m-1"></span>
                     <div class="collapse navbar-collapse ml-2" id="navbarTogglerDemo01">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
                                 <a class="font-bold text-uppercase nav-link" href="#"> {{ Auth::user()->name }} <span
                                         class="sr-only">(current)</span></a>
-                                {{-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> --}}
                             </li>
-
+                            <span class="m-1"></span>
                             <li class="nav-item">
                                 <form class="form-inline my-2 my-lg-0">
                                     <input class="form-control mr-sm-2" type="search" placeholder="Search"
                                         aria-label="Search">
+
                                     <button class="btn btn-primary my-2 my-sm-0" type="submit"><i
                                             class="fa fa-search"></i></button>
                                 </form>
-                                {{-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> --}}
                             </li>
                         </ul>
 
@@ -1273,31 +996,34 @@
                                     <a class="dropdown-item" href="{{url('file_managementindex')}}">Matter</a>
                                     <a class="dropdown-item" href="{{url('file_managementindex')}}">Contact</a>
                                     <a class="dropdown-item" href="{{url('file_managementindex')}}">Record payment</a>
-                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Client funds request</a>
+                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Client funds
+                                        request</a>
                                     <a class="dropdown-item" href="{{url('file_managementindex')}}">Email log</a>
                                     <a class="dropdown-item" href="{{url('file_managementindex')}}">Phone log</a>
                                     <a class="dropdown-item" href="{{url('file_managementindex')}}">Secure message</a>
                                     <a class="dropdown-item" href="{{url('file_managementindex')}}">Event</a>
                                     <a class="dropdown-item" href="{{url('file_managementindex')}}">Note</a>
 
-                                    {{-- <div class="dropdown-divider"></div> --}}
                                 </div>
                             </li>
                         </ul>
 
+                        <!-- <div id="stopwatch-container">
+                            <p id="stopwatch">00:00:00:00 </p>
+                            <div id="buttons-container">
+                                <button onclick="main()" id="main-btn" class="btn">Start</button>
+                                <button onclick="reset()" id="reset-btn" class="btn">Reset</button>
+                            </div>
+                        </div>
+                    </div> -->
 
-
-
-
-
-                        {{-- <div id="stopwatch-container" >
-      <p  id="stopwatch">00:00:00:00 </p>
-      <div id="buttons-container">
-        <button onclick="main()" id="main-btn" class="btn">Start</button>
-        <button onclick="reset()" id="reset-btn" class="btn">Reset</button>
-      </div>
-    </div> 
-</div>    --}}
+                        <!-- LogOut Button  -->
+                        <div>
+                        <a class="navbar-brand pl-4" href="#">
+                        <img src="{{asset('/') }}assets//images/faces/lawemb.png" height="40px"
+                            class="d-inline-block align-top" alt="">
+                         </a>
+                        </div>
 
                         <div id="navr" style="margin-right: .5%;">
 
@@ -1313,42 +1039,43 @@
                 </nav>
 
 
-                {{-- <a href="javascript:history.back()"  class="btn btn-primary" >Back</a>
-                                                                                    <div style="margin-left: 83%;margin-top: -8%;">
-                                                                                    <div class="avatar avatar-xl">
-                                                                                    <img  style="margin-left: 28%;" src="assets/images/faces/CRAHqLogo.png" alt="Face 1">
-                                                                                </div>
-                                                                                <h5 class="font-bold"> {{ Auth::user()->name }}
-                </h5>
-                <h6 class="text-muted mb-0"><a href="{{url('logt')}}"> <i class="fas fa-sign-out-alt"></i> </i> Log
-                        Out</a></h6>
-
-            </div> --}}
-            <br>
-            <section class="newstyle container-fluid bg-white p-4 mt-2">
-                <section class="row">
-                    <div class="col-12 col-lg-12">
-                        @yield('content')
+                <!-- <a href="javascript:history.back()" class="btn btn-primary">Back</a>
+                <div style="margin-left: 83%;margin-top: -8%;">
+                    <div class="avatar avatar-xl">
+                        <img style="margin-left: 28%;" src="assets/images/faces/CRAHqLogo.png" alt="Face 1">
                     </div>
+                    <h5 class="font-bold"> {{ Auth::user()->name }}
+                    </h5>
+                    <h6 class="text-muted mb-0"><a href="{{url('logt')}}"> <i class="fas fa-sign-out-alt"></i> </i> Log Out</a></h6>
+                </div> -->
+
+                <br>
+                <section class="newstyle container-fluid bg-white p-4 mt-2">
+                    <section class="row">
+                        <div class="col-12 col-lg-12">
+                            @yield('content')
+                        </div>
+                    </section>
                 </section>
-            </section>
 
             <br><br><br><br><br>
             <footer id="ftr" class="newstyle2 container-fluid bg-white p-4 mt-2 border-top">
                 
                 <div class="footer clearfix mb-0 text-muted ">
 
-                    <div class="container text-center">
-                        <p class="">2022 &copy; Globaleyet</p>
-                    </div>
-                    <!-- <div class="float-end">
-                                                            
-                                                            <p> <a class="pr-3" href="#"><i style="color: green;" class="	fa fa-level-up"></i> </a>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a href="https://www.globaleyet.com/">globaleyet</a></p>
-                                                        </div> -->
-                </div>
-            </footer>
+                        <div class="container text-center">
+                            <p class="">2022 &copy; Globaleyet</p>
+                        </div>
 
-        </div>
+                        <!-- <div class="float-end">
+                            <p> <a class="pr-3" href="#"><i style="color: green;" class="	fa fa-level-up"></i>
+                                </a>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
+                                    href="https://www.globaleyet.com/">globaleyet</a></p>
+                        </div> -->
+                    </div>
+                </footer>
+
+            </div>
         </div>
 
         <!-- time -->
