@@ -1327,7 +1327,7 @@
 myElement.style.color = "red"  --}}
 
     
->>>>>>>>> Temporary merge branch 2
+
     </body>
 
 
