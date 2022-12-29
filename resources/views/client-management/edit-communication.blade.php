@@ -1,15 +1,15 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container">
-   
 
-   
-        <div>
-           
-                        {{-- heading --}}
-    <h4 id="hdtpa"><b>Edit Communication</b></h4>
-    <br>
-        
+
+
+    <div>
+
+        {{-- heading --}}
+        <h4 id="hdtpa"><b>Edit Communication</b></h4>
+        <br>
+
     </div>
     <div class="row">
         <div class="col-md-12">
@@ -22,7 +22,8 @@
                             <label for="username">Communication Date</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="date" id="username" value="{{ $edit->communication_date}}">
+                                <input type="date" class="form-control" name="date" id="username"
+                                    value="{{ $edit->communication_date}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -37,7 +38,7 @@
 
                                 </div>
                                 <select name="Client" id="cars">
-                                    <option >{{ $edit->client}}</option>
+                                    <option>{{ $edit->client}}</option>
                                 </select>
                             </div>
                         </div>
@@ -50,7 +51,7 @@
 
                                 </div>
                                 <select name="File" id="cars">
-                                    <option >{{ $edit->file}}</option>
+                                    <option>{{ $edit->file}}</option>
                                 </select>
                             </div>
                         </div>
@@ -63,7 +64,8 @@
                             <label for="username">Customer</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="Customer" id="age" value="{{ $edit->customer}}" min="0" max="99">
+                                <input type="text" class="form-control" name="Customer" id="age"
+                                    value="{{ $edit->customer}}" min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
                                 </div>
@@ -75,8 +77,8 @@
                             <label for="username">Telephone No</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="telephone" value="{{ $edit->telephone_no}}"
-                                    id="confirm_password">
+                                <input type="text" class="form-control" name="telephone"
+                                    value="{{ $edit->telephone_no}}" id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -96,7 +98,8 @@
                             </div>
                         </div>
                     </div>
-                       
+                </div>
+
                 <br>
                 <div class="row">
                     <div class="col-md-4">
@@ -118,7 +121,7 @@
                                 <div class="input-group-prepend">
                                 </div>
                                 <select name="Communication">
-                                    <option >{{ $edit->mode_of_communication}}</option>
+                                    <option>{{ $edit->mode_of_communication}}</option>
                                 </select>
                             </div>
                         </div>
@@ -130,7 +133,7 @@
                                 <div class="input-group-prepend">
                                 </div>
                                 <select name="Communicated">
-                                    <option >{{ $edit->communicated}}</option>
+                                    <option>{{ $edit->communicated}}</option>
                                 </select>
                             </div>
                         </div>
@@ -145,7 +148,7 @@
                                 <div class="input-group-prepend">
                                 </div>
                                 <select name="Duration">
-                                    <option >{{ $edit->duration}}</option>
+                                    <option>{{ $edit->duration}}</option>
                                 </select>
                             </div>
                         </div>
@@ -167,8 +170,8 @@
                             <label for="username">Timer</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="time" class="form-control" name="Timer" id="username" value="{{ $edit->time}}" placeholder=""
-                                    required>
+                                <input type="time" class="form-control" name="Timer" id="username"
+                                    value="{{ $edit->time}}" placeholder="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Date is required.
                                 </div>
@@ -183,8 +186,8 @@
                             <label for="username">Others</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="Others" id="username" value="{{$edit->others}}" placeholder=""
-                                    required>
+                                <input type="text" class="form-control" name="Others" id="username"
+                                    value="{{$edit->others}}" placeholder="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Date is required.
                                 </div>
@@ -195,7 +198,8 @@
                         <div class="mb-1">
                             <label for="username">Communicated Description</label>
                             <div class="input-group">
-                                <textarea class="form-control" id="form7Example7" rows="2" name="Description"></textarea>
+                                <textarea class="form-control" id="form7Example7" rows="2"
+                                    name="Description"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Complaint Description is required.
                                 </div>
@@ -216,24 +220,25 @@
                 </div>
                 <br>
                 <div class="row">
-                        <div class="col-sm">
+                    <div class="col-sm">
 
-                        </div>
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">close</button>
-                        </div>
                     </div>
-              
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;" onclick="history.back()">Close</button>
+                    </div>
+                </div>
+
             </form>
         </div>
     </div>
 </div>
 
 </body>
+
 </html>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

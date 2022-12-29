@@ -9,7 +9,7 @@
                 integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
                 crossorigin="anonymous"> -->
                 {{-- heading --}}
-    <h4 id="hdtpa"><b>Edit New Client</b></h4>
+    <h4 id="hdtpa"><b>Edit Client Details</b></h4>
     <br><br>
 
         </div>
@@ -309,8 +309,8 @@
                     </div>
                     <div class="col-sm">
                         <br>
-                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">UPDATE</button>
-                        <button type="button" class="btn btn-primary float:left" Style="width:45%;">CLOSE</button>
+                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;" onclick="history.back()">Close</button>
                     </div>
                 </div>
        

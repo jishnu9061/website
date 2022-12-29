@@ -251,14 +251,11 @@
                                                     <label for="username">Country</label>
                                                     <div class="input-group">
                                                         <div class="input-group-prepend">
-
                                                         </div>
                                                         <select name="country" id="cars">
-                                                            <option>Select</option>
                                                             <option>Kenya</option>
-                                                            <option>South Africa</option>
-                                                            <option>India</option>
-                                                            <option>America</option>
+                                                            <option></option>
+                                                            <option></option>       
                                                         </select>
                                                     </div>
                                                 </div>
@@ -463,8 +460,16 @@
                                                     <label for="username">Town</label>
                                                     <div class="input-group">
                                                         <div class="input-group-prepend"></div>
-                                                        <input type="text" class="form-control" name="town" id="age"
-                                                            value="" min="0" max="99">
+                                                        <select name="country" id="cars">
+                                                            <option>Nairobi</option>
+                                                            <option></option>
+                                                            <option></option>
+                                                           
+                                                        </select>
+
+                                                        <!-- <input type="text" class="form-control" name="town" id="age"
+                                                            value="" min="0" max="99"> -->
+
                                                         <div class="invalid-feedback" style="width: 100%;">
                                                             Age is required.
                                                         </div>
