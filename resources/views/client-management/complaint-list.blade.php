@@ -58,7 +58,7 @@ color: #999;
             <b><u>Complaint Register</u></b> -->
             {{-- heading --}}
             <div class="container">
-            <h4 id="hdtpa"><b>Complaint Register</b></h4>
+            <h4 id="hdtpa"><b>Complaint Register Details</b></h4>
             <br>
         
 
@@ -105,9 +105,9 @@ color: #999;
                           
                                 <!-- <th class="text-center"> No</th> -->
                                 <th class="text-center">Date</th>
-                                <th class="text-center">Client</th>
+                                <th class="text-center">Client Type</th>
                                 <th class="text-center">Files</th>
-                                <th class="text-center">Customer Institution</th>
+                                <th class="text-center">Client Institution</th>
                                 <th class="text-center">Contact</th>
                                 <th class="text-center">Complaint Description</th>
                                 <th class="text-center">Actions</th>

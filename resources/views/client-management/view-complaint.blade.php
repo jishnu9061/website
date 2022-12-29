@@ -27,10 +27,10 @@
 
             @csrf
             <tbody>
-                <tr>
+                <!-- <tr>
                     <th style="width:10%";>No:</th>
                     <td style="width:20%";>{{$view_complaint ->id}}</td>
-                </tr>
+                </tr> -->
                 <tr>
                     <th>Date:</th>
                     <td>{{$view_complaint ->date}}</td>
