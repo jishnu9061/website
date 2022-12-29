@@ -24,7 +24,7 @@
                 </tr>
                     <th>Client Document</th>
                     <td><img src="{{asset('/images/file/'.$view_document_details->file)}}" width="80px" height="50px" alt="image">  
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="margin-left:5px">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="margin-left:5px; float:right;margin-right:5px;">
             Show
             </button></td>
                 </tr>
