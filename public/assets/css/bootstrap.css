@@ -6,6 +6,94 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+
+ 
+
+:root {
+    --ff-primary: basic-sans, sans-serif;
+    --clr-primary: #ee6352;
+    --clr-body: #333;
+    --clr-bg: #ddd;
+    --spacer: 1rem;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  h1, h2, h3, p {
+    margin: 0;
+  }
+  
+  .flow > * + * {
+    margin-top: var(--flow-space, var(--spacer));
+  }
+  
+
+  
+  a {
+    color: var(--clr-primary);
+  }
+  
+  .content {
+    width: min(70vw, 50rem);
+    margin: 3rem auto;
+    padding: 3em;
+    box-shadow: 0 0 3em rgba(0,0,0,.15);
+    background: white;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    place-items: center;
+  }
+  
+
+  
+  .btn {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: inherit;
+    border: 0;
+    line-height: 1;
+    background: none;
+    padding: .75em 1.5em;
+  }
+  
+
+  
+  .btn-2 {
+    --clr: #AD325E;
+    --outline: 2px solid var(--clr);
+    color: var(--clr);
+    outline: var(--outline);
+    border: var(--outline);
+    outline-offset: -2px;
+    transition: outline-offset 200ms ease;
+  }
+  
+  .btn-2:hover,
+  .btn-2:focus {
+    outline: var(--outline);
+    outline-offset: -6px;
+   
+  }
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
 :root {
     --bs-blue: #435ebe;
     --bs-indigo: #6610f2;
