@@ -36,43 +36,43 @@
                     <th>Client:</th>
                     <td>{{$view_pickup->client}}</td>
                 </tr>
-                    <th>file_name:</th>
+                    <th>File Name:</th>
                     <td>{{$view_pickup->file_name}}</td>
                 </tr>
                 </tr>
-                    <th>mobile:</th>
+                    <th>Mobile:</th>
                     <td>{{$view_pickup->mobile}}</td>
                 </tr>
                 </tr>
-                    <th>persion_handling:</th>
+                    <th>Persion Handling:</th>
                     <td>{{$view_pickup->persion_handling}}</td>
                 </tr>
                 <tr>
-                    <th>email:</th>
+                    <th>Email:</th>
                     <td>{{$view_pickup->email}}</td>
                 </tr>
                 <tr>
-                    <th>client_name:</th>
+                    <th>Client Name:</th>
                     <td>{{$view_pickup->client_name}}</td>
                 </tr>
                 <tr>
-                    <th>persion_picking_handling:</th>
+                    <th>Persion Picking Handling:</th>
                     <td>{{$view_pickup->persion_picking_handling}}</td>
                 </tr>
                 <tr>
-                    <th>reason:</th>
+                    <th>Reason:</th>
                     <td>{{$view_pickup->reason}}</td>
                 </tr>
                 <tr>
-                    <th>visitors:</th>
+                    <th>Visitors:</th>
                     <td>{{$view_pickup->visitors}}</td>
                 </tr>
                 <tr>
-                    <th>time_in:</th>
+                    <th>Time In:</th>
                     <td>{{$view_pickup->time_in}}</td>
                 </tr>
                 <tr>
-                    <th>time_out:</th>
+                    <th>Time Out:</th>
                     <td>{{$view_pickup->time_out}}</td>
                 </tr>
                

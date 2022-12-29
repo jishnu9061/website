@@ -3,9 +3,9 @@
 
                 
     <h4 id="hdtpa"><b>File List</b></h4>
-    
-            </div>
-            <div>
+    <br><br>
+            
+            <!-- <div> -->
                 <!-- <div class="btn btn-primary"
                     style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Corporate Client List</u></b></span></div><br>
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -21,7 +21,7 @@
              </div>
    <br>
 
-                <div id="" class="">
+                <!-- <div id="" class=""> -->
                     <!-- <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label> -->
                     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-1">Columns
                   </button>
@@ -37,8 +37,8 @@
                     </button
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Filter
                   </button> -->
-                </div>
-               
+                <!-- </div>
+                -->
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">New
                   File</button>
                
@@ -75,9 +75,9 @@
                                         <!-- <th class="text-center"> <input type="checkbox"></th> -->
                                       
                                         <!-- <th class="text-center">*</th> -->
-                                        <th class="text-center">File No</th>
+                                        <!-- <th class="text-center">File No</th> -->
                                         <th class="text-center">Client</th>
-                                        <th class="text-center">File No</th>
+                                        <th class="text-center">File Name</th>
                                         <th class="text-center">File Open</th>
                                         <!-- <th class="text-center">Responsible<br>Advocate</th>
                                         <th class="text-center">Most Recent Progress</th> -->
@@ -93,7 +93,7 @@
                                         <tr id="" class="text-center">
                                           
                                             <!-- <td scope="row">{{$list->id}}</td> -->
-                                            <td scope="row">{{$list->id}}</td>
+                                            <!-- <td scope="row">{{$list->id}}</td> -->
                                             <td scope="row">{{$list->client_name}}</td>
                                             <td scope="row">{{$list->file_name}}</td>
                                             <td scope="row">{{$list->open_date}}</td>

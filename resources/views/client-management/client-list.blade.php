@@ -250,8 +250,6 @@
                                                                     </div>
                                                                     <select name="country" id="cars">
                                                                         <option>Kenya</option>
-                                                                        <option></option>
-                                                                        <option></option>
 
                                                                     </select>
                                                                 </div>
@@ -489,8 +487,6 @@
                                                                     <div class="input-group-prepend"></div>
                                                                     <select name="country" id="cars">
                                                                         <option>Nairobi</option>
-                                                                        <option></option>
-                                                                        <option></option>
 
                                                                     </select>
 

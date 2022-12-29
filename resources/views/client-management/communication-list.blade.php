@@ -57,7 +57,7 @@ color: #999;
                     Conversation</u></b></div><br><br> -->
             {{-- heading --}}
             <div class="container">
-            <h4 id="hdtpa"><b>Client Communication</b></h4>
+            <h4 id="hdtpa"><b> Communication Details </b></h4>
             <br>
 
             <div>
