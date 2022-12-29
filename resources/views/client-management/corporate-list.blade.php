@@ -548,7 +548,7 @@
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="mb-1">
-                                                        <label for="username">Contact Person Email</label>
+                                                        <label for="username">Email</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
                                                             <input type="text" class="form-control" name="person_email"
