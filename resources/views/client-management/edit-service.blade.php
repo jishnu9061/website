@@ -6,12 +6,12 @@
 
         <div>
             <div>
-            
-                        {{-- heading --}}
-    <h4 id="hdtpa"><b>Edit New Client</b></h4>
-    <br><br>
+
+                {{-- heading --}}
+                <h4 id="hdtpa"><b>Edit Client Details</b></h4>
+                <br><br>
             </div>
-            
+
         </div>
     </div>
 
@@ -26,7 +26,8 @@
                             <label for="username">Receipt No</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="Receipt" id="username" value="{{$edit_service->receipt_no}}">
+                                <input type="text" class="form-control" name="Receipt" id="username"
+                                    value="{{$edit_service->receipt_no}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -35,10 +36,15 @@
                     </div>
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Name</label>
+                            <label for="username">Client Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="Name" id="username" value="{{$edit_service->client_name}}">
+                                <select name="code" id="cars">
+                                    <option>Client 1</option>
+                                    <option>Client 2</option>
+                                
+                                </select>
+                                <!-- <input type="text" class="form-control" name="Name" id="username" value="{{$edit_service->client_name}}"> -->
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -50,7 +56,8 @@
                             <label for="username">Mobile</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="Mobile" id="username" value="{{$edit_service->mobile}}">
+                                <input type="text" class="form-control" name="Mobile" id="username"
+                                    value="{{$edit_service->mobile}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -65,7 +72,8 @@
                             <label for="username">Amount Paid</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="amount" id="username" value="{{$edit_service->amount_paid}}" required>
+                                <input type="text" class="form-control" name="amount" id="username"
+                                    value="{{$edit_service->amount_paid}}" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -77,7 +85,8 @@
                             <label for="username">Date</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="date" id="username" value="{{$edit_service->date}}" required>
+                                <input type="date" class="form-control" name="date" id="username"
+                                    value="{{$edit_service->date}}" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -89,7 +98,8 @@
                             <label for="username">Email</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="email" class="form-control" name="email" id="username" value="{{$edit_service->email}}" required>
+                                <input type="email" class="form-control" name="email" id="username"
+                                    value="{{$edit_service->email}}" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -137,7 +147,7 @@
                             <br>
                             <button type="submit" class="btn btn-primary float:right;"
                                 Style="width:45%;">Update</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;" onclick="history.back()">Cancel</button>
                         </div>
                     </div>
                 </div>

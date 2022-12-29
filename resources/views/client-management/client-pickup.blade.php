@@ -59,7 +59,7 @@
             <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Client
                     Pickup Reception</u></b> -->
             {{-- heading --}}
-            <h4 id="hdtpa"><b>Client Pickup Reception</b></h4>
+            <h4 id="hdtpa"><b>Client Reception Details</b></h4>
             <br>
         </div>
         <div>
@@ -121,7 +121,7 @@
                                         <td scope="row" class="text-center">{{$pickup->mobile}}</td>
                                         <td scope="row" class="text-center">{{$pickup->time_in}}</td>
                                         <td scope="row" class="text-center">{{$pickup->time_out}}</td>
-                                        <td><a href="{{url('view-pickup',$pickup->id)}}"><i
+                                        <td class="text-center"><a href="{{url('view-pickup',$pickup->id)}}"><i
                                                     style="color:black;align:centre" class="fa fa-eye"
                                                     aria-hidden="true"></i></a>
                                             <a onClick="return myFunction();"

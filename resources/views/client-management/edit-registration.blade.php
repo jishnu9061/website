@@ -1,16 +1,16 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container">
-   <br>
-            <div>
-             
-                {{-- heading --}}
-    <h4 id="hdtpa"><b>Edit Customer Detials</b></h4>
-    <br><br>
+    <br>
+    <div>
 
-        </div>
-        
-  
+        {{-- heading --}}
+        <h4 id="hdtpa"><b>Edit Customer Detials</b></h4>
+        <br><br>
+
+    </div>
+
+
     <div class="row">
         <div class="col-md-12 order-md-1">
             <form method="post" action="{{url('update-registration')}}" id="form">
@@ -22,8 +22,13 @@
                             <label for="username">Client Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="name" id="username"
-                                    value="{{$edit_registration->customer_name}}" placeholder="Customer name" required>
+                                <select name="town" id="username" style="width:100%;">
+                                    <option> client 1 </option>
+                                    <option> client 2 </option>
+
+                                </select>
+                                <!-- <input type="text" class="form-control" name="name" id="username"
+                                    value="{{$edit_registration->customer_name}}" placeholder="Customer name" required> -->
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Date is required.
                                 </div>
@@ -48,17 +53,11 @@
                             <label for="username">Town</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                               
-                                    <select name="town" id="username"style="width:100%;">
-                                                                    <option>{{$edit_registration->town}}</option>
-                                                                    <option>Nairobi </option>
-                                                                    <option>Kisumu</option>
-                                                                    <option>Nakuru</option>
-                                                                    <option>Mombasa</option>
-                                                                    <option>Thika</option>
-                                                                    <option>Malindi</option>
-                                                                    
-                                                                </select>
+
+                                <select name="town" id="username" style="width:100%;">
+                                    <option>{{$edit_registration->town}}</option>
+
+                                </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Date is required.
                                 </div>
@@ -125,12 +124,12 @@
                     </div>
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Web site</label>
+                            <label for="username">Website</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="website"
                                     value="{{$edit_registration->web_site}}" id="confirm_password"
-                                    placeholder="Web Site">
+                                    placeholder="Website">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     others is required.
                                 </div>
@@ -142,7 +141,8 @@
                             <label for="username">Registration Date</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="Date" value="{{$edit_registration->registration_date}}" id="confirm_password"
+                                <input type="date" class="form-control" name="Date"
+                                    value="{{$edit_registration->registration_date}}" id="confirm_password"
                                     placeholder="Web Site">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Registration Date
@@ -157,7 +157,8 @@
                         <div class="mb-1">
                             <label for="username">Client Address</label>
                             <div class="input-group">
-                                <textarea class="form-control"name="caddress" id="form7Example7" rows="2">{{$edit_registration->customer_address}}</textarea>
+                                <textarea class="form-control" name="caddress" id="form7Example7"
+                                    rows="2">{{$edit_registration->customer_address}}</textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Action Plan is required.
                                 </div>
@@ -168,7 +169,8 @@
                         <div class="mb-1">
                             <label for="username">Physical Address</label>
                             <div class="input-group">
-                                <textarea class="form-control" id="form7Example7"name="paddress" rows="2">{{$edit_registration->physical_address}}</textarea>
+                                <textarea class="form-control" id="form7Example7" name="paddress"
+                                    rows="2">{{$edit_registration->physical_address}}</textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Complaint Description is required.
                                 </div>
@@ -193,16 +195,18 @@
                             <br>
                             <button type="submit" class="btn btn-primary float:right;"
                                 Style="width:50%;">Update</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                                onclick="history.back()">Cancel</button>
                         </div>
                     </div>
-              
+
             </form>
         </div>
     </div>
 </div>
 
 </body>
+
 </html>
 
 

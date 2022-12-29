@@ -28,10 +28,10 @@
 
             @csrf
             <tbody>
-                <tr>
+                <!-- <tr>
                     <th style="width:30%">No:</th>
                     <td>{{$view_pickup->id}}</td>
-                </tr>
+                </tr> -->
                 <tr>
                     <th>Client:</th>
                     <td>{{$view_pickup->client}}</td>
