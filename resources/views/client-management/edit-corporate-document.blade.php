@@ -1,33 +1,11 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container">
-    <div class="py-5 text-center">
-        @if(Session::has('staffregistered'))
-        <div class="alert alert-dark" role="alert">
-            {{ Session::get('staffregistered')}}
-        </div>
-        @endif
 
-    </div>
-    <div style="height: 50px;"></div>
-    <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-    <script type="text/javascript">
-    $(document).on('input', '#price', function() {
-        $('#percent').prop('readonly', true);
-
-    });
-    $(document).on('input', '#percent', function() {
-        $('#price').prop('readonly', true);
-
-    });
-    </script>
-    <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-    <div>
         {{-- heading --}}
-        <h4 id="hdtpa"><b>Add Document</b></h4>
+        <h4 id="hdtpa"><b>Add Corporate Document</b></h4>
         <br><br>
-    </div>
-    
+
 
 
     <div class="row">
@@ -45,7 +23,7 @@
                                     <th>Document Type</th>
                                     <th>File Upload</th>
                                     <th>Date</th>
-                                    <th></th>
+                                    <!-- <th></th> -->
                                 </tr>
 
                             </thead>
@@ -84,7 +62,8 @@
                     <div class="col-sm">
                         <br>
                         <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Submit</button>
-                        <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                            onclick="history.back()">Cancel</button>
                     </div>
                 </div>
             </form>
@@ -95,12 +74,7 @@
 
 
 </div>
-</div>
-</div>
 
-</div>
-
-</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">

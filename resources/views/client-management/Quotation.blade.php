@@ -60,7 +60,7 @@ color: #999;
                 crossorigin="anonymous"> -->
             {{-- heading --}} 
             <div class="container">
-            <h4 id="hdtpa"><b>New Quotation</b></h4>
+            <h4 id="hdtpa"><b> Quotation Details </b></h4>
             <br>
 
         
@@ -71,7 +71,7 @@ color: #999;
             <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
         </div> -->
          <div>
-        <button class="btn btn-primary add-btn" style="width:20%;" data-toggle="modal" data-target="#myModal">Add
+        <button class="btn btn-primary add-btn" style="width:20%;" data-toggle="modal" data-target="#myModal">Add New
             Quotation</button></a>
          </div>
        
@@ -108,7 +108,7 @@ color: #999;
 	
                         <thead>
                             <tr>
-                                <th class="text-center">No</th>
+                                <!-- <th class="text-center">No</th> -->
                                 <th class="text-center">Issue Date</th>
                                 <th class="text-center">Document No</th>
                                 <th class="text-center">Client</th>
@@ -120,7 +120,7 @@ color: #999;
                         <tbody>
                             @foreach($quotation as $list)
                             <tr id="data">
-                                <td scope="row" class="text-center">{{$list->id}}</td>
+                                <!-- <td scope="row" class="text-center">{{$list->id}}</td> -->
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->issue_date}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1"></td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->customer}}</td>
@@ -153,7 +153,7 @@ color: #999;
 
 
                     <div class="modal fade" id="myModal">
-                        <div class="modal-dialog modal-lg">
+                        <div class="modal-dialog modal-xl">
                             <div class="modal-content">
 
                                 <!-- Modal Header -->
@@ -201,7 +201,7 @@ color: #999;
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="mb-1">
-                                                                <label for="username">Client</label>
+                                                                <label for="username">Client Name</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend">
 
@@ -316,7 +316,7 @@ color: #999;
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="mb-1">
-                                                                <label for="username">To The Attender Of</label>
+                                                                <label for="username">To the Attender of</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
                                                                     <input type="text" class="form-control"
@@ -330,7 +330,7 @@ color: #999;
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="mb-1">
-                                                                <label for="username">Subject/Tittle</label>
+                                                                <label for="username">Subject / Title</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
                                                                     <input type="text" class="form-control"
@@ -346,15 +346,12 @@ color: #999;
                                                     <br>
                                                     <br>
                                                     <!-- <h2 style="text-align:center;"> Quotation Items</h2> -->
-                                                    <div>
-                                                        <div>
-                                                            <h4 id="hdtpa"><b> Quotation Items</b></h4>
+                                                  
+                                                        <div class="text-center">
+                                                            <h4><b> Quotation Items</b></h4>
 
                                                         </div><br>
 
-
-                                                    </div>
-                                                    <br>
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="mb-1">
