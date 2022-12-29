@@ -57,7 +57,7 @@
     <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Document Details</u></b></div><br><br> -->
     {{-- heading --}}
     <div class="container">
-        <h4 id="hdtpa"><b>Document Details</b></h4>
+        <h4 id="hdtpa"><b>Individual Document Details</b></h4>
 
 
         <div class="header_wrap">
