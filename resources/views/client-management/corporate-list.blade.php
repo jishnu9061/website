@@ -254,8 +254,7 @@
                                                         </div>
                                                         <select name="country" id="cars">
                                                             <option>Kenya</option>
-                                                            <option></option>
-                                                            <option></option>       
+                                                
                                                         </select>
                                                     </div>
                                                 </div>
@@ -462,8 +461,6 @@
                                                         <div class="input-group-prepend"></div>
                                                         <select name="country" id="cars">
                                                             <option>Nairobi</option>
-                                                            <option></option>
-                                                            <option></option>
                                                            
                                                         </select>
 
@@ -525,8 +522,14 @@
                                                         <label for="username">Designation</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="text" class="form-control" name="Designation"
-                                                                id="age" value="" placeholder="" min="0" max="99">
+                                                            <select name="industry" id="cars">
+                                                            <option>Select</option>
+                                                            <option>Manager</option>
+                                                            <option>Advocate</option>
+                                                           
+                                                        </select>
+                                                            <!-- <input type="text" class="form-control" name="Designation"
+                                                                id="age" value="" placeholder="" min="0" max="99"> -->
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Mobile No is required.
                                                             </div>

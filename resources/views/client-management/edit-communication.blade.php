@@ -7,7 +7,7 @@
     <div>
 
         {{-- heading --}}
-        <h4 id="hdtpa"><b>Edit Communication</b></h4>
+        <h4 id="hdtpa"><b>Edit Communication Details</b></h4>
         <br>
 
     </div>
@@ -61,11 +61,16 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Customer</label>
+                            <label for="username">Client Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="Customer" id="age"
-                                    value="{{ $edit->customer}}" min="0" max="99">
+                                <select name="industry" id="cars">
+                                    <option>client 1</option>
+                                    <option>client 2</option>
+                                 
+                                </select>
+                                <!-- <input type="text" class="form-control" name="Customer" id="age"
+                                    value="{{ $edit->customer}}" min="0" max="99"> -->
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
                                 </div>
@@ -228,7 +233,8 @@
                     </div>
                     <div class="col-sm">
                         <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
-                        <button type="button" class="btn btn-primary float:left" Style="width:45%;" onclick="history.back()">Close</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                            onclick="history.back()">Close</button>
                     </div>
                 </div>
 
