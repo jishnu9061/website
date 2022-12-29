@@ -100,7 +100,7 @@ color: #999;
                                 <th class="text-center">Email Address</th>
                                 <th class="text-center">Services Offered</th>
                                 <th class="text-center">Status</th>
-                                <th class="text-center">Add Documents</th>
+                                <th class="text-center">Documents</th>
                                 <th class="text-center">Actions</th>
                                 <!-- <th class="text-center">Edit</th>
                                 <th class="text-center">Delete</th> -->
@@ -120,7 +120,7 @@ color: #999;
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list_client->client_type}}
                                 </td>
                                 <td scope="row" class="text-center"><a href="{{url('view-client')}}">
-                                        <a href="{{url('create-document',$list_client->id)}}"><button class="doc-button" >Add Documents</button></a>
+                                        <a href="{{url('create-document',$list_client->id)}}"><button class="btn btn-primary"> Add </button></a>
                                 </td>        
                                 <td> <a href="{{url('show-client',$list_client->id )}}"><i style="color:black;"
                                             class="fa fa-eye" aria-hidden="true"></i></a>
