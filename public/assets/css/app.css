@@ -2174,6 +2174,14 @@ button, button
     
 }
 
+/* .sidebar-wrapper .menu .sidebar-link:visited {
+    color: green;
+  }
+
+  .sidebar-wrapper .menu .sidebar-link:link {
+    color: red;
+  } */
+
 
 
 .sidebar-wrapper .menu .sidebar-link svg,
@@ -2195,9 +2203,8 @@ button, button
 }
 
 .sidebar-wrapper .menu .sidebar-link:active {
-    background-color: #ffffff;
+    background-color: #033a66;
 }
-
 
 
 .sidebar-wrapper .menu .sidebar-item {

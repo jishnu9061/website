@@ -1010,9 +1010,6 @@
                         <i id="bkbtnicon" class="far fa-arrow-alt-circle-left p-3"></i></a>
                     <!--  -->
 
-
-
-
                     <!-- Nav ToolTip -->
                     <div class="nav-item dropdown">
 
@@ -1023,7 +1020,6 @@
                                 style="height: 35px; width: 35px;" id="cr_logo"
                                 src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA">
                         </button>
-
 
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{url('user_management')}}">User Management</a>
