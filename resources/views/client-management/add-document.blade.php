@@ -66,7 +66,7 @@ $(document).on('input', '#percent', function() {
 
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr class="text-center">
                                 <td style="width:45%;"> <select class="form-control select_group product"
                                         data-row-id="row_3" id="product_detailes" name="testname[]" style="width:100%;">
                                         <option selected>Select</option>
