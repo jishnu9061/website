@@ -32,46 +32,46 @@
                     <td>{{$view_complaint ->id}}</td>
                 </tr>
                 <tr>
-                    <th>date:</th>
+                    <th>Date:</th>
                     <td>{{$view_complaint ->date}}</td>
                 </tr>
-                    <th>client_type:</th>
+                    <th>Client Type:</th>
                     <td>{{$view_complaint ->client_type}}</td>
                 </tr>
                 </tr>
-                    <th>files:</th>
+                    <th>Files:</th>
                     <td>{{$view_complaint ->files}}</td>
                 </tr>
                 </tr>
-                    <th>customer_name:</th>
+                    <th>Customer Name:</th>
                     <td>{{$view_complaint ->customer_name}}</td>
                 </tr>
                 <tr>
-                    <th>staff_handling:</th>
+                    <th>Staff Handling:</th>
                     <td>{{$view_complaint ->staff_handling}}</td>
                 </tr>
                 <tr>
-                    <th>complaint_about:</th>
+                    <th>Complaint About:</th>
                     <td>{{$view_complaint ->complaint_about}}</td>
                 </tr>
                 <tr>
-                    <th>telephone_no:</th>
+                    <th>Telephone No:</th>
                     <td>{{$view_complaint ->telephone_no}}</td>
                 </tr>
                 <tr>
-                    <th>email:</th>
+                    <th>Email:</th>
                     <td>{{$view_complaint ->email}}</td>
                 </tr>
                 <tr>
-                    <th>others:</th>
+                    <th>Others:</th>
                     <td>{{$view_complaint ->others}}</td>
                 </tr>
                 <tr>
-                    <th>action_plan:</th>
+                    <th>Action Plan:</th>
                     <td>{{$view_complaint ->action_plan}}</td>
                 </tr>
                 <tr>
-                    <th>complaint_description:</th>
+                    <th>Complaint Description:</th>
                     <td>{{$view_complaint ->complaint_description}}</td>
                 </tr>
                
