@@ -76,8 +76,8 @@
 
 
 
-      
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
 
         <script>
@@ -199,18 +199,18 @@
 
 
         .progress {
-  background: rgb(252, 245, 184);
-  display: block;
-  height: 5px;
-  text-align: center;
-  transition: width .3s;
-  width: 0;
-}
+            background: rgb(252, 245, 184);
+            display: block;
+            height: 5px;
+            text-align: center;
+            transition: width .3s;
+            width: 0;
+        }
 
-.progress.hide {
-  opacity: 0;
-  transition: opacity 1.3s;
-}
+        .progress.hide {
+            opacity: 0;
+            transition: opacity 1.3s;
+        }
         </style>
 
     </head>
@@ -218,48 +218,48 @@
     <body>
         <div class="progress"></div>
         <script>
-            var data = [];
-for (var i = 0; i < 100000; i++) {
-    var tmp = [];
-    for (var i = 0; i < 100000; i++) {
-        tmp[i] = 'hue';
-    }
-    data[i] = tmp;
-};
-$.ajax({
-    xhr: function () {
-        var xhr = new window.XMLHttpRequest();
-        xhr.upload.addEventListener("progress", function (evt) {
-            if (evt.lengthComputable) {
-                var percentComplete = evt.loaded / evt.total;
-                console.log(percentComplete);
-                $('.progress').css({
-                    width: percentComplete * 100 + '%'
-                });
-                if (percentComplete === 1) {
-                    $('.progress').addClass('hide');
-                }
+        var data = [];
+        for (var i = 0; i < 100000; i++) {
+            var tmp = [];
+            for (var i = 0; i < 100000; i++) {
+                tmp[i] = 'hue';
             }
-        }, false);
-        xhr.addEventListener("progress", function (evt) {
-            if (evt.lengthComputable) {
-                var percentComplete = evt.loaded / evt.total;
-                console.log(percentComplete);
-                $('.progress').css({
-                    width: percentComplete * 100 + '%'
-                });
-            }
-        }, false);
-        return xhr;
-    },
-    type: 'POST',
-    url: "/echo/html",
-    data: data,
-    success: function (data) {}
-});
+            data[i] = tmp;
+        };
+        $.ajax({
+            xhr: function() {
+                var xhr = new window.XMLHttpRequest();
+                xhr.upload.addEventListener("progress", function(evt) {
+                    if (evt.lengthComputable) {
+                        var percentComplete = evt.loaded / evt.total;
+                        console.log(percentComplete);
+                        $('.progress').css({
+                            width: percentComplete * 100 + '%'
+                        });
+                        if (percentComplete === 1) {
+                            $('.progress').addClass('hide');
+                        }
+                    }
+                }, false);
+                xhr.addEventListener("progress", function(evt) {
+                    if (evt.lengthComputable) {
+                        var percentComplete = evt.loaded / evt.total;
+                        console.log(percentComplete);
+                        $('.progress').css({
+                            width: percentComplete * 100 + '%'
+                        });
+                    }
+                }, false);
+                return xhr;
+            },
+            type: 'POST',
+            url: "/echo/html",
+            data: data,
+            success: function(data) {}
+        });
         </script>
 
-        
+
         <div id="app">
 
             <div id="sidebar" class="active">
@@ -554,7 +554,7 @@ $.ajax({
 
 
 
-                            
+
                             <!-- CRA Dashboard End -->
 
 
@@ -1007,18 +1007,16 @@ $.ajax({
                 <nav class=" newstyle1 navbar navbar-expand-lg  sticky-top navbar-light bg-white">
                     <a id="backbtn" href="javascript:history.back()" style=" color: #070344;
                                             font-size: 35px;">
-                        <i id="bkbtnicon" class="far fa-arrow-alt-circle-left"></i></a>
+                        <i id="bkbtnicon" class="far fa-arrow-alt-circle-left p-3"></i></a>
                     <!--  -->
 
-                    <a class="navbar-brand pl-4" href="#">
-                        <img src="{{asset('/') }}assets//images/faces/lawemb.png" height="40px"
-                            class="d-inline-block align-top" alt="">
 
 
-                    </a>
 
                     <!-- Nav ToolTip -->
                     <div class="nav-item dropdown">
+
+
                         <button class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img data-toggle="tooltip" data-placement="top" title="Menu"
@@ -1044,6 +1042,35 @@ $.ajax({
                         </div>
                     </div>
                     <!--  -->
+                    <ul class="navbar-nav mr-auto lg-pl-3 p-3">
+
+                        <li class="nav-item dropdown">
+                            <button class=" dropdown-toggle-x btn btn-primary p-1" style="font-size:12px;" href="#"
+                                id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <b> Create New </b>
+                                <i class="fa fa-plus-square"></i>
+                            </button>
+
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{url('user_management')}}">Time entry</a>
+                                <a class="dropdown-item" href="{{url('client-index')}}">Expense entry</a>
+                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Task</a>
+                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Matter</a>
+                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Contact</a>
+                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Record payment</a>
+                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Client funds
+                                    request</a>
+                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Email log</a>
+                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Phone log</a>
+                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Secure message</a>
+                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Event</a>
+                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Note</a>
+
+                            </div>
+                        </li>
+                    </ul>
 
                     <!--Nav Hamburger -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -1054,50 +1081,21 @@ $.ajax({
 
                     <div class="collapse navbar-collapse ml-2" id="navbarTogglerDemo01">
                         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="font-bold text-uppercase nav-link" href="#"> {{ Auth::user()->name }} <span
-                                        class="sr-only">(current)</span></a>
-                            </li>
+
 
                             <li class="nav-item">
-                                <form class="form-inline my-2 my-lg-0">
+                                <form class="form-inline my-2 my-lg-2">
                                     <input class="form-control mr-sm-2" type="search" placeholder="Search"
                                         aria-label="Search">
                                     <button class="btn btn-primary my-2 my-sm-0" type="submit"><i
                                             class="fa fa-search"></i></button>
                                 </form>
                             </li>
-                        </ul>
-
-                        <ul class="navbar-nav mr-auto lg-pl-3">
-
-                            <li class="nav-item dropdown">
-                                <button class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown"
-                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Create New <i class="fa fa-plus-square"></i>
-                                </button>
 
 
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{url('user_management')}}">Time entry</a>
-                                    <a class="dropdown-item" href="{{url('client-index')}}">Expense entry</a>
-                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Task</a>
-                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Matter</a>
-                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Contact</a>
-                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Record payment</a>
-                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Client funds
-                                        request</a>
-                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Email log</a>
-                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Phone log</a>
-                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Secure message</a>
-                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Event</a>
-                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Note</a>
 
-                                </div>
-                            </li>
-                        </ul>
 
-                        <!-- <div id="stopwatch-container">
+                            <!-- <div id="stopwatch-container">
                             <p id="stopwatch">00:00:00:00 </p>
                             <div id="buttons-container">
                                 <button onclick="main()" id="main-btn" class="btn">Start</button>
@@ -1106,7 +1104,34 @@ $.ajax({
                         </div>
                     </div> -->
 
+
+                            <!-- <a class="navbar-brand pl-4" href="#">
+                                <img src="{{asset('/') }}assets//images/faces/lawemb.png" height="40px"
+                                    class="d-inline-block align-top" alt="">
+                            </a>
+
+
+                            <li class="nav-item active">
+                                <a class="font-bold text-uppercase nav-link" href="#"> {{ Auth::user()->name }} <span
+                                        class="sr-only">(current)</span></a>
+                            </li> -->
+                        </ul>
+
+                        
+                        <a class="navbar-brand pl-2" href="#">
+                            <img src="{{asset('/') }}assets//images/faces/lawemb.png" height="40px"
+                                class="d-inline-block align-top" alt="">
+                        </a>
+
+
+                        <li class="nav-item active" style=" text-decoration: none; list-style:none;">
+                            <a class="font-bold text-uppercase nav-link" href="#"> {{ Auth::user()->name }} <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+
+                        
                         <!-- LogOut Button  -->
+
 
                         <div id="navr" style="margin-right: .5%;">
 
@@ -1142,10 +1167,10 @@ $.ajax({
                 </section>
 
 
-    
-            <footer id="ftr" class="newstyle2 container-fluid bg-white p-4 mt-5 border-top">
-                
-                <div class="footer clearfix  text-muted ">
+
+                <footer id="ftr" class="newstyle2 container-fluid bg-white p-4 mt-5 border-top">
+
+                    <div class="footer clearfix  text-muted ">
 
 
                         <div class="container text-center">
@@ -1406,10 +1431,10 @@ $.ajax({
         }
         </script>
 
-{{-- const myElement = document.getElementById("subm");
+        {{-- const myElement = document.getElementById("subm");
 myElement.style.color = "red"  --}}
 
-    
+
 
     </body>
 
