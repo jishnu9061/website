@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<div class="container" >
-    <div class="py-5 text-center">
+<div class="container">
+    <!-- <div class="py-5 text-center">
         @if(Session::has('staffregistered'))
         <div class="alert alert-dark" role="alert">
             {{ Session::get('staffregistered')}}
@@ -12,8 +12,14 @@
             {{ Session::get('leavevalidat')}}
         </div>
         @endif
-       
-    </div>
+
+    </div> -->
+
+
+    <h4 id="hdtpa"><b>Add New Task</b></h4>
+    <br><br>
+
+
     <div class="row">
 
         <div class="col-md-12 order-md-1">
@@ -21,8 +27,8 @@
             <form method="post" action="" id="form">
                 @csrf
                 <div class="row">
-                
-               
+
+
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Add Task</label>
@@ -37,7 +43,6 @@
 
 
                 </div>
-                <br>
                 <!-- <div>
                     <div class="container">
                         <div class="row">
@@ -54,33 +59,24 @@
                     </div>
                 </div> -->
                 <div class="row">
-                        <div class="col-sm">
+                    <div class="col-sm">
 
-                        </div>
-                        <div class="col-sm">
+                    </div>
+                    <div class="col-sm">
 
-                        </div>
-                        <div class="col-sm">
-                            <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Cancel</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">View Report</button>
-                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <br>
+                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Cancel</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;">View Report</button>
                     </div>
                 </div>
-
-
-
         </div>
-
-
-
-
-
-        </tbody>
-        </table>
     </div>
+
+   
 </div>
-<br>
+
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
 $(function() {
@@ -247,9 +243,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Salary is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -276,9 +272,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Years of experience is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -301,9 +297,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 dob is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 /div>
 
             {
@@ -335,9 +331,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Bank Name is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -363,9 +359,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Account number is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -388,9 +384,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 IFSC Code is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-12" >
                 <
                 div class = "mb-1" >
@@ -431,7 +427,7 @@ $(document).on('input', '#percent', function() {
 
                 <
                 /tr> < /
-                table > {
+            table > {
                     {
                         -- < input type = "text"
                         class = "form-control"
@@ -448,7 +444,7 @@ $(document).on('input', '#percent', function() {
                         -- < /div> --}} < /
                         div > <
                             /div> < /
-                            div >
+                        div >
 
                             <
                             /div> <
@@ -490,9 +486,9 @@ $(document).on('input', '#percent', function() {
 
                             <
                             /tbody> < /
-                            table > <
+                        table > <
                             /div> < /
-                            div > <
+                        div > <
                             script src = "{{ url('assets/js') }}/jquery.min.js" >
 </script>
 <script type="text/javascript">
