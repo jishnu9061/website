@@ -553,8 +553,9 @@ class ClientManagement extends Controller
     //Pickup-client
 
     public function clientPickup(){
+        $get_items  = DB::table('cra_individual_client_details')->get();
         $client_pickup = DB::table('cra_client_pickup_reception')->get();
-        return view('client-management.client-pickup',compact('client_pickup'));
+        return view('client-management.client-pickup',compact('client_pickup','get_items'));
     }
 
 
