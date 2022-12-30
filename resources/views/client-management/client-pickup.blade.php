@@ -256,9 +256,11 @@
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
                                                                     <select name="industry" id="cars">
-                                                                        <option>--select--</option>
-                                                                        <option>Client 1</option>
-                                                                        <option>Client 2</option>
+                                                                        @if(count($get_items))
+                                                                        @foreach($get_items as $list_client)
+                                                                        <option>{{$list_client->client_name}}</option>
+                                                                       @endforeach
+                                                                       @endif
                                                                      
                                                                     </select>
                                                                     <!-- <input type="text" class="form-control" name="name"
