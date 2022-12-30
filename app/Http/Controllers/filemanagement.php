@@ -1383,11 +1383,11 @@ public function view_new_instructions(Request $request)
 public function new_file_instructions()
 {
 
-    $new_file_instruction=DB::table('cra_add_new_instructions')
-    ->select('*')
-    ->leftjoin('cra_add_file_progress','cra_add_file_progress.id','=','cra_add_new_instructions.id')
-    ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_new_instructions.id')
-    ->get();    
+    $new_file_instruction=DB::table('cra_add_new_instructions')->get();
+    // ->select('*')
+    // ->leftjoin('cra_add_file_progress','cra_add_file_progress.id','=','cra_add_new_instructions.id')
+    // ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_new_instructions.id')
+    // ->get();    
         return view('file_management.file_instruction',compact('new_file_instruction'));
     // return view('file_management.file_instruction');
 }
