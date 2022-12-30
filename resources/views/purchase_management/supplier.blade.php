@@ -47,7 +47,9 @@
                     <tr>
                         <th scope="col">Supplier Name</th>
                         <th scope="col">Product Supply</th>
-                        <th scope="col">Supplier Name</th>
+                        <th scope="col">Payment Details</th>
+                        <th scope="col">Action</th>
+                       
 
                     </tr>
                 </thead>
@@ -56,13 +58,14 @@
 
                         <td></td>
                         <td></td>
+                        <td> <a href="{{url('ledger_details')}}"> <button type="button" class="btn btn-primary" >Show Payment</button></a></td>
                         <td><a href="{{url('view_supplier')}}"> <i style="color:rgb(13, 1, 56);"
                                     class="fa fa-eye"></i><span class="m-2"></span>
                                 <a href="{{url('edit_supplier')}}"><i style="color:rgb(13, 1, 56);"
                                         class="fa fa-edit"></i><span class="m-2"></span>
                                     <a href="{{url('')}}"><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
                         </td>
-
+                       
                     </tr>
 
 
