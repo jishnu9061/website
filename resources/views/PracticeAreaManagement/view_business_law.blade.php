@@ -15,7 +15,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <input type="text" class="form-control" placeholder="2017-10-279">
+                        <input type="text" class="form-control" value="2017-10-279" Disabled>
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <input type="text" class="form-control" placeholder="Hank Wiliams">
+                        <input type="text" class="form-control" value="Hank Wiliams" Disabled>
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <input type="text" class="form-control" placeholder="Corporation">
+                        <input type="text" class="form-control" value="Corporation" Disabled>
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <textarea class="form-control" rows="2">Country Roads Albums</textarea>
+                        <textarea class="form-control" rows="2" Disabled>Country Roads Albums</textarea>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <textarea class="form-control" rows="2">Purpose: Producer of county music</textarea>
+                        <textarea class="form-control" rows="2" Disabled>Purpose: Producer of county music</textarea>
                     </div>
                 </div>
             </div>

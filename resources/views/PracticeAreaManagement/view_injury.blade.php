@@ -23,7 +23,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="matter_info" id="age" value="">
+                                <input type="text" class="form-control" name="matter_info" id="age" value="" Disabled>
                                 <!-- <select name="box_type" id="cars">
                                 <option>select</option>
                                                             <option>Box Type 1</option>
@@ -46,7 +46,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="matter_type" id="age" value="">
+                                <input type="text" class="form-control" name="matter_type" id="age" value="" Disabled>
                                 <!-- <select name="box_type" id="cars">
                                 <option>select</option>
                                                             <option>Box Type 1</option>
@@ -77,7 +77,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="incident" id="age" value="">
+                                <input type="text" class="form-control" name="incident" id="age" value="" Disabled>
                                 <!-- <select name="box_type" id="cars">
                                 <option>select</option>
                                                             <option>Box Type 1</option>
@@ -100,7 +100,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="damage" id="age" value="">
+                                <input type="text" class="form-control" name="damage" id="age" value="" Disabled>
                             </div>
                         </div>
                     </div>
@@ -112,7 +112,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="insurer" id="age" value="">
+                                <input type="text" class="form-control" name="insurer" id="age" value="" Disabled>
                                 <!-- <select name="box_type" id="cars">
                                 <option>select</option>
                                                             <option>Box Type 1</option>
@@ -135,7 +135,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="policy_detail" id="age" value="">
+                                <input type="text" class="form-control" name="policy_detail" id="age" value="" Disabled>
                                 <!-- <select name="box_type" id="cars">
                                 <option>select</option>
                                                             <option>Box Type 1</option>
@@ -162,7 +162,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="defendent" id="age" value="">
+                                <input type="text" class="form-control" name="defendent" id="age" value="" Disabled>
                                 <!-- <select name="box_type" id="cars">
                                 <option>select</option>
                                                             <option>Box Type 1</option>

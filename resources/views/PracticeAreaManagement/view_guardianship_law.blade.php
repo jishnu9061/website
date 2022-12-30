@@ -14,7 +14,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Matter Info</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                        <input type="text" class="form-control" placeholder="679VL-0618">
+                        <input type="text" class="form-control" value="679VL-0618" Disabled>
                     </div>
                 </div>
             </div>
@@ -23,7 +23,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Petitioner</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                        <input type="text" class="form-control" placeholder="Jessica Robinson">
+                        <input type="text" class="form-control" value="Jessica Robinson" Disabled>
                     </div>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                        <input type="text" class="form-control" placeholder="Guardinship of a Disabled Person">
+                        <input type="text" class="form-control" value="Guardinship of a Disabled Person" Disabled>
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Disabled Person</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                        <input type="text" class="form-control" placeholder="Charles Newman">
+                        <input type="text" class="form-control" value="Charles Newman" Disabled>
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
                         <textarea class="form-control"
-                            rows="2">Law Office of Greg Peters Attorney Greg Peters</textarea>
+                            rows="2" Disabled>Law Office of Greg Peters Attorney Greg Peters</textarea>
                     </div>
                 </div>
             </div>
@@ -62,7 +62,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Disability Details</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                        <textarea class="form-control" rows="2">Dementia</textarea>
+                        <textarea class="form-control" rows="2" Disabled>Dementia</textarea>
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Case Details</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                        <textarea class="form-control" rows="2">Brown 666-333</textarea>
+                        <textarea class="form-control" rows="2" Disabled>Brown 666-333</textarea>
                     </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Guardian</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                        <input type="text" class="form-control" placeholder="Janet Newman">
+                        <input type="text" class="form-control" value="Janet Newman" Disabled>
                     </div>
                 </div>
             </div>
@@ -91,7 +91,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Attorney</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                        <textarea class="form-control" rows="2">Law Office of Glenn Evans contact Glenn Evans</textarea>
+                        <textarea class="form-control" rows="2" Disabled>Law Office of Glenn Evans contact Glenn Evans</textarea>
                     </div>
                 </div>
             </div>
@@ -103,7 +103,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
                         <textarea class="form-control"
-                            rows="2">Guardian of the Person Petition Field: 8/07/2018</textarea>
+                            rows="2" Disabled>Guardian of the Person Petition Field: 8/07/2018</textarea>
                     </div>
                 </div>
             </div>

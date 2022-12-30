@@ -14,7 +14,7 @@
                     <label for="exampleFormControlInput1" class="form-label">File No</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                        <input type="text" class="form-control" placeholder="12T654C">
+                        <input type="text" class="form-control" value="12T654C" Disabled>
                     </div>
                 </div>
             </div>
@@ -23,7 +23,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Client Name</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                        <input type="text" class="form-control" placeholder="Alen">
+                        <input type="text" class="form-control" value="Alen" Disabled>
                     </div>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                        <input type="text" class="form-control" placeholder="Pre Decree">
+                        <input type="text" class="form-control" value="Pre Decree" Disabled>
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Other Party</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                        <input type="text" class="form-control" placeholder="Smith">
+                        <input type="text" class="form-control" value="Smith" Disabled>
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Attorney</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                        <input type="text" class="form-control" placeholder="David">
+                        <input type="text" class="form-control" value="David" Disabled>
                     </div>
                 </div>
             </div>
@@ -62,7 +62,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Case Details</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                        <textarea class="form-control" rows="2" placeholder="Divorce"></textarea>
+                        <textarea class="form-control" rows="2" value="Divorce" Disabled></textarea>
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Marriage Details</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                        <textarea class="form-control" rows="2" placeholder="Marriage Details"></textarea>
+                        <textarea class="form-control" rows="2" value="Marriage Details" Disabled></textarea>
                     </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Property Details</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                        <textarea class="form-control" rows="2" placeholder="Property Details"></textarea>
+                        <textarea class="form-control" rows="2" value="Property Details" Disabled></textarea>
                     </div>
                 </div>
             </div>
@@ -91,7 +91,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Child Details</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                        <textarea class="form-control" rows="2" placeholder="Child Details"></textarea>
+                        <textarea class="form-control" rows="2" value="Child Details" Disabled></textarea>
                     </div>
                 </div>
             </div>
