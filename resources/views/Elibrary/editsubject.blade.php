@@ -40,24 +40,27 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <input type="text" class="form-control" name="category" value="{{$edit->category}}" id="age">
-                        <div class="invalid-feedback" style="width: 100%;">
-                            Incorporation is required
-                        </div>
+                        <select name="category" value="{{$edit->category}}" id="cars">
+                            <option>---select---</option>
+                            <option></option>
+
+                        </select>
                     </div>
                 </div>
             </div>
         </div>
         <br>
+
         <div class="row">
             <div class="col-md-12">
                 <div class="mb-1">
-                    <label for="username">Discription</label>
+                    <label for="username">Description</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
 
                         </div>
-                        <textarea rows="4" cols="50" name="discription" class="form-control" type="text">{{$edit->discription}}</textarea>
+                        <textarea rows="4" cols="50" name="discription" class="form-control"
+                            type="text">{{$edit->discription}}</textarea>
                         <div class="invalid-feedback" style="width: 100%;">
                             Incorporation is required
                         </div>
