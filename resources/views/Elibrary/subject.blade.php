@@ -44,7 +44,7 @@
 
                     <th scope="col">Subject</th>
                     <th scope="col">Category</th>
-                    <th scope="col">Discription</th>
+                    <th scope="col">Description</th>
                     <th scope="col">Action</th>
 
                 </tr>
@@ -131,10 +131,13 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <input type="text" class="form-control" name="category" id="age">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                            Incorporation is required
-                                        </div>
+                                        <select name="category" id="cars">
+                                            <option>---select---</option>
+                                            <option></option>
+                                            <option></option>
+                                            
+                                            
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -143,7 +146,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="mb-1">
-                                    <label for="username">Discription</label>
+                                    <label for="username">Description</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
 

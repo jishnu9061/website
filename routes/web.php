@@ -1535,6 +1535,9 @@ Route::any('/editprecedence/{id}','Elibrary@editprecedences')->name('editprecede
 Route::any('update_precedence','Elibrary@updateprecedences')->name('update_precedence');
 Route::any('/delete_precedence/{id}','Elibrary@deleteprecedence')->name('delete_precedence');
 Route::any('viewprecedence','Elibrary@viewprecedences')->name('viewprecedence');
+Route::any('subject_category','Elibrary@subject_categorys')->name('subject_category');
+Route::any('editsubject_category','Elibrary@editsubject_categorys')->name('editsubject_category');
+
 
 
 
