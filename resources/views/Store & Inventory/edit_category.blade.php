@@ -21,48 +21,54 @@
                 <h4 id="hdtpa"><b>Edit Category</b></h4>
                 <br>
             </div>
-            <div class="row">
-                <div class="col-md-12 order-md-1">
-                    <form method="post" action="{{url('update_category')}}" id="form">
-                        @csrf
-                        <input type="hidden" name="id" value="{{$edit->id}}">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="mb-1">
-                                    <label for="username">Category Name</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"></div>
-                                        <input type="text" class="form-control" name="category_name" id="username"
-                                            value="{{$edit->category_name}}" placeholder="" required>
-                                        <div class="invalid-feedback" style="width: 100%;">
-
+          
+        </div>
+        <div class="card">
+            <div class="card-header">
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12 order-md-1">
+                        <form method="post" action="{{url('update_category')}}" id="form">
+                            @csrf
+                            <input type="hidden" name="id" value="{{$edit->id}}">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="mb-1">
+                                        <label for="username">Category Name</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <input type="text" class="form-control" name="category_name" id="username"
+                                                value="{{$edit->category_name}}" placeholder="" required>
+                                            <div class="invalid-feedback" style="width: 100%;">
+    
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+    
                             </div>
-
-                        </div>
-                        <br>
-
-                        <div class="row">
-                            <div class="col-sm">
-
+                            <br>
+    
+                            <div class="row">
+                                <div class="col-sm">
+    
+                                </div>
+                                <div class="col-sm">
+    
+                                </div>
+                                <div class="col-sm">
+                                    <br>
+                                    <button type="submit" class="btn btn-primary float:right;"
+                                        Style="width:50%;">Update</button>
+                                    <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                                        data-dismiss="modal">Cancel</button>
+                                </div>
                             </div>
-                            <div class="col-sm">
-
-                            </div>
-                            <div class="col-sm">
-                                <br>
-                                <button type="submit" class="btn btn-primary float:right;"
-                                    Style="width:50%;">Update</button>
-                                <button type="button" class="btn btn-primary float:left" Style="width:45%;"
-                                    data-dismiss="modal">Cancel</button>
-                            </div>
-                        </div>
-                </div>
-                </form>
-            </div>
-        </div>
+                    </div>
+                    </form>
+                </div>            </div>
+          </div>
 
 
 
