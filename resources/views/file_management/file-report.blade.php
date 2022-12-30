@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container">
-    <div class="py-5 text-center">
+    <!-- <div class="py-5 text-center">
         @if(Session::has('staffregistered'))
         <div class="alert alert-dark" role="alert">
             {{ Session::get('staffregistered')}}
@@ -12,17 +12,19 @@
             {{ Session::get('leavevalidat')}}
         </div>
         @endif
-    
-                     {{-- heading --}}
-  <h4 id="hdtpa"><b>File Reports</b></h4>
-  <br><br>
+    </div> -->
+
+
+    {{-- heading --}}
+    <h4 id="hdtpa"><b>File Reports</b></h4>
+    <br><br>
 
 
 
 
     <div>
-       
-        <div>
+
+        <div class="text-center">
             <input class="btn btn-primary" type="button" value="Today">
             <input class="btn btn-primary" type="button" value="This Week">
             <input class="btn btn-primary" type="button" value="Last Week">
@@ -34,7 +36,8 @@
             <input class="btn btn-primary" type="button" value="Last Year">
         </div>
         <br>
-        
+        <br>
+
 
 
 
@@ -47,8 +50,6 @@
             <form method="post" action="" id="form">
                 @csrf
                 <div class="row">
-
-
 
                     <div class="col-md-4">
                         <div class="mb-1">
@@ -67,10 +68,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- </div>
 
-        <br>
-        <div class="row"> -->
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Date (From)</label>
@@ -97,17 +95,34 @@
                             </div>
                         </div>
                     </div>
-</div>
+                </div>
+                <br>
+
+
+                <div class="row">
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+                        <br>
+                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">View</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                            onclick="history.back()">Close</button>
+                    </div>
+                </div>
+
+        </div>
 
 
 
+    </div>
 
 
 
-
-
-                    <br>
-                    <!-- <div>
+    <!-- <div>
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm">
@@ -122,33 +137,11 @@
                             </div>
                         </div>
                     </div> -->
-                    <div class="row">
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-                            <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">View</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;" onclick="history.back()">Close</button>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                </div>
 
 
 
 
 
-                </tbody>
-                </table>
-        </div>
-    </div>
     <script src="{{ url('assets/js') }}/jquery.min.js"></script>
     <script type="text/javascript">
     $(function() {
@@ -315,9 +308,9 @@
                 style = "width: 100%;" >
                     Salary is required. <
                     /div> < /
-                    div > <
+                div > <
                     /div> < /
-                    div >
+                div >
 
                     <
                     div class = "col-md-4" >
@@ -344,9 +337,9 @@
                 style = "width: 100%;" >
                     Years of experience is required. <
                     /div> < /
-                    div > <
+                div > <
                     /div> < /
-                    div > <
+                div > <
                     div class = "col-md-4" >
                     <
                     div class = "mb-1" >
@@ -369,9 +362,9 @@
                 style = "width: 100%;" >
                     dob is required. <
                     /div> < /
-                    div > <
+                div > <
                     /div> < /
-                    div > <
+                div > <
                     /div>
 
                 {
@@ -403,9 +396,9 @@
                 style = "width: 100%;" >
                     Bank Name is required. <
                     /div> < /
-                    div > <
+                div > <
                     /div> < /
-                    div >
+                div >
 
                     <
                     div class = "col-md-4" >
@@ -431,9 +424,9 @@
                 style = "width: 100%;" >
                     Account number is required. <
                     /div> < /
-                    div > <
+                div > <
                     /div> < /
-                    div > <
+                div > <
                     div class = "col-md-4" >
                     <
                     div class = "mb-1" >
@@ -456,9 +449,9 @@
                 style = "width: 100%;" >
                     IFSC Code is required. <
                     /div> < /
-                    div > <
+                div > <
                     /div> < /
-                    div > <
+                div > <
                     div class = "col-md-12" >
                     <
                     div class = "mb-1" >
@@ -499,7 +492,7 @@
 
                     <
                     /tr> < /
-                    table > {
+                table > {
                         {
                             -- < input type = "text"
                             class = "form-control"
@@ -516,7 +509,7 @@
                             -- < /div> --}} < /
                             div > <
                                 /div> < /
-                                div >
+                            div >
 
                                 <
                                 /div> <
@@ -558,9 +551,9 @@
 
                                 <
                                 /tbody> < /
-                                table > <
+                            table > <
                                 /div> < /
-                                div > <
+                            div > <
                                 script src = "{{ url('assets/js') }}/jquery.min.js" >
     </script>
     <script type="text/javascript">
