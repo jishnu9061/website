@@ -142,13 +142,14 @@ thead, tbody, tfoot, tr, td, th {
 
 .modal .modal-content {
     padding: 20px;
-    background: linear-gradient(to top, #cacaca 0%,  #d8dada 30%, #e8f5f5 40%,rgb(255, 255, 255)78%);
+    background: linear-gradient(to top, #f1d9b0 0%,  #f1d9b0 30%, #f1d9b0 40%,rgb(255, 255, 255)78%);
+    // background: linear-gradient(to top, #cacaca 0%,  #d8dada 30%, #e8f5f5 40%,rgb(255, 255, 255)78%);
     mix-blend-mode: color-dodge;
     // background: rgba(132, 209, 241, 0.6);
     box-shadow: 2.75px 2.75px 4.58333px rgb(39 59 74 / 20%);
     backdrop-filter: blur(116px);
     border-radius: 9px;
-    opacity: .9;
+    // opacity: .9;
     
 }
 
