@@ -4,6 +4,7 @@
 
 } */
 
+
 #gg { padding-top:80px; padding-bottom :80px;  text-align:center; width:130px; background-color: #f0ebe2; color: #252422;
 
 }
@@ -94,7 +95,84 @@
     margin-left: auto;
     margin-right: auto;
     align-items: center;
+
 }
+
+.lightSweep {
+    display: block;
+    width: 90px;
+    height: auto;
+ left: 75px;
+    align-items: center;
+  position: absolute;
+
+  background: none 0% 0% / auto repeat scroll padding-box border-box
+    rgba(255, 255, 255, 0);
+  overflow: hidden;
+  -webkit-filter: brightness(1.5);
+  -webkit-mask-size: 300% 200%;
+  -webkit-mask-image: -webkit-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  -webkit-transition: -webkit-mask-position;
+  -webkit-animation-timing-function: linear;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-filter: brightness(1.5);
+  -moz-mask-size: 300% 200%;
+  -moz-mask-image: -webkit-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  -moz-transition: -webkit-mask-position;
+  -moz-animation-timing-function: linear;
+  -moz-transform: translate3d(0, 0, 0);
+  -o-filter: brightness(1.5);
+  -o-mask-size: 300% 200%;
+  -o-mask-image: -webkit-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  -o-transition: -webkit-mask-position;
+  -o-animation-timing-function: linear;
+  -o-transform: translate3d(0, 0, 0);
+  filter: brightness(1.5);
+  mask-size: 300% 200%;
+  mask-image: -webkit-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  transition: -webkit-mask-position;
+  animation-timing-function: linear;
+  transform: translate3d(0, 0, 0);
+  transition-duration: 3s;
+  animation: move 2s ease-out infinite;
+}
+
+@keyframes move {
+  from {
+    -webkit-mask-position: 150% 0px;
+    -moz-mask-position: 150% 0px;
+    -o-mask-position: 150% 0px;
+    mask-position: 150% 0px;
+  }
+  to {
+    -webkit-mask-position: 0% 0px;
+    -moz-mask-position: 0% 0px;
+    -o-mask-position: 0% 0px;
+    mask-position: 0% 0px;
+  }
+}
+
+
 
 
 .h4 {
@@ -148,6 +226,9 @@ color: #003169;
    
 }
 }
+
+
+
 
 
 

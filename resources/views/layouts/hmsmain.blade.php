@@ -96,7 +96,7 @@
         }
 
         body {
-            background-color: #706f6c;
+            background-color: #ffffff;
             font-family: 'Be Vietnam Pro';
             /* font-family: 'Alexandria'; */
             /* font-family: 'Atkinson Hyperlegible'; */
@@ -269,16 +269,24 @@
                 <div class="sidebar-wrapper active"
                     style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius:0px 0px 0px 0px ; ">
 
-                    <div class="sidebar-header">
+                    <div class="sidebar-header" style="padding-bottom: 0%">
                         <div class="d-flex justify-content-between">
 
                             <div class="logo"
-                                style="background-color:#dfc79d; border-radius:100% 100% 100% 100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height:125px;width:125px; margin-left:25px;">
+                                style="background-color:#dfc79d; border-radius:100% 100% 100% 100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height:125px;width:125px; margin-left:25px; background:  #d0d3cd50 -webkit-linear-gradient(left,  #ffffff15, rgb(255, 255, 255)) repeat 0 0 / 200px;
+
+ 
+animation: sweep 1.5s ease-in-out infinite;
+animation-direction:reverse;">
                                 <a href="{{ url('home') }}">
                                     <!-- {{-- <img src="assets/images/logo/logo.png" alt="Logo" srcset=""> --}} -->
-
+<div class="lightSweep" ><img id="cr_logo" src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA"
+    style="margin-top:16px;"></div>
                                     <img id="cr_logo" src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA"
                                         style="margin-top:16px;">
+
+                                    
+                                       
 
 
                                 </a>
