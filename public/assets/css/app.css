@@ -1,10 +1,5 @@
 
 
-.btn-primary {
-    color: rgb(0, 0, 0);
-    background-color: #FFFBF4;
-    border-color: #CE912A;
-}
 
 
 /*
@@ -321,22 +316,37 @@
     color: #1D1D50;
    
     background-blend-mode: soft-light, normal;
-    border: 0.5px solid rgba(157, 168, 176, 0.4);
+    /* border: 0.5px solid rgba(157, 168, 176, 0.4); */
+    border-color: #CE912A;
     box-sizing: border-box;
+
+    --clr: #c4aa7d;
+    --outline: 1px solid var(--clr);
+   
+    outline: var(--outline);
+    border: var(--outline);
+    outline-offset: -1px;
+    transition: outline-offset 200ms ease;
    
 }
+
+
 
 
 
 .btn.btn-primary:hover {
     color: rgb(255, 255, 255);
   background-color : #4A4A78;
+ 
+  --outline: 1px solid #4A4A78;
+outline-offset: 3px;
     
 }
 
 .btn.btn-primary:focus {
     color: rgb(255, 255, 255);
   background-color : #4A4A78;
+  outline-offset: 2px;
     
 }
 
