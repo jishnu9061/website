@@ -27,17 +27,18 @@
 
             @csrf
             <tbody>
-                <tr>
+                <!-- <tr>
                     <th style="width:30%">File No:</th>
                     <td>{{$view_list ->id}}</td>
+                </tr> -->
+                
+                <tr>
+                    <th>Client:</th>
+                    <td>{{$view_list ->client}}</td>
                 </tr>
                 <tr>
                     <th>Associative Handling:</th>
                     <td>{{$view_list ->assoc_handling}}</td>
-                </tr>
-                <tr>
-                    <th>Client Name:</th>
-                    <td>{{$view_list ->client}}</td>
                 </tr>
                     <th>Email:</th>
                     <td>{{$view_list ->email}}</td>
@@ -94,9 +95,13 @@
                     <th>Amount:</th>
                     <td>{{$view_list ->amount}}</td>
                 </tr>
-                <tr>
+                <!-- <tr>
                     <th>Task:</th>
                     <td>{{$view_list ->task}}</td>
+                </tr> -->
+                <tr>
+                    <th>Status:</th>
+                    <td></td>
                 </tr>
               
                 
