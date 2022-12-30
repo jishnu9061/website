@@ -260,6 +260,9 @@
         </script>
 
 
+
+
+
         <div id="app">
 
             <div id="sidebar" class="active">
@@ -357,7 +360,7 @@
                         <li class="submenu-item  has-sub" style="list-style:none;">
                             <a href="{{url('user_management')}}" class='sidebar-link'>
                                 <i class="fa-regular fa-user" id="icon"></i>
-                                <span> User Management</span>
+                                <span> User Management</span> 
                             </a>
 
                         </li>
@@ -1430,7 +1433,12 @@
         {{-- const myElement = document.getElementById("subm");
 myElement.style.color = "red"  --}}
 
-
+<script>
+    $("a.link").click(function(){
+      $("a.link").css("background-color", "black");
+    $(this).css("background-color", "red");
+});
+</script>
 
     </body>
 

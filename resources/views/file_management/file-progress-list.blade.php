@@ -96,6 +96,13 @@
                 </div>
             </div>
 
+
+
+
+
+
+
+
             <div class="dropdown" style="width:25%;" style="margin-left:10px;">
                 <button class="btn btn-primary add-btn" type="button" style="width:97%;" id="dropdownMenuButton"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -526,7 +533,7 @@
                                   
                                     <br>
                                     <div id="test" style="height:20px;"></div>
-
+                                </div>
                                     <h4 style="text-align:center;">Send To Timesheet</h4>
 
                                     <div class="row">
@@ -582,19 +589,12 @@
 
 
                                     <br>
-                                    <div class="row">
-                                        <div class="col-sm">
-
-                                        </div>
-                                        <div class="col-sm">
-
-                                        </div>
-                                        <div class="col-sm">
-                                            <br>
-                                            <button type="submit" class="btn btn-primary float:right;"
-                                                Style="width:60%;">Save</button>
-                                            <button type="button" class="btn btn-primary float:right;"
-                                                data-dismiss="modal">Cancel</button>
+                                    <div class="row justify-content-between">
+                                      
+                                        <div class="col offset-md-8 pt-4">
+                                          
+                                            <button style="min-width: 45%; float: left" type="submit" class="btn btn-primary">Save</button>
+                                            <button style="min-width: 45%; float: right" type="button" class="btn btn-primary"data-dismiss="modal">Cancel</button>
                                         </div>
                                     </div>
                               

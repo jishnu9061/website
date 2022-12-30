@@ -1,6 +1,10 @@
 
 
-
+.btn-primary {
+    color: rgb(0, 0, 0);
+    background-color: #FFFBF4;
+    border-color: #CE912A;
+}
 
 
 /*
@@ -348,7 +352,7 @@
     
 }
 
-.btn.btn-primary:hover::after, .btn.btn-primary:focus::after {
+.btn.btn-primary:hover::after, .btn.btn-primary:focus::after .btn.btn-primary:active::before {
     color: rgb(255, 255, 255);
   background-color : #4A4A78;
     
