@@ -317,10 +317,10 @@
    
     background-blend-mode: soft-light, normal;
     /* border: 0.5px solid rgba(157, 168, 176, 0.4); */
-    border-color: #CE912A;
+    /* border-color: #CE912A; */
     box-sizing: border-box;
 
-    --clr: #c4aa7d;
+    --clr: #9ba3b3;
     --outline: 1px solid var(--clr);
    
     outline: var(--outline);
@@ -437,7 +437,7 @@ button, button
 
 .logo_size{
     width:15%;
-    filter: grayscale(50%);
+    filter: grayscale(60%);
     /* filter: hue-rotate(10deg); */
 }
 
