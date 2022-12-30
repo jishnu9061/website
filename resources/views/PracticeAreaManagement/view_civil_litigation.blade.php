@@ -15,7 +15,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <input type="text" class="form-control" placeholder="2016-10-155-ER/AP">
+                        <input type="text" class="form-control" value="2016-10-155-ER/AP" Disabled>
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <input type="text" class="form-control" placeholder="Charles Norris">
+                        <input type="text" class="form-control" value="Charles Norris" Disabled>
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <input type="text" class="form-control" placeholder="Civil Dispute">
+                        <input type="text" class="form-control" value="Civil Dispute" Disabled>
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <input type="text" class="form-control" placeholder="jean C. Van Damme">
+                        <input type="text" class="form-control" value="jean C. Van Damme" Disabled>
                     </div>
                 </div>
             </div>
@@ -58,18 +58,18 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <textarea class="form-control" rows="2">Deway Cheatum Contact Sara Howe</textarea>
+                        <textarea class="form-control" rows="2" Disabled>Deway Cheatum Contact Sara Howe</textarea>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="mb-1">
-                    <label for="exampleFormControlInput1" class="form-label">Case Details</label>
+                    <label for="exampleFormControlInput1" class="form-label" Disabled>Case Details</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
                         <textarea class="form-control"
-                            rows="2">Filed Date: 8/7/2017 Service by: Personal Cook First Civil</textarea>
+                            rows="2" Disabled>Filed Date: 8/7/2017 Service by: Personal Cook First Civil</textarea>
                     </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <textarea class="form-control" rows="2">Plaintiff's Insurer</textarea>
+                        <textarea class="form-control" rows="2" Disabled>Plaintiff's Insurer</textarea>
                     </div>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <textarea class="form-control" rows="2">Plaintiff's Witness</textarea>
+                        <textarea class="form-control" rows="2" Disabled>Plaintiff's Witness</textarea>
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <textarea class="form-control" rows="2">Plaintiff's Expert</textarea>
+                        <textarea class="form-control" rows="2" Disabled>Plaintiff's Expert</textarea>
                     </div>
                 </div>
             </div>
@@ -115,7 +115,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <textarea class="form-control" rows="2">Defendant's Insurer</textarea>
+                        <textarea class="form-control" rows="2" Disabled>Defendant's Insurer</textarea>
                     </div>
                 </div>
             </div>
@@ -125,7 +125,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <textarea class="form-control" rows="2">Defendant's Witness</textarea>
+                        <textarea class="form-control" rows="2" Disabled>Defendant's Witness</textarea>
                     </div>
                 </div>
             </div>
@@ -135,7 +135,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <textarea class="form-control" rows="2">Defendant's Expert</textarea>
+                        <textarea class="form-control" rows="2" Disabled>Defendant's Expert</textarea>
                     </div>
                 </div>
             </div>

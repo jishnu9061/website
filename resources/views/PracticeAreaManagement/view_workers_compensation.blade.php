@@ -15,7 +15,7 @@
                         <label for="exampleFormControlInput1" class="form-label">Matter Info</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
-                            <input type="text" class="form-control" placeholder="604VL-0218-WR">
+                            <input type="text" class="form-control" value="604VL-0218-WR" Disabled>
                         </div>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
                         <label for="exampleFormControlInput1" class="form-label">Petitioner</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
-                            <input type="text" class="form-control" placeholder="Victor">
+                            <input type="text" class="form-control" value="Victor" Disabled>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                         <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
-                            <input type="text" class="form-control" placeholder="Workers Compensation Claim">
+                            <input type="text" class="form-control" value="Workers Compensation Claim" Disabled>
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control"
-                                    placeholder="Tower Construction HR Manager Gina">
+                                    value="Tower Construction HR Manager Gina" Disabled>
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control"
-                                    placeholder="McCarthy and Associates Managing Partner Adam McCarthy">
+                                    value="McCarthy and Associates Managing Partner Adam McCarthy" Disabled>
                             </div>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                             <label for="exampleFormControlInput1" class="form-label">Insurer</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <textarea class="form-control" rows="2">BCBs contact Smith</textarea>
+                                <textarea class="form-control" rows="2" Disabled>BCBs contact Smith</textarea>
                             </div>
                         </div>
                     </div>
@@ -79,7 +79,7 @@
                             <label for="exampleFormControlInput1" class="form-label">Adjuster</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" placeholder="Danial Lee">
+                                <input type="text" class="form-control" value="Danial Lee" Disabled>
                             </div>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <textarea class="form-control"
-                                    rows="2">Claim Number: 123546987 Accident Date: 12/01/2016 17 WC 6525 Court</textarea>
+                                    rows="2" Disabled>Claim Number: 123546987 Accident Date: 12/01/2016 17 WC 6525 Court</textarea>
                             </div>
                         </div>
                     </div>
@@ -98,7 +98,7 @@
                             <label for="exampleFormControlInput1" class="form-label">Employee Doctor</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" placeholder="Northwestern Hospital">
+                                <input type="text" class="form-control" value="Northwestern Hospital" Disabled>
                             </div>
                         </div>
                     </div>
@@ -113,7 +113,7 @@
                                 Details</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" placeholder="Site Coordinator">
+                                <input type="text" class="form-control" placeholder="Site Coordinator" Disabled>
                             </div>
                         </div>
                         <div class="col">

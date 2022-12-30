@@ -1439,6 +1439,7 @@ Route::any('/delete_injury/{id}','PracticeAreaManagement@deleteinjury')->name('d
 
 Route::any('family_law','PracticeAreaManagement@family_law')->name('family_law');
 Route::any('add_family_law','PracticeAreaManagement@addfamilylaw')->name('add_family_law');
+Route::any('view_family_law','PracticeAreaManagement@view_family_law')->name('view_family_law');
 Route::any('/edit_family_law/{id}','PracticeAreaManagement@edit_family_law')->name('edit_family_law');
 Route::any('/update_family_law','PracticeAreaManagement@updatefamilylaw')->name('update_family_law');
 Route::any('/delete_law/{id}','PracticeAreaManagement@deletelaw')->name('delete_law');
@@ -1453,6 +1454,7 @@ Route::any('/delete_practice/{id}','PracticeAreaManagement@deletepractice')->nam
 
 Route::any('estate_plan','PracticeAreaManagement@estate_plan')->name('estate_plan');
 Route::any('add_estate_plan','PracticeAreaManagement@addestateplan')->name('add_estate_plan');
+Route::any('view_estate_plan','PracticeAreaManagement@view_estate_plan')->name('view_estate_plan');
 Route::any('/edit_estate_plan/{id}','PracticeAreaManagement@edit_estate_plan')->name('edit_estate_plan');
 Route::any('update_estate_plan','PracticeAreaManagement@updateestateplan')->name('update_estate_plan');
 Route::any('/delete_estate_plan/{id}','PracticeAreaManagement@deleteestateplan')->name('delete_estate_plan');
@@ -1475,6 +1477,7 @@ Route::any('/delete_criminal_law/{id}','PracticeAreaManagement@deletecriminallaw
 
 Route::any('civil_litigation','PracticeAreaManagement@civil_litigation')->name('civil_litigation');
 Route::any('add_civil_litigation','PracticeAreaManagement@addcivillitigation')->name('add_civil_litigation');
+Route::any('view_civil_litigation','PracticeAreaManagement@view_civil_litigation')->name('view_civil_litigation');
 Route::any('/edit_civil_litigation/{id}','PracticeAreaManagement@edit_civil_litigation')->name('edit_civil_litigation');
 Route::any('update_civil_litigation','PracticeAreaManagement@updatecivillitigation')->name('update_civil_litigation');
 Route::any('/delete_civil_litigation/{id}','PracticeAreaManagement@deletecivillitigation')->name('update_civil_litigation');

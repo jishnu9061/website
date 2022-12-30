@@ -14,7 +14,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Matter Info</label>
                     <div class="input-group">
                             <div class="input-group-prepend"></div>
-                    <input type="text" class="form-control" placeholder="602V-0218-GR/RW">
+                    <input type="text" class="form-control" value="602V-0218-GR/RW" Disabled>
                         </div>
                         </div>
     </div>
@@ -23,7 +23,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Executor / Administator</label>
                     <div class="input-group">
                             <div class="input-group-prepend"></div>
-                    <input type="text" class="form-control" placeholder="Isabel Collier">
+                    <input type="text" class="form-control" value="Isabel Collier" Disabled>
                         </div>
                         </div>
     </div>
@@ -32,7 +32,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
                     <div class="input-group">
                             <div class="input-group-prepend"></div>
-                    <input type="text" class="form-control" placeholder="Decedent's Estate">
+                    <input type="text" class="form-control" value="Decedent's Estate" Disabled>
                         </div>
                         </div>
     </div>
@@ -44,7 +44,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Deceased</label>
                     <div class="input-group">
                             <div class="input-group-prepend"></div>
-                    <input type="text" class="form-control" placeholder="Ken Collier">
+                    <input type="text" class="form-control" value="Ken Collier" Disabled>
                         </div>
                         </div>
     </div>
@@ -53,7 +53,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Case Details</label>
                     <div class="input-group">
                             <div class="input-group-prepend"></div>
-                    <textarea class="form-control" rows="2">Cook 2018-PR-2038 will filed Date: 3/05/2014</textarea>
+                    <textarea class="form-control" rows="2" Disabled>Cook 2018-PR-2038 will filed Date: 3/05/2014</textarea>
                         </div>
                         </div>
     </div>
@@ -62,7 +62,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Estate Details</label>
                     <div class="input-group">
                             <div class="input-group-prepend"></div>
-                    <textarea class="form-control" rows="2">EIN: 3201-2032 will Date: 10/23/2013</textarea>
+                    <textarea class="form-control" rows="2" Disabled>EIN: 3201-2032 will Date: 10/23/2013</textarea>
                         </div>
                         </div>
     </div>
