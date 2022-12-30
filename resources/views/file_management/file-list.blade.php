@@ -77,7 +77,7 @@
                             <!-- <th class="text-center">*</th> -->
                             <!-- <th class="text-center">File No</th> -->
                             <th class="text-center">Client</th>
-                            <th class="text-center">File Name</th>
+                            {{-- <th class="text-center">File Name</th> --}}
                             <th class="text-center">File Open</th>
                             <!-- <th class="text-center">Responsible<br>Advocate</th>
                                         <th class="text-center">Most Recent Progress</th> -->
@@ -94,17 +94,16 @@
 
                             <!-- <td scope="row">{{$list->id}}</td> -->
                             <!-- <td scope="row">{{$list->id}}</td> -->
-                            <td scope="row">{{$list->client_name}}</td>
-                            <td scope="row">{{$list->file_name}}</td>
+                            <td scope="row">{{$list->client}}</td>
+                            {{-- <td scope="row">{{$list->file}}</td> --}}
                             <td scope="row">{{$list->open_date}}</td>
 
                             <!-- <td scope="row">{{$list->advocate}}</td> -->
                             <!-- <td scope="row">{{$list->recent_progress}}</td> -->
 
                             <td scope="row">{{$list->close_date}}</td>
-
                             <td scope="row">{{$list->amount}}</td>
-                            <td scope="row"></td>
+                            <td scope="row">{{$list->status}}</td>
                             <td scope="row"><a href="{{url('view-list',$list->id)}}"><i style="color:black;"
                                         class="fa fa-eye" aria-hidden="true"></i>
 
@@ -333,11 +332,11 @@
                                                 <label for="username">Status</label>
                                                 <div class="input-group">
                                                     <div class="input-group-prepend"></div>
-                                                    <select>
+                                                    <select name="status">
                                                         <option value="select">---select---</option>
-                                                        <option value="">Opened</option>
-                                                        <option value="">Pending</option>
-                                                        <option value="">Closed</option>
+                                                        <option value="Opened">Opened</option>
+                                                        <option value="Pending">Pending</option>
+                                                        <option value="Closed">Closed</option>
 
                                                     </select>
                                                     <div class="invalid-feedback" style="width: 100%;">
@@ -389,7 +388,7 @@
                                                     <div class="input-group-prepend">
 
                                                     </div>
-                                                    <input type="email" class="form-control" name="notifi_email"
+                                                    <input type="text" class="form-control" name="phone"
                                                         placeholder="Enter your telephone number"
                                                         id="confirm_password"><br>
                                                     <div class="invalid-feedback" style="width: 100%;">
@@ -406,7 +405,7 @@
                                                     <div class="input-group-prepend">
 
                                                     </div>
-                                                    <input type="email" class="form-control" name="notifi_email"
+                                                    <input type="text" class="form-control" name="amount"
                                                         placeholder="Enter the amount" id="confirm_password"><br>
                                                     <div class="invalid-feedback" style="width: 100%;">
                                                         Password is required.
