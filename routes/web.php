@@ -1511,6 +1511,10 @@ Route::any('/delete_workers_compensation/{id}','PracticeAreaManagement@deletewor
 Route::any('view_workers_compensation','PracticeAreaManagement@view_workers_compensation')->name('view_workers_compensation');
 
 
+
+Route::any('edit_practice_area','PracticeAreaManagement@edit_practice_area')->name('edit_practice_area');
+
+
 //Elibrary
 Route::any('libraryindex','Elibrary@index')->name('libraryindex');
 Route::any('subject','Elibrary@subjects')->name('subject');

@@ -1232,6 +1232,10 @@ class PracticeAreaManagement extends Controller
     {
         return view('PracticeAreaManagement.view_probate_law');
     }
+    public function edit_practice_area()
+    {
+        return view('PracticeAreaManagement.edit_practice_area');
+    }
   
    
 }
