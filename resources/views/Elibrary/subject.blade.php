@@ -131,10 +131,13 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <input type="text" class="form-control" name="category" id="age">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                            Incorporation is required
-                                        </div>
+                                        <select name="category" id="cars">
+                                            <option>---select---</option>
+                                            <option></option>
+                                            <option></option>
+                                            
+                                            
+                                        </select>
                                     </div>
                                 </div>
                             </div>

@@ -352,5 +352,15 @@ public function sites()
 
     }
 
+    public function subject_categorys()
+    {
+        return view('Elibrary.subject_category');
+    }
+
+    public function editsubject_categorys()
+    {
+        return view('Elibrary.editsubject_category');
+    }
+
 
 }
