@@ -351,7 +351,7 @@ function myFunction() {
 $(document).ready(function() {
 
     var html =
-        '<tr> <td><input type="text" name="batch_no[]"id="batch_no_" class="form-control"placeholder="Item No"></td>    <td><select class="form-select" aria-label="select example" name="item_name[]" id="item_name"> <option value="">Select</option><option value=""></option></select></td>   <td><input type="text" name="quantity[]" id="quantity_" class="form-control text-right calculate"></td>   <td><input type="text" name="price[]" id="price_" class="form-control calculate" placeholder="0.00"></td>   <td><input type="text" name="total[]" id="total_" class="form-control calculate-sub" placeholder="0.00"></td>    <td><button type="button" class="add-Row ibtnDel btn btn-primary text-white" id="remove"  style="background-color:#607080;width:100%;color:white;">Remove</button><td></tr>';
+        '<tr> <td><input type="text" name="batch_no[]"id="batch_no_" class="form-control"placeholder="Item No"></td>    <td><select class="form-select" aria-label="select example" name="item_name[]"  id="item_name"> <option value="">Select</option><option>Demo Item</option></select></td>   <td><input type="text" name="quantity[]" id="quantity_" class="form-control text-right calculate"></td>   <td><input type="text" name="price[]" id="price_" class="form-control calculate" placeholder="0.00"></td>   <td><input type="text" name="total[]" id="total_" class="form-control calculate-sub" placeholder="0.00"></td>    <td><button type="button" class="add-Row ibtnDel btn btn-primary text-white" id="remove"  style="background-color:#607080;width:100%;color:white;">Remove</button><td></tr>';
 
     $("#add").click(function() {
         $("#tab_logic").append(html);

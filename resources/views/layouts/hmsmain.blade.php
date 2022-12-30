@@ -96,7 +96,7 @@
         }
 
         body {
-            background-color: #706f6c;
+            background-color: #ffffff;
             font-family: 'Be Vietnam Pro';
             /* font-family: 'Alexandria'; */
             /* font-family: 'Atkinson Hyperlegible'; */
