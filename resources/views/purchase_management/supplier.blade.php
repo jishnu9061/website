@@ -11,7 +11,7 @@
     <br>
 
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add
-    Supplier </button>
+        Supplier </button>
 
 
     <div class="header_wrap">
@@ -49,7 +49,7 @@
                         <th scope="col">Product Supply</th>
                         <th scope="col">Payment Details</th>
                         <th scope="col">Action</th>
-                       
+
 
                     </tr>
                 </thead>
@@ -58,14 +58,15 @@
 
                         <td></td>
                         <td></td>
-                        <td> <a href="{{url('ledger_details')}}"> <button type="button" class="btn btn-primary" >Show Payment</button></a></td>
+                        <td> <a href="{{url('ledger_details')}}"> <button type="button" class="btn btn-primary">Show
+                                    Payment</button></a></td>
                         <td><a href="{{url('view_supplier')}}"> <i style="color:rgb(13, 1, 56);"
                                     class="fa fa-eye"></i><span class="m-2"></span>
                                 <a href="{{url('edit_supplier')}}"><i style="color:rgb(13, 1, 56);"
                                         class="fa fa-edit"></i><span class="m-2"></span>
                                     <a href="{{url('')}}"><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
                         </td>
-                       
+
                     </tr>
 
 
@@ -108,7 +109,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-1">
-                                        <label for="username">Supplier  Name</label>
+                                        <label for="username">Supplier Name</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
@@ -123,23 +124,6 @@
 
                                 <div class="col-md-6">
                                     <div class="mb-1">
-                                        <label for="username">Product Supply</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-
-                                            </div>
-                                            <input type="text" class="form-control" name="" id="username" required>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="row">
-
-                                <div class="col-md-4">
-                                    <div class="mb-1">
                                         <label for="username">TAX ID</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
@@ -151,22 +135,9 @@
                                     </div>
                                 </div>
 
-
-
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="username">Contact No</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-
-                                            </div>
-                                            <input type="text" class="form-control" name="" id="username" required>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
                                     <div class="mb-1">
                                         <label for="username">Email</label>
                                         <div class="input-group">
@@ -179,60 +150,15 @@
                                     </div>
                                 </div>
 
+                                <div class="col-md-6">
+                                    <div class="mb-1">
+                                        <label for="username">Contact No</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
 
-
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="mb-1">
-                                            <label for="username">Address</label>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-
-                                                </div>
-                                                <textarea class="form-control" rows="3"></textarea>
-                                                <br>
                                             </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="mb-1">
-                                            <label for="username">City</label>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-
-                                                </div>
-                                                <input type="text" class="form-control" name="" id="username" required>
-                                                <br>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="mb-1">
-                                            <label for="username">State</label>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-
-                                                </div>
-                                                <input type="text" class="form-control" name="" id="username" required>
-                                                <br>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="mb-1">
-                                            <label for="username">PIN code</label>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-
-                                                </div>
-                                                <input type="text" class="form-control" name="" id="username" required>
-                                                <br>
-                                            </div>
+                                            <input type="text" class="form-control" name="" id="username" required>
+                                            <br>
                                         </div>
                                     </div>
                                 </div>
@@ -241,19 +167,95 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="mb-1">
-                                        <label for="username">Product Details</label>
+                                        <label for="username">Address</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" rows="3"></textarea>
-
+                                            <textarea class="form-control" rows="2"></textarea>
                                             <br>
                                         </div>
                                     </div>
                                 </div>
 
                             </div>
+                            <br>
+                            <div class="row">
+
+                                <div class="col-md-4">
+                                    <div class="mb-1">
+                                        <label for="username">City</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                            </div>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>-- select --</option>
+                                                <option value="1">Nairobi</option>
+                                                <option value="2">Kisumu</option>
+                                                <option value="3">Mombasa</option>
+                                            </select>
+                                            <!-- <input type="text" class="form-control" name="" id="username" required> -->
+                                            <br>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="col-md-4">
+                                    <div class="mb-1">
+                                        <label for="username">Provinces</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                            </div>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>-- select --</option>
+                                                <option value="1">Nairobi</option>
+                                                <option value="2">Central</option>
+                                                <option value="3">Coast</option>
+                                                <option value="3">Eastern</option>
+                                                <option value="3">North Eastern</option>
+                                                <option value="3">Nyanza</option>
+                                                <option value="3">Rift Valley</option>
+                                                <option value="3">Western</option>
+                                            </select>
+                                            <!-- <input type="text" class="form-control" name="" id="username" required> -->
+                                            <br>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="mb-1">
+                                        <label for="username">PIN code</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+
+                                            </div>
+                                            <input type="text" class="form-control" name="" id="username" required>
+                                            <br>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-1">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="mb-1">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
                             <br>
 
 
