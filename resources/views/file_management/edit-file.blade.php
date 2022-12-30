@@ -106,7 +106,12 @@
                         <label for="username">Responsible Advocate</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
-                            <input type="text" class="form-control" name="advocate" id="age" value="" min="0" max="99">
+                            <select name="assoc_handling" id="cars">
+                                <option>Select</option>
+                                <option>Advocate 1</option>
+                                <option>Advocate 2</option>
+                            </select>
+                            <!-- <input type="text" class="form-control" name="advocate" id="age" value="" min="0" max="99"> -->
                             <div class="invalid-feedback" style="width: 100%;">
                                 Age is required.
                             </div>
