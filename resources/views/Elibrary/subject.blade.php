@@ -44,7 +44,7 @@
 
                     <th scope="col">Subject</th>
                     <th scope="col">Category</th>
-                    <th scope="col">Discription</th>
+                    <th scope="col">Description</th>
                     <th scope="col">Action</th>
 
                 </tr>
@@ -143,7 +143,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="mb-1">
-                                    <label for="username">Discription</label>
+                                    <label for="username">Description</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
 
