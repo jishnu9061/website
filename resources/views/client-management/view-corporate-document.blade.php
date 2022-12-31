@@ -13,7 +13,7 @@
 <div class="container">
  <div>
             {{-- heading --}}
-    <h4 id="hdtpa"><b>View Pickup Reception</b></h4>
+    <h4 id="hdtpa"><b>Client Document Details</b></h4>
     <br><br>
     </div>
     <div class="table-responsive">
