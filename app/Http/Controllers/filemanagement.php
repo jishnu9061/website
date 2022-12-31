@@ -1398,6 +1398,7 @@ public function new_file_instructions()
 
 public function add_new_file_instructions(Request $request)
 {
+    $new_file_instruction=DB::table('cra_add_new_instructions')->get();
    $id =$request['id'];
    $date =$request['date'];
    $client =$request['client'];
@@ -1430,7 +1431,7 @@ public function add_new_file_instructions(Request $request)
     'details' =>   $details,
     'send_notification' =>   $send_notification,
 ]);
-    return view('file_management.file_instruction');                                                             
+    return view('file_management.file_instruction',compact('new_file_instruction'));                                                            
 }
 
 public function edit_file_instruction_list($id)
