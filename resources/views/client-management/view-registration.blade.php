@@ -57,7 +57,7 @@ color: #999;
                 <b><u>Client Registration</u></b></span> -->
                 {{-- heading --}}
                 <div class="container">
-                <h4 id="hdtpa"><b>Client Registration</b></h4>
+                <h4 id="hdtpa"><b>Client Registration Details</b></h4>
                 <br>
             
 

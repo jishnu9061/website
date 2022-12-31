@@ -1387,6 +1387,7 @@ Route::any('/drop_manage_items/{id}','store@drop_manage_items')->name('drop_mana
 //Purchase Management
 Route::any('purchase_index','PurchaseManagement@index_purchase')->name('purchase_index');
 Route::any('purchase_order','PurchaseManagement@purchase_order')->name('purchase_order');
+Route::any('create_purchase_order','PurchaseManagement@create_purchase_order')->name('createpurchase_order');
 Route::any('view_purchase_order','PurchaseManagement@view_purchase_order')->name('view_purchase_order');
 Route::any('purchase_order_report','PurchaseManagement@purchase_order_report')->name('purchase_order_report');
 Route::any('vendor_performance_report','PurchaseManagement@vendor_performance_report')->name('vendor_performance_report');

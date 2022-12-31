@@ -1,213 +1,208 @@
 @extends('layouts.hmsmain')
 @section('content')
-<div class="container">
-    <br>
-    <div>
+
 
         {{-- heading --}}
-        <h4 id="hdtpa"><b>Edit Customer Detials</b></h4>
-        <br><br>
-
+        <h4 id="hdtpa"><b>Edit Client Detials</b></h4>
+        <br>
+<div class="card">
+    <div class="card-header">
     </div>
-
-
-    <div class="row">
-        <div class="col-md-12 order-md-1">
-            <form method="post" action="{{url('update-registration')}}" id="form">
-                @csrf
-                <input type="hidden" name="id" value="{{$edit_registration->id}}">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Client Name</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <select name="town" id="username" style="width:100%;">
-                                    <option> client 1 </option>
-                                    <option> client 2 </option>
-
-                                </select>
-                                <!-- <input type="text" class="form-control" name="name" id="username"
-                                    value="{{$edit_registration->customer_name}}" placeholder="Customer name" required> -->
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Date is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Postal Code</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="Code" id="username"
-                                    value="{{$edit_registration->postal_code}}" placeholder="Postal Code" required>
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Date is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Town</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-
-                                <select name="town" id="username" style="width:100%;">
-                                    <option>{{$edit_registration->town}}</option>
-
-                                </select>
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Date is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Country</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <select name="country" id="cars">
-                                    <option>{{$edit_registration->country}}</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Telephone No</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="telephone" id="username"
-                                    value="{{$edit_registration->telephone_no}}" placeholder="Telephone" required>
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Date is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Email Address</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="email" id="username"
-                                    value="{{$edit_registration->email}}" placeholder="Email" required>
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Date is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Mobile No</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="mobile" id="age"
-                                    value="{{$edit_registration->mobile_no}}" placeholder="Mobile No" min="0" max="99">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Telephone No is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Website</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="website"
-                                    value="{{$edit_registration->web_site}}" id="confirm_password"
-                                    placeholder="Website">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    others is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Registration Date</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="Date"
-                                    value="{{$edit_registration->registration_date}}" id="confirm_password"
-                                    placeholder="Web Site">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Registration Date
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Client Address</label>
-                            <div class="input-group">
-                                <textarea class="form-control" name="caddress" id="form7Example7"
-                                    rows="2">{{$edit_registration->customer_address}}</textarea>
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Action Plan is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-1">
-                            <label for="username">Physical Address</label>
-                            <div class="input-group">
-                                <textarea class="form-control" id="form7Example7" name="paddress"
-                                    rows="2">{{$edit_registration->physical_address}}</textarea>
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Complaint Description is required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <!-- <h4 style="text-align:center">Contact Persons</h4> -->
-
-
-                <div class="col-sm">
-
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12 order-md-1">
+                <form method="post" action="{{url('update-registration')}}" id="form">
+                    @csrf
+                    <input type="hidden" name="id" value="{{$edit_registration->id}}">
                     <div class="row">
-                        <div class="col-sm">
-
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                                <label for="username">Client Name</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <select name="town" id="username" style="width:100%;">
+                                        <option> client 1 </option>
+                                        <option> client 2 </option>
+    
+                                    </select>
+                                    <!-- <input type="text" class="form-control" name="name" id="username"
+                                        value="{{$edit_registration->customer_name}}" placeholder="Customer name" required> -->
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Date is required.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-sm">
-
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                                <label for="username">Postal Code</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="text" class="form-control" name="Code" id="username"
+                                        value="{{$edit_registration->postal_code}}" placeholder="Postal Code" required>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Date is required.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-sm">
-                            <br>
-                            <button type="submit" class="btn btn-primary float:right;"
-                                Style="width:50%;">Update</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"
-                                onclick="history.back()">Cancel</button>
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                                <label for="username">Town</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+    
+                                    <select name="town" id="username" style="width:100%;">
+                                        <option>{{$edit_registration->town}}</option>
+    
+                                    </select>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Date is required.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-            </form>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                                <label for="username">Country</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+    
+                                    </div>
+                                    <select name="country" id="cars">
+                                        <option>{{$edit_registration->country}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                                <label for="username">Telephone No</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="text" class="form-control" name="telephone" id="username"
+                                        value="{{$edit_registration->telephone_no}}" placeholder="Telephone" required>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Date is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                                <label for="username">Email Address</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="text" class="form-control" name="email" id="username"
+                                        value="{{$edit_registration->email}}" placeholder="Email" required>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Date is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                                <label for="username">Mobile No</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="text" class="form-control" name="mobile" id="age"
+                                        value="{{$edit_registration->mobile_no}}" placeholder="Mobile No" min="0" max="99">
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Telephone No is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                                <label for="username">Website</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="text" class="form-control" name="website"
+                                        value="{{$edit_registration->web_site}}" id="confirm_password"
+                                        placeholder="Website">
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        others is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                                <label for="username">Registration Date</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                    <input type="date" class="form-control" name="Date"
+                                        value="{{$edit_registration->registration_date}}" id="confirm_password"
+                                        placeholder="Web Site">
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Registration Date
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-1">
+                                <label for="username">Client Address</label>
+                                <div class="input-group">
+                                    <textarea class="form-control" name="caddress" id="form7Example7"
+                                        rows="2">{{$edit_registration->customer_address}}</textarea>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Action Plan is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-1">
+                                <label for="username">Physical Address</label>
+                                <div class="input-group">
+                                    <textarea class="form-control" id="form7Example7" name="paddress"
+                                        rows="2">{{$edit_registration->physical_address}}</textarea>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Complaint Description is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <h4 style="text-align:center">Contact Persons</h4> -->
+    
+    
+                    <div class="col-sm">
+    
+                        <div class="row">
+                            <div class="col-sm">
+    
+                            </div>
+                            <div class="col-sm">
+    
+                            </div>
+                            <div class="col-sm">
+                                <br>
+                                <button type="submit" class="btn btn-primary float:right;"
+                                    Style="width:50%;">Update</button>
+                                <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                                    onclick="history.back()">Cancel</button>
+                            </div>
+                        </div>
+    
+                </form>
+            </div>
         </div>
     </div>
-</div>
+  </div>
 
-</body>
-
-</html>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

@@ -128,20 +128,20 @@
                                                     <div class="col">
                                                         <label for="exampleFormControlInput1"
                                                             class="form-label">Purchase Date</label>
-                                                        <input type="date" class="form-control">
+                                                        <input type="date" class="form-control" name="date">
                                                         <br>
                                                         <label for="exampleFormControlInput1"
                                                             class="form-label">Supplier</label>
-                                                        <select class="form-select" aria-label="Default select example">
-                                                            <option selected>---select---</option>
-                                                            <option value="1">Supplier 1</option>
-                                                            <option value="2">Supplier2</option>
+                                                        <select class="form-select" aria-label="Default select example" name="supplier">
+                                                            <option selected>Select</option>
+                                                            <option value="1">ABC Ltd</option>
+                                                            <option value="2">Moon Ltd</option>
                                                         </select>
                                                     </div>
                                                     <div class="col">
                                                         <label for="exampleFormControlInput1"
                                                             class="form-label">Purchase Order Number</label>
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" class="form-control"  value="@if (!empty($purc_order->purchase_orderno)) {{ $purc_order->purchase_orderno }}@else{{ strtoupper(uniqid()) }} @endif">
 
                                                         <br>
                                                         <label for="exampleFormControlInput1"
@@ -155,8 +155,9 @@
                                                         <label for="exampleFormControlInput1" class="form-label">Payment
                                                             Type</label>
                                                         <select class="form-select" aria-label="Default select example">
-                                                            <option selected>---select---</option>
-                                                            <option value="1">Cash</option>
+                                                            <option selected>Select</option>
+                                                            <option value="1">By Cash</option>
+                                                            <option value="2">By Cheque</option>
                                                             <option value="2">Bank Transfer</option>
                                                         </select>
                                                     </div>
