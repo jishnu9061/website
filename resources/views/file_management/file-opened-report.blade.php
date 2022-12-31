@@ -62,7 +62,7 @@
                         <tr id="data">
 
                             <!-- <td scope="row" class="text-center">{{$report->id}}</td> -->
-                            <td scope="row" class="text-center">{{$report->Client_name}}</td>
+                            <td scope="row" class="text-center">{{$report->client_name}}</td>
                             <td scope="row" class="text-center">{{$report->file_name}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>

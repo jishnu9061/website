@@ -63,7 +63,7 @@
                         <tr id="data">
 
                             <!-- <td scope="row" class="text-center">{{$pending->id}}</td> -->
-                            <td scope="row" class="text-center">{{$pending->Client_name}}</td>
+                            <td scope="row" class="text-center">{{$pending->client_name}}</td>
                             <td scope="row" class="text-center">{{$pending->id}}</td>
                             <td scope="row" class="text-center">{{$pending->file_name}}</td>
                             <td scope="row" class="text-center"></td>
