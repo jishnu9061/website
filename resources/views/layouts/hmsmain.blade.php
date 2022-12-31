@@ -542,15 +542,21 @@ animation-direction:reverse;">
 
                             </li>
                             <li class="submenu-item has-sub" style="list-style:none;">
-                                <a href="{{url('system_setup')}}" class='sidebar-link'>
-                                    <i class="fa fa-gear" id="icon"></i>
-                                    <span>System Setup</span>
-                                </a>
-                            </li>
-                            <li class="submenu-item has-sub" style="list-style:none;">
                                 <a href="{{url('office_admin_index')}}" class='sidebar-link'>
                                     <i class="fa fa-briefcase" id="icon"></i>
                                     <span>Office Administration</span>
+                                </a>
+                            </li>
+                            <li class="submenu-item has-sub" style="list-style:none;">
+                                <a href="{{url('crm_index')}}" class='sidebar-link'>
+                                    <i class="fa fa-briefcase" id="icon"></i>
+                                    <span>CRM</span>
+                                </a>
+                            </li>
+                            <li class="submenu-item has-sub" style="list-style:none;">
+                                <a href="{{url('system_setup')}}" class='sidebar-link'>
+                                    <i class="fa fa-gear" id="icon"></i>
+                                    <span>System Setup</span>
                                 </a>
                             </li>
 
@@ -1043,8 +1049,8 @@ animation-direction:reverse;">
                             <a class="dropdown-item" href="{{url('practice_area_index')}}">Practice Management</a>
                             <a class="dropdown-item" href="{{url('libraryindex')}}">E-Library</a>
                             <a class="dropdown-item" href="{{url('tender_index')}}">Tender Management</a>
-                            <a class="dropdown-item" href="{{url('system_setup')}}">System Setup</a>
                             <a class="dropdown-item" href="{{url('office_admin_index')}}">Office Administration</a>
+                            <a class="dropdown-item" href="{{url('system_setup')}}">System Setup</a>
 
                         </div>
                     </div>
