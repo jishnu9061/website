@@ -1217,7 +1217,7 @@ class filemanagement extends Controller
 
         public function addincommingletters(Request $request)
         {
-
+            $add_letter=DB::table('cra_add_incomming_letters')->get();
             $letter_date =$request['letter_date'];
             $client =$request['client'];
             $file =$request['file'];
@@ -1261,7 +1261,7 @@ class filemanagement extends Controller
                 'upload_copy' => $upload_copy,
     
             ]);
-              return view('file_management.incomming-letters');
+              return view('file_management.incomming-letters',compact('add_letter'));
             //  return view('file_management.add-incomming-letters');
         }
 
