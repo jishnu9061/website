@@ -108,8 +108,8 @@ color: #999;
                             <th class="text-center">Client</th>
                             <th class="text-center">File No</th>
                             <!-- <th class="text-center">File Name</th> -->
-                            <th class="text-center">Start</th>
-                            <th class="text-center">End</th>
+                            <th class="text-center">Start Time</th>
+                            <th class="text-center">End Time</th>
                             <th class="text-center">Submitted <br>By</th>
 
                             {{-- <th class="text-center">Action</th> --}}
@@ -126,7 +126,7 @@ color: #999;
                             <td scope="row" class="text-center">{{$list->client_name}}</td>
                             <td scope="row" class="text-center">{{$list->id}}</td>
                             <!-- <td scope="row" class="text-center">{{$list->file_name}}</td> -->
-                            <td scope="row" class="text-center">{{$list->Start_Date}}</td>
+                            <td scope="row" class="text-center">{{$list->Time}}</td>
                             <td scope="row" class="text-center">{{$list->Time_End}}</td>
                             <td scope="row" class="text-center"></td>
 
@@ -279,7 +279,7 @@ color: #999;
 
                     <div class="col-md-6">
                         <div class="mb-1">
-                            <label for="username">Time</label>
+                            <label for="username">Start Time</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
@@ -307,7 +307,7 @@ color: #999;
         </div>
         <div class="col-md-6">
             <div class="mb-1">
-                <label for="username">Time</label>
+                <label for="username">End Time</label>
                 <div class="input-group">
                     <div class="input-group-prepend">
 
