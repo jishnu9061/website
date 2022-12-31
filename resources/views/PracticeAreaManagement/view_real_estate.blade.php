@@ -16,7 +16,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <input type="text" class="form-control" placeholder="62G5585W">
+                        <input type="text" class="form-control" value="62G5585W" Disabled>
                     </div>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <input type="text" class="form-control" placeholder="Sell">
+                        <input type="text" class="form-control" value="Sell" Disabled>
                     </div>
                 </div>
             </div>
@@ -38,7 +38,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <input type="text" class="form-control" placeholder="Patrick">
+                        <input type="text" class="form-control" value="Patrick" Disabled>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <input type="text" class="form-control" placeholder="Dewey Cheatum">
+                        <input type="text" class="form-control" value="Dewey Cheatum" Disabled>
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <textarea class="form-control" rows="2" placeholder="1522, Los Angles pin:123 456"></textarea>
+                        <textarea class="form-control" rows="2" value="1522, Los Angles pin:123 456" Disabled></textarea>
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <textarea class="form-control" rows="2" placeholder="Total Payable:$233,025.15"></textarea>
+                        <textarea class="form-control" rows="2" value="Total Payable:$233,025.15" Disabled></textarea>
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <textarea class="form-control" rows="2" placeholder="Chris Doe"></textarea>
+                        <textarea class="form-control" rows="2" value="Chris Doe" Disabled></textarea>
                     </div>
                 </div>
             </div>
@@ -99,7 +99,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <textarea class="form-control" rows="2" placeholder="John Smith"></textarea>
+                        <textarea class="form-control" rows="2" value="John Smith" Disabled></textarea>
                     </div>
                 </div>
             </div>
@@ -110,7 +110,7 @@
                         <div class="input-group-prepend">
 
                         </div>
-                        <textarea class="form-control" rows="2" placeholder="Fidelity National"></textarea>
+                        <textarea class="form-control" rows="2" value="Fidelity National" Disabled></textarea>
                     </div>
                 </div>
             </div>

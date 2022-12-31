@@ -14,7 +14,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <input type="text" class="form-control" placeholder="OH-Felony-ER">
+                        <input type="text" class="form-control" value="OH-Felony-ER" Disabled>
                     </div>
                 </div>
             </div>
@@ -24,7 +24,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <input type="text" class="form-control" placeholder="Larry James">
+                        <input type="text" class="form-control" value="Larry James" Disabled>
                     </div>
                 </div>
             </div>
@@ -34,7 +34,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <input type="text" class="form-control" placeholder="Felony">
+                        <input type="text" class="form-control" value="Felony" Disabled>
                     </div>
                 </div>
             </div>
@@ -47,7 +47,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <textarea class="form-control" rows="2" placeholder="Cuyahoga Prosecutor's office"></textarea>
+                        <textarea class="form-control" rows="2" value="Cuyahoga Prosecutor's office" Disabled></textarea>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                         <div class="input-group-prepend">
                         </div>
                         <textarea class="form-control" rows="2"
-                            placeholder="Cuyahoga Criminal 2015-F-123456"></textarea>
+                            value="Cuyahoga Criminal 2015-F-123456" Disabled></textarea>
                     </div>
                 </div>
             </div>
@@ -68,7 +68,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <textarea class="form-control" rows="2" placeholder="Chris Investigator"></textarea>
+                        <textarea class="form-control" rows="2" value="Chris Investigator" Disabled></textarea>
                     </div>
                 </div>
             </div>
@@ -81,7 +81,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <textarea class="form-control" rows="2" placeholder="John"></textarea>
+                        <textarea class="form-control" rows="2" value="John" Disabled></textarea>
                     </div>
                 </div>
             </div>

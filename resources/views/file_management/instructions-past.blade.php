@@ -68,7 +68,7 @@
 
                             <!-- <td scope="row" class="text-center">{{$instruction->id}}</td> -->
                             <td scope="row" class="text-center">{{$instruction->Date_From}}</td>
-                            <td scope="row" class="text-center">{{$instruction->Client_name}}</td>
+                            <td scope="row" class="text-center">{{$instruction->client_name}}</td>
                             <td scope="row" class="text-center">{{$instruction->file_name}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>

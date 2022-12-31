@@ -93,7 +93,7 @@ class filemanagement extends Controller
         $email=$request['email'];
         $phone=$request['phone'];
         $address=$request['address'];
-        $file_type=$request['file_type'];
+       
         $open_date=$request['open_date'];
         $close_date=$request['close_date'];
         $comments=$request['comments'];
@@ -110,7 +110,7 @@ class filemanagement extends Controller
             'email' => $email,
             'phone' => $phone,
             'address' => $address,
-            'file_type' => $file_type,
+           
             'open_date' => $open_date,
             'close_date' => $close_date,
             'comments' => $comments,
