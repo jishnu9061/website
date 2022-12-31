@@ -549,7 +549,7 @@ animation-direction:reverse;">
                             </li>
                             <li class="submenu-item has-sub" style="list-style:none;">
                                 <a href="{{url('crm_index')}}" class='sidebar-link'>
-                                    <i class="fa fa-briefcase" id="icon"></i>
+                                    <i class="fa fa-address-book-o" id="icon" style="font-size:16px"></i>
                                     <span>CRM</span>
                                 </a>
                             </li>
