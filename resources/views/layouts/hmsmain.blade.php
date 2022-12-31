@@ -1039,18 +1039,19 @@ animation-direction:reverse;">
                         </button>
 
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{url('user_management')}}">User Management</a>
-                            <a class="dropdown-item" href="{{url('client-index')}}">Client Management</a>
-                            <a class="dropdown-item" href="{{url('file_managementindex')}}">File Management</a>
-                            <a class="dropdown-item" href="{{url('hrindex')}}">HR</a>
-                            <a class="dropdown-item" href="{{url('accindex')}}">Accounts</a>
-                            <a class="dropdown-item" href="{{url('Store_&_Inventory_index')}}">Store & Inventory</a>
-                            <a class="dropdown-item" href="{{url('purchase_index')}}">Procurement</a>
-                            <a class="dropdown-item" href="{{url('practice_area_index')}}">Practice Management</a>
-                            <a class="dropdown-item" href="{{url('libraryindex')}}">E-Library</a>
-                            <a class="dropdown-item" href="{{url('tender_index')}}">Tender Management</a>
-                            <a class="dropdown-item" href="{{url('office_admin_index')}}">Office Administration</a>
-                            <a class="dropdown-item" href="{{url('system_setup')}}">System Setup</a>
+                            <a class="dropdown-item" href="{{url('user_management')}}"><b>User Management</b></a>
+                            <a class="dropdown-item" href="{{url('client-index')}}"><b>Client Management</b></a>
+                            <a class="dropdown-item" href="{{url('file_managementindex')}}"><b>File Management</b></a>
+                            <a class="dropdown-item" href="{{url('hrindex')}}"><b>HR</b></a>
+                            <a class="dropdown-item" href="{{url('accindex')}}"><b>Accounts</b></a>
+                            <a class="dropdown-item" href="{{url('Store_&_Inventory_index')}}"><b>Store & Inventory</b></a>
+                            <a class="dropdown-item" href="{{url('purchase_index')}}"><b>Procurement</b></a>
+                            <a class="dropdown-item" href="{{url('practice_area_index')}}"><b>Practice Management</b></a>
+                            <a class="dropdown-item" href="{{url('libraryindex')}}"><b>E-Library</b></a>
+                            <a class="dropdown-item" href="{{url('tender_index')}}"><b>Tender Management</b></a>
+                            <a class="dropdown-item" href="{{url('office_admin_index')}}"><b>Office Administration</b></a>
+                            <a class="dropdown-item" href="{{url('crm_index')}}"><b>CRM</b></a>
+                            <a class="dropdown-item" href="{{url('system_setup')}}"><b>System Setup</b></a>
 
                         </div>
                     </div>
