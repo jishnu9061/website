@@ -57,7 +57,7 @@
 <br>
 <br> -->
 
-<div class="p-5" style="background-color: #e9e4d65e" id="calender"></div>
+<div class="p-5" style="background-color: white" id="calender"></div>
 
 
 {{-- {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
