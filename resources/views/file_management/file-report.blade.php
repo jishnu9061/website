@@ -30,8 +30,8 @@
             <input class="btn btn-primary" type="button" value="Last Week">
             <input class="btn btn-primary" type="button" value="This Month">
             <input class="btn btn-primary" type="button" value="Last Month">
-            <input class="btn btn-primary" type="button" style="width:12%;" value="This Quater ">
-            <input class="btn btn-primary" type="button" style="width:12%;" value="Last Quater">
+            <input class="btn btn-primary" type="button"  value="This Quater ">
+            <input class="btn btn-primary" type="button" value="Last Quater">
             <input class="btn btn-primary" type="button" value="This Year">
             <input class="btn btn-primary" type="button" value="Last Year">
         </div>
