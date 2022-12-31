@@ -188,7 +188,7 @@
                                                 <label for="username">Telephone</label>
                                                 <div class="input-group">
                                                     <div class="input-group-prepend"></div>
-                                                    <input type="number" class="form-control" name="phone" id="age"
+                                                    <input type="text" class="form-control" name="phone" id="age"
                                                         value="">
                                                     <div class="invalid-feedback" style="width: 100%;">
                                                         Age is required.
