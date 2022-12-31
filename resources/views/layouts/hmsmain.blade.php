@@ -555,7 +555,7 @@ animation-direction:reverse;">
                             </li>
                             <li class="submenu-item has-sub" style="list-style:none;">
                                 <a href="{{url('system_setup')}}" class='sidebar-link'>
-                                    <i class="fa fa-gear" id="icon"></i>
+                                    <i class="fa fa-gear" id="icon" style="font-size:16px"></i>
                                     <span>System Setup</span>
                                 </a>
                             </li>
