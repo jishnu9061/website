@@ -3,11 +3,92 @@
 
 {{-- heading --}}
 <div class="container">
-    <h4 id="hdtpa"><b>View General Practice</b></h4>
+    <h4 id="hdtpa"><b> General Practice Details</b></h4>
     <br>
 
+    <form method="post" action="{{url('')}}">
+        @csrf
+        <div class="container">
+            <div class="text-left">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td scope="row">File No:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
 
- <form action="">
+                        </tr>
+                        <tr>
+                            <td scope="row">Client Name:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Matter Type:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Other Party:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Attorney:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Case Details:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Witness Details:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </form>
+
+
+</div>
+
+@endsection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form action="">
     <div class="row">
         <div class="col-md-4">
             <div class="mb-3">
@@ -86,19 +167,15 @@
         </div>
     </div>
 </form>
-</div>
+</div> -->
 
 
 
 
-    <!-- <div class="mb-3">
+<!-- <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Supporting Details</label>
                     <span class="m-2"></span>
                     <input type="file" class="form-control" >
                         </div>
       </div>
   </div> -->
-
-
-
-    @endsection
