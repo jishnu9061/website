@@ -366,14 +366,13 @@ animation-direction:reverse;">
                         </li>
 
                         <li class="submenu-item  has-sub" style="list-style:none;">
-                            <a href="{{url('user_management')}}" class='sidebar-link'>
+                            <a id="sblma" href="{{url('user_management')}}" class='sidebar-link'>
                                 <i class="fa-regular fa-user" id="icon"></i>
                                 <span> User Management</span> 
                             </a>
 
                         </li>
-
-
+              
                         <li class="submenu-item has-sub " style="list-style:none;">
                             <a id="sblm" href="{{url('client-index')}}" class='sidebar-link'>
                                 <i class="fa fa-university" id="icon"></i>
@@ -1179,8 +1178,7 @@ animation-direction:reverse;">
                         </div>
                     </section>
                 </section>
-
-
+         
 
                 <footer id="ftr" class="newstyle2 container-fluid bg-white p-4 mt-5 border-top">
 
@@ -1199,6 +1197,8 @@ animation-direction:reverse;">
                         </div> -->
                     </div>
                 </footer>
+
+                
 
             </div>
         </div>
@@ -1419,16 +1419,16 @@ animation-direction:reverse;">
 
 
 
-        <script>
+        {{-- <script>
         $("a.sidebar-link").click(function() {
             $("a.sidebar-link").css("background-color", "");
             $(this).css("background-color", "#F5E9D4");
         });
-        </script>
+        </script> --}}
 
 
-        <script>
-        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        {{-- <script>
+         Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict
         var dropdown = document.getElementsByClassName("sidebar-link");
         var i;
 
@@ -1443,21 +1443,23 @@ animation-direction:reverse;">
                 }
             });
         }
-        </script>
+        </script> --}}
 
         {{-- const myElement = document.getElementById("subm");
 myElement.style.color = "red"  --}}
 
-<script>
+{{-- <script>
     $("a.link").click(function(){
       $("a.link").css("background-color", "black");
     $(this).css("background-color", "red");
 });
-</script>
+</script> --}}
+
+
 
     </body>
 
-
+  
     <!-- Mirrored from zuramai.github.io/mazer/demo/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 14 Aug 2021 11:16:21 GMT -->
 
     </html>
