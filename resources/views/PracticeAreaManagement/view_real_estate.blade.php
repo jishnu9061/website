@@ -3,11 +3,105 @@
 
 {{-- heading --}}
 <div class="container">
-    <h4 id="hdtpa"><b>View Real Estate</b></h4>
+    <h4 id="hdtpa"><b> Real Estate Details</b></h4>
     <br>
 
 
-    <form action="">
+    <form method="post" action="{{url('')}}">
+        @csrf
+        <div class="container">
+            <div class="text-left">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td scope="row">File No:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td scope="row">Client Name:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Matter Type:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Buyer:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Attorney:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Property Details:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td scope="row">Closing Statement:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Listing Realtor:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Selling Realtor:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Company Title:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </form>
+
+
+</div>
+
+@endsection
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form action="">
         <div class="row">
             <div class="col-md-4">
                 <div class="mb-1">
@@ -116,7 +210,7 @@
             </div>
 
     </form>
-</div>
+</div> -->
 
 
 
@@ -127,7 +221,3 @@
                         </div>
       </div>
   </div> -->
-
-
-
-@endsection
