@@ -4,7 +4,7 @@
 
 {{-- heading --}}
 <div class="container">
-    <h4 id="hdtpa"><b>Category Management </b></h4>
+    <h4 id="hdtpa"><b>Book Category Details</b></h4>
     <br>
 
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Category
@@ -91,14 +91,14 @@
 
             <!-- Modal Header -->
             <div class="modal-header">
-                <h2 class="text-centre"><b>Category Management</b></h2>
+                <h2 class="text-centre"><b>Add Category</b></h2>
                 <br>
             </div>
 
             <!-- Modal body -->
             <div class="modal-body">
                 <div class="container">
-                    <form action="{{url('add_site')}}" method="post">
+                    <form action="{{url('')}}" method="post">
                         @csrf
 
                         <div class="row">
