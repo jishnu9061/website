@@ -13,11 +13,13 @@
 #hdtpa{
     border: 0.5px solid rgba(157, 168, 176, 0.4);
     border-radius: 25px;
-    background-color: #d0d3cd50;
+    /* background-color: #d0d3cd50; */
+    background-color: #f1d9b0;
     padding: 1%;
     width:100%; 
     text-align:center;
     box-shadow: inset 0 0 3px #d3d0ca;
+    opacity: .9;
 }
 
 #hdbtb{
