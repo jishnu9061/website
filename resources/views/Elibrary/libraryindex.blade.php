@@ -20,7 +20,7 @@
 
         <div class="col-sm-4 "><img class="logo_size" src="image\logo\Client conversation.png" alt=""><a
                 href="{{ url('subject_category') }}"><button type="button" style="width:70%;"
-                    class="btn btn-primary btn_align_btn">Category</button></a></div>
+                    class="btn btn-primary btn_align_btn">Book Category</button></a></div>
 
         <div class="col-sm-4 "><img class="logo_size" src="image\logo\Client conversation.png" alt=""><a
                 href="{{ url('subject') }}"><button type="button" style="width:70%;"
