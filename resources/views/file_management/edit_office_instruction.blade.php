@@ -17,25 +17,22 @@
 
 
         </div>
-        
-        <div>
+
         {{-- heading --}}
-    <h4 id="hdtpa"><b>Edit Office Instruction</b></h4>
-    <br><br>
-        
-        </div>
+        <h4 id="hdtpa"><b>Edit Office Instruction</b></h4>
+        <br>
+
     </div>
 
 
-    <div class="row">
+    <div class="card">
 
-
-        <div class="col-md-12 order-md-1">
+        <div class="card-body">
 
             <form method="post" action="{{url('update_office_instruction')}}" id="form">
                 @csrf
 
-              <input type="hidden" name="id" value="{{$edit_office_instruction->id}}">
+                <input type="hidden" name="id" value="{{$edit_office_instruction->id}}">
 
                 <div class="row">
 
@@ -46,7 +43,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="date" value="{{$edit_office_instruction->date}}" id="username" required>
+                                <input type="date" class="form-control" name="date"
+                                    value="{{$edit_office_instruction->date}}" id="username" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -62,12 +60,12 @@
 
                                 </div>
                                 <select name="instruction_type" id="cars">
-                                    <option >{{$edit_office_instruction->instruction_type}}</option>
-                                <option>select...</option>
-                        <option>Demo 1</option>
-                        <option>Demo 2</option>
-                        <option>Demo 3</option>
-                        <option>Demo 4</option>
+                                    <option>{{$edit_office_instruction->instruction_type}}</option>
+                                    <option>select...</option>
+                                    <option>Demo 1</option>
+                                    <option>Demo 2</option>
+                                    <option>Demo 3</option>
+                                    <option>Demo 4</option>
                                 </select>
                             </div>
                         </div>
@@ -84,210 +82,214 @@
                                 </div>
                                 <select name="instruction_category" id="cars">
                                     <option>{{$edit_office_instruction->instruction_category}}</option>
-                                <option>select...</option>
-                        <option>Demo 1</option>
-                        <option>Demo 2</option>
-                        <option>Demo 3</option>
-                        <option>Demo 4</option>
+                                    <option>select...</option>
+                                    <option>Demo 1</option>
+                                    <option>Demo 2</option>
+                                    <option>Demo 3</option>
+                                    <option>Demo 4</option>
                                 </select>
                             </div>
                         </div>
                     </div>
 
                 </div>
-      
-    <br>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="mb-1">
-                <label for="username">Receiver</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
 
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Receiver</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="receiver"
+                                    value="{{$edit_office_instruction->receiver}}" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <input type="text" class="form-control" name="receiver" value="{{$edit_office_instruction->receiver}}" id="age">
-                    <div class="invalid-feedback" style="width: 100%;">
-                        Incorporation is required
+
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Currency</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="currency" id="cars">
+                                    <option>{{$edit_office_instruction->currency}}</option>
+                                    <option>select...</option>
+                                    <option>Demo 1</option>
+                                    <option>Demo 2</option>
+                                    <option>Demo 3</option>
+                                    <option>Demo 4</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Exchange Rate</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
-        <div class="col-md-4">
-            <div class="mb-1">
-                <label for="username">Currency</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
-                    </div>
-                    <select name="currency" id="cars">
-                        <option>{{$edit_office_instruction->currency}}</option>
-                    <option>select...</option>
-                        <option>Demo 1</option>
-                        <option>Demo 2</option>
-                        <option>Demo 3</option>
-                        <option>Demo 4</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="mb-1">
-                <label for="username">Exchange Rate</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
-                    </div>
-                    <input type="text" class="form-control" name="exchange_rate" value="{{$edit_office_instruction->exchange_rate}}" id="confirm_password" required>
-                    <div class="invalid-feedback" style="width: 100%;">
-                        Telephone Number is required.
-                    </div>
-                </div>
-            </div>
+                                </div>
+                                <input type="text" class="form-control" name="exchange_rate"
+                                    value="{{$edit_office_instruction->exchange_rate}}" id="confirm_password" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Telephone Number is required.
+                                </div>
+                            </div>
+                        </div>
 
 
-        </div>
-    </div>
-    <br>
-
-    <div class="row">
-
-        <div class="col-md-4">
-            <div class="mb-1">
-                <label for="username">Expense Category</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
-                    </div>
-                    <select name="expence_category" id="cars">
-                        <option>{{$edit_office_instruction->expence_category}}</option>
-                    <option>select...</option>
-                        <option>Demo 1</option>
-                        <option>Demo 2</option>
-                        <option>Demo 3</option>
-                        <option>Demo 4</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="mb-1">
-                <label for="username">Turn-Around Time(TAT)</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
-                    </div>
-                    <select name="turn_around" id="cars">
-                        <option>{{$edit_office_instruction->turn_around}}</option>
-                    <option>select...</option>
-                        <option>Demo 1</option>
-                        <option>Demo 2</option>
-                        <option>Demo 3</option>
-                        <option>Demo 4</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="col-md-4">
-            <div class="mb-1">
-                <label for="username">Priority</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
-                    </div>
-                    <select name="priority" id="cars">
-                        <option>{{$edit_office_instruction->priority}}</option>
-                    <option>select...</option>
-                        <option>Demo 1</option>
-                        <option>Demo 2</option>
-                        <option>Demo 3</option>
-                        <option>Demo 4</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <br>
-    <div class="row">
-
-        <div class="col-md-6">
-            <div class="mb-1">
-                <label for="username">Amount</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
-                    </div>
-                    <input type="text" class="form-control" name="amount" value="{{$edit_office_instruction->amount}}" id="username" required>
-                    <div class="invalid-feedback" style="width: 100%;">
-                        Number is required.
                     </div>
                 </div>
-            </div>
-        </div>
+                <br>
 
-        <div class="col-md-6">
-            <div class="mb-1">
-                <label for="username">Details</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
+                <div class="row">
 
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Expense Category</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="expence_category" id="cars">
+                                    <option>{{$edit_office_instruction->expence_category}}</option>
+                                    <option>select...</option>
+                                    <option>Demo 1</option>
+                                    <option>Demo 2</option>
+                                    <option>Demo 3</option>
+                                    <option>Demo 4</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <textarea class="form-control" id="form7Example7" name="detail" value="" rows="3">{{$edit_office_instruction->detail}}</textarea>
-                </div>
-            </div>
-        </div>
 
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Turn-Around Time(TAT)</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
-
-    </div>
-
-    <hr class="mb-4">
-
-
-    <div class="row">
-        <div class="col-md-6">
-            <div class="mb-1">
-                <label for="username">Send Notification To</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
+                                </div>
+                                <select name="turn_around" id="cars">
+                                    <option>{{$edit_office_instruction->turn_around}}</option>
+                                    <option>select...</option>
+                                    <option>Demo 1</option>
+                                    <option>Demo 2</option>
+                                    <option>Demo 3</option>
+                                    <option>Demo 4</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <select name="send_notification" id="cars">
-                        <option>{{$edit_office_instruction->send_notification}}</option>
-                    <option>select...</option>
-                        <option>Demo 1</option>
-                        <option>Demo 2</option>
-                        <option>Demo 3</option>
-                        <option>Demo 4</option>
-                    </select>
+
+
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Priority</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="priority" id="cars">
+                                    <option>{{$edit_office_instruction->priority}}</option>
+                                    <option>select...</option>
+                                    <option>Demo 1</option>
+                                    <option>Demo 2</option>
+                                    <option>Demo 3</option>
+                                    <option>Demo 4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-        </div>
-    </div>
+                <br>
+                <div class="row">
 
-<br>
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Amount</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
-<div class="container">
+                                </div>
+                                <input type="text" class="form-control" name="amount"
+                                    value="{{$edit_office_instruction->amount}}" id="username" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Number is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Details</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <textarea class="form-control" id="form7Example7" name="detail" value=""
+                                    rows="3">{{$edit_office_instruction->detail}}</textarea>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <hr class="mb-4">
+
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Send Notification To</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="send_notification" id="cars">
+                                    <option>{{$edit_office_instruction->send_notification}}</option>
+                                    <option>select...</option>
+                                    <option>Demo 1</option>
+                                    <option>Demo 2</option>
+                                    <option>Demo 3</option>
+                                    <option>Demo 4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="container">
                     <div class="row">
-                      <div class="col-sm">
-                      </div>
-                      <div class="col-sm">
-                      </div>
-                      <div class="col-sm">
-                        <button type="submit" class="btn btn-primary float:right" style="width:45%">Save</button>
-                        <button type="submit" class="btn btn-primary float:left"style="width:45%">Close</button>
-                      </div>
+                        <div class="col-sm">
+                        </div>
+                        <div class="col-sm">
+                        </div>
+                        <div class="col-sm">
+                            <button type="submit" class="btn btn-primary float:right" style="width:45%">Save</button>
+                            <button type="submit" class="btn btn-primary float:left" style="width:45%" onclick="history.back()">Cancel</button>
+                        </div>
                     </div>
-                 
 
 
-</form>
-</div>
-</div>
+
+            </form>
+        </div>
+    </div>
 
 
 

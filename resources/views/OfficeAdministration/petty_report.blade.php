@@ -1,5 +1,6 @@
 @extends('layouts.hmsmain')
 @section('content')
+
 <div class="container">
 
     <h4 id="hdtpa"><b>Petty Cash Report</b></h4>
@@ -26,90 +27,94 @@
     <br>
     <br>
     <div>
-        <div class="continer" style="width:70%; margin-left: auto; margin-right: auto;">
-            <form method="post" action="" id="form">
-                @csrf
+        <div class="card">
 
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Petty Cash A/C</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
+            <div class="card-body">
+                <form method="post" action="" id="form">
+                    @csrf
 
-                                </div>
-                                <select name="event" id="cars">
-                                    <option>---select---</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-              
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                                <label for="username">Petty Cash A/C</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
 
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">Transaction Period</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <input type="date" class="form-control" name="user" id="age">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Incorporation is required
+                                    </div>
+                                    <select name="event" id="cars">
+                                        <option>---select---</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-md-4">
-                        <div class="mb-1">
-                            <label for="username">To</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
 
-                                </div>
-                                <input type="date" class="form-control" name="user" id="age">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Incorporation is required
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                                <label for="username">Transaction Period</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+
+                                    </div>
+                                    <input type="date" class="form-control" name="user" id="age">
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Incorporation is required
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
+                        <div class="col-md-4">
+                            <div class="mb-1">
+                                <label for="username">To</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+
+                                    </div>
+                                    <input type="date" class="form-control" name="user" id="age">
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        Incorporation is required
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+          
+
+            <br>
+
+            <div class="row">
+                <div class="col-sm">
 
                 </div>
+                <div class="col-sm">
+
+                </div>
+                <div class="col-sm">
+                    <br>
+                    <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Submit</button>
+                    <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                        onclick="history.back()">Cancel</button>
+                </div>
+            </div>
+            </form>
         </div>
-
-        <br>
-
-        <div class="row">
-            <div class="col-sm">
-
-            </div>
-            <div class="col-sm">
-
-            </div>
-            <div class="col-sm">
-                <br>
-                <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Submit</button>
-                <button type="button" class="btn btn-primary float:left" Style="width:45%;"
-                    onclick="history.back()">Cancel</button>
-            </div>
-        </div>
-
-
-
     </div>
 
 
+</div>
 
 
 
 
 
 
-    @endsection
+
+
+@endsection
