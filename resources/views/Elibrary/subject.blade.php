@@ -132,9 +132,11 @@
 
                                         </div>
                                         <select name="category" id="cars">
-                                            <option>---select---</option>
-                                            <option></option>
-                                            <option></option>
+                                            @if(count($get_category))
+                                            @foreach($get_category as $list_category)
+                                            <option>{{$list_category->title}}</option>
+                                            @endforeach
+                                          @endif
                                             
                                             
                                         </select>
