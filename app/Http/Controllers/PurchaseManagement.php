@@ -88,7 +88,8 @@ class PurchaseManagement extends Controller
 
     public function purchase_order_report()
     {
-        return view('purchase_management.purchase_order_report');
+        $purchase_order_report = DB::table('cra_add_new_purchase')->get();
+        return view('purchase_management.purchase_order_report',compact('purchase_order_report'));
     }
 
 
@@ -118,15 +119,20 @@ class PurchaseManagement extends Controller
         return view('purchase_management.ledger_details');
     }
 
-    public function purchase_view()
+    public function purchase_view($purchase_id)
     {
-        return view('purchase_management.purchase_view');
+        $purchase_view  = DB::table('cra_add_new_purchase')->where('purchase_id',$purchase_id)->get();
+        $purchase       = DB::table('cra_purchase_items')->where('purchase_id',$purchase_id)->get();
+
+        return view('purchase_management.purchase_view',compact('purchase_id','purchase_view','purchase'));
     }
 
 
-    public function edit_purchase()
+    public function edit_purchase($purchase_id)
     {
-        return view('purchase_management.edit_purchase');
+        $edit_purchase  = DB::table('cra_add_new_purchase')->where('purchase_id',$purchase_id)->get();
+        $edit_purchases = DB::table('cra_purchase_items')->where('purchase_id',$purchase_id)->get();
+        return view('purchase_management.edit_purchase',compact('edit_purchase','purchase_id','edit_purchases'));
     }
 
     public function suppliers()

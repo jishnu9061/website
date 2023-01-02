@@ -3,110 +3,119 @@
 
 
 <div class="container">
-<h4 id="hdtpa"><b>View Purchase Order</b></h4>
-<br>
+    <h4 id="hdtpa"><b>View Purchase Order</b></h4>
+    <br>
 
 
 
-<div class="text-center">
-      <table class="table">
-  <thead>
-    <tr>
-      <th colspan="2">Purchase Details</th>
-      
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td scope="row">Purchase Date</td>
-      <td><input class="form-control" type="text" placeholder="25-11-2022"  aria-label="Disabled input example" Disabled></td>
- 
-    </tr>
-    <tr>
-      <td scope="row">Purchase Number</td>
-      <td><input class="form-control" type="email" placeholder="C12D56G89" aria-label="Disabled input example" Disabled></td>
-    
-    </tr>
-    <tr>
-      <td scope="row">Payment Type</td>
-      <td><input class="form-control" type="text" placeholder="Bank Transfer" aria-label="Disabled input example" Disabled></td>
-      
-    </tr>
-    <tr>
-      <td scope="row">Suppier</td>
-      <td><input class="form-control" type="text" placeholder="Supplier1" aria-label="Disabled input example" Disabled></td>
-    
-    </tr>
-    <tr>
-      <td scope="row">Status</td>
-      <td><input class="form-control" type="text" placeholder="Order-Placed" aria-label="Disabled input example" Disabled></td>
-    
-    </tr>
-    
-  
-  </tbody>
-</table>
+    <div class="text-center">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th colspan="2">Purchase Details</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($purchase_view as $lists)
+                <tr>
+                    <td scope="row">Purchase Date</td>
+                    <td><input class="form-control" type="text" value="{{$lists->purchase_date}}" aria-label="Disabled input example" Disabled></td>
+
+                </tr>
+                <tr>
+                    <td scope="row">Purchase Number</td>
+                    <td><input class="form-control" type="text" value="{{$lists->purchase_order_number}}" aria-label="Disabled input example" Disabled></td>
+
+                </tr>
+                <tr>
+                    <td scope="row">Payment Type</td>
+                    <td><input class="form-control" type="text" value="{{$lists->payment_type}}" aria-label="Disabled input example" Disabled></td>
+
+                </tr>
+                <tr>
+                    <td scope="row">Supplier</td>
+                    <td><input class="form-control" type="text" value="{{$lists->supplier_name}}" aria-label="Disabled input example" Disabled></td>
+
+                </tr>
+                <tr>
+                    <td scope="row">Status</td>
+                    <td><input class="form-control" type="text" value="{{$lists->status}}" aria-label="Disabled input example" Disabled></td>
+
+                </tr>
+                @endforeach
+
+            </tbody>
+        </table>
 
 
 
-<br>
+        <br>
 
-<!-- table -->
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Item Name</th>
-      <th scope="col">Item No</th>
-      <th scope="col">Quantity</th>
-      <th scope="col">Price</th>
-      <th scope="col">Total</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><input class="form-control" type="text" value="Paper" aria-label="Disabled input example" disabled readonly></td>
-      <td><input class="form-control" type="text" value="C15P125" aria-label="Disabled input example" disabled readonly></td>
-      <td><input class="form-control" type="text" value="40" aria-label="Disabled input example" disabled readonly></td>
-      <td><input class="form-control" type="text" value="200" aria-label="Disabled input example" disabled readonly></td>
-      <td><input class="form-control" type="text" value="200" aria-label="Disabled input example" disabled readonly></td>
-    </tr>
-   
-    <tr>  
-            <td colspan="3"></td>
-            <td><input type="text"  placeholder="Grand Total" class="form-control" disabled></td>
-            <td><input type="text"  placeholder="200" class="form-control" disabled></td>
-          </tr>
-        
-          <tr>
-           
-           
-            <td colspan="3"></td>
-            <td><input type="text"  placeholder="Advance Amount" class="form-control" disabled></td>
-            <td><input type="text"  placeholder="50" class="form-control" disabled></td>
-          </tr>
-        
-          <tr>
-           
-            
-            <td colspan="3"></td>
-            <td><input type="text"  placeholder="Payment Amount" class="form-control" disabled></td>
-            <td><input type="text"  placeholder="150" class="form-control" disabled></td>
-          </tr>
-  </tbody>
-</table>
+        <!-- table -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Item No</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($purchase as $listss)
+                <tr>
+                    <td><input class="form-control" type="text" value="{{$listss->item_name}}" aria-label="Disabled input example"
+                            disabled readonly></td>
+                    <td><input class="form-control" type="text" value="{{$listss->item_no}}" aria-label="Disabled input example"
+                            disabled readonly></td>
+                    <td><input class="form-control" type="text" value="{{$listss->quantity}}" aria-label="Disabled input example" disabled
+                            readonly></td>
+                    <td><input class="form-control" type="text" value="{{$listss->price}}" aria-label="Disabled input example" disabled
+                            readonly></td>
+                    <td><input class="form-control" type="text" value="{{$listss->total}}" aria-label="Disabled input example" disabled
+                            readonly></td>
+                </tr>
+                @endforeach
+                @foreach($purchase_view as $list)
+                <tr>
+                    <td colspan="3"></td>
+                    <td><input type="text" placeholder="Grand Total" class="form-control" disabled></td>
+                    <td><input type="text"  class="form-control" value="{{$list->grand_total}}" disabled></td>
+                </tr>
 
-<br>
-            <button type="button" class="btn btn-primary">Print</button>
-               <span class="m-2"></span>
-            <button type="button" class="btn btn-primary" onclick="history.back()">Close</button>
+                <tr>
 
 
+                    <td colspan="3"></td>
+                    <td><input type="text" placeholder="Advance Amount" class="form-control" disabled></td>
+                    <td><input type="text"  class="form-control" value="{{$list->advance_amount}}" disabled></td>
+                </tr>
+
+                <tr>
 
 
-</div>
+                    <td colspan="3"></td>
+                    <td><input type="text" placeholder="Pending Amount" class="form-control" disabled></td>
+                    <td><input type="text"  class="form-control" value="{{$list->pending_amount}}" disabled></td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+
+        <br>
+        <button type="button" class="btn btn-primary">Print</button>
+        <span class="m-2"></span>
+        <button type="button" class="btn btn-primary" onclick="history.back()">Close</button>
+
+
+
+
+    </div>
 
 
 
 
 
-@endsection
+    @endsection

@@ -78,7 +78,8 @@
                                     <td></td>
                                     <td>{{$list->status}}</td>
                                     <td scope="row" class="text-center">
-                                        <a href="{{url('view_purchase_order',$list->purchase_id)}}"> <i
+                                        <a href="{{url('view_purchase_order',$list->purchase_id
+                                            )}}"> <i
                                                 style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
                                     </td>
 
