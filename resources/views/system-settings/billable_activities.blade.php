@@ -95,8 +95,9 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    
-            <h6 style="text-align:center; color:#1D1D50;">List of Billable/Non Billable Activities</h6>
+        <div class="text-center">
+            <h5><b>List of Billable/Non Billable Activities</b></h5>
+        </div>
             <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
                     <thead>
