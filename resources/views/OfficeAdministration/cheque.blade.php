@@ -10,6 +10,9 @@
    
 <br>
 <div>
+<div class="card">
+
+<div class="card-body">
     <form method="post" action="" id="form">
         @csrf
 
@@ -60,7 +63,9 @@
             </div>
         </div>
 
-
+</form>
+</div>
+</div>
 
 </div>
 
