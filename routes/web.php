@@ -1384,11 +1384,13 @@ Route::any('addmanage_items','store@add_manage_items')->name('addmanage_items');
 Route::any('/edit_manage_items/{id}','store@editmanage_items')->name('edit_manage_items');
 Route::any('update_manage_items','store@update_manage_items')->name('update_manage_items');
 Route::any('/drop_manage_items/{id}','store@drop_manage_items')->name('drop_manage_items');
+
+
 //Purchase Management
 Route::any('purchase_index','PurchaseManagement@index_purchase')->name('purchase_index');
 Route::any('purchase_order','PurchaseManagement@purchase_order')->name('purchase_order');
-Route::any('create_purchase_order','PurchaseManagement@create_purchase_order')->name('createpurchase_order');
-Route::any('view_purchase_order','PurchaseManagement@view_purchase_order')->name('view_purchase_order');
+Route::any('store_purchase','PurchaseManagement@store_purchase')->name('store_purchase');
+Route::any('view_purchase_order/{purchase_id}','PurchaseManagement@view_purchase_order')->name('view_purchase_order');
 Route::any('purchase_order_report','PurchaseManagement@purchase_order_report')->name('purchase_order_report');
 Route::any('vendor_performance_report','PurchaseManagement@vendor_performance_report')->name('vendor_performance_report');
 Route::any('view_supplier','PurchaseManagement@view_supplier')->name('view_supplier');
@@ -1398,6 +1400,9 @@ Route::any('ledger_details','PurchaseManagement@ledger_details')->name('ledger_d
 Route::any('purchase_view','PurchaseManagement@purchase_view')->name('purchase_view');
 Route::any('edit_purchase','PurchaseManagement@edit_purchase')->name('edit_purchase');
 Route::any('supplier','PurchaseManagement@suppliers')->name('supplier');
+//end  Purchase Management
+
+
 //practice Area Management
 Route::any('practice_area_index','PracticeAreaManagement@practice_area_index')->name('practice_area_index');
 Route::any('practice_area','PracticeAreaManagement@practice_area')->name('practice_area');
@@ -1496,6 +1501,8 @@ Route::any('/delete_precedence/{id}','Elibrary@deleteprecedence')->name('delete_
 Route::any('viewprecedence','Elibrary@viewprecedences')->name('viewprecedence');
 Route::any('subject_category','Elibrary@subject_categorys')->name('subject_category');
 Route::any('editsubject_category','Elibrary@editsubject_categorys')->name('editsubject_category');
+
+
 //Tender Management
 Route::any('tender_index','TenderManagement@tender_index')->name('tender_index');
 Route::any('tender_details','TenderManagement@tender_details')->name('tender_details');
@@ -1509,6 +1516,8 @@ Route::any('view_apply_tender/{id}','TenderManagement@view_apply_tender')->name(
 Route::any('tender_applied_details','TenderManagement@tender_applied_details')->name('tender_applied_details');
 Route::any('view_tender_applied/{id}','TenderManagement@view_tender_applied')->name('view_tender_applied');
 Route::any('store_apply_tender','TenderManagement@store_apply_tender')->name('store_apply_tender');
+
+
 //Office Administration
 Route::any('office_admin_index','OfficeAdministration@office_admin_index')->name('office_admin_index');
 Route::any('creditor_list','OfficeAdministration@creditor_list')->name('creditor_list');
