@@ -98,7 +98,7 @@
         body {
            background-color: #e9e6d65e;
             /* background-color: #ffffff; */
-            font-family: 'Be Vietnam Pro';
+            /* font-family: 'Be Vietnam Pro'; */
             /* font-family: 'Alexandria'; */
             /* font-family: 'Atkinson Hyperlegible'; */
             /* font-family: 'Carter One'; */
@@ -1059,12 +1059,24 @@ animation-direction:reverse;">
                     <ul class="navbar-nav mr-auto lg-pl-3 p-3">
 
                         <li class="nav-item dropdown">
-                            <button class=" dropdown-toggle-x btn btn-primary p-1" style="font-size:12px;" href="#"
+                            <button  class=" dropdown-toggle-x btn btn-primary p-1" style="font-size:12px;" href="#"
                                 id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
-                                <b> Create New </b>
-                                <i class="fa fa-plus-square"></i>
+                                <b onmouseover="myFunctionw()" onmouseout="myFunctions()" onmousedown="myFunctions()">Create New</b>
+                                <span id="navns" ><i class="fa fa-plus-square"></i></span>
                             </button>
+   <style>
+                                    .mystyle {
+                                      display: none; }
+
+                                    .mystylea {
+                                      display: block;
+                                     
+                                    }
+                                    </style>
+                             
+                                <script>function myFunctionw() { document.getElementById("navns").className = "mystyle"; }function myFunctions() {    document.getElementById("navns").className = "mystylea"; }</script>
+
 
 
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">

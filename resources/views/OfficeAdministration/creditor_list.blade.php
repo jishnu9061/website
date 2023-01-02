@@ -4,18 +4,19 @@
 <div class="container">
     <h4 id="hdtpa"><b>Creditor List</b></h4>
     <br>
-
+    <form action="{{url('creditor_list')}}" method="post"  enctype="multipart/form-data">
+        @csrf
     <div class="row align-items-start">
         <div class="col">
             <label class="form-label">Date From</label>
-            <input type="date" class="form-control">
+            <input type="date" name="date_from" class="form-control">
         </div>
         <div class="col">
             <label class="form-label">Date To</label>
-            <input type="date" class="form-control">
+            <input type="date" name="date_to" class="form-control">
         </div>
     </div>
-
+    </form>
 
     <div class="header_wrap">
         <div class="num_rows">

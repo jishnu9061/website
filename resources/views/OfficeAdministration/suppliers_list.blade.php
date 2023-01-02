@@ -114,7 +114,7 @@
                                                 <option value="2">tech 2</option>
                                                 <option value="3">tech 3</option>
                                             </select>
-                                            <button type="button" class="btn btn-primary">Add</button>
+                                            <button type="button" class="btn btn-primary" style="margin-top:8px;">Add</button>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-4">

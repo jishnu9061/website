@@ -3,6 +3,7 @@
 
 
 <div class="container">
+
     <h4 id="hdtpa"><b>View Purchase Order</b></h4>
     <br>
 
@@ -119,3 +120,10 @@
 
 
     @endsection
+
+
+
+
+
+
+

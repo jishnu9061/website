@@ -320,8 +320,8 @@
     /* border-color: #CE912A; */
     box-sizing: border-box;
 
-    --clr: #9ba3b3;
-    --outline: 1px solid var(--clr);
+    --clr: #CE912A;
+    --outline: .001px solid var(--clr);
    
     outline: var(--outline);
     border: var(--outline);
@@ -437,9 +437,19 @@ button, button
 
 .logo_size{
     width:15%;
-    filter: grayscale(60%);
+    filter: grayscale(10%);
     /* filter: hue-rotate(10deg); */
+  
 }
+
+.logo_size:hover{
+    width:15%;
+    filter: grayscale(10%);
+    /* filter: hue-rotate(10deg); */
+    transform: scale(1.1); 
+    filter: grayscale(50%);
+}
+
 
 .clr{
     color:#000;
@@ -2089,6 +2099,10 @@ button, button
     .toggle-sidebar .sidebar {
         left: -300px;
     }
+}
+
+.sidebar-wrapper .menu .sidebar-link:hover{
+    transform: scale(1.05); 
 }
 
 /* vinu */

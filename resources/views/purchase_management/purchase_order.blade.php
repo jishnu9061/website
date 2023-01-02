@@ -128,6 +128,106 @@
 
                                             <div class="container">
                                                 <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="mb-1">
+                                                            <label for="username">Purchase Date</label>
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+
+                                                                </div>
+                                                                <input type="date" class="form-control" name="date"
+                                                                    id="username" required>
+                                                                <div class="invalid-feedback" style="width: 100%;">
+                                                                    Number is required.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <div class="mb-1">
+                                                            <label for="username">Purchase Order Number</label>
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+
+                                                                </div>
+                                                                <input type="text" class="form-control" name="text"
+                                                                    id="username" required>
+                                                                <div class="invalid-feedback" style="width: 100%;">
+                                                                    Number is required.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="mb-1">
+                                                            <label for="username">Payment Type</label>
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+
+                                                                </div>
+                                                                <select name="distributed" id="cars">
+                                                                    <option>select</option>
+                                                                    <option>By Cash</option>
+                                                                    <option>By Cheque</option>
+                                                                    <option>By Bank Transfer</option>
+                                                                </select>
+                                                                <div class="invalid-feedback" style="width: 100%;">
+                                                                    Number is required.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="mb-1">
+                                                            <label for="username">Supplier</label>
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+
+                                                                </div>
+                                                                <select name="distributed" id="cars">
+                                                                    <option>select</option>
+                                                                    <option>ABC Ltd</option>
+                                                                    <option>Moon Ltd</option>
+
+                                                                </select>
+                                                                <div class="invalid-feedback" style="width: 100%;">
+                                                                    Number is required.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="mb-1">
+                                                            <label for="username">Status</label>
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+
+                                                                </div>
+                                                                <input type="text" class="form-control" id="username"
+                                                                    value="Order-Placed" required>
+                                                                <div class="invalid-feedback" style="width: 100%;">
+                                                                    Number is required.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <br>
+                                                <br>
+
+
+
+
+
+
+
+                                                <!-- <div class="container">
+                                                <div class="row">
                                                     <div class="col">
                                                         <label for="exampleFormControlInput1"
                                                             class="form-label">Purchase Date</label>
@@ -173,47 +273,49 @@
                                                     </div>
                                                 </div>
                                                 <br>
-                                                <br>
+                                                <br> -->
 
                                                 <div class="text-center">
                                                     <h4><b>Purchase Items</b></h4>
                                                 </div>
                                                 <br>
                                                 <!-- table -->
+                                                <div class="table-responsive">
+                                                    <div class="row clearfix container">
 
-                                                <div class="row clearfix container">
+                                                        <div class="col-sm">
 
-                                                    <div class="col-sm">
+                                                            <table class="table table-bordered order-list"
+                                                                id="tab_logic">
 
-                                                        <table class="table table-bordered order-list" id="tab_logic">
+                                                                <tr>
+                                                                    <td class="">Item ID</td>
+                                                                    <td class="" style="width:25%">Item Name</td>
+                                                                    <td class="">Quantity</td>
+                                                                    <td class="">Price</td>
+                                                                    <td class="">Total</td>
+                                                                    <td> <input type="button" class="btn btn-primary"
+                                                                            id="add" value="Add" Style="width:100%;">
+                                                                    </td>
+                                                                </tr>
 
-                                                            <tr>
-                                                                <td class="">Item ID</td>
-                                                                <td class="" style="width:25%">Item Name</td>
-                                                                <td class="">Quantity</td>
-                                                                <td class="">Price</td>
-                                                                <td class="">Total</td>
-                                                                <td> <input type="button" class="btn btn-primary"
-                                                                        id="add" value="Add" Style="width:100%;">
-                                                                </td>
-                                                            </tr>
+                                                            </table>
+                                                            <div class="row">
+                                                                <div class="col-sm">
+                                                                </div>
+                                                                <div class="col-sm">
+                                                                    <table class="table table-bordered">
 
-                                                        </table>
-                                                        <div class="row">
-                                                            <div class="col-sm">
-                                                            </div>
-                                                            <div class="col-sm">
-                                                                <table class="table table-bordered">
-
-                                                                    <tr>
-                                                                        <td scope="col">Grand Total</td>
-                                                                        <td><input type="text"
-                                                                                class="form-control invoice-sub-total"
-                                                                                value="" name="grand_totall"
-                                                                                id="grand_totall_" readonly>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
+                                                                        <tr>
+                                                                            <td scope="col">Grand Total</td>
+                                                                            <td><input type="text"
+                                                                                    class="form-control invoice-sub-total"
+                                                                                    value="" name="grand_totall"
+                                                                                    id="grand_totall_" readonly>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>

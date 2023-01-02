@@ -23,70 +23,77 @@
 
 
 
-<br>
-<br>
-<div>
-<div class="continer" style="width:70%; margin-left: auto; margin-right: auto;">
-    <form method="post" action="" id="form">
-        @csrf
+    <br>
+    <br>
 
-        <div class="row">
-            <div class="col-md-6">
-                <div class="mb-1">
-                    <label for="username">Transaction period</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
 
-                        </div>
-                        <input type="date" class="form-control" name="user" id="age">
-                        <div class="invalid-feedback" style="width: 100%;">
-                            Incorporation is required
+
+    <div class="card">
+
+        <div class="card-body">
+            <form method="post" action="" id="form">
+                @csrf
+
+                <div class="row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label for="username">Transaction period</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="date" class="form-control" name="user" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
+                    
 
-            <div class="col-md-6">
-                <div class="mb-1">
-                    <label for="username">To</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
+                    <div class="col-md-3">
+                        <div class="mb-1">
+                            <label for="username">To</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
-                        </div>
-                        <input type="date" class="form-control" name="user" id="age">
-                        <div class="invalid-feedback" style="width: 100%;">
-                            Incorporation is required
+                                </div>
+                                <input type="date" class="form-control" name="user" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div class="col-md-3">
+                    </div>
+
+
                 </div>
-            </div>
 
 
-        </div>
-</div>
-
-        <br>
-
-        <div class="row">
-            <div class="col-sm">
-
-            </div>
-            <div class="col-sm">
-
-            </div>
-            <div class="col-sm">
                 <br>
-                <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Search</button>
-                <button type="button" class="btn btn-primary float:left" Style="width:45%;"
-                    onclick="history.back()">Cancel</button>
-            </div>
+
+                <div class="row">
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+                        <br>
+                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Search</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                            onclick="history.back()">Cancel</button>
+                    </div>
+                </div>
+            </form>
         </div>
-
-
-
-</div>
-
+    </div>
 
 
 
@@ -94,4 +101,8 @@
 
 
 
-@endsection
+
+
+
+
+    @endsection
