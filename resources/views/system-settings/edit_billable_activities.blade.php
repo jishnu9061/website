@@ -1,23 +1,18 @@
 @extends('layouts.hmsmain')
 @section('content')
-<div class="container" >
-    
-       
-            <div>
-            {{-- heading --}}
+<div class="container">
+
+
+    {{-- heading --}}
     <h4 id="hdtpa"><b>Edit Activity</b></h4>
     <br><br>
-          
 
-        
-       
-    </div>
-    <div class="row">
 
-        <div class="col-md-12 order-md-1">
+    <div class="card">
 
-        <form method="post"action="{{url('update_billable_activities')}}"id="form">  
-          <input type="hidden" name="id" value="{{$billable_activities->id}}">
+        <div class="card-body">
+            <form method="post" action="{{url('update_billable_activities')}}" id="form">
+                <input type="hidden" name="id" value="{{$billable_activities->id}}">
                 @csrf
                 <div class="row">
                     <div class="col-md-4">
@@ -28,12 +23,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select type="text" value="" id="" name="type"style="width:100%;">
-                                <option>{{$billable_activities->type}}</option>
-                                <option>Billable Activity</option>
-                                <option>Non-Billable Activity</option>
-                                
-                            </select>
+                                <select type="text" value="" id="" name="type" style="width:100%;">
+                                    <option>{{$billable_activities->type}}</option>
+                                    <option>Billable Activity</option>
+                                    <option>Non-Billable Activity</option>
+
+                                </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
@@ -49,14 +44,15 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="name" id="age" value="{{$billable_activities->activity_name}}">
+                                <input type="text" class="form-control" name="name" id="age"
+                                    value="{{$billable_activities->activity_name}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
                             </div>
                         </div>
                     </div>
-               
+
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Cost(Kshs)</label>
@@ -64,7 +60,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="cost" id="age" value="{{$billable_activities->cost}}">
+                                <input type="text" class="form-control" name="cost" id="age"
+                                    value="{{$billable_activities->cost}}">
                             </div>
                         </div>
                     </div>
@@ -72,35 +69,32 @@
 
                 </div>
                 <br>
-               
+
                 <div class="row">
-                        <div class="col-sm">
+                    <div class="col-sm">
 
-                        </div>
-                        <div class="col-sm">
+                    </div>
+                    <div class="col-sm">
 
-                        </div>
-                        <div class="col-sm">
-                            <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
-                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <br>
+                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                            onclick="history.back()">Cancel</button>
                     </div>
                 </div>
-
+            </form>
 
 
         </div>
-
-
-
-
-
-        </tbody>
-        </table>
     </div>
 </div>
-<br>
+
+
+@endsection
+
+
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
 $(function() {
@@ -267,9 +261,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Salary is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -296,9 +290,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Years of experience is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -321,9 +315,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 dob is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 /div>
 
             {
@@ -355,9 +349,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Bank Name is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -383,9 +377,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Account number is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -408,9 +402,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 IFSC Code is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-12" >
                 <
                 div class = "mb-1" >
@@ -451,7 +445,7 @@ $(document).on('input', '#percent', function() {
 
                 <
                 /tr> < /
-                table > {
+            table > {
                     {
                         -- < input type = "text"
                         class = "form-control"
@@ -468,7 +462,7 @@ $(document).on('input', '#percent', function() {
                         -- < /div> --}} < /
                         div > <
                             /div> < /
-                            div >
+                        div >
 
                             <
                             /div> <
@@ -510,9 +504,9 @@ $(document).on('input', '#percent', function() {
 
                             <
                             /tbody> < /
-                            table > <
+                        table > <
                             /div> < /
-                            div > <
+                        div > <
                             script src = "{{ url('assets/js') }}/jquery.min.js" >
 </script>
 <script type="text/javascript">
@@ -723,4 +717,3 @@ $(document).ready(function() {
     });
 });
 </script>
-@endsection

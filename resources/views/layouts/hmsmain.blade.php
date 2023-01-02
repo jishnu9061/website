@@ -96,7 +96,7 @@
         }
 
         body {
-           background-color: #e9e6d65e;
+            background-color: #e9e6d65e;
             /* background-color: #ffffff; */
             /* font-family: 'Be Vietnam Pro'; */
             /* font-family: 'Alexandria'; */
@@ -304,21 +304,22 @@
                     <div class="sidebar-header" style="padding-bottom: 0%">
                         <div class="d-flex justify-content-between">
 
-                            <div class="logo"
-                                style="background-color:#dfc79d; border-radius:100% 100% 100% 100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height:125px;width:125px; margin-left:25px; background:  #d0d3cd50 -webkit-linear-gradient(left,  #ffffff15, rgb(255, 255, 255)) repeat 0 0 / 200px;
+                            <div class="logo" style="background-color:#dfc79d; border-radius:100% 100% 100% 100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height:125px;width:125px; margin-left:25px; background:  #d0d3cd50 -webkit-linear-gradient(left,  #ffffff15, rgb(255, 255, 255)) repeat 0 0 / 200px;
 
  
 animation: sweep 1.5s ease-in-out infinite;
 animation-direction:reverse;">
                                 <a href="{{ url('home') }}">
                                     <!-- {{-- <img src="assets/images/logo/logo.png" alt="Logo" srcset=""> --}} -->
+
 <div class="lightSweep" ><img class="logoov" id="cr_logo" src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA"
     style="margin-top:16px;"></div>
                                     <img class="logoo" id="cr_logo" src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA"
+
                                         style="margin-top:16px;">
 
-                                    
-                                       
+
+
 
 
                                 </a>
@@ -400,11 +401,11 @@ animation-direction:reverse;">
                         <li class="submenu-item  has-sub" style="list-style:none;">
                             <a id="sblma" href="{{url('user_management')}}" class='sidebar-link'>
                                 <i class="fa-regular fa-user" id="icon"></i>
-                                <span> User Management</span> 
+                                <span> User Management</span>
                             </a>
 
                         </li>
-              
+
                         <li class="submenu-item has-sub " style="list-style:none;">
                             <a id="sblm" href="{{url('client-index')}}" class='sidebar-link'>
                                 <i class="fa fa-university" id="icon"></i>
@@ -1036,30 +1037,15 @@ animation-direction:reverse;">
 
 
             <div id="main">
-
-                <!-- {{-- <header class="mb-3"> --}}
-                {{-- <a href="#" class="burger-btn d-block d-xl-none">
-                    <i class="bi bi-justify fs-3"></i>
-                </a> --}}
-                {{-- </header> --}}
-                {{-- <div class="page-heading" > --}}
-                {{-- <h3 style="color:#c30147;">{{Auth::user()->Hospital}}</h3> --}}
-                {{-- <h3 style="color:#c30147;">ERP Global</h3> --}}
-                {{-- </div> --}}
-
-                {{-- <nav  class=" navbar navbar-light bg-light" id="ff">
-              <a class="navbar-brand" href="#">Fixed top</a>
-              </nav> --}} -->
-
-                <!-- Nav Back Button -->
                 <nav class=" newstyle1 navbar navbar-expand-lg  sticky-top navbar-light bg-white">
+                    <!-- Nav Back Button -->
                     <a id="backbtn" href="javascript:history.back()" style=" color: #070344;
                                             font-size: 35px;">
                         <i id="bkbtnicon" class="far fa-arrow-alt-circle-left p-3"></i></a>
                     <!--  -->
 
                     <!-- Nav ToolTip -->
-                    <div class="nav-item dropdown">
+                    <div class="nav-item dropdown" style="position: relative;">
 
 
                         <button class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown"
@@ -1075,12 +1061,15 @@ animation-direction:reverse;">
                             <a class="dropdown-item" href="{{url('file_managementindex')}}"><b>File Management</b></a>
                             <a class="dropdown-item" href="{{url('hrindex')}}"><b>HR</b></a>
                             <a class="dropdown-item" href="{{url('accindex')}}"><b>Accounts</b></a>
-                            <a class="dropdown-item" href="{{url('Store_&_Inventory_index')}}"><b>Store & Inventory</b></a>
+                            <a class="dropdown-item" href="{{url('Store_&_Inventory_index')}}"><b>Store &
+                                    Inventory</b></a>
                             <a class="dropdown-item" href="{{url('purchase_index')}}"><b>Procurement</b></a>
-                            <a class="dropdown-item" href="{{url('practice_area_index')}}"><b>Practice Management</b></a>
+                            <a class="dropdown-item" href="{{url('practice_area_index')}}"><b>Practice
+                                    Management</b></a>
                             <a class="dropdown-item" href="{{url('libraryindex')}}"><b>E-Library</b></a>
                             <a class="dropdown-item" href="{{url('tender_index')}}"><b>Tender Management</b></a>
-                            <a class="dropdown-item" href="{{url('office_admin_index')}}"><b>Office Administration</b></a>
+                            <a class="dropdown-item" href="{{url('office_admin_index')}}"><b>Office
+                                    Administration</b></a>
                             <a class="dropdown-item" href="{{url('crm_index')}}"><b>CRM</b></a>
                             <a class="dropdown-item" href="{{url('system_setup')}}"><b>System Setup</b></a>
 
@@ -1124,15 +1113,40 @@ animation-direction:reverse;">
                                 <a class="dropdown-item" href="{{url('file_managementindex')}}">Secure message</a>
                                 <a class="dropdown-item" href="{{url('file_managementindex')}}">Event</a>
                                 <a class="dropdown-item" href="{{url('file_managementindex')}}">Note</a>
+                    <span class="m-2"></span>
+                    <div class="nav-item dropdown" style="position: relative; ">
+                        <button class=" dropdown-toggle-x btn btn-primary p-1" style="font-size:12px;" href="#"
+                            id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <b> Create New </b>
+                            <i class="fa fa-plus-square"></i>
+                        </button>
 
-                            </div>
-                        </li>
-                    </ul>
+
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{url('user_management')}}">Time entry</a>
+                            <a class="dropdown-item" href="{{url('client-index')}}">Expense entry</a>
+                            <a class="dropdown-item" href="{{url('file_managementindex')}}">Task</a>
+                            <a class="dropdown-item" href="{{url('file_managementindex')}}">Matter</a>
+                            <a class="dropdown-item" href="{{url('file_managementindex')}}">Contact</a>
+                            <a class="dropdown-item" href="{{url('file_managementindex')}}">Record payment</a>
+                            <a class="dropdown-item" href="{{url('file_managementindex')}}">Client funds
+                                request</a>
+                            <a class="dropdown-item" href="{{url('file_managementindex')}}">Email log</a>
+                            <a class="dropdown-item" href="{{url('file_managementindex')}}">Phone log</a>
+                            <a class="dropdown-item" href="{{url('file_managementindex')}}">Secure message</a>
+                            <a class="dropdown-item" href="{{url('file_managementindex')}}">Event</a>
+                            <a class="dropdown-item" href="{{url('file_managementindex')}}">Note</a>
+
+                        </div>
+                    </div>
 
                     <!--Nav Hamburger -->
+
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                        aria-label="Toggle navigation">
+                        style="position: relative; margin-left:6px; " data-target="#navbarTogglerDemo01"
+                        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -1149,10 +1163,10 @@ animation-direction:reverse;">
                                 </form>
                             </li>
 
+                        </ul>
 
 
-
-                            <!-- <div id="stopwatch-container">
+                        <!-- <div id="stopwatch-container">
                             <p id="stopwatch">00:00:00:00 </p>
                             <div id="buttons-container">
                                 <button onclick="main()" id="main-btn" class="btn">Start</button>
@@ -1162,7 +1176,7 @@ animation-direction:reverse;">
                     </div> -->
 
 
-                            <!-- <a class="navbar-brand pl-4" href="#">
+                        <!-- <a class="navbar-brand pl-4" href="#">
                                 <img src="{{asset('/') }}assets//images/faces/lawemb.png" height="40px"
                                     class="d-inline-block align-top" alt="">
                             </a>
@@ -1172,9 +1186,9 @@ animation-direction:reverse;">
                                 <a class="font-bold text-uppercase nav-link" href="#"> {{ Auth::user()->name }} <span
                                         class="sr-only">(current)</span></a>
                             </li> -->
-                        </ul>
 
-                        
+
+
                         <a class="navbar-brand pl-2" href="#">
                             <img src="{{asset('/') }}assets//images/faces/lawemb.png" height="40px"
                                 class="d-inline-block align-top" alt="">
@@ -1186,7 +1200,7 @@ animation-direction:reverse;">
                                     class="sr-only">(current)</span></a>
                         </li>
 
-                        
+
                         <!-- LogOut Button  -->
 
 
@@ -1222,8 +1236,8 @@ animation-direction:reverse;">
                         </div>
                     </section>
                 </section>
-         
 
+                <!-- footer start -->
                 <footer id="ftr" class="newstyle2 container-fluid bg-white p-4 mt-5 border-top">
 
                     <div class="footer clearfix  text-muted ">
@@ -1242,7 +1256,7 @@ animation-direction:reverse;">
                     </div>
                 </footer>
 
-                
+                <!-- footer end         -->
 
             </div>
         </div>
@@ -1492,7 +1506,7 @@ animation-direction:reverse;">
         {{-- const myElement = document.getElementById("subm");
 myElement.style.color = "red"  --}}
 
-{{-- <script>
+        {{-- <script>
     $("a.link").click(function(){
       $("a.link").css("background-color", "black");
     $(this).css("background-color", "red");
@@ -1503,7 +1517,7 @@ myElement.style.color = "red"  --}}
 
     </body>
 
-  
+
     <!-- Mirrored from zuramai.github.io/mazer/demo/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 14 Aug 2021 11:16:21 GMT -->
 
     </html>

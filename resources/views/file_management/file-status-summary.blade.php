@@ -12,61 +12,50 @@
             {{ Session::get('leavevalidat')}}
         </div>
         @endif
-        <div class="col-sm">
 
-                   
-        </div>
- {{-- heading --}}
- <h4 id="hdtpa"><b>File Status Report Summary</b></h4>
- 
-
-            <br>
-            <div>
-                <input class="btn btn-primary" type="button" value="View Statement">
-                <input class="btn btn-primary" type="button" value="View Details">
-                <input class="btn btn-primary" type="button" value="Previous Instructions">
-                <input class="btn btn-primary" type="button" value="Post Progress">
-                <input class="btn btn-primary" type="button" value="Post Progress Only">
-                <input class="btn btn-primary" type="button" value="Post Bring-Up Only">
-
-            </div>
-            
+    </div>
 
 
+    {{-- heading --}}
+    <h4 id="hdtpa"><b>File Status Report Summary</b></h4>
+    <br>
 
-        </div>
-   
+    <div class="text-center">
+        <input class="btn btn-primary" type="button" value="View Statement">
+        <input class="btn btn-primary" type="button" value="View Details">
+        <input class="btn btn-primary" type="button" value="Previous Instructions">
+        <input class="btn btn-primary" type="button" value="Post Progress">
+        <input class="btn btn-primary" type="button" value="Post Progress Only">
+        <input class="btn btn-primary" type="button" value="Post Bring-Up Only">
+
+    </div>
+    <br>
+    <br>
 
 
-    <div class="row">
+    <div class="card">
 
-
-        <div class="col-md-12 order-md-1">
+        <div class="card-body">
 
             <form method="post" action="" id="form">
                 @csrf
 
-
-
                 <div class="row">
 
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Date to</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
-
-                <div class="col-md-4">
-            <div class="mb-1">
-                <label for="username">Date to</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
+                                </div>
+                                <input type="date" class="form-control" name="date_to" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <input type="date" class="form-control" name="date_to" id="age">
-                    <div class="invalid-feedback" style="width: 100%;">
-                        Incorporation is required
-                    </div>
-                </div>
-            </div>
-        </div>
-
 
                     <div class="col-md-4">
                         <div class="mb-1">
@@ -76,8 +65,8 @@
 
                                 </div>
                                 <select name="file" id="cars">
-                                <option>---select---</option>
-                                <option>File 1</option>
+                                    <option>---select---</option>
+                                    <option>File 1</option>
                                     <option>File 2</option>
                                     <option>File 3</option>
                                     <option>File 4</option>
@@ -85,6 +74,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Instruction Category</label>
@@ -93,7 +83,7 @@
 
                                 </div>
                                 <select name="category" id="cars">
-                                <option>---select---</option>
+                                    <option>---select---</option>
                                     <option>Category 1</option>
                                     <option>Category 2</option>
                                     <option>Category 3</option>
@@ -103,14 +93,11 @@
                         </div>
                     </div>
 
-
                 </div>
                 <br>
+
+
                 <div class="row">
-
-
-
-                   
 
                     <div class="col-md-4">
                         <div class="mb-1">
@@ -120,7 +107,7 @@
 
                                 </div>
                                 <select name="receiver" id="cars">
-                                <option>---select---</option>
+                                    <option>---select---</option>
                                     <option>receiver 1</option>
                                     <option>receiver 2</option>
                                     <option>receiver 3</option>
@@ -130,147 +117,121 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-            <div class="mb-1">
-                <label for="username">Currency</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
+                        <div class="mb-1">
+                            <label for="username">Currency</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
+                                </div>
+                                <select name="currency" id="cars">
+                                    <option>---select---</option>
+                                    <option>KES</option>
+                                    <option>USD</option>
+                                    <option>EUR</option>
+                                    <option>GBP</option>
+                                    <option>AUD</option>
+                                    <option>CAD</option>
+                                    <option>SEK</option>
+                                    <option>DKK</option>
+                                    <option>JPY</option>
+                                    <option>CHF</option>
+                                    <option>HKD</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <select name="currency" id="cars">
-                    <option>---select---</option>
-                    <option>KES</option>
-                                <option>USD</option>
-                                <option>EUR</option>
-                                <option>GBP</option>
-                                <option>AUD</option>
-                                <option>CAD</option>
-                                <option>SEK</option>
-                                <option>DKK</option>
-                                <option>JPY</option>
-                                <option>CHF</option>
-                                <option>HKD</option>
-                    </select>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Exchange Rate</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="exchange_rate" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="mb-1">
-                <label for="username">Exchange Rate</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
+                <br>
 
+
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Turn-Around Time(TAT)</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="time" class="form-control" name="turn_around_time" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <input type="text" class="form-control" name="exchange_rate" id="age">
-                    <div class="invalid-feedback" style="width: 100%;">
-                        Incorporation is required
-                    </div>
-                </div>
-            </div>
-        </div>
 
-                </div>
-                <div id="test" style="height:20px;"></div>
-        </div>
-    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Priority</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
-
-
-    <div class="row">
-
-
-        
-
-    </div>
-    
-
-    <div class="row">
-
-
-        <!-- <div class="col-md-4">
-            <div class="mb-1">
-                <label for="username">Turn-Around Time(TAT)</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
-                    </div>
-                    <select name="turn_around_time" id="cars">
-                    <option>select</option>
-                                    <option>demo 1</option>
-                                    <option>demo 2</option>
-                    </select>
-                </div>
-            </div>
-        </div> -->
-        <div class="col-md-4">
-            <div class="mb-1">
-                <label for="username">Turn-Around Time(TAT)</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
-                    </div>
-                    <input type="time" class="form-control" name="turn_around_time" id="age">
-                    <div class="invalid-feedback" style="width: 100%;">
-                        Incorporation is required
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="mb-1">
-                <label for="username">Priority</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
-                    </div>
-                    <select name="priority" id="cars">
-                    <option>---select---</option>
+                                </div>
+                                <select name="priority" id="cars">
+                                    <option>---select---</option>
                                     <option>Priority 1</option>
                                     <option>Priority 2</option>
                                     <option>Priority 3</option>
                                     <option>Priority 4</option>
-                    </select>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Details</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="details" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="mb-1">
-                <label for="username">Details</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
+                <br>
+
+                <div class="row">
+                    <div class="col-sm">
 
                     </div>
-                    <input type="text" class="form-control" name="details" id="age">
-                    <div class="invalid-feedback" style="width: 100%;">
-                        Incorporation is required
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+                        <br>
+                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">View
+                            Report</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                            onclick="history.back()">Cancel</button>
                     </div>
                 </div>
-            </div>
+            </form>
+
+
         </div>
-
-
     </div>
-
-
-<br>
-<div class="row">
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-                            <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">View Report</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
-                        </div>
-                    </div>
-</form>
-
-
-
-
 </div>
 
 
@@ -725,7 +686,8 @@ $(document).on('input', '#percent', function() {
                             /div>
 
                             <
-                            script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                            script src =
+                            "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
                         integrity = "sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
                         crossorigin = "anonymous" >
 </script>
@@ -884,7 +846,8 @@ $(document).on('click', '#testing1', function() {
                                     div > <
                                     /form> < /
                                     div > <
-                                    script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
+                                    script src =
+                                    "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
 </script>
 <script type="text/javascript">
 $('#password, #confirm_password').on('keyup', function() {

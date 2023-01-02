@@ -47,20 +47,17 @@
                 </tr>
             </thead>
             <tbody>
-
+            @foreach($view_category as $list)
                 <tr>
-
-
-                    <td></td>
+                    <td>{{$list->title}}</td>
                     <td>
-                        <a href="editsubject_category"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
-                            <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
+                        <a href="{{url('editsubject_category',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
+                            <a href="{{url('deletesubject_category',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
 
                     </td>
-
                 </tr>
 
-
+                @endforeach
             </tbody>
         </table>
     </div>
@@ -98,7 +95,7 @@
             <!-- Modal body -->
             <div class="modal-body">
                 <div class="container">
-                    <form action="{{url('')}}" method="post">
+                    <form action="{{url('add_subject_category')}}" method="post">
                         @csrf
 
                         <div class="row">
@@ -155,15 +152,5 @@
 
                     </form>
                 </div>
-
-
-
-
-
-
-
-
-
-
 
                 @endsection
