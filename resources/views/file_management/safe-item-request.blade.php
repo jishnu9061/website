@@ -9,7 +9,7 @@
         @endif
 
     </div>
-  
+
     <script src="{{ url('assets/js') }}/jquery.min.js"></script>
     <script type="text/javascript">
     $(document).on('input', '#price', function() {
@@ -23,55 +23,39 @@
     </script>
     <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 
-    <div class="col-sm">
 
 
-
-        <!-- <h2 style="text-align:center;">Safe Register Report</h2></br></br> -->
-        <div>
-        {{-- heading --}}
+    {{-- heading --}}
     <h4 id="hdtpa"><b>Safe Register Report</b></h4>
     <br>
-  
- 
- 
-       
+    <br>
 
-        </div>
+
+    <div class="text-center">
+
         <div>
-
-            
-            <div>
-                <input class="btn btn-primary" type="button" style="width:65px;" value="Today">
-                <input class="btn btn-primary" type="button" value="This Week">
-                <input class="btn btn-primary" type="button" value="Last Week">
-                <input class="btn btn-primary" type="button" value="This Month">
-                <input class="btn btn-primary" type="button" value="Last Month">
-                <input class="btn btn-primary" type="button" style="width:12%;" value="This Quater ">
-                <input class="btn btn-primary" type="button" style="width:12%;" value="Last Quater">
-                <input class="btn btn-primary" type="button" value="This Year">
-                <input class="btn btn-primary" type="button" value="Last Year">
-            </div>
-            <br>
-
-
-
+            <input class="btn btn-primary" type="button" style="width:65px;" value="Today">
+            <input class="btn btn-primary" type="button" value="This Week">
+            <input class="btn btn-primary" type="button" value="Last Week">
+            <input class="btn btn-primary" type="button" value="This Month">
+            <input class="btn btn-primary" type="button" value="Last Month">
+            <input class="btn btn-primary" type="button" style="width:12%;" value="This Quater ">
+            <input class="btn btn-primary" type="button" style="width:12%;" value="Last Quater">
+            <input class="btn btn-primary" type="button" value="This Year">
+            <input class="btn btn-primary" type="button" value="Last Year">
         </div>
-    
+        <br>
+
+    </div>
 
 
-    <div class="row">
+    <div class="card">
 
-
-        <div class="col-md-12 order-md-1">
+        <div class="card-body">
 
             <form method="post" action="" id="form">
                 @csrf
-
                 <div class="row">
-
-
-
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Client</label>
@@ -82,15 +66,13 @@
                                 <select name="client" id="cars">
                                     <option>select</option>
                                     <option>demo 1</option>
-                                    <option>demo 2</option> 
+                                    <option>demo 2</option>
 
 
                                 </select>
                             </div>
                         </div>
                     </div>
-
-
 
                     <div class="col-md-6">
                         <div class="mb-1">
@@ -100,15 +82,17 @@
 
                                 </div>
                                 <select name="file" id="cars">
-                                <option>select</option>
+                                    <option>select</option>
                                     <option>demo 1</option>
-                                    <option>demo 2</option> 
+                                    <option>demo 2</option>
                                 </select>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <br>
+
                 <div class="row">
 
                     <div class="col-md-6">
@@ -119,16 +103,13 @@
 
                                 </div>
                                 <select name="document_type" id="cars">
-                                <option>select</option>
+                                    <option>select</option>
                                     <option>demo 1</option>
-                                    <option>demo 2</option> 
+                                    <option>demo 2</option>
                                 </select>
                             </div>
                         </div>
                     </div>
-
-
-
 
                     <div class="col-md-6">
                         <div class="mb-1">
@@ -138,15 +119,17 @@
 
                                 </div>
                                 <select name="staf_name" id="cars">
-                                <option>select</option>
+                                    <option>select</option>
                                     <option>demo 1</option>
-                                    <option>demo 2</option> 
+                                    <option>demo 2</option>
                                 </select>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <br>
+
                 <div class="row">
 
                     <div class="col-md-6">
@@ -157,9 +140,9 @@
 
                                 </div>
                                 <select name="approver" id="cars">
-                                <option>select</option>
+                                    <option>select</option>
                                     <option>demo 1</option>
-                                    <option>demo 2</option> 
+                                    <option>demo 2</option>
                                 </select>
                             </div>
                         </div>
@@ -173,15 +156,17 @@
 
                                 </div>
                                 <select name="requested_by" id="cars">
-                                <option>select</option>
+                                    <option>select</option>
                                     <option>demo 1</option>
-                                    <option>demo 2</option> 
+                                    <option>demo 2</option>
                                 </select>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <br>
+
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
@@ -197,6 +182,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">and</label>
@@ -211,9 +197,11 @@
                             </div>
                         </div>
                     </div>
-</div>
-<br>
-<div class="row">
+                </div>
+
+                <br>
+
+                <div class="row">
 
                     <div class="col-md-6">
                         <div class="mb-1">
@@ -223,9 +211,9 @@
 
                                 </div>
                                 <select name="distributed" id="cars">
-                                <option>select</option>
+                                    <option>select</option>
                                     <option>demo 1</option>
-                                    <option>demo 2</option> 
+                                    <option>demo 2</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
@@ -242,9 +230,9 @@
 
                                 </div>
                                 <select name="status" id="cars">
-                                <option>select</option>
+                                    <option>select</option>
                                     <option>demo 1</option>
-                                    <option>demo 2</option> 
+                                    <option>demo 2</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
@@ -252,52 +240,38 @@
                             </div>
                         </div>
                     </div>
-
-
                 </div>
-                <div id="test" style="height:20px;"></div>
+                <br>
 
+                <div class="row">
+                    <div class="col-sm">
 
+                    </div>
+                    <div class="col-sm">
 
+                    </div>
+                    <div class="col-sm">
+                        <br>
 
-
-
-
+                        <button type="submit" class="btn btn-primary float:right;" value="Submit"
+                            Style="width:45%;">View
+                            Report</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                            onclick="history.back()">Close</button>
+                    </div>
+                </div>
+            </form>
 
         </div>
 
-
     </div>
 
-
-
-<div class="row">
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-                            <br>
-                            
-                            <button type="submit" class="btn btn-primary float:right;"  value="Submit" Style="width:45%;">View Report</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;" onclick="history.back()">Close</button>
-                        </div>
-                    </div>
-</form>
-
-
-
-
 </div>
 
 
 
 
 
-
-</div>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
 $(function() {
@@ -744,7 +718,8 @@ $(document).on('input', '#percent', function() {
                             /div>
 
                             <
-                            script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                            script src =
+                            "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
                         integrity = "sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
                         crossorigin = "anonymous" >
 </script>
@@ -903,7 +878,8 @@ $(document).on('click', '#testing1', function() {
                                     div > <
                                     /form> < /
                                     div > <
-                                    script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
+                                    script src =
+                                    "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
 </script>
 <script type="text/javascript">
 $('#password, #confirm_password').on('keyup', function() {

@@ -18,42 +18,35 @@
 
         </div>
 
-         {{-- heading --}}
- <h4 id="hdtpa"><b>Instruction Report</b></h4>
- <br><br>
+        {{-- heading --}}
+        <h4 id="hdtpa"><b>Instruction Report</b></h4>
+        <br><br>
 
-            <br>
-            <div >
-                <input class="btn btn-primary" type="button" value="Today">
-                <input class="btn btn-primary" type="button" value="This Week">
-                <input class="btn btn-primary" type="button" value="Last Week">
-                <input class="btn btn-primary" type="button" value="This Month">
-                <input class="btn btn-primary" type="button" value="Last Month">
-                <input class="btn btn-primary" type="button" value="This Quater">
-                <input class="btn btn-primary" type="button" value="Last Quater">
-                <input class="btn btn-primary" type="button" value="This Year">
-                <input class="btn btn-primary" type="button" value="Last Year">
-            </div>
-            <br>
-           
-
+        <br>
+        <div>
+            <input class="btn btn-primary" type="button" value="Today">
+            <input class="btn btn-primary" type="button" value="This Week">
+            <input class="btn btn-primary" type="button" value="Last Week">
+            <input class="btn btn-primary" type="button" value="This Month">
+            <input class="btn btn-primary" type="button" value="Last Month">
+            <input class="btn btn-primary" type="button" value="This Quater">
+            <input class="btn btn-primary" type="button" value="Last Quater">
+            <input class="btn btn-primary" type="button" value="This Year">
+            <input class="btn btn-primary" type="button" value="Last Year">
         </div>
-   
+        <br>
 
 
-    <div class="row">
+    </div>
 
+    <div class="card">
 
-        <div class="col-md-12 order-md-1">
+        <div class="card-body">
 
             <form method="post" action="" id="form">
                 @csrf
 
-
-
                 <div class="row">
-
-
 
                     <div class="col-md-4">
                         <div class="mb-1">
@@ -73,8 +66,6 @@
                         </div>
                     </div>
 
-
-
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Instruction Type</label>
@@ -83,7 +74,7 @@
 
                                 </div>
                                 <select name="instruction_type" id="cars">
-                                <option>select</option>
+                                    <option>select</option>
                                     <option>demo 1</option>
                                     <option>demo 2</option>
                                 </select>
@@ -99,7 +90,7 @@
 
                                 </div>
                                 <select name="expense_category" id="cars">
-                                <option>select</option>
+                                    <option>select</option>
                                     <option>demo 1</option>
                                     <option>demo 2</option>
                                 </select>
@@ -108,80 +99,74 @@
                     </div>
 
                 </div>
-        </div>
+                <br>
 
-    </div>
-    <br>
-    <div class="row">
+                <div class="row">
 
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Report Type</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
-        <div class="col-md-4">
-            <div class="mb-1">
-                <label for="username">Report Type</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
-                    </div>
-                    <select name="report_type" id="cars">
-                    <option>select</option>
+                                </div>
+                                <select name="report_type" id="cars">
+                                    <option>select</option>
                                     <option>demo 1</option>
                                     <option>demo 2</option>
-                    </select>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username"> Date (from)</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="date" class="form-control" name="date_from" id="username" required>
+                                <div class="invalid-feedback">
+                                    Number is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username"> Date(to)</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="date" class="form-control" name="date_to" id="username" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Number is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="mb-1">
-                <label for="username"> Date (from)</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
 
+                <br>
+                <br>
+
+                <div class="row">
+                    <div class="col-sm">
                     </div>
-                    <input type="date" class="form-control" name="date_from" id="username" required>
-                    <div class="invalid-feedback">
-                        Number is required.
+                    <div class="col-sm">
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="mb-1">
-                <label for="username"> Date(to)</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
-                    </div>
-                    <input type="date" class="form-control" name="date_to" id="username" required>
-                    <div class="invalid-feedback" style="width: 100%;">
-                        Number is required.
-                    </div>
-                </div>
-            </div>
-        </div>
-  
-</div>
-
-
-<br>
-
-
-
-
-
-
-<div class="container">
-                    <div class="row">
-                      <div class="col-sm">
-                      </div>
-                      <div class="col-sm">
-                      </div>
-                      <div class="col-sm">
+                    <div class="col-sm">
                         <button type="submit" class="btn btn-primary float:right" style="width:45%">View Report</button>
-                        <button  class="btn btn-primary float:left"style="width:45%">Cancel</button>
-                      </div>
+                        <button class="btn btn-primary float:left" style="width:45%"
+                            onclick="history.back()">Cancel</button>
                     </div>
-</form>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 
@@ -354,9 +339,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Salary is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -383,9 +368,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Years of experience is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -408,9 +393,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 dob is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 /div>
 
             {
@@ -442,9 +427,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Bank Name is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -470,9 +455,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Account number is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -495,9 +480,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 IFSC Code is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-12" >
                 <
                 div class = "mb-1" >
@@ -538,7 +523,7 @@ $(document).on('input', '#percent', function() {
 
                 <
                 /tr> < /
-                table > {
+            table > {
                     {
                         -- < input type = "text"
                         class = "form-control"
@@ -555,7 +540,7 @@ $(document).on('input', '#percent', function() {
                         -- < /div> --}} < /
                         div > <
                             /div> < /
-                            div >
+                        div >
 
                             <
                             /div> <
@@ -597,9 +582,9 @@ $(document).on('input', '#percent', function() {
 
                             <
                             /tbody> < /
-                            table > <
+                        table > <
                             /div> < /
-                            div >
+                        div >
 
                             <
                             div class = "modal"
@@ -624,18 +609,20 @@ $(document).on('input', '#percent', function() {
                             <
                             button class = "btn btn-primary sub_btnn"
                         type = "submit" > submit < /button> < /
-                            div > <
+                        div > <
                             /form> < /
-                            div > <
+                        div > <
                             /div> < /
-                            div > <
+                        div > <
                             /div> < /
-                            div > <
+                        div > <
                             /div>
 
                             <
-                            script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-                        integrity = "sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                            script src =
+                            "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                        integrity =
+                            "sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
                         crossorigin = "anonymous" >
 </script>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
@@ -793,7 +780,8 @@ $(document).on('click', '#testing1', function() {
                                     div > <
                                     /form> < /
                                     div > <
-                                    script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
+                                    script src =
+                                    "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
 </script>
 <script type="text/javascript">
 $('#password, #confirm_password').on('keyup', function() {

@@ -15,9 +15,6 @@
 
         {{-- heading --}}
         <h4 id="hdtpa"><b>Search</b></h4>
-
-
-
         <br>
         <div>
             <input class="btn btn-primary" type="button" value="Today">
@@ -35,105 +32,105 @@
 
 
 
+    <div class="card">
 
-    <div>
-        <form method="post" action="" id="form">
-            @csrf
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="mb-1">
-                        <label for="username">Client</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
+        <div class="card-body">
 
+            <form method="post" action="" id="form">
+                @csrf
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Client</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="client" id="cars">
+                                    <option>---select---</option>
+                                    <option>client 1</option>
+                                    <option>client 2</option>
+                                    <option>client 3</option>
+                                    <option>client 4</option>
+                                </select>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Number is required.
+                                </div>
                             </div>
-                            <select name="client" id="cars">
-                                <option>---select---</option>
-                                <option>client 1</option>
-                                <option>client 2</option>
-                                <option>client 3</option>
-                                <option>client 4</option>
-                            </select>
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Number is required.
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">File</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="file" id="cars">
+                                    <option>---select---</option>
+                                    <option>File 1</option>
+                                    <option>File 2</option>
+                                    <option>File 3</option>
+                                    <option>File 4</option>
+                                </select><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">Progress Date(From)</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="date" class="form-control" name="date_from" id="age">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label for="username">To</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="text" class="form-control" name="date_to" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
                             </div>
                         </div>
                     </div>
 
                 </div>
+                <br>
 
+                <div class="row">
+                    <div class="col-sm">
 
+                    </div>
+                    <div class="col-sm">
 
-                <div class="col-md-6">
-                    <div class="mb-1">
-                        <label for="username">File</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-
-                            </div>
-                            <select name="file" id="cars">
-                                <option>---select---</option>
-                                <option>File 1</option>
-                                <option>File 2</option>
-                                <option>File 3</option>
-                                <option>File 4</option>
-                            </select><br>
-                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <br>
+                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Search</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                            onclick="history.back()">Cancel</button>
                     </div>
                 </div>
-            </div>
-            <br>
-            <div class="row">
-
-                <div class="col-md-6">
-                    <div class="mb-1">
-                        <label for="username">Progress Date(From)</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-
-                            </div>
-                            <input type="date" class="form-control" name="date_from" id="age">
-                        </div>
-                    </div>
-                </div>
+            </form>
 
 
-                <div class="col-md-6">
-                    <div class="mb-1">
-                        <label for="username">To</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-
-                            </div>
-                            <input type="text" class="form-control" name="date_to" id="age">
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Incorporation is required
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-            <br>
-
-            <div class="row">
-                <div class="col-sm">
-
-                </div>
-                <div class="col-sm">
-
-                </div>
-                <div class="col-sm">
-                    <br>
-                    <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Search</button>
-                    <button type="button" class="btn btn-primary float:left" Style="width:45%;"
-                        onclick="history.back()">Cancel</button>
-                </div>
-            </div>
-
-
-
+        </div>
     </div>
 </div>
 
