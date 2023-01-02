@@ -1397,8 +1397,8 @@ Route::any('view_supplier','PurchaseManagement@view_supplier')->name('view_suppl
 Route::any('edit_supplier','PurchaseManagement@edit_supplier')->name('edit_supplier');
 // Route::any('cost_variation_report','PurchaseManagement@cost_variation_report')->name('cost_variation_report');
 Route::any('ledger_details','PurchaseManagement@ledger_details')->name('ledger_details');
-Route::any('purchase_view','PurchaseManagement@purchase_view')->name('purchase_view');
-Route::any('edit_purchase','PurchaseManagement@edit_purchase')->name('edit_purchase');
+Route::any('purchase_view/{purchase_id}','PurchaseManagement@purchase_view')->name('purchase_view');
+Route::any('edit_purchase/{purchase_id}','PurchaseManagement@edit_purchase')->name('edit_purchase');
 Route::any('supplier','PurchaseManagement@suppliers')->name('supplier');
 //end  Purchase Management
 
