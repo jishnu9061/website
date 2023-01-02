@@ -1217,7 +1217,7 @@ class filemanagement extends Controller
 
         public function addincommingletters(Request $request)
         {
-
+            $add_letter=DB::table('cra_add_incomming_letters')->get();
             $letter_date =$request['letter_date'];
             $client =$request['client'];
             $file =$request['file'];
@@ -1261,7 +1261,7 @@ class filemanagement extends Controller
                 'upload_copy' => $upload_copy,
     
             ]);
-              return view('file_management.incomming-letters');
+              return view('file_management.incomming-letters',compact('add_letter'));
             //  return view('file_management.add-incomming-letters');
         }
 
@@ -1398,6 +1398,7 @@ public function new_file_instructions()
 
 public function add_new_file_instructions(Request $request)
 {
+    $new_file_instruction=DB::table('cra_add_new_instructions')->get();
    $id =$request['id'];
    $date =$request['date'];
    $client =$request['client'];
@@ -1430,7 +1431,7 @@ public function add_new_file_instructions(Request $request)
     'details' =>   $details,
     'send_notification' =>   $send_notification,
 ]);
-    return view('file_management.file_instruction');                                                             
+    return view('file_management.file_instruction',compact('new_file_instruction'));                                                            
 }
 
 public function edit_file_instruction_list($id)

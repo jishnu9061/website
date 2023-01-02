@@ -3,11 +3,102 @@
 
 {{-- heading --}}
 <div class="container">
-    <h4 id="hdtpa"><b>View Guardianship Law</b></h4>
+    <h4 id="hdtpa"><b> Guardianship Law Details</b></h4>
     <br>
 
 
-    <form action="">
+    <form method="post" action="{{url('')}}">
+        @csrf
+        <div class="container">
+            <div class="text-left">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td scope="row">Matter Info:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td scope="row">Petitioner:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Matter Type:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Disabled Person:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Attorney:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Disability Details:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Case Details:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Guardian:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td scope="row">Guardian Details:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </form>
+
+
+</div>
+
+@endsection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form action="">
         <div class="row">
             <div class="col-md-4">
                 <div class="mb-3">
@@ -116,17 +207,13 @@
             </div>
         </div>
 
-    </form>
+    </form> -->
 
 
-    <!-- <div class="mb-3">
+<!-- <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Supporting Details</label>
                     <span class="m-2"></span>
                     <input type="file" class="form-control" >
                         </div>
       </div>
   </div> -->
-
-
-
-    @endsection

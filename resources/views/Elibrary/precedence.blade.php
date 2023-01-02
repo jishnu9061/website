@@ -4,7 +4,7 @@
 
 {{-- heading --}}
 <div class="container">
-    <h4 id="hdtpa"><b>Precedence Register Repository</b></h4>
+    <h4 id="hdtpa"><b>Precedence Register Details</b></h4>
     <br>
     <br>
 
