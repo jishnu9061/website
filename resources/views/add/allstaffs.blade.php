@@ -93,7 +93,7 @@
                             <td>{{ $alluser->uniqueid }}</td>
                             <td>{{ $alluser->name }}</td>
                             <td>{{ $alluser->email }}</td>
-                            <td>{{ $alluser->phone }}</td>
+                            <td>{{ $alluser->phoneno }}</td>
                             <td><a href="{{ url('managestaff' . $alluser->uniqueid) }}" style="color:rgb(13, 1, 56);"><i
                                         class="fa fa-edit"></i></a></td>
                     @endforeach
@@ -232,7 +232,7 @@
                             <label for="username">Date Of Joining</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="doj"
+                                <input type="date" class="form-control" name="date_of_joining"
                                     id="password" placeholder="staff Password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Passeord is required.
@@ -267,7 +267,7 @@
                     <div class="col-md-3">
                         <div class="mb-1">
                             <label>Roles&nbsp;</label>
-                            <select class="form-select" aria-label="Default select example" name="roles">
+                            <select class="form-select" aria-label="Default select example" name="role">
                                 <option>Select</option>
                                 <option value="Active">HR Manager</option>
                                 <option value="Inactive">Jr.Advocate</option>
@@ -473,7 +473,7 @@
                             <label>Leave Days per Year</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="leave_days" id="name"
+                                <input type="text" class="form-control" name="leave" id="name"
                                     value="21" disabled>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
@@ -515,7 +515,7 @@
                             <label>Account Number</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="account_number" id="name"
+                                <input type="text" class="form-control" name="account" id="name"
                                     value="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
