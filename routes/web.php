@@ -1494,8 +1494,12 @@ Route::any('/editprecedence/{id}','Elibrary@editprecedences')->name('editprecede
 Route::any('update_precedence','Elibrary@updateprecedences')->name('update_precedence');
 Route::any('/delete_precedence/{id}','Elibrary@deleteprecedence')->name('delete_precedence');
 Route::any('viewprecedence','Elibrary@viewprecedences')->name('viewprecedence');
+
 Route::any('subject_category','Elibrary@subject_categorys')->name('subject_category');
-Route::any('editsubject_category','Elibrary@editsubject_categorys')->name('editsubject_category');
+Route::any('add_subject_category','Elibrary@addsubject_categorys')->name('add_subject_category');
+Route::any('/editsubject_category/{id}','Elibrary@editsubject_categorys')->name('editsubject_category');
+Route::any('/update_subject_category','Elibrary@updatesubjectcategorys')->name('update_subject_category');
+Route::any('/deletesubject_category/{id}','Elibrary@deletesubject_categorys')->name('deletesubject_category');
 //Tender Management
 Route::any('tender_index','TenderManagement@tender_index')->name('tender_index');
 Route::any('tender_details','TenderManagement@tender_details')->name('tender_details');
@@ -1516,7 +1520,12 @@ Route::any('creditors_aging_report','OfficeAdministration@creditors_aging_report
 Route::any('supplier_expense_report','OfficeAdministration@supplier_expense_report')->name('supplier_expense_report');
 Route::any('pay_supplier_invoice','OfficeAdministration@pay_supplier_invoice')->name('pay_supplier_invoice');
 Route::any('supplier_credit_notes','OfficeAdministration@supplier_credit_notes')->name('supplier_credit_notes');
+
+Route::any('add_supplier_invoice','OfficeAdministration@add_supplier_invoice')->name('add_supplier_invoice');
 Route::any('supplier_invoice','OfficeAdministration@supplier_invoice')->name('supplier_invoice');
+Route::any('view_supplier_invoice','OfficeAdministration@view_supplier_invoice')->name('view_supplier_invoice');
+Route::any('edit_supplier_invoice','OfficeAdministration@edit_supplier_invoice')->name('edit_supplier_invoice');
+
 Route::any('balance','OfficeAdministration@balances')->name('balance');
 Route::any('cheque','OfficeAdministration@cheques')->name('cheque');
 Route::any('file_office','OfficeAdministration@file_offices')->name('file_office');
