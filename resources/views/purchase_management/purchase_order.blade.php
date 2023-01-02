@@ -69,20 +69,21 @@
                             </thead>
                             <tbody>
 
+                                @foreach($purchase_order as $list)
 
                                 <tr class="text-center">
-                                    <td>62C67947652DC</td>
-                                    <td>23-11-2022</td>
-                                    <td>ABC Ltd</td>
-                                    <td>10</td>
-                                    <td>Order-Placed</td>
+                                    <td>{{$list->purchase_order_number}}</td>
+                                    <td>{{$list->purchase_date}}</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>{{$list->status}}</td>
                                     <td scope="row" class="text-center">
-                                        <a href="{{url('view_purchase_order')}}"> <i style="color:rgb(13, 1, 56);"
-                                                class="fa fa-eye"></i>
+                                        <a href="{{url('view_purchase_order',$list->purchase_id)}}"> <i
+                                                style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
                                     </td>
 
                                 </tr>
-
+                                @endforeach
                             </tbody>
 
                         </table>
@@ -120,10 +121,111 @@
                                 <!-- Modal body -->
                                 <div class="modal-body">
                                     <div class="container">
-                                        <form method="post" action="" enctype="multipart/form-data">
+                                        <form method="post" action="{{url('store_purchase')}}"
+                                            enctype="multipart/form-data">
                                             <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 
                                             <div class="container">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="mb-1">
+                                                            <label for="username">Purchase Date</label>
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+
+                                                                </div>
+                                                                <input type="date" class="form-control" name="date"
+                                                                    id="username" required>
+                                                                <div class="invalid-feedback" style="width: 100%;">
+                                                                    Number is required.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <div class="mb-1">
+                                                            <label for="username">Purchase Order Number</label>
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+
+                                                                </div>
+                                                                <input type="text" class="form-control" name="text"
+                                                                    id="username" required>
+                                                                <div class="invalid-feedback" style="width: 100%;">
+                                                                    Number is required.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="mb-1">
+                                                            <label for="username">Payment Type</label>
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+
+                                                                </div>
+                                                                <select name="distributed" id="cars">
+                                                                    <option>select</option>
+                                                                    <option>By Cash</option>
+                                                                    <option>By Cheque</option>
+                                                                    <option>By Bank Transfer</option>
+                                                                </select>
+                                                                <div class="invalid-feedback" style="width: 100%;">
+                                                                    Number is required.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="mb-1">
+                                                            <label for="username">Supplier</label>
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+
+                                                                </div>
+                                                                <select name="distributed" id="cars">
+                                                                    <option>select</option>
+                                                                    <option>ABC Ltd</option>
+                                                                    <option>Moon Ltd</option>
+
+                                                                </select>
+                                                                <div class="invalid-feedback" style="width: 100%;">
+                                                                    Number is required.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="mb-1">
+                                                            <label for="username">Status</label>
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+
+                                                                </div>
+                                                                <input type="text" class="form-control" id="username"
+                                                                    value="Order-Placed" required>
+                                                                <div class="invalid-feedback" style="width: 100%;">
+                                                                    Number is required.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <br>
+                                                <br>
+
+
+
+
+
+
+
+                                                <!-- <div class="container">
                                                 <div class="row">
                                                     <div class="col">
                                                         <label for="exampleFormControlInput1"
@@ -132,78 +234,87 @@
                                                         <br>
                                                         <label for="exampleFormControlInput1"
                                                             class="form-label">Supplier</label>
-                                                        <select class="form-select" aria-label="Default select example" name="supplier">
+
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            name="supplier">
                                                             <option selected>Select</option>
-                                                            <option value="1">ABC Ltd</option>
-                                                            <option value="2">Moon Ltd</option>
-                                                        </select>
+                                                            <option value="ABC Ltd">ABC Ltd</option>
+                                                            <option value="Moon Ltd">Moon Ltd</option>
+
                                                     </div>
                                                     <div class="col">
                                                         <label for="exampleFormControlInput1"
                                                             class="form-label">Purchase Order Number</label>
-                                                        <input type="text" class="form-control"  value="@if (!empty($purc_order->purchase_orderno)) {{ $purc_order->purchase_orderno }}@else{{ strtoupper(uniqid()) }} @endif">
+                                                        <input type="text" class="form-control"
+                                                            value="@if (!empty($purc_order->purchase_orderno)) {{ $purc_order->purchase_orderno }}@else{{ strtoupper(uniqid()) }} @endif">
+                                                        <input type="text" class="form-control" name="number">
+
 
                                                         <br>
                                                         <label for="exampleFormControlInput1"
                                                             class="form-label">Status</label>
                                                         <input class="form-control" type="text"
                                                             placeholder="Order-Placed"
-                                                            aria-label="Disabled input example" disabled>
-
+                                                            aria-label="Disabled input example" value="Order-Placed"
+                                                            name="Order-Placed">
                                                     </div>
                                                     <div class="col">
                                                         <label for="exampleFormControlInput1" class="form-label">Payment
                                                             Type</label>
-                                                        <select class="form-select" aria-label="Default select example">
-                                                            <option selected>Select</option>
-                                                            <option value="1">By Cash</option>
-                                                            <option value="2">By Cheque</option>
-                                                            <option value="2">Bank Transfer</option>
+
+                                                        <select class="form-select" aria-label="Default select example"
+                                                            name="Payment">
+                                                            <option selected>---select---</option>
+                                                            <option value="Cash">Cash</option>
+                                                            <option value="cheque">Bank Transfer</option>
+
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <br>
-                                                <br>
+                                                <br> -->
 
                                                 <div class="text-center">
                                                     <h4><b>Purchase Items</b></h4>
                                                 </div>
                                                 <br>
                                                 <!-- table -->
+                                                <div class="table-responsive">
+                                                    <div class="row clearfix container">
 
-                                                <div class="row clearfix container">
+                                                        <div class="col-sm">
 
-                                                    <div class="col-sm">
+                                                            <table class="table table-bordered order-list"
+                                                                id="tab_logic">
 
-                                                        <table class="table table-bordered order-list" id="tab_logic">
+                                                                <tr>
+                                                                    <td class="">Item ID</td>
+                                                                    <td class="" style="width:25%">Item Name</td>
+                                                                    <td class="">Quantity</td>
+                                                                    <td class="">Price</td>
+                                                                    <td class="">Total</td>
+                                                                    <td> <input type="button" class="btn btn-primary"
+                                                                            id="add" value="Add" Style="width:100%;">
+                                                                    </td>
+                                                                </tr>
 
-                                                            <tr>
-                                                                <td class="">Item ID</td>
-                                                                <td class="" style="width:25%">Item Name</td>
-                                                                <td class="">Quantity</td>
-                                                                <td class="">Price</td>
-                                                                <td class="">Total</td>
-                                                                <td> <input type="button" class="btn btn-primary"
-                                                                        id="add" value="Add" Style="width:100%;">
-                                                                </td>
-                                                            </tr>
+                                                            </table>
+                                                            <div class="row">
+                                                                <div class="col-sm">
+                                                                </div>
+                                                                <div class="col-sm">
+                                                                    <table class="table table-bordered">
 
-                                                        </table>
-                                                        <div class="row">
-                                                            <div class="col-sm">
-                                                            </div>
-                                                            <div class="col-sm">
-                                                                <table class="table table-bordered">
-
-                                                                    <tr>
-                                                                        <td scope="col">Grand Total</td>
-                                                                        <td><input type="text"
-                                                                                class="form-control invoice-sub-total"
-                                                                                value="" name="grand_totall"
-                                                                                id="grand_totall_" readonly>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
+                                                                        <tr>
+                                                                            <td scope="col">Grand Total</td>
+                                                                            <td><input type="text"
+                                                                                    class="form-control invoice-sub-total"
+                                                                                    value="" name="grand_totall"
+                                                                                    id="grand_totall_" readonly>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -222,7 +333,7 @@
                                                             <div class="modal-body">
                                                                 <div class="container">
                                                                     <form method="post"
-                                                                        action="{{ url('purchase_order') }}"
+                                                                        action="{{ url('store_purchase') }}"
                                                                         enctype="multipart/form-data">
                                                                         @csrf
                                                                         <div class="col-sm" id="form_logic">
@@ -235,20 +346,22 @@
 
                                                                             <brform_logic>
 
-                                                                            <brform_logic> <br>
+                                                                                <brform_logic> <br>
 
-                                                                                <label for="">Advance Amount</label>
-                                                                                <input type="text"
-                                                                                    class="form-control total"
-                                                                                    placeholder="Advance Amount"
-                                                                                    id="advance-amount"
-                                                                                    name="advance_amount" value=""><br>
-                                                                                <label for="">Pending Amount</label>
-                                                                                <input type="text"
-                                                                                    class="form-control calculate_price"
-                                                                                    value{{ 0 }} placeholder=""
-                                                                                    id="result" name="pending_amount"
-                                                                                    value="0" readonly><br>
+                                                                                    <label for="">Advance Amount</label>
+                                                                                    <input type="text"
+                                                                                        class="form-control total"
+                                                                                        placeholder="Advance Amount"
+                                                                                        id="advance-amount"
+                                                                                        name="advance_amount"
+                                                                                        value=""><br>
+                                                                                    <label for="">Pending Amount</label>
+                                                                                    <input type="text"
+                                                                                        class="form-control calculate_price"
+                                                                                        value{{ 0 }} placeholder=""
+                                                                                        id="result"
+                                                                                        name="pending_amount" value="0"
+                                                                                        readonly><br>
                                                                         </div>
 
                                                                         <div>
@@ -290,12 +403,7 @@
                                 data-dismiss="modal">Close</button>
                         </div>
                     </div>
-                    <!-- <div>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-2"> Save
-                        </button>
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
 
-                    </div> -->
 
 
                 </div>
@@ -352,7 +460,9 @@ function myFunction() {
 $(document).ready(function() {
 
     var html =
+
         '<tr> <td><input type="text" name="batch_no[]"id="batch_no_" class="form-control"placeholder="Item No"></td>    <td><select class="form-select" aria-label="select example" name="item_name[]"  id="item_name"> <option value="">Select</option><option>Demo Item</option></select></td>   <td><input type="text" name="quantity[]" id="quantity_" class="form-control text-right calculate"></td>   <td><input type="text" name="price[]" id="price_" class="form-control calculate" placeholder="0.00"></td>   <td><input type="text" name="total[]" id="total_" class="form-control calculate-sub" placeholder="0.00"></td>    <td><button type="button" class="add-Row ibtnDel btn btn-primary text-white" id="remove"  style="background-color:#607080;width:100%;color:white;">Remove</button><td></tr>';
+
 
     $("#add").click(function() {
         $("#tab_logic").append(html);

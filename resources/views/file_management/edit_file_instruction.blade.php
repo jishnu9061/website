@@ -12,40 +12,27 @@
             {{ Session::get('leavevalidat')}}
         </div>
         @endif
-        <div class="col-sm">
 
 
-        </div>
+        {{-- heading --}}
+        <h4 id="hdtpa"><b>Edit Instruction</b></h4>
+        <br><br>
+
+
         <div>
-            <div>
-                {{-- heading --}}
-                <h4 id="hdtpa"><b>Edit Instruction</b></h4>
-                <br><br>
-
-            </div>
-
-
-            <br>
-            <div>
-                <input class="btn btn-primary" type="button" value="View File Statement">
-                <input class="btn btn-primary" type="button" value="View File Details">
-                <input class="btn btn-primary" type="button" value="Previous Instructions">
-                <input class="btn btn-primary" type="button" value="Post File Progress">
-                <input class="btn btn-primary" type="button" value="Post File Progress Only">
-                <input class="btn btn-primary" type="button" value="Post File Bring-Up Only">
-
-            </div>
-            <br>
-
+            <input class="btn btn-primary" type="button" value="View File Statement">
+            <input class="btn btn-primary" type="button" value="View File Details">
+            <input class="btn btn-primary" type="button" value="Previous Instructions">
+            <input class="btn btn-primary" type="button" value="Post File Progress">
+            <input class="btn btn-primary" type="button" value="Post File Progress Only">
+            <input class="btn btn-primary" type="button" value="Post File Bring-Up Only">
 
         </div>
     </div>
+   
+    <div class="card">
 
-
-    <div class="row">
-
-
-        <div class="col-md-12 order-md-1">
+        <div class="card-body">
 
             <form method="post" action="{{url('update_file_instruction')}}" id="form">
                 @csrf
@@ -54,8 +41,6 @@
                 <input type="hidden" name="id" value="{{$edit_file_instruction->id}}">
 
                 <div class="row">
-
-
 
                     <div class="col-md-4">
                         <div class="mb-1">
@@ -112,13 +97,10 @@
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
                 <br>
-                <div class="row">
 
+                <div class="row">
 
                     <div class="col-md-4">
                         <div class="mb-1">
@@ -172,183 +154,155 @@
                         </div>
                     </div>
                 </div>
-                <div id="test" style="height:20px;"></div>
-        </div>
-    </div>
+              <br>
 
+                <div class="row">
 
+                    <div class="col-md-2">
+                        <div class="mb-1">
+                            <label for="username">Currency</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
-    <div class="row">
-
-
-        <div class="col-md-2">
-            <div class="mb-1">
-                <label for="username">Currency</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
+                                </div>
+                                <select name="currency" id="cars">
+                                    <option>{{$edit_file_instruction->currency}}</option>
+                                    <option>select...</option>
+                                    <option>Demo 1</option>
+                                    <option>Demo 2</option>
+                                    <option>Demo 3</option>
+                                    <option>Demo 4</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <select name="currency" id="cars">
-                        <option>{{$edit_file_instruction->currency}}</option>
-                        <option>select...</option>
-                        <option>Demo 1</option>
-                        <option>Demo 2</option>
-                        <option>Demo 3</option>
-                        <option>Demo 4</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="mb-1">
-                <label for="username">Exchangr Rate</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
+                    <div class="col-md-2">
+                        <div class="mb-1">
+                            <label for="username">Exchangr Rate</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
+                                </div>
+                                <input type="text" class="form-control" name="exchange"
+                                    value="{{ $edit_file_instruction->exchange}}" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <input type="text" class="form-control" name="exchange"
-                        value="{{ $edit_file_instruction->exchange}}" id="age">
-                    <div class="invalid-feedback" style="width: 100%;">
-                        Incorporation is required
+
+                    <div class="col-md-2">
+                        <div class="mb-1">
+                            <label for="username">Turn-Around Time</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <select name="turn_around" id="cars">
+                                    <option>{{$edit_file_instruction->turn_around}}</option>
+                                    <option>select...</option>
+                                    <option>Demo 1</option>
+                                    <option>Demo 2</option>
+                                    <option>Demo 3</option>
+                                    <option>Demo 4</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                    <div class="col-md-2">
+                        <div class="mb-1">
+                            <label for="username">Priority</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
-        <div class="col-md-2">
-            <div class="mb-1">
-                <label for="username">Turn-Around Time</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
+                                </div>
+                                <select name="priority" id="cars">
+                                    <option>{{$edit_file_instruction->priority}}</option>
+                                    <option>select...</option>
+                                    <option>Demo 1</option>
+                                    <option>Demo 2</option>
+                                    <option>Demo 3</option>
+                                    <option>Demo 4</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <select name="turn_around" id="cars">
-                        <option>{{$edit_file_instruction->turn_around}}</option>
-                        <option>select...</option>
-                        <option>Demo 1</option>
-                        <option>Demo 2</option>
-                        <option>Demo 3</option>
-                        <option>Demo 4</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="mb-1">
-                <label for="username">Priority</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
 
-                    </div>
-                    <select name="priority" id="cars">
-                        <option>{{$edit_file_instruction->priority}}</option>
-                        <option>select...</option>
-                        <option>Demo 1</option>
-                        <option>Demo 2</option>
-                        <option>Demo 3</option>
-                        <option>Demo 4</option>
-                    </select>
-                </div>
-            </div>
-        </div>
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Amount</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
-        <div class="col-md-4">
-            <div class="mb-1">
-                <label for="username">Amount</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
-                    </div>
-                    <input type="text" class="form-control" name="amount" value="{{ $edit_file_instruction->amount}}"
-                        id="age">
-                    <div class="invalid-feedback" style="width: 100%;">
-                        Incorporation is required
+                                </div>
+                                <input type="text" class="form-control" name="amount"
+                                    value="{{ $edit_file_instruction->amount}}" id="age">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Incorporation is required
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="mb-1">
-                <label for="username">Details</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-1">
+                            <label for="username">Details</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
+                                </div>
+                                <textarea class="form-control" name="details" id="form7Example7" value=""
+                                    rows="3">{{ $edit_file_instruction->details}}</textarea>
+                            </div>
+                        </div>
                     </div>
-                    <textarea class="form-control" name="details" id="form7Example7" value=""
-                        rows="3">{{ $edit_file_instruction->details}}</textarea>
                 </div>
-            </div>
-        </div>
+                <br>
 
+                <div class="row">
 
-    </div>
-    <hr class="mb-4">
+                    <div class="col-md-4">
+                        <div class="mb-1">
+                            <label for="username">Send Notification To</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
 
-    <div class="row">
-
-
-        <div class="col-md-4">
-            <div class="mb-1">
-                <label for="username">Send Notification To</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-
+                                </div>
+                                <select name="send_notification" id="cars">
+                                    <option>{{ $edit_file_instruction->send_notification}}</option>
+                                    <option>select...</option>
+                                    <option>Demo 1</option>
+                                    <option>Demo 2</option>
+                                    <option>Demo 3</option>
+                                    <option>Demo 4</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <select name="send_notification" id="cars">
-                        <option>{{ $edit_file_instruction->send_notification}}</option>
-                        <option>select...</option>
-                        <option>Demo 1</option>
-                        <option>Demo 2</option>
-                        <option>Demo 3</option>
-                        <option>Demo 4</option>
-                    </select>
                 </div>
-            </div>
-        </div>
-    </div>
+
+                <br>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                        </div>
+                        <div class="col-sm">
+                        </div>
+                        <div class="col-sm">
+                            <button type="submit" class="btn btn-primary float:right" style="width:45%">Save</button>
+                            <button type="button" class="btn btn-primary float:left" style="width:45%" onclick="history.back()">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
 
 
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-<br>
-<div class="container">
-    <div class="row">
-        <div class="col-sm">
-        </div>
-        <div class="col-sm">
-        </div>
-        <div class="col-sm">
-            <button type="submit" class="btn btn-primary float:right" style="width:45%">Save</button>
-            <button type="button" class="btn btn-primary float:left" style="width:45%">Close</button>
         </div>
     </div>
 </div>
-</form>
-
-
-
-
-
-
-
 
 
 

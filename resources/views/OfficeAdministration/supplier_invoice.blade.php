@@ -286,7 +286,7 @@
                                                 <option value="2">Acc 2</option>
                                                 <option value="3">Acc 3</option>
                                             </select>
-                                            <button type="button" class="btn btn-primary">Add</button>
+                                            <button type="button" class="btn btn-primary" style="margin-top:8px;">Add</button>
                                         </div>
                                     </div>
 

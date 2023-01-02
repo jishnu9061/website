@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-// use Illuminate\Http\Request;
-// use DB;
+use Illuminate\Http\Request;
+use DB;
 
 class PurchaseManagement extends Controller
 {
@@ -13,28 +13,102 @@ class PurchaseManagement extends Controller
     }
     public function purchase_order()
     {
-        return view('purchase_management.purchase_order');
+        $purchase_order = DB::table('cra_add_new_purchase')->get();
+        return view('purchase_management.purchase_order',compact('purchase_order'));
     }
-    public function view_purchase_order()
+
+    
+    public function store_purchase(Request $request){
+
+            $purchase_date   = $request['date'];
+            $order_number    = $request['number'];
+            $supplier        = $request['Supplier'];
+            $payment         = $request['Payment'];
+            $status          = $request['Order-Placed'];
+            $grand_total     = $request['grand_total'];
+            $advance_amount  = $request['advance_amount'];
+            $pending_amount  = $request['pending_amount'];
+
+            $values = DB::table('cra_add_new_purchase')->insertGetId([
+             'purchase_date'        =>   $purchase_date,
+             'purchase_order_number'=>   $order_number,
+             'payment_type'         =>   $payment,
+             'supplier_name'        =>   $supplier,
+             'status'               =>   $status,
+             'grand_total'          =>   $grand_total,
+             'advance_amount'       =>   $advance_amount,
+             'pending_amount'       =>   $pending_amount  
+            ]);
+
+            
+            DB::table('cra_purchase_order_details')->insert([
+
+                'purchase_date'        =>   $purchase_date,
+                'purchase_order_number'=>   $order_number,
+                'payment_type'         =>   $payment,
+                'supplier_name'        =>   $supplier,
+                'status'               =>   $status,
+                'grand_total'          =>   $grand_total,
+                'advance_amount'       =>   $advance_amount,
+                'pending_amount'       =>   $pending_amount  
+               ]);
+
+            $item_id     = count($request->input('batch_no'));
+            $document    = [];
+
+            for($i=0; $i < $item_id; $i++){
+
+                $document[] = [
+                    'purchase_id'=> $values,
+                    'item_no'   => $request->input('batch_no')[$i],
+                    'item_name' => $request->input('item_name')[$i],
+                    'quantity' => $request->input('quantity')[$i],
+                    'price'    => $request->input('price')[$i],
+                    'total'    => $request->input('total')[$i]
+                ];
+            }
+
+            DB::table('cra_purchase_items')->insert($document);
+
+            return redirect('/purchase_order');
+
+    }
+
+    public function view_purchase_order($purchase_id)
     {
-        return view('purchase_management.view_purchase_reports');
+        
+        $view_order = DB::table('cra_add_new_purchase')->where('purchase_id',$purchase_id)->get();
+        
+
+        $view_purchase_order = DB::table('cra_purchase_items')->where('purchase_id',$purchase_id)->get();
+       
+        
+        return view('purchase_management.view_purchase_reports',compact('view_purchase_order','view_order','purchase_id'));
     }
+
     public function purchase_order_report()
     {
         return view('purchase_management.purchase_order_report');
     }
+
+
     public function vendor_performance_report()
     {
         return view('purchase_management.vendor_performance_report');
     }
+
+
     public function view_supplier()
     {
         return view('purchase_management.view_supplier');
     }
+
+
     public function edit_supplier()
     {
         return view('purchase_management.edit_supplier');
     }
+
     // public function cost_variation_report()
     // {
     //     return view('purchase_management.cost_variation_report');
@@ -43,10 +117,13 @@ class PurchaseManagement extends Controller
     {
         return view('purchase_management.ledger_details');
     }
+
     public function purchase_view()
     {
         return view('purchase_management.purchase_view');
     }
+
+
     public function edit_purchase()
     {
         return view('purchase_management.edit_purchase');
