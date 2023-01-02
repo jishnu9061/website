@@ -5,7 +5,60 @@
     <br><br>
 
     <form>
-        <div class="form-row">
+    <div class="table-responsive">
+            <table class="table table-hover" style="border: 1px solid">
+
+                @csrf
+                <tbody>
+                    
+
+                    <tr>
+                        <th>From Date :</th>
+                        <td>{{$view_tender_details->from_date}}</td>
+                    </tr>
+                    <tr>
+                        <th>Date To :</th>
+                        <td>{{$view_tender_details->to_date}}</td>
+                    </tr>
+                    <tr>
+                        <th>Item :</th>
+                        <td>{{$view_tender_details->item}}</td>
+                    </tr>
+                    <tr>
+                        <th>Category:</th>
+                        <td>{{$view_tender_details->category}}</td>
+                    </tr>
+                    <tr>
+                        <th>Quantity :</th>
+                        <td>{{$view_tender_details->quantity}}</td>
+                    </tr>
+                    <tr>
+                        <th>Status :</th>
+                        <td>Opened</td>
+                    </tr>
+                  
+                    <tr>
+                        <th>Description:</th>
+                        <td></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+
+    </form>
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- <div class="form-row">
             <div class="col-md-4 mb-3">
                 <label for="validationDefault01"> From Date </label>
                 <input type="Text" class="form-control" value="{{$view_tender_details->from_date}}">
@@ -40,9 +93,8 @@
                 <label for="inputAddress">Description</label>
                 <textarea class="form-control" rows="3" ></textarea>
             </div>
-        </div>
+        </div> -->
 
-    </form>
 
 
 </div>

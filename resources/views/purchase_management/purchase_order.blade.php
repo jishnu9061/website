@@ -279,40 +279,42 @@
                                                 </div>
                                                 <br>
                                                 <!-- table -->
+                                                <div class="table-responsive">
+                                                    <div class="row clearfix container">
 
-                                                <div class="row clearfix container">
+                                                        <div class="col-sm">
 
-                                                    <div class="col-sm">
+                                                            <table class="table table-bordered order-list"
+                                                                id="tab_logic">
 
-                                                        <table class="table table-bordered order-list" id="tab_logic">
+                                                                <tr>
+                                                                    <td class="">Item ID</td>
+                                                                    <td class="" style="width:25%">Item Name</td>
+                                                                    <td class="">Quantity</td>
+                                                                    <td class="">Price</td>
+                                                                    <td class="">Total</td>
+                                                                    <td> <input type="button" class="btn btn-primary"
+                                                                            id="add" value="Add" Style="width:100%;">
+                                                                    </td>
+                                                                </tr>
 
-                                                            <tr>
-                                                                <td class="">Item ID</td>
-                                                                <td class="" style="width:25%">Item Name</td>
-                                                                <td class="">Quantity</td>
-                                                                <td class="">Price</td>
-                                                                <td class="">Total</td>
-                                                                <td> <input type="button" class="btn btn-primary"
-                                                                        id="add" value="Add" Style="width:100%;">
-                                                                </td>
-                                                            </tr>
+                                                            </table>
+                                                            <div class="row">
+                                                                <div class="col-sm">
+                                                                </div>
+                                                                <div class="col-sm">
+                                                                    <table class="table table-bordered">
 
-                                                        </table>
-                                                        <div class="row">
-                                                            <div class="col-sm">
-                                                            </div>
-                                                            <div class="col-sm">
-                                                                <table class="table table-bordered">
-
-                                                                    <tr>
-                                                                        <td scope="col">Grand Total</td>
-                                                                        <td><input type="text"
-                                                                                class="form-control invoice-sub-total"
-                                                                                value="" name="grand_totall"
-                                                                                id="grand_totall_" readonly>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
+                                                                        <tr>
+                                                                            <td scope="col">Grand Total</td>
+                                                                            <td><input type="text"
+                                                                                    class="form-control invoice-sub-total"
+                                                                                    value="" name="grand_totall"
+                                                                                    id="grand_totall_" readonly>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
