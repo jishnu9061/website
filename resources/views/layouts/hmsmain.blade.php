@@ -104,12 +104,7 @@
             /* font-family: 'Carter One'; */
             /* font-size: 22px; */
 
-   
-    
-    
         }
-
-
 
         html {
             scroll-behavior: smooth;
@@ -217,37 +212,11 @@
             opacity: 0;
             transition: opacity 1.3s;
         }
-
-
-
-
-        .sidebar-menu{
-    animation: fadeInAnimation ease 1s;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
-        }
-        @keyframes fadeInAnimation {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-}
-   
         </style>
 
     </head>
 
     <body>
-<script>
-{
-      $(window).load(function() {
-    $("#sidebfar").removeClass("acftive");
-  });
-}
-</script>
-
         <div class="progress"></div>
         <script>
         var data = [];
@@ -311,11 +280,10 @@ animation: sweep 1.5s ease-in-out infinite;
 animation-direction:reverse;">
                                 <a href="{{ url('home') }}">
                                     <!-- {{-- <img src="assets/images/logo/logo.png" alt="Logo" srcset=""> --}} -->
-
-<div class="lightSweep" ><img class="logoov" id="cr_logo" src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA"
-    style="margin-top:16px;"></div>
-                                    <img class="logoo" id="cr_logo" src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA"
-
+                                    <div class="lightSweep"><img id="cr_logo"
+                                            src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA"
+                                            style="margin-top:16px;"></div>
+                                    <img id="cr_logo" src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA"
                                         style="margin-top:16px;">
 
 
@@ -1078,11 +1046,11 @@ animation-direction:reverse;">
                     <!--  -->
                     <ul class="navbar-nav mr-auto lg-pl-3 p-3">
 
-                        <li onmouseover="myFunctionw()" onmouseout="myFunctions()" onmousedown="myFunctions()" class="nav-item dropdown">
-                            <button   class=" dropdown-toggle-x btn btn-primary p-1" style="font-size:12px;" href="#"
+                        <li class="nav-item dropdown">
+                            <button  class=" dropdown-toggle-x btn btn-primary p-1" style="font-size:12px;" href="#"
                                 id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
-                                <b >Create New</b>
+                                <b onmouseover="myFunctionw()" onmouseout="myFunctions()" onmousedown="myFunctions()">Create New</b>
                                 <span id="navns" ><i class="fa fa-plus-square"></i></span>
                             </button>
    <style>
