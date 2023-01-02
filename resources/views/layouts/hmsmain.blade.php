@@ -1044,43 +1044,6 @@ animation-direction:reverse;">
                         </div>
                     </div>
                     <!--  -->
-                    <ul class="navbar-nav mr-auto lg-pl-3 p-3">
-
-                        <li class="nav-item dropdown">
-                            <button  class=" dropdown-toggle-x btn btn-primary p-1" style="font-size:12px;" href="#"
-                                id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
-                                <b onmouseover="myFunctionw()" onmouseout="myFunctions()" onmousedown="myFunctions()">Create New</b>
-                                <span id="navns" ><i class="fa fa-plus-square"></i></span>
-                            </button>
-   <style>
-                                    .mystyle {
-                                      display: none; }
-
-                                    .mystylea {
-                                      display: block;
-                                     
-                                    }
-                                    </style>
-                             
-                                <script>function myFunctionw() { document.getElementById("navns").className = "mystyle"; }function myFunctions() {    document.getElementById("navns").className = "mystylea"; }</script>
-
-
-
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{url('user_management')}}">Time entry</a>
-                                <a class="dropdown-item" href="{{url('client-index')}}">Expense entry</a>
-                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Task</a>
-                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Matter</a>
-                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Contact</a>
-                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Record payment</a>
-                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Client funds
-                                    request</a>
-                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Email log</a>
-                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Phone log</a>
-                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Secure message</a>
-                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Event</a>
-                                <a class="dropdown-item" href="{{url('file_managementindex')}}">Note</a>
                     <span class="m-2"></span>
                     <div class="nav-item dropdown" style="position: relative; ">
                         <button class=" dropdown-toggle-x btn btn-primary p-1" style="font-size:12px;" href="#"
