@@ -153,10 +153,8 @@ color: #999;
     <div class="rows_count">Showing 11 to 20 of 91</div>
 
  <!-- 		End of Container -->
-
-
  
-<div class="modal fade" id="myModal">
+<div class="modal fade" id="myModal" style="">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
 
