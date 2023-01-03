@@ -93,7 +93,7 @@
                             <td>{{ $alluser->uniqueid }}</td>
                             <td>{{ $alluser->name }}</td>
                             <td>{{ $alluser->email }}</td>
-                            <td>{{ $alluser->phoneno }}</td>
+                            <td>{{ $alluser->phone }}</td>
                             <td><a href="{{ url('managestaff' . $alluser->uniqueid) }}" style="color:rgb(13, 1, 56);"><i
                                         class="fa fa-edit"></i></a></td>
                     @endforeach
@@ -557,7 +557,7 @@
                             <label for="username">Upload CV</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="file" class="form-control" name="cv" id="password"
+                                <input type="file" class="form-control" name="cv" id=""
                                     placeholder="staff Password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Passeord is required.
@@ -570,7 +570,7 @@
                             <label for="username">Passport size Photograph</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="file" class="form-control" name="photo" id="password"
+                                <input type="file" class="form-control" name="photo" id=""
                                     placeholder="staff Password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Passeord is required.
@@ -583,7 +583,7 @@
                             <label for="username">Signature</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="file" class="form-control" name="signature" id="password"
+                                <input type="file" class="form-control" name="signature" id=""
                                     placeholder="staff Password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Passeord is required.
@@ -618,7 +618,7 @@
     <script type="text/javascript" charset="utf8"
         src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
     <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-    {{-- <script type="text/javascript">
+    <script type="text/javascript">
         $('#password, #confirm_password').on('keyup', function() {
             var v = $('#password').val();
             var b = $('#confirm_password').val()
@@ -633,7 +633,7 @@
             } else
                 $('#message').html('Not Matching').css('color', 'red');
         });
-    </script> --}}
+    </script> 
     {{-- <script>
         $('.leaves').on('keyup', function() {
             var total = 0;
