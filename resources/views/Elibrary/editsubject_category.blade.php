@@ -4,8 +4,6 @@
     <div class="container">
         <h4 id="hdtpa"><b>Edit Category Management </b></h4><br>
         <div class="card">
-            <div class="card-header">
-            </div>
             <div class="card-body">
             <form action="{{url('update_subject_category')}}" method="post">
                         @csrf
@@ -49,9 +47,9 @@
                                 <div class="col-sm">
                                     <br>
                                     <button type="submit" class="btn btn-primary float:right;"
-                                        Style="width:50%;">update</button>
+                                        Style="width:50%;">Update</button>
                                     <button type="button" class="btn btn-primary float:left" Style="width:45%;"
-                                        data-dismiss="modal">Cancel</button>
+                                        onclick="history.back()">Cancel</button>
                                 </div>
                             </div>
                         </div>
