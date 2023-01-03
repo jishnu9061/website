@@ -1035,6 +1035,25 @@ animation-direction:reverse;">
 
                 
 
+
+
+
+
+
+              
+                    // function hide() {
+                    //   var x = document.getElementById("sidebar");
+                      
+                    //   if (x.style.display === "none") {
+                    //     x.style.display = "block";
+                    //   } else {
+                    //     x.style.display = "none";
+                    //   }
+                    // }
+              
+
+
+
                     function hide() {
   var element = document.getElementById("sidebar");
   element.classList.remove("active");
@@ -1044,24 +1063,9 @@ animation-direction:reverse;">
 
 
 
-
-                {{-- <script>
-                    function hide() {
-                      var x = document.getElementById("sidebar");
-                      
-                      if (x.style.display === "none") {
-                        x.style.display = "block";
-                      } else {
-                        x.style.display = "none";
-                      }
-                    }
-                    </script> --}}
-
-
-
                 <nav class="navbar navbar-expand-lg navbar-light bg-white">
                     
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand p-1" href="#">
                         <img src="{{asset('/') }}assets//images/Logo cra.png" width="40" height="40" alt="">
                       </a>
                     {{-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -1073,10 +1077,19 @@ animation-direction:reverse;">
                         <li class="nav-item active">
                           <a class="nav-link" href="{{ url('home') }}">Home <span class="sr-only">(current)</span></a>
                         </li>
+                      
                         <li class="nav-item">
-                          <a type="button" onclick="hide()" class="nav-link" >Hide</a>
-                        </li>
-                        <li class="nav-item dropdown">
+                            <a type="button" href="{{url('system_setup')}}" class="nav-link" >Settings</a>
+                          </li>
+
+                          <li class="nav-item">
+                            <a type="button" href="{{url('system_setup')}}" class="nav-link" >About</a>
+                          </li>
+
+                          <li class="nav-item">
+                            <a type="button" href="{{url('system_setup')}}" class="nav-link" >Help</a>
+                          </li>
+                        {{-- <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Dropdown
                           </a>
@@ -1086,11 +1099,14 @@ animation-direction:reverse;">
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Something else here</a>
                           </div>
-                        </li>
-                        <li class="nav-item">
+                        </li> --}}
+                        {{-- <li class="nav-item">
                           <a class="nav-link disabled" href="#">Disabled</a>
-                        </li>
+                        </li> --}}
                       </ul>
+                      <div class="nav-item">
+                        <a type="button" onclick="hide()" class="nav-link" ><i class="fa fa-low-vision"></i></a>
+                      </div>
                       <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -1125,18 +1141,19 @@ animation-direction:reverse;">
                     <!-- Nav Back Button -->
                     <a id="backbtn" href="javascript:history.back()" style=" color: #070344;
                                             font-size: 35px;">
-                        <i id="bkbtnicon" class="far fa-arrow-alt-circle-left p-3"></i></a>
+                        <i id="bkbtnicon" class="far fa-arrow-alt-circle-left p-1"></i></a>
                     <!--  -->
 
                     <!-- Nav ToolTip -->
                     <div class="nav-item dropdown" style="position: relative;">
 
 
-                        <button class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown"
+                        <button class=" dropdown-toggle-x btn  px-2 py-1 m-1" href="#" id="navbarDropdown"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img data-toggle="tooltip" data-placement="top" title="Menu"
+                            <i class="fa fa-navicon"></i>
+                            {{-- <img data-toggle="tooltip" data-placement="top" title="Menu"
                                 style="height: 35px; width: 35px;" id="cr_logo"
-                                src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA">
+                                src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA"> --}}
                         </button>
 
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -1159,10 +1176,9 @@ animation-direction:reverse;">
 
                         </div>
                     </div>
-                    <!--  -->
-                    <span class="m-2"></span>
-                    <div class="nav-item dropdown" style="position: relative; ">
-                        <button class=" dropdown-toggle-x btn btn-primary p-1" style="font-size:12px;" href="#"
+      
+                    <div class="nav-item dropdown m-1" style="position: relative; " >
+                        <button class=" dropdown-toggle-x btn p-1" style="font-size:12px;" href="#"
                             id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
                             <b> Create New </b>
@@ -1251,7 +1267,7 @@ animation-direction:reverse;">
                         <!-- LogOut Button  -->
 
 
-                        <div id="navr" style="margin-right: .5%;">
+                        <div id="navr" class="p-1">
 
                             <div style=" text-decoration: none; list-style:none;">
 
