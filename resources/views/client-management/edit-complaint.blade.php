@@ -7,8 +7,8 @@
     <br><br>
 
 
-    <div class="row">
-        <div class="col-md-12">
+    <div class="card">
+        <div class="card-body">
             <form method="post" action="{{url('update-Complaint')}}" id="form">
                 @csrf
                 <input type="hidden" name="id" value="{{$edit_complaint->id}}">
