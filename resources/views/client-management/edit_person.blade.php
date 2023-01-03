@@ -14,8 +14,9 @@
 
     </div>
 
-    <div class="row">
-        <div class="col-md-12">
+    <div class="card">
+
+<div class="card-body">
             <form method="post" action="{{url('update-client')}}">
                 @csrf
                 <input type="hidden" name="id" value="{{$edit_client->id}}">

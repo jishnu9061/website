@@ -58,9 +58,10 @@
                     <td>{{$list->file_name}}</td>
                     <td>{{$list->discription}}</td>
                     <td>
+                        <a href="viewfile"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i><span class="m-2"></span>
                         <a href="{{url('editfile',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
-                            <a href="{{url('delete_file',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i><span class="m-2"></span>
-                            <a href="viewfile"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
+                            <a href="{{url('delete_file',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
+                            
                     </td>
 
                 </tr>

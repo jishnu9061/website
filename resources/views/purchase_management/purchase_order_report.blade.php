@@ -62,17 +62,17 @@
               </tr>
             </thead>
             <tbody>
+              @foreach($purchase_order_report as $list)
               <tr>
-
-                <td>25-11-2022</td>
-                <td>C15P125</td>
-                <td>Supplier1</td>
-                <td>Order-Placed</td>
-                <td><a href="{{url('purchase_view')}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-2"></span>
-                      <a href="{{url('edit_purchase')}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit" ></i>
-                </td>
-                
+                <td>{{$list->purchase_date}}</td>
+                <td>{{$list->purchase_order_number}}</td>
+                <td>{{$list->supplier_name}}</td>
+                <td>{{$list->status}}</td>
+                <td><a href="{{url('purchase_view',$list->purchase_id)}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-2"></span>
+                      <a href="{{url('edit_purchase',$list->purchase_id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit" ></i>
+                </td> 
               </tr>
+              @endforeach
             
              
             </tbody>

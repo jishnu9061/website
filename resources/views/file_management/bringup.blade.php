@@ -1,13 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css"
-        href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-   
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+
+
 <div class="container">
     <div class="py-5 text-center">
         @if(Session::has('staffregistered'))
@@ -20,23 +14,17 @@
             {{ Session::get('leavevalidat')}}
         </div>
         @endif
-        <div>
-            <!-- <h2 style="text-align:center;">Search</h2>
-            <hr class="mb-4">. -->
-            <div>
-            {{-- heading --}}
-    <h4 id="hdtpa"><b>Bringup Report</b></h4>
-    
- 
-         
-       
-        
-            </div>
-        </div>
     </div>
 
-    <div>
-        
+    {{-- heading --}}
+    <h4 id="hdtpa"><b>Bringup Report</b></h4>
+    <br>
+    <br>
+
+
+
+    <div class="text-center">
+
         <div>
             <input class="btn btn-primary" type="button" style="width:65px;" value="Today">
             <input class="btn btn-primary" type="button" value="This Week">
@@ -48,20 +36,15 @@
             <input class="btn btn-primary" type="button" value="This Year">
             <input class="btn btn-primary" type="button" value="Last Year">
         </div>
-        <br>
-        <br>
 
+    </div>
+    <br>
+    <br>
 
+    <div class="card">
 
+        <div class="card-body">
 
-
-
-
-
-
-
-
-        <div>
             <form method="post" action="" id="form">
                 @csrf
                 <div class="row">
@@ -73,7 +56,7 @@
 
                                 </div>
                                 <select name="client" id="cars">
-                                <option>---select---</option>
+                                    <option>---select---</option>
                                     <option>client 1</option>
                                     <option>client 2</option>
                                     <option>client 3</option>
@@ -94,7 +77,7 @@
 
                                 </div>
                                 <select name="file" id="cars">
-                                <option>---select---</option>
+                                    <option>---select---</option>
                                     <option>File 1</option>
                                     <option>File 2</option>
                                     <option>File 3</option>
@@ -137,7 +120,7 @@
 
                                 </div>
                                 <select name="responsible" id="cars">
-                                <option>---select---</option>
+                                    <option>---select---</option>
                                     <option>Advocate 1</option>
                                     <option>Advocate 2</option>
                                     <option>Advocate 3</option>
@@ -146,9 +129,9 @@
                             </div>
                         </div>
                     </div>
-</div>
-<br>
-            <div class="row"> 
+                </div>
+                <br>
+                <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Date (Form)</label>
@@ -178,660 +161,654 @@
                             </div>
                             <br>
                         </div>
-                        
-                    </div>
-                    
-</div>
-                    <div>
 
-           
-
-
-
-
-
-           
-
- 
-
-            <div class="row">
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-                            <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">View Report</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
-                        </div>
                     </div>
                 </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+                        <br>
+                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">View
+                            Report</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                            onclick="history.back()">Cancel</button>
+                    </div>
+                </div>
+
+            </form>
+
         </div>
-        </form>
-
     </div>
-    <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-    <script type="text/javascript">
-    $(function() {
-        $('[data-toggle="popover"]').popover()
-    })
+</div>
 
 
-    $(document).on('click', '#testing', function() {
-                $(this).text(' submited ');
-                $('.checkz:checked').each(function() {
-                            var allowanceid = this.value;
-                            var staffid = $('#staffname').val();
+
+<script src="{{ url('assets/js') }}/jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    $('[data-toggle="popover"]').popover()
+})
 
 
-                            $(this).prop('disabled', true);
-                            $.ajaxSetup({
-                                headers: {
-                                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                                }
-                            });
+$(document).on('click', '#testing', function() {
+            $(this).text(' submited ');
+            $('.checkz:checked').each(function() {
+                        var allowanceid = this.value;
+                        var staffid = $('#staffname').val();
 
 
-                            $.ajax({
-                                        method: "POST",
-                                        url: "/allowancetostaff",
-                                        data: {
-                                            "_token": "{{ csrf_token()}}",
-                                            'allowanceid': allowanceid,
-                                            'staffid': staffid,
-                                            'status': 'allowance',
-                                        },
+                        $(this).prop('disabled', true);
+                        $.ajaxSetup({
+                            headers: {
+                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                            }
+                        });
 
-                                        //success: function (response){
-                                        //  alert(response.status);
-                                        //},
-                                        <
-                                        /select>
 
-                                        <
-                                        /div> <
-                                        div class = "form-group col-md-7" >
-                                        <
-                                        label
-                                        for = "username" > Consulatation Fees < /label> <
-                                        div class = "input-group" >
-                                        <
-                                        div class = "input-group-prepend" >
+                        $.ajax({
+                                    method: "POST",
+                                    url: "/allowancetostaff",
+                                    data: {
+                                        "_token": "{{ csrf_token()}}",
+                                        'allowanceid': allowanceid,
+                                        'staffid': staffid,
+                                        'status': 'allowance',
+                                    },
 
-                                        <
-                                        /div> <
-                                        input type = "number"
-                                        class = "form-control"
-                                        name = "cons_fee"
-                                        id = "cons_fee"
-                                        placeholder = ""
-                                        min = "0" >
-                                        <
-                                        div class = "invalid-feedback"
-                                        style = "width: 100%;" >
-                                        <
-                                        /div> < /
-                                        div > <
-                                        /div>
+                                    //success: function (response){
+                                    //  alert(response.status);
+                                    //},
+                                    <
+                                    /select>
 
-                                        <
-                                        div class = "col-md-4 col-lg-2" >
-                                        <
-                                        p class = "card-title" > < b > Sex < /b></p >
-                                        <
-                                        div class = "card-body" >
-                                        <
-                                        div class = "form-check" >
-                                        <
-                                        input class = "form-check-input"
-                                        type = "radio"
-                                        name = "patienthere"
-                                        id = "flexRadioDefault1" >
-                                        <
-                                        label class = "form-check-label"
-                                        for = "flexRadioDefault1" >
-                                        Male <
-                                        /label> < /
-                                        div > <
-                                        div class = "form-check" >
-                                        <
-                                        input class = "form-check-input"
-                                        type = "radio"
-                                        name = "patienthere"
-                                        id = "flexRadioDefault1"
-                                        checked >
-                                        <
-                                        label class = "form-check-label"
-                                        for = "flexRadioDefault1" >
-                                        Female <
-                                        /label> < /
-                                        div > <
-                                        div class = "form-check" >
-                                        <
-                                        input class = "form-check-input"
-                                        type = "radio"
-                                        name = "patienthere"
-                                        id = "flexRadioDefault1"
-                                        checked >
-                                        <
-                                        label class = "form-check-label"
-                                        for = "flexRadioDefault1" >
-                                        Others <
-                                        /label> < /
-                                        div >
+                                    <
+                                    /div> <
+                                    div class = "form-group col-md-7" >
+                                    <
+                                    label
+                                    for = "username" > Consulatation Fees < /label> <
+                                    div class = "input-group" >
+                                    <
+                                    div class = "input-group-prepend" >
 
-                                        <
-                                        /div> < /
-                                        div > <
-                                        /div>
+                                    <
+                                    /div> <
+                                    input type = "number"
+                                    class = "form-control"
+                                    name = "cons_fee"
+                                    id = "cons_fee"
+                                    placeholder = ""
+                                    min = "0" >
+                                    <
+                                    div class = "invalid-feedback"
+                                    style = "width: 100%;" >
+                                    <
+                                    /div> < /
+                                    div > <
+                                    /div>
 
-                                        <
-                                        div style = "height:50px;" >
+                                    <
+                                    div class = "col-md-4 col-lg-2" >
+                                    <
+                                    p class = "card-title" > < b > Sex < /b></p >
+                                    <
+                                    div class = "card-body" >
+                                    <
+                                    div class = "form-check" >
+                                    <
+                                    input class = "form-check-input"
+                                    type = "radio"
+                                    name = "patienthere"
+                                    id = "flexRadioDefault1" >
+                                    <
+                                    label class = "form-check-label"
+                                    for = "flexRadioDefault1" >
+                                    Male <
+                                    /label> < /
+                                    div > <
+                                    div class = "form-check" >
+                                    <
+                                    input class = "form-check-input"
+                                    type = "radio"
+                                    name = "patienthere"
+                                    id = "flexRadioDefault1"
+                                    checked >
+                                    <
+                                    label class = "form-check-label"
+                                    for = "flexRadioDefault1" >
+                                    Female <
+                                    /label> < /
+                                    div > <
+                                    div class = "form-check" >
+                                    <
+                                    input class = "form-check-input"
+                                    type = "radio"
+                                    name = "patienthere"
+                                    id = "flexRadioDefault1"
+                                    checked >
+                                    <
+                                    label class = "form-check-label"
+                                    for = "flexRadioDefault1" >
+                                    Others <
+                                    /label> < /
+                                    div >
 
-                                        <
-                                        div style = "height: 50px;" >
+                                    <
+                                    /div> < /
+                                    div > <
+                                    /div>
 
-                                        <
-                                        /div> <
-                                        script src = "{{ url('assets/js') }}/jquery.min.js" >
-    </script>
-    <script type="text/javascript">
-    $(document).on('input', '#price', function() {
-        alert('sdf');
-        $('#percent').prop('readonly', true);
+                                    <
+                                    div style = "height:50px;" >
 
-    });
-    $(document).on('input', '#percent', function() {
-                $('#price').prop('readonly', true); <
-                /div>
+                                    <
+                                    div style = "height: 50px;" >
+
+                                    <
+                                    /div> <
+                                    script src = "{{ url('assets/js') }}/jquery.min.js" >
+</script>
+<script type="text/javascript">
+$(document).on('input', '#price', function() {
+    alert('sdf');
+    $('#percent').prop('readonly', true);
+
+});
+$(document).on('input', '#percent', function() {
+            $('#price').prop('readonly', true); <
+            /div>
+
+            <
+            h6 > Salary And Allowances < /h6>
 
                 <
-                h6 > Salary And Allowances < /h6>
-
-                    <
-                    hr class = "mb-4" >
-                    <
-                    div class = "row" >
-                    <
-                    div class = "col-md-4" >
-                    <
-                    div class = "mb-1" >
-                    <
-                    label
-                for = "username" > Salary < /label> <
-                div class = "input-group" >
-                    <
-                    div class = "input-group-prepend" >
-
-                    <
-                    /div> <
-                input type = "number"
-                class = "form-control"
-                name = "salary"
-                id = "username"
-                placeholder = "Salary"
-                min = "0" >
-                    <
-                    div class = "invalid-feedback"
-                style = "width: 100%;" >
-                    Salary is required. <
-                    /div> < /
-                div > <
-                    /div> < /
-                div >
-
-                    <
-                    div class = "col-md-4" >
-                    <
-                    div class = "mb-1" >
-                    <
-                    label
-                for = "username" > Years of experience < /label> <
-                div class = "input-group" >
-                    <
-                    div class = "input-group-prepend" >
-
-                    <
-                    /div> <
-                input type = "number"
-                class = "form-control"
-                name = "yearsexp"
-                id = "username"
-                placeholder = "Experience"
-                min = "0"
-                max = "70" >
-                    <
-                    div class = "invalid-feedback"
-                style = "width: 100%;" >
-                    Years of experience is required. <
-                    /div> < /
-                div > <
-                    /div> < /
-                div > <
-                    div class = "col-md-4" >
-                    <
-                    div class = "mb-1" >
-                    <
-                    label
-                for = "username" > D.O.B < /label> <
-                div class = "input-group" >
-                    <
-                    div class = "input-group-prepend" >
-
-                    <
-                    /div> <
-                input type = "date"
-                class = "form-control"
-                name = "dob"
-                id = "username"
-                placeholder = "DOB" >
-                    <
-                    div class = "invalid-feedback"
-                style = "width: 100%;" >
-                    dob is required. <
-                    /div> < /
-                div > <
-                    /div> < /
-                div > <
-                    /div>
-
-                {
-                    {
-                        Session::forget('staffregistered')
-                    }
-                } <
+                hr class = "mb-4" >
+                <
                 div class = "row" >
-                    <
-                    div class = "col-md-4" >
-                    <
-                    div class = "mb-1" >
-                    <
-                    label
-                for = "username" > Bank Name < /label> <
-                div class = "input-group" >
-                    <
-                    div class = "input-group-prepend" >
+                <
+                div class = "col-md-4" >
+                <
+                div class = "mb-1" >
+                <
+                label
+            for = "username" > Salary < /label> <
+            div class = "input-group" >
+                <
+                div class = "input-group-prepend" >
 
-                    <
-                    /div> <
-                input type = "text"
-                class = "form-control"
-                name = "bankname"
-                id = "username"
-                placeholder = "Bank Name" >
-                    <
-                    div class = "invalid-feedback"
-                style = "width: 100%;" >
-                    Bank Name is required. <
-                    /div> < /
-                div > <
-                    /div> < /
-                div >
+                <
+                /div> <
+            input type = "number"
+            class = "form-control"
+            name = "salary"
+            id = "username"
+            placeholder = "Salary"
+            min = "0" >
+                <
+                div class = "invalid-feedback"
+            style = "width: 100%;" >
+                Salary is required. <
+                /div> < /
+            div > <
+                /div> < /
+            div >
 
-                    <
-                    div class = "col-md-4" >
-                    <
-                    div class = "mb-1" >
-                    <
-                    label
-                for = "username" > Account Number < /label> <
-                div class = "input-group" >
-                    <
-                    div class = "input-group-prepend" >
+                <
+                div class = "col-md-4" >
+                <
+                div class = "mb-1" >
+                <
+                label
+            for = "username" > Years of experience < /label> <
+            div class = "input-group" >
+                <
+                div class = "input-group-prepend" >
 
-                    <
-                    /div> <
-                input type = "number"
-                class = "form-control"
-                name = "accountnumber"
-                id = "username"
-                placeholder = "Account Number"
-                min = "0" >
-                    <
-                    div class = "invalid-feedback"
-                style = "width: 100%;" >
-                    Account number is required. <
-                    /div> < /
-                div > <
-                    /div> < /
-                div > <
-                    div class = "col-md-4" >
-                    <
-                    div class = "mb-1" >
-                    <
-                    label
-                for = "username" > IFSC code < /label> <
-                div class = "input-group" >
-                    <
-                    div class = "input-group-prepend" >
+                <
+                /div> <
+            input type = "number"
+            class = "form-control"
+            name = "yearsexp"
+            id = "username"
+            placeholder = "Experience"
+            min = "0"
+            max = "70" >
+                <
+                div class = "invalid-feedback"
+            style = "width: 100%;" >
+                Years of experience is required. <
+                /div> < /
+            div > <
+                /div> < /
+            div > <
+                div class = "col-md-4" >
+                <
+                div class = "mb-1" >
+                <
+                label
+            for = "username" > D.O.B < /label> <
+            div class = "input-group" >
+                <
+                div class = "input-group-prepend" >
 
-                    <
-                    /div> <
-                input type = "text"
-                class = "form-control"
-                name = "isfc"
-                id = "username"
-                placeholder = "Ifsc Code" >
-                    <
-                    div class = "invalid-feedback"
-                style = "width: 100%;" >
-                    IFSC Code is required. <
-                    /div> < /
-                div > <
-                    /div> < /
-                div > <
-                    div class = "col-md-12" >
-                    <
-                    div class = "mb-1" >
-                    <
-                    br >
-                    <
-                    h6 > No: of Leaves(Annual) < /h6>
+                <
+                /div> <
+            input type = "date"
+            class = "form-control"
+            name = "dob"
+            id = "username"
+            placeholder = "DOB" >
+                <
+                div class = "invalid-feedback"
+            style = "width: 100%;" >
+                dob is required. <
+                /div> < /
+            div > <
+                /div> < /
+            div > <
+                /div>
 
-                    <
-                    div class = "input-group" >
-
-                    <
-                    div class = "input-group-prepend" >
-                    <
-                    /div> <
-                table class = "table" >
-                    <
-                    tr >
-
-
-
-                    <
-                    td >
-
-                    <
-                    input type = "hidden"
-                name = "leave_type[]"
-                value = "" > < /td> <
-                td > < input type = "number"
-                class = "form-control"
-                name = "leaves[]"
-                value = ""
-                min = "0"
-                max = "365"
-                width = "auto" > < /td>
-
-
-
-                    <
-                    /tr> < /
-                table > {
-                        {
-                            -- < input type = "text"
-                            class = "form-control"
-                            name = "leavetype"
-                            value = ""
-                            id = "leavetype"
-                            placeholder = "" >
-                                <
-                                div class = "invalid-feedback"
-                            style = "width:100%;" > --
-                        }
-                    } {
-                        {
-                            -- < /div> --}} < /
-                            div > <
-                                /div> < /
-                            div >
-
-                                <
-                                /div> <
-                            div style = "height: 50px;" >
-
-                                <
-                                /div> <
-                            div class = "row" >
-
-                                <
-                                div class = "col-md-4 col-lg-4" >
-                                <
-                                p > < b > Fixed Allowances < /b></p >
-                                <
-                                table class = "table table-bordered" >
-                                <
-                                tbody >
-
-
-
-                                <
-                                tr >
-
-                                <
-                                td > < /td> <
-                            input type = "hidden"
-                            name = ""
-                            value = "" >
-                                <
-                                td > < input type = "checkbox"
-                            class = "checkz"
-                            name = "allowz[]"
-                            value = "" > < /td>
-
-                                <
-                                /tr>
-
-
-
-                                <
-                                /tbody> < /
-                            table > <
-                                /div> < /
-                            div > <
-                                script src = "{{ url('assets/js') }}/jquery.min.js" >
-    </script>
-    <script type="text/javascript">
-    $(function() {
-        $('[data-toggle="popover"]').popover()
-    })
-
-    $(document).on('click', '#testing1', function() {
-
-                $(this).text(' submited ');
-                $('.checkz:checked').each(function() {
-                            var allowanceid = this.value;
-                            var staffid = $('#staffname').val();
-
-
-                            $(this).prop('disabled', true);
-                            $.ajaxSetup({
-                                headers: {
-                                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                                }
-                            });
-
-
-                            $.ajax({
-                                        method: "POST",
-                                        url: "/allowancetostaff",
-                                        data: {
-                                            "_token": "{{ csrf_token()}}",
-                                            'allowanceid': allowanceid,
-                                            'staffid': staffid,
-                                            'status': 'reduction',
-
-                                        },
-
-                                        //success: function (response){
-                                        //  alert(response.status);
-                                        //},
-
-
-                                        <
-                                        div class = "col-md-4 col-lg-4" >
-                                        <
-                                        p > < b > Non - Fixed Allowances < /b></p >
-                                        <
-                                        table class = "table table-bordered" >
-                                        <
-                                        tbody >
-
-
-
-                                        <
-                                        tr >
-
-                                        <
-                                        td > < /td> <
-                                        input type = "hidden"
-                                        name = ""
-                                        value = "" >
-                                        <
-                                        td > < input type = "number"
-                                        class = "checkz"
-                                        name = "nonfx[]"
-                                        min = "0"
-                                        value = "" > < /td>
-
-                                        <
-                                        /tr>
-
-
-
-                                        <
-                                        /tbody> < /
-                                        table > <
-                                        /div>
-
-                                        <
-                                        div class = "col-md-4 col-lg-4" >
-                                        <
-                                        p > < b > Deductions < /b></p >
-                                        <
-                                        table class = "table table-bordered" >
-                                        <
-                                        tbody >
-
-
-
-                                        <
-                                        tr >
-
-                                        <
-                                        td > < /td> <
-                                        input type = "hidden"
-                                        name = ""
-                                        value = "" >
-                                        <
-                                        td > < input type = "checkbox"
-                                        class = "checkz"
-                                        name = "category[]"
-                                        value = "" > < /td>
-
-                                        <
-                                        /tr>
-
-
-
-                                        <
-                                        /tbody> < /
-                                        table > <
-                                        /div>
-
-                                        <
-                                        /div> <
-                                        div class = "row" >
-                                        <
-                                        div class = "col-md-4" >
-                                        <
-                                        div class = "mb-1" >
-                                        <
-                                        label
-                                        for = "username" > Staff Status < /label> <
-                                        div class = "input-group" >
-                                        <
-                                        div class = "input-group-prepend" >
-                                        <
-                                        /div> <
-                                        select class = "form-control"
-                                        name = "status"
-                                        id = "status" >
-                                        <
-                                        option value = "" > Select < /option>
-
-                                        <
-                                        option value = "" > HH < /option>
-
-                                        <
-                                        div class = "invalid-feedback"
-                                        style = "width: 100%;" >
-                                        <
-                                        /div> < /
-                                        select > <
-                                        /div> < /
-                                        div > <
-                                        /div> < /
-                                        div > <
-                                        hr class = "mb-4" >
-
-                                        <
-                                        button type = "submit"
-                                        class = "btn btn-primary btn-lg btn-block"
-                                        type = "submit" > Add staffs < /button>
-
-                                        <
-                                        /div> < /
-                                        div > <
-                                        /form> < /
-                                        div > <
-                                        script src =
-                                        "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
-    </script>
-    <script type="text/javascript">
-    $('#password, #confirm_password').on('keyup', function() {
-        var v = $('#password').val();
-        var b = $('#confirm_password').val()
-        if (v != b) {
-            $('#test').html('Not Matching').css('color', 'red');
-        } else {
-            $('#test').html('Matching').css('color', 'green');
-        }
-        if ($('#password').val() == $('#confirm_password').val()) {
-
-            $('#message').html('Matching').css('color', 'green');
-        } else
-            $('#message').html('Not Matching').css('color', 'red');
-    });
-    </script>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-    <script>
-    $(document).ready(function() {
-        $('#form').validate({
-            rules: {
-                name: {
-                    required: true
-                },
-                email: {
-                    required: true,
-                    email: true
-                },
-                phoneno: {
-                    required: true
+            {
+                {
+                    Session::forget('staffregistered')
                 }
-                number: {
-                    required: true,
-                    digits: true
+            } <
+            div class = "row" >
+                <
+                div class = "col-md-4" >
+                <
+                div class = "mb-1" >
+                <
+                label
+            for = "username" > Bank Name < /label> <
+            div class = "input-group" >
+                <
+                div class = "input-group-prepend" >
 
-                },
+                <
+                /div> <
+            input type = "text"
+            class = "form-control"
+            name = "bankname"
+            id = "username"
+            placeholder = "Bank Name" >
+                <
+                div class = "invalid-feedback"
+            style = "width: 100%;" >
+                Bank Name is required. <
+                /div> < /
+            div > <
+                /div> < /
+            div >
+
+                <
+                div class = "col-md-4" >
+                <
+                div class = "mb-1" >
+                <
+                label
+            for = "username" > Account Number < /label> <
+            div class = "input-group" >
+                <
+                div class = "input-group-prepend" >
+
+                <
+                /div> <
+            input type = "number"
+            class = "form-control"
+            name = "accountnumber"
+            id = "username"
+            placeholder = "Account Number"
+            min = "0" >
+                <
+                div class = "invalid-feedback"
+            style = "width: 100%;" >
+                Account number is required. <
+                /div> < /
+            div > <
+                /div> < /
+            div > <
+                div class = "col-md-4" >
+                <
+                div class = "mb-1" >
+                <
+                label
+            for = "username" > IFSC code < /label> <
+            div class = "input-group" >
+                <
+                div class = "input-group-prepend" >
+
+                <
+                /div> <
+            input type = "text"
+            class = "form-control"
+            name = "isfc"
+            id = "username"
+            placeholder = "Ifsc Code" >
+                <
+                div class = "invalid-feedback"
+            style = "width: 100%;" >
+                IFSC Code is required. <
+                /div> < /
+            div > <
+                /div> < /
+            div > <
+                div class = "col-md-12" >
+                <
+                div class = "mb-1" >
+                <
+                br >
+                <
+                h6 > No: of Leaves(Annual) < /h6>
+
+                <
+                div class = "input-group" >
+
+                <
+                div class = "input-group-prepend" >
+                <
+                /div> <
+            table class = "table" >
+                <
+                tr >
+
+
+
+                <
+                td >
+
+                <
+                input type = "hidden"
+            name = "leave_type[]"
+            value = "" > < /td> <
+            td > < input type = "number"
+            class = "form-control"
+            name = "leaves[]"
+            value = ""
+            min = "0"
+            max = "365"
+            width = "auto" > < /td>
+
+
+
+                <
+                /tr> < /
+            table > {
+                    {
+                        -- < input type = "text"
+                        class = "form-control"
+                        name = "leavetype"
+                        value = ""
+                        id = "leavetype"
+                        placeholder = "" >
+                            <
+                            div class = "invalid-feedback"
+                        style = "width:100%;" > --
+                    }
+                } {
+                    {
+                        -- < /div> --}} < /
+                        div > <
+                            /div> < /
+                        div >
+
+                            <
+                            /div> <
+                        div style = "height: 50px;" >
+
+                            <
+                            /div> <
+                        div class = "row" >
+
+                            <
+                            div class = "col-md-4 col-lg-4" >
+                            <
+                            p > < b > Fixed Allowances < /b></p >
+                            <
+                            table class = "table table-bordered" >
+                            <
+                            tbody >
+
+
+
+                            <
+                            tr >
+
+                            <
+                            td > < /td> <
+                        input type = "hidden"
+                        name = ""
+                        value = "" >
+                            <
+                            td > < input type = "checkbox"
+                        class = "checkz"
+                        name = "allowz[]"
+                        value = "" > < /td>
+
+                            <
+                            /tr>
+
+
+
+                            <
+                            /tbody> < /
+                        table > <
+                            /div> < /
+                        div > <
+                            script src = "{{ url('assets/js') }}/jquery.min.js" >
+</script>
+<script type="text/javascript">
+$(function() {
+    $('[data-toggle="popover"]').popover()
+})
+
+$(document).on('click', '#testing1', function() {
+
+            $(this).text(' submited ');
+            $('.checkz:checked').each(function() {
+                        var allowanceid = this.value;
+                        var staffid = $('#staffname').val();
+
+
+                        $(this).prop('disabled', true);
+                        $.ajaxSetup({
+                            headers: {
+                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                            }
+                        });
+
+
+                        $.ajax({
+                                    method: "POST",
+                                    url: "/allowancetostaff",
+                                    data: {
+                                        "_token": "{{ csrf_token()}}",
+                                        'allowanceid': allowanceid,
+                                        'staffid': staffid,
+                                        'status': 'reduction',
+
+                                    },
+
+                                    //success: function (response){
+                                    //  alert(response.status);
+                                    //},
+
+
+                                    <
+                                    div class = "col-md-4 col-lg-4" >
+                                    <
+                                    p > < b > Non - Fixed Allowances < /b></p >
+                                    <
+                                    table class = "table table-bordered" >
+                                    <
+                                    tbody >
+
+
+
+                                    <
+                                    tr >
+
+                                    <
+                                    td > < /td> <
+                                    input type = "hidden"
+                                    name = ""
+                                    value = "" >
+                                    <
+                                    td > < input type = "number"
+                                    class = "checkz"
+                                    name = "nonfx[]"
+                                    min = "0"
+                                    value = "" > < /td>
+
+                                    <
+                                    /tr>
+
+
+
+                                    <
+                                    /tbody> < /
+                                    table > <
+                                    /div>
+
+                                    <
+                                    div class = "col-md-4 col-lg-4" >
+                                    <
+                                    p > < b > Deductions < /b></p >
+                                    <
+                                    table class = "table table-bordered" >
+                                    <
+                                    tbody >
+
+
+
+                                    <
+                                    tr >
+
+                                    <
+                                    td > < /td> <
+                                    input type = "hidden"
+                                    name = ""
+                                    value = "" >
+                                    <
+                                    td > < input type = "checkbox"
+                                    class = "checkz"
+                                    name = "category[]"
+                                    value = "" > < /td>
+
+                                    <
+                                    /tr>
+
+
+
+                                    <
+                                    /tbody> < /
+                                    table > <
+                                    /div>
+
+                                    <
+                                    /div> <
+                                    div class = "row" >
+                                    <
+                                    div class = "col-md-4" >
+                                    <
+                                    div class = "mb-1" >
+                                    <
+                                    label
+                                    for = "username" > Staff Status < /label> <
+                                    div class = "input-group" >
+                                    <
+                                    div class = "input-group-prepend" >
+                                    <
+                                    /div> <
+                                    select class = "form-control"
+                                    name = "status"
+                                    id = "status" >
+                                    <
+                                    option value = "" > Select < /option>
+
+                                    <
+                                    option value = "" > HH < /option>
+
+                                    <
+                                    div class = "invalid-feedback"
+                                    style = "width: 100%;" >
+                                    <
+                                    /div> < /
+                                    select > <
+                                    /div> < /
+                                    div > <
+                                    /div> < /
+                                    div > <
+                                    hr class = "mb-4" >
+
+                                    <
+                                    button type = "submit"
+                                    class = "btn btn-primary btn-lg btn-block"
+                                    type = "submit" > Add staffs < /button>
+
+                                    <
+                                    /div> < /
+                                    div > <
+                                    /form> < /
+                                    div > <
+                                    script src =
+                                    "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
+</script>
+<script type="text/javascript">
+$('#password, #confirm_password').on('keyup', function() {
+    var v = $('#password').val();
+    var b = $('#confirm_password').val()
+    if (v != b) {
+        $('#test').html('Not Matching').css('color', 'red');
+    } else {
+        $('#test').html('Matching').css('color', 'green');
+    }
+    if ($('#password').val() == $('#confirm_password').val()) {
+
+        $('#message').html('Matching').css('color', 'green');
+    } else
+        $('#message').html('Not Matching').css('color', 'red');
+});
+</script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#form').validate({
+        rules: {
+            name: {
+                required: true
             },
-            errorElement: 'span',
-            errorPlacement: function(error, element) {
-                error.addClass('invalid-feedback');
-                element.closest('.form-group').append(error);
+            email: {
+                required: true,
+                email: true
             },
-            highlight: function(element, errorClass, validClass) {
-                $(element).addClass('is-invalid');
-            },
-            unhighlight: function(element, errorClass, validClass) {
-                $(element).removeClass('is-invalid');
+            phoneno: {
+                required: true
             }
-        });
+            number: {
+                required: true,
+                digits: true
+
+            },
+        },
+        errorElement: 'span',
+        errorPlacement: function(error, element) {
+            error.addClass('invalid-feedback');
+            element.closest('.form-group').append(error);
+        },
+        highlight: function(element, errorClass, validClass) {
+            $(element).addClass('is-invalid');
+        },
+        unhighlight: function(element, errorClass, validClass) {
+            $(element).removeClass('is-invalid');
+        }
     });
-    </script>
-    @endsection
+});
+</script>
+@endsection

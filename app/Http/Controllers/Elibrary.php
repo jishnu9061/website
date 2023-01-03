@@ -22,9 +22,10 @@ class Elibrary extends Controller
 
     public function subjects()
     {
+        $get_category = DB::table('cra_subject_category')->get();
         $view_subject = DB::table('cra_subject')->get();
 
-        return view('Elibrary.subject',compact('view_subject'));
+        return view('Elibrary.subject',compact('view_subject','get_category'));
     }
 
     public function addsubjects(Request $request)
@@ -354,12 +355,45 @@ public function sites()
 
     public function subject_categorys()
     {
-        return view('Elibrary.subject_category');
+        $view_category = DB::table('cra_subject_category')->get();
+        return view('Elibrary.subject_category',compact('view_category'));
     }
 
-    public function editsubject_categorys()
+    public function addsubject_categorys(Request $request)
     {
-        return view('Elibrary.editsubject_category');
+
+        $title = $request['title'];
+
+        DB::table('cra_subject_category')->insert([
+
+            'title' => $title,
+        ]);
+        return redirect('/subject_category');
+    }
+
+    public function editsubject_categorys($id)
+    {
+        $edit = DB::table('cra_subject_category')->where('id',$id)->first();
+        return view('Elibrary.editsubject_category',compact('edit','id'));
+    }
+
+    public function updatesubjectcategorys(Request $request)
+    {
+        $id = $request['id'];
+        $title = $request['title'];
+
+        DB::table('cra_subject_category')->where('id',$id)->update([
+            'id' => $id,
+            'title' => $title,
+        ]);
+
+        return redirect('/subject_category');
+    }
+
+    public function deletesubject_categorys($id)
+    {
+        $delete = DB::table('cra_subject_category')->where('id',$id)->delete();
+        return redirect('/subject_category');
     }
 
 

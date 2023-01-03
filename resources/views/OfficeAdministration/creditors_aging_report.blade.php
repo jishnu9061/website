@@ -5,16 +5,27 @@
     <h4 id="hdtpa"><b>Creditor Aging Report</b></h4>
     <br>
 
-    <div class="row align-items-start">
-        <div class="col">
-            <label class="form-label">Date</label>
-            <input type="date" class="form-control">
-        </div>
-        <div class="col">
-            <!-- <label class="form-label">Date To</label>
-            <input type="date" class="form-control"> -->
-        </div>
-    </div>
+   <div class="row">
+   <div class="col-md-2">
+                                <div class="mb-1">
+                                    <label for="username">Date</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+
+                                        </div>
+                                        <input type="date" class="form-control" name="user" id="age">
+                                        <div class="invalid-feedback" style="width: 100%;">
+                                            Incorporation is required
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+   <div class="col-md-3">
+</div>
+<div class="col-md-6">
+</div>
+
+</div>
 
 
     <div class="header_wrap">

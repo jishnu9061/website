@@ -53,7 +53,7 @@
                 <tr>
 
                     <td>{{$list->title}}</td>
-                    <td>{{$list->site_url}}</td>
+                    <td><a href="{{$list->site_url}}">{{$list->site_url}}<br></a></td>
                     <td>{{$list->discription}}</td>
                     <td>
                         <a href="{{url('editsite',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span

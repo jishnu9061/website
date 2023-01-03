@@ -1,23 +1,18 @@
 @extends('layouts.hmsmain')
 @section('content')
-<div class="container" >
-   
-            <div>
-            {{-- heading --}}
+<div class="container">
+
+    {{-- heading --}}
     <h4 id="hdtpa"><b>Edit Transport Zone</b></h4>
     <br><br>
-            
-        
-            
 
-        
-    </div>
-    <div class="row">
 
-        <div class="col-md-12 order-md-1">
+    <div class="card">
 
-        <form method="post"action="{{url('update_transport_zone')}}"id="form">  
-          <input type="hidden" name="id" value="{{$transport_zone->id}}">
+        <div class="card-body">
+
+            <form method="post" action="{{url('update_transport_zone')}}" id="form">
+                <input type="hidden" name="id" value="{{$transport_zone->id}}">
                 @csrf
                 <div class="row">
                     <div class="col-md-4">
@@ -28,7 +23,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="zone_name" id="age"value="{{$transport_zone->zone_name}}">
+                                <input type="text" class="form-control" name="zone_name" id="age"
+                                    value="{{$transport_zone->zone_name}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
@@ -44,14 +40,15 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="zone_areas" id="age"value="{{$transport_zone->zone_areas}}">
+                                <input type="text" class="form-control" name="zone_areas" id="age"
+                                    value="{{$transport_zone->zone_areas}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
                             </div>
                         </div>
                     </div>
-               
+
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Cost(Kshs)</label>
@@ -59,7 +56,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="cost" id="age"value="{{$transport_zone->cost}}">
+                                <input type="text" class="form-control" name="cost" id="age"
+                                    value="{{$transport_zone->cost}}">
                             </div>
                         </div>
                     </div>
@@ -67,49 +65,28 @@
 
                 </div>
                 <br>
-                <!-- <div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm">
-
-                            </div>
-                            <div class="btn-group pt-3 " role="group" aria-label="Basic example">
-
-                                <button type="submit" class="btn btn-primary submit_btn">Cancel</button>
-                                <button type="submit" class="btn btn-primary submit_btn">View Report</button>
-
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
                 <div class="row">
-                        <div class="col-sm">
+                    <div class="col-sm">
 
-                        </div>
-                        <div class="col-sm">
+                    </div>
+                    <div class="col-sm">
 
-                        </div>
-                        <div class="col-sm">
-                            <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
-                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <br>
+                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                            onclick="history.back()">Cancel</button>
                     </div>
                 </div>
-
-
+            </form>
 
         </div>
-
-
-
-
-
-        </tbody>
-        </table>
     </div>
 </div>
-<br>
+
+@endsection
+
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
 $(function() {
@@ -276,9 +253,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Salary is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -305,9 +282,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Years of experience is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -330,9 +307,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 dob is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 /div>
 
             {
@@ -364,9 +341,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Bank Name is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -392,9 +369,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Account number is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -417,9 +394,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 IFSC Code is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-12" >
                 <
                 div class = "mb-1" >
@@ -460,7 +437,7 @@ $(document).on('input', '#percent', function() {
 
                 <
                 /tr> < /
-                table > {
+            table > {
                     {
                         -- < input type = "text"
                         class = "form-control"
@@ -477,7 +454,7 @@ $(document).on('input', '#percent', function() {
                         -- < /div> --}} < /
                         div > <
                             /div> < /
-                            div >
+                        div >
 
                             <
                             /div> <
@@ -519,9 +496,9 @@ $(document).on('input', '#percent', function() {
 
                             <
                             /tbody> < /
-                            table > <
+                        table > <
                             /div> < /
-                            div > <
+                        div > <
                             script src = "{{ url('assets/js') }}/jquery.min.js" >
 </script>
 <script type="text/javascript">
@@ -732,4 +709,3 @@ $(document).ready(function() {
     });
 });
 </script>
-@endsection

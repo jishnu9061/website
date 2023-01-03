@@ -19,7 +19,7 @@
 <style>
 .vl {
     border-left: 1.5px solid rgb(0, 0, 0);
-    height: 700px;
+    height: 100vh;
     
         border-radius:10px 10px 10px 10px;
         opacity: 10%;
@@ -88,8 +88,8 @@
             </form>
             <div class="text-center mt-5 text-lg" style="font-size: 22px">
                 <p class="text-gray-600">Don't have an account? <br> <a href="auth-register.html" class="font-bold">Sign
-                        up</a>.</p>
-                <p><a class="font-bold" href="auth-forgot-password.html">Forgot password?</a>.</p>
+                        up</a></p>
+                <p><a class="font-bold" href="auth-forgot-password.html">Forgot password?</a></p>
             </div>
         </div>
      </div>

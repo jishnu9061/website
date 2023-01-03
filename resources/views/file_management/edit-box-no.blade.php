@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<div class="container" >
-    <div class="py-5 text-center">
+<div class="Container">
+    <!-- <div class="py-5 text-center">
         @if(Session::has('staffregistered'))
         <div class="alert alert-dark" role="alert">
             {{ Session::get('staffregistered')}}
@@ -12,28 +12,33 @@
             {{ Session::get('leavevalidat')}}
         </div>
         @endif
-        <div>
-            <!-- <h2>Add Box No</h2> -->
-            <div>
-            <div >
-            {{-- heading --}}
+
+    </div> -->
+
+
+
+
+    {{-- heading --}}
     <h4 id="hdtpa"><b>Edit Box No</b></h4>
     <br><br>
-               
-        
-            </div>
 
-        </div>
-    </div>
-    <div class="row">
 
-        <div class="col-md-12 order-md-1">
+    <div class="card">
+
+        <div class="car d-body">
 
             <form method="post" action="{{url('update-box')}}" id="form">
                 @csrf
                 <input type="hidden" value="{{$edit->id}}" name="id">
+                <br>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-3">
+                        <div class="mb-1">
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
                         <div class="mb-1">
                             <label for="username">Box Type</label>
 
@@ -50,65 +55,55 @@
                             </div>
                         </div>
                     </div>
-               
-                    <div class="col-md-6">
+
+                    <div class="col-md-3">
                         <div class="mb-1">
                             <label for="username">Box No</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="box_no" value="{{ $edit->number}}" id="age">
+                                <input type="text" class="form-control" name="box_no" value="{{ $edit->number}}"
+                                    id="age">
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="mb-1">
+
                         </div>
                     </div>
 
 
                 </div>
                 <br>
-                <!-- <div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm">
 
-                            </div>
-                            <div class="btn-group pt-3 " role="group" aria-label="Basic example">
-
-                                <button type="submit" class="btn btn-primary submit_btn">Cancel</button>
-                                <button type="submit" class="btn btn-primary submit_btn">View Report</button>
-
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
                 <div class="row">
-                        <div class="col-sm">
+                    <div class="col-sm">
 
-                        </div>
-                        <div class="col-sm">
+                    </div>
+                    <div class="col-sm">
 
-                        </div>
-                        <div class="col-sm">
-                            <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:50%;">Update Box No</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Back</button>
-                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <br>
+                        <button type="submit" class="btn btn-primary float:right;" >Update</button>
+                        <button type="button" class="btn btn-primary float:left" onclick="history.back()" >Cancel</button>
                     </div>
                 </div>
-
-
-
+                <br>
+            </form>
         </div>
 
 
 
-
-
-        </tbody>
-        </table>
     </div>
 </div>
-<br>
+
+
+
+
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
 $(function() {
@@ -275,9 +270,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Salary is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -304,9 +299,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Years of experience is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -329,9 +324,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 dob is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 /div>
 
             {
@@ -363,9 +358,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Bank Name is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -391,9 +386,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Account number is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -416,9 +411,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 IFSC Code is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-12" >
                 <
                 div class = "mb-1" >
@@ -459,7 +454,7 @@ $(document).on('input', '#percent', function() {
 
                 <
                 /tr> < /
-                table > {
+            table > {
                     {
                         -- < input type = "text"
                         class = "form-control"
@@ -476,7 +471,7 @@ $(document).on('input', '#percent', function() {
                         -- < /div> --}} < /
                         div > <
                             /div> < /
-                            div >
+                        div >
 
                             <
                             /div> <
@@ -518,9 +513,9 @@ $(document).on('input', '#percent', function() {
 
                             <
                             /tbody> < /
-                            table > <
+                        table > <
                             /div> < /
-                            div > <
+                        div > <
                             script src = "{{ url('assets/js') }}/jquery.min.js" >
 </script>
 <script type="text/javascript">

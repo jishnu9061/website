@@ -3,8 +3,7 @@
 <h4 id="hdtpa"><b>Edit Corporate Client</b></h4>
     <br><br>
 <div class="card">
-    <div class="card-header">
-    </div>
+   
     <div class="card-body">
         <form method="post" action="{{url('update-corporate')}}" id="form">
             @csrf
@@ -315,9 +314,10 @@
                 </div>
             </div>
             <br>
+            <br>
     
-            <div>
-                <h4 id="hdtpa"><b>Contact Person</b></h4>
+            <div class="text-center">
+                <h4><b>Contact Person</b></h4>
     
             </div><br>
             <br>
