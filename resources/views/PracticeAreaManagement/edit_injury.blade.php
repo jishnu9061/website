@@ -25,9 +25,9 @@
 
         </div>
     </div>
-    <div class="row">
+    <div class="card">
 
-        <div class="col-md-12 order-md-1">
+       <div class="card-body">
 
             <form method="post" action="{{url('update_injury')}}" id="form">
                 @csrf
@@ -223,7 +223,7 @@
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:50%;">Update </button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Back</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;" onclick="history.back()">Close</button>
                         </div>
                     </div>
                 </div>
