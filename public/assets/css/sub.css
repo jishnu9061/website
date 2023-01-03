@@ -234,7 +234,11 @@ color: #003169;
  }
 
 
-
+ #timedate{
+  background-color: #ffffff;
+  color: #000000;
+  border: .5px solid #000000 ;
+ }
 
 
 
