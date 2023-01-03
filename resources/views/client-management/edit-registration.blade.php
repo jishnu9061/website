@@ -6,8 +6,6 @@
         <h4 id="hdtpa"><b>Edit Client Detials</b></h4>
         <br>
 <div class="card">
-    <div class="card-header">
-    </div>
     <div class="card-body">
         <div class="row">
             <div class="col-md-12 order-md-1">
