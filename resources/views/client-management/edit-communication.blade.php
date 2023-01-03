@@ -11,8 +11,8 @@
         <br>
 
     </div>
-    <div class="row">
-        <div class="col-md-12">
+    <div class="card">
+        <div class="card-body">
             <form method="post" action="{{url('update-communication')}}" id="form">
                 @csrf
                 <input type="hidden" name="id" value="{{ $edit->id}}">

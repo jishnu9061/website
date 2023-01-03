@@ -5,8 +5,9 @@
     <h4 id="hdtpa"><b>Edit File</b></h4>
     <br><br>
 
+<div class="card">
 
-
+   <div class="card-body">
 
     <div class="container">
         <form method="post" action="{{url('update')}}" id="form">
@@ -298,6 +299,8 @@
 
         </form>
     </div>
+</div>
+</div>
 </div>
 
 @endsection

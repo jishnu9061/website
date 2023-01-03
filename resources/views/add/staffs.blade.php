@@ -239,8 +239,8 @@
             <label for="username">Account Number</label>
             <div class="input-group">
                 <div class="input-group-prepend"></div>
-                <input type="number" class="form-control" name="accountnumber" id="username"
-                    placeholder="Account Number" min="0">
+                <input type="number" class="form-control" name="account" id="username" placeholder="Account Number"
+                    min="0">
                 <div class="invalid-feedback" style="width: 100%;">
                     Account number is required.
                 </div>
@@ -378,7 +378,15 @@ $('#password, #confirm_password').on('keyup', function() {
     } else
         $('#message').html('Not Matching').css('color', 'red');
 });
+
+$('#password, #confirm_password').on('keyup', function() {
+    if ($('#password').val() == $('#confirm_password').val()) {
+        $('#message').html('Matching').css('color', 'green');
+    } else
+        $('#message').html('Not Matching').css('color', 'red');
+});
 </script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 <script>
 $('.leaves').on('keyup', function() {
     var total = 0;

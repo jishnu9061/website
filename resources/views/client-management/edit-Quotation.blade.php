@@ -4,8 +4,6 @@
     <h4 id="hdtpa"><b>Edit Quotation Details</b></h4>
     <br><br>
     <div class="card">
-        <div class="card-header">
-        </div>
         <div class="card-body">
             <div class="row">
                 <div class="col-md-12 order-md-1">
@@ -187,7 +185,7 @@
                         <br>
                         <br>
                         <!-- <h2 style="text-align:center; text-shadow: 2px 1px;"> Quotation Items</h2> -->
-                        <div id="hdtpa">
+                        <div class="text-center">
                             <h4><b> Quotation Items </b></h4>
         
                         </div>

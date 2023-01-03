@@ -54,9 +54,8 @@ class addcontroller extends Controller
       $staffs->email=$Request['email'];
       $staffs->age=$Request['age'];
       $staffs->phoneno=$Request['phoneno'];
-      $staffs->password=$Request['password'];
-      // $staffs->password=Hash::make($password);
-      $staffs->password=$Request['password'];
+      $password=$Request['password'];
+      $staffs->password=Hash::make($password);
       $staffs->date_of_joining=$Request['date_of_joining'];
       $staffs->sex=$Request['sex'];
       $staffs->departments=$Request['departments'];
@@ -167,93 +166,95 @@ if(request()->hasfile('signature')){
    public function editstafff(Request $Request )
    {
     $id=$Request['id'];
-    $staffs->name=$Request['name'];
-    $staffs->email=$Request['email'];
-    $staffs->phoneno=$Request['phoneno'];
-    $staffs->password=$Request['password'];
-    // $staffs->password=Hash::make($password);
-    $staffs->password=$Request['password'];
-    $staffs->date_of_joining=$Request['date_of_joining'];
-    $staffs->sex=$Request['sex'];
-    $staffs->departments=$Request['departments'];
-    $staffs->role=$Request['role'];
-    $staffs->status=$Request['status'];
-    $staffs->status_date=$Request['status_date'];
-    $staffs->address=$Request['address'];
-    $staffs->branch=$Request['branch'];
-    $staffs->postal_code=$Request['postal_code'];
-    $staffs->town=$Request['town'];
-    $staffs->salary=$Request['salary'];
-    $staffs->partner=$Request['partner'];
-    $staffs->NSSF=$Request['NSSF'];
-    $staffs->NHIF=$Request['NHIF'];
-    $staffs->cra_pin=$Request['cra_pin'];
-    $staffs->tax=$Request['tax'];
-    $staffs->deduction=$Request['deduction'];
-    $staffs->contribution=$Request['contribution'];
-    $staffs->leave=$Request['leave'];
-    $staffs->pension_rate=$Request['pension_rate'];
-    $staffs->bank=$Request['bank'];
-    $staffs->bank_branch=$Request['bank_branch'];
-    $staffs->branch_code=$Request['branch_code'];
-    $staffs->account=$Request['account'];
+    $name=$Request['name'];
+    $email=$Request['email'];
+    $phoneno=$Request['phoneno'];
+    $password=$Request['password'];
+    $password=Hash::make($password);
+    $password=$Request['password'];
+    $date_of_joining=$Request['date_of_joining'];
+    $sex=$Request['sex'];
+    $departments=$Request['departments'];
+    $role=$Request['role'];
+    $status=$Request['status'];
+    $status_date=$Request['status_date'];
+    $address=$Request['address'];
+    $branch=$Request['branch'];
+    $postal_code=$Request['postal_code'];
+    $town=$Request['town'];
+    $salary=$Request['salary'];
+    $partner=$Request['partner'];
+    $NSSF=$Request['NSSF'];
+    $NHIF=$Request['NHIF'];
+    $cra_pin=$Request['cra_pin'];
+    $tax=$Request['tax'];
+    $deduction=$Request['deduction'];
+    $contribution=$Request['contribution'];
+    $leave=$Request['leave'];
+    $pension_rate=$Request['pension_rate'];
+    $bank=$Request['bank'];
+    $bank_branch=$Request['bank_branch'];
+    $branch_code=$Request['branch_code'];
+    $account=$Request['account'];
     $pwdzx=Hash::make($password);
     
     if($Request['password'] == '')
     {
-      $data=array('name'=>$name,'email'=>$Email,'phoneno'=>$phoneno,'date_of_joining'=>$date_of_joining,'departments'=>$departments,'sex'=>$sex,
+      $data=array('name'=>$name,'email'=>$email,'phoneno'=>$phoneno,'date_of_joining'=>$date_of_joining,'departments'=>$departments,'sex'=>$sex,
       'role'=>$role,'status'=>$status,'status_date'=>$status_date,'address'=>$address,'branch'=>$branch,
-      'postal_code'=>$postal_code,'town'=>$town,'account_no'=>$account_no,'salary'=>$salary,'partner'=>$partner,'NSSF'=>$NSSF,
+      'postal_code'=>$postal_code,'town'=>$town,'salary'=>$salary,'partner'=>$partner,'NSSF'=>$NSSF,
       'cra_pin'=>$cra_pin,'tax'=>$tax,'deduction'=>$deduction,'contribution'=>$contribution,'leave'=>$leave,'pension_rate'=>$pension_rate,
       'bank'=>$bank,'bank_branch'=>$bank_branch,'branch_code'=>$branch_code,'account'=>$account);
     }
     else{
-      $data=array('name'=>$Name,'email'=>$Email,'age'=>$age,'role'=>$Role,'departments'=>$departments,'phone'=>$Phone,
-      'salary'=>$salary,'yearsexp'=>$yearsexp,'dob'=>$dob,'status'=>$status,'consultation_fee'=>$consultation_fee,'ifsc'=>$ifsc,
-      'bank'=>$bank,'account_no'=>$account_no,'address'=>$address,'password'=>$pwdzx,'date_of_joining'=>$date_of_joining,'releving_date'=>$status_date);
+      $data=array('name'=>$name,'email'=>$email,'phoneno'=>$phoneno,'date_of_joining'=>$date_of_joining,'departments'=>$departments,'sex'=>$sex,
+      'role'=>$role,'status'=>$status,'status_date'=>$status_date,'address'=>$address,'branch'=>$branch,
+      'postal_code'=>$postal_code,'town'=>$town,'salary'=>$salary,'partner'=>$partner,'NSSF'=>$NSSF,
+      'cra_pin'=>$cra_pin,'tax'=>$tax,'deduction'=>$deduction,'contribution'=>$contribution,'leave'=>$leave,'pension_rate'=>$pension_rate,
+      'bank'=>$bank,'bank_branch'=>$bank_branch,'branch_code'=>$branch_code,'account'=>$account);
     }
 
     DB::table('users')->where('id',$id)->update($data);
 
-    // $leavetype = $Request->input('leave_type');
-    // $leavetype_items = $Request->input('leaves');
-    // $final_array=array_combine($leavetype,$leavetype_items);
+  //   $leavetype = $Request->input('leave_type');
+  //   $leavetype_items = $Request->input('leaves');
+  //   $final_array=array_combine($leavetype,$leavetype_items);
 
-    // foreach($final_array as $key => $value)
-    // {
-    //   $fillleavslft=DB::table('staff_leaves')->where('id',$key)->select('allotted_leaves','leaves_left')->first();
-    //   $fildatxz=$fillleavslft->allotted_leaves;
+  //   foreach($final_array as $key => $value)
+  //   {
+  //     $fillleavslft=DB::table('staff_leaves')->where('id',$key)->select('allotted_leaves','leaves_left')->first();
+  //     $fildatxz=$fillleavslft->allotted_leaves;
 
-    //   $levlft=$fillleavslft->leaves_left;
-    //   $minuzx=$value-$fildatxz;
+  //     $levlft=$fillleavslft->leaves_left;
+  //     $minuzx=$value-$fildatxz;
 
-    //   $pluzx=$fildatxz-$value;
-    //   $ddie=substr($minuzx, 0, 1);
+  //     $pluzx=$fildatxz-$value;
+  //     $ddie=substr($minuzx, 0, 1);
 
-    //   if($ddie == '-')
-    //   {
+  //     if($ddie == '-')
+  //     {
 
-    //  $leevlftupdate=$levlft-$pluzx;
-    //  $ddiemhn=substr($leevlftupdate, 0, 1);
-    //  if($ddiemhn == '-')
-    //  {
-    //   $leevlftupdate=0;
-    //  }
-    //   }
-    //   else
-    //   {
-    //     $leevlftupdate=$levlft+$minuzx;
-    //   }
-    //     $data = array(
-    //         "allotted_leaves" => $value,
-    //         "leaves_left"=>$leevlftupdate,
+  //    $leevlftupdate=$levlft-$pluzx;
+  //    $ddiemhn=substr($leevlftupdate, 0, 1);
+  //    if($ddiemhn == '-')
+  //    {
+  //     $leevlftupdate=0;
+  //    }
+  //     }
+  //     else
+  //     {
+  //       $leevlftupdate=$levlft+$minuzx;
+  //     }
+  //       $data = array(
+  //           "allotted_leaves" => $value,
+  //           "leaves_left"=>$leevlftupdate,
 
-    //     );
-  // DB::table('staff_leaves')->where('id',$key)->update($data);
-  //   }
+  //       );
+  //       DB::table('staff_leaves')->where('id',$key)->update($data);
+  //     }
 
-  //   // $Request->session()->put('detailupdate','Details Updated');
-  //   // return back();
+  //  $Request->session()->put('detailupdate','Details Updated');
+  //  return back();
     return redirect('/staffs');
    }
    public function disableuser($id)

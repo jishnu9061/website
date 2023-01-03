@@ -308,35 +308,35 @@ $(document).ready(function() {
             // var currentDate = date.format('D-MM-YYYY');
             // console.log(currentDate);
             if (dat >= date.format('D-MM-YYYY')) {
-                $('#exampleModal').modal('show');
-            } else {
-                alert("This is previous day");
-            }
-            // $('#exampleModal').modal('show');
-
-
-            // if(title)
-            // {
-            //     var start = $.fullCalendar.formatDate(start, 'Y-MM-DD HH:mm:ss');
-
-            //     var end = $.fullCalendar.formatDate(end, 'Y-MM-DD HH:mm:ss');
-
-            //     $.ajax({
-            //         url:"/calendar_event/action",
-            //         type:"POST",
-            //         data:{
-            //             title: title,
-            //             start: start,
-            //             end: end,
-            //             type: 'add'
-            //         },
-            //         success:function(data)
-            //         {
-            //             calendar.fullCalendar('refetchEvents');
-            //             alert("Event Created Successfully");
-            //         }
-            //     })
+                $('#exampleModal').modal('show');}
+            //  else {
+            //     alert("This is previous day");
             // }
+            $('#exampleModal').modal('show');
+
+
+            if(title)
+            {
+                var start = $.fullCalendar.formatDate(start, 'Y-MM-DD HH:mm:ss');
+
+                var end = $.fullCalendar.formatDate(end, 'Y-MM-DD HH:mm:ss');
+
+                $.ajax({
+                    url:"/calendar_event/action",
+                    type:"POST",
+                    data:{
+                        title: title,
+                        start: start,
+                        end: end,
+                        type: 'add'
+                    },
+                    success:function(data)
+                    {
+                        calendar.fullCalendar('refetchEvents');
+                        alert("Event Created Successfully");
+                    }
+                })
+            }
         },
         // eventClick: function(event, jsEvent, view) {
         //     console.log(event.start);
