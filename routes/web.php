@@ -1563,7 +1563,6 @@ Route::any('edit_supplier_list','OfficeAdministration@edit_supplier_list')->name
 
 //Customer Relationship Mamagement
 Route::any('crm_index',"CrmController@index_view")->name('crm_index');
-l
 Route::any('about',"etc@index")->name('about');
 Route::any('help',"etc@index_help")->name('help');
 
