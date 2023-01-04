@@ -39,6 +39,9 @@
     <div class="col-sm-4 "><img class="logo_size" src="image\logo\Customer registeration.png" alt=""><a
             href="{{ url('expense') }}"><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn">
                 Expense Reports</button></a></div>
+    <div class="col-sm-4 "><img class="logo_size" src="assets\image\Profit & loss.png" alt=""><a
+            href="{{ url('crm_panel') }}"><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn">
+               CRM Panel</button></a></div>
 
 
 

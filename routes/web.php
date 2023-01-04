@@ -1586,6 +1586,7 @@ Route::any('update_Corporate',"CrmController@update_Corporates")->name('update_C
 Route::any('expense',"CrmController@expense")->name('expense');
 Route::any('view_expense',"CrmController@view_expense")->name('view_expense');
 Route::any('edit_expense',"CrmController@edit_expense")->name('edit_expense');
+Route::any('crm_panel',"CrmController@crm_panel")->name('crm_panel');
 
 
 

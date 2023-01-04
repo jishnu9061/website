@@ -47,8 +47,6 @@
                         <th scope="col"> Task Assigned By </th>
                         <th scope="col"> Status </th>
                         <th scope="col"> Action </th>
-
-
                     </tr>
                 </thead>
                 <tbody>
@@ -67,8 +65,6 @@
                         </td>
 
                     </tr>
-
-
                 </tbody>
             </table>
 
@@ -117,6 +113,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-md-4">
                                     <div class="mb-1">
                                         <label for="username">Staff Name</label>
@@ -146,6 +143,7 @@
                                 </div>
 
                             </div>
+
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="mb-1">
@@ -166,6 +164,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                
                                 <div class="col-md-4">
                                     <div class="mb-1">
                                         <label for="username">Task Assigned By</label>
@@ -195,7 +194,6 @@
                                 </div>
                             </div>
 
-
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="mb-1">
@@ -208,6 +206,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                
                                 <div class="col-md-4">
                                     <div class="mb-1">
                                         <label for="username">Status</label>
@@ -227,6 +226,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-md-4">
                                     <div class="mb-1">
                                         <label for="exampleFormControlInput1" class="form-label">Supporting
@@ -235,7 +235,6 @@
                                         <input type="file" class="form-control" name="support_detail">
                                     </div>
                                 </div>
-
                             </div>
                             <br>
                             <br>
