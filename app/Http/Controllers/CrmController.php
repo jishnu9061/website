@@ -104,6 +104,10 @@ class CrmController extends Controller
     {
         return view('CRM.edit_expense');
     }
+    public function crm_panel()
+    {
+        return view('CRM.crm_panel');
+    }
 
 
     public function update_Corporates(Request $Request)
