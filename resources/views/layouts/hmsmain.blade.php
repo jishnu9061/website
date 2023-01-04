@@ -1322,7 +1322,7 @@ updateDate();
                         <button class=" dropdown-toggle-x btn p-1" style="font-size:12px;" href="#"
                             id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
-                            <b> Create New </b>
+                            <b>Create New</b>
                             <i class="fa fa-plus-square"></i>
                         </button>
 
