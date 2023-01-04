@@ -332,7 +332,7 @@ class ClientManagement extends Controller
        }
 
         DB::table('cra_document_detials')->insert($insertdoc);
-        return redirect('/corporate-document-details');
+        return redirect('/corporate-list');
 
     }
 
@@ -501,7 +501,7 @@ class ClientManagement extends Controller
 
         DB::table('cra_document_detials')->insert($insertdoc);
         
-        return redirect('/client-document');
+        return redirect('/client_list');
 
     }
 
