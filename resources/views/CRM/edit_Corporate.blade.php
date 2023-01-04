@@ -6,20 +6,19 @@
     <br>
     <div class="row">
                                     <div class="col-md-12 order-md-1">
-                                        <form method="post" action="{{url('')}}" id="form">
+                                        <form method="post" action="{{url('update_Corporate')}}" id="form">
                                             @csrf
+                                            <input type="hidden" name="id" value="{{$update_list->Id}}">
                                             <div class="row">
-                                                <div class="col-md-4">
+                                            <div class="col-md-4">
                                                     <div class="mb-1">
                                                         <label for="username"> Name</label>
                                                         <div class="input-group">
+                                                           
                                                             <div class="input-group-prepend"></div>
-                                                            <select name="town" id="username" style="width:100%;">
-                                                                <option>---select--- </option>
-                                                                <option>client 1 </option>
-                                                                <option>client 2</option>
-
-                                                            </select>
+                                                            <input type="text" class="form-control" name="name"
+                                                                id="username" value="{{ $update_list->Name}}" placeholder=""
+                                                                required>
                                                             <!-- <input type="text" class="form-control" name="name"
                                                                     id="username" value="" placeholder="Client name"
                                                                     required> -->
@@ -34,8 +33,8 @@
                                                         <label for="username">GST Office</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="text" class="form-control" name="Code"
-                                                                id="username" value="" placeholder=""
+                                                            <input type="text" class="form-control" name="office"
+                                                                id="username" value="{{ $update_list->GST_Office}}" placeholder=""
                                                                 required>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Postal Code is required.
@@ -48,8 +47,8 @@
                                                         <label for="username">GST Number</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="text" class="form-control" name="Code"
-                                                                id="username" value="" placeholder=""
+                                                            <input type="text" class="form-control" name="gst"
+                                                                id="username" value="{{ $update_list->GST_Number}}" placeholder=""
                                                                 required>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Postal Code is required.
@@ -65,8 +64,8 @@
                                                         <label for="username">Social Security Number</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="text" class="form-control" name="Code"
-                                                                id="username" value="" placeholder=""
+                                                            <input type="text" class="form-control" name="security"
+                                                                id="username" value="{{ $update_list->Social_Security_Number}}" placeholder=""
                                                                 required>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Postal Code is required.
@@ -79,8 +78,8 @@
                                                         <label for="username">Customer Authority</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="text" class="form-control" name="Code"
-                                                                id="username" value="" placeholder=""
+                                                            <input type="text" class="form-control" name="customer"
+                                                                id="username" value="{{ $update_list->Customer_Authority}}" placeholder=""
                                                                 required>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Postal Code is required.
@@ -93,8 +92,8 @@
                                                         <label for="username">Phone</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="text" class="form-control" name="Code"
-                                                                id="username" value="" placeholder=""
+                                                            <input type="text" class="form-control" name="phone"
+                                                                id="username" value="{{ $update_list->Phone}}" placeholder=""
                                                                 required>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Postal Code is required.
@@ -110,8 +109,8 @@
                                                         <label for="username">FAX</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="text" class="form-control" name="Code"
-                                                                id="username" value="" placeholder=""
+                                                            <input type="text" class="form-control" name="fax"
+                                                                id="username"  value="{{ $update_list->FAX}}" placeholder=""
                                                                 required>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Postal Code is required.
@@ -124,8 +123,8 @@
                                                         <label for="username">Email</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="email" class="form-control" name="Code"
-                                                                id="username" value="" placeholder=""
+                                                            <input type="email" class="form-control" name="email"
+                                                                id="username"  value="{{ $update_list->Email}}" placeholder=""
                                                                 required>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Postal Code is required.
@@ -138,8 +137,8 @@
                                                         <label for="username">Web</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="text" class="form-control" name="Code"
-                                                                id="username" value="" placeholder=""
+                                                            <input type="text" class="form-control" name="web"
+                                                                id="username"  value="{{ $update_list->Web}}" placeholder=""
                                                                 required>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Postal Code is required.
@@ -157,9 +156,9 @@
                                                             <div class="input-group-prepend">
 
                                                             </div>
-                                                            <select name="event" id="cars">
-                                                                <option>---select---</option>
-                                                                <option>1</option>
+                                                            <select name="country" id="cars">
+                                                               
+                                                                <option >{{$update_list->Country}}</option>
                                                                 <option>2</option>
                                                                 <option>3</option>
                                                                 <option>4 </option>
@@ -172,9 +171,13 @@
                                                         <label for="username">State</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="text" class="form-control" name="Code"
-                                                                id="username" value="" placeholder=""
-                                                                required>
+                                                            <select name="state" id="state">
+                                                                <option>{{ $update_list->State}}</option>
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                                <option>4 </option>
+                                                            </select>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Postal Code is required.
                                                             </div>
@@ -186,9 +189,13 @@
                                                         <label for="username">City</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="text" class="form-control" name="Code"
-                                                                id="username" value="" placeholder=""
-                                                                required>
+                                                            <select name="city" id="city">
+                                                                <option>{{ $update_list->City}}</option>
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                                <option>4 </option>
+                                                            </select>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Postal Code is required.
                                                             </div>
@@ -203,8 +210,8 @@
                                                         <label for="username">Town</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="text" class="form-control" name="Code"
-                                                                id="username" value="" placeholder=""
+                                                            <input type="text" class="form-control" name="town"
+                                                                id="username"  value="{{ $update_list->Town}}" placeholder=""
                                                                 required>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Postal Code is required.
@@ -217,8 +224,8 @@
                                                         <label for="username">Post Code</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="text" class="form-control" name="Code"
-                                                                id="username" value="" placeholder=""
+                                                            <input type="text" class="form-control" name="post"
+                                                                id="username"  value="{{ $update_list->Post_Code}}" placeholder=""
                                                                 required>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Postal Code is required.
@@ -231,8 +238,8 @@
                                                     <div class="mb-1">
                                                         <label for="username">Address</label>
                                                         <div class="input-group">
-                                                            <textarea class="form-control" id="form7Example7" rows="2"
-                                                                name="paddress"></textarea>
+                                                            <input type="text" class="form-control"  id="username" rows="2"
+                                                                name="address" value="{{ $update_list->Address}}"  >
                                                             <div class="invalid-feedback" style="width: 100%;">
 
                                                             </div>

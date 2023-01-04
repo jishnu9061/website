@@ -47,39 +47,43 @@
                     <table class="table table-striped table-class" id="table-id">
 
                         <thead>
+
                             <tr>
+
                                 <!-- <th class="text-center">No</th> -->
                                 <th class="text-center">Name</th>
                                 <th class="text-center">Address</th>
                                 <th class="text-center">Phone</th>
-                                <th class="text-center">Address</th>
+                                <th class="text-center">Email</th>
                                 <th class="text-center">Action</th>
 
                             </tr>
+
                         </thead>
                         <tbody>
+                            @foreach($Corporates_list as $list)
 
 
                             <tr class="text-center" id="data">
 
-                               
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td scope="row"><a href="edit_Corporate"><i style="color:black;" class="fa fa-edit"
+                                <td>{{$list->Name}}</td>
+                                <td>{{$list->Address}}</td>
+                                <td>{{$list->Phone}}</td>
+                                <td>{{ $list->Email}}</td>
+                                <td scope="row"><a href="{{url('edit_Corporate',$list->Id)}}"><i style="color:black;"
+                                            class="fa fa-edit" aria-hidden="true"></i></a>
+
+                                    <span class="m-2"></span>
+                                    <a href="view_Corporate"><i style="color:black;" class="fa fa-eye"
                                             aria-hidden="true"></i></a>
-                                            <span class="m-2"></span>
-                                            <a href="view_Corporate"><i style="color:black;" class="fa fa-eye"
-                                            aria-hidden="true"></i></a>
-                                        <span class="m-2"></span>
-                                        <a onClick="return myFunction();" href="{{url('')}}" style="color:black;"><i
-                                                class="fas fa-trash-alt"></i></a>
-                                        <input type="hidden" value="" id="medicine_id_hidden" class="applicate"
-                                            name="supplier_id_hidden">
+                                    <span class="m-2"></span>
+                                    <a onClick="return myFunction();" href="{{url('')}}" style="color:black;"><i
+                                            class="fas fa-trash-alt"></i></a>
+                                    <input type="hidden" value="" id="medicine_id_hidden" class="applicate"
+                                        name="supplier_id_hidden">
 
                             </tr>
-
+                            @endforeach
                         </tbody>
 
                     </table>
@@ -113,20 +117,17 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-12 order-md-1">
-                                        <form method="post" action="{{url('')}}" id="form">
+                                        <form method="post" action="{{url('add_Corporate')}}" id="form">
                                             @csrf
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="mb-1">
                                                         <label for="username"> Name</label>
                                                         <div class="input-group">
-                                                            <div class="input-group-prepend"></div>
-                                                            <select name="town" id="username" style="width:100%;">
-                                                                <option>---select--- </option>
-                                                                <option>client 1 </option>
-                                                                <option>client 2</option>
 
-                                                            </select>
+                                                            <div class="input-group-prepend"></div>
+                                                            <input type="text" class="form-control" name="name"
+                                                                id="username" value="" placeholder="" required>
                                                             <!-- <input type="text" class="form-control" name="name"
                                                                     id="username" value="" placeholder="Client name"
                                                                     required> -->
@@ -141,9 +142,8 @@
                                                         <label for="username">GST Office</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="text" class="form-control" name="Code"
-                                                                id="username" value="" placeholder=""
-                                                                required>
+                                                            <input type="text" class="form-control" name="office"
+                                                                id="username" value="" placeholder="" required>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Postal Code is required.
                                                             </div>
@@ -155,9 +155,8 @@
                                                         <label for="username">GST Number</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="text" class="form-control" name="Code"
-                                                                id="username" value="" placeholder=""
-                                                                required>
+                                                            <input type="text" class="form-control" name="gst"
+                                                                id="username" value="" placeholder="" required>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Postal Code is required.
                                                             </div>
@@ -172,9 +171,8 @@
                                                         <label for="username">Social Security Number</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="text" class="form-control" name="Code"
-                                                                id="username" value="" placeholder=""
-                                                                required>
+                                                            <input type="text" class="form-control" name="security"
+                                                                id="username" value="" placeholder="" required>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Postal Code is required.
                                                             </div>
@@ -186,9 +184,8 @@
                                                         <label for="username">Customer Authority</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="text" class="form-control" name="Code"
-                                                                id="username" value="" placeholder=""
-                                                                required>
+                                                            <input type="text" class="form-control" name="customer"
+                                                                id="username" value="" placeholder="" required>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Postal Code is required.
                                                             </div>
@@ -200,9 +197,8 @@
                                                         <label for="username">Phone</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="text" class="form-control" name="Code"
-                                                                id="username" value="" placeholder=""
-                                                                required>
+                                                            <input type="text" class="form-control" name="phone"
+                                                                id="username" value="" placeholder="" required>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Postal Code is required.
                                                             </div>
@@ -217,9 +213,8 @@
                                                         <label for="username">FAX</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="text" class="form-control" name="Code"
-                                                                id="username" value="" placeholder=""
-                                                                required>
+                                                            <input type="text" class="form-control" name="fax"
+                                                                id="username" value="" placeholder="" required>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Postal Code is required.
                                                             </div>
@@ -231,9 +226,8 @@
                                                         <label for="username">Email</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="email" class="form-control" name="Code"
-                                                                id="username" value="" placeholder=""
-                                                                required>
+                                                            <input type="email" class="form-control" name="email"
+                                                                id="username" value="" placeholder="" required>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Postal Code is required.
                                                             </div>
@@ -245,9 +239,8 @@
                                                         <label for="username">Web</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="text" class="form-control" name="Code"
-                                                                id="username" value="" placeholder=""
-                                                                required>
+                                                            <input type="text" class="form-control" name="web"
+                                                                id="username" value="" placeholder="" required>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Postal Code is required.
                                                             </div>
@@ -264,7 +257,7 @@
                                                             <div class="input-group-prepend">
 
                                                             </div>
-                                                            <select name="event" id="cars">
+                                                            <select name="country" id="cars">
                                                                 <option>---select---</option>
                                                                 <option>1</option>
                                                                 <option>2</option>
@@ -279,9 +272,13 @@
                                                         <label for="username">State</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="text" class="form-control" name="Code"
-                                                                id="username" value="" placeholder=""
-                                                                required>
+                                                            <select name="state" id="state">
+                                                                <option>---select---</option>
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                                <option>4 </option>
+                                                            </select>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Postal Code is required.
                                                             </div>
@@ -293,9 +290,13 @@
                                                         <label for="username">City</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="text" class="form-control" name="Code"
-                                                                id="username" value="" placeholder=""
-                                                                required>
+                                                            <select name="city" id="city">
+                                                                <option>---select---</option>
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                                <option>4 </option>
+                                                            </select>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Postal Code is required.
                                                             </div>
@@ -310,9 +311,8 @@
                                                         <label for="username">Town</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="text" class="form-control" name="Code"
-                                                                id="username" value="" placeholder=""
-                                                                required>
+                                                            <input type="text" class="form-control" name="town"
+                                                                id="username" value="" placeholder="" required>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Postal Code is required.
                                                             </div>
@@ -324,9 +324,8 @@
                                                         <label for="username">Post Code</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <input type="text" class="form-control" name="Code"
-                                                                id="username" value="" placeholder=""
-                                                                required>
+                                                            <input type="text" class="form-control" name="post"
+                                                                id="username" value="" placeholder="" required>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Postal Code is required.
                                                             </div>
@@ -338,8 +337,8 @@
                                                     <div class="mb-1">
                                                         <label for="username">Address</label>
                                                         <div class="input-group">
-                                                            <textarea class="form-control" id="form7Example7" rows="2"
-                                                                name="paddress"></textarea>
+                                                            <input type="text" class="form-control" id="form7Example7" rows="2"
+                                                                name="address">
                                                             <div class="invalid-feedback" style="width: 100%;">
 
                                                             </div>
@@ -350,6 +349,7 @@
                                             </div>
                                             <br>
                                             <!-- <h4 style="text-align:center">Contact Persons</h4> -->
+
 
 
 
@@ -368,15 +368,10 @@
                                                         Style="width:45%;" data-dismiss="modal">Cancel</button>
                                                 </div>
                                             </div>
+
+
+                                        </form>
                                     </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
-        @endsection
+                                    @endsection
