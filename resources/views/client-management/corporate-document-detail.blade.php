@@ -90,12 +90,8 @@
 
                         <thead>
                             <tr>
-                                <th class="text-center"> Client No</th>
-                                <th class="text-center"> Client Name</th>
-                                <th class="text-center"> Client type</th>
                                 <th class="text-center"> Client Document</th>
                                 <th class="text-center">Action</th>
-
                             </tr>
                         </thead>
                         <tbody>
@@ -103,9 +99,6 @@
                             @foreach( $view_corporate_document as $list)
 
                             <tr id="data">
-                                <td scope="row" class="text-center">{{$list->client_number}}</td>
-                                <td scope="row" class="text-center">{{$list->client_name}}</td>
-                                <td scope="row" class="text-center">{{$list->client_types}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1"><a
                                         href="{{url('view-document-details',$list->id)}}"><button type="button"
                                             class="btn btn-primary float:right;" Style="width:45%;">View
