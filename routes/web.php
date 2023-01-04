@@ -1570,6 +1570,10 @@ Route::any('projects',"CrmController@projects")->name('projects');
 Route::any('view_project',"CrmController@view_project")->name('view_project');
 Route::any('edit_project',"CrmController@edit_project")->name('edit_project');
 Route::any('Corporate',"CrmController@Corporates")->name('Corporate');
+Route::any('edit_Corporate',"CrmController@edit_Corporates")->name('edit_Corporate');
+Route::any('view_Corporate',"CrmController@view_Corporates")->name('view_Corporate');
+
+
 
 
 

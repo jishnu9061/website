@@ -4,114 +4,7 @@
 <div class="container">
     <h4 id="hdtpa"><b>Corporate Customers </b></h4>
     <br>
-
-
-
-    <div>
-        <button type="button" class="btn btn-primary complaint_btn btn " data-toggle="modal"
-            data-target="#myModal">Register Customers</button></a>
-    </div>
-
-
-
-
-    <div class="header_wrap">
-        <div class="num_rows">
-            <div class="form-group">
-                <!--		Show Numbers Of Rows 		-->
-                <select class="form-control" aria-label="Page navigation example" name="state" id="maxRows">
-
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                    <option value="15">15</option>
-                    <option value="20">20</option>
-                    <option value="50">50</option>
-                    <option value="70">70</option>
-                    <option value="100">100</option>
-                    <option value="5000">Show ALL Rows</option>
-                </select>
-
-            </div>
-        </div>
-        <div class="tb_search">
-            <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.."
-                class="form-control">
-        </div>
-
-
-
-
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                <div class="table-responsive">
-                    <table class="table table-striped table-class" id="table-id">
-
-                        <thead>
-                            <tr>
-                                <!-- <th class="text-center">No</th> -->
-                                <th class="text-center">Name</th>
-                                <th class="text-center">Address</th>
-                                <th class="text-center">Phone</th>
-                                <th class="text-center">Address</th>
-                                <th class="text-center">Action</th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-
-
-                            <tr class="text-center" id="data">
-
-                               
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td scope="row"><a href="edit_Corporate"><i style="color:black;" class="fa fa-edit"
-                                            aria-hidden="true"></i></a>
-                                            <span class="m-2"></span>
-                                            <a href="view_Corporate"><i style="color:black;" class="fa fa-eye"
-                                            aria-hidden="true"></i></a>
-                                        <span class="m-2"></span>
-                                        <a onClick="return myFunction();" href="{{url('')}}" style="color:black;"><i
-                                                class="fas fa-trash-alt"></i></a>
-                                        <input type="hidden" value="" id="medicine_id_hidden" class="applicate"
-                                            name="supplier_id_hidden">
-
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-                </div>
-
-                <!--		Start Pagination -->
-                <div class='pagination-container'>
-                    <nav>
-                        <ul class="pagination">
-                            <!--	Here the JS Function Will Add the Rows -->
-                        </ul>
-                    </nav>
-                </div>
-                <div class="rows_count">Showing 11 to 20 of 100</div>
-            </div>
-            <!-- 		End of Container -->
-
-
-            <div class="modal fade" id="myModal">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                            <h2 class="text-center"><b>Register Corporate Customers</b></h2>
-
-                        </div>
-
-                        <!-- Modal body -->
-                        <div class="modal-body">
-                            <div class="container">
-                                <div class="row">
+    <div class="row">
                                     <div class="col-md-12 order-md-1">
                                         <form method="post" action="{{url('')}}" id="form">
                                             @csrf
@@ -371,12 +264,6 @@
                                     </div>
                                     </form>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        @endsection
+                            
+            
+    @endsection
