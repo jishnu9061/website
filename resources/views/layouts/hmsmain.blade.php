@@ -1087,7 +1087,7 @@ animation-direction:reverse;">
                           </li>
 
                           <li class="nav-item">
-                            <a type="button" href="{{url('index')}}" class="nav-link" >Help</a>
+                            <a type="button" href="{{url('help')}}" class="nav-link" >Help</a>
                           </li>
                         {{-- <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
