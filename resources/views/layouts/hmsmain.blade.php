@@ -1084,11 +1084,11 @@ animation-direction:reverse;">
                           </li>
 
                           <li class="nav-item">
-                            <a type="button" href="{{url('system_setup')}}" class="nav-link" >About</a>
+                            <a type="button" href="{{url('about')}}" class="nav-link" >About</a>
                           </li>
 
                           <li class="nav-item">
-                            <a type="button" href="{{url('system_setup')}}" class="nav-link" >Help</a>
+                            <a type="button" href="{{url('help')}}" class="nav-link" >Help</a>
                           </li>
                         {{-- <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -1105,9 +1105,156 @@ animation-direction:reverse;">
                           <a class="nav-link disabled" href="#">Disabled</a>
                         </li> --}}
                       </ul>
+
+                      {{-- <div class="nav-item">
+                      <p id="timedate"></p >
+                        <p id="tme"></p >
+                           </div>
+                      <script>
+                        // program to display the date
+// get local machine date time
+const date = new Date();
+
+// get the date as a string
+const n = date.toDateString();
+
+// get the time as a string
+const time = date.toLocaleTimeString();
+
+// display date
+console.log('Date: ' + n);
+
+// display time
+console.log('Time: ' + time);
+                        const d = new Date();
+                        document.getElementById("timedate").innerHTML = 'Date: ' + n;
+                        document.getElementById("tme").innerHTML = 'Time: ' + time;
+                        </script> --}}
+                        <div class="nav-item">
+                            <a type="button" onclick="hide()" class="nav-link" ><i class="fa fa-low-vision"></i></a>
+                          </div>
+
+
+<div class="p-3" style="text-align: center; ">
+    <div class="display-date">
+      <span id="day">day</span>,
+      <span id="daynum">00</span>
+      <span id="month">month</span>
+      <span id="year">0000</span>
+    </div>
+    <div class="display-time"></div>
+  </div>
+
+  <script>
+    const displayTime = document.querySelector(".display-time");
+// Time
+function showTime() {
+  let time = new Date();
+  displayTime.innerText = time.toLocaleTimeString("en-US", { hour12: false });
+  setTimeout(showTime, 1000);
+}
+
+showTime();
+
+// Date
+function updateDate() {
+  let today = new Date();
+
+  // return number
+  let dayName = today.getDay(),
+    dayNum = today.getDate(),
+    month = today.getMonth(),
+    year = today.getFullYear();
+
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const dayWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  // value -> ID of the html element
+  const IDCollection = ["day", "daynum", "month", "year"];
+  // return value array with number as a index
+  const val = [dayWeek[dayName], dayNum, months[month], year];
+  for (let i = 0; i < IDCollection.length; i++) {
+    document.getElementById(IDCollection[i]).firstChild.nodeValue = val[i];
+  }
+}
+
+updateDate();
+
+  </script>
+
+
+
+
+<script language=“javascript”>
+    function toggle() {
+    var ele = document.getElementById(“”);
+    if(ele.style.display == “block”) {
+    ele.style.display = “none”;
+    }
+    else {
+    ele.style.display = “block”;
+    window.scrollTo(100,300)
+    }
+    }
+    </script>
+
+<style>
+    .display-date {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: .6rem;
+  font-weight: 600;
+}
+
+.display-time {
+    text-align: center;
+  display: flex;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid #1b1b1a;
+  padding: 1px 2px;
+  border-radius: 5px;
+  transition: ease-in-out 0.1s;
+  transition-property: background, box-shadow, color;
+  -webkit-box-reflect: below 2px
+    linear-gradient(transparent, rgba(255, 255, 255, 0.05));
+}
+
+.display-time:hover {
+  background: #ffffff;
+  /* box-shadow: 0 0 30px#8f8d87; */
+  color: #272727;
+  cursor: pointer;
+}
+
+</style>
+
+                     
+
                       <div class="nav-item">
                         <a type="button" onclick="hide()" class="nav-link" ><i class="fa fa-low-vision"></i></a>
                       </div>
+
                       <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -1253,14 +1400,14 @@ animation-direction:reverse;">
 
 
 
-                        <a class="navbar-brand pl-2" href="#">
+                        <li class="nav-item p-1 "  style=" text-decoration: none; list-style:none;">
                             <img src="{{asset('/') }}assets//images/faces/lawemb.png" height="40px"
-                                class="d-inline-block align-top" alt="">
-                        </a>
+                                class="d-inline-block " alt="">
+                        </li>
 
 
-                        <li class="nav-item active" style=" text-decoration: none; list-style:none;">
-                            <a class="font-bold text-uppercase nav-link" href="#"> {{ Auth::user()->name }} <span
+                        <li class="nav-item" style=" text-decoration: none; list-style:none;">
+                            <a class="font-bold text-uppercase nav-link" href="#" style=" padding: 0.1rem .1rem;">{{ Auth::user()->name }}<span
                                     class="sr-only">(current)</span></a>
                         </li>
 
@@ -1268,12 +1415,12 @@ animation-direction:reverse;">
                         <!-- LogOut Button  -->
 
 
-                        <div id="navr" class="p-1">
+                        <div id="navr" class="m-1">
 
-                            <div style=" text-decoration: none; list-style:none;">
+                            <div class="" style=" text-decoration: none; list-style:none;">
 
-                                <a type="button" class="btn btn-outline-primary" style="text-align: center"
-                                    class="text-muted mb-0 " href="{{url('logt')}}"><i
+                                <a type="button" class="btn btn-outline-primary" style="text-align: center; font-size:13px; padding: 0.2rem 0.2rem; "
+                                    class="text-muted  " href="{{url('logt')}}"><i
                                         class="fas fa-sign-out-alt"></i>LogOut
 
                                 </a>
