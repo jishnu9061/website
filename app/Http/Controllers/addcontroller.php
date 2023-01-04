@@ -53,7 +53,7 @@ class addcontroller extends Controller
       $staffs->name=$Request['name'];
       $staffs->email=$Request['email'];
       $staffs->age=$Request['age'];
-      $staffs->phoneno=$Request['phoneno'];
+      $staffs->phone=$Request['phoneno'];
       $password=$Request['password'];
       $staffs->password=Hash::make($password);
       $staffs->date_of_joining=$Request['date_of_joining'];
@@ -73,7 +73,7 @@ class addcontroller extends Controller
       $staffs->cra_pin=$Request['cra_pin'];
       $staffs->tax=$Request['tax'];
       $staffs->deduction=$Request['deduction'];
-      $staffs->contribution=$Request['contribution'];
+      $staffs->NSSF_contribution=$Request['contribution'];
       $staffs->leave=$Request['leave'];
       $staffs->pension_rate=$Request['pension_rate'];
       $staffs->bank=$Request['bank'];

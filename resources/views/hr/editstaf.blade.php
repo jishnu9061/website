@@ -47,7 +47,7 @@
                             <label>Phone Number</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="phoneno" id="phone_no" value="{{$users->phoneno}}"  value="">
+                                <input type="text" class="form-control" name="phoneno" id="phone_no" value="{{$users->phone}}"  value="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -74,7 +74,7 @@
                             <label for="username">Password</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="password" class="form-control" name="password" value="{{$users->password}}"  id="password"
+                                <input type="password" class="form-control" name="password" value=""  id="password"
                                     placeholder="staff Password" >
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Passeord is required.
@@ -87,7 +87,7 @@
                             <label for="username">Confirm Password</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="password" class="form-control" name="password" value="{{$users->password}}"  id="confirm_password"
+                                <input type="password" class="form-control" name="password" value=""  id="confirm_password"
                                     placeholder="Confirm Password" >
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
@@ -332,7 +332,7 @@
                         <div class="mb-1">
                             <label>Company NSSF Contribution</label>
                             <select class="form-select" aria-label="Default select example" value=""  name="contribution">
-                                <option value="">{{$users->contribution}}</option>
+                                <option value="">{{$users->NSSF_contribution}}</option>
                                 <option selected value="Deduct From Company">Deduct From Company</option>
                                 <option value="Active">Nairobi</option>
                                 <option value="Inactive">Mombasa</option>
