@@ -3,7 +3,7 @@
 
 
         {{-- heading --}}
-        <h4 id="hdtpa"><b>Edit Client Detials</b></h4>
+        <h4 id="hdtpa"><b>Edit Individual Customers</b></h4>
         <br>
 <div class="card">
     <div class="card-body">
