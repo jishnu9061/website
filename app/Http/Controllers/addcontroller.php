@@ -34,10 +34,10 @@ class addcontroller extends Controller
      
    	  $hospital=Auth::user()->Hospital;
       $depatmntz=$Request['depname'];
-   	  $hospitaldata=DB::table('hospitals')->where('name',$hospital)->select('id')->first();
-   	  $hospitalid=$hospitaldata->id;
-   	  $hospitalid=$hospitaldata->id;
-   	  $hosid=str_pad($hospitalid, 2, "0", STR_PAD_LEFT);
+   	  // // // $hospitaldata=DB::table('hospitals')->where('name',$hospital)->select('id')->first();
+   	  // // $hospitalid=$hospitaldata->id;
+   	  // // $hospitalid=$hospitaldata->id;
+   	  // $hosid=str_pad($hospitalid, 2, "0", STR_PAD_LEFT);
       $seldep=DB::table('users')
       ->leftjoin('departments','departments.id','=','users.departments')
       ->select('uniqueid')->first();
@@ -101,11 +101,11 @@ class addcontroller extends Controller
       $staffs->sex=$Request['sex'];
       // $staffs->yearsexp=$Request['yearsexp'];
       $staffs->dob=$Request['dob'];
-      $staffs->Hospital=$hospital;
+      // $staffs->Hospital=$hospital;
       $staffs->status=$Request['status'];
       $staffs->releving_date=$Request['releving_date'];
       $staffs->departments= $Request['depname'];
-      $staffs->medicaldepartments= $Request['depname'];
+      // $staffs->medicaldepartments= $Request['depname'];
       // $staffs->cv= $Request['cv'];
       if($Request->hasFile('cv')){
         $this->validate($Request,[

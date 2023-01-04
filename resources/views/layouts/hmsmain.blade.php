@@ -337,7 +337,7 @@ animation-direction:reverse;">
                         </ul>
                         </li>
                         @endif --}}
-                        @if(Auth::user()->role == 'hospitaladmin')
+                        @if(Auth::user()->role == 'Admin')
                         <li class="sidebar-item  has-sub">
                             <!-- <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
@@ -399,7 +399,7 @@ animation-direction:reverse;">
                         </li>
 
                         @endif
-                        @if(Auth::user()->role == 'hospitaladmin')
+                        @if(Auth::user()->role == 'Admin')
                         <li class="submenu-item has-sub " style="list-style:none;">
                             <a href="{{url('file_managementindex')}}" class='sidebar-link'>
                                 <i class="far fa-folder" id="icon" style="font-weight: 300;"></i>
@@ -407,7 +407,7 @@ animation-direction:reverse;">
                             </a>
                         </li>
                         @endif
-                        @if(Auth::user()->role == 'hr' || Auth::user()->role == 'hospitaladmin')
+                        @if(Auth::user()->role == 'hr' || Auth::user()->role == 'Admin')
                         @php
                         $hr = array("addallowance", "addstaffs",
                         "staffs","loans","payslip","attendance","attendanceview","payslipbulk","generatepayslip","managestaff");
@@ -513,7 +513,7 @@ animation-direction:reverse;">
                             {{-- </li> --}}
                             @endif
 
-                            @if(Auth::user()->role == 'account' || Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'account' || Auth::user()->role == 'Admin')
                             @php
                             $accounts = array("ledger_acount_categories",
                             "ledger_acount_subcategories","ledger_budget_category",
@@ -674,7 +674,7 @@ animation-direction:reverse;">
                             </ul>
                             {{-- </li> --}}
                             @endif
-                            @if(Auth::user()->role == 'store' || Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'store' || Auth::user()->role == 'Admin')
                             @php
                             $store=array("addsuppliers", "view_manufacturers","view_medicine",
                             "view_medicine_category","view_medicine_type","view_unit","view_medicine_group","view_brand_name","view_generic_name","reorder","view_purchase","stock_details","accounting_method","payment_type");
@@ -816,7 +816,7 @@ animation-direction:reverse;">
 
 
                             </ul>
-                            {{-- @if(Auth::user()->role == 'hr' || Auth::user()->role == 'hospitaladmin')
+                            {{-- @if(Auth::user()->role == 'hr' || Auth::user()->role == 'Admin')
                                 @php
                                     $hr = array("addallowance", "addstaffs", "staffs","loans","payslip","attendance","attendanceview","payslipbulk","generatepayslip","managestaff");
                                 @endphp
@@ -828,7 +828,7 @@ animation-direction:reverse;">
                             </a>
                             </li>
                             @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="	fas fa-user-graduate" style="font-weight: 300;"></i>
@@ -838,7 +838,7 @@ animation-direction:reverse;">
                             </li>
                             @endif
 
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fa fa-shield" style="font-weight: 300;"></i>
@@ -847,7 +847,7 @@ animation-direction:reverse;">
 
                             </li>
                             @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fas fa-file-invoice-dollar" style="font-weight: 300;"></i>
@@ -857,7 +857,7 @@ animation-direction:reverse;">
                             </li>
                             @endif
 
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fa fa-sliders" style="font-weight: 300;"></i>
@@ -866,7 +866,7 @@ animation-direction:reverse;">
 
                             </li>
                             @endif
-                            <!-- @if(Auth::user()->role == 'hospitaladmin')
+                            <!-- @if(Auth::user()->role == 'Admin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i id="icon" class="fa fa-cog"  style="font-weight: 300;"></i>
@@ -876,7 +876,7 @@ animation-direction:reverse;">
                                     </li>
                             @endif -->
 
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="far fa-file-alt" style="font-weight: 300;"></i>
@@ -885,7 +885,7 @@ animation-direction:reverse;">
 
                             </li>
                             @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fab fa-playstation" style="font-weight: 300;"></i>
@@ -895,7 +895,7 @@ animation-direction:reverse;">
                             </li>
                             @endif
 
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="far fa-sun" style="font-weight: 300;"></i>
@@ -904,7 +904,7 @@ animation-direction:reverse;">
 
                             </li>
                             @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fas fa-hand-holding" style="font-weight: 300;"></i>
@@ -914,7 +914,7 @@ animation-direction:reverse;">
                             </li>
                             @endif
 
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fas fa-layer-group" style="font-weight: 300;"></i>
@@ -923,7 +923,7 @@ animation-direction:reverse;">
 
                             </li>
                             @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fas fa-piggy-bank" style="font-weight: 300;"></i>
@@ -934,7 +934,7 @@ animation-direction:reverse;">
                             </li>
                             @endif
 
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fas fa-coins" style="font-weight: 300;"></i>
@@ -943,7 +943,7 @@ animation-direction:reverse;">
 
                             </li>
                             @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fa fa-user-circle" style="font-weight: 300;"></i>
@@ -953,7 +953,7 @@ animation-direction:reverse;">
                             </li>
                             @endif
 
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fab fa-cloudscale" style="font-weight: 300;"></i>
@@ -962,7 +962,7 @@ animation-direction:reverse;">
 
                             </li>
                             @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fas fa-atom" style="font-weight: 300;"></i>
