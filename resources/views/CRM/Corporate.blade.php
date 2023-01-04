@@ -337,8 +337,8 @@
                                                     <div class="mb-1">
                                                         <label for="username">Address</label>
                                                         <div class="input-group">
-                                                            <input type="text" class="form-control" id="form7Example7" rows="2"
-                                                                name="address">
+                                                        <textarea  class="form-control" id="form7Example7" rows="2"
+                                                                name="address"></textarea>
                                                             <div class="invalid-feedback" style="width: 100%;">
 
                                                             </div>

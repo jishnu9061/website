@@ -238,8 +238,8 @@
                                                     <div class="mb-1">
                                                         <label for="username">Address</label>
                                                         <div class="input-group">
-                                                            <input type="text" class="form-control"  id="username" rows="2"
-                                                                name="address" value="{{ $update_list->Address}}"  >
+                                                        <textarea  class="form-control"  id="username" rows="2"
+                                                                name="address" value="" >{{ $update_list->Address}}</textarea>
                                                             <div class="invalid-feedback" style="width: 100%;">
 
                                                             </div>
