@@ -1574,6 +1574,9 @@ Route::any('edit_Corporate',"CrmController@edit_Corporates")->name('edit_Corpora
 Route::any('view_Corporate',"CrmController@view_Corporates")->name('view_Corporate');
 
 
+Route::any('expense',"CrmController@expense")->name('expense');
+Route::any('view_expense',"CrmController@view_expense")->name('view_expense');
+Route::any('edit_expense',"CrmController@edit_expense")->name('edit_expense');
 
 
 

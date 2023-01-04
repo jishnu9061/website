@@ -48,13 +48,17 @@ class CrmController extends Controller
     {
         return view('CRM.view_Corporate');
     }
+    public function expense()
+    {
+        return view('CRM.expense');
+    }
+    public function view_expense()
+    {
+        return view('CRM.view_expense');
+    }
+    public function edit_expense()
+    {
+        return view('CRM.edit_expense');
+    }
 
 }
-
-
-
-
-
-
-
-
