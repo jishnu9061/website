@@ -1083,11 +1083,11 @@ animation-direction:reverse;">
                           </li>
 
                           <li class="nav-item">
-                            <a type="button" href="{{url('system_setup')}}" class="nav-link" >About</a>
+                            <a type="button" href="{{url('about')}}" class="nav-link" >About</a>
                           </li>
 
                           <li class="nav-item">
-                            <a type="button" href="{{url('system_setup')}}" class="nav-link" >Help</a>
+                            <a type="button" href="{{url('help')}}" class="nav-link" >Help</a>
                           </li>
                         {{-- <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -1199,6 +1199,22 @@ function updateDate() {
 updateDate();
 
   </script>
+
+
+
+
+<script language=“javascript”>
+    function toggle() {
+    var ele = document.getElementById(“”);
+    if(ele.style.display == “block”) {
+    ele.style.display = “none”;
+    }
+    else {
+    ele.style.display = “block”;
+    window.scrollTo(100,300)
+    }
+    }
+    </script>
 
 <style>
     .display-date {
@@ -1377,14 +1393,14 @@ updateDate();
 
 
 
-                        <a class="navbar-brand pl-2" href="#">
+                        <li class="nav-item p-1 "  style=" text-decoration: none; list-style:none;">
                             <img src="{{asset('/') }}assets//images/faces/lawemb.png" height="40px"
-                                class="d-inline-block align-top" alt="">
-                        </a>
+                                class="d-inline-block " alt="">
+                        </li>
 
 
-                        <li class="nav-item active" style=" text-decoration: none; list-style:none;">
-                            <a class="font-bold text-uppercase nav-link" href="#"> {{ Auth::user()->name }} <span
+                        <li class="nav-item" style=" text-decoration: none; list-style:none;">
+                            <a class="font-bold text-uppercase nav-link" href="#" style=" padding: 0.1rem .1rem;">{{ Auth::user()->name }}<span
                                     class="sr-only">(current)</span></a>
                         </li>
 
@@ -1392,12 +1408,12 @@ updateDate();
                         <!-- LogOut Button  -->
 
 
-                        <div id="navr" class="p-1">
+                        <div id="navr" class="m-1">
 
-                            <div style=" text-decoration: none; list-style:none;">
+                            <div class="" style=" text-decoration: none; list-style:none;">
 
-                                <a type="button" class="btn btn-outline-primary" style="text-align: center"
-                                    class="text-muted mb-0 " href="{{url('logt')}}"><i
+                                <a type="button" class="btn btn-outline-primary" style="text-align: center; font-size:13px; padding: 0.2rem 0.2rem; "
+                                    class="text-muted  " href="{{url('logt')}}"><i
                                         class="fas fa-sign-out-alt"></i>LogOut
 
                                 </a>
