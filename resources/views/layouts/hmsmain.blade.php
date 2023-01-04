@@ -594,6 +594,7 @@ animation-direction:reverse;">
 
 
 
+                            
 
 
                             {{-- @if (in_array(request()->path(), $accounts))
@@ -1071,11 +1072,11 @@ animation-direction:reverse;">
                     {{-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button> --}}
-                    
+                  
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                       <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                          <a class="nav-link" href="{{ url('home') }}">Home<span class="sr-only">(current)</span></a>
+                          <a class="nav-link" href="{{ url('home') }}">Home <span class="sr-only">(current)</span></a>
                         </li>
                       
                         <li class="nav-item">
@@ -1104,6 +1105,7 @@ animation-direction:reverse;">
                           <a class="nav-link disabled" href="#">Disabled</a>
                         </li> --}}
                       </ul>
+
                       {{-- <div class="nav-item">
                       <p id="timedate"></p >
                         <p id="tme"></p >
@@ -1248,6 +1250,11 @@ updateDate();
 </style>
 
                      
+
+                      <div class="nav-item">
+                        <a type="button" onclick="hide()" class="nav-link" ><i class="fa fa-low-vision"></i></a>
+                      </div>
+
                       <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -1298,22 +1305,22 @@ updateDate();
                         </button>
 
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{url('user_management')}}">User Management</a>
-                            <a class="dropdown-item" href="{{url('client-index')}}">Client Management</a>
-                            <a class="dropdown-item" href="{{url('file_managementindex')}}">File Management</a>
-                            <a class="dropdown-item" href="{{url('hrindex')}}">HR</a>
-                            <a class="dropdown-item" href="{{url('accindex')}}">Accounts</a>
-                            <a class="dropdown-item" href="{{url('Store_&_Inventory_index')}}">Store &
-                                    Inventory</a>
-                            <a class="dropdown-item" href="{{url('purchase_index')}}">Procurement</a>
-                            <a class="dropdown-item" href="{{url('practice_area_index')}}">Practice
-                                    Management</a>
-                            <a class="dropdown-item" href="{{url('libraryindex')}}">E-Library</a>
-                            <a class="dropdown-item" href="{{url('tender_index')}}">Tender Management</a>
-                            <a class="dropdown-item" href="{{url('office_admin_index')}}">Office
-                                    Administration</a>
-                            <a class="dropdown-item" href="{{url('crm_index')}}">CRM</a>
-                            <a class="dropdown-item" href="{{url('system_setup')}}">System Setup</a>
+                            <a class="dropdown-item" href="{{url('user_management')}}"><b>User Management</b></a>
+                            <a class="dropdown-item" href="{{url('client-index')}}"><b>Client Management</b></a>
+                            <a class="dropdown-item" href="{{url('file_managementindex')}}"><b>File Management</b></a>
+                            <a class="dropdown-item" href="{{url('hrindex')}}"><b>HR</b></a>
+                            <a class="dropdown-item" href="{{url('accindex')}}"><b>Accounts</b></a>
+                            <a class="dropdown-item" href="{{url('Store_&_Inventory_index')}}"><b>Store &
+                                    Inventory</b></a>
+                            <a class="dropdown-item" href="{{url('purchase_index')}}"><b>Procurement</b></a>
+                            <a class="dropdown-item" href="{{url('practice_area_index')}}"><b>Practice
+                                    Management</b></a>
+                            <a class="dropdown-item" href="{{url('libraryindex')}}"><b>E-Library</b></a>
+                            <a class="dropdown-item" href="{{url('tender_index')}}"><b>Tender Management</b></a>
+                            <a class="dropdown-item" href="{{url('office_admin_index')}}"><b>Office
+                                    Administration</b></a>
+                            <a class="dropdown-item" href="{{url('crm_index')}}"><b>CRM</b></a>
+                            <a class="dropdown-item" href="{{url('system_setup')}}"><b>System Setup</b></a>
 
                         </div>
                     </div>

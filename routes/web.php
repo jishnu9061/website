@@ -1563,8 +1563,26 @@ Route::any('edit_supplier_list','OfficeAdministration@edit_supplier_list')->name
 
 //Customer Relationship Mamagement
 Route::any('crm_index',"CrmController@index_view")->name('crm_index');
+l
 Route::any('about',"etc@index")->name('about');
 Route::any('help',"etc@index_help")->name('help');
+
+Route::any('manage_tasks',"CrmController@manage_tasks")->name('manage_tasks');
+Route::any('view_manage_task',"CrmController@view_manage_task")->name('view_manage_task');
+Route::any('edit_manage_task',"CrmController@edit_manage_task")->name('edit_manage_task');
+Route::any('projects',"CrmController@projects")->name('projects');
+Route::any('view_project',"CrmController@view_project")->name('view_project');
+Route::any('edit_project',"CrmController@edit_project")->name('edit_project');
+Route::any('Corporate',"CrmController@Corporates")->name('Corporate');
+Route::any('edit_Corporate',"CrmController@edit_Corporates")->name('edit_Corporate');
+Route::any('view_Corporate',"CrmController@view_Corporates")->name('view_Corporate');
+
+
+Route::any('expense',"CrmController@expense")->name('expense');
+Route::any('view_expense',"CrmController@view_expense")->name('view_expense');
+Route::any('edit_expense',"CrmController@edit_expense")->name('edit_expense');
+
+
 
 
 
