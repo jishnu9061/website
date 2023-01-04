@@ -34,6 +34,9 @@ class CrmController extends Controller
     public function edit_project()
     {
         return view('CRM.edit_project');
+    public function Corporates()
+    {
+        return view('CRM.Corporate');
     }
 
 }

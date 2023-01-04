@@ -1569,6 +1569,8 @@ Route::any('edit_manage_task',"CrmController@edit_manage_task")->name('edit_mana
 Route::any('projects',"CrmController@projects")->name('projects');
 Route::any('view_project',"CrmController@view_project")->name('view_project');
 Route::any('edit_project',"CrmController@edit_project")->name('edit_project');
+Route::any('Corporate',"CrmController@Corporates")->name('Corporate');
+
 
 
 
