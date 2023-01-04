@@ -1563,6 +1563,12 @@ Route::any('edit_supplier_list','OfficeAdministration@edit_supplier_list')->name
 
 //Customer Relationship Mamagement
 Route::any('crm_index',"CrmController@index_view")->name('crm_index');
+Route::any('manage_tasks',"CrmController@manage_tasks")->name('manage_tasks');
+Route::any('view_manage_task',"CrmController@view_manage_task")->name('view_manage_task');
+Route::any('edit_manage_task',"CrmController@edit_manage_task")->name('edit_manage_task');
+Route::any('projects',"CrmController@projects")->name('projects');
+Route::any('view_project',"CrmController@view_project")->name('view_project');
+Route::any('edit_project',"CrmController@edit_project")->name('edit_project');
 
 
 

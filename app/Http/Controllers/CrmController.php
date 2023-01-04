@@ -11,6 +11,30 @@ class CrmController extends Controller
     {
         return view('CRM.Crm_index');
     }
+    public function manage_tasks()
+    {
+        return view('CRM.manage_tasks');
+    }
+    public function view_manage_task()
+    {
+        return view('CRM.view_manage_task');
+    }
+    public function edit_manage_task()
+    {
+        return view('CRM.edit_manage_task');
+    }
+    public function projects()
+    {
+        return view('CRM.projects');
+    }
+    public function view_project()
+    {
+        return view('CRM.view_project');
+    }
+    public function edit_project()
+    {
+        return view('CRM.edit_project');
+    }
 
 }
 
