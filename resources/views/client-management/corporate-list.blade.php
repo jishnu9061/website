@@ -142,7 +142,10 @@
                                 <td scope="row" class="text-center">
                                     <a href="{{url('corporate-document',$list->corporate_id)}}"><button
                                             class="btn btn-primary"> Add </button></a>
+                                    <a href="{{url('corporate-document-details')}}"><button
+                                            class="btn btn-primary"> Document </button></a>
                                 </td>
+                               
                                 <td scope="row" class="text-center" id="medicine_name_1">
                                     <a href="{{ url('edit_client', $list->corporate_id)}}"><i style="color:black;"
                                             class="fa fa-edit" aria-hidden="true"></i>
@@ -254,7 +257,7 @@
                                                         </div>
                                                         <select name="country" id="cars">
                                                             <option>Kenya</option>
-                                                
+
                                                         </select>
                                                     </div>
                                                 </div>
@@ -461,7 +464,7 @@
                                                         <div class="input-group-prepend"></div>
                                                         <select name="country" id="cars">
                                                             <option>Nairobi</option>
-                                                           
+
                                                         </select>
 
                                                         <!-- <input type="text" class="form-control" name="town" id="age"
@@ -523,11 +526,11 @@
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
                                                             <select name="industry" id="cars">
-                                                            <option>Select</option>
-                                                            <option>Manager</option>
-                                                            <option>Advocate</option>
-                                                           
-                                                        </select>
+                                                                <option>Select</option>
+                                                                <option>Manager</option>
+                                                                <option>Advocate</option>
+
+                                                            </select>
                                                             <!-- <input type="text" class="form-control" name="Designation"
                                                                 id="age" value="" placeholder="" min="0" max="99"> -->
                                                             <div class="invalid-feedback" style="width: 100%;">

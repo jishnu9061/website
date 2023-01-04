@@ -134,6 +134,8 @@
                                     <td scope="row" class="text-center"><a href="{{url('view-client')}}">
                                             <a href="{{url('create-document',$list_client->id)}}"><button
                                                     class="btn btn-primary"> Add </button></a>
+                                            <a href="{{url('client-document')}}"><button
+                                                    class="btn btn-primary"> Document </button></a>
                                     </td>
                                     <td> <a href="{{url('show-client',$list_client->id )}}"><i style="color:black;"
                                                 class="fa fa-eye" aria-hidden="true"></i></a>
