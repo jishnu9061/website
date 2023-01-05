@@ -93,7 +93,7 @@
                             <td>{{ $alluser->uniqueid }}</td>
                             <td>{{ $alluser->name }}</td>
                             <td>{{ $alluser->email }}</td>
-                            <td>{{ $alluser->phoneno }}</td>
+                            <td>{{ $alluser->phone }}</td>
                             <td><a href="{{ url('managestaff' . $alluser->uniqueid) }}" style="color:rgb(13, 1, 56);"><i
                                         class="fa fa-edit"></i></a></td>
                     @endforeach
