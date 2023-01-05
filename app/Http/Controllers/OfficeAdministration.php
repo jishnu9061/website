@@ -199,5 +199,13 @@ class OfficeAdministration extends Controller
     {
         return view('OfficeAdministration.edit_supplier_list');
     }
+    public function submit_undeposit_fund()
+    {
+        return view('OfficeAdministration.submit_undeposit_fund');
+    }
+    public function view_supplier_invoice_Details()
+    {
+        return view('OfficeAdministration.view_supplier_invoice_Details');
+    }
     
 }

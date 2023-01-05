@@ -18,13 +18,15 @@
                     <th scope="col">Amount (KES)</th>
                     <th scope="col">WHT Amt (KES)</th>
                     <th scope="col">WHV Amt (KES)</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Actions</th>
 
                 </tr>
             </thead>
             <tbody>
 
                 <tr>
-                    <td colspan="8"><b>ABC CONSULT</b></td>
+                    <td colspan="10"><b>ABC CONSULT</b></td>
                 </tr>
                 <tr>
                     <td>0285</td>
@@ -35,6 +37,10 @@
                     <td>29,850.00</td>
                     <td>0.00</td>
                     <td>0.00</td>
+                    <td><span class="badge bg-success">Approved</span></td>
+                    <td><a href="{{ url('view_supplier_invoice_Details') }}"><i style="color:rgb(13, 1, 56);"
+                                class="fa fa-eye"></i>
+                                <a href=""><i  style="  color:rgb(13, 1, 56);" class="fas fa-comment" aria-hidden="true"></i></td>
                 </tr>
                 <tr>
                     <td>0678</td>
@@ -45,6 +51,10 @@
                     <td>2,100.00</td>
                     <td>0.00</td>
                     <td>0.00</td>
+                    <td><span class="badge bg-success">Approved</span></td>
+                    <td><a href="{{ url('view_supplier_invoice_Details') }}"><i style="color:rgb(13, 1, 56);"
+                                class="fa fa-eye"></i>
+                                <a href=""><i  style="  color:rgb(13, 1, 56);" class="fas fa-comment" aria-hidden="true"></i></td>
                 </tr>
                 <tr>
                     <td colspan="5">Total  ABC CONSULT</td>
@@ -54,7 +64,7 @@
                 </tr>
 
                 <tr>
-                    <td colspan="8"><b>ABERDARE DOWNSTREAM MINERAL WATER</b></td>
+                    <td colspan="10"><b>ABERDARE DOWNSTREAM MINERAL WATER</b></td>
                 </tr>
                 <tr>
                     <td>002</td>
@@ -65,6 +75,10 @@
                     <td>1,900.00</td>
                     <td>0.00</td>
                     <td>0.00</td>
+                    <td><span class="badge bg-success">Approved</span></td>
+                    <td><a href="{{ url('view_supplier_invoice_Details') }}"><i style="color:rgb(13, 1, 56);"
+                                class="fa fa-eye"></i>
+                                <a href=""><i  style="  color:rgb(13, 1, 56);" class="fas fa-comment" aria-hidden="true"></i></td>
                 </tr>
                 <tr>
                     <td>026</td>
@@ -75,6 +89,10 @@
                     <td>1,900.00</td>
                     <td>0.00</td>
                     <td>0.00</td>
+                    <td><span class="badge bg-success">Approved</span></td>
+                    <td><a href="{{ url('view_supplier_invoice_Details') }}"><i style="color:rgb(13, 1, 56);"
+                                class="fa fa-eye"></i>
+                                <a href=""><i  style="  color:rgb(13, 1, 56);" class="fas fa-comment" aria-hidden="true"></i></td>
                 </tr>
                 <tr>
                     <td colspan="5">Total  ABERDARE DOWNSTREAM MINERAL WATER</td>
