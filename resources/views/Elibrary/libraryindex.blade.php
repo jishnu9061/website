@@ -46,7 +46,7 @@
     <div class="row sm">
         <div class="col-sm-4 "><img class="logo_size" src="image\logo\Customer registeration.png" alt=""><a
                 href="{{ url('site') }}"><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn">
-                    legal sites</button></a></div>
+                    Legal Sites</button></a></div>
 
     </div>
     @endsection

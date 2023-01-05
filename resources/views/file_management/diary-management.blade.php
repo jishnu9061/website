@@ -55,7 +55,7 @@ color: #999;
         <!-- <h3 class="text-center" style="color: #070344;"><b>Diary(Calender Events)</b></h3> -->
         <div>
         {{-- heading --}}
-    <h4 id="hdtpa"><b>Diary(Calender Events)</b></h4>
+    <h4 id="hdtpa"><b>Diary (Calender Events)</b></h4>
     <br>
   
  

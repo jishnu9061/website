@@ -337,7 +337,7 @@ animation-direction:reverse;">
                         </ul>
                         </li>
                         @endif --}}
-                        @if(Auth::user()->role == 'hospitaladmin')
+                        @if(Auth::user()->role == 'Admin')
                         <li class="sidebar-item  has-sub">
                             <!-- <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
@@ -399,7 +399,7 @@ animation-direction:reverse;">
                         </li>
 
                         @endif
-                        @if(Auth::user()->role == 'hospitaladmin')
+                        @if(Auth::user()->role == 'Admin')
                         <li class="submenu-item has-sub " style="list-style:none;">
                             <a href="{{url('file_managementindex')}}" class='sidebar-link'>
                                 <i class="far fa-folder" id="icon" style="font-weight: 300;"></i>
@@ -407,7 +407,7 @@ animation-direction:reverse;">
                             </a>
                         </li>
                         @endif
-                        @if(Auth::user()->role == 'hr' || Auth::user()->role == 'hospitaladmin')
+                        @if(Auth::user()->role == 'hr' || Auth::user()->role == 'Admin')
                         @php
                         $hr = array("addallowance", "addstaffs",
                         "staffs","loans","payslip","attendance","attendanceview","payslipbulk","generatepayslip","managestaff");
@@ -513,7 +513,7 @@ animation-direction:reverse;">
                             {{-- </li> --}}
                             @endif
 
-                            @if(Auth::user()->role == 'account' || Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'account' || Auth::user()->role == 'Admin')
                             @php
                             $accounts = array("ledger_acount_categories",
                             "ledger_acount_subcategories","ledger_budget_category",
@@ -673,7 +673,7 @@ animation-direction:reverse;">
                             </ul>
                             {{-- </li> --}}
                             @endif
-                            @if(Auth::user()->role == 'store' || Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'store' || Auth::user()->role == 'Admin')
                             @php
                             $store=array("addsuppliers", "view_manufacturers","view_medicine",
                             "view_medicine_category","view_medicine_type","view_unit","view_medicine_group","view_brand_name","view_generic_name","reorder","view_purchase","stock_details","accounting_method","payment_type");
@@ -815,7 +815,7 @@ animation-direction:reverse;">
 
 
                             </ul>
-                            {{-- @if(Auth::user()->role == 'hr' || Auth::user()->role == 'hospitaladmin')
+                            {{-- @if(Auth::user()->role == 'hr' || Auth::user()->role == 'Admin')
                                 @php
                                     $hr = array("addallowance", "addstaffs", "staffs","loans","payslip","attendance","attendanceview","payslipbulk","generatepayslip","managestaff");
                                 @endphp
@@ -827,7 +827,7 @@ animation-direction:reverse;">
                             </a>
                             </li>
                             @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="	fas fa-user-graduate" style="font-weight: 300;"></i>
@@ -837,7 +837,7 @@ animation-direction:reverse;">
                             </li>
                             @endif
 
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fa fa-shield" style="font-weight: 300;"></i>
@@ -846,7 +846,7 @@ animation-direction:reverse;">
 
                             </li>
                             @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fas fa-file-invoice-dollar" style="font-weight: 300;"></i>
@@ -856,7 +856,7 @@ animation-direction:reverse;">
                             </li>
                             @endif
 
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fa fa-sliders" style="font-weight: 300;"></i>
@@ -865,7 +865,7 @@ animation-direction:reverse;">
 
                             </li>
                             @endif
-                            <!-- @if(Auth::user()->role == 'hospitaladmin')
+                            <!-- @if(Auth::user()->role == 'Admin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i id="icon" class="fa fa-cog"  style="font-weight: 300;"></i>
@@ -875,7 +875,7 @@ animation-direction:reverse;">
                                     </li>
                             @endif -->
 
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="far fa-file-alt" style="font-weight: 300;"></i>
@@ -884,7 +884,7 @@ animation-direction:reverse;">
 
                             </li>
                             @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fab fa-playstation" style="font-weight: 300;"></i>
@@ -894,7 +894,7 @@ animation-direction:reverse;">
                             </li>
                             @endif
 
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="far fa-sun" style="font-weight: 300;"></i>
@@ -903,7 +903,7 @@ animation-direction:reverse;">
 
                             </li>
                             @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fas fa-hand-holding" style="font-weight: 300;"></i>
@@ -913,7 +913,7 @@ animation-direction:reverse;">
                             </li>
                             @endif
 
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fas fa-layer-group" style="font-weight: 300;"></i>
@@ -922,7 +922,7 @@ animation-direction:reverse;">
 
                             </li>
                             @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fas fa-piggy-bank" style="font-weight: 300;"></i>
@@ -933,7 +933,7 @@ animation-direction:reverse;">
                             </li>
                             @endif
 
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fas fa-coins" style="font-weight: 300;"></i>
@@ -942,7 +942,7 @@ animation-direction:reverse;">
 
                             </li>
                             @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fa fa-user-circle" style="font-weight: 300;"></i>
@@ -952,7 +952,7 @@ animation-direction:reverse;">
                             </li>
                             @endif
 
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fab fa-cloudscale" style="font-weight: 300;"></i>
@@ -961,7 +961,7 @@ animation-direction:reverse;">
 
                             </li>
                             @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fas fa-atom" style="font-weight: 300;"></i>
@@ -1035,6 +1035,25 @@ animation-direction:reverse;">
 
                 
 
+
+
+
+
+
+              
+                    // function hide() {
+                    //   var x = document.getElementById("sidebar");
+                      
+                    //   if (x.style.display === "none") {
+                    //     x.style.display = "block";
+                    //   } else {
+                    //     x.style.display = "none";
+                    //   }
+                    // }
+              
+
+
+
                     function hide() {
   var element = document.getElementById("sidebar");
   element.classList.remove("active");
@@ -1044,39 +1063,33 @@ animation-direction:reverse;">
 
 
 
-
-                {{-- <script>
-                    function hide() {
-                      var x = document.getElementById("sidebar");
-                      
-                      if (x.style.display === "none") {
-                        x.style.display = "block";
-                      } else {
-                        x.style.display = "none";
-                      }
-                    }
-                    </script> --}}
-
-
-
                 <nav class="navbar navbar-expand-lg navbar-light bg-white">
                     
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand p-1" href="#">
                         <img src="{{asset('/') }}assets//images/Logo cra.png" width="40" height="40" alt="">
                       </a>
                     {{-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button> --}}
-                  
+                    
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                       <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                          <a class="nav-link" href="{{ url('home') }}">Home <span class="sr-only">(current)</span></a>
+                          <a class="nav-link" href="{{ url('home') }}">Home<span class="sr-only">(current)</span></a>
                         </li>
+                      
                         <li class="nav-item">
-                          <a type="button" onclick="hide()" class="nav-link" >Hide</a>
-                        </li>
-                        <li class="nav-item dropdown">
+                            <a type="button" href="{{url('system_setup')}}" class="nav-link" >Settings</a>
+                          </li>
+
+                          <li class="nav-item">
+                            <a type="button" href="{{url('about')}}" class="nav-link" >About</a>
+                          </li>
+
+                          <li class="nav-item">
+                            <a type="button" href="{{url('help')}}" class="nav-link" >Help</a>
+                          </li>
+                        {{-- <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Dropdown
                           </a>
@@ -1086,11 +1099,155 @@ animation-direction:reverse;">
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Something else here</a>
                           </div>
-                        </li>
-                        <li class="nav-item">
+                        </li> --}}
+                        {{-- <li class="nav-item">
                           <a class="nav-link disabled" href="#">Disabled</a>
-                        </li>
+                        </li> --}}
                       </ul>
+                      {{-- <div class="nav-item">
+                      <p id="timedate"></p >
+                        <p id="tme"></p >
+                           </div>
+                      <script>
+                        // program to display the date
+// get local machine date time
+const date = new Date();
+
+// get the date as a string
+const n = date.toDateString();
+
+// get the time as a string
+const time = date.toLocaleTimeString();
+
+// display date
+console.log('Date: ' + n);
+
+// display time
+console.log('Time: ' + time);
+                        const d = new Date();
+                        document.getElementById("timedate").innerHTML = 'Date: ' + n;
+                        document.getElementById("tme").innerHTML = 'Time: ' + time;
+                        </script> --}}
+                        <div class="nav-item">
+                            <a type="button" onclick="hide()" class="nav-link" ><i class="fa fa-low-vision"></i></a>
+                          </div>
+
+
+<div class="p-3" style="text-align: center; ">
+    <div class="display-date">
+      <span id="day">day</span>,
+      <span id="daynum">00</span>
+      <span id="month">month</span>
+      <span id="year">0000</span>
+    </div>
+    <div class="display-time"></div>
+  </div>
+
+  <script>
+    const displayTime = document.querySelector(".display-time");
+// Time
+function showTime() {
+  let time = new Date();
+  displayTime.innerText = time.toLocaleTimeString("en-US", { hour12: false });
+  setTimeout(showTime, 1000);
+}
+
+showTime();
+
+// Date
+function updateDate() {
+  let today = new Date();
+
+  // return number
+  let dayName = today.getDay(),
+    dayNum = today.getDate(),
+    month = today.getMonth(),
+    year = today.getFullYear();
+
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const dayWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  // value -> ID of the html element
+  const IDCollection = ["day", "daynum", "month", "year"];
+  // return value array with number as a index
+  const val = [dayWeek[dayName], dayNum, months[month], year];
+  for (let i = 0; i < IDCollection.length; i++) {
+    document.getElementById(IDCollection[i]).firstChild.nodeValue = val[i];
+  }
+}
+
+updateDate();
+
+  </script>
+
+
+
+
+<script language=“javascript”>
+    function toggle() {
+    var ele = document.getElementById(“”);
+    if(ele.style.display == “block”) {
+    ele.style.display = “none”;
+    }
+    else {
+    ele.style.display = “block”;
+    window.scrollTo(100,300)
+    }
+    }
+    </script>
+
+<style>
+    .display-date {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: .6rem;
+  font-weight: 600;
+}
+
+.display-time {
+    text-align: center;
+  display: flex;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid #1b1b1a;
+  padding: 1px 2px;
+  border-radius: 5px;
+  transition: ease-in-out 0.1s;
+  transition-property: background, box-shadow, color;
+  -webkit-box-reflect: below 2px
+    linear-gradient(transparent, rgba(255, 255, 255, 0.05));
+}
+
+.display-time:hover {
+  background: #ffffff;
+  /* box-shadow: 0 0 30px#8f8d87; */
+  color: #272727;
+  cursor: pointer;
+}
+
+</style>
+
+                     
                       <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -1125,47 +1282,47 @@ animation-direction:reverse;">
                     <!-- Nav Back Button -->
                     <a id="backbtn" href="javascript:history.back()" style=" color: #070344;
                                             font-size: 35px;">
-                        <i id="bkbtnicon" class="far fa-arrow-alt-circle-left p-3"></i></a>
+                        <i id="bkbtnicon" class="far fa-arrow-alt-circle-left p-1"></i></a>
                     <!--  -->
 
                     <!-- Nav ToolTip -->
                     <div class="nav-item dropdown" style="position: relative;">
 
 
-                        <button class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown"
+                        <button class=" dropdown-toggle-x btn  px-2 py-1 m-1" href="#" id="navbarDropdown"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img data-toggle="tooltip" data-placement="top" title="Menu"
+                            <i class="fa fa-navicon"></i>
+                            {{-- <img data-toggle="tooltip" data-placement="top" title="Menu"
                                 style="height: 35px; width: 35px;" id="cr_logo"
-                                src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA">
+                                src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA"> --}}
                         </button>
 
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{url('user_management')}}"><b>User Management</b></a>
-                            <a class="dropdown-item" href="{{url('client-index')}}"><b>Client Management</b></a>
-                            <a class="dropdown-item" href="{{url('file_managementindex')}}"><b>File Management</b></a>
-                            <a class="dropdown-item" href="{{url('hrindex')}}"><b>HR</b></a>
-                            <a class="dropdown-item" href="{{url('accindex')}}"><b>Accounts</b></a>
-                            <a class="dropdown-item" href="{{url('Store_&_Inventory_index')}}"><b>Store &
-                                    Inventory</b></a>
-                            <a class="dropdown-item" href="{{url('purchase_index')}}"><b>Procurement</b></a>
-                            <a class="dropdown-item" href="{{url('practice_area_index')}}"><b>Practice
-                                    Management</b></a>
-                            <a class="dropdown-item" href="{{url('libraryindex')}}"><b>E-Library</b></a>
-                            <a class="dropdown-item" href="{{url('tender_index')}}"><b>Tender Management</b></a>
-                            <a class="dropdown-item" href="{{url('office_admin_index')}}"><b>Office
-                                    Administration</b></a>
-                            <a class="dropdown-item" href="{{url('crm_index')}}"><b>CRM</b></a>
-                            <a class="dropdown-item" href="{{url('system_setup')}}"><b>System Setup</b></a>
+                            <a class="dropdown-item" href="{{url('user_management')}}">User Management</a>
+                            <a class="dropdown-item" href="{{url('client-index')}}">Client Management</a>
+                            <a class="dropdown-item" href="{{url('file_managementindex')}}">File Management</a>
+                            <a class="dropdown-item" href="{{url('hrindex')}}">HR</a>
+                            <a class="dropdown-item" href="{{url('accindex')}}">Accounts</a>
+                            <a class="dropdown-item" href="{{url('Store_&_Inventory_index')}}">Store &
+                                    Inventory</a>
+                            <a class="dropdown-item" href="{{url('purchase_index')}}">Procurement</a>
+                            <a class="dropdown-item" href="{{url('practice_area_index')}}">Practice
+                                    Management</a>
+                            <a class="dropdown-item" href="{{url('libraryindex')}}">E-Library</a>
+                            <a class="dropdown-item" href="{{url('tender_index')}}">Tender Management</a>
+                            <a class="dropdown-item" href="{{url('office_admin_index')}}">Office
+                                    Administration</a>
+                            <a class="dropdown-item" href="{{url('crm_index')}}">CRM</a>
+                            <a class="dropdown-item" href="{{url('system_setup')}}">System Setup</a>
 
                         </div>
                     </div>
-                    <!--  -->
-                    <span class="m-2"></span>
-                    <div class="nav-item dropdown" style="position: relative; ">
-                        <button class=" dropdown-toggle-x btn btn-primary p-1" style="font-size:12px;" href="#"
+      
+                    <div class="nav-item dropdown m-1" style="position: relative; " >
+                        <button class=" dropdown-toggle-x btn p-1" style="font-size:12px;" href="#"
                             id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
-                            <b> Create New </b>
+                            <b>Create New</b>
                             <i class="fa fa-plus-square"></i>
                         </button>
 
@@ -1236,14 +1393,14 @@ animation-direction:reverse;">
 
 
 
-                        <a class="navbar-brand pl-2" href="#">
+                        <li class="nav-item p-1 "  style=" text-decoration: none; list-style:none;">
                             <img src="{{asset('/') }}assets//images/faces/lawemb.png" height="40px"
-                                class="d-inline-block align-top" alt="">
-                        </a>
+                                class="d-inline-block " alt="">
+                        </li>
 
 
-                        <li class="nav-item active" style=" text-decoration: none; list-style:none;">
-                            <a class="font-bold text-uppercase nav-link" href="#"> {{ Auth::user()->name }} <span
+                        <li class="nav-item" style=" text-decoration: none; list-style:none;">
+                            <a class="font-bold text-uppercase nav-link" href="#" style=" padding: 0.1rem .1rem;">{{ Auth::user()->name }}<span
                                     class="sr-only">(current)</span></a>
                         </li>
 
@@ -1251,12 +1408,12 @@ animation-direction:reverse;">
                         <!-- LogOut Button  -->
 
 
-                        <div id="navr" style="margin-right: .5%;">
+                        <div id="navr" class="m-1">
 
-                            <div style=" text-decoration: none; list-style:none;">
+                            <div class="" style=" text-decoration: none; list-style:none;">
 
-                                <a type="button" class="btn btn-outline-primary" style="text-align: center"
-                                    class="text-muted mb-0 " href="{{url('logt')}}"><i
+                                <a type="button" class="btn btn-outline-primary" style="text-align: center; font-size:13px; padding: 0.2rem 0.2rem; "
+                                    class="text-muted  " href="{{url('logt')}}"><i
                                         class="fas fa-sign-out-alt"></i>LogOut
 
                                 </a>

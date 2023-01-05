@@ -4,8 +4,6 @@
     <h4 id="hdtpa"><b>Edit Subject Category</b></h4>
     <br>
     <div class="card">
-        <div class="card-header">
-        </div>
         <div class="card-body">
             <div class="container">
 

@@ -38,18 +38,7 @@ $(document).on('input', '#percent', function() {
             <input type="hidden" name="individual_id" value="{{$client_doc->id}}">
 
 
-            <div class="row align-items-start">
-                <div class="col">
-                    <label for="date" class="form-label">Added Date</label>
-                    <input type="date" class="form-control" name="date[]" id="username" required>
-                </div>
-                <div class="col">
-
-                </div>
-                <div class="col">
-
-                </div>
-            </div>
+           
             <br>
 
             <div class="row">
@@ -60,7 +49,7 @@ $(document).on('input', '#percent', function() {
                                 <th>Document Type</th>
                                 <th>File Upload</th>
 
-                                <!-- <th>Date</th> -->
+                                <th>Date</th>
                                 <th>Add</th>
                             </tr>
 
@@ -83,9 +72,9 @@ $(document).on('input', '#percent', function() {
                                     <input type="hidden" class="form-control" name="client[]" id="username"
                                         value="{{$client_doc->client_type}}" placeholder="File" required>
                                 </td> -->
-                                <!-- <td>
+                                <td>
                                     <input type="date" class="form-control" name="date[]" id="username" required>
-                                </td> -->
+                                </td>
                                 <td> <input type="button" class="btn btn-primary float:right;" id="add" value="Add">
                                 </td>
                                 <input type="hidden" class="form-control" name="client" id="username"
@@ -130,7 +119,7 @@ $(document).on('input', '#percent', function() {
 $(document).ready(function() {
     var html =
 
-        '<tr><td style="width:45%;"> <select class="form-control select_group product"data-row-id="row_3" id="product_detailes" name="testname[]" style="width:100%;"><option selected>Select</option><option value="assets">Type 1</option></select></td><td style="width:45%;"> <input type="file" class="form-control" name="file[]" multiple="multiple" required></td></td> <td> <input type="button" class="add-Row ibtnDel btn btn-primary text-white" style="background-color:#607080;width:100%;color:white;" name="remove" id="remove" value="Remove"></td></tr>';
+        '<tr><td style="width:45%;"> <select class="form-control select_group product"data-row-id="row_3" id="product_detailes" name="testname[]" style="width:100%;"><option selected>Select</option><option value="assets">Type 1</option></select></td><td style="width:45%;"> <input type="file" class="form-control" name="file[]" multiple="multiple" required></td></td>  <td><input type="date" class="form-control" name="date[]" id="username" required></td> <td> <input type="button" class="add-Row ibtnDel btn btn-primary text-white" style="background-color:#607080;width:100%;color:white;" name="remove" id="remove" value="Remove"></td></tr>';
 
 
 

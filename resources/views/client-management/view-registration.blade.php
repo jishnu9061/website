@@ -57,7 +57,7 @@ color: #999;
                 <b><u>Client Registration</u></b></span> -->
                 {{-- heading --}}
                 <div class="container">
-                <h4 id="hdtpa"><b>Client Registration Details</b></h4>
+                <h4 id="hdtpa"><b>Individual Customers</b></h4>
                 <br>
             
 
@@ -65,7 +65,7 @@ color: #999;
 
         <div>
             <button type="button" class="btn btn-primary complaint_btn btn " data-toggle="modal"
-                data-target="#myModal">Register Client</button></a>
+                data-target="#myModal">Register Customers</button></a>
          </div>
   
        
@@ -158,7 +158,7 @@ color: #999;
 
                             <!-- Modal Header -->
                             <div class="modal-header">
-                                <h2 class="text-center"><b>Register Client</b></h2>
+                                <h2 class="text-center"><b>Register Individual Customers</b></h2>
 
                             </div>
 
