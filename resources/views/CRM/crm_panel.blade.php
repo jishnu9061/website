@@ -13,7 +13,7 @@
         <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
     </div>
     <br>
-    <div>
+    <div> 
         <canvas id="myChart1" style="width:100%; max-width:600px; height:500px;"> </canvas>
     </div>
     
@@ -50,9 +50,7 @@ new Chart("myChart", {
         }
     }
 });
-</script>
 
-<script>
 var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
 var yValues = [55, 49, 44, 24, 15];
 var barColors = [
