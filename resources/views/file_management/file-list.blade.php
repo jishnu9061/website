@@ -161,11 +161,12 @@
                                         <div class="col-md-4">
                                             <div class="mb-3">
                                                 <label for="username">Client</label>
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>---select---</option>
-                                                    <option value="1">client1</option>
-                                                    <option value="2">client2</option>
-                                                    <option value="3">client3</option>
+                                                <select class="form-select" name="client" aria-label="Default select example">
+                                                @if(count($client_list))
+                                            @foreach($client_list as $list_category)
+                                            <option>{{$list_category->client_name}}</option>
+                                            @endforeach
+                                          @endif
                                                 </select>
                                             </div>
                                         </div>

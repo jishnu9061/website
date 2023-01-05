@@ -15,11 +15,13 @@ class filemanagement extends Controller
 
     public function views()
     {
+        $client_list = DB::table('cra_corporate_client_details')->get();
         $file_list = DB::table('cra_open_new_file_details')->get();
+        
         // ->select('*')  
         // ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_open_new_file_details.id')
         // ->get();    
-        return view ('file_management.file-list',compact('file_list'));
+        return view ('file_management.file-list',compact('file_list','client_list'));
         // return view('file_management.file-list',compact('file_list'));
     }
 
