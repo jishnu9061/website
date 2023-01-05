@@ -137,8 +137,36 @@ class PurchaseManagement extends Controller
 
     public function suppliers()
     {
-        return view('purchase_management.supplier');
+        $suppliers = DB::table('cra_add_supplier')->get();
+        return view('purchase_management.supplier',compact('suppliers'));
     }
+
+    public function store_supplier(Request $request){
+
+            $supplier_name        =    $request['name'];
+            $tax_id               =    $request['tax_id'];
+            $email                =    $request['email'];
+            $contact_no           =    $request['contact'];
+            $address              =    $request['Address'];
+            $city                 =    $request['City'];
+            $provinces            =    $request['Provinces'];
+            $pincode              =    $request['pincode'];
+
+            DB::table('cra_add_supplier')->insert([
+                
+            'supplier_name'       =>  $supplier_name,
+            'tax_id'              =>  $tax_id,
+            'email'               =>  $email,
+            'contact_no'          =>  $contact_no,
+            'address'             =>  $address,
+            'city'                =>  $city,
+            'provinces'           =>  $provinces,
+            'pincode'             =>  $pincode
+            ]);
+
+            return redirect('/supplier');
+    }
+
 
     
 
