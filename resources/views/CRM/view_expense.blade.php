@@ -53,7 +53,6 @@ th {
                         <th>Supporting Details :</th>
                         <td></td>
                     </tr>
-
                 </tbody>
             </table>
         </div>

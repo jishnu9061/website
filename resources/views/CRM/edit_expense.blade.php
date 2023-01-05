@@ -24,6 +24,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Staff Name</label>
@@ -73,6 +74,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Task Assigned By</label>
@@ -102,7 +104,6 @@
                     </div>
                 </div>
 
-
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
@@ -115,6 +116,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Status</label>
@@ -134,6 +136,7 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="exampleFormControlInput1" class="form-label">Supporting
