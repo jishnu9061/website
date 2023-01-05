@@ -19,7 +19,7 @@ class addcontroller extends Controller
 
      $hospital=Auth::user()->Hospital;
    	 $adminroles=DB::table('roles')->get();
-     $hospitals=DB::table('hospitals')->get();
+    //  $hospitals=DB::table('hospitals')->get();
      $departments=DB::table('departments')->get();
      $medicaldepartments=DB::table('medicaldepartments')->get();
      $allowancedata=DB::table('allowance')->where('hospital',$hospital)->where('status','allowance')->get();
@@ -32,11 +32,17 @@ class addcontroller extends Controller
    public function addthestaffs(Request $Request)
    {
      
-   	  $hospital=Auth::user()->Hospital;
+   	  // $hospital=Auth::user()->Hospital;
       $depatmntz=$Request['depname'];
+
+   	  // $hospitaldata=DB::table('hospitals')->where('name',$hospital)->select('id')->first();
+   	  // $hospitalid=$hospitaldata->id;
+   	  // $hospitalid=$hospitaldata->id;
+
    	  // // // $hospitaldata=DB::table('hospitals')->where('name',$hospital)->select('id')->first();
    	  // // $hospitalid=$hospitaldata->id;
    	  // // $hospitalid=$hospitaldata->id;
+
    	  // $hosid=str_pad($hospitalid, 2, "0", STR_PAD_LEFT);
       $seldep=DB::table('users')
       ->leftjoin('departments','departments.id','=','users.departments')
@@ -53,7 +59,7 @@ class addcontroller extends Controller
       $staffs->name=$Request['name'];
       $staffs->email=$Request['email'];
       $staffs->age=$Request['age'];
-      $staffs->phoneno=$Request['phoneno'];
+      $staffs->phone=$Request['phoneno'];
       $password=$Request['password'];
       $staffs->password=Hash::make($password);
       $staffs->date_of_joining=$Request['date_of_joining'];
@@ -73,7 +79,7 @@ class addcontroller extends Controller
       $staffs->cra_pin=$Request['cra_pin'];
       $staffs->tax=$Request['tax'];
       $staffs->deduction=$Request['deduction'];
-      $staffs->contribution=$Request['contribution'];
+      $staffs->NSSF_contribution=$Request['contribution'];
       $staffs->leave=$Request['leave'];
       $staffs->pension_rate=$Request['pension_rate'];
       $staffs->bank=$Request['bank'];

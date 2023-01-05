@@ -151,7 +151,7 @@
                                                                 <div class="input-group-prepend">
 
                                                                 </div>
-                                                                <input type="text" class="form-control" name="text"
+                                                                <input type="text" class="form-control" name="text" value="@if (!empty($purc_order->purchase_orderno)) {{ $purc_order->purchase_orderno }}@else{{ strtoupper(uniqid()) }} @endif"
                                                                     id="username" required>
                                                                 <div class="invalid-feedback" style="width: 100%;">
                                                                     Number is required.
