@@ -1577,9 +1577,11 @@ Route::any('Corporate',"CrmController@Corporates")->name('Corporate');
 
 Route::any('edit_Corporate/{Id}',"CrmController@edit_Corporates")->name('edit_Corporate');
 
-Route::any('view_Corporate',"CrmController@view_Corporates")->name('view_Corporate');
+Route::any('view_Corporate/{id}',"CrmController@view_Corporates")->name('view_Corporate');
 Route::any('add_Corporate',"CrmController@add_Corporates")->name('add_Corporate');
 Route::any('update_Corporate',"CrmController@update_Corporates")->name('update_Corporate');
+Route::any('drop_Corporate/{id}',"CrmController@drop_Corporates")->name('drop_Corporate');
+
 
 
 

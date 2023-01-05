@@ -88,9 +88,10 @@ class CrmController extends Controller
         return view('CRM.edit_Corporate',compact('update_list','id'));
     }
 
-    public function view_Corporates()
+    public function view_Corporates($id)
     {
-        return view('CRM.view_Corporate');
+        $view_corporates = DB::table('cra_corporate_customers')->where('id',$id)->first();
+        return view('CRM.view_Corporate',compact('view_corporates','id'));
     }
     public function expense()
     {
@@ -147,6 +148,12 @@ class CrmController extends Controller
             'Address' =>  $Address,
 
         ]);    
+        return redirect('/Corporate');
+    }
+
+    public function drop_Corporates($id)
+    {
+        DB::table('cra_corporate_customers')->where('id',$id)->delete();
         return redirect('/Corporate');
     }
 

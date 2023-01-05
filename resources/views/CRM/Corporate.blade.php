@@ -70,14 +70,17 @@
                                 <td>{{$list->Address}}</td>
                                 <td>{{$list->Phone}}</td>
                                 <td>{{ $list->Email}}</td>
-                                <td scope="row"><a href="{{url('edit_Corporate',$list->Id)}}"><i style="color:black;"
-                                            class="fa fa-edit" aria-hidden="true"></i></a>
+                                <td scope="row">
 
                                     <span class="m-2"></span>
-                                    <a href="view_Corporate"><i style="color:black;" class="fa fa-eye"
+                                    <a href="{{url('view_Corporate',$list->Id)}}"><i style="color:black;" class="fa fa-eye"
                                             aria-hidden="true"></i></a>
                                     <span class="m-2"></span>
-                                    <a onClick="return myFunction();" href="{{url('')}}" style="color:black;"><i
+                                    <a href="{{url('edit_Corporate',$list->Id)}}"><i style="color:black;"
+                                            class="fa fa-edit" aria-hidden="true"></i></a>
+                                            
+                                    <span class="m-2"></span>
+                                    <a onClick="return myFunction();" href="{{url('drop_Corporate',$list->Id)}}" style="color:black;"><i
                                             class="fas fa-trash-alt"></i></a>
                                     <input type="hidden" value="" id="medicine_id_hidden" class="applicate"
                                         name="supplier_id_hidden">
