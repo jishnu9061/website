@@ -19,35 +19,35 @@ th{
                 <tbody>
                     <tr>
                         <th>Task Name :</th>
-                        <td></td>
+                        <td>{{ $task_list->task_name}}</td>
                     </tr>
                     <tr>
                         <th>Milestone :</th>
-                        <td></td>
+                        <td>{{ $task_list->milestone}}</td>
                     </tr>
                     <tr>
                         <th>Task Assigned By :</th>
-                        <td></td>
+                        <td>{{ $task_list->task_assigned_by}}</td>
                     </tr>
                     <tr>
                         <th>Start Date :</th>
-                        <td></td>
+                        <td>{{ $task_list->start_date}}</td>
                     </tr>
                     <tr>
                         <th>End Date :</th>
-                        <td></td>
+                        <td>{{ $task_list->end_date}}</td>
                     </tr>
                     <tr>
                         <th>Task Priority :</th>
-                        <td></td>
+                        <td>{{ $task_list->task_priority}}</td>
                     </tr>
                     <tr>
                         <th>Task Status :</th>
-                        <td></td>
+                        <td>{{ $task_list->task_status}}</td>
                     </tr>
                     <tr>
                         <th>Task Description :</th>
-                        <td></td>
+                        <td>{{ $task_list->task_description}}</td>
                     </tr>
 
                 </tbody>

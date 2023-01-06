@@ -16,14 +16,12 @@ class CrmController extends Controller
         $task_list = DB::table('cra_manage_task')->get();
         return view('CRM.manage_tasks',compact('task_list'));
     }
-    public function view_manage_task()
+    public function view_manage_task($id)
     {
-        return view('CRM.view_manage_task');
+        $task_list = DB::table('cra_manage_task')->where('id',$id)->first();
+        return view('CRM.view_manage_task',compact('task_list','id'));
     }
-    public function edit_manage_task()
-    {
-        return view('CRM.edit_manage_task');
-    }
+  
     public function projects()
     {
         return view('CRM.projects');
@@ -197,6 +195,45 @@ class CrmController extends Controller
 
         ]);
         return redirect('manage_tasks');
+    }
+
+    public function edit_manage_task($id)
+    {
+        $edit_manage_task = DB::table('cra_manage_task')->where('id',$id)->first();
+        return view('CRM.edit_manage_task',compact('edit_manage_task','id'));
+    }
+
+    public function update_manage_task(Request $Request){
+        $id   = $Request['id'];
+        $task = $Request['task'];
+        $milestone = $Request['milestone'];
+        $assigned = $Request['assigned'];
+        $start = $Request['start'];
+        $end = $Request['end'];
+        $priority = $Request['priority'];
+        $status = $Request['status'];
+        $description = $Request['description'];
+
+        DB::table('cra_manage_task')->where('id',$id)->update([
+
+            'task_name' => $task,
+            'milestone' => $milestone,
+            'task_assigned_by' => $assigned,
+            'start_date' => $start,
+            'end_date' => $end,
+            'task_priority' => $priority,
+            'task_status' => $status,
+            'task_description' => $description,
+
+        ]);
+        return redirect('manage_tasks');
+    }
+
+    public function drop_manage_task($id)
+    {
+        DB::table('cra_manage_task')->where('id',$id)->delete();
+        return redirect('manage_tasks');
+      
     }
 
 }

@@ -58,11 +58,18 @@
                         <td>{{$list->start_date}}</td>
                         <td>{{$list->end_date}}</td>
                         <td>{{$list->task_status}}</td>
-                        <td><a href="{{url('view_manage_task')}}"> <i style="color:rgb(13, 1, 56);"
-                                    class="fa fa-eye"></i><span class="m-2"></span>
-                                <a href="{{url('edit_manage_task')}}"><i style="color:rgb(13, 1, 56);"
-                                        class="fa fa-edit"></i><span class="m-2"></span>
-                                    <a href="{{url('')}}"><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
+                        <td><a href="{{url('view_manage_task',$list->id)}}"> <i style="color:rgb(13, 1, 56);"
+                                    class="fa fa-eye"></i>
+                                    <span class="m-2"></span>
+
+                                <a href="{{url('edit_manage_task',$list->id)}}"><i style="color:rgb(13, 1, 56);"
+                                        class="fa fa-edit"></i>
+                                        <span class="m-2"></span>
+
+                                    <a onClick="return myFunction();" href="{{url('drop_manage_task',$list->id)}}" style="color:black;"><i
+                                            class="fas fa-trash-alt"></i></a>
+                                    <input type="hidden" value="" id="medicine_id_hidden" class="applicate"
+                                        name="supplier_id_hidden">
                         </td>
 
                     </tr>
