@@ -1595,7 +1595,6 @@ Route::any('crm_panel',"CrmController@crm_panel")->name('crm_panel');
 Route::any('lead',"CrmController@leads")->name('lead');
 Route::any('view_lead',"CrmController@view_leads")->name('view_lead');
 Route::any('proposal_lead',"CrmController@proposal_leads")->name('proposal_lead');
-Route::any('add_manage_task',"CrmController@add_manage_tasks")->name('add_manage_task');
 
 
 
