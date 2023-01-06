@@ -157,6 +157,21 @@ class CrmController extends Controller
         return redirect('/Corporate');
     }
 
+    public function leads()
+    {
+        return view('CRM.lead');
+    }
+
+    public function view_leads()
+    {
+        return view('CRM.view_lead');
+    }
+
+    public function proposal_leads()
+    {
+        return view('CRM.proposal_lead');
+    }
+
 }
 
 

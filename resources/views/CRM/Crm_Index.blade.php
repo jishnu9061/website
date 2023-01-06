@@ -22,6 +22,11 @@
     </div>
 
     <div class="col-sm-4 "><img class="logo_size" src="image\logo\Customer Follow up.png" alt=""><a
+            href="{{ url('lead') }}"><button type="button" style="width:70%;"
+                class="btn btn-primary btn_align_btn">Leads
+                </button></a></div>
+                
+    <div class="col-sm-4 "><img class="logo_size" src="image\logo\Customer Follow up.png" alt=""><a
             href="{{ url('follow-up') }}"><button type="button" style="width:70%;"
                 class="btn btn-primary btn_align_btn">Client
                 Follow Up</button></a></div>
