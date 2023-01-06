@@ -9,9 +9,10 @@
 
         <div class="card-body">
 
-            <form method="post" action="" enctype="multipart/form-data">
+            <form method="post" action="{{url('update_manage_task')}}" enctype="multipart/form-data">
 
                 @csrf
+                <input type="hidden" class="form-control" name="id" value="{{$edit_manage_task->id}}" id="username" required>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
@@ -20,7 +21,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="" id="username" required>
+                                <input type="text" class="form-control" name="task" value="{{$edit_manage_task->task_name}}" id="username" required>
                                 <br>
                             </div>
                         </div>
@@ -32,7 +33,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="text" class="form-control" name="" id="username" required>
+                                <input type="text" class="form-control"  value="{{$edit_manage_task->milestone}}" name="milestone" id="username" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -47,8 +48,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="" id="cars">
-                                    <option>select</option>
+                                <select name="assigned" id="cars">
+                                    <option>{{$edit_manage_task->task_assigned_by}}</option>
                                     <option>HR</option>
                                     <option>Advocate</option>
                                 </select>
@@ -66,7 +67,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="" id="username" required>
+                                <input type="date" class="form-control" name="start" value="{{$edit_manage_task->start_date}}" id="username" required>
                                 <br>
                             </div>
                         </div>
@@ -78,7 +79,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="date" class="form-control" name="" id="username" required>
+                                <input type="date" class="form-control" name="end"  value="{{$edit_manage_task->end_date}}" id="username" required>
                                 <br>
                             </div>
                         </div>
@@ -91,8 +92,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="" id="cars">
-                                    <option>select</option>
+                                <select name="priority" id="cars">
+                                    <option>{{$edit_manage_task->task_priority}}</option>
                                     <option>Low</option>
                                     <option>Mediun</option>
                                     <option>High</option>
@@ -114,7 +115,8 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="" id="cars">
+                                <select name="status" id="cars">
+                                <option>{{$edit_manage_task->task_status}}</option>
                                     <option>Open</option>
                                     <option>In progress</option>
                                     <option>Pending</option>
@@ -134,7 +136,7 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <textarea class="form-control" rows="2"></textarea>
+                                <textarea class="form-control" name="description" value="" rows="2">{{$edit_manage_task->task_description}}</textarea>
                                 <br>
                             </div>
                         </div>
