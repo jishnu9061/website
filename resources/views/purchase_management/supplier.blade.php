@@ -129,7 +129,8 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" name="tax_id" id="username" required>
+                                            <input type="text" class="form-control" name="tax_id" id="username"
+                                                required>
                                             <br>
                                         </div>
                                     </div>
@@ -144,7 +145,8 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="email" class="form-control" name="email" id="username" required>
+                                            <input type="email" class="form-control" name="email" id="username"
+                                                required>
                                             <br>
                                         </div>
                                     </div>
@@ -157,7 +159,8 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" name="contact" id="username" required>
+                                            <input type="text" class="form-control" name="contact" id="username"
+                                                required>
                                             <br>
                                         </div>
                                     </div>
@@ -208,7 +211,8 @@
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                             </div>
-                                            <select class="form-select" aria-label="Default select example" name="Provinces">
+                                            <select class="form-select" aria-label="Default select example"
+                                                name="Provinces">
                                                 <option selected>-- select --</option>
                                                 <option value="Nairobi">Nairobi</option>
                                                 <option value="Central">Central</option>
@@ -232,7 +236,8 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" name="pincode" id="username" required>
+                                            <input type="text" class="form-control" name="pincode" id="username"
+                                                required>
                                             <br>
                                         </div>
                                     </div>

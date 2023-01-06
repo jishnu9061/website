@@ -33,7 +33,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-4 ">
+            <!-- <div class="col-sm-4 ">
                 <div class="dropdown    "> <img class="logo_size" src="image\logo\Document details.png" alt=""><button
                         type="button" style="width:70%;" id="dropdownMenuButton" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false" class="btn btn-primary btn_align_btn">Document Details</button></a>
@@ -43,7 +43,7 @@
                         <a class="dropdown-item" href="{{url('client-document')}}">Individual Client Details</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="col-sm-4 "><img class="logo_size" src="image\logo\Client conversation.png" alt=""><a
                     href="{{ url('communication-list') }}"><button type="button"style="width:70%;"
