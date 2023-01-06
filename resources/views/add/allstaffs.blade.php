@@ -91,9 +91,9 @@
                         <tr class="text-center">
                             <input id="t_id" type="hidden" value="{{ $alluser->id }}">
                             <td>{{ $alluser->uniqueid }}</td>
-                            <td>{{ $alluser->name }}</td>
-                            <td>{{ $alluser->email }}</td>
-                            <td>{{ $alluser->phone }}</td>
+                            <td>{{ $alluser->name     }}</td>
+                            <td>{{ $alluser->email    }}</td>
+                            <td>{{ $alluser->phone    }}</td>
                             <td><a href="{{ url('managestaff' . $alluser->uniqueid) }}" style="color:rgb(13, 1, 56);"><i
                                         class="fa fa-edit"></i></a></td>
                     @endforeach
@@ -257,10 +257,11 @@
                         <div class="mb-1">
                             <label>Departments:&nbsp;</label>
                             <select class="form-select" aria-label="Default select example" name="departments">
-                                <option selected>Select</option>
-                                <option value="Legal Department">Legal Department</option>
-                                <option value="HR Department">HR Department</option>
-                                <option value="Account Department">Account Department</option>
+                            @if(count($get_department))
+                                            @foreach($get_department as $list_rdepartment)
+                                            <option>{{$list_rdepartment->department_name}}</option>
+                                            @endforeach
+                                          @endif
                             </select>
                         </div>
                     </div>
@@ -268,12 +269,11 @@
                         <div class="mb-1">
                             <label>Roles&nbsp;</label>
                             <select class="form-select" aria-label="Default select example" name="role">
-                                <option>Select</option>
-                                <option value="Active">HR Manager</option>
-                                <option value="Inactive">Jr.Advocate</option>
-                                <option value="Resigned">Sr.Advocate</option>
-                                <option value="Suspended">Hr Executive</option>
-                                <option value="Suspended">Receptionist</option>
+                            @if(count($get_role))
+                                            @foreach($get_role as $list_role)
+                                            <option>{{$list_role->role_name}}</option>
+                                            @endforeach
+                                          @endif
                             </select>
                         </div>
                         {{-- <div id="test" style="height:20px;"></div> --}}

@@ -162,11 +162,13 @@ if(request()->hasfile('signature')){
    public function allstaffs()
    {
     $hospital=Auth::user()->Hospital;
+    $get_role = DB::table('cra_add_user_roles')->get();
+    $get_department = DB::table('cra_add_user_department')->get();
    	$allusers=DB::table('users')
        ->leftjoin('departments','departments.id','=','users.departments')
        ->orderby('users.created_at','DESC')->where('users.Hospital',$hospital)->get();
     $leavetype=DB::table('leave_types')->get();
-   	return view('add.allstaffs',['allusers'=>$allusers,'leavetype'=>$leavetype]);
+   	return view('add.allstaffs',compact('get_role','get_department'),['allusers'=>$allusers,'leavetype'=>$leavetype]);
    }
 
    public function editstafff(Request $Request )
@@ -221,7 +223,7 @@ if(request()->hasfile('signature')){
     }
 
     DB::table('users')->where('id',$id)->update($data);
-
+// 
   //   $leavetype = $Request->input('leave_type');
   //   $leavetype_items = $Request->input('leaves');
   //   $final_array=array_combine($leavetype,$leavetype_items);
