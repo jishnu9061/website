@@ -94,16 +94,17 @@ class CrmController extends Controller
     }
     public function expense()
     {
-        return view('CRM.expense');
+        $expense_list = DB::table('cra_add_expense')->get();
+        return view('CRM.expense',compact('expense_list'));
     }
-    public function view_expense()
+
+    public function view_expense($id)
     {
-        return view('CRM.view_expense');
+        $view_expense_list =DB::table('cra_add_expense')->where('id',$id)->first();
+        return view('CRM.view_expense',compact('view_expense_list','id'));
     }
-    public function edit_expense()
-    {
-        return view('CRM.edit_expense');
-    }
+
+   
     public function crm_panel()
     {
         return view('CRM.crm_panel');
@@ -234,6 +235,76 @@ class CrmController extends Controller
         DB::table('cra_manage_task')->where('id',$id)->delete();
         return redirect('manage_tasks');
       
+    }
+
+    public function add_expense(Request $Request)
+    {
+
+        $date = $Request['date'];
+        $staff_name = $Request['staff_name'];
+        $reference = $Request['reference'];
+        $type = $Request['type'];
+        $assigned_by = $Request['assigned_by'];
+        $billing = $Request['billing'];
+        $description = $Request['description'];
+        $status = $Request['status'];
+        $support_detail = $Request['support_detail'];
+
+        DB::table('cra_add_expense')->insert([
+            
+            'date' => $date,
+            'staff_name' => $staff_name,
+            'expense_reference' => $reference,
+            'customer_type' => $type,
+            'task_assigned_by' => $assigned_by,
+            'billing' => $billing,
+            'description' => $description,
+            'status' => $status,
+            'supporting_details' => $support_detail,
+
+        ]);
+        return redirect('expense');
+
+    }
+
+    public function update_expense(Request $Request)
+    {
+        $id   = $Request['id'];
+        $date = $Request['date'];
+        $staff_name = $Request['staff_name'];
+        $reference = $Request['reference'];
+        $type = $Request['type'];
+        $assigned_by = $Request['assigned_by'];
+        $billing = $Request['billing'];
+        $description = $Request['description'];
+        $status = $Request['status'];
+        $support_detail = $Request['support_detail'];
+
+        DB::table('cra_add_expense')->where('id',$id)->update([
+            
+            'date' => $date,
+            'staff_name' => $staff_name,
+            'expense_reference' => $reference,
+            'customer_type' => $type,
+            'task_assigned_by' => $assigned_by,
+            'billing' => $billing,
+            'description' => $description,
+            'status' => $status,
+            'supporting_details' => $support_detail,
+
+        ]);
+        return view('CRM.view_lead');
+    }
+
+    public function edit_expense($id)
+    {
+        $edit_expense_task = DB::table('cra_add_expense')->where('id',$id)->first();
+        return view('CRM.edit_expense',compact('edit_expense_task','id'));
+    }
+
+    public function drop_expense($id){
+        DB::table('cra_add_expense')->where('id',$id)->delete();
+        return redirect('/expense');
     }
 
 }

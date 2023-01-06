@@ -50,21 +50,23 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach($expense_list as $list)
                     <tr>
 
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><a href="{{url('view_expense')}}"> <i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i><span
+                        <td>{{$list->date}}</td>
+                        <td>{{$list->staff_name}}</td>
+                        <td>{{$list->expense_reference}}</td>
+                        <td>{{$list->task_assigned_by}}</td>
+                        <td>{{$list->status}}</td>
+                        <td><a href="{{url('view_expense',$list->id)}}"> <i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i><span
                                     class="m-2"></span>
-                                <a href="{{url('edit_expense')}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span
+                                <a href="{{url('edit_expense',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span
                                         class="m-2"></span>
-                                    <a href="{{url('')}}"><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
+                                    <a href="{{url('drop_expense',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
                         </td>
 
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
 
@@ -98,7 +100,7 @@
                 <!-- Modal body -->
                 <div class="modal-body">
                     <div class="container">
-                        <form method="post" action="" enctype="multipart/form-data">
+                        <form method="post" action="add_expense" enctype="multipart/form-data">
 
                             @csrf
                             <div class="row">
@@ -108,7 +110,7 @@
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                             </div>
-                                            <input type="date" class="form-control" name="" id="username" required>
+                                            <input type="date" class="form-control" name="date" id="username" required>
                                             <br>
                                         </div>
                                     </div>
@@ -120,7 +122,7 @@
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                             </div>
-                                            <input type="text" class="form-control" name="" id="username" required>
+                                            <input type="text" class="form-control" name="staff_name" id="username" required>
                                             <div class="invalid-feedback" style="width: 100%;">
                                                 Number is required.
                                             </div>
@@ -134,7 +136,7 @@
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                             </div>
-                                            <input type="text" class="form-control" name="" id="username" required>
+                                            <input type="text" class="form-control" name="reference" id="username" required>
                                             <div class="invalid-feedback" style="width: 100%;">
                                                 Number is required.
                                             </div>
@@ -151,7 +153,7 @@
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                             </div>
-                                            <select name="" id="cars">
+                                            <select name="type" id="cars">
                                                 <option>select</option>
                                                 <option>Individual</option>
                                                 <option>Corporate</option>
@@ -171,7 +173,7 @@
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                             </div>
-                                            <select name="" id="cars">
+                                            <select name="assigned_by" id="cars">
                                                 <option>select</option>
                                                 <option>Marketing Department</option>
                                                 <option></option>
@@ -187,7 +189,7 @@
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                             </div>
-                                            <input type="text" class="form-control" name="" id="username" required>
+                                            <input type="text" class="form-control" name="billing" id="username" required>
                                             <br>
                                         </div>
                                     </div>
@@ -201,7 +203,7 @@
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                             </div>
-                                            <textarea class="form-control" rows="2"></textarea>
+                                            <textarea class="form-control" name="description" rows="2"></textarea>
                                             <br>
                                         </div>
                                     </div>
@@ -213,7 +215,7 @@
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                             </div>
-                                            <select name="" id="cars">
+                                            <select name="status" id="cars">
                                                 <option>Open</option>
                                                 <option>In progress</option>
                                                 <option>Pending</option>
