@@ -9,9 +9,11 @@
 
         <div class="card-body">
 
-            <form method="post" action="" enctype="multipart/form-data">
+            <form method="post" action="{{url('update_expense')}}" enctype="multipart/form-data">
 
                 @csrf
+                <input type="hidden" class="form-control" name="id" value="{{$edit_expense_task->id}}" id="username"
+                    required>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
@@ -19,7 +21,8 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <input type="date" class="form-control" name="" id="username" required>
+                                <input type="date" class="form-control" name="date"
+                                    value="{{$edit_expense_task->date}}" id="username" required>
                                 <br>
                             </div>
                         </div>
@@ -31,7 +34,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <input type="text" class="form-control" name="" id="username" required>
+                                <input type="text" class="form-control" name="staff_name" value="{{$edit_expense_task->staff_name}}" id="username" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -45,7 +48,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <input type="text" class="form-control" name="" id="username" required>
+                                <input type="text" class="form-control" name="reference" value="{{$edit_expense_task->expense_reference}}" id="username" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>
@@ -54,6 +57,7 @@
                     </div>
 
                 </div>
+
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
@@ -61,8 +65,8 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <select name="" id="cars">
-                                    <option>select</option>
+                                <select name="type" id="cars">
+                                    <option>{{$edit_expense_task->customer_type}}</option>
                                     <option>Individual</option>
                                     <option>Corporate</option>
 
@@ -81,10 +85,10 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <select name="" id="cars">
-                                    <option>select</option>
+                                <select name="assigned_by" id="cars">
+                                    <option>{{$edit_expense_task->task_assigned_by}}</option>
                                     <option>Marketing Department</option>
-
+                                    <option></option>
                                 </select>
                                 <br>
                             </div>
@@ -97,7 +101,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <input type="text" class="form-control" name="" id="username" required>
+                                <input type="text" class="form-control" name="billing" value="{{$edit_expense_task->billing}}" id="username" required>
                                 <br>
                             </div>
                         </div>
@@ -111,7 +115,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <textarea class="form-control" rows="2"></textarea>
+                                <textarea class="form-control" name="description" rows="2">{{$edit_expense_task->description}}</textarea>
                                 <br>
                             </div>
                         </div>
@@ -123,7 +127,9 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <select name="" id="cars">
+                                <select name="status" id="cars">
+                                <option>{{$edit_expense_task->status}}</option>
+
                                     <option>Open</option>
                                     <option>In progress</option>
                                     <option>Pending</option>
@@ -136,16 +142,15 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="exampleFormControlInput1" class="form-label">Supporting
                                 Details</label>
                             <span class="m-2"></span>
-                            <input type="file" class="form-control" name="support_detail">
+                            <input type="file" class="form-control" name="support_detail" value="{{$edit_expense_task->billing}}">
                         </div>
                     </div>
-
                 </div>
                 <br>
                 <br>

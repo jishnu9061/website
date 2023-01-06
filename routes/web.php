@@ -1596,8 +1596,8 @@ Route::any('drop_Corporate/{id}',"CrmController@drop_Corporates")->name('drop_Co
 
 
 Route::any('expense',"CrmController@expense")->name('expense');
-Route::any('view_expense',"CrmController@view_expense")->name('view_expense');
-Route::any('edit_expense',"CrmController@edit_expense")->name('edit_expense');
+Route::any('view_expense/{id}',"CrmController@view_expense")->name('view_expense');
+Route::any('edit_expense/{id}',"CrmController@edit_expense")->name('edit_expense');
 Route::any('crm_panel',"CrmController@crm_panel")->name('crm_panel');
 Route::any('lead',"CrmController@leads")->name('lead');
 Route::any('view_lead',"CrmController@view_leads")->name('view_lead');
@@ -1607,6 +1607,12 @@ Route::any('proposal_lead',"CrmController@proposal_leads")->name('proposal_lead'
 Route::any('add_manage_task',"CrmController@add_manage_tasks")->name('add_manage_task');
 Route::any('update_manage_task',"CrmController@update_manage_task")->name('update_manage_task');
 Route::any('drop_manage_task/{id}',"CrmController@drop_manage_task")->name('drop_manage_task');
+Route::any('add_expense',"CrmController@add_expense")->name('add_expense');
+Route::any('update_expense',"CrmController@update_expense")->name('update_expense');
+Route::any('drop_expense/{id}',"CrmController@drop_expense")->name('drop_expense');
+
+
+
 
 
 

@@ -19,39 +19,41 @@ th {
                 <tbody>
                     <tr>
                         <th>Date :</th>
-                        <td></td>
+                        <td>{{$view_expense_list->date}}</td>
                     </tr>
                     <tr>
                         <th>Staff Name :</th>
-                        <td></td>
+                        <td>{{$view_expense_list->staff_name}}</td>
                     </tr>
                     <tr>
                         <th>Expense Reference :</th>
-                        <td></td>
+                        <td>{{$view_expense_list->expense_reference}}</td>
                     </tr>
                     <tr>
                         <th>Customer Type :</th>
-                        <td></td>
+                        <td>{{$view_expense_list->customer_type}}</td>
                     </tr>
                     <tr>
                         <th>Project Assigned By :</th>
-                        <td></td>
+                        <td>{{$view_expense_list->task_assigned_by}}</td>
+
                     </tr>
                     <tr>
                         <th>Billing Amount :</th>
-                        <td></td>
+                        <td>{{$view_expense_list->billing}}</td>
+
                     </tr>
                     <tr>
                         <th>Description :</th>
-                        <td></td>
+                        <td>{{$view_expense_list->description}}</td>
                     </tr>
                     <tr>
                         <th>Status :</th>
-                        <td></td>
+                        <td>{{$view_expense_list->status}}</td>
                     </tr>
                     <tr>
                         <th>Supporting Details :</th>
-                        <td></td>
+                        <td>{{$view_expense_list->supporting_details}}</td>
                     </tr>
                 </tbody>
             </table>
