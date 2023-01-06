@@ -207,5 +207,9 @@ class OfficeAdministration extends Controller
     {
         return view('OfficeAdministration.view_supplier_invoice_Details');
     }
+    public function submit_payment_reports()
+    {
+        return view('OfficeAdministration.submit_payment_reports');
+    }
     
 }

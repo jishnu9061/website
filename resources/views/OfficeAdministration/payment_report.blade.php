@@ -163,7 +163,7 @@
             </div>
             <div class="col-sm">
                 <br>
-                <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Submit</button>
+                <a href="submit_payment_reports" class="btn btn-primary" role="button" data-bs-toggle="button" Style="width:45%;">Submit</a>
                 <button type="button" class="btn btn-primary float:left" Style="width:45%;"
                     onclick="history.back()">Cancel</button>
             </div>
