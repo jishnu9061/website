@@ -316,15 +316,26 @@ public function leave_request()
 
 public function addleaverequest(Request $Request)
 {
-    $leave_type = $Request['leavetype'];
-    $apply_date = $Request['applydate'];
-    $leave_date = $Request['leavedate1'];
+    $name = $Request['name'];
+    $department = $Request['department'];
+    $apply_date = $Request['apply_date'];
+    $leave_type = $Request['leave_type'];
+    $date_from = $Request['date_from'];
+    $date_to = $Request['date_to'];
+    $reason = $Request['reason'];
+    $attach_file = $Request['attach_file'];
     // $status = $Request['status'];
 
     DB::table('cra_leave_request_details')->insert([
-        'leave_type' => $leave_type,
+        'name' => $name,
+        'department' => $department,
         'apply_date' => $apply_date,
-        'leave_date' => $leave_date,
+        'leave_type' => $leave_type,
+        'date_from' => $date_from,
+        'date_to' => $date_to,
+        'date_from' => $date_from,
+        'reason' => $reason,
+        'attach_file' => $attach_file,
     ]);
     return redirect('/leave_request_details');
 
@@ -346,14 +357,25 @@ public function edit_leave_request($id)
 public function update_leave_request(Request $Request)
     {
         $id = $Request['id'];
-        $leave_type = $Request['leavetype'];
-        $apply_date = $Request['applydate'];
-        $leave_date = $Request['leavedate1'];
+        $name = $Request['name'];
+        $department = $Request['department'];
+        $apply_date = $Request['apply_date'];
+        $leave_type = $Request['leave_type'];
+        $date_from = $Request['date_from'];
+        $date_to = $Request['date_to'];
+        $reason = $Request['reason'];
+        $attach_file = $Request['attach_file'];
         
         $update_leave_request = array(
-            'leave_type' => $leave_type,
-            'apply_date' =>  $apply_date,
-            'leave_date' => $leave_date,
+        'name' => $name,
+        'department' => $department,
+        'apply_date' => $apply_date,
+        'leave_type' => $leave_type,
+        'date_from' => $date_from,
+        'date_to' => $date_to,
+        'date_from' => $date_from,
+        'reason' => $reason,
+        'attach_file' => $attach_file,
         );
         DB::table('cra_leave_request_details')->where('id', $id)->update( $update_leave_request );
         return redirect('/leave_request_details');
