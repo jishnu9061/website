@@ -38,7 +38,7 @@
         <!-- table -->
 
         <div class="table-responsive">
-            <table class="table text-center">
+        <table class="table table-striped table-class" id="table-id">
                 <thead>
                     <tr>
                         <th scope="col">Task Name </th>
