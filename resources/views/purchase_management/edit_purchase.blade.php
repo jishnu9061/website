@@ -44,8 +44,13 @@
                 </tr>
                 <tr>
                     <td scope="row">Status</td>
-                    <td><input class="form-control" type="text" value="{{$list->status}}"
-                            aria-label="Disabled input example"></td>
+                    <td> 
+                        <select class="form-select" aria-label="Default select example" name="City">
+                            <option value="order-placed">order-placed</option>
+                            <option value="verified">verified</option>
+                            <option value="cancel">cancel</option>
+                        </select>
+                    </td>
 
                 </tr>
                 @endforeach
@@ -71,11 +76,16 @@
             <tbody>
                 @foreach($edit_purchases as $listss)
                 <tr>
-                    <td><input class="form-control" type="text" value="{{$listss->item_name}}" aria-label="Disabled input example"></td>
-                    <td><input class="form-control" type="text" value="{{$listss->item_no}}" aria-label="Disabled input example"></td>
-                    <td><input class="form-control" type="text" value="{{$listss->quantity}}" aria-label="Disabled input example"></td>
-                    <td><input class="form-control" type="text" value="{{$listss->price}}" aria-label="Disabled input example"></td>
-                    <td><input class="form-control" type="text" value="{{$listss->total}}" aria-label="Disabled input example"></td>
+                    <td><input class="form-control" type="text" value="{{$listss->item_name}}"
+                            aria-label="Disabled input example"></td>
+                    <td><input class="form-control" type="text" value="{{$listss->item_no}}"
+                            aria-label="Disabled input example"></td>
+                    <td><input class="form-control" type="text" value="{{$listss->quantity}}"
+                            aria-label="Disabled input example"></td>
+                    <td><input class="form-control" type="text" value="{{$listss->price}}"
+                            aria-label="Disabled input example"></td>
+                    <td><input class="form-control" type="text" value="{{$listss->total}}"
+                            aria-label="Disabled input example"></td>
                 </tr>
                 @endforeach
 
