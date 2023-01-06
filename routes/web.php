@@ -1592,6 +1592,13 @@ Route::any('expense',"CrmController@expense")->name('expense');
 Route::any('view_expense',"CrmController@view_expense")->name('view_expense');
 Route::any('edit_expense',"CrmController@edit_expense")->name('edit_expense');
 Route::any('crm_panel',"CrmController@crm_panel")->name('crm_panel');
+Route::any('lead',"CrmController@leads")->name('lead');
+Route::any('view_lead',"CrmController@view_leads")->name('view_lead');
+Route::any('proposal_lead',"CrmController@proposal_leads")->name('proposal_lead');
+
+
+
+
 
 
 
