@@ -118,7 +118,7 @@ color: #999;
                         {{-- <a href="user_attachments"><i  style="  color:rgb(13, 1, 56);" class="fas fa-paperclip" aria-hidden="true"></i> --}}
                         <a href="user_comments"><i  style="  color:rgb(13, 1, 56);" class="fas fa-comment" aria-hidden="true"></i>
                     </td>
-
+{{-- 
                         <!-- <td class="text-center">
                       <div class="dropdown">
                             <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -134,7 +134,7 @@ color: #999;
                             </div>
                         </div> 
 
-                       </td> -->
+                       </td> --> --}}
                      
                      
                      </tr>

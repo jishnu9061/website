@@ -1353,10 +1353,13 @@ Route::any('viewsheet','hrindex@viewsheets')->name('viewsheet');
 Route::any('timesheetmonth','hrindex@timesheetmonths')->name('timesheetmonth');
 Route::any('monthviewsheet','hrindex@monthviewsheets')->name('monthviewsheet');
 
-
-
-
-
+//Subhasree
+Route::any('leave_request_details','hrindex@leave_request')->name('leave_request_details');
+Route::any('addleaverequest','hrindex@addleaverequest')->name('addleaverequest');
+Route::any('approve_leave_request','hrindex@approve_leave_request')->name('approve_leave_request');
+Route::any('edit_leave_request/{id}','hrindex@edit_leave_request')->name('edit_leave_request');
+Route::any('/update_leave_request','hrindex@update_leave_request')->name('update_leave_request');
+//Subhasree
 
 
 Route::any('internal_memos','hrindex@internal_memos')->name('internal_memos');
