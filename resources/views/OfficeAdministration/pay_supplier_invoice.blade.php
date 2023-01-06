@@ -4,21 +4,26 @@
 <div class="container">
     <h4 id="hdtpa"><b>Pay Supplier Invoice</b></h4>
     <br>
-    <div class="row align-items-start">
-        <div class="col">
-            <label class="form-label">Date</label>
-            <input type="date" class="form-control">
-        </div>
-        <div class="col">
-            <label class="form-label">Supplier</label>
-            <select class="form-select" aria-label="Default select example">
+
+
+    <div class="form-row">
+            <div class="form-group col-md-5">
+                <input type="date" class="form-control" placeholder="" aria-label="First name">
+                <div class="form-text">Date</div>
+            </div>
+            <div class="form-group col-md-5">
+                <select class="form-select" aria-label="Default select example">
                 <option selected>--- select ---</option>
                 <option value="1">supplier 1</option>
                 <option value="2">supplier 2</option>
                 <option value="3">supplier 3</option>
             </select>
+                <div class="form-text">Supplier</div>
+            </div>
+            <div class="form-group col-md-2">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
         </div>
-    </div>
     <br>
 
 

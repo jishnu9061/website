@@ -40,7 +40,8 @@
                     <td><span class="badge bg-success">Approved</span></td>
                     <td><a href="{{ url('view_supplier_invoice_Details') }}"><i style="color:rgb(13, 1, 56);"
                                 class="fa fa-eye"></i>
-                                <a href=""><i  style="  color:rgb(13, 1, 56);" class="fas fa-comment" aria-hidden="true"></i></td>
+                            <a data-toggle="modal" data-target="#myModal"><i style="  color:rgb(13, 1, 56);"
+                                    class="fas fa-comment" aria-hidden="true"></i></td>
                 </tr>
                 <tr>
                     <td>0678</td>
@@ -54,10 +55,12 @@
                     <td><span class="badge bg-success">Approved</span></td>
                     <td><a href="{{ url('view_supplier_invoice_Details') }}"><i style="color:rgb(13, 1, 56);"
                                 class="fa fa-eye"></i>
-                                <a href=""><i  style="  color:rgb(13, 1, 56);" class="fas fa-comment" aria-hidden="true"></i></td>
+                                <a data-toggle="modal" data-target="#myModal"><i style="  color:rgb(13, 1, 56);"
+                                    class="fas fa-comment" aria-hidden="true"></i></td>
+                    </td>
                 </tr>
                 <tr>
-                    <td colspan="5">Total  ABC CONSULT</td>
+                    <td colspan="5">Total ABC CONSULT</td>
                     <td>31,950.00</td>
                     <td>0.00</td>
                     <td>0.00</td>
@@ -78,7 +81,9 @@
                     <td><span class="badge bg-success">Approved</span></td>
                     <td><a href="{{ url('view_supplier_invoice_Details') }}"><i style="color:rgb(13, 1, 56);"
                                 class="fa fa-eye"></i>
-                                <a href=""><i  style="  color:rgb(13, 1, 56);" class="fas fa-comment" aria-hidden="true"></i></td>
+                                <a data-toggle="modal" data-target="#myModal"><i style="  color:rgb(13, 1, 56);"
+                                    class="fas fa-comment" aria-hidden="true"></i></td>
+                    </td>
                 </tr>
                 <tr>
                     <td>026</td>
@@ -92,10 +97,12 @@
                     <td><span class="badge bg-success">Approved</span></td>
                     <td><a href="{{ url('view_supplier_invoice_Details') }}"><i style="color:rgb(13, 1, 56);"
                                 class="fa fa-eye"></i>
-                                <a href=""><i  style="  color:rgb(13, 1, 56);" class="fas fa-comment" aria-hidden="true"></i></td>
+                                <a data-toggle="modal" data-target="#myModal"><i style="  color:rgb(13, 1, 56);"
+                                    class="fas fa-comment" aria-hidden="true"></i></td>
+                    </td>
                 </tr>
                 <tr>
-                    <td colspan="5">Total  ABERDARE DOWNSTREAM MINERAL WATER</td>
+                    <td colspan="5">Total ABERDARE DOWNSTREAM MINERAL WATER</td>
                     <td>3,800.00</td>
                     <td>0.00</td>
                     <td>0.00</td>
@@ -114,6 +121,95 @@
     </div>
 
 
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h2 class="text-centre"><b>Post Comment</b></h2>
+
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
+                        <form method="post" enctype="multipart/form-data" action="{{url('')}}">
+                            @csrf
+                            <div class="container">
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <div class="mb-2">
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <div class="mb-2">
+                                            <label for="exampleFormControlTextarea1" class="form-label">Comment</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <div class="mb-2">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <div class="mb-2">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <div class="mb-2">
+                                            <label for="inputEmail4">Send To</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>select</option>
+                                                <option value="1">supplier 1</option>
+                                                <option value="2">supplier 2</option>
+                                                
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <div class="mb-2">
+                                           
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+
+                            </div>
+
+                            <br>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm">
+
+                                </div>
+                                <div class="col-sm">
+                                    <button type="submit" class="btn btn-primary " Style="width:50%;">Submit</button>
+                                    <button type="button" class="btn btn-primary " Style="width:45%;"
+                                        data-dismiss="modal">Close</button>
+                                </div>
+                                <div class="col-sm">
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
 
 
 
