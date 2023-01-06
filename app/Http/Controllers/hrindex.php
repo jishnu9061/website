@@ -305,7 +305,64 @@ public function edit_task_allocation()
 {
     return view('hr.edit_task_allocation');
 }
+//Subhasree
+public function leave_request()
+{
 
+    $leave_request=DB::table('cra_leave_request_details')->get();
+    return view(('hr.leave_request_details'),compact('leave_request'));
+
+}
+
+public function addleaverequest(Request $Request)
+{
+    $leave_type = $Request['leavetype'];
+    $apply_date = $Request['applydate'];
+    $leave_date = $Request['leavedate1'];
+    // $status = $Request['status'];
+
+    DB::table('cra_leave_request_details')->insert([
+        'leave_type' => $leave_type,
+        'apply_date' => $apply_date,
+        'leave_date' => $leave_date,
+    ]);
+    return redirect('/leave_request_details');
+
+}
+public function approve_leave_request()
+{
+    return view('hr.approve_leave_request');
+}
+
+public function edit_leave_request($id)
+{
+
+    
+    $leave_request=DB::table('cra_leave_request_details')->where('id',$id)->first();
+    return view('hr.edit_leave_request',compact('leave_request','id'));
+   
+}
+
+public function update_leave_request(Request $Request)
+    {
+        $id = $Request['id'];
+        $leave_type = $Request['leavetype'];
+        $apply_date = $Request['applydate'];
+        $leave_date = $Request['leavedate1'];
+        
+        $update_leave_request = array(
+            'leave_type' => $leave_type,
+            'apply_date' =>  $apply_date,
+            'leave_date' => $leave_date,
+        );
+        DB::table('cra_leave_request_details')->where('id', $id)->update( $update_leave_request );
+        return redirect('/leave_request_details');
+
+       
+
+    }
+
+//Subhasree
 public function timesheets()
 {
     return view('hr.timesheet');
