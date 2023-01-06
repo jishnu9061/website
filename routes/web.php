@@ -1557,6 +1557,7 @@ Route::any('suppliers_list','OfficeAdministration@suppliers_list')->name('suppli
 Route::any('contractual_supplier','OfficeAdministration@contractual_suppliers')->name('contractual_supplier');
 Route::any('payments_transfer','OfficeAdministration@payments_transfers')->name('payments_transfer');
 Route::any('payment_report','OfficeAdministration@payment_reports')->name('payment_report');
+Route::any('submit_payment_reports','OfficeAdministration@submit_payment_reports')->name('submit_payment_reports');
 Route::any('petty_payment','OfficeAdministration@petty_payments')->name('petty_payment');
 Route::any('petty_report','OfficeAdministration@petty_reports')->name('petty_report');
 Route::any('settled_fee','OfficeAdministration@settled_fees')->name('settled_fee');

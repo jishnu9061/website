@@ -4,8 +4,9 @@
 <div class="container">
     <h4 id="hdtpa"><b>Corporate Customers </b></h4>
     <br>
-    <div class="row">
-                                    <div class="col-md-12 order-md-1">
+    <div class="card">
+
+<div class="card-body">
                                         <form method="post" action="{{url('update_Corporate')}}" id="form">
                                             @csrf
                                             <input type="hidden" name="id" value="{{$update_list->Id}}">

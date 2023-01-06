@@ -4,6 +4,7 @@
 <div class="container">
     <h4 id="hdtpa"><b>Pay Supplier Invoice</b></h4>
     <br>
+    <br>
 
 
     <div class="form-row">
@@ -60,8 +61,7 @@
             <tbody>
 
                 <tr>
-                    <td colspan="5"> <input type="text" placeholder="Mode of Payment" class="form-control" disabled>
-                    </td>
+                    <td colspan="5">Mode of Payment</td>
                     <td colspan="3"><select class="form-select" aria-label="Default select example">
                             <option selected>select payment mode </option>
                             <option value="1">One</option>
@@ -70,8 +70,7 @@
                         </select></td>
                 </tr>
                 <tr>
-                    <td colspan="5"> <input type="text" placeholder="Account Type" class="form-control" disabled>
-                    </td>
+                    <td colspan="5">Account Type</td>
                     <td colspan="3"><select class="form-select" aria-label="Default select example">
                             <option selected>---select--- </option>
                             <option value="1">One</option>
@@ -80,9 +79,7 @@
                         </select></td>
                 </tr>
                 <tr>
-                    <td colspan="5"> <input type="text" placeholder="Account to Withdraw from" class="form-control"
-                            disabled>
-                    </td>
+                    <td colspan="5">Account to Withdraw from </td>
                     <td colspan="3"><select class="form-select" aria-label="Default select example">
                             <option selected>---select--- </option>
                             <option value="1">One</option>
@@ -91,8 +88,7 @@
                         </select></td>
                 </tr>
                 <tr>
-                    <td colspan="5"> <input type="text" placeholder="Amount to Paid" class="form-control" disabled>
-                    </td>
+                    <td colspan="5">Amount to Paid </td>
                     <td colspan="3"><input class="form-control" type="text" placeholder=""
                             aria-label=".form-control example"></td>
                 </tr>
@@ -101,8 +97,7 @@
                     <td colspan="8"></td>
                 </tr>
                 <tr>
-                    <td colspan="5"> <input type="text" placeholder="Currency" class="form-control" disabled>
-                    </td>
+                    <td colspan="5">Currency</td>
                     <td colspan="3"><select class="form-select" aria-label="Default select example">
                             <option selected>KES </option>
                             <option value="1"></option>
@@ -111,8 +106,7 @@
                         </select></td>
                 </tr>
                 <tr>
-                    <td colspan="5"> <input type="text" placeholder="Exchange Rate" class="form-control" disabled>
-                    </td>
+                    <td colspan="5">Exchange Rate </td>
                     <td colspan="3"><input class="form-control" type="text" placeholder=""
                             aria-label=".form-control example"></td>
                 </tr>
