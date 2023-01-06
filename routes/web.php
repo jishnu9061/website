@@ -1352,6 +1352,13 @@ Route::any('timesheetweek','hrindex@timesheetweeks')->name('timesheetweek');
 Route::any('viewsheet','hrindex@viewsheets')->name('viewsheet');
 Route::any('timesheetmonth','hrindex@timesheetmonths')->name('timesheetmonth');
 Route::any('monthviewsheet','hrindex@monthviewsheets')->name('monthviewsheet');
+
+//leave request
+Route::any('leave_request_details','hrindex@leave_request')->name('leave_request_details');
+Route::any('addleaverequest','hrindex@addleaverequest')->name('addleaverequest');
+Route::any('approve_leave_request','hrindex@approve_leave_request')->name('approve_leave_request');
+Route::any('edit_leave_request/{id}','hrindex@edit_leave_request')->name('edit_leave_request');
+Route::any('/update_leave_request','hrindex@update_leave_request')->name('update_leave_request');
 Route::any('internal_memos','hrindex@internal_memos')->name('internal_memos');
 Route::any('view_memo','hrindex@view_memo')->name('view_memo');
 Route::any('edit_memo','hrindex@edit_memo')->name('edit_memo');
@@ -1570,8 +1577,8 @@ Route::any('about',"etc@index")->name('about');
 Route::any('help',"etc@index_help")->name('help');
 
 Route::any('manage_tasks',"CrmController@manage_tasks")->name('manage_tasks');
-Route::any('view_manage_task',"CrmController@view_manage_task")->name('view_manage_task');
-Route::any('edit_manage_task',"CrmController@edit_manage_task")->name('edit_manage_task');
+Route::any('view_manage_task/{id}',"CrmController@view_manage_task")->name('view_manage_task');
+Route::any('edit_manage_task/{id}',"CrmController@edit_manage_task")->name('edit_manage_task');
 Route::any('projects',"CrmController@projects")->name('projects');
 Route::any('view_project',"CrmController@view_project")->name('view_project');
 Route::any('edit_project',"CrmController@edit_project")->name('edit_project');
@@ -1595,6 +1602,13 @@ Route::any('crm_panel',"CrmController@crm_panel")->name('crm_panel');
 Route::any('lead',"CrmController@leads")->name('lead');
 Route::any('view_lead',"CrmController@view_leads")->name('view_lead');
 Route::any('proposal_lead',"CrmController@proposal_leads")->name('proposal_lead');
+
+
+Route::any('add_manage_task',"CrmController@add_manage_tasks")->name('add_manage_task');
+Route::any('update_manage_task',"CrmController@update_manage_task")->name('update_manage_task');
+Route::any('drop_manage_task/{id}',"CrmController@drop_manage_task")->name('drop_manage_task');
+
+
 
 
 

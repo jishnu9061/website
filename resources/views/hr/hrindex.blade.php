@@ -4,8 +4,8 @@
    <h4 id="hdtpa"><b>HR</b></h4>
    <br>
 
-        
-   
+
+
 
         <div class="row sm">
                 <!-- <div class="col-sm-4 "> <a href="{{ url('addstaffs') }}"><img class="logo_size" src="assets\image\Bring up report.png"
@@ -38,19 +38,28 @@
                  <div class="col-sm-4 "> <a href="{{ url('timesheet') }}"><img class="logo_size"
                  src="assets\image\File list progress report.png" alt=""><button type="button"
                  style="width:70%;" class="btn btn-primary btn_align_btn"> Time sheet</button></a></div>
-            <div class="col-sm-4 "> <a href="{{ url('task_allocation') }}"><img class="logo_size"
+           
+                 <div class="col-sm-4 "> <a href="{{ url('task_allocation') }}"><img class="logo_size"
                  src="assets\image\File list progress report.png" alt=""><button type="button"
                  style="width:70%;" class="btn btn-primary btn_align_btn"> Task Allocation</button></a></div>
-            
-                            
+
+
          </div>
-           
-         
+         <div class="col-sm-4 "> <a href="{{ url('leave_request_details') }}"><img class="logo_size"
+            src="assets\image\File list progress report.png" alt=""><button type="button"
+            style="width:70%;" class="btn btn-primary btn_align_btn"> Leave Request Details</button></a></div>
+
+
+
+
+    </div>
+
+
          <br>
     {{--sub heading --}}
     <h5 id="hdbtb">Settings</h5>
     <br>
-         
+
 
          <div class="row sm">
 
@@ -62,15 +71,15 @@
                 <div class="col-sm-4 "> <a href="{{url('internal_memos')}}"><img class="logo_size"
                  src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
                  class="btn btn-primary btn_align_btn">Internal Memos</button></a></div>
-                        
-        </div>
-        </div>
-    
 
-            
-              
-                
-           
-           
+        </div>
+        </div>
+
+
+
+
+
+
+
 @endsection
 
