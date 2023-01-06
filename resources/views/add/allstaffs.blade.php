@@ -258,8 +258,8 @@
                             <label>Departments:&nbsp;</label>
                             <select class="form-select" aria-label="Default select example" name="departments">
                             @if(count($get_department))
-                                            @foreach($get_department as $list_rdepartment)
-                                            <option>{{$list_rdepartment->department_name}}</option>
+                                            @foreach($get_department as $list_department)
+                                            <option>{{$list_department->department_name}}</option>
                                             @endforeach
                                           @endif
                             </select>
@@ -500,13 +500,11 @@
                         <div class="mb-1">
                             <label>Bank Name</label>
                             <select class="form-select" aria-label="Default select example" name="bank">
-                                <option selected value="">Select</option>
-                                <option value="UBA Kenya Bank Ltd">UBA Kenya Bank Ltd</option>
-                                <option value="Inactive">The Co-operative Bank</option>
-                                <option value="Resigned">Suntra Investment Bank Ltd</option>
-                                <option value="Suspended">Sterling Investment Bank</option>
-                                <option value="Suspended">Prime Bank</option>
-                                <option value="Suspended">Paramount Bank</option>
+                            @if(count($get_bank))
+                                            @foreach($get_bank as $list_bank)
+                                            <option>{{$list_bank->bank_name}}</option>
+                                            @endforeach
+                                          @endif
                             </select>
                         </div>
                     </div>
@@ -528,8 +526,14 @@
                             <label>Branch</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="bank_branch" id="address"
-                                    value="">
+                                    <select name="bank_branch" id="address">
+                                    @if(count($get_bank))
+                                            @foreach($get_bank as $list_branch)
+                                            <option>{{$list_branch->bank_name}}</option>
+                                            @endforeach
+                                          @endif
+                                    </select>
+                                    
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
