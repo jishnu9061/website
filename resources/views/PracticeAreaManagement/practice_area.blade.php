@@ -7,7 +7,7 @@
     <h4 id="hdtpa"><b>Practice Area</b></h4>
     <br>
 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New Practice
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Practice
         Area</button></a>
 
     <br>
@@ -53,7 +53,7 @@
 
                     <td>Family Law</td>
                     <td>
-                        <a href=""><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
+                        <a href="edit_practice_area"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
                             <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
                     </td>
 
@@ -61,63 +61,63 @@
                 <tr>
                     <td>Personal Injury</td>
                     <td>
-                        <a href=""><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
+                        <a href="edit_practice_area"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
                             <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
                     </td>
                 </tr>
                 <tr>
                     <td>General Practice</td>
                     <td>
-                        <a href=""><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
+                        <a href="edit_practice_area"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
                             <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
                     </td>
                 </tr>
                 <tr>
                     <td>Estate Planning</td>
                     <td>
-                        <a href=""><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
+                        <a href="edit_practice_area"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
                             <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
                     </td>
                 </tr>
                 <tr>
                     <td>Real Estate</td>
                     <td>
-                        <a href=""><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
+                        <a href="edit_practice_area"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
                             <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
                     </td>
                 </tr>
                 <tr>
                     <td>Criminal Law</td>
                     <td>
-                        <a href=""><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
+                        <a href="edit_practice_area"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
                             <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
                     </td>
                 </tr>
                 <tr>
                     <td>Civil Litigation</td>
                     <td>
-                        <a href=""><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
+                        <a href="edit_practice_area"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
                             <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
                     </td>
                 </tr>
                 <tr>
                     <td>Business Law</td>
                     <td>
-                        <a href=""><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
+                        <a href="edit_practice_area"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
                             <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
                     </td>
                 </tr>
                 <tr>
                     <td>Guardianship</td>
                     <td>
-                        <a href=""><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
+                        <a href="edit_practice_area"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
                             <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
                     </td>
                 </tr>
                 <tr>
                     <td>Probate Law</td>
                     <td>
-                        <a href=""><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
+                        <a href="edit_practice_area"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
                             <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
                     </td>
                 </tr>
@@ -151,7 +151,7 @@
 
             <!-- Modal Header -->
             <div class="modal-header">
-                <h2 class="text-centre"><b>Add Practice Area</b></h2>
+                <h2 class="text-centre"><b>Add New Practice Area</b></h2>
 
             </div>
 

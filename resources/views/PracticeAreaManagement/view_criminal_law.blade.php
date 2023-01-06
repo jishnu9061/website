@@ -3,10 +3,90 @@
 
 {{-- heading --}}
 <div class="container">
-    <h4 id="hdtpa"><b>View Criminal Law</b></h4>
+    <h4 id="hdtpa"><b> Criminal Law Details</b></h4>
     <br>
 
-    <form action="">
+
+    <form method="post" action="{{url('')}}">
+        @csrf
+        <div class="container">
+            <div class="text-left">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td scope="row">Matter Info:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td scope="row">Defendant:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Matter Type:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Prosecutor:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Case Details:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Investigator Details:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Victim Details:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </form>
+
+
+</div>
+
+@endsection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form action="">
         <div class="row">
             <div class="col-md-4">
                 <div class="mb-1">
@@ -14,7 +94,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <input type="text" class="form-control" placeholder="OH-Felony-ER">
+                        <input type="text" class="form-control" value="OH-Felony-ER" Disabled>
                     </div>
                 </div>
             </div>
@@ -24,7 +104,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <input type="text" class="form-control" placeholder="Larry James">
+                        <input type="text" class="form-control" value="Larry James" Disabled>
                     </div>
                 </div>
             </div>
@@ -34,7 +114,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <input type="text" class="form-control" placeholder="Felony">
+                        <input type="text" class="form-control" value="Felony" Disabled>
                     </div>
                 </div>
             </div>
@@ -47,7 +127,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <textarea class="form-control" rows="2" placeholder="Cuyahoga Prosecutor's office"></textarea>
+                        <textarea class="form-control" rows="2" value="Cuyahoga Prosecutor's office" Disabled></textarea>
                     </div>
                 </div>
             </div>
@@ -58,7 +138,7 @@
                         <div class="input-group-prepend">
                         </div>
                         <textarea class="form-control" rows="2"
-                            placeholder="Cuyahoga Criminal 2015-F-123456"></textarea>
+                            value="Cuyahoga Criminal 2015-F-123456" Disabled></textarea>
                     </div>
                 </div>
             </div>
@@ -68,7 +148,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <textarea class="form-control" rows="2" placeholder="Chris Investigator"></textarea>
+                        <textarea class="form-control" rows="2" value="Chris Investigator" Disabled></textarea>
                     </div>
                 </div>
             </div>
@@ -81,7 +161,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <textarea class="form-control" rows="2" placeholder="John"></textarea>
+                        <textarea class="form-control" rows="2" value="John" Disabled></textarea>
                     </div>
                 </div>
             </div>
@@ -93,18 +173,14 @@
 
             </div>
         </div>
-    </form>
+    </form> -->
 
 
 
-    <!-- <div class="mb-3">
+<!-- <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Supporting Details</label>
                     <span class="m-2"></span>
                     <input type="file" class="form-control" >
                         </div>
       </div>
   </div> -->
-
-
-
-    @endsection

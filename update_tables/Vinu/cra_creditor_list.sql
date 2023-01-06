@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2022 at 06:07 AM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 7.4.30
+-- Generation Time: Jan 02, 2023 at 05:27 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,32 +24,23 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cra_manage_items`
+-- Table structure for table `cra_creditor_list`
 --
 
-CREATE TABLE `cra_manage_items` (
+CREATE TABLE `cra_creditor_list` (
   `id` int(11) NOT NULL,
-  `Category` varchar(225) DEFAULT NULL,
-  `Item_Type` varchar(225) DEFAULT NULL,
-  `Item_Name` varchar(225) DEFAULT NULL,
-  `Reorder_Level` int(11) DEFAULT NULL
+  `date_from` date DEFAULT NULL,
+  `date_to` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `cra_manage_items`
---
-
-INSERT INTO `cra_manage_items` (`id`, `Category`, `Item_Type`, `Item_Name`, `Reorder_Level`) VALUES
-(11, 'furniture', 'pen', 'fffff', 123);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `cra_manage_items`
+-- Indexes for table `cra_creditor_list`
 --
-ALTER TABLE `cra_manage_items`
+ALTER TABLE `cra_creditor_list`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -57,10 +48,10 @@ ALTER TABLE `cra_manage_items`
 --
 
 --
--- AUTO_INCREMENT for table `cra_manage_items`
+-- AUTO_INCREMENT for table `cra_creditor_list`
 --
-ALTER TABLE `cra_manage_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+ALTER TABLE `cra_creditor_list`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

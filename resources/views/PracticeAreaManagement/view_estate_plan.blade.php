@@ -2,11 +2,96 @@
 @section('content')
 
 {{-- heading --}}
-   <div class="container" >            
-               <h4 id="hdtpa"><b>View Estate Planning</b></h4>
-               <br>
+<div class="container">
+    <h4 id="hdtpa"><b> Estate Planning Details</b></h4>
+    <br>
 
-<form action="">
+    <form method="post" action="{{url('')}}">
+        @csrf
+        <div class="container">
+            <div class="text-left">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td scope="row">File No:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td scope="row">Client Name:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Matter Type:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Estate Details:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Trust:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Property Details:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Accountant:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Financial Advisor:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </form>
+
+
+</div>
+
+@endsection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form action="">
 
      <div class="row">
         <div class="col-md-4">
@@ -14,7 +99,7 @@
                     <label for="exampleFormControlInput1" class="form-label">File No</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                    <input type="text" class="form-control" placeholder="72G6585K	">
+                    <input type="text" class="form-control" value="72G6585K" Disabled>
            </div>
            </div>
            </div>
@@ -23,7 +108,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Client Name</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                    <input type="text" class="form-control" placeholder="John">
+                    <input type="text" class="form-control" value="John" Disabled>
            </div>
            </div>
         </div>
@@ -32,7 +117,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                    <input type="text" class="form-control" placeholder="Estate Planning">
+                    <input type="text" class="form-control" value="Estate Planning" Disabled>
         </div>
         </div>
     </div>
@@ -44,7 +129,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Estate Details</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                    <textarea class="form-control" rows="2" placeholder="Executor: George"></textarea>
+                    <textarea class="form-control" rows="2" value="Executor: George" Disabled></textarea>
                         </div>
                         </div>
     </div>
@@ -53,7 +138,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Trust</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                    <textarea class="form-control" rows="2" placeholder="John"></textarea>
+                    <textarea class="form-control" rows="2" value="John" Disabled></textarea>
                         </div>
                         </div>
     </div>
@@ -62,7 +147,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Property Details</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                    <textarea class="form-control" rows="2" placeholder="4456 Kenya"></textarea>
+                    <textarea class="form-control" rows="2" value="4456 Kenya" Disabled></textarea>
                         </div>
                         </div>
     </div>
@@ -73,7 +158,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Accountant</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                    <textarea class="form-control" rows="2" placeholder="Chris"></textarea>
+                    <textarea class="form-control" rows="2" value="Chris" Disabled></textarea>
                         </div>
                         </div>
     </div>
@@ -82,7 +167,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Financial Advisor</label>
                     <div class="input-group">
                         <div class="input-group-prepend"></div>
-                    <textarea class="form-control" rows="2" placeholder="Smith Investments"></textarea>
+                    <textarea class="form-control" rows="2" value="Smith Investments" Disabled></textarea>
                         </div>
                         </div>
     </div>
@@ -93,16 +178,12 @@
 
  </form>  
  </div>  
-    
-   
-      <!-- <div class="mb-3">
+     -->
+
+<!-- <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Supporting Details</label>
                     <span class="m-2"></span>
                     <input type="file" class="form-control" >
                         </div>
       </div>
   </div> -->
-
-
-
-@endsection

@@ -9,15 +9,6 @@
 
 
     <div class="container">
-        <div class="shadow-sm auto bg-body rounded"> 
-            <nav class="navbar bg-light" style="height:50%";>
-             <a class="navbar-brand">Reviewed Applications</a>
-               <button class="btn btn-outline-success" type="button">View All</button> 
-            </nav>
-        </div>
-    </div>
-    <br>
-    <div class="container">
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->

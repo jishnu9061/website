@@ -220,7 +220,7 @@ class UserManagement extends Controller
 
     public function manageuserroles()
     {
-
+// 
         $user_role=DB::table('cra_add_user_roles')->get();
         return view('user_management.manage_user_roles',compact('user_role'));
         // return view('user_management.manage_user_roles');

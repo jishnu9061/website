@@ -13,13 +13,10 @@
         </div>
         @endif
 
-          {{-- heading --}}
-  <h4 id="hdtpa"><b>Search</b></h4>
-  
-
-
-            <br>
-            <div>
+        {{-- heading --}}
+        <h4 id="hdtpa"><b>Search</b></h4>
+        <br>
+        <div>
             <input class="btn btn-primary" type="button" value="Today">
             <input class="btn btn-primary" type="button" value="This Week">
             <input class="btn btn-primary" type="button" value="Last Week">
@@ -29,14 +26,16 @@
             <input class="btn btn-primary" type="button" value="Last Quater">
             <input class="btn btn-primary" type="button" value="This Year">
             <input class="btn btn-primary" type="button" value="Last Year">
-            </div>
-
         </div>
-        
+
+    </div>
 
 
 
-        <div>
+    <div class="card">
+
+        <div class="card-body">
+
             <form method="post" action="" id="form">
                 @csrf
                 <div class="row">
@@ -48,7 +47,7 @@
 
                                 </div>
                                 <select name="client" id="cars">
-                                <option>---select---</option>
+                                    <option>---select---</option>
                                     <option>client 1</option>
                                     <option>client 2</option>
                                     <option>client 3</option>
@@ -62,8 +61,6 @@
 
                     </div>
 
-
-
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">File</label>
@@ -72,8 +69,8 @@
 
                                 </div>
                                 <select name="file" id="cars">
-                                <option>---select---</option>
-                                <option>File 1</option>
+                                    <option>---select---</option>
+                                    <option>File 1</option>
                                     <option>File 2</option>
                                     <option>File 3</option>
                                     <option>File 4</option>
@@ -113,38 +110,32 @@
                         </div>
                     </div>
 
-
                 </div>
                 <br>
 
                 <div class="row">
-                        <div class="col-sm">
+                    <div class="col-sm">
 
-                        </div>
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-                            <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Search</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
-                        </div>
                     </div>
+                    <div class="col-sm">
 
+                    </div>
+                    <div class="col-sm">
+                        <br>
+                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Search</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                            onclick="history.back()">Cancel</button>
+                    </div>
+                </div>
+            </form>
 
 
         </div>
     </div>
-
-
 </div>
 
 
 
-
-
-</div>
-</div>
 <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 <script type="text/javascript">
 $(function() {

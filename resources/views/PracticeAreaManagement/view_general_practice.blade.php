@@ -3,18 +3,99 @@
 
 {{-- heading --}}
 <div class="container">
-    <h4 id="hdtpa"><b>View General Practice</b></h4>
+    <h4 id="hdtpa"><b> General Practice Details</b></h4>
     <br>
 
+    <form method="post" action="{{url('')}}">
+        @csrf
+        <div class="container">
+            <div class="text-left">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td scope="row">File No:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
 
- <form action="">
+                        </tr>
+                        <tr>
+                            <td scope="row">Client Name:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Matter Type:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Other Party:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Attorney:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Case Details:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Witness Details:</td>
+                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                    Disabled>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </form>
+
+
+</div>
+
+@endsection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form action="">
     <div class="row">
         <div class="col-md-4">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">File No</label>
                 <div class="input-group">
                     <div class="input-group-prepend"></div>
-                    <input type="text" class="form-control" placeholder="52B6577Z">
+                    <input type="text" class="form-control" value="52B6577Z" Disabled>
                 </div>
             </div>
         </div>
@@ -23,7 +104,7 @@
                 <label for="exampleFormControlInput1" class="form-label">Client Name</label>
                 <div class="input-group">
                     <div class="input-group-prepend"></div>
-                    <input type="text" class="form-control" placeholder="Michael">
+                    <input type="text" class="form-control" value="Michael" Disabled>
                 </div>
             </div>
         </div>
@@ -32,7 +113,7 @@
                 <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
                 <div class="input-group">
                     <div class="input-group-prepend"></div>
-                    <input type="text" class="form-control" placeholder="Civil Dispute">
+                    <input type="text" class="form-control" value="Civil Dispute" Disabled>
                 </div>
             </div>
         </div>
@@ -44,7 +125,7 @@
                 <label for="exampleFormControlInput1" class="form-label">Other Party</label>
                 <div class="input-group">
                     <div class="input-group-prepend"></div>
-                    <input type="text" class="form-control" placeholder="Jones">
+                    <input type="text" class="form-control" value="Jones" Disabled>
                 </div>
             </div>
         </div>
@@ -53,7 +134,7 @@
                 <label for="exampleFormControlInput1" class="form-label">Attorney</label>
                 <div class="input-group">
                     <div class="input-group-prepend"></div>
-                    <input type="text" class="form-control" placeholder="Samuel">
+                    <input type="text" class="form-control" value="Samuel" Disabled>
                 </div>
             </div>
         </div>
@@ -63,7 +144,7 @@
                 <div class="input-group">
                     <div class="input-group-prepend"></div>
                     <textarea class="form-control" rows="2"
-                        placeholder="Filed Date: 5/2/2019 Service by: Currier Los Angles"></textarea>
+                        value="Filed Date: 5/2/2019 Service by: Currier Los Angles" Disabled></textarea>
                 </div>
             </div>
         </div>
@@ -74,7 +155,7 @@
                 <label for="exampleFormControlInput1" class="form-label">Witness</label>
                 <div class="input-group">
                     <div class="input-group-prepend"></div>
-                    <textarea class="form-control" rows="2" placeholder="Chris"></textarea>
+                    <textarea class="form-control" rows="2" value="Chris" Disabled></textarea>
                 </div>
             </div>
         </div>
@@ -86,19 +167,15 @@
         </div>
     </div>
 </form>
-</div>
+</div> -->
 
 
 
 
-    <!-- <div class="mb-3">
+<!-- <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Supporting Details</label>
                     <span class="m-2"></span>
                     <input type="file" class="form-control" >
                         </div>
       </div>
   </div> -->
-
-
-
-    @endsection

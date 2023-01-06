@@ -26,7 +26,9 @@
     <br>
     <br>
     <div>
-        <div class="continer" style="width:70%; margin-left: auto; margin-right: auto;">
+    <div class="card">
+
+<div class="card-body">
             <form method="post" action="" id="form">
                 @csrf
 
@@ -86,7 +88,7 @@
 
 
                 </div>
-        </div>
+     
 
         <br>
 
@@ -99,12 +101,14 @@
             </div>
             <div class="col-sm">
                 <br>
-                <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Submit</button>
+                <a href="submit_undeposit_fund" class="btn btn-primary" role="button" data-bs-toggle="button" Style="width:45%;">Submit</a>
                 <button type="button" class="btn btn-primary float:left" Style="width:45%;"
                     onclick="history.back()">Cancel</button>
             </div>
         </div>
-
+</form>
+</div>
+</div>
 
 
     </div>

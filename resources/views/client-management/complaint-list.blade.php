@@ -58,7 +58,7 @@ color: #999;
             <b><u>Complaint Register</u></b> -->
             {{-- heading --}}
             <div class="container">
-            <h4 id="hdtpa"><b>Complaint Register</b></h4>
+            <h4 id="hdtpa"><b>Complaint Register Details</b></h4>
             <br>
         
 
@@ -105,9 +105,9 @@ color: #999;
                           
                                 <!-- <th class="text-center"> No</th> -->
                                 <th class="text-center">Date</th>
-                                <th class="text-center">Client</th>
+                                <th class="text-center">Client Type</th>
                                 <th class="text-center">Files</th>
-                                <th class="text-center">Customer Institution</th>
+                                <th class="text-center">Client Institution</th>
                                 <th class="text-center">Contact</th>
                                 <th class="text-center">Complaint Description</th>
                                 <th class="text-center">Actions</th>
@@ -217,11 +217,18 @@ color: #999;
                                                 <div class="row">
                                                     <div class="col-md-4">
                                                         <div class="mb-1">
-                                                            <label for="username">Customer Name</label>
+                                                            <label for="username">Client Name</label>
                                                             <div class="input-group">
                                                                 <div class="input-group-prepend"></div>
-                                                                <input type="text" class="form-control" name="name"
-                                                                    id="age" value="" min="0" max="99">
+                                                                <!-- <input type="text" class="form-control" name="name"
+                                                                    id="age" value="" min="0" max="99"> -->
+                                                                    <select name="Staff" id="cars">
+                                                                    <option>Select</option>
+                                                                    <option>client 1</option>
+                                                                    <option>client 2</option>
+                                                                    <option>client 3</option>
+                                                                    <option>client 4</option>
+                                                                </select>
                                                                 <div class="invalid-feedback" style="width: 100%;">
                                                                     Age is required.
                                                                 </div>

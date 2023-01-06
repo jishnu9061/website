@@ -1,5 +1,7 @@
 @extends('layouts.hmsmain')
+
 @section('content')
+
 
      {{-- heading --}}
     <h4 id="hdtpa"><b>User Management</b></h4>

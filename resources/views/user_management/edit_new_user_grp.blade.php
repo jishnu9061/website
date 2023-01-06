@@ -1,48 +1,53 @@
 @extends('layouts.hmsmain')
 @section('content')
-<html>
 
 <div class="container">
-        
-          
-                {{-- heading --}}
+
+
+    {{-- heading --}}
     <h4 id="hdtpa"><b>Edit Group</b></h4>
     <br><br>
 
-      
-   
-    <div class="row">
-        <div class="col-md-12">
+
+    <div class="card">
+
+        <div class="card-body">
+
             <form method="post" action="{{url('update_group')}}" id="form">
                 @csrf
-              
+
                 <input type="hidden" name="id" value="{{$edit_user->id}}">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Group Code</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="group_code" id="username" value="{{$edit_user->group_code}}">
+                                <input type="text" class="form-control" name="group_code" id="username"
+                                    value="{{$edit_user->group_code}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Group Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="group_name" id="username" value="{{$edit_user->group_name}}">
+                                <input type="text" class="form-control" name="group_name" id="username"
+                                    value="{{$edit_user->group_name}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Default Menu</label>
                             <div class="input-group">
@@ -64,7 +69,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Group Roles</label>
                             <div class="input-group">
@@ -87,7 +92,7 @@
                         </div>
                     </div>
                 </div>
-
+                <br>
                 <div class="row">
                     <div class="col-sm">
 
@@ -98,20 +103,19 @@
                     <div class="col-sm">
                         <br>
                         <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
-                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                            onclick="history.back()">Cancel</button>
                     </div>
                 </div>
-       
-        </form>
+
+            </form>
+
+        </div>
     </div>
 </div>
-</div>
 
 
 
-</body>
-
-</html>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
 </script>

@@ -27,16 +27,15 @@
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        {{-- vipin --}}
+
         {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" /> --}}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
-        {{-- vipin --}}
+
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css"
             href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
-        <!-- vinu -->
 
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
@@ -70,6 +69,17 @@
         <title>Make Simple Javascript Timer</title>
         <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Alexandria' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Atkinson Hyperlegible' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Carter One' rel='stylesheet'>
+
+
+
+
+
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
         <script>
         $(function() {
             $('[data-toggle="tooltip"]').tooltip()
@@ -86,18 +96,18 @@
         }
 
         body {
-            background-color: #F4F4F6;
-            font-family: 'Be Vietnam Pro';
+            background-color: #e9e6d65e;
+            /* background-color: #ffffff; */
+            /* font-family: 'Be Vietnam Pro'; */
+            /* font-family: 'Alexandria'; */
+            /* font-family: 'Atkinson Hyperlegible'; */
+            /* font-family: 'Carter One'; */
+            /* font-size: 22px; */
 
         }
 
         html {
             scroll-behavior: smooth;
-
-
-
-
-
         }
 
         .pagination>li>span {
@@ -186,274 +196,88 @@
         #buttons-container button:active {
             opacity: 0.7;
         }
+
+
+
+        .progress {
+            background: rgb(252, 245, 184);
+            display: block;
+            height: 5px;
+            text-align: center;
+            transition: width .3s;
+            width: 0;
+        }
+
+        .progress.hide {
+            opacity: 0;
+            transition: opacity 1.3s;
+        }
+
+        .sidebar-menu{
+    animation: fadeInAnimation ease 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+}
         </style>
 
     </head>
 
     <body>
 
-        <!-- ======= Header ======= -->
-        {{-- <header id="header" class="header fixed-top d-flex align-items-center"> --}}
+ 
 
-        <!-- <div class="d-flex align-items-center justify-content-between">
-  <a href="index.html" class="logo d-flex align-items-center">
-    <img class="cr_logo" src="assets/img/cr_logo.jpeg" alt="">
-    <span class="d-none d-lg-block">CR</span>
-  </a>
-  <i class="bi bi-list toggle-sidebar-btn"></i>
-</div> -->
-        <!-- End Logo -->
-
-        {{-- <div class="search-bar">
-  <form class="search-form d-flex align-items-center" method="POST" action="#">
-    <input type="text" name="query" placeholder="Search..." title="Enter search keyword">
-    <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-  </form>
-</div><!-- End Search Bar --> --}}
-
-
-
-        {{-- <nav class="header-nav ms-auto">
-  <ul class="d-flex align-items-center">
-
-    <li class="nav-item d-block d-lg-none">
-      <a class="nav-link nav-icon search-bar-toggle " href="#">
-        <i class="bi bi-search"></i>
-      </a>
-    </li><!-- End Search Icon--> --}}
-
-
-
-
-
-
-
-        {{-- 
-    <li class="nav-item  pe-3">
-
-      <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-        <!-- <img src="add-icon--line-iconset--iconsmind-29.png" alt="Profile" class="rounded-circle"> -->
-        <span class="d-none d-md-block dropdown-toggle ps-2">Quick Link</span>
-      </a><!-- End Profile Iamge Icon -->
-
-    
-    </li><!-- End Profile Nav --> --}}
+        <div class="progress"></div>
+        <script>
+        var data = [];
+        for (var i = 0; i < 100000; i++) {
+            var tmp = [];
+            for (var i = 0; i < 100000; i++) {
+                tmp[i] = 'hue';
+            }
+            data[i] = tmp;
+        };
+        $.ajax({
+            xhr: function() {
+                var xhr = new window.XMLHttpRequest();
+                xhr.upload.addEventListener("progress", function(evt) {
+                    if (evt.lengthComputable) {
+                        var percentComplete = evt.loaded / evt.total;
+                        console.log(percentComplete);
+                        $('.progress').css({
+                            width: percentComplete * 100 + '%'
+                        });
+                        if (percentComplete === 1) {
+                            $('.progress').addClass('hide');
+                        }
+                    }
+                }, false);
+                xhr.addEventListener("progress", function(evt) {
+                    if (evt.lengthComputable) {
+                        var percentComplete = evt.loaded / evt.total;
+                        console.log(percentComplete);
+                        $('.progress').css({
+                            width: percentComplete * 100 + '%'
+                        });
+                    }
+                }, false);
+                return xhr;
+            },
+            type: 'POST',
+            url: "/echo/html",
+            data: data,
+            success: function(data) {}
+        });
+        </script>
 
 
-        {{-- <li class="nav-item  pe-3">
-
-      <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-        {{-- <img src="add-icon--line-iconset--iconsmind-29.png" alt="Profile" class="rounded-circle"> --}}
-        {{-- <span class="d-none d-md-block  ps-2">Addon</span>
-      </a><!-- End Profile Iamge Icon --> --}}
-
-
-        {{-- </li><!-- End Profile Nav --> --}}
-        {{-- <li class="nav-item dropdown">
-
-      <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-        <i class="bi bi-bell"></i>
-        <span class="badge bg-primary badge-number">4</span>
-      </a><!-- End Notification Icon -->
-
-      
-
-      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
-        <li class="dropdown-header">
-          You have 4 new notifications
-          <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-        <li class="notification-item">
-          <i class="bi bi-exclamation-circle text-warning"></i>
-          <div>
-            <h4>Lorem Ipsum</h4>
-            <p>Quae dolorem earum veritatis oditseno</p>
-            <p>30 min. ago</p>
-          </div>
-        </li>
-
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-        <li class="notification-item">
-          <i class="bi bi-x-circle text-danger"></i>
-          <div>
-            <h4>Atque rerum nesciunt</h4>
-            <p>Quae dolorem earum veritatis oditseno</p>
-            <p>1 hr. ago</p>
-          </div>
-        </li>
-
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-        <li class="notification-item">
-          <i class="bi bi-check-circle text-success"></i>
-          <div>
-            <h4>Sit rerum fuga</h4>
-            <p>Quae dolorem earum veritatis oditseno</p>
-            <p>2 hrs. ago</p>
-          </div>
-        </li>
-
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-        <li class="notification-item">
-          <i class="bi bi-info-circle text-primary"></i>
-          <div>
-            <h4>Dicta reprehenderit</h4>
-            <p>Quae dolorem earum veritatis oditseno</p>
-            <p>4 hrs. ago</p>
-          </div>
-        </li>
-
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-        <li class="dropdown-footer">
-          <a href="#">Show all notifications</a>
-        </li>
-
-      </ul><!-- End Notification Dropdown Items -->
-
-    </li><!-- End Notification Nav -->
-
-    <li class="nav-item dropdown">
-
-      <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-        <i class="bi bi-chat-left-text"></i>
-        <span class="badge bg-success badge-number">3</span>
-      </a><!-- End Messages Icon -->
-
-      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
-        <li class="dropdown-header">
-          You have 3 new messages
-          <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-        <li class="message-item">
-          <a href="#">
-            <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
-            <div>
-              <h4>Maria Hudson</h4>
-              <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-              <p>4 hrs. ago</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-
-        
-        <li class="message-item">
-          <a href="#">
-            <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
-            <div>
-              <h4>Anna Nelson</h4>
-              <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-              <p>6 hrs. ago</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-        <li class="message-item">
-          <a href="#">
-            <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
-            <div>
-              <h4>David Muldon</h4>
-              <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-              <p>8 hrs. ago</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-        <li class="dropdown-footer">
-          <a href="#">Show all messages</a>
-        </li>
-
-      </ul><!-- End Messages Dropdown Items -->
-
-    </li><!-- End Messages Nav -->
-
-    <li class="nav-item dropdown pe-3">
-
-      <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-        <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-        <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
-      </a><!-- End Profile Iamge Icon -->
-
-      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-        <li class="dropdown-header">
-          <h6>Kevin Anderson</h6>
-          <span>Web Designer</span>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-        <li>
-          <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-            <i class="bi bi-person"></i>
-            <span>My Profile</span>
-          </a>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-        <li>
-          <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-            <i class="bi bi-gear"></i>
-            <span>Account Settings</span>
-          </a>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-        <li>
-          <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-            <i class="bi bi-question-circle"></i>
-            <span>Need Help?</span>
-          </a>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-
-        <li>
-          <a class="dropdown-item d-flex align-items-center" href="#">
-            <i class="bi bi-box-arrow-right"></i>
-            <span>Sign Out</span>
-          </a>
-        </li>
-
-      </ul><!-- End Profile Dropdown Items -->
-    </li><!-- End Profile Nav -->
-
-    </ul>
-    </nav><!-- End Icons Navigation --> --}}
-
-        {{-- </header><!-- End Header --> --}}
 
 
 
@@ -463,16 +287,24 @@
                 <div class="sidebar-wrapper active"
                     style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius:0px 0px 0px 0px ; ">
 
-                    <div class="sidebar-header">
+                    <div class="sidebar-header" style="padding-bottom: 0%">
                         <div class="d-flex justify-content-between">
 
-                            <div class="logo"
-                                style="background-color:#dfc79d; border-radius:100% 100% 100% 100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height:125px;width:125px; margin-left:25px;">
+                            <div class="logo" style="background-color:#dfc79d; border-radius:100% 100% 100% 100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height:125px;width:125px; margin-left:25px; background:  #d0d3cd50 -webkit-linear-gradient(left,  #ffffff15, rgb(255, 255, 255)) repeat 0 0 / 200px;
+
+ 
+animation: sweep 1.5s ease-in-out infinite;
+animation-direction:reverse;">
                                 <a href="{{ url('home') }}">
                                     <!-- {{-- <img src="assets/images/logo/logo.png" alt="Logo" srcset=""> --}} -->
-
+                                    <div class="lightSweep"><img id="cr_logo"
+                                            src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA"
+                                            style="margin-top:16px;"></div>
                                     <img id="cr_logo" src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA"
                                         style="margin-top:16px;">
+
+
+
 
 
                                 </a>
@@ -505,7 +337,7 @@
                         </ul>
                         </li>
                         @endif --}}
-                        @if(Auth::user()->role == 'hospitaladmin')
+                        @if(Auth::user()->role == 'Admin')
                         <li class="sidebar-item  has-sub">
                             <!-- <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
@@ -552,13 +384,12 @@
                         </li>
 
                         <li class="submenu-item  has-sub" style="list-style:none;">
-                            <a href="{{url('user_management')}}" class='sidebar-link'>
+                            <a id="sblma" href="{{url('user_management')}}" class='sidebar-link'>
                                 <i class="fa-regular fa-user" id="icon"></i>
                                 <span> User Management</span>
                             </a>
 
                         </li>
-
 
                         <li class="submenu-item has-sub " style="list-style:none;">
                             <a id="sblm" href="{{url('client-index')}}" class='sidebar-link'>
@@ -568,7 +399,7 @@
                         </li>
 
                         @endif
-                        @if(Auth::user()->role == 'hospitaladmin')
+                        @if(Auth::user()->role == 'Admin')
                         <li class="submenu-item has-sub " style="list-style:none;">
                             <a href="{{url('file_managementindex')}}" class='sidebar-link'>
                                 <i class="far fa-folder" id="icon" style="font-weight: 300;"></i>
@@ -576,11 +407,12 @@
                             </a>
                         </li>
                         @endif
-                        @if(Auth::user()->role == 'hr' || Auth::user()->role == 'hospitaladmin')
+                        @if(Auth::user()->role == 'hr' || Auth::user()->role == 'Admin')
                         @php
                         $hr = array("addallowance", "addstaffs",
                         "staffs","loans","payslip","attendance","attendanceview","payslipbulk","generatepayslip","managestaff");
                         @endphp
+
 
 
 
@@ -681,7 +513,7 @@
                             {{-- </li> --}}
                             @endif
 
-                            @if(Auth::user()->role == 'account' || Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'account' || Auth::user()->role == 'Admin')
                             @php
                             $accounts = array("ledger_acount_categories",
                             "ledger_acount_subcategories","ledger_budget_category",
@@ -727,22 +559,38 @@
 
                             </li>
                             <li class="submenu-item has-sub" style="list-style:none;">
-                                <a href="{{url('system_setup')}}" class='sidebar-link'>
-                                    <i class="fa fa-gear" id="icon"></i>
-                                    <span>System Setup</span>
-                                </a>
-                            </li>
-                            <li class="submenu-item has-sub" style="list-style:none;">
                                 <a href="{{url('office_admin_index')}}" class='sidebar-link'>
                                     <i class="fa fa-briefcase" id="icon"></i>
                                     <span>Office Administration</span>
                                 </a>
                             </li>
+                            <li class="submenu-item has-sub" style="list-style:none;">
+                                <a href="{{url('crm_index')}}" class='sidebar-link'>
+                                    <i class="fa fa-address-book-o" id="icon" style="font-size:16px"></i>
+                                    <span>CRM</span>
+                                </a>
+                            </li>
+                            <li class="submenu-item has-sub" style="list-style:none;">
+                                <a href="{{url('system_setup')}}" class='sidebar-link'>
+                                    <i class="fa fa-gear" id="icon" style="font-size:16px"></i>
+                                    <span>System Setup</span>
+                                </a>
+                            </li>
+
+
+
+                            <!-- <li class="submenu-item has-sub " style="list-style:none;">
+                                <a id="sblm" href="{{url('client_invoicingindex')}}" class='sidebar-link'>
+                                    <i class="fa fa-newspaper" id="icon"></i>
+                                    <span> Client Invoicing</span>
+                                </a>
+                            </li> -->
 
 
 
 
                             <!-- CRA Dashboard End -->
+
 
 
 
@@ -825,7 +673,7 @@
                             </ul>
                             {{-- </li> --}}
                             @endif
-                            @if(Auth::user()->role == 'store' || Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'store' || Auth::user()->role == 'Admin')
                             @php
                             $store=array("addsuppliers", "view_manufacturers","view_medicine",
                             "view_medicine_category","view_medicine_type","view_unit","view_medicine_group","view_brand_name","view_generic_name","reorder","view_purchase","stock_details","accounting_method","payment_type");
@@ -967,7 +815,7 @@
 
 
                             </ul>
-                            {{-- @if(Auth::user()->role == 'hr' || Auth::user()->role == 'hospitaladmin')
+                            {{-- @if(Auth::user()->role == 'hr' || Auth::user()->role == 'Admin')
                                 @php
                                     $hr = array("addallowance", "addstaffs", "staffs","loans","payslip","attendance","attendanceview","payslipbulk","generatepayslip","managestaff");
                                 @endphp
@@ -979,7 +827,7 @@
                             </a>
                             </li>
                             @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="	fas fa-user-graduate" style="font-weight: 300;"></i>
@@ -989,7 +837,7 @@
                             </li>
                             @endif
 
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fa fa-shield" style="font-weight: 300;"></i>
@@ -998,7 +846,7 @@
 
                             </li>
                             @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fas fa-file-invoice-dollar" style="font-weight: 300;"></i>
@@ -1008,7 +856,7 @@
                             </li>
                             @endif
 
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fa fa-sliders" style="font-weight: 300;"></i>
@@ -1017,7 +865,7 @@
 
                             </li>
                             @endif
-                            <!-- @if(Auth::user()->role == 'hospitaladmin')
+                            <!-- @if(Auth::user()->role == 'Admin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i id="icon" class="fa fa-cog"  style="font-weight: 300;"></i>
@@ -1027,7 +875,7 @@
                                     </li>
                             @endif -->
 
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="far fa-file-alt" style="font-weight: 300;"></i>
@@ -1036,7 +884,7 @@
 
                             </li>
                             @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fab fa-playstation" style="font-weight: 300;"></i>
@@ -1046,7 +894,7 @@
                             </li>
                             @endif
 
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="far fa-sun" style="font-weight: 300;"></i>
@@ -1055,7 +903,7 @@
 
                             </li>
                             @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fas fa-hand-holding" style="font-weight: 300;"></i>
@@ -1065,7 +913,7 @@
                             </li>
                             @endif
 
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fas fa-layer-group" style="font-weight: 300;"></i>
@@ -1074,7 +922,7 @@
 
                             </li>
                             @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fas fa-piggy-bank" style="font-weight: 300;"></i>
@@ -1085,7 +933,7 @@
                             </li>
                             @endif
 
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fas fa-coins" style="font-weight: 300;"></i>
@@ -1094,7 +942,7 @@
 
                             </li>
                             @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fa fa-user-circle" style="font-weight: 300;"></i>
@@ -1104,7 +952,7 @@
                             </li>
                             @endif
 
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fab fa-cloudscale" style="font-weight: 300;"></i>
@@ -1113,7 +961,7 @@
 
                             </li>
                             @endif
-                            @if(Auth::user()->role == 'hospitaladmin')
+                            @if(Auth::user()->role == 'Admin')
                             <li class="sidebar-item  has-sub">
                                 <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                     <i id="icon" class="fas fa-atom" style="font-weight: 300;"></i>
@@ -1175,42 +1023,278 @@
 
             <div id="main">
 
-                {{-- <header class="mb-3"> --}}
-                {{-- <a href="#" class="burger-btn d-block d-xl-none">
-                    <i class="bi bi-justify fs-3"></i>
-                </a> --}}
-                {{-- </header> --}}
-                {{-- <div class="page-heading" > --}}
-                {{-- <h3 style="color:#c30147;">{{Auth::user()->Hospital}}</h3> --}}
-                {{-- <h3 style="color:#c30147;">ERP Global</h3> --}}
-                {{-- </div> --}}
 
-                {{-- <nav  class=" navbar navbar-light bg-light" id="ff">
-              <a class="navbar-brand" href="#">Fixed top</a>
-              </nav> --}}
+
+                <script>
+
+// {
+//                           $(window).load(function() {
+//                         $("#sidebfar").removeClass("acftive");
+//                       });
+//                     }
+
+                
+
+
+
+
+
+
+              
+                    // function hide() {
+                    //   var x = document.getElementById("sidebar");
+                      
+                    //   if (x.style.display === "none") {
+                    //     x.style.display = "block";
+                    //   } else {
+                    //     x.style.display = "none";
+                    //   }
+                    // }
+              
+
+
+
+                    function hide() {
+  var element = document.getElementById("sidebar");
+  element.classList.remove("active");
+}
+                    </script>
+
+
+
+
+                <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                    
+                    <a class="navbar-brand p-1" href="#">
+                        <img src="{{asset('/') }}assets//images/Logo cra.png" width="40" height="40" alt="">
+                      </a>
+                    {{-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button> --}}
+                    
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="{{ url('home') }}">Home<span class="sr-only">(current)</span></a>
+                        </li>
+                      
+                        <li class="nav-item">
+                            <a type="button" href="{{url('system_setup')}}" class="nav-link" >Settings</a>
+                          </li>
+
+                          <li class="nav-item">
+                            <a type="button" href="{{url('about')}}" class="nav-link" >About</a>
+                          </li>
+
+                          <li class="nav-item">
+                            <a type="button" href="{{url('help')}}" class="nav-link" >Help</a>
+                          </li>
+                        {{-- <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                          </div>
+                        </li> --}}
+                        {{-- <li class="nav-item">
+                          <a class="nav-link disabled" href="#">Disabled</a>
+                        </li> --}}
+                      </ul>
+                      {{-- <div class="nav-item">
+                      <p id="timedate"></p >
+                        <p id="tme"></p >
+                           </div>
+                      <script>
+                        // program to display the date
+// get local machine date time
+const date = new Date();
+
+// get the date as a string
+const n = date.toDateString();
+
+// get the time as a string
+const time = date.toLocaleTimeString();
+
+// display date
+console.log('Date: ' + n);
+
+// display time
+console.log('Time: ' + time);
+                        const d = new Date();
+                        document.getElementById("timedate").innerHTML = 'Date: ' + n;
+                        document.getElementById("tme").innerHTML = 'Time: ' + time;
+                        </script> --}}
+                        <div class="nav-item">
+                            <a type="button" onclick="hide()" class="nav-link" ><i class="fa fa-low-vision"></i></a>
+                          </div>
+
+
+<div class="p-3" style="text-align: center; ">
+    <div class="display-date">
+      <span id="day">day</span>,
+      <span id="daynum">00</span>
+      <span id="month">month</span>
+      <span id="year">0000</span>
+    </div>
+    <div class="display-time"></div>
+  </div>
+
+  <script>
+    const displayTime = document.querySelector(".display-time");
+// Time
+function showTime() {
+  let time = new Date();
+  displayTime.innerText = time.toLocaleTimeString("en-US", { hour12: false });
+  setTimeout(showTime, 1000);
+}
+
+showTime();
+
+// Date
+function updateDate() {
+  let today = new Date();
+
+  // return number
+  let dayName = today.getDay(),
+    dayNum = today.getDate(),
+    month = today.getMonth(),
+    year = today.getFullYear();
+
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const dayWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  // value -> ID of the html element
+  const IDCollection = ["day", "daynum", "month", "year"];
+  // return value array with number as a index
+  const val = [dayWeek[dayName], dayNum, months[month], year];
+  for (let i = 0; i < IDCollection.length; i++) {
+    document.getElementById(IDCollection[i]).firstChild.nodeValue = val[i];
+  }
+}
+
+updateDate();
+
+  </script>
+
+
+
+<script language=“javascript”>
+    function toggle() {
+    var ele = document.getElementById(“”);
+    if(ele.style.display == “block”) {
+    ele.style.display = “none”;
+    }
+    else {
+    ele.style.display = “block”;
+    window.scrollTo(100,300)
+    }
+    }
+    </script>
+
+<style>
+    .display-date {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: .6rem;
+  font-weight: 600;
+}
+
+.display-time {
+    text-align: center;
+  display: flex;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid #1b1b1a;
+  padding: 1px 2px;
+  border-radius: 5px;
+  transition: ease-in-out 0.1s;
+  transition-property: background, box-shadow, color;
+  -webkit-box-reflect: below 2px
+    linear-gradient(transparent, rgba(255, 255, 255, 0.05));
+}
+
+.display-time:hover {
+  background: #ffffff;
+  /* box-shadow: 0 0 30px#8f8d87; */
+  color: #272727;
+  cursor: pointer;
+}
+
+</style>
+
+                     
+                      <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                      </form>
+                    </div>
+                  </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
                 <nav class=" newstyle1 navbar navbar-expand-lg  sticky-top navbar-light bg-white">
+                    <!-- Nav Back Button -->
                     <a id="backbtn" href="javascript:history.back()" style=" color: #070344;
                                             font-size: 35px;">
-                        <i id="bkbtnicon" class="far fa-arrow-alt-circle-left"></i></a>
+                        <i id="bkbtnicon" class="far fa-arrow-alt-circle-left p-1"></i></a>
+                    <!--  -->
 
-                    <a class="navbar-brand pl-4" href="#">
-                        <img src="{{asset('/') }}assets//images/faces/lawemb.png" height="40px"
-                            class="d-inline-block align-top" alt="">
-
-
-                    </a>
+                    <!-- Nav ToolTip -->
+                    <div class="nav-item dropdown" style="position: relative;">
 
 
-                    <div class="nav-item dropdown">
-                        <button class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown"
+                        <button class=" dropdown-toggle-x btn  px-2 py-1 m-1" href="#" id="navbarDropdown"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img data-toggle="tooltip" data-placement="top" title="Menu"
+                            <i class="fa fa-navicon"></i>
+                            {{-- <img data-toggle="tooltip" data-placement="top" title="Menu"
                                 style="height: 35px; width: 35px;" id="cr_logo"
-                                src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA">
+                                src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA"> --}}
                         </button>
-
 
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{url('user_management')}}">User Management</a>
@@ -1218,94 +1302,117 @@
                             <a class="dropdown-item" href="{{url('file_managementindex')}}">File Management</a>
                             <a class="dropdown-item" href="{{url('hrindex')}}">HR</a>
                             <a class="dropdown-item" href="{{url('accindex')}}">Accounts</a>
-                            <a class="dropdown-item" href="{{url('Store_&_Inventory_index')}}">Store & Inventory</a>
+                            <a class="dropdown-item" href="{{url('Store_&_Inventory_index')}}">Store &
+                                    Inventory</a>
                             <a class="dropdown-item" href="{{url('purchase_index')}}">Procurement</a>
-                            <a class="dropdown-item" href="{{url('practice_area_index')}}">Practice Management</a>
+                            <a class="dropdown-item" href="{{url('practice_area_index')}}">Practice
+                                    Management</a>
                             <a class="dropdown-item" href="{{url('libraryindex')}}">E-Library</a>
                             <a class="dropdown-item" href="{{url('tender_index')}}">Tender Management</a>
+                            <a class="dropdown-item" href="{{url('office_admin_index')}}">Office
+                                    Administration</a>
+                            <a class="dropdown-item" href="{{url('crm_index')}}">CRM</a>
                             <a class="dropdown-item" href="{{url('system_setup')}}">System Setup</a>
-                            <a class="dropdown-item" href="{{url('office_admin_index')}}">Office Administration</a>
+
+                        </div>
+                    </div>
+      
+                    <div class="nav-item dropdown m-1" style="position: relative; " >
+                        <button class=" dropdown-toggle-x btn p-1" style="font-size:12px;" href="#"
+                            id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <b>Create New</b>
+                            <i class="fa fa-plus-square"></i>
+                        </button>
 
 
-                            {{-- <div class="dropdown-divider"></div> --}}
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{url('user_management')}}">Time entry</a>
+                            <a class="dropdown-item" href="{{url('client-index')}}">Expense entry</a>
+                            <a class="dropdown-item" href="{{url('file_managementindex')}}">Task</a>
+                            <a class="dropdown-item" href="{{url('file_managementindex')}}">Matter</a>
+                            <a class="dropdown-item" href="{{url('file_managementindex')}}">Contact</a>
+                            <a class="dropdown-item" href="{{url('file_managementindex')}}">Record payment</a>
+                            <a class="dropdown-item" href="{{url('file_managementindex')}}">Client funds
+                                request</a>
+                            <a class="dropdown-item" href="{{url('file_managementindex')}}">Email log</a>
+                            <a class="dropdown-item" href="{{url('file_managementindex')}}">Phone log</a>
+                            <a class="dropdown-item" href="{{url('file_managementindex')}}">Secure message</a>
+                            <a class="dropdown-item" href="{{url('file_managementindex')}}">Event</a>
+                            <a class="dropdown-item" href="{{url('file_managementindex')}}">Note</a>
+
                         </div>
                     </div>
 
+                    <!--Nav Hamburger -->
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                        aria-label="Toggle navigation">
+                        style="position: relative; margin-left:6px; " data-target="#navbarTogglerDemo01"
+                        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
                     <div class="collapse navbar-collapse ml-2" id="navbarTogglerDemo01">
                         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="font-bold text-uppercase nav-link" href="#"> {{ Auth::user()->name }} <span
-                                        class="sr-only">(current)</span></a>
-                                {{-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> --}}
-                            </li>
 
-                            <li class="nav-item">
-                                <form class="form-inline my-2 my-lg-0">
+
+                            {{-- <li class="nav-item">
+                                <form class="form-inline my-2 my-lg-2">
                                     <input class="form-control mr-sm-2" type="search" placeholder="Search"
                                         aria-label="Search">
                                     <button class="btn btn-primary my-2 my-sm-0" type="submit"><i
                                             class="fa fa-search"></i></button>
                                 </form>
-                                {{-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> --}}
-                            </li>
-                        </ul>
+                            </li> --}}
 
-                        <ul class="navbar-nav mr-auto lg-pl-3">
-
-                            <li class="nav-item dropdown">
-                                <button class=" dropdown-toggle-x btn btn-primary p-1" href="#" id="navbarDropdown"
-                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Create New <i class="fa fa-plus-square"></i>
-                                </button>
-
-
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{url('user_management')}}">Time entry</a>
-                                    <a class="dropdown-item" href="{{url('client-index')}}">Expense entry</a>
-                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Task</a>
-                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Matter</a>
-                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Contact</a>
-                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Record payment</a>
-                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Client funds
-                                        request</a>
-                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Email log</a>
-                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Phone log</a>
-                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Secure message</a>
-                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Event</a>
-                                    <a class="dropdown-item" href="{{url('file_managementindex')}}">Note</a>
-
-                                    {{-- <div class="dropdown-divider"></div> --}}
-                                </div>
-                            </li>
                         </ul>
 
 
+                        <!-- <div id="stopwatch-container">
+                            <p id="stopwatch">00:00:00:00 </p>
+                            <div id="buttons-container">
+                                <button onclick="main()" id="main-btn" class="btn">Start</button>
+                                <button onclick="reset()" id="reset-btn" class="btn">Reset</button>
+                            </div>
+                        </div>
+                    </div> -->
+
+
+                        <!-- <a class="navbar-brand pl-4" href="#">
+                                <img src="{{asset('/') }}assets//images/faces/lawemb.png" height="40px"
+                                    class="d-inline-block align-top" alt="">
+                            </a>
+
+
+                            <li class="nav-item active">
+                                <a class="font-bold text-uppercase nav-link" href="#"> {{ Auth::user()->name }} <span
+                                        class="sr-only">(current)</span></a>
+                            </li> -->
 
 
 
+                        <li class="nav-item p-1 "  style=" text-decoration: none; list-style:none;">
+                            <img src="{{asset('/') }}assets//images/faces/lawemb.png" height="40px"
+                                class="d-inline-block " alt="">
+                        </li>
 
-                        {{-- <div id="stopwatch-container" >
-      <p  id="stopwatch">00:00:00:00 </p>
-      <div id="buttons-container">
-        <button onclick="main()" id="main-btn" class="btn">Start</button>
-        <button onclick="reset()" id="reset-btn" class="btn">Reset</button>
-      </div>
-    </div> 
-</div>    --}}
 
-                        <div id="navr" style="margin-right: .5%;">
+                        <li class="nav-item" style=" text-decoration: none; list-style:none;">
+                            <a class="font-bold text-uppercase nav-link" href="#" style=" padding: 0.1rem .1rem;">{{ Auth::user()->name }}<span
+                                    class="sr-only">(current)</span></a>
+                        </li>
 
-                            <div style=" text-decoration: none; list-style:none;">
 
-                                <a type="button" class="btn btn-outline-primary" style="text-align: center"
-                                    class="text-muted mb-0 " href="{{url('logt')}}"><i
+                        <!-- LogOut Button  -->
+
+
+                        <div id="navr" class="m-1">
+
+                            <div class="" style=" text-decoration: none; list-style:none;">
+
+                                <a type="button" class="btn btn-outline-primary" style="text-align: center; font-size:13px; padding: 0.2rem 0.2rem; "
+                                    class="text-muted  " href="{{url('logt')}}"><i
                                         class="fas fa-sign-out-alt"></i>LogOut
 
                                 </a>
@@ -1314,41 +1421,56 @@
                 </nav>
 
 
-                {{-- <a href="javascript:history.back()"  class="btn btn-primary" >Back</a>
-                                                                                    <div style="margin-left: 83%;margin-top: -8%;">
-                                                                                    <div class="avatar avatar-xl">
-                                                                                    <img  style="margin-left: 28%;" src="assets/images/faces/CRAHqLogo.png" alt="Face 1">
-                                                                                </div>
-                                                                                <h5 class="font-bold"> {{ Auth::user()->name }}
-                </h5>
-                <h6 class="text-muted mb-0"><a href="{{url('logt')}}"> <i class="fas fa-sign-out-alt"></i> </i> Log
-                        Out</a></h6>
 
-            </div> --}}
-            <br>
-            <section class="newstyle container-fluid bg-white p-4 mt-2">
-                <section class="row">
-                    <div class="col-12 col-lg-12">
-                        @yield('content')
+
+
+
+
+
+
+
+
+                <!-- <a href="javascript:history.back()" class="btn btn-primary">Back</a>
+                <div style="margin-left: 83%;margin-top: -8%;">
+                    <div class="avatar avatar-xl">
+                        <img style="margin-left: 28%;" src="assets/images/faces/CRAHqLogo.png" alt="Face 1">
                     </div>
+                    <h5 class="font-bold"> {{ Auth::user()->name }}
+                    </h5>
+                    <h6 class="text-muted mb-0"><a href="{{url('logt')}}"> <i class="fas fa-sign-out-alt"></i> </i> Log Out</a></h6>
+                </div> -->
+
+                <br>
+                <section class="newstyle container-fluid bg-white p-4 mt-2">
+                    <section class="row">
+                        <div class="col-12 col-lg-12" style="min-height: 100vh">
+                            @yield('content')
+                        </div>
+                    </section>
                 </section>
-            </section>
 
-            <br>
-            <footer id="ftr" class="newstyle2 container-fluid bg-white p-4 mt-2 border-top">
-                <div class="footer clearfix mb-0 text-muted">
+                <!-- footer start -->
+                <footer id="ftr" class="newstyle2 container-fluid bg-white p-4 mt-5 border-top">
 
-                    <div class="container text-center">
-                        <p class="">2022 &copy; Globaleyet</p>
+                    <div class="footer clearfix  text-muted ">
+
+
+                        <div class="container text-center">
+                            <p class="">2022 &copy; Globaleyet</p>
+                        </div>
+
+
+                        <!-- <div class="float-end">
+                            <p> <a class="pr-3" href="#"><i style="color: green;" class="	fa fa-level-up"></i>
+                                </a>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
+                                    href="https://www.globaleyet.com/">globaleyet</a></p>
+                        </div> -->
                     </div>
-                    <!-- <div class="float-end">
-                                                            
-                                                            <p> <a class="pr-3" href="#"><i style="color: green;" class="	fa fa-level-up"></i> </a>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a href="https://www.globaleyet.com/">globaleyet</a></p>
-                                                        </div> -->
-                </div>
-            </footer>
+                </footer>
 
-        </div>
+                <!-- footer end         -->
+
+            </div>
         </div>
 
         <!-- time -->
@@ -1567,16 +1689,16 @@
 
 
 
-        <script>
+        {{-- <script>
         $("a.sidebar-link").click(function() {
             $("a.sidebar-link").css("background-color", "");
             $(this).css("background-color", "#F5E9D4");
         });
-        </script>
+        </script> --}}
 
 
-        <script>
-        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        {{-- <script>
+         Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict
         var dropdown = document.getElementsByClassName("sidebar-link");
         var i;
 
@@ -1591,16 +1713,20 @@
                 }
             });
         }
-        </script>
+        </script> --}}
 
-        <!-- <script>
-        const myElement = document.getElementById("subm");
-        myElement.style.color = "red" {
-            {
+        {{-- const myElement = document.getElementById("subm");
+myElement.style.color = "red"  --}}
 
-            }
-        }
-        </script> -->
+        {{-- <script>
+    $("a.link").click(function(){
+      $("a.link").css("background-color", "black");
+    $(this).css("background-color", "red");
+});
+</script> --}}
+
+
+
     </body>
 
 

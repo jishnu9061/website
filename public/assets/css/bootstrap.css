@@ -6,6 +6,94 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+
+ 
+
+:root {
+    --ff-primary: basic-sans, sans-serif;
+    --clr-primary: #ee6352;
+    --clr-body: #333;
+    --clr-bg: #ddd;
+    --spacer: 1rem;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  h1, h2, h3, p {
+    margin: 0;
+  }
+  
+  .flow > * + * {
+    margin-top: var(--flow-space, var(--spacer));
+  }
+  
+
+  
+  a {
+    color: var(--clr-primary);
+  }
+  
+  .content {
+    width: min(70vw, 50rem);
+    margin: 3rem auto;
+    padding: 3em;
+    box-shadow: 0 0 3em rgba(0,0,0,.15);
+    background: white;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    place-items: center;
+  }
+  
+
+  
+  .btn {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: inherit;
+    border: 0;
+    line-height: 1;
+    background: none;
+    padding: .75em 1.5em;
+  }
+  
+
+  
+  .btn-2 {
+    --clr: #AD325E;
+    --outline: 2px solid var(--clr);
+    color: var(--clr);
+    outline: var(--outline);
+    border: var(--outline);
+    outline-offset: -2px;
+    transition: outline-offset 200ms ease;
+  }
+  
+  .btn-2:hover,
+  .btn-2:focus {
+    outline: var(--outline);
+    outline-offset: -6px;
+   
+  }
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
 :root {
     --bs-blue: #435ebe;
     --bs-indigo: #6610f2;
@@ -3210,27 +3298,7 @@ textarea.form-control.is-invalid {
     z-index: 3;
 }
 
-.btn {
-    display: inline-block;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #607080;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    border-radius: 0.25rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
+
 
 @media (prefers-reduced-motion: reduce) {
     .btn {
@@ -6101,7 +6169,7 @@ fieldset:disabled .btn {
     border-top: 1px solid #dee2e6;
     border-bottom-right-radius: calc(0.3rem - 1px);
     border-bottom-left-radius: calc(0.3rem - 1px);
-    background: #bfd4e5;
+    background: #FFFBF4;
     border-radius: 10px;
 }
 
@@ -11672,9 +11740,11 @@ fieldset:disabled .btn {
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
-    width: 12px;
-    height: 10px;
+    width: 5px;
+    height: 1vh;
+
+   
+  
 }
 
 
@@ -11688,7 +11758,9 @@ fieldset:disabled .btn {
 
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color:rgba(255, 224, 137,.4)
+
+    background-color:#7C7F7F50;
+    
     
     /* border-style:inset; */
     /* border: #E0CB63 solid .1px; */
@@ -11696,5 +11768,13 @@ fieldset:disabled .btn {
     /* box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1); */
     
 }
+::-webkit-scrollbar-thumb:hover {
+    border-radius: 10px;
+    background-color:#7C7F7F60;
+   
+    
+}
+
+
 
 

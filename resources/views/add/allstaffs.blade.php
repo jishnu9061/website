@@ -91,9 +91,9 @@
                         <tr class="text-center">
                             <input id="t_id" type="hidden" value="{{ $alluser->id }}">
                             <td>{{ $alluser->uniqueid }}</td>
-                            <td>{{ $alluser->name }}</td>
-                            <td>{{ $alluser->email }}</td>
-                            <td>{{ $alluser->phone }}</td>
+                            <td>{{ $alluser->name     }}</td>
+                            <td>{{ $alluser->email    }}</td>
+                            <td>{{ $alluser->phone    }}</td>
                             <td><a href="{{ url('managestaff' . $alluser->uniqueid) }}" style="color:rgb(13, 1, 56);"><i
                                         class="fa fa-edit"></i></a></td>
                     @endforeach
@@ -232,7 +232,7 @@
                             <label for="username">Date Of Joining</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="doj"
+                                <input type="date" class="form-control" name="date_of_joining"
                                     id="password" placeholder="staff Password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Passeord is required.
@@ -257,23 +257,23 @@
                         <div class="mb-1">
                             <label>Departments:&nbsp;</label>
                             <select class="form-select" aria-label="Default select example" name="departments">
-                                <option selected>Select</option>
-                                <option value="Legal Department">Legal Department</option>
-                                <option value="HR Department">HR Department</option>
-                                <option value="Account Department">Account Department</option>
+                            @if(count($get_department))
+                                            @foreach($get_department as $list_rdepartment)
+                                            <option>{{$list_rdepartment->department_name}}</option>
+                                            @endforeach
+                                          @endif
                             </select>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="mb-1">
                             <label>Roles&nbsp;</label>
-                            <select class="form-select" aria-label="Default select example" name="roles">
-                                <option>Select</option>
-                                <option value="Active">HR Manager</option>
-                                <option value="Inactive">Jr.Advocate</option>
-                                <option value="Resigned">Sr.Advocate</option>
-                                <option value="Suspended">Hr Executive</option>
-                                <option value="Suspended">Receptionist</option>
+                            <select class="form-select" aria-label="Default select example" name="role">
+                            @if(count($get_role))
+                                            @foreach($get_role as $list_role)
+                                            <option>{{$list_role->role_name}}</option>
+                                            @endforeach
+                                          @endif
                             </select>
                         </div>
                         {{-- <div id="test" style="height:20px;"></div> --}}
@@ -473,7 +473,7 @@
                             <label>Leave Days per Year</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="leave_days" id="name"
+                                <input type="text" class="form-control" name="leave" id="name"
                                     value="21" disabled>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
@@ -515,7 +515,7 @@
                             <label>Account Number</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="account_number" id="name"
+                                <input type="text" class="form-control" name="account" id="name"
                                     value="">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
@@ -557,7 +557,7 @@
                             <label for="username">Upload CV</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="file" class="form-control" name="cv" id="password"
+                                <input type="file" class="form-control" name="cv" id=""
                                     placeholder="staff Password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Passeord is required.
@@ -570,7 +570,7 @@
                             <label for="username">Passport size Photograph</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="file" class="form-control" name="photo" id="password"
+                                <input type="file" class="form-control" name="photo" id=""
                                     placeholder="staff Password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Passeord is required.
@@ -583,7 +583,7 @@
                             <label for="username">Signature</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="file" class="form-control" name="signature" id="password"
+                                <input type="file" class="form-control" name="signature" id=""
                                     placeholder="staff Password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Passeord is required.
@@ -618,7 +618,7 @@
     <script type="text/javascript" charset="utf8"
         src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
     <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-    {{-- <script type="text/javascript">
+    <script type="text/javascript">
         $('#password, #confirm_password').on('keyup', function() {
             var v = $('#password').val();
             var b = $('#confirm_password').val()
@@ -633,7 +633,7 @@
             } else
                 $('#message').html('Not Matching').css('color', 'red');
         });
-    </script> --}}
+    </script> 
     {{-- <script>
         $('.leaves').on('keyup', function() {
             var total = 0;

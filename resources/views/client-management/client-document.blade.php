@@ -57,7 +57,7 @@
     <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Document Details</u></b></div><br><br> -->
     {{-- heading --}}
     <div class="container">
-        <h4 id="hdtpa"><b>Document Details</b></h4>
+        <h4 id="hdtpa"><b>Individual Document Details</b></h4>
 
 
         <div class="header_wrap">
@@ -90,9 +90,7 @@
 
                         <thead>
                             <tr>
-                                <th class="text-center"> Client No</th>
-                                <th class="text-center"> Client Name</th>
-                                <th class="text-center"> Client type</th>
+                              
                                 <th class="text-center"> Client Document</th>
                                 <th class="text-center">Action</th>
 
@@ -104,9 +102,6 @@
                             
 
                             <tr id="data">
-                                <td scope="row" class="text-center">{{$list->client_number}}</td>
-                                <td scope="row" class="text-center">{{$list->client_name}}</td>
-                                <td scope="row" class="text-center">{{$list->client_types}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1"><a
                                         href="{{url('view-document',$list->id)}}"><button type="button"
                                             class="btn btn-primary float:right;" Style="width:45%;">View

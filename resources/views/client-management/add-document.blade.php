@@ -36,23 +36,26 @@ $(document).on('input', '#percent', function() {
         <form method="post" action="{{url('add-document')}}" id="form" enctype="multipart/form-data">
             @csrf
             <input type="hidden" name="individual_id" value="{{$client_doc->id}}">
-            
+
+
+           
             <br>
+
             <div class="row">
                 <div class="col-md-12">
                     <table class="table table-striped  order-list" id="table_field">
                         <thead>
-                            <tr>
+                            <tr class="text-center">
                                 <th>Document Type</th>
                                 <th>File Upload</th>
-                                <th></th>
+
                                 <th>Date</th>
                                 <th>Add</th>
                             </tr>
 
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr class="text-center">
                                 <td style="width:45%;"> <select class="form-control select_group product"
                                         data-row-id="row_3" id="product_detailes" name="testname[]" style="width:100%;">
                                         <option selected>Select</option>
@@ -65,10 +68,10 @@ $(document).on('input', '#percent', function() {
                                         multiple="multiple" required>
                                 </td>
 
-                                <td>
+                                <!-- <td>
                                     <input type="hidden" class="form-control" name="client[]" id="username"
                                         value="{{$client_doc->client_type}}" placeholder="File" required>
-                                </td>
+                                </td> -->
                                 <td>
                                     <input type="date" class="form-control" name="date[]" id="username" required>
                                 </td>
@@ -97,7 +100,7 @@ $(document).on('input', '#percent', function() {
                 <div class="col-sm">
                     <br>
                     <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Submit</button>
-                    <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                    <button type="button" class="btn btn-primary float:left" Style="width:45%;" onclick="history.back()">Cancel</button>
                 </div>
             </div>
         </form>
@@ -116,9 +119,9 @@ $(document).on('input', '#percent', function() {
 $(document).ready(function() {
     var html =
 
-        '<tr><td style="width:45%;"> <select class="form-control select_group product"data-row-id="row_3" id="product_detailes" name="testname[]" style="width:100%;"><option selected>Select</option><option value="assets">Type 1</option></select></td><td style="width:45%;"> <input type="file" class="form-control" name="file[]" multiple="multiple" required></td></td><td><input type="hidden" class="form-control" name="client" id="username"value="{{$client_doc->client_type}}" placeholder="File" required></td><td><input type="date" class="form-control" name="date" id="username" required></td> <td> <input type="button" class="btn btn-danger float:right;" name="remove" id="remove" value="remove"></td></tr>';
+        '<tr><td style="width:45%;"> <select class="form-control select_group product"data-row-id="row_3" id="product_detailes" name="testname[]" style="width:100%;"><option selected>Select</option><option value="assets">Type 1</option></select></td><td style="width:45%;"> <input type="file" class="form-control" name="file[]" multiple="multiple" required></td></td>  <td><input type="date" class="form-control" name="date[]" id="username" required></td> <td> <input type="button" class="add-Row ibtnDel btn btn-primary text-white" style="background-color:#607080;width:100%;color:white;" name="remove" id="remove" value="Remove"></td></tr>';
 
-    
+
 
     var max = 4;
     var X = 1;

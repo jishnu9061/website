@@ -1,18 +1,16 @@
 @extends('layouts.hmsmain')
 @section('content')
 
-    <div class="">
- {{-- heading --}}
- <h4 id="hdtpa"><b>New Fee Note</b></h4>
- <br><br>
+<div class="container">
+    {{-- heading --}}
+    <h4 id="hdtpa"><b>New Fee Note</b></h4>
+    <br><br>
 
- 
-    <br>
     <div class="row">
         <div class="col-md-12">
             <form method="post" action="" id="form">
                 @csrf
-                
+
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
@@ -20,7 +18,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <select name="code" id="cars">
-                                <option>---select---</option>
+                                    <option>---select---</option>
                                     <option>Fee Note</option>
                                     <option></option>
                                     <option></option>
@@ -65,7 +63,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <select name="code" id="cars">
-                                <option>choose a client...</option>
+                                    <option>choose a client...</option>
                                     <option></option>
                                     <option></option>
                                     <option></option>
@@ -83,7 +81,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <select name="code" id="cars">
-                                <option>choose a file...</option>
+                                    <option>choose a file...</option>
                                     <option></option>
                                     <option></option>
                                     <option></option>
@@ -101,7 +99,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <select name="code" id="cars">
-                                <option>---Select---</option>
+                                    <option>---Select---</option>
                                     <option>Main Client</option>
                                     <option></option>
                                     <option></option>
@@ -123,7 +121,8 @@
                             <label for="username">Billing Information:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <textarea rows="4" cols="50" name="comment" form=""class="form-control"  type="text"></textarea>
+                                <textarea rows="4" cols="50" name="comment" form="" class="form-control"
+                                    type="text"></textarea>
                                 <!-- <input type="text" class="form-control" name="" id="username"style="height:100px;border: 1px solid rgb(13, 1, 56);" value="" required> -->
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
@@ -133,9 +132,9 @@
                     </div>
                 </div>
                 <br>
-    <hr class="mb-4">
+                <hr class="mb-4">
 
-    <div class="row">
+                <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Date Due :</label>
@@ -154,7 +153,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <select name="code" id="cars">
-                                <option>---select---</option>
+                                    <option>---select---</option>
                                     <option></option>
                                     <option></option>
                                     <option></option>
@@ -187,7 +186,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <select name="code" id="cars">
-                                <option>---select---</option>
+                                    <option>---select---</option>
                                     <option></option>
                                     <option></option>
                                     <option></option>
@@ -205,7 +204,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <select name="code" id="cars">
-                                <option>---select---</option>
+                                    <option>---select---</option>
                                     <option></option>
                                     <option></option>
                                     <option></option>
@@ -223,7 +222,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <select name="code" id="cars">
-                                <option>---Select---</option>
+                                    <option>---Select---</option>
                                     <option>Main Client</option>
                                     <option></option>
                                     <option></option>
@@ -243,7 +242,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <select name="code" id="cars">
-                                <option>---select---</option>
+                                    <option>---select---</option>
                                     <option></option>
                                     <option></option>
                                     <option></option>
@@ -261,7 +260,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <select name="code" id="cars">
-                                <option>---select---</option>
+                                    <option>---select---</option>
                                     <option></option>
                                     <option></option>
                                     <option></option>
@@ -279,7 +278,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <select name="code" id="cars">
-                                <option>---Select---</option>
+                                    <option>---Select---</option>
                                     <option>Main Client</option>
                                     <option></option>
                                     <option></option>
@@ -303,7 +302,7 @@
                             <label for="username">To the attention of:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name=""    id="username" value="" required >
+                                <input type="text" class="form-control" name="" id="username" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -323,33 +322,27 @@
                             </div>
                         </div>
                     </div>
-</div>
-<br>
-<br>
-<div class="class">
-<div>
-            <div class="btn btn-primary"
-                style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:20px;"><b><u>
-                        Fee Note Items</u></b></span></div><br><br>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous">
+                </div>
+                <br>
 
-        </div>
-    </div>
-    <br>
+                <div class="container text-center">
+
+                    <span>
+                        <h4><b> Fee Note Items </b></h4>
+                    </span>
+
+                </div>
+                <br>
 
 
-    <form>
-
-    <div class="row">
+                <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
                             <label for="username">Item Type:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <select name="code" id="cars">
-                                <option>---select---</option>
+                                    <option>---select---</option>
                                     <option></option>
                                     <option></option>
                                     <option></option>
@@ -367,7 +360,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <select name="code" id="cars">
-                                <option>---select category---</option>
+                                    <option>---select category---</option>
                                     <option></option>
                                     <option></option>
                                     <option></option>
@@ -399,7 +392,8 @@
                             <label for="username">Particulars of Service Rendered:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <textarea rows="4" cols="50" name="comment" form=""class="form-control"  type="text"></textarea>
+                                <textarea rows="4" cols="50" name="comment" form="" class="form-control"
+                                    type="text"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -412,7 +406,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <select name="code" id="cars">
-                                <option>---select---</option>
+                                    <option>---select---</option>
                                     <option></option>
                                     <option></option>
                                     <option></option>
@@ -425,39 +419,42 @@
                         </div>
                     </div>
                     <div class="row">
-                    <div class="col-sm">
+                        <div class="col-sm">
 
-                    </div>
-                    <div class="col-sm">
+                        </div>
+                        <div class="col-sm">
 
-                    </div>
-                    <div class="col-sm">
-                        <br>
-                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">New Item</button>
-                        <button type="button" class="btn btn-primary float:left" Style="width:45%;">Delete Item</button>
+                        </div>
+                        <div class="col-sm">
+                            <br>
+                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">New
+                                Item</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Delete
+                                Item</button>
+                        </div>
                     </div>
                 </div>
-        </div>
-        </form>
-    </div>
 
-<div class="row">
+
+
+                <div class="row">
                     <div class="col-md-13">
                         <div class="mb-1">
                             <label for="username">Notes:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <textarea rows="4" cols="50" name="comment" form=""class="form-control"  type="text"></textarea>
+                                <textarea rows="4" cols="50" name="comment" form="" class="form-control"
+                                    type="text"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
                             </div>
                         </div>
                     </div>
-                    </div>
+                </div>
 
 
-  <div class="row">
+                <div class="row">
                     <div class="col-sm">
 
                     </div>
@@ -466,19 +463,19 @@
                     </div>
                     <div class="col-sm">
                         <br>
-                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save Fee Note</button>
-                        <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
+                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save Fee
+                            Note</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                            onclick="history.back()">Close</button>
                     </div>
                 </div>
+            </form>
         </div>
-        </form>
     </div>
-</div>
-</div>
-
-</div>
 
 
+
+</div>
 
 
 @endsection

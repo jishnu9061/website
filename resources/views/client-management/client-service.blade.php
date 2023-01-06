@@ -55,7 +55,7 @@ color: #999;
             <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Client
                     Reception</u></b></span>-->
             {{-- heading --}}
-            <h4 id="hdtpa"><b>Client Reception</b></h4>
+            <h4 id="hdtpa"><b> Service Details</b></h4>
             <br>
         </div>
         <button class="btn btn-primary add-btn" data-toggle="modal" data-target="#myModal" style="width:21%">New Client
@@ -96,7 +96,7 @@ color: #999;
                             <tr>
                                 <th class="text-center" style="width:15%;">Branch</th>
                                 <th class="text-center" style="width:15%;">Client</th>
-                                <th class="text-center">Phone</th>
+                                <th class="text-center">Mobile</th>
                                 <th class="text-center">Service</th>
                                 <th class="text-center" style="width:15%;">Description</th>
                                 <th class="text-center">Handling</th>
@@ -109,7 +109,7 @@ color: #999;
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach( $service as $list_service)
+                            @foreach($service as $list_service)
                             <tr id="data" style="width:100%;">
                                 <td class="text-center">{{$list_service->branch_name}}</td>
                                 <td class="text-center" id="medicine_name_1">{{$list_service->client_name}}</td>
@@ -180,11 +180,19 @@ color: #999;
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="mb-1">
-                                                            <label for="username">Name</label>
+                                                            <label for="username">Client Name</label>
                                                             <div class="input-group">
                                                                 <div class="input-group-prepend"></div>
-                                                                <input type="text" class="form-control" name="Name"
-                                                                    id="username" value="">
+                                                                <select name="code" id="cars">
+                                                                    <option>select</option>
+                                                                    @if(count($get_items))
+                                                                        @foreach($get_items as $list_client)
+                                                                        <option>{{$list_client->client_name}}</option>
+                                                                       @endforeach
+                                                                       @endif
+                                                                </select>
+                                                                <!-- <input type="text" class="form-control" name="Name"
+                                                                    id="username" value=""> -->
                                                                 <div class="invalid-feedback" style="width: 100%;">
                                                                     Name is required.
                                                                 </div>

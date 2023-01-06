@@ -1353,35 +1353,23 @@ Route::any('viewsheet','hrindex@viewsheets')->name('viewsheet');
 Route::any('timesheetmonth','hrindex@timesheetmonths')->name('timesheetmonth');
 Route::any('monthviewsheet','hrindex@monthviewsheets')->name('monthviewsheet');
 
-//Subhasree
+//leave request
 Route::any('leave_request_details','hrindex@leave_request')->name('leave_request_details');
 Route::any('addleaverequest','hrindex@addleaverequest')->name('addleaverequest');
 Route::any('approve_leave_request','hrindex@approve_leave_request')->name('approve_leave_request');
 Route::any('edit_leave_request/{id}','hrindex@edit_leave_request')->name('edit_leave_request');
 Route::any('/update_leave_request','hrindex@update_leave_request')->name('update_leave_request');
-//Subhasree
-
-
 Route::any('internal_memos','hrindex@internal_memos')->name('internal_memos');
 Route::any('view_memo','hrindex@view_memo')->name('view_memo');
 Route::any('edit_memo','hrindex@edit_memo')->name('edit_memo');
 
-
-
-
-
-
-
 //Store & Inventory
 Route::any('Store_&_Inventory_index','store@index')->name('Store_&_Inventory_index');
-
 Route::any('manage_categories','store@list_manage_categories')->name('manage_categories');
 Route::any('add_product','store@addproduct')->name('add_product');
 Route::any('/edit_product/{id}','store@editproduct')->name('edit_product');
 Route::any('update_product','store@updateproduct')->name('update_product');
 Route::any('/delete_product/{id}','store@deleteproduct')->name('delete_product');
-
-
 Route::any('manage_items','store@list_manage_items')->name('manage_items');
 Route::any('stock_list','store@stock_list_tab')->name('stock_list');
 Route::any('request_item','store@request_items')->name('request_item');
@@ -1392,13 +1380,9 @@ Route::any('view_item_details','store@viewitemdetails')->name('view_item_details
 Route::any('edit_manage_categories','store@edit_list_manage_categories')->name('edit_manage_categories');
 Route::any('edit_request_item','store@edit_request_items')->name('edit_request_item');
 Route::any('add_categories','store@list_add_categories')->name('add_categories');
-
 Route::any('edit_categories','store@list_edit_categories')->name('edit_categories');
 Route::any('view_requst','store@list_view_requst')->name('view_requst');
-
-
 Route::any('new_categories','store@newcategories')->name('new_categories');
-
 Route::any('/edit_category/{id}','store@editcategory')->name('edit_category');
 Route::any('update_category','store@updatecategory')->name('update_category');
 Route::any('/delete_category/{id}','store@deletecategory')->name('delete_category');
@@ -1408,21 +1392,23 @@ Route::any('/edit_manage_items/{id}','store@editmanage_items')->name('edit_manag
 Route::any('update_manage_items','store@update_manage_items')->name('update_manage_items');
 Route::any('/drop_manage_items/{id}','store@drop_manage_items')->name('drop_manage_items');
 
-//Purchase Management
 
+//Purchase Management
 Route::any('purchase_index','PurchaseManagement@index_purchase')->name('purchase_index');
 Route::any('purchase_order','PurchaseManagement@purchase_order')->name('purchase_order');
-Route::any('view_purchase_order','PurchaseManagement@view_purchase_order')->name('view_purchase_order');
+Route::any('store_purchase','PurchaseManagement@store_purchase')->name('store_purchase');
+Route::any('view_purchase_order/{purchase_id}','PurchaseManagement@view_purchase_order')->name('view_purchase_order');
 Route::any('purchase_order_report','PurchaseManagement@purchase_order_report')->name('purchase_order_report');
 Route::any('vendor_performance_report','PurchaseManagement@vendor_performance_report')->name('vendor_performance_report');
 Route::any('view_supplier','PurchaseManagement@view_supplier')->name('view_supplier');
 Route::any('edit_supplier','PurchaseManagement@edit_supplier')->name('edit_supplier');
 // Route::any('cost_variation_report','PurchaseManagement@cost_variation_report')->name('cost_variation_report');
 Route::any('ledger_details','PurchaseManagement@ledger_details')->name('ledger_details');
-Route::any('purchase_view','PurchaseManagement@purchase_view')->name('purchase_view');
-Route::any('edit_purchase','PurchaseManagement@edit_purchase')->name('edit_purchase');
-
-
+Route::any('purchase_view/{purchase_id}','PurchaseManagement@purchase_view')->name('purchase_view');
+Route::any('edit_purchase/{purchase_id}','PurchaseManagement@edit_purchase')->name('edit_purchase');
+Route::any('supplier','PurchaseManagement@suppliers')->name('supplier');
+Route::any('store_supplier','PurchaseManagement@store_supplier')->name('store_supplier');
+//end  Purchase Management
 
 
 //practice Area Management
@@ -1435,77 +1421,67 @@ Route::any('/edit_injury/{id}','PracticeAreaManagement@editinjury')->name('edit_
 Route::any('view_injury','PracticeAreaManagement@view_injury')->name('view_injury');
 Route::any('/update_injury','PracticeAreaManagement@updateinjury')->name('update_injury');
 Route::any('/delete_injury/{id}','PracticeAreaManagement@deleteinjury')->name('delete_injury');
-
 Route::any('family_law','PracticeAreaManagement@family_law')->name('family_law');
 Route::any('add_family_law','PracticeAreaManagement@addfamilylaw')->name('add_family_law');
+Route::any('view_family_law','PracticeAreaManagement@view_family_law')->name('view_family_law');
 Route::any('/edit_family_law/{id}','PracticeAreaManagement@edit_family_law')->name('edit_family_law');
 Route::any('/update_family_law','PracticeAreaManagement@updatefamilylaw')->name('update_family_law');
 Route::any('/delete_law/{id}','PracticeAreaManagement@deletelaw')->name('delete_law');
-
 Route::any('general_practice','PracticeAreaManagement@general_practice')->name('general_practice');
 Route::any('add_practice','PracticeAreaManagement@addpractice')->name('add_practice');
 Route::any('view_general_practice','PracticeAreaManagement@view_general_practice')->name('view_general_practice');
 Route::any('/edit_general_practice/{id}','PracticeAreaManagement@edit_general_practice')->name('edit_general_practice');
 Route::any('/update_practice','PracticeAreaManagement@updatepractice')->name('update_practice');
 Route::any('/delete_practice/{id}','PracticeAreaManagement@deletepractice')->name('delete_practice');
-
-
 Route::any('estate_plan','PracticeAreaManagement@estate_plan')->name('estate_plan');
 Route::any('add_estate_plan','PracticeAreaManagement@addestateplan')->name('add_estate_plan');
+Route::any('view_estate_plan','PracticeAreaManagement@view_estate_plan')->name('view_estate_plan');
 Route::any('/edit_estate_plan/{id}','PracticeAreaManagement@edit_estate_plan')->name('edit_estate_plan');
 Route::any('update_estate_plan','PracticeAreaManagement@updateestateplan')->name('update_estate_plan');
 Route::any('/delete_estate_plan/{id}','PracticeAreaManagement@deleteestateplan')->name('delete_estate_plan');
-
-
 Route::any('real_estate','PracticeAreaManagement@real_estate')->name('real_estate');
 Route::any('add_real_estate','PracticeAreaManagement@addrealestate')->name('add_real_estate');
 Route::any('view_real_estate','PracticeAreaManagement@view_real_estate')->name('view_real_estate');
 Route::any('/edit_real_estate/{id}','PracticeAreaManagement@edit_real_estate')->name('edit_real_estate');
 Route::any('update_real_estate','PracticeAreaManagement@updaterealestate')->name('update_real_estate');
 Route::any('/delete_real_estate/{id}','PracticeAreaManagement@deleterealestate')->name('delete_real_estate');
-
 Route::any('criminal_law','PracticeAreaManagement@criminal_law')->name('criminal_law');
 Route::any('add_criminal_law','PracticeAreaManagement@addcriminallaw')->name('add_criminal_law');
 Route::any('view_criminal_law','PracticeAreaManagement@view_criminal_law')->name('view_criminal_law');
 Route::any('/edit_criminal_law/{id}','PracticeAreaManagement@edit_criminal_law')->name('edit_criminal_law');
 Route::any('update_criminal_law','PracticeAreaManagement@updatecriminallaw')->name('add_criminal_law');
 Route::any('/delete_criminal_law/{id}','PracticeAreaManagement@deletecriminallaw')->name('delete_criminal_law');
-
-
 Route::any('civil_litigation','PracticeAreaManagement@civil_litigation')->name('civil_litigation');
 Route::any('add_civil_litigation','PracticeAreaManagement@addcivillitigation')->name('add_civil_litigation');
+Route::any('view_civil_litigation','PracticeAreaManagement@view_civil_litigation')->name('view_civil_litigation');
 Route::any('/edit_civil_litigation/{id}','PracticeAreaManagement@edit_civil_litigation')->name('edit_civil_litigation');
 Route::any('update_civil_litigation','PracticeAreaManagement@updatecivillitigation')->name('update_civil_litigation');
 Route::any('/delete_civil_litigation/{id}','PracticeAreaManagement@deletecivillitigation')->name('update_civil_litigation');
-
 Route::any('business_law','PracticeAreaManagement@business_law')->name('business_law');
 Route::any('add_business_law','PracticeAreaManagement@addbusinesslaw')->name('add_business_law');
 Route::any('view_business_law','PracticeAreaManagement@view_business_law')->name('view_business_law');
 Route::any('/edit_business_law/{id}','PracticeAreaManagement@edit_business_law')->name('edit_business_law');
 Route::any('update_business_law','PracticeAreaManagement@updatebusinesslaw')->name('update_business_law');
 Route::any('/delete_business_law/{id}','PracticeAreaManagement@deletebusinesslaw')->name('delete_business_law');
-
 Route::any('guardianship_law','PracticeAreaManagement@guardianship_law')->name('guardianship_law');
 Route::any('add_guardian','PracticeAreaManagement@addguardian')->name('add_guardian');
 Route::any('view_guardianship_law','PracticeAreaManagement@view_guardianship_law')->name('view_guardianship_law');
 Route::any('/edit_guardianship_law/{id}','PracticeAreaManagement@edit_guardianship_law')->name('edit_guardianship_law');
 Route::any('/update_guardian','PracticeAreaManagement@updateguardian')->name('update_guardian');
 Route::any('/delete_guardian/{id}','PracticeAreaManagement@deleteguardian')->name('delete_guardian');
-
 Route::any('probate_law','PracticeAreaManagement@probate_law')->name('probate_law');
 Route::any('add_probate_law','PracticeAreaManagement@addprobatelaw')->name('add_probate_law');
 Route::any('view_probate_law','PracticeAreaManagement@view_probate_law')->name('view_probate_law');
 Route::any('/edit_probate_law/{id}','PracticeAreaManagement@edit_probate_law')->name('edit_probate_law');
 Route::any('update_probate_law','PracticeAreaManagement@updateprobatelaw')->name('update_probate_law');
 Route::any('/delete_probate_law/{id}','PracticeAreaManagement@deleteprobatelaw')->name('delete_probate_law');
-
 Route::any('workers_compensation','PracticeAreaManagement@workers_compensation')->name('workers_compensation');
 Route::any('add_workers_compensation','PracticeAreaManagement@addworkerscompensation')->name('add_workers_compensation');
 Route::any('/edit_workers_compensation/{id}','PracticeAreaManagement@edit_workers_compensation')->name('edit_workers_compensation');
 Route::any('update_workers_compensation','PracticeAreaManagement@updateworkerscompensation')->name('update_workers_compensation');
 Route::any('/delete_workers_compensation/{id}','PracticeAreaManagement@deleteworkerscompensation')->name('delete_workers_compensation');
 Route::any('view_workers_compensation','PracticeAreaManagement@view_workers_compensation')->name('view_workers_compensation');
-
+Route::any('edit_practice_area','PracticeAreaManagement@edit_practice_area')->name('edit_practice_area');
 
 //Elibrary
 Route::any('libraryindex','Elibrary@index')->name('libraryindex');
@@ -1514,20 +1490,17 @@ Route::any('add_subject','Elibrary@addsubjects')->name('add_subject');
 Route::any('/editsubject/{id}','Elibrary@editsubjects')->name('editsubject');
 Route::any('update_subject','Elibrary@updatesubjects')->name('update_subject');
 Route::any('/deletesubject/{id}','Elibrary@deletesubjects')->name('deletesubject');
-
 Route::any('file','Elibrary@files')->name('file');
 Route::any('add_file','Elibrary@addfiles')->name('add_file');
 Route::any('/editfile/{id}','Elibrary@editfiles')->name('editfile');
 Route::any('update_file','Elibrary@updatefiles')->name('updatee_file');
 Route::any('/delete_file/{id}','Elibrary@deletefiles')->name('deletefile');
 Route::any('viewfile','Elibrary@viewfiles')->name('viewfile');
-
 Route::any('site','Elibrary@sites')->name('site');
 Route::any('add_site','Elibrary@addsites')->name('add_site');
 Route::any('update_site','Elibrary@updatesites')->name('update_site');
 Route::any('/editsite/{id}','Elibrary@editsites')->name('editsite');
 Route::any('/delete_site/{id}','Elibrary@deletesites')->name('delete_site');
-
 Route::any('precedence','Elibrary@precedences')->name('precedence');
 Route::any('add_precedence','Elibrary@addprecedences')->name('add_precedence');
 Route::any('/editprecedence/{id}','Elibrary@editprecedences')->name('editprecedence');
@@ -1535,6 +1508,14 @@ Route::any('update_precedence','Elibrary@updateprecedences')->name('update_prece
 Route::any('/delete_precedence/{id}','Elibrary@deleteprecedence')->name('delete_precedence');
 Route::any('viewprecedence','Elibrary@viewprecedences')->name('viewprecedence');
 
+Route::any('subject_category','Elibrary@subject_categorys')->name('subject_category');
+
+Route::any('add_subject_category','Elibrary@addsubject_categorys')->name('add_subject_category');
+Route::any('/editsubject_category/{id}','Elibrary@editsubject_categorys')->name('editsubject_category');
+Route::any('/update_subject_category','Elibrary@updatesubjectcategorys')->name('update_subject_category');
+Route::any('/deletesubject_category/{id}','Elibrary@deletesubject_categorys')->name('deletesubject_category');
+
+Route::any('editsubject_category','Elibrary@editsubject_categorys')->name('editsubject_category');
 
 
 
@@ -1560,7 +1541,12 @@ Route::any('creditors_aging_report','OfficeAdministration@creditors_aging_report
 Route::any('supplier_expense_report','OfficeAdministration@supplier_expense_report')->name('supplier_expense_report');
 Route::any('pay_supplier_invoice','OfficeAdministration@pay_supplier_invoice')->name('pay_supplier_invoice');
 Route::any('supplier_credit_notes','OfficeAdministration@supplier_credit_notes')->name('supplier_credit_notes');
+
+Route::any('add_supplier_invoice','OfficeAdministration@add_supplier_invoice')->name('add_supplier_invoice');
 Route::any('supplier_invoice','OfficeAdministration@supplier_invoice')->name('supplier_invoice');
+Route::any('view_supplier_invoice','OfficeAdministration@view_supplier_invoice')->name('view_supplier_invoice');
+Route::any('edit_supplier_invoice','OfficeAdministration@edit_supplier_invoice')->name('edit_supplier_invoice');
+
 Route::any('balance','OfficeAdministration@balances')->name('balance');
 Route::any('cheque','OfficeAdministration@cheques')->name('cheque');
 Route::any('file_office','OfficeAdministration@file_offices')->name('file_office');
@@ -1576,12 +1562,53 @@ Route::any('petty_report','OfficeAdministration@petty_reports')->name('petty_rep
 Route::any('settled_fee','OfficeAdministration@settled_fees')->name('settled_fee');
 Route::any('settlement_report','OfficeAdministration@settlement_reports')->name('settlement_report');
 Route::any('undeposited_fund','OfficeAdministration@undeposited_funds')->name('undeposited_fund');
+Route::any('submit_undeposit_fund','OfficeAdministration@submit_undeposit_fund')->name('submit_undeposit_fund');
 Route::any('view_supplier_credit','OfficeAdministration@view_supplier_credit')->name('view_supplier_credit');
 Route::any('edit_supplier_credit','OfficeAdministration@edit_supplier_credit')->name('edit_supplier_credit');
 Route::any('view_supplier_invoice','OfficeAdministration@view_supplier_invoice')->name('view_supplier_invoice');
 Route::any('edit_supplier_invoice','OfficeAdministration@edit_supplier_invoice')->name('edit_supplier_invoice');
 Route::any('view_supplier_list','OfficeAdministration@view_supplier_list')->name('view_supplier_list');
 Route::any('edit_supplier_list','OfficeAdministration@edit_supplier_list')->name('edit_supplier_list');
+Route::any('view_supplier_invoice_Details','OfficeAdministration@view_supplier_invoice_Details')->name('view_supplier_invoice_Details');
+
+//Customer Relationship Mamagement
+Route::any('crm_index',"CrmController@index_view")->name('crm_index');
+Route::any('about',"etc@index")->name('about');
+Route::any('help',"etc@index_help")->name('help');
+
+Route::any('manage_tasks',"CrmController@manage_tasks")->name('manage_tasks');
+Route::any('view_manage_task',"CrmController@view_manage_task")->name('view_manage_task');
+Route::any('edit_manage_task',"CrmController@edit_manage_task")->name('edit_manage_task');
+Route::any('projects',"CrmController@projects")->name('projects');
+Route::any('view_project',"CrmController@view_project")->name('view_project');
+Route::any('edit_project',"CrmController@edit_project")->name('edit_project');
+Route::any('Corporate',"CrmController@Corporates")->name('Corporate');
+
+Route::any('edit_Corporate/{Id}',"CrmController@edit_Corporates")->name('edit_Corporate');
+
+Route::any('view_Corporate/{id}',"CrmController@view_Corporates")->name('view_Corporate');
+Route::any('add_Corporate',"CrmController@add_Corporates")->name('add_Corporate');
+Route::any('update_Corporate',"CrmController@update_Corporates")->name('update_Corporate');
+Route::any('drop_Corporate/{id}',"CrmController@drop_Corporates")->name('drop_Corporate');
+
+
+
+
+
+Route::any('expense',"CrmController@expense")->name('expense');
+Route::any('view_expense',"CrmController@view_expense")->name('view_expense');
+Route::any('edit_expense',"CrmController@edit_expense")->name('edit_expense');
+Route::any('crm_panel',"CrmController@crm_panel")->name('crm_panel');
+Route::any('lead',"CrmController@leads")->name('lead');
+Route::any('view_lead',"CrmController@view_leads")->name('view_lead');
+Route::any('proposal_lead',"CrmController@proposal_leads")->name('proposal_lead');
+Route::any('add_manage_task',"CrmController@add_manage_tasks")->name('add_manage_task');
+
+
+
+
+
+
 
 
 

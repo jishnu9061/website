@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 22, 2022 at 08:20 AM
+-- Generation Time: Jan 06, 2023 at 07:38 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -24,24 +24,36 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cra_site`
+-- Table structure for table `cra_add_supplier`
 --
 
-CREATE TABLE `cra_site` (
+CREATE TABLE `cra_add_supplier` (
   `id` int(11) NOT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  `site_url` varchar(255) DEFAULT NULL,
-  `discription` varchar(255) DEFAULT NULL
+  `supplier_name` varchar(150) DEFAULT NULL,
+  `tax_id` int(11) DEFAULT NULL,
+  `email` varchar(150) DEFAULT NULL,
+  `contact_no` int(11) DEFAULT NULL,
+  `address` longtext DEFAULT NULL,
+  `city` varchar(150) DEFAULT NULL,
+  `provinces` varchar(150) DEFAULT NULL,
+  `pincode` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_add_supplier`
+--
+
+INSERT INTO `cra_add_supplier` (`id`, `supplier_name`, `tax_id`, `email`, `contact_no`, `address`, `city`, `provinces`, `pincode`) VALUES
+(1, 'mugu', 45, 'nmugu1@gmail.com', 987654321, 'jnjkfdnjkgdjkdnjkdjkg', 'Nairobi', 'North Eastern', 629158);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `cra_site`
+-- Indexes for table `cra_add_supplier`
 --
-ALTER TABLE `cra_site`
+ALTER TABLE `cra_add_supplier`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -49,10 +61,10 @@ ALTER TABLE `cra_site`
 --
 
 --
--- AUTO_INCREMENT for table `cra_site`
+-- AUTO_INCREMENT for table `cra_add_supplier`
 --
-ALTER TABLE `cra_site`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `cra_add_supplier`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

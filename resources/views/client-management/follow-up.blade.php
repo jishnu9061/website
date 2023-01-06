@@ -62,7 +62,7 @@
                 <b><u>Client Follow Up</u></b></span> -->
     {{-- heading --}}
     <div class="container">
-        <h4 id="hdtpa"><b>Client Follow Up</b></h4>
+        <h4 id="hdtpa"><b>Follow Up Details</b></h4>
 
 
 
@@ -114,9 +114,9 @@
 
                         <thead>
                             <tr>
-                                <th class="text-center">No</th>
-                                <th class="text-center">Follow Up date</th>
-                                <th class="text-center"> Follow Up Type</th>
+                                <!-- <th class="text-center">No</th> -->
+                                <th class="text-center">Date</th>
+                                <th class="text-center">Type</th>
                                 <th class="text-center">Client Name</th>
                                 <th class="text-center">Description</th>
                                 <th class="text-center">Next Date</th>
@@ -130,7 +130,7 @@
                         <tbody>
                             @foreach($followup as $list)
                             <tr id="data">
-                                <td scope="row" class="text-center" id="medicine_name_1">{{$list->id}}</td>
+                                <!-- <td scope="row" class="text-center" id="medicine_name_1">{{$list->id}}</td> -->
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->followup_date}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->followup_type}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{$list->customer}}</td>
@@ -190,7 +190,7 @@
                                                 <div class="row">
                                                     <div class="col-md-4">
                                                         <div class="mb-1">
-                                                            <label for="username">Follow Up Date</label>
+                                                            <label for="username">Date</label>
                                                             <div class="input-group">
                                                                 <div class="input-group-prepend"></div>
                                                                 <input type="date" class="form-control" name="date"
@@ -203,12 +203,13 @@
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="mb-1">
-                                                            <label for="username">Client</label>
+                                                            <label for="username">Client Name</label>
                                                             <div class="input-group">
                                                                 <div class="input-group-prepend">
 
                                                                 </div>
                                                                 <select name="client" id="cars">
+                                                                <option>--select--</option>
                                                                     @if(count($client))
                                                                     @foreach($client as $page)
                                                                     <option>{{$page->client_name}}</option>
@@ -220,7 +221,7 @@
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="mb-1">
-                                                            <label for="username">Follow Up Types</label>
+                                                            <label for="username">Types</label>
                                                             <div class="input-group">
                                                                 <div class="input-group-prepend">
 
@@ -316,7 +317,7 @@
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="mb-1">
-                                                            <label for="username"> Registered_by</label>
+                                                            <label for="username"> Registered By</label>
                                                             <div class="input-group">
                                                                 <div class="input-group-prepend"></div>
                                                                 <input type="text" class="form-control"

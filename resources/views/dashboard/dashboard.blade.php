@@ -27,98 +27,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
 
-    <script>
-    $(document).ready(function() {
-        var SITEURL = "{{ url('/') }}";
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
-        var calendar = $('#full_calendar_events').fullCalendar({
-            editable: true,
-            editable: true,
-            events: SITEURL + "/calendar-event",
-            displayEventTime: true,
-            eventRender: function(event, element, view) {
-                if (event.allDay === 'true') {
-                    event.allDay = true;
-                } else {
-                    event.allDay = false;
-                }
-            },
-            selectable: true,
-            selectHelper: true,
-            select: function(event_start, event_end, allDay) {
-                var event_name = prompt('Event Name:');
-                if (event_name) {
-                    var event_start = $.fullCalendar.formatDate(event_start, "Y-MM-DD HH:mm:ss");
-                    var event_end = $.fullCalendar.formatDate(event_end, "Y-MM-DD HH:mm:ss");
-                    $.ajax({
-                        url: SITEURL + "/calendar-crud-ajax",
-                        data: {
-                            event_name: event_name,
-                            event_start: event_start,
-                            event_end: event_end,
-                            type: 'create'
-                        },
-                        type: "POST",
-                        success: function(data) {
-                            displayMessage("Event created.");
-                            calendar.fullCalendar('renderEvent', {
-                                id: data.id,
-                                title: event_name,
-                                start: event_start,
-                                end: event_end,
-                                allDay: allDay
-                            }, true);
-                            calendar.fullCalendar('unselect');
-                        }
-                    });
-                }
-            },
-            eventDrop: function(event, delta) {
-                var event_start = $.fullCalendar.formatDate(event.start, "Y-MM-DD");
-                var event_end = $.fullCalendar.formatDate(event.end, "Y-MM-DD");
-                $.ajax({
-                    url: SITEURL + '/calendar-crud-ajax',
-                    data: {
-                        title: event.event_name,
-                        start: event_start,
-                        end: event_end,
-                        id: event.id,
-                        type: 'edit'
-                    },
-                    type: "POST",
-                    success: function(response) {
-                        displayMessage("Event updated");
-                    }
-                });
-            },
-            eventClick: function(event) {
-                var eventDelete = confirm("Are you sure?");
-                if (eventDelete) {
-                    $.ajax({
-                        type: "POST",
-                        url: SITEURL + '/calendar-crud-ajax',
-                        data: {
-                            id: event.id,
-                            type: 'delete'
-                        },
-                        success: function(response) {
-                            calendar.fullCalendar('removeEvents', event.id);
-                            displayMessage("Event removed");
-                        }
-                    });
-                }
-            }
-        });
-    });
 
-    function displayMessage(message) {
-        toastr.success(message, 'Event');
-    }
-    </script>
 
 </section>
 
@@ -148,7 +57,7 @@
 <br>
 <br> -->
 
-<div id="calender"></div>
+<div class="p-5" style="background-color: white" id="calender"></div>
 
 
 {{-- {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
@@ -158,82 +67,93 @@
 <!-- Modal -->
 {{-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"> --}}
 <div id="exampleModal" class="modal modal-top fade calendar-modal">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <form id="add-event" action="{{url('add_ot_patient')}}" method="post">
-                @csrf
-                <div class="modal-body" id="slotdata">
-                    <div class="modal-header">
-                        <h4 style="text-align:center;" class="text-white"><b>Add Events</b></h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-4 col-lg-12">
-                                <div class="form-group">
-                                    <label style="color:white">Date</label>
-                                    <input type="text" id="enamez" class="form-control" name="sur_date">
-                                </div>
-                            </div>
-                            {{-- <div class="col-md-8 col-lg-8"> --}}
-                            {{-- <div class="form-group">
-                                        <label>Title</label> --}}
-                            {{-- <input type="hidden" value="Booked" class="form-control" name="sur_title" style="text-align:center;"> --}}
-                            {{-- </div> --}}
-                            <div class="col-md-8 col-lg-12">
-                                <div class="form-group">
-                                    <label style="color:white">Event Name</label>
-                                    <input type="text" value="" class="form-control" name="sur_title"
-                                        style="text-align:center;">
-                                    {{-- @php
-                                      $users=DB::table('users')->where('id',Auth::user()->id)->get(); 
-                                    @endphp --}}
-                                    {{-- <select class="form-control" id="doctor_name" name="doctor_name" style="pointer-events:none">
-                                      <option>Select</option> 
-                                      @foreach ($users as $doc)
-                                          <option value="{{$doc->id}}"{{($doc->id==Auth::user()->id) ? "selected" : ""}}>{{ $doc->name }}
-                                    </option>
-                                    @endforeach
-                                    </select> --}}
-                                    {{-- </div> --}}
-                                </div>
-                            </div>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <form id="add-event" action="{{url('add_ot_patient')}}" method="post">
+                    @csrf
+                    <div class="modal-body" id="slotdata">
+                        <div class="modal-header">
+                            <h5 id="hdbtb">Add Event</h5>
                         </div>
-                        {{-- <div class="row">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-4 col-lg-12">
+                                    <div class="form-group">
+                                        <label>Title</label>
+                                        <input type="text" class="form-control" name="sur_date"
+                                            placeholder="Event Name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label>Date From</label>
+                                        <input type="text" id="enamez" class="form-control" name="sur_date">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label>End Date To</label>
+                                        <input type="date" class="form-control" name="sur_date">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-lg-12">
+                                    <div class="form-group">
+                                        <label>Description</label>
+                                        <textarea rows="4" cols="50" name="discription" class="form-control"
+                                            type="text" placeholder="About Event"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- <div class="row">
                                     <div class="col-md-12 col-lg-12">
                                         <div class="form-group">
                                             <label>Choose Color</label>
                                             <input type="color" name="color" class="form-control">
                                         </div>
                                     </div>
-                                </div> --}}
-                        <div class="row">
-                            {{-- <div class="col-md-4 col-lg-4">
+                                </div> -->
+
+                            <!-- <div class="row">
+                            <div class="col-md-4 col-lg-4">
                                         <div class="form-group">
                                             <label>Date</label>
                                             <input type="text" id="enamez" class="form-control" name="sur_date">
                                         </div>
-                                    </div> --}}
-                            <div class="col-md-6 col-lg-6">
-                                <?php
-                                            date_default_timezone_set("Asia/Calcutta");   //India time (GMT+5:30)
-                                          ?>
-                                <div class="form-group">
-                                    <label style="color:white">Start Time</label>
-                                    <input type="time" name="start_time" id="start_time" class="form-control" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6">
-                                <?php
-                                            date_default_timezone_set("Asia/Calcutta");   //India time (GMT+5:30)
-                                          ?>
-                                <div class="form-group">
-                                    <label style="color:white">End Time</label>
-                                    <input type="time" name="end_time" id="end_time" class="form-control" required>
-                                </div>
-                            </div>
+                                    </div>  -->
 
-                        </div>
-                        {{-- <div class="row">
+
+                            <!-- <div class="row">
+                                <div class="col-md-6 col-lg-6">
+                                    <?php
+                                            date_default_timezone_set("Asia/Calcutta");   //India time (GMT+5:30)
+                                          ?>
+                                    <div class="form-group">
+                                        <label>Start Time</label>
+                                        <input type="time" name="start_time" id="start_time" class="form-control"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6">
+                                    <?php
+                                            date_default_timezone_set("Asia/Calcutta");   //India time (GMT+5:30)
+                                          ?>
+                                    <div class="form-group">
+                                        <label>End Time</label>
+                                        <input type="time" name="end_time" id="end_time" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+
+                            {{-- <div class="row">
                                 <div class="col-md-12 col-lg-12">
                                     <div class="form-group">
                                     <label>Department</label>
@@ -245,13 +165,13 @@
 
                                         @foreach ($department as $dept)
                                           <option value="{{$dept->departments}}"{{ ($dept->departments==Auth::user()->departments) ? "selected" : ""}}>{{$dept->departments}}
-                        </option>
-                        @endforeach
-                        </select>
+                            </option>
+                            @endforeach
+                            </select>
+                        </div>
                     </div>
-                </div>
-        </div> --}}
-        {{-- <div class="row">
+            </div> --}}
+            {{-- <div class="row">
                                 <div class="col-md-6 col-lg-6">
                                     <div class="form-group">
                                         <label>Operation Theatre </label>
@@ -259,25 +179,26 @@
                                             <option>Select</option>
                                             @foreach ($operation_t as $theatre)
                                             <option value="{{$theatre->id}}"{{($theatre->id==$operation_t[0]->id) ? "selected" : "" }}>{{ $theatre->theatre_name }}
-        </option>
-        @endforeach
-        </select>
-
-    </div>
-</div>
-<div class="col-md-6 col-lg-6">
-    <div class="form-group">
-        <input type="hidden" name="patient_id" value="{{ $patient_id[0]->id}}">
-        <label>Patient Name</label>
-        <select class="form-control" id="ot_patient" name="ot_patient" style="pointer-events:none">
-            <option>select</option>
-            @foreach ($patient_details as $pt)
-            <option value="{{ $pt->id }}" {{ ($pt->id==$patient_id[0]->id) ? "selected" : "" }}>{{$pt->firstname}}
             </option>
             @endforeach
-        </select>
+            </select>
+
+        </div>
     </div>
-</div>
+    <div class="col-md-6 col-lg-6">
+        <div class="form-group">
+            <input type="hidden" name="patient_id" value="{{ $patient_id[0]->id}}">
+            <label>Patient Name</label>
+            <select class="form-control" id="ot_patient" name="ot_patient" style="pointer-events:none">
+                <option>select</option>
+                @foreach ($patient_details as $pt)
+                <option value="{{ $pt->id }}" {{ ($pt->id==$patient_id[0]->id) ? "selected" : "" }}>
+                    {{$pt->firstname}}
+                </option>
+                @endforeach
+            </select>
+        </div>
+    </div>
 </div> --}}
 {{-- <div class="row">
                                 <div class="col-md-6 col-lg-6">
@@ -293,6 +214,7 @@
                                         <option value="{{ $key->id }}">{{ $key->surgery_name }}</option>
 @endforeach
 </select>
+</div>
 </div>
 </div>
 </div>
@@ -315,13 +237,15 @@
 </div>
 </div> --}}
 </div>
-<div class="modal-footer">
-    {{-- <button type="submit" class="btn btn-success">Save</button>
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> --}}
-    <button type="button" class="btn  text-white" data-bs-dismiss="modal" style="width:30%" data-dismiss="modal"> <i
-            class="bx bx-x d-block d-sm-none"></i>
-        <span class="d-none d-sm-block"></span><b>Close</b></button>
-    <button type="submit" class="btn text-white" style="width:30%"><b>Save</b></button>
+<div class="row">
+    <div class="col-sm">
+    </div>
+
+    <div class="col-sm">
+        <br>
+        <button type="submit" class="btn btn-primary float:right;" Style="width:50%;">Save</button>
+        <button type="button" class="btn btn-primary float:left" Style="width:45%;" data-dismiss="modal">Cancel</button>
+    </div>
 </div>
 
 </div>
@@ -400,34 +324,33 @@ $(document).ready(function() {
             // console.log(currentDate);
             if (dat >= date.format('D-MM-YYYY')) {
                 $('#exampleModal').modal('show');
-            } else {
-                alert("This is previous day");
             }
-            // $('#exampleModal').modal('show');
-
-
-            // if(title)
-            // {
-            //     var start = $.fullCalendar.formatDate(start, 'Y-MM-DD HH:mm:ss');
-
-            //     var end = $.fullCalendar.formatDate(end, 'Y-MM-DD HH:mm:ss');
-
-            //     $.ajax({
-            //         url:"/calendar_event/action",
-            //         type:"POST",
-            //         data:{
-            //             title: title,
-            //             start: start,
-            //             end: end,
-            //             type: 'add'
-            //         },
-            //         success:function(data)
-            //         {
-            //             calendar.fullCalendar('refetchEvents');
-            //             alert("Event Created Successfully");
-            //         }
-            //     })
+            //  else {
+            //     alert("This is previous day");
             // }
+            $('#exampleModal').modal('show');
+
+
+            if (title) {
+                var start = $.fullCalendar.formatDate(start, 'Y-MM-DD HH:mm:ss');
+
+                var end = $.fullCalendar.formatDate(end, 'Y-MM-DD HH:mm:ss');
+
+                $.ajax({
+                    url: "/calendar_event/action",
+                    type: "POST",
+                    data: {
+                        title: title,
+                        start: start,
+                        end: end,
+                        type: 'add'
+                    },
+                    success: function(data) {
+                        calendar.fullCalendar('refetchEvents');
+                        alert("Event Created Successfully");
+                    }
+                })
+            }
         },
         // eventClick: function(event, jsEvent, view) {
         //     console.log(event.start);
@@ -449,6 +372,104 @@ $(document).ready(function() {
     });
 
 });
+</script>
+
+
+
+
+
+
+<script>
+$(document).ready(function() {
+    var SITEURL = "{{ url('/') }}";
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    var calendar = $('#full_calendar_events').fullCalendar({
+        editable: true,
+        editable: true,
+        events: SITEURL + "/calendar-event",
+        displayEventTime: true,
+        eventRender: function(event, element, view) {
+            if (event.allDay === 'true') {
+                event.allDay = true;
+            } else {
+                event.allDay = false;
+            }
+        },
+        selectable: true,
+        selectHelper: true,
+        select: function(event_start, event_end, allDay) {
+            var event_name = prompt('Event Name:');
+            if (event_name) {
+                var event_start = $.fullCalendar.formatDate(event_start, "Y-MM-DD HH:mm:ss");
+                var event_end = $.fullCalendar.formatDate(event_end, "Y-MM-DD HH:mm:ss");
+                $.ajax({
+                    url: SITEURL + "/calendar-crud-ajax",
+                    data: {
+                        event_name: event_name,
+                        event_start: event_start,
+                        event_end: event_end,
+                        type: 'create'
+                    },
+                    type: "POST",
+                    success: function(data) {
+                        displayMessage("Event created.");
+                        calendar.fullCalendar('renderEvent', {
+                            id: data.id,
+                            title: event_name,
+                            start: event_start,
+                            end: event_end,
+                            allDay: allDay
+                        }, true);
+                        calendar.fullCalendar('unselect');
+                    }
+                });
+            }
+        },
+        eventDrop: function(event, delta) {
+            var event_start = $.fullCalendar.formatDate(event.start, "Y-MM-DD");
+            var event_end = $.fullCalendar.formatDate(event.end, "Y-MM-DD");
+            $.ajax({
+                url: SITEURL + '/calendar-crud-ajax',
+                data: {
+                    title: event.event_name,
+                    start: event_start,
+                    end: event_end,
+                    id: event.id,
+                    type: 'edit'
+                },
+                type: "POST",
+                success: function(response) {
+                    displayMessage("Event updated");
+                }
+            });
+        },
+        eventClick: function(event) {
+            var eventDelete = confirm("Are you sure?");
+            if (eventDelete) {
+                $.ajax({
+                    type: "POST",
+                    url: SITEURL + '/calendar-crud-ajax',
+                    data: {
+                        id: event.id,
+                        type: 'delete'
+                    },
+                    success: function(response) {
+                        calendar.fullCalendar('removeEvents', event.id);
+                        displayMessage("Event removed");
+                    }
+                });
+            }
+        }
+    });
+});
+
+function displayMessage(message) {
+    toastr.success(message, 'Event');
+}
 </script>
 {{-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> --}}
 {{-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

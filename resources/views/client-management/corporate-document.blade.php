@@ -1,42 +1,22 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container">
-    <div class="py-5 text-center">
-        @if(Session::has('staffregistered'))
-        <div class="alert alert-dark" role="alert">
-            {{ Session::get('staffregistered')}}
-        </div>
-        @endif
 
-    </div>
-    <div style="height: 50px;"></div>
-    <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-    <script type="text/javascript">
-    $(document).on('input', '#price', function() {
-        $('#percent').prop('readonly', true);
-
-    });
-    $(document).on('input', '#percent', function() {
-        $('#price').prop('readonly', true);
-
-    });
-    </script>
-    <script src="{{ url('assets/js') }}/jquery.min.js"></script>
     <div>
         {{-- heading --}}
         <h4 id="hdtpa"><b>Add Corporate Document</b></h4>
         <br><br>
 
 
-
-        <br>
     </div>
     <div class="row">
         <div class="col-md-12 order-md-1">
             <form method="post" action="{{url('add-corporate-document')}}" id="form" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" name="corporate_id" value="{{$corporate_docs->corporate_id}}">
-               
+
+                
+             
                 <br>
 
                 <div class="row">
@@ -46,7 +26,6 @@
                                 <tr>
                                     <th>Document Type</th>
                                     <th>File Upload</th>
-                                    <th></th>
                                     <th>Date</th>
                                     <th>ADD</th>
                                 </tr>
@@ -66,10 +45,11 @@
                                             id="username" value="" placeholder="File" required>
                                     </td>
 
-                                    <td>
+                                    <!-- <td>
                                         <input type="hidden" class="form-control" name="client[]" id="username"
                                             value="{{$corporate_docs->Client_type}}" placeholder="File" required>
-                                    </td>
+                                    </td> -->
+
                                     <td>
                                         <input type="date" class="form-control" name="date[]" id="username" required>
                                     </td>
@@ -77,6 +57,7 @@
                                     </td>
                                     <input type="hidden" class="form-control" name="client" id="username"
                                         value="{{$corporate_docs->Client_type}}" placeholder="File" required>
+                                        
                                 </tr>
                             </tbody>
                         </table>
@@ -97,7 +78,7 @@
                     <div class="col-sm">
                         <br>
                         <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Submit</button>
-                        <button type="button" class="btn btn-primary float:left" Style="width:45%;">Cancel</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;" onclick="history.back()">Cancel</button>
                     </div>
                 </div>
             </form>
@@ -119,7 +100,7 @@ $(document).ready(function() {
 
 
     var html =
-        '<tr><td style="width:45%;"> <select class="form-control select_group product"data-row-id="row_3" id="product_detailes" name="testname[]" style="width:100%;"><option selected>Select</option><option value="assets">Type 1</option></select></td><td style="width:45%;"> <input type="file" class="form-control" name="file[]" multiple="multiple" required></td></td><td><input type="hidden" class="form-control" name="client" id="username"value="{{$corporate_docs->Client_type}}" placeholder="File" required></td><td><input type="date" class="form-control" name="date" id="username" required></td><td> <input type="button" class="btn btn-danger float:right;" name="remove" id="remove" value="remove"></td></tr>';
+        '<tr><td style="width:45%;"> <select class="form-control select_group product"data-row-id="row_3" id="product_detailes" name="testname[]" style="width:100%;"><option selected>Select</option><option value="assets">Type 1</option></select></td><td style="width:45%;"> <input type="file" class="form-control" name="file[]" multiple="multiple" required></td></td> <td><input type="date" class="form-control" name="date[]" id="username" required></td><td> <input type="button" class="add-Row ibtnDel btn btn-primary text-white" style="background-color:#607080;width:100%;color:white;" name="remove" id="remove" value="Remove"></td></tr>';
 
 
     $("#add").click(function() {

@@ -26,7 +26,9 @@
     <br>
     <br>
     <div>
-        <div class="continer" style="width:70%; margin-left: auto; margin-right: auto;">
+    <div class="card">
+
+<div class="card-body">
             <form method="post" action="" id="form">
                 @csrf
 
@@ -84,7 +86,7 @@
 
 
                 </div>
-        </div>
+       
 
         <br>
 
@@ -102,6 +104,9 @@
                     onclick="history.back()">Cancel</button>
             </div>
         </div>
+</form>
+</div>
+</div>
 
 
 

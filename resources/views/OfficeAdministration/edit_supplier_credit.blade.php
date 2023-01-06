@@ -4,6 +4,9 @@
 
     <h4 id="hdtpa"><b>Edit Supplier Credit Note</b></h4>
     <br>
+    <div class="card">
+
+<div class="card-body">
     <form method="post" enctype="multipart/form-data" action="{{url('')}}">
         <div class="container">
             <div class="form-row">
@@ -177,6 +180,8 @@
         </div>
 
     </form>
+</div>
+</div>
 
 </div>
 

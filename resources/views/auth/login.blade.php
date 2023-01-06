@@ -18,8 +18,8 @@
 
 <style>
 .vl {
-    border-left: 1px solid rgb(185, 161, 138);
-    height: 700px;
+    border-left: 1.5px solid rgb(0, 0, 0);
+    height: 100vh;
     
         border-radius:10px 10px 10px 10px;
         opacity: 10%;
@@ -48,7 +48,7 @@
                         @csrf
           @if(Session::has('errors'))
 
-           <div class="alert alert-dark" role="alert">
+           <div class="alert alert-danger" role="alert">
               {{ Session::get('errors')}}
            </div>
                           
@@ -88,8 +88,8 @@
             </form>
             <div class="text-center mt-5 text-lg" style="font-size: 22px">
                 <p class="text-gray-600">Don't have an account? <br> <a href="auth-register.html" class="font-bold">Sign
-                        up</a>.</p>
-                <p><a class="font-bold" href="auth-forgot-password.html">Forgot password?</a>.</p>
+                        up</a></p>
+                <p><a class="font-bold" href="auth-forgot-password.html">Forgot password?</a></p>
             </div>
         </div>
      </div>
@@ -99,7 +99,7 @@
 
 
         <div class="align-items-center col-lg-6  d-flex justify-content-center">
-            <div class="vl"></div>
+            <div class="vl "></div>
          
               <img  id="auth-right" src="assets/images/bg/loginimage.jpg" style="border-radius: 50px; " class="  mx-auto d-block" alt="Responsive image">
 

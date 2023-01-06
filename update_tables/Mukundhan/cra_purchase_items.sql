@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 22, 2022 at 08:20 AM
+-- Generation Time: Jan 02, 2023 at 07:00 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -24,31 +24,37 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cra_subject`
+-- Table structure for table `cra_purchase_items`
 --
 
-CREATE TABLE `cra_subject` (
+CREATE TABLE `cra_purchase_items` (
   `id` int(11) NOT NULL,
-  `sub_name` varchar(255) DEFAULT NULL,
-  `category` varchar(255) DEFAULT NULL,
-  `discription` varchar(255) DEFAULT NULL
+  `purchase_id` int(11) NOT NULL,
+  `item_no` int(11) NOT NULL,
+  `item_name` varchar(150) DEFAULT NULL,
+  `quantity` int(11) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
+  `total` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `cra_subject`
+-- Dumping data for table `cra_purchase_items`
 --
 
-INSERT INTO `cra_subject` (`id`, `sub_name`, `category`, `discription`) VALUES
-(1, '1234', 'fdfdg', 'fdfdgfgd');
+INSERT INTO `cra_purchase_items` (`id`, `purchase_id`, `item_no`, `item_name`, `quantity`, `price`, `total`) VALUES
+(1, 1, 1, 'Demo Item', 2, 33, 66),
+(2, 1, 2, 'Demo Item', 20, 33, 660),
+(3, 2, 3, 'Demo Item', 20, 34, 680),
+(4, 2, 4, 'Demo Item', 34, 12, 408);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `cra_subject`
+-- Indexes for table `cra_purchase_items`
 --
-ALTER TABLE `cra_subject`
+ALTER TABLE `cra_purchase_items`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -56,10 +62,10 @@ ALTER TABLE `cra_subject`
 --
 
 --
--- AUTO_INCREMENT for table `cra_subject`
+-- AUTO_INCREMENT for table `cra_purchase_items`
 --
-ALTER TABLE `cra_subject`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `cra_purchase_items`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

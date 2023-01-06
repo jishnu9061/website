@@ -4,7 +4,7 @@
 
 {{-- heading --}}
 <div class="container">
-    <h4 id="hdtpa"><b>Precedence Register Repository</b></h4>
+    <h4 id="hdtpa"><b>Precedence Register Details</b></h4>
     <br>
     <br>
 
@@ -57,13 +57,13 @@
                     <td>{{$list->file_no}}</td>
                     <td>{{$list->client_name}}</td>
                     <td>{{$list->file_discription}}</td>
-                    <td>
+                    <td> 
+                        <a href="viewprecedence"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i><span class="m-2"></span>
                         <a href="{{url('editprecedence',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span
                                 class="m-2"></span>
                             <a href="{{url('delete_precedence',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
-                            </i><span
-                                class="m-2"></span>
-                            <a href="viewprecedence"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
+                            </i>        
+                           
 
                     </td>
 

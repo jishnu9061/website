@@ -1,23 +1,14 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container">
-    <div class="py-5 text-center">
 
-
-        <div>
-            <div>
-                <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Add New Complaint</u></b></span></button><br>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                crossorigin="anonymous"> -->
-                {{-- heading --}}
-    <h4 id="hdtpa"><b>Add New Complaint</b></h4>
+    {{-- heading --}}
+    <h4 id="hdtpa"><b>Edit Complaint Details</b></h4>
     <br><br>
 
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
+
+    <div class="card">
+        <div class="card-body">
             <form method="post" action="{{url('update-Complaint')}}" id="form">
                 @csrf
                 <input type="hidden" name="id" value="{{$edit_complaint->id}}">
@@ -27,7 +18,8 @@
                             <label for="username">Date</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="date" id="username" value="{{$edit_complaint->date}}">
+                                <input type="date" class="form-control" name="date" id="username"
+                                    value="{{$edit_complaint->date}}">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -40,8 +32,8 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <select name="type" id="cars" >
-                                    <option >{{$edit_complaint->client_type}}</option>
+                                <select name="type" id="cars">
+                                    <option>{{$edit_complaint->client_type}}</option>
                                 </select>
                             </div>
                         </div>
@@ -54,7 +46,7 @@
 
                                 </div>
                                 <select name="files" id="cars">
-                                    <option >{{$edit_complaint->files}}</option>
+                                    <option>{{$edit_complaint->files}}</option>
                                 </select>
                             </div>
                         </div>
@@ -64,10 +56,17 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">Customer Name</label>
+                            <label for="username">Client Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="name" id="age" value="{{$edit_complaint->customer_name}}" min="0" max="99">
+                                <select name="Staff" id="cars">
+                                    <option>Select</option>
+                                    <option>client 1</option>
+                                    <option>client 2</option>
+                                    <option>client 3</option>
+                                    <option>client 4</option>
+                                </select>
+                                <!-- <input type="text" class="form-control" name="name" id="age" value="{{$edit_complaint->customer_name}}" min="0" max="99"> -->
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
                                 </div>
@@ -82,7 +81,7 @@
 
                                 </div>
                                 <select name="Staff" id="cars">
-                                    <option >{{$edit_complaint->staff_handling}}</option>
+                                    <option>{{$edit_complaint->staff_handling}}</option>
                                 </select>
                             </div>
                         </div>
@@ -95,7 +94,7 @@
 
                                 </div>
                                 <select name="Complaint" id="cars">
-                                    <option >{{$edit_complaint->complaint_about}}</option>
+                                    <option>{{$edit_complaint->complaint_about}}</option>
                                 </select>
                             </div>
                         </div>
@@ -108,8 +107,8 @@
                             <label for="username">Telephone No</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="Telephone" id="age" value="{{$edit_complaint->telephone_no}}"
-                                 min="0" max="99">
+                                <input type="text" class="form-control" name="Telephone" id="age"
+                                    value="{{$edit_complaint->telephone_no}}" min="0" max="99">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Age is required.
                                 </div>
@@ -121,7 +120,8 @@
                             <label for="username">Email Address</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="email" class="form-control" name="email" value="{{$edit_complaint->email}}" id="password">
+                                <input type="email" class="form-control" name="email" value="{{$edit_complaint->email}}"
+                                    id="password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -133,8 +133,8 @@
                             <label for="username">Others</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="Others" value="{{$edit_complaint->others}}"
-                                    id="confirm_password">
+                                <input type="text" class="form-control" name="Others"
+                                    value="{{$edit_complaint->others}}" id="confirm_password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Password is required.
                                 </div>
@@ -148,7 +148,8 @@
                         <div class="mb-1">
                             <label for="username">Action Plan</label>
                             <div class="input-group">
-                                <textarea class="form-control" id="form7Example7" rows="3" name="plan">{{$edit_complaint->action_plan}}</textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3"
+                                    name="plan">{{$edit_complaint->action_plan}}</textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Action Plan is required.
                                 </div>
@@ -159,16 +160,17 @@
                         <div class="mb-1">
                             <label for="username">Complaint Description</label>
                             <div class="input-group">
-                                <textarea class="form-control" id="form7Example7" rows="3" name="Description">{{$edit_complaint->complaint_description}}</textarea>
+                                <textarea class="form-control" id="form7Example7" rows="3"
+                                    name="Description">{{$edit_complaint->complaint_description}}</textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Complaint Description is required.
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-                <br>
-                <div class="row">
+
+                    <br>
+                    <div class="row">
                         <div class="col-sm">
 
                         </div>
@@ -177,11 +179,13 @@
                         </div>
                         <div class="col-sm">
                             <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
-                            <button type="button" class="btn btn-primary float:left" Style="width:45%;">Close</button>
+                            <button type="submit" class="btn btn-primary float:right;"
+                                Style="width:45%;">Update</button>
+                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                                onclick="history.back()">Close</button>
                         </div>
                     </div>
-                
+
             </form>
         </div>
     </div>
@@ -361,9 +365,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Salary is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -390,9 +394,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Years of experience is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -415,9 +419,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 dob is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 /div>
 
             {
@@ -449,9 +453,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Bank Name is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div >
+            div >
 
                 <
                 div class = "col-md-4" >
@@ -477,9 +481,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 Account number is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-4" >
                 <
                 div class = "mb-1" >
@@ -502,9 +506,9 @@ $(document).on('input', '#percent', function() {
             style = "width: 100%;" >
                 IFSC Code is required. <
                 /div> < /
-                div > <
+            div > <
                 /div> < /
-                div > <
+            div > <
                 div class = "col-md-12" >
                 <
                 div class = "mb-1" >
@@ -545,7 +549,7 @@ $(document).on('input', '#percent', function() {
 
                 <
                 /tr> < /
-                table > {
+            table > {
                     {
                         -- < input type = "text"
                         class = "form-control"
@@ -559,8 +563,8 @@ $(document).on('input', '#percent', function() {
                     }
                 } {
                     {
-                        -- < /div> --}} <
-                        /div> < /
+                        -- < /div> --}} < /
+                        div > < /
                         div > <
                             /div>
 
@@ -604,9 +608,9 @@ $(document).on('input', '#percent', function() {
 
                             <
                             /tbody> < /
-                            table > <
+                        table > <
                             /div> < /
-                            div > <
+                        div > <
                             script src = "{{ url('assets/js') }}/jquery.min.js" >
 </script>
 <script type="text/javascript">

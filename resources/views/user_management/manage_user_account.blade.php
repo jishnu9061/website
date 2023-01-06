@@ -114,9 +114,10 @@ color: #999;
                         <td class="text-center"></td>
                         <td  scope="row"class="text-center">
                         <a href="{{url('user_edit',$list->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <a href="user_comments"><i  style="  color:rgb(13, 1, 56);" class="fas fa-comment" aria-hidden="true"></i>
                         <a href="{{url('user_destroy',$list->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
                         {{-- <a href="user_attachments"><i  style="  color:rgb(13, 1, 56);" class="fas fa-paperclip" aria-hidden="true"></i> --}}
-                        <a href="user_comments"><i  style="  color:rgb(13, 1, 56);" class="fas fa-comment" aria-hidden="true"></i>
+                        
                     </td>
 {{-- 
                         <!-- <td class="text-center">
@@ -153,10 +154,8 @@ color: #999;
     <div class="rows_count">Showing 11 to 20 of 91</div>
 
  <!-- 		End of Container -->
-
-
  
-<div class="modal fade" id="myModal">
+<div class="modal fade" id="myModal" style="">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
 

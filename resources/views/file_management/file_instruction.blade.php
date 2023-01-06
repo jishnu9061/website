@@ -92,7 +92,7 @@
                             <tbody>
 
                                 @foreach ($new_file_instruction as $instruction)
-                                
+                              
                                 <tr id="data">
                                     <!-- <td scope="row" class="text-center">{{$instruction->id}}</td> -->
                                     <td scope="row" class="text-center"></td>
@@ -102,8 +102,8 @@
                                     <td scope="row" class="text-center">{{$instruction->receiver}}</td>
                                     <td scope="row" class="text-center">{{$instruction->details}}</td>
                                     <td scope="row" class="text-center">{{$instruction->amount}}</td>
-                                    <td scope="row" class="text-center">{{$instruction->Client_name}}</td>
-                                    <td scope="row" class="text-center">{{$instruction->file_name}}</td>
+                                    <td scope="row" class="text-center">{{$instruction->client}}</td>
+                                    <td scope="row" class="text-center">{{$instruction->file}}</td>
                                     <td scope="row" class="text-center">{{$instruction->turn_around}}</td>
                                     <td scope="row" class="text-center"></td>
                                     <td scope="row" class="text-center"><a href="{{url('edit_file_instruction',$instruction->id)}}"><i

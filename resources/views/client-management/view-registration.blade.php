@@ -57,7 +57,7 @@ color: #999;
                 <b><u>Client Registration</u></b></span> -->
                 {{-- heading --}}
                 <div class="container">
-                <h4 id="hdtpa"><b>Client Registration</b></h4>
+                <h4 id="hdtpa"><b>Individual Customers</b></h4>
                 <br>
             
 
@@ -65,7 +65,7 @@ color: #999;
 
         <div>
             <button type="button" class="btn btn-primary complaint_btn btn " data-toggle="modal"
-                data-target="#myModal">Register Client</button></a>
+                data-target="#myModal">Register Customers</button></a>
          </div>
   
        
@@ -102,7 +102,7 @@ color: #999;
 	
                         <thead>
                             <tr>
-                                <th class="text-center">No</th>
+                                <!-- <th class="text-center">No</th> -->
                                 <th class="text-center">Client Name</th>
                                 <th class="text-center"> Client Address</th>
                                 <th class="text-center">Contact</th>
@@ -116,7 +116,7 @@ color: #999;
                             @foreach($view_registration as $registration)
 
                             <tr class="text-center" id="data" >
-                                <td>{{$registration->id}}</td>
+                                <!-- <td>{{$registration->id}}</td> -->
                                 <td>{{$registration->customer_name}}</td>
                                 <td>{{$registration->customer_address}}</td>
                                 <td>{{$registration->mobile_no}}</td>
@@ -158,7 +158,7 @@ color: #999;
 
                             <!-- Modal Header -->
                             <div class="modal-header">
-                                <h2 class="text-center"><b>Register Client</b></h2>
+                                <h2 class="text-center"><b>Register Individual Customers</b></h2>
 
                             </div>
 
@@ -175,9 +175,15 @@ color: #999;
                                                             <label for="username">Client Name</label>
                                                             <div class="input-group">
                                                                 <div class="input-group-prepend"></div>
-                                                                <input type="text" class="form-control" name="name"
+                                                                <select name="town" id="username" style="width:100%;">
+                                                                    <option>---select--- </option>
+                                                                    <option>client 1 </option>
+                                                                    <option>client 2</option>
+
+                                                                </select>
+                                                                <!-- <input type="text" class="form-control" name="name"
                                                                     id="username" value="" placeholder="Client name"
-                                                                    required>
+                                                                    required> -->
                                                                 <div class="invalid-feedback" style="width: 100%;">
                                                                     Customer Name is required.
                                                                 </div>
@@ -207,11 +213,6 @@ color: #999;
                                                                 <select name="town" id="username" style="width:100%;">
                                                                     <option>---select--- </option>
                                                                     <option>Nairobi </option>
-                                                                    <option>Kisumu</option>
-                                                                    <option>Nakuru</option>
-                                                                    <option>Mombasa</option>
-                                                                    <option>Thika</option>
-                                                                    <option>Malindi</option>
 
                                                                 </select>
                                                                 <div class="invalid-feedback" style="width: 100%;">
@@ -284,12 +285,12 @@ color: #999;
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="mb-1">
-                                                            <label for="username">Web site</label>
+                                                            <label for="username">Website</label>
                                                             <div class="input-group">
                                                                 <div class="input-group-prepend"></div>
                                                                 <input type="text" class="form-control" name="website"
                                                                     value="" id="confirm_password"
-                                                                    placeholder="Web Site">
+                                                                    placeholder="Website">
                                                                 <div class="invalid-feedback" style="width: 100%;">
                                                                     Web site is required.
                                                                 </div>

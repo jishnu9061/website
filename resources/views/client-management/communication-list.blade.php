@@ -57,12 +57,12 @@ color: #999;
                     Conversation</u></b></div><br><br> -->
             {{-- heading --}}
             <div class="container">
-            <h4 id="hdtpa"><b>Client Conversation</b></h4>
+            <h4 id="hdtpa"><b> Communication Details </b></h4>
             <br>
 
             <div>
                 <button type="submit" class="btn btn-primary float:right;" data-toggle="modal" data-target="#myModal"
-                    Style="width:18%;">Add Comminication</button>
+                    Style="width:18%;">Add Communication</button>
                 <a href="{{url('client-pickup')}}"><button type="submit" class="btn btn-primary float:right;"
                         Style="width:14%;">Client Pickup</button></a>
                 <a href="{{url('client-service')}}"><button type="submit" class="btn btn-primary float:right;"
