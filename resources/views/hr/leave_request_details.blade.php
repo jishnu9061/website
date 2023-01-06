@@ -41,7 +41,7 @@
                         <thead>
 
                             <tr>
-                                <th class="text-center">Employee Id</th>
+                                <th class="text-center">Id</th>
                                 <th class="text-center">Name</th>
                                 <th class="text-center">Department</th>
                                 <th class="text-center">Leave Type</th>
@@ -62,10 +62,14 @@
                             <tr>
 
                                 <td scope="row" class="text-center">{{$leave->id}}</td>
+                                <td scope="row" class="text-center">{{$leave->name}}</td>
+                                <td scope="row" class="text-center">{{$leave->department}}</td>
                                 <td scope="row" class="text-center">{{$leave->leave_type}}</td>
-                                <td scope="row" class="text-center">{{$leave->leave_date}}</td>
-                                <td scope="row" class="text-center">{{$leave->days}}</td>
                                 <td scope="row" class="text-center">{{$leave->apply_date}}</td>
+                                <td scope="row" class="text-center">{{$leave->date_from}}</td>
+                                <td scope="row" class="text-center">{{$leave->date_to}}</td>
+                                <td scope="row" class="text-center">{{$leave->reason}}</td>
+                                <td scope="row" class="text-center">{{$leave->attach_file}}</td>
                                 <td scope="row" class="text-center">
                                     <div class="dropdown">
                                         <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pending
@@ -132,23 +136,24 @@
     </div>
     <div class="col-md-6">
         <div class="mb-1">
-        <label >Name</label>
+        <label >Department</label>
             <div class="input-group">
                 <div class="input-group-prepend"></div>
-                <input type="text"  id="" name="name"value="" class="form-control" >
+                <input type="text"  id="" name="department"value="" class="form-control" >
                 <div class="invalid-feedback" style="width: 100%;">
                 Required Field.
                 </div>
             </div>
         </div>
     </div>
+</div>
    <div class="row">
                 <div class="col-md-6">
                     <div class="mb-1">
                     <label >Apply Date</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
-                            <input type="date"  id="" name="applydate"value="" class="form-control" >
+                            <input type="date"  id="" name="apply_date"value="" class="form-control" >
                             <div class="invalid-feedback" style="width: 100%;">
                             Required Field.
                             </div>
@@ -161,7 +166,7 @@
                         <div class="input-group">
                             <div class="input-group-prepend">
                             </div>
-                            <select name="leavetype" id="cars"required>
+                            <select name="leave_type" id="cars"required>
                                 <option>---Select--- </option>
                                 <option>Full Day</option>
                                 <option>Half Day</option>
@@ -175,25 +180,25 @@
                  </div>
                 </div>
                 <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <div class="mb-1">
-                    <label >Leave Date </label>
+                    <label >Leave Date From </label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
-                            <input type="date"  id="" name="leavedate1"value=""class="form-control">
+                            <input type="date"  id="" name="date_from"value=""class="form-control">
                             <div class="invalid-feedback" style="width: 100%;">
                             Required Field.
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <div class="mb-1">
-                        <label></label>
+                        <label>Leave Date To</label>
 
                             </div> <div class="input-group">
                             <div class="input-group-prepend"></div>
-                            <input type="date"  id="" name="leavedate2"value=""class="form-control">
+                            <input type="date"  id="" name="date_to"value=""class="form-control">
                             <div class="invalid-feedback" style="width: 100%;">
                                 Required
                         </div>
@@ -202,12 +207,12 @@
                 </div> <br>
 
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <div class="mb-1">
                         <label >Reason</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                               <textarea type="text" class="form-control"></textarea>
+                               <textarea type="text" name="reason" class="form-control"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
                                 </div>
@@ -215,13 +220,13 @@
                         </div>
                     </div> <br>
 
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <div class="mb-1">
                             <label>Attach File</label>
 
                                 </div> <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="file"  id="" name="exchangerate"value=""class="form-control">
+                                <input type="file"  id="" name="attach_file"value=""class="form-control">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required
                             </div>
@@ -243,7 +248,7 @@
                         <br>
                     </div>
                 </div>
-    </div>
+   
 </form>
 </div>
 </div>
