@@ -13,7 +13,8 @@ class CrmController extends Controller
     }
     public function manage_tasks()
     {
-        return view('CRM.manage_tasks');
+        $task_list = DB::table('cra_manage_task')->get();
+        return view('CRM.manage_tasks',compact('task_list'));
     }
     public function view_manage_task()
     {
@@ -147,7 +148,7 @@ class CrmController extends Controller
             'Post_Code' => $town,
             'Address' =>  $Address,
 
-        ]);    
+        ]);
         return redirect('/Corporate');
     }
 
@@ -170,6 +171,32 @@ class CrmController extends Controller
     public function proposal_leads()
     {
         return view('CRM.proposal_lead');
+    }
+
+    public function add_manage_tasks(Request $Request)
+    {
+        $task = $Request['task'];
+        $milestone = $Request['milestone'];
+        $assigned = $Request['assigned'];
+        $start = $Request['start'];
+        $end = $Request['end'];
+        $priority = $Request['priority'];
+        $status = $Request['status'];
+        $description = $Request['description'];
+
+        DB::table('cra_manage_task')->insert([
+
+            'task_name' => $task,
+            'milestone' => $milestone,
+            'task_assigned_by' => $assigned,
+            'start_date' => $start,
+            'end_date' => $end,
+            'task_priority' => $priority,
+            'task_status' => $status,
+            'task_description' => $description,
+
+        ]);
+        return redirect('manage_tasks');
     }
 
 }
