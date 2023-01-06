@@ -51,12 +51,13 @@
                     </tr>
                 </thead>
                 <tbody>
+                @foreach($task_list as $list)
                     <tr>
 
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>{{$list->task_name}}</td>
+                        <td>{{$list->start_date}}</td>
+                        <td>{{$list->end_date}}</td>
+                        <td>{{$list->task_status}}</td>
                         <td><a href="{{url('view_manage_task')}}"> <i style="color:rgb(13, 1, 56);"
                                     class="fa fa-eye"></i><span class="m-2"></span>
                                 <a href="{{url('edit_manage_task')}}"><i style="color:rgb(13, 1, 56);"
@@ -65,7 +66,7 @@
                         </td>
 
                     </tr>
-
+                    @endforeach
 
                 </tbody>
             </table>
@@ -100,7 +101,7 @@
                 <!-- Modal body -->
                 <div class="modal-body">
                     <div class="container">
-                        <form method="post" action="" enctype="multipart/form-data">
+                        <form method="post" action="add_manage_task" enctype="multipart/form-data">
 
                             @csrf
                             <div class="row">
@@ -111,7 +112,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" name="" id="username" required>
+                                            <input type="text" class="form-control" name="task" id="username" required>
                                             <br>
                                         </div>
                                     </div>
@@ -123,7 +124,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" name="" id="username" required>
+                                            <input type="text" class="form-control" name="milestone" id="username" required>
                                             <div class="invalid-feedback" style="width: 100%;">
                                                 Number is required.
                                             </div>
@@ -138,7 +139,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <select name="" id="cars">
+                                            <select name="assigned" id="cars">
                                                 <option>select</option>
                                                 <option>HR</option>
                                                 <option>Advocate</option>
@@ -157,7 +158,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="date" class="form-control" name="" id="username" required>
+                                            <input type="date" class="form-control" name="start" id="username" required>
                                             <br>
                                         </div>
                                     </div>
@@ -169,7 +170,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="date" class="form-control" name="" id="username" required>
+                                            <input type="date" class="form-control" name="end" id="username" required>
                                             <br>
                                         </div>
                                     </div>
@@ -182,7 +183,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <select name="" id="cars">
+                                            <select name="priority" id="cars">
                                                 <option>select</option>
                                                 <option>Low</option>
                                                 <option>Mediun</option>
@@ -205,7 +206,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <select name="" id="cars">
+                                            <select name="status" id="cars">
                                                 <option>Open</option>
                                                 <option>In progress</option>
                                                 <option>Pending</option>
@@ -225,7 +226,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" rows="2"></textarea>
+                                            <textarea class="form-control" name="description" rows="2"></textarea>
                                             <br>
                                         </div>
                                     </div>
