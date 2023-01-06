@@ -67,9 +67,9 @@
         </div>
 
         <div class="text-center">
-            <button type="button" class="btn btn-primary" style="width:15%;">Print</button>
+            <button type="button" class="btn btn-primary">Print</button>
             <span class="m-2"></span>
-            <button type="button" class="btn btn-primary" style="width:15%;">Close</button>
+            <button type="button" class="btn btn-primary">Close</button>
         </div>
 
     </form>
@@ -78,79 +78,80 @@
     <br>
 
 
+    <div class="table-responsive">
+        <table class="table">
+            <thead class="text-center">
+                <tr>
+                    <th colspan="4">Bulk Transfer</th>
 
-    <table class="table">
-        <thead class="text-center">
-            <tr>
-                <th colspan="4">Bulk Transfer</th>
+                </tr>
+            </thead>
+            <tbody>
 
-            </tr>
-        </thead>
-        <tbody>
+                <tr>
+                    <td scope="row"> Date</td>
+                    <td><input class="form-control" type="date" value="" aria-label=" input example"></td>
 
-            <tr>
-                <td scope="row"> Date</td>
-                <td><input class="form-control" type="date" value="" aria-label=" input example"></td>
+                    <td scope="row"> Branch</td>
+                    <td><select class="form-control" aria-label="Default select example">
+                            <option selected>Nairobi</option>
+                            <option value="1"></option>
 
-                <td scope="row"> Branch</td>
-                <td><select class="form-control" aria-label="Default select example">
-                        <option selected>Nairobi</option>
-                        <option value="1"></option>
-               
-                    </select>
-                </td>
+                        </select>
+                    </td>
 
-            </tr>
-            <tr>
-                <td scope="row">Account Type</td>
-                <td><select class="form-control" aria-label="Default select example">
-                        <option selected>-- select --</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </td>
+                </tr>
+                <tr>
+                    <td scope="row">Account Type</td>
+                    <td><select class="form-control" aria-label="Default select example">
+                            <option selected>-- select --</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </td>
 
 
-                <td scope="row">Account to Allocate To</td>
-                <td><select class="form-control" aria-label="Default select example">
-                        <option selected>-- select --</option>
-                        <option value="1">Cash</option>
-                        <option value="2"></option>
-                        
-                    </select>
-                </td>
+                    <td scope="row">Account to Allocate To</td>
+                    <td><select class="form-control" aria-label="Default select example">
+                            <option selected>-- select --</option>
+                            <option value="1">Cash</option>
+                            <option value="2"></option>
 
-            </tr>
-            <tr>
-                <td scope="row">Currency</td>
-                <td><select class="form-control" aria-label="Default select example">
-                        <option selected>KES</option>
-                        <option value="1"></option>
+                        </select>
+                    </td>
 
-                    </select>
-                </td>
+                </tr>
+                <tr>
+                    <td scope="row">Currency</td>
+                    <td><select class="form-control" aria-label="Default select example">
+                            <option selected>KES</option>
+                            <option value="1"></option>
 
-                <td scope="row">Exchange Rate</td>
-                <td><input class="form-control" type="text" value="" aria-label=" input example"></td>
+                        </select>
+                    </td>
 
-            </tr>
-            <tr>
+                    <td scope="row">Exchange Rate</td>
+                    <td><input class="form-control" type="text" value="" aria-label=" input example"></td>
 
-                <td scope="row">Cheque No</td>
-                <td><input class="form-control" type="text" value="" aria-label=" input example"></td>
+                </tr>
+                <tr>
 
-                <td scope="row">Receiver</td>
-                <td><input class="form-control" type="text" value="" aria-label=" input example"></td>
-            </tr>
+                    <td scope="row">Cheque No</td>
+                    <td><input class="form-control" type="text" value="" aria-label=" input example"></td>
 
-        </tbody>
-    </table>
+                    <td scope="row">Receiver</td>
+                    <td><input class="form-control" type="text" value="" aria-label=" input example"></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
 
     <div class="text-center">
-        <button type="button" class="btn btn-primary" style="width:15%;">Execute</button>
+        <button type="button" class="btn btn-primary" >Execute</button>
         <span class="m-2"></span>
-        <button type="button" class="btn btn-primary" style="width:15%;">Close</button>
+        <button type="button" class="btn btn-primary" >Close</button>
     </div>
 
 

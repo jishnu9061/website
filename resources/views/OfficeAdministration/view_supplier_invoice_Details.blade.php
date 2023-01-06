@@ -185,7 +185,7 @@
     <div class="text-center">
         <button type="button" class="btn btn-primary" style="width:15%;">Print</button>
         <span class="m-2"></span>
-        <button type="button" class="btn btn-primary" style="width:15%;">Close</button>
+        <button type="button" class="btn btn-primary" style="width:15%;" onclick="history.back()">Close</button>
     </div>
 
 

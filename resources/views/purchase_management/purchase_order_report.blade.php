@@ -10,17 +10,24 @@
   <div class="container">
       <h4 id="hdtpa"><b>Purchase Order Reports</b></h4>
       <br>
+      <br>
 
-       <div class="row align-items-start">
-          <div class="col">
-            <label class="form-label">Date From</label>
-            <input type="date" class="form-control" >
-          </div>
-          <div class="col">
-            <label class="form-label">Date To</label>
-            <input type="date" class="form-control" >
-          </div>
-    </div>
+
+      <div class="form-row">
+            <div class="form-group col-md-5">
+                <input type="date" class="form-control" placeholder="" aria-label="First name">
+                <div class="form-text">From Date</div>
+            </div>
+            <div class="form-group col-md-5">
+                <input type="date" class="form-control" placeholder="" aria-label="Last name">
+                <div class="form-text">To Date</div>
+            </div>
+            <div class="form-group col-md-2">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+
+
 
        
        <div class="header_wrap">
@@ -51,7 +58,7 @@
        <!-- table -->
        
        <div class="table-responsive">
-         <table class="table text-center">
+         <table class="table text-center" id="table-id">
             <thead>
               <tr>
                 <th scope="col">Date</th>

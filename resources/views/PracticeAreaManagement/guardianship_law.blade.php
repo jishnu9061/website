@@ -37,7 +37,7 @@
 
 
 <div class="table-responsive">
-    <table class="table text-center">
+    <table class="table text-center" id="table-id">
         <thead>
             <tr>
 
