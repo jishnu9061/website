@@ -94,9 +94,12 @@
                             <td>{{ $alluser->name     }}</td>
                             <td>{{ $alluser->email    }}</td>
                             <td>{{ $alluser->phone    }}</td>
-                            <td><a href="{{ url('managestaff' . $alluser->uniqueid) }}" style="color:rgb(13, 1, 56);"><i
-                                        class="fa fa-edit"></i></a></td>
-                    @endforeach
+                            <td>
+                                     <a href="{{url('view_staff_details')}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span> 
+                                     <a href="{{url('update_staff_details')}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-edit"></i><span class="m-1"></span> 
+                                        
+                                
+                    @endforeach  
                     </tr>
                 <tbody>
             </table>
@@ -252,7 +255,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">    
+                <div class="row">
                     <div class="col-md-3">
                         <div class="mb-1">
                             <label>Departments:&nbsp;</label>
@@ -289,7 +292,7 @@
                                 <option value="Suspended">Suspended</option>
                             </select>
                         </div>
-                       
+
                     </div>
                     <div class="col-md-3">
                         <div class="mb-1">
@@ -637,7 +640,7 @@
             } else
                 $('#message').html('Not Matching').css('color', 'red');
         });
-    </script> 
+    </script>
     {{-- <script>
         $('.leaves').on('keyup', function() {
             var total = 0;

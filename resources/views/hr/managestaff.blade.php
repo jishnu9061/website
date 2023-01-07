@@ -629,6 +629,7 @@ $('#percent').prop('readonly', true);
 
 
                     <td><button type="button"  onClick="$(this).closest('tr').remove();" class="btn"><i class="fas fa-backspace"></i></button></td>
+
                     </form>
                 </tr>
             @endforeach

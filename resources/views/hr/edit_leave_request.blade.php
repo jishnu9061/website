@@ -61,11 +61,11 @@
                                 <option>Half Day</option>
                                 <option>Casual Leave</option>
                                 <option>Medical Leave</option>
-                              
-                                
+
+
                             </select>
                         </div>
-                        
+
                     </div>
                  </div>
                 </div>
@@ -85,7 +85,7 @@
                 <div class="col-md-6">
                     <div class="mb-1">
                         <label>Leave Date To</label>
-                        
+
                             </div> <div class="input-group">
                             <div class="input-group-prepend"></div>
                             <input type="date"  id="" name="date_to"value="{{$leave_request->date_to}}"class="form-control">
@@ -102,10 +102,10 @@
                         <label >Reason</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                               <textarea type="text" name="reason" value="{{$leave_request->reason}}"class="form-control"></textarea>
+                               <textarea type="text" name="reason" class="form-control">{{$leave_request->reason}}</textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
-                                </div> 
+                                </div>
                             </div>
                         </div>
                     </div> <br>
@@ -113,7 +113,7 @@
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label>Attach File</label>
-                            
+
                                 </div> <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="file"  id="" name="attach_file" value="{{$leave_request->attach_file}}"class="form-control">

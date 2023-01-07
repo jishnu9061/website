@@ -1,6 +1,6 @@
 
 @extends('layouts.hmsmain')
-@section('content') 
+@section('content')
 <div class="container">
 <h4 id="hdtpa"><b> Job Post Details</b></h4>
     <br>
@@ -9,22 +9,22 @@
   <div class="container-fluid">
    <nav class="navbar bg-light" style="height:50%";>
     <a class="navbar-brand">Job Posts</a>
-    <button class="btn btn-outline-success" type="button">View All</button> 
+    <button class="btn btn-outline-success" type="button">View All</button>
    </nav>
   </div>
   </nav>
   <br> -->
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-           
+
 {{-- <a href="{{('create_job_post')}}"><button class="btn btn-primary">Create Job Post</button></a> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Create Job Post</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                     
+
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 
 
- 
+
   <!-- <input class="btn btn-primary" type="button" value="Create Job Post" data-toggle="modal" data-target="#myModal1">
   <br>
   <br> -->
@@ -42,7 +42,7 @@
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
@@ -61,7 +61,7 @@
           <th scope="col">Qualification</th>
           <th scope="col">Work Experience</th>
           <th scope="col">Action</th>
-          
+
       </thead>
       <tbody>
       @foreach($job_details as $job)
@@ -72,7 +72,7 @@
           <td>{{$job->work_experience}}</td>
           <td class="text-center">
             <a href="{{url('view_job_post',$job->id)}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span>
-            <a href="{{url('edit_job_post',$job->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" ></i><span class="m-1"></span>
+            <a href="{{url('edit_job_post',$job->id)}}"> <i  style="color:rgb(13, 1, 56);"class="fa fa-edit"></i><span class="m-1"></span>
             <a href="{{url('delete_job_post',$job->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
           </td>
           {{-- <td><a href="{{url('view_job_post',$job->id)}}" class="dropdown-item" >View<
@@ -86,13 +86,13 @@
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a href="{{url('view_job_post',$job->id)}}" class="dropdown-item" >View</a>
-                            
+
                             <a href="{{url('edit_job_post',$job->id)}}" class="dropdown-item" >Edit</a>
-                            
+
                             <a href="{{url('delete_job_post',$job->id)}}" class="dropdown-item" >Delete</a>
-                            
+
                             </div>
-                        </div> 
+                        </div>
 
                        </td> --}}
                        @endforeach
@@ -111,7 +111,6 @@
     <div class="rows_count">Showing 11 to 20 of 100</div>
 
  <!-- 		End of Container -->
- 
 
 
 
@@ -119,7 +118,8 @@
 
 
 
-   
+
+
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-xl">
@@ -135,18 +135,18 @@
                                     <div class="modal-body" >
                                         <div class="container">
                                             <form method="post" action="{{ url('create_job_post') }}"
-                                                enctype="multipart/form-data"> 
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->    
+                                                enctype="multipart/form-data">
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 
 
-       
-       
+
+
        @csrf
         <div class="row">
           <div class="col">
             <div class="mb-3">
             <!-- <form method="post" action="{{url('create_job_post')}}"> -->
-                
+
                 <label for="job title" class="form-label">Job Title</label>
                 <!-- <input type="text" class="form-control" name="job_title" aria-describedby="jobtitle"> -->
                 <select class="form-select" name="job_title">
@@ -171,7 +171,7 @@
                     <option value="Full-Time">Full-Time</option>
                     <option value="Part-Time">Part-Time</option>
                   </select>
-            </div>  
+            </div>
             <div class="mb-3">
                 <label for="job type" class="form-label">Job Type</label>
                 <select class="form-select" name="job_type">
@@ -180,17 +180,17 @@
                     <option value="hr">Hr</option>
                     <option value="Accountant">Accountant</option>
                     <option value="receptionist">Receptionist</option>
-                    
+
                   </select>
-            </div>  
+            </div>
             <div class="mb-3">
                 <label for="starting date" class="form-label">Starting Date to Apply</label>
                 <input type="date" class="form-control" name="start_date" aria-describedby="startingdate">
             </div>
          </div>
-            
+
         <!-- column-2 -->
-          
+
           <div class="col">
             <div class="mb-3">
                 <label for="job location" class="form-label">Job Location</label>
@@ -227,9 +227,9 @@
         <div class="mb-3">
             <label for="ending date" class="form-label">Ending Date to Apply</label>
             <input type="date" class="form-control" name="end_date" aria-describedby="endingdate">
-          </div> 
+          </div>
         </div>
-        
+
 
      <!-- Job Description -->
         <div class="mb-3">
@@ -243,10 +243,10 @@
         <textarea class="form-control" name="job_responsibilities" rows="3"></textarea>
       </div>
 </div>
-     
+
 
     <!-- Buttons -->
-    
+
     <div class="row">
                         <div class="col-sm">
 
@@ -259,15 +259,15 @@
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
                             <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
                         </div>
-                    </div>  
+                    </div>
 
 </form>
-</div>     
-</div>     
-</div>     
-</div>     
-</div>    
+</div>
+</div>
+</div>
+</div>
+</div>
 @endsection
 
-  
-    
+
+

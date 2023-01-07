@@ -28,6 +28,19 @@ class hrindex extends Controller
         return view('hr.recruitment_index');
     }
 
+//Subhasree
+
+public function view_staff_details()
+{
+    return view('hr.view_staff_details');
+}
+
+public function update_staff_details()
+{
+   
+    return view('hr.update_staff_details',compact('update_staff_details'));
+}
+
 
 public function job_posts()
     {
@@ -348,10 +361,10 @@ public function approve_leave_request()
 public function edit_leave_request($id)
 {
 
-    
+
     $leave_request=DB::table('cra_leave_request_details')->where('id',$id)->first();
     return view('hr.edit_leave_request',compact('leave_request','id'));
-   
+
 }
 
 public function update_leave_request(Request $Request)
@@ -365,7 +378,7 @@ public function update_leave_request(Request $Request)
         $date_to = $Request['date_to'];
         $reason = $Request['reason'];
         $attach_file = $Request['attach_file'];
-        
+
         $update_leave_request = array(
         'name' => $name,
         'department' => $department,
@@ -380,7 +393,7 @@ public function update_leave_request(Request $Request)
         DB::table('cra_leave_request_details')->where('id', $id)->update( $update_leave_request );
         return redirect('/leave_request_details');
 
-       
+
 
     }
 
