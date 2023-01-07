@@ -60,7 +60,7 @@
       <thead>
 
                         <tr>
-                        <th class="text-center" >No</th>
+                        <!-- <th class="text-center" >No</th> -->
                         <th class="text-center" >Department Code</th>
                         <th class="text-center" >Department Name</th>
                         <th class="text-center" >H.O.D</th>
@@ -72,12 +72,13 @@
              <tbody>
             @foreach($manage_document  as $document)
                     <tr>
-                        <td  class="text-center">{{$document->id}}</td>
+                        <!-- <td  class="text-center">{{$document->id}}</td> -->
                         <td  class="text-center">{{$document->department_code}}</td>
                         <td class="text-center">{{$document->department_name}}</td>
                         <td class="text-center">{{$document->h_o_d}}</td>
                         <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
                                  <a href="{{url('edit_user_department',$document->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                                 <span class="m-2"></span>
                                  <a href="{{url('destroy_user_department',$document->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
                   
                      </tr>

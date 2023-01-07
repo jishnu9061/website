@@ -143,9 +143,9 @@
                     </div>
                     <div class="col-sm">
                         <br>
-                        <button type="submit" class="btn btn-success float:right;" Style="width:45%;">Accepted</button>
+                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Accepted</button>
 
-                        <button type="button" class="btn btn-danger float:left" Style="width:45%;">Rejected</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;">Rejected</button>
                         <br>
                         <br>
                     </div>

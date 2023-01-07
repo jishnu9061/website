@@ -120,28 +120,40 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">File No</label>
+                                        <label for="username" >File No</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend"></div>
-                                            <input type="text" class="form-control" placeholder="" name="file_no">
+                                            <input type="text" class="form-control" placeholder="" name="file_no"
+                                                id="username" required>
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Postal Code is required.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Client Name</label>
+                                        <label for="username" >Client Name</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend"></div>
-                                            <input type="text" class="form-control" placeholder="" name="client_name">
+                                            <input type="text" class="form-control" placeholder="" name="client_name"
+                                                id="username" required>
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Postal Code is required.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
+                                        <label for="username" >Matter Type</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend"></div>
-                                            <input type="text" class="form-control" placeholder="" name="matter_type">
+                                            <input type="text" class="form-control" placeholder="" name="matter_type"
+                                                id="username" required>
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Postal Code is required.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -150,28 +162,40 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Other Party</label>
+                                        <label for="username">Other Party</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend"></div>
-                                            <input type="text" class="form-control" placeholder="" name="other_party">
+                                            <input type="text" class="form-control" placeholder="" name="other_party"
+                                                id="username" required>
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Postal Code is required.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Attorney</label>
+                                        <label for="username" >Attorney</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend"></div>
-                                            <input type="text" class="form-control" placeholder="" name="attorney">
+                                            <input type="text" class="form-control" placeholder="" name="attorney"
+                                                id="username" required>
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Postal Code is required.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Case Details</label>
+                                        <label for="username" >Case Details</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend"></div>
-                                            <textarea class="form-control" rows="2" name="case_details"></textarea>
+                                            <textarea class="form-control" rows="2" name="case_details"
+                                                id="username" required></textarea>
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Postal Code is required.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -179,30 +203,42 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Marriage
+                                        <label for="username">Marriage
                                             Details</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend"></div>
-                                            <textarea class="form-control" rows="2" name="marrige"></textarea>
+                                            <textarea class="form-control" rows="2" name="marrige"
+                                                id="username" required></textarea>
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Postal Code is required.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Property
+                                        <label for="username" >Property
                                             Details</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend"></div>
-                                            <textarea class="form-control" rows="2" name="property"></textarea>
+                                            <textarea class="form-control" rows="2" name="property"
+                                                id="username" required></textarea>
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Postal Code is required.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Child Details</label>
+                                        <label for="username">Child Details</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend"></div>
-                                            <textarea class="form-control" rows="2" name="child_details"></textarea>
+                                            <textarea class="form-control" rows="2" name="child_details"
+                                                id="username" required></textarea>
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                Postal Code is required.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -215,9 +251,12 @@
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Supporting Details</label>
+                                <label for="username" >Supporting Details</label>
                                 <span class="m-2"></span>
-                                <input type="file" class="form-control" name="support_detail">
+                                <input type="file" class="form-control" name="support_detail" id="username" required>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Postal Code is required.
+                                </div>
                             </div>
                         </div>
                 </div>

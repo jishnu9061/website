@@ -46,8 +46,6 @@
                         <th scope="col">End Date </th>
                         <th scope="col">Status </th>
                         <th scope="col">Action </th>
-
-
                     </tr>
                 </thead>
                 <tbody>
@@ -124,6 +122,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-md-4">
                                     <div class="mb-1">
                                         <label for="username">Milestone</label>
@@ -170,6 +169,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-md-4">
                                     <div class="mb-1">
                                         <label for="username">End Date</label>
@@ -203,6 +203,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
 
                             <div class="row">
@@ -226,6 +227,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-md-4">
                                     <div class="mb-1">
                                         <label for="username">Task Description</label>
@@ -238,6 +240,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-md-4">
                                     <div class="mb-1">
 
