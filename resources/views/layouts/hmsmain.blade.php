@@ -1244,13 +1244,98 @@ updateDate();
   cursor: pointer;
 }
 
+
+
+
+
+
+
+input[type=text] {
+	width: 30%;
+	-webkit-transition: width 0.15s ease-in-out;
+	transition: width 0.15s ease-in-out;
+}
+
+/* When the input field gets focus,
+		change its width to 100% */
+input[type=text]:focus {
+	width: 70%;
+}
+
+#list{
+	font-size: 1.5em;
+	margin-left: 90px;
+}
+
+.animals{
+display: list-item;	
+}
+
+
 </style>
 
                      
                       <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <input name="search" class="form-control mr-sm-2" id="searchbar" onkeyup="search_animal()" type="text" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                       </form>
+
+
+                     
+                    
+                  <!-- ordered list -->
+            
+
+
+<script>
+    // JavaScript code
+function search_animal() {
+	let input = document.getElementById('searchbar').value
+	input=input.toLowerCase();
+	let x = document.getElementsByClassName('btn btn-primary');
+    let y = document.getElementsByClassName('logo_size');
+    let col = document.getElementsByClassName('col-sm-4');
+    let row = document.getElementsByClassName('row sm');
+
+    const mydivs = document.querySelectorAll("#hdtpa, #hdbtb");
+
+
+  
+
+	for (i = 0; i < x.length; i++) {
+		if (!x[i].innerHTML.toLowerCase().includes(input)) {  
+			x[i].style.display="none";
+            x[i].style.padding = "0px 0px 0px 0px";
+            y[i].style.display="none";
+            col[i].style.display="none";
+         
+           
+        
+            mydivs.forEach((element) => {
+  element.style.display="none";
+});
+
+// mydivs.forEach((element) => {
+//   element.style.color = "red";
+// });
+
+		}
+		else {
+			x[i].style.display="list-item";	
+            x[i].style.padding = "0px 0px 0px 0px";
+            y[i].style.display="none";
+            
+            mydivs.forEach((element) => {
+  element.style.display="none";
+});
+        		
+		}
+	}
+}
+
+</script>
+
+
                     </div>
                   </nav>
 

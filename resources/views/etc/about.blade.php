@@ -12,38 +12,9 @@
                 <div class="container">
 
 
-
-            
-
-                 
-
-
                     <!-- portfolio filter begin -->
 
-       
-
-
-
                 <div id="gallery" class="gallery full-gallery de-gallery pf_full_width wow fadeInUp" data-wow-delay=".3s">
-
-					
-
-					
-
-					<!-- gallery item -->
-
-					
-
-					
-
-		
-
-                
-
-      
-
-            <!-- section close -->
-
 
 
             <!-- section begin -->
@@ -61,10 +32,7 @@
                         </div>
 
                     </div>
-
-                    
-
-                    
+              
 
  <div id="testimonials" class="carousel slide" data-ride="carousel">
 
@@ -319,14 +287,7 @@
 	</div>
 
 	</div>
-
-                 
-
-        
-
-                    
-
-                </div>
+                </div></div>
 
             </section>
         
