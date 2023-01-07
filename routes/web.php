@@ -79,7 +79,10 @@ Route::any('/addstaffs','addController@addstaffs');
 Route::any('/editstafff','addController@editstafff');
 Route::post('/addthestaffs','addController@addthestaffs');
 Route::any('/staffs','addController@allstaffs');
+
 Route::any('/managestaff{id}','hrcontroller@managestaff');
+
+
 Route::any('/managedepstaff{id}','departmentcontroller@managedepstaff');
 Route::any('/disableuser{id}','addController@disableuser');
 Route::any('/enableuser{id}','addController@enableuser');
@@ -1308,6 +1311,12 @@ Route::any('view_bill',"clientinvoicing@view_bill_item")->name('view_bill_item')
 // hr module belji
 Route::any('hrindex','hrindex@index')->name('hrindex');
 Route::any('recruitment','hrindex@recruitment')->name('recruitment');
+
+// Subhasree
+ Route::any('/view_staff_details','hrindex@view_staff_details')->name('view_staff_details');
+ Route::any('/update_staff_details','hrindex@update_staff_details')->name('update_staff_details');
+
+
 //reshma
 Route::any('performance_department','hrindex@performance_department')->name('performance_department');
 Route::any('job_posts','hrindex@job_posts')->name('job_posts');
@@ -1359,6 +1368,7 @@ Route::any('addleaverequest','hrindex@addleaverequest')->name('addleaverequest')
 Route::any('approve_leave_request','hrindex@approve_leave_request')->name('approve_leave_request');
 Route::any('edit_leave_request/{id}','hrindex@edit_leave_request')->name('edit_leave_request');
 Route::any('/update_leave_request','hrindex@update_leave_request')->name('update_leave_request');
+
 Route::any('internal_memos','hrindex@internal_memos')->name('internal_memos');
 Route::any('view_memo','hrindex@view_memo')->name('view_memo');
 Route::any('edit_memo','hrindex@edit_memo')->name('edit_memo');
