@@ -407,11 +407,12 @@ animation-direction:reverse;">
                             </a>
                         </li>
                         @endif
-                        @if(Auth::user()->role == 'hr' || Auth::user()->role == 'Admin')
+                        @if(Auth::user()->role == 'Admin')
                         @php
                         $hr = array("addallowance", "addstaffs",
                         "staffs","loans","payslip","attendance","attendanceview","payslipbulk","generatepayslip","managestaff");
                         @endphp
+                       
 
 
 
@@ -463,7 +464,7 @@ animation-direction:reverse;">
                         <li class="submenu-item" style="list-style:none;">
                             <a href="{{url('hrindex')}}" class='sidebar-link'>
                                 <i class="fa fa-th-large" id="icon"></i>
-                                <span>HR</span>
+                                <span>HR Mamagement</span>
                             </a>
                         </li>
 
@@ -512,12 +513,24 @@ animation-direction:reverse;">
                             </li> --}}
                             {{-- </li> --}}
                             @endif
+                            @if(Auth::user()->role == 'hr')
+                            <li class="submenu-item has-sub " style="list-style:none;">
+                                <a href="{{url('hrindex')}}" class='sidebar-link'>
+                                    <i class="fa fa-th-large" id="icon" style="font-weight: 300;"></i>
+                                    <span>HR Details</span>
+                                </a>
+                            </li>
+                            <li class="submenu-item has-sub " style="list-style:none;">
+                                <a href="{{url('staffs')}}" class='sidebar-link'>
+                                    <i class="fa fa-th-large" id="icon" style="font-weight: 300;"></i>
+                                    <span>Manage Staffs</span>
+                                </a>
+                            </li>
+                            @endif
 
-                            @if(Auth::user()->role == 'account' || Auth::user()->role == 'Admin')
+                            @if(Auth::user()->role == 'Accountant' || Auth::user()->role == 'Admin')
                             @php
-                            $accounts = array("ledger_acount_categories",
-                            "ledger_acount_subcategories","ledger_budget_category",
-                            "ledger_acounts","expense_report","journal","ledger","trialbalance","profitandlossaccount","balancesheet","stock_section","stock_issue","store_ledger","stock_categories","stock_subcategories","stock_items");
+                            $accounts = array("accindex");
                             @endphp
 
                             <li class="submenu-item" style="list-style:none;">
@@ -576,102 +589,6 @@ animation-direction:reverse;">
                                     <span>System Setup</span>
                                 </a>
                             </li>
-
-
-
-                            <!-- <li class="submenu-item has-sub " style="list-style:none;">
-                                <a id="sblm" href="{{url('client_invoicingindex')}}" class='sidebar-link'>
-                                    <i class="fa fa-newspaper" id="icon"></i>
-                                    <span> Client Invoicing</span>
-                                </a>
-                            </li> -->
-
-
-
-
-                            <!-- CRA Dashboard End -->
-
-
-
-
-
-
-                            {{-- @if (in_array(request()->path(), $accounts))
-                                       <ul class="submenu" style="display: block;">
-                                     @else
-                                     <ul class="submenu" style="display: none;">
-                                      @endif
-                                           <li class="submenu-item  ">
-                                                <a href="{{ url('ledger_acount_categories') }}" class=" sidebar-link">
-                            <span id="subm">Account Type</span></a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('ledger_acount_subcategories') }}" class="sidebar-link">
-                                    <span id="">Groups</span></a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('ledger_budget_category') }}" class="sidebar-link">
-                                    <span id="subm">Budget Category</span></a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('ledger_acounts') }}" class=" sidebar-link">
-                                    <span id="subm">Ledger Account</span>
-                                </a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('expense_report') }}" class=" sidebar-link">
-                                    <span id="subm">Expense Report</span>
-                                </a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('journal') }}" class=" sidebar-link">
-                                    <span id="subm">Journal</span>
-                                </a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('ledger') }}" class=" sidebar-link">
-                                    <span id="subm">Ledger</span></a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('trialbalance') }}" class=" sidebar-link">
-                                    <span id="subm">Trial Balance</span></a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('profitandlossaccount') }}" class=" sidebar-link">
-                                    <span id="subm">Profit And loss Account</span></a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('balancesheet') }}" class=" sidebar-link">
-                                    <span id="subm">Balance Sheet</span></a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('stock_section') }}" class=" sidebar-link">
-                                    <span id="subm">Stock Reciept </span></a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('stock_issue') }}" class=" sidebar-link">
-                                    <span id="subm">Stock Issue </span></a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('store_ledger') }}" class=" sidebar-link">
-                                    <span id="subm">Store Ledger </span></a>
-                            </li>
-
-                            <li class="submenu-item ">
-                                <a href="{{ url('stock_categories') }}" class=" sidebar-link">
-                                    <span id="subm">Stock Categories </span></a>
-                            </li>
-
-                            <li class="submenu-item ">
-                                <a href="{{ url('stock_subcategories') }}" class=" sidebar-link">
-                                    <span id="subm">Stock Sub Categories </span></a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('stock_items') }}" class=" sidebar-link">
-                                    <span id="subm">Stock Items </span></a>
-                            </li>
-                            </ul>
-                            {{-- </li> --}}
                             @endif
                             @if(Auth::user()->role == 'store' || Auth::user()->role == 'Admin')
                             @php
