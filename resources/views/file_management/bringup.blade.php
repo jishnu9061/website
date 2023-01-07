@@ -1,7 +1,12 @@
 @extends('layouts.hmsmain')
 @section('content')
 
+<head>
+    <style>
+    
 
+    </style>
+</head>
 <div class="container">
     <div class="py-5 text-center">
         @if(Session::has('staffregistered'))
@@ -26,18 +31,19 @@
     <div class="text-center">
 
         <div>
-            <input class="btn btn-primary" type="button" style="width:65px;" value="Today">
-            <input class="btn btn-primary" type="button" value="This Week">
-            <input class="btn btn-primary" type="button" value="Last Week">
-            <input class="btn btn-primary" type="button" value="This Month">
-            <input class="btn btn-primary" type="button" style="width:12%;" value="Last Month">
-            <input class="btn btn-primary" type="button" style="width:12%;" value="This Quater ">
-            <input class="btn btn-primary" type="button" value="Last Quater">
-            <input class="btn btn-primary" type="button" value="This Year">
-            <input class="btn btn-primary" type="button" value="Last Year">
+            <button type="button" class="gp_btn left">Today</button>
+            <button type="button" class="gp_btn">This Week</button>
+            <button type="button" class="gp_btn">Last Week</button>
+            <button type="button" class="gp_btn">This Month</button>
+            <button type="button" class="gp_btn">Last Month</button>
+            <button type="button" class="gp_btn">This Quater</button>
+            <button type="button" class="gp_btn">Last Quater</button>
+            <button type="button" class="gp_btn">This Year</button>
+            <button type="button" class="gp_btn right">Last Year</button>
+
         </div>
 
-    </div>
+      
     <br>
     <br>
 
