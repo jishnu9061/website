@@ -1,47 +1,28 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container">
-    <div class="py-5 text-center">
-        @if(Session::has('staffregistered'))
-        <div class="alert alert-dark" role="alert">
-            {{ Session::get('staffregistered')}}
-        </div>
-        @endif
-
-    </div>
-
-    <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-    <script type="text/javascript">
-    $(document).on('input', '#price', function() {
-        $('#percent').prop('readonly', true);
-
-    });
-    $(document).on('input', '#percent', function() {
-        $('#price').prop('readonly', true);
-
-    });
-    </script>
-    <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-
-
+   
 
     {{-- heading --}}
     <h4 id="hdtpa"><b>Safe Register Report</b></h4>
     <br>
-
-    <div>
-        <input class="btn btn-primary" type="button" value="Today">
-        <input class="btn btn-primary" type="button" value="This Week">
-        <input class="btn btn-primary" type="button" value="Last Week">
-        <input class="btn btn-primary" type="button" value="This Month">
-        <input class="btn btn-primary" type="button" value="Last Month">
-        <input class="btn btn-primary" type="button" style="width:12%" value="This Quater">
-        <input class="btn btn-primary" type="button" style="width:12%" value="Last Quater">
-        <input class="btn btn-primary" type="button" value="This Year">
-        <input class="btn btn-primary" type="button" value="Last Year">
-    </div>
     <br>
 
+    <div class="text-center">
+
+        <button type="button" class="gp_btn left">Today</button>
+        <button type="button" class="gp_btn">This Week</button>
+        <button type="button" class="gp_btn">Last Week</button>
+        <button type="button" class="gp_btn">This Month</button>
+        <button type="button" class="gp_btn">Last Month</button>
+        <button type="button" class="gp_btn">This Quater</button>
+        <button type="button" class="gp_btn">Last Quater</button>
+        <button type="button" class="gp_btn">This Year</button>
+        <button type="button" class="gp_btn right">Last Year</button>
+
+    </div>
+    <br>
+<br>
 
 
     <div class="card">
