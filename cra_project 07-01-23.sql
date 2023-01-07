@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 07, 2023 at 10:18 AM
+-- Generation Time: Jan 07, 2023 at 12:08 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -31,7 +31,7 @@ CREATE TABLE `budget_types` (
   `id` int(11) NOT NULL,
   `budget_name` varchar(255) DEFAULT NULL,
   `budget_desc` varchar(255) DEFAULT NULL,
-  `budget_update_privilage` int(11) NOT NULL
+  `budget_update_privilage` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -105,7 +105,7 @@ INSERT INTO `cra_add_box` (`id`, `type`, `number`, `company_id`, `branch_id`) VA
 
 CREATE TABLE `cra_add_categories` (
   `id` int(11) NOT NULL,
-  `category_name` varchar(255) NOT NULL
+  `category_name` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -167,7 +167,7 @@ CREATE TABLE `cra_add_expense` (
   `task_assigned_by` text DEFAULT NULL,
   `billing` int(11) DEFAULT NULL,
   `description` varchar(222) DEFAULT NULL,
-  `status` text NOT NULL,
+  `status` text DEFAULT NULL,
   `supporting_details` varchar(222) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -188,13 +188,13 @@ INSERT INTO `cra_add_expense` (`id`, `date`, `staff_name`, `expense_reference`, 
 
 CREATE TABLE `cra_add_file_bringup_reminder` (
   `id` int(11) NOT NULL,
-  `client_name` varchar(255) NOT NULL,
-  `file_name` varchar(255) NOT NULL,
-  `progress_date` date NOT NULL,
-  `next_bringup_days` date NOT NULL,
-  `remind_period_days` date NOT NULL,
-  `send_notification` varchar(255) NOT NULL,
-  `reason` varchar(500) NOT NULL,
+  `client_name` varchar(255) DEFAULT NULL,
+  `file_name` varchar(255) DEFAULT NULL,
+  `progress_date` date DEFAULT NULL,
+  `next_bringup_days` date DEFAULT NULL,
+  `remind_period_days` date DEFAULT NULL,
+  `send_notification` varchar(255) DEFAULT NULL,
+  `reason` varchar(500) DEFAULT NULL,
   `company_id` int(11) DEFAULT NULL,
   `branch_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -337,7 +337,7 @@ INSERT INTO `cra_add_kpi` (`id`, `select_department`, `enter_kpi`) VALUES
 
 CREATE TABLE `cra_add_new_instructions` (
   `id` int(11) NOT NULL,
-  `date` date NOT NULL,
+  `date` date DEFAULT NULL,
   `client` varchar(255) DEFAULT NULL,
   `file` varchar(255) DEFAULT NULL,
   `instruction` varchar(255) DEFAULT NULL,
@@ -362,18 +362,18 @@ CREATE TABLE `cra_add_new_instructions` (
 
 CREATE TABLE `cra_add_office_instructions` (
   `id` int(11) NOT NULL,
-  `date` date NOT NULL,
+  `date` date DEFAULT NULL,
   `instruction_type` varchar(255) DEFAULT NULL,
   `instruction_category` varchar(255) DEFAULT NULL,
   `receiver` varchar(255) DEFAULT NULL,
   `currency` varchar(255) DEFAULT NULL,
   `exchange_rate` varchar(255) DEFAULT NULL,
-  `expence_category` varchar(255) NOT NULL,
-  `turn_around` varchar(255) NOT NULL,
-  `priority` varchar(255) NOT NULL,
-  `amount` varchar(255) NOT NULL,
-  `detail` varchar(255) NOT NULL,
-  `send_notification` varchar(255) NOT NULL,
+  `expence_category` varchar(255) DEFAULT NULL,
+  `turn_around` varchar(255) DEFAULT NULL,
+  `priority` varchar(255) DEFAULT NULL,
+  `amount` varchar(255) DEFAULT NULL,
+  `detail` varchar(255) DEFAULT NULL,
+  `send_notification` varchar(255) DEFAULT NULL,
   `company_id` int(11) DEFAULT NULL,
   `branch_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -386,15 +386,15 @@ CREATE TABLE `cra_add_office_instructions` (
 
 CREATE TABLE `cra_add_outgoing_letter` (
   `id` int(11) NOT NULL,
-  `letter_date` date NOT NULL,
-  `client` varchar(255) NOT NULL,
-  `file` varchar(255) NOT NULL,
-  `delivered_to` varchar(255) NOT NULL,
-  `Document_category` varchar(255) NOT NULL,
-  `letter_name` varchar(255) NOT NULL,
-  `originator` varchar(255) NOT NULL,
-  `viewers` varchar(255) NOT NULL,
-  `upload_copy` varchar(25) NOT NULL
+  `letter_date` date DEFAULT NULL,
+  `client` varchar(255) DEFAULT NULL,
+  `file` varchar(255) DEFAULT NULL,
+  `delivered_to` varchar(255) DEFAULT NULL,
+  `Document_category` varchar(255) DEFAULT NULL,
+  `letter_name` varchar(255) DEFAULT NULL,
+  `originator` varchar(255) DEFAULT NULL,
+  `viewers` varchar(255) DEFAULT NULL,
+  `upload_copy` varchar(25) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -487,7 +487,7 @@ INSERT INTO `cra_add_user_group` (`id`, `group_code`, `group_name`, `default_men
 
 CREATE TABLE `cra_add_user_roles` (
   `id` int(11) NOT NULL,
-  `role_name` varchar(255) NOT NULL,
+  `role_name` varchar(255) DEFAULT NULL,
   `company_id` int(11) DEFAULT NULL,
   `branch_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -507,7 +507,7 @@ INSERT INTO `cra_add_user_roles` (`id`, `role_name`, `company_id`, `branch_id`) 
 
 CREATE TABLE `cra_apply_tender` (
   `id` int(11) NOT NULL,
-  `date` date NOT NULL,
+  `date` date DEFAULT NULL,
   `item_name` varchar(200) DEFAULT NULL,
   `quantity` int(11) DEFAULT NULL,
   `supplier_name` varchar(200) DEFAULT NULL,
@@ -659,12 +659,12 @@ INSERT INTO `cra_bringup` (`id`, `Client`, `File`, `Registered_By`, `Responsible
 
 CREATE TABLE `cra_business_law` (
   `id` int(11) NOT NULL,
-  `matter_info` varchar(255) NOT NULL,
-  `client_name` varchar(255) NOT NULL,
-  `matter_type` varchar(255) NOT NULL,
-  `corporation` varchar(255) NOT NULL,
-  `case_details` varchar(255) NOT NULL,
-  `supporting` varchar(255) NOT NULL
+  `matter_info` varchar(255) DEFAULT NULL,
+  `client_name` varchar(255) DEFAULT NULL,
+  `matter_type` varchar(255) DEFAULT NULL,
+  `corporation` varchar(255) DEFAULT NULL,
+  `case_details` varchar(255) DEFAULT NULL,
+  `supporting` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -675,19 +675,19 @@ CREATE TABLE `cra_business_law` (
 
 CREATE TABLE `cra_civil_litigation` (
   `id` int(11) NOT NULL,
-  `matter_info` varchar(255) NOT NULL,
-  `plaintiff` varchar(255) NOT NULL,
-  `matter_type` varchar(255) NOT NULL,
-  `defendent` varchar(255) NOT NULL,
-  `attroney` varchar(255) NOT NULL,
+  `matter_info` varchar(255) DEFAULT NULL,
+  `plaintiff` varchar(255) DEFAULT NULL,
+  `matter_type` varchar(255) DEFAULT NULL,
+  `defendent` varchar(255) DEFAULT NULL,
+  `attroney` varchar(255) DEFAULT NULL,
   `case_detail` varchar(255) DEFAULT NULL,
-  `insurer` varchar(255) NOT NULL,
-  `witness` varchar(255) NOT NULL,
-  `expert` varchar(255) NOT NULL,
-  `def_insurer` varchar(255) NOT NULL,
-  `def_witness` varchar(255) NOT NULL,
-  `def_expert` varchar(255) NOT NULL,
-  `support_detail` varchar(255) NOT NULL
+  `insurer` varchar(255) DEFAULT NULL,
+  `witness` varchar(255) DEFAULT NULL,
+  `expert` varchar(255) DEFAULT NULL,
+  `def_insurer` varchar(255) DEFAULT NULL,
+  `def_witness` varchar(255) DEFAULT NULL,
+  `def_expert` varchar(255) DEFAULT NULL,
+  `support_detail` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -1009,14 +1009,14 @@ CREATE TABLE `cra_courts` (
 
 CREATE TABLE `cra_criminal_law` (
   `id` int(11) NOT NULL,
-  `matter_info` varchar(255) NOT NULL,
-  `defendent` varchar(255) NOT NULL,
-  `matter_type` varchar(255) NOT NULL,
-  `prosecutor` varchar(255) NOT NULL,
-  `case_detail` varchar(255) NOT NULL,
-  `investigator` varchar(255) NOT NULL,
-  `victim` varchar(255) NOT NULL,
-  `support_detail` varchar(255) NOT NULL
+  `matter_info` varchar(255) DEFAULT NULL,
+  `defendent` varchar(255) DEFAULT NULL,
+  `matter_type` varchar(255) DEFAULT NULL,
+  `prosecutor` varchar(255) DEFAULT NULL,
+  `case_detail` varchar(255) DEFAULT NULL,
+  `investigator` varchar(255) DEFAULT NULL,
+  `victim` varchar(255) DEFAULT NULL,
+  `support_detail` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -1376,15 +1376,15 @@ INSERT INTO `cra_file_types` (`id`, `file_type`, `short_name`, `retainer_period`
 CREATE TABLE `cra_guardianship_law` (
   `id` int(11) NOT NULL,
   `matter_info` varchar(255) DEFAULT NULL,
-  `petitioner` varchar(255) NOT NULL,
-  `matter_type` varchar(255) NOT NULL,
-  `disable_person` varchar(255) NOT NULL,
-  `attroney` varchar(255) NOT NULL,
-  `disadility_details` varchar(255) NOT NULL,
-  `case_details` varchar(255) NOT NULL,
-  `guardian` varchar(255) NOT NULL,
-  `guardian_details` varchar(255) NOT NULL,
-  `support_details` varchar(255) NOT NULL
+  `petitioner` varchar(255) DEFAULT NULL,
+  `matter_type` varchar(255) DEFAULT NULL,
+  `disable_person` varchar(255) DEFAULT NULL,
+  `attroney` varchar(255) DEFAULT NULL,
+  `disadility_details` varchar(255) DEFAULT NULL,
+  `case_details` varchar(255) DEFAULT NULL,
+  `guardian` varchar(255) DEFAULT NULL,
+  `guardian_details` varchar(255) DEFAULT NULL,
+  `support_details` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -1834,6 +1834,13 @@ CREATE TABLE `cra_probate_law` (
   `supporting_details` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `cra_probate_law`
+--
+
+INSERT INTO `cra_probate_law` (`id`, `matter_info`, `executor`, `matter_type`, `deceased`, `case_details`, `estate_details`, `supporting_details`) VALUES
+(3, '789898', NULL, NULL, NULL, NULL, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -2037,6 +2044,28 @@ CREATE TABLE `cra_subject` (
 
 INSERT INTO `cra_subject` (`id`, `sub_name`, `category`, `discription`) VALUES
 (1, '1234', 'fdfdg', 'fdfdgfgd');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_subject_category`
+--
+
+CREATE TABLE `cra_subject_category` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_subject_category`
+--
+
+INSERT INTO `cra_subject_category` (`id`, `title`) VALUES
+(3, 'category 1'),
+(4, 'category 2'),
+(5, 'category 3'),
+(6, 'category 4'),
+(7, 'category 5');
 
 -- --------------------------------------------------------
 
@@ -2347,6 +2376,13 @@ CREATE TABLE `cra_workers_compensation` (
   `benefit_detail` varchar(255) DEFAULT NULL,
   `supporting_details` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_workers_compensation`
+--
+
+INSERT INTO `cra_workers_compensation` (`id`, `matter_info`, `petitioner`, `matter_type`, `respondent`, `attroney`, `insurer`, `adjuster`, `case_detail`, `employee_doctor`, `benefit_detail`, `supporting_details`) VALUES
+(4, '769769', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -10663,6 +10699,12 @@ ALTER TABLE `cra_subject`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cra_subject_category`
+--
+ALTER TABLE `cra_subject_category`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `cra_tax_chart`
 --
 ALTER TABLE `cra_tax_chart`
@@ -11360,7 +11402,7 @@ ALTER TABLE `cra_precedence`
 -- AUTO_INCREMENT for table `cra_probate_law`
 --
 ALTER TABLE `cra_probate_law`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `cra_real_estate`
@@ -11409,6 +11451,12 @@ ALTER TABLE `cra_staff_monthly_status_report`
 --
 ALTER TABLE `cra_subject`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `cra_subject_category`
+--
+ALTER TABLE `cra_subject_category`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `cra_tax_chart`
@@ -11480,7 +11528,7 @@ ALTER TABLE `cra_weekend_and_holiday`
 -- AUTO_INCREMENT for table `cra_workers_compensation`
 --
 ALTER TABLE `cra_workers_compensation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `cra_work_flow`
