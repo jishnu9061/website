@@ -75,6 +75,7 @@
                         <td class="text-center"></td>
                         <td  scope="row"class="text-center">
                         <a href="{{url('edit_new_user_grp',$group->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                        <span class="m-1"></span>
                         <a href="{{url('user_group_destroy',$group->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
                        
                      </tr>

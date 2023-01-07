@@ -60,7 +60,7 @@
       <thead>
 
                         <tr>
-                        <th class="text-center" >No</th>
+                        <!-- <th class="text-center" >No</th> -->
                         <th class="text-center" >Town/City</th>
                      <th class="text-center" >Action</th>
                       
@@ -70,11 +70,12 @@
              <tbody>
             @foreach($manage_towns  as $town)
                     <tr>
-                        <td  class="text-center">{{$town->id}}</td>
+                        <!-- <td  class="text-center">{{$town->id}}</td> -->
                         <td  class="text-center">{{$town->Town_City}}</td>
                       
                         <td  scope="row"class="text-center"style="color:rgb(13, 1, 56);">
                                  <a href="{{url('edit_town',$town->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                                 <span class="m-2"></span>
                                  <a href="{{url('delete_town',$town->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
                   
                      </tr>

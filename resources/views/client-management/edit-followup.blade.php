@@ -141,7 +141,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="mb-1">
-                                    <label for="username"> Registered_by</label>
+                                    <label for="username"> Registered By</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend"></div>
                                         <input type="text" class="form-control" name="Registered"

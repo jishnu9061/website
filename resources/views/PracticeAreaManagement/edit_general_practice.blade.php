@@ -18,7 +18,7 @@
                             <label for="exampleFormControlInput1" class="form-label">File No</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" placeholder="52B6577Z">
+                                <input type="text" class="form-control" value="52B6577Z">
                             </div>
                         </div>
                     </div>
@@ -27,7 +27,7 @@
                             <label for="exampleFormControlInput1" class="form-label">Client Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" placeholder="Michael">
+                                <input type="text" class="form-control" value="Michael">
                             </div>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                             <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" placeholder="Civil Dispute">
+                                <input type="text" class="form-control" value="Civil Dispute">
                             </div>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                             <label for="exampleFormControlInput1" class="form-label">Other Party</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" placeholder="Jones">
+                                <input type="text" class="form-control" value="Jones">
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                             <label for="exampleFormControlInput1" class="form-label">Attorney</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" placeholder="Samuel">
+                                <input type="text" class="form-control" value="Samuel">
                             </div>
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <textarea class="form-control" rows="2"
-                                    placeholder="Filed Date: 5/2/2019 Service by: Currier Los Angles"></textarea>
+                                    value="Filed Date: 5/2/2019 Service by: Currier Los Angles"></textarea>
                             </div>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
                             <label for="exampleFormControlInput1" class="form-label">Witness</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <textarea class="form-control" rows="2" placeholder="Chris"></textarea>
+                                <textarea class="form-control" rows="2" value="Chris"></textarea>
                             </div>
                         </div>
                     </div>
