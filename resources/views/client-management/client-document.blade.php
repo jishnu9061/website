@@ -104,13 +104,13 @@
                             <tr id="data">
                                 <td scope="row" class="text-center" id="medicine_name_1"><a
                                         href="{{url('view-document',$list->id)}}"><button type="button"
-                                            class="btn btn-primary float:right;" Style="width:45%;">View
+                                            class="btn btn-primary float:right;" >View
                                             Document</button></a>
                                 </td>
                                 <td scope="row" class="text-center">
                                     <a href="{{url('edit-documents',$list->id)}}"><i style="color:black;"
                                             class="fa fa-pencil" aria-hidden="true"></i>
-
+                                     <span class="m-2"></span>
                                         <a onClick="return myFunction();" href="{{url('delete-document',$list->id)}}"
                                             style="color:black;"><i class="fas fa-trash-alt"></i></a>
                                 </td>

@@ -178,7 +178,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="mb-1">
-                            <label for="username">user Group</label>
+                            <label for="username">User Group</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
@@ -265,7 +265,7 @@
                     </div>
                     <div class="col-sm d-flex justify-content-around p-1">
 
-                        <button type="submit" class="btn btn-primary" style="width:45%">Save</button>
+                        <button type="submit" class="btn btn-primary" style="width:45%">Update</button>
                         <button type="button" class="btn btn-primary" style="width:45%"
                             onclick="history.back()">Cancel</button>
                     </div>

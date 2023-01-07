@@ -122,7 +122,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" placeholder="" name="matter_info">
+                                            <input type="text" class="form-control" value="" name="matter_info" required>
                                         </div>
                                     </div>
                                 </div>
@@ -133,7 +133,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" placeholder="" name="plaintiff">
+                                            <input type="text" class="form-control" value="" name="plaintiff" required>
                                         </div>
                                     </div>
                                 </div>
@@ -144,7 +144,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" placeholder="" name="matter_type">
+                                            <input type="text" class="form-control" value="" name="matter_type" required>
                                         </div>
                                     </div>
                                 </div>
@@ -158,7 +158,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="text" class="form-control" placeholder="" name="defendent">
+                                            <input type="text" class="form-control" value="" name="defendent" required>
                                         </div>
                                     </div>
                                 </div>
@@ -169,7 +169,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" rows="2" name="attroney"></textarea>
+                                            <textarea class="form-control" rows="2" name="attroney" required></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -180,7 +180,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" rows="2" name="case_detail"></textarea>
+                                            <textarea class="form-control" rows="2" name="case_detail" required></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -195,7 +195,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" rows="2" name="insurer"></textarea>
+                                            <textarea class="form-control" rows="2" name="insurer" required></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -207,7 +207,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" rows="2" name="witness"></textarea>
+                                            <textarea class="form-control" rows="2" name="witness" required></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -219,7 +219,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" rows="2" name="expert"></textarea>
+                                            <textarea class="form-control" rows="2" name="expert" required></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -234,7 +234,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" rows="2" name="def_insurer"></textarea>
+                                            <textarea class="form-control" rows="2" name="def_insurer" required></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -246,7 +246,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" rows="2" name="def_witness"></textarea>
+                                            <textarea class="form-control" rows="2" name="def_witness" required></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -258,7 +258,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <textarea class="form-control" rows="2" name="def_expert"></textarea>
+                                            <textarea class="form-control" rows="2" name="def_expert" required></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -273,7 +273,7 @@
                                             <div class="input-group-prepend">
 
                                             </div>
-                                            <input type="file" class="form-control" name="support_detail">
+                                            <input type="file" class="form-control" name="support_detail" required>
                                         </div>
                                     </div>
                                 </div>

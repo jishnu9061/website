@@ -20,14 +20,13 @@
         <table class="table table-hover" style="border: 1px solid">
 
 
-            <tbody>
+            <tbody class="text-center">
                 <tr>
                     <th>Client Document</th>
                     <td><img src="{{asset('/images/file/'.$view_document->file)}}" width="80px" height="50px"
                             alt="image"></td>
                     <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-                            style="margin-left:5px; float:right;margin-right:5px;">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                             Show
                         </button>
 
