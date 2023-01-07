@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 17, 2022 at 07:09 AM
+-- Generation Time: Jan 07, 2023 at 10:18 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -20,348 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `cra_project`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `alllabtests`
---
-
-CREATE TABLE `alllabtests` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `patient_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `appointment_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `patient_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `patient_phoneno` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `patient_address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `hospital` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `alllabtests`
---
-
-INSERT INTO `alllabtests` (`id`, `patient_id`, `appointment_id`, `patient_name`, `patient_phoneno`, `patient_address`, `created_at`, `updated_at`, `hospital`) VALUES
-(1, '1', NULL, '1', '1', '1', '2022-01-31 06:18:07', '2022-01-31 06:18:07', 'kims intetrnational'),
-(2, '9', NULL, '9', '9', '9', '2022-01-31 06:24:31', '2022-01-31 06:24:31', 'kims intetrnational'),
-(3, '74', NULL, 'po', '47', 'o', '2022-02-01 00:11:48', '2022-02-01 00:11:48', 'kims intetrnational'),
-(4, '47', NULL, 'puiopupuip', '90', 'objo7', '2022-02-01 00:13:07', '2022-02-01 00:13:07', 'kims intetrnational'),
-(5, '5', NULL, '5', '5', '5', '2022-02-01 01:21:11', '2022-02-01 01:21:11', 'kims intetrnational'),
-(6, '2', NULL, 'SSS', '3131415', 'vzvzgh', '2022-02-01 04:19:19', '2022-02-01 04:19:19', 'kims intetrnational'),
-(7, '1', NULL, 'r', '4', 'y', '2022-02-19 05:51:07', '2022-02-19 05:51:07', 'kims intetrnational');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `allowance`
---
-
-CREATE TABLE `allowance` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `allowancename` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `price` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `percent` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `hospital` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sum` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `created_at` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `updated_at` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `allowance`
---
-
-INSERT INTO `allowance` (`id`, `allowancename`, `price`, `percent`, `hospital`, `status`, `sum`, `created_at`, `updated_at`) VALUES
-(9, 'typ4', '1', NULL, 'D-clinic', 'nonfixedallowance', NULL, '2021-12-22 12:45:58', '2021-12-22 12:45:58'),
-(10, 'st', '3', NULL, 'D-clinic', 'allowance', NULL, '2021-12-22 12:46:05', '2021-12-22 12:46:05'),
-(11, 'ty', NULL, NULL, 'D-clinic', 'nonfixedallowance', NULL, '2021-12-22 12:46:15', '2021-12-22 12:46:15'),
-(15, 'pp', NULL, NULL, 'D-clinic', 'nonfixedallowance', NULL, '2021-12-22 12:52:03', '2021-12-22 12:52:03'),
-(17, 'piY', NULL, NULL, 'kims intetrnational', 'nonfixedallowance', NULL, '2021-12-24 06:02:16', '2021-12-24 06:02:16'),
-(22, 'TRAVEL ALLOWANCE', '1503', NULL, 'kims intetrnational', 'allowance', NULL, '2021-12-24 06:30:54', '2021-12-24 06:30:54'),
-(25, 'gst', NULL, '6', 'kims intetrnational', 'reduction', NULL, '2021-12-24 06:31:43', '2021-12-24 06:31:43'),
-(33, 'k', '7', NULL, 'D-clinic', 'allowance', NULL, '2021-12-31 05:27:55', '2021-12-31 05:27:55'),
-(34, 'd', '10', NULL, 'D-clinic', 'reduction', NULL, '2021-12-31 05:30:26', '2021-12-31 05:30:26'),
-(37, 'Loan', NULL, NULL, 'kims intetrnational', 'reduction', NULL, '2022-02-01 10:51:46', '2022-02-01 10:51:46'),
-(42, 'HRA', '1000', NULL, 'kims intetrnational', 'allowance', NULL, '2022-02-28 08:12:11', '2022-02-28 08:12:11'),
-(43, 'DUTY ALLOWANCE', '300', NULL, 'kims intetrnational', 'allowance', NULL, '2022-02-28 08:13:06', '2022-02-28 08:13:06'),
-(44, 'EMPLOYEE TAX', '1500', NULL, 'kims intetrnational', 'reduction', NULL, '2022-02-28 08:14:41', '2022-02-28 08:14:41');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `amb_driver`
---
-
-CREATE TABLE `amb_driver` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `licence_no` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `contact` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `vehicle_no` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `vehicle_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `year_of_made` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `amb_ulance`
---
-
-CREATE TABLE `amb_ulance` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `vehicle_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `vehicle_model` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `year_made` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `driver_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `driver_license` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `driver_contact` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `vehicle_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `patient` bigint(200) DEFAULT NULL,
-  `patient_name` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `amb_ulance`
---
-
-INSERT INTO `amb_ulance` (`id`, `vehicle_name`, `vehicle_model`, `year_made`, `driver_name`, `driver_license`, `driver_contact`, `vehicle_type`, `status`, `created_at`, `updated_at`, `patient`, `patient_name`) VALUES
-(2, '1', '2', '3', '1', '5', '4', '9', '1', NULL, NULL, NULL, NULL),
-(3, 'name', 'model', 'yrmade', 'drivername', 'driver_license', '8365454532', 'veh_type', 'Inactive', NULL, NULL, NULL, NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `appointments`
---
-
-CREATE TABLE `appointments` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `patientid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Department` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `appointmentdate` date DEFAULT NULL,
-  `hospital` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `token` bigint(250) DEFAULT NULL,
-  `prescription` varchar(1500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `lab` varchar(3000) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `medicine` varchar(5000) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `docs` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `files` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `surgery` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `surgerydate` date DEFAULT NULL,
-  `nextappointment` date DEFAULT NULL,
-  `created_at` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `updated_at` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `visiting_type` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `bystander_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `bystander_address` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `contact_no` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `consultant` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `appointments`
---
-
-INSERT INTO `appointments` (`id`, `patientid`, `Department`, `appointmentdate`, `hospital`, `status`, `token`, `prescription`, `lab`, `medicine`, `docs`, `files`, `surgery`, `surgerydate`, `nextappointment`, `created_at`, `updated_at`, `visiting_type`, `bystander_name`, `bystander_address`, `contact_no`, `consultant`) VALUES
-(1, '987', 'Urology', '2021-12-04', 'kims intetrnational', 'medicinated', 1, 'qwer', 'er', 'qewr', NULL, NULL, NULL, NULL, NULL, '2021-12-04 11:11:18', '2021-12-04 11:11:18', '', '', '', '', NULL),
-(2, '1243', 'Urology', '2021-12-04', 'kims intetrnational', 'appointedddd', 2, 'dfgh', 'fdh', 'fdh', NULL, NULL, NULL, NULL, NULL, '2021-12-04 12:03:37', '2021-12-04 12:03:37', '', '', '', '', NULL),
-(3, '123', 'Urology', '2021-12-04', 'kims intetrnational', 'appointed', 3, '111111', '33333333', '22222', NULL, NULL, NULL, NULL, NULL, '2021-12-04 12:11:13', '2021-12-04 12:11:13', '', '', '', '', NULL),
-(4, '789', 'Urology', '2021-12-06', 'kims intetrnational', 'medicinated', 1, 'ghj', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-12-06 04:42:11', '2021-12-06 04:42:11', '', '', '', '', NULL),
-(5, '789', 'Gastroenterology', '2021-12-06', 'kims intetrnational', 'queue', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-12-06 04:42:32', '2021-12-06 04:42:32', '', '', '', '', NULL),
-(6, '987', 'Urology', '2021-12-09', 'kims intetrnational', 'called', 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-12-06 04:42:46', '2021-12-06 04:42:46', '', '', '', '', NULL),
-(7, '88', 'Urology', '2021-12-09', 'kims intetrnational', 'medicinated', 4, 'phramatest\r\ndgh\r\ndh\r\nfh\r\nd\r\nfhh', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-12-06 04:45:46', '2021-12-06 04:45:46', '', '', '', '', NULL),
-(8, '87', 'Urology', '2021-12-06', 'kims intetrnational', 'called', 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-12-06 05:22:08', '2021-12-06 05:22:08', '', '', '', '', NULL),
-(9, '34', 'Urology', '2021-12-06', 'kims intetrnational', 'medicinated', 6, 'qqqqq11111', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-12-06 07:07:02', '2021-12-06 07:07:02', '', '', '', '', NULL),
-(10, '87', 'Urology', '2021-12-06', 'kims intetrnational', 'medicinated', 7, 'zx', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-12-06 08:49:28', '2021-12-06 08:49:28', '', '', '', '', NULL),
-(11, '3232', 'Urology', '2021-12-06', 'kims intetrnational', 'medicinated', 8, 'k', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-12-06 08:54:10', '2021-12-06 08:54:10', '', '', '', '', NULL),
-(12, '3322', 'Urology', '2021-12-06', 'kims intetrnational', 'medicinated', 9, 'kk', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-12-06 08:55:12', '2021-12-06 08:55:12', '', '', '', '', NULL),
-(13, '987987', 'Urology', '2021-12-06', 'kims intetrnational', 'medicinated', 10, 'qqqqqqqqqqwwwwwww', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-12-06 10:35:49', '2021-12-06 10:35:49', '', '', '', '', NULL),
-(14, '987987', 'Urology', '2021-12-06', 'kims intetrnational', 'appointed', 11, 'sdfsdfsfs', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-12-06 11:36:15', '2021-12-06 11:36:15', '', '', '', '', NULL),
-(15, '12', 'Urology', '2021-12-24', 'kims intetrnational', 'discharged', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-12-24 05:50:36', '2021-12-24 05:50:36', '', '', '', '', NULL),
-(16, '11', 'Urology', '2021-12-24', 'kims intetrnational', 'medicinated', 2, 'afasfafasfa', 'asf\r\nas\r\nf\r\ns\r\nf\r\na\r\nsfsaf', 'safasf\r\n\r\n\r\nafs\r\n\r\nasf\r\nsaf', NULL, NULL, NULL, '2021-12-30', NULL, '2021-12-24 05:51:07', '2021-12-24 05:51:07', '', '', '', '', NULL),
-(17, '9', 'Urology', '2021-12-24', 'kims intetrnational', 'discharged', 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-12-24 05:51:19', '2021-12-24 05:51:19', '', '', '', '', NULL),
-(18, '8', 'Urology', '2021-12-24', 'kims intetrnational', 'discharged', 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-12-24 05:51:39', '2021-12-24 05:51:39', '', '', '', '', NULL),
-(19, '8', 'Urology', '2021-12-24', 'kims intetrnational', 'discharged', 5, 'rew', 'bvbv\r\nyff', 'yuf', NULL, NULL, 'hg', '2021-12-24', NULL, '2021-12-24 07:04:09', '2021-12-24 07:04:09', '', '', '', '', NULL),
-(20, '5', 'Urology', '2021-12-24', 'kims intetrnational', 'discharged', 6, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-12-24 07:04:34', '2021-12-24 07:04:34', '', '', '', '', NULL),
-(21, '6', 'Urology', '2021-12-24', 'kims intetrnational', 'discharged', 7, 'ytry', 'jh\r\nigig\r\ng', 'klj', NULL, NULL, NULL, NULL, '2021-12-30', '2021-12-24 07:04:46', '2021-12-24 07:04:46', '', '', '', '', NULL),
-(22, '2', 'Urology', '2021-12-25', 'kims intetrnational', 'discharged', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-12-25 09:55:33', '2021-12-25 09:55:33', '', '', '', '', NULL),
-(23, '4', 'Urology', '2021-12-25', 'kims intetrnational', 'discharged', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-12-25 09:56:04', '2021-12-25 09:56:04', '', '', '', '', NULL),
-(24, '5', 'Urology', '2021-12-25', 'kims intetrnational', 'discharged', 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-12-25 09:56:18', '2021-12-25 09:56:18', '', '', '', '', NULL),
-(25, '9', 'Urology', '2021-12-25', 'kims intetrnational', 'discharged', 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-12-25 09:56:29', '2021-12-25 09:56:29', '', '', '', '', NULL),
-(26, '1', 'Urology', '2022-01-07', 'kims intetrnational', 'discharged', 1, 'token 1 today prescription', 'token 1 today Lab', 'token 1 today Medicine', NULL, NULL, NULL, NULL, NULL, '2022-01-07 05:04:16', '2022-01-07 05:04:16', '', '', '', '', NULL),
-(27, '2', 'Urology', '2022-01-07', 'kims intetrnational', 'discharged', 2, 'qwe', 'ewq', 'qwe', NULL, NULL, NULL, NULL, NULL, '2022-01-07 05:04:26', '2022-01-07 05:04:26', '', '', '', '', NULL),
-(28, '3', 'Urology', '2022-01-07', 'kims intetrnational', 'discharged', 3, 'dfg', 'fgd', 'fgd', NULL, NULL, NULL, NULL, NULL, '2022-01-07 05:04:34', '2022-01-07 05:04:34', '', '', '', '', NULL),
-(29, '4', 'Urology', '2022-01-07', 'kims intetrnational', 'discharged', 4, 'fdg', 'fg', 'gf', NULL, NULL, NULL, NULL, NULL, '2022-01-07 05:04:42', '2022-01-07 05:04:42', '', '', '', '', NULL),
-(30, '5', 'Urology', '2022-01-07', 'kims intetrnational', 'discharged', 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-01-07 05:04:52', '2022-01-07 05:04:52', '', '', '', '', NULL),
-(31, '6', 'Urology', '2022-01-07', 'kims intetrnational', 'discharged', 6, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-01-07 05:05:00', '2022-01-07 05:05:00', '', '', '', '', NULL),
-(32, '7', 'Urology', '2022-01-07', 'kims intetrnational', 'discharged', 7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-01-07 05:05:08', '2022-01-07 05:05:08', '', '', '', '', NULL),
-(33, '2', 'Physiotherapy', '2022-01-10', 'kims intetrnational', 'discharged', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-01-10 12:22:59', '2022-01-10 12:22:59', '', '', '', '', NULL),
-(34, '6', 'General Surgery', '2022-01-10', 'kims intetrnational', 'discharged', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-01-10 12:23:07', '2022-01-10 12:23:07', '', '', '', '', NULL),
-(35, '1', 'Urology', '2022-01-11', 'kims intetrnational', 'discharged', 1, 'dgh', 'tu', 'h', NULL, NULL, NULL, NULL, NULL, '2022-01-11 13:05:54', '2022-01-11 13:05:54', '', '', '', '', NULL),
-(36, '2', 'Urology', '2022-01-11', 'kims intetrnational', 'discharged', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-01-11 13:06:06', '2022-01-11 13:06:06', '', '', '', '', NULL),
-(37, '3', 'Urology', '2022-01-11', 'kims intetrnational', 'discharged', 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-01-11 13:06:15', '2022-01-11 13:06:15', '', '', '', '', NULL),
-(38, '5', 'Urology', '2022-01-11', 'kims intetrnational', 'discharged', 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-01-11 13:06:28', '2022-01-11 13:06:28', '', '', '', '', NULL),
-(39, '9', 'Urology', '2022-01-11', 'kims intetrnational', 'discharged', 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-01-11 13:13:09', '2022-01-11 13:13:09', '', '', '', '', NULL),
-(40, '10', 'Urology', '2022-01-11', 'kims intetrnational', 'queue', 6, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-01-11 13:13:19', '2022-01-11 13:13:19', '', '', '', '', NULL),
-(41, '12', 'Urology', '2022-01-11', 'kims intetrnational', 'discharged', 7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-01-11 13:13:29', '2022-01-11 13:13:29', '', '', '', '', NULL),
-(42, '13', 'Urology', '2022-01-11', 'kims intetrnational', 'queue', 8, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-01-11 13:13:40', '2022-01-11 13:13:40', '', '', '', '', NULL),
-(43, '14', 'Urology', '2022-01-11', 'kims intetrnational', 'queue', 9, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-01-11 13:13:50', '2022-01-11 13:13:50', '', '', '', '', NULL),
-(44, '2', 'casuality', '2022-01-14', '', 'discharged', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '', 'normal', 'b', 'b', '1', NULL),
-(45, '1', 'casuality', '2022-01-14', '', 'discharged', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '', 'mercedes', 'e', 'w', '3', NULL),
-(46, '3', 'casuality', '2022-01-15', '', 'discharged', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '', 'normal', 'r`r', 't', '54', NULL),
-(47, '6', 'Urology', '2022-01-14', 'kims intetrnational', 'discharged', 1, 'e', 'r', 'e', NULL, NULL, NULL, '2022-01-14', NULL, '2022-01-14 09:01:27', '2022-01-14 09:01:27', NULL, '', '', '', NULL),
-(48, '7', 'Urology', '2022-01-14', 'kims intetrnational', 'discharged', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-01-14 09:01:40', '2022-01-14 09:01:40', NULL, '', '', '', NULL),
-(49, '8', 'Urology', '2022-01-14', 'kims intetrnational', 'discharged', 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-01-14 09:02:21', '2022-01-14 09:02:21', NULL, '', '', '', NULL),
-(50, '1', 'casuality', '2022-01-14', '', 'discharged', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '', 'mercedes', 'p', 'o', '7', NULL),
-(51, '2', 'ENT', '2022-01-18', 'kims intetrnational', 'discharged', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-01-18 04:58:54', '2022-01-18 04:58:54', NULL, '', '', '', NULL),
-(52, '1', 'Urology', '2022-01-18', 'kims intetrnational', 'discharged', 2, 'test details on prescription', 'test details on lab', 'test details on medicine', NULL, NULL, NULL, NULL, NULL, '2022-01-18 07:51:22', '2022-01-18 07:51:22', NULL, '', '', '', NULL),
-(53, '2', 'Urology', '2022-02-02', 'kims intetrnational', 'discharged', 1, 'prescription today2.2.2022', 'lab today2.2.2022', 'medicine today2.2.2022', NULL, NULL, NULL, NULL, NULL, '2022-02-02 11:14:43', '2022-02-02 11:14:43', NULL, '', '', '', NULL),
-(54, '3', 'Urology', '2022-02-02', 'kims intetrnational', 'discharged', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-02-02 11:14:54', '2022-02-02 11:14:54', NULL, '', '', '', NULL),
-(55, '5', 'Urology', '2022-02-02', 'kims intetrnational', 'discharged', 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-02-02 11:15:19', '2022-02-02 11:15:19', NULL, '', '', '', NULL),
-(56, '5', 'Urology', '2022-02-07', 'kims intetrnational', 'discharged', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-02-07 09:49:48', '2022-02-07 09:49:48', NULL, '', '', '', NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `atttendance`
---
-
-CREATE TABLE `atttendance` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `Employee Code` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `PresentDays` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Absent Days` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Normal Working Hours` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `OT Hours` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `CL` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `PL` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `SL` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Total Leave` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Late Coming Days` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Late Coming Hours` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Early Going Days` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Early Going Hours` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Weekly Off` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Weekly Off Present` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Holiday` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Holiday Present` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `a` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `atttendance`
---
-
-INSERT INTO `atttendance` (`id`, `Employee Code`, `PresentDays`, `Absent Days`, `Normal Working Hours`, `OT Hours`, `CL`, `PL`, `SL`, `Total Leave`, `Late Coming Days`, `Late Coming Hours`, `Early Going Days`, `Early Going Hours`, `Weekly Off`, `Weekly Off Present`, `Holiday`, `Holiday Present`, `a`, `created_at`, `updated_at`) VALUES
-(1, '900038', '15', '12', '18', '10:49:00', '00:00:00', '0', '0', '0', '0', '4', '01:30:00', '2', '00:15:00', '5', '0.5', '0', NULL, '2021-12-24 00:56:26', '2021-12-24 00:56:26'),
-(2, '900039', '15', '14', '16', '01:26:00', '00:00:00', '0', '0', '0', '0', '0', '00:00:00', '0', '00:00:00', '4', '0.5', '0', NULL, '2021-12-24 00:56:26', '2021-12-24 00:56:26'),
-(3, '900040', '15', '14', '16', '01:26:00', '00:00:00', '0', '0', '0', '0', '0', '00:00:00', '0', '00:00:00', '4', '0.5', '0', NULL, '2021-12-24 00:56:26', '2021-12-24 00:56:26'),
-(4, '900041', '15', '14', '16', '01:26:00', '00:00:00', '0', '0', '0', '0', '0', '00:00:00', '0', '00:00:00', '4', '0.5', '0', NULL, '2021-12-24 00:56:26', '2021-12-24 00:56:26'),
-(5, '900042', '15', '14', '16', '01:26:00', '00:00:00', '0', '0', '0', '0', '0', '00:00:00', '0', '00:00:00', '4', '0.5', '0', NULL, '2021-12-24 00:56:26', '2021-12-24 00:56:26'),
-(6, '900043', '15', '14', '16', '01:26:00', '00:00:00', '0', '0', '0', '0', '0', '00:00:00', '0', '00:00:00', '4', '0.5', '0', NULL, '2021-12-24 00:56:26', '2021-12-24 00:56:26'),
-(7, '900044', '15', '14', '16', '01:26:00', '00:00:00', '0', '0', '0', '0', '0', '00:00:00', '0', '00:00:00', '4', '0.5', '0', NULL, '2021-12-24 00:56:26', '2021-12-24 00:56:26'),
-(8, '900045', '15', '14', '16', '01:26:00', '00:00:00', '0', '0', '0', '0', '0', '00:00:00', '0', '00:00:00', '4', '0.5', '0', NULL, '2021-12-24 00:56:26', '2021-12-24 00:56:26'),
-(9, '900046', '15', '14', '16', '01:26:00', '00:00:00', '0', '0', '0', '0', '0', '00:00:00', '0', '00:00:00', '4', '0.5', '0', NULL, '2021-12-24 00:56:26', '2021-12-24 00:56:26'),
-(10, '900047', '15', '14', '16', '01:26:00', '00:00:00', '0', '0', '0', '0', '0', '00:00:00', '0', '00:00:00', '4', '0.5', '0', NULL, '2021-12-24 00:56:26', '2021-12-24 00:56:26'),
-(11, '900048', '15', '14', '16', '01:26:00', '00:00:00', '0', '0', '0', '0', '0', '00:00:00', '0', '00:00:00', '4', '0.5', '0', NULL, '2021-12-24 00:56:26', '2021-12-24 00:56:26'),
-(12, '900049', '15', '14', '16', '01:26:00', '00:00:00', '0', '0', '0', '0', '0', '00:00:00', '0', '00:00:00', '4', '0.5', '0', NULL, '2021-12-24 00:56:26', '2021-12-24 00:56:26'),
-(13, '900050', '15', '14', '16', '01:26:00', '00:00:00', '0', '0', '0', '0', '0', '00:00:00', '0', '00:00:00', '4', '0.5', '0', NULL, '2021-12-24 00:56:26', '2021-12-24 00:56:26'),
-(14, '900051', '15', '14', '16', '01:26:00', '00:00:00', '0', '0', '0', '0', '0', '00:00:00', '0', '00:00:00', '4', '0.5', '0', NULL, '2021-12-24 00:56:26', '2021-12-24 00:56:26'),
-(15, '900052', '15', '14', '16', '01:26:00', '00:00:00', '0', '0', '0', '0', '0', '00:00:00', '0', '00:00:00', '4', '0.5', '0', NULL, '2021-12-24 00:56:26', '2021-12-24 00:56:26'),
-(16, '900053', '15', '14', '16', '01:26:00', '00:00:00', '0', '0', '0', '0', '0', '00:00:00', '0', '00:00:00', '4', '0.5', '0', NULL, '2021-12-24 00:56:26', '2021-12-24 00:56:26'),
-(17, '900054', '15', '14', '16', '01:26:00', '00:00:00', '0', '0', '0', '0', '0', '00:00:00', '0', '00:00:00', '4', '0.5', '0', NULL, '2021-12-24 00:56:26', '2021-12-24 00:56:26'),
-(18, '900055', '15', '14', '16', '01:26:00', '00:00:00', '0', '0', '0', '0', '0', '00:00:00', '0', '00:00:00', '4', '0.5', '0', NULL, '2021-12-24 00:56:26', '2021-12-24 00:56:26'),
-(19, '900056', '15', '14', '16', '01:26:00', '00:00:00', '0', '0', '0', '0', '0', '00:00:00', '0', '00:00:00', '4', '0.5', '0', NULL, '2021-12-24 00:56:26', '2021-12-24 00:56:26'),
-(20, '900057', '15', '14', '16', '01:26:00', '00:00:00', '0', '0', '0', '0', '0', '00:00:00', '0', '00:00:00', '4', '0.5', '0', NULL, '2021-12-24 00:56:26', '2021-12-24 00:56:26'),
-(21, '900058', '15', '14', '16', '01:26:00', '00:00:00', '0', '0', '0', '0', '0', '00:00:00', '0', '00:00:00', '4', '0.5', '0', NULL, '2021-12-24 00:56:26', '2021-12-24 00:56:26'),
-(22, '0900065', '15', '14', '16', '01:26:00', '00:00:00', '0', '0', '0', '0', '0', '00:00:00', '0', '00:00:00', '4', '0.5', '0', NULL, '2021-12-24 00:56:26', '2021-12-24 00:56:26');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `beds`
---
-
-CREATE TABLE `beds` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `bedname` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `allocateduser` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `bedcharge` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `time` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `css` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `js` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `userid` bigint(100) DEFAULT NULL,
-  `hospital` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `department` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `updated_at` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `username` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `clinicalnotes` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `category` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `bill_details`
---
-
-CREATE TABLE `bill_details` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `bill_no` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `date` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `patient_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `opd_no` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `ipd_no` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `patient_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `doctor_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `medicine_category_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `medicine_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Batch_no` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `expiry_date` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `avilable_quantity` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sale_price` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `amount` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `total` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `discount` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `tax` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `net_amount` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `brand_names`
---
-
-CREATE TABLE `brand_names` (
-  `id` int(11) NOT NULL,
-  `brand_name` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `brand_names`
---
-
-INSERT INTO `brand_names` (`id`, `brand_name`) VALUES
-(1, 'demo brand');
 
 -- --------------------------------------------------------
 
@@ -395,26 +53,6 @@ INSERT INTO `budget_types` (`id`, `budget_name`, `budget_desc`, `budget_update_p
 (16, 'Audit,Accountancy & Strategic Plan Consultancy Fees', NULL, 1),
 (17, 'Projected Taxes', NULL, 1),
 (18, 'Telecommunication Costs', NULL, 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `callambulance`
---
-
-CREATE TABLE `callambulance` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `ambulance_id` int(11) NOT NULL,
-  `Patient_id` int(11) NOT NULL,
-  `distance` double(8,2) NOT NULL,
-  `amount` double(8,2) NOT NULL,
-  `paid_status` int(11) NOT NULL,
-  `trip_status` int(11) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `from` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `to` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -513,6 +151,34 @@ CREATE TABLE `cra_add_event` (
 
 INSERT INTO `cra_add_event` (`id`, `Event_Type`, `Title`, `Meeting_Room`, `Location`, `Start_Date`, `Time`, `End_Date`, `Time_End`, `Event_Booked_For`, `User_Invited`, `Other_Invites`, `Client`, `File`, `Notes`, `Set_Repetition`, `Repetition_End`, `Set_Reminder`, `company_id`, `branch_id`) VALUES
 (5, 'demo 2', 'sdgdg', 'demo 3', 'sdfsdf', '2022-09-28', '15:27:00', '2022-10-28', '16:28:00', 'demo 2', 'sdfsd', 'test', 'demo 3', 'demo 2', 'dfgdfgdg', 'demo 2', '2022-10-28', 'demo 2', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_add_expense`
+--
+
+CREATE TABLE `cra_add_expense` (
+  `id` int(11) NOT NULL,
+  `date` date DEFAULT NULL,
+  `staff_name` varchar(222) DEFAULT NULL,
+  `expense_reference` varchar(222) DEFAULT NULL,
+  `customer_type` varchar(222) DEFAULT NULL,
+  `task_assigned_by` text DEFAULT NULL,
+  `billing` int(11) DEFAULT NULL,
+  `description` varchar(222) DEFAULT NULL,
+  `status` text NOT NULL,
+  `supporting_details` varchar(222) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_add_expense`
+--
+
+INSERT INTO `cra_add_expense` (`id`, `date`, `staff_name`, `expense_reference`, `customer_type`, `task_assigned_by`, `billing`, `description`, `status`, `supporting_details`) VALUES
+(1, '2023-01-06', 'test', 'test1', 'Individual', 'Marketing Department', 2222, 'adsdasd', 'In progress', 'C:\\xampp\\tmp\\phpC728.tmp'),
+(2, '2023-01-12', 'test', 'test1', 'Individual', 'Marketing Department', 2222, 'sddaad', 'In progress', 'C:\\xampp\\tmp\\phpA42.tmp'),
+(5, '2023-01-12', 'test', 'test1', 'Individual', 'Marketing Department', 2222, 'wedwedwe', 'In progress', 'C:\\xampp\\tmp\\php4AC2.tmp');
 
 -- --------------------------------------------------------
 
@@ -639,9 +305,8 @@ CREATE TABLE `cra_add_injury` (
   `matter_type` varchar(255) DEFAULT NULL,
   `incident` varchar(255) DEFAULT NULL,
   `damage` varchar(255) DEFAULT NULL,
-  `insurer` varchar(255) DEFAULT NULL,
   `policy_detail` varchar(255) DEFAULT NULL,
-  `defendent` varchar(255) NOT NULL
+  `defendent` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -712,6 +377,32 @@ CREATE TABLE `cra_add_office_instructions` (
   `company_id` int(11) DEFAULT NULL,
   `branch_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_add_outgoing_letter`
+--
+
+CREATE TABLE `cra_add_outgoing_letter` (
+  `id` int(11) NOT NULL,
+  `letter_date` date NOT NULL,
+  `client` varchar(255) NOT NULL,
+  `file` varchar(255) NOT NULL,
+  `delivered_to` varchar(255) NOT NULL,
+  `Document_category` varchar(255) NOT NULL,
+  `letter_name` varchar(255) NOT NULL,
+  `originator` varchar(255) NOT NULL,
+  `viewers` varchar(255) NOT NULL,
+  `upload_copy` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_add_outgoing_letter`
+--
+
+INSERT INTO `cra_add_outgoing_letter` (`id`, `letter_date`, `client`, `file`, `delivered_to`, `Document_category`, `letter_name`, `originator`, `viewers`, `upload_copy`) VALUES
+(1, '2022-11-12', 'demo 3', 'demo 2', 'da', 'demo 3', 'aaaa', 'demo 2', 'demo 2', 'C:\\xampp\\tmp\\phpA90B.tmp');
 
 -- --------------------------------------------------------
 
@@ -806,7 +497,35 @@ CREATE TABLE `cra_add_user_roles` (
 --
 
 INSERT INTO `cra_add_user_roles` (`id`, `role_name`, `company_id`, `branch_id`) VALUES
-(8, 'Account', NULL, NULL);
+(8, 'Accountant', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_apply_tender`
+--
+
+CREATE TABLE `cra_apply_tender` (
+  `id` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `item_name` varchar(200) DEFAULT NULL,
+  `quantity` int(11) DEFAULT NULL,
+  `supplier_name` varchar(200) DEFAULT NULL,
+  `mobile_no` int(11) DEFAULT NULL,
+  `address` longtext DEFAULT NULL,
+  `description` varchar(100) DEFAULT NULL,
+  `document` varchar(200) DEFAULT NULL,
+  `period_of_contract` varchar(200) DEFAULT NULL,
+  `cost_of_tender` varchar(200) DEFAULT NULL,
+  `payment_type` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_apply_tender`
+--
+
+INSERT INTO `cra_apply_tender` (`id`, `date`, `item_name`, `quantity`, `supplier_name`, `mobile_no`, `address`, `description`, `document`, `period_of_contract`, `cost_of_tender`, `payment_type`) VALUES
+(1, '2022-12-17', 'jvjcf', 45, 'fdfdfdfdg', 2147483647, 'jhfgsjfgbsk', 'wregtewrtwrt', 'C:\\xampp\\tmp\\phpB94A.tmp', '23', '3456778', 'card');
 
 -- --------------------------------------------------------
 
@@ -1233,6 +952,43 @@ INSERT INTO `cra_corporate_client_details` (`corporate_id`, `client_number`, `Cl
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `cra_corporate_customers`
+--
+
+CREATE TABLE `cra_corporate_customers` (
+  `Id` int(11) NOT NULL,
+  `Name` varchar(222) DEFAULT NULL,
+  `GST_Office` int(11) DEFAULT NULL,
+  `GST_Number` int(11) DEFAULT NULL,
+  `Social_Security_Number` int(11) DEFAULT NULL,
+  `Customer_Authority` varchar(222) DEFAULT NULL,
+  `Phone` int(11) DEFAULT NULL,
+  `FAX` int(11) DEFAULT NULL,
+  `Email` varchar(222) DEFAULT NULL,
+  `Web` varchar(222) DEFAULT NULL,
+  `Country` varchar(222) DEFAULT NULL,
+  `State` varchar(222) DEFAULT NULL,
+  `City` varchar(222) DEFAULT NULL,
+  `Town` varchar(222) DEFAULT NULL,
+  `Post_Code` int(11) DEFAULT NULL,
+  `Address` varchar(222) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_corporate_customers`
+--
+
+INSERT INTO `cra_corporate_customers` (`Id`, `Name`, `GST_Office`, `GST_Number`, `Social_Security_Number`, `Customer_Authority`, `Phone`, `FAX`, `Email`, `Web`, `Country`, `State`, `City`, `Town`, `Post_Code`, `Address`) VALUES
+(1, 'gnbc', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2', NULL, NULL, NULL, NULL, NULL),
+(2, 'gn', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '4', NULL, NULL, NULL, NULL, NULL),
+(3, 'qqqq', 3554, 345345, 0, 'fd gfdg', 1111, 968796, 'globaleyetanandhu@gmail.com', 'fgdfhrt', '1', '2', '3', '54556', 54556, NULL),
+(4, 'gnbch', 3554, 345345, 353453, 'fd gfdg', 2147483647, 33423, 'globaleyetanandhu@gmail.com', 'fgdfhrt', '2', '2', '2', 'gncvn', 0, NULL),
+(5, 'gnbch', 3554, 345345, 353453, 'fd gfdg', 2147483647, 33423, 'a@gmail.com', 'fgdfhrt', '1', '1', '4', 'dfhbh', 0, NULL),
+(6, 'CRAdg', 3554, 0, 353453, 'fd gfdg', 2147483647, 968796, 'globaleyetanandhu@gmail.com', 'fgdfhrt', '1', '---select---', '---select---', 'cbxf', 0, 'gggggggddddd');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `cra_courts`
 --
 
@@ -1423,8 +1179,8 @@ CREATE TABLE `cra_document_detials` (
 --
 
 CREATE TABLE `cra_estate_planning` (
-  `id` int(11) NOT NULL,
-  `file_no` varchar(255) DEFAULT NULL,
+  `id` int(11) DEFAULT NULL,
+  `file_no` varchar(255) NOT NULL,
   `client_name` varchar(255) DEFAULT NULL,
   `matter_type` varchar(255) DEFAULT NULL,
   `estate_details` varchar(255) DEFAULT NULL,
@@ -1434,13 +1190,6 @@ CREATE TABLE `cra_estate_planning` (
   `financier` varchar(255) DEFAULT NULL,
   `support` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `cra_estate_planning`
---
-
-INSERT INTO `cra_estate_planning` (`id`, `file_no`, `client_name`, `matter_type`, `estate_details`, `trust`, `property_details`, `accoundant`, `financier`, `support`) VALUES
-(3, 'test', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1468,6 +1217,24 @@ CREATE TABLE `cra_family_law` (
 
 INSERT INTO `cra_family_law` (`id`, `file_no`, `client_name`, `matter_type`, `other_party`, `attorney`, `case_details`, `marrige`, `property`, `child_details`, `support_detail`) VALUES
 (4, '445', 'fhgchf', '787878', 'fytrf', '45454', '777', 'afd', 'dafds', 'sddf', 'C:\\xampp\\tmp\\php5AD5.tmp');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_file`
+--
+
+CREATE TABLE `cra_file` (
+  `id` int(11) NOT NULL,
+  `upload_date` varchar(255) DEFAULT NULL,
+  `subject` varchar(255) DEFAULT NULL,
+  `file_name` varchar(255) DEFAULT NULL,
+  `auther` varchar(255) DEFAULT NULL,
+  `publisher` varchar(255) DEFAULT NULL,
+  `upload_by` varchar(255) DEFAULT NULL,
+  `discription` varchar(255) DEFAULT NULL,
+  `e_file` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -1777,6 +1544,37 @@ CREATE TABLE `cra_leave_days` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `cra_leave_request_details`
+--
+
+CREATE TABLE `cra_leave_request_details` (
+  `id` int(11) NOT NULL,
+  `leave_type` varchar(255) DEFAULT NULL,
+  `leave_date` date DEFAULT NULL,
+  `days` int(11) DEFAULT NULL,
+  `apply_date` date DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_leave_request_details`
+--
+
+INSERT INTO `cra_leave_request_details` (`id`, `leave_type`, `leave_date`, `days`, `apply_date`, `status`) VALUES
+(8, 'Medical Leave', '2023-01-02', NULL, NULL, NULL),
+(9, 'Half Day', '2023-01-24', NULL, NULL, NULL),
+(10, 'Half Day', '2023-01-13', NULL, '2023-01-12', NULL),
+(11, 'Medical Leave', '2023-01-08', NULL, '2023-01-07', NULL),
+(12, 'Medical Leave', '2023-01-08', NULL, '2023-01-07', NULL),
+(13, 'Medical Leave', '2023-01-08', NULL, '2023-01-07', NULL),
+(14, 'Casual Leave', '2023-01-08', NULL, '2023-01-07', NULL),
+(15, '---Select---', NULL, NULL, NULL, NULL),
+(16, '---Select---', NULL, NULL, NULL, NULL),
+(17, '---Select---', NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `cra_letter_types`
 --
 
@@ -1812,6 +1610,32 @@ CREATE TABLE `cra_manage_items` (
 
 INSERT INTO `cra_manage_items` (`id`, `Category`, `Item_Type`, `Item_Name`, `Reorder_Level`, `stock`, `company_id`, `branch_id`) VALUES
 (11, 'furniture', 'pen', 'fffff', 25, '50', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_manage_task`
+--
+
+CREATE TABLE `cra_manage_task` (
+  `id` int(11) NOT NULL,
+  `task_name` varchar(222) DEFAULT NULL,
+  `milestone` varchar(222) DEFAULT NULL,
+  `task_assigned_by` varchar(222) DEFAULT NULL,
+  `start_date` date DEFAULT NULL,
+  `end_date` date DEFAULT NULL,
+  `task_priority` varchar(222) DEFAULT NULL,
+  `task_status` varchar(222) DEFAULT NULL,
+  `task_description` varchar(222) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_manage_task`
+--
+
+INSERT INTO `cra_manage_task` (`id`, `task_name`, `milestone`, `task_assigned_by`, `start_date`, `end_date`, `task_priority`, `task_status`, `task_description`) VALUES
+(6, 'test', 'test', 'HR', '2023-01-06', '2023-01-07', 'Low', 'Pending', 'sssss'),
+(7, 'test', 'test', 'Advocate', '2023-01-06', '2023-01-13', 'Low', 'Complete', 'saaass');
 
 -- --------------------------------------------------------
 
@@ -1978,6 +1802,24 @@ CREATE TABLE `cra_payment_item` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `cra_precedence`
+--
+
+CREATE TABLE `cra_precedence` (
+  `id` int(11) NOT NULL,
+  `file_no` varchar(255) DEFAULT NULL,
+  `client_name` varchar(255) DEFAULT NULL,
+  `file_handle` varchar(100) DEFAULT NULL,
+  `date_from` date DEFAULT NULL,
+  `date_to` date DEFAULT NULL,
+  `file_status` varchar(255) DEFAULT NULL,
+  `file_discription` varchar(255) DEFAULT NULL,
+  `upload_file` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `cra_probate_law`
 --
 
@@ -2000,17 +1842,16 @@ CREATE TABLE `cra_probate_law` (
 
 CREATE TABLE `cra_real_estate` (
   `id` int(11) NOT NULL,
-  `file_no` varchar(255) NOT NULL,
-  `client_name` varchar(255) NOT NULL,
-  `matter_type` varchar(255) NOT NULL,
-  `buyer` varchar(255) NOT NULL,
-  `attroney` varchar(255) NOT NULL,
-  `property` varchar(255) NOT NULL,
-  `close_statement` varchar(255) NOT NULL,
-  `listing_realtor` varchar(255) NOT NULL,
-  `selling_realtor` varchar(255) NOT NULL,
-  `company_title` varchar(255) NOT NULL,
-  `support_detail` varchar(255) NOT NULL
+  `file_no` varchar(255) DEFAULT NULL,
+  `client_name` varchar(255) DEFAULT NULL,
+  `buyer` varchar(255) DEFAULT NULL,
+  `attroney` varchar(255) DEFAULT NULL,
+  `property` varchar(255) DEFAULT NULL,
+  `close_statement` varchar(255) DEFAULT NULL,
+  `listing_realtor` varchar(255) DEFAULT NULL,
+  `selling_realtor` varchar(255) DEFAULT NULL,
+  `company_title` varchar(255) DEFAULT NULL,
+  `support_detail` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -2047,7 +1888,9 @@ CREATE TABLE `cra_reg_new_user` (
 
 INSERT INTO `cra_reg_new_user` (`id`, `user_code`, `first_name`, `last_name`, `initial`, `user_name`, `password`, `re_type_password`, `post_address`, `town_name`, `telephone_no`, `mobile_no`, `email_address`, `departments`, `upload_signature`, `user_group`, `user_role`, `company_id`, `branch_id`) VALUES
 (7, '1234', 'Allams', NULL, 'sss', 'allan1234', '123456', NULL, 'Allan Villaa', 'Nairobii', NULL, '7894561241', 'allan123@gmail.com', 'HRM & Admin', 'cra_add_user_roles.sql', 'Support', 'Department Head', NULL, NULL),
-(8, '123', 'test', 'hh', 'hjkh', 'tea123', '123', '123', 'test address', 'test city', '7894456123', '7894561231', 'test@gmail.com', 'Administration', 'C:\\xampp\\tmp\\phpE28D.tmp', 'Advocate', 'Jr.Advocate', NULL, NULL);
+(8, '123', 'test', 'hh', 'hjkh', 'tea123', '123', '123', 'test address', 'test city', '7894456123', '7894561231', 'test@gmail.com', 'Administration', 'C:\\xampp\\tmp\\phpE28D.tmp', 'Advocate', 'Jr.Advocate', NULL, NULL),
+(9, '098774', 'Prakash', NULL, 'J', 'prakash', 'admin123', NULL, 'sdfsfs', 'sdfsdf', NULL, '879898743', 'prakash@gmail.com', 'Administration', 'Screenshot_4.jpg', NULL, 'View Client', NULL, NULL),
+(10, '09084', 'Prakakaa', 'Sddd', 'J', '0900047', 'kimsadmin', 'Prog@123', '628001', 'TUT', '6448833', '8667435953', 'pk@gmail.com', 'Family Law Sevices', '/private/var/folders/7w/bvqf1_f1483bkhnsfssz3gfw0000gn/T/phpge3CNU', 'Legal Assistant', 'Open New File', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -2140,6 +1983,19 @@ INSERT INTO `cra_safe_register_report` (`id`, `Client`, `File`, `Document_Type`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `cra_site`
+--
+
+CREATE TABLE `cra_site` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `site_url` varchar(255) DEFAULT NULL,
+  `discription` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `cra_staff_monthly_status_report`
 --
 
@@ -2161,6 +2017,26 @@ INSERT INTO `cra_staff_monthly_status_report` (`id`, `Department`, `Month`, `Yea
 (10, NULL, NULL, NULL, NULL, NULL),
 (11, 'department 2', 'August', 2021, NULL, NULL),
 (12, NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_subject`
+--
+
+CREATE TABLE `cra_subject` (
+  `id` int(11) NOT NULL,
+  `sub_name` varchar(255) DEFAULT NULL,
+  `category` varchar(255) DEFAULT NULL,
+  `discription` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_subject`
+--
+
+INSERT INTO `cra_subject` (`id`, `sub_name`, `category`, `discription`) VALUES
+(1, '1234', 'fdfdg', 'fdfdgfgd');
 
 -- --------------------------------------------------------
 
@@ -2312,6 +2188,30 @@ INSERT INTO `cra_template_category` (`id`, `Template_Category`, `Category_Type`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `cra_tender_details`
+--
+
+CREATE TABLE `cra_tender_details` (
+  `id` int(11) NOT NULL,
+  `from_date` date DEFAULT NULL,
+  `to_date` date DEFAULT NULL,
+  `item` varchar(150) DEFAULT NULL,
+  `category` varchar(150) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `description` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_tender_details`
+--
+
+INSERT INTO `cra_tender_details` (`id`, `from_date`, `to_date`, `item`, `category`, `quantity`, `description`) VALUES
+(1, '2022-12-24', '2022-12-11', 'fff', 'Furniture', 45, 'dfgghh'),
+(2, '2022-12-23', '2022-12-16', 'ff', 'Furniture', 45, 'sdffff');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `cra_town_city`
 --
 
@@ -2372,6 +2272,39 @@ INSERT INTO `cra_transport_zone` (`id`, `zone_name`, `zone_areas`, `cost`, `comp
 (42, NULL, NULL, NULL, NULL, NULL),
 (43, NULL, NULL, NULL, NULL, NULL),
 (44, NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cra_upload_document`
+--
+
+CREATE TABLE `cra_upload_document` (
+  `id` int(11) NOT NULL,
+  `client` varchar(255) DEFAULT NULL,
+  `file` varchar(255) DEFAULT NULL,
+  `other_file` varchar(255) DEFAULT NULL,
+  `document_category` varchar(255) DEFAULT NULL,
+  `document_title` varchar(255) DEFAULT NULL,
+  `nature_document` varchar(255) DEFAULT NULL,
+  `search` varchar(255) DEFAULT NULL,
+  `document_owner` varchar(255) DEFAULT NULL,
+  `final_aggrement` varchar(255) DEFAULT NULL,
+  `document_upload` varchar(255) DEFAULT NULL,
+  `folder_upload` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cra_upload_document`
+--
+
+INSERT INTO `cra_upload_document` (`id`, `client`, `file`, `other_file`, `document_category`, `document_title`, `nature_document`, `search`, `document_owner`, `final_aggrement`, `document_upload`, `folder_upload`) VALUES
+(1, 'client 1', 'file 1', 'df', 'category_1', 'ffgf', 'fggfgf', 'fggsg', 'doc_owner_2', 'qqq', '1668750010.png', 'C:\\xampp\\tmp\\phpCEEB.tmp'),
+(2, 'client 2', 'file 1', 'asd', 'category_2', 'dsfd', 'jh', 'fgj', 'doc_owner_1', 'qqq', '1668768481.jpg', '1668768481.jpg'),
+(3, 'client 1', 'file 1', 'asd', 'category_1', 'sdsdg', 'awdad', 'adsasdsda', 'doc_owner_1', 'sasa', '1669184297.png', '1669184297.png'),
+(4, 'client 3', 'file 3', 'df', 'category_3', 'dsfd', 'rg', 'fgfgg', 'doc_owner_3', 'sdsd', '1669184543.jpg', '1669184543.jpg'),
+(5, 'client 1', 'file 2', 'test', 'category_1', 'test title', 'test', 'test', 'doc_owner_1', 'test agreement', '1672375347.png', '1672375347.png'),
+(6, '---select---', '---select---', 'test', '---select---', 'test', NULL, NULL, '---select---', 'test', '1672375529.pdf', '1672375529.pdf');
 
 -- --------------------------------------------------------
 
@@ -7685,51 +7618,6 @@ INSERT INTO `giveallowance` (`id`, `staffid`, `allowanceid`, `type`, `updated_at
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hospitals`
---
-
-CREATE TABLE `hospitals` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `location` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `departments` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `category` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `accounting_method` int(11) NOT NULL,
-  `profit_margin` float NOT NULL,
-  `time` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `acrooms` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `rooms` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `categoryrooms` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `wardbeds` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `acroomcharge` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `roomcharge` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `categoryroomcharge` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `wardbedcharge` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `hospitals`
---
-
-INSERT INTO `hospitals` (`id`, `name`, `location`, `departments`, `category`, `accounting_method`, `profit_margin`, `time`, `acrooms`, `rooms`, `categoryrooms`, `wardbeds`, `acroomcharge`, `roomcharge`, `categoryroomcharge`, `wardbedcharge`, `created_at`, `updated_at`) VALUES
-(1, 'Holycross', 'kottiyam', NULL, 'gyno', 0, 0, NULL, '10', '10', '15', '15', '150', '100', '1560', '15', '2021-10-05 01:05:03', '2021-10-05 01:05:03'),
-(2, 'GSM', 'trivandrum', NULL, 'anything', 0, 0, NULL, '7', '52', '9', '14', '10', '50', '120', '300', '2021-10-05 01:05:19', '2021-10-05 01:05:19'),
-(3, 'testinghospital', 'here', NULL, 'anything', 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-10-05 01:05:44', '2021-10-05 01:05:44'),
-(4, 'Oppollo', 'chennai', NULL, 'everything', 0, 0, NULL, '20', '10', '12', '20', '1000', '500', '321', '123', '2021-10-06 22:23:28', '2021-10-06 22:23:28'),
-(5, 'SSNM', 'here', NULL, 'anything', 0, 0, NULL, '14', '5', '17', '15', '500', '100', '500', '20', '2021-10-08 05:04:18', '2021-10-08 05:04:18'),
-(6, 'abc', 'here', NULL, 'a', 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-10-08 07:02:25', '2021-10-08 07:02:25'),
-(7, 'test', 'hg', NULL, 'hg', 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-10-09 01:23:12', '2021-10-09 01:23:12'),
-(8, 'hollo', 'hkl', NULL, 'kh', 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-10-09 01:23:21', '2021-10-09 01:23:21'),
-(9, 'kims intetrnational', 'fg', NULL, 'gd', 1, 20, NULL, '6', '{\"Roomno\":6,\"Hospital\":\"kims intetrnational\",\"category\":\"ac\",\"updated_at\":\"2022-02-02T10:58:43.000000Z\",\"created_at\":\"2022-02-02T10:58:43.000000Z\",\"id\":814}', '5', '5', '50', '50', '60', '10', '2021-10-09 01:23:38', '2021-10-09 01:23:38'),
-(10, 'KIms local', 'sd', NULL, 'gf', 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-10-09 01:23:48', '2021-10-09 01:23:48'),
-(11, 'D-clinic', 'TVM', NULL, 'all', 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-10-30 02:17:56', '2021-10-30 02:17:56'),
-(12, 'rk hospital', 'kollam', NULL, 'dental', 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-16 00:10:56', '2022-04-16 00:10:56');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `issue_registers`
 --
 
@@ -7984,118 +7872,6 @@ INSERT INTO `journal_transactions` (`id`, `journal_date`, `journal_addedon`, `jo
 -- --------------------------------------------------------
 
 --
--- Table structure for table `labcategory`
---
-
-CREATE TABLE `labcategory` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `hospital` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `labcategory`
---
-
-INSERT INTO `labcategory` (`id`, `name`, `created_at`, `updated_at`, `hospital`) VALUES
-(8, 'microbiolgy', '2022-01-22 02:12:49', '2022-01-22 02:12:49', ''),
-(9, 'seriology', '2022-01-22 02:12:56', '2022-01-22 02:12:56', ''),
-(10, 'medico', '2022-01-22 02:13:02', '2022-01-22 02:13:02', '');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `labprofile`
---
-
-CREATE TABLE `labprofile` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `price` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `tests` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `hospital` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `labprofile`
---
-
-INSERT INTO `labprofile` (`id`, `name`, `price`, `created_at`, `updated_at`, `tests`, `hospital`) VALUES
-(1, 'q', '5', '2022-01-29 03:03:04', '2022-01-29 03:03:04', '11', 'kims intetrnational'),
-(2, 'q', '5', '2022-01-29 03:03:04', '2022-01-29 03:03:04', 'TRIGLYCERIDES', 'kims intetrnational'),
-(3, 'q', '5', '2022-01-29 03:03:04', '2022-01-29 03:03:04', 'Sugarwq1', 'kims intetrnational'),
-(4, 'doc-profile', '5', '2022-01-29 03:51:03', '2022-01-29 03:51:03', '15', 'kims intetrnational'),
-(5, 'doc-profile', '5', '2022-01-29 03:51:03', '2022-01-29 03:51:03', 'bloodpressure', 'kims intetrnational'),
-(6, 'b', '5', '2022-01-29 03:51:39', '2022-01-29 03:51:39', '14', 'kims intetrnational'),
-(7, 'b', '5', '2022-01-29 03:52:50', '2022-01-29 03:52:50', '14', 'kims intetrnational'),
-(8, 'p', '5', '2022-01-29 03:52:56', '2022-01-29 03:52:56', 'bloodpressure', 'kims intetrnational'),
-(9, 'poi', '5', '2022-01-29 03:53:17', '2022-01-29 03:53:17', 'bloodpressure', 'kims intetrnational'),
-(10, 'poi', '5', '2022-01-29 03:53:17', '2022-01-29 03:53:17', 'doc-test', 'kims intetrnational'),
-(11, 'heartdisease', '5', '2022-01-29 05:54:42', '2022-01-29 05:54:42', 'TRIGLYCERIDES', 'kims intetrnational'),
-(12, 'heartdisease', '5', '2022-01-29 05:54:42', '2022-01-29 05:54:42', 'doc-test', 'kims intetrnational'),
-(13, 'heartdisease', '5', '2022-01-29 05:54:42', '2022-01-29 05:54:42', 'bloodpressure', 'kims intetrnational');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `labprofiles`
---
-
-CREATE TABLE `labprofiles` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `hospital` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `labprofiles`
---
-
-INSERT INTO `labprofiles` (`id`, `name`, `created_at`, `updated_at`, `hospital`) VALUES
-(13, 'q', '2022-01-29 03:03:04', '2022-01-29 03:03:04', 'kims intetrnational'),
-(14, 'doc-profile', '2022-01-29 03:51:03', '2022-01-29 03:51:03', 'kims intetrnational'),
-(17, 'p', '2022-01-29 03:52:56', '2022-01-29 03:52:56', 'kims intetrnational'),
-(18, 'poi', '2022-01-29 03:53:17', '2022-01-29 03:53:17', 'kims intetrnational'),
-(19, 'heartdisease', '2022-01-29 05:54:42', '2022-01-29 05:54:42', 'kims intetrnational');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `labtests`
---
-
-CREATE TABLE `labtests` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `category` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `price` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `reference_range` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `unit` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `method` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `hospital` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `labtests`
---
-
-INSERT INTO `labtests` (`id`, `name`, `category`, `price`, `reference_range`, `unit`, `method`, `created_at`, `updated_at`, `hospital`) VALUES
-(12, 'TRIGLYCERIDES', 'seriology', '45', '54', 'f', 'h', '2022-01-22 06:37:18', '2022-01-22 06:37:18', NULL),
-(13, 'Sugarwq1', 'medicoq1', '2311', '41', '51', 'g1', '2022-01-22 06:37:34', '2022-01-22 06:37:34', NULL),
-(14, 'bloodpressure', 'medico', '500', '50', '5', '4', '2022-01-29 03:50:15', '2022-01-29 03:50:15', 'kims intetrnational'),
-(15, 'doc-test', 'microbiolgy', '6', '9', '1', '1', '2022-01-29 03:50:33', '2022-01-29 03:50:33', 'kims intetrnational');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `leaves`
 --
 
@@ -8319,86 +8095,6 @@ CREATE TABLE `lifo_table_acc` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `loans`
---
-
-CREATE TABLE `loans` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `totalamount` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `amountpaid` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `balanceleft` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `duration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `deduct` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `loanreoson` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `uniqueid` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `hospital` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `loans`
---
-
-INSERT INTO `loans` (`id`, `totalamount`, `amountpaid`, `balanceleft`, `duration`, `deduct`, `loanreoson`, `status`, `created_at`, `updated_at`, `uniqueid`, `hospital`) VALUES
-(1, '100', NULL, NULL, '10', '10', NULL, NULL, '2021-12-21 06:09:26', '2021-12-21 06:09:26', '1100070', 'D-clinic'),
-(2, '1000', NULL, NULL, '10', '100', NULL, NULL, '2021-12-21 06:09:31', '2021-12-21 06:09:31', '1100070', 'D-clinic'),
-(3, '200', NULL, NULL, '2', '100', NULL, NULL, '2021-12-21 06:09:38', '2021-12-21 06:09:38', '1100070', 'D-clinic'),
-(4, '2000', NULL, NULL, '2', '1000', NULL, NULL, '2021-12-21 06:09:56', '2021-12-21 06:09:56', '1100070', 'D-clinic'),
-(5, '200', NULL, NULL, '2', '100', NULL, NULL, '2021-12-21 06:10:20', '2021-12-21 06:10:20', '1100070', 'D-clinic'),
-(6, '1000', NULL, NULL, '2', '500', NULL, NULL, '2021-12-21 23:36:46', '2021-12-21 23:36:46', '0900060', 'kims intetrnational'),
-(7, '1000', NULL, NULL, '2', '500', NULL, NULL, '2021-12-21 23:38:13', '2021-12-21 23:38:13', '0900064', 'kims intetrnational'),
-(8, '10', NULL, NULL, '1', '10', NULL, NULL, '2021-12-22 02:41:02', '2021-12-22 02:41:02', '1100071', 'D-clinic'),
-(9, '100', NULL, NULL, '1', '100', NULL, NULL, '2021-12-22 02:43:13', '2021-12-22 02:43:13', '1100071', 'D-clinic'),
-(10, '10000', NULL, NULL, '10', '1000', NULL, NULL, '2021-12-22 02:43:22', '2021-12-22 02:43:22', '1100071', 'D-clinic'),
-(11, '10000', NULL, NULL, '10', '1000', NULL, NULL, '2021-12-22 02:43:24', '2021-12-22 02:43:24', '1100071', 'D-clinic'),
-(12, '100', NULL, NULL, '1', '100', NULL, NULL, '2021-12-22 02:43:29', '2021-12-22 02:43:29', '1100071', 'D-clinic'),
-(13, '1001', NULL, NULL, '1', '1001', NULL, NULL, '2021-12-22 02:43:31', '2021-12-22 02:43:31', '1100071', 'D-clinic'),
-(14, '5000', NULL, NULL, '5', '1000', NULL, NULL, '2021-12-24 00:35:33', '2021-12-24 00:35:33', '0900064', 'kims intetrnational'),
-(15, '1000', NULL, NULL, '10', '100', NULL, NULL, '2021-12-24 01:15:33', '2021-12-24 01:15:33', '0900065', 'kims intetrnational'),
-(16, '5000', NULL, NULL, '5', '1000', NULL, NULL, '2021-12-24 01:15:54', '2021-12-24 01:15:54', '0900065', 'kims intetrnational'),
-(17, '6000', NULL, NULL, '10', '600', NULL, NULL, '2021-12-24 01:16:20', '2021-12-24 01:16:20', '0900065', 'kims intetrnational'),
-(18, '2000', NULL, NULL, '2', '1000', NULL, NULL, '2021-12-25 02:26:53', '2021-12-25 02:26:53', '0900046', 'kims intetrnational'),
-(19, '4000', NULL, NULL, '3', '1333.33', NULL, NULL, '2021-12-25 02:27:11', '2021-12-25 02:27:11', '0900046', 'kims intetrnational'),
-(20, '4000', NULL, NULL, '3', '1333.33', NULL, NULL, '2021-12-25 02:27:14', '2021-12-25 02:27:14', '0900046', 'kims intetrnational'),
-(21, '30', NULL, NULL, '1', '30', NULL, NULL, '2021-12-25 02:27:24', '2021-12-25 02:27:24', '0900046', 'kims intetrnational'),
-(22, '301', NULL, NULL, '12', '25.08', NULL, NULL, '2021-12-25 02:27:28', '2021-12-25 02:27:28', '0900046', 'kims intetrnational'),
-(23, '301', NULL, NULL, '122', '2.47', NULL, NULL, '2021-12-25 02:27:33', '2021-12-25 02:27:33', '0900046', 'kims intetrnational'),
-(24, '10', NULL, NULL, '1', '10', NULL, NULL, '2021-12-31 00:01:29', '2021-12-31 00:01:29', '1100058', 'D-clinic'),
-(25, '800', NULL, NULL, '1', '800', NULL, NULL, '2022-02-15 23:42:51', '2022-02-15 23:42:51', '0900090', ''),
-(26, '800', NULL, NULL, '1', '800', NULL, NULL, '2022-02-15 23:42:56', '2022-02-15 23:42:56', '0900090', ''),
-(27, '800', NULL, NULL, '1', '800', NULL, NULL, '2022-02-15 23:42:56', '2022-02-15 23:42:56', '0900090', ''),
-(28, '800', NULL, NULL, '1', '800', NULL, NULL, '2022-02-15 23:42:57', '2022-02-15 23:42:57', '0900090', ''),
-(29, '8000', NULL, NULL, '1', '8000', NULL, NULL, '2022-02-15 23:43:03', '2022-02-15 23:43:03', '0900090', ''),
-(30, '8000', NULL, NULL, '1', '8000', NULL, NULL, '2022-02-15 23:43:14', '2022-02-15 23:43:14', '0900090', ''),
-(31, '8000', NULL, NULL, '1', '8000', NULL, NULL, '2022-02-15 23:43:15', '2022-02-15 23:43:15', '0900090', ''),
-(32, '8000', NULL, NULL, '1', '8000', NULL, NULL, '2022-02-15 23:43:16', '2022-02-15 23:43:16', '0900090', '');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `manualattendances`
---
-
-CREATE TABLE `manualattendances` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `staffname` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `attendance` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `type_of_leave` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `leave_reoson` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `date` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `intime` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `outtime` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `salary_per_hour` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `hospital` varchar(2505) COLLATE utf8mb4_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `manufactuers`
 --
 
@@ -8465,190 +8161,6 @@ INSERT INTO `manufacturer_ledger_details` (`id`, `paid_date`, `amount`, `purchas
 (19, NULL, NULL, 3),
 (20, NULL, NULL, 3),
 (21, NULL, NULL, 3);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `medicaldepartments`
---
-
-CREATE TABLE `medicaldepartments` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `depname` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `updated_at` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `medicaldepartments`
---
-
-INSERT INTO `medicaldepartments` (`id`, `depname`, `updated_at`, `created_at`) VALUES
-(1, 'Anesthetics', '2021-10-01 05:08:00', '2021-10-01 05:08:00'),
-(2, 'Breast Screening', '2021-10-01 05:08:14', '2021-10-01 05:08:14'),
-(3, 'Cardiology', '2021-10-01 05:08:28', '2021-10-01 05:08:28'),
-(4, 'ENT', '2021-10-01 05:08:35', '2021-10-01 05:08:35'),
-(5, 'Elderly services department', '2021-10-01 05:09:09', '2021-10-01 05:09:09'),
-(6, 'Gastroenterology', '2021-10-01 05:09:29', '2021-10-01 05:09:29'),
-(7, 'General Surgery', '2021-10-01 05:09:40', '2021-10-01 05:09:40'),
-(8, 'Gynecology', '2021-10-01 05:10:08', '2021-10-01 05:10:08'),
-(9, 'Hematology', '2021-10-01 05:10:19', '2021-10-01 05:10:19'),
-(10, 'Neonatal unit', '2021-10-01 05:10:38', '2021-10-01 05:10:38'),
-(11, 'Neurology', '2021-10-01 05:10:50', '2021-10-01 05:10:50'),
-(12, 'Nutrition and dietetics', '2021-10-01 05:11:17', '2021-10-01 05:11:17'),
-(13, 'Obstetrics and gynecology units', '2021-10-01 05:11:55', '2021-10-01 05:11:55'),
-(14, 'Oncology', '2021-10-01 05:12:06', '2021-10-01 05:12:06'),
-(15, 'Ophthalmology', '2021-10-01 05:12:26', '2021-10-01 05:12:26'),
-(16, 'Orthopedics', '2021-10-01 05:12:36', '2021-10-01 05:12:36'),
-(17, 'Physiotherapy', '2021-10-01 05:12:49', '2021-10-01 05:12:49'),
-(18, 'Renal unit', '2021-10-01 05:12:59', '2021-10-01 05:12:59'),
-(19, 'Sexual Health', '2021-10-01 05:13:13', '2021-10-01 05:13:13'),
-(20, 'Urology', '2021-10-01 05:13:20', '2021-10-01 05:13:20'),
-(21, 'General', '2021-10-06 07:08:01', '2021-10-06 07:08:01'),
-(23, 'Outpatient department (OPD)', '2021-10-12 06:26:24', '2021-10-12 06:26:24'),
-(24, 'Inpatient Service (IP)', '2021-10-12 06:26:33', '2021-10-12 06:26:33'),
-(25, 'Medical Department', '2021-10-12 06:26:42', '2021-10-12 06:26:42'),
-(26, 'Nursing Department', '2021-10-12 06:26:50', '2021-10-12 06:26:50'),
-(27, 'Paramedical Department', '2021-10-12 06:27:00', '2021-10-12 06:27:00'),
-(28, 'Physical Medicine and Rehabilitation Department', '2021-10-12 06:27:10', '2021-10-12 06:27:10'),
-(29, 'Operation Theatre Complex (OT)', '2021-10-12 06:27:18', '2021-10-12 06:27:18'),
-(30, 'Pharmacy Department', '2021-10-12 06:27:23', '2021-10-12 06:27:23'),
-(31, 'Radiology Department (X-ray)', '2021-10-12 06:27:29', '2021-10-12 06:27:29'),
-(32, 'Dietary Department', '2021-10-12 06:27:35', '2021-10-12 06:27:35'),
-(33, 'Non-professional Services (Business Management)', '2021-10-12 06:27:44', '2021-10-12 06:27:44'),
-(34, 'Medical Record Department (MRD)', '2021-10-12 06:27:53', '2021-10-12 06:27:53'),
-(35, 'Personnel Department', '2021-10-12 06:27:59', '2021-10-12 06:27:59'),
-(36, 'ssss', '2022-01-29 05:16:05', '2022-01-29 05:16:05');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `medicines`
---
-
-CREATE TABLE `medicines` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `brand_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Item_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `item_group` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `category_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `generic_name` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `minimum_level` varchar(125) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `reorder_level` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `upload_image` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `medicine_composition` varchar(125) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `notes` varchar(175) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `profit_percentage` int(25) NOT NULL,
-  `hospital` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `total_stock` int(11) DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `updated_at` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `medicines`
---
-
-INSERT INTO `medicines` (`id`, `brand_name`, `Item_name`, `item_group`, `category_name`, `generic_name`, `minimum_level`, `reorder_level`, `upload_image`, `medicine_composition`, `notes`, `profit_percentage`, `hospital`, `total_stock`, `created_at`, `updated_at`) VALUES
-(1, 'demo brand', 'Crosin', 'demo group', 'cat1', 'gen name', '10', '20', '', 'test', NULL, 0, 'kims intetrnational', 15, '2022-06-25 12:14:51', '2022-06-25 12:11:25'),
-(2, 'demo brand', 'Needle', 'demo group', 'cat1', 'gen name', '25', '50', '', NULL, NULL, 0, 'kims intetrnational', 0, '2022-06-30 10:07:45', ''),
-(3, 'demo brand', 'Syrup', 'demo group', 'cat1', 'Select', '10', '20', '', NULL, NULL, 0, 'kims intetrnational', NULL, '2022-06-30 09:18:55', ''),
-(4, '', 'tablet', '', '', NULL, NULL, NULL, NULL, NULL, NULL, 20, NULL, NULL, '2022-08-19 12:25:50', '');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `medicines_details`
---
-
-CREATE TABLE `medicines_details` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `added_date` date DEFAULT NULL,
-  `purchase_date` date DEFAULT NULL,
-  `order_no` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `payment_type` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `supplier` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `manufacturer` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `Item_name` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `batch_no` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `quantity` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `purchase_rate` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `profit_percentage` int(11) DEFAULT NULL,
-  `sales_price` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `expiry_date` date DEFAULT NULL,
-  `purchase_id` int(11) DEFAULT NULL,
-  `hospital` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `overhead_charge` int(50) DEFAULT NULL,
-  `total_sales_price` int(50) DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `medicines_details`
---
-
-INSERT INTO `medicines_details` (`id`, `added_date`, `purchase_date`, `order_no`, `payment_type`, `supplier`, `manufacturer`, `Item_name`, `batch_no`, `quantity`, `purchase_rate`, `profit_percentage`, `sales_price`, `expiry_date`, `purchase_id`, `hospital`, `overhead_charge`, `total_sales_price`, `created_at`, `updated_at`) VALUES
-(1, '2022-04-07', '2022-04-08', '624BFB36C1EC1', 'By Cheque', 'demo supplier', 'demo manufacturer', 'test789', '133', '500', '100', 25, '69375', '2022-04-25', 1, 'kims intetrnational', NULL, NULL, '2022-04-07 12:18:51', '2022-04-07 12:18:51'),
-(2, '2022-04-18', '2022-04-08', '624BFB36C1EC1', 'By Cheque', 'demo supplier', 'demo manufacturer', 'test789', '133', '25', '100', 25, '19375', '2022-04-19', 1, 'kims intetrnational', NULL, NULL, '2022-04-08 10:00:21', '2022-04-08 10:00:21'),
-(3, '2022-04-04', '2022-04-08', '624BFB36C1EC1', 'By Cheque', 'demo supplier', 'demo manufacturer', 'test789', '133', '100', '100', 25, '19375', '2022-04-18', 1, 'kims intetrnational', NULL, NULL, '2022-04-09 05:43:09', '2022-04-09 05:43:09');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `medicine_groups`
---
-
-CREATE TABLE `medicine_groups` (
-  `id` int(11) NOT NULL,
-  `group_name` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `medicine_groups`
---
-
-INSERT INTO `medicine_groups` (`id`, `group_name`) VALUES
-(1, 'demo group');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `medicine_types`
---
-
-CREATE TABLE `medicine_types` (
-  `id` int(11) NOT NULL,
-  `medicine_type_name` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `medicine_types`
---
-
-INSERT INTO `medicine_types` (`id`, `medicine_type_name`) VALUES
-(1, 'demo'),
-(2, 'name');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `medicine_units`
---
-
-CREATE TABLE `medicine_units` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `unit_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `medicine_units`
---
-
-INSERT INTO `medicine_units` (`id`, `unit_name`, `created_at`, `updated_at`) VALUES
-(1, 'unit', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -8743,17 +8255,6 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `new_medicines`
---
-
-CREATE TABLE `new_medicines` (
-  `id` int(11) NOT NULL,
-  `medicine_name` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `password_resets`
 --
 
@@ -8762,183 +8263,6 @@ CREATE TABLE `password_resets` (
   `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `patient`
---
-
-CREATE TABLE `patient` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `phoneno` longblob DEFAULT NULL,
-  `firstname` longblob DEFAULT NULL,
-  `address` longblob DEFAULT NULL,
-  `age` bigint(100) DEFAULT NULL,
-  `email` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `dateofbirth` date NOT NULL,
-  `gender` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `place` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `height` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `weight` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `temparature` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `prescription` longblob DEFAULT NULL,
-  `lab` longblob DEFAULT NULL,
-  `medicine` longblob DEFAULT NULL,
-  `files` longblob DEFAULT NULL,
-  `anotherfiles` longblob DEFAULT NULL,
-  `updated_at` datetime NOT NULL DEFAULT current_timestamp(),
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `visiting_type` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `patient`
---
-
-INSERT INTO `patient` (`id`, `phoneno`, `firstname`, `address`, `age`, `email`, `dateofbirth`, `gender`, `place`, `height`, `weight`, `temparature`, `prescription`, `lab`, `medicine`, `files`, `anotherfiles`, `updated_at`, `created_at`, `visiting_type`) VALUES
-(1, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, '2021-09-29 09:01:49', '2022-04-22 05:00:05', NULL),
-(2, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, '2021-09-29 09:02:11', '2022-04-22 05:00:05', NULL),
-(3, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, '2021-09-29 09:02:41', '2022-04-22 05:00:05', NULL),
-(4, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, '2021-09-29 09:02:57', '2022-04-22 05:00:05', NULL),
-(5, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, '2021-10-01 06:33:37', '2022-04-22 05:00:05', NULL),
-(6, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, '2021-10-06 05:16:12', '2022-04-22 05:00:05', NULL),
-(7, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, '2021-10-06 05:21:01', '2022-04-22 05:00:05', NULL),
-(8, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, '2021-10-06 05:21:16', '2022-04-22 05:00:05', NULL),
-(9, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, '2021-10-06 05:29:48', '2022-04-22 05:00:05', NULL),
-(10, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, '2021-10-06 05:30:11', '2022-04-22 05:00:05', NULL),
-(11, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, '2021-10-06 06:51:53', '2022-04-22 05:00:05', NULL),
-(12, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-10-29 07:36:38', '2022-04-22 05:00:05', NULL),
-(13, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-10-29 07:36:49', '2022-04-22 05:00:05', NULL),
-(14, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-10-30 05:34:50', '2022-04-22 05:00:05', NULL),
-(15, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-02-19 11:20:23', '2022-04-22 05:00:05', NULL),
-(16, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-10 08:04:29', '2022-04-22 05:00:05', NULL),
-(17, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-10 11:21:45', '2022-04-22 05:00:05', NULL),
-(18, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-16 07:34:41', '2022-04-22 05:00:05', NULL),
-(19, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-16 08:12:25', '2022-04-22 05:00:05', NULL),
-(20, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-18 11:28:34', '2022-04-22 05:00:05', NULL),
-(21, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-19 04:08:39', '2022-04-22 05:00:05', NULL),
-(22, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-19 04:10:36', '2022-04-22 05:00:05', NULL),
-(23, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-19 04:12:27', '2022-04-22 05:00:05', NULL),
-(24, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-19 04:23:52', '2022-04-22 05:00:05', NULL),
-(25, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-19 04:49:48', '2022-04-22 05:00:05', NULL),
-(26, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-19 04:54:04', '2022-04-22 05:00:05', NULL),
-(27, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-19 04:55:22', '2022-04-22 05:00:05', NULL),
-(28, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-19 06:26:31', '2022-04-22 05:00:05', NULL),
-(29, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-19 06:30:12', '2022-04-22 05:00:05', NULL),
-(30, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-19 06:34:29', '2022-04-22 05:00:05', NULL),
-(31, NULL, NULL, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-19 06:35:48', '2022-04-22 05:00:05', NULL),
-(32, NULL, 0x7265726572, NULL, NULL, NULL, '0000-00-00', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-19 06:37:09', '2022-04-22 05:38:50', NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `patientinsurance`
---
-
-CREATE TABLE `patientinsurance` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `occupation` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `employer` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `empphoneno` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `empaddress` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `bday` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `groupno` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `policyno` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `copayment` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `patienthere` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `patientinsurance`
---
-
-INSERT INTO `patientinsurance` (`id`, `name`, `address`, `phone`, `occupation`, `employer`, `empphoneno`, `empaddress`, `bday`, `groupno`, `policyno`, `copayment`, `patienthere`, `created_at`, `updated_at`) VALUES
-(1, 'jhg', 'hg', '456', 'hjg', 'jhg', '789', 'hgkf', '2021-10-13', '78', '78', '78', 'on', '2021-10-01 06:24:25', '2021-10-01 06:24:25'),
-(2, 'jhg', 'hg', '456444', 'hjg', 'jhg', '789', 'hgkf', '2021-10-13', '78', '78', '78', 'on', '2021-10-01 06:27:07', '2021-10-01 06:27:07'),
-(3, 'hiu', 'uigug', '7897', 'uvuhv', 'jib', '7987', 'kgv', '2021-10-07', '78', '102', '201', 'on', '2021-10-29 02:07:48', '2021-10-29 02:07:48'),
-(4, 'bh', 'hbhb', '45465', '8787', 'gv', 'hgv', 'vgh', '2021-10-06', '45', '45', '64', 'on', '2021-10-29 02:12:07', '2021-10-29 02:12:07'),
-(5, 'dfgfdg', 'gdfg', '345', 'er', 'ert', '4535', 'g355', '2021-12-21', '435', '45', '54', 'on', '2021-12-24 00:27:22', '2021-12-24 00:27:22');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `patientprofiles`
---
-
-CREATE TABLE `patientprofiles` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `patientid` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `appointmentid` bigint(100) DEFAULT NULL,
-  `profiles` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `patientprofiles`
---
-
-INSERT INTO `patientprofiles` (`id`, `created_at`, `updated_at`, `patientid`, `appointmentid`, `profiles`) VALUES
-(1, '2022-01-31 04:18:43', '2022-01-31 04:18:43', '7', 7, '19'),
-(2, '2022-01-31 04:18:43', '2022-01-31 04:18:43', '7', 7, 'poi'),
-(3, '2022-01-31 05:22:57', '2022-01-31 05:22:57', '7', 7, '19'),
-(4, '2022-01-31 05:22:57', '2022-01-31 05:22:57', '7', 7, 'poi'),
-(5, '2022-01-31 05:33:58', '2022-01-31 05:33:58', '5', 5, '13'),
-(6, '2022-01-31 06:18:07', '2022-01-31 06:18:07', '1', 1, '14'),
-(7, '2022-01-31 06:24:31', '2022-01-31 06:24:31', '9', 9, '13'),
-(8, '2022-01-31 06:24:31', '2022-01-31 06:24:31', '9', 9, 'p'),
-(9, '2022-02-01 00:11:48', '2022-02-01 00:11:48', '74', 74, '13'),
-(10, '2022-02-01 00:11:48', '2022-02-01 00:11:48', '74', 74, 'heartdisease'),
-(11, '2022-02-01 00:13:07', '2022-02-01 00:13:07', '47', 47, 'Select'),
-(12, '2022-02-01 01:21:11', '2022-02-01 01:21:11', '5', 5, '14'),
-(13, '2022-02-01 04:19:19', '2022-02-01 04:19:19', '2', 2, '19'),
-(14, '2022-02-01 04:19:20', '2022-02-01 04:19:20', '2', 2, 'p'),
-(15, '2022-02-19 05:51:07', '2022-02-19 05:51:07', '1', 1, '14');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `patienttests`
---
-
-CREATE TABLE `patienttests` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `patientid` bigint(20) DEFAULT NULL,
-  `appointmentid` bigint(20) DEFAULT NULL,
-  `tests` varchar(300) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `value` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `hospital` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `patienttests`
---
-
-INSERT INTO `patienttests` (`id`, `created_at`, `updated_at`, `patientid`, `appointmentid`, `tests`, `value`, `hospital`) VALUES
-(1, '2022-01-31 06:18:07', '2022-01-31 06:18:07', 1, 1, 'bloodpressure', NULL, NULL),
-(2, '2022-01-31 06:24:31', '2022-01-31 06:24:31', 9, 9, 'TRIGLYCERIDES', '50', NULL),
-(3, '2022-01-31 06:24:31', '2022-01-31 06:24:31', 9, 9, 'bloodpressure', NULL, NULL),
-(4, '2022-01-31 06:24:31', '2022-01-31 06:24:31', 9, 9, 'doc-test', '10', NULL),
-(5, '2022-02-01 00:11:48', '2022-02-01 00:11:48', 74, 74, 'TRIGLYCERIDES', '34', NULL),
-(6, '2022-02-01 00:11:48', '2022-02-01 00:11:48', 74, 74, 'bloodpressure', '52', NULL),
-(7, '2022-02-01 00:13:08', '2022-02-01 00:13:08', 47, 47, 'Select', NULL, NULL),
-(8, '2022-02-01 00:13:08', '2022-02-01 00:13:08', 47, 47, 'Sugarwq1', '30', NULL),
-(9, '2022-02-01 00:13:08', '2022-02-01 00:13:08', 47, 47, 'doc-test', '15', NULL),
-(10, '2022-02-01 00:13:08', '2022-02-01 00:13:08', 47, 47, 'bloodpressure', '20', NULL),
-(11, '2022-02-01 01:21:11', '2022-02-01 01:21:11', 5, 5, 'TRIGLYCERIDES', '50', NULL),
-(12, '2022-02-01 01:21:11', '2022-02-01 01:21:11', 5, 5, 'bloodpressure', '64', NULL),
-(13, '2022-02-01 01:21:11', '2022-02-01 01:21:11', 5, 5, 'doc-test', '10', NULL),
-(14, '2022-02-01 04:19:20', '2022-02-01 04:19:20', 2, 2, 'doc-test', '10', NULL),
-(15, '2022-02-01 04:19:20', '2022-02-01 04:19:20', 2, 2, 'TRIGLYCERIDES', '20', NULL),
-(16, '2022-02-19 05:51:07', '2022-02-19 05:51:07', 1, 1, 'Sugarwq1', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -8958,271 +8282,6 @@ CREATE TABLE `payment_type` (
 INSERT INTO `payment_type` (`payment_id`, `payment_name`) VALUES
 (1, 'cash'),
 (2, 'bank transfer');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pharma_requests`
---
-
-CREATE TABLE `pharma_requests` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `request_intend` int(11) NOT NULL,
-  `medicine` int(11) NOT NULL,
-  `requested_quantity` double NOT NULL,
-  `issued_quantity` int(11) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `pharma_requests`
---
-
-INSERT INTO `pharma_requests` (`id`, `request_intend`, `medicine`, `requested_quantity`, `issued_quantity`, `created_at`, `updated_at`) VALUES
-(7, 3, 4, 50, 0, NULL, NULL),
-(8, 3, 1, 40, 0, NULL, NULL),
-(9, 4, 7, 40, 0, NULL, NULL),
-(10, 4, 1, 100, 0, NULL, NULL),
-(11, 5, 8, 20, 0, NULL, NULL),
-(12, 5, 1, 15, 0, NULL, NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `purchase`
---
-
-CREATE TABLE `purchase` (
-  `id` int(11) NOT NULL,
-  `manufacturer` int(11) DEFAULT NULL,
-  `purchase_date` date DEFAULT NULL,
-  `purchase_orderno` varchar(200) DEFAULT NULL,
-  `payment_type` int(11) DEFAULT NULL,
-  `grand_total` double DEFAULT NULL,
-  `advance_amount` double DEFAULT NULL,
-  `pending_amount` bigint(20) DEFAULT NULL,
-  `installment` bigint(20) DEFAULT NULL,
-  `paid_date` date DEFAULT NULL,
-  `status` varchar(25) DEFAULT NULL,
-  `purchase_added_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `supplier` int(11) DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `purchase`
---
-
-INSERT INTO `purchase` (`id`, `manufacturer`, `purchase_date`, `purchase_orderno`, `payment_type`, `grand_total`, `advance_amount`, `pending_amount`, `installment`, `paid_date`, `status`, `purchase_added_date`, `supplier`, `updated_at`) VALUES
-(1, NULL, '2022-05-12', '62C67947652DC', 2, 9000, 1000, NULL, NULL, NULL, 'Verified', '2022-08-23 11:22:32', 1, '2022-07-20 00:16:55'),
-(2, NULL, '2022-07-01', '62C7C8D9A555D', 1, 1000, 0, NULL, NULL, NULL, 'Verified', '2022-08-23 10:58:47', 1, NULL),
-(3, 1, '2022-07-01', '62CBD16B36FD0', 1, 1000, 500, NULL, NULL, NULL, 'Order-Placed', '2022-08-23 09:59:44', NULL, NULL),
-(4, 1, '2022-07-01', '62CBD74152A19', 1, 6000, 2000, NULL, NULL, NULL, 'Order-Placed', '2022-08-23 09:59:58', NULL, NULL),
-(5, NULL, '2022-07-28', '62E1F9FE636D4', 2, 56.25, 30, NULL, NULL, NULL, 'Order-Placed', '2022-08-23 09:36:45', 1, NULL),
-(6, 1, '2022-08-19', '62FF7F2C6FA13', 1, 850, 200, NULL, NULL, NULL, 'Order-Placed', '2022-08-20 07:05:19', 1, NULL),
-(7, 1, '2022-08-19', '62FF7F2C6FA13', 1, 850, 200, 0, NULL, NULL, 'Order-Placed', '2022-08-19 12:20:54', 1, NULL),
-(8, 1, '2022-08-19', '62FF7F2C6FA13', 1, 850, 200, NULL, NULL, NULL, 'Order-Placed', '2022-08-20 07:05:39', 1, NULL),
-(9, 1, '2022-08-19', '62FF807656587', 2, 1650, 500, NULL, NULL, NULL, 'Order-Placed', '2022-08-20 07:05:34', 1, NULL),
-(10, 1, '2022-08-22', '63036570B8721', 1, 500, 250, 0, NULL, NULL, 'Order-Placed', '2022-08-22 11:19:30', 1, NULL),
-(11, 1, '2022-08-22', '630366439EBB5', 2, 200, 200, NULL, NULL, NULL, 'Order-Placed', '2022-08-23 12:59:54', 1, NULL),
-(12, 1, '2022-08-22', '630368F3345A6', 1, 1750, 1000, 0, NULL, NULL, 'Order-Placed', '2022-08-22 11:33:20', 1, NULL),
-(13, 1, '2022-08-23', '6303698126EA5', 1, 3480, 3000, 10, 10, '2022-08-24', 'Order-Placed', '2022-08-24 05:27:54', 1, NULL),
-(14, 1, '2022-08-23', '6304C1F16A1B4', 1, 250, 100, 15, 5, '2022-08-26', 'Order-Placed', '2022-08-26 10:38:41', NULL, NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `purchase_items`
---
-
-CREATE TABLE `purchase_items` (
-  `id` int(11) NOT NULL,
-  `purchase_id` int(11) NOT NULL,
-  `item_name` int(11) NOT NULL,
-  `batch_no` varchar(200) NOT NULL,
-  `quantity` varchar(100) NOT NULL,
-  `price` double NOT NULL,
-  `total` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `purchase_items`
---
-
-INSERT INTO `purchase_items` (`id`, `purchase_id`, `item_name`, `batch_no`, `quantity`, `price`, `total`) VALUES
-(1, 6, 1, '35435', '11', 100, 1100),
-(2, 0, 2, '554', '5', 20, 100),
-(3, 0, 1, 'wqwqw', '15', 50, 750),
-(4, 6, 2, '554', '5', 20, 100),
-(5, 6, 1, 'wqwqw', '15', 50, 750),
-(6, 7, 3, '554', '30', 55, 1650),
-(7, 8, 2, 'weqqdw', '10', 50, 500),
-(8, 9, 1, '4rere', '10', 20, 200),
-(9, 10, 4, 'ddrc', '50', 35, 1750),
-(10, 11, 1, 'dd25', '30', 50, 1500),
-(11, 11, 3, 'dd31', '20', 99, 1980),
-(12, 12, 1, '54554', '10', 25, 250);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `purchase_order`
---
-
-CREATE TABLE `purchase_order` (
-  `id` int(11) NOT NULL,
-  `manufacturer` int(11) DEFAULT NULL,
-  `purchase_date` date NOT NULL,
-  `payment_type` int(11) NOT NULL,
-  `grand_total` double NOT NULL,
-  `advance_amount` double NOT NULL,
-  `pending_amount` double DEFAULT NULL,
-  `supplier` int(11) DEFAULT NULL,
-  `purchase_orderno` varchar(150) NOT NULL,
-  `status` varchar(50) NOT NULL,
-  `hospital` varchar(50) NOT NULL,
-  `order_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `purchase_order`
---
-
-INSERT INTO `purchase_order` (`id`, `manufacturer`, `purchase_date`, `payment_type`, `grand_total`, `advance_amount`, `pending_amount`, `supplier`, `purchase_orderno`, `status`, `hospital`, `order_date`) VALUES
-(1, 1, '2022-08-19', 1, 850, 200, 0, 1, '62FF7F2C6FA13', 'Order-Placed', '', '2022-08-19 12:18:24'),
-(2, NULL, '2022-07-07', 2, 9000, 1000, 8000, 1, '62C67947652DC', 'Order-Placed', '', '2022-07-07 06:12:47'),
-(3, 1, '2022-07-01', 1, 1000, 0, 0, NULL, '62C7C8D9A555D', 'Order-Placed', '', '2022-07-08 06:04:30'),
-(4, 1, '2022-07-01', 1, 1000, 0, 0, NULL, '62CBD16B36FD0', 'Order-Placed', '', '2022-07-11 07:30:09'),
-(5, 1, '2022-07-01', 1, 6000, 0, 0, NULL, '62CBD74152A19', 'Order-Placed', '', '2022-07-11 07:55:24'),
-(6, 1, '2022-08-19', 1, 850, 200, 0, 1, '62FF7F2C6FA13', 'Order-Placed', '', '2022-08-19 12:22:13'),
-(7, 1, '2022-08-19', 2, 1650, 500, 0, 1, '62FF807656587', 'Order-Placed', '', '2022-08-19 12:24:13'),
-(8, 1, '2022-08-22', 1, 500, 250, 0, 1, '63036570B8721', 'Order-Placed', '', '2022-08-22 11:19:30'),
-(9, 1, '2022-08-22', 2, 200, 200, 0, 1, '630366439EBB5', 'Order-Placed', '', '2022-08-22 11:30:58'),
-(10, 1, '2022-08-22', 1, 1750, 1000, 0, 1, '630368F3345A6', 'Order-Placed', '', '2022-08-22 11:33:20'),
-(11, 1, '2022-08-23', 1, 3480, 3000, 0, 1, '6303698126EA5', 'Order-Placed', '', '2022-08-22 11:36:07'),
-(12, 1, '2022-08-23', 1, 250, 100, 150, NULL, '6304C1F16A1B4', 'Order-Placed', '', '2022-08-23 12:03:58');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `purchase_order_items`
---
-
-CREATE TABLE `purchase_order_items` (
-  `id` int(11) NOT NULL,
-  `purchase_order_id` int(11) NOT NULL,
-  `item_name` int(11) NOT NULL,
-  `batch_no` varchar(150) NOT NULL,
-  `quantity` int(11) NOT NULL,
-  `price` double NOT NULL,
-  `total` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `purchase_order_items`
---
-
-INSERT INTO `purchase_order_items` (`id`, `purchase_order_id`, `item_name`, `batch_no`, `quantity`, `price`, `total`) VALUES
-(1, 0, 2, '554', 5, 20, 100),
-(2, 1, 1, '1000', 30, 300, 9000),
-(3, 2, 1, '7588', 10, 100, 1000),
-(4, 3, 1, '545', 10, 100, 1000),
-(5, 4, 2, '126', 20, 100, 2000),
-(6, 4, 3, '225', 30, 100, 3000),
-(7, 4, 1, '546', 10, 100, 1000),
-(8, 6, 2, '554', 5, 20, 100),
-(9, 6, 1, 'wqwqw', 15, 50, 750),
-(10, 7, 3, '554', 30, 55, 1650),
-(11, 8, 2, 'weqqdw', 10, 50, 500),
-(12, 9, 1, '4rere', 10, 20, 200),
-(13, 10, 4, 'ddrc', 50, 35, 1750),
-(14, 11, 1, 'dd25', 30, 50, 1500),
-(15, 11, 3, 'dd31', 20, 99, 1980),
-(16, 12, 1, '54554', 10, 25, 250);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `purchase_return`
---
-
-CREATE TABLE `purchase_return` (
-  `purchase_return_id` int(11) NOT NULL,
-  `purchase_return_pur_id` int(11) NOT NULL,
-  `purchase_return_pur_items_id` int(11) NOT NULL,
-  `purchase_return_batch` int(11) NOT NULL,
-  `purchase_return_quantity` varchar(250) NOT NULL,
-  `purchase_return_remarks` varchar(200) NOT NULL,
-  `purchase_return_added_by` int(11) NOT NULL,
-  `purchase_return_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `purchase_return_status` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `request_intend`
---
-
-CREATE TABLE `request_intend` (
-  `request_intendid` int(11) NOT NULL,
-  `request_intenddate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `request_intendadded_by` int(11) DEFAULT NULL,
-  `request_intendstatus` varchar(11) NOT NULL,
-  `department` varchar(25) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `request_intend`
---
-
-INSERT INTO `request_intend` (`request_intendid`, `request_intenddate`, `request_intendadded_by`, `request_intendstatus`, `department`) VALUES
-(1, '2022-05-03 18:30:00', 44, '1', 'Pharmacy'),
-(2, '2022-05-18 18:30:00', 47, '1', 'Pharmacy'),
-(3, '2022-05-19 18:30:00', 47, '1', 'Pharmacy'),
-(4, '2022-05-17 18:30:00', 47, '1', 'Pharmacy Department'),
-(5, '2022-04-30 18:30:00', 44, '1', 'Pharmacy Department'),
-(6, '2022-05-05 18:30:00', 44, '1', 'pharma1'),
-(7, '2022-05-17 18:30:00', 44, '1', 'pharma1'),
-(8, '2022-05-25 18:30:00', 44, '1', 'pharma1'),
-(9, '2022-05-18 18:30:00', 47, '1', 'Pharmacy');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `request_items`
---
-
-CREATE TABLE `request_items` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `medicines_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `quantity` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `suppliers` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `request_status`
---
-
-CREATE TABLE `request_status` (
-  `request_statusid` int(11) NOT NULL,
-  `request_statusname` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `request_status`
---
-
-INSERT INTO `request_status` (`request_statusid`, `request_statusname`) VALUES
-(1, 'Requested'),
-(2, 'Processing'),
-(5, 'Pending'),
-(6, 'Supplied');
 
 -- --------------------------------------------------------
 
@@ -9257,120 +8316,6 @@ INSERT INTO `roles` (`id`, `rolename`, `hospital`, `departments`, `category`, `e
 -- --------------------------------------------------------
 
 --
--- Table structure for table `roomcategories`
---
-
-CREATE TABLE `roomcategories` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `category` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `hospital` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `roomcategories`
---
-
-INSERT INTO `roomcategories` (`id`, `category`, `created_at`, `updated_at`, `hospital`) VALUES
-(1, 'o', '2022-02-04 04:55:40', '2022-02-04 04:55:40', 'kims intetrnational'),
-(2, 'ac', '2022-02-04 04:58:45', '2022-02-04 04:58:45', 'kims intetrnational'),
-(3, 'f', '2022-02-04 04:59:22', '2022-02-04 04:59:22', 'kims intetrnational'),
-(4, 'non-ac', '2022-02-05 05:08:43', '2022-02-05 05:08:43', 'kims intetrnational');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `rooms`
---
-
-CREATE TABLE `rooms` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `Roomno` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `allocateduser` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `Roomcharge` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `Hospital` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Department` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `category` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `js` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `css` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `updated_at` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `username` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `clinicalnotes` varchar(5000) COLLATE utf8mb4_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `rooms`
---
-
-INSERT INTO `rooms` (`id`, `Roomno`, `allocateduser`, `Roomcharge`, `Hospital`, `Department`, `category`, `js`, `css`, `updated_at`, `created_at`, `username`, `clinicalnotes`) VALUES
-(1, '1', '', NULL, 'kims intetrnational', 'cardiology', 'ac', NULL, '', '2022-02-16 11:20:25', '2022-02-16 11:20:25', '', NULL),
-(2, NULL, NULL, NULL, 'kims intetrnational', 'cardiology', 'ac', NULL, NULL, '2022-02-16 11:20:25', '2022-02-16 11:20:25', NULL, NULL),
-(3, '3', '4', NULL, 'kims intetrnational', 'cardiology', 'ac', NULL, 'black', '2022-02-16 11:20:25', '2022-02-16 11:20:25', 'analize me', NULL),
-(4, NULL, NULL, NULL, 'kims intetrnational', 'cardiology', 'ac', NULL, NULL, '2022-02-16 11:20:25', '2022-02-16 11:20:25', NULL, NULL),
-(5, '5', '4', NULL, 'kims intetrnational', 'cardiology', 'ac', NULL, 'black', '2022-02-16 11:20:25', '2022-02-16 11:20:25', 'analize me', NULL),
-(6, NULL, NULL, NULL, 'kims intetrnational', 'cardiology', 'ac', NULL, NULL, '2022-02-16 11:20:25', '2022-02-16 11:20:25', NULL, NULL),
-(7, NULL, NULL, NULL, 'kims intetrnational', 'cardiology', 'ac', NULL, NULL, '2022-02-16 11:20:25', '2022-02-16 11:20:25', NULL, NULL),
-(8, '8', '', NULL, 'kims intetrnational', 'cardiology', 'ac', NULL, '', '2022-02-16 11:20:25', '2022-02-16 11:20:25', '', NULL),
-(9, '9', '', NULL, 'kims intetrnational', 'cardiology', 'ac', NULL, '', '2022-02-16 11:20:25', '2022-02-16 11:20:25', '', NULL),
-(10, '10', '', NULL, 'kims intetrnational', 'cardiology', 'ac', NULL, '', '2022-02-16 11:20:25', '2022-02-16 11:20:25', '', NULL),
-(11, '11', '9', NULL, 'kims intetrnational', 'Paramedical Department', 'ac', NULL, 'black', '2022-02-16 12:22:03', '2022-02-16 12:22:03', 'tester', NULL),
-(12, '12', '1', NULL, 'kims intetrnational', 'Paramedical Department', 'ac', NULL, 'black', '2022-02-16 12:22:03', '2022-02-16 12:22:03', 'test1', NULL),
-(13, NULL, NULL, NULL, 'kims intetrnational', 'Paramedical Department', 'ac', NULL, NULL, '2022-02-16 12:22:03', '2022-02-16 12:22:03', NULL, NULL),
-(14, NULL, NULL, NULL, 'kims intetrnational', 'Paramedical Department', 'ac', NULL, NULL, '2022-02-16 12:22:04', '2022-02-16 12:22:04', NULL, NULL),
-(15, NULL, NULL, NULL, 'kims intetrnational', 'Paramedical Department', 'ac', NULL, NULL, '2022-02-16 12:22:04', '2022-02-16 12:22:04', NULL, NULL),
-(16, NULL, NULL, NULL, 'kims intetrnational', 'cardiology', 'non-ac', NULL, NULL, '2022-02-19 05:05:24', '2022-02-19 05:05:24', NULL, NULL),
-(17, NULL, NULL, NULL, 'kims intetrnational', 'cardiology', 'non-ac', NULL, NULL, '2022-02-19 05:05:24', '2022-02-19 05:05:24', NULL, NULL),
-(18, NULL, NULL, NULL, 'kims intetrnational', 'cardiology', 'non-ac', NULL, NULL, '2022-02-19 05:05:24', '2022-02-19 05:05:24', NULL, NULL),
-(19, NULL, NULL, NULL, 'kims intetrnational', 'cardiology', 'non-ac', NULL, NULL, '2022-02-19 05:05:24', '2022-02-19 05:05:24', NULL, NULL),
-(20, NULL, NULL, NULL, 'kims intetrnational', 'cardiology', 'non-ac', NULL, NULL, '2022-02-19 05:05:24', '2022-02-19 05:05:24', NULL, NULL),
-(21, NULL, NULL, NULL, 'kims intetrnational', 'cardiology', 'non-ac', NULL, NULL, '2022-02-19 05:05:24', '2022-02-19 05:05:24', NULL, NULL),
-(22, NULL, NULL, NULL, 'kims intetrnational', 'cardiology', 'non-ac', NULL, NULL, '2022-02-19 05:05:24', '2022-02-19 05:05:24', NULL, NULL),
-(23, NULL, NULL, NULL, 'kims intetrnational', 'cardiology', 'non-ac', NULL, NULL, '2022-02-19 05:05:24', '2022-02-19 05:05:24', NULL, NULL),
-(24, NULL, NULL, NULL, 'kims intetrnational', 'cardiology', 'non-ac', NULL, NULL, '2022-02-19 05:05:24', '2022-02-19 05:05:24', NULL, NULL),
-(25, NULL, NULL, NULL, 'kims intetrnational', 'cardiology', 'non-ac', NULL, NULL, '2022-02-19 05:05:25', '2022-02-19 05:05:25', NULL, NULL),
-(26, NULL, NULL, NULL, 'kims intetrnational', 'cardiology', 'non-ac', NULL, NULL, '2022-02-19 05:05:25', '2022-02-19 05:05:25', NULL, NULL),
-(27, NULL, NULL, NULL, 'kims intetrnational', 'cardiology', 'non-ac', NULL, NULL, '2022-02-19 05:05:25', '2022-02-19 05:05:25', NULL, NULL),
-(28, NULL, NULL, NULL, 'kims intetrnational', 'cardiology', 'non-ac', NULL, NULL, '2022-02-19 05:05:25', '2022-02-19 05:05:25', NULL, NULL),
-(29, NULL, NULL, NULL, 'kims intetrnational', 'cardiology', 'non-ac', NULL, NULL, '2022-02-19 05:05:25', '2022-02-19 05:05:25', NULL, NULL),
-(30, NULL, NULL, NULL, 'kims intetrnational', 'cardiology', 'non-ac', NULL, NULL, '2022-02-19 05:05:25', '2022-02-19 05:05:25', NULL, NULL),
-(31, NULL, NULL, NULL, 'kims intetrnational', 'cardiology', 'non-ac', NULL, NULL, '2022-02-19 05:05:25', '2022-02-19 05:05:25', NULL, NULL),
-(32, NULL, NULL, NULL, 'kims intetrnational', 'cardiology', 'non-ac', NULL, NULL, '2022-02-19 05:05:25', '2022-02-19 05:05:25', NULL, NULL),
-(33, NULL, NULL, NULL, 'kims intetrnational', 'cardiology', 'non-ac', NULL, NULL, '2022-02-19 05:05:25', '2022-02-19 05:05:25', NULL, NULL),
-(34, NULL, NULL, NULL, 'kims intetrnational', 'cardiology', 'non-ac', NULL, NULL, '2022-02-19 05:05:25', '2022-02-19 05:05:25', NULL, NULL),
-(35, NULL, NULL, NULL, 'kims intetrnational', 'cardiology', 'non-ac', NULL, NULL, '2022-02-19 05:05:25', '2022-02-19 05:05:25', NULL, NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `roomtypes`
---
-
-CREATE TABLE `roomtypes` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `roomname` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `location` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `charge` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `department` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `tax` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `hospital` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `no_of_rooms` bigint(200) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `roomtypes`
---
-
-INSERT INTO `roomtypes` (`id`, `roomname`, `location`, `charge`, `department`, `tax`, `hospital`, `created_at`, `updated_at`, `no_of_rooms`) VALUES
-(19, 'ac', 'i', '7', 'Paramedical Department', '7', 'kims intetrnational', '2022-02-16 06:52:03', '2022-02-16 06:52:03', 5),
-(20, 'non-ac', 'north-west', '500', 'cardiology', '5', 'kims intetrnational', '2022-02-18 23:35:23', '2022-02-18 23:35:23', 20);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `salary`
 --
 
@@ -9400,33 +8345,6 @@ INSERT INTO `salary` (`id`, `employeeid`, `Basicpay`, `travelallowance`, `insura
 (2, NULL, '10', '10', '10', '10', '10', '10', '10', '10', '10', 30, '2021-10-13 04:15:13', '2021-10-13 04:15:13'),
 (3, 900040, '10000', '10', '10', '10', '20', '20', '20', '20', '20', 10010, '2021-10-13 04:39:43', '2021-10-13 04:39:43'),
 (4, 900039, '20', '20', '20', '20', '20', '20', '20', '20', '20', 60, '2021-10-13 04:41:33', '2021-10-13 04:41:33');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `servedmedicines`
---
-
-CREATE TABLE `servedmedicines` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `medicinename` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `quantity` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `priceperitem` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `totalprice` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `appz` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `servedmedicines`
---
-
-INSERT INTO `servedmedicines` (`id`, `medicinename`, `quantity`, `priceperitem`, `totalprice`, `appz`, `created_at`, `updated_at`) VALUES
-(1, 'MEDcin', '10', '600', '6000', '--', '2022-01-11 02:46:56', '2022-01-11 02:46:56'),
-(2, 'tyu', '2', '1000', '2000', '--', '2022-01-11 02:47:22', '2022-01-11 02:47:22'),
-(3, 'KG Nitros 009', '50', '2209', '110450', '--', '2022-01-11 02:47:32', '2022-01-11 02:47:32'),
-(4, 'Paracetamol', '10', '250', '2500', '--', '2022-01-18 02:14:39', '2022-01-18 02:14:39');
 
 -- --------------------------------------------------------
 
@@ -9546,494 +8464,6 @@ INSERT INTO `staff_leaves` (`id`, `staff_id`, `leave_type_id`, `allotted_leaves`
 (73, 118096, 1, 0, '0'),
 (74, 118096, 2, 0, '0'),
 (75, 118096, 3, 0, '0');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `stock_categories_acc`
---
-
-CREATE TABLE `stock_categories_acc` (
-  `id` int(11) NOT NULL,
-  `stock_categories_name` varchar(150) NOT NULL,
-  `stock_categories_company` varchar(150) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `stock_categories_acc`
---
-
-INSERT INTO `stock_categories_acc` (`id`, `stock_categories_name`, `stock_categories_company`, `created_at`) VALUES
-(1, 'Medicines', '0', '2022-03-16 02:13:25'),
-(3, 'Medicines', 'kims intetrnational', '2022-03-22 04:46:00'),
-(4, 'Raw Leaves', 'kims intetrnational', '2022-03-29 07:33:46');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `stock_details`
---
-
-CREATE TABLE `stock_details` (
-  `id` bigint(150) NOT NULL,
-  `date` date DEFAULT NULL,
-  `purchase_date` date DEFAULT NULL,
-  `purchase_order` varchar(150) DEFAULT NULL,
-  `manufacturer` varchar(150) DEFAULT NULL,
-  `supplier` varchar(150) DEFAULT NULL,
-  `payment_type` varchar(150) DEFAULT NULL,
-  `expiry_date` date DEFAULT NULL,
-  `item_name` varchar(150) DEFAULT NULL,
-  `batch_no` varchar(25) DEFAULT NULL,
-  `purchase_rate` varchar(125) DEFAULT NULL,
-  `quantity` int(10) DEFAULT NULL,
-  `overhead_charges` varchar(50) DEFAULT NULL,
-  `profit_percentage` varchar(50) DEFAULT NULL,
-  `sales_price` varchar(50) DEFAULT NULL,
-  `hospital` varchar(120) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `stock_details`
---
-
-INSERT INTO `stock_details` (`id`, `date`, `purchase_date`, `purchase_order`, `manufacturer`, `supplier`, `payment_type`, `expiry_date`, `item_name`, `batch_no`, `purchase_rate`, `quantity`, `overhead_charges`, `profit_percentage`, `sales_price`, `hospital`) VALUES
-(1, NULL, NULL, 'Select', 'Select', 'Select', 'Select', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '3', '1001', '333', 10, '0', '0', '7.5', NULL),
-(3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '15', '1255', '333', 10, '250', '250', '7.5', NULL),
-(4, '2022-03-08', NULL, '6230596D42D5E', 'demo manufacturer', 'Select', 'demo', '2024-10-22', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '3', '32143', '600', 250, '2', '2', '2', NULL),
-(6, NULL, NULL, 'Select', 'Select', 'Select', 'Select', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(7, NULL, NULL, '2022-03-18', '162382EC51B86A', 'demo manufacturer', 'demo supplier', '0000-00-00', NULL, NULL, '1', NULL, NULL, NULL, '0', NULL),
-(8, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(9, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(10, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(11, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(12, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(13, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(14, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(15, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(16, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(17, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(18, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(19, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(20, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(21, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(22, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(23, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(24, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(25, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(26, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(27, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(28, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(29, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(30, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(31, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(32, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(33, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(34, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(35, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(36, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(37, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(38, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(39, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(40, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(41, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(42, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(43, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(44, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(45, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(46, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(47, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(48, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(49, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(50, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(51, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(52, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(53, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(54, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(55, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(56, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(57, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(58, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(59, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(60, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(61, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(62, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(63, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(64, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(65, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(66, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(67, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(68, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(69, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(70, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(71, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(72, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(73, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(74, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(75, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(76, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(77, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(78, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(79, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(80, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(81, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(82, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(83, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(84, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(85, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(86, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(87, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(88, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(89, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(90, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(91, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(92, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(93, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(94, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(95, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(96, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(97, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(98, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(99, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(100, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(101, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(102, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(103, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(104, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(105, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(106, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(107, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(108, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(109, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(110, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(111, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(112, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(113, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(114, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(115, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(116, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(117, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(118, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(119, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(120, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(121, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(122, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(123, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(124, '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(125, '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(126, '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(127, '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(128, '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(129, '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(130, '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(131, '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(132, '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(133, '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(134, '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(135, '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(136, '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(137, '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(138, '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(139, '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(140, '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(141, '0000-00-00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `stock_groups_acc`
---
-
-CREATE TABLE `stock_groups_acc` (
-  `id` int(11) NOT NULL,
-  `stock_groups_name` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `stock_groups_acc`
---
-
-INSERT INTO `stock_groups_acc` (`id`, `stock_groups_name`) VALUES
-(1, 'Raw Materials'),
-(2, 'Work in Process'),
-(3, 'Finished Goods');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `stock_items_acc`
---
-
-CREATE TABLE `stock_items_acc` (
-  `id` int(11) NOT NULL,
-  `stock_items_itemcode` varchar(150) NOT NULL,
-  `stock_items_name` varchar(150) NOT NULL,
-  `stock_items_cat` int(11) NOT NULL,
-  `stock_items_subcat` int(11) NOT NULL,
-  `stock_items_groups` int(11) NOT NULL,
-  `stock_items_company` varchar(150) NOT NULL,
-  `stock_items_desc` text DEFAULT NULL,
-  `stock_items_addedby` int(11) NOT NULL,
-  `stock_items_addedon` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `stock_items_acc`
---
-
-INSERT INTO `stock_items_acc` (`id`, `stock_items_itemcode`, `stock_items_name`, `stock_items_cat`, `stock_items_subcat`, `stock_items_groups`, `stock_items_company`, `stock_items_desc`, `stock_items_addedby`, `stock_items_addedon`) VALUES
-(1, 'PAR', 'Paracetamole', 3, 4, 2, 'kims intetrnational', 'test', 47, '2022-03-26 06:44:36'),
-(2, 'CRO', 'Crossin', 3, 5, 1, 'kims intetrnational', 'demo', 47, '2022-03-26 09:41:09'),
-(4, 'PAR', 'Paracetamole', 3, 4, 3, 'kims intetrnational', 'demo', 47, '2022-03-26 06:45:00'),
-(5, 'LVP', 'Levitracetum', 3, 4, 3, 'kims intetrnational', 'demo', 47, '2022-03-29 07:31:59'),
-(6, 'STV120', 'Stivia Leaves', 4, 6, 1, 'kims intetrnational', 'demo', 47, '2022-03-29 07:35:44');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `stock_methods`
---
-
-CREATE TABLE `stock_methods` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `stock_method` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `profit_percentage` bigint(20) DEFAULT NULL,
-  `status` int(25) DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `stock_methods`
---
-
-INSERT INTO `stock_methods` (`id`, `stock_method`, `profit_percentage`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'FIFO', NULL, NULL, NULL, NULL),
-(2, 'LIFO', NULL, NULL, NULL, NULL),
-(3, 'Weighted Average', NULL, NULL, NULL, NULL),
-(4, 'Expiry Date', NULL, NULL, NULL, NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `stock_subcategories_acc`
---
-
-CREATE TABLE `stock_subcategories_acc` (
-  `id` int(11) NOT NULL,
-  `stock_subcategories_name` varchar(150) NOT NULL,
-  `stock_subcategories_category` int(11) NOT NULL,
-  `stock_subcategories_addedon` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `stock_subcategories_company` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `stock_subcategories_acc`
---
-
-INSERT INTO `stock_subcategories_acc` (`id`, `stock_subcategories_name`, `stock_subcategories_category`, `stock_subcategories_addedon`, `stock_subcategories_company`) VALUES
-(2, 'Tablets', 1, '2022-03-16 04:46:32', '0'),
-(4, 'Tablets', 3, '2022-03-23 08:43:05', 'kims intetrnational'),
-(5, 'Syrups', 3, '2022-03-24 04:40:58', 'kims intetrnational'),
-(6, 'Medicinal Leaves', 4, '2022-03-29 07:34:24', 'kims intetrnational');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `stock_transaction_table_acc`
---
-
-CREATE TABLE `stock_transaction_table_acc` (
-  `id` int(11) NOT NULL,
-  `stock_transaction_date` datetime NOT NULL,
-  `stock_transaction_type` int(11) NOT NULL COMMENT '1 for reciept 2 for issue',
-  `stock_transaction_subtype` int(11) DEFAULT NULL,
-  `stock_transaction_by` int(11) NOT NULL,
-  `stock_transaction_addedon` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `stock_transaction_remarks` text DEFAULT NULL,
-  `stock_transaction_company` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `stock_transaction_table_acc`
---
-
-INSERT INTO `stock_transaction_table_acc` (`id`, `stock_transaction_date`, `stock_transaction_type`, `stock_transaction_subtype`, `stock_transaction_by`, `stock_transaction_addedon`, `stock_transaction_remarks`, `stock_transaction_company`) VALUES
-(5, '2022-03-10 00:00:00', 1, 1, 47, '2022-03-31 12:41:03', NULL, 'kims intetrnational'),
-(6, '2022-03-13 00:00:00', 1, 1, 47, '2022-03-31 12:41:32', NULL, 'kims intetrnational'),
-(7, '2022-03-18 00:00:00', 1, 1, 47, '2022-03-31 12:43:20', NULL, 'kims intetrnational'),
-(8, '2022-03-19 00:00:00', 2, 2, 47, '2022-04-01 04:37:30', 'demo', 'kims intetrnational'),
-(9, '2022-03-15 00:00:00', 2, 2, 47, '2022-04-01 05:41:54', NULL, 'kims intetrnational'),
-(10, '2022-04-16 00:00:00', 1, 1, 47, '2022-04-16 04:18:29', NULL, 'kims intetrnational'),
-(11, '2022-04-17 00:00:00', 2, 2, 47, '2022-04-16 04:20:43', NULL, 'kims intetrnational');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `store_issued_details`
---
-
-CREATE TABLE `store_issued_details` (
-  `id` int(11) NOT NULL,
-  `issued_date` date NOT NULL,
-  `department` int(11) NOT NULL,
-  `issued_by` int(11) NOT NULL,
-  `issued_status` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `store_issued_details`
---
-
-INSERT INTO `store_issued_details` (`id`, `issued_date`, `department`, `issued_by`, `issued_status`) VALUES
-(1, '2022-06-29', 51, 40, 6),
-(2, '2022-06-29', 38, 40, 6),
-(3, '2022-06-29', 39, 40, 6),
-(4, '2022-06-29', 41, 40, 6),
-(5, '2022-06-29', 43, 40, 6),
-(6, '2022-06-29', 43, 40, 6),
-(7, '2022-06-29', 43, 40, 6),
-(8, '2022-06-29', 41, 40, 6),
-(9, '2022-06-29', 39, 40, 6),
-(10, '2022-06-29', 40, 40, 6),
-(11, '2022-06-29', 43, 40, 6),
-(12, '2022-06-29', 52, 40, 6),
-(13, '2022-06-29', 52, 40, 6),
-(14, '2022-06-29', 52, 40, 6),
-(15, '2022-06-29', 52, 40, 6),
-(16, '2022-06-29', 52, 40, 6),
-(17, '2022-06-29', 52, 40, 6),
-(18, '2022-06-29', 52, 40, 6),
-(19, '2022-06-29', 52, 40, 6),
-(20, '2022-06-29', 52, 40, 6),
-(21, '2022-06-29', 52, 40, 6),
-(22, '2022-06-29', 52, 40, 6),
-(23, '2022-06-29', 42, 40, 6),
-(24, '2022-06-29', 40, 40, 6),
-(25, '2022-06-29', 40, 40, 6),
-(26, '2022-06-29', 40, 40, 6),
-(27, '2022-06-29', 40, 40, 6),
-(28, '2022-06-29', 40, 40, 6),
-(29, '2022-06-29', 38, 40, 6),
-(30, '2022-06-29', 42, 40, 6),
-(31, '2022-06-29', 42, 40, 6),
-(32, '2022-06-29', 42, 40, 6),
-(33, '2022-06-29', 42, 40, 6),
-(34, '2022-06-29', 51, 40, 6),
-(35, '2022-06-29', 43, 40, 6),
-(36, '2022-06-29', 45, 40, 6),
-(37, '2022-06-29', 45, 40, 6),
-(38, '2022-06-29', 45, 40, 6);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `store_issued_items`
---
-
-CREATE TABLE `store_issued_items` (
-  `id` int(11) NOT NULL,
-  `item_name` int(11) NOT NULL,
-  `issued_id` int(11) DEFAULT NULL,
-  `issued_quantity` int(11) DEFAULT NULL,
-  `current_stock` int(11) DEFAULT NULL,
-  `batch_no` int(11) DEFAULT NULL,
-  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `store_issued_items`
---
-
-INSERT INTO `store_issued_items` (`id`, `item_name`, `issued_id`, `issued_quantity`, `current_stock`, `batch_no`, `updated_at`) VALUES
-(1, 3, 1, 20, 105, 3, '2022-06-29 04:11:18'),
-(2, 3, 2, 30, 85, 3, '2022-06-29 04:13:23'),
-(3, 3, 3, 2, 53, 3, '2022-06-28 23:03:43'),
-(4, 3, 4, 5, -5, 3, '2022-06-28 23:12:31'),
-(5, 3, 7, 2, 50, 3, '2022-06-29 04:34:43'),
-(6, 4, 8, 25, 50, 4, '2022-06-29 04:36:14'),
-(7, 4, 9, 10, 25, 4, '2022-06-29 04:37:28'),
-(8, 4, 10, 10, 15, 4, '2022-06-29 04:40:33'),
-(9, 4, 11, 5, 5, 4, '2022-06-29 04:42:31'),
-(10, 2, 22, 2, NULL, 10, '2022-06-29 05:18:11'),
-(11, 4, 23, 4, NULL, 25, '2022-06-29 05:21:31'),
-(12, 4, 28, 4, 75, 10, '2022-06-29 05:25:46'),
-(13, 4, 29, 4, 25, 10, '2022-06-29 05:27:09'),
-(14, 4, 33, 4, 40, 10, '2022-06-29 05:33:46'),
-(15, 3, 34, 3, 25, 5, '2022-06-29 05:34:09'),
-(16, 3, 35, 3, 20, 5, '2022-06-29 05:34:53'),
-(17, 3, 36, 5, 15, 3, '2022-06-29 05:37:26'),
-(18, 3, 38, 1, 10, 3, '2022-06-29 05:40:37');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `store_requests`
---
-
-CREATE TABLE `store_requests` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `date` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `department` int(11) NOT NULL,
-  `medicine` int(11) NOT NULL,
-  `quantity` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `requested_status` int(11) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `store_requests`
---
-
-INSERT INTO `store_requests` (`id`, `date`, `department`, `medicine`, `quantity`, `requested_status`, `created_at`, `updated_at`) VALUES
-(1, '2022-01-11', 36, 11, '30', 1, NULL, NULL),
-(2, '2022-01-11', 38, 20, '30', 1, NULL, NULL),
-(3, '2022-01-12', 37, 18, '13', 0, NULL, NULL),
-(4, '2022-01-19', 36, 15, '20', 0, NULL, NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `sub_store`
---
-
-CREATE TABLE `sub_store` (
-  `id` int(11) NOT NULL,
-  `sub_store_name` varchar(125) DEFAULT NULL,
-  `department_id` int(11) DEFAULT NULL,
-  `request_medicine` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `sub_store`
---
-
-INSERT INTO `sub_store` (`id`, `sub_store_name`, `department_id`, `request_medicine`) VALUES
-(5, 'Sub Store 2', 42, NULL),
-(6, 'Store123', 42, NULL),
-(7, 'test 123', 39, NULL),
-(8, 'Store 1', 36, NULL),
-(9, 'Store 2', 36, NULL),
-(10, 'Store 1', 40, NULL),
-(11, 'Store 2', 40, NULL),
-(16, 'Store 1', 37, NULL),
-(17, 'Store 1', 38, NULL),
-(18, 'Store 1', 39, NULL),
-(19, 'Store 3', 40, NULL),
-(20, 'Store 3', 41, NULL),
-(21, 'Store 1', 42, NULL),
-(22, 'Store 1', 43, NULL),
-(23, 'Store 1', 44, NULL),
-(24, 'Store 1', 45, NULL),
-(25, 'Store 1', 51, NULL),
-(26, 'Store 1', 52, NULL),
-(27, 'Sub store', 53, NULL),
-(28, 'Sub store', 54, NULL),
-(29, 'jkhkjhkds', 36, NULL);
 
 -- --------------------------------------------------------
 
@@ -11185,52 +9615,6 @@ INSERT INTO `supplier_ledger_details` (`id`, `paid_date`, `amount`, `purchase_id
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usermanagements`
---
-
-CREATE TABLE `usermanagements` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `previlages` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `hospital` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `text` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `usermanagements`
---
-
-INSERT INTO `usermanagements` (`id`, `name`, `previlages`, `hospital`, `created_at`, `updated_at`, `text`) VALUES
-(3, 'ewr', 'addstaffs', '', '2022-01-16 23:08:04', '2022-01-16 23:08:04', NULL),
-(4, 'ewr', 'staffs', '', '2022-01-16 23:08:04', '2022-01-16 23:08:04', NULL),
-(5, 'ewr', 'attendance', '', '2022-01-16 23:08:04', '2022-01-16 23:08:04', NULL),
-(6, 'ewr', 'payslip', '', '2022-01-16 23:08:04', '2022-01-16 23:08:04', NULL),
-(7, 'ewr', 'leaves', '', '2022-01-16 23:08:05', '2022-01-16 23:08:05', NULL),
-(8, 'ewr', 'loans', '', '2022-01-16 23:08:05', '2022-01-16 23:08:05', NULL),
-(14, 'Medicines', 'Medicines|allmedicinez', '', '2022-01-17 04:52:08', '2022-01-17 04:52:08', 'allmedicinez'),
-(17, 'nurse', 'allpatients', 'kims intetrnational', '2022-01-17 05:28:03', '2022-01-17 05:28:03', 'Patients'),
-(18, 'nurse', 'depqueue', 'kims intetrnational', '2022-01-17 05:28:03', '2022-01-17 05:28:03', 'Queue'),
-(19, 'nurse', 'dutyshedule', 'kims intetrnational', '2022-01-17 05:28:03', '2022-01-17 05:28:03', 'Duty Schedule'),
-(20, 's', 'attendance', 'kims intetrnational', '2022-01-28 22:31:41', '2022-01-28 22:31:41', 'Attendance'),
-(25, 'p', 'addstaffs', 'kims intetrnational', '2022-02-02 05:23:02', '2022-02-02 05:23:02', 'Add Staffs'),
-(26, 'p', 'staffs', 'kims intetrnational', '2022-02-02 05:23:02', '2022-02-02 05:23:02', 'Manage Staffs'),
-(32, 'd', 'addstaffs', 'kims intetrnational', '2022-02-19 05:25:52', '2022-02-19 05:25:52', 'Add Staffs'),
-(33, 'uffff', 'Consultation', 'kims intetrnational', '2022-02-19 05:26:05', '2022-02-19 05:26:05', 'Consultation'),
-(34, 'doctor', 'Consultation', 'kims intetrnational', '2022-02-19 05:31:20', '2022-02-19 05:31:20', 'Consultation'),
-(35, 'doctor', 'appointments', 'kims intetrnational', '2022-02-19 05:31:20', '2022-02-19 05:31:20', 'Appointments'),
-(36, 'doctor', 'allpatients', 'kims intetrnational', '2022-02-19 05:31:20', '2022-02-19 05:31:20', 'Patients'),
-(37, 'doctor', 'depqueue', 'kims intetrnational', '2022-02-19 05:31:21', '2022-02-19 05:31:21', 'Queue'),
-(38, 'doctor', 'dutyshedule', 'kims intetrnational', '2022-02-19 05:31:21', '2022-02-19 05:31:21', 'Duty Schedule'),
-(39, 'doctor', 'applyleave', 'kims intetrnational', '2022-02-19 05:31:21', '2022-02-19 05:31:21', 'Leave Application'),
-(40, 'Display', 'appointments', 'kims intetrnational', '2022-02-19 05:32:03', '2022-02-19 05:32:03', 'Appointments'),
-(41, 'nutrition', 'Consultation', 'kims intetrnational', '2022-02-19 05:32:28', '2022-02-19 05:32:28', 'Consultation'),
-(102, 'HR', 'addstaffs', 'kims intetrnational', '2022-03-30 01:46:37', '2022-03-30 01:46:37', 'Add Staffs');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `userroles`
 --
 
@@ -11345,7 +9729,7 @@ INSERT INTO `users` (`id`, `uniqueid`, `name`, `email`, `age`, `email_verified_a
 (34, '0400034', 'testphone', 'testphone@gmail.com', 0, NULL, '$2y$10$8yiHPKEEHV3iy1vgr488Nua2ZP43BJvylAIIfV75gJ078.ed8DPTq', 'Role', '', NULL, NULL, '', NULL, '2021-10-09 01:09:48', '2021-10-09 01:09:48', 'Oppollo', 0, 'Departments', NULL, NULL, '20000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (35, '0400035', 'testagain', 'rd@fd.ji', 0, NULL, '$2y$10$XmEg.54kPJ3nPUn6XJOrrenUaQ7cnhTyFsSCLSzsp/hdlVcLkpC3O', 'Role', '', NULL, NULL, '', NULL, '2021-10-09 01:13:12', '2021-10-09 01:13:12', 'Oppollo', 0, 'Departments', NULL, NULL, '20000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (36, '0400036', 'wqe', 'sas@po.pl', 0, NULL, '$2y$10$H3f28JozWSor.7zMXBxeJeXv7AXkG8cHNl7lHY4PMbgMo30Pd4RLa', 'Role', '', NULL, NULL, '', NULL, '2021-10-09 01:14:58', '2021-10-09 01:14:58', 'Oppollo', 0, 'Departments', '12321123', NULL, '20000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(37, '0400037', 'kimshr', 'kimshr@gmail.com', 0, NULL, '$2y$10$ZYxNv0w57OfilD7zB3SJceN.lYwL90L8ZjvlCIIC2lRd/AwQVGWmK', 'HR', '', NULL, NULL, '', NULL, '2021-10-11 18:10:07', '2021-10-11 18:10:07', 'kims intetrnational', 0, 'Departments', NULL, NULL, '20000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(37, '0400037', 'kimshr', 'kimshr@gmail.com', 0, NULL, '$2y$10$ZYxNv0w57OfilD7zB3SJceN.lYwL90L8ZjvlCIIC2lRd/AwQVGWmK', 'hr', '', NULL, NULL, '', NULL, '2021-10-11 18:10:07', '2021-10-11 18:10:07', 'kims intetrnational', 0, 'Departments', NULL, NULL, '20000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (38, '0900038', 'kimsdoctor', 'kimsdoctor@gmail.com', 0, NULL, '$2y$10$r1Rk7qO4lWFr71djJmQnWe4ITG2DQbZWsxYdrCS1BBzlMwgbccC6i', 'Doctor', '', NULL, NULL, '', NULL, '2021-10-11 18:11:21', '2021-10-11 18:11:21', 'kims intetrnational', 0, 'Departments', '7777788888', NULL, '20000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (39, '0900039', 'teststaff', 'teststaff@gmail.com', 0, NULL, '$2y$10$GRFxUnI0XS9xPZHNZYU.aOCLnYodbhQZo7JMSDJ/stgUbItHTcauy', 'HR', '', NULL, NULL, '', NULL, '2021-10-11 20:30:45', '2021-10-11 20:30:45', 'kims intetrnational', 0, 'Urology', '7778889988', NULL, '20000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (40, '0900040', 'kimsdoctor1', 'kimsdoctor1@gmail.com', 0, NULL, '$2y$10$zK/WX0uoq4aUnBKtdL1ffO3yp3Juv2wsGGyskjZxT.HdMwWlBwESm', 'Doctor', '', NULL, NULL, '', NULL, '2021-10-12 19:32:40', '2021-10-12 19:32:40', 'kims intetrnational', 0, NULL, '8778987', NULL, '20000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -11355,7 +9739,7 @@ INSERT INTO `users` (`id`, `uniqueid`, `name`, `email`, `age`, `email_verified_a
 (44, '0900044', 'kimspharma', 'kimspharma@gmail.com', 0, NULL, '$2y$10$GpIUjv6fVqo2u6PX008eXue49MNYu0PTkndXMVl1Iywevri7gSAFu', 'pharma', '', NULL, NULL, '', NULL, '2021-10-27 19:28:59', '2021-10-27 19:28:59', 'kims intetrnational', 0, NULL, '9879879879', NULL, '30000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (45, '0900045', 'kimsurodoctor', 'kimsurodoctor@gmail.com', 0, NULL, '$2y$10$XxlirQ1D1X8DYiQqw4fyU.1stdyf7.5UVlXtUYGcllEYU3hoFPWbO', 'Doctor', '', NULL, NULL, '', NULL, '2021-10-31 18:54:00', '2021-10-31 18:54:00', 'kims intetrnational', 0, NULL, '789456', NULL, '30000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (46, '0900046', 'kimsudoctor', 'kimsudoctor@gmail.com', 0, NULL, '$2y$10$k1ecXxKblO.AdtvYLvOQUe/WS9XDAx23kEi60XCU1NzUz2bhvALrG', 'Doctor', '', NULL, NULL, '', NULL, '2021-10-31 18:54:53', '2021-10-31 18:54:53', 'kims intetrnational', 0, NULL, '78987', NULL, '30000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(47, '0900047', 'kimsadmin', 'kimsadmin@gmail.com', 0, NULL, '$2y$10$LJAbGCLx1uDpnCJHoYdGFORN4Jk9ArjK2cd8oKO4vP1avcnbdiwc2', 'hospitaladmin', '', NULL, NULL, '', NULL, '2021-10-31 20:48:49', '2021-10-31 20:48:49', 'kims intetrnational', 0, NULL, '7894', NULL, '30000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(47, '0900047', 'Allan', 'kimsadmin@gmail.com', 0, NULL, '$2y$10$LJAbGCLx1uDpnCJHoYdGFORN4Jk9ArjK2cd8oKO4vP1avcnbdiwc2', 'Admin', '', NULL, NULL, '', NULL, '2021-10-31 20:48:49', '2021-10-31 20:48:49', 'kims intetrnational', 0, NULL, '7894', NULL, '30000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (48, '0900048', '123', 'asd@jkn.df321', 0, NULL, '$2y$10$vsvH97V4nYSxCMpVznZzROMD8va4cXAryxFHweJKrBD5CXdX5Txa2', 'Role', '', NULL, NULL, '', NULL, '2021-11-01 17:23:22', '2021-11-01 17:23:22', 'kims intetrnational', 0, NULL, '554', NULL, '30000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (49, '0900049', 'qwe', 'qwe@qwe.qwe', 0, NULL, '$2y$10$EsCL0YQEhKQ.2c.8hlJ23.iytHzaMVU3sPlJmC6b/tmaGjyKw8ye.', 'Doctor', '', NULL, NULL, '', NULL, '2021-11-01 18:07:21', '2021-11-01 18:07:21', 'kims intetrnational', 0, NULL, '123', NULL, '30000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (50, '0900050', 'kimsentdoctor', 'kimsentdoctor@gmail.com', 0, NULL, '$2y$10$jOPSO3FsAcntChJcZ52nuedmUm7jqRAk1QCaELDokbEqfLFNfLiQK', 'Doctor', '', NULL, NULL, '', NULL, '2021-11-02 17:06:17', '2021-11-02 17:06:17', 'kims intetrnational', 0, NULL, '465465', NULL, '30000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -11366,152 +9750,6 @@ INSERT INTO `users` (`id`, `uniqueid`, `name`, `email`, `age`, `email_verified_a
 (55, NULL, 'dclinicadmin', 'dclinicadmin@gmail.com', 0, NULL, '$2y$10$gSm/ZGaIdem2eOb2wMVYp.KQ2uyVrIVOvPf3S2QAabXJ3GT2nSVza', 'admin', '', NULL, NULL, '', NULL, '2021-12-13 18:22:34', '2021-12-13 18:22:34', 'D-clinic', NULL, NULL, NULL, NULL, '30000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (56, NULL, 'dclinichr', 'dclinichr@gmail.com', 0, NULL, '$2y$10$dgPvKV9QXWo5XI0H5hCGA.NTUsKAORZJqXTrUAgtnRYn24pI3PQGi', 'HR', '', NULL, NULL, '', NULL, '2021-12-13 18:34:34', '2021-12-13 18:34:34', 'D-clinic', NULL, NULL, NULL, NULL, '30000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (57, '1100057', 'dclinicpharma', 'dclinicpharma@gmail.com', 0, NULL, '$2y$10$y3N8UI1.vVGt9RE.HRVvgODoMR.uvEv1pXh8Lz/z0yP2yUMp0fnk2', 'pharma', '', NULL, NULL, '', NULL, '2021-12-13 18:47:50', '2021-12-13 18:47:50', 'D-clinic', 0, NULL, '123456789', NULL, '25000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(58, '1100058', 'test-d-clinic-staff', 'test-d-clinic-staff@gmail.com', 0, NULL, '$2y$10$e0eVcQVjn9YfkY2LvQ/57e5sbHyOaGQSA4h32mjd/M2eBnh03w/AK', 'lab', '', NULL, NULL, '', NULL, '2021-12-17 19:59:39', '2021-12-17 19:59:39', 'D-clinic', 0, NULL, '987', NULL, '35000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(72, '1100072', 'wer', 'wer@gfg.hjj', 0, NULL, '$2y$10$T7TLOSqyhjFbrRtqsfyguO9CwsnQ1SYFx.ezd7n4oIL9iAK7QPXB6', 'Role', '', NULL, NULL, '', NULL, '2021-12-21 21:15:17', '2021-12-21 21:15:17', 'D-clinic', 0, NULL, '435', NULL, '35000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(75, '0900074', 'kimsstore', 'kimsstore@gmail.com', 0, NULL, '$2y$10$Kim4TEicyWP46RX8cgi87uARtdJNBaHBkKXhaxAeaQi6vf5sM8r/G', 'store', '', NULL, NULL, '', NULL, '2022-01-02 21:14:35', '2022-01-02 21:14:35', 'kims intetrnational', 0, NULL, '4', NULL, '234', '2022-01-12', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(76, '0900076', 'casuality', 'casuality@gmail.com', 0, NULL, '$2y$10$5bIy9/k7PBiYHZTtXB6dvOa5Lx0Xls0Uv9lqOY/fkd9vb49IBKTNC', 'casuality', '', NULL, NULL, '', NULL, '2022-01-04 00:27:52', '2022-01-04 00:27:52', 'kims intetrnational', 0, NULL, '36', NULL, '35000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(77, '0900077', 'nurse', 'nurse@gmail.com', 0, NULL, '$2y$10$U1qk1MtKqOtk02OxaDDGE.CTsqHLnHbkmMXYpJWVgEfa0iKoioC4a', 'nurse', '', NULL, NULL, '', NULL, '2022-01-04 01:07:33', '2022-01-04 01:07:33', 'kims intetrnational', 0, NULL, '123', NULL, '35000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(78, '0900078', 'hospitaladmin', 'hospitaladmin@gmail.com', 0, NULL, '$2y$10$9v9uLzRsReCXbFvVgB0SR.NJj1K5TQi.C9H7y442e.7fywpa490rW', 'hospitaladmin', '', NULL, NULL, '', NULL, '2022-01-09 17:27:04', '2022-01-09 17:27:04', 'kims intetrnational', 0, NULL, '987', NULL, '35000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(80, '0900079', 'Dep Admin', 'departmentadmin@gmail.com', 0, NULL, '$2y$10$OU7nsSW2KqdUONHyR8I7IugxyVti.8BxHyudVd84NE5zanscnAgbC', 'Department Admin', '', NULL, NULL, '', NULL, '2022-01-10 18:29:57', '2022-01-10 18:29:57', 'kims intetrnational', 0, NULL, '74', NULL, '35000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(81, '0900081', 'entadmin', 'entadmin@gmail.com', 0, NULL, '$2y$10$itd3FYq1pmrnKVA2/IC40eZ/ks9FkDAtbIubWiRdPyEiOo.fJcKXu', 'Department Admin', '', NULL, NULL, '', NULL, '2022-01-10 19:36:59', '2022-01-10 19:36:59', 'kims intetrnational', 0, NULL, '12', NULL, '35000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(82, '0900082', 'entnurse', 'entnurse@gmail.com', 0, NULL, '$2y$10$NW9Guz7KPCDwJnuJif5uBOe8XVbAIHJbjZ6jNXK0JAnzRKiCkkJ1i', 'nurse', '', NULL, NULL, '', NULL, '2022-01-10 20:30:19', '2022-01-10 20:30:19', 'kims intetrnational', 0, NULL, '9876876554', NULL, '35000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(83, '0900083', 'ent lab', 'entlab@gmail.com', 0, NULL, '$2y$10$Cw9puNXzcl/37c1syqDJpehWORcXH7n/k8JMUMDlxUoYen3HeJ/aW', 'lab', '', NULL, NULL, '', NULL, '2022-01-10 20:31:11', '2022-01-10 20:31:11', 'kims intetrnational', 0, NULL, '9058688758', NULL, '35000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(84, '0900084', 'anpham', 'anpham@gmail.com', 0, NULL, '$2y$10$iTBKp2FUltLfyWIhiIZIde7Ou01xQ2fDKIQBxVmg5xYTR2zGCG5SO', 'pharma', '', NULL, NULL, '', NULL, '2022-01-10 23:03:16', '2022-01-10 23:03:16', 'kims intetrnational', 0, NULL, '21', NULL, '30000', '2022-01-11', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(85, '0900085', 'testprevilage', 'testprevilage@gmail.com', 0, NULL, '$2y$10$6PdkT5h1bkRs18wZDiVj6ORw1r6NZ07b495cgQZovL84faeoHW3XS', 'test', '', NULL, NULL, '', NULL, '2022-01-16 20:37:13', '2022-01-16 20:37:13', 'kims intetrnational', 0, NULL, '21', NULL, '35000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(86, '0900086', 'dutnurse', 'dutnurse@gmail.com', 0, NULL, '$2y$10$ZbkgoSHkfAD8z/0I/vC60OTD1Z3biAsq0nau/dGAlrE7wzYGrh0Ny', 'nurse', '', NULL, NULL, '', NULL, '2022-01-16 23:58:34', '2022-01-16 23:58:34', 'kims intetrnational', 0, NULL, '321', NULL, '35000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(87, '0900087', 'SSS', 'aa@gmail.com', 0, NULL, '$2y$10$FyuoJOA9S2JZjlHVdpcRDe5kWW6tJP0KL05qwnKmqYx6igG5yhgNy', 'nurse', '', NULL, NULL, '', NULL, '2022-01-31 22:53:15', '2022-01-31 22:53:15', 'kims intetrnational', 0, NULL, '21313214', NULL, '10000', '0003-12-12', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(88, '0900088', '5', '123@fff.in', 0, NULL, '$2y$10$UdQE0dzAFih09uL3uyR6/OpFYLCbqeC2NdtQXGeuJPVBgTu3i0hte', 'doc', '', NULL, NULL, '', NULL, '2022-01-31 23:01:07', '2022-01-31 23:01:07', 'kims intetrnational', 0, NULL, 'QWEQQE', NULL, '13131', '2421-03-22', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(89, '0900089', 'aaa', 'q@qwe.co.in', 0, NULL, '$2y$10$.uzngz7LKcqYHSsuuM1hIuOQ4dF54qAaS2fQk323g9eQah..wa51a', 'Department Head', '', NULL, NULL, '', NULL, '2022-02-01 00:02:17', '2022-02-01 00:02:17', 'kims intetrnational', 0, NULL, '4142', NULL, '35000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(90, NULL, 'testinghospitaladmin', 'testinghospitaladmin@gmail.com', 0, NULL, '$2y$10$zE2SVENNNyiSXNpJqxi7LO9FsT5raRn/2Wb6SEK/2mYsFhfcevFcm', 'admin', '', NULL, NULL, '', NULL, '2022-02-14 17:41:41', '2022-02-14 17:41:41', 'testinghospital', NULL, NULL, NULL, NULL, '35000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(91, NULL, 'hosadmin2', 'hosadmin2@gmail.com', 0, NULL, '$2y$10$oTSwbuACbi9WSBcw1BTwiePmYzUyEhtxu4OPGnILCt/CXTfre.0gO', 'hospitaladmin', '', NULL, NULL, '', NULL, '2022-02-14 17:54:35', '2022-02-14 17:54:35', 'GSM', NULL, NULL, NULL, NULL, '35000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(92, NULL, 't', 'r@g.yt', 0, NULL, '$2y$10$DLnKLB5J7ZH04xOLwjM1COVsqPRmDrVpm3Y2cYeBadELrxGIhisKu', 'departmentadmin', '', NULL, NULL, '', NULL, '2022-02-14 19:55:47', '2022-02-14 19:55:47', 'Paramedical Department', NULL, NULL, NULL, NULL, '35000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(93, NULL, 'e', 'r@g.g', 0, NULL, '$2y$10$2JjxdCxRQ0fKEdKEOzdTF.5tIEC0a7XCv5/TaFE2eaHnKdmC11Aku', 'departmentadmin', '', NULL, NULL, '', NULL, '2022-02-14 19:56:22', '2022-02-14 19:56:22', 'Rehabilitation Department', NULL, NULL, NULL, NULL, '35000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(94, NULL, 'testdepadmin', 'testdepadmin@gmail.com', 0, NULL, '$2y$10$m3Ps7h5rQ9CNGnwhu38xb.0OqRc5am.pmlgDAK9AejJdVeCNrpor6', 'Department Admin', '', NULL, NULL, '', NULL, '2022-02-14 21:00:40', '2022-02-14 21:00:40', 'Nursing Department', 0, NULL, NULL, NULL, '35000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(95, NULL, 'testagdepadmin', 'testagdepadmin@gmail.com', 0, NULL, '$2y$10$77cxDn/YaDJqGaKO6kV3MeUVnNxGpzF1hHqnSZCXYx.autry/cUwe', 'Department Admin', '', NULL, NULL, '', NULL, '2022-02-14 21:02:31', '2022-02-14 21:02:31', '', 0, 'Nursing Department', NULL, NULL, '30000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(96, '0900090', 'nursetestdep', 'nursetestdep@gmail.com', 0, NULL, '$2y$10$gZHPvyhGvPVBIryOJhAfOupzRHeL/TTEirZL4gWiMNYTgMc8nOBZW', 'nurse', '', NULL, NULL, '', NULL, '2022-02-14 21:03:23', '2022-02-14 21:03:23', 'kims intetrnational', 0, 'Nursing Department', '54', NULL, '30000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(97, NULL, 'cardiologyadmin', 'cardiologyadmin@gmail.com', 0, NULL, '$2y$10$ramk/ZAqPwjx71i4kiWdfOSqa2H5Mf4soL/CnXEbH.dJe/aMYgYsC', 'Department Admin', '', NULL, NULL, '', NULL, '2022-02-15 20:54:49', '2022-02-15 20:54:49', 'kims intetrnational', 0, NULL, NULL, NULL, '30000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(98, '0900098', 'cardiologydoctor', 'cardiologydoctor@gmail.com', 0, NULL, '$2y$10$6/y0TDrj2l6fH.7I9qa18eEEjsN0RKgUMoH3LdSVxa/MtZQzSPIxe', 'doctor', '', NULL, NULL, '', NULL, '2022-02-15 21:01:36', '2022-02-15 21:01:36', 'kims intetrnational', 0, NULL, '21', NULL, '30000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(99, '0900099', 'card', 'card@gmail.com', 0, NULL, '$2y$10$pQbgMXAq9Ri8pJNexLTuXeUpnfsfK7xx73EDrHlcU0Rml8JYgk3xu', 'doctor', '', NULL, NULL, '', NULL, '2022-02-15 21:03:37', '2022-02-15 21:03:37', 'kims intetrnational', 0, NULL, '4', NULL, '20000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(100, NULL, 'depadmintest', 'depadmintest@gmail.com', 0, NULL, '$2y$10$re2tfnyQViSTfZIVopsTWeWTEMgtnyWQW0n6B7kPfp7ZT4/Tzpnze', 'Department Admin', '', NULL, NULL, '', NULL, '2022-02-15 21:08:29', '2022-02-15 21:08:29', 'kims intetrnational', NULL, NULL, NULL, NULL, '30000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(101, NULL, 'cardftest', 'cardftest@gmail.com', 0, NULL, '$2y$10$qIme/tbnHWo.O1JgIIs.uew.YbWw7IB46FybCfxRV6xdZEh7qHhkC', 'Department Admin', '', NULL, NULL, '', NULL, '2022-02-15 21:31:38', '2022-02-15 21:31:38', 'kims intetrnational', 0, 'cardiology', NULL, NULL, '30000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(102, '0900102', 'testorder', 'testorder@gmail.com', 0, NULL, '$2y$10$prz1YXbu0/XxugQdmyDT.efYdQkiO5F8D1TlnYJr2iZjki22GGR2e', 'doctor', '', NULL, NULL, '', NULL, '2022-02-19 00:17:03', '2022-02-19 00:17:03', 'kims intetrnational', 0, NULL, '654', NULL, '100000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(103, NULL, 't', 't@g.y', 0, NULL, '$2y$10$1vtr3xV56JMq3j3.6GjL5OpFkwO45j7P2hqC.JTyX74WdvE57HU7.', 'Department Admin', '', NULL, NULL, '', NULL, '2022-02-19 00:40:36', '2022-02-19 00:40:36', 'kims intetrnational', 0, 'Paramedical Department', NULL, NULL, '30000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(105, '0904000010104', 'vipin', 'vipin@gmail.com', 30, NULL, '$2y$10$UOM/7czhJZgNBoMunS0d9eBnw3IFyTn0K8nqkW.RTWavNwWQIZ98y', NULL, 'tvm', '0000-00-00', '678678621', 'hdfc', NULL, '2022-08-16 23:08:47', '2022-08-16 23:08:47', 'kims intetrnational', 36, 'Medical Departments', '8129471721', '0000-00-00', '15000', '1991-07-23', NULL, 'male', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(106, '0904000010106', 'manoj', 'billingstaff@gmail.com', 29, NULL, '$2y$10$GAFaQAIN8AUkTkwXB2qBpuLs8o4faN5vK2gOvQs32Gyqyzve.RX4.', NULL, 'kollam', '0000-00-00', '327623', 'wrere', NULL, '2022-08-17 19:53:22', '2022-08-17 19:53:22', 'kims intetrnational', 41, '41', '9995395512', '0000-00-00', '15000', '1993-07-18', NULL, 'male', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(107, '0904000010107', 'gfgg', 'casufdfdfdality@gmail.com', 29, NULL, '$2y$10$pZJbxoSQXEQSsaoPB.44JePr5LKJJRyDaTRPUFePRTdOpgRklmjpe', NULL, 'ffdggddd', '2022-08-18', '776923', 'qe', NULL, '2022-08-17 22:40:52', '2022-08-17 22:40:52', 'kims intetrnational', NULL, NULL, '54545453', NULL, '2331', NULL, NULL, 'male', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(108, '845431', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(109, '964767', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(110, '944442', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(111, '231511', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(112, '391645', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(113, '374508', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(114, '360407', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(115, '574196', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(116, '911725', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(117, '590632', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(118, '158456', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(119, '777778', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(120, '747074', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(121, '240853', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(122, '666703', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(123, '379900', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(124, '256412', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(125, '258290', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(126, '597597', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(127, '250241', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(128, '587374', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(129, '622263', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(130, '622678', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(131, '830328', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(132, '318053', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(133, '882678', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(134, '915443', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(135, '964382', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(136, '536792', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(137, '649517', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(138, '274287', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(139, '877393', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(140, '400363', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(141, '552306', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(142, '364184', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(143, '572430', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(144, '333154', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(145, '410135', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(146, '883009', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(147, '301161', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(148, '174245', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(149, '340603', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(150, '255499', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(151, '612344', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(152, '455449', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(153, '661252', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(154, '263037', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(155, '521185', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(156, '877107', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(157, '104619', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(158, '823276', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(159, '658136', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(160, '498951', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(161, '800682', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `users` (`id`, `uniqueid`, `name`, `email`, `age`, `email_verified_at`, `password`, `role`, `address`, `date_of_joining`, `account_no`, `bank`, `remember_token`, `created_at`, `updated_at`, `Hospital`, `departments`, `medicaldepartments`, `phone`, `releving_date`, `salary`, `dob`, `subrole`, `sex`, `gender`, `status_date`, `branch`, `postal_code`, `town`, `partner`, `NSSF`, `NHIF`, `cra_pin`, `tax`, `payroll_deduction`, `NSSF_contribution`, `leave`, `pension_rate`, `account`, `bank_branch`, `branch_code`, `cv`, `photo`, `signature`, `deduction`, `status`) VALUES
-(162, '554416', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(163, '915725', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(164, '542443', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(165, '373266', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(166, '691711', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(167, '777611', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(168, '170143', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(169, '721895', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(170, '673225', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(171, '578625', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(172, '803901', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(173, '617290', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(174, '662754', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(175, '678791', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(176, '217325', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(177, '373817', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(178, '501371', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(179, '564520', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(180, '730739', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(181, '810899', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(182, '993242', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(183, '618664', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(184, '520375', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(185, '590578', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(186, '367045', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(187, '929526', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(188, '760247', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(189, '877192', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(190, '534069', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(191, '397497', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(192, '752868', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(193, '910901', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(194, '993239', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(195, '474093', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(196, '693703', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(197, '425328', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(198, '437620', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(199, '937812', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(200, '170317', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(201, '844427', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(202, '214498', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(203, '487018', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(204, '523800', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(205, '140970', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(206, '830405', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(207, '183159', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(208, '744607', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(209, '834032', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(210, '650280', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(211, '476523', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(212, '955531', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(213, '402123', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(214, '214142', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(215, '878780', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(216, '911673', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(217, '392999', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(218, '591404', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(219, '253016', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (220, '562642', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (221, '493729', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (222, '484085', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -11615,7 +9853,8 @@ INSERT INTO `users` (`id`, `uniqueid`, `name`, `email`, `age`, `email_verified_a
 (320, '776781', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (321, '959100', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (322, '188974', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(323, '234983', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(323, '234983', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `users` (`id`, `uniqueid`, `name`, `email`, `age`, `email_verified_at`, `password`, `role`, `address`, `date_of_joining`, `account_no`, `bank`, `remember_token`, `created_at`, `updated_at`, `Hospital`, `departments`, `medicaldepartments`, `phone`, `releving_date`, `salary`, `dob`, `subrole`, `sex`, `gender`, `status_date`, `branch`, `postal_code`, `town`, `partner`, `NSSF`, `NHIF`, `cra_pin`, `tax`, `payroll_deduction`, `NSSF_contribution`, `leave`, `pension_rate`, `account`, `bank_branch`, `branch_code`, `cv`, `photo`, `signature`, `deduction`, `status`) VALUES
 (324, '702159', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (325, '151582', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (326, '320687', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -11630,8 +9869,7 @@ INSERT INTO `users` (`id`, `uniqueid`, `name`, `email`, `age`, `email_verified_a
 (335, '854353', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (336, '700525', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (337, '218712', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(338, '164277', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `users` (`id`, `uniqueid`, `name`, `email`, `age`, `email_verified_at`, `password`, `role`, `address`, `date_of_joining`, `account_no`, `bank`, `remember_token`, `created_at`, `updated_at`, `Hospital`, `departments`, `medicaldepartments`, `phone`, `releving_date`, `salary`, `dob`, `subrole`, `sex`, `gender`, `status_date`, `branch`, `postal_code`, `town`, `partner`, `NSSF`, `NHIF`, `cra_pin`, `tax`, `payroll_deduction`, `NSSF_contribution`, `leave`, `pension_rate`, `account`, `bank_branch`, `branch_code`, `cv`, `photo`, `signature`, `deduction`, `status`) VALUES
+(338, '164277', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (339, '413464', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (340, '281340', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (341, '379838', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -11793,7 +10031,8 @@ INSERT INTO `users` (`id`, `uniqueid`, `name`, `email`, `age`, `email_verified_a
 (497, '655783', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (498, '258519', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (499, '692681', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(500, '641707', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(500, '641707', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `users` (`id`, `uniqueid`, `name`, `email`, `age`, `email_verified_at`, `password`, `role`, `address`, `date_of_joining`, `account_no`, `bank`, `remember_token`, `created_at`, `updated_at`, `Hospital`, `departments`, `medicaldepartments`, `phone`, `releving_date`, `salary`, `dob`, `subrole`, `sex`, `gender`, `status_date`, `branch`, `postal_code`, `town`, `partner`, `NSSF`, `NHIF`, `cra_pin`, `tax`, `payroll_deduction`, `NSSF_contribution`, `leave`, `pension_rate`, `account`, `bank_branch`, `branch_code`, `cv`, `photo`, `signature`, `deduction`, `status`) VALUES
 (501, '559786', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (502, '983026', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (503, '452623', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -11808,8 +10047,7 @@ INSERT INTO `users` (`id`, `uniqueid`, `name`, `email`, `age`, `email_verified_a
 (512, '620854', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (513, '556460', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (514, '739391', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(515, '855018', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `users` (`id`, `uniqueid`, `name`, `email`, `age`, `email_verified_at`, `password`, `role`, `address`, `date_of_joining`, `account_no`, `bank`, `remember_token`, `created_at`, `updated_at`, `Hospital`, `departments`, `medicaldepartments`, `phone`, `releving_date`, `salary`, `dob`, `subrole`, `sex`, `gender`, `status_date`, `branch`, `postal_code`, `town`, `partner`, `NSSF`, `NHIF`, `cra_pin`, `tax`, `payroll_deduction`, `NSSF_contribution`, `leave`, `pension_rate`, `account`, `bank_branch`, `branch_code`, `cv`, `photo`, `signature`, `deduction`, `status`) VALUES
+(515, '855018', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (516, '508281', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (517, '151466', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (518, '236343', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -11919,36 +10157,7 @@ INSERT INTO `users` (`id`, `uniqueid`, `name`, `email`, `age`, `email_verified_a
 (705, '911964', 'test', NULL, NULL, NULL, '$2y$10$X67GrEM4Nzk4IIDSgn.aNOEeYcrGCax0sUsf/olelD8vkVMC3dN2O', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-07 22:58:39', '2022-12-07 22:58:39', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Select'),
 (706, '923282', 'test', NULL, NULL, NULL, NULL, 'Select', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'kims intetrnational', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Select', NULL, 'Select', NULL, NULL, NULL, NULL, 'Yes', 'From Salary', 'Deduct From Company', NULL, '5%', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Select'),
 (707, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(708, '490969', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL),
-(709, '791539', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL),
-(710, '993611', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL),
-(711, '552667', 'addd', NULL, NULL, NULL, '$2y$10$yijsaYQHF.TrWGIXSfCkHumIpfNbdWDL9U3zaX2.AM9XIlUEPxWXW', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-08 01:20:23', '2022-12-08 01:20:23', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Select'),
-(712, '375806', 'addd', NULL, NULL, NULL, '$2y$10$3rZzgkvh2sNgLtuUMAGPr.7yV30oQX4rC.hG6npnS5gothYLmqW4q', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-08 01:26:05', '2022-12-08 01:26:05', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Select'),
-(713, '289548', 'gdffhf', NULL, NULL, NULL, '$2y$10$PPXOblVopJ2DF68a486VPunDHNrHhpdlOcYyyTJzX1Yllh9n.2ob.', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-08 01:32:19', '2022-12-08 01:32:19', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'C:\\xampp\\ht', NULL, NULL, NULL, 'Select'),
-(714, '856736', 'fgghf', NULL, NULL, NULL, '$2y$10$O8AqfxrwXBU.81uS7J0s1eYzDSw79irr54p8Qk7y80sAisq27W47e', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-08 01:38:43', '2022-12-08 01:38:43', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '/CRA/public', NULL, NULL, NULL, 'Select'),
-(715, '274934', 'asfsfss', NULL, NULL, NULL, '$2y$10$IpCBlul3ecFv75.EsLFi6.V7qlXLVCB5YN/66KpDDdv5gl4vcPnbq', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-08 01:41:41', '2022-12-08 01:41:41', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '/CRA/public/images/file/1670483501.pdf', NULL, NULL, NULL, 'Select'),
-(716, '121838', 'sdgggd', NULL, NULL, NULL, '$2y$10$CRcyFcSJe8gBfX0Kcu422eVKKJZOrqIm5p6yrGOku0yoEMW3xMx5a', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-08 02:06:37', '2022-12-08 02:06:37', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '/CRA/public/images/file/1670484997.pdf', NULL, NULL, NULL, 'Select'),
-(717, '620108', 'fsddsgd', NULL, NULL, NULL, '$2y$10$ULxRZG8FfDvpPUS9zza7GuGS74dVc5XAyOuPeQp.YYs0R7yI23vJK', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-08 02:12:28', '2022-12-08 02:12:28', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '/CRA/public/images/file/1670485348.jfif', NULL, NULL, 'Select'),
-(718, '176324', 'gfghfhfh', NULL, NULL, NULL, '$2y$10$US6c.EQZMntmteCdlwiZruC2oIJYDz.junKFiGKRKACoKAsD33eHm', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-08 02:13:36', '2022-12-08 02:13:36', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '/CRA/public/images/file/1670485416.pdf', '/CRA/public/images/file/1670485416.jfif', NULL, NULL, 'Select'),
-(719, '347690', NULL, NULL, NULL, NULL, '$2y$10$KbNeirfni9fLFrx4nKrevObtkvTt41Jy4KAnkjVmodMlPeRvCdMRW', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-08 02:15:43', '2022-12-08 02:15:43', 'kims intetrnational', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '/CRA/public/images/file/1670485543.pdf', '/CRA/public/images/file/1670485543.jfif', '/CRA/public/images/file/1670485543.jpg', NULL, 'Select');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `visiters`
---
-
-CREATE TABLE `visiters` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `patient_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `date` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `bystander_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `bystander_address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+(723, '483332', 'CRA Accountant', 'craacco@gmail.com', 35, NULL, '$2y$10$k2W9j2satvnG.eAEA4HKvueLubs6uBCFtL6RxjTCjhxdPJ.0j4KrW', 'hr', 'test address', '2023-01-07', NULL, NULL, NULL, '2023-01-07 00:19:17', '2023-01-07 00:19:17', NULL, NULL, NULL, '789456123', NULL, '15000', NULL, NULL, 'Male', NULL, '2023-01-07', 'Nairobi', 691578, 'Mombasa', 'hgjghjg', '78945', '258741', 'CRA123', 'Yes', NULL, 'Deduct From Company', NULL, '5%', '1234567891', 'kenya', '12356', '/CRA/public/images/file/1673070557.pdf', '/CRA/public/images/file/1673070557.jfif', '/CRA/public/images/file/1673070557.jpg', 'From Salary', 'Active');
 
 -- --------------------------------------------------------
 
@@ -11980,69 +10189,9 @@ CREATE TABLE `weighted_avg_table_acc` (
 --
 
 --
--- Indexes for table `alllabtests`
---
-ALTER TABLE `alllabtests`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `allowance`
---
-ALTER TABLE `allowance`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `amb_driver`
---
-ALTER TABLE `amb_driver`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `amb_ulance`
---
-ALTER TABLE `amb_ulance`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `appointments`
---
-ALTER TABLE `appointments`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `atttendance`
---
-ALTER TABLE `atttendance`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `beds`
---
-ALTER TABLE `beds`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `bill_details`
---
-ALTER TABLE `bill_details`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `brand_names`
---
-ALTER TABLE `brand_names`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `budget_types`
 --
 ALTER TABLE `budget_types`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `callambulance`
---
-ALTER TABLE `callambulance`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -12067,6 +10216,12 @@ ALTER TABLE `cra_add_categories`
 -- Indexes for table `cra_add_event`
 --
 ALTER TABLE `cra_add_event`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_add_expense`
+--
+ALTER TABLE `cra_add_expense`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -12118,6 +10273,12 @@ ALTER TABLE `cra_add_office_instructions`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cra_add_outgoing_letter`
+--
+ALTER TABLE `cra_add_outgoing_letter`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `cra_add_product`
 --
 ALTER TABLE `cra_add_product`
@@ -12145,6 +10306,12 @@ ALTER TABLE `cra_add_user_group`
 -- Indexes for table `cra_add_user_roles`
 --
 ALTER TABLE `cra_add_user_roles`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_apply_tender`
+--
+ALTER TABLE `cra_apply_tender`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -12232,6 +10399,12 @@ ALTER TABLE `cra_corporate_client_details`
   ADD PRIMARY KEY (`corporate_id`);
 
 --
+-- Indexes for table `cra_corporate_customers`
+--
+ALTER TABLE `cra_corporate_customers`
+  ADD PRIMARY KEY (`Id`);
+
+--
 -- Indexes for table `cra_courts`
 --
 ALTER TABLE `cra_courts`
@@ -12283,12 +10456,18 @@ ALTER TABLE `cra_document_detials`
 -- Indexes for table `cra_estate_planning`
 --
 ALTER TABLE `cra_estate_planning`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`file_no`);
 
 --
 -- Indexes for table `cra_family_law`
 --
 ALTER TABLE `cra_family_law`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_file`
+--
+ALTER TABLE `cra_file`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -12358,6 +10537,12 @@ ALTER TABLE `cra_leave_days`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cra_leave_request_details`
+--
+ALTER TABLE `cra_leave_request_details`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `cra_letter_types`
 --
 ALTER TABLE `cra_letter_types`
@@ -12367,6 +10552,12 @@ ALTER TABLE `cra_letter_types`
 -- Indexes for table `cra_manage_items`
 --
 ALTER TABLE `cra_manage_items`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_manage_task`
+--
+ALTER TABLE `cra_manage_task`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -12412,6 +10603,12 @@ ALTER TABLE `cra_payment_item`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cra_precedence`
+--
+ALTER TABLE `cra_precedence`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `cra_probate_law`
 --
 ALTER TABLE `cra_probate_law`
@@ -12448,9 +10645,21 @@ ALTER TABLE `cra_safe_register_report`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cra_site`
+--
+ALTER TABLE `cra_site`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `cra_staff_monthly_status_report`
 --
 ALTER TABLE `cra_staff_monthly_status_report`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_subject`
+--
+ALTER TABLE `cra_subject`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -12490,6 +10699,12 @@ ALTER TABLE `cra_template_category`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cra_tender_details`
+--
+ALTER TABLE `cra_tender_details`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `cra_town_city`
 --
 ALTER TABLE `cra_town_city`
@@ -12499,6 +10714,12 @@ ALTER TABLE `cra_town_city`
 -- Indexes for table `cra_transport_zone`
 --
 ALTER TABLE `cra_transport_zone`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cra_upload_document`
+--
+ALTER TABLE `cra_upload_document`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -12574,12 +10795,6 @@ ALTER TABLE `giveallowance`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `hospitals`
---
-ALTER TABLE `hospitals`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `issue_registers`
 --
 ALTER TABLE `issue_registers`
@@ -12601,30 +10816,6 @@ ALTER TABLE `journal_items`
 -- Indexes for table `journal_transactions`
 --
 ALTER TABLE `journal_transactions`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `labcategory`
---
-ALTER TABLE `labcategory`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `labprofile`
---
-ALTER TABLE `labprofile`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `labprofiles`
---
-ALTER TABLE `labprofiles`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `labtests`
---
-ALTER TABLE `labtests`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -12664,18 +10855,6 @@ ALTER TABLE `lifo_table_acc`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `loans`
---
-ALTER TABLE `loans`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `manualattendances`
---
-ALTER TABLE `manualattendances`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `manufactuers`
 --
 ALTER TABLE `manufactuers`
@@ -12685,42 +10864,6 @@ ALTER TABLE `manufactuers`
 -- Indexes for table `manufacturer_ledger_details`
 --
 ALTER TABLE `manufacturer_ledger_details`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `medicaldepartments`
---
-ALTER TABLE `medicaldepartments`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `medicines`
---
-ALTER TABLE `medicines`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `medicines_details`
---
-ALTER TABLE `medicines_details`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `medicine_groups`
---
-ALTER TABLE `medicine_groups`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `medicine_types`
---
-ALTER TABLE `medicine_types`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `medicine_units`
---
-ALTER TABLE `medicine_units`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -12736,40 +10879,10 @@ ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `new_medicines`
---
-ALTER TABLE `new_medicines`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
-
---
--- Indexes for table `patient`
---
-ALTER TABLE `patient`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `patientinsurance`
---
-ALTER TABLE `patientinsurance`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `patientprofiles`
---
-ALTER TABLE `patientprofiles`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `patienttests`
---
-ALTER TABLE `patienttests`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `payment_type`
@@ -12778,81 +10891,9 @@ ALTER TABLE `payment_type`
   ADD PRIMARY KEY (`payment_id`);
 
 --
--- Indexes for table `pharma_requests`
---
-ALTER TABLE `pharma_requests`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `purchase`
---
-ALTER TABLE `purchase`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `purchase_items`
---
-ALTER TABLE `purchase_items`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `purchase_order`
---
-ALTER TABLE `purchase_order`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `purchase_order_items`
---
-ALTER TABLE `purchase_order_items`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `purchase_return`
---
-ALTER TABLE `purchase_return`
-  ADD PRIMARY KEY (`purchase_return_id`);
-
---
--- Indexes for table `request_intend`
---
-ALTER TABLE `request_intend`
-  ADD PRIMARY KEY (`request_intendid`);
-
---
--- Indexes for table `request_items`
---
-ALTER TABLE `request_items`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `request_status`
---
-ALTER TABLE `request_status`
-  ADD PRIMARY KEY (`request_statusid`);
-
---
 -- Indexes for table `roles`
 --
 ALTER TABLE `roles`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `roomcategories`
---
-ALTER TABLE `roomcategories`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `rooms`
---
-ALTER TABLE `rooms`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `roomtypes`
---
-ALTER TABLE `roomtypes`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -12862,81 +10903,9 @@ ALTER TABLE `salary`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `servedmedicines`
---
-ALTER TABLE `servedmedicines`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `staff_leaves`
 --
 ALTER TABLE `staff_leaves`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `stock_categories_acc`
---
-ALTER TABLE `stock_categories_acc`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `stock_details`
---
-ALTER TABLE `stock_details`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `stock_groups_acc`
---
-ALTER TABLE `stock_groups_acc`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `stock_items_acc`
---
-ALTER TABLE `stock_items_acc`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `stock_methods`
---
-ALTER TABLE `stock_methods`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `stock_subcategories_acc`
---
-ALTER TABLE `stock_subcategories_acc`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `stock_transaction_table_acc`
---
-ALTER TABLE `stock_transaction_table_acc`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `store_issued_details`
---
-ALTER TABLE `store_issued_details`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `store_issued_items`
---
-ALTER TABLE `store_issued_items`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `store_requests`
---
-ALTER TABLE `store_requests`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `sub_store`
---
-ALTER TABLE `sub_store`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -12952,12 +10921,6 @@ ALTER TABLE `supplier_ledger_details`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `usermanagements`
---
-ALTER TABLE `usermanagements`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `userroles`
 --
 ALTER TABLE `userroles`
@@ -12967,12 +10930,6 @@ ALTER TABLE `userroles`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `visiters`
---
-ALTER TABLE `visiters`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -12986,70 +10943,10 @@ ALTER TABLE `weighted_avg_table_acc`
 --
 
 --
--- AUTO_INCREMENT for table `alllabtests`
---
-ALTER TABLE `alllabtests`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `allowance`
---
-ALTER TABLE `allowance`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
-
---
--- AUTO_INCREMENT for table `amb_driver`
---
-ALTER TABLE `amb_driver`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `amb_ulance`
---
-ALTER TABLE `amb_ulance`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `appointments`
---
-ALTER TABLE `appointments`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
-
---
--- AUTO_INCREMENT for table `atttendance`
---
-ALTER TABLE `atttendance`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
-
---
--- AUTO_INCREMENT for table `beds`
---
-ALTER TABLE `beds`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=171;
-
---
--- AUTO_INCREMENT for table `bill_details`
---
-ALTER TABLE `bill_details`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `brand_names`
---
-ALTER TABLE `brand_names`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT for table `budget_types`
 --
 ALTER TABLE `budget_types`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
-
---
--- AUTO_INCREMENT for table `callambulance`
---
-ALTER TABLE `callambulance`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `cra_add_bank_name`
@@ -13073,6 +10970,12 @@ ALTER TABLE `cra_add_categories`
 -- AUTO_INCREMENT for table `cra_add_event`
 --
 ALTER TABLE `cra_add_event`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `cra_add_expense`
+--
+ALTER TABLE `cra_add_expense`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
@@ -13103,7 +11006,7 @@ ALTER TABLE `cra_add_incomming_letters`
 -- AUTO_INCREMENT for table `cra_add_injury`
 --
 ALTER TABLE `cra_add_injury`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `cra_add_kpi`
@@ -13122,6 +11025,12 @@ ALTER TABLE `cra_add_new_instructions`
 --
 ALTER TABLE `cra_add_office_instructions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `cra_add_outgoing_letter`
+--
+ALTER TABLE `cra_add_outgoing_letter`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `cra_add_product`
@@ -13152,6 +11061,12 @@ ALTER TABLE `cra_add_user_group`
 --
 ALTER TABLE `cra_add_user_roles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `cra_apply_tender`
+--
+ALTER TABLE `cra_apply_tender`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `cra_bank_details`
@@ -13238,6 +11153,12 @@ ALTER TABLE `cra_corporate_client_details`
   MODIFY `corporate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
+-- AUTO_INCREMENT for table `cra_corporate_customers`
+--
+ALTER TABLE `cra_corporate_customers`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `cra_courts`
 --
 ALTER TABLE `cra_courts`
@@ -13286,16 +11207,16 @@ ALTER TABLE `cra_document_detials`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `cra_estate_planning`
---
-ALTER TABLE `cra_estate_planning`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
 -- AUTO_INCREMENT for table `cra_family_law`
 --
 ALTER TABLE `cra_family_law`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `cra_file`
+--
+ALTER TABLE `cra_file`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `cra_file_progress_report`
@@ -13364,6 +11285,12 @@ ALTER TABLE `cra_leave_days`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `cra_leave_request_details`
+--
+ALTER TABLE `cra_leave_request_details`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
 -- AUTO_INCREMENT for table `cra_letter_types`
 --
 ALTER TABLE `cra_letter_types`
@@ -13374,6 +11301,12 @@ ALTER TABLE `cra_letter_types`
 --
 ALTER TABLE `cra_manage_items`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `cra_manage_task`
+--
+ALTER TABLE `cra_manage_task`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `cra_manage_user_department`
@@ -13418,6 +11351,12 @@ ALTER TABLE `cra_payment_item`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `cra_precedence`
+--
+ALTER TABLE `cra_precedence`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `cra_probate_law`
 --
 ALTER TABLE `cra_probate_law`
@@ -13427,13 +11366,13 @@ ALTER TABLE `cra_probate_law`
 -- AUTO_INCREMENT for table `cra_real_estate`
 --
 ALTER TABLE `cra_real_estate`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `cra_reg_new_user`
 --
 ALTER TABLE `cra_reg_new_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `cra_request_safe_item`
@@ -13454,10 +11393,22 @@ ALTER TABLE `cra_safe_register_report`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `cra_site`
+--
+ALTER TABLE `cra_site`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `cra_staff_monthly_status_report`
 --
 ALTER TABLE `cra_staff_monthly_status_report`
   MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `cra_subject`
+--
+ALTER TABLE `cra_subject`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `cra_tax_chart`
@@ -13496,6 +11447,12 @@ ALTER TABLE `cra_template_category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=199;
 
 --
+-- AUTO_INCREMENT for table `cra_tender_details`
+--
+ALTER TABLE `cra_tender_details`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `cra_town_city`
 --
 ALTER TABLE `cra_town_city`
@@ -13506,6 +11463,12 @@ ALTER TABLE `cra_town_city`
 --
 ALTER TABLE `cra_transport_zone`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+
+--
+-- AUTO_INCREMENT for table `cra_upload_document`
+--
+ALTER TABLE `cra_upload_document`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `cra_weekend_and_holiday`
@@ -13580,12 +11543,6 @@ ALTER TABLE `giveallowance`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
--- AUTO_INCREMENT for table `hospitals`
---
-ALTER TABLE `hospitals`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
 -- AUTO_INCREMENT for table `issue_registers`
 --
 ALTER TABLE `issue_registers`
@@ -13608,30 +11565,6 @@ ALTER TABLE `journal_items`
 --
 ALTER TABLE `journal_transactions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
-
---
--- AUTO_INCREMENT for table `labcategory`
---
-ALTER TABLE `labcategory`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
---
--- AUTO_INCREMENT for table `labprofile`
---
-ALTER TABLE `labprofile`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
---
--- AUTO_INCREMENT for table `labprofiles`
---
-ALTER TABLE `labprofiles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
-
---
--- AUTO_INCREMENT for table `labtests`
---
-ALTER TABLE `labtests`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `leaves`
@@ -13670,18 +11603,6 @@ ALTER TABLE `lifo_table_acc`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `loans`
---
-ALTER TABLE `loans`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
-
---
--- AUTO_INCREMENT for table `manualattendances`
---
-ALTER TABLE `manualattendances`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `manufactuers`
 --
 ALTER TABLE `manufactuers`
@@ -13692,42 +11613,6 @@ ALTER TABLE `manufactuers`
 --
 ALTER TABLE `manufacturer_ledger_details`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
-
---
--- AUTO_INCREMENT for table `medicaldepartments`
---
-ALTER TABLE `medicaldepartments`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
-
---
--- AUTO_INCREMENT for table `medicines`
---
-ALTER TABLE `medicines`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `medicines_details`
---
-ALTER TABLE `medicines_details`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `medicine_groups`
---
-ALTER TABLE `medicine_groups`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `medicine_types`
---
-ALTER TABLE `medicine_types`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `medicine_units`
---
-ALTER TABLE `medicine_units`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `messages`
@@ -13742,88 +11627,10 @@ ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
--- AUTO_INCREMENT for table `new_medicines`
---
-ALTER TABLE `new_medicines`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `patient`
---
-ALTER TABLE `patient`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
-
---
--- AUTO_INCREMENT for table `patientinsurance`
---
-ALTER TABLE `patientinsurance`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `patientprofiles`
---
-ALTER TABLE `patientprofiles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
---
--- AUTO_INCREMENT for table `patienttests`
---
-ALTER TABLE `patienttests`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
-
---
 -- AUTO_INCREMENT for table `payment_type`
 --
 ALTER TABLE `payment_type`
   MODIFY `payment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `pharma_requests`
---
-ALTER TABLE `pharma_requests`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `purchase`
---
-ALTER TABLE `purchase`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
---
--- AUTO_INCREMENT for table `purchase_items`
---
-ALTER TABLE `purchase_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `purchase_order`
---
-ALTER TABLE `purchase_order`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `purchase_order_items`
---
-ALTER TABLE `purchase_order_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
-
---
--- AUTO_INCREMENT for table `purchase_return`
---
-ALTER TABLE `purchase_return`
-  MODIFY `purchase_return_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `request_items`
---
-ALTER TABLE `request_items`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `request_status`
---
-ALTER TABLE `request_status`
-  MODIFY `request_statusid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `roles`
@@ -13832,33 +11639,9 @@ ALTER TABLE `roles`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT for table `roomcategories`
---
-ALTER TABLE `roomcategories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `rooms`
---
-ALTER TABLE `rooms`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
-
---
--- AUTO_INCREMENT for table `roomtypes`
---
-ALTER TABLE `roomtypes`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
---
 -- AUTO_INCREMENT for table `salary`
 --
 ALTER TABLE `salary`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `servedmedicines`
---
-ALTER TABLE `servedmedicines`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
@@ -13866,60 +11649,6 @@ ALTER TABLE `servedmedicines`
 --
 ALTER TABLE `staff_leaves`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
-
---
--- AUTO_INCREMENT for table `stock_categories_acc`
---
-ALTER TABLE `stock_categories_acc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `stock_details`
---
-ALTER TABLE `stock_details`
-  MODIFY `id` bigint(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;
-
---
--- AUTO_INCREMENT for table `stock_groups_acc`
---
-ALTER TABLE `stock_groups_acc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `stock_items_acc`
---
-ALTER TABLE `stock_items_acc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `stock_methods`
---
-ALTER TABLE `stock_methods`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `stock_subcategories_acc`
---
-ALTER TABLE `stock_subcategories_acc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `stock_transaction_table_acc`
---
-ALTER TABLE `stock_transaction_table_acc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
---
--- AUTO_INCREMENT for table `store_requests`
---
-ALTER TABLE `store_requests`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `sub_store`
---
-ALTER TABLE `sub_store`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `suppliers`
@@ -13934,12 +11663,6 @@ ALTER TABLE `supplier_ledger_details`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1098;
 
 --
--- AUTO_INCREMENT for table `usermanagements`
---
-ALTER TABLE `usermanagements`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=120;
-
---
 -- AUTO_INCREMENT for table `userroles`
 --
 ALTER TABLE `userroles`
@@ -13949,13 +11672,7 @@ ALTER TABLE `userroles`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=720;
-
---
--- AUTO_INCREMENT for table `visiters`
---
-ALTER TABLE `visiters`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=724;
 
 --
 -- AUTO_INCREMENT for table `weighted_avg_table_acc`
