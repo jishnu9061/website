@@ -3,23 +3,12 @@
 
 <head>
     <style>
-    
+
 
     </style>
 </head>
 <div class="container">
-    <div class="py-5 text-center">
-        @if(Session::has('staffregistered'))
-        <div class="alert alert-dark" role="alert">
-            {{ Session::get('staffregistered')}}
-        </div>
-        @endif
-        @if(Session::has('leavevalidat'))
-        <div class="alert alert-dark" role="alert">
-            {{ Session::get('leavevalidat')}}
-        </div>
-        @endif
-    </div>
+
 
     {{-- heading --}}
     <h4 id="hdtpa"><b>Bringup Report</b></h4>
@@ -30,20 +19,19 @@
 
     <div class="text-center">
 
-        <div>
-            <button type="button" class="gp_btn left">Today</button>
-            <button type="button" class="gp_btn">This Week</button>
-            <button type="button" class="gp_btn">Last Week</button>
-            <button type="button" class="gp_btn">This Month</button>
-            <button type="button" class="gp_btn">Last Month</button>
-            <button type="button" class="gp_btn">This Quater</button>
-            <button type="button" class="gp_btn">Last Quater</button>
-            <button type="button" class="gp_btn">This Year</button>
-            <button type="button" class="gp_btn right">Last Year</button>
+        <button type="button" class="gp_btn left">Today</button>
+        <button type="button" class="gp_btn">This Week</button>
+        <button type="button" class="gp_btn">Last Week</button>
+        <button type="button" class="gp_btn">This Month</button>
+        <button type="button" class="gp_btn">Last Month</button>
+        <button type="button" class="gp_btn">This Quater</button>
+        <button type="button" class="gp_btn">Last Quater</button>
+        <button type="button" class="gp_btn">This Year</button>
+        <button type="button" class="gp_btn right">Last Year</button>
 
-        </div>
+    </div>
 
-      
+
     <br>
     <br>
 

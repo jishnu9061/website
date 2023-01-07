@@ -74,7 +74,7 @@ class CrmController extends Controller
             'State' => $state,
             'City' => $city,
             'Town' => $town,
-            'Post_Code' => $town,
+            'Post_Code' => $post,
             'Address' =>  $Address,
 
         ]);    
@@ -144,7 +144,7 @@ class CrmController extends Controller
             'State' => $state,
             'City' => $city,
             'Town' => $town,
-            'Post_Code' => $town,
+            'Post_Code' => $post,
             'Address' =>  $Address,
 
         ]);
