@@ -4,14 +4,6 @@
     <div class="container">
         <h4 id="hdtpa"><b>Account Types</b></h4>
         <br>
-
-
-{{-- heading --}}
-<div class="container">
-    <h4 id="hdtpa"><b>Account Types</b></h4>
-    <br>
-
-
     <button class="btn btn-primary" data-toggle="modal" id="patient" data-bs-toggle="modal" data-bs-target="#default"
         class="btn btn-secondary">Add Type</button>
     <br>
@@ -432,8 +424,6 @@
         $('#cat-id').val(val1);
     };
     </script>
-
-    @endsection
 
                                 <div class="form-group mb-3">
                                     <label>Status</label>
