@@ -79,7 +79,7 @@ class addcontroller extends Controller
       $staffs->cra_pin=$Request['cra_pin'];
       $staffs->tax=$Request['tax'];
       $staffs->deduction=$Request['deduction'];
-      $staffs->NSSF_contribution=$Request['contribution'];
+      $staffs->NSSF_contribution=$Request['NSSF_contribution'];
       $staffs->leave=$Request['leave'];
       $staffs->pension_rate=$Request['pension_rate'];
       $staffs->bank=$Request['bank'];
@@ -165,11 +165,12 @@ if(request()->hasfile('signature')){
     $get_role = DB::table('cra_add_user_roles')->get();
     $get_department = DB::table('cra_add_user_department')->get();
     $get_bank = DB::table('cra_add_bank_name')->get();
+    $get_town = DB::table('cra_town_city')->get();
    	$allusers=DB::table('users')->get();
       //  ->leftjoin('departments','departments.id','=','users.departments')
       //  ->orderby('users.created_at','DESC')->where('users.Hospital',$hospital)
     $leavetype=DB::table('leave_types')->get();
-   	return view('add.allstaffs',compact('get_role','get_department','get_bank'),['allusers'=>$allusers,'leavetype'=>$leavetype]);
+   	return view('add.allstaffs',compact('get_role','get_department','get_bank','get_town'),['allusers'=>$allusers,'leavetype'=>$leavetype]);
    }
 
    public function editstafff(Request $Request )
@@ -198,7 +199,7 @@ if(request()->hasfile('signature')){
     $cra_pin=$Request['cra_pin'];
     $tax=$Request['tax'];
     $deduction=$Request['deduction'];
-    $contribution=$Request['contribution'];
+    $NSSF_contribution=$Request['NSSF_contribution'];
     $leave=$Request['leave'];
     $pension_rate=$Request['pension_rate'];
     $bank=$Request['bank'];
@@ -219,7 +220,7 @@ if(request()->hasfile('signature')){
       $data=array('name'=>$name,'email'=>$email,'phoneno'=>$phoneno,'date_of_joining'=>$date_of_joining,'departments'=>$departments,'sex'=>$sex,
       'role'=>$role,'status'=>$status,'status_date'=>$status_date,'address'=>$address,'branch'=>$branch,
       'postal_code'=>$postal_code,'town'=>$town,'salary'=>$salary,'partner'=>$partner,'NSSF'=>$NSSF,
-      'cra_pin'=>$cra_pin,'tax'=>$tax,'deduction'=>$deduction,'contribution'=>$contribution,'leave'=>$leave,'pension_rate'=>$pension_rate,
+      'cra_pin'=>$cra_pin,'tax'=>$tax,'deduction'=>$deduction,'NSSF_contribution'=>$NSSF_contribution,'leave'=>$leave,'pension_rate'=>$pension_rate,
       'bank'=>$bank,'bank_branch'=>$bank_branch,'branch_code'=>$branch_code,'account'=>$account);
     }
 

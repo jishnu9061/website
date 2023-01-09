@@ -93,10 +93,10 @@
                             <td>{{ $alluser->uniqueid }}</td>
                             <td>{{ $alluser->name     }}</td>
                             <td>{{ $alluser->email    }}</td>
-                            <td>{{ $alluser->phone    }}</td>
+                            <td>{{ $alluser->phoneno    }}</td>
                             <td>
                                      <a href="{{url('view_staff_details')}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span> 
-                                     <a href="{{url('update_staff_details')}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-edit"></i><span class="m-1"></span> 
+                                     <a href="{{ url('managestaff' . $alluser->uniqueid) }}"> <i style="color:rgb(13, 1, 56);"class="fa fa-edit"></i><span class="m-1"></span> 
                                         
                                 
                     @endforeach  
@@ -356,11 +356,11 @@
                         <div class="mb-1">
                             <label>Town/City</label>
                             <select class="form-select" aria-label="Default select example" name="town">
-                                <option selected>Select</option>
-                                <option value="Nairobi">Nairobi</option>
-                                <option value="Mombasa">Mombasa</option>
-                                <option value="Kisumu">Kisumu</option>
-                                <option value="Nakuru">Nakuru</option>
+                            @if(count($get_town))
+                                            @foreach($get_town as $list_city)
+                                            <option>{{$list_city->Town_City}}</option>
+                                            @endforeach
+                                          @endif
                             </select>
                         </div>
                     </div>
@@ -459,12 +459,12 @@
                     <div class="col-md-3">
                         <div class="mb-1">
                             <label>Company NSSF Contribution</label>
-                            <select class="form-select" aria-label="Default select example" name="contribution">
+                            <select class="form-select" aria-label="Default select example" name="NSSF_contribution">
                                 <option selected value="Deduct From Company">Deduct From Company</option>
-                                {{-- <option value="Active">Nairobi</option>
+                                <option value="Active">Nairobi</option>
                                 <option value="Inactive">Mombasa</option>
                                 <option value="Resigned">Kisumu</option>
-                                <option value="Suspended">Nakuru</option> --}}
+                                <option value="Suspended">Nakuru</option> 
                             </select>
                         </div>
                     </div>
