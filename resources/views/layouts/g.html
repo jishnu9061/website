@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<style>
+		.colorBlue {
+			color: blue;
+		}
+
+		.colorRed {
+			color: red;
+		}
+	</style>
+</head>
+
+<body>
+	<h1 style="color: green;">
+		GeeksforGeeks
+	</h1>
+	
+	<h2>
+		How can the style/class of
+		an element be changed?
+	</h2>
+	
+	<h3>className Example</h3>
+	
+	<p class="colorBlue">
+		GeeksforGeeks is a computer science portal
+		for geeks.This platform has been designed
+		for every geek wishing to expand their
+		knowledge, share their knowledge and is
+		ready to grab their dream job. GFG have
+		millions of articles, live as well
+		as online courses, thousands of tutorials
+		and much more just for the geek inside you.
+	</p>
+	
+	<button id="submit">Change Color</button>
+
+	<script>
+		const btn = document.getElementById("submit");
+		const para = document.querySelector("p");
+
+		btn.addEventListener("click", function () {
+			para.className = "colorRed";
+		});
+	</script>
+</body>
+
+</html>

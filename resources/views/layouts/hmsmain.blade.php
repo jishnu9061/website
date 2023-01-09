@@ -97,11 +97,7 @@
 
         body {
             background-color: #e9e6d65e;
-            /* background-color: #ffffff; */
-            /* font-family: 'Be Vietnam Pro'; */
-            /* font-family: 'Alexandria'; */
-            /* font-family: 'Atkinson Hyperlegible'; */
-            /* font-family: 'Carter One'; */
+      
             /* font-size: 22px; */
 
         }
@@ -226,12 +222,29 @@
                 opacity: 1;
             }
 }
+
+
+.bodya{
+
+     font-family: 'Be Vietnam Pro';
+
+}
+
+      /* background-color: #ffffff; */
+            /* font-family: 'Be Vietnam Pro'; */
+            /* font-family: 'Alexandria'; */
+            /* font-family: 'Atkinson Hyperlegible'; */
+            /* font-family: 'Carter One'; */
+
+
+
         </style>
 
     </head>
 
-    <body>
+    <body class="body">
 
+   
  
 
         <div class="progress"></div>
@@ -283,7 +296,7 @@
 
         <div id="app">
 
-            <div id="sidebar" class="active">
+            <div id="sidebar" class="active ">
                 <div class="sidebar-wrapper active"
                     style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius:0px 0px 0px 0px ; ">
 
@@ -1045,6 +1058,7 @@ animation-direction:reverse;">
                     //   var x = document.getElementById("sidebar");
                       
                     //   if (x.style.display === "none") {
+                        
                     //     x.style.display = "block";
                     //   } else {
                     //     x.style.display = "none";
@@ -1054,16 +1068,65 @@ animation-direction:reverse;">
 
 
 
-                    function hide() {
-  var element = document.getElementById("sidebar");
-  element.classList.remove("active");
+        function hide() {
+            var element = document.getElementById("sidebar");
+      
+            if (element.classList.contains("active")) {
+            element.classList.remove("active");
+
+            } else {
+                element.classList.add("active");
+            }
+        }
+    </script>
+
+
+
+<div class="container" style="height: 10px ; font-size:5px;"> 
+    <div class="row">
+        <div class="col">
+            <p id="demob"></p>
+        </div>
+
+    </div>
+     </div>
+                <nav class="navbar navbar-expand-lg navbar-light bg-white" >
+
+
+
+
+
+
+                 
+                
+             
+                  
+              
+           
+                
+
+
+
+
+
+                            {{-- <p id="daemo">This is a paragraph.</p>
+
+<button type="button" onclick="myaa()">Set font size</button>
+ 
+<script>
+
+var cont = document.getElementById("daemo");
+                      
+
+function myaa() {
+  document.getElementById("daemo").style.fontSize = "x-large";
 }
-                    </script>
+</script> --}}
+             
+                  
+            
 
 
-
-
-                <nav class="navbar navbar-expand-lg navbar-light bg-white">
                     
                     <a class="navbar-brand p-1" href="#">
                         <img src="{{asset('/') }}assets//images/Logo cra.png" width="40" height="40" alt="">
@@ -1089,48 +1152,88 @@ animation-direction:reverse;">
                           <li class="nav-item">
                             <a type="button" href="{{url('help')}}" class="nav-link" >Help</a>
                           </li>
-                        {{-- <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                          </div>
-                        </li> --}}
-                        {{-- <li class="nav-item">
-                          <a class="nav-link disabled" href="#">Disabled</a>
-                        </li> --}}
+           
                       </ul>
-                      {{-- <div class="nav-item">
-                      <p id="timedate"></p >
-                        <p id="tme"></p >
-                           </div>
-                      <script>
-                        // program to display the date
-// get local machine date time
-const date = new Date();
 
-// get the date as a string
-const n = date.toDateString();
 
-// get the time as a string
-const time = date.toLocaleTimeString();
 
-// display date
-console.log('Date: ' + n);
 
-// display time
-console.log('Time: ' + time);
-                        const d = new Date();
-                        document.getElementById("timedate").innerHTML = 'Date: ' + n;
-                        document.getElementById("tme").innerHTML = 'Time: ' + time;
-                        </script> --}}
+
+            <style>
+                #range{
+                    display: none;
+
+                }
+
+                #ssdf{
+                    display: none;
+                }
+
+                #hgh{
+                    display: none;
+                    
+
+                }
+           
+                .fa-low-vision:hover{
+                    color: #00fcc5;
+
+                }
+             
+            </style>
+
+
+
+
+
+                        <script>
+                        function myss() {
+                        var x = document.getElementById("range");
+                        var t = document.getElementById("t");
+                        var ad = document.getElementById("ssdf");
+                        var dvv = document.getElementById("hgh");
+
+                        if (x.style.display === "block") {
+                            x.style.display = "none";
+                            ad.style.display = "none";
+                            dvv.style.display = "none";
+                        } else {
+                            x.style.display = "block";
+                            ad.style.display = "block";
+                            dvv.style.display = "block";
+                            // t.style.display = "none";
+
+                        }
+                        }
+                        </script>
+
+   
+
+                <a  type="button" onclick="hide()" class="nav-link" ><i class="fa fa-low-vision"></i></a>
                         <div class="nav-item">
-                            <a type="button" onclick="hide()" class="nav-link" ><i class="fa fa-low-vision"></i></a>
+                            
+                            <a id="t" type="button" onclick="myss()" class="nav-link"> <i class="fa fa-text-width"></i></a>
+                            
                           </div>
+
+                <div class="p-1" id="hgh" style="border: solid #070344 1px; border-radius:5px; ">
+
+                          <input  type="range" id="range" min="1.0" max="3.0" step="0.1" value="2.0" style="color: #070344"/>
+                          
+                          <a class="ml-1"> <i id="ssdf" type="button" class="fa fa-font"></i></a> 
+                          
+                        </div>         
+
+                                    <script>
+
+                                     const btn = document.getElementById("ssdf");
+                                    const para = document.querySelector("body");
+                              
+                                    btn.addEventListener("click", function () {
+                                        para.className = "bodya";
+                                    });
+                            
+                                    </script>
 
 
 <div class="p-3" style="text-align: center; ">
@@ -1250,22 +1353,57 @@ updateDate();
 
 
 
+/* input[type=text] {
+	width: 30%;
+	-webkit-transition: width 0.15s ease-in-out;
+	transition: width 0.15s ease-in-out;
+}
 
+/
+input[type=text]:focus {
+	width: 70%;
+} */
+
+#list{
+	font-size: 1.5em;
+	margin-left: 90px;
+}
+
+.animals{
+display: list-item;	
+}
 
 
 </style>
 
-                     
                       <form class="form-inline my-2 my-lg-0">
-                        <input name="search" class="form-control mr-sm-2" id="searchbar" onkeyup="search_animal()" type="text" placeholder="Search" aria-label="Search">
+                        <input onkeydown="myFunction(event)" name="search" class="form-control mr-sm-2" id="searchbar" onkeyup="search_animal()" type="text" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        
                       </form>
 
 
-                     
-                    
                   <!-- ordered list -->
-            
+
+                        <script>
+                            function myFunction(event) {
+                            var x = event.key;
+                            document.getElementById("demob").innerHTML = " " + x;
+                            }
+                        </script>
+                    <style>
+                                window.addEventListener('keydown', function(e)
+                    {
+                        if( e.keyCode == '8' )
+                        {
+                            e.preventDefault();  // prevent backspace from going to browser
+                                            // history
+                            // add reload code
+                            location.reload();
+                        }
+                    }, false);
+
+                    </style> 
 
 
 <script>
@@ -1289,6 +1427,7 @@ function search_animal() {
             x[i].style.padding = "0px 0px 0px 0px";
             y[i].style.display="none";
             col[i].style.display="none";
+            
          
            
         
@@ -1305,6 +1444,7 @@ function search_animal() {
 			x[i].style.display="list-item";	
             x[i].style.padding = "0px 0px 0px 0px";
             y[i].style.display="none";
+            
             
             mydivs.forEach((element) => {
   element.style.display="none";
@@ -1332,7 +1472,7 @@ function search_animal() {
 
 
 
-
+{{-- nav 2 --}}
 
 
 
@@ -1509,9 +1649,17 @@ function search_animal() {
                 <br>
                 <section class="newstyle container-fluid bg-white p-4 mt-2">
                     <section class="row">
-                        <div class="col-12 col-lg-12" style="min-height: 100vh">
+                        <div class="col-12 col-lg-12" style="min-height: 100vh" id="fontscl">
                             @yield('content')
-                        </div>
+                            <script>
+                                var range = document.querySelector("#range");
+                            var form = document.querySelector("#fontscl");
+                            
+                            range.addEventListener("input", function() {
+                              form.style["font-size"] = this.value + "em";
+                            });
+                            </script>
+                        </div>  </div>
                     </section>
                 </section>
 
