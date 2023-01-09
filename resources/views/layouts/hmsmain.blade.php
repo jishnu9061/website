@@ -230,6 +230,12 @@
 
 }
 
+.bodyb{
+
+font-family: 'Carter One'; 
+
+}
+
       /* background-color: #ffffff; */
             /* font-family: 'Be Vietnam Pro'; */
             /* font-family: 'Alexandria'; */
@@ -1093,7 +1099,7 @@ function myaa() {
                 }
            
                 .fa-low-vision:hover{
-                    color: #00fcc5;
+                    color: #07463b;
 
                 }
              
@@ -1120,8 +1126,10 @@ function myaa() {
                             dvv.style.display = "block";
                             // t.style.display = "none";
 
-                        }
-                        }
+                        }}
+
+
+                        
                         </script>
 
    
@@ -1133,11 +1141,14 @@ function myaa() {
                             
                           </div>
 
-                <div class="p-1" id="hgh" style="border: solid #070344 1px; border-radius:5px; ">
+                <div class="p-1" id="hgh" style="border: solid #a38931 1px; border-radius:5px; background-color:rgb(243, 238, 226); ">
 
-                          <input  type="range" id="range" min="1.0" max="3.0" step="0.1" value="2.0" style="color: #070344"/>
+                          <input  type="range" id="range" min="1.0" max="3.0" step="0.1" value="2.0" style="color: #070344"/> 
                           
-                          <a class="ml-1"> <i id="ssdf" type="button" class="fa fa-font"></i></a> 
+                          
+                          <a > <i id="ssdf" type="button" class="fa fa-font"></i> </a>
+                          <a > <i id="ssdd" type="button" class="fa fa-font"></i> </a>
+                       
                           
                         </div>         
 
@@ -1150,6 +1161,23 @@ function myaa() {
                                         para.className = "bodya";
                                     });
                             
+                                    </script>
+
+                                    <script>
+
+                                        const btne = document.getElementById("ssdd");
+                                    const parae = document.querySelector("body");
+
+                                    btne.addEventListener("click", function () {
+                                        parae.className = "bodyb";
+                                    });
+
+
+
+
+
+                                    
+
                                     </script>
 
 
@@ -1324,7 +1352,7 @@ display: list-item;
 
 
 <script>
-    // JavaScript code
+    // search
 function search_animal() {
 	let input = document.getElementById('searchbar').value
 	input=input.toLowerCase();
@@ -1332,11 +1360,9 @@ function search_animal() {
     let y = document.getElementsByClassName('logo_size');
     let col = document.getElementsByClassName('col-sm-4');
     let row = document.getElementsByClassName('row sm');
+    // let bbd = document.getElementsByTagName('div');
 
     const mydivs = document.querySelectorAll("#hdtpa, #hdbtb");
-
-
-  
 
 	for (i = 0; i < x.length; i++) {
 		if (!x[i].innerHTML.toLowerCase().includes(input)) {  
@@ -1344,10 +1370,10 @@ function search_animal() {
             x[i].style.padding = "0px 0px 0px 0px";
             y[i].style.display="none";
             col[i].style.display="none";
+            // row[i].style.padding = "50px 10px 20px 30px";
             
-         
-           
-        
+            // bbd[i].style.display="none";
+            
             mydivs.forEach((element) => {
   element.style.display="none";
 });
@@ -1355,22 +1381,19 @@ function search_animal() {
 // mydivs.forEach((element) => {
 //   element.style.color = "red";
 // });
-
 		}
 		else {
 			x[i].style.display="list-item";	
             x[i].style.padding = "0px 0px 0px 0px";
             y[i].style.display="none";
-            
-            
+          
+            // bbd[i].style.display="none";
+                   
             mydivs.forEach((element) => {
   element.style.display="none";
-});
-        		
-		}
+});		}
 	}
 }
-
 </script>
 
 

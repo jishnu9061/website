@@ -1,51 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-	<style>
-		.colorBlue {
-			color: blue;
-		}
-
-		.colorRed {
-			color: red;
-		}
-	</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>sessionStorage</title>
+  <script type="text/javascript" src="main.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
-	<h1 style="color: green;">
-		GeeksforGeeks
-	</h1>
-	
-	<h2>
-		How can the style/class of
-		an element be changed?
-	</h2>
-	
-	<h3>className Example</h3>
-	
-	<p class="colorBlue">
-		GeeksforGeeks is a computer science portal
-		for geeks.This platform has been designed
-		for every geek wishing to expand their
-		knowledge, share their knowledge and is
-		ready to grab their dream job. GFG have
-		millions of articles, live as well
-		as online courses, thousands of tutorials
-		and much more just for the geek inside you.
-	</p>
-	
-	<button id="submit">Change Color</button>
+  <div class="container" id="formDiv">
+        <form class="form-signin" id="carForm">
+            <h1>Enter details</h1>
+            <label for="carBrand" class="sr-only">Car</label>
+            <input type="text" id="carBrand" class="form-control" placeholder="Car brand" required autofocus><br>
+            <label for="carPrice" class="sr-only">Price</label>
+            <input type="text" id="carPrice" class="form-control" placeholder="Price" required><br>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+        </form>
 
-	<script>
-		const btn = document.getElementById("submit");
-		const para = document.querySelector("p");
+        <button class="btn btn-lg btn-primary btn-block" id="retrieveButton">Retrieve records</button>
+        <div id="retrieve"></div>
 
-		btn.addEventListener("click", function () {
-			para.className = "colorRed";
-		});
-	</script>
+        <button class="btn btn-lg btn-danger btn-block" id="removeButton">Remove record</button>
+        <button class="btn btn-lg btn-danger btn-block" id="clearButton">Clear all records</button>
+  </div>
+  <script>
+	
+function store() { //stores items in the sessionStorage
+    var brand = document.getElementById('carBrand').value;
+    var price = document.getElementById('carPrice').value;
+
+    const car = {
+        brand: brand,
+        price: price,
+    }
+    
+    window.sessionStorage.setItem('car',JSON.stringify(car));  
+    //converting object to string
+}
+
+function retrieveRecords() { //retrieves items in the sessionStorage
+        console.log("retrive records");
+        var records = window.sessionStorage.getItem('car');
+        var paragraph = document.createElement("p");
+        var infor = document.createTextNode(records);
+        paragraph.appendChild(infor);
+        var element = document.getElementById("retrieve");
+        element.appendChild(paragraph);
+}
+
+function removeItem() {//deletes item from sessionStorage
+        sessionStorage.removeItem('car');
+        console.log("remove items");
+}
+
+function clearStorage() { //clears the entire sessionStorage
+        sessionStorage.clear();
+        console.log("clear records");
+}
+
+window.onload =function() { //ensures the page is loaded before functions are executed.
+        document.getElementById("carForm").onsubmit = store;
+        document.getElementById("clearButton").onclick = clearStorage;
+        document.getElementById("removeButton").onclick = removeItem;
+        document.getElementById("retrieveButton").onclick = retrieveRecords;
+}
+  </script>
+
 </body>
-
 </html>
