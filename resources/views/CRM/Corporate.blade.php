@@ -56,6 +56,7 @@
                                 <th class="text-center">Phone</th>
                                 <th class="text-center">Email</th>
                                 <th class="text-center">Action</th>
+                                <th class="text-center">Status</th>
 
                             </tr>
 
@@ -70,18 +71,19 @@
                                 <td>{{$list->Address}}</td>
                                 <td>{{$list->Phone}}</td>
                                 <td>{{ $list->Email}}</td>
+                                <td>{{ $list->status}}</td>
                                 <td scope="row">
 
                                     <span class="m-2"></span>
-                                    <a href="{{url('view_Corporate',$list->Id)}}"><i style="color:black;" class="fa fa-eye"
-                                            aria-hidden="true"></i></a>
+                                    <a href="{{url('view_Corporate',$list->Id)}}"><i style="color:black;"
+                                            class="fa fa-eye" aria-hidden="true"></i></a>
                                     <span class="m-2"></span>
                                     <a href="{{url('edit_Corporate',$list->Id)}}"><i style="color:black;"
                                             class="fa fa-edit" aria-hidden="true"></i></a>
-                                            
+
                                     <span class="m-2"></span>
-                                    <a onClick="return myFunction();" href="{{url('drop_Corporate',$list->Id)}}" style="color:black;"><i
-                                            class="fas fa-trash-alt"></i></a>
+                                    <a onClick="return myFunction();" href="{{url('drop_Corporate',$list->Id)}}"
+                                        style="color:black;"><i class="fas fa-trash-alt"></i></a>
                                     <input type="hidden" value="" id="medicine_id_hidden" class="applicate"
                                         name="supplier_id_hidden">
 
@@ -340,7 +342,7 @@
                                                     <div class="mb-1">
                                                         <label for="username">Address</label>
                                                         <div class="input-group">
-                                                        <textarea  class="form-control" id="form7Example7" rows="2"
+                                                            <textarea class="form-control" id="form7Example7" rows="2"
                                                                 name="address"></textarea>
                                                             <div class="invalid-feedback" style="width: 100%;">
 
@@ -349,6 +351,23 @@
                                                     </div>
                                                 </div>
 
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-md-4">
+                                                    <div class="mb-1">
+                                                        <label for="username">Status</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend"></div>
+                                                            <select name="Status" id="city">
+                                                                <option>Pending</option>
+                                                               
+                                                            </select>
+                                                            <div class="invalid-feedback" style="width: 100%;">
+                                                                Postal Code is required.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <br>
                                             <!-- <h4 style="text-align:center">Contact Persons</h4> -->
