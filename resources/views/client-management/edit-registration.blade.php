@@ -183,7 +183,7 @@
                                                             <div class="input-group-prepend"></div>
                                                             <select name="status" id="form7Example7">
                                                                 <option>{{$edit_registration->status}}</option>
-                                                                <option>Pending</option>
+                                                                
                                                                 <option>Accepted</option>
                                                                 <option>Rejected</option>
                                                                 <option>Follow-Up</option>
