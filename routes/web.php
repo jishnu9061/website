@@ -1115,6 +1115,7 @@ Route::any('add-registration','ClientManagement@addRegistration')->name('add-reg
 Route::any('edit-registration/{id}','ClientManagement@editRegistration')->name('edit-registration');
 Route::any('update-registration','ClientManagement@updateRegistration')->name('update-registration');
 Route::any('delete-registration/{id}','ClientManagement@deleteRegistration')->name('delete-registration');
+Route::any('show-registration/{id}','ClientManagement@showRegistration')->name('show-registration');
 //end registration
 
 //communication

@@ -108,6 +108,8 @@ color: #999;
                                 <th class="text-center">Contact</th>
                                 <th class="text-center">Physical Address</th>
                                 <th class="text-center">Registration Date</th>
+                                <th class="text-center">Status</th>
+
                                 <th class="text-center">Action</th>
 
                             </tr>
@@ -122,7 +124,10 @@ color: #999;
                                 <td>{{$registration->mobile_no}}</td>
                                 <td>{{$registration->physical_address}}</td>
                                 <td>{{$registration->registration_date}}</td>
-                                <td scope="row"><a
+                                <td>{{$registration->status}}</td>
+                                <td scope="row">  <a href="{{url('show-registration',$registration->id)}}"><i style="color:black;"
+                                            class="fa fa-eye" aria-hidden="true"></i></a>
+                                    <span class="m-2"></span><a
                                         href="{{url('edit-registration',$registration->id)}}"><i style="color:black;"
                                             class="fa fa-edit" aria-hidden="true"></i>
                                             <span class="m-2"></span>
@@ -175,10 +180,10 @@ color: #999;
                                                             <label for="username">Client Name</label>
                                                             <div class="input-group">
                                                                 <div class="input-group-prepend"></div>
-                                                                <select name="town" id="username" style="width:100%;">
+                                                                <select name="client_name" id="username" style="width:100%;">
                                                                     <option>---select--- </option>
-                                                                    <option>client 1 </option>
-                                                                    <option>client 2</option>
+                                                                    <option value="client 1">client 1 </option>
+                                                                    <option value="client 2">client 2</option>
 
                                                                 </select>
                                                                 <!-- <input type="text" class="form-control" name="name"
@@ -340,6 +345,23 @@ color: #999;
                                                     </div>
                                                 </div>
                                                 <br>
+                                                <div class="row">
+                                            <div class="col-md-4">
+                                                    <div class="mb-1">
+                                                        <label for="username">Status</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend"></div>
+                                                            <select name="status" id="city">
+                                                                <option>Pending</option>
+                                                               
+                                                            </select>
+                                                            <div class="invalid-feedback" style="width: 100%;">
+                                                                Postal Code is required.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                                 <!-- <h4 style="text-align:center">Contact Persons</h4> -->
 
 

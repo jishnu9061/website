@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 04, 2023 at 12:43 PM
+-- Generation Time: Jan 09, 2023 at 10:25 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -43,20 +43,21 @@ CREATE TABLE `cra_corporate_customers` (
   `City` varchar(222) DEFAULT NULL,
   `Town` varchar(222) DEFAULT NULL,
   `Post_Code` int(11) DEFAULT NULL,
-  `Address` varchar(222) DEFAULT NULL
+  `Address` varchar(222) DEFAULT NULL,
+  `status` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `cra_corporate_customers`
 --
 
-INSERT INTO `cra_corporate_customers` (`Id`, `Name`, `GST_Office`, `GST_Number`, `Social_Security_Number`, `Customer_Authority`, `Phone`, `FAX`, `Email`, `Web`, `Country`, `State`, `City`, `Town`, `Post_Code`, `Address`) VALUES
-(1, 'gnbc', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2', NULL, NULL, NULL, NULL, NULL),
-(2, 'gn', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '4', NULL, NULL, NULL, NULL, NULL),
-(3, 'qqqq', 3554, 345345, 0, 'fd gfdg', 1111, 968796, 'globaleyetanandhu@gmail.com', 'fgdfhrt', '1', '2', '3', '54556', 54556, NULL),
-(4, 'gnbch', 3554, 345345, 353453, 'fd gfdg', 2147483647, 33423, 'globaleyetanandhu@gmail.com', 'fgdfhrt', '2', '2', '2', 'gncvn', 0, NULL),
-(5, 'gnbch', 3554, 345345, 353453, 'fd gfdg', 2147483647, 33423, 'a@gmail.com', 'fgdfhrt', '1', '1', '4', 'dfhbh', 0, NULL),
-(6, 'CRAdg', 3554, 0, 353453, 'fd gfdg', 2147483647, 968796, 'globaleyetanandhu@gmail.com', 'fgdfhrt', '1', '---select---', '---select---', 'cbxf', 0, 'gggggggddddd');
+INSERT INTO `cra_corporate_customers` (`Id`, `Name`, `GST_Office`, `GST_Number`, `Social_Security_Number`, `Customer_Authority`, `Phone`, `FAX`, `Email`, `Web`, `Country`, `State`, `City`, `Town`, `Post_Code`, `Address`, `status`) VALUES
+(7, 'gnbch', 0, 345345, 353453, 'fd gfdg', 2147483647, 33423, 'aj2@gmail.com', 'fgdfhrt', '4', '3', '1', 'asdad', 0, 'awaaaaaa', 'Accepted'),
+(11, 'AMAL', 3554, 345345, 353453, 'sdfsdf', 2147483647, 968796, 'globaleye@gmail.com', 'fgdfhrt', '2', '2', '1', 'dfhbh', 22222, 'all', 'Accepted'),
+(13, 'gnbch', 3554, 345345, 353453, 'fd gfdg', 2147483647, 968796, 'globaleyetanandhu@gmail.com', 'fgdfhrt', '1', '1', '1', 'gncvn', 123, 'adasdas', 'Accepted'),
+(14, 'AMAL', 0, 345345, 2234, 'fd gfdg', 2147483647, 968796, 'aj2@gmail.com', 'fgdfhrt', '1', '2', '3', 'cbxf', 222222, 'port', 'Pending'),
+(15, 'Akhil', 3554, 22312, 353453, 'Test', 2147483647, 968796, 'info@cradvocatesllp.com', 'test', '1', '2', '3', 'test 123', 22222, '123 test address', 'Follow-Up'),
+(16, 'test', 3554, 345345, 353453, 'fd gfdg', 2147483647, 968796, 'a@gmail.com', 'fgdfhrt', '1', '1', '1', 'tesr 1', 22222, 'test 22', 'Rejected');
 
 --
 -- Indexes for dumped tables
@@ -76,7 +77,7 @@ ALTER TABLE `cra_corporate_customers`
 -- AUTO_INCREMENT for table `cra_corporate_customers`
 --
 ALTER TABLE `cra_corporate_customers`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

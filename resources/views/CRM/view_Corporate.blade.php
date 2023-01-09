@@ -77,6 +77,10 @@ th{
                         <th>Address :</th>
                         <td>{{$view_corporates->Address}}</td>
                     </tr>
+                    <tr>
+                        <th>Status :</th>
+                        <td>{{$view_corporates->status}}</td>
+                    </tr>
                     
 
 
