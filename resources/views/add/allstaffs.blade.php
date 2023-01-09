@@ -95,11 +95,11 @@
                             <td>{{ $alluser->email    }}</td>
                             <td>{{ $alluser->phone    }}</td>
                             <td>
-                                     <a href="{{url('view_staff_details')}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span> 
-                                     <a href="{{url('update_staff_details')}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-edit"></i><span class="m-1"></span> 
-                                        
-                                
-                    @endforeach  
+                                     <a href="{{url('view_staff_details', $alluser->id)}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span>
+                                     <a href="{{url('edit_staff_details', $alluser->id)}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-edit"></i><span class="m-1"></span>
+
+
+                    @endforeach
                     </tr>
                 <tbody>
             </table>
@@ -536,7 +536,7 @@
                                             @endforeach
                                           @endif
                                     </select>
-                                    
+
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
