@@ -18,7 +18,7 @@
                                 <label for="username">Client Name</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend"></div>
-                                    <select name="town" id="username" style="width:100%;">
+                                    <select name="client_name" id="username" style="width:100%;">
                                         <option> client 1 </option>
                                         <option> client 2 </option>
     
@@ -174,6 +174,28 @@
                             </div>
                         </div>
                     </div>
+                    <br>
+                    <div class="row">
+                                            <div class="col-md-4">
+                                                    <div class="mb-1">
+                                                        <label for="username">Status</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend"></div>
+                                                            <select name="status" id="form7Example7">
+                                                                <option>{{$edit_registration->status}}</option>
+                                                                
+                                                                <option>Accepted</option>
+                                                                <option>Rejected</option>
+                                                                <option>Follow-Up</option>
+                                                               
+                                                            </select>
+                                                            <div class="invalid-feedback" style="width: 100%;">
+                                                                Postal Code is required.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <br>
                     <!-- <h4 style="text-align:center">Contact Persons</h4> -->
     
     

@@ -59,6 +59,7 @@ class CrmController extends Controller
         $town = $Request['town'];
         $post = $Request['post'];
         $Address = $Request['address'];
+        $Status = $Request['Status'];
 
         DB::table('cra_corporate_customers')->insert([
             'Name' => $name,
@@ -76,6 +77,7 @@ class CrmController extends Controller
             'Town' => $town,
             'Post_Code' => $post,
             'Address' =>  $Address,
+            'status' =>  $Status,
 
         ]);    
 
@@ -129,6 +131,7 @@ class CrmController extends Controller
         $town = $Request['town'];
         $post = $Request['post'];
         $Address = $Request['address'];
+        $Status = $Request['Status'];
 
         DB::table('cra_corporate_customers')->where('id',$id)->update([
             'Name' => $name,
@@ -146,6 +149,7 @@ class CrmController extends Controller
             'Town' => $town,
             'Post_Code' => $post,
             'Address' =>  $Address,
+            'status' =>  $Status,
 
         ]);
         return redirect('/Corporate');

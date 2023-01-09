@@ -956,7 +956,7 @@ class ClientManagement extends Controller
     
     public function addRegistration(Request $Request){
 
-        $client_name = $Request['name'];
+        $client_name = $Request['client_name'];
         $postal_code = $Request['Code'];
         $town = $Request['town'];
         $country = $Request['country'];
@@ -967,6 +967,7 @@ class ClientManagement extends Controller
         $registration_date = $Request['Date'];
         $client_address = $Request['caddress'];
         $physical_address = $Request['paddress'];
+        $status = $Request['status'];
 
         DB::table('cra_customer_registration')->insert([
             'customer_name' =>  $client_name ,
@@ -980,6 +981,7 @@ class ClientManagement extends Controller
             'registration_date' =>   $registration_date,
             'customer_address' => $client_address,
             'physical_address' => $physical_address,
+            'status' => $status,
         ]);
 
         return redirect('/view-registration');
@@ -987,13 +989,15 @@ class ClientManagement extends Controller
 
 
     public function editRegistration($id){
+
         $edit_registration = DB::table('cra_customer_registration')->where('id',$id)->first();
         return view('client-management.edit-registration',compact('edit_registration','id'));
     }
 
     public function updateRegistration(Request $Request){
+       
         $id            = $Request['id'];
-        $customer_name = $Request['name'];
+        $customer_name = $Request['client_name'];
         $postal_code = $Request['Code'];
         $town = $Request['town'];
         $country = $Request['country'];
@@ -1004,12 +1008,14 @@ class ClientManagement extends Controller
         $registration_date = $Request['Date'];
         $customer_address = $Request['caddress'];
         $physical_address = $Request['paddress'];
+        $status = $Request['status'];
 
         DB::table('cra_customer_registration')->where('id',$id)->update([
 
             'customer_name' => $customer_name ,
             'postal_code' =>   $postal_code ,
             'town' => $town,
+           
             'country' =>$country,
             'telephone_no' => $telephone_no,
             'email' =>  $email,
@@ -1018,9 +1024,15 @@ class ClientManagement extends Controller
             'registration_date' =>   $registration_date,
             'customer_address' =>  $customer_address,
             'physical_address' => $physical_address,
+            'status' => $status,
         ]);
 
         return redirect('/view-registration');
+    }
+    public function showRegistration ($id)
+    {
+        $view_reg = DB::table('cra_customer_registration')->where('id',$id)->first();
+        return view('client-management.show-registration',compact('view_reg','id'));
     }
 
     public function deleteRegistration($id){
@@ -1131,6 +1143,7 @@ class ClientManagement extends Controller
         return redirect('/communication-list');
     }
 
+   
     //end communication
 
      //client-Search

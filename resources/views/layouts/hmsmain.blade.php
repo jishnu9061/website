@@ -97,11 +97,7 @@
 
         body {
             background-color: #e9e6d65e;
-            /* background-color: #ffffff; */
-            /* font-family: 'Be Vietnam Pro'; */
-            /* font-family: 'Alexandria'; */
-            /* font-family: 'Atkinson Hyperlegible'; */
-            /* font-family: 'Carter One'; */
+      
             /* font-size: 22px; */
 
         }
@@ -226,12 +222,35 @@
                 opacity: 1;
             }
 }
+
+
+.bodya{
+
+     font-family: 'Be Vietnam Pro';
+
+}
+
+.bodyb{
+
+font-family: 'Carter One'; 
+
+}
+
+      /* background-color: #ffffff; */
+            /* font-family: 'Be Vietnam Pro'; */
+            /* font-family: 'Alexandria'; */
+            /* font-family: 'Atkinson Hyperlegible'; */
+            /* font-family: 'Carter One'; */
+
+
+
         </style>
 
     </head>
 
-    <body>
+    <body class="body">
 
+   
  
 
         <div class="progress"></div>
@@ -283,7 +302,7 @@
 
         <div id="app">
 
-            <div id="sidebar" class="active">
+            <div id="sidebar" class="active ">
                 <div class="sidebar-wrapper active"
                     style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius:0px 0px 0px 0px ; ">
 
@@ -407,11 +426,12 @@ animation-direction:reverse;">
                             </a>
                         </li>
                         @endif
-                        @if(Auth::user()->role == 'hr' || Auth::user()->role == 'Admin')
+                        @if(Auth::user()->role == 'Admin')
                         @php
                         $hr = array("addallowance", "addstaffs",
                         "staffs","loans","payslip","attendance","attendanceview","payslipbulk","generatepayslip","managestaff");
                         @endphp
+                       
 
 
 
@@ -463,7 +483,7 @@ animation-direction:reverse;">
                         <li class="submenu-item" style="list-style:none;">
                             <a href="{{url('hrindex')}}" class='sidebar-link'>
                                 <i class="fa fa-th-large" id="icon"></i>
-                                <span>HR</span>
+                                <span>HR Mamagement</span>
                             </a>
                         </li>
 
@@ -512,12 +532,24 @@ animation-direction:reverse;">
                             </li> --}}
                             {{-- </li> --}}
                             @endif
+                            @if(Auth::user()->role == 'hr')
+                            <li class="submenu-item has-sub " style="list-style:none;">
+                                <a href="{{url('hrindex')}}" class='sidebar-link'>
+                                    <i class="fa fa-th-large" id="icon" style="font-weight: 300;"></i>
+                                    <span>HR Details</span>
+                                </a>
+                            </li>
+                            <li class="submenu-item has-sub " style="list-style:none;">
+                                <a href="{{url('staffs')}}" class='sidebar-link'>
+                                    <i class="fa fa-th-large" id="icon" style="font-weight: 300;"></i>
+                                    <span>Manage Staffs</span>
+                                </a>
+                            </li>
+                            @endif
 
-                            @if(Auth::user()->role == 'account' || Auth::user()->role == 'Admin')
+                            @if(Auth::user()->role == 'Accountant' || Auth::user()->role == 'Admin')
                             @php
-                            $accounts = array("ledger_acount_categories",
-                            "ledger_acount_subcategories","ledger_budget_category",
-                            "ledger_acounts","expense_report","journal","ledger","trialbalance","profitandlossaccount","balancesheet","stock_section","stock_issue","store_ledger","stock_categories","stock_subcategories","stock_items");
+                            $accounts = array("accindex");
                             @endphp
 
                             <li class="submenu-item" style="list-style:none;">
@@ -576,102 +608,6 @@ animation-direction:reverse;">
                                     <span>System Setup</span>
                                 </a>
                             </li>
-
-
-
-                            <!-- <li class="submenu-item has-sub " style="list-style:none;">
-                                <a id="sblm" href="{{url('client_invoicingindex')}}" class='sidebar-link'>
-                                    <i class="fa fa-newspaper" id="icon"></i>
-                                    <span> Client Invoicing</span>
-                                </a>
-                            </li> -->
-
-
-
-
-                            <!-- CRA Dashboard End -->
-
-
-
-
-
-
-                            {{-- @if (in_array(request()->path(), $accounts))
-                                       <ul class="submenu" style="display: block;">
-                                     @else
-                                     <ul class="submenu" style="display: none;">
-                                      @endif
-                                           <li class="submenu-item  ">
-                                                <a href="{{ url('ledger_acount_categories') }}" class=" sidebar-link">
-                            <span id="subm">Account Type</span></a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('ledger_acount_subcategories') }}" class="sidebar-link">
-                                    <span id="">Groups</span></a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('ledger_budget_category') }}" class="sidebar-link">
-                                    <span id="subm">Budget Category</span></a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('ledger_acounts') }}" class=" sidebar-link">
-                                    <span id="subm">Ledger Account</span>
-                                </a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('expense_report') }}" class=" sidebar-link">
-                                    <span id="subm">Expense Report</span>
-                                </a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('journal') }}" class=" sidebar-link">
-                                    <span id="subm">Journal</span>
-                                </a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('ledger') }}" class=" sidebar-link">
-                                    <span id="subm">Ledger</span></a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('trialbalance') }}" class=" sidebar-link">
-                                    <span id="subm">Trial Balance</span></a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('profitandlossaccount') }}" class=" sidebar-link">
-                                    <span id="subm">Profit And loss Account</span></a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('balancesheet') }}" class=" sidebar-link">
-                                    <span id="subm">Balance Sheet</span></a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('stock_section') }}" class=" sidebar-link">
-                                    <span id="subm">Stock Reciept </span></a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('stock_issue') }}" class=" sidebar-link">
-                                    <span id="subm">Stock Issue </span></a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('store_ledger') }}" class=" sidebar-link">
-                                    <span id="subm">Store Ledger </span></a>
-                            </li>
-
-                            <li class="submenu-item ">
-                                <a href="{{ url('stock_categories') }}" class=" sidebar-link">
-                                    <span id="subm">Stock Categories </span></a>
-                            </li>
-
-                            <li class="submenu-item ">
-                                <a href="{{ url('stock_subcategories') }}" class=" sidebar-link">
-                                    <span id="subm">Stock Sub Categories </span></a>
-                            </li>
-                            <li class="submenu-item ">
-                                <a href="{{ url('stock_items') }}" class=" sidebar-link">
-                                    <span id="subm">Stock Items </span></a>
-                            </li>
-                            </ul>
-                            {{-- </li> --}}
                             @endif
                             @if(Auth::user()->role == 'store' || Auth::user()->role == 'Admin')
                             @php
@@ -1045,6 +981,7 @@ animation-direction:reverse;">
                     //   var x = document.getElementById("sidebar");
                       
                     //   if (x.style.display === "none") {
+                        
                     //     x.style.display = "block";
                     //   } else {
                     //     x.style.display = "none";
@@ -1054,16 +991,65 @@ animation-direction:reverse;">
 
 
 
-                    function hide() {
-  var element = document.getElementById("sidebar");
-  element.classList.remove("active");
+        function hide() {
+            var element = document.getElementById("sidebar");
+      
+            if (element.classList.contains("active")) {
+            element.classList.remove("active");
+
+            } else {
+                element.classList.add("active");
+            }
+        }
+    </script>
+
+
+
+<div class="container" style="height: 10px ; font-size:5px;"> 
+    <div class="row">
+        <div class="col">
+            <p id="demob"></p>
+        </div>
+
+    </div>
+     </div>
+                <nav class="navbar navbar-expand-lg navbar-light bg-white" >
+
+
+
+
+
+
+                 
+                
+             
+                  
+              
+           
+                
+
+
+
+
+
+                            {{-- <p id="daemo">This is a paragraph.</p>
+
+<button type="button" onclick="myaa()">Set font size</button>
+ 
+<script>
+
+var cont = document.getElementById("daemo");
+                      
+
+function myaa() {
+  document.getElementById("daemo").style.fontSize = "x-large";
 }
-                    </script>
+</script> --}}
+             
+                  
+            
 
 
-
-
-                <nav class="navbar navbar-expand-lg navbar-light bg-white">
                     
                     <a class="navbar-brand p-1" href="#">
                         <img src="{{asset('/') }}assets//images/Logo cra.png" width="40" height="40" alt="">
@@ -1089,48 +1075,110 @@ animation-direction:reverse;">
                           <li class="nav-item">
                             <a type="button" href="{{url('help')}}" class="nav-link" >Help</a>
                           </li>
-                        {{-- <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                          </div>
-                        </li> --}}
-                        {{-- <li class="nav-item">
-                          <a class="nav-link disabled" href="#">Disabled</a>
-                        </li> --}}
+           
                       </ul>
-                      {{-- <div class="nav-item">
-                      <p id="timedate"></p >
-                        <p id="tme"></p >
-                           </div>
-                      <script>
-                        // program to display the date
-// get local machine date time
-const date = new Date();
 
-// get the date as a string
-const n = date.toDateString();
 
-// get the time as a string
-const time = date.toLocaleTimeString();
 
-// display date
-console.log('Date: ' + n);
 
-// display time
-console.log('Time: ' + time);
-                        const d = new Date();
-                        document.getElementById("timedate").innerHTML = 'Date: ' + n;
-                        document.getElementById("tme").innerHTML = 'Time: ' + time;
-                        </script> --}}
+
+            <style>
+                #range{
+                    display: none;
+
+                }
+
+                #ssdf{
+                    display: none;
+                }
+
+                #hgh{
+                    display: none;
+                    
+
+                }
+           
+                .fa-low-vision:hover{
+                    color: #07463b;
+
+                }
+             
+            </style>
+
+
+
+
+
+                        <script>
+                        function myss() {
+                        var x = document.getElementById("range");
+                        var t = document.getElementById("t");
+                        var ad = document.getElementById("ssdf");
+                        var dvv = document.getElementById("hgh");
+
+                        if (x.style.display === "block") {
+                            x.style.display = "none";
+                            ad.style.display = "none";
+                            dvv.style.display = "none";
+                        } else {
+                            x.style.display = "block";
+                            ad.style.display = "block";
+                            dvv.style.display = "block";
+                            // t.style.display = "none";
+
+                        }}
+
+
+                        
+                        </script>
+
+   
+
+                <a  type="button" onclick="hide()" class="nav-link" ><i class="fa fa-low-vision"></i></a>
                         <div class="nav-item">
-                            <a type="button" onclick="hide()" class="nav-link" ><i class="fa fa-low-vision"></i></a>
+                            
+                            <a id="t" type="button" onclick="myss()" class="nav-link"> <i class="fa fa-text-width"></i></a>
+                            
                           </div>
+
+                <div class="p-1" id="hgh" style="border: solid #a38931 1px; border-radius:5px; background-color:rgb(243, 238, 226); ">
+
+                          <input  type="range" id="range" min="1.0" max="3.0" step="0.1" value="2.0" style="color: #070344"/> 
+                          
+                          
+                          <a > <i id="ssdf" type="button" class="fa fa-font"></i> </a>
+                          <a > <i id="ssdd" type="button" class="fa fa-font"></i> </a>
+                       
+                          
+                        </div>         
+
+                                    <script>
+
+                                     const btn = document.getElementById("ssdf");
+                                    const para = document.querySelector("body");
+                              
+                                    btn.addEventListener("click", function () {
+                                        para.className = "bodya";
+                                    });
+                            
+                                    </script>
+
+                                    <script>
+
+                                        const btne = document.getElementById("ssdd");
+                                    const parae = document.querySelector("body");
+
+                                    btne.addEventListener("click", function () {
+                                        parae.className = "bodyb";
+                                    });
+
+
+
+
+
+                                    
+
+                                    </script>
 
 
 <div class="p-3" style="text-align: center; ">
@@ -1250,26 +1298,61 @@ updateDate();
 
 
 
+/* input[type=text] {
+	width: 30%;
+	-webkit-transition: width 0.15s ease-in-out;
+	transition: width 0.15s ease-in-out;
+}
 
+/
+input[type=text]:focus {
+	width: 70%;
+} */
+
+#list{
+	font-size: 1.5em;
+	margin-left: 90px;
+}
+
+.animals{
+display: list-item;	
+}
 
 
 </style>
 
-                     
                       <form class="form-inline my-2 my-lg-0">
-                        <input name="search" class="form-control mr-sm-2" id="searchbar" onkeyup="search_animal()" type="text" placeholder="Search" aria-label="Search">
+                        <input onkeydown="myFunction(event)" name="search" class="form-control mr-sm-2" id="searchbar" onkeyup="search_animal()" type="text" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        
                       </form>
 
 
-                     
-                    
                   <!-- ordered list -->
-            
+
+                        <script>
+                            function myFunction(event) {
+                            var x = event.key;
+                            document.getElementById("demob").innerHTML = " " + x;
+                            }
+                        </script>
+                    <style>
+                                window.addEventListener('keydown', function(e)
+                    {
+                        if( e.keyCode == '8' )
+                        {
+                            e.preventDefault();  // prevent backspace from going to browser
+                                            // history
+                            // add reload code
+                            location.reload();
+                        }
+                    }, false);
+
+                    </style> 
 
 
 <script>
-    // JavaScript code
+    // search
 function search_animal() {
 	let input = document.getElementById('searchbar').value
 	input=input.toLowerCase();
@@ -1277,11 +1360,9 @@ function search_animal() {
     let y = document.getElementsByClassName('logo_size');
     let col = document.getElementsByClassName('col-sm-4');
     let row = document.getElementsByClassName('row sm');
+    // let bbd = document.getElementsByTagName('div');
 
     const mydivs = document.querySelectorAll("#hdtpa, #hdbtb");
-
-
-  
 
 	for (i = 0; i < x.length; i++) {
 		if (!x[i].innerHTML.toLowerCase().includes(input)) {  
@@ -1289,9 +1370,10 @@ function search_animal() {
             x[i].style.padding = "0px 0px 0px 0px";
             y[i].style.display="none";
             col[i].style.display="none";
-         
-           
-        
+            // row[i].style.padding = "50px 10px 20px 30px";
+            
+            // bbd[i].style.display="none";
+            
             mydivs.forEach((element) => {
   element.style.display="none";
 });
@@ -1299,21 +1381,19 @@ function search_animal() {
 // mydivs.forEach((element) => {
 //   element.style.color = "red";
 // });
-
 		}
 		else {
 			x[i].style.display="list-item";	
             x[i].style.padding = "0px 0px 0px 0px";
             y[i].style.display="none";
-            
+          
+            // bbd[i].style.display="none";
+                   
             mydivs.forEach((element) => {
   element.style.display="none";
-});
-        		
-		}
+});		}
 	}
 }
-
 </script>
 
 
@@ -1332,7 +1412,7 @@ function search_animal() {
 
 
 
-
+{{-- nav 2 --}}
 
 
 
@@ -1509,9 +1589,17 @@ function search_animal() {
                 <br>
                 <section class="newstyle container-fluid bg-white p-4 mt-2">
                     <section class="row">
-                        <div class="col-12 col-lg-12" style="min-height: 100vh">
+                        <div class="col-12 col-lg-12" style="min-height: 100vh" id="fontscl">
                             @yield('content')
-                        </div>
+                            <script>
+                                var range = document.querySelector("#range");
+                            var form = document.querySelector("#fontscl");
+                            
+                            range.addEventListener("input", function() {
+                              form.style["font-size"] = this.value + "em";
+                            });
+                            </script>
+                        </div>  </div>
                     </section>
                 </section>
 

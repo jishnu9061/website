@@ -189,18 +189,22 @@ public function view_job_post($id)
 
     public function quarterly_performance_form()
     {
-        $add_kpi=DB::table('cra_add_kpi')->get();
-        return view('hr.quarterly_performance_form',compact('add_kpi'));
+        $user_roles=DB::table('cra_add_user_roles')->get();
+        $departments=DB::table('cra_add_user_department')->get();
+        // $add_kpi=DB::table('cra_add_kpi')->get();
+        return view('hr.quarterly_performance_form',compact('departments','user_roles'));
 
     }
     public function add_kpi(Request $Request)
     {
-        $select_department= $Request['department'];
-        $enter_kpi = $Request['kpi'];
+        $department= $Request['department'];
+        $designation= $Request['role_name'];
+        $kpi = $Request['kpi'];
 
         DB::table('cra_add_kpi')->insert([
-            'select_department' => $select_department,
-            'enter_kpi' => $enter_kpi,
+            'department' =>$department,
+            'designation' =>$designation,
+            'kpi' =>$kpi,
         ]);
 
         return redirect('/quarterly_performance_form');
