@@ -1115,6 +1115,7 @@ Route::any('add-registration','ClientManagement@addRegistration')->name('add-reg
 Route::any('edit-registration/{id}','ClientManagement@editRegistration')->name('edit-registration');
 Route::any('update-registration','ClientManagement@updateRegistration')->name('update-registration');
 Route::any('delete-registration/{id}','ClientManagement@deleteRegistration')->name('delete-registration');
+Route::any('show-registration/{id}','ClientManagement@showRegistration')->name('show-registration');
 //end registration
 
 //communication
@@ -1428,7 +1429,7 @@ Route::any('matter_type','PracticeAreaManagement@matter_type')->name('matter_typ
 Route::any('personal_injury','PracticeAreaManagement@personalinjury')->name('personal_injury');
 Route::any('add_injury','PracticeAreaManagement@addinjury')->name('add_injury');
 Route::any('/edit_injury/{id}','PracticeAreaManagement@editinjury')->name('edit_injury');
-Route::any('view_injury','PracticeAreaManagement@view_injury')->name('view_injury');
+Route::any('view_injury','PracticeAreaManagement@view_injury')->name('view_injury');    
 Route::any('/update_injury','PracticeAreaManagement@updateinjury')->name('update_injury');
 Route::any('/delete_injury/{id}','PracticeAreaManagement@deleteinjury')->name('delete_injury');
 Route::any('family_law','PracticeAreaManagement@family_law')->name('family_law');

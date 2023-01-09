@@ -331,8 +331,8 @@
                     <div class="col-md-3">
                         <div class="mb-1">
                             <label>Company NSSF Contribution</label>
-                            <select class="form-select" aria-label="Default select example" value=""  name="contribution">
-                                <option value="">{{$users->contribution}}</option>
+                            <select class="form-select" aria-label="Default select example" value=""  name="NSSF_contribution">
+                                <option value="">{{$users->NSSF_contribution}}</option>
                                 <option selected value="Deduct From Company">Deduct From Company</option>
                                 <option value="Active">Nairobi</option>
                                 <option value="Inactive">Mombasa</option>

@@ -115,19 +115,20 @@ class hrcontroller extends Controller
     $users=DB::table('users')->where('uniqueid',$id)->first();
     $hospital=Auth::user()->Hospital;
     $staffdata=DB::table('users')->where('uniqueid',$id)->select('name','uniqueid')->first();
-    $allowancedata=DB::table('allowance')->where('hospital',$hospital)->where('status','allowance')->get();
-     $nonfixedallowancedata=DB::table('allowance')->where('hospital',$hospital)->where('status','onfixedallowance')->get();
-    $deductiondata=DB::table('allowance')->where('hospital',$hospital)->where('status','reduction')->get();
+    // $allowancedata=DB::table('allowance')->where('hospital',$hospital)->where('status','allowance')->get();
+    //  $nonfixedallowancedata=DB::table('allowance')->where('hospital',$hospital)->where('status','onfixedallowance')->get();
+    // $deductiondata=DB::table('allowance')->where('hospital',$hospital)->where('status','reduction')->get();
     $particularallow=DB::table('giveallowance')->where('staffid',$id)->where('type','allowance')->get();
      $particularreduct=DB::table('giveallowance')->where('staffid',$id)->where('type','reduction')->get();
-    $loans=DB::table('loans')->where('uniqueid',$id)->get();
+    // $loans=DB::table('loans')->where('uniqueid',$id)->get();
     $schedule=DB::table('dutyschedule')->where('staffid',$id)->get();
   
     $adminroles=DB::table('userroles')->get();
-   $hospitals=DB::table('hospitals')->get();
+  //  $hospitals=DB::table('hospitals')->get();
+   
    $departments=DB::table('departments')->get();
   //  dd($departments);
-   $medicaldepartments=DB::table('medicaldepartments')->get();
+  //  $medicaldepartments=DB::table('medicaldepartments')->get();
   //  $leavetype=DB::table('staff_leaves')->where('staff_id',$id)
   //  ->join('leave_types', 'staff_leaves.leave_type_id', '=', 'leave_types.id')
   //  ->select('staff_leaves.*','leave_types.leave_type')
@@ -135,7 +136,9 @@ class hrcontroller extends Controller
   //  dd($leavetype);
   $leavetype=DB::table('leave_types')->get();
    $staffstatus=DB::table('staffstatus')->get();
-    return view('hr.editstaf',['users'=>$users,'staffdata'=>$staffdata,'allowancedata'=>$allowancedata,'loans'=>$loans,'schedule'=>$schedule,'staffid'=>$id,'deductiondata'=>$deductiondata,'nonfixdallowancedata'=>$particularallow,'particularreduct'=>$particularreduct,'$nonfixedallowancedata',$nonfixedallowancedata,'roles'=>$adminroles,'hospitals'=>$hospitals,'departments'=>$departments,'medicaldepartments'=>$medicaldepartments,'leavetype'=>$leavetype,'staffstatus'=>$staffstatus]);
+    return view('hr.editstaf',['users'=>$users,'staffdata'=>$staffdata,'schedule'=>$schedule,'staffid'=>$id,
+    'nonfixdallowancedata'=>$particularallow,'particularreduct'=>$particularreduct,'roles'=>$adminroles,
+    'departments'=>$departments,'leavetype'=>$leavetype,'staffstatus'=>$staffstatus]);
    
   }
 
