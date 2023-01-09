@@ -93,10 +93,10 @@
                             <td>{{ $alluser->uniqueid }}</td>
                             <td>{{ $alluser->name     }}</td>
                             <td>{{ $alluser->email    }}</td>
-                            <td>{{ $alluser->phoneno    }}</td>
+                            <td>{{ $alluser->phone    }}</td>
                             <td>
-                                     <a href="{{url('view_staff_details')}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span> 
-                                     <a href="{{ url('managestaff' . $alluser->uniqueid) }}"> <i style="color:rgb(13, 1, 56);"class="fa fa-edit"></i><span class="m-1"></span> 
+                                     <a href="{{url('view_staff_details',$alluser->uniqueid)}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span> 
+                                     <a href="{{ url('managestaff' , $alluser->uniqueid) }}"> <i style="color:rgb(13, 1, 56);"class="fa fa-edit"></i><span class="m-1"></span> 
                                         
                                 
                     @endforeach  
@@ -262,7 +262,7 @@
                             <select class="form-select" aria-label="Default select example" name="departments">
                             @if(count($get_department))
                                             @foreach($get_department as $list_department)
-                                            <option>{{$list_department->department_name}}</option>
+                                            <option value="{{$list_department->id}}">{{$list_department->department_name}}</option>
                                             @endforeach
                                           @endif
                             </select>
@@ -274,7 +274,7 @@
                             <select class="form-select" aria-label="Default select example" name="role">
                             @if(count($get_role))
                                             @foreach($get_role as $list_role)
-                                            <option>{{$list_role->role_name}}</option>
+                                            <option value="{{$list_role->id}}">{{$list_role->role_name}}</option>
                                             @endforeach
                                           @endif
                             </select>
@@ -358,7 +358,7 @@
                             <select class="form-select" aria-label="Default select example" name="town">
                             @if(count($get_town))
                                             @foreach($get_town as $list_city)
-                                            <option>{{$list_city->Town_City}}</option>
+                                            <option value="{{$list_department->id}}">{{$list_city->Town_City}}</option>
                                             @endforeach
                                           @endif
                             </select>
@@ -461,7 +461,7 @@
                             <label>Company NSSF Contribution</label>
                             <select class="form-select" aria-label="Default select example" name="NSSF_contribution">
                                 <option selected value="Deduct From Company">Deduct From Company</option>
-                                <option value="Active">Nairobi</option>
+                                {{-- <option value="Active">Nairobi</option>
                                 <option value="Inactive">Mombasa</option>
                                 <option value="Resigned">Kisumu</option>
                                 <option value="Suspended">Nakuru</option> 
@@ -477,7 +477,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="leave" id="name"
-                                    value="21" disabled>
+                                 >
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -505,7 +505,7 @@
                             <select class="form-select" aria-label="Default select example" name="bank">
                             @if(count($get_bank))
                                             @foreach($get_bank as $list_bank)
-                                            <option>{{$list_bank->bank_name}}</option>
+                                            <option value="{{$list_department->id}}">{{$list_bank->bank_name}}</option>
                                             @endforeach
                                           @endif
                             </select>
@@ -532,7 +532,7 @@
                                     <select name="bank_branch" id="address">
                                     @if(count($get_bank))
                                             @foreach($get_bank as $list_branch)
-                                            <option>{{$list_branch->bank_name}}</option>
+                                            <option value="{{$list_department->id}}">{{$list_branch->bank_name}}</option>
                                             @endforeach
                                           @endif
                                     </select>
