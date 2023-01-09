@@ -246,7 +246,7 @@
                                                             <div class="input-group-prepend"></div>
                                                             <select name="Status" id="city">
                                                                 <option>{{ $update_list->status}}</option>
-                                                                <option>Pending</option>
+                                                                
                                                                 
                                                                 <option>Accepted</option>
                                                                 <option>Rejected</option>
