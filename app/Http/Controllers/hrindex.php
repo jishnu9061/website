@@ -20,13 +20,16 @@ class hrindex extends Controller
     }
     public function performance_department()
     {
-        return view('hr.performance_department');
+        $departments=DB::table('cra_add_user_department')->get();
+        return view('hr.performance_department',compact('departments'));
     }
 
     public function recruitment()
     {
         return view('hr.recruitment_index');
     }
+    
+
 
 //Subhasree
 

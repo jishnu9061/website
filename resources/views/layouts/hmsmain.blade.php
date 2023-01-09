@@ -532,20 +532,20 @@ animation-direction:reverse;">
                             </li> --}}
                             {{-- </li> --}}
                             @endif
-                            @if(Auth::user()->role == 'hr')
-                            <li class="submenu-item has-sub " style="list-style:none;">
+                            {{-- @if(Auth::user()->role == 'hr')
+                            {{-- <li class="submenu-item has-sub " style="list-style:none;">
                                 <a href="{{url('hrindex')}}" class='sidebar-link'>
                                     <i class="fa fa-th-large" id="icon" style="font-weight: 300;"></i>
                                     <span>HR Details</span>
                                 </a>
-                            </li>
-                            <li class="submenu-item has-sub " style="list-style:none;">
+                            </li> --}}
+                            {{-- <li class="submenu-item has-sub " style="list-style:none;">
                                 <a href="{{url('staffs')}}" class='sidebar-link'>
                                     <i class="fa fa-th-large" id="icon" style="font-weight: 300;"></i>
                                     <span>Manage Staffs</span>
                                 </a>
                             </li>
-                            @endif
+                            @endif-> --}}
 
                             @if(Auth::user()->role == 'Accountant' || Auth::user()->role == 'Admin')
                             @php
