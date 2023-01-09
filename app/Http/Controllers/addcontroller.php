@@ -19,7 +19,7 @@ class addcontroller extends Controller
 
      $hospital=Auth::user()->Hospital;
    	 $adminroles=DB::table('roles')->get();
-    //  $hospitals=DB::table('hospitals')->get();
+    // $hospitals=DB::table('hospitals')->get();
      $departments=DB::table('departments')->get();
      $medicaldepartments=DB::table('medicaldepartments')->get();
      $allowancedata=DB::table('allowance')->where('hospital',$hospital)->where('status','allowance')->get();
@@ -31,7 +31,7 @@ class addcontroller extends Controller
    }
    public function addthestaffs(Request $Request)
    {
-     
+
    	  // $hospital=Auth::user()->Hospital;
       $depatmntz=$Request['depname'];
 
@@ -52,7 +52,7 @@ class addcontroller extends Controller
    	  $uniqId=random_int(100000,999999);
       $check_if_duplicate_exisit = User::where('uniqueid', $uniqId)->first();
       // dd($uniqId);
-     
+
       $stame=$Request['name'];
       $al_email=$Request['email'];
       $staffs=new User();
@@ -86,8 +86,8 @@ class addcontroller extends Controller
       $staffs->bank_branch=$Request['bank_branch'];
       $staffs->branch_code=$Request['branch_code'];
       $staffs->account=$Request['account'];
-    
-      
+
+
 
       // $staffs->sex=$Request['sex'];
       // $staffs->email=$Request['email'];
@@ -126,7 +126,7 @@ class addcontroller extends Controller
           $staffs->cv    =  $image_location.$imageName;
         }
       }
-     
+
     if($Request->hasFile('photo')){
       $this->validate($Request,[
           'photo' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
@@ -140,7 +140,7 @@ class addcontroller extends Controller
         $staffs->photo    =  $image_location.$imageName;
     }
     }
- 
+
   if($Request->hasFile('signature')){
     $this->validate($Request,[
         'signature' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
@@ -207,7 +207,7 @@ if(request()->hasfile('signature')){
     $branch_code=$Request['branch_code'];
     $account=$Request['account'];
     $pwdzx=Hash::make($password);
-    
+
     if($Request['password'] == '')
     {
       $data=array('name'=>$name,'email'=>$email,'phoneno'=>$phoneno,'date_of_joining'=>$date_of_joining,'departments'=>$departments,'sex'=>$sex,
@@ -225,7 +225,7 @@ if(request()->hasfile('signature')){
     }
 
     DB::table('users')->where('id',$id)->update($data);
-// 
+//
   //   $leavetype = $Request->input('leave_type');
   //   $leavetype_items = $Request->input('leaves');
   //   $final_array=array_combine($leavetype,$leavetype_items);

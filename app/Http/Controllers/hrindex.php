@@ -30,16 +30,21 @@ class hrindex extends Controller
 
 //Subhasree
 
-public function view_staff_details()
+
+public function view_staff_details($id)
 {
-    return view('hr.view_staff_details');
+    $view_list = DB::table('users')->where('id',$id)->first();
+
+    return view('hr.view_staff_details',compact('view_list','id'));
 }
 
-public function update_staff_details()
-{
-   
-    return view('hr.update_staff_details',compact('update_staff_details'));
-}
+
+
+ public function edit_staff_details()
+ {
+
+    return view('hr.edit_staff_details');
+ }
 
 
 public function job_posts()

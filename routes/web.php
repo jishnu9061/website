@@ -1313,10 +1313,10 @@ Route::any('view_bill',"clientinvoicing@view_bill_item")->name('view_bill_item')
 Route::any('hrindex','hrindex@index')->name('hrindex');
 Route::any('recruitment','hrindex@recruitment')->name('recruitment');
 
-// Subhasree
- Route::any('/view_staff_details','hrindex@view_staff_details')->name('view_staff_details');
- Route::any('/update_staff_details','hrindex@update_staff_details')->name('update_staff_details');
+// HR-Manage Staffs Subhasree
 
+Route::any('/edit_staff_details/{id}','hrindex@edit_staff_details')->name('edit_staff_details');
+Route::any('/view_staff_details/{id}','hrindex@view_staff_details')->name('view_staff_details');
 
 //reshma
 Route::any('performance_department','hrindex@performance_department')->name('performance_department');
@@ -1363,7 +1363,7 @@ Route::any('viewsheet','hrindex@viewsheets')->name('viewsheet');
 Route::any('timesheetmonth','hrindex@timesheetmonths')->name('timesheetmonth');
 Route::any('monthviewsheet','hrindex@monthviewsheets')->name('monthviewsheet');
 
-//leave request
+//HR-leave request
 Route::any('leave_request_details','hrindex@leave_request')->name('leave_request_details');
 Route::any('addleaverequest','hrindex@addleaverequest')->name('addleaverequest');
 Route::any('approve_leave_request','hrindex@approve_leave_request')->name('approve_leave_request');
