@@ -238,6 +238,28 @@
                     </div>
 
                 </div>
+                <div class="row">
+                                            <div class="col-md-4">
+                                                    <div class="mb-1">
+                                                        <label for="username">Status</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend"></div>
+                                                            <select name="Status" id="city">
+                                                                <option>{{ $update_list->status}}</option>
+                                                                
+                                                                
+                                                                <option>Accepted</option>
+                                                                <option>Rejected</option>
+                                                                <option>Follow-Up</option>
+                                                               
+                                                            </select>
+                                                            <div class="invalid-feedback" style="width: 100%;">
+                                                                Postal Code is required.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                 <br>
                 <!-- <h4 style="text-align:center">Contact Persons</h4> -->
 

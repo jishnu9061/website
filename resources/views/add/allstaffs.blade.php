@@ -100,6 +100,7 @@
 
 
                     @endforeach
+
                     </tr>
                 <tbody>
             </table>
@@ -262,7 +263,7 @@
                             <select class="form-select" aria-label="Default select example" name="departments">
                             @if(count($get_department))
                                             @foreach($get_department as $list_department)
-                                            <option>{{$list_department->department_name}}</option>
+                                            <option value="{{$list_department->id}}">{{$list_department->department_name}}</option>
                                             @endforeach
                                           @endif
                             </select>
@@ -274,7 +275,7 @@
                             <select class="form-select" aria-label="Default select example" name="role">
                             @if(count($get_role))
                                             @foreach($get_role as $list_role)
-                                            <option>{{$list_role->role_name}}</option>
+                                            <option value="{{$list_role->id}}">{{$list_role->role_name}}</option>
                                             @endforeach
                                           @endif
                             </select>
@@ -356,11 +357,11 @@
                         <div class="mb-1">
                             <label>Town/City</label>
                             <select class="form-select" aria-label="Default select example" name="town">
-                                <option selected>Select</option>
-                                <option value="Nairobi">Nairobi</option>
-                                <option value="Mombasa">Mombasa</option>
-                                <option value="Kisumu">Kisumu</option>
-                                <option value="Nakuru">Nakuru</option>
+                            @if(count($get_town))
+                                            @foreach($get_town as $list_city)
+                                            <option value="{{$list_department->id}}">{{$list_city->Town_City}}</option>
+                                            @endforeach
+                                          @endif
                             </select>
                         </div>
                     </div>
@@ -459,12 +460,12 @@
                     <div class="col-md-3">
                         <div class="mb-1">
                             <label>Company NSSF Contribution</label>
-                            <select class="form-select" aria-label="Default select example" name="contribution">
+                            <select class="form-select" aria-label="Default select example" name="NSSF_contribution">
                                 <option selected value="Deduct From Company">Deduct From Company</option>
                                 {{-- <option value="Active">Nairobi</option>
                                 <option value="Inactive">Mombasa</option>
                                 <option value="Resigned">Kisumu</option>
-                                <option value="Suspended">Nakuru</option> --}}
+                                <option value="Suspended">Nakuru</option> 
                             </select>
                         </div>
                     </div>
@@ -477,7 +478,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="leave" id="name"
-                                    value="21" disabled>
+                                 >
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -505,7 +506,7 @@
                             <select class="form-select" aria-label="Default select example" name="bank">
                             @if(count($get_bank))
                                             @foreach($get_bank as $list_bank)
-                                            <option>{{$list_bank->bank_name}}</option>
+                                            <option value="{{$list_department->id}}">{{$list_bank->bank_name}}</option>
                                             @endforeach
                                           @endif
                             </select>
@@ -532,7 +533,7 @@
                                     <select name="bank_branch" id="address">
                                     @if(count($get_bank))
                                             @foreach($get_bank as $list_branch)
-                                            <option>{{$list_branch->bank_name}}</option>
+                                            <option value="{{$list_department->id}}">{{$list_branch->bank_name}}</option>
                                             @endforeach
                                           @endif
                                     </select>
