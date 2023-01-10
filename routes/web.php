@@ -1616,6 +1616,8 @@ Route::any('view_lead',"CrmController@view_leads")->name('view_lead');
 Route::any('proposal_lead',"CrmController@proposal_leads")->name('proposal_lead');
 Route::any('individual_lead',"CrmController@individual_leads")->name('individual_lead');
 Route::any('view_individual_lead',"CrmController@view_individual_leads")->name('view_individual_lead');
+Route::any('individual_proposal_lead',"CrmController@individual_proposal_leads")->name('individual_proposal_lead');
+
 
 
 
