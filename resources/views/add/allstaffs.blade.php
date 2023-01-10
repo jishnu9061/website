@@ -262,6 +262,7 @@
                         <div class="mb-1">
                             <label>Departments:&nbsp;</label>
                             <select class="form-select" aria-label="Default select example" name="departname">
+                                <option>select</option>
                             @if(count($get_department))
                                             @foreach($get_department as $list_department)
                                             <option value="{{$list_department->id}}">{{$list_department->department_name}}</option>
@@ -274,6 +275,7 @@
                         <div class="mb-1">
                             <label>Roles&nbsp;</label>
                             <select class="form-select" aria-label="Default select example" name="role">
+                            <option>select</option>
                             @if(count($get_role))
                                             @foreach($get_role as $list_role)
                                             <option value="{{$list_role->id}}">{{$list_role->role_name}}</option>
@@ -358,6 +360,7 @@
                         <div class="mb-1">
                             <label>Town/City</label>
                             <select class="form-select" aria-label="Default select example" name="town">
+                            <option>select</option>
                             @if(count($get_town))
                                             @foreach($get_town as $list_city)
                                             <option value="{{$list_city->id}}">{{$list_city->Town_City}}</option>
@@ -505,6 +508,7 @@
                         <div class="mb-1">
                             <label>Bank Name</label>
                             <select class="form-select" aria-label="Default select example" name="bank">
+                            <option>select</option>
                             @if(count($get_bank))
                                             @foreach($get_bank as $list_bank)
                                             <option value="{{$list_bank->id}}">{{$list_bank->bank_name}}</option>
@@ -532,6 +536,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                     <select name="bank_branch" id="address">
+                                    <option>select</option>
                                     @if(count($get_bank))
                                             @foreach($get_bank as $branch_list)
                                             <option value="{{$branch_list->id}}">{{$branch_list->bank_name}}</option>
