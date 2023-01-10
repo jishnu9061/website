@@ -3,22 +3,21 @@
 {{-- heading --}}
 <div class="container">
 
-    <div>
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{ url('lead') }}"
-                    style="font-size:15px;">Corporate</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('individual_lead') }}" style="font-size:15px;">Individual</a>
-            </li>
+<div>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{{ url('lead') }}"  style="font-size:15px;">Corporate</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="{{ url('individual_lead') }}"  style="font-size:15px;">Individual</a>
+        </li>
+      
+    </ul>
 
-        </ul>
+    <br>
+</div>
 
-        <br>
-    </div>
-
-    <h4 id="hdtpa"><b>Corporate Customers Leads</b></h4>
+    <h4 id="hdtpa"><b>Individual Customers Leads</b></h4>
     <br>
 
     <br>
@@ -80,12 +79,12 @@
                                 <td></td>
                                 <td></td>
                                 <td scope="row">
-                                    <a href="view_lead"><i style="color:black;" class="fa fa-eye"
+                                    <a href="view_individual_lead"><i style="color:black;" class="fa fa-eye"
                                             aria-hidden="true"></i></a>
 
                                     <span class="m-2"></span>
 
-                                    <a href="proposal_lead"><i style="color:black;" class="fas fa-arrow-right"
+                                    <a href="#"><i style="color:black;" class="fas fa-arrow-right"
                                             aria-hidden="true"></i></a>
                                 </td>
 

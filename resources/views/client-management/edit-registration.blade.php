@@ -2,9 +2,9 @@
 @section('content')
 
 
-        {{-- heading --}}
-        <h4 id="hdtpa"><b>Edit Individual Customers</b></h4>
-        <br>
+{{-- heading --}}
+<h4 id="hdtpa"><b>Edit Individual Customers</b></h4>
+<br>
 <div class="card">
     <div class="card-body">
         <div class="row">
@@ -15,14 +15,12 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="mb-1">
-                                <label for="username">Client Name</label>
+                                <label for="username">Name</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend"></div>
-                                    <select name="client_name" id="username" style="width:100%;">
-                                        <option> client 1 </option>
-                                        <option> client 2 </option>
-    
-                                    </select>
+                                    <input type="text" class="form-control" name="client_name" id="username"
+                                        value="{{$edit_registration->customer_name}}" placeholder="Name" required>
+
                                     <!-- <input type="text" class="form-control" name="name" id="username"
                                         value="{{$edit_registration->customer_name}}" placeholder="Customer name" required> -->
                                     <div class="invalid-feedback" style="width: 100%;">
@@ -49,10 +47,10 @@
                                 <label for="username">Town</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend"></div>
-    
+
                                     <select name="town" id="username" style="width:100%;">
                                         <option>{{$edit_registration->town}}</option>
-    
+
                                     </select>
                                     <div class="invalid-feedback" style="width: 100%;">
                                         Date is required.
@@ -68,7 +66,7 @@
                                 <label for="username">Country</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-    
+
                                     </div>
                                     <select name="country" id="cars">
                                         <option>{{$edit_registration->country}}</option>
@@ -111,7 +109,8 @@
                                 <div class="input-group">
                                     <div class="input-group-prepend"></div>
                                     <input type="text" class="form-control" name="mobile" id="age"
-                                        value="{{$edit_registration->mobile_no}}" placeholder="Mobile No" min="0" max="99">
+                                        value="{{$edit_registration->mobile_no}}" placeholder="Mobile No" min="0"
+                                        max="99">
                                     <div class="invalid-feedback" style="width: 100%;">
                                         Telephone No is required.
                                     </div>
@@ -175,53 +174,34 @@
                         </div>
                     </div>
                     <br>
-                    <div class="row">
-                                            <div class="col-md-4">
-                                                    <div class="mb-1">
-                                                        <label for="username">Status</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend"></div>
-                                                            <select name="status" id="form7Example7">
-                                                                <option>{{$edit_registration->status}}</option>
-                                                                <option>Pending</option>
-                                                                <option>Accepted</option>
-                                                                <option>Rejected</option>
-                                                                <option>Follow-Up</option>
-                                                               
-                                                            </select>
-                                                            <div class="invalid-feedback" style="width: 100%;">
-                                                                Postal Code is required.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            <br>
-                    <!-- <h4 style="text-align:center">Contact Persons</h4> -->
-    
-    
-                    <div class="col-sm">
-    
-                        <div class="row">
-                            <div class="col-sm">
-    
+                  
+                        <br>
+                        <!-- <h4 style="text-align:center">Contact Persons</h4> -->
+
+
+                        <div class="col-sm">
+
+                            <div class="row">
+                                <div class="col-sm">
+
+                                </div>
+                                <div class="col-sm">
+
+                                </div>
+                                <div class="col-sm">
+                                    <br>
+                                    <button type="submit" class="btn btn-primary float:right;"
+                                        Style="width:50%;">Update</button>
+                                    <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                                        onclick="history.back()">Cancel</button>
+                                </div>
                             </div>
-                            <div class="col-sm">
-    
-                            </div>
-                            <div class="col-sm">
-                                <br>
-                                <button type="submit" class="btn btn-primary float:right;"
-                                    Style="width:50%;">Update</button>
-                                <button type="button" class="btn btn-primary float:left" Style="width:45%;"
-                                    onclick="history.back()">Cancel</button>
-                            </div>
-                        </div>
-    
+
                 </form>
             </div>
         </div>
     </div>
-  </div>
+</div>
 
 
 

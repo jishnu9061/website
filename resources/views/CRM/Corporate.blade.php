@@ -55,8 +55,8 @@
                                 <th class="text-center">Address</th>
                                 <th class="text-center">Phone</th>
                                 <th class="text-center">Email</th>
+                               
                                 <th class="text-center">Action</th>
-                                <th class="text-center">Status</th>
 
                             </tr>
 
@@ -71,7 +71,7 @@
                                 <td>{{$list->Address}}</td>
                                 <td>{{$list->Phone}}</td>
                                 <td>{{ $list->Email}}</td>
-                                <td>{{ $list->status}}</td>
+                               
                                 <td scope="row">
 
                                     <span class="m-2"></span>
@@ -352,23 +352,7 @@
                                                 </div>
 
                                             </div>
-                                            <div class="row">
-                                            <div class="col-md-4">
-                                                    <div class="mb-1">
-                                                        <label for="username">Status</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend"></div>
-                                                            <select name="Status" id="city">
-                                                                <option>Pending</option>
-                                                               
-                                                            </select>
-                                                            <div class="invalid-feedback" style="width: 100%;">
-                                                                Postal Code is required.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                           
                                             <br>
                                             <!-- <h4 style="text-align:center">Contact Persons</h4> -->
 

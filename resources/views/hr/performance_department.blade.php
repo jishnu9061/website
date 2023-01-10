@@ -16,11 +16,9 @@
     
   
   <div class="row sm">
-
-    <div class="col-sm-4 " ><a href="{{ url('quarterly_performance_form') }}"><img class="logo_size"src="assets\image\Bring up report.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" > HR</button></a></div>
-    <div class="col-sm-4 " > <a href="{{ url('quarterly_performance_form') }}"><img class="logo_size"src="assets\image\Bring up report.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" >Legal</button></a></div>
-    <div class="col-sm-4 " > <a href="{{ url('quarterly_performance_form') }}"><img class="logo_size"src="assets\image\Bring up report.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" >Finance</button></a></div>
-    
+    @foreach($departments as $department)
+    <div class="col-sm-4 " ><a href="{{ url('quarterly_performance_form') }}"><img class="logo_size"src="assets\image\Bring up report.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" >{{ $department->department_name }}</button></a></div>
+    @endforeach
   </div>
 
 
