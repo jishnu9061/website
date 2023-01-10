@@ -8,7 +8,7 @@ th{
 </style>
 
 <div class="container">
-    <h4 id="hdtpa"><b>{{$view_reg->customer_name}}</b></h4>
+    <h4 id="hdtpa"><b>Detail</b></h4>
     <br><br>
 
     <form>
@@ -19,47 +19,47 @@ th{
                 <tbody>
                     <tr>
                         <th>Name :</th>
-                        <td>{{$view_reg->customer_name}}</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th> Postal Code :</th>
-                        <td>{{$view_reg->postal_code}}</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th> Town :</th>
-                        <td>{{$view_reg->town}}</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th> Country :</th>
-                        <td>{{$view_reg->country}}</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th> Telephone No :</th>
-                        <td>{{$view_reg->telephone_no}}</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th> Email Address :</th>
-                        <td>{{$view_reg->email}}</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th> Mobile No :</th>
-                        <td>{{$view_reg->mobile_no}}</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th> Website :</th>
-                        <td>{{$view_reg->web_site}}</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th> Registration Date :</th>
-                        <td>{{$view_reg->registration_date}}</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th> Address :</th>
-                        <td>{{$view_reg->customer_address}}</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th> Physical Address :</th>
-                        <td>{{$view_reg->physical_address}}</td>
+                        <td></td>
                     </tr>
                    
                    

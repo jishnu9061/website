@@ -311,6 +311,15 @@ class CrmController extends Controller
         return redirect('/expense');
     }
 
+    public function individual_leads()
+    {
+        return view('CRM.individual_lead');
+    }
+    public function view_individual_leads()
+    {
+        return view('CRM.view_individual_lead');
+    }
+
 }
 
 
