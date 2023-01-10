@@ -33,7 +33,7 @@ class addcontroller extends Controller
    {
 
    	  // $hospital=Auth::user()->Hospital;
-      $depatmntz=$Request['depname'];
+      // $depatmntz=$Request['depname'];
 
    	  // $hospitaldata=DB::table('hospitals')->where('name',$hospital)->select('id')->first();
    	  // $hospitalid=$hospitaldata->id;
@@ -64,7 +64,7 @@ class addcontroller extends Controller
       $staffs->password=Hash::make($password);
       $staffs->date_of_joining=$Request['date_of_joining'];
       $staffs->sex=$Request['sex'];
-      $staffs->departments=$Request['departments'];
+      $staffs->departments=$Request['departname'];
       $staffs->role=$Request['role'];
       $staffs->status=$Request['status'];
       $staffs->status_date=$Request['status_date'];
@@ -110,7 +110,6 @@ class addcontroller extends Controller
       // $staffs->Hospital=$hospital;
       $staffs->status=$Request['status'];
       $staffs->releving_date=$Request['releving_date'];
-      $staffs->departments= $Request['depname'];
       // $staffs->medicaldepartments= $Request['depname'];
       // $staffs->cv= $Request['cv'];
       if($Request->hasFile('cv')){

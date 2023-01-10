@@ -75,6 +75,7 @@
         </div>
         <div class="table-responsive">
             <table class="table table-striped table-class" id="table-id">
+                
                 <thead>
                     <tr class="text-center">
                         <!-- <th>Sl No</th> -->
@@ -260,7 +261,7 @@
                     <div class="col-md-3">
                         <div class="mb-1">
                             <label>Departments:&nbsp;</label>
-                            <select class="form-select" aria-label="Default select example" name="departments">
+                            <select class="form-select" aria-label="Default select example" name="departname">
                             @if(count($get_department))
                                             @foreach($get_department as $list_department)
                                             <option value="{{$list_department->id}}">{{$list_department->department_name}}</option>
