@@ -359,7 +359,7 @@
                             <select class="form-select" aria-label="Default select example" name="town">
                             @if(count($get_town))
                                             @foreach($get_town as $list_city)
-                                            <option value="{{$list_department->id}}">{{$list_city->Town_City}}</option>
+                                            <option value="{{$list_city->id}}">{{$list_city->Town_City}}</option>
                                             @endforeach
                                           @endif
                             </select>
@@ -506,7 +506,7 @@
                             <select class="form-select" aria-label="Default select example" name="bank">
                             @if(count($get_bank))
                                             @foreach($get_bank as $list_bank)
-                                            <option value="{{$list_department->id}}">{{$list_bank->bank_name}}</option>
+                                            <option value="{{$list_bank->id}}">{{$list_bank->bank_name}}</option>
                                             @endforeach
                                           @endif
                             </select>
@@ -532,8 +532,8 @@
                                 <div class="input-group-prepend"></div>
                                     <select name="bank_branch" id="address">
                                     @if(count($get_bank))
-                                            @foreach($get_bank as $list_branch)
-                                            <option value="{{$list_department->id}}">{{$list_branch->bank_name}}</option>
+                                            @foreach($get_bank as $branch_list)
+                                            <option value="{{$branch_list->id}}">{{$branch_list->bank_name}}</option>
                                             @endforeach
                                           @endif
                                     </select>
