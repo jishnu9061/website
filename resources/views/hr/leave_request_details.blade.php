@@ -49,7 +49,7 @@
                                 <th class="text-center">Leave Date From</th>
                                 <th class="text-center">Leave Date To</th>
                                 <th class="text-center">Reason</th>
-                                <th class="text-center">Attach File</th>
+                                <th class="text-center">Upload Document</th>
                                 <th class="text-center">Status</th>
                                 <th class="text-center">Action</th>
 
@@ -69,7 +69,7 @@
                                 <td scope="row" class="text-center">{{$leave->date_from}}</td>
                                 <td scope="row" class="text-center">{{$leave->date_to}}</td>
                                 <td scope="row" class="text-center">{{$leave->reason}}</td>
-                                <td scope="row" class="text-center">{{$leave->attach_file}}</td>
+                                <td scope="row" class="text-center">{{$leave->document}}</td>
                                 <td scope="row" class="text-center">
                                     <div class="dropdown">
                                         <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pending
@@ -109,7 +109,7 @@
 
                                 <!-- Modal Header -->
                                 <div class="modal-header">
-                                    <h2 class="text-centre"><b>Add Details</b></h2>
+                                    <h2 class="text-centre"><b>Leave Request</b></h2>
 
                                 </div>
 
@@ -127,10 +127,18 @@
         <label >Name</label>
             <div class="input-group">
                 <div class="input-group-prepend"></div>
-                <input type="text"  id="" name="name"value="" class="form-control" >
+                {{-- <input type="text"  id="" name="name"value="" class="form-control" > --}}
                 <div class="invalid-feedback" style="width: 100%;">
                 Required Field.
                 </div>
+                <select name="name" id="cars"required>
+                    <option>---Select--- </option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+
+                </select>
             </div>
         </div>
     </div>
@@ -139,10 +147,18 @@
         <label >Department</label>
             <div class="input-group">
                 <div class="input-group-prepend"></div>
-                <input type="text"  id="" name="department"value="" class="form-control" >
+                {{-- <input type="text"  id="" name="department"value="" class="form-control" > --}}
                 <div class="invalid-feedback" style="width: 100%;">
                 Required Field.
                 </div>
+                <select name="department" id="cars"required>
+                    <option>---Select--- </option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+
+                </select>
             </div>
         </div>
     </div>
@@ -157,12 +173,13 @@
                             <div class="invalid-feedback" style="width: 100%;">
                             Required Field.
                             </div>
+
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="mb-1">
-                        <label>Leave Type</label>
+                        <label>Type</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                             </div>
@@ -182,7 +199,7 @@
                 <div class="row">
                 <div class="col-md-6">
                     <div class="mb-1">
-                    <label >Leave Date From </label>
+                    <label >Date From </label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
                             <input type="date"  id="" name="date_from"value=""class="form-control">
@@ -194,7 +211,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="mb-1">
-                        <label>Leave Date To</label>
+                        <label>Date To</label>
 
                             </div> <div class="input-group">
                             <div class="input-group-prepend"></div>
@@ -222,11 +239,11 @@
 
                     <div class="col-md-6">
                         <div class="mb-1">
-                            <label>Attach File</label>
+                            <label>Upload Document</label>
 
                                 </div> <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="file"  id="" name="attach_file"value=""class="form-control">
+                                <input type="file"  id="" name="document"value=""class="form-control">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required
                             </div>
@@ -248,7 +265,7 @@
                         <br>
                     </div>
                 </div>
-   
+
 </form>
 </div>
 </div>

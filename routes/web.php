@@ -1363,7 +1363,7 @@ Route::any('viewsheet','hrindex@viewsheets')->name('viewsheet');
 Route::any('timesheetmonth','hrindex@timesheetmonths')->name('timesheetmonth');
 Route::any('monthviewsheet','hrindex@monthviewsheets')->name('monthviewsheet');
 
-//HR-leave request
+//HR-leave request Subhasree
 Route::any('leave_request_details','hrindex@leave_request')->name('leave_request_details');
 Route::any('addleaverequest','hrindex@addleaverequest')->name('addleaverequest');
 Route::any('approve_leave_request','hrindex@approve_leave_request')->name('approve_leave_request');

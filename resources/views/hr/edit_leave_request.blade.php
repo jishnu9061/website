@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container">
-    <h4 id="hdtpa"><b> Edit Details </b></h4>
+    <h4 id="hdtpa"><b> Edit Leave Request </b></h4>
     <br>
 
 
@@ -16,10 +16,19 @@
             <label >Name</label>
                 <div class="input-group">
                     <div class="input-group-prepend"></div>
-                    <input type="text"  id="" name="name"value="{{$leave_request->name}}" class="form-control" >
+                    {{-- <input type="text"  id="" name="name"value="{{$leave_request->name}}" class="form-control" > --}}
                     <div class="invalid-feedback" style="width: 100%;">
                     Required Field.
                     </div>
+                    <select name="name" id="cars"required>
+                        <option>---Select---</option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+
+
+                    </select>
                 </div>
             </div>
         </div>
@@ -28,10 +37,19 @@
             <label >Department</label>
                 <div class="input-group">
                     <div class="input-group-prepend"></div>
-                    <input type="text"  id="" name="department"value="{{$leave_request->department}}" class="form-control" >
+                    {{-- <input type="text"  id="" name="department"value="{{$leave_request->department}}" class="form-control" > --}}
                     <div class="invalid-feedback" style="width: 100%;">
                     Required Field.
                     </div>
+                    <select name="department" id="cars"required>
+                        <option>---Select---</option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+
+
+                    </select>
                 </div>
             </div>
         </div>
@@ -51,7 +69,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="mb-1">
-                        <label>Leave Type</label>
+                        <label>Type</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                             </div>
@@ -72,7 +90,7 @@
                 <div class="row">
                 <div class="col-md-6">
                     <div class="mb-1">
-                    <label >Leave Date From </label>
+                    <label >Date From </label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
                             <input type="date"  id="" name="date_from"value="{{$leave_request->date_from}}"class="form-control">
@@ -84,7 +102,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="mb-1">
-                        <label>Leave Date To</label>
+                        <label>Date To</label>
 
                             </div> <div class="input-group">
                             <div class="input-group-prepend"></div>
@@ -112,11 +130,11 @@
 
                     <div class="col-md-6">
                         <div class="mb-1">
-                            <label>Attach File</label>
+                            <label>Upload Document</label>
 
                                 </div> <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="file"  id="" name="attach_file" value="{{$leave_request->attach_file}}"class="form-control">
+                                <input type="file"  id="" name="document" value="{{$leave_request->document}}"class="form-control">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                             </div>
