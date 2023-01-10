@@ -426,12 +426,11 @@ animation-direction:reverse;">
                             </a>
                         </li>
                         @endif
-                        @if(Auth::user()->role == 'Admin')
+                        @if(Auth::user()->role == 'hr' || Auth::user()->role == 'Admin')
                         @php
                         $hr = array("addallowance", "addstaffs",
                         "staffs","loans","payslip","attendance","attendanceview","payslipbulk","generatepayslip","managestaff");
                         @endphp
-                       
 
 
 
@@ -483,7 +482,7 @@ animation-direction:reverse;">
                         <li class="submenu-item" style="list-style:none;">
                             <a href="{{url('hrindex')}}" class='sidebar-link'>
                                 <i class="fa fa-th-large" id="icon"></i>
-                                <span>HR Mamagement</span>
+                                <span>HR</span>
                             </a>
                         </li>
 
@@ -532,6 +531,8 @@ animation-direction:reverse;">
                             </li> --}}
                             {{-- </li> --}}
                             @endif
+
+
                             {{-- @if(Auth::user()->role == 'hr')
                             {{-- <li class="submenu-item has-sub " style="list-style:none;">
                                 <a href="{{url('hrindex')}}" class='sidebar-link'>
@@ -547,9 +548,12 @@ animation-direction:reverse;">
                             </li>
                             @endif-> --}}
 
-                            @if(Auth::user()->role == 'Accountant' || Auth::user()->role == 'Admin')
+
+                            @if(Auth::user()->role == 'account' || Auth::user()->role == 'Admin')
                             @php
-                            $accounts = array("accindex");
+                            $accounts = array("ledger_acount_categories",
+                            "ledger_acount_subcategories","ledger_budget_category",
+                            "ledger_acounts","expense_report","journal","ledger","trialbalance","profitandlossaccount","balancesheet","stock_section","stock_issue","store_ledger","stock_categories","stock_subcategories","stock_items");
                             @endphp
 
                             <li class="submenu-item" style="list-style:none;">
@@ -608,6 +612,102 @@ animation-direction:reverse;">
                                     <span>System Setup</span>
                                 </a>
                             </li>
+
+
+
+                            <!-- <li class="submenu-item has-sub " style="list-style:none;">
+                                <a id="sblm" href="{{url('client_invoicingindex')}}" class='sidebar-link'>
+                                    <i class="fa fa-newspaper" id="icon"></i>
+                                    <span> Client Invoicing</span>
+                                </a>
+                            </li> -->
+
+
+
+
+                            <!-- CRA Dashboard End -->
+
+
+
+
+
+
+                            {{-- @if (in_array(request()->path(), $accounts))
+                                       <ul class="submenu" style="display: block;">
+                                     @else
+                                     <ul class="submenu" style="display: none;">
+                                      @endif
+                                           <li class="submenu-item  ">
+                                                <a href="{{ url('ledger_acount_categories') }}" class=" sidebar-link">
+                            <span id="subm">Account Type</span></a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="{{ url('ledger_acount_subcategories') }}" class="sidebar-link">
+                                    <span id="">Groups</span></a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="{{ url('ledger_budget_category') }}" class="sidebar-link">
+                                    <span id="subm">Budget Category</span></a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="{{ url('ledger_acounts') }}" class=" sidebar-link">
+                                    <span id="subm">Ledger Account</span>
+                                </a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="{{ url('expense_report') }}" class=" sidebar-link">
+                                    <span id="subm">Expense Report</span>
+                                </a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="{{ url('journal') }}" class=" sidebar-link">
+                                    <span id="subm">Journal</span>
+                                </a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="{{ url('ledger') }}" class=" sidebar-link">
+                                    <span id="subm">Ledger</span></a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="{{ url('trialbalance') }}" class=" sidebar-link">
+                                    <span id="subm">Trial Balance</span></a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="{{ url('profitandlossaccount') }}" class=" sidebar-link">
+                                    <span id="subm">Profit And loss Account</span></a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="{{ url('balancesheet') }}" class=" sidebar-link">
+                                    <span id="subm">Balance Sheet</span></a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="{{ url('stock_section') }}" class=" sidebar-link">
+                                    <span id="subm">Stock Reciept </span></a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="{{ url('stock_issue') }}" class=" sidebar-link">
+                                    <span id="subm">Stock Issue </span></a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="{{ url('store_ledger') }}" class=" sidebar-link">
+                                    <span id="subm">Store Ledger </span></a>
+                            </li>
+
+                            <li class="submenu-item ">
+                                <a href="{{ url('stock_categories') }}" class=" sidebar-link">
+                                    <span id="subm">Stock Categories </span></a>
+                            </li>
+
+                            <li class="submenu-item ">
+                                <a href="{{ url('stock_subcategories') }}" class=" sidebar-link">
+                                    <span id="subm">Stock Sub Categories </span></a>
+                            </li>
+                            <li class="submenu-item ">
+                                <a href="{{ url('stock_items') }}" class=" sidebar-link">
+                                    <span id="subm">Stock Items </span></a>
+                            </li>
+                            </ul>
+                            {{-- </li> --}}
                             @endif
                             @if(Auth::user()->role == 'store' || Auth::user()->role == 'Admin')
                             @php
@@ -961,48 +1061,6 @@ animation-direction:reverse;">
 
 
 
-                <script>
-
-// {
-//                           $(window).load(function() {
-//                         $("#sidebfar").removeClass("acftive");
-//                       });
-//                     }
-
-                
-
-
-
-
-
-
-              
-                    // function hide() {
-                    //   var x = document.getElementById("sidebar");
-                      
-                    //   if (x.style.display === "none") {
-                        
-                    //     x.style.display = "block";
-                    //   } else {
-                    //     x.style.display = "none";
-                    //   }
-                    // }
-              
-
-
-
-        function hide() {
-            var element = document.getElementById("sidebar");
-      
-            if (element.classList.contains("active")) {
-            element.classList.remove("active");
-
-            } else {
-                element.classList.add("active");
-            }
-        }
-    </script>
-
 
 
 <div class="container" style="height: 10px ; font-size:5px;"> 
@@ -1102,6 +1160,9 @@ function myaa() {
                     color: #07463b;
 
                 }
+                #ni{
+                    display: none;
+                }
              
             </style>
 
@@ -1132,9 +1193,76 @@ function myaa() {
                         
                         </script>
 
+
+
+
+
+
+
+
+
+
+
+
+                <script>
+
+                        // {
+                        //                           $(window).load(function() {
+                        //                         $("#sidebfar").removeClass("acftive");
+                        //                       });
+                        //                     }
+                                            // function hide() {
+                        //   var x = document.getElementById("sidebar");
+                          
+                        //   if (x.style.display === "none") {
+                            
+                        //     x.style.display = "block";
+                        //   } else {
+                        //     x.style.display = "none";
+                        //   }
+                        // }
+ 
+                    function hide() {
+                        var element = document.getElementById("sidebar");
+                        var rtyu = document.getElementById("mi");
+                        var rtyupio = document.getElementById("ni");
+                
+                        if (element.classList.contains("active")) {
+                        element.classList.remove("active");
+                        rtyu.style.display = "none";
+                        rtyupio.style.display = "block";
+                        
+                        } else {
+                            element.classList.add("active");
+                        }
+                    }
+
+                    function hidea() {
+                        var element = document.getElementById("sidebar");
+                        var rtyu = document.getElementById("mi");
+                        var rtyupio = document.getElementById("ni");
+                
+                        if (element.classList.contains("active")) {
+                        element.classList.remove("active");
+                    
+                        } else {
+                            element.classList.add("active");
+                            rtyupio.style.display = "none";
+                            rtyu.style.display = "block";
+                        }
+                    }
+
+                </script>
+
+                
+    
+
    
 
-                <a  type="button" onclick="hide()" class="nav-link" ><i class="fa fa-low-vision"></i></a>
+                <a id="mi" type="button" onclick="hide()" class="nav-link" ><i class="fa fa-eye-slash"></i></a>
+                <a id="ni" type="button" onclick="hidea()" class="nav-link" ><i class="fa fa-eye"></i></a>
+        
+                
                         <div class="nav-item">
                             
                             <a id="t" type="button" onclick="myss()" class="nav-link"> <i class="fa fa-text-width"></i></a>
@@ -1328,7 +1456,7 @@ display: list-item;
                       </form>
 
 
-                  <!-- ordered list -->
+                  <!-- show keys -->
 
                         <script>
                             function myFunction(event) {
@@ -1370,7 +1498,7 @@ function search_animal() {
             x[i].style.padding = "0px 0px 0px 0px";
             y[i].style.display="none";
             col[i].style.display="none";
-            // row[i].style.padding = "50px 10px 20px 30px";
+          
             
             // bbd[i].style.display="none";
             
@@ -1436,7 +1564,7 @@ function search_animal() {
 
                         <button class=" dropdown-toggle-x btn  px-2 py-1 m-1" href="#" id="navbarDropdown"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-navicon"></i>
+                            <i class="fa fa-ellipsis-h"></i>
                             {{-- <img data-toggle="tooltip" data-placement="top" title="Menu"
                                 style="height: 35px; width: 35px;" id="cr_logo"
                                 src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA"> --}}
@@ -1496,7 +1624,7 @@ function search_animal() {
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         style="position: relative; margin-left:6px; " data-target="#navbarTogglerDemo01"
                         aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <span class=""><i class="fa fa-ellipsis-v"></i></span>
                     </button>
 
                     <div class="collapse navbar-collapse ml-2" id="navbarTogglerDemo01">
@@ -1539,7 +1667,7 @@ function search_animal() {
 
 
                         <li class="nav-item p-1 "  style=" text-decoration: none; list-style:none;">
-                            <img src="{{asset('/') }}assets//images/faces/lawemb.png" height="40px"
+                            <img src="{{asset('/') }}assets//images/faces/lawemb.png" height="30px"
                                 class="d-inline-block " alt="">
                         </li>
 

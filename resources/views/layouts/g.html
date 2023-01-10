@@ -1,73 +1,54 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>sessionStorage</title>
-  <script type="text/javascript" src="main.js"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Demo</title>
 </head>
 
 <body>
-  <div class="container" id="formDiv">
-        <form class="form-signin" id="carForm">
-            <h1>Enter details</h1>
-            <label for="carBrand" class="sr-only">Car</label>
-            <input type="text" id="carBrand" class="form-control" placeholder="Car brand" required autofocus><br>
-            <label for="carPrice" class="sr-only">Price</label>
-            <input type="text" id="carPrice" class="form-control" placeholder="Price" required><br>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
-        </form>
 
-        <button class="btn btn-lg btn-primary btn-block" id="retrieveButton">Retrieve records</button>
-        <div id="retrieve"></div>
+	<style>
+		body, a {font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; text-decoration:none;
+}
 
-        <button class="btn btn-lg btn-danger btn-block" id="removeButton">Remove record</button>
-        <button class="btn btn-lg btn-danger btn-block" id="clearButton">Clear all records</button>
-  </div>
-  <script>
+
+a.panel-group_btn {color: #888;display:block;}
+
+a.like-btn {
+    color: #888;
+    font-size: 14px;
+}
+
+
+span.clicked {
+  color: #00dfae; 
+  font-weight:bold;
+}
+	</style>
 	
-function store() { //stores items in the sessionStorage
-    var brand = document.getElementById('carBrand').value;
-    var price = document.getElementById('carPrice').value;
+	<h1>Like button</h1>
 
-    const car = {
-        brand: brand,
-        price: price,
-    }
-    
-    window.sessionStorage.setItem('car',JSON.stringify(car));  
-    //converting object to string
-}
-
-function retrieveRecords() { //retrieves items in the sessionStorage
-        console.log("retrive records");
-        var records = window.sessionStorage.getItem('car');
-        var paragraph = document.createElement("p");
-        var infor = document.createTextNode(records);
-        paragraph.appendChild(infor);
-        var element = document.getElementById("retrieve");
-        element.appendChild(paragraph);
-}
-
-function removeItem() {//deletes item from sessionStorage
-        sessionStorage.removeItem('car');
-        console.log("remove items");
-}
-
-function clearStorage() { //clears the entire sessionStorage
-        sessionStorage.clear();
-        console.log("clear records");
-}
-
-window.onload =function() { //ensures the page is loaded before functions are executed.
-        document.getElementById("carForm").onsubmit = store;
-        document.getElementById("clearButton").onclick = clearStorage;
-        document.getElementById("removeButton").onclick = removeItem;
-        document.getElementById("retrieveButton").onclick = retrieveRecords;
-}
-  </script>
-
+	<p>Uses the span's id to name the Local Storage key. Check Local Storage in your inspector to see the saved keys.</p>
+	
+	<a  class="panel-group_btn" href="#" >
+		<span id="like-01" class="like-btn">
+		Like
+		</span>
+	</a>
+	
+	<a  class="panel-group_btn" href="#" >
+		<span id="like-02" class="like-btn">
+		Like
+		</span>
+	</a>
+	
+	<a  class="panel-group_btn" href="#">
+		<span id="like-03" class="like-btn">
+		Like
+		</span>
+	</a>
+	
+	
+	
 </body>
+
 </html>
