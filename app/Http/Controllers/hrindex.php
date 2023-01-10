@@ -341,7 +341,22 @@ public function addleaverequest(Request $Request)
     $date_from = $Request['date_from'];
     $date_to = $Request['date_to'];
     $reason = $Request['reason'];
-    $attach_file = $Request['attach_file'];
+    $image=  $Request['document'];
+    
+    if($Request->hasFile('document')){
+        $this->validate($Request,[
+            'document' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+        ]);
+        if(request()->hasfile('document')){
+          $uploadedImage = $Request->file('document');
+          $imageName     = time() .'.'. $uploadedImage->getClientOriginalExtension();
+          $destinationPath = public_path('images/file');
+          $image_location="/CRA/public/images/file/";
+          $uploadedImage->move($destinationPath,$imageName);
+          $image->document    =  $image_location.$imageName;
+        }
+      }
+    // $document = $Request['document'];
     // $status = $Request['status'];
 
     DB::table('cra_leave_request_details')->insert([
@@ -351,9 +366,8 @@ public function addleaverequest(Request $Request)
         'leave_type' => $leave_type,
         'date_from' => $date_from,
         'date_to' => $date_to,
-        'date_from' => $date_from,
         'reason' => $reason,
-        'attach_file' => $attach_file,
+        'document' => $image,
     ]);
     return redirect('/leave_request_details');
 
@@ -382,7 +396,7 @@ public function update_leave_request(Request $Request)
         $date_from = $Request['date_from'];
         $date_to = $Request['date_to'];
         $reason = $Request['reason'];
-        $attach_file = $Request['attach_file'];
+        $document = $Request['document'];
 
         $update_leave_request = array(
         'name' => $name,
@@ -393,7 +407,7 @@ public function update_leave_request(Request $Request)
         'date_to' => $date_to,
         'date_from' => $date_from,
         'reason' => $reason,
-        'attach_file' => $attach_file,
+        'document' => $document,
         );
         DB::table('cra_leave_request_details')->where('id', $id)->update( $update_leave_request );
         return redirect('/leave_request_details');
