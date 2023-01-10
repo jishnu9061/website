@@ -44,10 +44,7 @@
                 class="form-control">
         </div>
 
-
-
-
-        <div class="tab-content" id="myTabContent">
+     <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <div class="table-responsive">
                     <table class="table table-striped table-class" id="table-id">
@@ -68,10 +65,7 @@
 
                         </thead>
                         <tbody>
-
-
-
-                            <tr class="text-center" id="data">
+                           <tr class="text-center" id="data">
 
                                 <td></td>
                                 <td></td>
@@ -84,7 +78,7 @@
 
                                     <span class="m-2"></span>
 
-                                    <a href="#"><i style="color:black;" class="fas fa-arrow-right"
+                                    <a href="individual_proposal_lead"><i style="color:black;" class="fas fa-arrow-right"
                                             aria-hidden="true"></i></a>
                                 </td>
 

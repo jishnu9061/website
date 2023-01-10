@@ -2,8 +2,8 @@
 @section('content')
 
 <style>
-th{ 
-    width:30%;
+th {
+    width: 30%;
 }
 </style>
 
@@ -77,20 +77,11 @@ th{
                         <th>Address :</th>
                         <td></td>
                     </tr>
-                    
-
-
                 </tbody>
             </table>
         </div>
 
 
     </form>
-
-
-
-
-
-
 </div>
 @endsection

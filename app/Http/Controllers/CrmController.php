@@ -320,6 +320,11 @@ class CrmController extends Controller
         return view('CRM.view_individual_lead');
     }
 
+    public function individual_proposal_leads()
+    {
+        return view('CRM.individual_proposal_lead');
+    }
+
 }
 
 
