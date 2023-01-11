@@ -1363,7 +1363,7 @@ Route::any('viewsheet','hrindex@viewsheets')->name('viewsheet');
 Route::any('timesheetmonth','hrindex@timesheetmonths')->name('timesheetmonth');
 Route::any('monthviewsheet','hrindex@monthviewsheets')->name('monthviewsheet');
 
-//HR-leave request
+//HR-leave request Subhasree
 Route::any('leave_request_details','hrindex@leave_request')->name('leave_request_details');
 Route::any('addleaverequest','hrindex@addleaverequest')->name('addleaverequest');
 Route::any('approve_leave_request','hrindex@approve_leave_request')->name('approve_leave_request');
@@ -1411,6 +1411,7 @@ Route::any('store_purchase','PurchaseManagement@store_purchase')->name('store_pu
 Route::any('view_purchase_order/{purchase_id}','PurchaseManagement@view_purchase_order')->name('view_purchase_order');
 Route::any('purchase_order_report','PurchaseManagement@purchase_order_report')->name('purchase_order_report');
 Route::any('vendor_performance_report','PurchaseManagement@vendor_performance_report')->name('vendor_performance_report');
+Route::any('purchase_print/{purchase_id}','PurchaseManagement@purchase_print')->name('purchase_print');
 Route::any('view_supplier','PurchaseManagement@view_supplier')->name('view_supplier');
 Route::any('edit_supplier','PurchaseManagement@edit_supplier')->name('edit_supplier');
 // Route::any('cost_variation_report','PurchaseManagement@cost_variation_report')->name('cost_variation_report');
@@ -1616,6 +1617,8 @@ Route::any('view_lead',"CrmController@view_leads")->name('view_lead');
 Route::any('proposal_lead',"CrmController@proposal_leads")->name('proposal_lead');
 Route::any('individual_lead',"CrmController@individual_leads")->name('individual_lead');
 Route::any('view_individual_lead',"CrmController@view_individual_leads")->name('view_individual_lead');
+Route::any('individual_proposal_lead',"CrmController@individual_proposal_leads")->name('individual_proposal_lead');
+
 
 
 
