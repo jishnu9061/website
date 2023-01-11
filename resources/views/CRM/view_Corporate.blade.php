@@ -8,7 +8,7 @@ th{
 </style>
 
 <div class="container">
-    <h4 id="hdtpa"><b>View Corporate Customers</b></h4>
+    <h4 id="hdtpa"><b>{{$view_corporates->Name}}</b></h4>
     <br><br>
 
     <form>
@@ -77,10 +77,7 @@ th{
                         <th>Address :</th>
                         <td>{{$view_corporates->Address}}</td>
                     </tr>
-                    <tr>
-                        <th>Status :</th>
-                        <td>{{$view_corporates->status}}</td>
-                    </tr>
+                   
                     
 
 
