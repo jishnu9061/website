@@ -227,7 +227,13 @@ td {
                         <div class="sub-price">
                     
                             <small>Payment Type</small>
-                            <span class="text-inverse">{{$row->payment_type}}</span>
+                            <span class="text-inverse">{{$row->payment_type
+                                
+                            
+                            
+                            
+                            
+                            }}</span>
                       
                         </div>
                     </div>
