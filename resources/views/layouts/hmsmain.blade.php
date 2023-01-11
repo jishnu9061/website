@@ -96,7 +96,7 @@
         }
 
         body {
-            background-color: #e9e6d65e;
+            background-color: #ffffff;
       
             /* font-size: 22px; */
 
@@ -236,6 +236,8 @@ font-family: 'Carter One';
 
 }
 
+
+
       /* background-color: #ffffff; */
             /* font-family: 'Be Vietnam Pro'; */
             /* font-family: 'Alexandria'; */
@@ -247,11 +249,28 @@ font-family: 'Carter One';
         </style>
 
     </head>
+    <script>
+        var el_up = document.getElementById("GFG_UP");
+        var el_down = document.getElementById("GFG_DOWN");
+        var str = "Click on button to change the background color";
+                  
+        el_up.innerHTML = str;
+                  
+        function changeColor(color) {
+            document.body.style.background = color;
+        }
+          
+        function gfg_Run() {
+            changeColor('yellow');
+            el_down.innerHTML = "Background Color changed";
+        }        
+    </script>
+    
 
     <body class="body">
 
    
- 
+
 
         <div class="progress"></div>
         <script>
@@ -337,6 +356,7 @@ animation-direction:reverse;">
                         <ul class="menu">
                             <li class="sidebar-title" style="color: #1D1D50; text-align:center; font-size:16px; ">
                                 DASHBOARD</li>
+              
                             {{-- @if(Auth::user()->role == 'superadmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="#" class='sidebar-link'>
@@ -479,7 +499,7 @@ animation-direction:reverse;">
                                     </li> -->
 
 
-                        <li class="submenu-item" style="list-style:none;">
+                        <li onclick="gfg_Run()" class="submenu-item" style="list-style:none;">
                             <a href="{{url('hrindex')}}" class='sidebar-link'>
                                 <i class="fa fa-th-large" id="icon"></i>
                                 <span>HR</span>
@@ -1177,6 +1197,7 @@ function myaa() {
                         var ad = document.getElementById("ssdf");
                         var dvv = document.getElementById("hgh");
 
+
                         if (x.style.display === "block") {
                             x.style.display = "none";
                             ad.style.display = "none";
@@ -1238,6 +1259,7 @@ function myaa() {
                     }
 
                     function hidea() {
+                        
                         var element = document.getElementById("sidebar");
                         var rtyu = document.getElementById("mi");
                         var rtyupio = document.getElementById("ni");
@@ -1254,7 +1276,7 @@ function myaa() {
 
                 </script>
 
-                
+             
     
 
    
