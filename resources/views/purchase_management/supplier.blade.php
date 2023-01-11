@@ -7,11 +7,11 @@
 
 {{-- heading --}}
 <div class="container">
-    <h4 id="hdtpa"><b>Supplier </b></h4>
+    <h4 id="hdtpa"><b>Vendor</b></h4>
     <br>
 
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add
-        Supplier </button>
+        Vendor</button>
 
 
     <div class="header_wrap">
@@ -45,7 +45,7 @@
             <table class="table text-center" id="table-id">
                 <thead>
                     <tr>
-                        <th scope="col">Supplier Name</th>
+                        <th scope="col">Vendor Name</th>
                         <th scope="col">Product Supply</th>
                         <th scope="col">Payment Details</th>
                         <th scope="col">Action</th>
@@ -96,7 +96,7 @@
 
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h2 class="text-center"><b>Add Supplier </b></h2>
+                    <h2 class="text-center"><b>Add Vendor </b></h2>
 
                 </div>
 
@@ -109,7 +109,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-1">
-                                        <label for="username">Supplier Name</label>
+                                        <label for="username">Vendor Name</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
 
