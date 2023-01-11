@@ -11,7 +11,7 @@
                 <b><u>Client Registration</u></b></span> -->
 {{-- heading --}}
 
-<h4 id="hdtpa"><b>New Purchase Order</b></h4>
+<h4 id="hdtpa"><b> Purchase Order Details</b></h4>
 <br>
 
 
@@ -61,9 +61,8 @@
                                     <th class="text-center">Order Number</th>
                                     <th class="text-center">Date</th>
                                     <th class="text-center">Vendor</th>
-                                    <th class="text-center">Unit</th>
                                     <th class="text-center">Status</th>
-                                    <th class="text-center">View</th>
+                                    <th class="text-center">Action</th>
 
                                 </tr>
                             </thead>
@@ -75,13 +74,15 @@
                                     <td>{{$list->purchase_order_number}}</td>
                                     <td>{{$list->purchase_date}}</td>
                                     <td></td>
-                                    <td></td>
                                     <td>{{$list->status}}</td>
                                     <td scope="row" class="text-center">
                                         <a href="{{url('view_purchase_order',$list->purchase_id
-                                            )}}"> <i
-                                                style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
+                                            )}}"> <i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
+
+                                            <a href="{{url('purchase_print',$list->purchase_id)}}"> <i
+                                                    style="color:rgb(13, 1, 56);" class="fa fa-print"></i>
                                     </td>
+
 
                                 </tr>
                                 @endforeach
@@ -151,7 +152,8 @@
                                                                 <div class="input-group-prepend">
 
                                                                 </div>
-                                                                <input type="text" class="form-control" name="text" value="@if (!empty($purc_order->purchase_orderno)) {{ $purc_order->purchase_orderno }}@else{{ strtoupper(uniqid()) }} @endif"
+                                                                <input type="text" class="form-control" name="number"
+                                                                    value="@if (!empty($purc_order->purchase_orderno)) {{ $purc_order->purchase_orderno }}@else{{ strtoupper(uniqid()) }} @endif"
                                                                     id="username" required>
                                                                 <div class="invalid-feedback" style="width: 100%;">
                                                                     Number is required.
@@ -166,7 +168,7 @@
                                                                 <div class="input-group-prepend">
 
                                                                 </div>
-                                                                <select name="distributed" id="cars">
+                                                                <select name="Payment" id="cars">
                                                                     <option>select</option>
                                                                     <option>By Cash</option>
                                                                     <option>By Cheque</option>
@@ -188,12 +190,15 @@
                                                                 <div class="input-group-prepend">
 
                                                                 </div>
-                                                                <select name="distributed" id="cars">
-                                                                    <option>select</option>
-                                                                    <option>ABC Ltd</option>
-                                                                    <option>Moon Ltd</option>
 
+                                                                <select name="Supplier" id="cars">
+                                                                    @if(count($supplier_order))
+                                                                    @foreach($supplier_order as $list)
+                                                                    <option value="{{$list->id}}">{{$list->supplier_name}}</option>
+                                                                    @endforeach
+                                                                    @endif
                                                                 </select>
+
                                                                 <div class="invalid-feedback" style="width: 100%;">
                                                                     Number is required.
                                                                 </div>
@@ -208,7 +213,7 @@
 
                                                                 </div>
                                                                 <input type="text" class="form-control" id="username"
-                                                                    value="Order-Placed" required>
+                                                                    value="Order-Placed" name="status" required>
                                                                 <div class="invalid-feedback" style="width: 100%;">
                                                                     Number is required.
                                                                 </div>

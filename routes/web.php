@@ -1411,6 +1411,7 @@ Route::any('store_purchase','PurchaseManagement@store_purchase')->name('store_pu
 Route::any('view_purchase_order/{purchase_id}','PurchaseManagement@view_purchase_order')->name('view_purchase_order');
 Route::any('purchase_order_report','PurchaseManagement@purchase_order_report')->name('purchase_order_report');
 Route::any('vendor_performance_report','PurchaseManagement@vendor_performance_report')->name('vendor_performance_report');
+Route::any('purchase_print/{purchase_id}','PurchaseManagement@purchase_print')->name('purchase_print');
 Route::any('view_supplier','PurchaseManagement@view_supplier')->name('view_supplier');
 Route::any('edit_supplier','PurchaseManagement@edit_supplier')->name('edit_supplier');
 // Route::any('cost_variation_report','PurchaseManagement@cost_variation_report')->name('cost_variation_report');

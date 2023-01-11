@@ -11,10 +11,25 @@ class PurchaseManagement extends Controller
     {
         return view('purchase_management.purchase_index');
     }
+
     public function purchase_order()
     {
+        $supplier_order = DB::table('cra_add_supplier')->get();
         $purchase_order = DB::table('cra_add_new_purchase')->get();
-        return view('purchase_management.purchase_order',compact('purchase_order'));
+        return view('purchase_management.purchase_order',compact('purchase_order','supplier_order'));
+    }
+
+    public function purchase_print($purchase_id){
+
+       
+        $print_purchase  = DB::table('cra_purchase_items')->where('purchase_id',$purchase_id)->get();
+        $purchase_print  = DB::table('cra_add_new_purchase')
+        ->leftjoin('cra_add_supplier','cra_add_supplier.id','=','cra_add_new_purchase.supplier_name')
+        ->where('cra_add_new_purchase.purchase_id',$purchase_id)
+        ->get();
+       
+      
+        return view('purchase_management.purchase_print',compact('purchase_print','print_purchase','purchase_id'));
     }
 
     
@@ -24,7 +39,7 @@ class PurchaseManagement extends Controller
             $order_number    = $request['number'];
             $supplier        = $request['Supplier'];
             $payment         = $request['Payment'];
-            $status          = $request['Order-Placed'];
+            $status          = $request['status'];
             $grand_total     = $request['grand_total'];
             $advance_amount  = $request['advance_amount'];
             $pending_amount  = $request['pending_amount'];
@@ -64,7 +79,7 @@ class PurchaseManagement extends Controller
                     'item_name' => $request->input('item_name')[$i],
                     'quantity' => $request->input('quantity')[$i],
                     'price'    => $request->input('price')[$i],
-                    'total'    => $request->input('total')[$i]
+                    'total'    => $request->input('total')[$i],
                 ];
             }
 
@@ -77,12 +92,13 @@ class PurchaseManagement extends Controller
     public function view_purchase_order($purchase_id)
     {
         
-        $view_order = DB::table('cra_add_new_purchase')->where('purchase_id',$purchase_id)->get();
-        
+        $view_order = DB::table('cra_add_new_purchase')
+        ->leftjoin('cra_add_supplier','cra_add_supplier.id','=','cra_add_new_purchase.supplier_name')
+        ->where('cra_add_new_purchase.purchase_id',$purchase_id)
+        ->get();
 
         $view_purchase_order = DB::table('cra_purchase_items')->where('purchase_id',$purchase_id)->get();
-       
-        
+   
         return view('purchase_management.view_purchase_reports',compact('view_purchase_order','view_order','purchase_id'));
     }
 
