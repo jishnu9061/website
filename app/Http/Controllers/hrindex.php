@@ -344,6 +344,7 @@ public function addleaverequest(Request $Request)
     $leave_type = $Request['leave_type'];
     $date_from = $Request['date_from'];
     $date_to = $Request['date_to'];
+    $number_of_days = $Request['number_of_days'];
     $reason = $Request['reason'];
     $image=  $Request['document'];
     
@@ -360,6 +361,7 @@ public function addleaverequest(Request $Request)
           $image->document    =  $image_location.$imageName;
         }
       }
+      $remarks = $Request['remarks'];
     // $document = $Request['document'];
     // $status = $Request['status'];
 
@@ -370,8 +372,10 @@ public function addleaverequest(Request $Request)
         'leave_type' => $leave_type,
         'date_from' => $date_from,
         'date_to' => $date_to,
+        'number_of_days' => $number_of_days,
         'reason' => $reason,
         'document' => $image,
+        'remarks' => $remarks,
     ]);
     return redirect('/leave_request_details');
 
@@ -380,6 +384,13 @@ public function approve_leave_request()
 {
     return view('hr.approve_leave_request');
 }
+public function view_leave_request($id)
+{
+    $view_leave_request=DB::table('cra_leave_request_details')->where('id',$id)->first();
+    return view('hr.view_leave_request',compact('view_leave_request','id'));
+    
+}
+
 
 public function edit_leave_request($id)
 {
@@ -399,8 +410,10 @@ public function update_leave_request(Request $Request)
         $leave_type = $Request['leave_type'];
         $date_from = $Request['date_from'];
         $date_to = $Request['date_to'];
+        $number_of_days = $Request['number_of_days'];
         $reason = $Request['reason'];
         $document = $Request['document'];
+        $remarks = $Request['remarks'];
 
         $update_leave_request = array(
         'name' => $name,
@@ -409,9 +422,10 @@ public function update_leave_request(Request $Request)
         'leave_type' => $leave_type,
         'date_from' => $date_from,
         'date_to' => $date_to,
-        'date_from' => $date_from,
+        'number_of_days' => $number_of_days,
         'reason' => $reason,
         'document' => $document,
+        'remarks' => $remarks,
         );
         DB::table('cra_leave_request_details')->where('id', $id)->update( $update_leave_request );
         return redirect('/leave_request_details');
@@ -419,6 +433,19 @@ public function update_leave_request(Request $Request)
 
 
     }
+
+    public function attendance_sheet()
+{
+    return view('hr.attendance_sheet');
+}
+
+
+public function view_attendance()
+{
+    return view('hr.view_attendance');
+}
+
+
 
 //Subhasree
 public function timesheets()

@@ -48,6 +48,10 @@
                 src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
                 class="btn btn-primary btn_align_btn"> Leave Request Details</button></a></div>
 
+    <div class="col-sm-4 "> <a href="{{ url('attendance_sheet') }}"><img class="logo_size"
+                    src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
+                    class="btn btn-primary btn_align_btn"> Attendance Sheet</button></a></div>
+
 
 
 
