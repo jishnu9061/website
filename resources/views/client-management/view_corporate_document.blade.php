@@ -1,10 +1,11 @@
-@extends('layouts.hmsmain')
-@section('content')
+
+
 <style>
 .btn-width {
     width: 10%;
 }
 </style>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <div>
 
 
@@ -22,6 +23,13 @@
  
     <br><br>
     </div>
+    <div class="invoice-company text-inverse f-w-600">
+                <span class="pull-right hidden-print">
+
+                    <button><a href="javascript:;" onclick="window.print()" class="btn btn-sm btn-white m-b-10 p-l-5"
+                        id="hidethat"><i class="fa fa-print t-plus-1 fa-fw fa-lg"></i> Print</a></button>
+                </span>
+            </div>
     <div class="table-responsive">
         <table class="table table-hover" style="border: 1px solid">
 
@@ -30,8 +38,8 @@
              
                 <tr>
                 
-                    <td><img src="{{asset('/images/file/'.$view_document->file)}}" width="100%" height="100%"
-                            alt="image"></td>
+                    <img src="{{asset('/images/file/'.$view_document->file)}}" width="100%" height="100%"
+                            alt="image">
                 </tr>
                
             </tbody>
@@ -41,4 +49,3 @@
 
 
 
-@endsection
