@@ -6,7 +6,7 @@
    <h4 id="hdtpa"><b>Attendance Sheet</b></h4>
    <br>
 
-
+{{-- 
 
    <meta name="csrf-token" content="{{ csrf_token() }}">
    <form method="post" action="monthwise">
@@ -20,7 +20,7 @@
    <option  value="{{$dep->depname}}">{{$dep->depname}}</option>
    
    @endforeach --}}
-   </select>
+   {{-- </select>
    </div>
    <div class="col-md-3">
    
@@ -51,7 +51,7 @@
    </div>
    <div class="col-md-2">
        <button type="submit" class="btn btn-primary form-control">Submit</button>
-   </div>
+   </div>  --}}
    
    </form>
    <div class="header_wrap">
