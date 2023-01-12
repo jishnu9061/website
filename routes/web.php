@@ -1048,7 +1048,7 @@ Route::any('/update-corporate','ClientManagement@Update_corporate')->name('updat
 Route::any('/delete_client/{corporate_id}','ClientManagement@Corporate_destroy')->name('delete_client');
 Route::any('/corporate-document/{corporate_id}','ClientManagement@CorporateDocument')->name('corporate-document');
 Route::any('add-corporate-document','ClientManagement@addCorporatedocument')->name('add-corporate-document');
-Route::any('corporate-document-details','ClientManagement@viewCorporateDocument')->name('corporate-document-details');
+Route::any('corporate-document-details/{id}','ClientManagement@viewCorporateDocument')->name('corporate-document-details');
 Route::any('edit-corporate-document/{id}','ClientManagement@editCorporateDocument')->name('edit-corporate-document');
 Route::any('update-document-details','ClientManagement@updateDocumentDetails')->name('update-document-details');
 Route::any('view-document-details/{id}','ClientManagement@viewDocummentDetails')->name('view-document-details');
@@ -1061,6 +1061,7 @@ Route::any('create-document/{individual_id}','ClientManagement@createDocument')-
 Route::any('add-document','ClientManagement@addDocument')->name('add-document');
 Route::any('view-document/{id}','ClientManagement@viewDocument')->name('view-document');
 Route::any('edit-documents/{id}','ClientManagement@editDocument')->name('edit-documents');
+Route::any('view_corporate_document/{id}','ClientManagement@showcorporatedocument')->name('view_corporate_document');
 Route::any('delete-document/{id}','ClientManagement@deleteDocument')->name('delete-document');
 Route::any('update-document','ClientManagement@updatedocument')->name('update-document');
 //end Client-Documents
