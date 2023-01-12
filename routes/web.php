@@ -1379,6 +1379,16 @@ Route::any('edit_memo','hrindex@edit_memo')->name('edit_memo');
 Route::any('attendance_sheet','hrindex@attendance_sheet')->name('attendance_sheet');
 Route::any('view_attendance','hrindex@view_attendance')->name('view_attendance');
 
+//HR-Manage Salary Subhasree
+Route::any('manage_salary','hrindex@manage_salary')->name('manage_salary');
+Route::any('manage_salary_index','hrindex@manage_salary_index')->name('manage_salary_index');
+Route::any('allowances','hrindex@allowances')->name('allowances');
+Route::any('commissions','hrindex@commissions')->name('commissions');
+Route::any('loan','hrindex@loan')->name('loan');
+Route::any('statutory_deductions','hrindex@statutory_deductions')->name('statutory_deductions');
+Route::any('other_payment','hrindex@other_payment')->name('other_payment');
+Route::any('overtime','hrindex@overtime')->name('overtime');
+
 //Store & Inventory
 Route::any('Store_&_Inventory_index','store@index')->name('Store_&_Inventory_index');
 Route::any('manage_categories','store@list_manage_categories')->name('manage_categories');
@@ -1434,7 +1444,7 @@ Route::any('matter_type','PracticeAreaManagement@matter_type')->name('matter_typ
 Route::any('personal_injury','PracticeAreaManagement@personalinjury')->name('personal_injury');
 Route::any('add_injury','PracticeAreaManagement@addinjury')->name('add_injury');
 Route::any('/edit_injury/{id}','PracticeAreaManagement@editinjury')->name('edit_injury');
-Route::any('view_injury','PracticeAreaManagement@view_injury')->name('view_injury');    
+Route::any('view_injury','PracticeAreaManagement@view_injury')->name('view_injury');
 Route::any('/update_injury','PracticeAreaManagement@updateinjury')->name('update_injury');
 Route::any('/delete_injury/{id}','PracticeAreaManagement@deleteinjury')->name('delete_injury');
 Route::any('family_law','PracticeAreaManagement@family_law')->name('family_law');

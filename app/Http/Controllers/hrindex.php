@@ -445,6 +445,46 @@ public function view_attendance()
     return view('hr.view_attendance');
 }
 
+public function manage_salary()
+{
+    return view('hr.manage_salary');
+}
+
+public function manage_salary_index()
+{
+    return view('hr.manage_salary_index');
+}
+
+public function allowances()
+{
+    return view('hr.allowances');
+}
+
+public function commissions()
+{
+    return view('hr.commissions');
+}
+
+public function loan()
+{
+    return view('hr.loan');
+}
+
+public function statutory_deductions()
+{
+    return view('hr.statutory_deductions');
+}
+
+public function other_payment()
+{
+    return view('hr.other_payment');
+}
+
+public function overtime()
+{
+    return view('hr.overtime');
+}
+
 
 
 //Subhasree

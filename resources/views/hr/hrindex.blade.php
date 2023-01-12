@@ -52,6 +52,9 @@
                     src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
                     class="btn btn-primary btn_align_btn"> Attendance Sheet</button></a></div>
 
+    <div class="col-sm-4 "> <a href="{{ url('manage_salary_index') }}"><img class="logo_size"
+                        src="assets\image\File list progress report.png" alt=""><button type="button" style="width:70%;"
+                        class="btn btn-primary btn_align_btn">Manage Salary</button></a></div>
 
 
 
