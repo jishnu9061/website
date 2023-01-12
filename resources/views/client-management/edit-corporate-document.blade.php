@@ -37,7 +37,7 @@
                                         </select>
                                     </td>
                                     <td style="width:45%;"> <input type="file" class="form-control" name="file"
-                                            multiple="multiple" required>
+                                            multiple="multiple" >
                                     </td>
                                     <td>
                                         <input type="date" class="form-control" name="date" id="username" required>
