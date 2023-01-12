@@ -134,7 +134,7 @@
                                 <td scope="row" class="text-center" id="medicine_name_1">
                                     {{ $list->client_name}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1">
-                                    {{ $list->designation }}</td>
+                                    {{ $list->designation}}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1">
                                     {{ $list->Mobile_no }}</td>
                                 <td scope="row" class="text-center" id="medicine_name_1">{{ $list->Email_address }}
@@ -142,7 +142,7 @@
                                 <td scope="row" class="text-center">
                                     <a href="{{url('corporate-document',$list->corporate_id)}}"><button
                                             class="btn btn-primary"> Add </button></a>
-                                    <a href="{{url('corporate-document-details')}}"><button
+                                    <a href="{{url('corporate-document-details',$list->corporate_id)}}"><button
                                             class="btn btn-primary"> Document </button></a>
                                 </td>
                                
@@ -525,7 +525,7 @@
                                                         <label for="username">Designation</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
-                                                            <select name="industry" id="cars">
+                                                            <select name="Designation" id="cars">
                                                                 <option>Select</option>
                                                                 <option>Manager</option>
                                                                 <option>Advocate</option>

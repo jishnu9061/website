@@ -76,7 +76,8 @@
                             <select name="leave_type" id="cars"required>
                                 <option>{{$leave_request->leave_type}}</option>
                                 <option>Full Day</option>
-                                <option>Half Day</option>
+                                <option>For Noon</option>
+                                <option>After Noon</option>
                                 <option>Casual Leave</option>
                                 <option>Medical Leave</option>
 
@@ -117,6 +118,18 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
+                            <label>Number Of Days</label>
+    
+                                </div> <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="number"  id="" name="number_of_days"value=""class="form-control">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required
+                            </div>
+                        </div>
+                     </div>
+                    <div class="col-md-6">
+                        <div class="mb-1">
                         <label >Reason</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
@@ -127,7 +140,7 @@
                             </div>
                         </div>
                     </div> <br>
-
+                    <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label>Upload Document</label>
@@ -140,8 +153,40 @@
                             </div>
                         </div>
                      </div>
+                     <div class="col-md-6">
+                        <div class="mb-1">
+                        <label >Remarks</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                               <textarea type="text" name="remarks" class="form-control"></textarea>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div> <br>
                     </div>
+                   
+                        
+                     
+                
                 <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-1">
+                            <label>Status</label>
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Requested
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#" value="Pending">Requested</a>
+                                  <a class="dropdown-item" href="#">Accepted</a>
+                                  <a class="dropdown-item" href="#">Rejected</a>
+
+                                </div>
+                              </div>
+                        </div>
+
+                    </div>
      <div class="col-sm">
 
                     </div>

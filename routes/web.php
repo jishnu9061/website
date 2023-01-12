@@ -1048,7 +1048,7 @@ Route::any('/update-corporate','ClientManagement@Update_corporate')->name('updat
 Route::any('/delete_client/{corporate_id}','ClientManagement@Corporate_destroy')->name('delete_client');
 Route::any('/corporate-document/{corporate_id}','ClientManagement@CorporateDocument')->name('corporate-document');
 Route::any('add-corporate-document','ClientManagement@addCorporatedocument')->name('add-corporate-document');
-Route::any('corporate-document-details','ClientManagement@viewCorporateDocument')->name('corporate-document-details');
+Route::any('corporate-document-details/{id}','ClientManagement@viewCorporateDocument')->name('corporate-document-details');
 Route::any('edit-corporate-document/{id}','ClientManagement@editCorporateDocument')->name('edit-corporate-document');
 Route::any('update-document-details','ClientManagement@updateDocumentDetails')->name('update-document-details');
 Route::any('view-document-details/{id}','ClientManagement@viewDocummentDetails')->name('view-document-details');
@@ -1061,6 +1061,7 @@ Route::any('create-document/{individual_id}','ClientManagement@createDocument')-
 Route::any('add-document','ClientManagement@addDocument')->name('add-document');
 Route::any('view-document/{id}','ClientManagement@viewDocument')->name('view-document');
 Route::any('edit-documents/{id}','ClientManagement@editDocument')->name('edit-documents');
+Route::any('view_corporate_document/{id}','ClientManagement@showcorporatedocument')->name('view_corporate_document');
 Route::any('delete-document/{id}','ClientManagement@deleteDocument')->name('delete-document');
 Route::any('update-document','ClientManagement@updatedocument')->name('update-document');
 //end Client-Documents
@@ -1367,12 +1368,17 @@ Route::any('monthviewsheet','hrindex@monthviewsheets')->name('monthviewsheet');
 Route::any('leave_request_details','hrindex@leave_request')->name('leave_request_details');
 Route::any('addleaverequest','hrindex@addleaverequest')->name('addleaverequest');
 Route::any('approve_leave_request','hrindex@approve_leave_request')->name('approve_leave_request');
+Route::any('view_leave_request','hrindex@view_leave_request')->name('view_leave_request');
 Route::any('edit_leave_request/{id}','hrindex@edit_leave_request')->name('edit_leave_request');
 Route::any('/update_leave_request','hrindex@update_leave_request')->name('update_leave_request');
 
 Route::any('internal_memos','hrindex@internal_memos')->name('internal_memos');
 Route::any('view_memo','hrindex@view_memo')->name('view_memo');
 Route::any('edit_memo','hrindex@edit_memo')->name('edit_memo');
+
+//HR-Attendance Sheet Subhasree
+Route::any('attendance_sheet','hrindex@attendance_sheet')->name('attendance_sheet');
+Route::any('view_attendance','hrindex@view_attendance')->name('view_attendance');
 
 //Store & Inventory
 Route::any('Store_&_Inventory_index','store@index')->name('Store_&_Inventory_index');

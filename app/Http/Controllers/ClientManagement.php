@@ -287,12 +287,15 @@ class ClientManagement extends Controller
         return view('client-management.corporate-document',compact('corporate_docs','corporate_id'));
     }
 
-    public function viewCorporateDocument(){
+    
+    public function viewCorporateDocument($corporate_id){
+
         $view_corporate_document = DB::table('cra_document_detials')
         ->join('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_document_detials.corporate_id')
+        ->where('cra_document_detials.corporate_id',$corporate_id)
         ->get();
        
-        return view('client-management.corporate-document-detail',compact('view_corporate_document'));
+        return view('client-management.corporate-document-detail',compact('view_corporate_document','corporate_id'));
     }
 
     public function editCorporateDocument($id){
@@ -318,6 +321,8 @@ class ClientManagement extends Controller
             $destinationPath = public_path('images/file');
             $uploadedImage->move($destinationPath,$imageName);
             $file->file    = $destinationPath.$imageName;
+        }else{
+            $file = '';
         }
 
         $insertdoc[] = [
@@ -542,10 +547,14 @@ class ClientManagement extends Controller
         return redirect('/client-document');
     }
 
+    public function showcorporatedocument($id){
+      $view_document = DB::table('cra_document_detials')->where('id',$id)->first();  
+       return view('client-management.view_corporate_document',compact('view_document','id'));
+   }
 
     public function deleteDocument($id){
          DB::table('cra_document_detials')->where('id',$id)->delete();  
-        return redirect('/client-document');
+        return redirect('/corporate-document-details');
     }
 
     //document

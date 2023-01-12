@@ -90,7 +90,7 @@
 
                         <thead>
                             <tr>
-                                <th class="text-center"> Client Document</th>
+                                <th class="text-center">Document Type</th>
                                 <th class="text-center">Action</th>
                             </tr>
                         </thead>
@@ -99,23 +99,22 @@
                             @foreach( $view_corporate_document as $list)
 
                             <tr id="data">
-                                <td scope="row" class="text-center" id="medicine_name_1"><a
-                                        href="{{url('view-document-details',$list->id)}}"><button type="button"
-                                            class="btn btn-primary float:right;" Style="width:45%;">View
-                                            Document</button></a>
-                                </td>
+                                <td scope="row" class="text-center" id="medicine_name_1">{{$list->document_type}}</td>
                                 <td scope="row" class="text-center">
+                                <a href="{{url('view_corporate_document',$list->id)}}"><i style="color:black;"
+                                        class="fa fa-eye" aria-hidden="true"></i>
                                     <a href="{{url('edit-corporate-document',$list->id)}}"><i style="color:black;"
                                             class="fa fa-pencil" aria-hidden="true"></i>
                                         <a onClick="return myFunction();" href="{{url('delete-document',$list->id)}}"
                                             style="color:black;"><i class="fas fa-trash-alt"></i></a>
+                                           
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
                 </div>
-
+               
                 <!--		Start Pagination -->
                 <div class='pagination-container'>
                     <nav>
