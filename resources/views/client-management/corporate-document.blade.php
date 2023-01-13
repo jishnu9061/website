@@ -15,8 +15,8 @@
                 @csrf
                 <input type="hidden" name="corporate_id" value="{{$corporate_docs->corporate_id}}">
 
-                
-             
+
+
                 <br>
 
                 <div class="row">
@@ -35,13 +35,12 @@
                                 <tr>
                                     <td style="width:45%;">
 
-                                    <input type="text" name="testname[]" list="cityname"
-                                                                style="width:100%;">
-                                    <datalist id="cityname" style="width:100%;">
-                                                                <option>
-                                                                <option>
-                                                                <option>
-                                                            </datalist>
+                                        <input type="text" name="testname[]" list="cityname" style="width:100%;">
+                                        <datalist id="cityname" style="width:100%;">
+                                            <option>
+                                            <option>
+                                            <option>
+                                        </datalist>
 
                                         <!-- <select class="form-control select_group product" data-row-id="row_3"
                                             id="product_detailes" name="testname[]" style="width:100%;">
@@ -65,7 +64,7 @@
                                     </td>
                                     <input type="hidden" class="form-control" name="client" id="username"
                                         value="{{$corporate_docs->Client_type}}" placeholder="File" required>
-                                        
+
                                 </tr>
                             </tbody>
                         </table>
@@ -86,7 +85,8 @@
                     <div class="col-sm">
                         <br>
                         <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Submit</button>
-                        <button type="button" class="btn btn-primary float:left" Style="width:45%;" onclick="history.back()">Cancel</button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                            onclick="history.back()">Cancel</button>
                     </div>
                 </div>
             </form>
@@ -722,8 +722,6 @@ $(document).on('click', '#testing1', function() {
                                     /form> < /
                                     div > <
                                     script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" >
-
-                                    
 </script>
 <script type="text/javascript">
 $('#password, #confirm_password').on('keyup', function() {

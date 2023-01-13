@@ -556,8 +556,8 @@ class ClientManagement extends Controller
    }
 
     public function deleteDocument($id){
-         DB::table('cra_document_detials')->where('id',$id)->delete();  
-        return redirect('/corporate-document-details');
+        DB::table('cra_document_detials')->where('id',$id)->delete();  
+        return redirect('/corporate-list');
     }
 
     //document
