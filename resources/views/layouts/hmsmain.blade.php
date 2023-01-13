@@ -1979,26 +1979,26 @@ function search_animal() {
         // }
         // }
 
-        $(function() {
-        // Just to append id number for each row
-        $('table tr:eq(0)').prepend('<th> ID </th>');
+        // $(function() {
+        // // Just to append id number for each row
+        // $('table tr:eq(0)').prepend('<th> ID </th>');
 
-        var id = 0;
+        // var id = 0;
 
-        $('table tr:gt(0)').each(function() {
-            id++;
-            $(this).prepend('<td>' + id + '</td>');
-        });
-        });       
+        // $('table tr:gt(0)').each(function() {
+        //     id++;
+        //     $(this).prepend('<td>' + id + '</td>');
+        // });
+        // });       
 
-        //ROWS SHOWING FUNCTION
-        function showig_rows_count(maxRows, pageNum, totalRows) {
-            //Default rows showing
-            var end_index = maxRows * pageNum;
-            var start_index = ((maxRows * pageNum) - maxRows) + parseFloat(1);
-            var string = 'Showing ' + start_index + ' to ' + end_index + ' of ' + totalRows + ' entries';
-            $('.rows_count').html(string);
-        }
+        // //ROWS SHOWING FUNCTION
+        // function showig_rows_count(maxRows, pageNum, totalRows) {
+        //     //Default rows showing
+        //     var end_index = maxRows * pageNum;
+        //     var start_index = ((maxRows * pageNum) - maxRows) + parseFloat(1);
+        //     var string = 'Showing ' + start_index + ' to ' + end_index + ' of ' + totalRows + ' entries';
+        //     $('.rows_count').html(string);
+        // }
 
         // CREATING INDEX
         // function default_index() {
