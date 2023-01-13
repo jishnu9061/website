@@ -1955,29 +1955,29 @@ function search_animal() {
         // END OF PAGINATION
         }
 
-        function limitPagging() {
-        // alert($('.pagination li').length)
+        // function limitPagging() {
+        // // alert($('.pagination li').length)
 
-        if ($('.pagination li').length > 10) {
-            if ($('.pagination li.active').attr('data-page') <= 9) {
-            $('.pagination li:gt(9)').hide();
-            $('.pagination li:lt(9)').show();
-            $('.pagination [data-page="next"]').show();
-            }
-            if ($('.pagination li.active').attr('data-page') > 9) {
-            $('.pagination li:gt(0)').hide();
-            $('.pagination li:lt(0)').show();
-            $('.pagination [data-page="next"]').show();
-            for (
-                let i = parseInt($('.pagination li.active').attr('data-page')) - 4;
-                i <= parseInt($('.pagination li.active').attr('data-page')) + 4;
-                i++
-            ) {
-                $('.pagination [data-page="' + i + '"]').show();
-            }
-            }
-        }
-        }
+        // if ($('.pagination li').length > 10) {
+        //     if ($('.pagination li.active').attr('data-page') <= 9) {
+        //     $('.pagination li:gt(9)').hide();
+        //     $('.pagination li:lt(9)').show();
+        //     $('.pagination [data-page="next"]').show();
+        //     }
+        //     if ($('.pagination li.active').attr('data-page') > 9) {
+        //     $('.pagination li:gt(0)').hide();
+        //     $('.pagination li:lt(0)').show();
+        //     $('.pagination [data-page="next"]').show();
+        //     for (
+        //         let i = parseInt($('.pagination li.active').attr('data-page')) - 4;
+        //         i <= parseInt($('.pagination li.active').attr('data-page')) + 4;
+        //         i++
+        //     ) {
+        //         $('.pagination [data-page="' + i + '"]').show();
+        //     }
+        //     }
+        // }
+        // }
 
         $(function() {
         // Just to append id number for each row
