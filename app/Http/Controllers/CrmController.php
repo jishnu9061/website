@@ -26,6 +26,7 @@ class CrmController extends Controller
     {
         return view('CRM.projects');
     }
+
     public function view_project()
     {
         return view('CRM.view_project');
@@ -59,7 +60,7 @@ class CrmController extends Controller
         $town = $Request['town'];
         $post = $Request['post'];
         $Address = $Request['address'];
-        $Status = $Request['Status'];
+       
 
         DB::table('cra_corporate_customers')->insert([
             'Name' => $name,
@@ -77,8 +78,7 @@ class CrmController extends Controller
             'Town' => $town,
             'Post_Code' => $post,
             'Address' =>  $Address,
-            'status' =>  $Status,
-
+           
         ]);    
 
         return redirect('Corporate');
@@ -131,7 +131,7 @@ class CrmController extends Controller
         $town = $Request['town'];
         $post = $Request['post'];
         $Address = $Request['address'];
-        $Status = $Request['Status'];
+      
 
         DB::table('cra_corporate_customers')->where('id',$id)->update([
             'Name' => $name,
@@ -149,7 +149,7 @@ class CrmController extends Controller
             'Town' => $town,
             'Post_Code' => $post,
             'Address' =>  $Address,
-            'status' =>  $Status,
+         
 
         ]);
         return redirect('/Corporate');
@@ -163,17 +163,41 @@ class CrmController extends Controller
 
     public function leads()
     {
-        return view('CRM.lead');
+        $leads = DB::table('cra_proposal_lead')
+        ->rightjoin('cra_corporate_customers','cra_corporate_customers.id','=','cra_proposal_lead.corporate_customers_id')
+        ->get();
+        return view('CRM.lead',compact('leads'));
     }
 
-    public function view_leads()
+    public function view_leads($id)
     {
-        return view('CRM.view_lead');
+        $view_leads = DB::table('cra_corporate_customers')->where('id',$id)->first();
+        return view('CRM.view_lead',compact('view_leads','id'));
     }
 
-    public function proposal_leads()
+    public function proposal_leads($Id)
     {
-        return view('CRM.proposal_lead');
+        $proposal_leads = DB::table('cra_corporate_customers')->where('Id',$Id)->first();
+        return view('CRM.proposal_lead',compact('proposal_leads','Id'));
+    }
+
+    public function store_proposal_leads(Request $request){
+
+            $id        =  $request['id'];
+            $date      =  $request['date'];
+            $contacted =  $request['Contacted'];
+            $source    =  $request['Source'];
+            $status    =  $request['Status'];
+
+            DB::table('cra_proposal_lead')->insert([
+                'date_of_contact'       =>  $date,
+                'corporate_customers_id'=>  $id,
+                'contacted_by'          =>  $contacted,
+                'source'                =>  $source,
+                'status'                =>  $status 
+            ]);
+
+            return redirect('/lead');
     }
 
     public function add_manage_tasks(Request $Request)
@@ -311,19 +335,144 @@ class CrmController extends Controller
         return redirect('/expense');
     }
 
+
+
     public function individual_leads()
     {
-        return view('CRM.individual_lead');
-    }
-    public function view_individual_leads()
-    {
-        return view('CRM.view_individual_lead');
+        $individual_leads = DB::table('cra_individual_proposal_lead')
+        ->rightjoin('cra_customer_registration','cra_customer_registration.id','cra_individual_proposal_lead.registration_id')
+        ->get();
+        return view('CRM.individual_lead',compact('individual_leads'));
     }
 
-    public function individual_proposal_leads()
+
+    public function view_individual_leads($id)
     {
-        return view('CRM.individual_proposal_lead');
+        $view_individual_leads = DB::table('cra_customer_registration')->where('id',$id)->first();
+        return view('CRM.view_individual_lead',compact('view_individual_leads','id'));
     }
+
+
+    public function individual_proposal_leads($id)
+    {
+        $individual_proposal_leads = DB::table('cra_customer_registration')->where('id',$id)->first();
+        return view('CRM.individual_proposal_lead',compact('individual_proposal_leads','id'));
+    }
+
+    public function store_individual_proposal_leads(Request $request){
+
+        $date      =    $request['date'];
+        $id        =    $request['id'];
+        $Contacted =    $request['Contacted'];
+        $Source    =    $request['Source'];
+        $Status    =    $request['Status'];
+
+        DB::table('cra_individual_proposal_lead')->insert([
+            'registration_id'   =>    $id,
+            'date_of_contact'   =>    $date,
+            'contacted_by'      =>    $Contacted,
+            'source'            =>    $Source,
+            'status'            =>    $Status 
+        ]);
+
+        return redirect('/individual_lead');
+    }
+
+
+    public function addRegistration(Request $Request){
+
+        $client_name = $Request['client_name'];
+        $postal_code = $Request['Code'];
+        $town = $Request['town'];
+        $country = $Request['country'];
+        $telephone_no = $Request['telephone'];
+        $email = $Request['email'];
+        $mobile_no = $Request['mobile'];
+        $web_site = $Request['website'];
+        $registration_date = $Request['Date'];
+        $client_address = $Request['caddress'];
+        $physical_address = $Request['paddress'];
+        $status = $Request['status'];
+
+        DB::table('cra_customer_registration')->insert([
+            'customer_name' =>  $client_name ,
+            'postal_code' =>   $postal_code ,
+            'town' => $town,
+            'country' =>$country,
+            'telephone_no' => $telephone_no,
+            'email' =>  $email,
+            'mobile_no' =>   $mobile_no,
+            'web_site' =>   $web_site,
+            'registration_date' =>   $registration_date,
+            'customer_address' => $client_address,
+            'physical_address' => $physical_address,
+            'status' => $status,
+        ]);
+
+        return redirect('/view-registration');
+    }
+
+
+    public function viewRegistration(){
+        $view_registration = DB::table('cra_customer_registration')->get();
+        return view('client-management.view-registration',compact('view_registration'));
+    }
+
+    public function showRegistration ($id)
+    {
+        $view_reg = DB::table('cra_customer_registration')->where('id',$id)->first();
+        return view('client-management.show-registration',compact('view_reg','id'));
+    }
+
+    public function editRegistration($id){
+
+        $edit_registration = DB::table('cra_customer_registration')->where('id',$id)->first();
+        return view('client-management.edit-registration',compact('edit_registration','id'));
+    }
+
+
+    public function deleteRegistration($id){
+        $edit_registration = DB::table('cra_customer_registration')->where('id',$id)->delete();
+        return redirect('/view-registration');
+    }
+
+    public function updateRegistration(Request $Request){
+       
+        $id            = $Request['id'];
+        $customer_name = $Request['client_name'];
+        $postal_code = $Request['Code'];
+        $town = $Request['town'];
+        $country = $Request['country'];
+        $telephone_no = $Request['telephone'];
+        $email = $Request['email'];
+        $mobile_no = $Request['mobile'];
+        $web_site = $Request['website'];
+        $registration_date = $Request['Date'];
+        $customer_address = $Request['caddress'];
+        $physical_address = $Request['paddress'];
+        $status = $Request['status'];
+
+        DB::table('cra_customer_registration')->where('id',$id)->update([
+
+            'customer_name' => $customer_name ,
+            'postal_code' =>   $postal_code ,
+            'town' => $town,
+           
+            'country' =>$country,
+            'telephone_no' => $telephone_no,
+            'email' =>  $email,
+            'mobile_no' =>   $mobile_no,
+            'web_site' =>   $web_site,
+            'registration_date' =>   $registration_date,
+            'customer_address' =>  $customer_address,
+            'physical_address' => $physical_address,
+            'status' => $status,
+        ]);
+
+        return redirect('/view-registration');
+    }
+
+
 
 }
 

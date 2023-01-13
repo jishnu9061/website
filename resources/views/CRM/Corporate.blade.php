@@ -55,7 +55,7 @@
                                 <th class="text-center">Address</th>
                                 <th class="text-center">Phone</th>
                                 <th class="text-center">Email</th>
-                               
+
                                 <th class="text-center">Action</th>
 
                             </tr>
@@ -71,7 +71,7 @@
                                 <td>{{$list->Address}}</td>
                                 <td>{{$list->Phone}}</td>
                                 <td>{{ $list->Email}}</td>
-                               
+
                                 <td scope="row">
 
                                     <span class="m-2"></span>
@@ -352,7 +352,7 @@
                                                 </div>
 
                                             </div>
-                                           
+
                                             <br>
                                             <!-- <h4 style="text-align:center">Contact Persons</h4> -->
 

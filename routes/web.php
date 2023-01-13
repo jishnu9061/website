@@ -1109,13 +1109,13 @@ Route::any('update-Quotation','ClientManagement@updateQuotation')->name('update-
 Route::any('delete-Quotation/{id}','ClientManagement@deleteQuotation')->name('delete-Quotation');
 //end Quotation
 
-//Registration
-Route::any('view-registration','ClientManagement@viewRegistration')->name('view-registration');
-Route::any('add-registration','ClientManagement@addRegistration')->name('add-registration');
-Route::any('edit-registration/{id}','ClientManagement@editRegistration')->name('edit-registration');
-Route::any('update-registration','ClientManagement@updateRegistration')->name('update-registration');
-Route::any('delete-registration/{id}','ClientManagement@deleteRegistration')->name('delete-registration');
-Route::any('show-registration/{id}','ClientManagement@showRegistration')->name('show-registration');
+//CRM-Registration
+Route::any('view-registration','CrmController@viewRegistration')->name('view-registration');
+Route::any('add-registration','CrmController@addRegistration')->name('add-registration');
+Route::any('edit-registration/{id}','CrmController@editRegistration')->name('edit-registration');
+Route::any('update-registration','CrmController@updateRegistration')->name('update-registration');
+Route::any('delete-registration/{id}','CrmController@deleteRegistration')->name('delete-registration');
+Route::any('show-registration/{id}','CrmController@showRegistration')->name('show-registration');
 //end registration
 
 //communication
@@ -1613,11 +1613,16 @@ Route::any('view_expense/{id}',"CrmController@view_expense")->name('view_expense
 Route::any('edit_expense/{id}',"CrmController@edit_expense")->name('edit_expense');
 Route::any('crm_panel',"CrmController@crm_panel")->name('crm_panel');
 Route::any('lead',"CrmController@leads")->name('lead');
-Route::any('view_lead',"CrmController@view_leads")->name('view_lead');
-Route::any('proposal_lead',"CrmController@proposal_leads")->name('proposal_lead');
+Route::any('view_lead/{Id}',"CrmController@view_leads")->name('view_lead');
+Route::any('store_proposal_leads',"CrmController@store_proposal_leads")->name('store_proposal_leads');
+// Route::any('leads_edits',"CrmController@leads_edits")->name('leads_edits');
+
+
+Route::any('proposal_lead{Id}',"CrmController@proposal_leads")->name('proposal_lead');
 Route::any('individual_lead',"CrmController@individual_leads")->name('individual_lead');
-Route::any('view_individual_lead',"CrmController@view_individual_leads")->name('view_individual_lead');
-Route::any('individual_proposal_lead',"CrmController@individual_proposal_leads")->name('individual_proposal_lead');
+Route::any('view_individual_lead/{id}',"CrmController@view_individual_leads")->name('view_individual_lead');
+Route::any('individual_proposal_lead/{id}',"CrmController@individual_proposal_leads")->name('individual_proposal_lead');
+Route::any('store_individual_proposal_leads',"CrmController@store_individual_proposal_leads")->name('store_individual_proposal_leads');
 
 
 
