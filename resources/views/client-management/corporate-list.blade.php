@@ -3,6 +3,7 @@
 <html>
 
 <head>
+    
     <style>
     .pagination>li>span {
         position: relative;
@@ -527,8 +528,11 @@
                                                             <div class="input-group-prepend"></div>
                                                             <select name="Designation" id="cars">
                                                                 <option>Select</option>
-                                                                <option>Manager</option>
-                                                                <option>Advocate</option>
+                                                                @if(count($list_designation))
+                                                                @foreach ($list_designation as $list)
+                                                                <option>{{$list->role_name}}</option>
+                                                                @endforeach
+                                                                @endif
 
                                                             </select>
                                                             <!-- <input type="text" class="form-control" name="Designation"

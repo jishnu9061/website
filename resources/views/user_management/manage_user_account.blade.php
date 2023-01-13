@@ -311,6 +311,7 @@ color: #999;
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="mobile_no" id="" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
+                                
                                     Name is required.
                                 </div>
                             </div>

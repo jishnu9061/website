@@ -311,10 +311,10 @@ $(document).on('input', '#percent', function() {
             div class = "input-group" >
                 <
                 div class = "input-group-prepend" >
-
-                <
-                /div> <
-            input type = "number"
+g
+                <g
+                /div> <g
+            input type = "number"g
             class = "form-control"
             name = "salary"
             id = "username"
@@ -323,7 +323,7 @@ $(document).on('input', '#percent', function() {
                 <
                 div class = "invalid-feedback"
             style = "width: 100%;" >
-                Salary is required. <
+                Salary is required. <y
                 /div> < /
             div > <
                 /div> < /

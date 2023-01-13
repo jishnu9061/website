@@ -22,6 +22,7 @@ class UserManagement extends Controller
     {
         $user_list = DB::table('cra_reg_new_user')->get();
         return view('user_management.manage_user_account',compact('user_list'));
+        
         // return view('user_management.manage_user_account');
     }
 
