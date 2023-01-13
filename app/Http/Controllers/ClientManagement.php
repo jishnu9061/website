@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use DB;
 use Illuminate\Support\Facades\Storage;
 
@@ -379,8 +380,9 @@ class ClientManagement extends Controller
 
     public function listCorporate(){
 
+        $list_designation = DB::table('cra_add_user_roles')->get();
         $corporate_list=DB::table('cra_corporate_client_details')->get();
-        return view('client-management.corporate-list',compact('corporate_list'));
+        return view('client-management.corporate-list',compact('corporate_list','list_designation'));
     }
 
     public function edit_corporate($corporate_id)
