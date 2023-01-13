@@ -71,26 +71,27 @@
                         <tbody>
 
 
+                            @foreach($leads as $row)
 
                             <tr class="text-center" id="data">
 
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>{{$row->Name}}</td>
+                                <td>{{$row->Phone}}</td>
+                                <td>{{$row->Email}}</td>
+                                <td>{{$row->source}}</td>
+                                <td>{{$row->status}}</td>
                                 <td scope="row">
-                                    <a href="view_lead"><i style="color:black;" class="fa fa-eye"
+                                    <a href="{{url('view_lead',$row->Id)}}"><i style="color:black;" class="fa fa-eye"
                                             aria-hidden="true"></i></a>
 
                                     <span class="m-2"></span>
 
-                                    <a href="proposal_lead"><i style="color:black;" class="fas fa-arrow-right"
+                                    <a href="{{'proposal_lead'.$row->Id}}"><i style="color:black;" class="fas fa-arrow-right"
                                             aria-hidden="true"></i></a>
                                 </td>
 
                             </tr>
-
+                            @endforeach
                         </tbody>
 
                     </table>

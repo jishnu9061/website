@@ -19,47 +19,47 @@ th{
                 <tbody>
                     <tr>
                         <th>Name :</th>
-                        <td></td>
+                        <td>{{$view_individual_leads->customer_name}}</td>
                     </tr>
                     <tr>
                         <th> Postal Code :</th>
-                        <td></td>
+                        <td>{{$view_individual_leads->postal_code}}</td>
                     </tr>
                     <tr>
                         <th> Town :</th>
-                        <td></td>
+                        <td>{{$view_individual_leads->town}}</td>
                     </tr>
                     <tr>
                         <th> Country :</th>
-                        <td></td>
+                        <td>{{$view_individual_leads->country}}</td>
                     </tr>
                     <tr>
                         <th> Telephone No :</th>
-                        <td></td>
+                        <td>{{$view_individual_leads->telephone_no}}</td>
                     </tr>
                     <tr>
                         <th> Email Address :</th>
-                        <td></td>
+                        <td>{{$view_individual_leads->email}}</td>
                     </tr>
                     <tr>
                         <th> Mobile No :</th>
-                        <td></td>
+                        <td>{{$view_individual_leads->mobile_no}}</td>
                     </tr>
                     <tr>
                         <th> Website :</th>
-                        <td></td>
+                        <td>{{$view_individual_leads->web_site}}</td>
                     </tr>
                     <tr>
                         <th> Registration Date :</th>
-                        <td></td>
+                        <td>{{$view_individual_leads->registration_date}}</td>
                     </tr>
                     <tr>
                         <th> Address :</th>
-                        <td></td>
+                        <td>{{$view_individual_leads->customer_address}}</td>
                     </tr>
                     <tr>
                         <th> Physical Address :</th>
-                        <td></td>
+                        <td>{{$view_individual_leads->physical_address}}</td>
                     </tr>
                    
                    
