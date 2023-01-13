@@ -41,7 +41,6 @@
                         <thead>
 
                             <tr>
-                                <th class="text-center">Id</th>
                                 <th class="text-center">Name</th>
                                 <th class="text-center">Department</th>
                                 <th class="text-center">Type</th>
@@ -52,27 +51,25 @@
                                 <th class="text-center">Reason</th>
                                 <th class="text-center">Upload Document</th>
                                 <th class="text-center">Status</th>
-                                <th class="text-center">Action</th>
                                 <th class="text-center">Remarks</th>
+                                <th class="text-center">Action</th>
 
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($leave_request as $leave)
 
 
                             <tr>
 
-                                <td scope="row" class="text-center">{{$leave->id}}</td>
-                                <td scope="row" class="text-center">{{$leave->name}}</td>
-                                <td scope="row" class="text-center">{{$leave->department}}</td>
-                                <td scope="row" class="text-center">{{$leave->leave_type}}</td>
-                                <td scope="row" class="text-center">{{$leave->apply_date}}</td>
-                                <td scope="row" class="text-center">{{$leave->date_from}}</td>
-                                <td scope="row" class="text-center">{{$leave->date_to}}</td>
-                                <td scope="row" class="text-center">{{$leave->number_of_days}}</td>
-                                <td scope="row" class="text-center">{{$leave->reason}}</td>
-                                <td scope="row" class="text-center">{{$leave->document}}</td>
+                                <td scope="row" class="text-center"></td>
+                                <td scope="row" class="text-center"></td>
+                                <td scope="row" class="text-center"></td>
+                                <td scope="row" class="text-center"></td>
+                                <td scope="row" class="text-center"></td>
+                                <td scope="row" class="text-center"></td>
+                                <td scope="row" class="text-center"></td>
+                                <td scope="row" class="text-center"></td>
+                                <td scope="row" class="text-center"></td>
                                 <td scope="row" class="text-center">
                                     <div class="dropdown">
                                         <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Requested
@@ -85,16 +82,16 @@
                                         </div>
                                       </div>
                             </td>
-                            <td scope="row" class="text-center">{{$leave->remarks}}</td>
+                            <td scope="row" class="text-center"></td>
                                 <td scope="row" class="text-center">
-                                    <a href="{{url('view_leave_request', $leave->id)}}"><i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span>
-                                    <a href="{{url('edit_leave_request',$leave->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                                    {{-- <a href="{{url('delete_leave_request',$leave->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i> --}}
-                            <td scope="row" class="text-center">{{$leave->remarks}}</td>
+                                    <a href=""><i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span>
+                                    <a href=""><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                                    {{-- <a href=""> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i> --}}
+                          
 
                                 </td>
                             </tr>
-                            @endforeach
+                
 
                         </tbody>
                     </table>
