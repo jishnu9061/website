@@ -7,12 +7,18 @@
             padding: 6px 12px;
             margin-left: -1px;
             line-height: 1.42857143;
-            color: #337ab7;
+            color: #010305;
             text-decoration: none;
             background-color: #fff;
-            border: 1px solid #ddd;
+            border: 1px solid #f1d9b0;
         }
-
+        .pagination>.active>span{
+            z-index: 3;
+            color: rgb(5, 4, 4);
+            cursor: default;
+            background-color: #f1d9b0;
+            border-color: #f1d9b0;
+        }
         .pagination {
             margin: 0;
         }
@@ -41,7 +47,7 @@
         }
 
         .rows_count {
-            width: 20%;
+            width: 30%;
             float: right;
             text-align: right;
             color: #999;
@@ -110,14 +116,19 @@
         <div class='pagination-container'>
             <nav>
                 <ul class="pagination">
-                    <!--	Here the JS Function Will Add the Rows -->
+                    <li data-page="prev">
+                        <span> < <span class="sr-only">(current)</span></span>
+                    </li>
+                
+                    <li data-page="next" id="prev">
+                        <span> > <span class="sr-only">(current)</span></span>
+                    </li>
                 </ul>
             </nav>
         </div>
-        <div class="rows_count">Showing 11 to 20 of 91</div>
-
+        <div class="rows_count"></div>
         <!-- 		End of Container -->
-    </div>
+        </div>
 
     <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
     <div class="modal fade" id="myModal">

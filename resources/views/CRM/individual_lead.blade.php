@@ -65,24 +65,26 @@
 
                         </thead>
                         <tbody>
+                            @foreach($individual_leads as $row)
                            <tr class="text-center" id="data">
 
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>{{$row->customer_name}}</td>
+                                <td>{{$row->mobile_no}}</td>
+                                <td>{{$row->email}}</td>
+                                <td>{{$row->source}}</td>
+                                <td>{{$row->status}}</td>
                                 <td scope="row">
-                                    <a href="view_individual_lead"><i style="color:black;" class="fa fa-eye"
+                                    <a href="{{url('view_individual_lead',$row->id)}}"><i style="color:black;" class="fa fa-eye"
                                             aria-hidden="true"></i></a>
 
                                     <span class="m-2"></span>
 
-                                    <a href="individual_proposal_lead"><i style="color:black;" class="fas fa-arrow-right"
+                                    <a href="{{url('individual_proposal_lead',$row->id)}}"><i style="color:black;" class="fas fa-arrow-right"
                                             aria-hidden="true"></i></a>
                                 </td>
 
                             </tr>
+                            @endforeach
 
                         </tbody>
 

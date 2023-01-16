@@ -19,63 +19,63 @@ th {
                 <tbody>
                     <tr>
                         <th>Name :</th>
-                        <td></td>
+                        <td>{{ $view_leads->Name}}</td>
                     </tr>
                     <tr>
                         <th>GST Office :</th>
-                        <td></td>
+                        <td>{{ $view_leads->GST_Office}}</td>
                     </tr>
                     <tr>
                         <th>GST Number :</th>
-                        <td></td>
+                        <td>{{$view_leads->GST_Number}}</td>
                     </tr>
                     <tr>
                         <th>Social Security Number :</th>
-                        <td></td>
+                        <td>{{$view_leads->Social_Security_Number}}</td>
                     </tr>
                     <tr>
                         <th>Customer Authority :</th>
-                        <td></td>
+                        <td>{{$view_leads->Customer_Authority}}</td>
                     </tr>
                     <tr>
                         <th>Phone :</th>
-                        <td></td>
+                        <td>{{$view_leads->Phone}}</td>
                     </tr>
                     <tr>
                         <th>FAX :</th>
-                        <td></td>
+                        <td>{{$view_leads->FAX}}</td>
                     </tr>
                     <tr>
                         <th>Email :</th>
-                        <td></td>
+                        <td>{{$view_leads->Email}}</td>
                     </tr>
                     <tr>
                         <th>Web :</th>
-                        <td></td>
+                        <td>{{$view_leads->Web}}</td>
                     </tr>
                     <tr>
                         <th>Country :</th>
-                        <td></td>
+                        <td>{{ $view_leads->Country}}</td>
                     </tr>
                     <tr>
                         <th>State :</th>
-                        <td></td>
+                        <td>{{$view_leads->State}}</td>
                     </tr>
                     <tr>
                         <th>City :</th>
-                        <td></td>
+                        <td>{{$view_leads->City}}</td>
                     </tr>
                     <tr>
                         <th>Town :</th>
-                        <td></td>
+                        <td>{{$view_leads->Town}}</td>
                     </tr>
                     <tr>
                         <th>Post Code :</th>
-                        <td></td>
+                        <td>{{$view_leads->Name}}</td>
                     </tr>
                     <tr>
                         <th>Address :</th>
-                        <td></td>
+                        <td>{{$view_leads->Name}}</td>
                     </tr>
                 </tbody>
             </table>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use DB;
 use Illuminate\Support\Facades\Storage;
 
@@ -21,6 +22,7 @@ class ClientManagement extends Controller
 
 
     public function view(){
+        
         $client_list = DB::table('cra_individual_client_details')->get();
         return view('client-management.client-list',compact('client_list'));
     }
@@ -287,12 +289,15 @@ class ClientManagement extends Controller
         return view('client-management.corporate-document',compact('corporate_docs','corporate_id'));
     }
 
-    public function viewCorporateDocument(){
+    
+    public function viewCorporateDocument($corporate_id){
+
         $view_corporate_document = DB::table('cra_document_detials')
         ->join('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_document_detials.corporate_id')
+        ->where('cra_document_detials.corporate_id',$corporate_id)
         ->get();
        
-        return view('client-management.corporate-document-detail',compact('view_corporate_document'));
+        return view('client-management.corporate-document-detail',compact('view_corporate_document','corporate_id'));
     }
 
     public function editCorporateDocument($id){
@@ -318,6 +323,8 @@ class ClientManagement extends Controller
             $destinationPath = public_path('images/file');
             $uploadedImage->move($destinationPath,$imageName);
             $file->file    = $destinationPath.$imageName;
+        }else{
+            $file = '';
         }
 
         $insertdoc[] = [
@@ -374,8 +381,9 @@ class ClientManagement extends Controller
 
     public function listCorporate(){
 
+        $list_designation = DB::table('cra_add_user_roles')->get();
         $corporate_list=DB::table('cra_corporate_client_details')->get();
-        return view('client-management.corporate-list',compact('corporate_list'));
+        return view('client-management.corporate-list',compact('corporate_list','list_designation'));
     }
 
     public function edit_corporate($corporate_id)
@@ -542,10 +550,14 @@ class ClientManagement extends Controller
         return redirect('/client-document');
     }
 
+    public function showcorporatedocument($id){
+      $view_document = DB::table('cra_document_detials')->where('id',$id)->first();  
+       return view('client-management.view_corporate_document',compact('view_document','id'));
+   }
 
     public function deleteDocument($id){
-         DB::table('cra_document_detials')->where('id',$id)->delete();  
-        return redirect('/client-document');
+        DB::table('cra_document_detials')->where('id',$id)->delete();  
+        return redirect('/corporate-list');
     }
 
     //document
@@ -945,101 +957,6 @@ class ClientManagement extends Controller
 
     //end quotation
 
-    //Registration
-
-    public function viewRegistration(){
-        $view_registration = DB::table('cra_customer_registration')->get();
-        return view('client-management.view-registration',compact('view_registration'));
-    }
-    
-
-    
-    public function addRegistration(Request $Request){
-
-        $client_name = $Request['client_name'];
-        $postal_code = $Request['Code'];
-        $town = $Request['town'];
-        $country = $Request['country'];
-        $telephone_no = $Request['telephone'];
-        $email = $Request['email'];
-        $mobile_no = $Request['mobile'];
-        $web_site = $Request['website'];
-        $registration_date = $Request['Date'];
-        $client_address = $Request['caddress'];
-        $physical_address = $Request['paddress'];
-        $status = $Request['status'];
-
-        DB::table('cra_customer_registration')->insert([
-            'customer_name' =>  $client_name ,
-            'postal_code' =>   $postal_code ,
-            'town' => $town,
-            'country' =>$country,
-            'telephone_no' => $telephone_no,
-            'email' =>  $email,
-            'mobile_no' =>   $mobile_no,
-            'web_site' =>   $web_site,
-            'registration_date' =>   $registration_date,
-            'customer_address' => $client_address,
-            'physical_address' => $physical_address,
-            'status' => $status,
-        ]);
-
-        return redirect('/view-registration');
-    }
-
-
-    public function editRegistration($id){
-
-        $edit_registration = DB::table('cra_customer_registration')->where('id',$id)->first();
-        return view('client-management.edit-registration',compact('edit_registration','id'));
-    }
-
-    public function updateRegistration(Request $Request){
-       
-        $id            = $Request['id'];
-        $customer_name = $Request['client_name'];
-        $postal_code = $Request['Code'];
-        $town = $Request['town'];
-        $country = $Request['country'];
-        $telephone_no = $Request['telephone'];
-        $email = $Request['email'];
-        $mobile_no = $Request['mobile'];
-        $web_site = $Request['website'];
-        $registration_date = $Request['Date'];
-        $customer_address = $Request['caddress'];
-        $physical_address = $Request['paddress'];
-        $status = $Request['status'];
-
-        DB::table('cra_customer_registration')->where('id',$id)->update([
-
-            'customer_name' => $customer_name ,
-            'postal_code' =>   $postal_code ,
-            'town' => $town,
-           
-            'country' =>$country,
-            'telephone_no' => $telephone_no,
-            'email' =>  $email,
-            'mobile_no' =>   $mobile_no,
-            'web_site' =>   $web_site,
-            'registration_date' =>   $registration_date,
-            'customer_address' =>  $customer_address,
-            'physical_address' => $physical_address,
-            'status' => $status,
-        ]);
-
-        return redirect('/view-registration');
-    }
-    public function showRegistration ($id)
-    {
-        $view_reg = DB::table('cra_customer_registration')->where('id',$id)->first();
-        return view('client-management.show-registration',compact('view_reg','id'));
-    }
-
-    public function deleteRegistration($id){
-        $edit_registration = DB::table('cra_customer_registration')->where('id',$id)->delete();
-        return redirect('/view-registration');
-    }
-    //end Registration
 
     //communication
 

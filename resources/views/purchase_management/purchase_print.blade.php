@@ -142,8 +142,8 @@ td {
             <div class="invoice-company text-inverse f-w-600">
                 <span class="pull-right hidden-print">
 
-                    <a href="javascript:;" onclick="window.print()" class="btn btn-sm btn-white m-b-10 p-l-5"
-                        id="hidethat"><i class="fa fa-print t-plus-1 fa-fw fa-lg"></i> Print</a>
+                    <button><a href="javascript:;" onclick="window.print()" class="btn btn-sm btn-white m-b-10 p-l-5"
+                        id="hidethat"><i class="fa fa-print t-plus-1 fa-fw fa-lg"></i> Print</a></button>
                 </span>
             </div>
             <!-- end invoice-company -->
@@ -227,7 +227,13 @@ td {
                         <div class="sub-price">
                     
                             <small>Payment Type</small>
-                            <span class="text-inverse">{{$row->payment_type}}</span>
+                            <span class="text-inverse">{{$row->payment_type
+                                
+                            
+                            
+                            
+                            
+                            }}</span>
                       
                         </div>
                     </div>
@@ -262,7 +268,7 @@ td {
     </div>
 </div>
 </div>
-<script src="cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>jh,m
 <script>
 $(document).ready(function() {
     $('#myTable').DataTable();

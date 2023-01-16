@@ -307,7 +307,7 @@
                                                     <div class="input-group-prepend">
 
                                                     </div>
-                                                    <input type="date" class="form-control" name="close_date" id="age"
+                                                    <input type="date" class="form-control" name="open_datek" id="age"
                                                         value="" min="0" max="99">
                                                 </div>
                                             </div>

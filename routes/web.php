@@ -1048,7 +1048,7 @@ Route::any('/update-corporate','ClientManagement@Update_corporate')->name('updat
 Route::any('/delete_client/{corporate_id}','ClientManagement@Corporate_destroy')->name('delete_client');
 Route::any('/corporate-document/{corporate_id}','ClientManagement@CorporateDocument')->name('corporate-document');
 Route::any('add-corporate-document','ClientManagement@addCorporatedocument')->name('add-corporate-document');
-Route::any('corporate-document-details','ClientManagement@viewCorporateDocument')->name('corporate-document-details');
+Route::any('corporate-document-details/{id}','ClientManagement@viewCorporateDocument')->name('corporate-document-details');
 Route::any('edit-corporate-document/{id}','ClientManagement@editCorporateDocument')->name('edit-corporate-document');
 Route::any('update-document-details','ClientManagement@updateDocumentDetails')->name('update-document-details');
 Route::any('view-document-details/{id}','ClientManagement@viewDocummentDetails')->name('view-document-details');
@@ -1061,6 +1061,7 @@ Route::any('create-document/{individual_id}','ClientManagement@createDocument')-
 Route::any('add-document','ClientManagement@addDocument')->name('add-document');
 Route::any('view-document/{id}','ClientManagement@viewDocument')->name('view-document');
 Route::any('edit-documents/{id}','ClientManagement@editDocument')->name('edit-documents');
+Route::any('view_corporate_document/{id}','ClientManagement@showcorporatedocument')->name('view_corporate_document');
 Route::any('delete-document/{id}','ClientManagement@deleteDocument')->name('delete-document');
 Route::any('update-document','ClientManagement@updatedocument')->name('update-document');
 //end Client-Documents
@@ -1109,13 +1110,13 @@ Route::any('update-Quotation','ClientManagement@updateQuotation')->name('update-
 Route::any('delete-Quotation/{id}','ClientManagement@deleteQuotation')->name('delete-Quotation');
 //end Quotation
 
-//Registration
-Route::any('view-registration','ClientManagement@viewRegistration')->name('view-registration');
-Route::any('add-registration','ClientManagement@addRegistration')->name('add-registration');
-Route::any('edit-registration/{id}','ClientManagement@editRegistration')->name('edit-registration');
-Route::any('update-registration','ClientManagement@updateRegistration')->name('update-registration');
-Route::any('delete-registration/{id}','ClientManagement@deleteRegistration')->name('delete-registration');
-Route::any('show-registration/{id}','ClientManagement@showRegistration')->name('show-registration');
+//CRM-Registration
+Route::any('view-registration','CrmController@viewRegistration')->name('view-registration');
+Route::any('add-registration','CrmController@addRegistration')->name('add-registration');
+Route::any('edit-registration/{id}','CrmController@editRegistration')->name('edit-registration');
+Route::any('update-registration','CrmController@updateRegistration')->name('update-registration');
+Route::any('delete-registration/{id}','CrmController@deleteRegistration')->name('delete-registration');
+Route::any('show-registration/{id}','CrmController@showRegistration')->name('show-registration');
 //end registration
 
 //communication
@@ -1366,12 +1367,27 @@ Route::any('monthviewsheet','hrindex@monthviewsheets')->name('monthviewsheet');
 Route::any('leave_request_details','hrindex@leave_request')->name('leave_request_details');
 Route::any('addleaverequest','hrindex@addleaverequest')->name('addleaverequest');
 Route::any('approve_leave_request','hrindex@approve_leave_request')->name('approve_leave_request');
+Route::any('view_leave_request','hrindex@view_leave_request')->name('view_leave_requ 30px;est');
 Route::any('edit_leave_request/{id}','hrindex@edit_leave_request')->name('edit_leave_request');
 Route::any('/update_leave_request','hrindex@update_leave_request')->name('update_leave_request');
 
 Route::any('internal_memos','hrindex@internal_memos')->name('internal_memos');
 Route::any('view_memo','hrindex@view_memo')->name('view_memo');
 Route::any('edit_memo','hrindex@edit_memo')->name('edit_memo');
+
+//HR-Attendance Sheet Subhasree
+Route::any('attendance_sheet','hrindex@attendance_sheet')->name('attendance_sheet');
+Route::any('view_attendance','hrindex@view_attendance')->name('view_attendance');
+
+//HR-Manage Salary Subhasree
+Route::any('manage_salary','hrindex@manage_salary')->name('manage_salary');
+Route::any('manage_salary_index','hrindex@manage_salary_index')->name('manage_salary_index');
+Route::any('allowances','hrindex@allowances')->name('allowances');
+Route::any('commissions','hrindex@commissions')->name('commissions');
+Route::any('loan','hrindex@loan')->name('loan');
+Route::any('statutory_deductions','hrindex@statutory_deductions')->name('statutory_deductions');
+Route::any('other_payment','hrindex@other_payment')->name('other_payment');
+Route::any('overtime','hrindex@overtime')->name('overtime');
 
 //Store & Inventory
 Route::any('Store_&_Inventory_index','store@index')->name('Store_&_Inventory_index');
@@ -1429,7 +1445,7 @@ Route::any('matter_type','PracticeAreaManagement@matter_type')->name('matter_typ
 Route::any('personal_injury','PracticeAreaManagement@personalinjury')->name('personal_injury');
 Route::any('add_injury','PracticeAreaManagement@addinjury')->name('add_injury');
 Route::any('/edit_injury/{id}','PracticeAreaManagement@editinjury')->name('edit_injury');
-Route::any('view_injury','PracticeAreaManagement@view_injury')->name('view_injury');    
+Route::any('view_injury','PracticeAreaManagement@view_injury')->name('view_injury');
 Route::any('/update_injury','PracticeAreaManagement@updateinjury')->name('update_injury');
 Route::any('/delete_injury/{id}','PracticeAreaManagement@deleteinjury')->name('delete_injury');
 Route::any('family_law','PracticeAreaManagement@family_law')->name('family_law');
@@ -1612,11 +1628,16 @@ Route::any('view_expense/{id}',"CrmController@view_expense")->name('view_expense
 Route::any('edit_expense/{id}',"CrmController@edit_expense")->name('edit_expense');
 Route::any('crm_panel',"CrmController@crm_panel")->name('crm_panel');
 Route::any('lead',"CrmController@leads")->name('lead');
-Route::any('view_lead',"CrmController@view_leads")->name('view_lead');
-Route::any('proposal_lead',"CrmController@proposal_leads")->name('proposal_lead');
+Route::any('view_lead/{Id}',"CrmController@view_leads")->name('view_lead');
+Route::any('store_proposal_leads',"CrmController@store_proposal_leads")->name('store_proposal_leads');
+// Route::any('leads_edits',"CrmController@leads_edits")->name('leads_edits');
+
+
+Route::any('proposal_lead{Id}',"CrmController@proposal_leads")->name('proposal_lead');
 Route::any('individual_lead',"CrmController@individual_leads")->name('individual_lead');
-Route::any('view_individual_lead',"CrmController@view_individual_leads")->name('view_individual_lead');
-Route::any('individual_proposal_lead',"CrmController@individual_proposal_leads")->name('individual_proposal_lead');
+Route::any('view_individual_lead/{id}',"CrmController@view_individual_leads")->name('view_individual_lead');
+Route::any('individual_proposal_lead/{id}',"CrmController@individual_proposal_leads")->name('individual_proposal_lead');
+Route::any('store_individual_proposal_leads',"CrmController@store_individual_proposal_leads")->name('store_individual_proposal_leads');
 
 
 
