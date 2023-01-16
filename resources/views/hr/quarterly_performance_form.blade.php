@@ -679,9 +679,11 @@
                                     aria-label=".form-select-lg example">
                                     <div class="mb-3">
                                         <option>select</option>
-                                            @foreach ( $view_department_staff as $department)
+                                        @if (count($departments))
+                                            @foreach ($departments as $department)
                                                 <option>{{ $department->department_name }}</option>
                                             @endforeach
+                                        @endif
                                 </select>
                             </div>
                             <div class="col-sm-6">
@@ -689,9 +691,11 @@
                                     aria-label=".form-select-lg example">
                                     <div class="mb-3">
                                         <option>select</option>
-                                            @foreach ($view_department_staff as $user_role)
+                                        @if (count($user_roles))
+                                            @foreach ($user_roles as $user_role)
                                                 <option>{{ $user_role->role_name }}</option>
                                             @endforeach
+                                        @endif
                                 </select>
                             </div>
                             <div class="col-sm">

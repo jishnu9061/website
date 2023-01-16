@@ -38,7 +38,6 @@ class UserManagement extends Controller
         return view('user_management.user_edit',compact('edit','id'));
         // return view('user_management.user_edit');
     }
-    
 
 
 
