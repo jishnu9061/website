@@ -249,22 +249,7 @@ font-family: 'Carter One';
         </style>
 
     </head>
-    <script>
-        var el_up = document.getElementById("GFG_UP");
-        var el_down = document.getElementById("GFG_DOWN");
-        var str = "Click on button to change the background color";
-                  
-        el_up.innerHTML = str;
-                  
-        function changeColor(color) {
-            document.body.style.background = color;
-        }
-          
-        function gfg_Run() {
-            changeColor('yellow');
-            el_down.innerHTML = "Background Color changed";
-        }        
-    </script>
+
     
 
     <body class="body">
@@ -352,11 +337,32 @@ animation-direction:reverse;">
                         </div> --}}
                         </div>
                     </div>
-                    <div class="sidebar-menu">
+                    <div id="demo" class="sidebar-menu">
                         <ul class="menu">
                             <li class="sidebar-title" style="color: #1D1D50; text-align:center; font-size:16px; ">
                                 DASHBOARD</li>
-              
+                                {{-- <input type="color" id="colorID" oninput="changeColor()">
+                 
+                        <script>
+                            // on input, get value and save it as 'storedValue'
+                            function changeColor() { 
+                            var userColor = document.getElementById('colorID').value;
+                            localStorage.setItem('storedValue', document.body.style.backgroundColor = userColor);
+                            
+                            }
+                            
+                            // if there is a value stored, update color picker and background color
+                            if(localStorage.storedValue) {
+                            document.getElementById('colorID').value = localStorage.storedValue;
+                            document.body.style.backgroundColor      = localStorage.storedValue;
+                            }
+                        </script> --}}
+
+
+
+
+
+                        
                             {{-- @if(Auth::user()->role == 'superadmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="#" class='sidebar-link'>
@@ -499,7 +505,7 @@ animation-direction:reverse;">
                                     </li> -->
 
 
-                        <li onclick="gfg_Run()" class="submenu-item" style="list-style:none;">
+                        <li  class="submenu-item" style="list-style:none;">
                             <a href="{{url('hrindex')}}" class='sidebar-link'>
                                 <i class="fa fa-th-large" id="icon"></i>
                                 <span>HR</span>
@@ -551,23 +557,6 @@ animation-direction:reverse;">
                             </li> --}}
                             {{-- </li> --}}
                             @endif
-
-
-                            {{-- @if(Auth::user()->role == 'hr')
-                            {{-- <li class="submenu-item has-sub " style="list-style:none;">
-                                <a href="{{url('hrindex')}}" class='sidebar-link'>
-                                    <i class="fa fa-th-large" id="icon" style="font-weight: 300;"></i>
-                                    <span>HR Details</span>
-                                </a>
-                            </li> --}}
-                            {{-- <li class="submenu-item has-sub " style="list-style:none;">
-                                <a href="{{url('staffs')}}" class='sidebar-link'>
-                                    <i class="fa fa-th-large" id="icon" style="font-weight: 300;"></i>
-                                    <span>Manage Staffs</span>
-                                </a>
-                            </li>
-                            @endif-> --}}
-
 
                             @if(Auth::user()->role == 'account' || Auth::user()->role == 'Admin')
                             @php
@@ -1518,6 +1507,7 @@ function search_animal() {
 		if (!x[i].innerHTML.toLowerCase().includes(input)) {  
 			x[i].style.display="none";
             x[i].style.padding = "0px 0px 0px 0px";
+           
             y[i].style.display="none";
             col[i].style.display="none";
           
@@ -1535,6 +1525,7 @@ function search_animal() {
 		else {
 			x[i].style.display="list-item";	
             x[i].style.padding = "0px 0px 0px 0px";
+           
             y[i].style.display="none";
           
             // bbd[i].style.display="none";
