@@ -41,13 +41,18 @@
                         <thead>
 
                             <tr>
+                                <th class="text-center">Emp Id</th>
                                 <th class="text-center">Name</th>
                                 <th class="text-center">Department</th>
-                                <th class="text-center">Type</th>
+                                <th class="text-center">Leave Type</th>
                                 <th class="text-center">Apply Date</th>
+                                <th class="text-center">From Date</th>
+                                <th class="text-center">To Date</th>
                                 <th class="text-center">Date From</th>
                                 <th class="text-center">Date To</th>
                                 <th class="text-center">Number Of Days</th>
+                                <th class="text-center">Leave Date From</th>
+                                <th class="text-center">Leave Date To</th>
                                 <th class="text-center">Reason</th>
                                 <th class="text-center">Upload Document</th>
                                 <th class="text-center">Status</th>
@@ -61,6 +66,15 @@
 
                             <tr>
 
+                                <td scope="row" class="text-center">{{$leave->id}}</td>
+                                <td scope="row" class="text-center">{{$leave->name}}</td>
+                                <td scope="row" class="text-center">{{$leave->department}}</td>
+                                <td scope="row" class="text-center">{{$leave->leave_type}}</td>
+                                <td scope="row" class="text-center">{{$leave->apply_date}}</td>
+                                <td scope="row" class="text-center">{{$leave->date_from}}</td>
+                                <td scope="row" class="text-center">{{$leave->date_to}}</td>
+                                <td scope="row" class="text-center">{{$leave->reason}}</td>
+                                <td scope="row" class="text-center">{{$leave->document}}</td>
                                 <td scope="row" class="text-center"></td>
                                 <td scope="row" class="text-center"></td>
                                 <td scope="row" class="text-center"></td>
