@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use DB;
 //
 class filemanagement extends Controller
@@ -15,7 +16,7 @@ class filemanagement extends Controller
 
     public function views()
     {
-        $client_list = DB::table('cra_corporate_client_details')->get();
+        $client_list = DB::table('cra_mixed_table')->get();
         $file_list = DB::table('cra_open_new_file_details')->get();
         
         // ->select('*')  
@@ -355,13 +356,13 @@ class filemanagement extends Controller
 
     public function fileprogresslist()
     {
-       
+        $client_list = DB::table('cra_mixed_table')->get();
          $file_progress_list = DB::table('cra_add_file_progress')
         ->select('*')  
         ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_file_progress.id')
         ->leftjoin('cra_open_new_file_details','cra_open_new_file_details.id','=','cra_add_file_progress.id')
         ->get();    
-        return view ('file_management.file-progress-list',compact('file_progress_list'));
+        return view ('file_management.file-progress-list',compact('file_progress_list','client_list'));
     }
 
 
