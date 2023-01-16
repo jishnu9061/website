@@ -18,16 +18,45 @@ class hrindex extends Controller
     {
         return view('hr.hrindex');
     }
-    public function performance_department()
+    // public function performance_department()
+    // {
+    //     $departments=DB::table('cra_add_user_department')->get();
+    //     return view('hr.performance_department',compact('departments'));
+    // }
+    public function manage_staff_perfomance()
     {
-        $departments=DB::table('cra_add_user_department')->get();
-        return view('hr.performance_department',compact('departments'));
+        $departments = DB::table('cra_add_user_department')->get();
+        return view('hr.manage_staff_perfomance',compact('departments'));
+    }
+    public function view_user_department($id)
+    {
+        $department_roles = DB::table('cra_add_user_department')
+        ->join('cra_add_kpi','cra_add_kpi.department','=','cra_add_user_department.id')
+        ->get();
+        // $role_perfomance = DB::table('cra_add_user_department')->where('id',$id)->first();
+        return view('hr.user_roles_perfomance',compact('department_roles','id'));
+    }
+    public function edituserdepartment($id)
+    {
+        $department_roles=DB::table('cra_add_user_department')
+        ->join('cra_add_kpi','cra_add_kpi.department','=','cra_add_user_department.id')
+        ->where('cra_add_user_department.id',$id)
+        ->get();
+        // $edit_department = DB::table('cra_add_user_department')->where('id',$id)->first();
+        return view('hr.user_roles_perfomance',compact('department_roles','id'));
     }
 
     public function recruitment()
     {
         return view('hr.recruitment_index');
     }
+    // public function manage_staff_perfomance()
+    // {
+    //     $departments = DB::table('cra_add_user_department')->get();
+    //     return view('hr.manage_staff_perfomance',compact('departments'));
+    // }
+
+    
     
 
 
@@ -134,7 +163,7 @@ public function delete_job_post($id){
     DB::table('cra_hr_create_post')->where('id',$id)->delete();
     return redirect('/job_posts');
 }
-public function view_job_post($id)
+public function view_job_post($id,$request)
 {
     $job_details= DB::table('cra_hr_create_post')->where('id',$id)->first();
     return view('hr.view_job_post',compact('job_details','id'));
@@ -192,10 +221,14 @@ public function view_job_post($id)
 
     public function quarterly_performance_form()
     {
-        $user_roles=DB::table('cra_add_user_roles')->get();
+        // $user_roles=DB::table('cra_add_user_roles')->get();
         $departments=DB::table('cra_add_user_department')->get();
+        $view_department_staff = DB::table('users')
+        ->join('cra_add_user_roles','cra_add_user_roles.id','=','users.role')
+        ->join('cra_add_user_department','cra_add_user_department.id','=','users.departments')
+        ->get();
         // $add_kpi=DB::table('cra_add_kpi')->get();
-        return view('hr.quarterly_performance_form',compact('departments','user_roles'));
+        return view('hr.quarterly_performance_form',compact('view_department_staff','departments'));
 
     }
     public function add_kpi(Request $Request)
@@ -213,7 +246,10 @@ public function view_job_post($id)
         return redirect('/quarterly_performance_form');
 
     }
-
+    public function view_hr_staff_details()
+    {
+        return view('hr.mid_year_performance');
+    }
 
     public function mid_year_performance()
     {

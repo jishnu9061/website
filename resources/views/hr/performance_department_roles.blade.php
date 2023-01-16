@@ -42,7 +42,7 @@
                             <input id="t_id" type="hidden" value="">
                             <td>{{ $department->department_name }}</td>
                             <td>
-                            <a href="{{"performance_department",$department->id}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span>
+                            <a href="{{"performance_department_roles",$department->id}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span>
                             <a href=""> <i style="color:rgb(13, 1, 56);"class="fa fa-edit"></i><span class="m-1"></span>
                             </td>
                     @endforeach          

@@ -1312,13 +1312,12 @@ Route::any('view_bill',"clientinvoicing@view_bill_item")->name('view_bill_item')
 // hr module belji
 Route::any('hrindex','hrindex@index')->name('hrindex');
 Route::any('recruitment','hrindex@recruitment')->name('recruitment');
-
-// HR-Manage Staffs Subhasree
-
+// HR-Manage Staffs
 Route::any('/edit_staff_details/{id}','hrindex@edit_staff_details')->name('edit_staff_details');
 Route::any('/view_staff_details/{id}','hrindex@view_staff_details')->name('view_staff_details');
-
-//reshma
+//HR Perfomence
+Route::any('user_department','hrindex@manage_staff_perfomance')->name('user_department');
+Route::any('/edit_user_department/{id}','hrindex@edituserdepartment')->name('edit_user_department');
 Route::any('performance_department','hrindex@performance_department')->name('performance_department');
 Route::any('job_posts','hrindex@job_posts')->name('job_posts');
 Route::any('edit_job_post/{id}','hrindex@edit_job_post')->name('edit_job_post');
