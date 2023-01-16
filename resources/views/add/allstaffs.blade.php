@@ -383,7 +383,7 @@
                 </div>
                 <br>
                 <div class="row">
-                    <h5><u>Account Details</u></h5>
+                    <h5><u>Salaray Details</u></h5>
                     <br>
                     <br>
                     <div class="col-md-3">
@@ -399,122 +399,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="mb-1">
-                            <label>Partners Drawing</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="partner" id="name"
-                                    value="">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Required Field.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="mb-1">
-                            <label>N.S.S.F Number</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="NSSF" id="address"
-                                    value="">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Required Field.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="mb-1">
-                            <label>N.H.I.F Number</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="NHIF" id="address"
-                                    value="">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Required Field.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="mb-1">
-                            <label>CRA PIN Number</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="cra_pin" id="name"
-                                    value="">
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Required Field.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="mb-1">
-                            <label>Should be taxed?</label>
-                            <select class="form-select" aria-label="Default select example" name="tax">
-                                <option selected value="Yes">Yes</option>
-                                <option value="Active">N0</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="mb-1">
-                            <label>Payroll Deductions</label>
-                            <select class="form-select" aria-label="Default select example" name="deduction">
-                                <option selected value="From Salary">From Salary</option>
-                                {{-- <option value="Active">N0</option> --}}
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="mb-1">
-                            <label>Company NSSF Contribution</label>
-                            <select class="form-select" aria-label="Default select example" name="NSSF_contribution">
-                                <option selected value="Deduct From Company">Deduct From Company</option>
-                                {{-- <option value="Active">Nairobi</option>
-                                <option value="Inactive">Mombasa</option>
-                                <option value="Resigned">Kisumu</option>
-                                <option value="Suspended">Nakuru</option> 
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="mb-1">
-                            <label>Leave Days per Year</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="leave" id="name"
-                                 >
-                                <div class="invalid-feedback" style="width: 100%;">
-                                    Required Field.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="mb-1">
-                            <label>Pension Rate(as % of Basic)</label>
-                            <select class="form-select" aria-label="Default select example" name="pension_rate">
-                                <option selected value="5%">5%</option>
-                                {{-- <option value="Active">N0</option> --}}
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <h5><u>Bank Details</u></h5>
-                    <br>
-                    <br>
                     <div class="col-md-3">
                         <div class="mb-1">
                             <label>Bank Name</label>
@@ -561,9 +445,12 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <br>
+                <div class="row">
                     <div class="col-md-3">
                         <div class="mb-1">
-                            <label>Branch Code</label>
+                            <label>Bank Code</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="branch_code" id="address"
@@ -574,7 +461,110 @@
                             </div>
                         </div>
                     </div>
+                    {{-- <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>Should be taxed?</label>
+                            <select class="form-select" aria-label="Default select example" name="tax">
+                                <option selected value="Yes">Yes</option>
+                                <option value="Active">N0</option>
+                            </select>
+                        </div>
+                    </div> --}}
+                    {{-- <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>Payroll Deductions</label>
+                            <select class="form-select" aria-label="Default select example" name="deduction">
+                                <option selected value="From Salary">From Salary</option>
+                                {{-- <option value="Active">N0</option> --}}
+                            {{-- </select>
+                        </div>
+                    </div> --}}
+                    {{-- <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>Company NSSF Contribution</label>
+                            <select class="form-select" aria-label="Default select example" name="NSSF_contribution">
+                                <option selected value="Deduct From Company">Deduct From Company</option>
+                                <option value="Active">Nairobi</option>
+                                <option value="Inactive">Mombasa</option>
+                                <option value="Resigned">Kisumu</option>
+                                <option value="Suspended">Nakuru</option> 
+                            </select>
+                        </div>
+                    </div> --}}
                 </div>
+                <br>
+                <div class="row">
+                    <h5><u>No: of Leaves(Annual)</u></h5>
+                    <br>
+                    <br>
+                    <div class="col-md-12">
+                        <div class="mb-1">
+                        <br>
+                            {{-- <h6>No: of Leaves(Annual)</h6> --}}
+                            <div></div>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"></div>
+                                        <table class="table" style="width:60%">
+                                            <tr>
+                                                @foreach($leavetype as $data)
+                                                    <td>{{$data->leave_type}}
+                                                        <input type="hidden" name="leave_type[]" value="{{$data->id}}"></td>
+                                                        <td><input type="number" class="form-control leaves" name="leaves[]" value="0" min="0" max="365" width="auto"></td>
+                                                @endforeach
+                                            </tr>
+                                        </table>
+                                </div>
+                            </div>
+                        </div
+                    {{-- <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>Bank Name</label>
+                            <select class="form-select" aria-label="Default select example" name="bank">
+                            <option>select</option>
+                            @if(count($get_bank))
+                                            @foreach($get_bank as $list_bank)
+                                            <option value="{{$list_bank->id}}">{{$list_bank->bank_name}}</option>
+                                            @endforeach
+                                          @endif
+                            </select>
+                        </div>
+                    </div> --}}
+                    {{-- <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>Account Number</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="account" id="name"
+                                    value="">
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div> --}}
+                    {{-- <div class="col-md-3">
+                        <div class="mb-1">
+                            <label>Branch</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                    <select name="bank_branch" id="address">
+                                    <option>select</option>
+                                    @if(count($get_bank))
+                                            @foreach($get_bank as $branch_list)
+                                            <option value="{{$branch_list->id}}">{{$branch_list->bank_name}}</option>
+                                            @endforeach
+                                          @endif
+                                    </select>
+
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Required Field.
+                                </div>
+                            </div>
+                        </div>
+                    </div> --}}
+                </div>
+                <br>
+                <br>
                 <br>
                 <div class="row">
                     <div class="col-md-4">
