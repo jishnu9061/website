@@ -434,6 +434,11 @@ public function update_leave_request(Request $Request)
 
     }
 
+    public function leave_balance()
+{
+    return view('hr.leave_balance');
+}
+
     public function attendance_sheet()
 {
     return view('hr.attendance_sheet');

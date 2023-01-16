@@ -7,6 +7,7 @@
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Apply Leave</button>
     {{-- Modal --}}
     <a href="{{url('approve_leave_request')}}"> <button type="button" class="btn btn-primary"> Approve Leave Request</button></a>
+    <a href="{{url('leave_balance')}}"> <button type="button" class="btn btn-primary">Leave Balance</button></a>
     <div class="header_wrap">
         <div class="num_rows">
             <div class="form-group">
@@ -87,11 +88,11 @@
                                     <a href=""><i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span>
                                     <a href=""><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                                     {{-- <a href=""> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i> --}}
-                          
+
 
                                 </td>
                             </tr>
-                
+
 
                         </tbody>
                     </table>
@@ -224,7 +225,7 @@
                         </div>
                     </div>
                  </div>
-                </div> 
+                </div>
                 <div class="row">
                  <div class="col-md-6">
                     <div class="mb-1">
@@ -238,9 +239,9 @@
                         </div>
                     </div>
                  </div>
-               
 
-               
+
+
                     <div class="col-md-6">
                         <div class="mb-1">
                         <label >Reason</label>

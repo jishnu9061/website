@@ -1370,6 +1370,7 @@ Route::any('approve_leave_request','hrindex@approve_leave_request')->name('appro
 Route::any('view_leave_request','hrindex@view_leave_request')->name('view_leave_requ 30px;est');
 Route::any('edit_leave_request/{id}','hrindex@edit_leave_request')->name('edit_leave_request');
 Route::any('/update_leave_request','hrindex@update_leave_request')->name('update_leave_request');
+Route::any('/leave_balance','hrindex@leave_balance')->name('leave_balance');
 
 Route::any('internal_memos','hrindex@internal_memos')->name('internal_memos');
 Route::any('view_memo','hrindex@view_memo')->name('view_memo');
