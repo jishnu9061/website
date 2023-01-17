@@ -49,11 +49,7 @@
                                 <th class="text-center">Apply Date</th>
                                 <th class="text-center">From Date</th>
                                 <th class="text-center">To Date</th>
-                                <th class="text-center">Date From</th>
-                                <th class="text-center">Date To</th>
                                 <th class="text-center">Number Of Days</th>
-                                <th class="text-center">Leave Date From</th>
-                                <th class="text-center">Leave Date To</th>
                                 <th class="text-center">Reason</th>
                                 <th class="text-center">Upload Document</th>
                                 <th class="text-center">Status</th>
@@ -81,14 +77,8 @@
                                 <td scope="row" class="text-center">{{$leave->reason}}</td>
                                 <td scope="row" class="text-center">{{$leave->document}}</td>
                                 <td scope="row" class="text-center"></td>
-                                <td scope="row" class="text-center"></td>
-                                <td scope="row" class="text-center"></td>
-                                <td scope="row" class="text-center"></td>
-                                <td scope="row" class="text-center"></td>
-                                <td scope="row" class="text-center"></td>
-                                <td scope="row" class="text-center"></td>
-                                <td scope="row" class="text-center"></td>
-                                <td scope="row" class="text-center"></td>
+                                
+                                
                                 <td scope="row" class="text-center">
                                     <div class="dropdown">
                                         <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Requested
@@ -102,6 +92,7 @@
                                       </div>
                             </td>
                             <td scope="row" class="text-center"></td>
+                           
                                 <td scope="row" class="text-center">
                                     <a href=""><i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span>
                                     <a href=""><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
