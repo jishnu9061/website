@@ -405,6 +405,8 @@ public function edit_leave_request($id)
 }
 
 public function update_leave_request(Request $Request)
+
+
     {
         $id = $Request['id'];
         $name = $Request['name'];

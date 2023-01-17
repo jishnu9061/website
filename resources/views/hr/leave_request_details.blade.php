@@ -42,11 +42,11 @@
                         <thead>
 
                             <tr>
-                                <th class="text-center">Emp Id</th>
+                                {{-- <th class="text-center">Emp Id</th> --}}
                                 <th class="text-center">Name</th>
                                 <th class="text-center">Department</th>
-                                <th class="text-center">Leave Type</th>
                                 <th class="text-center">Apply Date</th>
+                                <th class="text-center">Leave Type</th>
                                 <th class="text-center">From Date</th>
                                 <th class="text-center">To Date</th>
                                 <th class="text-center">Number Of Days</th>
@@ -67,18 +67,16 @@
 
                             <tr>
 
-                                <td scope="row" class="text-center">{{$leave->id}}</td>
+                                {{-- <td scope="row" class="text-center">{{$leave->id}}</td> --}}
                                 <td scope="row" class="text-center">{{$leave->name}}</td>
                                 <td scope="row" class="text-center">{{$leave->department}}</td>
-                                <td scope="row" class="text-center">{{$leave->leave_type}}</td>
                                 <td scope="row" class="text-center">{{$leave->apply_date}}</td>
+                                <td scope="row" class="text-center">{{$leave->leave_type}}</td>
                                 <td scope="row" class="text-center">{{$leave->date_from}}</td>
                                 <td scope="row" class="text-center">{{$leave->date_to}}</td>
                                 <td scope="row" class="text-center">{{$leave->reason}}</td>
                                 <td scope="row" class="text-center">{{$leave->document}}</td>
                                 <td scope="row" class="text-center"></td>
-                                
-                                
                                 <td scope="row" class="text-center">
                                     <div class="dropdown">
                                         <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Requested
@@ -90,15 +88,12 @@
 
                                         </div>
                                       </div>
-                            </td>
-                            <td scope="row" class="text-center"></td>
-                           
+                                </td>
+                                <td scope="row" class="text-center"></td>
                                 <td scope="row" class="text-center">
-                                    <a href=""><i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span>
-                                    <a href=""><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                                    <a href="{{url('view_leave_request',$leave->id)}}"><i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span>
+                                    <a href="{{url('edit_leave_request',$leave->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                                     {{-- <a href=""> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i> --}}
-
-
                                 </td>
                             </tr>
 
@@ -191,7 +186,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="mb-1">
-                        <label>Type</label>
+                        <label>Leave Type</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                             </div>
@@ -209,10 +204,10 @@
                     </div>
                  </div>
                 </div>
-                <div class="row">
+    <div class="row">
                 <div class="col-md-6">
                     <div class="mb-1">
-                    <label >Date From </label>
+                    <label >From Date</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
                             <input type="date"  id="" name="date_from"value=""class="form-control">
@@ -224,7 +219,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="mb-1">
-                        <label>Date To</label>
+                        <label>To Date</label>
 
                             </div> <div class="input-group">
                             <div class="input-group-prepend"></div>
@@ -235,12 +230,13 @@
                     </div>
                  </div>
                 </div>
-                <div class="row">
+    <div class="row">
                  <div class="col-md-6">
                     <div class="mb-1">
                         <label>Number Of Days</label>
 
-                            </div> <div class="input-group">
+                            </div> 
+                            <div class="input-group">
                             <div class="input-group-prepend"></div>
                             <input type="number"  id="" name="number_of_days"value=""class="form-control">
                             <div class="invalid-feedback" style="width: 100%;">
@@ -263,7 +259,7 @@
                             </div>
                         </div>
                     </div> <br>
-                    <div class="row">
+    <div class="row">
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label>Upload Document</label>
@@ -289,10 +285,10 @@
                         </div>
                     </div> <br>
                     </div>
-                <div class="row">
-     <div class="col-sm">
-        <div class="mb-1">
-            <label>Status</label>
+    <div class="row">
+        <div class="col-sm">
+            <div class="mb-1">
+                <label>Status</label>
             <div class="dropdown">
                 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Requested
                 </button>
