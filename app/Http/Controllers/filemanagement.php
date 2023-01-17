@@ -342,6 +342,7 @@ class filemanagement extends Controller
         return redirect('/file-progress-list');
 
     }
+
     public function delete_progress($id)
     {
         DB::table('cra_add_file_progress')->where('id',$id)->delete();
@@ -358,9 +359,9 @@ class filemanagement extends Controller
     {
         $client_list = DB::table('cra_mixed_table')->get();
          $file_progress_list = DB::table('cra_add_file_progress')
-        ->select('*')  
-        ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_file_progress.id')
-        ->leftjoin('cra_open_new_file_details','cra_open_new_file_details.id','=','cra_add_file_progress.id')
+        // ->select('*')  
+        // ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_file_progress.id')
+        // ->leftjoin('cra_open_new_file_details','cra_open_new_file_details.id','=','cra_add_file_progress.id')
         ->get();    
         return view ('file_management.file-progress-list',compact('file_progress_list','client_list'));
     }
