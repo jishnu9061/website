@@ -36,7 +36,7 @@ th{ width:30%;
                     
 
                     <tr>
-                        <th>Supplier  Name</th>
+                        <th>Vendor Name</th>
                         <td></td>
                     </tr>
                     <tr>

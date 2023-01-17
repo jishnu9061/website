@@ -58,7 +58,7 @@
                     <tr>
                         <td>{{$list->supplier_name}}</td>
                         <td></td>
-                        <td> <a href="{{url('ledger_details')}}"> <button type="button" class="btn btn-primary">Show
+                        <td> <a href="{{url('ledger_details',$list->supplier_name)}}"> <button type="button" class="btn btn-primary">Show
                                     Payment</button></a></td>
                         <td><a href="{{url('view_supplier')}}"> <i style="color:rgb(13, 1, 56);"
                                     class="fa fa-eye"></i><span class="m-2"></span>
@@ -287,7 +287,7 @@
 
     </div>
 
-
+  
 
 
 

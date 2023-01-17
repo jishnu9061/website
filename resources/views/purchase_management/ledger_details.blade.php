@@ -24,47 +24,40 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach($ledger_details as $list)
                 <tr class="text-center">
 
-                    <td><input type="text" placeholder="12C45F78JK" class="form-control" disabled></td>
-                    <td><input type="text" placeholder="24-11-2022" class="form-control" disabled></td>
-                    <td><input type="text" placeholder="1000" class="form-control" disabled></td>
-                    <td><input type="text" placeholder="400" class="form-control" disabled></td>
-                    <td><input type="text" placeholder="600" class="form-control" disabled></td>
-                    <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add
-                            Amount</button></td>
+                    <td><input type="text" class="form-control" value="{{$list->purchase_order_number}}" disabled></td>
+                    <td><input type="text" class="form-control" value="{{$list->purchase_date}}" disabled></td>
+                    <td><input type="text" class="form-control calculate-sub" value="{{$list->grand_total}}" disabled>
+                    </td>
+                    <td><input type="text" class="form-control advance" value="{{$list->advance_amount}}" disabled></td>
+                    <td><input type="text" class="form-control balance" value="{{$list->pending_amount}}" disabled></td>
+                    <td>
+                        <a href="{{url('ledger_add_payment',$list->purchase_id)}}"><input type="button" class="btn btn-primary"  value="Add Amount"></a>
+                    </td>
                     <td><button type="button" class="btn btn-primary" data-toggle="modal"
                             data-target="#myModal1">View</button></td>
 
                 </tr>
-                <tr class="text-center">
-
-                    <td><input type="text" placeholder="34C67F89JK" class="form-control" disabled></td>
-                    <td><input type="text" placeholder="25-11-2022" class="form-control" disabled></td>
-                    <td><input type="text" placeholder="2000" class="form-control" disabled></td>
-                    <td><input type="text" placeholder="500" class="form-control" disabled></td>
-                    <td><input type="text" placeholder="1500" class="form-control" disabled></td>
-                    <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add
-                            Amount</button></td>
-                    <td><button type="button" class="btn btn-primary" data-toggle="modal"
-                            data-target="#myModal1">View</button></td>
-
-                </tr>
+                @endforeach
                 <tr>
                     <td colspan="5"></td>
                     <td><input type="text" placeholder="Grand Total" class="form-control" disabled></td>
-                    <td><input type="text" placeholder="3000" class="form-control" disabled></td>
-                </tr>
+
+                    <td><input type="text" class="form-control invoice-sub-total" value="" disabled></td>
+
                 <tr>
                     <td colspan="5"></td>
                     <td><input type="text" placeholder="Total Advance" class="form-control" disabled></td>
-                    <td><input type="text" placeholder="900" class="form-control" disabled></td>
+                    <td><input type="text" class="form-control invoice_advance" disabled></td>
                 </tr>
                 <tr>
                     <td colspan="5"></td>
                     <td><input type="text" placeholder="Total Balance" class="form-control" disabled></td>
-                    <td><input type="text" placeholder="2100" class="form-control" disabled></td>
+                    <td><input type="text" class="form-control total_balance" disabled></td>
                 </tr>
+
             </tbody>
         </table>
     </div>
@@ -90,54 +83,7 @@
     <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 
 
-    <div class="modal fade" id="myModal">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h2 class="text-centre"><b>Add Payment</b></h2>
-                </div>
-
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <div class="container">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Amount</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Balance Amount</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Payment Date</label>
-                            <input type="date" class="form-control" id="exampleFormControlInput1">
-                        </div>
-
-                        <br>
-
-
-
-
-
-
-
-
-                        <!-- Modal Footer -->
-
-                        <div>
-
-                            <button type="submit" class="btn btn-primary" style="width:20%">Save</button>
-                            <button type="button" class="btn btn-primary" style="width:15%" data-dismiss="modal">Close</button>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+   
 
 
     <!---------------------------------------------- MODAL-1 ---------------------------------------------------------------------->
@@ -166,9 +112,9 @@
                             <tbody>
                                 <tr>
 
-                                    <td><input class="form-control" type="text" value="24-11-2022"
+                                    <td><input class="form-control" type="text" value=""
                                             aria-label="Disabled input example" disabled readonly></td>
-                                    <td><input class="form-control" type="text" value="2000"
+                                    <td><input class="form-control" type="text" value=""
                                             aria-label="Disabled input example" disabled readonly></td>
 
                                 </tr>
@@ -193,6 +139,72 @@
         </div>
     </div>
 </div>
+
+<script src="{{ url('assets/js') }}/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/js/select2.min.js" defer></script>
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" charset="utf8"
+    src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+    calculateTotal();
+    calculateadvance();
+    calculatebalance();
+
+
+    function calculateTotal() {
+       
+        var grand_total = 0;
+        $('.calculate-sub').each(function() {
+            total = ($(this).val());
+            if ($.isNumeric(total)) {
+
+                grand_total += parseFloat(total);
+            }
+        });
+
+        $('.invoice-sub-total').val(parseFloat(grand_total).toFixed(2));
+    }
+
+
+    function calculateadvance(){
+
+         var total_advance = 0;
+         $('.advance').each(function(){
+            advance = ($(this).val());
+            if($.isNumeric(advance)){
+                total_advance += parseFloat(advance);
+            }
+         });
+
+         $('.invoice_advance').val(parseFloat(total_advance).toFixed(2));
+    }
+
+    function calculatebalance(){
+
+        var total_balance = 0;
+
+        $('.balance').each(function(){
+            balance = ($(this).val());
+            if($.isNumeric(balance)){
+                total_balance  += parseFloat(balance);
+            }
+        });
+
+        $('.total_balance').val(parseFloat(total_balance).toFixed(2));
+    }
+
+
+    
+});
+
+
+</script>
+
+
+<script></script>
+
 
 
 

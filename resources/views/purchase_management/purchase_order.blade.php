@@ -194,7 +194,8 @@
                                                                 <select name="Supplier" id="cars">
                                                                     @if(count($supplier_order))
                                                                     @foreach($supplier_order as $list)
-                                                                    <option value="{{$list->id}}">{{$list->supplier_name}}</option>
+                                                                    <option value="{{$list->id}}">
+                                                                        {{$list->supplier_name}}</option>
                                                                     @endforeach
                                                                     @endif
                                                                 </select>
@@ -346,13 +347,13 @@
                                                                             <label for="">Grand Total</label>
                                                                             <input type="text"
                                                                                 class="form-control invoice-sub-total"
-                                                                                placeholder="Grand Total "
+                                                                                placeholder="Grand Total"
                                                                                 id="grand-total" name="grand_total"
                                                                                 value="0" readonly>
 
-                                                                            <brform_logic>
+                                                                            
 
-                                                                                <brform_logic> <br>
+                                                                              <br>
 
                                                                                     <label for="">Advance Amount</label>
                                                                                     <input type="text"
@@ -491,7 +492,7 @@ $(document).ready(function() {
             price = $('[name="price[]"]', tr).val(),
             percent = $('[name="total[]"]', tr).val(),
             subtotal = parseInt(quantity) * parseFloat(price);
-        console.log(tr);
+
         $('.calculate-sub', tr).val(subtotal.toFixed(2));
     }
 

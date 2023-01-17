@@ -130,9 +130,12 @@ class PurchaseManagement extends Controller
     // {
     //     return view('purchase_management.cost_variation_report');
     // }
-    public function ledger_details()
+
+
+    public function ledger_details($supplier_name)
     {
-        return view('purchase_management.ledger_details');
+        $ledger_details  =  DB::table('cra_add_new_purchase')->where('supplier_name',$supplier_name)->get();
+        return view('purchase_management.ledger_details',compact('ledger_details'));
     }
 
     public function purchase_view($purchase_id)
@@ -153,7 +156,10 @@ class PurchaseManagement extends Controller
 
     public function suppliers()
     {
-        $suppliers = DB::table('cra_add_supplier')->get();
+        $suppliers =  DB::table('cra_add_supplier')
+        ->leftjoin('cra_add_new_purchase','cra_add_new_purchase.purchase_id','=','cra_add_supplier.id')
+        ->get();
+      
         return view('purchase_management.supplier',compact('suppliers'));
     }
 
@@ -181,6 +187,24 @@ class PurchaseManagement extends Controller
             ]);
 
             return redirect('/supplier');
+    }
+
+    public function ledger_add_payment($purchase_id){
+
+        $ledger_add_payment  = DB::table('cra_add_new_purchase')->where('purchase_id',$purchase_id)->first();
+        return view('purchase_management.ladger_add_payment',compact('ledger_add_payment','purchase_id'));
+    }
+
+    public function update_ledger_add_payment(Request $request){
+
+        $purchase_id      =  $request['purchase_id'];
+        $pending_amount   =  $request['pending_amount'];
+
+        DB::table('cra_add_new_purchase')->where('purchase_id',$purchase_id)->update([
+            'pending_amount'    =>  $pending_amount
+        ]);
+
+        return redirect('/supplier');
     }
 
 
