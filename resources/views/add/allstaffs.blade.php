@@ -12,13 +12,15 @@
             background-color: #fff;
             border: 1px solid #f1d9b0;
         }
-        .pagination>.active>span{
+
+        .pagination>.active>span {
             z-index: 3;
             color: rgb(5, 4, 4);
             cursor: default;
             background-color: #f1d9b0;
             border-color: #f1d9b0;
         }
+
         .pagination {
             margin: 0;
         }
@@ -81,7 +83,7 @@
         </div>
         <div class="table-responsive">
             <table class="table table-striped table-class" id="table-id">
-                
+
                 <thead>
                     <tr class="text-center">
                         <!-- <th>Sl No</th> -->
@@ -98,14 +100,14 @@
                         <tr class="text-center">
                             <input id="t_id" type="hidden" value="{{ $alluser->id }}">
                             <td>{{ $alluser->uniqueid }}</td>
-                            <td>{{ $alluser->name     }}</td>
-                            <td>{{ $alluser->email    }}</td>
-                            <td>{{ $alluser->phone    }}</td>
+                            <td>{{ $alluser->name }}</td>
+                            <td>{{ $alluser->email }}</td>
+                            <td>{{ $alluser->phone }}</td>
                             <td>
-                                     <a href="{{url('view_staff_details', $alluser->id)}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span>
-                                     <a href="{{url('edit_staff_details', $alluser->id)}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-edit"></i><span class="m-1"></span>
-
-
+                                <a href="{{ url('view_staff_details', $alluser->id) }}"> <i
+                                        style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span>
+                                    <a href="{{ url('edit_staff_details', $alluser->id) }}"> <i
+                                            style="color:rgb(13, 1, 56);"class="fa fa-edit"></i><span class="m-1"></span>
                     @endforeach
 
                     </tr>
@@ -117,9 +119,11 @@
             <nav>
                 <ul class="pagination">
                     <li data-page="prev">
-                        <span> < <span class="sr-only">(current)</span></span>
+                        <span>
+                            < <span class="sr-only">(current)
+                        </span></span>
                     </li>
-                
+
                     <li data-page="next" id="prev">
                         <span> > <span class="sr-only">(current)</span></span>
                     </li>
@@ -128,7 +132,7 @@
         </div>
         <div class="rows_count"></div>
         <!-- 		End of Container -->
-        </div>
+    </div>
 
     <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
     <div class="modal fade" id="myModal">
@@ -151,11 +155,11 @@
 
 
                             <!--
-                                                    <label>add logo</label>
-                                                    <div class="input-group">
-                                                        <div class="custom-file">
-                                                           <input type="file"name="image"class="custom-file-input">
-                                                           <label class="custom-file-label">choose file</label> -->
+                                                        <label>add logo</label>
+                                                        <div class="input-group">
+                                                            <div class="custom-file">
+                                                               <input type="file"name="image"class="custom-file-input">
+                                                               <label class="custom-file-label">choose file</label> -->
                     </div>
                 </div>
                 <!-- --------------------------------------image------------------------------------------------->
@@ -170,7 +174,8 @@
                             <label>Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" name="name" id="name" value="" required>
+                                <input type="text" class="form-control" name="name" id="name" value=""
+                                    required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -182,7 +187,8 @@
                             <label>Email</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="email" class="form-control" name="email" id="address" value="" required>
+                                <input type="email" class="form-control" name="email" id="address" value=""
+                                    required>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
@@ -248,8 +254,8 @@
                             <label for="username">Date Of Joining</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="date_of_joining"
-                                    id="password" placeholder="staff Password">
+                                <input type="date" class="form-control" name="date_of_joining" id="password"
+                                    placeholder="staff Password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Passeord is required.
                                 </div>
@@ -274,11 +280,12 @@
                             <label>Departments:&nbsp;</label>
                             <select class="form-select" aria-label="Default select example" name="departname">
                                 <option>select</option>
-                            @if(count($get_department))
-                                            @foreach($get_department as $list_department)
-                                            <option value="{{$list_department->id}}">{{$list_department->department_name}}</option>
-                                            @endforeach
-                                          @endif
+                                @if (count($get_department))
+                                    @foreach ($get_department as $list_department)
+                                        <option value="{{ $list_department->id }}">{{ $list_department->department_name }}
+                                        </option>
+                                    @endforeach
+                                @endif
                             </select>
                         </div>
                     </div>
@@ -286,12 +293,12 @@
                         <div class="mb-1">
                             <label>Roles&nbsp;</label>
                             <select class="form-select" aria-label="Default select example" name="role">
-                            <option>select</option>
-                            @if(count($get_role))
-                                            @foreach($get_role as $list_role)
-                                            <option value="{{$list_role->id}}">{{$list_role->role_name}}</option>
-                                            @endforeach
-                                          @endif
+                                <option>select</option>
+                                @if (count($get_role))
+                                    @foreach ($get_role as $list_role)
+                                        <option value="{{ $list_role->id }}">{{ $list_role->role_name }}</option>
+                                    @endforeach
+                                @endif
                             </select>
                         </div>
                         {{-- <div id="test" style="height:20px;"></div> --}}
@@ -314,8 +321,8 @@
                             <label for="username">Status Date</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="date" class="form-control" name="status_date"
-                                    id="password" placeholder="staff Password">
+                                <input type="date" class="form-control" name="status_date" id="password"
+                                    placeholder="staff Password">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Passeord is required.
                                 </div>
@@ -371,12 +378,12 @@
                         <div class="mb-1">
                             <label>Town/City</label>
                             <select class="form-select" aria-label="Default select example" name="town">
-                            <option>select</option>
-                            @if(count($get_town))
-                                            @foreach($get_town as $list_city)
-                                            <option value="{{$list_city->id}}">{{$list_city->Town_City}}</option>
-                                            @endforeach
-                                          @endif
+                                <option>select</option>
+                                @if (count($get_town))
+                                    @foreach ($get_town as $list_city)
+                                        <option value="{{ $list_city->id }}">{{ $list_city->Town_City }}</option>
+                                    @endforeach
+                                @endif
                             </select>
                         </div>
                     </div>
@@ -384,7 +391,7 @@
                 <br>
 
                 <div class="row">
-                    <h5><u>Salary Details</u></h5>
+                    <h5><u>Salary Details & Allowances</u></h5>
                     <br>
                     <br>
 
@@ -406,17 +413,16 @@
                         <div class="mb-1">
                             <label>Bank Name</label>
                             <select class="form-select" aria-label="Default select example" name="bank">
-                            <option>select</option>
-                            @if(count($get_bank))
-                                            @foreach($get_bank as $list_bank)
-                                            <option value="{{$list_bank->id}}">{{$list_bank->bank_name}}</option>
-                                            @endforeach
-                                          @endif
+                                <option>select</option>
+                                @if (count($get_bank))
+                                    @foreach ($get_bank as $list_bank)
+                                        <option value="{{ $list_bank->id }}">{{ $list_bank->bank_name }}</option>
+                                    @endforeach
+                                @endif
                             </select>
                         </div>
                     </div>
-
-                    <div class="col-md-3">
+                     <div class="col-md-3">
                         <div class="mb-1">
                             <label>Account Number</label>
                             <div class="input-group">
@@ -428,29 +434,30 @@
                                 </div>
                             </div>
                         </div>
-                    </div> </div>
-   <div class="row">
+                    </div>
                     <div class="col-md-3">
                         <div class="mb-1">
                             <label>Branch</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                    <select name="bank_branch" id="address">
+                                <select name="bank_branch" id="address">
                                     <option>select</option>
-                                    @if(count($get_bank))
-                                            @foreach($get_bank as $branch_list)
-                                            <option value="{{$branch_list->id}}">{{$branch_list->bank_name}}</option>
-                                            @endforeach
-                                          @endif
-                                    </select>
+                                    @if (count($get_bank))
+                                        @foreach ($get_bank as $branch_list)
+                                            <option value="{{ $branch_list->id }}">{{ $branch_list->bank_name }}</option>
+                                        @endforeach
+                                    @endif
+                                </select>
 
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                                 </div>
                             </div>
                         </div>
+                </div>
+                <div class="row">
+                   
                     </div>
-
                     <div class="col-md-3">
                         <div class="mb-1">
                             <label>Bank Code</label>
@@ -464,11 +471,11 @@
                             </div>
                         </div>
 
-                </div>
-                <br>
+                    </div>
+                    <br>
 
 
-              
+
                     {{-- <div class="col-md-3">
                         <div class="mb-1">
                             <label>Should be taxed?</label>
@@ -484,7 +491,7 @@
                             <select class="form-select" aria-label="Default select example" name="deduction">
                                 <option selected value="From Salary">From Salary</option>
                                 {{-- <option value="Active">N0</option> --}}
-                            {{-- </select>
+                    {{-- </select>
                         </div>
                     </div> --}}
                     {{-- <div class="col-md-3">
@@ -501,80 +508,111 @@
                     </div> --}}
                 </div>
                 <br>
+                <table class="table">
+                    <thead class="thead-dark">
+                        <h5><u>No. of Leaves (Annual)</u></h5>
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            @foreach ($leavetype as $data)
+                                <td> <input type="hidden" name="leave_type[]"
+                                        value="{{ $data->id }} ">{{ $data->leave_type }}</td>
+
+                                <td> <input type="number" class="form-control leaves" name="leaves[]" value="0"
+                                        min="0" max="365"></td>
+                            @endforeach
+                        </tr>
+
+
+                    </tbody>
+                </table>
 
 
 
-
-
-
-
-
-                
-
-
-
-
-
-
-
-                    <table class="table">
-                        <thead class="thead-dark">
-                            <h5><u>No. of Leaves (Annual)</u></h5>
-                 
-                        </thead>
-                        <tbody>
-                            <tr>
-                                @foreach($leavetype as $data) 
-                                    <td>  <input type="hidden" name="leave_type[]" value="{{$data->id}} ">{{$data->leave_type}}</td>
-                                    
-                                        <td> <input type="number" class="form-control leaves" name="leaves[]" value="0" min="0" max="365" ></td>
-                               @endforeach 
-                            </tr>
-                      
-                     
-                        </tbody>
-                      </table>
-                      
-                      
-                      
 
 
 
 
 
                 <div class="row">
-                    <h5><u>No. of Leaves (Annual)</u></h5>
-                    <br>
-                    <br>
-                    <div class="col-12">
+                    <div style="height: 50px;"></div>
+                    <div class="row">
+                        <div class="col-md-4 col-lg-4">
+                            <p><b>Fixed Allowances</b></p>
+                            <table class="table table-bordered">
+                                <tbody>
+                                    @foreach ($allowancedata as $data)
+                                        <tr>
+                                            <td>{{ $data->allowancename }}</td>
+                                            <input type="hidden" name="{{ $data->allowancename }}"
+                                                value="{{ $data->allowancename }}">
+                                            <td><input type="checkbox" class="checkz" name="allowz[]"
+                                                    value="{{ $data->id }}"></td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-4 col-lg-4">
+                            <p><b>Non-Fixed Allowances</b></p>
+                            <table class="table table-bordered">
+                                <tbody>
+                                    @foreach ($nonfixdallowancedata as $data)
+                                        <tr>
+                                            <td>{{ $data->allowancename }}</td>
+                                            <input type="hidden" name="{{ $data->allowancename }}"
+                                                value="{{ $data->allowancename }}">
+                                            <td><input type="number" class="checkz" name="nonfx[]" min="0"
+                                                    value="0"></td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-4 col-lg-4">
+                            <p><b>Deductions</b></p>
+                            <table class="table table-bordered">
+                                <tbody>
+                                    @foreach ($deductiondata as $data)
+                                        <tr>
+                                            <td>{{ $data->allowancename }}</td>
+                                            <input type="hidden" name="{{ $data->allowancename }}"
+                                                value="{{ $data->allowancename }}">
+                                            <td><input type="checkbox" class="checkz" name="category[]"
+                                                    value="{{ $data->id }}"></td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    {{-- <div class="col-12">
                         <div class="mb-1">
                         <br>
                             {{-- <h6>No: of Leaves(Annual)</h6> --}}
-                            <div>
+                    {{-- <div>
                                 <div class="input-group">
                                     <div class="input-group-prepend"></div>
                                         <table class="table">
                                             <tr>
-                                                {{-- @foreach($leavetype as $data) --}}
+                                                @foreach ($leavetype as $data)
                                                     <td>
-                                                        {{-- {{$data->leave_type}} --}}
-                                                        <input type="hidden" name="leave_type[]" value="
-                                                        {{-- {{$data->id}} --}}
-                                                        "></td>
+                                                        <input type="hidden" name="leave_type[]" value="{{$data->id}}"></td>
                                                         <td><input type="number" class="form-control leaves" name="leaves[]" value="0" min="0" max="365" ></td>
-                                                {{-- @endforeach --}}
+                                                @endforeach
                                             </tr>
                                         </table>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     {{-- <div class="col-md-3">
                         <div class="mb-1">
                             <label>Bank Name</label>
                             <select class="form-select" aria-label="Default select example" name="bank">
                             <option>select</option>
-                            @if(count($get_bank))
-                                            @foreach($get_bank as $list_bank)
+                            @if (count($get_bank))
+                                            @foreach ($get_bank as $list_bank)
                                             <option value="{{$list_bank->id}}">{{$list_bank->bank_name}}</option>
                                             @endforeach
                                           @endif
@@ -601,8 +639,8 @@
                                 <div class="input-group-prepend"></div>
                                     <select name="bank_branch" id="address">
                                     <option>select</option>
-                                    @if(count($get_bank))
-                                            @foreach($get_bank as $branch_list)
+                                    @if (count($get_bank))
+                                            @foreach ($get_bank as $branch_list)
                                             <option value="{{$branch_list->id}}">{{$branch_list->bank_name}}</option>
                                             @endforeach
                                           @endif
@@ -615,8 +653,6 @@
                         </div>
                     </div> --}}
                 </div>
-                <br>
-                <br>
                 <br>
                 <div class="row">
                     <div class="col-md-4">

@@ -76,6 +76,7 @@ Route::any('/queuemanagement','hospitalController@queuemanagement');
 Route::any('/clinicalnotes','bedsController@clinicalnotes');
 Route::any('/callthepatient{id}','hospitalController@callthepatient');
 Route::any('/addstaffs','addController@addstaffs');
+
 Route::any('/editstafff','addController@editstafff');
 Route::post('/addthestaffs','addController@addthestaffs');
 Route::any('/staffs','addController@allstaffs');
