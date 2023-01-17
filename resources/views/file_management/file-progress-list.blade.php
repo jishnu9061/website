@@ -63,6 +63,7 @@
 
 
 
+            
         </div>
 
         <div style="display:flex;   margin-top: 3%;">
@@ -687,15 +688,15 @@
                                                             <div class="input-group-prepend">
 
                                                             </div>
-                                                          
+
                                                             <select name="client_name" id="">
-                                                            <option value="">select</option>
-                                                            @if(count($client_list))
-                                                            @foreach($client_list as $list_category)
-                                                            <option>{{$list_category->client_name}}</option>
-                                                            @endforeach
-                                                            @endif
-                                                        </select>
+                                                                <option value="">select</option>
+                                                                @if(count($client_list))
+                                                                @foreach($client_list as $list_category)
+                                                                <option>{{$list_category->client_name}}</option>
+                                                                @endforeach
+                                                                @endif
+                                                            </select>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Incorporation is required
                                                             </div>
