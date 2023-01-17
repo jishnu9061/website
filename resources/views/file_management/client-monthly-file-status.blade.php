@@ -59,13 +59,15 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="client" id="cars">
-                                    <option>---select---</option>
-                                    <option>Client 1</option>
-                                    <option>Client 2</option>
-                                    <option>Client 3</option>
-                                    <option>Client 4</option>
-                                </select>
+                                <select name="client" id="">
+                                                            <option value="">select</option>
+                                                            @if(count($client_list))
+                                                            @foreach($client_list as $list_category)
+                                                            <option>{{$list_category->client_name}}</option>
+                                                            @endforeach
+                                                            @endif
+                                                        </select>
+                              
                             </div>
                         </div>
                     </div>
