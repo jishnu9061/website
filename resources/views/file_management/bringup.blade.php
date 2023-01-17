@@ -49,14 +49,15 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="client" id="cars">
-                                    <option>---select---</option>
-                                    <option>client 1</option>
-                                    <option>client 2</option>
-                                    <option>client 3</option>
-                                    <option>client 4</option>
-
+                                <select name="client" id="">
+                                    <option value="">select</option>
+                                    @if(count($client_list))
+                                    @foreach($client_list as $list_category)
+                                    <option>{{$list_category->client_name}}</option>
+                                    @endforeach
+                                    @endif
                                 </select>
+
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
                                 </div>
