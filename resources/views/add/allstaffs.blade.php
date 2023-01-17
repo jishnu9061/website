@@ -382,10 +382,12 @@
                     </div>
                 </div>
                 <br>
+
                 <div class="row">
-                    <h5><u>Salaray Details</u></h5>
+                    <h5><u>Salary Details</u></h5>
                     <br>
                     <br>
+
                     <div class="col-md-3">
                         <div class="mb-1">
                             <label>Basic Salary(Kshs)</label>
@@ -399,6 +401,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-3">
                         <div class="mb-1">
                             <label>Bank Name</label>
@@ -412,6 +415,7 @@
                             </select>
                         </div>
                     </div>
+
                     <div class="col-md-3">
                         <div class="mb-1">
                             <label>Account Number</label>
@@ -424,7 +428,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> </div>
+   <div class="row">
                     <div class="col-md-3">
                         <div class="mb-1">
                             <label>Branch</label>
@@ -445,9 +450,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <br>
-                <div class="row">
+
                     <div class="col-md-3">
                         <div class="mb-1">
                             <label>Bank Code</label>
@@ -460,7 +463,12 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+
+                </div>
+                <br>
+
+
+              
                     {{-- <div class="col-md-3">
                         <div class="mb-1">
                             <label>Should be taxed?</label>
@@ -493,29 +501,73 @@
                     </div> --}}
                 </div>
                 <br>
+
+
+
+
+
+
+
+
+                
+
+
+
+
+
+
+
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <h5><u>No. of Leaves (Annual)</u></h5>
+                 
+                        </thead>
+                        <tbody>
+                            <tr>
+                                @foreach($leavetype as $data) 
+                                    <td>  <input type="hidden" name="leave_type[]" value="{{$data->id}} ">{{$data->leave_type}}</td>
+                                    
+                                        <td> <input type="number" class="form-control leaves" name="leaves[]" value="0" min="0" max="365" ></td>
+                               @endforeach 
+                            </tr>
+                      
+                     
+                        </tbody>
+                      </table>
+                      
+                      
+                      
+
+
+
+
+
                 <div class="row">
-                    <h5><u>No: of Leaves(Annual)</u></h5>
+                    <h5><u>No. of Leaves (Annual)</u></h5>
                     <br>
                     <br>
-                    <div class="col-md-12">
+                    <div class="col-12">
                         <div class="mb-1">
                         <br>
                             {{-- <h6>No: of Leaves(Annual)</h6> --}}
-                            <div></div>
+                            <div>
                                 <div class="input-group">
                                     <div class="input-group-prepend"></div>
-                                        <table class="table" style="width:60%">
+                                        <table class="table">
                                             <tr>
-                                                @foreach($leavetype as $data)
-                                                    <td>{{$data->leave_type}}
-                                                        <input type="hidden" name="leave_type[]" value="{{$data->id}}"></td>
-                                                        <td><input type="number" class="form-control leaves" name="leaves[]" value="0" min="0" max="365" width="auto"></td>
-                                                @endforeach
+                                                {{-- @foreach($leavetype as $data) --}}
+                                                    <td>
+                                                        {{-- {{$data->leave_type}} --}}
+                                                        <input type="hidden" name="leave_type[]" value="
+                                                        {{-- {{$data->id}} --}}
+                                                        "></td>
+                                                        <td><input type="number" class="form-control leaves" name="leaves[]" value="0" min="0" max="365" ></td>
+                                                {{-- @endforeach --}}
                                             </tr>
                                         </table>
                                 </div>
                             </div>
-                        </div
+                        </div>
                     {{-- <div class="col-md-3">
                         <div class="mb-1">
                             <label>Bank Name</label>
