@@ -64,6 +64,10 @@
                         </thead>
                         <tbody>
 
+                            @foreach($leave_request as $leave)
+
+
+
 
                             <tr>
 
@@ -107,7 +111,7 @@
                                 </td>
                             </tr>
 
-
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
