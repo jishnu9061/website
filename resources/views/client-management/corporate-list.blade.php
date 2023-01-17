@@ -142,9 +142,9 @@
                                 </td>
                                 <td scope="row" class="text-center">
                                     <a href="{{url('corporate-document',$list->corporate_id)}}"><button
-                                            class="btn btn-primary"> Add </button></a>
+                                            class="btn btn-primary"> Add Document</button></a>
                                     <a href="{{url('corporate-document-details',$list->corporate_id)}}"><button
-                                            class="btn btn-primary"> Document </button></a>
+                                            class="btn btn-primary"> View Document </button></a>
                                 </td>
                                
                                 <td scope="row" class="text-center" id="medicine_name_1">
