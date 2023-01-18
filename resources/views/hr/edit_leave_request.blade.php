@@ -24,14 +24,9 @@
                     <div class="invalid-feedback" style="width: 100%;">
                     Required Field.
                     </div>
-                    <select name="name" id="cars"required>
-                        <option>---Select--- </option>
-                        <option></option>
-                        <option></option>
-                        <option></option>
-                        <option></option>
-    
-                    </select>
+                        <select name="name" id="cars">
+                            <option >{{ $leave_request->name}}</option>
+                        </select> 
                 </div>
             </div>
         </div>
@@ -44,14 +39,9 @@
                     <div class="invalid-feedback" style="width: 100%;">
                     Required Field.
                     </div>
-                    <select name="department" id="cars"required>
-                        <option>---Select--- </option>
-                        <option></option>
-                        <option></option>
-                        <option></option>
-                        <option></option>
-    
-                    </select>
+                    <select name="department" id="cars">
+                        <option >{{ $leave_request->department}}</option>
+                    </select> 
                 </div>
             </div>
         </div>
