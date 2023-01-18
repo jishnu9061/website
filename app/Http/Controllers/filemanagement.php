@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use DB;
 //
 class filemanagement extends Controller
@@ -15,7 +16,7 @@ class filemanagement extends Controller
 
     public function views()
     {
-        $client_list = DB::table('cra_corporate_client_details')->get();
+        $client_list = DB::table('cra_mixed_table')->get();
         $file_list = DB::table('cra_open_new_file_details')->get();
         
         // ->select('*')  
@@ -341,6 +342,7 @@ class filemanagement extends Controller
         return redirect('/file-progress-list');
 
     }
+
     public function delete_progress($id)
     {
         DB::table('cra_add_file_progress')->where('id',$id)->delete();
@@ -355,13 +357,13 @@ class filemanagement extends Controller
 
     public function fileprogresslist()
     {
-       
+        $client_list = DB::table('cra_mixed_table')->get();
          $file_progress_list = DB::table('cra_add_file_progress')
-        ->select('*')  
-        ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_file_progress.id')
-        ->leftjoin('cra_open_new_file_details','cra_open_new_file_details.id','=','cra_add_file_progress.id')
+        // ->select('*')  
+        // ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_file_progress.id')
+        // ->leftjoin('cra_open_new_file_details','cra_open_new_file_details.id','=','cra_add_file_progress.id')
         ->get();    
-        return view ('file_management.file-progress-list',compact('file_progress_list'));
+        return view ('file_management.file-progress-list',compact('file_progress_list','client_list'));
     }
 
 
@@ -673,6 +675,8 @@ class filemanagement extends Controller
     //monthly file status report
     public function clientmonthlystatus(Request $request)
     {
+        $client_list = DB::table('cra_mixed_table')->get();
+
        $id =$request['id'];
        $Report_type =$request['report_type'];
        $Client =$request['client'];
@@ -687,11 +691,14 @@ class filemanagement extends Controller
            'year' =>  $Year,
 
        ]);
-        return view('file_management.client-monthly-file-status');
+        return view('file_management.client-monthly-file-status',compact('client_list'));
     }
 
     public function fileprogressreport(Request $request)
     {
+
+        $client_list = DB::table('cra_mixed_table')->get();
+
        $id =$request['id'];
        $Client =$request['client'];
        $File =$request['file'];
@@ -707,7 +714,7 @@ class filemanagement extends Controller
            'Progress_Date_To' =>   $Date_to,
 
        ]);
-        return view('file_management.file-progress-report');
+        return view('file_management.file-progress-report',compact('client_list'));
     }
 
     public function filestatussummary(Request $request)
@@ -809,16 +816,19 @@ class filemanagement extends Controller
 
      public function diarymanagement()
      {
+
+        $client_list = DB::table('cra_mixed_table')->get();
+
         // $event=DB::table('cra_add_event')->get();
         $event = DB::table('cra_add_event')
-        ->select('*')  
-        ->leftjoin('cra_add_file_progress','cra_add_file_progress.id','=','cra_add_event.id')
-       ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_event.id')
+    //     ->select('*')  
+    //     ->leftjoin('cra_add_file_progress','cra_add_file_progress.id','=','cra_add_event.id')
+    //    ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_event.id')
        
     //    ->where('cra_add_event.id',$id)
          ->get();    
 
-         return view('file_management.diary-management',compact('event'));
+         return view('file_management.diary-management',compact('event','client_list'));
      }
 
      public function eventdelete($id)
@@ -1049,6 +1059,9 @@ class filemanagement extends Controller
 
      public function bringup(Request $request)
      {
+
+        $client_list = DB::table('cra_mixed_table')->get();
+
         $id =$request['id'];
         $Client =$request['client'];
         $File =$request['file'];
@@ -1068,7 +1081,7 @@ class filemanagement extends Controller
             'Date_To' => $Data_to,
 
         ]);
-         return view('file_management.bringup');
+         return view('file_management.bringup',compact('client_list'));
      }
        //document manager
 

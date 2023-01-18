@@ -76,6 +76,7 @@ Route::any('/queuemanagement','hospitalController@queuemanagement');
 Route::any('/clinicalnotes','bedsController@clinicalnotes');
 Route::any('/callthepatient{id}','hospitalController@callthepatient');
 Route::any('/addstaffs','addController@addstaffs');
+
 Route::any('/editstafff','addController@editstafff');
 Route::post('/addthestaffs','addController@addthestaffs');
 Route::any('/staffs','addController@allstaffs');
@@ -1368,9 +1369,10 @@ Route::any('monthviewsheet','hrindex@monthviewsheets')->name('monthviewsheet');
 Route::any('leave_request_details','hrindex@leave_request')->name('leave_request_details');
 Route::any('addleaverequest','hrindex@addleaverequest')->name('addleaverequest');
 Route::any('approve_leave_request','hrindex@approve_leave_request')->name('approve_leave_request');
-Route::any('view_leave_request','hrindex@view_leave_request')->name('view_leave_requ 30px;est');
+Route::any('view_leave_request','hrindex@view_leave_request')->name('view_leave_request');
 Route::any('edit_leave_request/{id}','hrindex@edit_leave_request')->name('edit_leave_request');
 Route::any('/update_leave_request','hrindex@update_leave_request')->name('update_leave_request');
+Route::any('/leave_balance','hrindex@leave_balance')->name('leave_balance');
 
 Route::any('internal_memos','hrindex@internal_memos')->name('internal_memos');
 Route::any('view_memo','hrindex@view_memo')->name('view_memo');
@@ -1431,11 +1433,13 @@ Route::any('purchase_print/{purchase_id}','PurchaseManagement@purchase_print')->
 Route::any('view_supplier','PurchaseManagement@view_supplier')->name('view_supplier');
 Route::any('edit_supplier','PurchaseManagement@edit_supplier')->name('edit_supplier');
 // Route::any('cost_variation_report','PurchaseManagement@cost_variation_report')->name('cost_variation_report');
-Route::any('ledger_details','PurchaseManagement@ledger_details')->name('ledger_details');
+Route::any('ledger_details/{supplier_name}','PurchaseManagement@ledger_details')->name('ledger_details');
 Route::any('purchase_view/{purchase_id}','PurchaseManagement@purchase_view')->name('purchase_view');
 Route::any('edit_purchase/{purchase_id}','PurchaseManagement@edit_purchase')->name('edit_purchase');
 Route::any('supplier','PurchaseManagement@suppliers')->name('supplier');
 Route::any('store_supplier','PurchaseManagement@store_supplier')->name('store_supplier');
+Route::any('ledger_add_payment/{purchase_id}','PurchaseManagement@ledger_add_payment')->name('ledger_add_payment');
+Route::any('update_ledger_add_payment','PurchaseManagement@update_ledger_add_payment')->name('update_ledger_add_payment');
 //end  Purchase Management
 
 

@@ -1,11 +1,11 @@
 @extends('layouts.hmsmain')
 @section('content')
 <div class="container">
-   
-        <h4 id="hdtpa"><b>Search</b></h4>
-        <br>
-        
-        <div class="text-center">
+
+    <h4 id="hdtpa"><b>Search</b></h4>
+    <br>
+
+    <div class="text-center">
 
         <button type="button" class="gp_btn left">Today</button>
         <button type="button" class="gp_btn">This Week</button>
@@ -19,8 +19,8 @@
 
     </div>
 
-   <br>
-   <br>
+    <br>
+    <br>
 
 
 
@@ -38,13 +38,15 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <select name="client" id="cars">
-                                    <option>---select---</option>
-                                    <option>client 1</option>
-                                    <option>client 2</option>
-                                    <option>client 3</option>
-                                    <option>client 4</option>
+                                <select name="client" id="">
+                                    <option value="">select</option>
+                                    @if(count($client_list))
+                                    @foreach($client_list as $list_category)
+                                    <option>{{$list_category->client_name}}</option>
+                                    @endforeach
+                                    @endif
                                 </select>
+
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Number is required.
                                 </div>

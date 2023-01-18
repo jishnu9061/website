@@ -40,12 +40,17 @@
                 <thead>
 
                     <tr>
-                        <th class="text-center">Staff</th>
-                        <th class="text-center">Leave Type</th>
-                        <th class="text-center">Leave Date</th>
-                        <th class="text-center">Days</th>
+                        <th class="text-center">Name</th>
+                        <th class="text-center">Department</th>
                         <th class="text-center">Apply Date</th>
+                        <th class="text-center">Leave Type</th>
+                        <th class="text-center">Date From</th>
+                        <th class="text-center">Date To</th>
+                        <th class="text-center">Number Of Days</th>
+                        <th class="text-center">Reason</th>
+                        <th class="text-center">Upload Document</th>
                         <th class="text-center">Status</th>
+                        <th class="text-center">Remarks</th>
                         <th class="text-center">Action</th>
 
                     </tr>
@@ -55,7 +60,10 @@
 
 
                     <tr>
-
+                        <td scope="row" class="text-center"></td>
+                        <td scope="row" class="text-center"></td>
+                        <td scope="row" class="text-center"></td>
+                        <td scope="row" class="text-center"></td>
                         <td scope="row" class="text-center"></td>
                         <td scope="row" class="text-center"></td>
                         <td scope="row" class="text-center"></td>
@@ -63,16 +71,17 @@
                         <td scope="row" class="text-center"></td>
                         <td scope="row" class="text-center">
                             <div class="dropdown">
-                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pending
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Requested
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                  <a class="dropdown-item" href="#" value="Pending">Pending</a>
+                                  <a class="dropdown-item" href="#" value="Pending">Requested</a>
                                   <a class="dropdown-item" href="#">Accepted</a>
                                   <a class="dropdown-item" href="#">Rejected</a>
 
                                 </div>
                               </div>
                         </td>
+                        <td scope="row" class="text-center"></td>
                         <td scope="row" class="text-center">
                             <a href="{{url('edit_leave_request')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                             

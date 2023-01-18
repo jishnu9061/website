@@ -96,13 +96,6 @@
                 </div>
             </div>
 
-
-
-
-
-
-
-
             <div class="dropdown" style="width:25%;" style="margin-left:10px;">
                 <button class="btn btn-primary add-btn" type="button" style="width:97%;" id="dropdownMenuButton"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -188,7 +181,11 @@
                                     <!-- <td scope="row" class="text-center">{{$list->id}}</td>
                                     <td scope="row" class="text-center">{{$list->action_type}}</td> -->
                                     <td scope="row" class="text-center">{{$list->progress_date}}</td>
+
                                     <td scope="row" class="text-center">{{$list->client_name}}</td>
+
+                                    
+
                                     <td scope="row" class="text-center">{{$list->file_name}}</td>
                                     <td scope="row" class="text-center">{{$list->action_description}}</td>
                                     <td scope="row" class="text-center">{{$list->time_taken_hours}}</td>
@@ -214,10 +211,6 @@
 
                         </table>
                     </div>
-                    </div>
-
-                    </div>
-
                     <!--		Start Pagination -->
                     <div class='pagination-container'>
                         <nav>
@@ -227,7 +220,6 @@
                         </nav>
                     </div>
                     <div class="rows_count">Showing 11 to 20 of 100</div>
-</div>
 
                     <!-- 		End of Container -->
 
@@ -267,9 +259,14 @@
 
                                                                         </div>
                                                                        
-                                                                        <input type="text" class="form-control"
-                                                                            name="client_name" value="" id="age">
-
+                                                                        <select name="client_name" id="">
+                                                            <option value="">select</option>
+                                                            @if(count($client_list))
+                                                            @foreach($client_list as $list_category)
+                                                            <option>{{$list_category->client_name}}</option>
+                                                            @endforeach
+                                                            @endif
+                                                        </select>
                                                                         <div class="invalid-feedback"
                                                                             style="width: 100%;">
                                                                             Incorporation is required
@@ -331,7 +328,9 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                  
+                                                        </div>
+                                                </div>
+
 
                                             </div>
                                             <br>
@@ -530,10 +529,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                  
+                                    </div>
                                     <br>
                                     <div id="test" style="height:20px;"></div>
-                                </div>
+
                                     <h4 style="text-align:center;">Send To Timesheet</h4>
 
                                     <div class="row">
@@ -589,21 +588,28 @@
 
 
                                     <br>
-                                    <div class="row justify-content-between">
-                                      
-                                        <div class="col offset-md-8 pt-4">
-                                          
-                                            <button style="min-width: 45%; float: left" type="submit" class="btn btn-primary">Save</button>
-                                            <button style="min-width: 45%; float: right" type="button" class="btn btn-primary"data-dismiss="modal">Cancel</button>
+                                    <div class="row">
+                                        <div class="col-sm">
+
+                                        </div>
+                                        <div class="col-sm">
+
+                                        </div>
+                                        <div class="col-sm">
+                                            <br>
+                                            <button type="submit" class="btn btn-primary float:right;"
+                                                Style="width:60%;">Save</button>
+                                            <button type="button" class="btn btn-primary float:right;"
+                                                data-dismiss="modal">Cancel</button>
                                         </div>
                                     </div>
-                              
+                                </div>
                                 </form>
                             </div>
                         </div>
                     </div>
 
-             
+                </div>
                 <div class="modal" id="mymodal">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -680,11 +686,14 @@
                                                             <div class="input-group-prepend">
 
                                                             </div>
-                                                            <select name="client_name" id="cars">
-                                                                <option>---select---</option>
-                                                                <option>client 1</option>
-                                                                <option>client 2</option>
-                                                            </select>
+                                                            <select name="client_name" id="">
+                                                            <option value="">select</option>
+                                                            @if(count($client_list))
+                                                            @foreach($client_list as $list_category)
+                                                            <option>{{$list_category->client_name}}</option>
+                                                            @endforeach
+                                                            @endif
+                                                        </select>
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Incorporation is required
                                                             </div>
@@ -929,11 +938,13 @@
                                                         <div class="input-group-prepend">
 
                                                         </div>
-                                                        <select name="client_name" id="cars">
-                                                            <option>select....</option>
-                                                            <option>client 1</option>
-                                                            <option>client 2</option>
-                                                            <option>client 3</option>
+                                                        <select name="client_name" id="">
+                                                            <option value="">select</option>
+                                                            @if(count($client_list))
+                                                            @foreach($client_list as $list_category)
+                                                            <option>{{$list_category->client_name}}</option>
+                                                            @endforeach
+                                                            @endif
                                                         </select>
                                                         <div class="invalid-feedback" style="width: 100%;">
                                                             Incorporation is required
@@ -1159,11 +1170,13 @@
                                                         <div class="input-group-prepend">
 
                                                         </div>
-                                                        <select name="client_name" id="cars">
-                                                            <option>select....</option>
-                                                            <option>client 1</option>
-                                                            <option>client 2</option>
-                                                            <option>client 3</option>
+                                                        <select name="client_name" id="">
+                                                            <option value="">select</option>
+                                                            @if(count($client_list))
+                                                            @foreach($client_list as $list_category)
+                                                            <option>{{$list_category->client_name}}</option>
+                                                            @endforeach
+                                                            @endif
                                                         </select>
                                                     </div>
                                                 </div>
@@ -1483,12 +1496,13 @@
                                                         <div class="input-group-prepend">
 
                                                         </div>
-                                                        <select name="client_name" id="cars">
-                                                            <option>select...</option>
-                                                            <option>client 1</option>
-                                                            <option>client 2</option>
-                                                            <option>client 3</option>
-                                                            <option>client 4</option>
+                                                        <select name="client_name" id="">
+                                                            <option value="">select</option>
+                                                            @if(count($client_list))
+                                                            @foreach($client_list as $list_category)
+                                                            <option>{{$list_category->client_name}}</option>
+                                                            @endforeach
+                                                            @endif
                                                         </select>
                                                     </div>
                                                 </div>
@@ -1908,12 +1922,13 @@
                                                         <div class="input-group-prepend">
 
                                                         </div>
-                                                        <select name="client_name" id="cars">
-                                                            <option>select....</option>
-                                                            <option>client 1</option>
-                                                            <option>client 2</option>
-                                                            <option>client 3</option>
-                                                            <option>client 4</option>
+                                                        <select name="client_name" id="">
+                                                            <option value="">select</option>
+                                                            @if(count($client_list))
+                                                            @foreach($client_list as $list_category)
+                                                            <option>{{$list_category->client_name}}</option>
+                                                            @endforeach
+                                                            @endif
                                                         </select>
                                                     </div>
                                                 </div>
@@ -2220,12 +2235,13 @@
                                                         <div class="input-group-prepend">
 
                                                         </div>
-                                                        <select name="client_name" id="cars">
-                                                            <option>select....</option>
-                                                            <option>client 1</option>
-                                                            <option>client 2</option>
-                                                            <option>client 3</option>
-                                                            <option>client 4</option>
+                                                        <select name="client_name" id="">
+                                                            <option value="">select</option>
+                                                            @if(count($client_list))
+                                                            @foreach($client_list as $list_category)
+                                                            <option>{{$list_category->client_name}}</option>
+                                                            @endforeach
+                                                            @endif
                                                         </select>
                                                     </div>
                                                 </div>

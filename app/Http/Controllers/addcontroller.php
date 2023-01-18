@@ -22,16 +22,17 @@ class addcontroller extends Controller
     // $hospitals=DB::table('hospitals')->get();
      $departments=DB::table('departments')->get();
      $medicaldepartments=DB::table('medicaldepartments')->get();
-     $allowancedata=DB::table('allowance')->where('hospital',$hospital)->where('status','allowance')->get();
+     $allowancedata=DB::table('allowance')->where('status','allowance')->get();
      $nonfixdallowancedata=DB::table('allowance')->where('hospital',$hospital)->where('status','nonfixedallowance')->get();
      $deductiondata=DB::table('allowance')->where('hospital',$hospital)->where('status','reduction')->get();
      $leavetype=DB::table('leave_types')->get();
      $staffstatus=DB::table('staffstatus')->get();
-   	return view('add.staffs',['roles'=>$adminroles,'hospitals'=>$hospitals,'departments'=>$departments,'medicaldepartments'=>$medicaldepartments,'allowancedata'=>$allowancedata,'deductiondata'=>$deductiondata,'leavetype'=>$leavetype,'staffstatus'=>$staffstatus,'nonfixdallowancedata'=>$nonfixdallowancedata]);
+   	return view('add.staffs',['roles'=>$adminroles,'departments'=>$departments,'medicaldepartments'=>$medicaldepartments,'allowancedata'=>$allowancedata,'deductiondata'=>$deductiondata,'leavetype'=>$leavetype,'staffstatus'=>$staffstatus,'nonfixdallowancedata'=>$nonfixdallowancedata]);
    }
    public function addthestaffs(Request $Request)
    {
 
+    $allowancedata=DB::table('allowance')->where('status','allowance')->get();
    	  // $hospital=Auth::user()->Hospital;
       // $depatmntz=$Request['depname'];
 
@@ -161,6 +162,9 @@ if(request()->hasfile('signature')){
    public function allstaffs()
    {
     $hospital=Auth::user()->Hospital;
+    $allowancedata=DB::table('allowance')->where('status','allowance')->get();
+    $nonfixdallowancedata=DB::table('allowance')->where('status','nonfixedallowance')->get();
+    $deductiondata=DB::table('allowance')->where('status','reduction')->get();
     $get_role = DB::table('cra_add_user_roles')->get();
     $get_department = DB::table('cra_add_user_department')->get();
     $get_bank = DB::table('cra_add_bank_name')->get();
@@ -169,7 +173,7 @@ if(request()->hasfile('signature')){
       //  ->leftjoin('departments','departments.id','=','users.departments')
       //  ->orderby('users.created_at','DESC')->where('users.Hospital',$hospital)
     $leavetype=DB::table('leave_types')->get();
-   	return view('add.allstaffs',compact('get_role','get_department','get_bank','get_town'),['allusers'=>$allusers,'leavetype'=>$leavetype]);
+   	return view('add.allstaffs',compact('get_role','get_department','get_bank','get_town','allowancedata','nonfixdallowancedata','deductiondata'),['allusers'=>$allusers,'leavetype'=>$leavetype]);
    }
 
    public function editstafff(Request $Request )
