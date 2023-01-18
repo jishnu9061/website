@@ -52,6 +52,11 @@
             <div class="col-sm-4 "><img class="logo_size" src="image\logo\Complaint register.png" alt=""><a
                     href="complaint-list"><button type="button"
                         style="width:70%;"class="btn btn-primary btn_align_btn">Complaint Register</button></a></div>
-        </div>
+       
+
+        <div class="col-sm-4 "><img class="logo_size" src="image\logo\Complaint register.png" alt=""><a
+            href="complaint-list"><button type="button"
+                style="width:70%;"class="btn btn-primary btn_align_btn">Assign Lawyer</button></a></div>
+</div>
         <br>
     @endsection
