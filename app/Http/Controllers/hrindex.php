@@ -28,7 +28,7 @@ class hrindex extends Controller
     {
         return view('hr.recruitment_index');
     }
-    
+
 
 
 //Subhasree
@@ -333,14 +333,23 @@ public function edit_task_allocation()
 //Subhasree
 public function leave_request()
 {
-
+    $name_list = DB::table('users')->get();
     $leave_request=DB::table('cra_leave_request_details')->get();
-    return view(('hr.leave_request_details'),compact('leave_request'));
+    return view('hr.leave_request_details',compact('leave_request','name_list'));
+
+    
+    $separtment_list = DB::table('users')->get();
+    $leave_request=DB::table('cra_leave_request_details')->get();
+    return view('hr.leave_request_details',compact('leave_request','department_list'));
+
 
 }
 
+
+
 public function addleaverequest(Request $Request)
 {
+   
     $name = $Request['name'];
     $department = $Request['department'];
     $apply_date = $Request['apply_date'];
@@ -350,7 +359,7 @@ public function addleaverequest(Request $Request)
     $number_of_days = $Request['number_of_days'];
     $reason = $Request['reason'];
     $image=  $Request['document'];
-    
+
     if($Request->hasFile('document')){
         $this->validate($Request,[
             'document' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
@@ -391,7 +400,7 @@ public function view_leave_request($id)
 {
     $view_leave_request=DB::table('cra_leave_request_details')->where('id',$id)->first();
     return view('hr.view_leave_request',compact('view_leave_request','id'));
-    
+
 }
 
 
@@ -410,7 +419,17 @@ public function update_leave_request(Request $Request)
     {
         $id = $Request['id'];
         $name = $Request['name'];
+        $name_list = DB::table('users')->get();
+        $addleaverequest = DB::table('cra_leave_request_details')
+      
+       ->get();
+       return view ('hr.leave_request_details',compact('leave_request','name_list'));
         $department = $Request['department'];
+        $department_list = DB::table('users')->get();
+        $addleaverequest = DB::table('cra_leave_request_details')
+      
+       ->get();
+       return view ('hr.leave_request_details',compact('leave_request','department_list'));
         $apply_date = $Request['apply_date'];
         $leave_type = $Request['leave_type'];
         $date_from = $Request['date_from'];

@@ -138,13 +138,11 @@
                 <div class="invalid-feedback" style="width: 100%;">
                 Required Field.
                 </div>
-                <select name="name" id="cars"required>
-                    <option>---Select--- </option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
-
+                <select name="name" id="">
+                    <option value="">select</option>
+                    @foreach($name_list as $list_category)
+                    <option>{{$list_category->name}}</option>
+                    @endforeach
                 </select>
             </div>
         </div>
@@ -158,13 +156,13 @@
                 <div class="invalid-feedback" style="width: 100%;">
                 Required Field.
                 </div>
-                <select name="department" id="cars"required>
-                    <option>---Select--- </option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
-
+                <select name="depaertment" id="">
+                    <option value="">select</option>
+                    @if(count($leave_request))
+                    @foreach($leave_request as $list_category)
+                    <option>{{$list_category->department}}</option>
+                    @endforeach
+                    @endif
                 </select>
             </div>
         </div>
