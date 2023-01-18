@@ -343,20 +343,30 @@ animation-direction:reverse;">
                                 DASHBOARD</li>
                                 {{-- <input type="color" id="colorID" oninput="changeColor()">
                  
-                        <script>
-                            // on input, get value and save it as 'storedValue'
-                            function changeColor() { 
-                            var userColor = document.getElementById('colorID').value;
-                            localStorage.setItem('storedValue', document.body.style.backgroundColor = userColor);
-                            
-                            }
-                            
-                            // if there is a value stored, update color picker and background color
-                            if(localStorage.storedValue) {
-                            document.getElementById('colorID').value = localStorage.storedValue;
-                            document.body.style.backgroundColor      = localStorage.storedValue;
-                            }
-                        </script> --}}
+
+                     
+                        
+                        
+                       
+                          
+                
+                        
+                                <script>
+                                    // Add active class to the current button (highlight it)
+                                    var box = document.getElementById("menu");
+                                    var butonn = box.getElementsByClassName("submenu-item");
+                                    
+                        
+                                    for (var i = 0; i < butonn.length; i++) {
+                                        butonn[i].addEventListener("click", function() {
+                                    var selectedbtn = document.getElementsByClassName("activew");
+                                    selectedbtn[0].className = selectedbtn[0].className.replace("activew","");
+                                    
+                                    this.className += " activew";
+                                    
+                                    });
+                                    }
+                                </script>
 
 
 
@@ -427,14 +437,23 @@ animation-direction:reverse;">
 
                                 </ul>
                         </li>
+                
 
-                        <li class="submenu-item  has-sub" style="list-style:none;">
+
+
+                        <li class="submenu-item  has-sub activew" style="list-style:none;">
                             <a id="sblma" href="{{url('user_management')}}" class='sidebar-link'>
                                 <i class="fa-regular fa-user" id="icon"></i>
+                                
                                 <span> User Management</span>
                             </a>
 
+
+                 
+
                         </li>
+
+                 
 
                         <li class="submenu-item has-sub " style="list-style:none;">
                             <a id="sblm" href="{{url('client-index')}}" class='sidebar-link'>
@@ -2053,12 +2072,37 @@ function search_animal() {
 
 
 
-        {{-- <script>
-        $("a.sidebar-link").click(function() {
-            $("a.sidebar-link").css("background-color", "");
-            $(this).css("background-color", "#F5E9D4");
-        });
-        </script> --}}
+
+{{-- <script>
+    // on input, get value and save it as 'storedValue'
+    function changeColor() { 
+    var userColor = document.getElementById('colorID').value;
+    localStorage.setItem('storedValue', document.body.style.backgroundColor = userColor);
+    
+    }
+    
+    // if there is a value stored, update color picker and background color
+    if(localStorage.storedValue) {
+    document.getElementById('colorID').value = localStorage.storedValue;
+    document.body.style.backgroundColor      = localStorage.storedValue;
+    }
+</script>  --}}
+
+
+        <script>
+$("a.sidebar-link").click(function() {
+$("a.sidebar-link").css("background-color", "");
+$(this).css("background-color", "#F9a9D4");
+
+
+
+});
+
+</script>
+
+
+
+
 
 
         {{-- <script>
