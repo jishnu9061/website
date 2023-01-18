@@ -1044,6 +1044,9 @@ Route::any('delete-client/{id}',"ClientManagement@deleteClient")->name('delete-c
 Route::any('add-corporate','ClientManagement@addCorporate')->name('add-corporate');
 // Route::any('store-corporate','ClientManagement@storeCorporate')->name('store-corporate');
 Route::any('corporate-list','ClientManagement@listCorporate')->name('corporate-list');
+
+Route::any('asign-lawyer','ClientManagement@asignlawyer')->name('asign-lawyer');
+
 Route::any('/edit_client/{corporate_id}','ClientManagement@edit_corporate')->name('edit_client');
 Route::any('/update-corporate','ClientManagement@Update_corporate')->name('update-corporate');
 Route::any('/delete_client/{corporate_id}','ClientManagement@Corporate_destroy')->name('delete_client');

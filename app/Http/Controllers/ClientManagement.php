@@ -27,6 +27,16 @@ class ClientManagement extends Controller
         return view('client-management.client-list',compact('client_list'));
     }
 
+
+
+    public function asignlawyer()
+    {
+       return view('client-management.Asign lawyer');
+     
+    }
+
+    
+
     /**
      * Show the form for creating a new resource.
      *
