@@ -1202,7 +1202,7 @@ function myaa() {
                         function myss() {
                         var x = document.getElementById("range");
                         var t = document.getElementById("t");
-                        var ad = document.getElementById("ssdf");
+                        var adv = document.getElementById("ssdf");
                         var dvv = document.getElementById("hgh");
 
 
