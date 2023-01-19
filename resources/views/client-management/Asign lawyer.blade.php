@@ -46,12 +46,11 @@
 
                     <thead>
                         <tr>
-                            <!-- <th class="text-center"> No</th> -->
-                            <th class="text-center"> Client No</th>
+                            {{-- <!-- <th class="text-center"> No</th> --> --}}
+                            <th class="text-center"> Client Number</th>
                             <th class="text-center">Client Type</th>
                             <th class="text-center">Client Name</th>
-                            
-                            <th class="text-center">File No</th>
+                            <th class="text-center">File Number</th>
                             <th class="text-center">Lawyer Name</th>
                             <th class="text-center">Court Name</th>
                             <th class="text-center">Actions</th>
@@ -61,40 +60,34 @@
                         </tr>
                     </thead>
                     <tbody>
+
+                        @foreach($asign_lawyer as $lawyer)
                        
-                        <tr class="text-center" id="data">
+                        <tr class="text-center" id="">
                           
-                            <td scope="row" class="text-center" id="medicine_name_1">
-                            
-                            </td>
-                            <td scope="row" class="text-center" id="medicine_name_1">
-                              
-                            </td>
-                            <td scope="row" class="text-center" id="medicine_name_1">
-                             
-                            </td>
-                            <td scope="row" class="text-center" id="medicine_name_1"></td>
-                            <td scope="row" class="text-center" id="medicine_name_1">
-                              
-                            </td>
-                            <td scope="row" class="text-center"><a href="{{url('view-client')}}">
+                            <td scope="row" class="text-center" id="">{{$lawyer->client_number}}</td>
+                            <td scope="row" class="text-center" id="">{{$lawyer->client_type}}</td>
+                            <td scope="row" class="text-center" id="">{{$lawyer->client_name}}</td>
+                            <td scope="row" class="text-center" id="">{{$lawyer->file_number}}</td>
+                            <td scope="row" class="text-center" id="">{{$lawyer->lawyer_name}}</td>
+                            <td scope="row" class="text-center" id="">{{$lawyer->court_name}}</td>
+                            {{-- <td scope="row" class="text-center">
+                                <a href="{{url('view-client')}}">
                                   
-                            </td>
+                            </td> --}}
                             
-                            <td> <a href=""><i style="color:black;"
-                                        class="fa fa-eye" aria-hidden="true"></i></a>
-                                <span class="m-1"></span>
-                                <a href=""><i style="color:black;"
-                                        class="fa fa-edit" aria-hidden="true"></i></a>
-                                <span class="m-1"></span>
-                                <a onClick="return myFunction();"
-                                    href="" style="color:black;"><i
-                                        class="fas fa-trash-alt"></i></a>
+                            <td scope="row" class="text-center"> 
+                                <a href="{{url('')}}"><i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span><span class="m-1"></span>
+                                
+                                <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                                
+                                <a href="{{url('')}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
 
                             </td>
 
                         </tr>
                   
+                        @endforeach
                     </tbody>
                 </table>
             </div>
@@ -131,21 +124,21 @@
 
                         </div>
 
-                        <!-- Modal body -->
+                        <!------------------------ Modal body ------------------------>
                         <div class="modal-body">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <form method="post" action="{{url('add_newclient')}}">
-                                            @csrf
+                                        <form method="post" action="{{url('add_lawyer')}}">
+                        @csrf
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="mb-1">
-                                                        <label for="username">Client Number</label>
+                                                        <label>Client Number</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
                                                             <input type="text" class="form-control"
-                                                                name="number" id="username" value="">
+                                                                name="client_number" id="" value="">
                                                             <div class="invalid-feedback" style="width: 100%;">
                                                                 Name is required.
                                                             </div>
@@ -154,12 +147,12 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="mb-1">
-                                                        <label for="username">Client Type</label>
+                                                        <label>Client Type</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend">
 
                                                             </div>
-                                                            <select name="type" id="cars">
+                                                            <select name="client_type" id="">
                                                                 <option value="Individual">Individual</option>
                                                             </select>
                                                         </div>
@@ -167,14 +160,15 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="mb-1">
-                                                        <label for="username">Client Name</label>
+                                                        <label>Client Name</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend">
 
                                                             </div>
-                                                            <select name="citizen" id="cars">
-                                                                <option value="Residensial">Residensial</option>
-                                                                <option value="Non Residensial">Non Residensial
+                                                            <select name="client_name" id="">
+                                                                <option value="residential">Select</option>
+                                                                <option value="residential">Residensial</option>
+                                                                <option value="non-residential">Non Residensial
                                                                 </option>
                                                             </select>
                                                         </div>
@@ -185,25 +179,24 @@
                                         
                                                 <div class="col-md-6">
                                                     <div class="mb-1">
-                                                        <label for="username">File No.</label>
+                                                        <label>File Number</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
                                                             <input type="text" class="form-control"
-                                                                name="incorporation" id="age" value="" min="0"
+                                                                name="file_number" id="" value="" min="0"
                                                                 max="99">
                                                             <div class="invalid-feedback" style="width: 100%;">
-                                                                Age is required.
+                                                                
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="mb-1">
-                                                        <label for="username">Lawyer Name</label>
+                                                        <label>Lawyer Name</label>
                                                         <div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                            </div>
-                                                            <select name="country" id="cars">
+                                                            <div class="input-group-prepend"></div>
+                                                            <select name="lawyer_name" id="">
                                                                 <option>Kenya</option>
 
                                                             </select>
@@ -212,13 +205,13 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="mb-1">
-                                                        <label for="username">Court Name</label>
+                                                        <label>Court Name</label>
                                                         <div class="input-group">
                                                             <div class="input-group-prepend"></div>
                                                             <input type="text" class="form-control"
-                                                                name="telephone" value="" id="confirm_password">
+                                                                name="court_name" value="" id="">
                                                             <div class="invalid-feedback" style="width: 100%;">
-                                                                Password is required.
+                                                                
                                                             </div>
                                                         </div>
                                                     </div>

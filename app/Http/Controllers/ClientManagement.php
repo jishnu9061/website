@@ -31,11 +31,51 @@ class ClientManagement extends Controller
 
     public function asignlawyer()
     {
-       return view('client-management.Asign lawyer');
+        $asign_lawyer = DB::table('cra_asign_lawyer')->get();
+        return view('client-management.Asign lawyer',compact('asign_lawyer'));
+        
      
     }
-
+    public function add_lawyer(Request $Request)
+    {
     
+        $client_number = $Request['client_number'];
+        $client_type  = $Request['client_type '];
+        $client_name  = $Request['client_name '];
+        $file_number  = $Request['file_number'];
+        $lawyer_name = $Request['lawyer_name'];
+        $court_name = $Request['court_name'];
+    
+        DB::table('cra_asign_lawyer')->insert([
+            'client_number' => $client_number,
+            'client_type' => $client_type ,
+            'client_name' => $client_name,
+            'file_number' => $file_number,
+            'lawyer_name' => $lawyer_name,
+            'court_name' => $court_name,
+           
+        ]);
+        return redirect('/asign-lawyer');
+    
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -97,6 +137,9 @@ class ClientManagement extends Controller
         
         return redirect('/client_list');
     }
+
+    //Asign Lawyer//
+
 
     /**
      * Store a newly created resource in storage.

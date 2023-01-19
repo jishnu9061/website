@@ -333,23 +333,34 @@ public function edit_task_allocation()
 //Subhasree
 public function leave_request()
 {
-    $name_list = DB::table('users')->get();
-    $leave_request=DB::table('cra_leave_request_details')->get();
-    return view('hr.leave_request_details',compact('leave_request','name_list'));
+    // $name_list = DB::table('users')->get();
 
-    
-    $separtment_list = DB::table('users')->get();
-    $leave_request=DB::table('cra_leave_request_details')->get();
-    return view('hr.leave_request_details',compact('leave_request','department_list'));
+    // $leave_request=DB::table('cra_leave_request_details')->get();
+    // return view('hr.leave_request_details',compact('leave_request','name_list'));
 
 
+    // $department_list = DB::table('cra_manage_user_department')->get();
+
+    // $leave_request=DB::table('cra_leave_request_details')->get();
+    // return view('hr.leave_request_details',compact('leave_request','department_list'));
+
+    $leave_request = DB::table('users')
+    ->Select ('*') 
+    ->leftjoin('users','users.name','=','cra_leave_request_details.name')
+    ->leftjoin('cra_manage_user_department','cra_manage_user_department.department_name','=','cra_leave_request_details.department')
+    ->get();
+        dd($leave_request);
+    return view ('hr.leave_request_details',compact('leave_request'));
+   
 }
+
+
 
 
 
 public function addleaverequest(Request $Request)
 {
-   
+
     $name = $Request['name'];
     $department = $Request['department'];
     $apply_date = $Request['apply_date'];
@@ -379,7 +390,7 @@ public function addleaverequest(Request $Request)
 
     DB::table('cra_leave_request_details')->insert([
         'name' => $name,
-        'department' => $department,
+        'department' => $department ,
         'apply_date' => $apply_date,
         'leave_type' => $leave_type,
         'date_from' => $date_from,
@@ -407,6 +418,15 @@ public function view_leave_request($id)
 public function edit_leave_request($id)
 {
 
+    // $name_list = DB::table('users')->get();
+
+    // $leave_request=DB::table('cra_leave_request_details')->get();
+    // return view('hr.leave_request_details',compact('leave_request','name_list'));
+
+    // $department_list = DB::table('cra_manage_user_department')->get();
+
+    // $leave_request=DB::table('cra_leave_request_details')->get();
+    // return view('hr.leave_request_details',compact('leave_request','department_list'));
 
     $leave_request=DB::table('cra_leave_request_details')->where('id',$id)->first();
     return view('hr.edit_leave_request',compact('leave_request','id'));
@@ -421,13 +441,13 @@ public function update_leave_request(Request $Request)
         $name = $Request['name'];
         $name_list = DB::table('users')->get();
         $addleaverequest = DB::table('cra_leave_request_details')
-      
+
        ->get();
        return view ('hr.leave_request_details',compact('leave_request','name_list'));
-        $department = $Request['department'];
-        $department_list = DB::table('users')->get();
+        $department  = $Request['department'];
+        $department_list = DB::table('cra_manage_user_department')->get();
         $addleaverequest = DB::table('cra_leave_request_details')
-      
+
        ->get();
        return view ('hr.leave_request_details',compact('leave_request','department_list'));
         $apply_date = $Request['apply_date'];
@@ -441,7 +461,7 @@ public function update_leave_request(Request $Request)
 
         $update_leave_request = array(
         'name' => $name,
-        'department' => $department,
+        'department' => $department ,
         'apply_date' => $apply_date,
         'leave_type' => $leave_type,
         'date_from' => $date_from,
@@ -513,10 +533,9 @@ public function overtime()
 {
     return view('hr.overtime');
 }
-
-
-
 //Subhasree
+
+
 public function timesheets()
 {
     return view('hr.timesheet');
