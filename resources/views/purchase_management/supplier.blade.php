@@ -46,7 +46,7 @@
                 <thead>
                     <tr>
                         <th scope="col">Vendor Name</th>
-                        <th scope="col">Product Supply</th>
+                        <th scope="col">Product Supply1</th>
                         <th scope="col">Payment Details</th>
                         <th scope="col">Action</th>
 
