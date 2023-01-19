@@ -197,6 +197,15 @@ class filemanagement extends Controller
         // return view('file_management.edit-box-no');
     }
 
+    public function deleteboxno($id)
+    {
+        DB::table('cra_add_box')->where('id',$id)->delete();
+        return redirect('/file-archive');
+        
+        // return view('file_management.edit-box-no');
+    }
+
+
     public function updatebox(Request $request)
     {
         $id=$request['id'];
