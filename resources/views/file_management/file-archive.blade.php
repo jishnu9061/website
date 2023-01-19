@@ -117,10 +117,10 @@ color: #999;
                             <!-- <td scope="row" class="text-center">{{$list->id}}</td> -->
                              <td scope="row" class="text-center">Box No :<b>{{$list->number}}</b></td>
                              <td scope="row" class="text-center"></td> 
-                             <td scope="row" class="text-center"></td>
+                             <td scope="row" class="text-center">{{$list->client}}</td>
+                             <td scope="row" class="text-center">{{$list->file_name}}</td> 
                              <td scope="row" class="text-center"></td> 
-                             <td scope="row" class="text-center"></td> 
-                             <td scope="row" class="text-center"></td>
+                             <td scope="row" class="text-center">{{$list->close_date}}</td>
                           
                           
                             <td scope="row" class="text-center"><a href=""><i style="color:black;" class="fa fa-eye"
