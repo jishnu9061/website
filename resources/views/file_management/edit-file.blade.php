@@ -14,274 +14,287 @@
             @csrf
             <!-- <h4><b> Matter </b></h4> -->
 
-            <div class="row">
+            <br>
+                                    <div class="text-center">
+                                        <h4><b> Matter </b></h4>
+                                    </div>
+                                    <br>
 
-                <div class="col-md-4">
-                    <div class="mb-3">
-                        <label for="username">Client</label>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>---select---</option>
-                            <option value="1">client1</option>
-                            <option value="2">client2</option>
-                            <option value="3">client3</option>
-                        </select>
-                    </div>
-                </div>
+                                    <div class="row">
+                                        <input type="hidden" name="id" value="{{$edit->id}}">
+
+                                        <div class="col-md-4">
+                                            <div class="mb-3">
+                                                <label for="username">Associative Handling</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+
+                                                    </div>
+                                                    <select name="assoc_handling" id="cars" value="" >
+                                                        <option>{{$edit->assoc_handling}}</option>
+                                                        <option>Residensial</option>
+                                                        <option>Non Residensial</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
 
 
-                <div class="col-md-4">
-                    <div class="mb-3">
-                        <label for="username">Associative Handling</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
+                                        <div class="col-md-4">
+                                            <div class="mb-3">
+                                                <label for="username">Client</label>
+                                                <select class="form-select" name="client" aria-label="Default select example">
+                                               
+                                            <option>{{$edit->client}}</option>
+                                         
+                                                </select>
+                                            </div>
+                                        </div>
 
-                            </div>
-                            <select name="assoc_handling" id="cars">
-                                <option>Select</option>
-                                <option>Residensial</option>
-                                <option>Non Residensial</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
+                                        <div class="col-md-4">
+                                            <div class="mb-3">
+                                                <label for="username">Email</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
 
-                <div class="col-md-4">
-                    <div class="mb-3">
-                        <label for="username">Email</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
+                                                    </div>
+                                                    <input type="email" class="form-control" name="email" value="{{$edit->id}}" id="age"
+                                                        value="">
+                                                </div>
+                                            </div>
+                                        </div>
 
-                            </div>
-                            <input type="email" class="form-control" name="email" id="age" value="{{$edit->email}}">
-                        </div>
-                    </div>
-                </div>
+                                        <div class="col-md-4">
+                                            <div class="mb-3">
+                                                <label for="username">Telephone</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"></div>
+                                                    <input type="text" class="form-control" name="phone" value="{{$edit->phone}}" id="age"
+                                                        value="">
+                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                        Age is required.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="mb-3">
+                                                <label for="username">Address</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"></div>
+                                                    <input type="text" class="form-control" name="address" value="{{$edit->address}}" id="age"
+                                                        value="">
+                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                        Age is required.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="mb-3">
+                                                <label for="username">File No</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"></div>
+                                                    <select name="file_name">
+                                                        <option >---select---</option>
+                                                        <option >file 1</option>
+                                                        <option >file 2</option>
+                                                        <option >file 3</option>
 
-                <div class="col-md-4">
-                    <div class="mb-3">
-                        <label for="username">Telephone</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend"></div>
-                            <input type="number" class="form-control" name="phone" id="age" value="{{$edit->phone}}">
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Age is required.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="mb-3">
-                        <label for="username">Address</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend"></div>
-                            <input type="text" class="form-control" name="address" id="age" value="{{$edit->address}}">
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Age is required.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="mb-3">
-                        <label for="username">File Name</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend"></div>
-                            <select>
-                                <option value="">---select---</option>
-                                <option value="">file 1</option>
-                                <option value="">file 2</option>
-                                <option value="">file 3</option>
-
-                            </select>
-                            <!-- <input type="text" class="form-control" name="file_name" value=""
+                                                    </select>
+                                                    <!-- <input type="text" class="form-control" name="file_name" value=""
                                                         id="confirm_password"> -->
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Password is required.
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                        Password is required.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                <div class="col-md-4">
-                    <div class="mb-3">
-                        <label for="username">Responsible Advocate</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend"></div>
-                            <select name="assoc_handling" id="cars">
-                                <option>Select</option>
-                                <option>Advocate 1</option>
-                                <option>Advocate 2</option>
-                            </select>
-                            <!-- <input type="text" class="form-control" name="advocate" id="age" value="" min="0" max="99"> -->
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Age is required.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="mb-3">
-                        <label for="username">Most Recent Progress</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend"></div>
-                            <input type="text" class="form-control" name="recent_progress" id="age" value="" min="0"
-                                max="99">
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Age is required.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="mb-3">
-                        <label for="username">Work Flow</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend"></div>
-                            <input type="text" class="form-control" name="work_flow" id="age" value="" min="0" max="99">
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Age is required.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                                        <div class="col-md-4">
+                                            <div class="mb-3">
+                                                <label for="username">Responsible Advocate</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"></div>
+                                                    <select name="advocate" id="cars">
+                                                        <option>Select</option>
+                                                        <option>Advocate 1</option>
+                                                        <option>Advocate 2</option>
+                                                    </select>
+                                                    <!-- <input type="text" class="form-control" name="advocate" id="age"
+                                                        value="" min="0" max="99"> -->
+                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                        Age is required.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="mb-3">
+                                                <label for="username">Most Recent Progress</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"></div>
+                                                    <input type="text" class="form-control" value="{{$edit->recent_progress}}" name="recent_progress"
+                                                        id="age" value="" min="0" max="99">
+                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                        Age is required.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="mb-3">
+                                                <label for="username">Work Flow</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"></div>
+                                                    <input type="text" class="form-control" value="{{$edit->work_flow}}" name="work_flow" id="age"
+                                                        value="" min="0" max="99">
+                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                        Age is required.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="mb-3">
-                        <label for="">Practice Area</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                            </div>
-                            <select>
-                                <option value="select">---select---</option>
-                                <option value="Family Law">Family Law</option>
-                                <option value="Personal Injury">Personal Injury</option>
-                                <option value="General Practice">General Practice</option>
-                                <option value="Estate Planning">Estate Planning</option>
-                                <option value="Real Estate">Real Estate</option>
-                                <option value="Criminal Law">Criminal Law</option>
-                                <option value="Civil Litigation">Civil Litigation</option>
-                                <option value="Business Law">Business Law</option>
-                                <option value="Guardianship Law">Guardianship Law</option>
-                                <option value="Probate Law">Probate Law</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="mb-3">
-                        <label for="username">Opening Date</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="mb-3">
+                                                <label for="">Practice Area</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                    </div>
+                                                    <select>
+                                                        <option value="select">---select---</option>
+                                                        <option value="Family Law">Family Law</option>
+                                                        <option value="Personal Injury">Personal Injury</option>
+                                                        <option value="General Practice">General Practice</option>
+                                                        <option value="Estate Planning">Estate Planning</option>
+                                                        <option value="Real Estate">Real Estate</option>
+                                                        <option value="Criminal Law">Criminal Law</option>
+                                                        <option value="Civil Litigation">Civil Litigation</option>
+                                                        <option value="Business Law">Business Law</option>
+                                                        <option value="Guardianship Law">Guardianship Law</option>
+                                                        <option value="Probate Law">Probate Law</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="mb-3">
+                                                <label for="username">Opening Date</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
 
-                            </div>
-                            <input type="date" class="form-control" name="close_date" id="age"
-                                value="{{ $edit->open_date}}" min="0" max="99">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="mb-3">
-                        <label for="username">Closing Date </label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
+                                                    </div>
+                                                    <input type="date" class="form-control" value="{{$edit->open_date}}" name="open_date" id="age"
+                                                        value="" min="0" max="99">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="mb-3">
+                                                <label for="username">Closing Date </label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
 
-                            </div>
-                            <input type="date" class="form-control" name="close_date" id="age"
-                                value="{{ $edit->close_date}}" min="0" max="99">
-                        </div>
-                    </div>
-                </div>
-            </div>
+                                                    </div>
+                                                    <input type="date" class="form-control" value="{{$edit->close_date}}" name="close_date" id="age"
+                                                        value="" min="0" max="99">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-            <div class="row">
+                                    <div class="row">
 
-                <div class="col-md-4">
-                    <div class="mb-1">
-                        <label for="username">Status</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend"></div>
-                            <select>
-                                <option value="select">---select---</option>
-                                <option value="">Opened</option>
-                                <option value="">Pending</option>
-                                <option value="">Closed</option>
+                                        <div class="col-md-4">
+                                            <div class="mb-1">
+                                                <label for="username">Status</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"></div>
+                                                    <select name="status">
+                                                        <option value="select">{{$edit->comments}}</option>
+                                                        <option value="Opened">Opened</option>
+                                                        <option value="Pending">Pending</option>
+                                                        <option value="Closed">Closed</option>
 
-                            </select>
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Password is required.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="mb-1">
-                        <label for="username">Comments</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend"></div>
-                            <textarea class="form-control" id="form7Example7" rows="2" name="comments"
-                                value="{{$edit->comments}}"></textarea><br>
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Password is required.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                                                    </select>
+                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                        Password is required.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="mb-1">
+                                                <label for="username">Comments</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"></div>
+                                                    <textarea class="form-control" id="form7Example7" name="comments" rows="2"
+                                                        name="comments">{{$edit->comments}}</textarea><br>
+                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                        Password is required.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-            <br>
-            <hr>
-            <br>
+                                    <br>
+                                    <hr>
+                                    <br>
 
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="mb-1">
-                        <label for="username">Notification</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="mb-1">
+                                                <label for="username">Notification</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
 
-                            </div>
-                            <input type="email" class="form-control" name="con_email" value="{{ $edit->con_email}}"><br>
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Password is required.
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                                    </div>
+                                                    <input type="email" class="form-control" value="{{$edit->notifi_email}}" name="notifi_email"
+                                                        placeholder="Enter your email" id="confirm_password"><br>
+                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                        Password is required.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                <div class="col-md-4">
-                    <div class="mb-1">
-                        <label for="username">Telephone No.</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
+                                        <div class="col-md-4">
+                                            <div class="mb-1">
+                                                <label for="username">Telephone No.</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
 
-                            </div>
-                            <input type="number" class="form-control" name="con_phone" value="{{ $edit->con_phone}}"
-                                id="confirm_password"><br>
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Password is required.
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                                    </div>
+                                                    <input type="text" class="form-control" value="{{$edit->phone}}" name="phone"
+                                                        placeholder="Enter your telephone number"
+                                                        id="confirm_password"><br>
+                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                        Password is required.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                <div class="col-md-4">
-                    <div class="mb-1">
-                        <label for="username">Billing</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
+                                        <div class="col-md-4">
+                                            <div class="mb-1">
+                                                <label for="username">Billing</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
 
-                            </div>
-                            <input type="text" class="form-control" name="amount" value="{{ $edit->amount}}"
-                                id="confirm_password"><br>
-                            <div class="invalid-feedback" style="width: 100%;">
-                                Password is required.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                                                    </div>
+                                                    <input type="text" class="form-control" value="{{$edit->amount}}" name="amount"
+                                                        placeholder="Enter the amount" id="confirm_password"><br>
+                                                    <div class="invalid-feedback" style="width: 100%;">
+                                                        Password is required.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
             <div class="row">
                 <div class="col-sm">
 
