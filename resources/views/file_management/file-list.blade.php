@@ -215,7 +215,7 @@
                                                 <label for="username">File No</label>
                                                 <div class="input-group">
                                                     <div class="input-group-prepend"></div>
-                                                    <select>
+                                                    <select name="file_name">
                                                         <option value="">---select---</option>
                                                         <option value="">file 1</option>
                                                         <option value="">file 2</option>
