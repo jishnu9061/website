@@ -99,13 +99,13 @@
     display: block;
     width: 90px;
     height: auto;
- left: 75px;
+ left: 85px;
     align-items: center;
   position: absolute;
 
   background: none 0% 0% / auto repeat scroll padding-box border-box
     rgba(255, 255, 255, 0);
-  overflow: hidden;
+
   -webkit-filter: brightness(1.5);
   -webkit-mask-size: 300% 200%;
   -webkit-mask-image: -webkit-linear-gradient(
@@ -122,7 +122,7 @@
   -moz-mask-image: -webkit-linear-gradient(
     -45deg,
     rgba(255, 255, 255, 0) 40%,
-    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 1) 90%,
     rgba(255, 255, 255, 0) 60%
   );
   -moz-transition: -webkit-mask-position;
@@ -133,7 +133,7 @@
   -o-mask-image: -webkit-linear-gradient(
     -45deg,
     rgba(255, 255, 255, 0) 40%,
-    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 1) 90%,
     rgba(255, 255, 255, 0) 60%
   );
   -o-transition: -webkit-mask-position;
@@ -144,7 +144,7 @@
   mask-image: -webkit-linear-gradient(
     -45deg,
     rgba(255, 255, 255, 0) 40%,
-    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 1) 90%,
     rgba(255, 255, 255, 0) 60%
   );
   transition: -webkit-mask-position;
