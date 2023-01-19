@@ -1252,7 +1252,7 @@ function myaa() {
                         // }
  
                     function hide() {
-                        var element = document.getElementById("sidebar");
+                        var element = document.getElementById("sidebar-active");
                         var rtyu = document.getElementById("mi");
                         var rtyupio = document.getElementById("ni");
                 
@@ -2092,7 +2092,7 @@ function search_animal() {
         <script>
 $("a.sidebar-link").click(function() {
 $("a.sidebar-link").css("background-color", "");
-$(this).css("background-color", "#F9a9D4");
+$(this).css("background-color", "#F2e9D4");
 
 
 
