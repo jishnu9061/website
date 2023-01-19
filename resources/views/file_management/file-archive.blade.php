@@ -129,7 +129,7 @@ color: #999;
                                         name="supplier_id_hidden">
                                     <a href="{{url('edit-box-no',$list->id)}}"><i style="color:black;" class="fa fa-edit"
                                             aria-hidden="true"></i>
-                                        <a onClick="return myFunction();" href="" style="color:black;"><i
+                                        <a onClick="return myFunction();" href="{{url('delete-box-no',$list->id)}}" style="color:black;"><i
                                                 class="fas fa-trash-alt"></i></a></td> 
                         </tr>
                         @endforeach
