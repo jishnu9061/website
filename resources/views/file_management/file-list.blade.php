@@ -155,7 +155,7 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> 
 
 
                                         <div class="col-md-4">
@@ -216,10 +216,10 @@
                                                 <div class="input-group">
                                                     <div class="input-group-prepend"></div>
                                                     <select name="file_name">
-                                                        <option value="">---select---</option>
-                                                        <option value="">file 1</option>
-                                                        <option value="">file 2</option>
-                                                        <option value="">file 3</option>
+                                                        <option >---select---</option>
+                                                        <option >file 1</option>
+                                                        <option >file 2</option>
+                                                        <option >file 3</option>
 
                                                     </select>
                                                     <!-- <input type="text" class="form-control" name="file_name" value=""
@@ -236,7 +236,7 @@
                                                 <label for="username">Responsible Advocate</label>
                                                 <div class="input-group">
                                                     <div class="input-group-prepend"></div>
-                                                    <select name="assoc_handling" id="cars">
+                                                    <select name="advocate" id="cars">
                                                         <option>Select</option>
                                                         <option>Advocate 1</option>
                                                         <option>Advocate 2</option>
@@ -307,7 +307,7 @@
                                                     <div class="input-group-prepend">
 
                                                     </div>
-                                                    <input type="date" class="form-control" name="open_datek" id="age"
+                                                    <input type="date" class="form-control" name="open_date" id="age"
                                                         value="" min="0" max="99">
                                                 </div>
                                             </div>
