@@ -77,11 +77,11 @@
                             </td> --}}
 
                             <td scope="row" class="text-center">
-                                <a href="{{url('')}}"><i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span><span class="m-1"></span>
+                                <a href="{{url('view_lawyer',$lawyer->id)}}"><i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span><span class="m-1"></span>
 
-                                <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                                <a href="{{url('edit_lawyer',$lawyer->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
 
-                                <a href="{{url('')}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
+                                <a href="{{url('delete_lawyer',$lawyer->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
 
                             </td>
 
