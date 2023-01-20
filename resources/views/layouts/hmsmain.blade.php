@@ -96,6 +96,7 @@
         }
 
         body {
+            mix-blend-mode: multiply;
             background-color: #ffffff;
       
             /* font-size: 22px; */
@@ -103,7 +104,7 @@
         }
 
         html {
-            scroll-behavior: smooth;
+            scroll_behavior: smooth;
         }
 
         .pagination>li>span {
@@ -316,13 +317,13 @@ font-family: 'Carter One';
                             <div class="logo" style="background-color:#dfc79d; border-radius:100% 100% 100% 100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height:125px;width:125px; margin-left:25px; background:  #d0d3cd50 -webkit-linear-gradient(left,  #ffffff15, rgb(255, 255, 255)) repeat 0 0 / 200px;
 
  
-animation: sweep 1.5s ease-in-out infinite;
+animation: sweep 5.5s ease-in-out infinite;
 animation-direction:reverse;">
                                 <a href="{{ url('home') }}">
                                     <!-- {{-- <img src="assets/images/logo/logo.png" alt="Logo" srcset=""> --}} -->
-                                    <div class="lightSweep"><img id="cr_logo"
+                                    {{-- <div class="light-Sweep"><img id="cr_logo"
                                             src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA"
-                                            style="margin-top:16px;"></div>
+                                            style="margin-top:16px;"></div> --}}
                                     <img id="cr_logo" src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA"
                                         style="margin-top:16px;">
 
@@ -1202,7 +1203,7 @@ function myaa() {
                         function myss() {
                         var x = document.getElementById("range");
                         var t = document.getElementById("t");
-                        var ad = document.getElementById("ssdf");
+                        var adv = document.getElementById("ssdf");
                         var dvv = document.getElementById("hgh");
 
 
@@ -1252,7 +1253,7 @@ function myaa() {
                         // }
  
                     function hide() {
-                        var element = document.getElementById("sidebar");
+                        var element = document.getElementById("sidebar-active");
                         var rtyu = document.getElementById("mi");
                         var rtyupio = document.getElementById("ni");
                 
@@ -1514,8 +1515,8 @@ display: list-item;
 function search_animal() {
 	let input = document.getElementById('searchbar').value
 	input=input.toLowerCase();
-	let x = document.getElementsByClassName('btn btn-primary');
-    let y = document.getElementsByClassName('logo_size');
+	let btn = document.getElementsByClassName('btn btn-primary');
+    let logo = document.getElementsByClassName('logo_size');
     let col = document.getElementsByClassName('col-sm-4');
     let row = document.getElementsByClassName('row sm');
     // let bbd = document.getElementsByTagName('div');
@@ -1525,9 +1526,10 @@ function search_animal() {
 	for (i = 0; i < x.length; i++) {
 		if (!x[i].innerHTML.toLowerCase().includes(input)) {  
 			x[i].style.display="none";
-            x[i].style.padding = "0px 0px 0px 0px";
+            x[i].style.padding = "100px 110px 110px 110px";
            
-            y[i].style.display="none";
+           
+            y[i].style.width="20px";
             col[i].style.display="none";
           
             
@@ -1545,7 +1547,9 @@ function search_animal() {
 			x[i].style.display="list-item";	
             x[i].style.padding = "0px 0px 0px 0px";
            
-            y[i].style.display="none";
+           
+            y[i].style.width="20px";
+            
           
             // bbd[i].style.display="none";
                    
@@ -2089,16 +2093,16 @@ function search_animal() {
 </script>  --}}
 
 
-        <script>
+        {{-- <script>
 $("a.sidebar-link").click(function() {
 $("a.sidebar-link").css("background-color", "");
-$(this).css("background-color", "#F9a9D4");
+$(this).css("background-color", "#F2e9D4");
 
 
 
 });
 
-</script>
+</script> --}}
 
 
 

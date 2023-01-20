@@ -108,13 +108,13 @@ color: #999;
                         <tr id="data">
 
                             <!-- <td scope="row" class="text-center">{{$list->id}}</td> -->
-                            <td scope="row" class="text-center">{{$list->client_name}}</td>
+                            <td scope="row" class="text-center">{{$list->client}}</td>
                             <td scope="row" class="text-center">{{$list->file_name}}</td>
-                            <td scope="row" class="text-center">{{$list->progress_date}}</td>
+                            <td scope="row" class="text-center">{{$list->open_date}}</td>
                             <td scope="row" class="text-center">{{$list->advocate}}</td>
                             <td scope="row" class="text-center">{{$list->recent_progress}}</td>
                             <!-- <td scope="row" class="text-center"></td> -->
-                            <td scope="row" class="text-center"></td>
+                            <td scope="row" class="text-center">{{$list->status}}</td>
                             {{-- <td  scope="row"class="text-center">
                             <a href="{{url('view-file-list-progress',$list->id)}}"><i style="color:black;" class="fa fa-eye"
                                         aria-hidden="true"></i>

@@ -54,7 +54,7 @@
                             <th class="text-center">Lawyer Name</th>
                             <th class="text-center">Court Name</th>
                             <th class="text-center">Actions</th>
-                          
+
                             <!-- <th class="text-center">Edit</th>
                         <th class="text-center">Delete</th> -->
                         </tr>
@@ -62,9 +62,9 @@
                     <tbody>
 
                         @foreach($asign_lawyer as $lawyer)
-                       
+
                         <tr class="text-center" id="">
-                          
+
                             <td scope="row" class="text-center" id="">{{$lawyer->client_number}}</td>
                             <td scope="row" class="text-center" id="">{{$lawyer->client_type}}</td>
                             <td scope="row" class="text-center" id="">{{$lawyer->client_name}}</td>
@@ -73,20 +73,20 @@
                             <td scope="row" class="text-center" id="">{{$lawyer->court_name}}</td>
                             {{-- <td scope="row" class="text-center">
                                 <a href="{{url('view-client')}}">
-                                  
+
                             </td> --}}
-                            
-                            <td scope="row" class="text-center"> 
+
+                            <td scope="row" class="text-center">
                                 <a href="{{url('')}}"><i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span><span class="m-1"></span>
-                                
+
                                 <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                                
+
                                 <a href="{{url('')}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
 
                             </td>
 
                         </tr>
-                  
+
                         @endforeach
                     </tbody>
                 </table>
@@ -94,7 +94,7 @@
 
 
 
-            
+
 
 
 
@@ -154,6 +154,7 @@
                                                             </div>
                                                             <select name="client_type" id="">
                                                                 <option value="Individual">Individual</option>
+                                                                <option value="Corporate">Corporate</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -167,16 +168,16 @@
                                                             </div>
                                                             <select name="client_name" id="">
                                                                 <option value="residential">Select</option>
-                                                                <option value="residential">Residensial</option>
-                                                                <option value="non-residential">Non Residensial
+                                                                <option value="residential">Residential</option>
+                                                                <option value="non-residential">Non-Residential
                                                                 </option>
                                                             </select>
                                                         </div>
                                                     </div>
                                                 </div>
-                                          
-                                         
-                                        
+
+
+
                                                 <div class="col-md-6">
                                                     <div class="mb-1">
                                                         <label>File Number</label>
@@ -186,7 +187,7 @@
                                                                 name="file_number" id="" value="" min="0"
                                                                 max="99">
                                                             <div class="invalid-feedback" style="width: 100%;">
-                                                                
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -211,13 +212,13 @@
                                                             <input type="text" class="form-control"
                                                                 name="court_name" value="" id="">
                                                             <div class="invalid-feedback" style="width: 100%;">
-                                                                
+
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            
-                                   
+
+
 
                                                     <div class="col-md-4">
                                                         <div class="mb-1">
@@ -244,7 +245,7 @@
 
 
 
-    
+
 
 
 @endsection
