@@ -1147,7 +1147,7 @@ class filemanagement extends Controller
        public function fileopenreport()
        {
 
-        $file_open_report=DB::table('cra_file_report')
+        $file_open_report=DB::table('cra_open_new_file_details')
         
          ->get();    
         return view('file_management.file-opened-report',compact('file_open_report'));
