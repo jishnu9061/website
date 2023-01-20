@@ -14,59 +14,62 @@
                     <tbody>
                         <tr>
                             <td scope="row">File No:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            {{-- <td><input class="form-control" type="text" aria-label="default input example" value=""
+                                Disabled>
+                        </td> --}}
+                            <td  type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
 
                         </tr>
                         <tr>
                             <td scope="row">Client Name:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
-                                    Disabled>
-                            </td>
+                            <td  type="text" aria-label="default input example" value=""
+                            Disabled>
+                    </td>
                         </tr>
                         <tr>
                             <td scope="row">Matter Type:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
-                                    Disabled>
-                            </td>
+                            <td  type="text" aria-label="default input example" value=""
+                            Disabled>
+                    </td>
                         </tr>
                         <tr>
                             <td scope="row">Other Party:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td  type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Attorney:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
-                                    Disabled>
-                            </td>
+                            <td  type="text" aria-label="default input example" value=""
+                            Disabled>
+                    </td>
                         </tr>
                         <tr>
                             <td scope="row">Case Details:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
-                                    Disabled>
-                            </td>
+                            <td  type="text" aria-label="default input example" value=""
+                            Disabled>
+                    </td>
                         </tr>
                         <tr>
                             <td scope="row">Marriage Details:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
-                                    Disabled>
-                            </td>
+                            <td  type="text" aria-label="default input example" value=""
+                            Disabled>
+                    </td>
                         </tr>
                         <tr>
                             <td scope="row">Property Details:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
-                                    Disabled>
-                            </td>
+                            <td  type="text" aria-label="default input example" value=""
+                            Disabled>
+                    </td>
 
                         </tr>
                         <tr>
                             <td scope="row">Child Details:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
-                                    Disabled>
-                            </td>
+                            <td  type="text" aria-label="default input example" value=""
+                            Disabled>
+                    </td>
                         </tr>
 
 

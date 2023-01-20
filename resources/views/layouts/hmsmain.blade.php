@@ -1628,10 +1628,10 @@ function search_animal() {
                     </div>
       
                     <div class="nav-item dropdown m-1" style="position: relative; " >
-                        <button class=" dropdown-toggle-x btn p-1" style="font-size:12px;" href="#"
+                        <button class=" dropdown-toggle-x btn p-1"  href="#"
                             id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
-                            <b>Create New</b>
+                            Create New
                             <i class="fa fa-plus-square"></i>
                         </button>
 
@@ -1733,7 +1733,7 @@ function search_animal() {
 
 
 
-
+             
 
 
 
