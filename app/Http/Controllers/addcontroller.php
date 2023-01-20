@@ -11,40 +11,28 @@ use App\salary;
 use App\model\allowance;
 use App\model\giveallowance;
 Use \Carbon\Carbon;
-
+// Hr Manage Staff
 class addcontroller extends Controller
 {
    public function addstaffs()
    {
 
-     $hospital=Auth::user()->Hospital;
-   	 $adminroles=DB::table('roles')->get();
+    //  $hospital=Auth::user()->Hospital;
+   	//  $adminroles=DB::table('roles')->get();
     // $hospitals=DB::table('hospitals')->get();
-     $departments=DB::table('departments')->get();
-     $medicaldepartments=DB::table('medicaldepartments')->get();
+    //  $medicaldepartments=DB::table('medicaldepartments')->get();
+    $departments=DB::table('departments')->get();
      $allowancedata=DB::table('allowance')->where('status','allowance')->get();
-     $nonfixdallowancedata=DB::table('allowance')->where('hospital',$hospital)->where('status','nonfixedallowance')->get();
-     $deductiondata=DB::table('allowance')->where('hospital',$hospital)->where('status','reduction')->get();
+     $nonfixdallowancedata=DB::table('allowance')->where('status','nonfixedallowance')->get();
+     $deductiondata=DB::table('allowance')->where('status','reduction')->get();
      $leavetype=DB::table('leave_types')->get();
      $staffstatus=DB::table('staffstatus')->get();
-   	return view('add.staffs',['roles'=>$adminroles,'departments'=>$departments,'medicaldepartments'=>$medicaldepartments,'allowancedata'=>$allowancedata,'deductiondata'=>$deductiondata,'leavetype'=>$leavetype,'staffstatus'=>$staffstatus,'nonfixdallowancedata'=>$nonfixdallowancedata]);
+   	return view('add.staffs',['departments'=>$departments,'allowancedata'=>$allowancedata,'deductiondata'=>$deductiondata,'leavetype'=>$leavetype,'staffstatus'=>$staffstatus,'nonfixdallowancedata'=>$nonfixdallowancedata]);
    }
    public function addthestaffs(Request $Request)
    {
 
-    $allowancedata=DB::table('allowance')->where('status','allowance')->get();
-   	  // $hospital=Auth::user()->Hospital;
-      // $depatmntz=$Request['depname'];
-
-   	  // $hospitaldata=DB::table('hospitals')->where('name',$hospital)->select('id')->first();
-   	  // $hospitalid=$hospitaldata->id;
-   	  // $hospitalid=$hospitaldata->id;
-
-   	  // // // $hospitaldata=DB::table('hospitals')->where('name',$hospital)->select('id')->first();
-   	  // // $hospitalid=$hospitaldata->id;
-   	  // // $hospitalid=$hospitaldata->id;
-
-   	  // $hosid=str_pad($hospitalid, 2, "0", STR_PAD_LEFT);
+    // $allowancedata=DB::table('allowance')->where('status','allowance')->get();
       $seldep=DB::table('users')
       ->leftjoin('departments','departments.id','=','users.departments')
       ->select('uniqueid')->first();
@@ -74,45 +62,27 @@ class addcontroller extends Controller
       $staffs->postal_code=$Request['postal_code'];
       $staffs->town=$Request['town'];
       $staffs->salary=$Request['salary'];
-      $staffs->partner=$Request['partner'];
-      $staffs->NSSF=$Request['NSSF'];
-      $staffs->NHIF=$Request['NHIF'];
-      $staffs->cra_pin=$Request['cra_pin'];
-      $staffs->tax=$Request['tax'];
-      $staffs->deduction=$Request['deduction'];
-      $staffs->NSSF_contribution=$Request['NSSF_contribution'];
-      $staffs->leave=$Request['leave'];
-      $staffs->pension_rate=$Request['pension_rate'];
-      $staffs->bank=$Request['bank'];
       $staffs->bank_branch=$Request['bank_branch'];
       $staffs->branch_code=$Request['branch_code'];
       $staffs->account=$Request['account'];
-
-
-
-      // $staffs->sex=$Request['sex'];
-      // $staffs->email=$Request['email'];
-      // $staffs->age=$Request['age'];
-      // $staffs->phoneno=$Request['phoneno'];
-      // $password=$Request['password'];
-      // $staffs->password=Hash::make($password);
-      // $staffs->role= $Request['role'];
       $staffs->address= $Request['address'];
       $staffs->date_of_joining= $Request['date_of_joining'];
       $staffs->account_no= $Request['accountnumber'];
       $staffs->bank= $Request['bankname'];
-      // $staffs->ifsc= $Request['ifsc'];
-      // $staffs->consultation_fee=$Request['cons_fee'];
       $staffs->uniqueid= $uniqId;
       $staffs->salary=$Request['salary'];
       $staffs->sex=$Request['sex'];
       // $staffs->yearsexp=$Request['yearsexp'];
       $staffs->dob=$Request['dob'];
-      // $staffs->Hospital=$hospital;
       $staffs->status=$Request['status'];
       $staffs->releving_date=$Request['releving_date'];
-      // $staffs->medicaldepartments= $Request['depname'];
-      // $staffs->cv= $Request['cv'];
+      $leavetype_items = $Request->input('leaves');
+      $error= array_sum($leavetype_items);
+      if($error > 366)
+      {
+        $Request->session()->put('leave validated','Sum of number of leaves alloted must be less than 366');
+        return back();
+      }
       if($Request->hasFile('cv')){
         $this->validate($Request,[
             'cv' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'

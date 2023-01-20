@@ -36,6 +36,8 @@ class hrindex extends Controller
 
 public function view_staff_details($id)
 {
+    $department=DB::table('cra_add_user_department')->select('id as department_id','department_name')->get();
+    $roles=DB::table('cra_add_user_department')->select('id as roles_id','role_name')->get();
     $view_list = DB::table('users')->where('id',$id)->first();
 
     return view('hr.view_staff_details',compact('view_list','id'));
