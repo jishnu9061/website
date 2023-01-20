@@ -62,13 +62,13 @@
                         <tr id="data">
 
                             <!-- <td scope="row" class="text-center">{{$report->id}}</td> -->
-                            <td scope="row" class="text-center">{{$report->client_name}}</td>
+                            <td scope="row" class="text-center">{{$report->client}}</td>
                             <td scope="row" class="text-center">{{$report->file_name}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center">{{$report->Responsible_Advocate}}</td>
+                            <td scope="row" class="text-center">{{$report->advocate}}</td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center">{{$report->Date_From}}</td>
+                            <td scope="row" class="text-center">{{$report->open_date}}</td>
                             <td  scope="row"class="text-center">
                       
                         <a href=""> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i></td>
