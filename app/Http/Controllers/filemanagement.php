@@ -1156,11 +1156,9 @@ class filemanagement extends Controller
        public function fileclosedreport()
        {
 
-        $file_close_report=DB::table('cra_file_report')
-         ->select('*')
-         ->leftjoin('cra_add_file_progress','cra_add_file_progress.id','=','cra_file_report.id')
-         ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_file_report.id')
-         ->get();    
+        $file_close_report=DB::table('cra_open_new_file_details')->get();    
+       
+         
         return view('file_management.file-closed-report',compact('file_close_report'));
 
        
