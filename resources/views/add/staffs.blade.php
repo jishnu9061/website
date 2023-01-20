@@ -124,7 +124,7 @@
                     </select>
                 </div>
         </div> --}}
-        {{-- <div class="form-group col-md-5">
+        <div class="form-group col-md-5">
                                                         <label for="username">Departments</label>
                                                             <div class="form-group col-md-5">
                                                                 <select class="custom-select my-1 mr-sm-2 btn btn-secondary dropdown-toggle me-2" name="depname" id="inlineFormCustomSelectPref">
@@ -135,7 +135,7 @@
         @endforeach
         </select>
     </div>
-</div> --}}
+</div>
 <div class="form-group col-md-7">
     <label for="username">Date Of Joining</label>
     <div class="form-group col-md-7">

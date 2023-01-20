@@ -75,13 +75,13 @@
 
                             <!-- <td scope="row" class="text-center">{{$report->id}}</td> -->
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center">{{$report->client_name}}</td>
+                            <td scope="row" class="text-center">{{$report->client}}</td>
                             <td scope="row" class="text-center">{{$report->file_name}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center">{{$report->Responsible_Advocate}}</td>
+                            <td scope="row" class="text-center">{{$report->advocate}}</td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center">{{$report->Date_To}}</td>
+                            <td scope="row" class="text-center">{{$report->close_date}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                             
