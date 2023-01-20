@@ -10,7 +10,6 @@ th{
 <div class="container">
     <h4 id="hdtpa"><b>{{$view_reg->customer_name}}</b></h4>
     <br><br>
-
     <form>
         <div class="table-responsive">
             <table class="table table-hover" style="border: 1px solid">

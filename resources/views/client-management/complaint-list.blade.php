@@ -4,7 +4,7 @@
 <html>
     <head>
 <style>
-  .pagination>li>span {
+.pagination>li>span {
     position: relative;
     float: left;
     padding: 6px 12px;

@@ -528,13 +528,6 @@
                     </tbody>
                 </table>
 
-
-
-
-
-
-
-
                 <div class="row">
                     <div style="height: 50px;"></div>
                     <div class="row">

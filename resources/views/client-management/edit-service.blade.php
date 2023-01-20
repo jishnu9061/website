@@ -2,8 +2,6 @@
 @section('content')
 <div class="container">
     <div class="py-5 text-center">
-
-
         <div>
             <div>
 

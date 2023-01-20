@@ -7,7 +7,6 @@
 </style>
 <div>
 
-
 </div>
 <br>
 <div class="container">
@@ -81,7 +80,5 @@
         </table>
     </div>
 </div>
-
-
 
 @endsection

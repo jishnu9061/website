@@ -11,7 +11,6 @@
     {{-- heading --}}
     <h4 id="hdtpa"><b> Individual Client Details</b></h4>
     <br><br>
-
     <div class="table-responsive">
         <table class="table table-hover" style="border: 1px solid">
 

@@ -680,7 +680,6 @@
         var medicine_images = $(this).closest('#data').find('#medicine_images').val();
 
 
-
         $("#edit_id").val(medicine_id_hidden);
         $("#edit_medicine_name").val(medicine_name);
         $("#edit_brand_name").val(medicine_brand_name);

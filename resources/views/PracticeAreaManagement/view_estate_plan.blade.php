@@ -14,50 +14,50 @@
                     <tbody>
                         <tr>
                             <td scope="row">File No:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
 
                         </tr>
                         <tr>
                             <td scope="row">Client Name:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Matter Type:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Estate Details:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Trust:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Property Details:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Accountant:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Financial Advisor:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
                         </tr>

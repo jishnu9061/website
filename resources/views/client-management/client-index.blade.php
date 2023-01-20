@@ -10,14 +10,8 @@
 
         {{-- sub heading --}}
         <h5 id="hdbtb">Client Management Details</h5>
-      
-
-
+   
         <div class="row sm">
-
-           
-
-
 
             {{-- button with drop down --}}
             <div class="col-sm-4 ">
@@ -32,7 +26,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- <div class="col-sm-4 ">
                 <div class="dropdown    "> <img class="logo_size" src="image\logo\Document details.png" alt=""><button
                         type="button" style="width:70%;" id="dropdownMenuButton" data-toggle="dropdown"

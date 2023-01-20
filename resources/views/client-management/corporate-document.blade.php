@@ -14,11 +14,7 @@
             <form method="post" action="{{url('add-corporate-document')}}" id="form" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" name="corporate_id" value="{{$corporate_docs->corporate_id}}">
-
-
-
                 <br>
-
                 <div class="row">
                     <div class="col-md-12">
                         <table class="table table-striped  order-list" id="table_field">
@@ -29,7 +25,6 @@
                                     <th>Date</th>
                                     <th>ADD</th>
                                 </tr>
-
                             </thead>
                             <tbody>
                                 <tr>
