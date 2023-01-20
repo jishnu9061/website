@@ -71,6 +71,8 @@
                             <td scope="row" class="text-center" id="">{{$lawyer->file_number}}</td>
                             <td scope="row" class="text-center" id="">{{$lawyer->lawyer_name}}</td>
                             <td scope="row" class="text-center" id="">{{$lawyer->court_name}}</td>
+                            
+
                             {{-- <td scope="row" class="text-center">
                                 <a href="{{url('view-client')}}">
 
@@ -217,6 +219,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                               
 
 
 
