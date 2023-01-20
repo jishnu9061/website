@@ -117,10 +117,10 @@ color: #999;
                             <!-- <td scope="row" class="text-center">{{$list->id}}</td> -->
                              <td scope="row" class="text-center">Box No :<b>{{$list->number}}</b></td>
                              <td scope="row" class="text-center"></td> 
-                             <td scope="row" class="text-center"></td>
+                             <td scope="row" class="text-center">{{$list->client}}</td>
+                             <td scope="row" class="text-center">{{$list->file_name}}</td> 
                              <td scope="row" class="text-center"></td> 
-                             <td scope="row" class="text-center"></td> 
-                             <td scope="row" class="text-center"></td>
+                             <td scope="row" class="text-center">{{$list->close_date}}</td>
                           
                           
                             <td scope="row" class="text-center"><a href=""><i style="color:black;" class="fa fa-eye"
@@ -129,7 +129,7 @@ color: #999;
                                         name="supplier_id_hidden">
                                     <a href="{{url('edit-box-no',$list->id)}}"><i style="color:black;" class="fa fa-edit"
                                             aria-hidden="true"></i>
-                                        <a onClick="return myFunction();" href="" style="color:black;"><i
+                                        <a onClick="return myFunction();" href="{{url('delete-box-no',$list->id)}}" style="color:black;"><i
                                                 class="fas fa-trash-alt"></i></a></td> 
                         </tr>
                         @endforeach
