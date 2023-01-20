@@ -73,6 +73,7 @@ public function job_posts()
         $end_date=$request['end_date'];
         $job_description=$request['job_description'];
         $job_responsibilities=$request['job_responsibilities'];
+        
 
 
         DB::table('cra_hr_create_post')->insert([
