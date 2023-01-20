@@ -131,7 +131,7 @@
 <div class="row">
     <div class="col-md-6">
         <div class="mb-1">
-        <label >Name</label>
+        <label>Name</label>
             <div class="input-group">
                 <div class="input-group-prepend"></div>
                 {{-- <input type="text"  id="" name="name"value="" class="form-control" > --}}
@@ -156,13 +156,11 @@
                 <div class="invalid-feedback" style="width: 100%;">
                 Required Field.
                 </div>
-                <select name="depaertment" id="">
+                <select name="department" id="">
                     <option value="">select</option>
-                    @if(count($leave_request))
-                    @foreach($leave_request as $list_category)
-                    <option>{{$list_category->department}}</option>
+                    @foreach($department_list as $department_category)
+                    <option>{{$department_category->department}}</option>
                     @endforeach
-                    @endif
                 </select>
             </div>
         </div>
