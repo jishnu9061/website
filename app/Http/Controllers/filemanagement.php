@@ -91,12 +91,7 @@ class filemanagement extends Controller
         // $status=$request['status'];
 
         DB::table('cra_open_new_file_details')->insert([
-<<<<<<< HEAD
-
-=======
-            
             'assoc_handling' => $assoc_handling,
->>>>>>> 1e469229dc2a25bcd0a23d275cc9b350ee5d3057
             'client' => $client,
             'email' => $email,
             'phone' => $phone,
@@ -140,14 +135,10 @@ class filemanagement extends Controller
         $email=$request['email'];
         $phone=$request['phone'];
         $address=$request['address'];
-<<<<<<< HEAD
-
-=======
         $file_name=$request['file_name'];
         $advocate=$request['advocate'];
         $recent_progress=$request['recent_progress'];
         $work_flow=$request['work_flow'];
->>>>>>> 1e469229dc2a25bcd0a23d275cc9b350ee5d3057
         $open_date=$request['open_date'];
         $close_date=$request['close_date'];
         $comments=$request['comments'];
@@ -159,25 +150,16 @@ class filemanagement extends Controller
         $status=$request['status'];
 
         DB::table('cra_open_new_file_details')->where('id',$id)->update([
-
-<<<<<<< HEAD
-
-=======
            
             'assoc_handling' => $assoc_handling,
->>>>>>> 1e469229dc2a25bcd0a23d275cc9b350ee5d3057
             'client' => $client,
             'email' => $email,
             'phone' => $phone,
             'address' => $address,
-<<<<<<< HEAD
-
-=======
             'file_name' => $file_name,
             'advocate' => $advocate,
             'recent_progress' => $recent_progress,
             'work_flow' => $work_flow,
->>>>>>> 1e469229dc2a25bcd0a23d275cc9b350ee5d3057
             'open_date' => $open_date,
             'close_date' => $close_date,
             'comments' => $comments,
@@ -229,18 +211,14 @@ class filemanagement extends Controller
     //manage files
     public function filearchive()
     {
-
-<<<<<<< HEAD
         $file_progress_list = DB::table('cra_add_box')->get();
     //    ->select('*')
     //    ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_file_progress.id')
     //     ->get();
-=======
         $file_progress_list = DB::table('cra_add_box')
       ->select('*')  
       ->leftjoin('cra_open_new_file_details','cra_add_box.id','=','cra_open_new_file_details.id')
        ->get();    
->>>>>>> 1e469229dc2a25bcd0a23d275cc9b350ee5d3057
         return view('file_management.file-archive',compact('file_progress_list'));
 
         // return view('file_management.file-archive');
@@ -702,18 +680,13 @@ class filemanagement extends Controller
     }
     public function filelistprogressreport()
     {
-
-<<<<<<< HEAD
         $file_progress_list = DB::table('cra_add_file_progress')
         ->select('*')
         ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_file_progress.id')
         ->leftjoin('cra_open_new_file_details','cra_open_new_file_details.id','=','cra_add_file_progress.id')
         ->get();
-=======
         $file_progress_list = DB::table('cra_open_new_file_details')->get();    
-        
-        
->>>>>>> 1e469229dc2a25bcd0a23d275cc9b350ee5d3057
+
         return view ('file_management.file-list-progress-report',compact('file_progress_list'));
 
         // return view('file_management.file-list-progress-report');
