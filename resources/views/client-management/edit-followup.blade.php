@@ -3,7 +3,6 @@
     {{-- heading --}}
     <h4 id="hdtpa"><b>Edit Follow Up</b></h4>
     <br>
-    
     <div class="card">
         <div class="card-body">
             <div class="row">

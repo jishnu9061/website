@@ -6,8 +6,6 @@
     <h4 id="hdtpa"><b>Add Individual Document</b></h4>
     <br><br>
 
-
-
     <div class="row">
         <div class="col-md-12 order-md-1">
             <form method="post" action="{{url('update-document')}}" id="form" enctype="multipart/form-data">

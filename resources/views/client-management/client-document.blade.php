@@ -58,8 +58,6 @@
     {{-- heading --}}
     <div class="container">
         <h4 id="hdtpa"><b>Individual Document Details</b></h4>
-
-
         <div class="header_wrap">
             <div class="num_rows">
                 <div class="form-group">
@@ -82,8 +80,6 @@
                     class="form-control">
 
             </div>
-
-
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <div class="table-responsive">
                     <table class="table table-striped table-class" id="table-id">
@@ -99,7 +95,6 @@
                         <tbody>
                             
                             @foreach($client_document as $list)
-                            
 
                             <tr id="data">
                                 <td scope="row" class="text-center" id="medicine_name_1"><a

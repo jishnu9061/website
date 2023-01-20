@@ -2,7 +2,6 @@
 @section('content')
 <div class="container">
     <div class="">
-
        {{-- heading --}}
        <h4 id="hdtpa"><b>New Client Services</b></h4>
        <br><br>
@@ -125,8 +124,7 @@
                             </div>
                         </div>
                     </div>
-                    
-               
+                                   
                     <div class="row">
                         <div class="col-sm">
 

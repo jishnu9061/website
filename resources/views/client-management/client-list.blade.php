@@ -63,11 +63,6 @@
         <h4 id="hdtpa"><b>Individual Client List</b></h4>
         <br>
 
-
-
-
-
-
         <button class="btn btn-primary add-btn" data-toggle="modal" data-target="#myModal">Add Client</button></a>
 
 
@@ -154,7 +149,6 @@
                             </tbody>
                         </table>
                     </div>
-
                     <!--		Start Pagination -->
                     <div class='pagination-container'>
                         <nav>
@@ -166,7 +160,6 @@
                     <div class="rows_count">Showing 11 to 20 of 100</div>
 
                     <!-- 		End of Container -->
-
                     <div class="modal fade" id="myModal">
                         <div class="modal-dialog modal-xl">
                             <div class="modal-content">

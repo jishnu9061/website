@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <!-- Mirrored from zuramai.github.io/mazer/demo/auth-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 14 Aug 2021 11:17:08 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
@@ -30,8 +29,6 @@
 
 <body style="background-color: rgb(245, 241, 234) ;">
 
-   
-    
     <div id="auth">
         <div class="row h-100" >
      <div class="col-lg-6 " >
@@ -94,9 +91,6 @@
         </div>
      </div>
         {{ Session::forget('errors')}}
-
-        
-
 
         <div class="align-items-center col-lg-6  d-flex justify-content-center">
             <div class="vl "></div>

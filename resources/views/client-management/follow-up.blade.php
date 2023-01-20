@@ -65,13 +65,7 @@
         <h4 id="hdtpa"><b>Follow Up Details</b></h4>
 
 
-
-
-
         <br>
-
-
-
 
         <div>
             <button type="button" class="btn btn-primary complaint_btn" data-toggle="modal" data-target="#myModal"> Add

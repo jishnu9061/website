@@ -6,7 +6,6 @@
     <h4 id="hdtpa"><b>Edit Complaint Details</b></h4>
     <br><br>
 
-
     <div class="card">
         <div class="card-body">
             <form method="post" action="{{url('update-Complaint')}}" id="form">

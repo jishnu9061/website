@@ -6,8 +6,6 @@
 }
 </style>
 <div>
-
-
 </div>
 <br>
 <div class="container">
@@ -44,7 +42,6 @@
         </div>
     </div>
 </div>
-
 
 
 @endsection

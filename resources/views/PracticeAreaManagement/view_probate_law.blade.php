@@ -15,38 +15,38 @@
                     <tbody>
                         <tr>
                             <td scope="row">Matter Info:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
 
                         </tr>
                         <tr>
                             <td scope="row">Executor / Administator:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Matter Type:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Deceased:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Case Details:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Estate Details:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
                         </tr>
