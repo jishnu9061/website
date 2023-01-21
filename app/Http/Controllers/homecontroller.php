@@ -44,6 +44,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+        if ( Auth::user()->role == 1) {// do your magic here
+            return redirect('/superadminhome');
+            }
         return view('dashboard.dashboard');
     }
     public function admindashboard()

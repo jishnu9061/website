@@ -45,13 +45,13 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-
         // Check validation
-       // $this->validate($request, [
-         //   'mobile_no' => 'required|regex:/[0-9]{10}/|digits:10',            
-      //  ]);
+        // $this->validate($request, [
+        //   'mobile_no' => 'required|regex:/[0-9]{10}/|digits:10',            
+        //  ]);
 
         // Get user record
+        
         $remember_me  = ( !empty( $request->remember_me) )? TRUE : FALSE;
 
         $user = User::where('uniqueid', $request->get('email'))->first();
@@ -60,10 +60,10 @@ class LoginController extends Controller
             $dd= (Hash::check( $request->get('password'), $user->password)); 
         }
        else
-       {
-                   \Session::put('errors', 'Invalid Details..!!');
+        {
+            \Session::put('errors', 'Invalid Details..!!');
             return back();
-       }
+        }
            
         // Check Condition Mobile No. Found or Not
         if($request->get('email') != $user->uniqueid) {
@@ -79,20 +79,23 @@ class LoginController extends Controller
          $request->session()->get('justlogin');
          }
          // Set Auth Details
-          \Auth::login($user,$remember_me);
-         if ( $user->isRole()=='superadmin') {// do your magic here
-     return redirect('/home');
+        // print_r($user);
+        // die();
+        \Auth::login($user,$remember_me);
+        
+        if ( $user->role == 1) {// do your magic here
+            return redirect('/superadminhome');
+            }
+            elseif ( $user->role == 2) {// do your magic here
+                return redirect('/home');
+            }
+                elseif ( $user->role == 3) {// do your magic here
+                    return redirect('/home');
+                }
+            else{
+                \Session::put('errors', 'Invalid Details..!!');
+                return back();
         }
-         elseif ( $user->isRole()=='admin') {// do your magic here
-     return redirect('/home');
-        }
-                 elseif ( $user->isRole()=='hospitaladmin') {// do your magic here
-     return redirect('/home');
-        }
-                          
-         else{
-            return redirect('/'); 
-         }
         // Redirect home page
             
     }
