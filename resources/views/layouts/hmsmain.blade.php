@@ -342,8 +342,17 @@ animation-direction:reverse;">
                         <ul class="menu">
                             <li class="sidebar-title" style="color: #1D1D50; text-align:center; font-size:16px; ">
                                 DASHBOARD</li>
+                              
                                 {{-- <input type="color" id="colorID" oninput="changeColor()">
+                 
 
+                     
+                        
+                        
+                       
+                          
+                
+                        
                                 <script>
                                     // Add active class to the current button (highlight it)
                                     var box = document.getElementById("menu");
@@ -361,6 +370,11 @@ animation-direction:reverse;">
                                     }
                                 </script>
 
+
+
+
+
+                        
                             {{-- @if(Auth::user()->role == 'superadmin')
                                 <li class="sidebar-item  has-sub">
                                     <a href="#" class='sidebar-link'>
@@ -425,6 +439,9 @@ animation-direction:reverse;">
 
                                 </ul>
                         </li>
+                
+
+
 
                         <li class="submenu-item  has-sub activew" style="list-style:none;">
                             <a id="sblma" href="{{url('user_management')}}" class='sidebar-link'>
