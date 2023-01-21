@@ -314,11 +314,13 @@ font-family: 'Carter One';
                     <div class="sidebar-header" style="padding-bottom: 0%">
                         <div class="d-flex justify-content-between">
 
-                            <div class="logo" style="background-color:#dfc79d; border-radius:100% 100% 100% 100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19); height:125px;width:125px; margin-left:25px; background:  #d0d3cd50 -webkit-linear-gradient(left,  #ffffff15, rgb(255, 255, 255)) repeat 0 0 / 200px;
-
- 
-animation: sweep 5.5s ease-in-out infinite;
-animation-direction:reverse;">
+                            <div class="logo" style="background-color:#dfc79d; 
+                            border-radius:100% 100% 100% 100%; 
+                            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+                            height:125px;width:125px; margin-left:25px;
+                            background:  #d0d3cd50 -webkit-linear-gradient(left,  #ffffff15, rgb(255, 255, 255)) repeat 0 0 / 200px;
+                            animation: sweep 5.5s ease-in-out infinite;
+                            animation-direction:reverse;">
                                 <a href="{{ url('home') }}">
                                     <!-- {{-- <img src="assets/images/logo/logo.png" alt="Logo" srcset=""> --}} -->
                                     {{-- <div class="light-Sweep"><img id="cr_logo"
@@ -393,7 +395,7 @@ animation-direction:reverse;">
                         </ul>
                         </li>
                         @endif --}}
-                        @if(Auth::user()->role == 'Admin')
+                        @if(Auth::user()->role == '2')
                         <li class="sidebar-item  has-sub">
                             <!-- <a href="{{url('usermanagement')}}" class='sidebar-link'>
                                         <i class="fa-regular fa-user"  style="font-weight: 300;"></i>
@@ -464,7 +466,7 @@ animation-direction:reverse;">
                         </li>
 
                         @endif
-                        @if(Auth::user()->role == 'Admin')
+                        @if(Auth::user()->role == '2')
                         <li class="submenu-item has-sub " style="list-style:none;">
                             <a href="{{url('file_managementindex')}}" class='sidebar-link'>
                                 <i class="far fa-folder" id="icon" style="font-weight: 300;"></i>
@@ -472,7 +474,7 @@ animation-direction:reverse;">
                             </a>
                         </li>
                         @endif
-                        @if(Auth::user()->role == 'hr' || Auth::user()->role == 'Admin')
+                        @if(Auth::user()->role == 'hr' || Auth::user()->role == '2')
                         @php
                         $hr = array("addallowance", "addstaffs",
                         "staffs","loans","payslip","attendance","attendanceview","payslipbulk","generatepayslip","managestaff");
@@ -578,7 +580,7 @@ animation-direction:reverse;">
                             {{-- </li> --}}
                             @endif
 
-                            @if(Auth::user()->role == 'account' || Auth::user()->role == 'Admin')
+                            @if(Auth::user()->role == 'account' || Auth::user()->role == '2')
                             @php
                             $accounts = array("ledger_acount_categories",
                             "ledger_acount_subcategories","ledger_budget_category",
@@ -738,7 +740,7 @@ animation-direction:reverse;">
                             </ul>
                             {{-- </li> --}}
                             @endif
-                            @if(Auth::user()->role == 'store' || Auth::user()->role == 'Admin')
+                            @if(Auth::user()->role == 'store' || Auth::user()->role == '2')
                             @php
                             $store=array("addsuppliers", "view_manufacturers","view_medicine",
                             "view_medicine_category","view_medicine_type","view_unit","view_medicine_group","view_brand_name","view_generic_name","reorder","view_purchase","stock_details","accounting_method","payment_type");
@@ -1087,63 +1089,19 @@ animation-direction:reverse;">
 
 
             <div id="main">
-
-
-
-
-
-<div class="container" style="height: 10px ; font-size:5px;"> 
-    <div class="row">
+        <div class="container" style="height: 10px ; font-size:5px;"> 
+        <div class="row">
         <div class="col">
             <p id="demob"></p>
         </div>
 
-    </div>
-     </div>
-                <nav class="navbar navbar-expand-lg navbar-light bg-white" >
-
-
-
-
-
-
-                 
-                
-             
-                  
-              
-           
-                
-
-
-
-
-
-                            {{-- <p id="daemo">This is a paragraph.</p>
-
-<button type="button" onclick="myaa()">Set font size</button>
- 
-<script>
-
-var cont = document.getElementById("daemo");
-                      
-
-function myaa() {
-  document.getElementById("daemo").style.fontSize = "x-large";
-}
-</script> --}}
-             
-                  
-            
-
-
-                    
-                    <a class="navbar-brand p-1" href="#">
+        </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white" >
+        <a class="navbar-brand p-1" href="#">
                         <img src="{{asset('/') }}assets//images/Logo cra.png" width="40" height="40" alt="">
                       </a>
-                    {{-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button> --}}
+
                     
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                       <ul class="navbar-nav mr-auto">
@@ -1709,8 +1667,9 @@ function search_animal() {
 
 
                         <li class="nav-item" style=" text-decoration: none; list-style:none;">
-                            <a class="font-bold text-uppercase nav-link" href="#" style=" padding: 0.1rem .1rem;">{{ Auth::user()->name }}<span
+                            <a class="font-bold text-uppercase nav-link" href="#" style=" padding: 0.1rem .1rem;">{{ Auth::user()->username }}<span
                                     class="sr-only">(current)</span></a>
+
                         </li>
 
 

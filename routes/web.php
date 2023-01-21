@@ -22,6 +22,11 @@ use App\Http\Controllers\issued_summary;
 //  return view('frontpage');
 //});
 Auth::routes();
+//superadmin
+Route::get('/superadminhome',"superadminController@index")->name('superadminhome');
+Route::any('company_list',"superadminController@show_company_list")->name('company_list');
+//superadmin
+
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'HomeController@index')->name('home');
