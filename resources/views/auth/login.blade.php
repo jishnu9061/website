@@ -32,7 +32,7 @@
     <div id="auth" >
         <div class="row"  >
      <div class="col-lg-6 " style="padding: 80px;" >
-        <div  style=" background-color:#ffffff; border-radius:30px; ">
+        <div  style=" background-color:#ffffff; border-radius:30px; width:30rem; margin: auto">
         <div id="auth-left" >
             <div class="auth-logo " >
                 <img class="mx-auto d-block"  id="cr_logo" src="assets/images/Logo cra.png" alt="" style="width:6rem;height:6rem; ">
