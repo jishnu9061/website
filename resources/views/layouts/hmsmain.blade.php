@@ -344,6 +344,7 @@ font-family: 'Carter One';
                         <ul class="menu">
                             <li class="sidebar-title" style="color: #1D1D50; text-align:center; font-size:16px; ">
                                 DASHBOARD</li>
+                              
                                 {{-- <input type="color" id="colorID" oninput="changeColor()">
                  
 
@@ -450,13 +451,7 @@ font-family: 'Carter One';
                                 
                                 <span> User Management</span>
                             </a>
-
-
-                 
-
                         </li>
-
-                 
 
                         <li class="submenu-item has-sub " style="list-style:none;">
                             <a id="sblm" href="{{url('client-index')}}" class='sidebar-link'>
@@ -479,10 +474,6 @@ font-family: 'Carter One';
                         $hr = array("addallowance", "addstaffs",
                         "staffs","loans","payslip","attendance","attendanceview","payslipbulk","generatepayslip","managestaff");
                         @endphp
-
-
-
-
 
                         <!-- <ul class="submenu">
                             
@@ -526,16 +517,12 @@ font-family: 'Carter One';
                         <!-- </ul>
                                     </li> -->
 
-
                         <li  class="submenu-item" style="list-style:none;">
                             <a href="{{url('hrindex')}}" class='sidebar-link'>
                                 <i class="fa fa-th-large" id="icon"></i>
                                 <span>HR</span>
                             </a>
                         </li>
-
-
-
 
                         {{-- <li class="submenu-item ">
                                         <a href="{{url('addallowance')}}" class='sidebar-link'>
@@ -643,9 +630,6 @@ font-family: 'Carter One';
                                     <span>System Setup</span>
                                 </a>
                             </li>
-
-
-
                             <!-- <li class="submenu-item has-sub " style="list-style:none;">
                                 <a id="sblm" href="{{url('client_invoicingindex')}}" class='sidebar-link'>
                                     <i class="fa fa-newspaper" id="icon"></i>
@@ -653,15 +637,7 @@ font-family: 'Carter One';
                                 </a>
                             </li> -->
 
-
-
-
                             <!-- CRA Dashboard End -->
-
-
-
-
-
 
                             {{-- @if (in_array(request()->path(), $accounts))
                                        <ul class="submenu" style="display: block;">
@@ -768,9 +744,6 @@ font-family: 'Carter One';
                                                 <span>Items</span>
                                             </a>
                                         </li>
-
-
-
                                         <!-- <li class="submenu-item ">
                                         <a href="{{url('view_request')}}" class=" sidebar-link">
                                             <span>Requested Items</span></a>
@@ -835,10 +808,6 @@ font-family: 'Carter One';
                                     <i class="" style="font-weight: 400;"></i>
                                     <span>Settings</span>
                                 </a>
-
-
-
-
 
                                 <ul class="submenu" style="display: none;">
                                     <!-- <li class="submenu-item  ">
@@ -1089,16 +1058,38 @@ font-family: 'Carter One';
 
 
             <div id="main">
-        <div class="container" style="height: 10px ; font-size:5px;"> 
-        <div class="row">
+
+<div class="container" style="height: 10px ; font-size:5px;"> 
+    <div class="row">
+
         <div class="col">
             <p id="demob"></p>
         </div>
 
-        </div>
-        </div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white" >
-        <a class="navbar-brand p-1" href="#">
+
+    </div>
+     </div>
+                <nav class="navbar navbar-expand-lg navbar-light bg-white" >
+
+
+                            {{-- <p id="daemo">This is a paragraph.</p>
+
+<button type="button" onclick="myaa()">Set font size</button>
+ 
+<script>
+
+var cont = document.getElementById("daemo");
+                      
+
+function myaa() {
+  document.getElementById("daemo").style.fontSize = "x-large";
+}
+</script> --}}
+             
+
+                    
+                    <a class="navbar-brand p-1" href="#">
+
                         <img src="{{asset('/') }}assets//images/Logo cra.png" width="40" height="40" alt="">
                       </a>
 
@@ -1183,15 +1174,6 @@ font-family: 'Carter One';
 
 
 
-
-
-
-
-
-
-
-
-
                 <script>
 
                         // {
@@ -1243,10 +1225,6 @@ font-family: 'Carter One';
 
                 </script>
 
-             
-    
-
-   
 
                 <a id="mi" type="button" onclick="hide()" class="nav-link" ><i class="fa fa-eye-slash"></i></a>
                 <a id="ni" type="button" onclick="hidea()" class="nav-link" ><i class="fa fa-eye"></i></a>
@@ -1288,12 +1266,6 @@ font-family: 'Carter One';
                                     btne.addEventListener("click", function () {
                                         parae.className = "bodyb";
                                     });
-
-
-
-
-
-                                    
 
                                     </script>
 
@@ -1524,25 +1496,7 @@ function search_animal() {
 
 
 
-
-
-
-
-
-
-
-
-
-
 {{-- nav 2 --}}
-
-
-
-
-
-
-
-
 
 
                 <nav class=" newstyle1 navbar navbar-expand-lg  sticky-top navbar-light bg-white">
@@ -1586,10 +1540,10 @@ function search_animal() {
                     </div>
       
                     <div class="nav-item dropdown m-1" style="position: relative; " >
-                        <button class=" dropdown-toggle-x btn p-1" style="font-size:12px;" href="#"
+                        <button class=" dropdown-toggle-x btn p-1"  href="#"
                             id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
-                            <b>Create New</b>
+                            Create New
                             <i class="fa fa-plus-square"></i>
                         </button>
 
@@ -1692,7 +1646,7 @@ function search_animal() {
 
 
 
-
+             
 
 
 

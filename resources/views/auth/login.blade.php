@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <!-- Mirrored from zuramai.github.io/mazer/demo/auth-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 14 Aug 2021 11:17:08 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
@@ -30,14 +29,13 @@
 
 <body style="background-color: rgb(245, 241, 234) ;">
 
-   
-    
-    <div id="auth">
-        <div class="row h-100" >
-     <div class="col-lg-6 " >
+    <div id="auth" >
+        <div class="row"  >
+     <div class="col-lg-6 " style="padding: 80px;" >
+        <div  style=" background-color:#ffffff; border-radius:30px; width:30rem; margin: auto">
         <div id="auth-left" >
             <div class="auth-logo " >
-                <img class="mx-auto d-block"  id="cr_logo" src="assets/images/Logo cra.png" alt="" style="width:45%;height:45%; ">
+                <img class="mx-auto d-block"  id="cr_logo" src="assets/images/Logo cra.png" alt="" style="width:6rem;height:6rem; ">
             </div>
 
             <div class="" style="text-align: center">   <h5 style="font-size: 200%" class="auth-title">Log in</h5>
@@ -65,7 +63,7 @@
                 </div>
 
 
-                <div class="form-group position-relative has-icon-left mb-4" >
+                <div class="form-group position-relative has-icon-left mb-3" >
                     <input id="password" type="password" class="form-control" placeholder="Password" name="password" required autocomplete="current-password">
 
                             
@@ -82,11 +80,11 @@
                     </label>
                 </div>
                 
-                 <button type="submit" class="btn btn-primary btn-block btn-lg  mt-4" style="margin: 0px; border: 1px solid #1D1D50;">
+                 <button type="submit" class="btn btn-primary btn-block btn-lg  mt-3" style="margin: 0px; border: 1px solid #1D1D50;">
                                     {{ __('Login') }}
                  </button>
             </form>
-            <div class="text-center mt-5 text-lg" style="font-size: 22px">
+            <div class="text-center mt-1 text-lg" style="font-size: 18px">
                 <p class="text-gray-600">Don't have an account? <br> <a href="auth-register.html" class="font-bold">Sign
                         up</a></p>
                 <p><a class="font-bold" href="auth-forgot-password.html">Forgot password?</a></p>
@@ -95,13 +93,12 @@
      </div>
         {{ Session::forget('errors')}}
 
-        
+    </div>
 
-
-        <div class="align-items-center col-lg-6  d-flex justify-content-center">
-            <div class="vl "></div>
+        <div class="align-items-center col-lg-6 d-flex justify-content-center" >
+            {{-- <div class="vl"></div> --}}
          
-              <img  id="auth-right" src="assets/images/bg/loginimage.jpg" style="border-radius: 50px; " class="  mx-auto d-block" alt="Responsive image">
+              <img  id="auth-right" src="assets/images/bg/loginimage.jpg" style="border-radius: 50px; " class="  mx-auto d-block" alt="Responsive image" >
 
             
         </div>

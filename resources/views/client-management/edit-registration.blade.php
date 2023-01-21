@@ -1,7 +1,6 @@
 @extends('layouts.hmsmain')
 @section('content')
 
-
 {{-- heading --}}
 <h4 id="hdtpa"><b>Edit Individual Customers</b></h4>
 <br>

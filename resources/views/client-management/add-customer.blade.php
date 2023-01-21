@@ -647,6 +647,7 @@ $(document).on('input', '#percent', function() {
                             script src = "{{ url('assets/js') }}/jquery.min.js" >
 </script>
 <script type="text/javascript">
+
 $(function() {
     $('[data-toggle="popover"]').popover()
 })
@@ -682,7 +683,6 @@ $(document).on('click', '#testing1', function() {
                                     //  alert(response.status);
                                     //},
 
-
                                     <
                                     div class = "col-md-4 col-lg-4" >
                                     <
@@ -691,7 +691,6 @@ $(document).on('click', '#testing1', function() {
                                     table class = "table table-bordered" >
                                     <
                                     tbody >
-
 
 
                                     <

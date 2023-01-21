@@ -82,10 +82,6 @@ color: #999;
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-   
-
-      
-
 <!-- 
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"> -->
@@ -145,8 +141,6 @@ color: #999;
     <div class="rows_count">Showing 11 to 20 of 100</div>
 
  <!-- 		End of Container -->
-
-
                 <div class="modal fade" id="myModal">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">

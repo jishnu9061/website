@@ -1050,7 +1050,13 @@ Route::any('add-corporate','ClientManagement@addCorporate')->name('add-corporate
 // Route::any('store-corporate','ClientManagement@storeCorporate')->name('store-corporate');
 Route::any('corporate-list','ClientManagement@listCorporate')->name('corporate-list');
 
+// Lawyer
 Route::any('asign-lawyer','ClientManagement@asignlawyer')->name('asign-lawyer');
+Route::any('add_lawyer','ClientManagement@add_lawyer')->name('add_lawyer');
+Route::any('edit_lawyer/{id}','ClientManagement@edit_lawyer')->name('edit_lawyer');
+Route::any('update_lawyer',"ClientManagement@update_lawyer")->name('update_lawyer');
+Route::any('view_lawyer/{id}','ClientManagement@view_lawyer')->name('view_lawyer');
+Route::any('/delete_lawyer/{id}','ClientManagement@delete_lawyer')->name('delete_lawyer');
 
 Route::any('/edit_client/{corporate_id}','ClientManagement@edit_corporate')->name('edit_client');
 Route::any('/update-corporate','ClientManagement@Update_corporate')->name('update-corporate');

@@ -7,7 +7,6 @@
    <div class="col-md-6 col-lg-6">
       <div class="container">
 
-     
          <div style="height: 15px;"></div>
          <h6 style="text-align: center;">{{$staffdata->name}}</h6> 
          <hr class="mb-4">

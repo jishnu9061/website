@@ -11740,7 +11740,7 @@ fieldset:disabled .btn {
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 7px;
     height: 1vh;
 
    

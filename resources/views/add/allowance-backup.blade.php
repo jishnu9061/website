@@ -1,19 +1,13 @@
 @extends('layouts.hmsmain')
 @section('content')
 
-
-
-
-
 <a href="#" class="edits" data-toggle="modal" id="patient" data-bs-toggle="modal"
                             data-bs-target="#default">View</a>
   <div class="modal fade text-left" id="default" tabindex="-1" role="dialog"
                             aria-labelledby="myModalLabel1" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-scrollable" role="document">
                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                     
-                                        
+                                    <div class="modal-header">                            
 
     <h5 class="modal-title bb" id="myModalLabel1">Patient Id : </h5>
                                        

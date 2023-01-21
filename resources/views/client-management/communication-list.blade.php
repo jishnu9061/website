@@ -2,8 +2,6 @@
 @section('content')
 
 {{-- <div class="spacer" style="height:40px;margin-top: 30px;"> --}}
-
-
 <html>
     <head>
     <style>

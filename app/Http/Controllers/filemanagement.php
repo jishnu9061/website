@@ -76,22 +76,9 @@ class filemanagement extends Controller
         $task=$request['task'];
         $status=$request['status'];
 
-        // $client=$request['client'];
-        // $email=$request['email'];
-        // $phone=$request['phone'];
-        // $address=$request['address'];
-        // $file_name=$request['file_name'];
-        // $open_date=$request['open_date'];
-        // $close_date=$request['close_date'];
-        // $comments=$request['comments'];
-        // $notifi_email=$request['email'];
-        // $con_phone=$request['phone'];
-        // $amount=$request['amount'];
-        // $task=$request['task'];
-        // $status=$request['status'];
+        
 
         DB::table('cra_open_new_file_details')->insert([
-            
             'assoc_handling' => $assoc_handling,
             'client' => $client,
             'email' => $email,
@@ -111,19 +98,7 @@ class filemanagement extends Controller
             'task' => $task,
             'status' => $status,
 
-            // 'client' => $client,
-            // 'email' => $email,
-            // 'phone' => $phone,
-            // 'address' => $address,
-            // 'file_name' => $file_name,
-            // 'open_date' => $open_date,
-            // 'close_date' => $close_date,
-            // 'comments' => $comments,
-            // 'notifi_email' => $notifi_email,
-            // 'con_phone' => $con_phone,
-            // 'amount' => $amount,
-            // 'task' => $task,
-            // 'status' => $status,
+       
 
         ]);
         return redirect('/file-list');
@@ -131,7 +106,7 @@ class filemanagement extends Controller
     public function update(Request $request)
     {
         $id =$request['id'];
-        $assoc_handling=$request['assoc_handling'];
+       $assoc_handling=$request['assoc_handling'];
         $client=$request['client'];
         $email=$request['email'];
         $phone=$request['phone'];
@@ -151,6 +126,9 @@ class filemanagement extends Controller
         $status=$request['status'];
 
         DB::table('cra_open_new_file_details')->where('id',$id)->update([
+
+
+
 
            
             'assoc_handling' => $assoc_handling,
@@ -213,7 +191,6 @@ class filemanagement extends Controller
     //manage files
     public function filearchive()
     {
-
         $file_progress_list = DB::table('cra_add_box')
       ->select('*')  
       ->leftjoin('cra_open_new_file_details','cra_add_box.id','=','cra_open_new_file_details.id')
@@ -680,9 +657,15 @@ class filemanagement extends Controller
     public function filelistprogressreport()
     {
 
-        $file_progress_list = DB::table('cra_open_new_file_details')->get();    
+       $file_progress_list = DB::table('cra_add_file_progress')
+        ->select('*')
+        ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_file_progress.id')
+        ->leftjoin('cra_open_new_file_details','cra_open_new_file_details.id','=','cra_add_file_progress.id')
+        ->get();
+ 
         
         
+
         return view ('file_management.file-list-progress-report',compact('file_progress_list'));
 
         // return view('file_management.file-list-progress-report');
@@ -1164,11 +1147,7 @@ class filemanagement extends Controller
        public function fileopenreport()
        {
 
-        $file_open_report=DB::table('cra_file_report')
-         ->select('*')
-         ->leftjoin('cra_add_file_progress','cra_add_file_progress.id','=','cra_file_report.id')
-         ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_file_report.id')
-         ->get();    
+        $file_open_report=DB::table('cra_open_new_file_details')->get();
         return view('file_management.file-opened-report',compact('file_open_report'));
 
         //    return view('file_management.file-opened-report');
@@ -1177,23 +1156,19 @@ class filemanagement extends Controller
        public function fileclosedreport()
        {
 
-        $file_close_report=DB::table('cra_file_report')
-         ->select('*')
-         ->leftjoin('cra_add_file_progress','cra_add_file_progress.id','=','cra_file_report.id')
-         ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_file_report.id')
-         ->get();    
+        $file_close_report=DB::table('cra_open_new_file_details')->get();    
+       
+         
         return view('file_management.file-closed-report',compact('file_close_report'));
 
-        //    return view('file_management.fsile-closed-report');
+       
        }
 
        public function filepending()
        {
-        $file_pending_closure=DB::table('cra_file_report')
-        ->select('*')
-        ->leftjoin('cra_add_file_progress','cra_add_file_progress.id','=','cra_file_report.id')
-        ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_file_report.id')
-        ->get();    
+        $file_pending_closure=DB::table('cra_open_new_file_details')->get();  
+      
+          
        return view('file_management.file-pending',compact('file_pending_closure'));
         //    return view('file_management.file-pending');
        }

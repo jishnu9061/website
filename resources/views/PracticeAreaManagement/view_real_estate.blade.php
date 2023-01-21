@@ -15,63 +15,63 @@
                     <tbody>
                         <tr>
                             <td scope="row">File No:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
 
                         </tr>
                         <tr>
                             <td scope="row">Client Name:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Matter Type:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Buyer:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Attorney:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Property Details:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
 
                         </tr>
                         <tr>
                             <td scope="row">Closing Statement:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Listing Realtor:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Selling Realtor:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Company Title:</td>
-                            <td><input class="form-control" type="text" aria-label="default input example" value=""
+                            <td type="text" aria-label="default input example" value=""
                                     Disabled>
                             </td>
                         </tr>

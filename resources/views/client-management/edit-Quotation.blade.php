@@ -16,7 +16,6 @@
                                     <label for="username">Document Type</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-        
                                         </div>
                                         <select name="document" id="cars">
                                             <option>{{ $edit_quotation->document_type }}</option>

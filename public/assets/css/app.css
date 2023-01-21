@@ -2147,7 +2147,7 @@ button, button
     /* background-image: linear-gradient(318deg, #3e699b, #1a3c62); */
     background-image: linear-gradient(#D5BD94, #f1d9b0); 
     bottom: 0;
-    transition: left 0.5s ease-out;
+    /* transition: left 0.5s ease-out; */
     font-size: small;
 }
 
@@ -2192,7 +2192,7 @@ button, button
     display: flex;
     align-items: center;
     border-radius:  2rem;
-    transition: all 0.5s;
+    /* transition: all 0.5s; */
     text-decoration: none;
     margin-bottom: 5px;
     color: #1D1D50;
@@ -2251,7 +2251,7 @@ button, button
 }
 
 .sidebar-wrapper .menu .sidebar-item.active .sidebar-link {
-    background-color: #519fff;
+    background-color: #051120;
 }
 
 .sidebar-wrapper .menu .sidebar-item.active .sidebar-link span {

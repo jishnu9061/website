@@ -42,7 +42,6 @@
         width: 70%;
         float: left;
     }
-
     .rows_count {
         width: 20%;
         float: right;

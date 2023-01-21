@@ -66,8 +66,6 @@
         <br>
 
 
-
-
         <div>
             <button type="button" class="btn btn-primary complaint_btn btn " data-toggle="modal"
                 data-target="#myModal">Register Customers</button></a>

@@ -118,15 +118,15 @@
                     <div class="col">
                         <div class="mb-3">
                             <label for="idnumber" class="form-label">ID Number</label>
-                            <input type="number" class="form-control" id="idnumber">
+                            <input type="number" name="id_number" class="form-control" id="idnumber">
                         </div>
                         <div class="mb-3">
                             <label for="currentsalary" class="form-label">Current Salary</label>
-                            <input type="number" class="form-control" id="currentsalary">
+                            <input type="number" name="current_salary" class="form-control" id="currentsalary">
                         </div>
                         <div class="mb-3">
                             <label for="Default select example" class="form-label">Department</label>
-                            <select class="form-select" aria-label="Default select example">
+                            <select class="form-select" name="department" aria-label="Default select example">
                                 <option selected>--- select ---</option>
                                 <option value="1">HR</option>
                                 <option value="2">Legal</option>
@@ -137,21 +137,21 @@
                     <div class="col">
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name">
+                            <input type="text" name="name" class="form-control" id="name">
                         </div>
                         <div class="mb-3">
                             <label for="reviewperiodfrom" class="form-label">Review Period From</label>
-                            <input type="date" class="form-control" id="reviewperiodfrom">
+                            <input type="date" name="review_from" class="form-control" id="reviewperiodfrom">
                         </div>
                     </div>
                     <div class="col">
                         <div class="mb-3">
                             <label for="currentdesignation" class="form-label">Current Designation</label>
-                            <input type="text" class="form-control" id="currentdesignation">
+                            <input type="text" name="current_designation" class="form-control" id="currentdesignation">
                         </div>
                         <div class="mb-3">
                             <label for="reviewperiodto" class="form-label">Review Period To</label>
-                            <input type="date" class="form-control" id="reviewperiodto">
+                            <input type="date" name="review_to" class="form-control" id="reviewperiodto">
                         </div>
                     </div>
                 </div>
