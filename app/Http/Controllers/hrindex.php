@@ -73,7 +73,7 @@ public function job_posts()
         $end_date=$request['end_date'];
         $job_description=$request['job_description'];
         $job_responsibilities=$request['job_responsibilities'];
-        
+
 
 
         DB::table('cra_hr_create_post')->insert([
@@ -336,10 +336,10 @@ public function edit_task_allocation()
 //Subhasree
 public function leave_request()
 {
-    // $name_list = DB::table('users')->get();
+    $name_list = DB::table('users')->get();
 
-    // $leave_request=DB::table('cra_leave_request_details')->get();
-    // return view('hr.leave_request_details',compact('leave_request','name_list'));
+    $leave_request=DB::table('cra_leave_request_details')->get();
+    return view('hr.leave_request_details',compact('leave_request','name_list'));
 
 
     // $department_list = DB::table('cra_manage_user_department')->get();
@@ -347,14 +347,22 @@ public function leave_request()
     // $leave_request=DB::table('cra_leave_request_details')->get();
     // return view('hr.leave_request_details',compact('leave_request','department_list'));
 
-    $leave_request = DB::table('users')
-    ->Select ('*') 
-    ->leftjoin('users','users.name','=','cra_leave_request_details.name')
-    ->leftjoin('cra_manage_user_department','cra_manage_user_department.department_name','=','cra_leave_request_details.department')
-    ->get();
-        dd($leave_request);
-    return view ('hr.leave_request_details',compact('leave_request'));
-   
+    // $leave_request = DB::table('users')
+    // ->Select ('*')
+    // ->leftjoin('users','users.name','=','cra_leave_request_details.name')
+    // ->leftjoin('cra_manage_user_department','cra_manage_user_department.department_name','=','cra_leave_request_details.department')
+    // ->get();
+    //     dd($leave_request);
+    // return view ('hr.leave_request_details',compact('leave_request'));
+
+    // $leave_request = DB::table('cra_leave_request_details')
+    // ->Select ('name' , 'department_name')
+    // ->from('users')
+    // ->leftjoin('cra_manage_user_department', 'users.name', '=' ,'cra_manage_user_department.department_name')
+    // ->get();
+
+    // return view ('hr.leave_request_details',compact('leave_request'));
+
 }
 
 
