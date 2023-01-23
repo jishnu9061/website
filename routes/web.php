@@ -1045,7 +1045,7 @@ Route::any('add-corporate','ClientManagement@addCorporate')->name('add-corporate
 // Route::any('store-corporate','ClientManagement@storeCorporate')->name('store-corporate');
 Route::any('corporate-list','ClientManagement@listCorporate')->name('corporate-list');
 
-// Lawyer
+// Lawyernt
 Route::any('asign-lawyer','ClientManagement@asignlawyer')->name('asign-lawyer');
 Route::any('add_lawyer','ClientManagement@add_lawyer')->name('add_lawyer');
 Route::any('edit_lawyer/{id}','ClientManagement@edit_lawyer')->name('edit_lawyer');

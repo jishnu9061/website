@@ -21,9 +21,9 @@ class ClientManagement extends Controller
     }
 
 
-  
+
     public function view(){
-        
+
         $client_list = DB::table('cra_individual_client_details')->get();
         return view('client-management.client-list',compact('client_list'));
     }
@@ -34,19 +34,19 @@ class ClientManagement extends Controller
     {
         $asign_lawyer = DB::table('cra_asign_lawyer')->get();
         return view('client-management.Asign lawyer',compact('asign_lawyer'));
-        
-     
+
+
     }
     public function add_lawyer(Request $Request)
     {
-    
+
         $client_number = $Request['client_number'];
         $client_type  = $Request['client_type '];
         $client_name  = $Request['client_name '];
         $file_number  = $Request['file_number'];
         $lawyer_name = $Request['lawyer_name'];
         $court_name = $Request['court_name'];
-    
+
         DB::table('cra_asign_lawyer')->insert([
             'client_number' => $client_number,
             'client_type' => $client_type ,
@@ -54,13 +54,13 @@ class ClientManagement extends Controller
             'file_number' => $file_number,
             'lawyer_name' => $lawyer_name,
             'court_name' => $court_name,
-           
+
         ]);
         return redirect('/asign-lawyer');
-    
+
     }
 
-    
+
     public function edit_lawyer($id)
     {
         $asign_lawyer = DB::table('cra_asign_lawyer')->where('id',$id)->first();
@@ -68,8 +68,8 @@ class ClientManagement extends Controller
 
     }
     public function update_lawyer(Request $Request)
-    {  
-        $id = $Request['id']; 
+    {
+        $id = $Request['id'];
         $client_number = $Request['client_number'];
         $client_type = $Request['client_type '];
         $client_name = $Request['client_name '];
@@ -88,18 +88,18 @@ class ClientManagement extends Controller
             'court_name' => $court_name,
         );
         DB::table('cra_asign_lawyer')->where('id', $id)->update($update_lawyer );
-        
+
        return redirect('/asign-lawyer');
             }
-    
+
     public function view_lawyer($id)
     {
         $asign_lawyer = DB::table('cra_asign_lawyer')->where('id',$id)->first();
         return view('client-management.view_lawyer', compact('asign_lawyer' ,'id'));
 
-       
+
     }
-    
+
     public function delete_lawyer($id)
     {
         DB::table('cra_asign_lawyer')->where('id',$id)->delete();
@@ -149,7 +149,7 @@ class ClientManagement extends Controller
         $physical_address = $Request['physical'];
         $Notes = $Request['notes'];
 
-        
+
         DB::table('cra_individual_client_details')->insert([
             'client_number' => $number,
             'client_type' =>  $client_type,
@@ -177,7 +177,7 @@ class ClientManagement extends Controller
         DB::table('cra_mixed_table')->insertGetId([
             'client_name' =>    $client_name,
         ]);
-        
+
         return redirect('/client_list');
     }
 
@@ -202,7 +202,7 @@ class ClientManagement extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {   
+    {
         $client_individual = DB::table('cra_individual_client_details')->where('id',$id)->first();
         return view('client-management.view-client',compact('client_individual','id'));
     }
@@ -252,7 +252,7 @@ class ClientManagement extends Controller
         $physical_address = $Request['physical'];
         $Notes = $Request['notes'];
 
-         
+
         DB::table('cra_individual_client_details')->where('id',$id)->update([
             'client_number' => $number,
             'client_type' =>  $client_type,
@@ -292,32 +292,32 @@ class ClientManagement extends Controller
         return redirect('/client_list');
     }
 
-    
-    
+
+
 
     //complaint
 
-    
+
     //end complaint
-   
+
 
     //communication
 
-   
+
     //end communication
      //client-Search
 
-   
+
     public function registerClient(){
         return view('client-management.register-client');
     }
 
-  
+
 
   //end client-search
 
   public function addCorporate(Request $Request){
-  
+
     $number = $Request['number'];
     $client_type = $Request['type'];
     $citizen_status = $Request['citizen'];
@@ -376,7 +376,7 @@ class ClientManagement extends Controller
         'client_name' =>    $client_name,
     ]);
 
-    return redirect("/corporate-list"); 
+    return redirect("/corporate-list");
 
     }
 
@@ -385,14 +385,14 @@ class ClientManagement extends Controller
         return view('client-management.corporate-document',compact('corporate_docs','corporate_id'));
     }
 
-    
+
     public function viewCorporateDocument($corporate_id){
 
         $view_corporate_document = DB::table('cra_document_detials')
         ->join('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_document_detials.corporate_id')
         ->where('cra_document_detials.corporate_id',$corporate_id)
         ->get();
-       
+
         return view('client-management.corporate-document-detail',compact('view_corporate_document','corporate_id'));
     }
 
@@ -401,16 +401,16 @@ class ClientManagement extends Controller
             return view('client-management.edit-corporate-document',compact('edit_corporate_document','id'));
     }
 
-   
+
 
     public function addCorporatedocument(Request $request){
-       
+
        $testname    = count($request->input('testname'));
        $insertdoc   = [];
 
 
        for($i = 0; $i < $testname; $i++){
-         
+
         $file = $request->file('file')[$i];
 
         if(request()->hasfile('file')){
@@ -556,14 +556,15 @@ class ClientManagement extends Controller
     //end corporate_client
 
 //document
-    
-        
+
+
     public function document(){
         $client_document = DB::table('cra_individual_client_details')
         ->select('*')
         ->join('cra_document_detials','cra_document_detials.individual_id','=','cra_individual_client_details.id')
         ->get();
-       
+        dd($client_document);
+
         return view('client-management.client-document',compact('client_document'));
     }
 
@@ -578,9 +579,9 @@ class ClientManagement extends Controller
         $testname = count($request->input('testname'));
         $insertdoc   = [];
 
-       
 
-       
+
+
         for($i = 0; $i < $testname; $i++){
 
             $file = $request->file('file')[$i];
@@ -604,14 +605,14 @@ class ClientManagement extends Controller
         }
 
         DB::table('cra_document_detials')->insert($insertdoc);
-        
+
         return redirect('/client_list');
 
     }
 
 
     public function viewDocument($id){
-        $view_document = DB::table('cra_document_detials')->where('id',$id)->first();  
+        $view_document = DB::table('cra_document_detials')->where('id',$id)->first();
         return view('client-management.view-document',compact('view_document','id'));
     }
 
@@ -627,7 +628,7 @@ class ClientManagement extends Controller
         $client_type =  $Request['client'];
         $file = $Request['file'];
 
-        
+
         if (request()->hasFile('file')){
             $uploadedImage = $Request->file('file');
             $imageName = time() . '.' . $file->getClientOriginalExtension();
@@ -636,23 +637,23 @@ class ClientManagement extends Controller
             $file->file = $destinationPath . $imageName;
         }
 
-        
+
         DB::table('cra_document_detials')->where('id',$id)->update([
 
             'document_type' =>  $document_type,
             'file' =>   $imageName,
-            'client_types' =>$client_type, 
+            'client_types' =>$client_type,
         ]);
         return redirect('/client-document');
     }
 
     public function showcorporatedocument($id){
-      $view_document = DB::table('cra_document_detials')->where('id',$id)->first();  
+      $view_document = DB::table('cra_document_detials')->where('id',$id)->first();
        return view('client-management.view_corporate_document',compact('view_document','id'));
    }
 
     public function deleteDocument($id){
-        DB::table('cra_document_detials')->where('id',$id)->delete();  
+        DB::table('cra_document_detials')->where('id',$id)->delete();
         return redirect('/corporate-list');
     }
 
@@ -759,7 +760,7 @@ class ClientManagement extends Controller
         return view('client-management.edit-complaint',compact('edit_complaint','id'));
     }
 
-    public function updateComplaint(Request $Request){   
+    public function updateComplaint(Request $Request){
         $id   = $Request['id'];
         $date = $Request['date'];
         $client_type = $Request['type'];
@@ -810,7 +811,7 @@ class ClientManagement extends Controller
     }
 
     public function addFollowup(Request $Request){
-        
+
         $followup_date = $Request['date'];
         $client = $Request['client'];
         $followup_type = $Request['type'];
@@ -821,7 +822,7 @@ class ClientManagement extends Controller
         $email = $Request['email'];
         $registered_by = $Request['Registered'];
         $description = $Request['description'];
-        
+
         DB::table('cra_customer_followup')->insert([
             'followup_date' => $followup_date ,
             'customer' =>  $client,
@@ -856,7 +857,7 @@ class ClientManagement extends Controller
         $email = $Request['email'];
         $registered_by = $Request['Registered'];
         $description = $Request['description'];
-        
+
         DB::table('cra_customer_followup')->where('id',$id)->update([
             'followup_date' => $followup_date ,
             'customer' => $customer ,
@@ -960,7 +961,7 @@ class ClientManagement extends Controller
 
 
     public function addQuotation(Request $Request){
-        
+
         $document_type = $Request['document'];
         $issue_date = $Request['issue'];
         $customer = $Request['client'];
@@ -1045,7 +1046,7 @@ class ClientManagement extends Controller
         ]);
         return redirect('/Quotation');
     }
-    
+
     public function deleteQuotation($id){
         $edit_quotation = DB::table('cra_customer_quotation')->where('id',$id)->delete();
         return redirect('/Quotation');
@@ -1096,11 +1097,11 @@ class ClientManagement extends Controller
             'action_plan' =>  $action_plan,
         ]);
 
-        
+
         return redirect('communication-list');
     }
 
-    
+
     public function indexCommunication(){
         return view('client-management.add-communication');
     }
@@ -1129,7 +1130,7 @@ class ClientManagement extends Controller
         $communicated_description = $Request['Description'];
         $action_plan = $Request['Action'];
 
-        
+
         DB::table('cra_conversations')->where('id',$id)->update([
             'communication_date' => $communication_date,
             'client' =>   $client,
@@ -1156,7 +1157,7 @@ class ClientManagement extends Controller
         return redirect('/communication-list');
     }
 
-   
+
     //end communication
 
      //client-Search
@@ -1190,7 +1191,7 @@ class ClientManagement extends Controller
 
   //end client-search
 
-   
 
-   
+
+
 }
