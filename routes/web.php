@@ -1335,6 +1335,7 @@ Route::any('/edit_staff_details/{id}','hrindex@edit_staff_details')->name('edit_
 Route::any('/view_staff_details/{id}','hrindex@view_staff_details')->name('view_staff_details');
 
 //reshma
+Route::any('hr_department','hrindex@hrdepartment')->name('hr_department');
 Route::any('performance_department','hrindex@performance_department')->name('performance_department');
 Route::any('job_posts','hrindex@job_posts')->name('job_posts');
 Route::any('edit_job_post/{id}','hrindex@edit_job_post')->name('edit_job_post');

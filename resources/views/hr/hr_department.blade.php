@@ -16,8 +16,8 @@
     
   
   <div class="row sm">
-    @foreach($departments as $department)
-    <div class="col-sm-4 " ><a href="{{ url('hr_department') }}"><img class="logo_size"src="assets\image\Bring up report.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" >{{ $department->department_name }}</button></a></div>
+    @foreach($roles as $role)
+    <div class="col-sm-4 " ><a href="{{ url('quarterly_performance_form') }}"><img class="logo_size"src="assets\image\Bring up report.png" alt=""><button type="button" style="width:70%;" class="btn btn-primary btn_align_btn" >{{ $role->role_name }}</button></a></div>
     @endforeach
   </div>
 
