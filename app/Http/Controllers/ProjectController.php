@@ -13,5 +13,7 @@ class ProjectController extends Controller
     {
     	Excel::import(new ProjectsImport,request()->file('file'));
     	return back()->with('success','project created successfully');
+        // return Excel::download(new ProjectsImport($row),'attendance.xlsx');
+
     }
 }
