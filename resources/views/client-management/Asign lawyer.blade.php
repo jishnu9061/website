@@ -3,7 +3,7 @@
 
 {{-- <div class="spacer" style="height:40px;margin-top: 30px;"> --}}
 
-    <h4 id="hdtpa"><b>Asign Lawyer</b></h4>
+    <h4 id="hdtpa"><b>Assign Lawyer</b></h4>
 
 
 
