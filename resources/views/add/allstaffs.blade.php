@@ -90,7 +90,6 @@
                         <th>User Id</th>
                         <th>Name</th>
                         <th>Email</th>
-                        <th>Phone</th>
                         <th>Action</th>
 
                     </tr>
@@ -100,9 +99,8 @@
                         <tr class="text-center">
                             <input id="t_id" type="hidden" value="{{ $alluser->id }}">
                             <td>{{ $alluser->uniqueid }}</td>
-                            <td>{{ $alluser->name }}</td>
+                            <td>{{ $alluser->username }}</td>
                             <td>{{ $alluser->email }}</td>
-                            <td>{{ $alluser->phone }}</td>
                             <td>
                                 <a href="{{ url('view_staff_details', $alluser->id) }}"> <i
                                         style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-1"></span>
