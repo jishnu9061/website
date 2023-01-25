@@ -4,15 +4,8 @@
 {{-- <div class="spacer" style="height:40px;margin-top: 30px;"> --}}
 
     <h4 id="hdtpa"><b>Assign Lawyer</b></h4>
-
-
-
 <br><br>
-
-
 <button class="btn btn-primary add-btn" data-toggle="modal" data-target="#myModal">Add Client</button></a>
-
-
 
 <div class="header_wrap">
     <div class="num_rows">
@@ -36,8 +29,6 @@
         <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.."
             class="form-control">
     </div>
-
-
 
     <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -71,7 +62,7 @@
                             <td scope="row" class="text-center" id="">{{$lawyer->file_number}}</td>
                             <td scope="row" class="text-center" id="">{{$lawyer->lawyer_name}}</td>
                             <td scope="row" class="text-center" id="">{{$lawyer->court_name}}</td>
-                            
+
 
                             {{-- <td scope="row" class="text-center">
                                 <a href="{{url('view-client')}}">
@@ -198,7 +189,7 @@
                                                     </div>
                                                 </div>
 
-                                               
+
 
 
 
