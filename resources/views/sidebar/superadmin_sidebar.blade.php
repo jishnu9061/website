@@ -21,7 +21,7 @@
                 <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
                         <i id="icon" class="fa-regular fa-user"  style="font-weight: 300;"></i>
-                            <span>Management company</span>
+                            <span>Manage company</span>
                     </a>
                     @php
                         $admin = array("company_list", "Add_company",);
