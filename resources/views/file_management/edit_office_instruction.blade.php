@@ -1,5 +1,10 @@
 @extends('layouts.hmsmain')
 @section('content')
+<nav style="font-size:12px;">
+      <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+      <a href="#" style="color: #1D1D50;">File Management-Edit Office Instruction</a>
+</nav>
+
 <div class="container">
     <div class="py-5 text-center">
         @if(Session::has('staffregistered'))

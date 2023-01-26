@@ -1,5 +1,10 @@
 @extends('layouts.hmsmain')
 @section('content')
+<nav style="font-size:12px;">
+      <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+      <a href="#" style="color: #1D1D50;">Store & Inventory-Edit Items</a>
+</nav>
+<br><br>
 
 <div class="container">
     <h4 id="hdtpa"><b>Edit Items</b></h4>
