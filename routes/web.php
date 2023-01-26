@@ -25,21 +25,16 @@ Auth::routes();
 //superadmin
 Route::get('/superadminhome', "superadminController@index")->name('superadminhome');
 Route::any('company_list', "superadminController@show_company_list")->name('company_list');
+Route::post('reg_company', "superadminController@reg_company")->name('reg_company');
+Route::get('/changestatus_com', "superadminController@changestatus_company")->name('changestatus_com');
+
 //superadmin
 
-Route::get('/', 'HomeController@index')->name('home');
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/admin', 'HomeController@index')->name('home');
-Route::get('/hr', 'HomeController@hr')->name('hr');
-Route::get('/pharmacy', 'HomeController@pharmacy')->name('pharmacy');
-Route::get('/doctor', 'HomeController@doctor')->name('doctor');
-Route::get('/nurse', 'HomeController@nurse')->name('nurse');
-Route::get('/counter', 'HomeController@counter')->name('counter');
-Route::get('/store', 'HomeController@store')->name('store');
-Route::get('/casuality', 'HomeController@casuality')->name('casuality');
-Route::get('/lab', 'HomeController@lab')->name('lab');
-Route::get('/admindashboard', 'homeController@admindashboard')->name('admindashboard');
-Route::get('/logt', 'HomeController@logout')->name('home');
+Route::get('/', 'homecontroller@index')->name('home');
+Route::get('/home', 'homecontroller@index')->name('home');
+Route::get('/admin', 'homecontroller@index')->name('home');
+Route::get('/admindashboard', 'homecontroller@admindashboard')->name('admindashboard');
+Route::get('/logt', 'homecontroller@logout')->name('home');
 Route::any('/patientregistration', 'patientcontroller@patientregistration')->name('allpatients');
 Route::any('/getdepartmentdoctor', 'patientcontroller@getdepartmentdoctor')->name('getdepartmentdoctor');
 Route::post('/addpatient', 'patientcontroller@addpatient')->name('addpatient');

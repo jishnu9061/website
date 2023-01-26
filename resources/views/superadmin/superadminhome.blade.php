@@ -21,7 +21,7 @@
                                 </div>
                                 <div class="col-md-8" style="padding-left:1px;">
                                     <h5 class=" font-semibold">Total Companies</h5>
-                                    <h6 class="font-extrabold mb-0">0</h6>
+                                    <h6 class="font-extrabold mb-0">{{ $total }}</h6>
                                 </div>
                             </div>
                         </div>
@@ -38,7 +38,7 @@
                                 </div>
                                 <div class="col-md-8" style="padding-left:1px;">
                                     <h5 class="font-semibold" style="color: #15144d;">Active Companies</h5>
-                                    <h6 class="font-extrabold mb-0">0</h6>
+                                    <h6 class="font-extrabold mb-0">{{ $active }}</h6>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
                                 </div>
                                 <div class="col-md-8" style="padding-left:1px;">
                                     <h5 class="text-muted font-semibold">Inactive Companies</h5>
-                                    <h6 class="text-muted font-extrabold mb-0">0</h6>
+                                    <h6 class="text-muted font-extrabold mb-0">{{ $inactive }}</h6>
                                 </div>
                             </div>
                         </div>

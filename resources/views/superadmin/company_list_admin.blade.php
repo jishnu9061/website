@@ -55,6 +55,68 @@
             color: rgba(0, 0, 0, 0)
             }
         </style>
+        <style>
+            .switch {
+              position: relative;
+              display: inline-block;
+              width: 50px;
+              height: 20px;
+            }
+            
+            .switch input { 
+              opacity: 0;
+              width: 0;
+              height: 0;
+            }
+            
+            .slider {
+              position: absolute;
+              cursor: pointer;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: #6c757d;
+              -webkit-transition: .4s;
+              transition: .4s;
+            }
+            
+            .slider:before {
+              position: absolute;
+              content: "";
+              height: 15px;
+              width: 15px;
+              left: 4px;
+              bottom: 2.5px;
+              background-color: white;
+              -webkit-transition: .4s;
+              transition: .4s;
+            }
+            
+            .check:checked + .slider {
+              background-color: #1d1d50;
+            }
+            
+            .check:focus + .slider {
+              box-shadow: 0 0 1px #1d1d50;
+            }
+            
+            .check:checked + .slider:before {
+              -webkit-transform: translateX(26px);
+              -ms-transform: translateX(26px);
+              transform: translateX(26px);
+            }
+            
+            /* Rounded sliders */
+            .slider.round {
+              border-radius: 34px;
+            }
+            
+            .slider.round:before {
+              border-radius: 50%;
+            }
+            </style>
+         
         <div class="container" >
         {{-- heading --}}
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
@@ -105,6 +167,7 @@
                             <thead>
                                 <tr>
                                     <th class="text-center" style="width:4%;">Sl.No</th>
+                                    <th class="text-center" style="width:4%;">UniqueId</th>
                                     <th class="text-center" >Company Name</th>
                                     <th class="text-center" >Users</th>
                                     <th class="text-center" >City/state</th>
@@ -113,19 +176,24 @@
                                     <th class="text-center" >Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                @foreach ($user_list as $list)
+                            <tbody><?php $i=0; ?>
+                                @foreach ($user_list as $user )
+                                    <?php  $i++; ?>
                                     <tr>
-                                        <td class="text-center"></td>
-                                        <td class="text-center"></td>
-                                        <td class="text-center"></td>
-                                        <td class="text-center"></td>
-                                        <td class="text-center"></td>
-                                        <td class="text-center"></td>
+                                        <td class="text-center">{{ $i }}</td>
+                                        <td class="text-center">{{ $user->uniqueid }}</td>
+                                        <td class="text-center">{{ $user->company_name }}</td>
+                                        <td class="text-center">{{ $user->users_name }}</td>
+                                        <td class="text-center">{{ $user->city }}</td>
+                                        <td class="text-center"><i>U/C..</i></td>
+                                        <td class="text-center"><label class="switch">
+                                            <input type="checkbox" data-id="{{ $user->uniqueid }}" id="status" onclick="myFunction()" class="check" {{ $user->status == 1 ? 'checked' : '' }}>
+                                            <span class="slider round"></span>
+                                          </label>
                                         <td  scope="row"class="text-center">
-                                            <a href="{{url('user_edit',$list->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                                            <a href="user_comments"><i  style="  color:rgb(13, 1, 56);" class="fas fa-comment" aria-hidden="true"></i>
-                                            <a href="{{url('user_destroy',$list->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
+                                            <a href="{{url('user_edit',$user->company_id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                                            {{-- <a href="user_comments"><i  style="  color:rgb(13, 1, 56);" class="fas fa-comment" aria-hidden="true"></i> --}}
+                                            <a href="{{url('user_destroy',$user->company_id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -144,6 +212,7 @@
                 </div>
             </div>    
             </div>
+            <p id="demo">sfdsf</p>
         </div>
         <!-- 		End of Container -->
         <div class="modal fade" id="myModal" style="">
@@ -176,7 +245,7 @@
                         <div class="modal-body" >
                             <div class="container">
                                 
-    <!---------------------------------------------- MODAL ---------------------------------------------------------------------->      
+            <!---------------------------------------------- MODAL ---------------------------------------------------------------------->      
                                     
                                     <div class="row"><h6><b><span>Enter Company Details:-</span></b></h6> </div>
                                     <div class="row">
@@ -232,27 +301,9 @@
                                         </div>
                                     </div>
                                     <br>
-                                    <div class="row"><h6><b><span>Enter proprietor Details:-</span></b></h6> </div>
+                                    <div class="row"><h6><b><span>Enter Admin Details:-</span></b></h6> </div>
                                     <div class="row">
-                                        <div class="" style="width: 35%">
-                                            <div class=""><span style="color: red">*</span>
-                                                <label for="username" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">First Name</label>
-                                                <input type="text" placeholder="Enter First Name " style="width=45%" class="form-control" name="first_name" id="" value=""required>
-                                                <div class="invalid-feedback" style="width: 100%;">
-                                                    First Name is required.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="" style="width: 35%">
-                                            <div class=""><span style="color: red">*</span>
-                                                <label for="company_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Last Name</label>
-                                                <input type="text" placeholder="Enter Last Name " style="width=45%" class="form-control" name="last_name" id="" value=""required>
-                                                <div class="invalid-feedback" style="width: 100%;">
-                                                    Last Name is required.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="" style="width: 30%">
+                                        <div class="" style="width: 40%">
                                             <div class=""><span style="color: red">*</span>
                                                 <label for="company_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">User Name</label>
                                                 <input type="text" placeholder="Enter User Name " style="width=45%" class="form-control" name="username" id="" value=""required>
@@ -261,9 +312,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="" style="width: 35%">
+                                        <div class="" style="width: 40%">
                                             <div class=""><span style="color: red">*</span>
                                                 <label for="username" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Email </label>
                                                 <input type="email" placeholder="Enter Email " style="width=45%" class="form-control" name="email" id="" value="@"required>
@@ -272,7 +321,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="" style="width: 35%">
+                                    </div>
+                                    <div class="row">
+                                        <div class="" style="width: 40%">
                                             <div class=""><span style="color: red">*</span>
                                                 <label for="company_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Password</label>
                                                 <input type="password" placeholder="Password" style="width=45%" class="form-control" name="password" id="" value=""required>
@@ -281,7 +332,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="" style="width: 30%">
+                                        <div class="" style="width: 40%">
                                             <div class=""><span style="color: red">*</span>
                                                 <label for="company_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Comform Password</label>
                                                 <input type="password" placeholder="Comform Password" style="width=45%" class="form-control" name="password_1" id="" value=""required>
@@ -297,7 +348,7 @@
                                         <div class="col-sm"></div>
                                         <div class="col-sm" style="padding-right: 0px;">
                                             <br>
-                                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
+                                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Create</button>
                                             <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
                                         </div>
                                     </div>
@@ -306,5 +357,5 @@
                         </div>
                 </div>
             </div>
-        </div>                     
+        </div>
     @endsection
