@@ -25,6 +25,12 @@ class superadminController extends Controller
         $inactive = DB::table('company_details')->where('status',0)->count()??0;
         return view('superadmin.superadminhome',compact('total','active','inactive'));
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function show_company_list()
     {
         
@@ -60,6 +66,13 @@ class superadminController extends Controller
     public function reg_company(Request $request)
     {
         $pass = Hash::make($request->password);
+        if($request->hasfile('com_logo')){
+            $com_logo = $request->com_logo;
+            $com_logoname = time() . '.' . $com_logo->getClientOriginalExtension();
+            $com_logo->move(public_path('\images\logo'),$com_logoname);
+        }else{
+            $com_logoname = '';
+        };
         $company=DB::table('company_details')->insertGetId([
             'company_name' =>$request->company_name,
             'company_type' =>$request->company_type,
@@ -68,6 +81,7 @@ class superadminController extends Controller
             'postal_code' =>$request->postal_code,
             'GSTin' =>$request->GSTin,
             'status' =>1,
+            'company_logo'=>$com_logoname,
             'created_at'=>date('Y-m-d H:i:s'),
         ]);
         $role=sprintf("%02d",2);
@@ -99,10 +113,11 @@ class superadminController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * change status of company.
      *
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
+     * @author udayan <arockiaudayan@gmail.com>
      */
     public function changestatus_company(Request $request)
     {
@@ -130,14 +145,31 @@ class superadminController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the company.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
+     * @author udayan <arockiaudayan@gmail.com>
      */
-    public function edit($id)
+    public function edit_company($id)
     {
-        //
+        $user_edit = DB::table('company_details')->where('company_details.uniqueid', $id)
+            ->leftJoin('users', 'users.uniqueid', 'company_details.uniqueid')
+        ->select('company_details.company_name as company_name',
+        'company_details.address as address',
+        'company_details.city as city',
+        'company_details.company_website as company_website',
+        'company_details.company_type as company_type',
+        'company_details.postal_code as postal_code',
+        'company_details.GSTin as GSTin',
+        'company_details.company_logo as company_logo',
+        'users.username as users_name',
+        'users.email as email',
+        'users.password as password',
+        'users.photo_path as photo_path'
+        )->first();
+        $edit = [];
+        return view('superadmin.company_edit',compact('user_edit','id','edit'));
     }
 
     /**
