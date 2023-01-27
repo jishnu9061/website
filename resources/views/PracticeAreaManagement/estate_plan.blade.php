@@ -3,7 +3,7 @@
 
 {{-- heading --}}
 
-<h4 id="hdtpa"><b>Estate Planing</b></h4>
+<h4 id="hdtpa"><b>Estate Planning</b></h4>
 <br>
 
 <input class="btn btn-primary" type="button" value="Add New Matter" data-toggle="modal" data-target="#myModal">

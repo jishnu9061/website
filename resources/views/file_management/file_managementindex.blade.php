@@ -139,7 +139,7 @@
                                 class="btn btn-primary btn_align_btn">Outgoing Letters</button></a></div>
                     <div class="col-sm-4"> <a href="{{ url('incomming-letters') }}"><img class="logo_size"
                                 src="assets\image\Incomming Letters.png" alt=""><button type="button" style="width:70%;"
-                                class="btn btn-primary btn_align_btn">Incomming Letters</button></a></div>
+                                class="btn btn-primary btn_align_btn">Incoming Letters</button></a></div>
                     <div class="col-sm-4"> <a href="{{ url('safe-register-report') }}"><img class="logo_size"
                                 src="assets\image\safe register report.png" alt=""><button type="button" style="width:70%;"
                                 class="btn btn-primary btn_align_btn">Safe Register Report</button></a></div>

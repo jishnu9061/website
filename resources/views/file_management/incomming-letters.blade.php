@@ -9,15 +9,15 @@
 {{-- heading --}}
 <div class="container">
 
-    <h4 id="hdtpa"><b>Clients Incomming Letters</b></h4>
+    <h4 id="hdtpa"><b>Clients Incoming Letters</b></h4>
 
 
     <br>
 
     <!-- <a href="{{url('add-incomming-letters')}}"><button class="btn btn-primary add-btn"
-                style="width: 20%;">Add Incomming Letter</button></a> -->
+                style="width: 20%;">Add Incoming Letter</button></a> -->
     {{-- <a href="{{('add-corporate')}}"><button class="btn btn-primary">Add Incomming Letter</button></a> --}}
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Incomming
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Incoming
         Letter</button>
     <br>
 
@@ -117,7 +117,7 @@
 
                             <!-- Modal Header -->
                             <div class="modal-header">
-                                <h2 class="text-center"><b>Add Incomming Letter</b></h2>
+                                <h2 class="text-center"><b>Add Incoming Letter</b></h2>
 
                             </div>
 
