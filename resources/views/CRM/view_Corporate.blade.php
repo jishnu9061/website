@@ -2,13 +2,13 @@
 @section('content')
 
 <style>
-th{ 
+th{
     width:30%;
 }
 </style>
 
 <div class="container">
-    <h4 id="hdtpa"><b>{{$view_corporates->Name}}</b></h4>
+    <h4 id="hdtpa"><b>Corporate Customer Details</b></h4>
     <br><br>
 
     <form>
@@ -54,44 +54,32 @@ th{
                         <td>{{$view_corporates->Web}}</td>
                     </tr>
                     <tr>
-                        <th>Country :</th>
-                        <td>{{$view_corporates->Country}}</td>
-                    </tr>
-                    <tr>
-                        <th>State :</th>
-                        <td>{{$view_corporates->State}}</td>
-                    </tr>
-                    <tr>
-                        <th>City :</th>
-                        <td>{{$view_corporates->City}}</td>
-                    </tr>
-                    <tr>
-                        <th>Town :</th>
-                        <td>{{$view_corporates->Town}}</td>
+                        <th>Address :</th>
+                        <td>{{$view_corporates->Address}}</td>
                     </tr>
                     <tr>
                         <th>Post Code :</th>
                         <td>{{$view_corporates->Post_Code}}</td>
                     </tr>
                     <tr>
-                        <th>Address :</th>
-                        <td>{{$view_corporates->Address}}</td>
+                        <th>Town :</th>
+                        <td>{{$view_corporates->Town}}</td>
                     </tr>
-                   
-                    
-
-
+                    <tr>
+                        <th>City :</th>
+                        <td>{{$view_corporates->City}}</td>
+                    </tr>
+                    <tr>
+                        <th>State :</th>
+                        <td>{{$view_corporates->State}}</td>
+                    </tr>
+                    <tr>
+                        <th>Country :</th>
+                        <td>{{$view_corporates->Country}}</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
-
-
     </form>
-
-
-
-
-
-
 </div>
 @endsection
