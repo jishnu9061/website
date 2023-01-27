@@ -18,10 +18,21 @@ class hrindex extends Controller
     {
         return view('hr.hrindex');
     }
+
+    public function hrdepartment(Request $Request)
+    {
+     $departments=$Request['departments'];
+     $roles=$Request['roles'];
+     $staffs=DB::table('users')->get();
+    return view('hr.hr_department',['staffs'=>$staffs,'roles'=>$roles,'departments'=>$departments]);
+    }
+
     public function performance_department()
     {
         $departments=DB::table('cra_add_user_department')->get();
-        return view('hr.performance_department',compact('departments'));
+        $roles=DB::table('cra_add_user_roles')->get();
+
+        return view('hr.performance_department',compact('departments','roles'));
     }
 
     public function recruitment()

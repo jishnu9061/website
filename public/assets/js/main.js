@@ -7,7 +7,7 @@ for(var i = 0; i < sidebarItems.length; i++) {
         e.preventDefault();
         
         let submenu = sidebarItem.querySelector('.submenu');
-        if( submenu.classList.contains('active') ) submenu.style.display = ""
+        if( submenu.classList.contains('active') ) submenu.style.display = "block"
 
         if( submenu.style.display == "none" ) submenu.classList.add('active')
         else submenu.classList.remove('active')

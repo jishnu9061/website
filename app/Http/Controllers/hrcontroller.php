@@ -177,12 +177,12 @@ class hrcontroller extends Controller
    {
     return view('hr.payslip');
    }
+
    public function generatepayslip(Request $Request)
    {
-    $hospital=Auth::user()->Hospital;
     $month=$Request['month'];
     $year=$Request['year'];
-    $staffs=DB::table('users')->where('hospital',$hospital)->get();
+    $staffs=DB::table('users')->get();
     return view('hr.generatepayslip',['staffs'=>$staffs,'year'=>$year,'month'=>$month]);
    }
 

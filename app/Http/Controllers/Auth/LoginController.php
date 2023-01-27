@@ -78,9 +78,12 @@ class LoginController extends Controller
          {                 
          $request->session()->get('justlogin');
          }
-         // Set Auth Details
-        // print_r($user);
-        // die();
+        if($user->status == 0){
+            \Session::put('errors', 'User is InActive..!! Contant Admin');
+            return back();
+        }
+
+
         \Auth::login($user,$remember_me);
         
         if ( $user->role == 1) {// do your magic here
