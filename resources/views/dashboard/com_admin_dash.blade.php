@@ -1214,8 +1214,8 @@
         @endif
                 </a>
             </li>// 12th submenu end
-            
-</li> 
+
+</li>
 <li class="sidebar-item  has-sub">// Nineth menu
     <a href="#" class='sidebar-link'>
         <i id="icon" class="fa fa-book"  style="font-weight: 300;"></i>
@@ -1232,14 +1232,14 @@
         @if(request()->path()== "subject_category")//  1st  submenu start
             <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
                 <a href="{{url('subject_category')}}" class='sidebar-link'>
-                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px"Subject</span>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Subject</span>
             @else
             <li class="submenu-item ">
                 <a href="{{url('subject_category')}}" class='sidebar-link'>
                     <span>Book Category</span>
         @endif
                 </a>
-            </li>//1st submenu end   
+            </li>//1st submenu end
         @if(request()->path()== "subject")//  2nd  submenu start
             <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
                 <a href="{{url('subject')}}" class='sidebar-link'>
@@ -1250,7 +1250,7 @@
                     <span>Subject</span>
         @endif
                 </a>
-            </li>//2nd submenu end   
+            </li>//2nd submenu end
         @if(request()->path()== "file")//  3rd  submenu start
             <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
                 <a href="{{url('file')}}" class='sidebar-link'>
@@ -1283,5 +1283,588 @@
                     <span>Legal Sites</span>
         @endif
                 </a>
-            </li>//5th submenu end
+            </li>  //5th submenu end
+
+</li>
+<li class="sidebar-item  has-sub">// Tenth menu
+
+
+    <a href="#" class='sidebar-link'>
+        <i id="icon" class="fa fa-handshake-o"  style="font-weight: 300;"></i>
+            <span>Tender Management</span>
+    </a>
+    @php
+        $admin = array("tender_details", "apply_tender", "tender_applied_details");
+    @endphp
+    @if (in_array(request()->path(), $admin))
+        <ul class="submenu" style="display: block;">
+        @else
+            <ul class="submenu" style="display: none;">
+    @endif
+        @if(request()->path()== "tender_details")//  1st  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('tender_details')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Tender Details</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('tender_details')}}" class='sidebar-link'>
+                    <span>Tender Details</span>
+        @endif
+                </a>
+            </li>//1st submenu end
+        @if(request()->path()== "apply_tender")//  2nd  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('apply_tender')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Apply Tender</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('apply_tender')}}" class='sidebar-link'>
+                    <span>Apply Tender</span>
+        @endif
+                </a>
+            </li>//1st submenu end
+        @if(request()->path()== "tender_applied_details")//  3rd  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('tender_applied_details')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Tender Applied Details</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('tender_applied_details')}}" class='sidebar-link'>
+                    <span>Tender Applied Details</span>
+        @endif
+                </a>
+            </li>// 3rd submenu end
+</li>
+<li class="sidebar-item  has-sub">// Eleventh menu
+
+
+    <a href="#" class='sidebar-link'>
+        <i id="icon" class="fa fa-briefcase"  style="font-weight: 300;"></i>
+            <span>Office Administration</span>
+    </a>
+    @php
+        $admin = array("creditor_list", "creditors_aging_report", "supplier_expense_report", "pay_supplier_invoice", "supplier_credit_notes", "supplier_invoice", "supplier_monthly_schedule", "suppliers_list", "balance", "cheque", "file_office", "Payment", "budget", "contractual_supplier", "payments_transfer", "payment_report", "petty_payment", "petty_report", "settled_fee", "settlement_report", "undeposited_fund");
+    @endphp
+    @if (in_array(request()->path(), $admin))
+        <ul class="submenu" style="display: block;">
+        @else
+            <ul class="submenu" style="display: none;">
+    @endif
+        @if(request()->path()== "creditor_list")//  1st  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('creditor_list')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Creditor List</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('creditor_list')}}" class='sidebar-link'>
+                    <span>Creditor List</span>
+        @endif
+                </a>
+            </li>// 1st submenu end
+        @if(request()->path()== "creditors_aging_report")//  2nd submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('creditors_aging_report')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Creditors Aging Report</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('creditors_aging_report')}}" class='sidebar-link'>
+                    <span>Creditors Aging Report</span>
+        @endif
+                </a>
+            </li>// 2nd submenu end
+        @if(request()->path()== "supplier_expense_report")//  3rd submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('supplier_expense_report')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Supplier Expense Report</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('supplier_expense_report')}}" class='sidebar-link'>
+                    <span>Supplier Expense Report</span>
+        @endif
+                </a>
+            </li>// 3rd submenu end
+        @if(request()->path()== "pay_supplier_invoice")//  4th submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('pay_supplier_invoice')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Pay Supplier Invoice</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('pay_supplier_invoice')}}" class='sidebar-link'>
+                    <span>Pay Supplier Invoice</span>
+        @endif
+                </a>
+            </li>// 4th submenu end
+        @if(request()->path()== "supplier_credit_notes")//  5th submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('supplier_credit_notes')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Supplier Credit Notes</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('supplier_credit_notes')}}" class='sidebar-link'>
+                    <span>Supplier Credit Notes</span>
+        @endif
+                </a>
+            </li>// 5th submenu end
+        @if(request()->path()== "supplier_invoice")//  6th submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('supplier_invoice')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Supplier Invoice</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('supplier_invoice')}}" class='sidebar-link'>
+                    <span>Supplier Invoice</span>
+        @endif
+                </a>
+            </li>// 6th submenu end
+        @if(request()->path()== "supplier_monthly_schedule")//  7th submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('supplier_monthly_schedule')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Supplier Monthly Schedule</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('supplier_monthly_schedule')}}" class='sidebar-link'>
+                    <span>Supplier Monthly Schedule</span>
+        @endif
+                </a>
+            </li>// 7th submenu end
+        @if(request()->path()== "suppliers_list")//  8th submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('suppliers_list')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Supplier List</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('suppliers_list')}}" class='sidebar-link'>
+                    <span>Supplier List</span>
+        @endif
+                </a>
+            </li>// 8th submenu end
+        @if(request()->path()== "balance")//  9th submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('balance')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Balance on Client Trust</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('balance')}}" class='sidebar-link'>
+                    <span>Balance on Client Trust</span>
+        @endif
+                </a>
+            </li>// 9th submenu end
+        @if(request()->path()== "cheque")//  10th submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('cheque')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Cheque Cancellation</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('cheque')}}" class='sidebar-link'>
+                    <span>Cheque Cancellation</span>
+        @endif
+                </a>
+            </li>// 10th submenu end
+        @if(request()->path()== "file_office")//  11th submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('file_office')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">File - Office Journals</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('file_office')}}" class='sidebar-link'>
+                    <span>File - Office Journals</span>
+        @endif
+                </a>
+            </li>// 11th submenu end
+        @if(request()->path()== "Payment")//  12th submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('Payment')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">File Payments & Transfer</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('Payment')}}" class='sidebar-link'>
+                    <span>File Payments & Transfer</span>
+        @endif
+                </a>
+            </li>// 12th submenu end
+        @if(request()->path()== "budget")//  13th submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('budget')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Monthly Budget planner</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('budget')}}" class='sidebar-link'>
+                    <span>Monthly Budget planner</span>
+        @endif
+                </a>
+            </li>// 13th submenu end
+        @if(request()->path()== "contractual_supplier")//  14th submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('contractual_supplier')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Non-Contractual Suppliers Voucher</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('contractual_supplier')}}" class='sidebar-link'>
+                    <span>Non-Contractual Suppliers Voucher</span>
+        @endif
+                </a>
+            </li>// 14th submenu end
+        @if(request()->path()== "payments_transfer")//  15th submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('payments_transfer')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Office Payments Transfers</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('payments_transfer')}}" class='sidebar-link'>
+                    <span>Office Payments Transfers</span>
+        @endif
+                </a>
+            </li>// 15th submenu end
+        @if(request()->path()== "payment_report")//  16th submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('payment_report')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Payment Reports</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('payment_report')}}" class='sidebar-link'>
+                    <span>Payment Reports</span>
+        @endif
+                </a>
+            </li>// 16th submenu end
+        @if(request()->path()== "petty_payment")//  17th submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('petty_payment')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Petty Cash Payments</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('petty_payment')}}" class='sidebar-link'>
+                    <span>Petty Cash Payments</span>
+        @endif
+                </a>
+            </li>// 17th submenu end
+        @if(request()->path()== "petty_report")//  18th submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('petty_report')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Petty Cash Report</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('petty_report')}}" class='sidebar-link'>
+                    <span>Petty Cash Report</span>
+        @endif
+                </a>
+            </li>// 18th submenu end
+        @if(request()->path()== "settled_fee")//  19th submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('settled_fee')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Settled Paid Legal Fees</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('settled_fee')}}" class='sidebar-link'>
+                    <span>Settled Paid Legal Fees</span>
+        @endif
+                </a>
+            </li>// 19th submenu end
+        @if(request()->path()== "settlement_report")//  20th submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('settlement_report')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Settlement Report</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('settlement_report')}}" class='sidebar-link'>
+                    <span>Settlement Report</span>
+        @endif
+                </a>
+            </li>// 20th submenu end
+        @if(request()->path()== "undeposited_fund")//  21st submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('undeposited_fund')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Undeposited Funds Report</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('undeposited_fund')}}" class='sidebar-link'>
+                    <span>Undeposited Funds Report</span>
+        @endif
+                </a>
+            </li>// 21st submenu end
+</li>
+<li class="sidebar-item  has-sub">// Twelveth menu
+
+
+    <a href="#" class='sidebar-link'>
+        <i id="icon" class="fa fa-address-book-o"  style="font-weight: 300;"></i>
+            <span>CRM</span>
+    </a>
+    @php
+        $admin = array("Corporate", "view-registration", "lead", "follow-up", "Quotation", "manage_tasks", "projects", "expense", "crm_panel");
+    @endphp
+    @if (in_array(request()->path(), $admin))
+        <ul class="submenu" style="display: block;">
+        @else
+            <ul class="submenu" style="display: none;">
+    @endif
+        @if(request()->path()== "Corporate")//  1st  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('Corporate')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Corporate Customers</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('Corporate')}}" class='sidebar-link'>
+                    <span>Corporate Customers</span>
+        @endif
+                </a>
+            </li>// 1st submenu end
+        @if(request()->path()== "view-registration")//  2nd  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('view-registration')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Individual Customers</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('view-registration')}}" class='sidebar-link'>
+                    <span>Individual Customers</span>
+        @endif
+                </a>
+            </li>// 2nd submenu end
+        @if(request()->path()== "lead")//  3rd  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('lead')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Leads</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('lead')}}" class='sidebar-link'>
+                    <span>Leads</span>
+        @endif
+                </a>
+            </li>// 3rd submenu end
+        @if(request()->path()== "follow-up")//  4th  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('follow-up')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Client Follow Up</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('follow-up')}}" class='sidebar-link'>
+                    <span>Client Follow Up</span>
+        @endif
+                </a>
+            </li>// 4th submenu end
+        @if(request()->path()== "Quotation")//  5th  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('Quotation')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Client Quotation</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('Quotation')}}" class='sidebar-link'>
+                    <span>Client Quotation</span>
+        @endif
+                </a>
+            </li>// 5th submenu end
+        @if(request()->path()== "manage_tasks")//  6th  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('manage_tasks')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Manage Tasks</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('manage_tasks')}}" class='sidebar-link'>
+                    <span>Manage Tasks</span>
+        @endif
+                </a>
+            </li>// 6th submenu end
+        @if(request()->path()== "projects")//  7th  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('projects')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Projects</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('projects')}}" class='sidebar-link'>
+                    <span>Projects</span>
+        @endif
+                </a>
+            </li>// 7th submenu end
+        @if(request()->path()== "expense")//  8th  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('expense')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Expense Reports</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('expense')}}" class='sidebar-link'>
+                    <span>Expense Reports</span>
+        @endif
+                </a>
+            </li>// 8th submenu end
+        @if(request()->path()== "crm_panel")//  9th  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('crm_panel')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">CRM Panel</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('crm_panel')}}" class='sidebar-link'>
+                    <span>CRM Panel</span>
+        @endif
+                </a>
+            </li>// 9th submenu end
+</li>
+<li class="sidebar-item  has-sub">// Thirteenth menu
+
+
+    <a href="#" class='sidebar-link'>
+        <i id="icon" class="fa fa-gear"  style="font-weight: 300;"></i>
+            <span>System Setup</span>
+    </a>
+    @php
+        $admin = array("company_details", "weekend_holiday", "other_confgn", "file_types", "invoice_items", "currency_list", "database_backup", "Transport_zones", "billable_activities", "bank_details", "leave_days_year", "hourly_rates", "partner_revenue_share", "menu_access_configuration", "useful_links");
+    @endphp
+    @if (in_array(request()->path(), $admin))
+        <ul class="submenu" style="display: block;">
+        @else
+            <ul class="submenu" style="display: none;">
+    @endif
+        @if(request()->path()== "company_details")//  1st  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('company_details')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Company</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('company_details')}}" class='sidebar-link'>
+                    <span>Company</span>
+        @endif
+                </a>
+            </li>// 1st submenu end
+        @if(request()->path()== "weekend_holiday")//  2nd  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('weekend_holiday')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Weekends and Holidays</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('weekend_holiday')}}" class='sidebar-link'>
+                    <span>Weekends and Holidays</span>
+        @endif
+                </a>
+            </li>// 2nd submenu end
+        @if(request()->path()== "other_confgn")//  3rd  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('other_confgn')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Other Configurations</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('other_confgn')}}" class='sidebar-link'>
+                    <span>Other Configurations</span>
+        @endif
+                </a>
+            </li>// 3rd submenu end
+        @if(request()->path()== "file_types")//  4th  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('file_types')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">File Types</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('file_types')}}" class='sidebar-link'>
+                    <span>File Types</span>
+        @endif
+                </a>
+            </li>// 4th submenu end
+        @if(request()->path()== "invoice_items")//  5th  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('invoice_items')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Invoice Items</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('invoice_items')}}" class='sidebar-link'>
+                    <span>Invoice Items</span>
+        @endif
+                </a>
+            </li>// 5th submenu end
+        @if(request()->path()== "currency_list")//  6th  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('currency_list')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Currency List</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('currency_list')}}" class='sidebar-link'>
+                    <span>Currency List</span>
+        @endif
+                </a>
+            </li>// 6th submenu end
+        @if(request()->path()== "database_backup")//  7th  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('database_backup')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Database Backup</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('database_backup')}}" class='sidebar-link'>
+                    <span>Database Backup</span>
+        @endif
+                </a>
+            </li>// 7th submenu end
+        @if(request()->path()== "Transport_zones")//  8th  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('Transport_zones')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Transport Zones</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('Transport_zones')}}" class='sidebar-link'>
+                    <span>Transport Zones</span>
+        @endif
+                </a>
+            </li>// 8th submenu end
+        @if(request()->path()== "billable_activities")//  9th  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('billable_activities')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Billable Activities</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('billable_activities')}}" class='sidebar-link'>
+                    <span>Billable Activities</span>
+        @endif
+                </a>
+            </li>// 9th submenu end
+        @if(request()->path()== "bank_details")//  10th  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('bank_details')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Bank Account Details</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('bank_details')}}" class='sidebar-link'>
+                    <span>Bank Account Details</span>
+        @endif
+                </a>
+            </li>// 10th submenu end
+        @if(request()->path()== "leave_days_year")//  11th  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('leave_days_year')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Leave Days Per Year</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('leave_days_year')}}" class='sidebar-link'>
+                    <span>Leave Days Per Year</span>
+        @endif
+                </a>
+            </li>// 11th submenu end
+        @if(request()->path()== "hourly_rates")//  12th  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('hourly_rates')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Hourly Rates</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('hourly_rates')}}" class='sidebar-link'>
+                    <span>Hourly Rates</span>
+        @endif
+                </a>
+            </li>// 12th submenu end
+        @if(request()->path()== "menu_access_configuration")//  13th  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('menu_access_configuration')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Menu Access Configuration</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('menu_access_configuration')}}" class='sidebar-link'>
+                    <span>Menu Access Configuration</span>
+        @endif
+                </a>
+            </li>// 13th submenu end
+        @if(request()->path()== "useful_links")//  14th  submenu start
+            <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
+                <a href="{{url('useful_links')}}" class='sidebar-link'>
+                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Useful Link</span>
+        @else
+            <li class="submenu-item ">
+                <a href="{{url('useful_links')}}" class='sidebar-link'>
+                    <span>Useful Link</span>
+        @endif
+                </a>
+            </li>// 14th submenu end
+</li>
             @endsection
