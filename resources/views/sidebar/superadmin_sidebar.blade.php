@@ -21,7 +21,7 @@
                 <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
                         <i id="icon" class="fa-regular fa-user"  style="font-weight: 300;"></i>
-                            <span>Manage company</span>
+                            <span style="padding-left: 20px">Manage company</span>
                     </a>
                     @php
                         $admin = array("company_list", "Add_company",);
@@ -34,7 +34,7 @@
                     @if (request()->path() == 'company_list')
                         <li class="submenu-item " >
                             <a href="{{url('company_list')}}" class='sidebar-link' style="background-color: #1D1D50;color:white;">
-                                </span><span> Company List</span>
+                                <span> Company List</span>
                     @else
                         <li class="submenu-item " >
                             <a href="{{url('company_list')}}" class='sidebar-link'>
@@ -54,7 +54,7 @@
                 <li class="sidebar-item  ">
                     <a href="{{url('superadminhome')}}" class='sidebar-link'>
                         <i id="icon" class="fa-regular fa-user"  style="font-weight: 300;"></i>
-                            <span>SuperAdmin setup</span>
+                            <span style="padding-left: 20px">SuperAdmin setup</span>
                     </a>
                     @php
                         $admin = array("usermanagement", "adddepartments","add_labdept","add_surgery_types","adddepartmentadmin","addroomstypes","addroomtypes","beds","Add_Ambulance_details");
