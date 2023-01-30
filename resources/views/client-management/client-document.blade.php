@@ -1,5 +1,12 @@
 @extends('layouts.hmsmain')
 @section('content')
+<nav style="font-size:17px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">Client Management</a> /
+    <a href="{{url('client_list')}}" style="color: #1D1D50;">Individual Client List</a> /
+    <a href="#" style="color: #1D1D50;">Individual Document Details</a>
+</nav>
+<br><br>
 <html>
 
 <head>
@@ -86,14 +93,14 @@
 
                         <thead>
                             <tr>
-                              
+
                                 <th class="text-center"> Client Document</th>
                                 <th class="text-center">Action</th>
 
                             </tr>
                         </thead>
                         <tbody>
-                            
+
                             @foreach($client_document as $list)
 
                             <tr id="data">
@@ -238,7 +245,7 @@
                                 </div>
                                 <div class="container">
 
-                                </div>
+                                </div>dd
                             </div>
 
                             </form>

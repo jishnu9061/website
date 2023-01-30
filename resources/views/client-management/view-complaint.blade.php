@@ -1,8 +1,10 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:12px;">
-      <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
-      <a href="#" style="color: #1D1D50;">Client Management-View Complaint</a>
+<nav style="font-size:17px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">Client Management</a> /
+    <a href="{{url('complaint-list')}}" style="color: #1D1D50;">Complaint Register Details</a> /
+    <a href="#" style="color: #1D1D50;">View Complaint</a>
 </nav>
 <br><br>
 <style>
@@ -78,7 +80,7 @@
                     <th>Complaint Description:</th>
                     <td>{{$view_complaint ->complaint_description}}</td>
                 </tr>
-               
+
 
             </tbody>
         </table>

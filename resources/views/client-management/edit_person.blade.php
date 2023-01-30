@@ -1,8 +1,10 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:12px;">
-      <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
-      <a href="#" style="color: #1D1D50;">Client Management-Edit Individual Client</a>
+<nav style="font-size:17px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">Client Management</a> /
+    <a href="{{url('client_list')}}" style="color: #1D1D50;">Individual Client List</a> /
+    <a href="#" style="color: #1D1D50;">Edit Client Details</a>
 </nav>
 <br><br>
 <div class="container">
@@ -284,7 +286,7 @@
                                 <div class="input-group-prepend"></div>
                                 <select name="industry" id="cars">
                                     <option>Nairobi</option>
-                            
+
                                 </select>
                                 <!-- <input type="text" class="form-control" name="town" id="age" value="{{$edit_client->town}}" min="0" max="99"> -->
                                 <div class="invalid-feedback" style="width: 100%;">
