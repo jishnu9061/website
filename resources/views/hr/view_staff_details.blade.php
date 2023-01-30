@@ -2,7 +2,13 @@
 
 @extends('layouts.hmsmain')
 @section('content')
-
+<nav style="font-size:17px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">HR</a> /
+    <a href="{{url('staffs')}}" style="color: #1D1D50;">Manage Staffs</a> /
+    <a href="#" style="color: #1D1D50;">View Staffs</a>
+</nav>
+<br><br>
 <div class="container">
 
 
@@ -12,16 +18,16 @@
         <br><br>
 
     </div>
-    
-        
+
+
 
         @csrf
         <input type="hidden" name="id" value="{{$view_list->id}}">
 
 
 
-           
-           
+
+
         </div>
         <table class="table table-striped">
             <tbody>

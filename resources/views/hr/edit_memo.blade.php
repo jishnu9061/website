@@ -1,5 +1,12 @@
 @extends('layouts.hmsmain')
 @section('content')
+<nav style="font-size:17px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">HR</a> /
+    <a href="{{url('internal_memos')}}" style="color: #1D1D50;">Internal Memos</a> /
+    <a href="#" style="color: #1D1D50;">Edit Memo</a>
+</nav>
+<br><br>
 <div class="container">
     <h4 id="hdtpa"><b> Edit Memo </b></h4>
     <br>
@@ -64,7 +71,7 @@
         </form>
         <br>
         <button class="btn btn-primary float-right" type="button" onclick="history.back()">Cancel</button>
-        <button class="btn btn-primary float-right" type="submit">Update</button> 
+        <button class="btn btn-primary float-right" type="submit">Update</button>
     </div>
 
 </div>
