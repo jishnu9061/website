@@ -1,5 +1,11 @@
 @extends('layouts.hmsmain')
 @section('content')
+<nav style="font-size:17px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">Accounts</a> /
+    <a href="#" style="color: #1D1D50;">Balance Sheet</a>
+</nav>
+<br><br>
  <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link rel="stylesheet" href="{{ url('assets/css') }}/sweetalert.css">
 
