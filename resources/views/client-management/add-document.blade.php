@@ -1,5 +1,12 @@
 @extends('layouts.hmsmain')
 @section('content')
+<nav style="font-size:17px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">Client Management</a> /
+    <a href="{{url('client_list')}}" style="color: #1D1D50;">Individual Client List</a> /
+    <a href="#" style="color: #1D1D50;">Add Document</a>
+</nav>
+<br><br>
 <div class="container">
 
     @if(Session::has('staffregistered'))
@@ -36,7 +43,7 @@ $(document).on('input', '#percent', function() {
             <input type="hidden" name="individual_id" value="{{$client_doc->id}}">
 
 
-           
+
             <br>
 
             <div class="row">

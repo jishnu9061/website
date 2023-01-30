@@ -1,8 +1,10 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:12px;">
+<nav style="font-size:17px;">
       <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
-      <a href="#" style="color: #1D1D50;">User Management-Edit User Roles</a>
+      <a href="#" style="color: #1D1D50;">User Management</a> /
+      <a href="{{url('manage_user_roles')}}" style="color: #1D1D50;">Manage User Roles</a> /
+      <a href="#" style="color: #1D1D50;">Edit User Roles</a>
 </nav>
 <br><br>
 <div class="container">
