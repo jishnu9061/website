@@ -1,5 +1,12 @@
 @extends('layouts.hmsmain')
 @section('content')
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">Office Administration</a> /
+    <a href="{{url('supplier_credit_notes')}}" style="color: #1D1D50;">Supplier Credit Notes</a> /
+    <a href="#" style="color: #1D1D50;">View Supplier Credit Notes</a>
+</nav>
+<br><br>
 <div class="container">
 
     <h4 id="hdtpa"><b>View Supplier Credit Note</b></h4>

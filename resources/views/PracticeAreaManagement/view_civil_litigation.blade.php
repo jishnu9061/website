@@ -1,6 +1,12 @@
 @extends('layouts.hmsmain')
 @section('content')
-
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">Practice Management</a> /
+    <a href="{{url('civil_litigation')}}" style="color: #1D1D50;">Civil Litigation</a> /
+    <a href="#" style="color: #1D1D50;">View Civil Litigation</a>
+</nav>
+<br><br>
 {{-- heading --}}
 <div class="container">
     <h4 id="hdtpa"><b> Civil Litigation Details</b></h4>
