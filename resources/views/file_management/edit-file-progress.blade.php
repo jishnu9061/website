@@ -1,8 +1,10 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:12px;">
-      <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
-      <a href="#" style="color: #1D1D50;">File Management-Edit File Progress</a>
+<nav style="font-size:17px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+    <a href="#" style="color: #1D1D50;">File Management</a> /
+    <a href="{{url('file-progress-list')}}" style="color: #1D1D50;">File Progress List</a> /
+    <a href="#" style="color: #1D1D50;">Edit File Progress</a>
 </nav>
 
 <div class="container">

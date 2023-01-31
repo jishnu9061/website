@@ -1,7 +1,12 @@
 @extends('layouts.hmsmain')
 @section('content')
 
-
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">Procurement</a> /
+    <a href="#" style="color: #1D1D50;">New Purchase Orders</a>
+</nav>
+<br><br>
 
 
 <!-- <h2 style="color: #070344;  text-align:center;"><b>Customer Registration</b></h2> -->
@@ -351,7 +356,7 @@
                                                                                 id="grand-total" name="grand_total"
                                                                                 value="0" readonly>
 
-                                                                            
+
 
                                                                               <br>
 

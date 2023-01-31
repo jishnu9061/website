@@ -1,8 +1,9 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:12px;">
-      <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
-      <a href="#" style="color: #1D1D50;">Store & Inventory-Request Item Details</a>
+<nav style="font-size:17px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">Stores and Inventory</a> /
+    <a href="#" style="color: #1D1D50;">Requested Item Details</a>
 </nav>
 <br><br>
 <html>
@@ -32,8 +33,8 @@
             <!-- <button type="button" class="btn btn-primary complaint_btn btn " data-toggle="modal"
                 data-target="#myModal">Request Item</button></a> -->
             <!--filter-->
-           
-           
+
+
 
             <!--filter end-->
 
@@ -209,7 +210,7 @@
                                                             <h4 id="hdtpa"><b>Item </b></h4>
                                                         </div>
                                                         <br>
-                                                       
+
                                     <div class="row clearfix">
 
                                         <div class="col-sm">
@@ -218,11 +219,11 @@
 
                                                 <tr>
                                                     <td class="" style="width:25%">Category</td>
-                                                    
-                                                 
+
+
                                                     <td class="">Item Name</td>
                                                     <td class="">Quantity</td>
-                                                  
+
                                                     <td> <input type="button" class="btn btn-primary" id="add_Row"
                                                             style="background-color:#607080;width:100%;" value="Add">
                                                     </td>
@@ -232,26 +233,26 @@
                                                         <td><select class="form-select" aria-label="select example"
                                                                 name="item_name[]" id="item_name">
                                                                 <option value="">Select</option>
-                                                              
+
                                                                     <option value="">
-                                                                    
+
                                                                     </option>
-                                                           
+
                                                             </select></td>
                                                             <td><select class="form-select" aria-label="select example"
                                                                 name="item_name[]" id="item_name">
                                                                 <option value="">Select</option>
-                                                              
+
                                                                     <option value="">
-                                                                    
+
                                                                     </option>
-                                                           
+
                                                             </select></td>
-                                                     
-                                                       
+
+
                                                         <td><input type="text" name="price[]" id="price_"
                                                                 class="form-control calculate" placeholder="0"></td>
-                                                     
+
                                                         </td>
                                                         <td><button type="button"
                                                                 class="add-Row ibtnDel btn btn-primary text-white "
@@ -264,14 +265,14 @@
                                                 </div>
                                                 <div class="col-sm">
                                                     <table class="table table-bordered">
-                                                    
-                                                       
+
+
                                                     </table>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                 
+
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary text-white" style="width:10%;background-color:#607080"
@@ -295,12 +296,12 @@
 
         </div>
         <br>
-     
-
-               
 
 
-           
+
+
+
+
 
             <br>
             <!-- Supplier modal Edit End -->

@@ -1,5 +1,11 @@
 @extends('layouts.hmsmain')
 @section('content')
+<nav style="font-size:17px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+    <a href="#" style="color: #1D1D50;">HR</a> /
+    <a href="#" style="color: #1D1D50;">Attendance (CSV)</a>
+</nav>
+<br><br>
 @if(Session::has('attendanceuploded'))
 
 <div class="alert alert-dark" role="alert">

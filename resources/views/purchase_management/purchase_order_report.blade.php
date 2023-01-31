@@ -1,8 +1,14 @@
 
 @extends('layouts.hmsmain')
 @section('content')
-    
 
+
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">Procurement</a> /
+    <a href="#" style="color: #1D1D50;">Purchase Order Report</a>
+</nav>
+<br><br>
 
 
 
@@ -29,7 +35,7 @@
 
 
 
-       
+
        <div class="header_wrap">
                     <div class="num_rows">
                         <div class="form-group">
@@ -56,7 +62,7 @@
 
 
        <!-- table -->
-       
+
        <div class="table-responsive">
          <table class="table text-center" id="table-id">
             <thead>
@@ -77,15 +83,15 @@
                 <td>{{$list->status}}</td>
                 <td><a href="{{url('purchase_view',$list->purchase_id)}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-2"></span>
                       <a href="{{url('edit_purchase',$list->purchase_id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit" ></i>
-                </td> 
+                </td>
               </tr>
               @endforeach
-            
-             
-            </tbody>
-          </table> 
 
-    
+
+            </tbody>
+          </table>
+
+
     </div>
      <!--		Start Pagination -->
      <div class='pagination-container'>

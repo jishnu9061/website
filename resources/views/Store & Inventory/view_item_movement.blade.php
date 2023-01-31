@@ -1,8 +1,10 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:12px;">
-      <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
-      <a href="#" style="color: #1D1D50;">Store & Inventory-View Item Movement</a>
+<nav style="font-size:17px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">Stores and Inventory</a> /
+    <a href="{{url('item_movement')}}" style="color: #1D1D50;">Item Movement Report</a> /
+    <a href="#" style="color: #1D1D50;">View Item Movement</a>
 </nav>
 <br><br>
 <style>

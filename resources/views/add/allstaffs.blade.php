@@ -1,5 +1,11 @@
 @extends('layouts.hmsmain')
 @section('content')
+<nav style="font-size:17px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+    <a href="#" style="color: #1D1D50;">HR</a> /
+    <a href="#" style="color: #1D1D50;">Manage Staffs</a>
+</nav>
+<br><br>
     <style>
         .pagination>li>span {
             position: relative;
