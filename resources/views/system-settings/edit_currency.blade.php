@@ -1,6 +1,12 @@
 @extends('layouts.hmsmain')
 @section('content')
-
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">System Setup</a> /
+    <a href="{{url('currency_list')}}" style="color: #1D1D50;">Currency List</a> /
+    <a href="#" style="color: #1D1D50;">Edit Currency List</a>
+</nav>
+<br><br>
 <div class="container">
 
     {{-- heading --}}

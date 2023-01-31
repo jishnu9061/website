@@ -1,5 +1,12 @@
 @extends('layouts.hmsmain')
 @section('content')
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">CRM</a> /
+    <a href="#" style="color: #1D1D50;">Lead</a> /
+    <a href="#" style="color: #1D1D50;">Individual Customer Leads</a>
+</nav>
+<br><br>
 {{-- heading --}}
 <div class="container">
 
@@ -11,7 +18,7 @@
         <li class="nav-item">
             <a class="nav-link active" href="{{ url('individual_lead') }}"  style="font-size:15px;">Individual</a>
         </li>
-      
+
     </ul>
 
     <br>

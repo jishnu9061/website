@@ -3,8 +3,8 @@
 <nav style="font-size:15px;">
     <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">Practice Management</a> /
-    <a href="{{url('real_estate')}}" style="color: #1D1D50;">Real Estat</a> /
-    <a href="#" style="color: #1D1D50;">Edit Real Estat</a>
+    <a href="{{url('real_estate')}}" style="color: #1D1D50;">Real Estate</a> /
+    <a href="#" style="color: #1D1D50;">Edit Real Estate</a>
 </nav>
 <br><br>
 {{-- heading --}}

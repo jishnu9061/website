@@ -1,8 +1,14 @@
 @extends('layouts.hmsmain')
 @section('content')
-
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">CRM</a> /
+    <a href="{{url('view-registration')}}" style="color: #1D1D50;">Individual Customers</a> /
+    <a href="#" style="color: #1D1D50;">View Individual Customers</a>
+</nav>
+<br><br>
 <style>
-th{ 
+th{
     width:30%;
 }
 </style>
@@ -60,9 +66,9 @@ th{
                         <th> Physical Address :</th>
                         <td>{{$view_reg->physical_address}}</td>
                     </tr>
-                   
-                   
-                    
+
+
+
 
 
                 </tbody>
