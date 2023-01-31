@@ -1,5 +1,12 @@
 @extends('layouts.hmsmain')
 @section('content')
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">E-Library</a> /
+    <a href="{{url('precedence')}}" style="color: #1D1D50;">Precedence Register</a> /
+    <a href="#" style="color: #1D1D50;">View Precedence Register</a>
+</nav>
+<br><br>
 <style>
 .btn-width {
     width: 10%;
