@@ -1,8 +1,9 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:12px;">
-      <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
-      <a href="#" style="color: #1D1D50;">Store & Inventory-Manage Categories</a>
+<nav style="font-size:17px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">Stores and Inventory</a> /
+    <a href="#" style="color: #1D1D50;">Manage Categories</a>
 </nav>
 <br><br>
 <html>
@@ -139,13 +140,13 @@
 
 
                                                 </div>
-                                                   
+
                                                         <br>
                                                         <br>
                                                         <button type="submit" class="btn btn-primary">Add</button>
                                                         <button type="button" class="btn btn-primary"
                                                             data-dismiss="modal">Cancel</button>
-                                               
+
                                         </div>
                                         </form>
                                     </div>
