@@ -340,7 +340,7 @@ class CrmController extends Controller
     public function individual_leads()
     {
         $individual_leads = DB::table('cra_individual_proposal_lead')
-        ->rightjoin('cra_customer_registration','cra_customer_registration.id','cra_individual_proposal_lead.registration_id')
+        ->rightjoin('cra_customer_registration','cra_customer_registration.id','cra_individual_proposal_lead.id')
         ->get();
         return view('CRM.individual_lead',compact('individual_leads'));
     }
@@ -368,8 +368,8 @@ class CrmController extends Controller
         $Status    =    $request['Status'];
 
         DB::table('cra_individual_proposal_lead')->insert([
-            'registration_id'   =>    $id,
-            'date_of_contact'   =>    $date,
+            'id'   =>    $id,
+            'date_of_contract'   =>    $date,
             'contacted_by'      =>    $Contacted,
             'source'            =>    $Source,
             'status'            =>    $Status 
