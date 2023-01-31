@@ -1,5 +1,11 @@
 @extends('layouts.hmsmain')
 @section('content')
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">CRM</a> /
+    <a href="#" style="color: #1D1D50;">CRM Panel</a>
+</nav>
+<br><br>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
 <div class="container">
@@ -13,10 +19,10 @@
         <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
     </div>
     <br>
-    <div> 
+    <div>
         <canvas id="myChart1" style="width:100%; max-width:600px; height:500px;"> </canvas>
     </div>
-    
+
 
 </div>
 

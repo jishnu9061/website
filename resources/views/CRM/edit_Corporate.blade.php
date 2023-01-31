@@ -1,5 +1,12 @@
 @extends('layouts.hmsmain')
 @section('content')
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">CRM</a> /
+    <a href="{{url('Corporate')}}" style="color: #1D1D50;">Corporate Customers</a> /
+    <a href="#" style="color: #1D1D50;">Edit Corporate Customers</a>
+</nav>
+<br><br>
 {{-- heading --}}
 <div class="container">
     <h4 id="hdtpa"><b>Edit Corporate Customers </b></h4>
@@ -238,7 +245,7 @@
                     </div>
 
                 </div>
-               
+
                 <br>
                 <!-- <h4 style="text-align:center">Contact Persons</h4> -->
 
@@ -262,6 +269,6 @@
                                     </div>
                                     </form>
                                 </div>
-                            
-            
+
+
     @endsection
