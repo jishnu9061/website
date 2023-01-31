@@ -2,6 +2,13 @@
 @section('content')
 
 
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">Procurement</a> /
+    <a href="{{url('purchase_order')}}" style="color: #1D1D50;">New Purchase Orders</a> /
+    <a href="#" style="color: #1D1D50;">View Purchase Order</a>
+</nav>
+<br><br>
 
 
 
@@ -64,7 +71,7 @@
         <div class="table-responsive">
             <table class="table">
                 <thead>
-                    
+
                     <tr>
                         <th scope="col">Item Name</th>
                         <th scope="col">Quantity</th>
@@ -73,7 +80,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                
+
                     @foreach($view_purchase_order as $lists)
                     <tr>
 

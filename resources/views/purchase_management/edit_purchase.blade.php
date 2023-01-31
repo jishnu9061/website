@@ -1,6 +1,12 @@
 @extends('layouts.hmsmain')
 @section('content')
-
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">Procurement</a> /
+    <a href="{{url('purchase_order_report')}}" style="color: #1D1D50;">Purchase Order Report</a> /
+    <a href="#" style="color: #1D1D50;">Edit Purchase Order</a>
+</nav>
+<br><br>
 
 <div class="container">
     <h4 id="hdtpa"><b>Edit Purchase Order</b></h4>
@@ -44,7 +50,7 @@
                 </tr>
                 <tr>
                     <td scope="row">Status</td>
-                    <td> 
+                    <td>
                         <select class="form-select" aria-label="Default select example" name="City">
                             <option value="order-placed">order-placed</option>
                             <option value="verified">verified</option>
