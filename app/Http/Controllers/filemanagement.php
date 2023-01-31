@@ -1166,11 +1166,9 @@ class filemanagement extends Controller
 
        public function filepending()
        {
-        $file_pending_closure=DB::table('cra_file_report')
-        ->select('*')
-        ->leftjoin('cra_add_file_progress','cra_add_file_progress.id','=','cra_file_report.id')
-        ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_file_report.id')
-        ->get();    
+        $file_pending_closure=DB::table('cra_open_new_file_details')->get();  
+      
+          
        return view('file_management.file-pending',compact('file_pending_closure'));
         //    return view('file_management.file-pending');
        }

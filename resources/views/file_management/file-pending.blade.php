@@ -63,13 +63,13 @@
                         <tr id="data">
 
                             <!-- <td scope="row" class="text-center">{{$pending->id}}</td> -->
-                            <td scope="row" class="text-center">{{$pending->client_name}}</td>
+                            <td scope="row" class="text-center">{{$pending->client}}</td>
                             <td scope="row" class="text-center">{{$pending->id}}</td>
                             <td scope="row" class="text-center">{{$pending->file_name}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center">{{$pending->Responsible_Advocate}}</td>
-                            <td scope="row" class="text-center">{{$pending->Date_From}}</td>
+                            <td scope="row" class="text-center">{{$pending->advocate}}</td>
+                            <td scope="row" class="text-center">{{$pending->open_date}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                             <td  scope="row"class="text-center">
