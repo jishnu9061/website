@@ -204,10 +204,51 @@
         #ni{
             display: none;
         }
+        .sidepanel  {
+        width: 0; 
+        position: fixed;
+        z-index: 10000;
+        height: 100vh;
+        top: 0;
+        right:  0;
+        background-color: rgb(255, 255, 255);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 6px;
+
+        }
     </style>
 
 </head>
 <body>
+
+    <div id="mySidepanel" class="sidepanel">
+        <a style="display: block ;text-align:end" href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+        <div id="navr" class="m-1">
+            <div class="" style=" text-decoration: none; list-style:none;">
+                <a type="button" class="btn btn-outline-primary" style="text-align: center; font-size:13px; padding: 0.2rem 0.2rem;"
+                    class="text-muted  " href="{{url('logt')}}">
+                    <i class="fas fa-sign-out-alt"></i>LogOut
+                </a>
+            </div>
+        </div>
+      </div>
+
+      <script>
+        function openNav() {
+          document.getElementById("mySidepanel").style.width = "40%";
+          document.getElementById("mySidepanel").style.padding = "4%";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidepanel").style.width = "0";
+          document.getElementById("mySidepanel").style.padding = "0%";
+        }
+        </script>
     <div id="app">
             <div id="sidebar" class="active">
                 {{-- @include('sidebar.superadmin_sidebar') --}}
@@ -341,18 +382,18 @@
                                 class="d-inline-block " alt="">
                         </li>
                         <li class="nav-item" style=" text-decoration: none; list-style:none;">
-                            <a class="font-bold text-uppercase nav-link" href="#" style=" padding: 0.1rem .1rem;color:#15144d;">{{ Auth::user()->username }}<span
+                            <a  onclick="openNav()" class="font-bold text-uppercase nav-link" href="#" style=" padding: 0.1rem .1rem;color:#15144d;">{{ Auth::user()->username }}<span
                                     class="sr-only">(current)</span></a>
                         </li>
                         <!-- LogOut Button  -->
-                        <div id="navr" class="m-1">
+                        {{-- <div id="navr" class="m-1">
                             <div class="" style=" text-decoration: none; list-style:none;">
                                 <a type="button" class="btn btn-outline-primary" style="text-align: center; font-size:13px; padding: 0.2rem 0.2rem; "
                                     class="text-muted  " href="{{url('logt')}}">
                                     <i class="fas fa-sign-out-alt"></i>LogOut
                                 </a>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
         </nav>
         <section class="newstyle container-fluid bg-white p-4 mt-2">
@@ -851,6 +892,8 @@
                         }
                     }
             </script>
+
+
         @endif
         <script src="{{asset('/')}}assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
         <script src="{{asset('/')}}assets/js/bootstrap.bundle.min.js"></script>
