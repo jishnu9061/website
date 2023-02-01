@@ -125,7 +125,7 @@ color: #999;
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center">{{$list->close_date}}</td>
                             <td scope="row" class="text-center">
-                        <a href=""><i style="color:black;" class="fa fa-eye" aria-hidden="true"></i></a>
+                        <a href="{{url('view_box_no,') }}" data-toggle="modal" data-target="#viewmyModal"><i style="color:black;" class="fa fa-eye" aria-hidden="true"></i></a>
             <input type="hidden" value="" id="medicine_id_hidden" class="applicate" name="supplier_id_hidden">
                         <a href="{{url('edit-box-no',$list->id)}}"><i style="color:black;" class="fa fa-edit"aria-hidden="true"></i></a>
                         <a onClick="return myFunction();" href="{{url('delete-box-no',$list->id)}}" style="color:black;"><i class="fas fa-trash-alt"></i></a></td>
@@ -203,8 +203,8 @@ color: #999;
                 <div class="col-md-6">
                     <div class="mb-1">
                         <label for="username">Box No</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
 
                                 </div>
                                     <input type="text" class="form-control" name="box_no" id="age">
@@ -236,7 +236,127 @@ color: #999;
     </div>
 
 </div>
-<div class="modal" id="mymodal">
+                   <!------------Modal-View---------------->
+
+<div class="modal fade" id="viewmyModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" >
+                
+                                                    <!-- Modal Header -->
+<div class="modal-header">
+    <h2 class="text-center"><b>View Box No</b></h2>
+                
+</div>
+                
+                                                    <!-- Modal body -->
+<div class="modal-body">
+    <div class="container">
+        <form method="post" action="{{ url('view-box-no') }}"
+                    enctype="multipart/form-data">
+        @csrf
+                
+<div class="row">
+    <div class="col-md-6">
+        <div class="mb-1">
+            <label for="username">Archive Number</label>
+                
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                
+                    </div>
+            <input type="text" class="form-control" name="archive_number" id="age">
+                                                        <div class="invalid-feedback" style="width: 100%;">
+                                                                            Incorporation is required 
+                                                        </div>
+                </div>
+        </div>
+    </div>
+                
+    <div class="col-md-6">
+        <div class="mb-1">
+            <label for="username">Archive Date</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                
+                    </div>
+            <input type="date" class="form-control" name="archive_date" id="age">
+                </div>
+        </div>
+    </div>
+                
+                
+</div>
+                <br>
+<div class="row">
+    <div class="col-md-6">
+        <div class="mb-1">
+            <label for="username">Client Name</label>
+                
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                
+                    </div>
+            <input type="text" class="form-control" name="client_name" id="age">
+                                                     <div class="invalid-feedback" style="width: 100%;">
+                                                                            Incorporation is required 
+                                                    </div> 
+                </div>
+        </div>
+    </div>
+                
+    <div class="col-md-6">
+        <div class="mb-1">
+            <label for="username">File Number</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                
+                    </div>
+            <input type="text" class="form-control" name="file_number" id="age">
+                </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+        <div class="col-md-6">
+            <div class="mb-1">
+                <label for="username">File Closed Number</label>
+                    
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                    
+                        </div>
+                <input type="text" class="form-control" name="file_closednumber" id="age">
+                                                            <div class="invalid-feedback" style="width: 100%;">
+                                                                                Incorporation is required 
+                                                            </div> 
+                    </div>
+            </div>
+        </div>
+                    
+        <div class="col-md-6">
+            <div class="mb-1">
+                <label for="username">Date Closed</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                    
+                        </div>
+                <input type="date" class="form-control" name="date_closed" id="age">
+                    </div>
+            </div>
+        </div>
+                    
+                    
+</div>                
+    </form>
+    </div>   
+</div>
+        </div>
+    </div>
+</div>
+                
+</div>                   
+                
+{{-- <div class="modal" id="mymodal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -268,6 +388,7 @@ color: #999;
             </div>
         </div>
     </div>
+</div> --}}
 </div>
 </div>
         </div>
