@@ -2,8 +2,8 @@
 $company_id_for_sidebar=Auth::user()->company_id;
 $copmany_name_for_sidebar=DB::table('company_details')->where('id',Auth::user()->company_id)->select('company_name')->first();
 ?>
-<div class="sidebar-wrapper active">
-    <div class="sidebar-header"style="padding-left: 20px;padding-right: 10px;padding-bottom:0px;">
+<div class="sidebar-wrapper active"style="top:100px;border-top-right-radius: 6px;height:auto;">
+    {{-- <div class="sidebar-header"style="padding-left: 20px;padding-right: 10px;padding-bottom:0px;">
         <div class="d-flex justify-content-between">
             <div class="logo"class="logo" style="background-color:#dfc79d;
                                                  border-radius:100% 100% 100% 100%; 
@@ -16,11 +16,11 @@ $copmany_name_for_sidebar=DB::table('company_details')->where('id',Auth::user()-
                 <img id="cr_logo" src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA" style="margin-top:8px;height:60px;width:60px;">
                 </a>
             </div>
-            <div class="toggler" style="text-align:center;height:auto;width:150px;color:#1D1D50;line-height: 80%;padding-left:10px;padding-top:10px; ">
-                <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a> {{ $copmany_name_for_sidebar->company_name }}
-            </div>
         </div>
-    </div>
+        <div class="toggler" style="text-align:center;height:auto;width:150px;color:#1D1D50;line-height: 80%;padding-left:10px;padding-top:10px; ">
+            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a> {{ $copmany_name_for_sidebar->company_name }}
+        </div> --}}
+    {{-- </div> --}}
     <div id="demo" class="sidebar-menu">
         <ul class="menu">
             <li class="sidebar-title" style="background-color:#1D1D50;color: #dcdce7; text-align:center; font-size:16px;border: 0.1px solid #0606067d;
@@ -510,7 +510,7 @@ $copmany_name_for_sidebar=DB::table('company_details')->where('id',Auth::user()-
                         @endif
                                 </a>
                             </li>{{-- 28th submenu end --}}
-                        @if(request()->path()== "incomming-letters"){{-- 29th  submenu start --}}
+                        {{--@if(request()->path()== "incomming-letters") 29th  submenu start
                             <li class="submenu-item " >
                                 <a href="{{url('incomming-letters')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Incoming Letters</span>
@@ -520,7 +520,7 @@ $copmany_name_for_sidebar=DB::table('company_details')->where('id',Auth::user()-
                                         <span>Incoming Letters</span>
                         @endif
                                 </a>
-                            </li>{{-- 29th submenu end --}}
+                            </li> 29thsubmenuend --}}
                         @if(request()->path()== "safe-register-report"){{-- 30th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('safe-register-report')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
