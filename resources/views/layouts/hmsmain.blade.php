@@ -221,34 +221,7 @@
 
 </head>
 <body>
-
-    <div id="mySidepanel" class="sidepanel">
-        <a style="display: block ;text-align:end" href="javascript:void(0)" class="closebtn" onclick="closeoffset()">×</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
-        <div id="navr" class="m-1">
-            <div class="" style=" text-decoration: none; list-style:none;">
-                <a type="button" class="btn btn-outline-primary" style="text-align: center; font-size:13px; padding: 0.2rem 0.2rem;"
-                    class="text-muted  " href="{{url('logt')}}">
-                    <i class="fas fa-sign-out-alt"></i>LogOut
-                </a>
-            </div>
-        </div>
-      </div>
-
-      <script>
-        function openNav() {
-          document.getElementById("mySidepanel").style.width = "40%";
-          document.getElementById("mySidepanel").style.padding = "4%";
-        }
-        
-        function close() {
-          document.getElementById("mySidepanel").style.width = "0";
-          document.getElementById("mySidepanel").style.padding = "0%";
-        }
-        </script>
+    @include('navbar_logout.logout_offset')
     <div id="app"style="background-color: #1d1d50;">
         <nav class=" newstyle1 navbar navbar-expand-lg  sticky-top navbar-light " style="background-color: #D5BD94">
             <div class="logo"class="logo" style="background-color:#dfc79d;
@@ -360,7 +333,7 @@
                                 class="d-inline-block " alt="">
                         </li>
                         <li class="nav-item" style=" text-decoration: none; list-style:none;">
-                            <a  onclick="openNav()" class="font-bold text-uppercase nav-link" href="#" style=" padding: 0.1rem .1rem;color:#15144d;">{{ Auth::user()->username }}<span
+                            <a  onclick="openoffset()" class="font-bold text-uppercase nav-link" href="#" style=" padding: 0.1rem .1rem;color:#15144d;">{{ Auth::user()->username }}<span
                                     class="sr-only">(current)</span></a>
                         </li>
                         <!-- LogOut Button  -->
