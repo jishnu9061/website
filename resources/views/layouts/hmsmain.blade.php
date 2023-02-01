@@ -262,9 +262,10 @@
                 <img id="cr_logo" src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA" style="margin-top:8px;height:40px;width:40px;">
                 </a>
             </div>
-            
+            <?php $company_id_for_sidebar=Auth::user()->company_id;$copmany_name_for_sidebar=DB::table('company_details')->where('id',Auth::user()->company_id)->select('company_name')->first();?>
             <div class="toggler p-2" style="text-align:center;height:auto;width:auto;color:#1D1D50;padding-left:10px;padding-top:10px;line-height: 150%; ">
-                <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a><b style="font-size: 20px">Company Name goes Here</b>
+
+                <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a><b style="font-size: 20px">{{ $copmany_name_for_sidebar->company_name }}</b>
 
             </div>
             <!-- Nav Back Button -->
@@ -272,7 +273,7 @@
                 <i id="bkbtnicon" class="far fa-arrow-alt-circle-left p-1"></i>
             </a>
             <div class="nav-item">
-                <a id="das-" type="button" onclick="hideee()" class="nav-link"> <i style=" color: #15144d;font-size: 30px;">☰</i></a>
+                <a id="das-" type="button" onclick="hideee()" class="nav-link"> <span style=" color: #15144d;font-size: 30px;">☰</span></a>
             </div>
             <div class="nav-item">
                 <a id="t" type="button" onclick="myss()" class="nav-link"> <i class="fa fa-text-width" style=" color: #15144d;font-size: 20px;"></i></a>

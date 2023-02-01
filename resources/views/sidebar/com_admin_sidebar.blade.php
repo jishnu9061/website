@@ -1,7 +1,3 @@
-<?php 
-$company_id_for_sidebar=Auth::user()->company_id;
-$copmany_name_for_sidebar=DB::table('company_details')->where('id',Auth::user()->company_id)->select('company_name')->first();
-?>
 <div class="sidebar-wrapper active"style="top:100px;border-top-right-radius: 6px;height:auto;">
     {{-- <div class="sidebar-header"style="padding-left: 20px;padding-right: 10px;padding-bottom:0px;">
         <div class="d-flex justify-content-between">
