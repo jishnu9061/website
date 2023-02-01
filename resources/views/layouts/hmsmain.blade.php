@@ -204,10 +204,51 @@
         #ni{
             display: none;
         }
+        .sidepanel  {
+        width: 0; 
+        position: fixed;
+        z-index: 10000;
+        height: 100vh;
+        top: 0;
+        right:  0;
+        background-color: rgb(255, 255, 255);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 6px;
+
+        }
     </style>
 
 </head>
 <body>
+
+    <div id="mySidepanel" class="sidepanel">
+        <a style="display: block ;text-align:end" href="javascript:void(0)" class="closebtn" onclick="closeoffset()">×</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+        <div id="navr" class="m-1">
+            <div class="" style=" text-decoration: none; list-style:none;">
+                <a type="button" class="btn btn-outline-primary" style="text-align: center; font-size:13px; padding: 0.2rem 0.2rem;"
+                    class="text-muted  " href="{{url('logt')}}">
+                    <i class="fas fa-sign-out-alt"></i>LogOut
+                </a>
+            </div>
+        </div>
+      </div>
+
+      <script>
+        function openNav() {
+          document.getElementById("mySidepanel").style.width = "40%";
+          document.getElementById("mySidepanel").style.padding = "4%";
+        }
+        
+        function close() {
+          document.getElementById("mySidepanel").style.width = "0";
+          document.getElementById("mySidepanel").style.padding = "0%";
+        }
+        </script>
     <div id="app"style="background-color: #1d1d50;">
         <nav class=" newstyle1 navbar navbar-expand-lg  sticky-top navbar-light " style="background-color: #D5BD94">
             <div class="logo"class="logo" style="background-color:#dfc79d;
@@ -223,7 +264,9 @@
             </div>
             <?php $company_id_for_sidebar=Auth::user()->company_id;$copmany_name_for_sidebar=DB::table('company_details')->where('id',Auth::user()->company_id)->select('company_name')->first();?>
             <div class="toggler p-2" style="text-align:center;height:auto;width:auto;color:#1D1D50;padding-left:10px;padding-top:10px;line-height: 150%; ">
+
                 <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a><b style="font-size: 20px">{{ $copmany_name_for_sidebar->company_name }}</b>
+
             </div>
             <!-- Nav Back Button -->
             <a id="backbtn" href="javascript:history.back()" style=" color: #15144d;font-size: 35px;">
@@ -317,18 +360,18 @@
                                 class="d-inline-block " alt="">
                         </li>
                         <li class="nav-item" style=" text-decoration: none; list-style:none;">
-                            <a class="font-bold text-uppercase nav-link" href="#" style=" padding: 0.1rem .1rem;color:#15144d;">{{ Auth::user()->username }}<span
+                            <a  onclick="openNav()" class="font-bold text-uppercase nav-link" href="#" style=" padding: 0.1rem .1rem;color:#15144d;">{{ Auth::user()->username }}<span
                                     class="sr-only">(current)</span></a>
                         </li>
                         <!-- LogOut Button  -->
-                        <div id="navr" class="m-1">
+                        {{-- <div id="navr" class="m-1">
                             <div class="" style=" text-decoration: none; list-style:none;">
                                 <a type="button" class="btn btn-outline-primary" style="text-align: center; font-size:13px; padding: 0.2rem 0.2rem; "
                                     class="text-muted  " href="{{url('logt')}}">
                                     <i class="fas fa-sign-out-alt"></i>LogOut
                                 </a>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
         </nav>
             <div id="sidebar" class="active">
@@ -866,6 +909,8 @@
                         }
                     }
             </script>
+
+
         @endif
         <script src="{{asset('/')}}assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
         <script src="{{asset('/')}}assets/js/bootstrap.bundle.min.js"></script>

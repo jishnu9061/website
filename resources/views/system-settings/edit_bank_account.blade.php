@@ -1,5 +1,12 @@
 @extends('layouts.hmsmain')
 @section('content')
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">System Setup</a> /
+    <a href="{{url('bank_details#')}}" style="color: #1D1D50;">Bank Account Details</a> /
+    <a href="#" style="color: #1D1D50;">Edit Bank Account Details</a>
+</nav>
+<br><br>
 <div class="container">
 
     {{-- heading --}}

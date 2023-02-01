@@ -1,5 +1,13 @@
 @extends('layouts.hmsmain')
 @section('content')
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">CRM</a> /
+    <a href="#" style="color: #1D1D50;">Lead</a> /
+    <a href="{{url('lead')}}" style="color: #1D1D50;">Corporate Customer Leads</a> /
+    <a href="#" style="color: #1D1D50;">Proposals</a>
+</nav>
+<br><br>
 {{-- heading --}}
 <div class="container">
     <h4 id="hdtpa"><b>Proposals</b></h4>

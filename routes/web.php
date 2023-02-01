@@ -81,6 +81,7 @@ Route::any('/addstaffs', 'addController@addstaffs');
 
 Route::any('/editstafff', 'addController@editstafff');
 Route::post('/addthestaffs', 'addController@addthestaffs');
+Route::post('/addstaffss', 'addController@addstaffss');
 Route::any('/add_staff', 'addController@add_staff');
 Route::any('/managestaff{id}', 'hrcontroller@managestaff');
 Route::any('/managedepstaff{id}', 'departmentcontroller@managedepstaff');
@@ -1171,6 +1172,7 @@ Route::any('/file_destroy/{id}', "filemanagement@file_destroy")->name('file_dest
 Route::any('add-new-file', "filemanagement@addnew")->name('add-new-file');
 Route::any('file-archive', "filemanagement@filearchive")->name('file-archive');
 Route::any('add-box-no', "filemanagement@addboxno")->name('add-box-no');
+Route::any('view-box-no', "filemanagement@viewboxno")->name('view-box-no');
 Route::any('/edit-box-no/{id}', "filemanagement@editboxno")->name('edit-box-no');
 Route::any('/update-box', "filemanagement@updatebox")->name('update-box');
 //manage files

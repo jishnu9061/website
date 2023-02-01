@@ -214,6 +214,12 @@ class filemanagement extends Controller
         
         return redirect('/file-archive');
     }
+    
+    public function viewboxno()
+    {
+        return view('file_management.view-box-no');
+    }
+    
 
     public function editboxno($id)
     {

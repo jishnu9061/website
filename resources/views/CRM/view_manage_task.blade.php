@@ -1,6 +1,12 @@
 @extends('layouts.hmsmain')
 @section('content')
-
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">CRM</a> /
+    <a href="{{url('manage_tasks')}}" style="color: #1D1D50;">Manage Tasks</a> /
+    <a href="#" style="color: #1D1D50;">View Tasks</a>
+</nav>
+<br><br>
 <style>
 th{ 
     width:30%;
