@@ -8,7 +8,7 @@
     <div class="container">
         <h4 id="hdtpa"><b>Add New Staff</h4>
         <br><br>
-        <form method="post" action="{{ url('addthestaffs') }}" enctype="multipart/form-data">
+        <form method="post" action="{{ url('addstaffss') }}" enctype="multipart/form-data">
             @csrf
             <div class="row">
                 <h5><u>Basic Details</u></h5>
@@ -130,8 +130,14 @@
                     <div class="mb-1">
                         <label>Roles&nbsp;</label>
                         <select class="form-select" aria-label="Default select example" name="role">
-                            <option>select</option>
-                            <option value=""></option>
+                            @if(count($roles))
+                            @foreach($roles  as $list)
+                            
+                              
+                                    <option value="">{{$list->role}}</option>
+                               
+                            @endforeach
+                            @endif
                         </select>
                     </div>
                     {{-- <div id="test" style="height:20px;"></div> --}}
@@ -167,7 +173,7 @@
                 <div class="col-md-3">
                     <div class="mb-1">
                         <label>Experience:&nbsp;</label>
-                        <select class="form-select" aria-label="Default select example" name="status">
+                        <select class="form-select" aria-label="Default select example" name="experience">
                             <option selected>Select</option>
                             <option value="Fresher">Fresher</option>
                             <option value="1+ Yeras">1+ Yeras</option>
@@ -374,7 +380,7 @@
                         <label for="username">Upload CV</label>
                         <div class="input-group">
                             <div class="input-group-prepend"></div>
-                            <input type="file" class="form-control" name="cv" id=""
+                            <input type="file" class="form-control" name="upload_cv" id=""
                                 placeholder="staff Password">
                             <div class="invalid-feedback" style="width: 100%;">
                                 Passeord is required.

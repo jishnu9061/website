@@ -80,6 +80,7 @@ Route::any('/addstaffs', 'addController@addstaffs');
 
 Route::any('/editstafff', 'addController@editstafff');
 Route::post('/addthestaffs', 'addController@addthestaffs');
+Route::post('/addstaffss', 'addController@addstaffss');
 Route::any('/add_staff', 'addController@add_staff');
 Route::any('/managestaff{id}', 'hrcontroller@managestaff');
 Route::any('/managedepstaff{id}', 'departmentcontroller@managedepstaff');
