@@ -1,5 +1,12 @@
 @extends('layouts.hmsmain')
 @section('content')
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">E-Library</a> /
+    <a href="{{url('site')}}" style="color: #1D1D50;">Legal Sites</a> /
+    <a href="#" style="color: #1D1D50;">Edit Site</a>
+</nav>
+<br><br>
 {{-- heading --}}
 <h4 id="hdtpa"><b>Edit Site Details</b></h4>
 <br>

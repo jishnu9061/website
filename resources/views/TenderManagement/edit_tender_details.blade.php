@@ -1,5 +1,13 @@
 @extends('layouts.hmsmain')
 @section('content')
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">Tender Management</a> /
+    <a href="{{url('tender_details')}}" style="color: #1D1D50;">Tender Details</a> /
+    <a href="#" style="color: #1D1D50;">Edit Tender Details</a>
+</nav>
+<br><br>
+
     <h4 id="hdtpa"><b> Edit Tender Details </b></h4>
 <br>    
 <div class="card">

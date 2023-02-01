@@ -11,6 +11,8 @@ use App\salary;
 use App\model\allowance;
 use App\model\giveallowance;
 use \Carbon\Carbon;
+
+
 // Hr Manage Staff
 class addcontroller extends Controller
 {
@@ -22,7 +24,10 @@ class addcontroller extends Controller
     $nonfixd_allowance_data = DB::table('allowance')->where('status', 'nonfixedallowance')->get();
     $allowance_data = DB::table('allowance')->where('status', 'allowance')->get();
     $leave_type = DB::table('leave_types')->get();
-    return view('hr.add_staff', compact('leave_type', 'allowance_data', 'nonfixd_allowance_data', 'deduction_data', 'user'));
+    
+    $roles    = DB::table('roles')->get();
+ 
+    return view('hr.add_staff', compact('leave_type', 'allowance_data', 'nonfixd_allowance_data', 'deduction_data', 'user','roles'));
   }
   public function addstaffs()
   {
@@ -128,13 +133,16 @@ class addcontroller extends Controller
       $uploadedImage->move($destinationPath, $imageName);
       $staffs->signature    =  $image_location . $imageName;
     }
-    $staffs->save();
+    $staffs->save(); 
     $Request->session()->put('staffregistered', 'Staff Registered');
     return redirect('/staffs');
   }
 
   public function allstaffs()
   {
+  
+    // $id=uniqid();
+    // dd($id);
     $hospital = Auth::user()->Hospital;
     $allowancedata = DB::table('allowance')->where('status', 'allowance')->get();
     $nonfixdallowancedata = DB::table('allowance')->where('status', 'nonfixedallowance')->get();
@@ -508,5 +516,120 @@ class addcontroller extends Controller
 
     return response()->json(['status' => 'all set']);
     return view('add.salary', ['jsondata' => $json, 'id' => '2']);
+  }
+
+  
+  public function addstaffss(Request $request){
+       
+       $uniqId        = uniqid();
+       $salary        = $request['salary'];
+       $bank_name     = $request['bank'];
+       $account_number= $request['account'];
+       $branch        = $request['bank_branch'];
+       $bank_code     = $request['branch_code'];
+
+       $name          = $request['name'];
+       $email         = $request['email'];
+       $number        = $request['phoneno'];
+       $age           = $request['age'];
+       $password      = $request['password'];
+       $password     =  Hash::make($password);
+       $date_of_joining=$request['date_of_joining'];
+       $gender        = $request['sex'];
+       $departments   = $request['departname'];
+       $roles         = $request['role'];
+       $status        = $request['status'];
+       $status_date   = $request['status_date'];
+       $experience    = $request['experience'];
+       $upload_cv     = $request['upload_cv'];
+       $photo         = $request['photo'];
+       $signature     = $request['signature'];
+
+       DB::table('salary_details')->insert([
+          'unique_id'   =>   $uniqId,
+          'basic_salary'=>   $salary,
+          'bank_name'   =>   $bank_name,
+          'account_number'=> $account_number,
+          'branch'      =>   $branch,
+          'bank_code'   =>   $bank_code
+       ]);
+
+       if(!empty($request->file('upload_cv'))){
+
+        $this->validate($request,[
+            'upload_cv' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+        ]);
+     }
+
+      if(request()->hasfile('upload_cv')){
+          $uploadedImage = $request->file('upload_cv');
+          $imageName     = time() .'.'. $upload_cv->getClientOriginalExtension();
+          $destinationPath = public_path('images/file');
+          $image_location = "/CRA/public/images/file/";
+          $uploadedImage->move($destinationPath,$imageName);
+          $upload_cv->upload_cv    = $image_location.$imageName;
+      }
+
+
+      
+      if(!empty($request->file('photo'))){
+
+        $this->validate($request,[
+            'photo' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+        ]);
+     }
+
+      if(request()->hasfile('photo')){
+          $uploadedImages = $request->file('photo');
+          $imageNames     = time() .'.'. $photo->getClientOriginalExtension();
+          $destinationPath = public_path('images/file');
+          $image_location = "/CRA/public/images/file/";
+          $uploadedImages->move($destinationPath,$imageNames);
+          $photo->photo    = $image_location.$imageNames;
+      }
+
+
+       
+      if(!empty($request->file('signature'))){
+
+        $this->validate($request,[
+            'signature' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
+        ]);
+     }
+
+      if(request()->hasfile('signature')){
+          $uploadedImagess = $request->file('signature');
+          $imageNamess     = time() .'.'. $signature->getClientOriginalExtension();
+          $destinationPath = public_path('images/file');
+          $image_location = "/CRA/public/images/file/";
+          $uploadedImagess->move($destinationPath,$imageNamess);
+          $signature->signature    = $image_location.$imageNamess;
+      }
+     
+
+    
+
+      DB::table('add_staff')->insert([
+
+            'name'        => $name,
+            'email'       => $email,
+            'phone_number'=> $number,
+            'age'         => $age,
+            'password'    => $password,
+            'date_of_joining'=> $date_of_joining,
+            'gender'      => $gender,
+            'departments' => $departments,
+            'roles'       => $roles,
+            'status'      => $status,
+            'status_date' => $status_date,
+            'experience'  => $experience,
+            'upload_cv'   => $imageName,
+            'photo'       => $imageNames,
+            'signature'   => $imageNamess
+           
+      ]);
+
+
+       return redirect('/staffs');
   }
 }

@@ -1,5 +1,11 @@
 @extends('layouts.hmsmain')
 @section('content')
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">CRM</a> /
+    <a href="#" style="color: #1D1D50;">Individual Customers</a>
+</nav>
+<br><br>
 <html>
 
 <head>
@@ -113,7 +119,7 @@
                                     <th class="text-center">Phone</th>
                                     <th class="text-center">Email</th>
 
-                                    
+
                                     <th class="text-center">Action</th>
 
                                 </tr>
@@ -128,7 +134,7 @@
                                     <td>{{$registration->mobile_no}}</td>
                                     <td>{{$registration->email}}</td>
 
-                                   
+
                                     <td scope="row"> <a href="{{url('show-registration',$registration->id)}}"><i
                                                 style="color:black;" class="fa fa-eye" aria-hidden="true"></i></a>
                                         <span class="m-2"></span><a
@@ -349,7 +355,7 @@
                                                         </div>
                                                     </div>
                                                     <br>
-                                                   
+
                                                     <!-- <h4 style="text-align:center">Contact Persons</h4> -->
 
 

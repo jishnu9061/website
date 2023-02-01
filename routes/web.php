@@ -28,6 +28,7 @@ Route::any('company_list', "superadminController@show_company_list")->name('comp
 Route::post('reg_company', "superadminController@reg_company")->name('reg_company');
 Route::post('/changestatus_com', "superadminController@changestatus_company")->name('changestatus_com');
 Route::get('/edit_company/{id}', "superadminController@edit_company")->name('edit_company');
+Route::put('/update_company/{id}', "superadminController@update_company")->name('update_company');
 
 //superadmin
 
@@ -80,6 +81,7 @@ Route::any('/addstaffs', 'addController@addstaffs');
 
 Route::any('/editstafff', 'addController@editstafff');
 Route::post('/addthestaffs', 'addController@addthestaffs');
+Route::post('/addstaffss', 'addController@addstaffss');
 Route::any('/add_staff', 'addController@add_staff');
 Route::any('/managestaff{id}', 'hrcontroller@managestaff');
 Route::any('/managedepstaff{id}', 'departmentcontroller@managedepstaff');

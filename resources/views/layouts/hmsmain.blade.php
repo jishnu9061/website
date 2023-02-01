@@ -223,7 +223,7 @@
 <body>
 
     <div id="mySidepanel" class="sidepanel">
-        <a style="display: block ;text-align:end" href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a style="display: block ;text-align:end" href="javascript:void(0)" class="closebtn" onclick="closeoffset()">×</a>
         <a href="#">About</a>
         <a href="#">Services</a>
         <a href="#">Clients</a>
@@ -244,52 +244,29 @@
           document.getElementById("mySidepanel").style.padding = "4%";
         }
         
-        function closeNav() {
+        function close() {
           document.getElementById("mySidepanel").style.width = "0";
           document.getElementById("mySidepanel").style.padding = "0%";
         }
         </script>
-    <div id="app">
-            <div id="sidebar" class="active">
-                {{-- @include('sidebar.superadmin_sidebar') --}}
-                @include('sidebar.com_admin_sidebar')
+    <div id="app"style="background-color: #1d1d50;">
+        <nav class=" newstyle1 navbar navbar-expand-lg  sticky-top navbar-light " style="background-color: #D5BD94">
+            <div class="logo"class="logo" style="background-color:#dfc79d;
+                                                border-radius:100% 100% 100% 100%; 
+                                                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                                                height:50px;width:50px; margin-left:px; 
+                                                background:  #d0d3cd50 -webkit-linear-gradient(left,  #ffffff15, rgb(255, 255, 255)) repeat 0 0 / 200px;
+                                                animation: sweep 5.5s ease-in-out infinite;
+                                                animation-direction:reverse;">
+                <a href="{{url('home')}}">
+                <img id="cr_logo" src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA" style="margin-top:8px;height:40px;width:40px;">
+                </a>
             </div>
-    <div id="main" style="padding-bottom:8px;padding-top: 8px;padding-right: 20px;margin-right:-8px;background-color: #1D1D50;">
-     {{-- mian start --}}  
-        <style>
-            .display-date {
-                text-align: center;
-                margin-bottom: 10px;
-                font-size: .6rem;
-                font-weight: 600;
-            }
-            .display-time {
-                text-align: center;
-                display: flex;
-                font-size: 1rem;
-                font-weight: bold;
-                border: 1px solid #1b1b1a;
-                padding: 1px 2px;
-                border-radius: 5px;
-                transition: ease-in-out 0.1s;
-                transition-property:  box-shadow, color;
-                -webkit-box-reflect: below 2px
-                linear-gradient(transparent, rgba(255, 255, 255, 0.05));
-            }
-            .display-time:hover {
-                background: #ffffff;
-                color: #272727;
-                cursor: pointer;
-            }
-            #list{
-                font-size: 1.5em;
-                margin-left: 90px;
-            }
-            .animals{
-                display: list-item;	
-            }
-        </style>  
-        <nav class=" newstyle1 navbar navbar-expand-lg  sticky-top navbar-light bg-white">
+            
+            <div class="toggler p-2" style="text-align:center;height:auto;width:auto;color:#1D1D50;padding-left:10px;padding-top:10px;line-height: 150%; ">
+                <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a><b style="font-size: 20px">Company Name goes Here</b>
+
+            </div>
             <!-- Nav Back Button -->
             <a id="backbtn" href="javascript:history.back()" style=" color: #15144d;font-size: 35px;">
                 <i id="bkbtnicon" class="far fa-arrow-alt-circle-left p-1"></i>
@@ -347,7 +324,7 @@
                             <a class="dropdown-item" href="{{url('file_managementindex')}}">Secure message</a>
                             <a class="dropdown-item" href="{{url('file_managementindex')}}">Event</a>
                             <a class="dropdown-item" href="{{url('file_managementindex')}}">Note</a>
-
+    
                         </div>
                     </div>
                     <div style="text-align: center;padding-left:1rem; ">
@@ -396,6 +373,45 @@
                         </div> --}}
                     </div>
         </nav>
+            <div id="sidebar" class="active">
+                {{-- @include('sidebar.superadmin_sidebar') --}}
+                @include('sidebar.com_admin_sidebar')
+            </div>
+    <div id="main" style="padding-bottom:8px;padding-top: 2px;padding-right: 20px;margin-right:-8px;background-color: #1D1D50;">
+     {{-- mian start --}}  
+        <style>
+            .display-date {
+                text-align: center;
+                margin-bottom: 10px;
+                font-size: .6rem;
+                font-weight: 600;
+            }
+            .display-time {
+                text-align: center;
+                display: flex;
+                font-size: 1rem;
+                font-weight: bold;
+                border: 1px solid #1b1b1a;
+                padding: 1px 2px;
+                border-radius: 5px;
+                transition: ease-in-out 0.1s;
+                transition-property:  box-shadow, color;
+                -webkit-box-reflect: below 2px
+                linear-gradient(transparent, rgba(255, 255, 255, 0.05));
+            }
+            .display-time:hover {
+                background: #ffffff;
+                color: #272727;
+                cursor: pointer;
+            }
+            #list{
+                font-size: 1.5em;
+                margin-left: 90px;
+            }
+            .animals{
+                display: list-item;	
+            }
+        </style>  
         <section class="newstyle container-fluid bg-white p-4 mt-2">
             <section class="row">
                 <div class="col-12 col-lg-12" style="min-height: 100vh" id="fontscl">

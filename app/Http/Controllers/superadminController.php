@@ -168,8 +168,11 @@ class superadminController extends Controller
         'users.password as password',
         'users.photo_path as photo_path'
         )->first();
-        $edit = [];
-        return view('superadmin.company_edit',compact('user_edit','id','edit'));
+
+        return response()->json([
+            'status' => 200,
+            'result' => $user_edit,
+        ]);
     }
 
     /**
@@ -179,9 +182,10 @@ class superadminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update_company(Request $request, $id)
     {
-        //
+        print_r($id);
+        die;
     }
 
     /**

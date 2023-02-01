@@ -208,7 +208,7 @@
 
 </head>
 <body>
-    <div id="app">
+    <div id="app" style="background-color: #1d1d50;">
             <div id="sidebar" class="active">
                 @include('sidebar.superadmin_sidebar')
                 {{-- @include('sidebar.com_admin_sidebar') --}}
