@@ -193,7 +193,7 @@
                                         </td>
                                         <td scope="row"class="text-center">
                                             <a href="{{url('edit_company',$user->uniqueid)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                                            <a href="#" data-toggle="modal" data-target="#editcompany"><i  style="  color:rgb(13, 1, 56);" class="fas fa-eye" aria-hidden="true"></i>
+                                            <a href="#" data-toggle="modal" data-id="{{ $user->uniqueid }}" onclick="editcompany(this)" data-target="#editcompany"><i  style="  color:rgb(13, 1, 56);" class="fas fa-eye" aria-hidden="true"></i>
                                             <a href="{{url('#',$user->uniqueid)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
                                         </td>
                                     </tr>
@@ -395,16 +395,18 @@
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <!---- Modal Header -->
-                    <form method="post" action="{{ url('reg_company') }}" enctype="multipart/form-data"> 
+                    <form method="post"  id="update_company" action="#" enctype="multipart/form-data"> 
                         @csrf
+                        @method('PUT')
+                        <input type="hidden" id="uniqueid" value="uniqueid">
                         <div class="modal-header" style="padding:0rem 0rem;">
-                            <div style="padding:1rem 1rem;"><h4 class="text-centre"><b>Edit Company details</b></h4></div>
+                            <div style="padding:1rem 1rem;"><h4 class="text-centre"><b>Edit details</b></h4></div>
                             <div style="align-self:left;padding:0rem 2.5rem;">
-                                <img id="e_blah" src="#" alt="" style="width:50px;height:60px;" />
-                                <label for="imgInp" style="margin-left: 9px;text-align:center;width:80px;height:30px;
+                                <img id="e_blah" src="#" alt=""  style="width:50px;height:60px;" />
+                                <label for="e_imgInp" style="margin-left: 9px;text-align:center;width:80px;height:30px;
                                 padding-right:-7px;color:#1D1D50;background-color: #f1d9b0;border-radius: 5px;">
                                 <span style="color: red">*</span>User Img
-                                <input accept="image/*" type='file' id="e_imgInp" name="e_logo" style="width:0px;height:0px;"required>
+                                <input accept="image/*" type='file' id="e_imgInp" name="e_logo" style="width:0px;height:0px;">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Logo required.
                                 </div></label>
@@ -420,13 +422,13 @@
                         <!-- Modal body -->
                         <div class="modal-body" >
                             <div class="container">
-                                <div class="row"><h6><b><span>Edit Company Details:-</span></b></h6> 
+                                <div class="row"><h6><b><span>Enter Company Details:-</span></b></h6> 
                                 </div>
                                     <div class="row">
                                         <div class="" style="width: 50%">
                                             <div class=""><span style="color: red">*</span>
                                                 <label for="company_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Company Name</label>
-                                                <input type="text" placeholder="Enter Company Name " style="width=45%" class="form-control" name="company_name" id="" value=""required>
+                                                <input type="text" placeholder="Enter Company Name " style="width=45%" class="form-control" name="company_name" id="company_name" value=""required>
                                                 <div class="invalid-feedback" style="width: 100%;">
                                                     Company Name is required.
                                                 </div>
@@ -435,7 +437,7 @@
                                         <div class="" style="width: 50%">
                                             <div class=""><span style="color: red">*</span>
                                                 <label for="username" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">company Type</label>
-                                                <input type="text" placeholder="Enter Company type " style="width=45%" class="form-control" name="company_type" id="" value=""required>
+                                                <input type="text" placeholder="Enter Company type " style="width=45%" class="form-control" name="company_type" id="company_type" value=""required>
                                                 <div class="invalid-feedback" style="width: 100%;">
                                                     company Type is required.
                                                 </div>
@@ -447,13 +449,13 @@
                                         <div class="" style="width: 70%">
                                             <div class="">
                                                 <label for="company_name" style="width: 200px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Address:</label>
-                                                <input type="text" placeholder="Enter Address " style="width=45%" class="form-control" name="address" id="" value="">
+                                                <input type="text" placeholder="Enter Address " style="width=45%" class="form-control" name="address" id="address" value="">
                                             </div>
                                         </div>
                                         <div class="" style="width: 30%">
                                             <div class=""><span style="color: red">*</span>
                                                 <label for="company_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">City/State/Country:</label>
-                                                <input type="text" placeholder="City/State/Country" style="width=45%" class="form-control" name="city" id="" value="">
+                                                <input type="text" placeholder="City/State/Country" style="width=45%" class="form-control" name="city" id="city" value="">
                                                 <div class="invalid-feedback" style="width: 100%;">
                                                     City/State/Country is required.
                                                 </div>
@@ -464,18 +466,18 @@
                                         <div class="" style="width: 40%">
                                             <div class="">
                                                 <label for="username" style="width: 200px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Postal Code</label>
-                                                <input type="text" placeholder="Enter Postal Code " style="width=45%" class="form-control" name="postal_code" id="" value="">
+                                                <input type="text" placeholder="Enter Postal Code " style="width=45%" class="form-control" name="postal_code" id="postal_code" value="">
                                             </div>
                                         </div>
                                         <div class="" style="width: 60%">
                                             <div class="">
                                                 <label for="company_name" style="width: 200px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">GSTin</label>
-                                                <input type="text" placeholder="Enter GSTin " style="width=45%" class="form-control" name="GSTin" id="" value="">
+                                                <input type="text" placeholder="Enter GSTin " style="width=45%" class="form-control" name="GSTin" id="GSTin" value="">
                                             </div>
                                         </div>
                                     </div>
                                     <br>
-                                    <div class="row"><h6><b><span>Edit Admin Details:-</span></b></h6>
+                                    <div class="row"><h6><b><span>Enter Admin Details:-</span></b></h6>
                                     </div>
                                     <div class="row" style="height:150px;">
                                         <div style="height:100%;width:70%;padding-right:0px;">
@@ -483,7 +485,7 @@
                                                 <div class="" style="width: 50%">
                                                     <div class=""><span style="color: red">*</span>
                                                         <label for="company_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">User Name</label>
-                                                        <input type="text" placeholder="Enter User Name " style="width=45%" class="form-control" name="username" id="" value=""required>
+                                                        <input type="text" placeholder="Enter User Name " style="width=45%" class="form-control" name="username" id="username" value=""required>
                                                         <div class="invalid-feedback" style="width: 100%;">
                                                             User Name is required.
                                                         </div>
@@ -492,7 +494,7 @@
                                                 <div class="" style="width: 50%;padding-right:0px;">
                                                     <div class=""><span style="color: red">*</span>
                                                         <label for="username" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Email </label>
-                                                        <input type="email" placeholder="Enter Email " style="width=45%" class="form-control" name="email" id="" value="@"required>
+                                                        <input type="email" placeholder="Enter Email " style="width=45%" class="form-control" name="email" id="email" value="@"required>
                                                         <div class="invalid-feedback" style="width: 100%;">
                                                             Email is required.
                                                         </div>
@@ -503,7 +505,7 @@
                                                 <div class="" style="width: 50%">
                                                     <div class=""><span style="color: red">*</span>
                                                         <label for="company_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Password</label>
-                                                        <input type="password" placeholder="Password" style="width=45%" class="form-control" name="password" id="" value=""required>
+                                                        <input type="password" placeholder="**********" style="width=45%" class="form-control" name="password" id="" value="">
                                                         <div class="invalid-feedback" style="width: 100%;">
                                                             Password is required.
                                                         </div>
@@ -512,7 +514,7 @@
                                                 <div class="" style="width: 50%;padding-right:0px;">
                                                     <div class=""><span style="color: red">*</span>
                                                         <label for="company_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Comform Password</label>
-                                                        <input type="password" placeholder="Comform Password" style="width=45%" class="form-control" name="password_1" id="" value=""required>
+                                                        <input type="password" placeholder="**********" style="width=45%" class="form-control" name="password_1" id="" value="">
                                                         <div class="invalid-feedback" style="width: 100%;">
                                                             Comform Password is required.
                                                         </div>
@@ -522,7 +524,7 @@
                                         </div>
                                         <div style="height:100%;width:30%;text-align:center;">
                                             <img id="e_blah_1" src="#" alt="" style="max-width: 100%; max-height: 100%;" /><br>
-                                            <label for="imgInp_1" style=" text-align: center;
+                                            <label for="e_imgInp_1" style=" text-align: center;
                                                                         width: 112px;
                                                                         height: 30px;
                                                                         color: #ebebf1;
@@ -530,7 +532,7 @@
                                                                         border-radius: 5px;
                                                                         margin-top: 10px;">
                                             <span style="color: red">*</span>companylogo
-                                            <input accept="image/*" type='file' id="e_imgInp_1" name="e_com_logo" style="width:0px;height:0px;"required>
+                                            <input accept="image/*" type='file' id="e_imgInp_1" name="e_com_logo" style="width:0px;height:0px;">
                                             <div class="invalid-feedback" style="width: 100%;">
                                                 Logo required.
                                             </div></label>
@@ -561,21 +563,44 @@
         </div>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-        <script>// change copany status @author:udayan
-                function changestatus(param){
-                        var status = $(param).prop('checked') == true ? 1 : 0; 
-                        var user_id = $(param).data('id'); 
-                        $.ajax({
-                            type: "post",
-                            dataType: "json",
-                            url: "{{route('changestatus_com')}}",
-                            data: {"_token": "{{ csrf_token() }}",'status': status, 'user_id': user_id},
-                            success: function(data){
-                                toastr.options.closeButton = true;
-                                toastr.options.closeMethod = 'fadeOut';
-                                toastr.options.closeDuration = 1;
-                                toastr.success(data.success);
-                            }
+        <script>
+            function changestatus(param){// change copany status 
+                var status = $(param).prop('checked') == true ? 1 : 0; 
+                var user_id = $(param).data('id'); 
+                $.ajax({
+                    type: "post",
+                    dataType: "json",
+                    url: "{{route('changestatus_com')}}",
+                    data: {"_token": "{{ csrf_token() }}",'status': status, 'user_id': user_id},
+                    success: function(data){
+                        toastr.options.closeButton = true;
+                        toastr.options.closeMethod = 'fadeOut';
+                        toastr.options.closeDuration = 1;
+                        toastr.success(data.success);
+                    }
+                });
+            }
+            function editcompany(param){// edit company get details 
+                var uniqueid = $(param).data('id');
+                $.ajax({
+                    type: "GET",
+                    url: 'edit_company/'+uniqueid,
+                    success: function(response){
+                        $('#GSTin').val(response.result.GSTin);
+                        $('#address').val(response.result.address);
+                        $('#city').val(response.result.city);
+                        $('#e_blah_1').attr('src','{{asset('/') }}/images/logo/'+response.result.company_logo);
+                        $('#company_name').val(response.result.company_name);
+                        $('#company_type').val(response.result.company_type);
+                        $('#company_website').val(response.result.company_website);
+                        $('#email').val(response.result.email);
+                        $('#e_blah').attr('src','{{asset('/') }}/images/faces/'+response.result.photo_path);
+                        $('#postal_code').val(response.result.postal_code);
+                        $('#username').val(response.result.users_name);
+                        $('#password').val(response.result.password);
+                        $('#uniqueid').val(uniqueid);
+                        $('#update_company').attr('action',"{{ url('update_company') }}"+"/"+uniqueid);
+                    }
                 });
             }
         </script>
