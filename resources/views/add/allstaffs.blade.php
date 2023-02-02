@@ -62,12 +62,12 @@
         }
     </style>
     <div class='container'>
-        <h4 id="hdtpa"><b>Staff Details</b></h4><br>
-        <a type="button" class="btn btn-primary" href="{{ url('add_staff') }}">Add New Staff</a>
+        <h4 id="hdtpa"><b>Employee Details</b></h4><br>
+        <a type="button" class="btn btn-primary" href="{{ url('add_staff') }}">Add New Employee</a>
         <div class="header_wrap">
             <div class="num_rows">
                 <div class="form-group">
-                    <!--		Show Numbers Of Rows 		-->
+                    <!-- Show Numbers Of Rows -->
                     <select class="form-control" aria-label="Page navigation example" name="state" id="maxRows">
                         <option value="5">5</option>
                         <option value="10">10</option>

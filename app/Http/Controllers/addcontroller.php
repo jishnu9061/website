@@ -582,10 +582,9 @@ class addcontroller extends Controller
       if(request()->hasfile('photo')){
           $uploadedImages = $request->file('photo');
           $imageNames     = time() .'.'. $photo->getClientOriginalExtension();
-          $destinationPath = public_path('images/file');
-          $image_location = "/CRA/public/images/file/";
+          $destinationPath = public_path('images/photo');
           $uploadedImages->move($destinationPath,$imageNames);
-          $photo->photo    = $image_location.$imageNames;
+          $photo->photo    = $destinationPath.$imageNames;
       }
 
 
@@ -600,10 +599,9 @@ class addcontroller extends Controller
       if(request()->hasfile('signature')){
           $uploadedImagess = $request->file('signature');
           $imageNamess     = time() .'.'. $signature->getClientOriginalExtension();
-          $destinationPath = public_path('images/file');
-          $image_location = "/CRA/public/images/file/";
+          $destinationPath = public_path('images/signature');
           $uploadedImagess->move($destinationPath,$imageNamess);
-          $signature->signature    = $image_location.$imageNamess;
+          $signature->signature    = $destinationPath.$imageNamess;
       }
      
 

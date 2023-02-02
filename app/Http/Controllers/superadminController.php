@@ -42,7 +42,7 @@ class superadminController extends Controller
         'company_details.CITY as city',
         'company_details.status as status',
         'company_details.id as company_id'
-        )->orderBy('company_details.id', 'desc')->get();
+        )->orderBy('company_details.id', 'desc')->where('company_details.deleted_at',null)->get();
         return view('superadmin.company_list_admin',compact('user_list'));
     }
 
@@ -167,7 +167,7 @@ class superadminController extends Controller
         'users.email as email',
         'users.password as password',
         'users.photo_path as photo_path'
-        )->first();
+        )->where('company_details.deleted_at',null)->first();
 
         return response()->json([
             'status' => 200,
@@ -184,8 +184,62 @@ class superadminController extends Controller
      */
     public function update_company(Request $request, $id)
     {
-        print_r($id);
-        die;
+        $user_update = DB::table('company_details')->where('company_details.uniqueid', $id)
+                ->leftJoin('users', 'users.uniqueid', 'company_details.uniqueid')
+            ->select('company_details.company_name as company_name',
+            'company_details.address as address',
+            'company_details.city as city',
+            'company_details.company_website as company_website',
+            'company_details.company_type as company_type',
+            'company_details.postal_code as postal_code',
+            'company_details.GSTin as GSTin',
+            'company_details.company_logo as company_logo',
+            'users.username as users_name',
+            'users.email as email',
+            'users.password as password',
+            'users.photo_path as photo_path'
+            )->where('company_details.deleted_at',null)->first();
+
+        if($request->hasfile('e_logo')){
+            if (!empty($user_update->photo_path)) {
+                unlink(public_path('\images\faces'). DIRECTORY_SEPARATOR .$user_update->photo_path);
+            }
+            $logo = $request->e_logo;
+            $logoname = time() . '.' . $logo->getClientOriginalExtension();
+            $logo->move(public_path('\images\faces'),$logoname);
+            DB::table('users')->where('uniqueid', $id)->update(['photo_path' => $logoname]);
+        }
+        if($request->hasfile('e_com_logo')){
+            if (!empty($user_update->company_logo)) {
+                unlink(public_path('\images\logo'). DIRECTORY_SEPARATOR . $user_update->company_logo);
+            }
+            $com_logo = $request->e_com_logo;
+            $com_logoname = time() . '.' . $com_logo->getClientOriginalExtension();
+            $com_logo->move(public_path('\images\logo'),$com_logoname);
+            DB::table('company_details')->where('uniqueid', $id)->update(['company_logo' =>$com_logoname]);
+        }
+        if(!empty($request->password)){
+            $pass = Hash::make($request->password);
+            DB::table('users')->where('uniqueid', $id)->update([
+                'password'=>$pass,
+            ]);
+        }
+        DB::table('company_details')->where('uniqueid', $id)->update([
+            'company_name' =>$request->company_name,
+            'company_type' =>$request->company_type,
+            'address' =>$request->address,
+            'city' =>$request->city,
+            'postal_code' =>$request->postal_code,
+            'GSTin' =>$request->GSTin,
+            'updated_at'=>date('Y-m-d H:i:s'),
+        ]);
+        DB::table('users')->where('uniqueid', $id)->update([
+            'username'=>$request->username,
+            'email' =>$request->email,
+            'updated_at'=>date('Y-m-d H:i:s'),
+        ]);
+
+        return redirect('/company_list');
     }
 
     /**
@@ -194,8 +248,16 @@ class superadminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete_company($id)
     {
-        //
+        DB::table('users')->where('uniqueid', $id)->update([
+            'deleted_at'=>date('Y-m-d H:i:s'),
+            'status'=>0
+        ]);
+        DB::table('company_details')->where('uniqueid', $id)->update([
+            'deleted_at'=>date('Y-m-d H:i:s'),
+            'status'=>0
+        ]);
+        return redirect('/company_list');
     }
 }

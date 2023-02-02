@@ -770,7 +770,7 @@
                         limitPagging();
                         
                         })
-                        .val(5)
+                        .val(20)
                         .change();
 
                     // end of on select change
@@ -822,18 +822,6 @@
                         var string = 'Showing ' + start_index + ' to ' + end_index + ' of ' + totalRows + ' entries';
                         $('.rows_count').html(string);
                     }
-
-                    // CREATING INDEX
-                    // function default_index() {
-                    //   $('table tr:eq(0)').prepend('<th> ID </th>')
-
-                    // 					var id = 0;
-
-                    // 					$('table tr:gt(0)').each(function(){	
-                    // 						id++
-                    // 						$(this).prepend('<td>'+id+'</td>');
-                    // 					});
-                    // }
 
                     // All Table search script
                     function FilterkeyWord_all_table() {

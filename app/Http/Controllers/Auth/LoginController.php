@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\User;
 use Hash;
+use Illuminate\Support\Facades\DB;
 
 class LoginController extends Controller
 {
@@ -45,13 +47,7 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        // Check validation
-        // $this->validate($request, [
-        //   'mobile_no' => 'required|regex:/[0-9]{10}/|digits:10',            
-        //  ]);
-
-        // Get user record
-        
+       
         $remember_me  = ( !empty( $request->remember_me) )? TRUE : FALSE;
 
         $user = User::where('uniqueid', $request->get('email'))->first();
@@ -90,6 +86,12 @@ class LoginController extends Controller
             return redirect('/superadminhome');
             }
             elseif ( $user->role == 2) {// do your magic here
+            DB::table('users_ip_track')->insert([
+                'uniqueid'=>$user->uniqueid,
+                'company_id'=>$user->company_id,
+                'login_at' => Carbon::now()->toDateTimeString(),
+                'ip_address' => $request->ip(),
+            ]);
                 return redirect('/home');
             }
                 elseif ( $user->role == 3) {// do your magic here
