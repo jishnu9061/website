@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="{{asset('/') }}assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="{{asset('/') }}assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="{{asset('/') }}assets/css/app.css">
-    <link rel="stylesheet" href="{{asset('/') }}assets/css/customstyle.css">
     <link rel="shortcut icon" href="{{asset('/') }}assets/images/favicon.html" type="image/x-icon">
     <link rel="stylesheet"href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -35,10 +34,10 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Be Vietnam Pro' rel='stylesheet'>
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
     <link rel="stylesheet" href="{{asset('/') }}assets/css/sub.css">
     <link rel="stylesheet" href="{{asset('/') }}assets/css/sub1.scss">
-    <link rel="stylesheet" href="{{asset('/') }}assets/css/c.css">
+
     <link href='https://fonts.googleapis.com/css?family=Alexandria' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Atkinson Hyperlegible' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Carter One' rel='stylesheet'>
@@ -51,8 +50,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="table.js"></script>
-    <link rel="stylesheet" href="style.css">
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -223,22 +222,23 @@
 <body>
     @include('navbar_logout.logout_offset')
     <div id="app"style="background-color: #1d1d50;">
-        <nav class=" newstyle1 navbar navbar-expand-lg  sticky-top navbar-light " style="background-color: #D5BD94">
-            <div class="logo"class="logo" style="background-color:#dfc79d;
-                                                border-radius:100% 100% 100% 100%; 
-                                                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                                                height:50px;width:50px; margin-left:px; 
-                                                background:  #d0d3cd50 -webkit-linear-gradient(left,  #ffffff15, rgb(255, 255, 255)) repeat 0 0 / 200px;
-                                                animation: sweep 5.5s ease-in-out infinite;
-                                                animation-direction:reverse;">
+        <nav class=" newstyle1 navbar navbar-expand-lg  sticky-top navbar-light " style="background-color: #D5BD94;height:75px">
+            <?php $company_id_for_sidebar=Auth::user()->company_id;$copmany_name_for_sidebar=DB::table('company_details')->where('id',Auth::user()->company_id)->select('company_name','company_logo')->first();?>
+            <div class="logo"class="logo" style="*/background-color:#dfc79d;
+                                                */border-radius:100% 100% 100% 100%; 
+                                                */box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                                                */height:auto;
+                                                width:70px;  
+                                                */background:  #d0d3cd50 -webkit-linear-gradient(left,  #ffffff15, rgb(255, 255, 255)) repeat 0 0 / 200px;
+                                                */animation: sweep 5.5s ease-in-out infinite;
+                                                */animation-direction:reverse;">
                 <a href="{{url('home')}}">
-                <img id="cr_logo" src="{{asset('/') }}assets//images/Logo cra.png" alt="CRA" style="margin-top:8px;height:40px;width:40px;">
+                <img id="cr_logo" src="{{asset('/') }}/images/logo/{{ $copmany_name_for_sidebar->company_logo }}" alt="CRA" style="margin-top:8px;height:auto;width:60px;">
                 </a>
             </div>
-            <?php $company_id_for_sidebar=Auth::user()->company_id;$copmany_name_for_sidebar=DB::table('company_details')->where('id',Auth::user()->company_id)->select('company_name')->first();?>
             <div class="toggler p-2" style="text-align:center;height:auto;width:auto;color:#1D1D50;padding-left:10px;padding-top:10px;line-height: 150%; ">
 
-                <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a><b style="font-size: 20px">{{ $copmany_name_for_sidebar->company_name }}</b>
+                <b style="font-size: 20px">{{ $copmany_name_for_sidebar->company_name }}</b>
 
             </div>
             <!-- Nav Back Button -->
@@ -249,12 +249,10 @@
                 <a id="das-" type="button" onclick="hideee()" class="nav-link"> <span style=" color: #15144d;font-size: 30px;">☰</span></a>
             </div>
             <div class="nav-item">
-                <a id="t" type="button" onclick="myss()" class="nav-link"> <i class="fa fa-text-width" style=" color: #15144d;font-size: 20px;"></i></a>
+                <a id="t" type="button" onclick="textsize()" class="nav-link"> <i class="fa fa-text-width" style=" color: #15144d;font-size: 20px;"></i></a>
             </div>
             <div class="p-1" id="hgh" style="border: solid #a38931 1px; border-radius:5px; background-color:rgb(243, 238, 226);display:none;">
-                <input  type="range" id="range" min="1.0" max="3.0" step="0.1" value="2.0" style="color: #15144d"/> 
-                <a > <i id="ssdf" type="button" class="fa fa-font"></i> </a>
-                <a > <i id="ssdd" type="button" class="fa fa-font"></i> </a>
+                <input  type="range" id="range" min="1.0" max="3.0" step="0.1" value="2.0" style="color: #1d1d50"/> 
             </div>   
                 <!-- Nav ToolTip -->
                     <div class="nav-item dropdown" style="position: relative;">
@@ -302,13 +300,13 @@
                         </div>
                     </div>
                     <div style="text-align: center;padding-left:1rem; ">
-                        <div class="display-date" style="margin-bottom: 5px;">
+                        <div class="display-date btn" style="margin-bottom: 0px;border-color: transparent;">
                             <span id="day">day</span>,
                             <span id="daynum">00</span>
                             <span id="month">month</span>
                             <span id="year">0000</span>
                         </div>
-                        <div class="display-time" style="height: 24.481482px;width:70.481482px;margin: auto;">
+                        <div class="display-time btn" style="height: 24.481482px;width:70.481482px;margin: auto;">
                         </div>
                     </div>                    
                     <!--Nav Hamburger -->
@@ -328,14 +326,18 @@
                                 </form>
                             </li>
                         </div>
-                        <li class="nav-item p-1 "  style=" text-decoration: none; list-style:none;">
-                            <img src="{{asset('/') }}assets//images/faces/lawemb.png" height="30px"
-                                class="d-inline-block " alt="">
+                        <li class="nav-item p-1 "  style=" text-decoration: none; list-style:none;margin-right: 10px;">
+                            <a type="button" style="background: transparent;padding: 0px;margin: 0px;" href="{{url('logt')}}">
+                                <div style="height: 50px;width:50px;border-radius:50%;background:#dfdfe4;">
+                                <img src="{{asset('/') }}/images/faces/{{ Auth::user()->photo_path }}" 
+                                    class="d-inline-block " style="-webkit-border-radius: 50%;height: 45px;width: 45px;margin-left:2.5px;margin-top:2.5px;"alt="">
+                                </div>
+                            </a>
                         </li>
-                        <li class="nav-item" style=" text-decoration: none; list-style:none;">
+                        {{-- <li class="nav-item" style=" text-decoration: none; list-style:none;">
                             <a data-toggle="modal" data-target="#myModal" onclick="openoffset()" class="font-bold text-uppercase nav-link" href="#" style=" padding: 0.1rem .1rem;color:#15144d;">{{ Auth::user()->username }}<span
                                     class="sr-only">(current)</span></a>
-                        </li>
+                        </li> --}}
                         <!-- LogOut Button  -->
                         {{-- <div id="navr" class="m-1">
                             <div class="" style=" text-decoration: none; list-style:none;">
@@ -351,7 +353,7 @@
                 {{-- @include('sidebar.superadmin_sidebar') --}}
                 @include('sidebar.com_admin_sidebar')
             </div>
-    <div id="main" style="padding-bottom:8px;padding-top: 2px;padding-right: 20px;margin-right:-8px;background-color: #1D1D50;">
+    <div id="main" style="padding-bottom:8px;padding-top: 2px;padding-right: 15px;margin-right:-8px;background-color: #1D1D50;margin-top:5px;">
      {{-- mian start --}}  
         <style>
             .display-date {
@@ -386,7 +388,7 @@
                 display: list-item;	
             }
         </style>  
-        <section class="newstyle container-fluid bg-white p-4 mt-2">
+        <section class="newstyle container-fluid bg-white p-4 ">
             <section class="row">
                 <div class="col-12 col-lg-12" style="min-height: 100vh" id="fontscl">
                     @yield('content')
@@ -436,61 +438,16 @@
                     }
                 </script>
                 <script>
-                    function myss() {
+                    function textsize() {
                     var x = document.getElementById("range");
-                    var t = document.getElementById("t");
-                    var adv = document.getElementById("ssdf");
                     var dvv = document.getElementById("hgh");
                     if (x.style.display === "block") {
                         x.style.display = "none";
-                        ad.style.display = "none";
                         dvv.style.display = "none";
                     } else {
                         x.style.display = "block";
-                        ad.style.display = "block";
                         dvv.style.display = "block";
                     }}
-                </script>
-
-                <script>
-                    function hide() {
-                        var element = document.getElementById("sidebar-active");
-                        var rtyu = document.getElementById("mi");
-                        var rtyupio = document.getElementById("ni");
-                        if (element.classList.contains("active")) {
-                            element.classList.remove("active");
-                            rtyu.style.display = "none";
-                            rtyupio.style.display = "block";
-                        } else {
-                            element.classList.add("active");
-                        }
-                    }
-                    function hidea() {
-                        var element = document.getElementById("sidebar");
-                        var rtyu = document.getElementById("mi");
-                        var rtyupio = document.getElementById("ni");
-                        if (element.classList.contains("active")) {
-                            element.classList.remove("active");
-                        } else {
-                            element.classList.add("active");
-                            rtyupio.style.display = "none";
-                            rtyu.style.display = "block";
-                        }
-                    }
-                </script>
-                <script>
-                    const btn = document.getElementById("ssdf");
-                    const para = document.querySelector("body");
-                    btn.addEventListener("click", function () {
-                        para.className = "bodya";
-                        });
-                </script>
-                <script>
-                    const btne = document.getElementById("ssdd");
-                    const parae = document.querySelector("body");
-                    btne.addEventListener("click", function () {
-                        parae.className = "bodyb";
-                        });
                 </script>
                 <script>//time script important@udayan
                     const displayTime = document.querySelector(".display-time");
@@ -551,18 +508,6 @@
                         document.getElementById("demob").innerHTML = " " + x;
                     }
                 </script>
-                <style>
-                    window.addEventListener('keydown', function(e)
-                    {
-                        if( e.keyCode == '8' )
-                        {
-                            e.preventDefault();  // prevent backspace from going to browser
-                                            // history
-                            // add reload code
-                            location.reload();
-                        }
-                    }, false);
-                </style> 
                 <script>
                     // search
                     function search_animal() {
