@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">File Management</a> /
     <a href="#" style="color: #1D1D50;">File List Progress Report</a>
 </nav>
@@ -50,14 +50,14 @@ float:right;
 text-align:right;
 color: #999;
 }
-</style>  
- 
+</style>
+
     </head>
 
 <body>
 
     <div class="container">
-       
+
         <div>
         {{-- heading --}}
     <h4 id="hdtpa"><b>List of Progress</b></h4>
@@ -66,7 +66,7 @@ color: #999;
                     <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
 
         </div> -->
-       
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -81,19 +81,19 @@ color: #999;
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    
+
 
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
-	
+
                     <thead >
                         <tr>
 
@@ -125,7 +125,7 @@ color: #999;
                             <a href="{{url('view-file-list-progress',$list->id)}}"><i style="color:black;" class="fa fa-eye"
                                         aria-hidden="true"></i>
                         </td> --}}
-						
+
                         </tr>
 
 
@@ -148,7 +148,7 @@ color: #999;
  <!-- 		End of Container -->
 
                 <br>
-               
+
                 <!-- The Modal -->
                 <div class="modal fade" id="editmed">
                     <div class="modal-dialog modal-xl">

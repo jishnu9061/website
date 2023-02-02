@@ -1,6 +1,6 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
+<nav style="font-size:15px;">
     <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">File Management</a> /
     <a href="#" style="color: #1D1D50;">File Archive</a>
@@ -241,75 +241,75 @@ color: #999;
 <div class="modal fade" id="viewmyModal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content" >
-                
+
                                                     <!-- Modal Header -->
 <div class="modal-header">
     <h2 class="text-center"><b>View Box No</b></h2>
-                
+
 </div>
-                
+
                                                     <!-- Modal body -->
 <div class="modal-body">
     <div class="container">
         <form method="post" action="{{ url('view-box-no') }}"
                     enctype="multipart/form-data">
         @csrf
-                
+
 <div class="row">
     <div class="col-md-6">
         <div class="mb-1">
             <label for="username">Archive Number</label>
-                
+
                 <div class="input-group">
                     <div class="input-group-prepend">
-                
+
                     </div>
             <input type="text" class="form-control" name="archive_number" id="age">
                                                         <div class="invalid-feedback" style="width: 100%;">
-                                                                            Incorporation is required 
+                                                                            Incorporation is required
                                                         </div>
                 </div>
         </div>
     </div>
-                
+
     <div class="col-md-6">
         <div class="mb-1">
             <label for="username">Archive Date</label>
                 <div class="input-group">
                     <div class="input-group-prepend">
-                
+
                     </div>
             <input type="date" class="form-control" name="archive_date" id="age">
                 </div>
         </div>
     </div>
-                
-                
+
+
 </div>
                 <br>
 <div class="row">
     <div class="col-md-6">
         <div class="mb-1">
             <label for="username">Client Name</label>
-                
+
                 <div class="input-group">
                     <div class="input-group-prepend">
-                
+
                     </div>
             <input type="text" class="form-control" name="client_name" id="age">
                                                      <div class="invalid-feedback" style="width: 100%;">
-                                                                            Incorporation is required 
-                                                    </div> 
+                                                                            Incorporation is required
+                                                    </div>
                 </div>
         </div>
     </div>
-                
+
     <div class="col-md-6">
         <div class="mb-1">
             <label for="username">File Number</label>
                 <div class="input-group">
                     <div class="input-group-prepend">
-                
+
                     </div>
             <input type="text" class="form-control" name="file_number" id="age">
                 </div>
@@ -320,42 +320,42 @@ color: #999;
         <div class="col-md-6">
             <div class="mb-1">
                 <label for="username">File Closed Number</label>
-                    
+
                     <div class="input-group">
                         <div class="input-group-prepend">
-                    
+
                         </div>
                 <input type="text" class="form-control" name="file_closednumber" id="age">
                                                             <div class="invalid-feedback" style="width: 100%;">
-                                                                                Incorporation is required 
-                                                            </div> 
+                                                                                Incorporation is required
+                                                            </div>
                     </div>
             </div>
         </div>
-                    
+
         <div class="col-md-6">
             <div class="mb-1">
                 <label for="username">Date Closed</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
-                    
+
                         </div>
                 <input type="date" class="form-control" name="date_closed" id="age">
                     </div>
             </div>
         </div>
-                    
-                    
-</div>                
+
+
+</div>
     </form>
-    </div>   
+    </div>
 </div>
         </div>
     </div>
 </div>
-                
-</div>                   
-                
+
+</div>
+
 {{-- <div class="modal" id="mymodal">
     <div class="modal-dialog">
         <div class="modal-content">

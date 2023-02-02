@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">File Management</a> /
     <a href="{{url('file-list')}}" style="color: #1D1D50;">File List</a> /
     <a href="#" style="color: #1D1D50;">View List</a>
@@ -38,7 +38,7 @@
                     <th style="width:30%">File No:</th>
                     <td>{{$view_list ->id}}</td>
                 </tr> -->
-                
+
                 <tr>
                     <th>Client:</th>
                     <td>{{$view_list ->client}}</td>
@@ -110,8 +110,8 @@
                     <th>Status:</th>
                     <td></td>
                 </tr>
-              
-                
+
+
 
             </tbody>
         </table>

@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">File Management</a> /
     <a href="{{url('file-list')}}" style="color: #1D1D50;">File List</a> /
     <a href="#" style="color: #1D1D50;">Edit File</a>
@@ -51,9 +51,9 @@
                                             <div class="mb-3">
                                                 <label for="username">Client</label>
                                                 <select class="form-select" name="client" aria-label="Default select example">
-                                               
+
                                             <option>{{$edit->client}}</option>
-                                         
+
                                                 </select>
                                             </div>
                                         </div>
