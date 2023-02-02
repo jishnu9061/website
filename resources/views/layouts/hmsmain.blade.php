@@ -333,7 +333,7 @@
                                 class="d-inline-block " alt="">
                         </li>
                         <li class="nav-item" style=" text-decoration: none; list-style:none;">
-                            <a  onclick="openoffset()" class="font-bold text-uppercase nav-link" href="#" style=" padding: 0.1rem .1rem;color:#15144d;">{{ Auth::user()->username }}<span
+                            <a data-toggle="modal" data-target="#myModal" onclick="openoffset()" class="font-bold text-uppercase nav-link" href="#" style=" padding: 0.1rem .1rem;color:#15144d;">{{ Auth::user()->username }}<span
                                     class="sr-only">(current)</span></a>
                         </li>
                         <!-- LogOut Button  -->
