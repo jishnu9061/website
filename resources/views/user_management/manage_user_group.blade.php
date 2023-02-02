@@ -1,25 +1,25 @@
 
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-      <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+      <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
       <a href="#" style="color: #1D1D50;">User Management</a> /
       <a href="#" style="color: #1D1D50;">Manage User Groups</a>
 </nav>
 <br><br>
 <style>
- 
-</style>  
-    
+
+</style>
 
 
-<div class="container"> 
+
+<div class="container">
 
    {{-- heading --}}
   <h4 id="hdtpa"><b>Manage Groups</b></h4>
   <br>
 
-  
+
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 {{-- <a href="{{('add_new_user_grp')}}"><button class="btn btn-primary">Add New Group</button></a> --}}
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New  Group</button>
@@ -41,18 +41,18 @@
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-   
 
 
-   <div class="table-responsive">   
+
+   <div class="table-responsive">
     <table class="table table-striped table-class" id= "table-id">
-      
+
       <thead>
 
                         <tr>
@@ -63,13 +63,13 @@
                         <th class="text-center" >Group Users</th>
                         <th class="text-center" >Group Status</th>
                         <th class="text-center" >Action</th>
-                      
+
                     </tr>
 </thead>
              <tbody>
 
              @foreach($user_group as $group)
-             
+
                     <tr>
                         <!-- <td class="text-center">{{$group->id}}</td> -->
                         <td class="text-center">{{$group->group_code}}</td>
@@ -81,12 +81,12 @@
                         <a href="{{url('edit_new_user_grp',$group->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                         <span class="m-1"></span>
                         <a href="{{url('user_group_destroy',$group->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
-                       
+
                      </tr>
                      @endforeach
                      </tbody>
-        
-                    
+
+
                     </table><br>
 </div >
 <!--		Start Pagination -->
@@ -99,7 +99,7 @@
     </div>
     <div class="rows_count">Showing 11 to 20 of 100</div>
 
- <!-- 		End of Container -->   
+ <!-- 		End of Container -->
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
@@ -115,8 +115,8 @@
                                     <div class="modal-body">
                                         <div class="container">
                                             <form method="post" action="{{ url('add_new_user_grp') }}"
-                                                enctype="multipart/form-data"> 
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->   
+                                                enctype="multipart/form-data">
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 @csrf
                 <div class="row">
                     <div class="col-md-3">
@@ -176,7 +176,7 @@
                                     <option>Role 2</option>
                                     <option>Role 3</option>
                                     <option>Role 4</option>
-                                   
+
                                 </select>
                             </div>
                         </div>
@@ -208,7 +208,6 @@
 </html>
 
   @endsection
-      
 
 
 
@@ -223,4 +222,4 @@
 
 
 
-   
+

@@ -1,8 +1,8 @@
 
 @extends('layouts.hmsmain')
 @section('content')
-        <nav style="font-size:17px;">
-            <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+        <nav style="font-size:15px;">
+            <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
             <a href="#" style="color: #1D1D50;">User Management</a> /
             <a href="#" style="color: #1D1D50;">Manage User Account</a>
         </nav>
@@ -55,10 +55,10 @@ color: #999;
     <h4 id="hdtpa"><b>Manage Accounts</b></h4>
     <br>
 
- 
+
 
     <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-           
+
                 {{-- <a href="{{('reg_new_user')}}"><button class="btn btn-primary">Add New User</button></a> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New User</button>
                 <div class="tab-content" id="myTabContent">
@@ -79,13 +79,13 @@ color: #999;
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-   
+
 <div class="table-responsive">
 <table  class="table table-striped table-class" id= "table-id">
   <thead>
@@ -101,13 +101,13 @@ color: #999;
                         <th class="text-center" >Logout Time</th>
                         <!-- <th class="text-center" >Status</th> -->
                         <th class="text-center" >Action</th>
-                       
+
                     </tr>
 </thead>
 <tbody>
 @foreach ($user_list as $list)
                     <tr>
-                       
+
                         <!-- <td class="text-center">{{$list->user_code}}</td>
                         <td class="text-center">{{$list->first_name}}</td> -->
                         <td class="text-center">{{$list->user_name}}</td>
@@ -123,9 +123,9 @@ color: #999;
                         <a href="user_comments"><i  style="  color:rgb(13, 1, 56);" class="fas fa-comment" aria-hidden="true"></i>
                         <a href="{{url('user_destroy',$list->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
                         {{-- <a href="user_attachments"><i  style="  color:rgb(13, 1, 56);" class="fas fa-paperclip" aria-hidden="true"></i> --}}
-                        
+
                     </td>
-{{-- 
+{{--
                         <!-- <td class="text-center">
                       <div class="dropdown">
                             <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -137,13 +137,13 @@ color: #999;
                                 <a href="user_attachments"class="dropdown-item" >Attachment</a>
                                 <a href="user_comments" class="dropdown-item" >Comments</a>
                                 <a href="{{url('user_destroy',$list->id)}}" class="dropdown-item" >Delete</a>
-                            
+
                             </div>
-                        </div> 
+                        </div>
 
                        </td> --> --}}
-                     
-                     
+
+
                      </tr>
                      @endforeach
  <tbody>
@@ -160,7 +160,7 @@ color: #999;
     <div class="rows_count">Showing 11 to 20 of 91</div>
 
  <!-- 		End of Container -->
- 
+
 <div class="modal fade" id="myModal" style="">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
@@ -168,8 +168,8 @@ color: #999;
                                    <!---- Modal Header -->
                                     <div class="modal-header">
                                         <h2 class="text-centre"><b>Add New User</b></h2>
-                                       
-  
+
+
 
                                     </div>
 
@@ -177,8 +177,8 @@ color: #999;
                                     <div class="modal-body">
                                         <div class="container">
                                             <form method="post" action="{{ url('reg_new_user') }}"
-                                                enctype="multipart/form-data"> 
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->      
+                                                enctype="multipart/form-data">
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
                 @csrf
                 <div class="row">
                     <div class="col-md-4">
@@ -317,7 +317,7 @@ color: #999;
                                 <div class="input-group-prepend"></div>
                                 <input type="text" class="form-control" name="mobile_no" id="" value="" required>
                                 <div class="invalid-feedback" style="width: 100%;">
-                                
+
                                     Name is required.
                                 </div>
                             </div>
@@ -418,7 +418,7 @@ color: #999;
                                     <option>Receptionist</option>
                                     <option>Department Head</option>
                                 </select>
-                              
+
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Name is required.
                                 </div>
@@ -446,8 +446,8 @@ color: #999;
     </div>
   </div>
 </div>
-</div>   
+</div>
         </body>
-        </div>     
+        </div>
 </html>
 @endsection

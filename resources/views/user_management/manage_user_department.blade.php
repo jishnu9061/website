@@ -1,10 +1,10 @@
 
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-      <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+      <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
       <a href="#" style="color: #1D1D50;">User Management</a> /
-      <a href="#" style="color: #1D1D50;">Manage User Departments</a> 
+      <a href="#" style="color: #1D1D50;">Manage User Departments</a>
 </nav>
 <br><br>
 <html>
@@ -12,31 +12,31 @@
 
    <head>
    <style>
-  
-</style>  
+
+</style>
    </head>
    <body>
 
     <div>
              <!--<button class="btn btn-primary"
                 style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Manage Departments </u></b></span></button><br> -->
-             
+
                 <div class="container">   {{-- heading --}}
     <h4 id="hdtpa"><b>Manage Departments</b></h4>
     <br>
-           
-     
-            
+
+
+
             <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-           
+
 {{-- <a href="{{('add_user_department')}}"><button class="btn btn-primary">Add Department</button></a> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Department</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                     
+
 <!---------------------------------------------------- MODAL ---------------------------------------------------------------------->
     <!-- <a href="{{('add_user_department')}}"><button class="btn btn-primary add-btn"style="width=100%;height=100%;">Add Department</button></a> -->
- 
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -51,18 +51,18 @@
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-   
+
 
     <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">User Departments</h3>
-    <div class="table-responsive">   
+    <div class="table-responsive">
     <table class="table table-striped table-class" id= "table-id">
-      
+
       <thead>
 
                         <tr>
@@ -71,8 +71,8 @@
                         <th class="text-center" >Department Name</th>
                         <th class="text-center" >H.O.D</th>
                         <th class="text-center" >Action</th>
-                      
-                   
+
+
                     </tr>
 </thead>
              <tbody>
@@ -86,12 +86,12 @@
                                  <a href="{{url('edit_user_department',$document->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                                  <span class="m-2"></span>
                                  <a href="{{url('destroy_user_department',$document->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
-                  
+
                      </tr>
                      @endforeach
                      </tbody>
                      </table><br>
-</div > 
+</div >
 <!--		Start Pagination -->
 <div class='pagination-container'>
       <nav>
@@ -102,7 +102,7 @@
     </div>
     <div class="rows_count">Showing 11 to 20 of 100</div>
 
- <!-- 		End of Container --> 
+ <!-- 		End of Container -->
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
@@ -118,8 +118,8 @@
                                     <div class="modal-body">
                                         <div class="container">
                                             <form method="post" action="{{ url('add_user_department') }}"
-                                                enctype="multipart/form-data"> 
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->   
+                                                enctype="multipart/form-data">
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 @csrf
                 <div class="row">
                     <div class="col-md-6">
@@ -188,7 +188,7 @@
                                 <select name="perfomance_report" id="cars">
                                     <option>--select--</option>
                                     <option>Yes</option>
-                                    <option>No</option>   
+                                    <option>No</option>
                                 </select>
                             </div>
                         </div>
@@ -221,7 +221,6 @@
 </html>
 
   @endsection
-      
 
 
 
@@ -236,4 +235,4 @@
 
 
 
-   
+
