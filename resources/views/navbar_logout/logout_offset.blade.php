@@ -48,7 +48,7 @@
 
 <!-- Trigger the modal with a button -->
 <!-- Modal -->
-    <div class="modal right fade" id="myModal" role="dialog">
+    <div class="modal right fade" id="yModal" role="dialog">
       <div class="modal-dialog">
   
         <!-- Modal content-->
@@ -56,13 +56,14 @@
             <div class="modal-header">
                 {{-- <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Student Information</h4> --}}
+                <a type="button" class="btn btn-outline-primary" style="text-align: center; font-size:13px; padding: 0.2rem 0.2rem;"
+                class="text-muted  " href="{{url('logt')}}">
+                <i class="fas fa-sign-out-alt"></i>LogOut
+                </a>
             </div>
             <div class="modal-body">
                   {{-- <a style="text-align:start " href="javascript:void(0)" class="closebtn" onclick="closeoffset()">×</a> --}}
-              <a type="button" class="btn btn-outline-primary" style="text-align: center; font-size:13px; padding: 0.2rem 0.2rem;"
-              class="text-muted  " href="{{url('logt')}}">
-              <i class="fas fa-sign-out-alt"></i>LogOut
-              </a>
+
             </div>
                 {{-- <div class="modal-footer">
                   <button type="button" class="btn btn-success">Save</button>
