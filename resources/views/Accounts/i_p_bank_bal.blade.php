@@ -1,23 +1,23 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
+<nav style="font-size:15px;">
     <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">Accounts</a> /
     <a href="#" style="color: #1D1D50;">i/p Bank Balance</a>
 </nav>
 <br><br>
 <head>
-   
+
 </head>
 
 <div class="container">
 
   <div>
-    
+
     {{-- heading --}}
     <h4 id="hdtpa"><b>Input Bank Balance</b></h4>
     <br>
-   
+
           </div>
 
           <form method="post" action="" id="form">
@@ -63,7 +63,7 @@
                                     <option>Sep</option>
                                     <option>Oct</option>
                                     <option>Nov</option>
-                                    <option>Dec</option> 
+                                    <option>Dec</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -83,7 +83,7 @@
                                 <option>2021</option>
                                     <option>2022</option>
                                     <option>2023</option>
-                                 
+
                                 </select>
                             </div>
                         </div>
@@ -116,7 +116,7 @@
                                 <option>---select---</option>
                                     <option>Debit(+ve Balance)</option>
                                     <option>Credit(-ve Balance)</option>
-                                
+
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     required
@@ -124,9 +124,9 @@
                             </div>
                         </div>
                     </div>
-                    
+
  </div>
-              
+
                  <div class="row">
                         <div class="col-sm">
 
@@ -140,9 +140,9 @@
                             <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
                         </div>
                     </div>
-                
+
             </form>
-            
+
 
 </body>
 </div>

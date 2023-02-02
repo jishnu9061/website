@@ -1,12 +1,12 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
+<nav style="font-size:15px;">
     <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">Accounts</a> /
     <a href="#" style="color: #1D1D50;">Budget Group</a>
 </nav>
 <br><br>
-	
+
     {{-- heading --}}
     <div class="container">
   <h4 id="hdtpa"><b>Budget Grouping</b></h4>
@@ -15,7 +15,7 @@
         <button  class="btn btn-primary "  data-toggle="modal" id="patient" data-bs-toggle="modal"
         data-bs-target="#default" style="width: 25%">Add Budget Group</button>
 
-        
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -30,13 +30,13 @@
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    
+
 <br>
 <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
@@ -64,8 +64,8 @@
                 <a href="#" class="edits" data-toggle="modal" data-bs-toggle="modal"data-bs-target="#edit_budget">
                 <i style="color:rgb(13, 1, 56);"class="fa fa-edit"onclick="edit_values('{{ $key->id }}','{{ $key->budget_name }}','{{ $key->budget_desc }}')"></i></a>
                 @endif
-         
-           
+
+
                 @if($key->budget_update_privilage == 0)
                 <a onclick="return confirm('Are you sure ?');" href="{{ url('delete_ledger_budget_category/'.$key->id) }}"><i style="color:rgb(13, 1, 56);" class="fa fa-trash-alt"></i></a>
                 @endif
@@ -101,7 +101,7 @@
 
 
 
-          
+
             <h2 class="text-centre"><b>Add Budget Group</b></h2>
 
 
@@ -126,7 +126,7 @@
                                 </textarea>
                         </div>
 
-            
+
                     </div>
                 </div>
                 <div class="modal-footer" style="background-color:#d3e0ed;">
@@ -171,7 +171,7 @@
                                 </textarea>
                         </div>
 
-            
+
                     </div>
                 </div>
                 <div class="modal-footer" style="backgroung-color:#d3e0ed;">
@@ -190,7 +190,7 @@
   })
   </script>
 <script>
- function edit_values(val1,val2,val3) 
+ function edit_values(val1,val2,val3)
  {
    $('#budget_id').val(val1);
    $('#edit_budget_name').val(val2);

@@ -1,6 +1,6 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
+<nav style="font-size:15px;">
     <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">Accounts</a> /
     <a href="#" style="color: #1D1D50;">Ledger Listing</a>
@@ -25,12 +25,12 @@
 {{-- heading --}}
   <h4 id="hdtpa"><b>Ledger Accounts Listing</b></h4>
   <br><br>
-  
+
   <div class="row">
     <div class="col-md-12 order-md-1">
         <form method="post" action="{{ url('ledger')}}">
              @csrf
-             
+
              <div class="row">
                 <div class="col-md-4">
                     <div class="mb-1">
@@ -88,13 +88,13 @@
                         </div>
                         <div class="col-sm">
                             <br>
-                           
+
                             <button type="submit" class="btn btn-primary" float:right; Style="width:45%;">Search</button>
                             <button type="button" class="btn btn-primary float:left" Style="width:45%;"onclick="history.back()">Cancel</button>
                         </div>
                     </div>
                 </div>
-                </div>                 
+                </div>
 
 
 
@@ -103,7 +103,7 @@
 
 
 
-      
+
 
 @foreach($ledger_account_result as $key)
 
@@ -222,7 +222,7 @@
                      @case(4)
                             {{ "To P & L Account c/d" }}
                                  @break
-        
+
 
                     @default
                     {{ "To Balance c/d" }}
