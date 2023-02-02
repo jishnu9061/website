@@ -6,7 +6,7 @@
         }
     </style>
     <div class="container">
-        <h4 id="hdtpa"><b>Add New Staff</h4>
+        <h4 id="hdtpa"><b>Add New Employee</h4>
         <br><br>
         <form method="post" action="{{ url('addstaffss') }}" enctype="multipart/form-data">
             @csrf
