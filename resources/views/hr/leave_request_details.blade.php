@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">HR</a> /
     <a href="#" style="color: #1D1D50;">Leave Request Details</a>
 </nav>
@@ -237,7 +237,7 @@
                     <div class="mb-1">
                         <label>Number Of Days</label>
 
-                            </div> 
+                            </div>
                             <div class="input-group">
                             <div class="input-group-prepend"></div>
                             <input type="number"  id="" name="number_of_days"value=""class="form-control">

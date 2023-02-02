@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
-@section('content') 
-<nav style="font-size:17px;">
-  <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+@section('content')
+<nav style="font-size:15px;">
+  <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
   <a href="#" style="color: #1D1D50;">HR</a> /
   <a href="{{url('recruitment')}}" style="color: #1D1D50;">Recruitment</a> /
   <a href="#" style="color: #1D1D50;">View Job Applications</a>
@@ -9,23 +9,23 @@
 <br><br>
 <div class="container">
 <h4 id="hdtpa"><b>View job Application</b></h4>
-  
+
     </div>
     <br>
 
-   
-      <!-- <div class="shadow-sm auto bg-body rounded"> 
+
+      <!-- <div class="shadow-sm auto bg-body rounded">
      <nav class="navbar bg-light">
       <a class="navbar-brand">Applications</a>
-        <button class="btn btn-outline-success" type="button">View All</button> 
+        <button class="btn btn-outline-success" type="button">View All</button>
       </nav>
       </div>
       <br> -->
-<!--       
+<!--
   <div class="container-fluid">
     <nav class="navbar bg-light" style="height:50%";>
      <a class="navbar-brand"><b>Senior Advocate</b> Job Applications</a>
-     <button class="btn btn-outline-success" type="button">View All</button> 
+     <button class="btn btn-outline-success" type="button">View All</button>
     </nav>
   </div> -->
 
@@ -45,7 +45,7 @@
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">

@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
   <a href="#" style="color: #1D1D50;">HR</a> /
   <a href="{{url('recruitment')}}" style="color: #1D1D50;">Recruitment</a> /
   <a href="{{url('view_job_applications')}}" style="color: #1D1D50;">View Job Applications</a> /
@@ -107,7 +107,7 @@
                                 </div>
                             </div>
 
-                            
+
                             <div class="col-md-4">
                                 <div class="mb-1">
                                     <label>Work Experience:</label>

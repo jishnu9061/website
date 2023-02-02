@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">HR</a> /
     <a href="{{url('timesheet')}}" style="color: #1D1D50;">Time Sheet</a> /
     <a href="{{url('timesheetweek')}}" style="color: #1D1D50;">Time Sheet Week</a> /
@@ -61,12 +61,12 @@ th{ width:30%;
                     <tr>
                         <th>Time In </th>
                         <td></td>
-                        
+
                     </tr>
                     <tr>
                         <th>Time Out </th>
                         <td></td>
-                        
+
                     </tr>
                     <tr>
                         <th>Over Time </th>
@@ -80,7 +80,7 @@ th{ width:30%;
                         <th>More..if needed </th>
                         <td><button class="doc-button  fa fa-download" style="width:20%; padding:7px; float:right; margin-right:5px;"></button></td>
                     </tr>
-               
+
 
                 </tbody>
             </table>

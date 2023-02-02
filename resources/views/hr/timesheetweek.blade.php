@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">HR</a> /
     <a href="{{url('timesheet')}}" style="color: #1D1D50;">Time Sheet</a> /
     <a href="#" style="color: #1D1D50;">Weekly Time Sheet</a>
@@ -24,7 +24,7 @@
         <li class="nav-item">
             <a class="nav-link" href="{{ url('timesheetmonth') }}"  style="font-size:15px;">Month</a>
         </li>
-      
+
     </ul>
 
     <br>
@@ -33,7 +33,7 @@
 <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add File
     </button></a> -->
 
-    
+
     <div class="header_wrap">
         <div class="num_rows">
             <div class="form-group">
@@ -83,7 +83,7 @@
                     <td></td>
                     <td>
                         <a href="viewsheet"><i style="color:rgb(13, 1, 56);" class="far fa-eye"></i>
-                           
+
                     </td>
 
                 </tr>
@@ -108,7 +108,7 @@
 
 
 </div>
-    
-                   
+
+
 
                 @endsection

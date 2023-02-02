@@ -1,8 +1,8 @@
 
 @extends('layouts.hmsmain')
-@section('content') 
-<nav style="font-size:17px;">
-  <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+@section('content')
+<nav style="font-size:15px;">
+  <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
   <a href="#" style="color: #1D1D50;">HR</a> /
   <a href="#" style="color: #1D1D50;">Reviewed Applications</a>
 </nav>
@@ -29,7 +29,7 @@
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
@@ -39,8 +39,8 @@
 
      <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
-	 
-            <table class="table"> 
+
+            <table class="table">
               <thead>
                 <tr>
                   <th scope="col">#</th>
