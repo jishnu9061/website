@@ -1,6 +1,6 @@
 @extends('layouts.cra_superadmin_ly')
     @section('content')
-        <nav style="font-size:12px;">
+        <nav style="font-size:15px;">
             <a href="{{url('superadminhome')}}" style="color: #1D1D50;">home</a> / 
             <a href="#" style="color: #1D1D50;">Manage company-Comapany List</a>
         </nav>
@@ -115,6 +115,43 @@
             .slider.round:before {
               border-radius: 50%;
             }
+            /* The message box is shown when the user clicks on the password field */
+            #passmessage {
+            display:none;
+            color: #1d1d50;
+            position: relative;
+            }
+            #e_passmessage {
+            display:none;
+            color: #1d1d50;
+            position: relative;
+            }
+            /* Add a green text color and a checkmark when the requirements are right */
+            .passvalid {
+            color: green;
+            margin: 0px;
+            font-size: 10px;
+            }
+
+            .passvalid:before {
+            position: relative;
+            left: 0px;
+            content: "✔";
+            }
+
+            /* Add a red text color and an "x" when the requirements are wrong */
+            .passinvalid {
+            color: red;
+            margin: 0px;
+            font-size: 10px;
+            padding-left: 10px;
+            }
+
+            .passinvalid:before {
+            position: relative;
+            left: 0px;
+            content: "✖";
+            }
         </style>
          
         <div class="container" >
@@ -192,9 +229,10 @@
                                           </label>
                                         </td>
                                         <td scope="row"class="text-center">
-                                            <a href="{{url('edit_company',$user->uniqueid)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                                            <a href="#" data-toggle="modal" data-id="{{ $user->uniqueid }}" onclick="editcompany(this)" data-target="#editcompany"><i  style="  color:rgb(13, 1, 56);" class="fas fa-eye" aria-hidden="true"></i>
-                                            <a href="{{url('#',$user->uniqueid)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i>
+                                            {{-- <a href="{{url('edit_company',$user->uniqueid)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i> --}}
+                                            <a href="#" data-toggle="modal" data-id="{{ $user->uniqueid }}" onclick="editcompany(this)" data-target="#editcompany"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                                            {{-- <a href="{{url('#',$user->uniqueid)}}"> <i style="color:rgb(13, 1, 56);padding-left:15px"class="fas fa-trash-alt"></i> --}}
+                                            <a href="#" data-toggle="modal" data-id="{{ $user->uniqueid }}" data-name="{{ $user->company_name }}"onclick="deletecompany(this)" data-target="#deletecompany"> <i style="color:rgb(13, 1, 56);padding-left:25px"class="fas fa-trash-alt"></i>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -335,7 +373,7 @@
                                                 <div class="" style="width: 50%">
                                                     <div class=""><span style="color: red">*</span>
                                                         <label for="company_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Password</label>
-                                                        <input type="password" placeholder="Password" style="width=45%" class="form-control" name="password" id="" value=""required>
+                                                        <input type="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z]).{8,}"style="width=45%" class="form-control" name="password" id="checkpass" value=""required>
                                                         <div class="invalid-feedback" style="width: 100%;">
                                                             Password is required.
                                                         </div>
@@ -344,7 +382,7 @@
                                                 <div class="" style="width: 50%;padding-right:0px;">
                                                     <div class=""><span style="color: red">*</span>
                                                         <label for="company_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Comform Password</label>
-                                                        <input type="password" placeholder="Comform Password" style="width=45%" class="form-control" name="password_1" id="" value=""required>
+                                                        <input type="password" placeholder="Comform Password" style="width=45%" class="form-control" name="password_1" id="checkpass_1" value=""required>
                                                         <div class="invalid-feedback" style="width: 100%;">
                                                             Comform Password is required.
                                                         </div>
@@ -375,13 +413,26 @@
                                             </script>
                                         </div>
                                     </div>
-                                    <br>
+                                    
                                     <div class="row">
-                                        <div class="col-sm"></div>
-                                        <div class="col-sm"></div>
-                                        <div class="col-sm" style="padding-right: 0px;">
+                                        <div class="" style="width: 50%;">
+                                            <div id="passmessage">
+                                                <h6 style="margin:0px;">Password must contain the following:</h6>
+                                                <div class="row" style="width: 100%;">
+                                                    <div style="width: 40%;">
+                                                        <ul id="passletter" class="passinvalid">A <b>letter</b> </ul>
+                                                        <ul id="passnumber" class="passinvalid">A <b>number</b></ul>
+                                                    </div>
+                                                    <div style="width: 50%;">
+                                                        <ul id="passlength" class="passinvalid">Minimum <b>8 characters</b></ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div lass="" style="width: 0%"></div>
+                                        <div class="col-sm" style="padding-right: 0px;width: 50%">
                                             <br>
-                                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Create</button>
+                                            <button type="submit" onclick="return Validate()" class="btn btn-primary float:right;" Style="width:45%;">Create</button>
                                             <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
                                         </div>
                                     </div>
@@ -505,19 +556,13 @@
                                                 <div class="" style="width: 50%">
                                                     <div class=""><span style="color: red">*</span>
                                                         <label for="company_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Password</label>
-                                                        <input type="password" placeholder="**********" style="width=45%" class="form-control" name="password" id="" value="">
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Password is required.
-                                                        </div>
+                                                        <input type="password" placeholder="**********" style="width=45%"pattern="(?=.*\d)(?=.*[a-z]).{8,}" class="form-control" name="password" id="e_password" value="">
                                                     </div>
                                                 </div>
                                                 <div class="" style="width: 50%;padding-right:0px;">
                                                     <div class=""><span style="color: red">*</span>
                                                         <label for="company_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Comform Password</label>
-                                                        <input type="password" placeholder="**********" style="width=45%" class="form-control" name="password_1" id="" value="">
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Comform Password is required.
-                                                        </div>
+                                                        <input type="password" placeholder="**********" style="width=45%" class="form-control" name="password_1" id="e_password_1" value="">
                                                     </div>
                                                 </div>
                                             </div>
@@ -547,12 +592,56 @@
                                     </div>
                                     <br>
                                     <div class="row">
-                                        <div class="col-sm"></div>
-                                        <div class="col-sm"></div>
-                                        <div class="col-sm" style="padding-right: 0px;">
+                                        <div class="" style="width: 50%;">
+                                            <div id="e_passmessage">
+                                                <h6 style="margin:0px;">Password must contain the following:</h6>
+                                                <div class="row" style="width: 100%;">
+                                                    <div style="width: 40%;">
+                                                        <ul id="e_passletter" class="passinvalid">A <b>letter</b> </ul>
+                                                        <ul id="e_passnumber" class="passinvalid">A <b>number</b></ul>
+                                                    </div>
+                                                    <div style="width: 50%;">
+                                                        <ul id="e_passlength" class="passinvalid">Minimum <b>8 characters</b></ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div lass="" style="width: 0%"></div>
+                                        <div class="col-sm" style="padding-right: 0px;width: 50%;">
                                             <br>
-                                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Update</button>
+                                            <button type="submit" onclick="return e_Validate()"class="btn btn-primary float:right;" Style="width:45%;">Update</button>
                                             <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="deletecompany" style=""><!-- delete company -->
+            <div class="modal-dialog modal-lg" style="width:30%;">
+                <div class="modal-content">
+                    <!---- Modal Header -->
+                    <form method="post"  id="delete_company" action="#" enctype="multipart/form-data"> 
+                        @csrf
+                        <input type="hidden" id="deleteuniqueid" value="uniqueid">
+                        <div class="modal-header" style="padding:0rem 0rem;">
+                            <div style="padding:1rem 1rem;"><h4 class="text-centre"><b>Delete <span id="deletcompany_name"></span></b></h4></div>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body" >
+                            <div class="container">
+                                <div class="row"><h6><b><span>Are you sure?</span></b></h6> 
+                                </div>
+                                    <div class="row">
+                                        <div class="" style="width: 30%;">
+                                        </div>
+                                        <div lass="" style="width: 0%"></div>
+                                        <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                            <br>
+                                            <button type="submit" class="btn btn-primary float:right;" Style="width:45%;background-color:#DD4132;">Yes</button>
+                                            <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">No</button>
                                         </div>
                                     </div>
                                 </div>
@@ -603,6 +692,112 @@
                     }
                 });
             }
+            function deletecompany(param){// edit company get details 
+                var deleteuniqueid = $(param).data('id');
+                var deletecompany_name = $(param).data('name');
+                $('#deleteuniqueid').val(deleteuniqueid);
+                $('#deletcompany_name').html(deletecompany_name);
+                document.getElementById("deletcompany_name").innerHTML = deletecompany_name;
+                $('#delete_company').attr('action',"{{ url('delete_company') }}"+"/"+deleteuniqueid);
+            }
+            //createt password validation start
+            var checkpass = document.getElementById("checkpass");
+            var passletter = document.getElementById("passletter");
+            var passnumber = document.getElementById("passnumber");
+            var passlength = document.getElementById("passlength");
+            checkpass.onfocus = function() {// for password validation display
+                document.getElementById("passmessage").style.display = "block";
+            }
+            checkpass.onblur = function() {// for password validation hide
+                document.getElementById("passmessage").style.display = "none";
+            }
+            checkpass.onkeyup = function() {
+                // Validate lowercase letters
+                var lowerCaseLetters = /[a-z]/g;
+                if(checkpass.value.match(lowerCaseLetters)) {  
+                    passletter.classList.remove("passinvalid");
+                    passletter.classList.add("passvalid");
+                } else {
+                    passletter.classList.remove("passvalid");
+                    passletter.classList.add("passinvalid");
+                }
+                // Validate numbers
+                var numbers = /[0-9]/g;
+                if(checkpass.value.match(numbers)) {  
+                    passnumber.classList.remove("passinvalid");
+                    passnumber.classList.add("passvalid");
+                } else {
+                    passnumber.classList.remove("passvalid");
+                    passnumber.classList.add("passinvalid");
+                }
+                // Validate length
+                if(checkpass.value.length >= 8) {
+                    passlength.classList.remove("passinvalid");
+                    passlength.classList.add("passvalid");
+                } else {
+                    passlength.classList.remove("passvalid");
+                    passlength.classList.add("passinvalid");
+                }
+            }
+            function Validate() {// to  check password and conform password are same
+                var password = document.getElementById("checkpass").value;
+                var confirmPassword = document.getElementById("checkpass_1").value;
+                if (password != confirmPassword) {
+                    alert("Please enter same password in both");
+                    return false;
+                }
+                return true;
+            }
+            // create password validation end here
+            // edit password validation start
+            var e_checkpass = document.getElementById("e_password");
+            var e_passletter = document.getElementById("e_passletter");
+            var e_passnumber = document.getElementById("e_passnumber");
+            var e_passlength = document.getElementById("e_passlength");
+            e_checkpass.onfocus = function() {// for password validation display
+                document.getElementById("e_passmessage").style.display = "block";
+            }
+            e_checkpass.onblur = function() {// for password validation hide
+                document.getElementById("e_passmessage").style.display = "none";
+            }
+            e_checkpass.onkeyup = function() {
+                // Validate lowercase letters
+                var lowerCaseLetters = /[a-z]/g;
+                if(e_checkpass.value.match(lowerCaseLetters)) {  
+                    e_passletter.classList.remove("passinvalid");
+                    e_passletter.classList.add("passvalid");
+                } else {
+                    e_passletter.classList.remove("passvalid");
+                    e_passletter.classList.add("passinvalid");
+                }
+                // Validate numbers
+                var numbers = /[0-9]/g;
+                if(e_checkpass.value.match(numbers)) {  
+                    e_passnumber.classList.remove("passinvalid");
+                    e_passnumber.classList.add("passvalid");
+                } else {
+                    e_passnumber.classList.remove("passvalid");
+                    e_passnumber.classList.add("passinvalid");
+                }
+                // Validate length
+                if(e_checkpass.value.length >= 8) {
+                    e_passlength.classList.remove("passinvalid");
+                    e_passlength.classList.add("passvalid");
+                } else {
+                    e_passlength.classList.remove("passvalid");
+                    e_passlength.classList.add("passinvalid");
+                }
+            }
+            function e_Validate() {// to  check password and conform password are same
+                var e_password = document.getElementById("e_password").value;
+                var e_confirmPassword = document.getElementById("e_password_1").value;
+                if (e_password != e_confirmPassword) {
+                    alert("Please enter same password in both");
+                    return false;
+                }
+                return true;
+            }
+            // edit password validation end here
         </script>
 
 @endsection
