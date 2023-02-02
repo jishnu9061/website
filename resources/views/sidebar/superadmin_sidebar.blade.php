@@ -18,36 +18,18 @@
             </li>
                 @if(Auth::user()->role == '1')
                 {{-- Management company start --}}
-                <li class="sidebar-item  has-sub">
-                    <a href="#" class='sidebar-link'>
+                @if (request()->path() == 'company_list')
+                <li class="sidebar-item ">
+                    <a href="company_list" class='sidebar-link'style="background-color: #1D1D50;color:white;">
+                        <i id="icon" class="fa-regular fa-user"  style="font-weight: 300;color:white;"></i>
+                            <span style="padding-left: 20px">Manage company</span>
+                @else
+                <li class="sidebar-item ">
+                    <a href="company_list" class='sidebar-link'>
                         <i id="icon" class="fa-regular fa-user"  style="font-weight: 300;"></i>
                             <span style="padding-left: 20px">Manage company</span>
+                @endif
                     </a>
-                    @php
-                        $admin = array("company_list", "Add_company",);
-                    @endphp
-                    @if (in_array(request()->path(), $admin))
-                        <ul class="submenu" style="display: block;">
-                        @else
-                            <ul class="submenu" style="display: none;">
-                    @endif
-                    @if (request()->path() == 'company_list')
-                        <li class="submenu-item " >
-                            <a href="{{url('company_list')}}" class='sidebar-link' style="background-color: #1D1D50;color:white;">
-                                <span> Company List</span>
-                    @else
-                        <li class="submenu-item " >
-                            <a href="{{url('company_list')}}" class='sidebar-link'>
-                                <span>Company List</span>
-                    @endif
-                            </a>
-                        </li>
-                        <li class="submenu-item ">
-                            <a href="{{url('Add_company')}}" class='sidebar-link'>
-                                <span>Add Company</span>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
                 {{-- Management company end --}}
                 {{-- super admin setup start --}}

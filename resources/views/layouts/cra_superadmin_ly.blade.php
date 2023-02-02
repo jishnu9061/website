@@ -715,7 +715,7 @@
                     limitPagging();
                     
                     })
-                    .val(5)
+                    .val(20)
                     .change();
 
                 // end of on select change

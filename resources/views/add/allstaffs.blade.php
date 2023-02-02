@@ -67,7 +67,7 @@
         <div class="header_wrap">
             <div class="num_rows">
                 <div class="form-group">
-                    <!--		Show Numbers Of Rows 		-->
+                    <!-- Show Numbers Of Rows -->
                     <select class="form-control" aria-label="Page navigation example" name="state" id="maxRows">
                         <option value="5">5</option>
                         <option value="10">10</option>
