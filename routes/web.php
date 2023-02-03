@@ -1047,22 +1047,22 @@ Route::any('add-corporate', 'ClientManagement@addCorporate')->name('add-corporat
 Route::any('corporate-list', 'ClientManagement@listCorporate')->name('corporate-list');
 
 // Lawyernt
-Route::any('asign-lawyer','ClientManagement@asignlawyer')->name('asign-lawyer');
-Route::any('add_lawyer','ClientManagement@add_lawyer')->name('add_lawyer');
-Route::any('edit_lawyer/{id}','ClientManagement@edit_lawyer')->name('edit_lawyer');
-Route::any('update_lawyer',"ClientManagement@update_lawyer")->name('update_lawyer');
-Route::any('view_lawyer/{id}','ClientManagement@view_lawyer')->name('view_lawyer');
-Route::any('/delete_lawyer/{id}','ClientManagement@delete_lawyer')->name('delete_lawyer');
+Route::any('asign-lawyer', 'ClientManagement@asignlawyer')->name('asign-lawyer');
+Route::any('add_lawyer', 'ClientManagement@add_lawyer')->name('add_lawyer');
+Route::any('edit_lawyer/{id}', 'ClientManagement@edit_lawyer')->name('edit_lawyer');
+Route::any('update_lawyer', "ClientManagement@update_lawyer")->name('update_lawyer');
+Route::any('view_lawyer/{id}', 'ClientManagement@view_lawyer')->name('view_lawyer');
+Route::any('/delete_lawyer/{id}', 'ClientManagement@delete_lawyer')->name('delete_lawyer');
 
-Route::any('/edit_client/{corporate_id}','ClientManagement@edit_corporate')->name('edit_client');
-Route::any('/update-corporate','ClientManagement@Update_corporate')->name('update-corporate');
-Route::any('/delete_client/{corporate_id}','ClientManagement@Corporate_destroy')->name('delete_client');
-Route::any('/corporate-document/{corporate_id}','ClientManagement@CorporateDocument')->name('corporate-document');
-Route::any('add-corporate-document','ClientManagement@addCorporatedocument')->name('add-corporate-document');
-Route::any('corporate-document-details/{id}','ClientManagement@viewCorporateDocument')->name('corporate-document-details');
-Route::any('edit-corporate-document/{id}','ClientManagement@editCorporateDocument')->name('edit-corporate-document');
-Route::any('update-document-details','ClientManagement@updateDocumentDetails')->name('update-document-details');
-Route::any('view-document-details/{id}','ClientManagement@viewDocummentDetails')->name('view-document-details');
+Route::any('/edit_client/{corporate_id}', 'ClientManagement@edit_corporate')->name('edit_client');
+Route::any('/update-corporate', 'ClientManagement@Update_corporate')->name('update-corporate');
+Route::any('/delete_client/{corporate_id}', 'ClientManagement@Corporate_destroy')->name('delete_client');
+Route::any('/corporate-document/{corporate_id}', 'ClientManagement@CorporateDocument')->name('corporate-document');
+Route::any('add-corporate-document', 'ClientManagement@addCorporatedocument')->name('add-corporate-document');
+Route::any('corporate-document-details/{id}', 'ClientManagement@viewCorporateDocument')->name('corporate-document-details');
+Route::any('edit-corporate-document/{id}', 'ClientManagement@editCorporateDocument')->name('edit-corporate-document');
+Route::any('update-document-details', 'ClientManagement@updateDocumentDetails')->name('update-document-details');
+Route::any('view-document-details/{id}', 'ClientManagement@viewDocummentDetails')->name('view-document-details');
 //end corporate
 //end Client-List
 
@@ -1332,13 +1332,13 @@ Route::any('/edit_staff_details/{id}', 'hrindex@edit_staff_details')->name('edit
 Route::any('/view_staff_details/{id}', 'hrindex@view_staff_details')->name('view_staff_details');
 
 //reshma
-Route::any('hr_department','hrindex@hrdepartment')->name('hr_department');
-Route::any('performance_department','hrindex@performance_department')->name('performance_department');
-Route::any('job_posts','hrindex@job_posts')->name('job_posts');
-Route::any('edit_job_post/{id}','hrindex@edit_job_post')->name('edit_job_post');
-Route::any('/update_job_post','hrindex@update_job_post')->name('update_job_post');
-Route::any('/delete_job_post/{id}','hrindex@delete_job_post')->name('delete_job_post');
-Route::any('/view_job_post/{id}','hrindex@view_job_post')->name('view_job_post');
+Route::any('hr_department', 'hrindex@hrdepartment')->name('hr_department');
+Route::any('performance_department', 'hrindex@performance_department')->name('performance_department');
+Route::any('job_posts', 'hrindex@job_posts')->name('job_posts');
+Route::any('edit_job_post/{id}', 'hrindex@edit_job_post')->name('edit_job_post');
+Route::any('/update_job_post', 'hrindex@update_job_post')->name('update_job_post');
+Route::any('/delete_job_post/{id}', 'hrindex@delete_job_post')->name('delete_job_post');
+Route::any('/view_job_post/{id}', 'hrindex@view_job_post')->name('view_job_post');
 //reshma
 Route::any('view_job_applications', 'hrindex@view_job_applications')->name('view_job_applications');
 Route::any('view_application_details', 'hrindex@view_application_details')->name('view_application_details');
