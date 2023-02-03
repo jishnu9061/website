@@ -547,13 +547,35 @@
                         <span style="margin-left: 1rem;">HR</span>
                     </a>
                     @php
-                        $admin = array("staffs", "recruitment", "performance_department", "loans", "payslip", "attendanceview", "attendance", "timesheet", "task_allocation", "leave_request_details", "attendance_sheet", "bank_names", "internal_memos");
+                        $admin = array('employee_list/'.Auth::user()->company_id,"staffs", "recruitment", "performance_department", "loans", "payslip", "attendanceview", "attendance", "timesheet", "task_allocation", "leave_request_details", "attendance_sheet", "bank_names", "internal_memos");
                     @endphp
                     @if (in_array(request()->path(), $admin))
                         <ul class="submenu" style="display: block;">
                         @else
                         <ul class="submenu" style="display: none;">
                     @endif
+                        @if(request()->path()== 'employee_list/'.Auth::user()->company_id){{-- 0th  submenu start --}}
+                            <li class="submenu-item " >
+                                <a href="{{url('employee_list/'.Auth::user()->company_id)}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
+                                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Employee List</span>
+                            @else
+                                <li class="submenu-item ">
+                                    <a href="{{url('employee_list/'.Auth::user()->company_id)}}" class='sidebar-link'>
+                                    <span>Employee List</span>
+                        @endif
+                            </a>
+                        </li>{{-- 0_1th submenu end --}}
+                        @if(request()->path()== 'employee_list/'.Auth::user()->company_id){{-- 0th  submenu start --}}
+                            <li class="submenu-item " >
+                                <a href="{{url('employee_list/')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
+                                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Add Employee</span>
+                            @else
+                                <li class="submenu-item ">
+                                    <a href="{{url('employee_list/')}}" class='sidebar-link'>
+                                    <span>Add Employee</span>
+                        @endif
+                            </a>
+                        </li>{{-- 0_1th submenu end --}}                        
                         @if(request()->path()== "staffs"){{-- 1st  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('staffs')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
