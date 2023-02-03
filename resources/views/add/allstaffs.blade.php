@@ -62,8 +62,8 @@
         }
     </style>
     <div class='container'>
-        <h4 id="hdtpa"><b>Staff Details</b></h4><br>
-        <a type="button" class="btn btn-primary" href="{{ url('add_staff') }}">Add New Staff</a>
+        <h4 id="hdtpa"><b>Employee Details</b></h4><br>
+        <a type="button" class="btn btn-primary" href="{{ url('add_staff') }}">Add New Employee</a>
         <div class="header_wrap">
             <div class="num_rows">
                 <div class="form-group">

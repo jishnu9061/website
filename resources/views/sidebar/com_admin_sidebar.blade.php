@@ -1,4 +1,4 @@
-<div class="sidebar-wrapper active"style="top:100px;border-top-right-radius: 6px;height:auto;">
+<div class="sidebar-wrapper active"style="top:80px;border-top-right-radius: 6px;height:auto;transition: all 1s;">
     {{-- <div class="sidebar-header"style="padding-left: 20px;padding-right: 10px;padding-bottom:0px;">
         <div class="d-flex justify-content-between">
             <div class="logo"class="logo" style="background-color:#dfc79d;
