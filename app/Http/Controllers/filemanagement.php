@@ -18,10 +18,10 @@ class filemanagement extends Controller
     {
         $client_list = DB::table('cra_mixed_table')->get();
         $file_list = DB::table('cra_open_new_file_details')->get();
-        
-        // ->select('*')  
+
+        // ->select('*')
         // ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_open_new_file_details.id')
-        // ->get();    
+        // ->get();
         return view ('file_management.file-list',compact('file_list','client_list'));
         // return view('file_management.file-list',compact('file_list'));
     }
@@ -30,13 +30,13 @@ class filemanagement extends Controller
     {
         $view_list = DB::table('cra_open_new_file_details')->where('id',$id)->first();
         return view('file_management.view-list',compact('view_list','id'));
-                                                                  
+
     }
 
 
     public function edit($id)
     {
-    
+
         $edit =DB::table('cra_open_new_file_details')->where('id',$id)->first();
         return view('file_management.edit-file',compact('edit','id'));
     }
@@ -44,19 +44,19 @@ class filemanagement extends Controller
     public function file_destroy($id)
     {
         $edit =DB::table('cra_open_new_file_details')->where('id',$id)->delete();
-        
+
         return redirect ('/file-list');
     }
 
     public function addtask()
 {
-    return view('file_management.add-task');                                                             
+    return view('file_management.add-task');
 }
 
     public function addnew(Request $request)
     {
 
-         
+
         $assoc_handling=$request['assoc_handling'];
         $client=$request['client'];
         $email=$request['email'];
@@ -76,7 +76,7 @@ class filemanagement extends Controller
         $task=$request['task'];
         $status=$request['status'];
 
-        
+
 
         DB::table('cra_open_new_file_details')->insert([
             'assoc_handling' => $assoc_handling,
@@ -98,7 +98,7 @@ class filemanagement extends Controller
             'task' => $task,
             'status' => $status,
 
-       
+
 
         ]);
         return redirect('/file-list');
@@ -130,7 +130,7 @@ class filemanagement extends Controller
 
 
 
-           
+
             'assoc_handling' => $assoc_handling,
             'client' => $client,
             'email' => $email,
@@ -150,7 +150,7 @@ class filemanagement extends Controller
             'task' => $task,
             'status' => $status,
         ]);
-      
+
 
         return redirect('/file-list');
 
@@ -180,7 +180,7 @@ class filemanagement extends Controller
             'to_upload' =>  $to_upload,
 
         ]);
-        
+
         return redirect('/template-category');
         // return view('file_management.add-template');
     }
@@ -192,9 +192,9 @@ class filemanagement extends Controller
     public function filearchive()
     {
         $file_progress_list = DB::table('cra_add_box')
-      ->select('*')  
+      ->select('*')
       ->leftjoin('cra_open_new_file_details','cra_add_box.id','=','cra_open_new_file_details.id')
-       ->get();    
+       ->get();
         return view('file_management.file-archive',compact('file_progress_list'));
 
         // return view('file_management.file-archive');
@@ -211,21 +211,27 @@ class filemanagement extends Controller
             'number' =>  $Box_number,
 
         ]);
-        
+
         return redirect('/file-archive');
     }
-    
-    public function viewboxno()
+
+    public function viewboxno($id)
     {
-        return view('file_management.view-box-no');
+        $archive_details = DB::table('cra_add_box')->where('cra_add_box.uniqueid',$id)->first();
+
+    return response()->json([
+        'status' => 200,
+        'result' =>$archive_details,
+    ]);
+        // return view('file_management.view-box-no');
     }
-    
+
 
     public function editboxno($id)
     {
         $edit =DB::table('cra_add_box')->where('id',$id)->first();
         return view('file_management.edit-box-no',compact('edit','id'));
-        
+
         // return view('file_management.edit-box-no');
     }
 
@@ -233,7 +239,7 @@ class filemanagement extends Controller
     {
         DB::table('cra_add_box')->where('id',$id)->delete();
         return redirect('/file-archive');
-        
+
         // return view('file_management.edit-box-no');
     }
 
@@ -249,12 +255,12 @@ class filemanagement extends Controller
             'number' =>  $Box_number,
 
         ]);
-        
+
         return redirect('/file-archive');
     }
 
 
-    
+
     //manage files
 
     //file progress
@@ -275,10 +281,10 @@ class filemanagement extends Controller
 
     public function addprogress(Request $request )
 
-    { 
+    {
         $id = $request['id'];
         $progress_date=$request['date_progress'];
-        $next_action=$request['next_action'];      
+        $next_action=$request['next_action'];
         $bringup_date=$request['bringup_date'];
         $file_name=$request['file_name'];
         $client_name=$request['client_name'];
@@ -325,7 +331,7 @@ class filemanagement extends Controller
 
 
     // public function editprogress($id)
-    
+
     // {
     //     return view('file_management.add-file-progress');
     // }
@@ -335,7 +341,7 @@ class filemanagement extends Controller
     {
         $edit_progress =DB::table('cra_add_file_progress')->where('id',$id)->first();
         return view('file_management.edit-file-progress',compact('edit_progress','id'));
-       
+
     }
 
     public function update_progress(Request $request){
@@ -343,7 +349,7 @@ class filemanagement extends Controller
         $id =$request['id'];
         $client_name=$request['client_name'];
         $progress_date=$request['date_progress'];
-        $next_action=$request['next_action'];      
+        $next_action=$request['next_action'];
         $bringup_date=$request['bringup_date'];
         $file_name=$request['file_name'];
         $reminder_period=$request['reminder_period'];
@@ -361,7 +367,7 @@ class filemanagement extends Controller
 
 
         DB::table('cra_add_file_progress')->where('id',$id)->update([
-            
+
             'progress_date' => $progress_date,
             'next_action' => $next_action,
             'client_name' => $client_name,
@@ -389,7 +395,7 @@ class filemanagement extends Controller
         DB::table('cra_add_file_progress')->where('id',$id)->delete();
         return redirect('/file-progress-list');
     }
-    
+
     public function fileactionhours()
     {
         return view('file_management.file-action-hours');
@@ -400,10 +406,10 @@ class filemanagement extends Controller
     {
         $client_list = DB::table('cra_mixed_table')->get();
          $file_progress_list = DB::table('cra_add_file_progress')
-        // ->select('*')  
+        // ->select('*')
         // ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_file_progress.id')
         // ->leftjoin('cra_open_new_file_details','cra_open_new_file_details.id','=','cra_add_file_progress.id')
-        ->get();    
+        ->get();
         return view ('file_management.file-progress-list',compact('file_progress_list','client_list'));
     }
 
@@ -414,14 +420,14 @@ class filemanagement extends Controller
         $id =$request['id'];
         $client_name=$request['client_name'];
         $file_name=$request['file_name'];
-        $progress_date=$request['progress_date'];      
+        $progress_date=$request['progress_date'];
         $time_taken_hours=$request['time_taken_hours'];
         $action_type=$request['action_type'];
         $time_taken_minutes=$request['time_taken_minutes'];
         $sent_notification=$request['sent_notification'];
 
         DB::table('cra_add_file_progress_action')->insert([
-            
+
             'client_name' => $client_name,
             'file_name' => $file_name,
             'progress_date' => $progress_date,
@@ -429,11 +435,11 @@ class filemanagement extends Controller
             'action_type' => $action_type,
             'time_taken_minutes' => $time_taken_minutes,
             'sent_notification' => $sent_notification,
-            
+
         ]);
-        
+
         return redirect('/file-progress-list');
-        
+
     }
 
 
@@ -443,14 +449,14 @@ class filemanagement extends Controller
         $id =$request['id'];
         $client_name=$request['client_name'];
         $file_name=$request['file_name'];
-        $progress_date=$request['progress_date'];      
+        $progress_date=$request['progress_date'];
         $next_bringup_days=$request['next_bringup_days'];
         $remind_period_days=$request['remind_period_days'];
         $send_notification=$request['send_notification'];
         $reason=$request['reason'];
 
         DB::table('cra_add_file_bringup_reminder')->insert([
-            
+
             'client_name' => $client_name,
             'file_name' => $file_name,
             'progress_date' => $progress_date,
@@ -458,10 +464,10 @@ class filemanagement extends Controller
             'remind_period_days' => $remind_period_days,
             'send_notification' => $send_notification,
             'reason' => $reason,
-            
+
         ]);
         return redirect('/file-progress-list');
-        
+
     }
 
     public function bookcourt (Request $request)
@@ -471,7 +477,7 @@ class filemanagement extends Controller
         $id =$request['id'];
         $client_name=$request['client_name'];
         $file_name=$request['file_name'];
-        $court_name=$request['court_name'];      
+        $court_name=$request['court_name'];
         $court_event_type=$request['court_event_type'];
         $start_date=$request['start_date'];
         $start_time=$request['start_time'];
@@ -483,7 +489,7 @@ class filemanagement extends Controller
         $notes=$request['notes'];
 
         DB::table('cra_book_a_court')->insert([
-            
+
             'client_name' => $client_name,
             'file_name' => $file_name,
             'court_name' => $court_name,
@@ -496,12 +502,12 @@ class filemanagement extends Controller
             'send_notification' => $send_notification,
             'set_reminder' => $set_reminder,
             'notes' => $notes,
-          
-            
+
+
         ]);
         return redirect('/file-progress-list');
         // return view('file_management.book-court');
-        
+
     }
 
     public function courtattendance(Request $request)
@@ -509,7 +515,7 @@ class filemanagement extends Controller
         $id =$request['id'];
         $attendance_date=$request['attendance_date'];
         $client_name=$request['client_name'];
-        $file_name=$request['file_name'];      
+        $file_name=$request['file_name'];
         $other_file=$request['other_file'];
         $court_name=$request['court_name'];
         $judicial_officer=$request['judicial_officer'];
@@ -518,7 +524,7 @@ class filemanagement extends Controller
         $acting_for=$request['acting_for'];
         $instructions=$request['instructions'];
         $transpired_in_court=$request['transpired_in_court'];
-        $remarks=$request['remarks'];        
+        $remarks=$request['remarks'];
         $notes=$request['notes'];
         $person_dealing=$request['person_dealing'];
         $time_taken_hours=$request['time_taken_hours'];
@@ -528,7 +534,7 @@ class filemanagement extends Controller
         $send_remind_to=$request['send_remind_to'];
 
         DB::table('cra_court_attendance_sheet')->insert([
-            
+
             'attendance_date' => $attendance_date,
             'client_name' => $client_name,
             'file_name' => $file_name,
@@ -548,11 +554,11 @@ class filemanagement extends Controller
             'bring_up_date' => $bring_up_date,
             'remind_period_days' => $remind_period_days,
             'send_remind_to' => $send_remind_to,
-          
-            
+
+
         ]);
         return redirect('/file-progress-list');
-        // return view('file_management.court-attendance-sheet'); 
+        // return view('file_management.court-attendance-sheet');
     }
 
 
@@ -561,7 +567,7 @@ class filemanagement extends Controller
         $id =$request['id'];
         $court_type=$request['court_type'];
         $client_name=$request['client_name'];
-        $file_name=$request['file_name'];      
+        $file_name=$request['file_name'];
         $court_name=$request['court_name'];
         $start_date=$request['start_date'];
         $start_time=$request['start_time'];
@@ -570,10 +576,10 @@ class filemanagement extends Controller
         $user_assigned=$request['user_assigned'];
         $sent_notification=$request['sent_notification'];
         $set_reminder=$request['set_reminder'];
-        $notes=$request['notes']; 
+        $notes=$request['notes'];
 
         DB::table('cra_arbiration_sheet')->insert([
-            
+
             'court_type' => $court_type,
             'client_name' => $client_name,
             'file_name' => $file_name,
@@ -586,12 +592,12 @@ class filemanagement extends Controller
             'sent_notification' => $sent_notification,
             'set_reminder' => $set_reminder,
             'notes' => $notes,
-           
-            
+
+
         ]);
         return redirect('/file-progress-list');
         // return view('file_management.arbiration-sheet');
-        
+
     }
 
     public function conveyance(Request $request)
@@ -600,7 +606,7 @@ class filemanagement extends Controller
         $id =$request['id'];
         $arbiration_date=$request['arbiration_date'];
         $client_name=$request['client_name'];
-        $file_name=$request['file_name'];      
+        $file_name=$request['file_name'];
         $seller_name=$request['seller_name'];
         $seller_id_no=$request['seller_id_no'];
         $seller_address=$request['seller_address'];
@@ -609,24 +615,24 @@ class filemanagement extends Controller
         $land_ref_no=$request['land_ref_no'];
         $title_deed_no=$request['title_deed_no'];
         $location=$request['location'];
-        $property_size=$request['property_size']; 
+        $property_size=$request['property_size'];
         $buyer_name=$request['buyer_name'];
         $buyer_id_no=$request['buyer_id_no'];
         $buyer_address=$request['buyer_address'];
         $buyer_contact=$request['buyer_contact'];
         $buyer_email=$request['buyer_email'];
-        $solving_process=$request['solving_process']; 
+        $solving_process=$request['solving_process'];
         $final_aggremnt=$request['final_aggremnt'];
         $person_dealing=$request['person_dealing'];
         $time_taken_hours=$request['time_taken_hours'];
         $time_taken_minutes=$request['time_taken_minutes'];
         $bringup_date=$request['bringup_date'];
         $remind_period_days=$request['remind_period_days'];
-        $send_reminder_to=$request['send_reminder_to']; 
-        $next_action=$request['next_action']; 
+        $send_reminder_to=$request['send_reminder_to'];
+        $next_action=$request['next_action'];
 
         DB::table('cra_conveyence_sheet')->insert([
-            
+
             'arbiration_date' => $arbiration_date,
             'client_name' => $client_name,
             'file_name' => $file_name,
@@ -653,12 +659,12 @@ class filemanagement extends Controller
             'remind_period_days' => $remind_period_days,
             'send_reminder_to' => $send_reminder_to,
             'next_action' => $next_action,
-              
+
         ]);
         return redirect('/file-progress-list');
- 
+
         // return view('file_management.conveyance-sheet');
-        
+
     }
     public function filelistprogressreport()
     {
@@ -668,27 +674,27 @@ class filemanagement extends Controller
         ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_file_progress.id')
         ->leftjoin('cra_open_new_file_details','cra_open_new_file_details.id','=','cra_add_file_progress.id')
         ->get();
- 
-        
-        
+
+
+
 
         return view ('file_management.file-list-progress-report',compact('file_progress_list'));
 
         // return view('file_management.file-list-progress-report');
-        
+
     }
 
 
     public function viewfilelistreport($id)
     {
         $view_list = DB::table('cra_add_file_progress')
-        ->select('*')  
+        ->select('*')
         ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_file_progress.id')
-        ->get(); 
-        
+        ->get();
+
 
         return view('file_management.view-file-list-progress',compact('view_list','id'));
-                                                                  
+
     }
 
     public function staffmonthlystatusreport(Request $request)
@@ -707,7 +713,7 @@ class filemanagement extends Controller
 
         ]);
         return view('file_management.staff-monthly-status-report');
-        
+
     }
 
     //file progress
@@ -749,7 +755,7 @@ class filemanagement extends Controller
        $File =$request['file'];
        $Date_from =$request['date_from'];
        $Date_to =$request['date_to'];
-       
+
        DB::table('cra_file_progress_report')->insert([
 
            'id' =>  $id,
@@ -763,7 +769,7 @@ class filemanagement extends Controller
     }
 
     public function filestatussummary(Request $request)
-    { 
+    {
        $Date_To =$request['date_to'];
        $File =$request['file'];
        $Instruction_Category =$request['category'];
@@ -783,7 +789,7 @@ class filemanagement extends Controller
            'Exchange_Rate' =>  $Exchange_Rate,
            'Turn_Around_Time' =>  $Turn_Around_Time,
            'Priority' =>  $Priority,
-           'Details' =>  $Details 
+           'Details' =>  $Details
 
        ]);
         return view('file_management.file-status-summary');
@@ -798,12 +804,12 @@ class filemanagement extends Controller
 
      public function newworkflow(Request $request)
      {
-        $id =$request['id']; 
-        $Date =$request['date']; 
-        $Flow_name =$request['flow_name']; 
+        $id =$request['id'];
+        $Date =$request['date'];
+        $Flow_name =$request['flow_name'];
         $start_date =$request['start_date'];
-        $Duration =$request['duration']; 
-        $Flow_comments =$request['flow_comments']; 
+        $Duration =$request['duration'];
+        $Flow_comments =$request['flow_comments'];
 
         DB::table('cra_work_flow')->insert([
             'id' =>  $id,
@@ -814,18 +820,18 @@ class filemanagement extends Controller
             'Workflow_Comments' =>   $Flow_comments,
         ]);
 
-     
+
      return redirect('/work-flow');
      }
 
      public function updatworkflow(Request $request)
      {
-        $id =$request['id']; 
-        $Date =$request['date']; 
-        $Flow_name =$request['flow_name']; 
+        $id =$request['id'];
+        $Date =$request['date'];
+        $Flow_name =$request['flow_name'];
         $start_date =$request['start_date'];
-        $Duration =$request['duration']; 
-        $Flow_comments =$request['flow_comments']; 
+        $Duration =$request['duration'];
+        $Flow_comments =$request['flow_comments'];
 
         DB::table('cra_work_flow')->where('id',$id)->update([
             'id' =>  $id,
@@ -836,7 +842,7 @@ class filemanagement extends Controller
             'Workflow_Comments' =>   $Flow_comments,
         ]);
 
-     
+
      return redirect('/work-flow');
      }
 
@@ -845,7 +851,7 @@ class filemanagement extends Controller
      {
         $delete_flow=DB::table('cra_work_flow')->where('id',$id)->delete();
        return redirect('/work-flow');
-      
+
      }
 
      public function editworkflow($id)
@@ -853,7 +859,7 @@ class filemanagement extends Controller
      {
          $edit_flow =DB::table('cra_work_flow')->where('id',$id)->first();
          return view('file_management.edit-workflow',compact('edit_flow','id'));
-        
+
      }
 
 
@@ -866,12 +872,12 @@ class filemanagement extends Controller
 
         // $event=DB::table('cra_add_event')->get();
         $event = DB::table('cra_add_event')
-    //     ->select('*')  
+    //     ->select('*')
     //     ->leftjoin('cra_add_file_progress','cra_add_file_progress.id','=','cra_add_event.id')
     //    ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_event.id')
-       
+
     //    ->where('cra_add_event.id',$id)
-         ->get();    
+         ->get();
 
          return view('file_management.diary-management',compact('event','client_list'));
      }
@@ -889,7 +895,7 @@ class filemanagement extends Controller
      {
          $edit_event =DB::table('cra_add_event')->where('id',$id)->first();
          return view('file_management.edit_event',compact('edit_event','id'));
-        
+
      }
 
      public function updateevent(Request $request)
@@ -912,11 +918,11 @@ class filemanagement extends Controller
         $Repetition =$request['repetition'];
         $Repetition_end =$request['repetition_end'];
         $Reminder =$request['reminder'];
-        
+
 
         DB::table('cra_add_event')->where('id',$id)->update([
 
-            
+
             'Event_Type' =>  $Event_type,
             'Title' =>  $Title,
             'Meeting_Room' =>  $Meeting_room,
@@ -938,13 +944,13 @@ class filemanagement extends Controller
         ]);
         return redirect('/diary-management');
     }
- 
+
 
      public function addevent(Request $request)
      {
-        
+
         $Event_type =$request['event'];
-        // dd($Event_type); 
+        // dd($Event_type);
         $Title =$request['title'];
         $Meeting_room =$request['room'];
         $Location =$request['location'];
@@ -961,11 +967,11 @@ class filemanagement extends Controller
         $Repetition =$request['repetition'];
         $Repetition_end =$request['repetition_end'];
         $Reminder =$request['reminder'];
-        
+
 
         DB::table('cra_add_event')->insert([
 
-           
+
             'Event_Type' =>  $Event_type,
             'Title' =>  $Title,
             'Meeting_Room' =>  $Meeting_room,
@@ -986,7 +992,7 @@ class filemanagement extends Controller
 
         ]);
         return redirect('/diary-management');
-        
+
      }
 
      public function meetingrooms()
@@ -997,14 +1003,14 @@ class filemanagement extends Controller
      public function documentmanager()
      {
         $new_document=DB::table('cra_upload_document')->get();
-        
+
         return view('file_management.document-manager',compact('new_document'));
         //  return view('file_management.document-manager');
      }
 
      public function uploaddocument(Request $request)
      {
-        
+
         $client =$request['client'];
         $file =$request['file'];
         $other_file =$request['other_file'];
@@ -1045,12 +1051,12 @@ class filemanagement extends Controller
             $uploadedImage->move($destinationPath,$imageName);
             $folder_upload->file    = $destinationPath.$imageName;
         }
-       
+
         // dd(( $imageName ));
 
         DB::table('cra_upload_document')->insert([
 
-           
+
             'client' =>  $client,
             'file' =>  $file,
             'other_file' =>  $other_file,
@@ -1062,15 +1068,15 @@ class filemanagement extends Controller
             'final_aggrement' =>  $final_aggrement,
             'document_upload' =>   $imageName ,
             'folder_upload' =>  $imageName,
-        
+
         ]);
         return redirect('/document-manager');
-   
+
      }
 
      public function generatedocument(Request $request)
      {
-        
+
         $client =$request['client'];
         $file =$request['file'];
         $document_category =$request['document_category'];
@@ -1080,11 +1086,11 @@ class filemanagement extends Controller
         $document_owner =$request['document_owner'];
         $viewer =$request['viewer'];
         $document_template =$request['document_template'];
-        
+
 
         DB::table('cra_generate_document')->insert([
 
-           
+
             'client' =>  $client,
             'file' =>  $file,
             'document_category' =>   $document_category,
@@ -1094,12 +1100,12 @@ class filemanagement extends Controller
             'document_owner' =>  $document_owner,
             'viewer' =>  $viewer,
             'document_template' =>  $document_template,
-        
+
         ]);
         return redirect('/document-manager');
         //  return view('file_management.generate-document');
      }
- 
+
 
 
      public function bringup(Request $request)
@@ -1162,19 +1168,19 @@ class filemanagement extends Controller
        public function fileclosedreport()
        {
 
-        $file_close_report=DB::table('cra_open_new_file_details')->get();    
-       
-         
+        $file_close_report=DB::table('cra_open_new_file_details')->get();
+
+
         return view('file_management.file-closed-report',compact('file_close_report'));
 
-       
+
        }
 
        public function filepending()
        {
-        $file_pending_closure=DB::table('cra_open_new_file_details')->get();  
-      
-          
+        $file_pending_closure=DB::table('cra_open_new_file_details')->get();
+
+
        return view('file_management.file-pending',compact('file_pending_closure'));
         //    return view('file_management.file-pending');
        }
@@ -1186,7 +1192,7 @@ class filemanagement extends Controller
         ->select('*')
         ->leftjoin('cra_add_file_progress','cra_add_file_progress.id','=','cra_file_report.id')
         ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_file_report.id')
-        ->get();    
+        ->get();
        return view('file_management.file-pending-approval',compact('file_pending_approval'));
 
         //    return view('file_management.file-pending-approval');
@@ -1199,7 +1205,7 @@ class filemanagement extends Controller
         ->select('*')
         ->leftjoin('cra_add_file_progress','cra_add_file_progress.id','=','cra_file_report.id')
         ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_file_report.id')
-        ->get();    
+        ->get();
        return view('file_management.instructions-past',compact('instruction_past'));
         //    return view('file_management.instructions-past');
        }
@@ -1212,12 +1218,12 @@ class filemanagement extends Controller
 
             $add_letter=DB::table('cra_add_outgoing_letter')->get();
             return view('file_management.outgoing-letters',compact('add_letter'));
-            
+
         }
 
         public function addoutgoingletters(Request $request)
         {
-          
+
            $letter_date =$request['letter_date'];
            $client =$request['client'];
            $file =$request['file'];
@@ -1241,10 +1247,10 @@ class filemanagement extends Controller
             $uploadedImage->move($destinationPath,$imageName);
             $upload_copy->file    = $destinationPath.$imageName;
         }
-   
+
            DB::table('cra_add_outgoing_letter')->insert([
-   
-               
+
+
                'letter_date' => $letter_date,
                'client' =>  $client,
                'file' => $file,
@@ -1254,7 +1260,7 @@ class filemanagement extends Controller
                'originator' => $originator,
                'viewers' =>  $viewers,
                'upload_copy' => $upload_copy,
-   
+
            ]);
              return view('file_management.outgoing-letters');
         }
@@ -1295,11 +1301,11 @@ class filemanagement extends Controller
                 $uploadedImage->move($destinationPath,$imageName);
                 $upload_copy->file    = $destinationPath.$imageName;
             }
-    
-    
+
+
             DB::table('cra_add_incomming_letters')->insert([
-    
-                
+
+
                 'letter_date' => $letter_date,
                 'client' =>  $client,
                 'file' => $file,
@@ -1311,7 +1317,7 @@ class filemanagement extends Controller
                 'delivered_to' => $delivered_to,
                 'viewer' =>  $viewer,
                 'upload_copy' => $upload_copy,
-    
+
             ]);
               return view('file_management.incomming-letters',compact('add_letter'));
             //  return view('file_management.add-incomming-letters');
@@ -1386,11 +1392,11 @@ class filemanagement extends Controller
              return view('file_management.safe-register-report');
         }
        //add ons
-       
 
 
 
-    
+
+
     public function u_details()
     {
         return view('system-settings.u_details');
@@ -1406,7 +1412,7 @@ class filemanagement extends Controller
     }
 
 
-   
+
 
 public function view_new_instructions(Request $request)
 {
@@ -1439,7 +1445,7 @@ public function new_file_instructions()
     // ->select('*')
     // ->leftjoin('cra_add_file_progress','cra_add_file_progress.id','=','cra_add_new_instructions.id')
     // ->leftjoin('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_add_new_instructions.id')
-    // ->get();    
+    // ->get();
         return view('file_management.file_instruction',compact('new_file_instruction'));
     // return view('file_management.file_instruction');
 }
@@ -1483,7 +1489,7 @@ public function add_new_file_instructions(Request $request)
     'details' =>   $details,
     'send_notification' =>   $send_notification,
 ]);
-    return view('file_management.file_instruction',compact('new_file_instruction'));                                                            
+    return view('file_management.file_instruction',compact('new_file_instruction'));
 }
 
 public function edit_file_instruction_list($id)
@@ -1493,7 +1499,7 @@ public function edit_file_instruction_list($id)
     $edit_file_instruction =DB::table('cra_add_new_instructions')->where('id',$id)->first();
     return view('file_management.edit_file_instruction',compact('edit_file_instruction','id'));
 
-                                                             
+
 }
 
 public function updatefileinstruction(Request $request)
@@ -1514,9 +1520,9 @@ public function updatefileinstruction(Request $request)
     $amount =$request['amount'];
     $details =$request['details'];
     $send_notification =$request['send_notification'];
- 
+
     DB::table('cra_add_new_instructions')->where('id',$id)->update([
- 
+
      'id' => $id,
      'date' => $date,
      'client' => $client,
@@ -1547,7 +1553,7 @@ public function destroyfileinstruction($id)
 public function new_instructions()
 {
     $new_office_instruction=DB::table('cra_add_office_instructions')->get();
-        
+
     return view('file_management.office_instructions',compact('new_office_instruction'));
 }
 
@@ -1556,7 +1562,7 @@ public function add_new_instructions(Request $request)
 {
 
 
-   
+
     $date =$request['date'];
     $instruction_type =$request['instruction_type'];
     $instruction_category =$request['instruction_category'];
@@ -1569,10 +1575,10 @@ public function add_new_instructions(Request $request)
     $amount =$request['amount'];
     $detail =$request['detail'];
     $send_notification =$request['send_notification'];
- 
+
     DB::table('cra_add_office_instructions')->insert([
- 
-    
+
+
      'date' => $date,
      'instruction_type' => $instruction_type,
      'instruction_category' => $instruction_category,
@@ -1594,7 +1600,7 @@ public function add_new_instructions(Request $request)
 public function edit_office_instruction_list($id)
 {
     $edit_office_instruction =DB::table('cra_add_office_instructions')->where('id',$id)->first();
-    return view('file_management.edit_office_instruction',compact('edit_office_instruction','id'));                                                           
+    return view('file_management.edit_office_instruction',compact('edit_office_instruction','id'));
 }
 
 public function updateofficeinstructions(Request $request)
@@ -1614,9 +1620,9 @@ public function updateofficeinstructions(Request $request)
     $amount =$request['amount'];
     $detail =$request['detail'];
     $send_notification =$request['send_notification'];
- 
+
     DB::table('cra_add_office_instructions')->where('id',$id)->update([
- 
+
      'id' => $id,
      'date' => $date,
      'instruction_type' => $instruction_type,
@@ -1647,16 +1653,16 @@ public function destroyofficeinstruction($id)
 public function safe_management_list()
 {
     $safe_management=DB::table('cra_new_safe_management')->get();
-        
+
     return view('file_management.Safe_management',compact('safe_management'));
-    // return view('file_management.Safe_management');                                                             
+    // return view('file_management.Safe_management');
 }
 
 public function new_safe_management_list(Request $request)
 {
 
 
-   
+
     $date =$request['date'];
     $client =$request['client'];
     $file =$request['file'];
@@ -1666,10 +1672,10 @@ public function new_safe_management_list(Request $request)
     $doc_no =$request['doc_no'];
     $category =$request['category'];
     $document =$request['document'];
- 
+
     DB::table('cra_new_safe_management')->insert([
- 
-    
+
+
      'date' => $date,
      'client' => $client,
      'file' => $file,
@@ -1683,13 +1689,13 @@ public function new_safe_management_list(Request $request)
 
  return redirect('/Safe_management');
 
-    // return view('file_management.new_Safe_management');                                                             
+    // return view('file_management.new_Safe_management');
 }
 
 public function editsafemanagement_list($id)
 {
     $edit_management =DB::table('cra_new_safe_management')->where('id',$id)->first();
-    return view('file_management.edit_Safe_management',compact('edit_management','id'));                                                           
+    return view('file_management.edit_Safe_management',compact('edit_management','id'));
 }
 
 public function updatesafemanagement_list(Request $request)
@@ -1706,9 +1712,9 @@ public function updatesafemanagement_list(Request $request)
     $doc_no =$request['doc_no'];
     $category =$request['category'];
     $document =$request['document'];
- 
+
     DB::table('cra_new_safe_management')->where('id',$id)->update([
- 
+
     'id' => $id,
      'date' => $date,
      'client' => $client,
@@ -1723,7 +1729,7 @@ public function updatesafemanagement_list(Request $request)
 
  return redirect('/Safe_management');
 
-    // return view('file_management.new_Safe_management');                                                             
+    // return view('file_management.new_Safe_management');
 }
 
 public function deletesafemanagement($id)
@@ -1738,41 +1744,41 @@ public function deletesafemanagement($id)
 public function Request_staff_item_list()
 {
     $safe_management=DB::table('cra_request_safe_item')->get();
-        
+
     return view('file_management.Request_staff_item',compact('safe_management'));
-                                                              
+
 }
 
 public function add_Request_staff_item_list(Request $request)
 {
 
 
-   
+
     $date =$request['date'];
     $client =$request['client'];
     $file =$request['file'];
     $send_instruction =$request['send_instruction'];
     $approver =$request['approver'];
-   
- 
+
+
     DB::table('cra_request_safe_item')->insert([
- 
-    
+
+
      'date' => $date,
      'client' => $client,
      'file' => $file,
      'send_instruction' => $send_instruction,
      'approver' =>  $approver,
-     
+
  ]);
 
  return redirect('/Request_staff_item');
-    // return view('file_management.new_Request_staff_item');                                                             
+    // return view('file_management.new_Request_staff_item');
 }
 
 public function Process_Request_list()
 {
-    return view('file_management.Process_Request');                                                             
+    return view('file_management.Process_Request');
 }
 
 
