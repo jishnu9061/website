@@ -30,8 +30,13 @@ Route::post('/changestatus_com', "superadminController@changestatus_company")->n
 Route::get('/edit_company/{id}', "superadminController@edit_company")->name('edit_company');
 Route::put('/update_company/{id}', "superadminController@update_company")->name('update_company');
 Route::any('/delete_company/{id}', "superadminController@delete_company")->name('delete_company');
-
 //superadmin
+
+//mange employee route start
+Route::any('employee_list/{id}', "employeeController@employee_list")->name('employee_list');
+
+
+//mange employee route end
 
 Route::get('/', 'homecontroller@index')->name('home');
 Route::get('/home', 'homecontroller@index')->name('home');
