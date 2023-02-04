@@ -1,6 +1,11 @@
 @extends('layouts.hmsmain')
 @section('content')
-    <div>
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">User Management</a> /
+    <a href="#" style="color: #1D1D50;">Manage User Roles</a>
+</nav>
+<br><br>
         <!-- <button class="btn btn-primary"
                             style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Manage Roles</u></b></span></button><br>
                       -->
@@ -195,6 +200,7 @@
                     </div>
                 </div>
             </div>
+        </div>
             <script>
                 function deleteuser(param) { // delete role 
                     var deleteid = $(param).data('id');
@@ -205,4 +211,4 @@
                     $('#delete_role').attr('action', "{{ url('delete_user_roles') }}" + "/" + deleteid);
                 }
             </script>
-        @endsection
+@endsection
