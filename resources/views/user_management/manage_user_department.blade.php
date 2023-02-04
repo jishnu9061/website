@@ -1,7 +1,13 @@
 @extends('layouts.hmsmain')
 @section('content')
+    <nav style="font-size:15px;">
+        <a href="{{ url('home') }}" style="color: #1D1D50;">Home</a> /
+        <a href="#" style="color: #1D1D50;">User Management</a> /
+        <a href="#" style="color: #1D1D50;">Manage User Roles</a>
+    </nav>
+    <br><br>
     <!--<button class="btn btn-primary"
-                                                                    style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Manage Departments </u></b></span></button><br> -->
+                                                                        style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Manage Departments </u></b></span></button><br> -->
 
     <div class="container"> {{-- heading --}}
         <h4 id="hdtpa"><b>Manage Departments</b></h4><br>
