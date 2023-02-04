@@ -101,7 +101,7 @@
                                         </td> --> --}}
                                     </tr>
                                 @endforeach
-                            <tbody>
+                            </tbody>
                         </table>
                     </div>
                     <!--		Start Pagination -->
