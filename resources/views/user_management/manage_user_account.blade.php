@@ -53,6 +53,12 @@
             color: #999;
         }
     </style>
+    <nav style="font-size:15px;">
+        <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+        <a href="#" style="color: #1D1D50;">User Management</a> /
+        <a href="#" style="color: #1D1D50;">Manage User Departments</a>
+  </nav>
+  <br><br>
     <div class="container">
         {{-- heading --}}
         <h4 id="hdtpa"><b>Manage Accounts</b></h4>
