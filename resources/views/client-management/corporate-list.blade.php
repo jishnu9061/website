@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-      <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+      <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
       <a href="#" style="color: #1D1D50;">Client Management</a> /
       <a href="#" style="color: #1D1D50;">Corporate Client List</a>
 </nav>
@@ -9,7 +9,7 @@
 <html>
 
 <head>
-    
+
     <style>
     .pagination>li>span {
         position: relative;
@@ -152,7 +152,7 @@
                                     <a href="{{url('corporate-document-details',$list->corporate_id)}}"><button
                                             class="btn btn-primary"> View Document </button></a>
                                 </td>
-                               
+
                                 <td scope="row" class="text-center" id="medicine_name_1">
                                     <a href="{{ url('edit_client', $list->corporate_id)}}"><i style="color:black;"
                                             class="fa fa-edit" aria-hidden="true"></i>

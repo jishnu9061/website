@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">HR</a> /
     <a href="{{url('leave_request_details')}}" style="color: #1D1D50;">Leave Request Details</a> /
     <a href="#" style="color: #1D1D50;">Edit Leave Request Details</a>
@@ -10,15 +10,15 @@
 <div class="container">
     <h4 id="hdtpa"><b> Edit Details </b></h4>
     <br>
- 
-   
+
+
     <form method="post" action="{{url('update_leave_request')}}"
     enctype="multipart/form-data">
-    
-    
-   
+
+
+
     <input type="hidden" name="id" value="{{$leave_request->id}}">
-  
+
     @csrf
 
     <div class="row">
@@ -33,7 +33,7 @@
                     </div>
                         <select name="name" id="cars">
                             <option >{{ $leave_request->name}}</option>
-                        </select> 
+                        </select>
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@
                     </div>
                     <select name="department" id="cars">
                         <option >{{ $leave_request->department}}</option>
-                    </select> 
+                    </select>
                 </div>
             </div>
         </div>
@@ -78,11 +78,11 @@
                                 <option>Half Day</option>
                                 <option>Casual Leave</option>
                                 <option>Medical Leave</option>
-                              
-                                
+
+
                             </select>
                         </div>
-                        
+
                     </div>
                  </div>
                 </div>
@@ -102,7 +102,7 @@
                 <div class="col-md-6">
                     <div class="mb-1">
                         <label>To Date</label>
-                        
+
                             </div> <div class="input-group">
                             <div class="input-group-prepend"></div>
                             <input type="date"  id="" name="date_to"value="{{$leave_request->date_to}}"class="form-control">
@@ -118,7 +118,7 @@
             <div class="mb-1">
                 <label>Number Of Days</label>
 
-                    </div> 
+                    </div>
                     <div class="input-group">
                     <div class="input-group-prepend"></div>
                     <input type="number"  id="" name="number_of_days"value=""class="form-control">
@@ -135,7 +135,7 @@
                                <textarea type="text" name="reason" value="{{$leave_request->reason}}"class="form-control"></textarea>
                                 <div class="invalid-feedback" style="width: 100%;">
                                 Required Field.
-                                </div> 
+                                </div>
                             </div>
                         </div>
                     </div> <br>
@@ -143,15 +143,15 @@
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label>Upload Document</label>
-                            
-                                
+
+
                                 <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <input type="file"  id="" name="Upload Document" value="{{$leave_request->document}}"class="form-control">
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
                             </div>
-                        </div> 
+                        </div>
                      </div>
                     </div>
                     <div class="col-md-6">
@@ -178,13 +178,13 @@
                                   <a class="dropdown-item" href="#" value="Pending">Requested</a>
                                   <a class="dropdown-item" href="#">Accepted</a>
                                   <a class="dropdown-item" href="#">Rejected</a>
-                
+
                                 </div>
                               </div>
                         </div>
                                     </div>
                                     <div class="col-sm">
-                
+
                                     </div>
                                     <div class="col-sm">
                                         <br>
@@ -194,8 +194,8 @@
                                         <br>
                                     </div>
                                 </div>
-           
-    
+
+
 </form>
 
 </div>

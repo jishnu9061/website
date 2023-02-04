@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">Client Management</a> /
     <a href="{{url('communication-list')}}" style="color: #1D1D50;">Communication Details</a> /
     <a href="#" style="color: #1D1D50;">Client Pickup</a>
@@ -177,7 +177,7 @@
                                                                         <option>--select--</option>
                                                                         <option>Corporate Client</option>
                                                                         <option>Individual Client</option>
-                                                                     
+
                                                                     </select>
                                                                     <!-- <input type="text" class="form-control" name="client"
                                                                     id="username" value="" placeholder="" required> -->
@@ -196,7 +196,7 @@
                                                                         <option>--select--</option>
                                                                         <option>File 1</option>
                                                                         <option>File 2</option>
-                                                                     
+
                                                                     </select>
                                                                     <!-- <input type="text" class="form-control" name="file"
                                                                         id="username" value="" placeholder="" required> -->
@@ -232,7 +232,7 @@
                                                                         <option>--select--</option>
                                                                         <option>Advocate 1</option>
                                                                         <option>Advocate 2</option>
-                                                                     
+
                                                                     </select>
                                                                     <!-- <input type="text" class="form-control"
                                                                         name="persion" id="username" value=""
@@ -267,7 +267,7 @@
                                                                         <option>{{$list_client->client_name}}</option>
                                                                        @endforeach
                                                                        @endif
-                                                                     
+
                                                                     </select>
                                                                     <!-- <input type="text" class="form-control" name="name"
                                                                         id="username" value="" placeholder=" name"

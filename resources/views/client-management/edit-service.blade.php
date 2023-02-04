@@ -1,11 +1,11 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">Client Management</a> /
     <a href="{{url('communication-list')}}" style="color: #1D1D50;">Communication Details</a> /
     <a href="{{url('client-service')}}" style="color: #1D1D50;">Client Service Details</a> /
-    <a href="#" style="color: #1D1D50;">Edit Service Details</a> 
+    <a href="#" style="color: #1D1D50;">Edit Service Details</a>
 </nav>
 <br><br>
 <div class="container">
@@ -48,7 +48,7 @@
                                 <select name="code" id="cars">
                                     <option>Client 1</option>
                                     <option>Client 2</option>
-                                
+
                                 </select>
                                 <!-- <input type="text" class="form-control" name="Name" id="username" value="{{$edit_service->client_name}}"> -->
                                 <div class="invalid-feedback" style="width: 100%;">

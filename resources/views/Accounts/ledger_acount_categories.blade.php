@@ -1,6 +1,6 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
+<nav style="font-size:15px;">
     <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">Accounts</a> /
     <a href="#" style="color: #1D1D50;">Account Types</a>
@@ -246,19 +246,19 @@
                                     </div>
                                 </div>
                             </div>
-                      
-    
+
+
                         </div>
                         <div class="modal-footer" style="background-color:#d3e0ed;">
                           <button type="submit" class="btn btn-primary">Save</button>
                           <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
                       </div>
-                    </form>  
+                    </form>
                     </div>
                 </div>
             </div>
         </div>
-      </div>  
+      </div>
 
 
 
@@ -450,7 +450,7 @@
                 </div>
             </div>
         </div>
-        
+
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <script src="{{ url('assets/js') }}/jquery.min.js"></script>
         <script>

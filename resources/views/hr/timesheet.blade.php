@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">HR</a> /
     <a href="#" style="color: #1D1D50;">Time Sheet</a>
 </nav>
@@ -63,7 +63,7 @@
                     <td></td>
                     <td>
                         <a href="timesheetweek"><i style="color:rgb(13, 1, 56);" class="far fa-file-alt"></i>
-                           
+
                     </td>
 
                 </tr>

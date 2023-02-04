@@ -1,10 +1,10 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">Client Management</a> /
     <a href="{{url('corporate-list')}}" style="color: #1D1D50;">Corporate Client List</a> /
-    <a href="#" style="color: #1D1D50;">Edit Corporate Client</a> 
+    <a href="#" style="color: #1D1D50;">Edit Corporate Client</a>
 </nav>
 <br><br>
 <h4 id="hdtpa"><b>Edit Corporate Client</b></h4>
@@ -33,9 +33,9 @@
                         <label for="username">Client Type</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
-    
+
                             </div>
-    
+
                             <select name="type" id="cars" disabled>
                                 <option value="Corporate">{{$corporate_details->Client_type}}</option>
                             </select>
@@ -47,7 +47,7 @@
                         <label for="username">Citizen Status</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
-    
+
                             </div>
                             <select name="citizen" id="cars">
                                 <option>Residensial</option>
@@ -77,11 +77,11 @@
                         <label for="username">Country</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
-    
+
                             </div>
                             <select name="country" id="cars">
                                 <option>Kenya</option>
-    
+
                             </select>
                         </div>
                     </div>
@@ -162,7 +162,7 @@
                         <label for="username">Status Reporting Day</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
-    
+
                             </div>
                             <select name="status" id="cars">
                                 <option>Monday</option>
@@ -179,7 +179,7 @@
                         <label for="username">Client Source</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
-    
+
                             </div>
                             <select name="source" id="cars">
                                 <option>Excisting Client</option>
@@ -222,7 +222,7 @@
                         <label for="username">Client Industry</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
-    
+
                             </div>
                             <select name="industry" id="cars">
                                 <option>Commerce</option>
@@ -284,7 +284,7 @@
                             <div class="input-group-prepend"></div>
                             <select name="industry" id="cars">
                                 <option>Nairobi</option>
-    
+
                             </select>
                             <!-- <input type="text" class="form-control" name="town" id="age"
                                 value="{{$corporate_details->town}}" min="0" max="99"> -->
@@ -321,10 +321,10 @@
             </div>
             <br>
             <br>
-    
+
             <div class="text-center">
                 <h4><b>Contact Person</b></h4>
-    
+
             </div><br>
             <br>
             <div class="row">
@@ -336,7 +336,7 @@
                             <input type="text" class="form-control" name="person" id="age"
                                 value="{{$corporate_details->contact_person}}" placeholder="" min="0" max="99">
                             <div class="invalid-feedback" style="width: 100%;">
-    
+
                             </div>
                         </div>
                     </div>
@@ -349,7 +349,7 @@
                             <select name="industry" id="cars">
                                 <option>Manager</option>
                                 <option>Advocate</option>
-                                
+
                             </select>
                             <!-- <input type="text" class="form-control" name="Designation" id="age"
                                 value="{{$corporate_details->designation}}" placeholder="" min="0" max="99"> -->
@@ -381,20 +381,20 @@
                                 value="{{$corporate_details->email}}" placeholder="" min="0" max="99">
                             <div class="invalid-feedback" style="width: 100%;">
                             </div>
-    
+
                         </div>
-    
-    
+
+
                     </div>
                 </div>
             </div>
             <br>
             <div class="row">
                 <div class="col-sm">
-    
+
                 </div>
                 <div class="col-sm">
-    
+
                 </div>
                 <div class="col-sm">
                     <br>

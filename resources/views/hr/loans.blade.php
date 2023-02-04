@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">HR</a> /
     <a href="#" style="color: #1D1D50;">Loans</a>
 </nav>
@@ -25,7 +25,7 @@
 <div class="container">
    <h4 id="hdtpa"><b>Loans</b></h4>
    <br>
-   
+
 
 <form method="post" action="{{url('addloan')}}">
     @csrf
@@ -55,8 +55,8 @@
                                     </div>
                         </div>
 
-                        
-                                        
+
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -71,13 +71,13 @@
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    
+
 
 </form>
  <div class="table-responsive">
@@ -110,7 +110,7 @@
                         Action
                     </th>
                 </tr>
-                
+
             </thead>
             <tbody>
             @foreach($loans as $loan)
@@ -121,19 +121,19 @@
                     <td>{{$loan->balanceleft}}</td>
                     <td>{{$loan->duration}}</td>
                     <td>{{$loan->deduct}}</td>
-            
+
                     <td>{{$loan->status}}</td>
                     <form method="post" action="{{url('loandelete'.$loan->id)}}">
 					@csrf
 					<input type="hidden" name="delete">
-                    
+
 					<td><a type="submit" onclick="return confirm('Are you sure?');"href="{{url('loandelete'.$loan->id)}}">
                     <i  style=" color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></a></td>
 					</form>
-                    
+
                 </tr>
             @endforeach
-                
+
             </tbody>
         </table>
 </div>
