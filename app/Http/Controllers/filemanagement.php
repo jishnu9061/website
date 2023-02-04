@@ -195,6 +195,7 @@ class filemanagement extends Controller
       ->select('*')
       ->leftjoin('cra_open_new_file_details','cra_add_box.id','=','cra_open_new_file_details.id')
        ->get();
+
         return view('file_management.file-archive',compact('file_progress_list'));
 
         // return view('file_management.file-archive');
@@ -217,11 +218,11 @@ class filemanagement extends Controller
 
     public function viewboxno($id)
     {
-        $archive_details = DB::table('cra_add_box')->where('cra_add_box.uniqueid',$id)->first();
+        $list = DB::table('cra_add_box')->where('cra_add_box.id',$id)->first();
 
     return response()->json([
         'status' => 200,
-        'result' =>$archive_details,
+        'result' =>$list,
     ]);
         // return view('file_management.view-box-no');
     }

@@ -6,12 +6,6 @@
         <a href="#" style="color: #1D1D50;">File Archive</a>
     </nav>
     <br><br>
-
-
-
-    <html>
-
-    <head>
         <style>
             .pagination>li>span {
                 position: relative;
@@ -59,24 +53,18 @@
                 color: #999;
             }
         </style>
-    </head>
-
-    <body>
         <div class="container">
             <div>
-
                 <h4 id="hdtpa"><b>File Archive</b></h4>
             </div>
             <br>
             <!--
-             <div id="mydatatable_filter" class="dataTables_filter">
-                        <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
-                    </div> -->
-
+            <div id="mydatatable_filter" class="dataTables_filter">
+                <label><input type="search" class="box" placeholder="search" aria-controls="mydatatable"></label>
+            </div> -->
             {{-- <a href="{{('add-box-no')}}"><button class="btn btn-primary">Add Box No</button></a> --}}
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Box No</button>
             <br>
-
             <div class="header_wrap">
                 <div class="num_rows">
                     <div class="form-group">
@@ -99,9 +87,6 @@
                     <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.."
                         class="form-control">
                 </div>
-
-
-
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <br>
@@ -121,7 +106,6 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-
                                     @foreach ($file_progress_list as $list)
                                         <tr id="data">
                                             <!-- <td scope="row" class="text-center">{{ $list->id }}</td> -->
@@ -132,11 +116,9 @@
                                             <td scope="row" class="text-center"></td>
                                             <td scope="row" class="text-center">{{ $list->close_date }}</td>
                                             <td scope="row" class="text-center">
-                                                <a href="{{ url('view-box-no,$list->id') }}" data-toggle="modal"
+                                                <a href="#"onclick=viewbox(this) data-id="{{ $list->id }}"data-toggle="modal"
                                                     data-target="#viewmyModal"><i style="color:black;" class="fa fa-eye"
                                                         aria-hidden="true"></i></a>
-                                                <input type="hidden" value="" id="medicine_id_hidden"
-                                                    class="applicate" name="supplier_id_hidden">
                                                 <a href="{{ url('edit-box-no', $list->id) }}"><i style="color:black;"
                                                         class="fa fa-edit"aria-hidden="true"></i></a>
                                                 <a onClick="return myFunction();"
@@ -146,266 +128,249 @@
                                         </tr>
                                     @endforeach
                                 </tbody>
-
                             </table>
-
-
                         </div>
                     </div>
-
+                </div>
                     <!--		Start Pagination -->
-                    <div class='pagination-container'>
-                        <nav>
-                            <ul class="pagination">
-                                <li data-page="prev">
-                                    <span>
-                                        < <span class="sr-only">(current)
-                                    </span></span>
-                                </li>
-                                <li data-page="next" id="prev">
-                                    <span> > <span class="sr-only">(current)</span></span>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="rows_count"></div>
+                <div class='pagination-container'>
+                    <nav>
+                        <ul class="pagination">
+                            <li data-page="prev">
+                                <span>
+                                    < <span class="sr-only">(current)
+                                </span></span>
+                            </li>
+                             <li data-page="next" id="prev">
+                                <span> > <span class="sr-only">(current)</span></span>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="rows_count"></div>
                     <!--		end Pagination -->
-
-
+            </div>     
+        </div>
                     <!-- The Modal -->
-                    <div class="modal fade" id="myModal">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
 
                                 <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <h2 class="text-center"><b>Add Box No</b></h2>
+                    <div class="modal-header">
+                        <h2 class="text-center"><b>Add Box No</b></h2>
 
-                                </div>
+                    </div>
 
                                 <!-- Modal body -->
-                                <div class="modal-body">
-                                    <div class="container">
-                                        <form method="post" action="{{ url('add-box-no') }}"
+                    <div class="modal-body">
+                        <div class="container">
+                            <form method="post" action="{{ url('add-box-no') }}"
                                             enctype="multipart/form-data">
                                             @csrf
 
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="mb-1">
-                                                        <label for="username">Box Type</label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-1">
+                                            <label for="username">Box Type</label>
 
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
 
-                                                            </div>
-                                                            <select name="box_type" id="cars">
-                                                                <option>select</option>
-                                                                <option>Box Type 1</option>
-                                                                <option>Box Type 2</option>
-                                                                <option>Box Type 3</option>
-                                                                <option>Box Type 4</option>
+                                                </div>
+                                                    <select name="box_type" id="cars">
+                                                        <option>select</option>
+                                                        <option>Box Type 1</option>
+                                                        <option>Box Type 2</option>
+                                                        <option>Box Type 3</option>
+                                                        <option>Box Type 4</option>
 
-                                                            </select>
-                                                            <div class="invalid-feedback" style="width: 100%;">
+                                                    </select>
+                                                <div class="invalid-feedback" style="width: 100%;">
                                                                 Incorporation is required
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-6">
-                                                    <div class="mb-1">
-                                                        <label for="username">Box No</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <input type="text" class="form-control" name="box_no"
-                                                                id="age">
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-                                            <br>
-
-                                            <div class="row">
-                                                <div class="col-sm">
-
-                                                </div>
-                                                <div class="col-sm">
-
-                                                </div>
-                                                <div class="col-sm">
-                                                    <br>
-                                                    <button type="submit" class="btn btn-primary float:right;"
-                                                        Style="width:45%;">Save</button>
-                                                    <button type="button" class="btn btn-primary float:right;"
-                                                        data-dismiss="modal">Cancel</button>
                                                 </div>
                                             </div>
+                                        </div>
                                     </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-1">
+                                            <label for="username">Box No</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
 
+                                                </div>
+                                                <input type="text" class="form-control" name="box_no"
+                                                                id="age">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+            <br>
+                                <div class="row">
+                                    <div class="col-sm">
+
+                                    </div>
+                                    <div class="col-sm">
+
+                                    </div>
+                                    <div class="col-sm">
+                                        <br>
+                                    <button type="submit" class="btn btn-primary float:right;"
+                                                        Style="width:45%;">Save</button>
+                                    <button type="button" class="btn btn-primary float:right;"
+                                                        data-dismiss="modal">Cancel</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
+                </div>
+            </div>
+
+        </div>
                     <!------------Modal-View---------------->
 
-                    <div class="modal fade" id="viewmyModal">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
+        <div class="modal fade" id="viewmyModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
 
                                 <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <h2 class="text-center"><b>View Box No</b></h2>
+                    <div class="modal-header">
+                        <h2 class="text-center"><b>View Box No</b></h2>
 
-                                </div>
-
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                    <div class="container">
-                                        <form method="post" action="{{ url('view-box-no') }}"
-                                            enctype="multipart/form-data">
-                                            @csrf
-
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="mb-1">
-                                                        <label for="username">Archive Number</label>
-
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <input type="text" class="form-control"
-                                                                name="archive_number" id="age">
-                                                            <div class="invalid-feedback" style="width: 100%;">
-                                                                Incorporation is required
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-6">
-                                                    <div class="mb-1">
-                                                        <label for="username">Archive Date</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <input type="date" class="form-control"
-                                                                name="archive_date" id="age">
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-                                            <br>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="mb-1">
-                                                        <label for="username">Client Name</label>
-
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <input type="text" class="form-control" name="client_name"
-                                                                id="age">
-                                                            <div class="invalid-feedback" style="width: 100%;">
-                                                                Incorporation is required
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-6">
-                                                    <div class="mb-1">
-                                                        <label for="username">File Number</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <input type="text" class="form-control" name="file_number"
-                                                                id="age">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="mb-1">
-                                                        <label for="username">File Closed Number</label>
-
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <input type="text" class="form-control"
-                                                                name="file_closednumber" id="age">
-                                                            <div class="invalid-feedback" style="width: 100%;">
-                                                                Incorporation is required
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-6">
-                                                    <div class="mb-1">
-                                                        <label for="username">Date Closed</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-
-                                                            </div>
-                                                            <input type="date" class="form-control" name="date_closed"
-                                                                id="age">
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
+                                <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <form method="post" action="{{ url('view-box-no') }}"
+                                            enctype="multipart/form-data">
+                                            @csrf
+                                           
+                                <input type="hidden" id="id" value="id">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-1">
+                                            <label for="username">Archive Number</label>
+
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+
+                                                </div>
+                                                <input type="text" class="form-control"
+                                                                name="archive_number" id="archive_number">
+                                                <div class="invalid-feedback" style="width: 100%;">
+                                                                Incorporation is required
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="mb-1">
+                                            <label for="username">Archive Date</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+
+                                                </div>
+                                            <input type="date" class="form-control"
+                                                                name="archive_date" id="archive_date">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                    <br>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-1">
+                                            <label for="username">Client Name</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                </div>
+                                            <input type="text" class="form-control" name="client_name"
+                                                                id="client_name">
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                                Incorporation is required
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-1">
+                                            <label for="username">File Number</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                </div>
+                                            <input type="text" class="form-control" name="file_number"
+                                                                id="file_number">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    <br>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-1">
+                                            <label for="username">File Closed Number</label>
+
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+
+                                                </div>
+                                            <input type="text" class="form-control"
+                                                                name="file_closednumber" id="file_closednumber">
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                                Incorporation is required
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="mb-1">
+                                            <label for="username">Date Closed</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+
+                                                </div>
+                                                <input type="date" class="form-control" name="date_closed"
+                                                                id="date_closed">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-
-
             </div>
         </div>
-        </div>
-        </div>
-    </body>
 
-    </html>
     <br>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <script>
-        function viewbox(param) { // view archive details
-            var uniqueid = $(param).data('id');
-            $.ajax({
-                type: "GET",
-                url: 'view-box-no/' + uniqueid,
-                success: function(response) {
-                    $('#archive_number').val(response.result.archive_number);
-                    $('#archive_date').val(response.result.archive_date);
-                    $('#client_name').val(response.result.client_name);
-                    $('#file_number').val(response.result.file_number);
-                    $('#file_closednumber').val(response.result.file_closednumber);
-                    $('#date_closed').val(response.result.date_closed);
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script>
+            function viewbox(param) { // view archive details
+                var uniqueid = $(param).data('id');
+                console.log(uniqueid);
+                $.ajax({
+                    type: "GET",
+                    url: 'view_box_no/'+uniqueid,
+                    success: function(response) {
+                        $('#archive_number').val(response.result.archive_number);
+                        $('#archive_date').val(response.result.archive_date);
+                        $('#client_name').val(response.result.client_name);
+                        $('#file_number').val(response.result.file_number);
+                        $('#file_closednumber').val(response.result.file_closednumber);
+                        $('#date_closed').val(response.result.date_closed);
 
                 }
             });
         }
     </script>
+ 
 @endsection
