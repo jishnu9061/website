@@ -36,10 +36,10 @@
               </div>  
         </div>
 
-        <form method="post" action="{{ url('addstaffss') }}" enctype="multipart/form-data" id="addemployee">
+        <form method="post" action="{{ url('addstaffss') }}" enctype="multipart/form-data" id="addemployee" >
             @csrf
             <h4><b>Personal Details:-</b></h4>
-            <div class="row" style="*/background-color:orange;height:280px">
+            <div class="row" style="*/background-color:orange;height:600px">
                 <div class=""style="*/background-color: #d3d0ca;width:80%;border-radius:5px;">
                     <div class="row">
                         <div class="" style="width: 50%">
@@ -54,7 +54,51 @@
                                 <input type="text" placeholder="Enter Last Name " style="border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="last_name" id="" value=""required>
                             </div>
                         </div>
+                                    <div class="" style="width: 50%">
+                            <div class=""><span style="color: red">*</span>
+                                <label for="last_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">ID Number</label>
+                                <input type="text" placeholder="ID Number " style="border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="last_name" id="" value=""required>
+                            </div>
+                        </div>
+                                    <div class="" style="width: 50%">
+                            <div class=""><span style="color: red">*</span>
+                                <label for="last_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Associated Users</label>
+                                <input type="text" placeholder="Associated Users " style="border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="last_name" id="" value=""required>
+                            </div>
+                        </div>
+                                    <div class="" style="width: 50%">
+                            <div class=""><span style="color: red">*</span>
+                                <label for="last_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Practice Group</label>
+                                <input type="text" placeholder="Practice Group " style="border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="last_name" id="" value=""required>
+                            </div>
+                        </div>
+                                    <div class="" style="width: 50%">
+                            <div class=""><span style="color: red">*</span>
+                                <label for="last_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Job Title</label>
+                                <input type="text" placeholder="Job Title " style="border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="last_name" id="" value=""required>
+                            </div>
+                        </div>
+                                    <div class="" style="width: 50%">
+                            <div class=""><span style="color: red">*</span>
+                                <label for="last_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Level</label>
+                                <input type="text" placeholder="Level " style="border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="last_name" id="" value=""required>
+                            </div>
+                        </div>
+                                    <div class="" style="width: 50%">
+                            <div class=""><span style="color: red">*</span>
+                                <label for="last_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Salary Band</label>
+                                <input type="text" placeholder="Salary Band " style="border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="last_name" id="" value=""required>
+                            </div>
+                        </div>
+                                    <div class="" style="width: 50%">
+                            <div class=""><span style="color: red">*</span>
+                                <label for="last_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Reporting To</label>
+                                <input type="text" placeholder="Reporting To " style="border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="last_name" id="" value=""required>
+                            </div>
+                        </div>
+
                     </div>
+                    
                     <div class="row" style="margin-top: 10px;">
                         <div class="" style="width: 30%">
                             <div class=""><span style="color: red">*</span>
@@ -224,6 +268,94 @@
                             onclick="history.back()">Cancel</button>
                     </div>
                 </div>
+                    <h4><b>Branch:-</b></h4>
+            <div class="row" style="*/background-color:orange;">
+                <div class=""style="*/background-color: #d3d0ca;width:80%;border-radius:5px;">
+                    <div class="row">
+                                    <div class="" style="width: 50%">
+                            <div class=""><span style="color: red">*</span>
+                                <label for="last_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Branch</label>
+                                <input type="text" placeholder="Branch " style="border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="last_name" id="" value=""required>
+                            </div>
+                        </div>
+                                    <div class="" style="width: 50%">
+                            <div class=""><span style="color: red">*</span>
+                                <label for="last_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Mobile Number</label>
+                                <input type="text" placeholder="Mobile Number " style="border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="last_name" id="" value=""required>
+                            </div>
+                        </div>
+                                    <div class="" style="width: 50%">
+                            <div class=""><span style="color: red">*</span>
+                                <label for="last_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Email Address</label>
+                                <input type="text" placeholder="Email Address " style="border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="last_name" id="" value=""required>
+                            </div>
+                        </div>     
+                    </div>  </div>
+
+                    <h4><br><b>Relative:-</b></h4>
+                    <div class="row" style="*/background-color:orange;">
+                        <div class=""style="*/background-color: #d3d0ca;width:80%;border-radius:5px;">
+                            <div class="row">
+                                            <div class="" style="width: 50%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="last_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Next of kin name</label>
+                                        <input type="text" placeholder="Next of kin name " style="border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="last_name" id="" value=""required>
+                                    </div>
+                                </div>
+                                            <div class="" style="width: 50%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="last_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Relation</label>
+                                        <input type="text" placeholder="Relation " style="border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="last_name" id="" value=""required>
+                                    </div>
+                                </div>
+                                            <div class="" style="width: 50%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="last_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Telephone Number</label>
+                                        <input type="text" placeholder="Telephone Number " style="border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="last_name" id="" value=""required>
+                                    </div>
+                                </div>   </div>   </div>    
+                          
+
+                                            <h4><br><b>Salary:-</b></h4>
+                    <div class="row" style="*/background-color:orange;">
+                        <div class=""style="*/background-color: #d3d0ca;width:80%;border-radius:5px;">
+                            <div class="row">
+                                            <div class="" style="width: 50%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="last_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Basic Salary</label>
+                                        <input type="text" placeholder="Basic Salary " style="border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="last_name" id="" value=""required>
+                                    </div>
+                                </div>
+                                            <div class="" style="width: 50%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="last_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Partners Drawing</label>
+                                        <input type="text" placeholder="Partners Drawing " style="border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="last_name" id="" value=""required>
+                                    </div>
+                                </div>
+                                            <div class="" style="width: 50%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="last_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">N.S.S.F Number</label>
+                                        <input type="text" placeholder="N.S.S.F Number " style="border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="last_name" id="" value=""required>
+                                    </div>
+                                </div> 
+                                <div class="" style="width: 50%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="last_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">N.H.I.F Number</label>
+                                        <input type="text" placeholder="N.H.I.F Number " style="border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="last_name" id="" value=""required>
+                                    </div>
+                                </div>   
+                                <div class="" style="width: 50%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="last_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">KRA PIN Number</label>
+                                        <input type="text" placeholder="KRA PIN Number " style="border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="last_name" id="" value=""required>
+                                    </div>
+                                </div> </div>   </div>
+  
+                                
+                    
+                    
+                    
+                
         </form>
     </div>
     <script>
