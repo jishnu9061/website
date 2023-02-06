@@ -20,10 +20,10 @@ class Elibrary extends Controller
         return view('Elibrary.libraryindex');
     }
 
-    public function subjects()
+    public function subjects($id)
     {
         $get_category = DB::table('cra_subject_category')->get();
-        $view_subject = DB::table('cra_subject')->get();
+        $view_subject = DB::table('cra_subject')->where('company_id', $id)->get();
 
         return view('Elibrary.subject',compact('view_subject','get_category'));
     }
@@ -77,10 +77,10 @@ class Elibrary extends Controller
 
 
 
-    public function files()
+    public function files($id)
     {
 
-        $view_file=DB::table('cra_file')->get();
+        $view_file=DB::table('cra_file')->where('company_id', $id)->get();
 
         return view('Elibrary.file',compact('view_file'));
     }
@@ -109,7 +109,7 @@ class Elibrary extends Controller
             $uploadedImage->move($destinationPath,$imageName);
             $e_file->file    = $destinationPath.$imageName;
         }
-       
+
 
         DB::table('cra_file')->insert([
 
@@ -121,7 +121,7 @@ class Elibrary extends Controller
             'upload_by' => $upload_by,
             'discription' => $discription,
             'e_file' => $e_file,
-            
+
         ]);
         return redirect('/file');
     }
@@ -131,7 +131,7 @@ class Elibrary extends Controller
     {
         $edit=DB::table('cra_file')->where('id',$id)->first();
         return view('Elibrary.editfile',compact('edit','id'));
-        
+
     }
 
     public function updatefiles(Request $request)
@@ -159,7 +159,7 @@ class Elibrary extends Controller
             $uploadedImage->move($destinationPath,$imageName);
             $e_file->file    = $destinationPath.$imageName;
         }
-       
+
 
         DB::table('cra_file')->where('id',$id)->update([
 
@@ -172,7 +172,7 @@ class Elibrary extends Controller
             'upload_by' => $upload_by,
             'discription' => $discription,
             'e_file' => $e_file,
-            
+
         ]);
         return redirect('/file');
     }
@@ -181,13 +181,13 @@ class Elibrary extends Controller
     {
         $edit=DB::table('cra_file')->where('id',$id)->delete();
         return redirect('/file');
-        
+
     }
 
-    public function precedences()
+    public function precedences($id)
     {
 
-        $view=DB::table('cra_precedence')->get();
+        $view=DB::table('cra_precedence')->where('company_id', $id)->get();
         return view('Elibrary.precedence',compact('view'));
     }
 
@@ -215,7 +215,7 @@ class Elibrary extends Controller
             $uploadedImage->move($destinationPath,$imageName);
             $upload_file->file    = $destinationPath.$imageName;
         }
-       
+
 
         DB::table('cra_precedence')->insert([
 
@@ -227,7 +227,7 @@ class Elibrary extends Controller
             'file_status' => $file_status,
             'file_discription' => $file_discription,
             'upload_file' => $upload_file,
-            
+
         ]);
         return redirect('/precedence');
     }
@@ -263,7 +263,7 @@ class Elibrary extends Controller
             $uploadedImage->move($destinationPath,$imageName);
             $upload_file->file    = $destinationPath.$imageName;
         }
-       
+
 
         DB::table('cra_precedence')->where('id',$id)->update([
 
@@ -276,7 +276,7 @@ class Elibrary extends Controller
             'file_status' => $file_status,
             'file_discription' => $file_discription,
             'upload_file' => $upload_file,
-            
+
         ]);
         return redirect('/precedence');
     }
@@ -285,7 +285,7 @@ class Elibrary extends Controller
     {
         $edit=DB::table('cra_precedence')->where('id',$id)->delete();
         return redirect('/file');
-        
+
     }
 
 
@@ -300,9 +300,9 @@ class Elibrary extends Controller
     }
 
 
-public function sites()
+public function sites($id)
     {
-        $view_site=DB::table('cra_site')->get();
+        $view_site=DB::table('cra_site')->where('company_id', $id)->get();
         return view('Elibrary.site',compact('view_site'));
     }
 
@@ -353,9 +353,9 @@ public function sites()
 
     }
 
-    public function subject_categorys()
+    public function subject_categorys($id)
     {
-        $view_category = DB::table('cra_subject_category')->get();
+        $view_category = DB::table('cra_subject_category')->where('company_id', $id)->get();
         return view('Elibrary.subject_category',compact('view_category'));
     }
 
