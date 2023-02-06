@@ -24,11 +24,16 @@ class addcontroller extends Controller
     $nonfixd_allowance_data = DB::table('allowance')->where('status', 'nonfixedallowance')->get();
     $allowance_data = DB::table('allowance')->where('status', 'allowance')->get();
     $leave_type = DB::table('leave_types')->get();
-    
-    $roles    = DB::table('roles')->get();
- 
-    return view('hr.add_staff', compact('leave_type', 'allowance_data', 'nonfixd_allowance_data', 'deduction_data', 'user','roles'));
+    $departments= DB::table('departments')->get();
+    $roles    = DB::table('roles')->whereNotIn('id',[1,2,3,4])->get();
+    return view('hr.add_staff', compact('leave_type', 'allowance_data', 'nonfixd_allowance_data', 'deduction_data', 'user','roles','departments'));
   }
+  public function get_role($id)//to  get role for add employee
+  {
+    $position = DB::table('roles')->where('department_category',$id)->get();
+    return response()->json($position);
+    }
+
   public function addstaffs()
   {
     $departments = DB::table('departments')->get();
