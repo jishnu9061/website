@@ -21,21 +21,7 @@ use App\Http\Controllers\issued_summary;
 //Route::get('/', function () {
 //  return view('frontpage');
 //});
-<<<<<<< HEAD
-
     Auth::routes();
-=======
-Auth::routes();
-//superadmin
-Route::get('/superadminhome', "superadminController@index")->name('superadminhome');
-Route::any('company_list', "superadminController@show_company_list")->name('company_list');
-Route::post('reg_company', "superadminController@reg_company")->name('reg_company');
-Route::post('/changestatus_com', "superadminController@changestatus_company")->name('changestatus_com');
-Route::get('/edit_company/{id}', "superadminController@edit_company")->name('edit_company');
-Route::put('/update_company/{id}', "superadminController@update_company")->name('update_company');
-Route::any('/delete_company/{id}', "superadminController@delete_company")->name('delete_company');
-
->>>>>>> develop
 //superadmin
     Route::get('/superadminhome', "superadmincontroller@index")->name('superadminhome');
     Route::any('company_list', "superadmincontroller@show_company_list")->name('company_list');
@@ -46,7 +32,6 @@ Route::any('/delete_company/{id}', "superadminController@delete_company")->name(
     Route::any('/delete_company/{id}', "superadmincontroller@delete_company")->name('delete_company');
     //superadmin
 
-<<<<<<< HEAD
     //mange employee route start
     Route::any('employee_list/{id}', "employeecontroller@employee_list")->name('employee_list');
     Route::any('getrole/{id}', "addcontroller@get_role")->name('getrole');
@@ -100,54 +85,6 @@ Route::any('/delete_company/{id}', "superadminController@delete_company")->name(
     Route::any('/clinicalnotes', 'bedsController@clinicalnotes');
     Route::any('/callthepatient{id}', 'hospitalController@callthepatient');
     Route::any('/addstaffs', 'addController@addstaffs');
-=======
-Route::get('/', 'homecontroller@index')->name('home');
-Route::get('/home', 'homecontroller@index')->name('home');
-Route::get('/admin', 'homecontroller@index')->name('home');
-Route::get('/admindashboard', 'homecontroller@admindashboard')->name('admindashboard');
-Route::get('/logt', 'homecontroller@logout')->name('home');
-Route::any('/patientregistration', 'patientcontroller@patientregistration')->name('allpatients');
-Route::any('/getdepartmentdoctor', 'patientcontroller@getdepartmentdoctor')->name('getdepartmentdoctor');
-Route::post('/addpatient', 'patientcontroller@addpatient')->name('addpatient');
-Route::any('/allpatients', 'patientcontroller@allpatients')->name('allpatients');
-Route::any('/viewpatient{id}', 'patientController@viewpatient');
-Route::any('/editpatient{id}', 'patientController@editpatient');
-Route::any('editthepatient', 'patientController@editthepatient');
-Route::any('/beds', 'bedsController@beds');
-Route::any('/allocatebed', 'bedsController@allocatebed');
-Route::any('/allocateroom', 'bedsController@allocateroom');
-Route::any('/allocatenonacroom', 'bedsController@allocatenonacroom');
-Route::any('/hospitals', 'hospitalController@hospitals');
-Route::any('/addhospital', 'hospitalController@addhospital');
-// Route::any('/admins', 'hospitalController@admins');
-Route::any('/roles', 'hospitalController@roles');
-//rooms
-Route::any('/addroomtypes', 'hospitalController@addroomtypes');
-Route::any('/saveroomtypes', 'hospitalController@saveroomtypes');
-Route::any('/delroomtypes{id}', 'hospitalController@delroomtypes');
-Route::any('/delrooms{id}', 'hospitalController@delrooms');
-Route::any('/update_roomtypes', 'hospitalController@update_roomtypes');
-Route::any('/addroomstypes', 'hospitalController@addroomstypes');
-Route::any('/saveroomstypes', 'hospitalController@saveroomstypes');
-Route::any('/update_roomstype', 'hospitalController@update_roomstype');
-//stafs
-Route::any('/addadmins', 'hospitalController@addadmins');
-Route::any('/allhospitals', 'hospitalController@allhospitals');
-Route::any('/appointment{id}', 'hospitalController@appointment');
-Route::any('/getdoctordetails{id}', 'hospitalController@getdoctordetails');
-Route::any('/get_cons_fees', 'hospitalController@get_cons_fees');
-Route::any('/bookappointment', 'hospitalController@bookappointment');
-Route::any('/allappointment', 'hospitalController@allappointment');
-Route::any('/print_appointment{id}', 'hospitalController@print_appointment')->name('print_appointment');
-Route::any('/edit_appointment{id}', 'hospitalController@edit_appointment');
-Route::any('/update_appointment', 'hospitalController@update_appointment')->name('update_appointment');
-Route::any('/delete_appointment{id}', 'hospitalController@delete_appointment')->name('delete_appointment');
-Route::any('/cross_consult{id}', 'hospitalController@cross_consult')->name('cross_consult');
-Route::any('/queuemanagement', 'hospitalController@queuemanagement');
-Route::any('/clinicalnotes', 'bedsController@clinicalnotes');
-Route::any('/callthepatient{id}', 'hospitalController@callthepatient');
-Route::any('/addstaffs', 'addController@addstaffs');
->>>>>>> develop
 
     Route::any('/editstafff', 'addController@editstafff');
     Route::post('/addthestaffs', 'addController@addthestaffs');
@@ -1124,26 +1061,6 @@ Route::any('/addstaffs', 'addController@addstaffs');
     // Route::any('store-corporate','ClientManagement@storeCorporate')->name('store-corporate');
     Route::any('corporate-list', 'ClientManagement@listCorporate')->name('corporate-list');
 
-<<<<<<< HEAD
-    // Lawyernt
-    Route::any('asign-lawyer', 'ClientManagement@asignlawyer')->name('asign-lawyer');
-    Route::any('add_lawyer', 'ClientManagement@add_lawyer')->name('add_lawyer');
-    Route::any('edit_lawyer/{id}', 'ClientManagement@edit_lawyer')->name('edit_lawyer');
-    Route::any('update_lawyer', "ClientManagement@update_lawyer")->name('update_lawyer');
-    Route::any('view_lawyer/{id}', 'ClientManagement@view_lawyer')->name('view_lawyer');
-    Route::any('/delete_lawyer/{id}', 'ClientManagement@delete_lawyer')->name('delete_lawyer');
-
-    Route::any('/edit_client/{corporate_id}', 'ClientManagement@edit_corporate')->name('edit_client');
-    Route::any('/update-corporate', 'ClientManagement@Update_corporate')->name('update-corporate');
-    Route::any('/delete_client/{corporate_id}', 'ClientManagement@Corporate_destroy')->name('delete_client');
-    Route::any('/corporate-document/{corporate_id}', 'ClientManagement@CorporateDocument')->name('corporate-document');
-    Route::any('add-corporate-document', 'ClientManagement@addCorporatedocument')->name('add-corporate-document');
-    Route::any('corporate-document-details/{id}', 'ClientManagement@viewCorporateDocument')->name('corporate-document-details');
-    Route::any('edit-corporate-document/{id}', 'ClientManagement@editCorporateDocument')->name('edit-corporate-document');
-    Route::any('update-document-details', 'ClientManagement@updateDocumentDetails')->name('update-document-details');
-    Route::any('view-document-details/{id}', 'ClientManagement@viewDocummentDetails')->name('view-document-details');
-    //end corporate
-=======
 // Lawyernt
 Route::any('asign-lawyer','ClientManagement@asignlawyer')->name('asign-lawyer');
 Route::any('add_lawyer','ClientManagement@add_lawyer')->name('add_lawyer');
@@ -1162,7 +1079,6 @@ Route::any('edit-corporate-document/{id}','ClientManagement@editCorporateDocumen
 Route::any('update-document-details','ClientManagement@updateDocumentDetails')->name('update-document-details');
 Route::any('view-document-details/{id}','ClientManagement@viewDocummentDetails')->name('view-document-details');
 //end corporate
->>>>>>> develop
 //end Client-List
 
     //Client-Documents
@@ -1323,12 +1239,6 @@ Route::any('view-document-details/{id}','ClientManagement@viewDocummentDetails')
     //document manager
 //vinu
 
-<<<<<<< HEAD
-    //file status report
-    Route::any('client-monthly-file-status', 'filemanagement@clientmonthlystatus')->name('client-monthly-file-status');
-    Route::any('staff-monthly-status-report', "filemanagement@staffmonthlystatusreport")->name('staff-monthly-status-report');
-    Route::any('file-list-progress-report', "filemanagement@filelistprogressreport")->name('file-list-progress-report');
-=======
 //manage files
 Route::any('file_managementindex', "filemanagement@index")->name('file_managementindex');
 Route::any('file-list', "filemanagement@views")->name('file-list');
@@ -1361,7 +1271,6 @@ Route::any('/update_progress', "filemanagement@update_progress")->name('update_p
 Route::any('/delete-file-progress/{id}', "filemanagement@delete_progress")->name('delete-file-progress');
 Route::any('progress-bringup', "filemanagement@progressbringup")->name('progress-bringup');
 Route::any('add-new-bringup', "filemanagement@addbringup")->name('add-new-bringup');
->>>>>>> develop
 
 
     Route::any('view-file-list-progress/{id}', 'filemanagement@viewfilelisprogress')->name('view-file-list-progress');
@@ -1802,8 +1711,6 @@ Route::any('add-new-bringup', "filemanagement@addbringup")->name('add-new-bringu
     Route::any('update_expense', "CrmController@update_expense")->name('update_expense');
     Route::any('drop_expense/{id}', "CrmController@drop_expense")->name('drop_expense');
 
-<<<<<<< HEAD
-=======
 //file report
 Route::any('file-report', "filemanagement@filereport")->name('file-report');
 Route::any('file-opened-report', "filemanagement@fileopenreport")->name('file-opened-report');
@@ -2233,4 +2140,3 @@ Route::any('drop_manage_task/{id}', "CrmController@drop_manage_task")->name('dro
 Route::any('add_expense', "CrmController@add_expense")->name('add_expense');
 Route::any('update_expense', "CrmController@update_expense")->name('update_expense');
 Route::any('drop_expense/{id}', "CrmController@drop_expense")->name('drop_expense');
->>>>>>> develop
