@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">Client Management</a> /
     <a href="#" style="color: #1D1D50;">Complaint Register Details</a>
 </nav>
@@ -51,30 +51,30 @@ float:right;
 text-align:right;
 color: #999;
 }
-</style> 
+</style>
 
 
-       
+
 </head>
 
 <body>
-    
-      
+
+
             <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;">
             <b><u>Complaint Register</u></b> -->
             {{-- heading --}}
             <div class="container">
             <h4 id="hdtpa"><b>Complaint Register Details</b></h4>
             <br>
-        
+
 
         <div>
          <button class="btn btn-primary add-btn" Style="width:20%" data-toggle="modal" data-target="#myModal">Add New Complaint</button>
         </div>
-        
-         
 
-           
+
+
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -89,13 +89,13 @@ color: #999;
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
       <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    
+
 
             <!-- <input type="text"  placeholder="Search for Client" title="Type in a name"> -->
 
@@ -108,7 +108,7 @@ color: #999;
         <table class="table table-striped table-class" id= "table-id">
                         <thead>
                             <tr>
-                          
+
                                 <!-- <th class="text-center"> No</th> -->
                                 <th class="text-center">Date</th>
                                 <th class="text-center">Client Type</th>
@@ -392,7 +392,7 @@ function myFunction() {
       } else {
         tr[i].style.display = "none";
       }
-    }       
+    }
   }
 }
 </script>

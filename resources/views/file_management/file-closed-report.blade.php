@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">File Management</a> /
     <a href="#" style="color: #1D1D50;">Files Closed Report</a>
 </nav>
@@ -10,20 +10,20 @@
 <html>
     <head>
     <style>
-  
-</style>     
+
+</style>
     </head>
 <body>
 
     <div class="container">
         <!-- <h3 class="text-center" style="color: #070344;"><b>Files Closed Report</b></h3> -->
-        
+
         <div>
         {{-- heading --}}
     <h4 id="hdtpa"><b>Files Closed Report</b></h4>
-   
+
 </div>
-    
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -38,19 +38,19 @@
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    
- 
-         
-      
-        
-           
-        
+
+
+
+
+
+
+
 
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -90,10 +90,10 @@
                             <td scope="row" class="text-center">{{$report->close_date}}</td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
-                            
+
 
                             <td  scope="row"class="text-center">
-                       
+
                         <a href=""> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i></td>
                         </tr>
 

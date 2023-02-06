@@ -1,15 +1,22 @@
 @extends('layouts.hmsmain')
 @section('content')
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">HR</a> /
+    <a href="{{url('leave_request_details')}}" style="color: #1D1D50;">Leave Request Details</a> /
+    <a href="#" style="color: #1D1D50;">Approve Leave Request Details</a>
+</nav>
+<br><br>
 <div class="container">
     <h4 id="hdtpa"><b> Approve Leave Request </b></h4>
     <br>
 
-   
+
 
     <div class="header_wrap">
         <div class="num_rows">
             <div class="form-group">
-            
+
     <select class="form-control" aria-label="Page navigation example" name="state" id="maxRows">
 
         <option value="5">5</option>
@@ -84,12 +91,12 @@
                         <td scope="row" class="text-center"></td>
                         <td scope="row" class="text-center">
                             <a href="{{url('edit_leave_request')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                            
+
 
 
                         </td>
-                   
-                   
+
+
                 </tbody>
             </table>
         </div>
@@ -120,5 +127,5 @@
 
 
 
-    
+
 @endsection

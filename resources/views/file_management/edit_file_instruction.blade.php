@@ -1,10 +1,13 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:12px;">
-      <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
-      <a href="#" style="color: #1D1D50;">File Management-Edit File Instruction</a>
-</nav>
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">File Management</a> /
+    <a href="{{url('file_new_instruction')}}" style="color: #1D1D50;">File Instructions</a> /
+    <a href="#" style="color: #1D1D50;">Edit File Instructions</a>
 
+</nav>
+<br><br>
 <div class="container">
     <div class="py-5 text-center">
         @if(Session::has('staffregistered'))
@@ -34,7 +37,7 @@
 
         </div>
     </div>
-   
+
     <div class="card">
 
         <div class="card-body">

@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">File Management</a> /
     <a href="#" style="color: #1D1D50;">Document Manager</a>
 </nav>
@@ -9,18 +9,18 @@
 <html>
     <head>
     <style>
-  
-    </style>    
+
+    </style>
     </head>
 
 <body>
     <div class="container">
         <!-- <h3 class="text-center" style="color: #070344;"><b>Document Manager(DMS)</b></h3> -->
-        
+
         <div>{{-- heading --}}
     <h4 id="hdtpa"><b>Document Manager(DMS)</b></h4>
-    
-            
+
+
             </div>
         <br>
 
@@ -38,8 +38,8 @@
                 Generate Document </button>
             </div>
         </div>
-        
-        
+
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -54,13 +54,13 @@
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
- 
+
 
     <div class="table-responsive">
     <table class="table table-striped table-class" id= "table-id">
@@ -69,7 +69,7 @@
                 <table class="table table-bordered" id="new-item">
                     <thead>
                         <tr>
-                          
+
                             <th class="text-center">Type</th>
                             <th class="text-center">Description</t>
                             <th class="text-center">Action</th>
@@ -80,11 +80,11 @@
                     <tbody>
                     @foreach($new_document as $document)
                         <tr id="data">
-                      
+
 
                             <td scope="row" class="text-center"> <img src="{{asset('/image/'.$document->document_upload)}}" width="80px" height="50px" alt="image"></td>
                             <td scope="row" class="text-center"> <img src="{{asset('/image/'.$document->folder_upload)}}" width="80px" height="50px" alt="image"></td>
-                          
+
                             <td  scope="row"class="text-center">
                         <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                         <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
@@ -148,7 +148,7 @@
                         <option >client 2</option>
                         <option >client 3</option>
                     </select>
-                              
+
                             </div>
                         </div>
                     </div>
@@ -295,8 +295,8 @@
         </div>
 </div>
 <br>
-        
-        <div class="row"> 
+
+        <div class="row">
         <div class="col-md-6">
             <div class="mb-1">
                 <label for="username">Documet To Upload</label>
@@ -332,7 +332,7 @@
 
 
 
-                                
+
                                 <br>
                                 <div class="row">
                                     <div class="col-sm">
@@ -586,7 +586,7 @@
 
 
 
-                                
+
                                 <br>
                                 <div class="row">
                                     <div class="col-sm">
@@ -655,7 +655,7 @@
 
 
 
-                
+
 
                 <!-- The Modal -->
                 <div class="modal fade" id="editmed">

@@ -1,8 +1,11 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:12px;">
-      <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
-      <a href="#" style="color: #1D1D50;">Client Management-View Client Pickup</a>
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">Client Management</a> /
+    <a href="{{url('communication-list')}}" style="color: #1D1D50;">Communication Details</a> /
+    <a href="{{url('client-pickup')}}" style="color: #1D1D50;">Client Pickup</a> /
+    <a href="#" style="color: #1D1D50;">View Pickup</a>
 </nav>
 <br><br>
 <style>
@@ -79,7 +82,7 @@
                     <th>Time Out:</th>
                     <td>{{$view_pickup->time_out}}</td>
                 </tr>
-               
+
 
             </tbody>
         </table>

@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">File Management</a> /
     <a href="#" style="color: #1D1D50;">Document Templates</a>
 </nav>
@@ -9,8 +9,8 @@
 <html>
     <head>
     <style>
- 
-</style>    
+
+</style>
     </head>
 
 <body>
@@ -20,22 +20,22 @@
         {{-- heading --}}
     <h4 id="hdtpa"><b>Template Category</b></h4>
     <br>
-  
- 
- 
-         
-      
-        
+
+
+
+
+
+
             </div>
 
-       
 
-<!-- 
+
+<!--
         <a href="{{url('add-template')}}"><button class="btn btn-primary add-btn">Add Template</button></a>
         <div class="tab-content" id="myTabContent"> -->
         {{-- <a href="{{('')}}"><button class="btn btn-primary">Add Template</button></a> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Template</button>
-              
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -50,35 +50,35 @@
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    
+
 
 
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><br>
-                
+
 
  <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
                     <thead>
                         <tr>
-                           
+
                             <th class="text-center">Template Category</th>
                             <th class="text-center">Title</th>
                             <th class="text-center">Action</th>
-                           
+
                         </tr>
                     </thead>
-                    
+
                     <tbody>
                         @foreach($template_list as $template)
                         <tr id="data">
-                        
-                          
+
+
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                             <td  scope="row"class="text-center">
@@ -105,7 +105,7 @@
 
 
 
-                
+
                   <!-- The Modal -->
                   <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">

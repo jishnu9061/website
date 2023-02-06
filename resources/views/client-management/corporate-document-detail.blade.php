@@ -1,10 +1,10 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-      <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+      <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
       <a href="#" style="color: #1D1D50;">Client Management</a> /
       <a href="{{url('corporate-list')}}" style="color: #1D1D50;">Corporate Client List</a> /
-      <a href="#" style="color: #1D1D50;">Corporate Document Details</a> 
+      <a href="#" style="color: #1D1D50;">Corporate Document Details</a>
 </nav>
 <br><br>
 <html>
@@ -111,14 +111,14 @@
                                             class="fa fa-pencil" aria-hidden="true"></i>
                                         <a onClick="return myFunction();" href="{{url('delete-document',$list->id)}}"
                                             style="color:black;"><i class="fas fa-trash-alt"></i></a>
-                                           
+
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
                 </div>
-               
+
                 <!--		Start Pagination -->
                 <div class='pagination-container'>
                     <nav>
