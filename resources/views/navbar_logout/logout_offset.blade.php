@@ -10,10 +10,23 @@
     z-index: 10000;
     top: 0;
     right: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
+    background-color: rgb(255, 255, 255);
+  
     overflow-x: hidden;
     transition: 0.5s;
+  }
+  .back-o {
+    height: 100%;
+    width: 0;
+    top: 0;
+    right: 0;
+    position: fixed;
+    z-index: 9999;
+    margin: auto;
+    background-color: rgb(255, 0, 0);
+    background-color: rgba(0,0,0, 0.5);
+    overflow-x: hidden;
+
   }
   
   .overlay-content {
@@ -34,7 +47,7 @@
   }
   
   .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
+    color: #aca0a0;
   }
   
   .overlay .closebtn {
@@ -54,7 +67,7 @@
   }
   </style>
 
-  
+  <div class="back-o" id="backo">
   <div id="myNav" class="overlay">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="overlay-content">
@@ -64,25 +77,33 @@
       <a href="#">Contact</a> --}}
     </div>
   </div>
-  
+</div>
 
   
-  <script>
-     const htm = document.getElementsByTagName("html");
-  const bnf = document.getElementById("myNav");
+      <script>
+          function openNav() {
+            document.getElementById("myNav").style.width = "30%";
+            document.getElementById("backo").style.width = "100%";
+          }
+          
+          function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+            document.getElementById("backo").style.width = "0%";
+          }
+      </script>
 
-  function openNav() {
-    document.getElementById("myNav").style.width = "30%";
-  }
-  
-  function closeNav() {
-    document.getElementById("myNav").style.width = "0%";
-  }
- 
-
-  window.onclick = function(event) {
-    if (event.target == htm) {
-        document.getElementById("myNav").style.width = "0%";
-    }
-}
-  </script>
+      <script>
+            const sdbarright = document.getElementById("myNav");
+            const sdbarback = document.getElementById("backo");
+            
+            window.onclick = function(event) {
+            if (event.target == sdbarright) {
+                  document.getElementById("myNav").style.width = "0%";
+                  document.getElementById("backo").style.width = "0%";
+              }
+            if (event.target == sdbarback) {
+                document.getElementById("myNav").style.width = "0%";
+                document.getElementById("backo").style.width = "0%";
+            }
+          }
+      </script>
