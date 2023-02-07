@@ -13,7 +13,7 @@ use App\Http\Controllers\issued_summary;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
+| routes are loaded by the RouteServiceProvider within a group whicsubject_category
 | contains the "web" middleware group. Now create something great!
 |
 */
@@ -1571,38 +1571,38 @@ Route::any('add-new-bringup', "filemanagement@addbringup")->name('add-new-bringu
     Route::any('edit_practice_area', 'PracticeAreaManagement@edit_practice_area')->name('edit_practice_area');
 
     //Elibrary
-    Route::any('libraryindex', 'Elibrary@index')->name('libraryindex');
-    Route::any('subject', 'Elibrary@subjects')->name('subject');
-    Route::any('add_subject', 'Elibrary@addsubjects')->name('add_subject');
-    Route::any('/editsubject/{id}', 'Elibrary@editsubjects')->name('editsubject');
-    Route::any('update_subject', 'Elibrary@updatesubjects')->name('update_subject');
-    Route::any('/deletesubject/{id}', 'Elibrary@deletesubjects')->name('deletesubject');
-    Route::any('file', 'Elibrary@files')->name('file');
-    Route::any('add_file', 'Elibrary@addfiles')->name('add_file');
-    Route::any('/editfile/{id}', 'Elibrary@editfiles')->name('editfile');
-    Route::any('update_file', 'Elibrary@updatefiles')->name('updatee_file');
-    Route::any('/delete_file/{id}', 'Elibrary@deletefiles')->name('deletefile');
-    Route::any('viewfile', 'Elibrary@viewfiles')->name('viewfile');
-    Route::any('site', 'Elibrary@sites')->name('site');
-    Route::any('add_site', 'Elibrary@addsites')->name('add_site');
-    Route::any('update_site', 'Elibrary@updatesites')->name('update_site');
-    Route::any('/editsite/{id}', 'Elibrary@editsites')->name('editsite');
-    Route::any('/delete_site/{id}', 'Elibrary@deletesites')->name('delete_site');
-    Route::any('precedence', 'Elibrary@precedences')->name('precedence');
-    Route::any('add_precedence', 'Elibrary@addprecedences')->name('add_precedence');
-    Route::any('/editprecedence/{id}', 'Elibrary@editprecedences')->name('editprecedence');
-    Route::any('update_precedence', 'Elibrary@updateprecedences')->name('update_precedence');
-    Route::any('/delete_precedence/{id}', 'Elibrary@deleteprecedence')->name('delete_precedence');
-    Route::any('viewprecedence', 'Elibrary@viewprecedences')->name('viewprecedence');
+    Route::any('libraryindex', 'elibrary@index')->name('libraryindex');
+    Route::any('subject/{id}', 'elibrary@subjects')->name('subject');
+    Route::any('add_subject', 'elibrary@addsubjects')->name('add_subject');
+    Route::any('/editsubject/{id}', 'elibrary@editsubjects')->name('editsubject');
+    Route::any('update_subject', 'elibrary@updatesubjects')->name('update_subject');
+    Route::any('/deletesubject/{id}', 'elibrary@deletesubjects')->name('deletesubject');
+    Route::any('file/{id}', 'elibrary@files')->name('file');
+    Route::any('add_file', 'elibrary@addfiles')->name('add_file');
+    Route::any('/editfile/{id}', 'elibrary@editfiles')->name('editfile');
+    Route::any('update_file', 'elibrary@updatefiles')->name('updatee_file');
+    Route::any('/delete_file/{id}', 'elibrary@deletefiles')->name('deletefile');
+    Route::any('viewfile', 'elibrary@viewfiles')->name('viewfile');
+    Route::any('site/{id}', 'elibrary@sites')->name('site');
+    Route::any('add_site', 'elibrary@addsites')->name('add_site');
+    Route::any('update_site', 'elibrary@updatesites')->name('update_site');
+    Route::any('/editsite/{id}', 'elibrary@editsites')->name('editsite');
+    Route::any('/delete_site/{id}', 'elibrary@deletesites')->name('delete_site');
+    Route::any('precedence/{id}', 'elibrary@precedences')->name('precedence');
+    Route::any('add_precedence', 'elibrary@addprecedences')->name('add_precedence');
+    Route::any('/editprecedence/{id}', 'elibrary@editprecedences')->name('editprecedence');
+    Route::any('update_precedence', 'elibrary@updateprecedences')->name('update_precedence');
+    Route::any('/delete_precedence/{id}', 'elibrary@deleteprecedence')->name('delete_precedence');
+    Route::any('viewprecedence', 'elibrary@viewprecedences')->name('viewprecedence');
 
-    Route::any('subject_category', 'Elibrary@subject_categorys')->name('subject_category');
+    Route::any('subject_category/{id}', 'elibrary@subject_categorys')->name('subject_category');
 
-    Route::any('add_subject_category', 'Elibrary@addsubject_categorys')->name('add_subject_category');
-    Route::any('/editsubject_category/{id}', 'Elibrary@editsubject_categorys')->name('editsubject_category');
-    Route::any('/update_subject_category', 'Elibrary@updatesubjectcategorys')->name('update_subject_category');
-    Route::any('/deletesubject_category/{id}', 'Elibrary@deletesubject_categorys')->name('deletesubject_category');
+    Route::any('add_subject_category', 'elibrary@addsubject_categorys')->name('add_subject_category');
+    Route::any('/editsubject_category/{id}', 'elibrary@editsubject_categorys')->name('editsubject_category');
+    Route::any('/update_subject_category', 'elibrary@updatesubjectcategorys')->name('update_subject_category');
+    Route::any('/deletesubject_category/{id}', 'elibrary@deletesubject_categorys')->name('deletesubject_category');
 
-    Route::any('editsubject_category', 'Elibrary@editsubject_categorys')->name('editsubject_category');
+    Route::any('editsubject_category', 'elibrary@editsubject_categorys')->name('editsubject_category');
 
 
 
