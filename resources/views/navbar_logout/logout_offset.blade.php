@@ -11,9 +11,10 @@
     top: 0;
     right: 0;
     background-color: rgb(255, 255, 255);
-  
+    display: flex;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.2s;
+    justify-content: space-between;
   }
   .back-o {
     height: 100%;
@@ -31,19 +32,21 @@
   
   .overlay-content {
     position: relative;
-    top: 25%;
+    top: 0;
     width: 100%;
-    text-align: center;
-    margin-top: 30px;
+    right: 50px;
+    margin-top: 38px;
   }
   
   .overlay a {
     padding: 8px;
     text-decoration: none;
-    font-size: 36px;
+    font-size: 30px;
     color: #818181;
     display: block;
+    text-align: end;
     transition: 0.3s;
+    
   }
   
   .overlay a:hover, .overlay a:focus {
@@ -53,8 +56,9 @@
   .overlay .closebtn {
     position: absolute;
     top: 20px;
-    right: 45px;
+    left: 45px;
     font-size: 60px;
+    text-align:left;
   }
   
   @media screen and (max-height: 450px) {
@@ -70,12 +74,16 @@
   <div class="back-o" id="backo">
   <div id="myNav" class="overlay">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <div class="overlay-content">
-      <a href= "{{url('logt')}}" >Log Out</a>
+    {{-- <div class="overlay-content"> --}}
+      <a href= "{{url('logt')}}" style="
+            text-align: right;
+    height: 20px;
+    width: 100%;
+    margin: 30px 5px 10px 0px;">Log Out</a>
       {{-- <a href="#">Services</a>
       <a href="#">Clients</a>
       <a href="#">Contact</a> --}}
-    </div>
+    {{-- </div> --}}
   </div>
 </div>
 
@@ -107,3 +115,4 @@
             }
           }
       </script>
+      
