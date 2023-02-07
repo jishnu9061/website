@@ -327,9 +327,11 @@
                             </li>
                         </div>
                         <li class="nav-item p-1 "  style=" text-decoration: none; list-style:none;margin-right: 10px;">
-                            <a type="button" style="background: transparent;padding: 0px;margin: 0px;" href="{{url('logt')}}">
+                            <a type="button" style="background: transparent;padding: 0px;margin: 0px;" onclick="openNav()"
+                            {{-- href="{{url('logt')}}" --}}
+                            >
                                 <div style="height: 50px;width:50px;border-radius:50%;background:#dfdfe4;">
-                                <img src="{{asset('/') }}/images/faces/{{ Auth::user()->photo_path }}" 
+                                <img  src="{{asset('/') }}/images/faces/{{ Auth::user()->photo_path }}" 
                                     class="d-inline-block " style="-webkit-border-radius: 50%;height: 45px;width: 45px;margin-left:2.5px;margin-top:2.5px;"alt="">
                                 </div>
                             </a>
