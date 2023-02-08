@@ -36,8 +36,9 @@
                     <td>
                         <a href="{{url('ledger_add_payment',$list->purchase_id)}}"><input type="button" class="btn btn-primary"  value="Add Amount"></a>
                     </td>
-                    <td><button type="button" class="btn btn-primary" data-toggle="modal"
-                            data-target="#myModal1">View</button></td>
+                    <td>
+                    <a href="{{url('view_ledger_details',$list->purchase_id)}}"><button type="button" class="btn btn-primary">View</button></a>
+                    </td>
 
                 </tr>
                 @endforeach
