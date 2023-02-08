@@ -1,300 +1,97 @@
 @extends('layouts.hmsmain')
 @section('content')
 
-<style>
-.fc-time {
-    display: none;
-}
-</style>
-
-
-
-<section>
-
-    <script src="{{asset('/')}}assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="{{asset('/')}}assets/js/bootstrap.bundle.min.js"></script>
-    <script src="{{asset('/')}}assets/vendors/apexcharts/apexcharts.js"></script>
-    <script src="{{asset('/')}}assets/js/pages/dashboard.js"></script>
-    <script src="{{asset('/')}}assets/js/main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js">
-    </script>
-    <script>
-    var mquery = window.matchMedia("(max-width:767.98px)");
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
-
-
-
-</section>
-
-{{-- {{request()->id}} --}}
-{{-- <h4>{{ $operation_t[0]->theatre_name }}</h4> --}}
-{{-- <br />
-    <h1 class="text-center text-primary">Full Calender</h1> --}}
-
-<br />
-
-
-<!-- <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
-    <label class="btn btn-outline-primary" for="btnradio1">Main Dashboard</label>
-
-    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-    <label class="btn btn-outline-primary" for="btnradio2"> System Analytics
-    </label>
-
-    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-    <label class="btn btn-outline-primary" for="btnradio3"> Banking
-        Dashboard</label>
-
-    <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-    <label class="btn btn-outline-primary" for="btnradio4"> KPI Dashboard</label>
-</div>
-<br>
-<br> -->
-
-<div class="p-5" style="background-color: white" id="calender"></div>
-
-
-{{-- {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Launch demo modal
-    </button> --}}
-
-<!-- Modal -->
-{{-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"> --}}
-<div id="exampleModal" class="modal modal-top fade calendar-modal">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <form id="add-event" action="{{url('add_ot_patient')}}" method="post">
-                    @csrf
-                    <div class="modal-body" id="slotdata">
-                        <div class="modal-header">
-                            <h5 id="hdbtb">Add Event</h5>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="col-md-4 col-lg-12">
-                                    <div class="form-group">
-                                        <label>Title</label>
-                                        <input type="text" class="form-control" name="sur_date"
-                                            placeholder="Event Name">
-                                    </div>
-                                </div>
+    <style>
+    .fc-time {
+        display: none;
+    }
+    </style>
+    <section>
+        <script src="{{asset('/')}}assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+        <script src="{{asset('/')}}assets/js/bootstrap.bundle.min.js"></script>
+        <script src="{{asset('/')}}assets/vendors/apexcharts/apexcharts.js"></script>
+        <script src="{{asset('/')}}assets/js/pages/dashboard.js"></script>
+        <script src="{{asset('/')}}assets/js/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js">
+        </script>
+        <script>
+        var mquery = window.matchMedia("(max-width:767.98px)");
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+    </section>
+    <br>
+    <div class="row">
+        <div class="p-2" style="background-color: white;width:70%;padding:2%" id="calender">
+        </div>
+        <div style="width:30%">
+            <h4>Today Event:-</h4>
+        </div>
+    </div>
+    <div class="p-2" style="background-color: white;width:70%;padding:2%" id="calender">
+    </div>
+    <div id="exampleModal" class="modal modal-top fade calendar-modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <form id="add-event" action="#" method="post">
+                        @csrf
+                        <div class="modal-body" id="slotdata">
+                            <div class="modal-header">
+                                <h5 id="hdbtb">Add Event</h5>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6 col-lg-6">
-                                    <div class="form-group">
-                                        <label>Date From</label>
-                                        <input type="text" id="enamez" class="form-control" name="sur_date">
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-6">
-                                    <div class="form-group">
-                                        <label>End Date To</label>
-                                        <input type="date" class="form-control" name="sur_date">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4 col-lg-12">
-                                    <div class="form-group">
-                                        <label>Description</label>
-                                        <textarea rows="4" cols="50" name="discription" class="form-control"
-                                            type="text" placeholder="About Event"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <!-- <div class="row">
-                                    <div class="col-md-12 col-lg-12">
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-4 col-lg-12">
                                         <div class="form-group">
-                                            <label>Choose Color</label>
-                                            <input type="color" name="color" class="form-control">
+                                            <label>Title</label>
+                                            <input type="text" class="form-control" name="sur_date"
+                                                placeholder="Event Name">
                                         </div>
                                     </div>
-                                </div> -->
-
-                            <!-- <div class="row">
-                            <div class="col-md-4 col-lg-4">
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-6">
                                         <div class="form-group">
-                                            <label>Date</label>
+                                            <label>Date From</label>
                                             <input type="text" id="enamez" class="form-control" name="sur_date">
                                         </div>
-                                    </div>  -->
-
-
-                            <!-- <div class="row">
-                                <div class="col-md-6 col-lg-6">
-                                    <?php
-                                            date_default_timezone_set("Asia/Calcutta");   //India time (GMT+5:30)
-                                          ?>
-                                    <div class="form-group">
-                                        <label>Start Time</label>
-                                        <input type="time" name="start_time" id="start_time" class="form-control"
-                                            required>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6">
+                                        <div class="form-group">
+                                            <label>End Date To</label>
+                                            <input type="date" class="form-control" name="sur_date">
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-lg-6">
-                                    <?php
-                                            date_default_timezone_set("Asia/Calcutta");   //India time (GMT+5:30)
-                                          ?>
-                                    <div class="form-group">
-                                        <label>End Time</label>
-                                        <input type="time" name="end_time" id="end_time" class="form-control" required>
+                                <div class="row">
+                                    <div class="col-md-4 col-lg-12">
+                                        <div class="form-group">
+                                            <label>Description</label>
+                                            <textarea rows="4" cols="50" name="discription" class="form-control"
+                                                type="text" placeholder="About Event"></textarea>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div> -->
-
-
-                            {{-- <div class="row">
-                                <div class="col-md-12 col-lg-12">
-                                    <div class="form-group">
-                                    <label>Department</label>
-                                    @php
-                                        $department=DB::table('users')->where('departments',Auth::user()->departments)->get();
-                                    @endphp
-                                    <select class="form-control" name="dept_name" id="dept_name" style="pointer-events:none">
-                                        <option>Select</option>
-
-                                        @foreach ($department as $dept)
-                                          <option value="{{$dept->departments}}"{{ ($dept->departments==Auth::user()->departments) ? "selected" : ""}}>{{$dept->departments}}
-                            </option>
-                            @endforeach
-                            </select>
-                        </div>
-                    </div>
-            </div> --}}
-            {{-- <div class="row">
-                                <div class="col-md-6 col-lg-6">
-                                    <div class="form-group">
-                                        <label>Operation Theatre </label>
-                                        <select class="form-control" name="theatre_name" id="theatre_name" style="pointer-events:none">
-                                            <option>Select</option>
-                                            @foreach ($operation_t as $theatre)
-                                            <option value="{{$theatre->id}}"{{($theatre->id==$operation_t[0]->id) ? "selected" : "" }}>{{ $theatre->theatre_name }}
-            </option>
-            @endforeach
-            </select>
-
-        </div>
-    </div>
-    <div class="col-md-6 col-lg-6">
-        <div class="form-group">
-            <input type="hidden" name="patient_id" value="{{ $patient_id[0]->id}}">
-            <label>Patient Name</label>
-            <select class="form-control" id="ot_patient" name="ot_patient" style="pointer-events:none">
-                <option>select</option>
-                @foreach ($patient_details as $pt)
-                <option value="{{ $pt->id }}" {{ ($pt->id==$patient_id[0]->id) ? "selected" : "" }}>
-                    {{$pt->firstname}}
-                </option>
-                @endforeach
-            </select>
-        </div>
-    </div>
-</div> --}}
-{{-- <div class="row">
-                                <div class="col-md-6 col-lg-6">
-                                    <div class="mb-3">
-                                      <div class="form-group">
-                                    <label>Surgery name</label>
-                                    @php
-                                         $surgery=DB::table('surgery_types')->get();
-                                    @endphp
-                                    <select class="form-control" aria-label="Default select example" name="sur_name" id="sur_name" required>
-                                      <option value="">Select</option>
-                                    @foreach ($surgery as $key )
-                                        <option value="{{ $key->id }}">{{ $key->surgery_name }}</option>
-@endforeach
-</select>
-</div>
-</div>
-</div>
-</div>
-<div class="col-md-6 col-lg-6">
-    <div class="mb-3">
-        <div class="form-group">
-            <label>Doctor</label>
-            @php
-            $users=DB::table('users')->where('id',Auth::user()->id)->get();
-            @endphp
-            <select class="form-control" id="doctor_name" name="doctor_name" style="pointer-events:none">
-                <option>Select</option>
-                @foreach ($users as $doc)
-                <option value="{{$doc->id}}" {{($doc->id==Auth::user()->id) ? "selected" : ""}}>{{ $doc->name }}
-                </option>
-                @endforeach
-            </select>
-        </div>
-    </div>
-</div>
-</div> --}}
-</div>
-<div class="row">
-    <div class="col-sm">
-    </div>
-
-    <div class="col-sm">
-        <br>
-        <button type="submit" class="btn btn-primary float:right;" Style="width:50%;">Save</button>
-        <button type="button" class="btn btn-primary float:left" Style="width:45%;" data-dismiss="modal">Cancel</button>
-    </div>
-</div>
-
-</div>
-</form>
-</div>
-</div>
-</div>
-{{-- event viewmodal --}}
-{{-- <div id="modal-view-event" class="modal modal-top fade calendar-modal">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <h5 class="h4"><span class="mr-3 event-icon weight-400"></span><span class="event-title"></span></h5>
-                            <div class="event-body"></div>
-                            <h5 class="h4"><span class="mr-3 event-icon weight-400"></span><span class="event-start"></span></h5>
-                            <div class="event-body"></div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
-{{-- <div class="modal fade" id="modal-view-event" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <div class="modal-header" style="background-color:#5e829d">
-                                <h4 style="text-align:center;" class="text-white"><b>Appointment Details</b></h4>
+                            <div class="row">
+                                <div class="col-sm">
+                                </div>
+                                <div class="col-sm">
+                                    <br>
+                                    <button type="submit" class="btn btn-primary float:right;" Style="width:50%;">Save</button>
+                                    <button type="button" class="btn btn-primary float:left" Style="width:45%;" data-dismiss="modal">Cancel</button>
+                                </div>
                             </div>
-                            Doctor:
-                            <br/>
-                            <input type="text" class="form-control" name="doc_name" id="doc_name">
-                            Start time:
-                            <br />
-                            <input type="text" class="form-control" name="start_timez" id="start_timez">
-            
-                            End time:
-                            <br />
-                            <input type="text" class="form-control" name="finish_time" id="finish_time">
                         </div>
-            
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn text-white" data-dismiss="modal" style="background-color:#5e829d;">Close</button>
-                        </div>
-                    </div>
+                    </form>
                 </div>
-            </div> --}}
-{{-- event_viewmodal end --}}
+            </div>
+        </div>
+    </div>
 <script>
 $(document).ready(function() {
 
@@ -352,15 +149,6 @@ $(document).ready(function() {
                 })
             }
         },
-        // eventClick: function(event, jsEvent, view) {
-        //     console.log(event.start);
-        // 		jQuery('.event-icon').html("<i class='fa fa-"+event.icon+"'></i>");
-        // 		jQuery('.event-title').html(event.title);
-        // 		jQuery('.event-start').html(event.start);
-        // 		jQuery('.event-body').html(event.description);
-        // 		jQuery('.eventUrl').attr('href',event.url);
-        // 		jQuery('#modal-view-event').modal();
-        // 	},
         eventClick: function(calEvent, jsEvent, view) {
             console.log(calEvent.doctor);
             $('#sur_title').val(calEvent.title);
@@ -471,9 +259,4 @@ function displayMessage(message) {
     toastr.success(message, 'Event');
 }
 </script>
-{{-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> --}}
-{{-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> --}}
-
-
 @endsection

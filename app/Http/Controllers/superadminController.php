@@ -18,6 +18,10 @@ class superadminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $total = DB::table('company_details')->where('deleted_at',null)->count()??0;
