@@ -135,7 +135,7 @@ class PurchaseManagement extends Controller
     public function ledger_details($supplier_name)
     {
         $ledger_details  =  DB::table('cra_add_new_purchase')->where('supplier_name',$supplier_name)->get();
-        return view('purchase_management.ledger_details',compact('ledger_details'));
+        return view('purchase_management.ledger_details',compact('ledger_details','supplier_name'));
     }
 
     public function purchase_view($purchase_id)
@@ -199,12 +199,27 @@ class PurchaseManagement extends Controller
 
         $purchase_id      =  $request['purchase_id'];
         $pending_amount   =  $request['pending_amount'];
+        $amount           =  $request['amount'];
+        $payment_date     =  $request['date'];
 
         DB::table('cra_add_new_purchase')->where('purchase_id',$purchase_id)->update([
             'pending_amount'    =>  $pending_amount
         ]);
 
+        DB::table('cra_add_payment')->insert([
+            'amount'      =>   $amount,
+            'payment_date'=>   $payment_date,
+            'purchase_id' =>   $purchase_id
+        ]);
+
+
         return redirect('/supplier');
+    }
+
+    public function view_ledger_details($purchase_id){
+
+        $view_ledger_details  =  DB::table('cra_add_payment')->where('purchase_id',$purchase_id)->get();
+        return view('purchase_management.view_ledger_details',compact('view_ledger_details','purchase_id'));
     }
 
 
