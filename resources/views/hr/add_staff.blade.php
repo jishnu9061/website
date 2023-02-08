@@ -472,7 +472,7 @@
         let p=0;
         function add_decduct_input(){
             const decductname = document.createElement("input");
-            decductname.type="text";
+            decductname.type="text";gir 
             decductname.className="doc_input";
             decductname.placeholder = "Enter Decduction Name";
             decductname.name="decduct["+p+"][0]"
