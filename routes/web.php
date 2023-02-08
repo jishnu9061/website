@@ -1925,6 +1925,7 @@ Route::any('supplier', 'PurchaseManagement@suppliers')->name('supplier');
 Route::any('store_supplier', 'PurchaseManagement@store_supplier')->name('store_supplier');
 Route::any('ledger_add_payment/{purchase_id}', 'PurchaseManagement@ledger_add_payment')->name('ledger_add_payment');
 Route::any('update_ledger_add_payment', 'PurchaseManagement@update_ledger_add_payment')->name('update_ledger_add_payment');
+Route::any('view_ledger_details/{purchase_id}', 'PurchaseManagement@view_ledger_details')->name('view_ledger_details');
 //end  Purchase Management
 
 
