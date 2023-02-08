@@ -293,7 +293,7 @@
                     </div>  </div>
 
                     <h4><br><b>Relative:-</b></h4>
-                    <div class="row" style="*/background-color:orange;">
+                 
                         <div class=""style="*/background-color: #d3d0ca;width:80%;border-radius:5px;">
                             <div class="row">
                                             <div class="" style="width: 50%">
@@ -313,11 +313,11 @@
                                         <label for="last_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Telephone Number</label>
                                         <input type="text" placeholder="Telephone Number " style="border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="last_name" id="" value=""required>
                                     </div>
-                                </div>   </div>   </div>    
+                                </div>   </div>       </div>    
                           
 
                                             <h4><br><b>Salary:-</b></h4>
-                    <div class="row" style="*/background-color:orange;">
+                  
                         <div class=""style="*/background-color: #d3d0ca;width:80%;border-radius:5px;">
                             <div class="row">
                                             <div class="" style="width: 50%">
@@ -349,7 +349,7 @@
                                         <label for="last_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">KRA PIN Number</label>
                                         <input type="text" placeholder="KRA PIN Number " style="border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="last_name" id="" value=""required>
                                     </div>
-                                </div> </div>   </div>
+                                </div> </div>  
   
                                 
                     
