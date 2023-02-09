@@ -664,17 +664,15 @@
                             @endif
                         </a>
                     </li>{{-- 0th submenu end --}}
-                    @if(request()->path()== 'add_staff'){{-- 0_1th  submenu start --}}
-                    <li class="submenu-item ">
-                        <a href="{{url('add_staff/')}}" class='sidebar-link'
-                            style="background-color:#1D1D50 ; color:white;">
-                            <span style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Add
-                                Employee</span>
-                            @else
-                    <li class="submenu-item ">
-                        <a href="{{url('add_staff/')}}" class='sidebar-link'>
+                    @if(request()->path()== 'create_employee/'.Auth::user()->company_id){{-- 0_1th  submenu start --}}
+                    <li class="submenu-item " >
+                        <a href="{{url('create_employee/'.Auth::user()->company_id)}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
+                            <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Add Employee</span>
+                    @else
+                        <li class="submenu-item ">
+                            <a href="{{url('create_employee/'.Auth::user()->company_id)}}" class='sidebar-link'>
                             <span>Add Employee</span>
-                            @endif
+                    @endif
                         </a>
                     </li>{{-- 0_1th submenu end --}}
                     @if(request()->path()== "staffs"){{-- 1st  submenu start --}}

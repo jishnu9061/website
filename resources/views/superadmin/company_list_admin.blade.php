@@ -215,7 +215,7 @@
                             </thead>
                             <tbody><?php $i=0; ?>
                                 @foreach ($user_list as $user )
-                                    <?php  $i++; ?>
+                                    
                                     <tr>
                                         <td class="text-center">{{ $i }}</td>
                                         <td class="text-center">{{ $user->uniqueid }}</td>

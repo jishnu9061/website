@@ -34,7 +34,7 @@ use App\Http\Controllers\issued_summary;
 
     //mange employee route start
     Route::any('employee_list/{id}', "employeecontroller@employee_list")->name('employee_list');
-    Route::any('getrole/{id}', "addcontroller@get_role")->name('getrole');
+    Route::any('create_employee/getrole/{id}', "addcontroller@get_role")->name('getrole');
 
 
     //mange employee route end

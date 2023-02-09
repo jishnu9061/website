@@ -39,7 +39,7 @@ class superadminController extends Controller
     {
         
         $user_list =DB::table('company_details')
-        ->leftJoin('users','users.company_id','company_details.id')
+        ->leftJoin('users','users.uniqueid','company_details.uniqueid')
         ->select('company_details.uniqueid as uniqueid',
         'company_details.company_name as company_name',
         'users.username as users_name',
