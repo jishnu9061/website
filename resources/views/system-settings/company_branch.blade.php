@@ -114,10 +114,10 @@
                                 <tbody>
                                     @foreach ($branch_details as $branch)
                                         <tr class="text-center">
-                                            <!-- <td>{{ $branch->id }}</td> -->
-                                            <td>{{ $branch->branch_no }}</td>
-                                            <td>{{ $branch->branch_code }}</td>
-                                            <td>{{ $branch->branch_name }}</td>
+                                            {{-- <td>{{ $branch->id }}</td> --}}
+                                            <td>{{$branch->branch_no}}</td>
+                                            <td>{{$branch->branch_code}}</td>
+                                            <td>{{$branch->branch_name}}</td>
                                             <td style="color:green;font-weight:bold;"></td>
                                             <td scope="row">
                                                 <a href="{{ url('edit_company_branch', $branch->id) }}"><i
