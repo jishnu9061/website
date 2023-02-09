@@ -81,8 +81,8 @@
                 <td>{{$list->purchase_order_number}}</td>
                 <td>{{$list->supplier_name}}</td>
                 <td>{{$list->status}}</td>
-                <td><a href="{{url('purchase_view',$list->purchase_id)}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-2"></span>
-                      <a href="{{url('edit_purchase',$list->purchase_id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit" ></i>
+                <td><a href="{{url('purchase_view',$list->id)}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-2"></span>
+                      <a href="{{url('edit_purchase',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit" ></i>
                 </td>
               </tr>
               @endforeach

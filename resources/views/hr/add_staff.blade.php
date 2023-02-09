@@ -34,7 +34,7 @@
             color: #1d1d50;
             justify-content: space-evenly;
             align-items: center;
-            line-height: 0.7;
+            line-height: 0.9;
             cursor: pointer;
         }
         .decduct_input{
@@ -43,6 +43,37 @@
             border-radius: 5px;
             border-color: #1d1d50;
         }
+        #e_passmessage {
+            display:block;
+            color: #1d1d50;
+            position: relative;
+            }
+            /* Add a green text color and a checkmark when the requirements are right */
+            .passvalid {
+            color: green;
+            margin: 0px;
+            font-size: 10px;
+            }
+
+            .passvalid:before {
+            position: relative;
+            left: 0px;
+            content: "✔";
+            }
+
+            /* Add a red text color and an "x" when the requirements are wrong */
+            .passinvalid {
+            color: red;
+            margin: 0px;
+            font-size: 10px;
+            padding-left: 10px;
+            }
+
+            .passinvalid:before {
+            position: relative;
+            left: 0px;
+            content: "✖";
+            }
     </style>
     <div class="container">
         <div class="row" style="height:50px;">
@@ -64,7 +95,7 @@
               </div>  
         </div>
 
-        <form method="post" action="{{ url('addstaffss') }}" enctype="multipart/form-data" id="addemployee">
+        <form method="post" action="{{ url('addemployee') }}" enctype="multipart/form-data" id="addemployee">
             @csrf
             <h5><b>Personal Details:-</b></h5>
             <div class="row" style="*/background-color:orange;height:280px">
@@ -118,7 +149,7 @@
                         <div style="width:40%">
                             <div class=""><span style="color: red">*</span>
                                 <label for="postal_addr" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Postal Address</label>
-                                <textarea class="outer" rows="4" cols="41" placeholder="Postal Address" name="postal_addr" form="addemployee"></textarea>                           
+                                <textarea class="outer" rows="4" style="width:100%;"cols="41" placeholder="Postal Address" name="postal_addr" form="addemployee"></textarea>                           
                             </div>
                         </div>
                         <div style="width:60%">
@@ -234,6 +265,9 @@
                         <label for="branch" style="width: 100px;margin:0px 2px 2px 0px;font-size:10px;">Branch</label>
                         <select class="form-select" aria-label="Default select example" title="Branch"style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"name="branch" id="branch"required>
                             <option value="">Choose Branch</option>
+                            @foreach($branch_list  as $branch)
+                                <option value="{{$branch->id}}">{{$branch->branch_name}}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
@@ -273,7 +307,7 @@
                 <div class="" style="width: 25%;display:none;">
                     <div class=""><span style="color: red">*</span>
                         <label for="eoc" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">End of Contract</label>
-                        <input type="date"  placeholder="End of Contract" title="End of Contract"style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="eoc" id="eoc" value=""required>
+                        <input type="date"  placeholder="End of Contract" title="End of Contract"style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="eoc" id="eoc" value="">
                     </div>
                 </div>
             </div>
@@ -332,7 +366,7 @@
                     <div class="row decduct_details " style="margin-bottom: 20px;">
                         <div class = "docflex">
                             <label style="width:50%;" class="doc_input">Pension Rate(%)</label>
-                            <input type="number" class="decduct_input" placeholder="%">
+                            <input type="number" class="decduct_input" placeholder="%" name="pension_percent">
                             {{-- Add More Decduction percentage javascript --}}
                         </div>
                     </div>
@@ -342,8 +376,8 @@
             <div class="row" style="margin-top:0px">
                 <div class="" style="width: 25%">
                     <div class=""><span style="color: red">*</span>
-                        <label for="bank" style="width: 100px;margin:0px 2px 2px 0px;font-size:10px;">Bank</label>
-                        <input type="text"  placeholder="Bank" title="Bank"style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="bank" id="bank" value=""required>
+                        <label for="bank_name" style="width: 100px;margin:0px 2px 2px 0px;font-size:10px;">Bank</label>
+                        <input type="text"  placeholder="Bank" title="Bank"style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;" class="form-control" name="bank_name" id="bank" value=""required>
                         </select>
                     </div>
                 </div>
@@ -379,10 +413,48 @@
                 </div>
             </div>
             <br>
+            <h5 style="margin-top:10px;margin-bottom:0px"><b>Employee login Details:-</b></h5>
+            <div class="row">
+                <div class="" style="width: 33%">
+                    <div class=""><span style="color: red">*</span>
+                        <label for="company_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">User Name</label>
+                        <input type="text" placeholder="Enter User Name " style="width=45%" class="form-control" name="username" id="username" value=""required>
+                        <div class="invalid-feedback" style="width: 100%;">
+                            User Name is required.
+                        </div>
+                    </div>
+                </div>
+                <div class="" style="width: 33%">
+                    <div class=""><span style="color: red">*</span>
+                        <label for="company_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Password</label>
+                        <input type="password" placeholder="**********" style="width=45%"pattern="(?=.*\d)(?=.*[a-z]).{8,}" class="form-control" name="password" id="e_password" value="">
+                    </div>
+                </div>
+                <div class="" style="width: 33%;padding-right:0px;">
+                    <div class=""><span style="color: red">*</span>
+                        <label for="company_name" style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Comform Password</label>
+                        <input type="password" placeholder="**********" style="width=45%" class="form-control" name="password_1" id="e_password_1" value="">
+                    </div>
+                </div>
+            </div>
             <br>
             <br>
                 <div class="row">
                     <div class="col-sm">
+                        <div class="" style="width: 100%;">
+                            <div id="e_passmessage">
+                                <h6 style="margin:0px;">Password must contain the following:</h6>
+                                <div class="row" style="width: 100%;">
+                                    <div style="width: 40%;">
+                                        <ul id="e_passletter" class="passinvalid">A <b>letter</b> </ul>
+                                        <ul id="e_passnumber" class="passinvalid">A <b>number</b></ul>
+                                    </div>
+                                    <div style="width: 50%;">
+                                        <ul id="e_passlength" class="passinvalid">Minimum <b>8 characters</b></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class style="width: 20%">
                     </div>
@@ -411,7 +483,7 @@
                         $('#job_title').empty();
                         $('#job_title').append('<option hidden>Choose Job Title</option>'); 
                         $.each(data, function(key, position){
-                            $('select[name="job_title"]').append('<option value="'+ key +'">' + position.role+ '</option>');
+                            $('select[name="job_title"]').append('<option value="'+ position.id +'">' + position.role+ '</option>');
                         });
                     }else{
                         $('#job_title').empty();
@@ -430,20 +502,19 @@
         }
         const adddoc = document.querySelector(" .add_doc ");
         const exdocinput = document.querySelector(" .document_details ");
-        let i =0;
-        console.log(i);
+        let m =0;
         function exdocaddinput(){
             const exdocname = document.createElement("input");
             exdocname.type="text";
             exdocname.className="doc_input";
             exdocname.placeholder = "Enter Document ID Name";
-            exdocname.name="exdoc["+i+"][0]";
+            exdocname.name="exdoc["+m+"][0]";
 
             const docidnumber = document.createElement("input");
             docidnumber.type="text";
             docidnumber.className="doc_input";
             docidnumber.placeholder = "Enter Document ID no.";
-            docidnumber.name="exdoc["+i+"][1]";
+            docidnumber.name="exdoc["+m+"][1]";
 
             const btndele = document.createElement("a");
             btndele.className="exdocdelete";
@@ -472,7 +543,7 @@
         let p=0;
         function add_decduct_input(){
             const decductname = document.createElement("input");
-            decductname.type="text";gir 
+            decductname.type="text";
             decductname.className="doc_input";
             decductname.placeholder = "Enter Decduction Name";
             decductname.name="decduct["+p+"][0]"
@@ -541,6 +612,55 @@
         }
         upload_doc.addEventListener("click",upload_doc_fn);// Add More Decduction percentage author@udayan --end
 
+            // edit password validation start
+            var e_checkpass = document.getElementById("e_password");
+            var e_passletter = document.getElementById("e_passletter");
+            var e_passnumber = document.getElementById("e_passnumber");
+            var e_passlength = document.getElementById("e_passlength");
+            e_checkpass.onfocus = function() {// for password validation display
+                document.getElementById("e_passmessage").style.display = "block";
+            }
+            e_checkpass.onblur = function() {// for password validation hide
+                document.getElementById("e_passmessage").style.display = "none";
+            }
+            e_checkpass.onkeyup = function() {
+                // Validate lowercase letters
+                var lowerCaseLetters = /[a-z]/g;
+                if(e_checkpass.value.match(lowerCaseLetters)) {  
+                    e_passletter.classList.remove("passinvalid");
+                    e_passletter.classList.add("passvalid");
+                } else {
+                    e_passletter.classList.remove("passvalid");
+                    e_passletter.classList.add("passinvalid");
+                }
+                // Validate numbers
+                var numbers = /[0-9]/g;
+                if(e_checkpass.value.match(numbers)) {  
+                    e_passnumber.classList.remove("passinvalid");
+                    e_passnumber.classList.add("passvalid");
+                } else {
+                    e_passnumber.classList.remove("passvalid");
+                    e_passnumber.classList.add("passinvalid");
+                }
+                // Validate length
+                if(e_checkpass.value.length >= 8) {
+                    e_passlength.classList.remove("passinvalid");
+                    e_passlength.classList.add("passvalid");
+                } else {
+                    e_passlength.classList.remove("passvalid");
+                    e_passlength.classList.add("passinvalid");
+                }
+            }
+            function e_Validate() {// to  check password and conform password are same
+                var e_password = document.getElementById("e_password").value;
+                var e_confirmPassword = document.getElementById("e_password_1").value;
+                if (e_password != e_confirmPassword) {
+                    alert("Please enter same password in both");
+                    return false;
+                }
+                return true;
+            }
+            // edit password validation end here
     
     </script>
 @endsection

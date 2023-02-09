@@ -81,10 +81,10 @@
                                     <td></td>
                                     <td>{{$list->status}}</td>
                                     <td scope="row" class="text-center">
-                                        <a href="{{url('view_purchase_order',$list->purchase_id
+                                        <a href="{{url('view_purchase_order',$list->id
                                             )}}"> <i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
 
-                                            <a href="{{url('purchase_print',$list->purchase_id)}}"> <i
+                                            <a href="{{url('purchase_print',$list->id)}}"> <i
                                                     style="color:rgb(13, 1, 56);" class="fa fa-print"></i>
                                     </td>
 
@@ -131,7 +131,7 @@
                                         <form method="post" action="{{url('store_purchase')}}"
                                             enctype="multipart/form-data">
                                             <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-
+                                            <input type="hidden" name="company_id" value="{{Auth::user()->company_id}}">
                                             <div class="container">
                                                 <div class="row">
                                                     <div class="col-md-4">
@@ -296,19 +296,22 @@
 
                                                         <div class="col-sm">
 
-                                                            <table class="table table-bordered order-list"
-                                                                id="tab_logic">
+                                                            <table class="table table-bordered order-list">                                                               <thead>
+                                                                    <tr>
+                                                                        <td class="">Item ID</td>
+                                                                        <td class="" style="width:25%">Item Name</td>
+                                                                        <td class="">Quantity</td>
+                                                                        <td class="">Price</td>
+                                                                        <td class="">Total</td>
+                                                                        <td> <input type="button"
+                                                                                class="btn btn-primary" id="add"
+                                                                                value="Add" Style="width:100%;">
+                                                                        </td>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody  id="tab_logic">
 
-                                                                <tr>
-                                                                    <td class="">Item ID</td>
-                                                                    <td class="" style="width:25%">Item Name</td>
-                                                                    <td class="">Quantity</td>
-                                                                    <td class="">Price</td>
-                                                                    <td class="">Total</td>
-                                                                    <td> <input type="button" class="btn btn-primary"
-                                                                            id="add" value="Add" Style="width:100%;">
-                                                                    </td>
-                                                                </tr>
+                                                                </tbody>
 
                                                             </table>
                                                             <div class="row">
@@ -358,22 +361,20 @@
 
 
 
-                                                                              <br>
+                                                                            <br>
 
-                                                                                    <label for="">Advance Amount</label>
-                                                                                    <input type="text"
-                                                                                        class="form-control total"
-                                                                                        placeholder="Advance Amount"
-                                                                                        id="advance-amount"
-                                                                                        name="advance_amount"
-                                                                                        value=""><br>
-                                                                                    <label for="">Pending Amount</label>
-                                                                                    <input type="text"
-                                                                                        class="form-control calculate_price"
-                                                                                        value{{ 0 }} placeholder=""
-                                                                                        id="result"
-                                                                                        name="pending_amount" value="0"
-                                                                                        readonly><br>
+                                                                            <label for="">Advance Amount</label>
+                                                                            <input type="text"
+                                                                                class="form-control total"
+                                                                                placeholder="Advance Amount"
+                                                                                id="advance-amount"
+                                                                                name="advance_amount" value=""><br>
+                                                                            <label for="">Pending Amount</label>
+                                                                            <input type="text"
+                                                                                class="form-control calculate_price"
+                                                                                value{{ 0 }} placeholder="" id="result"
+                                                                                name="pending_amount" value="0"
+                                                                                readonly><br>
                                                                         </div>
 
                                                                         <div>
@@ -471,9 +472,7 @@ function myFunction() {
 <script type="text/javascript">
 $(document).ready(function() {
 
-    var html =
-
-        '<tr> <td><input type="text" name="batch_no[]"id="batch_no_" class="form-control"placeholder="Item No"></td>    <td><select class="form-select" aria-label="select example" name="item_name[]"  id="item_name"> <option value="">Select</option><option>Demo Item</option></select></td>   <td><input type="text" name="quantity[]" id="quantity_" class="form-control text-right calculate"></td>   <td><input type="text" name="price[]" id="price_" class="form-control calculate" placeholder="0.00"></td>   <td><input type="text" name="total[]" id="total_" class="form-control calculate-sub" placeholder="0.00"></td>    <td><button type="button" class="add-Row ibtnDel btn btn-primary text-white" id="remove"  style="background-color:#607080;width:100%;color:white;">Remove</button><td></tr>';
+    var html ='<tr>  <td><input type="text" name="batch_no[]"id="batch_no_" class="form-control"placeholder="batch_no"></td>   <td><select class="form-select" aria-label="select example" name="item_name[]"  id="item_name">           <option value="">Select</option><option>Demo Item</option></select></td>       <td><input type="text" name="quantity[]" id="quantity_" class="form-control text-right calculate"></td>      <td><input type="text" name="price[]" id="price_" class="form-control calculate" placeholder="0.00"></td>   <td><input type="text" name="total[]" id="total_" class="form-control calculate-sub" placeholder="0.00"></td>   <td><button type="button" class="add-Row ibtnDel btn btn-primary text-white" id="remove"  style="background-color:#607080;width:100%;color:white;">Remove</button><td></tr>';
 
 
     $("#add").click(function() {
