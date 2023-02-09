@@ -29,7 +29,7 @@
   }
   .overlay a {
     text-decoration: none;
-    border: 1px solid rgb(240, 228, 227); padding:10px;font-size: 18px;background-color: #1d1d50;color: #ffffff;
+    padding:10px;font-size: 18px;background-color: #1d1d50;color: #ffffff;
  
    
   } 
@@ -41,7 +41,12 @@
   .overlay a:hover, .overlay a:focus {
     color: #c5bebe;
   }
-  
+  .center-xy{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  }
 
   
   @media screen and (max-height: 450px) {
@@ -59,7 +64,7 @@
   <div class="back-o" id="backo">
   <div id="myNav" class="overlay">
     
-    <ul class="p-5"  style="
+    <ul class="p-3"  style="
     margin:0;
     padding:0% 2%;
     float: left;
@@ -68,7 +73,7 @@
   
     display: flex;
     flex-direction: row;
-    align-items: center;  
+    /* align-items: top;   */
     list-style:none;
     ">
 
@@ -79,48 +84,55 @@
       <li style=" text-align:right;"><a href= "{{url('logt')}}">Logout</a></li>
   
   </ul>
+
   <div class="container">
     <div class="row">
-      <div class="col-sm">
-        <img src="assets/img/cr_logo.jpeg" class="img-fluid" alt="Responsive image">
-      </div>
-      <div class="col-sm" style="tect-align:center; display: flex;
-      flex-direction: row;
-      align-items: center; " >
-
-      
-        One of three columns
+      <div class="col-3 center-xy" > <img style="max-width: 40px;" src="assets/img/cr_logo.jpeg" class="img-fluid" alt="Responsive image"></div>
+      <div class="col-9">
+        <div class="row">
+          <div class="col" >Name</div>
+         
+          <div class="w-100"></div>
+          <div class="col" >Email</div>
+          <div class="w-100"></div>
+          <div class="col" >Proof Setting</div>
+          
+        </div>
+<br>
       </div>
       
     </div>
+    <div class="row">
+      <div class="col-3 center-xy"><i  class="fa fa-address-card " aria-hidden="true"></i></div>
+      <div class="col-9">
+        <div class="row">
+          <div class="col" >Name</div>
+         
+          <div class="w-100"></div>
+          <div class="col" >Email</div>
+          <div class="w-100"></div>
+          <div class="col" >Proof Setting</div>
+          
+        </div>
+
+      </div>
+    </div>
   </div>
+  <br>
+
   
-<div class="p-5">
-  <table class="table">
+<div class="p-1">
+  <table class="table-responsive-xl">
     <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
+      <tr style="color:#f1d9b0;">
+        <th scope="col">Sl.No:</th>
+        <th scope="col">IP Address</th>
+        <th scope="col">Login Time/Date</th>
+        
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-      
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-       
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-       
-        <td>@twitter</td>
-      </tr>
+
     </tbody>
   </table>
 </div>
