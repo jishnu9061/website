@@ -34,10 +34,10 @@
                     <td><input type="text" class="form-control advance" value="{{$list->advance_amount}}" disabled></td>
                     <td><input type="text" class="form-control balance" value="{{$list->pending_amount}}" disabled></td>
                     <td>
-                        <a href="{{url('ledger_add_payment',$list->purchase_id)}}"><input type="button" class="btn btn-primary"  value="Add Amount"></a>
+                        <a href="{{url('ledger_add_payment',$list->id)}}"><input type="button" class="btn btn-primary"  value="Add Amount"></a>
                     </td>
                     <td>
-                    <a href="{{url('view_ledger_details',$list->purchase_id)}}"><button type="button" class="btn btn-primary">View</button></a>
+                    <a href="{{url('view_ledger_details',$list->id)}}"><button type="button" class="btn btn-primary">View</button></a>
                     </td>
 
                 </tr>

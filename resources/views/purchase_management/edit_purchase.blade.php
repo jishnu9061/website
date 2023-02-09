@@ -22,46 +22,51 @@
 
                 </tr>
             </thead>
-            <tbody>
-                @foreach($edit_purchase as $list)
-                <tr>
-                    <td scope="row">Purchase Date</td>
-                    <td><input class="form-control" type="text" value="{{$list->purchase_date}}"
-                            aria-label="Disabled input example"></td>
+            <form method="post" action="{{url('update_purchase')}}">
+                @csrf
+                
+                <tbody>
+                    
+                    @foreach($edit_purchase as $list)
+                    <tr>
+                    <input type="hidden" name="id" value="{{$list->id}}">
+                        <td scope="row">Purchase Date</td>
+                        <td><input class="form-control" type="text" value="{{$list->purchase_date}}"
+                                aria-label="Disabled input example" name="date"></td>
 
-                </tr>
-                <tr>
-                    <td scope="row">Purchase Number</td>
-                    <td><input class="form-control" type="email" value="{{$list->purchase_order_number}}"
-                            aria-label="Disabled input example"></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Purchase Number</td>
+                        <td><input class="form-control" type="number" value="{{$list->purchase_order_number}}"
+                                aria-label="Disabled input example" name="number"></td>
 
-                </tr>
-                <tr>
-                    <td scope="row">Payment Type</td>
-                    <td><input class="form-control" type="text" value="{{$list->payment_type}}"
-                            aria-label="Disabled input example"></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Payment Type</td>
+                        <td><input class="form-control" type="text" value="{{$list->payment_type}}"
+                                aria-label="Disabled input example" name="payment"></td>
 
-                </tr>
-                <tr>
-                    <td scope="row">Supplier</td>
-                    <td><input class="form-control" type="text" value="{{$list->supplier_name}}"
-                            aria-label="Disabled input example"></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Supplier</td>
+                        <td><input class="form-control" type="text" value="{{$list->supplier_name}}"
+                                aria-label="Disabled input example" name="supplier"></td>
 
-                </tr>
-                <tr>
-                    <td scope="row">Status</td>
-                    <td>
-                        <select class="form-select" aria-label="Default select example" name="City">
-                            <option value="order-placed">order-placed</option>
-                            <option value="verified">verified</option>
-                            <option value="cancel">cancel</option>
-                        </select>
-                    </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Status</td>
+                        <td>
+                            <select class="form-select" aria-label="Default select example" name="status">
+                                <option value="order-placed">order-placed</option>
+                                <option value="verified">verified</option>
+                                <option value="cancel">cancel</option>
+                            </select>
+                        </td>
 
-                </tr>
-                @endforeach
+                    </tr>
+                    @endforeach
 
-            </tbody>
+                </tbody>
         </table>
 
 
@@ -99,7 +104,7 @@
                 <tr>
                     <td colspan="3"></td>
                     <td><input type="text" placeholder="Grand Total" class="form-control"></td>
-                    <td><input type="text" value="{{$lists->grand_total}}" class="form-control"></td>
+                    <td><input type="text" value="{{$lists->grand_total}}" class="form-control" name="grand_total"></td>
                 </tr>
 
                 <tr>
@@ -107,7 +112,7 @@
 
                     <td colspan="3"></td>
                     <td><input type="text" placeholder="Advance Amount" class="form-control"></td>
-                    <td><input type="text" value="{{$lists->advance_amount}}" class="form-control"></td>
+                    <td><input type="text" value="{{$lists->advance_amount}}" class="form-control" name="advance"></td>
                 </tr>
 
                 <tr>
@@ -115,17 +120,17 @@
 
                     <td colspan="3"></td>
                     <td><input type="text" placeholder="Pending Amount" class="form-control"></td>
-                    <td><input type="text" value="{{$lists->pending_amount}}" class="form-control"></td>
+                    <td><input type="text" value="{{$lists->pending_amount}}" class="form-control" name="pending_amount"></td>
                 </tr>
                 @endforeach
             </tbody>
         </table>
 
         <br>
-        <button type="button" class="btn btn-primary">Update</button>
+        <button type="submit" class="btn btn-primary">Update</button>
         <span class="m-2"></span>
         <button type="button" class="btn btn-primary" onclick="history.back()">Close</button>
-
+        </form>
 
 
 
