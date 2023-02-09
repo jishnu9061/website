@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">Client Management</a> /
     <a href="{{url('communication-list')}}" style="color: #1D1D50;">Communication Details</a> /
     <a href="#" style="color: #1D1D50;">Client Service Details</a>
@@ -52,8 +52,8 @@ float:right;
 text-align:right;
 color: #999;
 }
-</style>  
- 
+</style>
+
     </head>
 
 <body>
@@ -68,7 +68,7 @@ color: #999;
         <button class="btn btn-primary add-btn" data-toggle="modal" data-target="#myModal" style="width:21%">New Client
             Service</button></a>
 
-           
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -83,18 +83,18 @@ color: #999;
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-<!-- 
+<!--
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"> -->
             <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
-	
+
                         <thead>
                             <tr>
                                 <th class="text-center" style="width:15%;">Branch</th>

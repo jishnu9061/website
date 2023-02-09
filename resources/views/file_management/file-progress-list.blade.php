@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">File Management</a> /
     <a href="#" style="color: #1D1D50;">File Progress List</a>
 </nav>
@@ -70,7 +70,7 @@
 
 
         </div>
-        
+
         <div style="display:flex;   margin-top: 3%;">
             <div class="dropdown" style="width:25%;">
                 <div class="btn btn-primary add-btn" type="button" style="width:97%;" id="dropdownMenuButton"
@@ -130,7 +130,7 @@
             </div>
         </div>
 
-       
+
             <div class="header_wrap">
                 <div class="num_rows">
                     <div class="form-group">
@@ -153,7 +153,7 @@
                     <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.."
                         class="form-control">
                 </div>
-         
+
 
 
 
@@ -166,7 +166,7 @@
                                     <!-- <th class="text-center">*</th> -->
                                     <!-- <th class="text-center">Action <br>Type</th> -->
                                     <th class="text-center">Date</th>
-                                    <th class="text-center">Client</th> 
+                                    <th class="text-center">Client</th>
                                     <th class="text-center">File Name</th>
                                     <th class="text-center">Description</th>
                                     <th class="text-center">Time Taken</th>
@@ -181,7 +181,7 @@
 
                             <tbody>
                                 @foreach($file_progress_list as $list)
-                               
+
 
                                 <tr id="data">
                                     <!-- <td scope="row" class="text-center">{{$list->id}}</td>
@@ -190,7 +190,7 @@
 
                                     <td scope="row" class="text-center">{{$list->client_name}}</td>
 
-                                    
+
 
                                     <td scope="row" class="text-center">{{$list->file_name}}</td>
                                     <td scope="row" class="text-center">{{$list->action_description}}</td>
@@ -203,7 +203,7 @@
                                     <td scope="row" class="text-center">
 
                                         <a href="{{url('edit-file-progress',$list->id)}}"><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
-                                        
+
                                             <a onClick="return myFunction();" href="{{url('delete-file-progress',$list->id)}}"><i style="  color:rgb(13, 1, 56)";
 
 
@@ -211,7 +211,7 @@
                                     </td>
                                 </tr>
                                 @endforeach
-                             
+
 
                             </tbody>
 
@@ -255,7 +255,7 @@
                                             <div class="row">
 
                                                 <div class="col-md-12 order-md-1">
-                                               
+
                                                         <div class="row">
                                                             <div class="col-md-4">
                                                                 <div class="mb-1">
@@ -264,7 +264,7 @@
                                                                         <div class="input-group-prepend">
 
                                                                         </div>
-                                                                       
+
                                                                         <select name="client_name" id="">
                                                             <option value="">select</option>
                                                             @if(count($client_list))
@@ -402,7 +402,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                               
+
                                     </div>
                                     <br>
                                     <div class="row">
@@ -2726,5 +2726,5 @@
     </div>
     </div>
 
-   
+
     @endsection

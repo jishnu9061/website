@@ -1,6 +1,6 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
+<nav style="font-size:15px;">
     <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">Accounts</a> /
     <a href="#" style="color: #1D1D50;">Budget Forecasting Department</a>
@@ -14,14 +14,14 @@
     {{-- heading --}}
     <h4 id="hdtpa"><b>Budget Forecasting Department</b></h4>
     <br>
-   
+
           </div>
-          
+
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-           
+
   {{-- <a href="{{('')}}"><button class="btn btn-primary">Create New Budget</button></a> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Create New Budget</button>
-                
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -36,22 +36,22 @@
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-   
-                
+
+
     <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
-                     
+
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 
 
           <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Department Budget Projection - 2022</h3>
-         
+
           <!-- <table style="width:200%" class="table table-bordered" id="new-item"> -->
 
           <div class="table-responsive">
@@ -71,19 +71,19 @@
                 <th>Jul 2022</th>
                 <th>Aug 2022</th>
                 <th>Sep 2022</th>
-                <th>Oct 2022</th> 
+                <th>Oct 2022</th>
                 <th>Nov 2022</th>
                 <th>Dec 2022</th>
                 <th>Total Projections 2022</th>
                 <th>Action</th>
-            
-             
+
+
               </tr>
             </thead>
             <tbody>
-              
+
                 <tr>
-             
+
               <td></td>
                <td></td>
                <td></td>
@@ -101,15 +101,15 @@
                <td></td>
                <td></td>
                <td></td>
- 
+
                 <td  scope="row"class="text-center">
                     <!-- <a href="{{url('')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
                         <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                         <a href="{{url('')}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
-                        
+
              </tr>
-            
-                        
+
+
              </tr>
            </tbody>
 </table>
@@ -163,8 +163,8 @@
                                     <div class="modal-body">
                                         <div class="container">
                                             <form method="post" action="{{ url('') }}"
-                                                enctype="multipart/form-data"> 
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->       
+                                                enctype="multipart/form-data">
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 @csrf
 
 
@@ -225,7 +225,7 @@
                             </div>
                         </div>
                      </div>
-            
+
                      <div class="col-md-6">
                         <div class="mb-1">
                             <label>choose how you want to create budget</label>
@@ -249,19 +249,19 @@
 
 
 
- 
+
                     <div class="row">
                         <div class="col-sm">
 
                         </div>
-                       
+
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
                             <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
                         </div>
                     </div>
-        
+
 </div>
             </form>
             </div>

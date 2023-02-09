@@ -1,104 +1,70 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-      <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
-      <a href="#" style="color: #1D1D50;">Client Management</a> /
-      <a href="#" style="color: #1D1D50;">Corporate Client List</a>
-</nav>
-<br><br>
-<html>
-
-<head>
-    
+    <nav style="font-size:15px;">
+        <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+        <a href="#" style="color: #1D1D50;">Client Management</a> /
+        <a href="#" style="color: #1D1D50;">Corporate Client List</a>
+    </nav>
+    <br><br>
     <style>
-    .pagination>li>span {
-        position: relative;
-        float: left;
-        padding: 6px 12px;
-        margin-left: -1px;
-        line-height: 1.42857143;
-        color: #337ab7;
-        text-decoration: none;
-        background-color: #fff;
-        border: 1px solid #ddd;
-    }
+        .pagination>li>span {
+            position: relative;
+            float: left;
+            padding: 6px 12px;
+            margin-left: -1px;
+            line-height: 1.42857143;
+            color: #337ab7;
+            text-decoration: none;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
 
-    .pagination {
-        margin: 0;
-    }
+        .pagination {
+            margin: 0;
+        }
 
-    .pagination li:hover {
-        cursor: pointer;
-    }
+        .pagination li:hover {
+            cursor: pointer;
+        }
 
-    .header_wrap {
-        padding: 30px 0;
-    }
+        .header_wrap {
+            padding: 30px 0;
+        }
 
-    .num_rows {
-        width: 20%;
-        float: left;
-    }
+        .num_rows {
+            width: 20%;
+            float: left;
+        }
 
-    .tb_search {
-        width: 20%;
-        float: right;
-    }
+        .tb_search {
+            width: 20%;
+            float: right;
+        }
 
-    .pagination-container {
-        width: 70%;
-        float: left;
-    }
+        .pagination-container {
+            width: 70%;
+            float: left;
+        }
 
-    .rows_count {
-        width: 20%;
-        float: right;
-        text-align: right;
-        color: #999;
-    }
-    </style>
-</head>
+        .rows_count {
+            width: 20%;
+            float: right;
+            text-align: right;
+            color: #999;
+        }
+        </style>
 
-
-{{-- <div class="spacer" style="height:40px;margin-top: 30px;"> --}}
-
-
-</head>
-
-<body>
-
-
-
-    <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;">
-                <b><u>Corporate Client List</u></b> -->
-    {{-- heading --}}
     <div class="container">
         <h4 id="hdtpa"><b>Corporate Client List</b></h4>
         <br>
-
-
-        <!-- <div class="btn btn-primary"
-                    style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px"><b><u>Corporate Client List</u></b></span></div><br>
-                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-                    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-                    crossorigin="anonymous">
-
-            </div> -->
-
         <div>
-            {{-- <a href="{{('add-corporate')}}"><button class="btn btn-primary">Add Corporate</button></a> --}}
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add
-                Corporate</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Corporate</button>
         </div>
-
-
-
         <div class="header_wrap">
             <div class="num_rows">
                 <div class="form-group">
                     <!--		Show Numbers Of Rows 		-->
                     <select class="form-control" aria-label="Page navigation example" name="state" id="maxRows">
-
                         <option value="5">5</option>
                         <option value="10">10</option>
                         <option value="15">15</option>
@@ -108,7 +74,6 @@
                         <option value="100">100</option>
                         <option value="5000">Show ALL Rows</option>
                     </select>
-
                 </div>
             </div>
             <div class="tb_search">
@@ -116,12 +81,10 @@
                     class="form-control">
             </div>
         </div>
-
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <div class="table-responsive">
                     <table class="table table-striped table-class" id="table-id">
-
                         <thead>
                             <tr>
                                 <th class="text-center">Client No</th>
@@ -135,113 +98,106 @@
                         </thead>
                         <tbody>
                             @foreach ($corporate_list as $list)
+                                <tr id="data">
+                                    <td scope="row" class="text-center">{{ $list->client_number}}</td>
+                                    <td scope="row" class="text-center" id="medicine_name_1">
+                                            {{ $list->client_name}}</td>
+                                    <td scope="row" class="text-center" id="medicine_name_1">
+                                            {{ $list->designation}}</td>
+                                    <td scope="row" class="text-center" id="medicine_name_1">
+                                            {{ $list->Mobile_no }}</td>
+                                    <td scope="row" class="text-center" id="medicine_name_1">{{ $list->Email_address }} </td>
+                                    <td scope="row" class="text-center" >
+                                        <a href="{{url('corporate-document',$list->corporate_id)}}"><button style="font-size: 12px; min-width:120px"
+                                                class="btn btn-primary ">Add Document</button></a>
+                                        <a href="{{url('corporate-document-details',$list->corporate_id)}}"><button style="font-size: 12px; min-width:120px"
+                                                class="btn btn-primary ">View Document</button></a>
+                                    </td>
 
-                            <tr id="data">
-                                <td scope="row" class="text-center">{{ $list->client_number}}</td>
-                                <td scope="row" class="text-center" id="medicine_name_1">
-                                    {{ $list->client_name}}</td>
-                                <td scope="row" class="text-center" id="medicine_name_1">
-                                    {{ $list->designation}}</td>
-                                <td scope="row" class="text-center" id="medicine_name_1">
-                                    {{ $list->Mobile_no }}</td>
-                                <td scope="row" class="text-center" id="medicine_name_1">{{ $list->Email_address }}
-                                </td>
-                                <td scope="row" class="text-center">
-                                    <a href="{{url('corporate-document',$list->corporate_id)}}"><button
-                                            class="btn btn-primary"> Add Document</button></a>
-                                    <a href="{{url('corporate-document-details',$list->corporate_id)}}"><button
-                                            class="btn btn-primary"> View Document </button></a>
-                                </td>
-                               
-                                <td scope="row" class="text-center" id="medicine_name_1">
-                                    <a href="{{ url('edit_client', $list->corporate_id)}}"><i style="color:black;"
-                                            class="fa fa-edit" aria-hidden="true"></i>
-                                        <a onClick="return myFunction();"
-                                            href="{{ url('delete_client', $list->corporate_id)}}"
-                                            style="color:black;"><i class="fas fa-trash-alt"></i></a>
-                                </td>
-                            </tr>
-                            @endforeach
+                                    <td scope="row" class="text-center" id="medicine_name_1">
+                                            <a href="{{ url('edit_client', $list->corporate_id)}}"><i style="color:black;"
+                                                    class="fa fa-edit" aria-hidden="true"></i>
+                                                <a onClick="return myFunction();"
+                                                    href="{{ url('delete_client', $list->corporate_id)}}"
+                                                    style="color:black;"><i class="fas fa-trash-alt"></i></a>
+                                    </td>
+                                </tr>
+                                @endforeach
                         </tbody>
                     </table>
                 </div>
-
                 <!--		Start Pagination -->
                 <div class='pagination-container'>
                     <nav>
                         <ul class="pagination">
-                            <!--	Here the JS Function Will Add the Rows -->
+                            <li data-page="prev">
+                                <span>
+                                    < <span class="sr-only">(current)
+                                </span></span>
+                            </li>
+                            <li data-page="next" id="prev">
+                                <span> > <span class="sr-only">(current)</span></span>
+                            </li>
                         </ul>
                     </nav>
                 </div>
-                <div class="rows_count">Showing 11 to 20 of 100</div>
-
+                <div class="rows_count"></div>
                 <!-- 		End of Container -->
-
-                <!-- The Modal -->
-                <div class="modal fade" id="myModal">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
-
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                                <h2 class="text-center"><b>Add Corporate Client</b></h2>
-
-                            </div>
-
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <div class="container">
-                                    <form method="post" action="{{ url('add-corporate') }}"
-                                        enctype="multipart/form-data">
-                                        @csrf
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Client Number</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend"></div>
-                                                        <input type="text" class="form-control" name="number"
-                                                            id="username" value="" required>
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Name is required.
-                                                        </div>
-                                                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h2 class="text-center"><b>Add Corporate Client</b></h2>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
+                        <form method="post" action="{{ url('add_corporate') }}" enctype="multipart/form-data">
+                            @csrf
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="mb-1">
+                                        <label for="username">Client Number</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"></div>
+                                                <input type="text" class="form-control" name="number" id="username" value="" required>
+                                                <div class="invalid-feedback" style="width: 100%;">
+                                                    Name is required.
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Client Type</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <!-- <select name="type" id="cars">
-                                                                    <option value="Corporate">Corporate</option>
-                                                                </select> -->
-                                                        <select name="type" id="cars">
-                                                            <option>Corporate</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Citizen Status</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <select name="citizen" id="cars">
-                                                            <option>Select</option>
-                                                            <option>Residensial</option>
-                                                            <option>Non Residensial</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-1">
+                                        <label for="username">Client Type</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <select name="type" id="cars">
+                                                <option>Corporate</option>
+                                            </select>
                                         </div>
-                                        <br>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-1">
+                                        <label for="username">Citizen Status</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"></div>
+                                            <select name="citizen" id="cars" required> 
+                                                <option value="">Select</option>
+                                                <option value="residential">Residential</option>
+                                                <option value="Non Residential">Non Residential</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="mb-1">
@@ -304,7 +260,7 @@
                                                     <div class="input-group">
                                                         <div class="input-group-prepend"></div>
                                                         <input type="email" class="form-control" name="email" value=""
-                                                            id="password">
+                                                            id="password" required>
                                                         <div class="invalid-feedback" style="width: 100%;">
                                                             Password is required.
                                                         </div>
@@ -396,7 +352,7 @@
                                                     <div class="input-group">
                                                         <div class="input-group-prepend"></div>
                                                         <input type="text" class="form-control" name="name" value=""
-                                                            id="confirm_password">
+                                                            id="confirm_password" required>
                                                         <div class="invalid-feedback" style="width: 100%;">
                                                             Password is required.
                                                         </div>
@@ -469,7 +425,7 @@
                                                     <label for="username">Town</label>
                                                     <div class="input-group">
                                                         <div class="input-group-prepend"></div>
-                                                        <select name="country" id="cars">
+                                                        <select name="town" id="cars">
                                                             <option>Nairobi</option>
 
                                                         </select>
@@ -510,7 +466,7 @@
                                         </div>
                                         <br>
                                         <div>
-                                            <h4 id="hdtpa"><b>Contact Person</b></h4>
+                                        <h4 id="hdtpa"><b>Contact Person</b></h4>
 
                                             <br>
                                             <div class="row">
@@ -596,40 +552,19 @@
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="mb-1">
-                                                        <button type="submit" class="btn btn-primary"
-                                                            style="width:45%;">Save</button>
-                                                        <button type="button" class="btn btn-primary"
-                                                            data-dismiss="modal" style="width:45%;">Cancel</button>
+                                                        <button type="submit" class="btn btn-primary" style="width:45%;">Save</button>
+                                                        <button type="button" class="btn btn-primary"  data-dismiss="modal" style="width:45%;">Cancel</button>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-
+                        </form>
                     </div>
-
-                    </form>
-
                 </div>
             </div>
         </div>
-
     </div>
 
-    <br>
-    <!-- Supplier modal Edit End -->
-
-    <!-- Delete  confirmation Message -->
-
-    <!-- End delete confirmation message -->
-    </div>
     <script>
     function myFunction() {
         if (!confirm("Are you sure to delete this"))
@@ -704,4 +639,4 @@
     });
     </script>
     {{-- Supplier Edit End --}}
-    @endsection
+@endsection

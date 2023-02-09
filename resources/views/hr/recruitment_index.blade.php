@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">HR</a> /
     <a href="#" style="color: #1D1D50;">Recruitment</a>
 </nav>
@@ -9,10 +9,10 @@
    {{-- heading --}}
    <h4 id="hdtpa"><b>Recruitment</b></h4>
    <br><br>
- 
+
    <br>
 
-        
+
        {{--sub heading --}}
     {{-- <h5 id="hdbtb">Maintenance</h5>
     <br> --}}
@@ -46,18 +46,18 @@
                             alt=""><button type="button" style="width:70%;"
                             class="btn btn-primary btn_align_btn">Perfomence</button></a></div> -->
             </div>
-          
-          
-   
-    
 
-            
-              
-                
-           
-           
 
-    
+
+
+
+
+
+
+
+
+
+
 
 
 @endsection

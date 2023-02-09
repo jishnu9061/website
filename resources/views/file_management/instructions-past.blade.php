@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-  <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+  <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
   <a href="#" style="color: #1D1D50;">File Management</a> /
   <a href="#" style="color: #1D1D50;">Instructions Past TAT</a>
 </nav>
@@ -9,18 +9,18 @@
 <html>
     <head>
     <style>
-  
-</style>     
+
+</style>
     </head>
     <body>
     <div class="container">
 
-        
+
          {{-- heading --}}
          <h4 id="hdtpa"><b>Instructions Past TAT</b></h4>
-         
 
-       
+
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -35,15 +35,15 @@
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-   
 
-       
+
+
     <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
                     <thead >
@@ -86,7 +86,7 @@
                             <td scope="row" class="text-center"></td>
                             <td  scope="row"class="text-center">
                         <a href=""><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                       
+
 
                         <a href=""> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
                         </tr>
@@ -112,6 +112,6 @@
  <!-- 		End of Container -->
 
                 <!-- The Modal -->
-          
+
         {{-- Supplier Edit End --}}
         @endsection

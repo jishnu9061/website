@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-      <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+      <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
       <a href="#" style="color: #1D1D50;">User Management</a> /
       <a href="#" style="color: #1D1D50;">View User Roles</a>
 </nav>
@@ -9,10 +9,10 @@
 <html>
 
 <head>
-  
+
 
     <style>
-   
+
 
     /* tr:nth-child(odd)
 {
@@ -33,8 +33,8 @@
                         {{-- heading --}}
     <h4 id="hdtpa"><b>View Roles</b></h4>
     <br>
-           
-       
+
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -49,15 +49,15 @@
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-   
-   
-       
+
+
+
 <h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Roles per User</h3>
 <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">

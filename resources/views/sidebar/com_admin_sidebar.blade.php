@@ -2,9 +2,9 @@
     {{-- <div class="sidebar-header"style="padding-left: 20px;padding-right: 10px;padding-bottom:0px;">
         <div class="d-flex justify-content-between">
             <div class="logo"class="logo" style="background-color:#dfc79d;
-                                                 border-radius:100% 100% 100% 100%; 
+                                                 border-radius:100% 100% 100% 100%;
                                                  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                                                 height:70px;width:70px; margin-left:px; 
+                                                 height:70px;width:70px; margin-left:px;
                                                  background:  #d0d3cd50 -webkit-linear-gradient(left,  #ffffff15, rgb(255, 255, 255)) repeat 0 0 / 200px;
                                                  animation: sweep 5.5s ease-in-out infinite;
                                                  animation-direction:reverse;">
@@ -69,7 +69,7 @@
                         @endif
                                 </a>
                             </li>    {{-- 3rd submenu end --}}
-                        @if(request()->path()== "view_roles_per_user"){{-- 4th submenu start --}} 
+                        @if(request()->path()== "view_roles_per_user"){{-- 4th submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('view_roles_per_user')}}" class='sidebar-link' style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">View Roles</span>
@@ -115,7 +115,7 @@
                             </li>  {{--7th submenu end  --}}
                     </ul>
                 </li>
-                <li id="2"class="sidebar-item  has-sub">{{--  Second menu--}} 
+                <li id="2"class="sidebar-item  has-sub">{{--  Second menu--}}
                     <a href="#" class='sidebar-link'>
                         <i id="icon" class="fa fa-university"  style="font-weight: 300;"></i>
                             <span style="margin-left: 1rem;">Client Management</span>
@@ -128,7 +128,7 @@
                         @else
                             <ul class="submenu" style="display: none;">
                     @endif
-                        @if(request()->path()== "corporate-list"){{--1st-> 1st  submenu start  --}} 
+                        @if(request()->path()== "corporate-list"){{--1st-> 1st  submenu start  --}}
                             <li class="submenu-item " >
                                 <a href="{{url('corporate-list')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Corporate Client List</span>
@@ -264,7 +264,7 @@
                         @endif
                                 </a>
                             </li>{{--6th submenu end  --}}
-                        @if(request()->path()== "file-status-summary"){{-- 7th  submenu start --}} 
+                        @if(request()->path()== "file-status-summary"){{-- 7th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('file-status-summary')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">File Status Report Summary</span>
@@ -341,7 +341,7 @@
                         @endif
                                 </a>
                             </li>{{-- 13th submenu end --}}
-                        @if(request()->path()== "file_instruction"){{-- 14th  submenu start --}} 
+                        @if(request()->path()== "file_instruction"){{-- 14th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('file_instruction')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">File Instructions</span>
@@ -385,7 +385,7 @@
                         @endif
                                 </a>
                             </li>{{-- 17th submenu end --}}
-                        @if(request()->path()== "file-opened-report"){{-- 18th  submenu start --}} 
+                        @if(request()->path()== "file-opened-report"){{-- 18th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('file-opened-report')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Files Opened Report</span>
@@ -396,7 +396,7 @@
                         @endif
                                 </a>
                             </li>{{-- 18th submenu end --}}
-                        @if(request()->path()== "file-closed-report"){{-- 19th  submenu start --}} 
+                        @if(request()->path()== "file-closed-report"){{-- 19th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('file-closed-report')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Files Closed Report</span>
@@ -418,7 +418,7 @@
                         @endif
                                 </a>
                             </li>{{-- 20th submenu end --}}
-                        @if(request()->path()== "file-pending-approval"){{-- 21st  submenu start --}} 
+                        @if(request()->path()== "file-pending-approval"){{-- 21st  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('file-pending-approval')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Files Pending Approval</span>
@@ -429,7 +429,7 @@
                         @endif
                                 </a>
                             </li>{{-- 21st submenu end --}}
-                        @if(request()->path()== "instructions-past"){{-- 22nd  submenu start --}} 
+                        @if(request()->path()== "instructions-past"){{-- 22nd  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('instructions-past')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Instructions Past TAT</span>
@@ -495,7 +495,7 @@
                         @endif
                                 </a>
                             </li>{{-- 27th submenu end --}}
-                        @if(request()->path()== "incomming-letters"){{-- 28th  submenu start --}} 
+                        @if(request()->path()== "incomming-letters"){{-- 28th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('incomming-letters')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Incoming Letters</span>
@@ -547,7 +547,7 @@
                         <span style="margin-left: 1rem;">HR</span>
                     </a>
                     @php
-                        $admin = array('employee_list/'.Auth::user()->company_id,"staffs", "recruitment", "performance_department", "loans", "payslip", "attendanceview", "attendance", "timesheet", "task_allocation", "leave_request_details", "attendance_sheet", "bank_names", "internal_memos");
+                        $admin = array('employee_list/'.Auth::user()->company_id,'add_staff',"staffs", "recruitment", "performance_department", "loans", "payslip", "attendanceview", "attendance", "timesheet", "task_allocation", "leave_request_details", "attendance_sheet", "bank_names", "internal_memos");
                     @endphp
                     @if (in_array(request()->path(), $admin))
                         <ul class="submenu" style="display: block;">
@@ -564,18 +564,18 @@
                                     <span>Employee List</span>
                         @endif
                             </a>
-                        </li>{{-- 0_1th submenu end --}}
-                        @if(request()->path()== 'employee_list/'.Auth::user()->company_id){{-- 0th  submenu start --}}
+                        </li>{{-- 0th submenu end --}}
+                        @if(request()->path()== 'add_staff'){{-- 0_1th  submenu start --}}
                             <li class="submenu-item " >
-                                <a href="{{url('employee_list/')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
+                                <a href="{{url('add_staff/')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Add Employee</span>
                             @else
                                 <li class="submenu-item ">
-                                    <a href="{{url('employee_list/')}}" class='sidebar-link'>
+                                    <a href="{{url('add_staff/')}}" class='sidebar-link'>
                                     <span>Add Employee</span>
                         @endif
                             </a>
-                        </li>{{-- 0_1th submenu end --}}                        
+                        </li>{{-- 0_1th submenu end --}}
                         @if(request()->path()== "staffs"){{-- 1st  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('staffs')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
@@ -811,7 +811,7 @@
                         @endif
                             </a>
                         </li>{{-- 6th submenu end --}}
-                        @if(request()->path()== "budget_forecasting"){{-- 7th  submenu start --}}  
+                        @if(request()->path()== "budget_forecasting"){{-- 7th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('budget_forecasting')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Budget Forecasting</span>
@@ -822,7 +822,7 @@
                         @endif
                             </a>
                         </li>{{-- 7th submenu end --}}
-                        @if(request()->path()== "budget_forecat_dept"){{-- 8th  submenu start --}}  
+                        @if(request()->path()== "budget_forecat_dept"){{-- 8th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('budget_forecat_dept')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Budget Forecasting Department</span>
@@ -833,7 +833,7 @@
                         @endif
                             </a>
                         </li>{{-- 8th submenu end --}}
-                        @if(request()->path()== "i_p_bank_bal"){{-- 9th  submenu start --}}  
+                        @if(request()->path()== "i_p_bank_bal"){{-- 9th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('i_p_bank_bal')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">i/p Bank Balance</span>
@@ -844,7 +844,7 @@
                         @endif
                             </a>
                         </li>{{-- 9th submenu end --}}
-                        @if(request()->path()== "reconcile_bank_entries"){{-- 10th  submenu start --}} 
+                        @if(request()->path()== "reconcile_bank_entries"){{-- 10th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('reconcile_bank_entries')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Reconcile Bank Entries</span>
@@ -855,7 +855,7 @@
                         @endif
                             </a>
                         </li>{{-- 10th submenu end --}}
-                        @if(request()->path()== "bank_recon_report"){{--11th  submenu start --}}  
+                        @if(request()->path()== "bank_recon_report"){{--11th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('bank_recon_report')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Bank Reconciliation Report</span>
@@ -866,7 +866,7 @@
                         @endif
                             </a>
                         </li>{{-- 11th submenu end --}}
-                        @if(request()->path()== "expense_report"){{-- 12th  submenu start --}}  
+                        @if(request()->path()== "expense_report"){{-- 12th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('expense_report')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Expense Report</span>
@@ -877,7 +877,7 @@
                         @endif
                             </a>
                         </li>{{-- 12th submenu end --}}
-                        @if(request()->path()== "m_c_report"){{-- 13th  submenu start --}}  
+                        @if(request()->path()== "m_c_report"){{-- 13th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('m_c_report')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Monthly Comparative Report</span>
@@ -888,7 +888,7 @@
                         @endif
                             </a>
                         </li>{{-- 13th submenu end --}}
-                        @if(request()->path()== "vat_report"){{-- 14th  submenu start --}}  
+                        @if(request()->path()== "vat_report"){{-- 14th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('vat_report')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">V.A.T Report</span>
@@ -899,7 +899,7 @@
                         @endif
                             </a>
                         </li>{{-- 14th submenu end --}}
-                        @if(request()->path()== ""){{-- 15th  submenu start --}} 
+                        @if(request()->path()== ""){{-- 15th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Withholding TAX(WHT) Report</span>
@@ -910,7 +910,7 @@
                         @endif
                             </a>
                         </li>{{-- 15th submenu end --}}
-                        @if(request()->path()== ""){{-- 16th  submenu start --}}  
+                        @if(request()->path()== ""){{-- 16th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Withholding VAT(WHV) Report</span>
@@ -921,7 +921,7 @@
                         @endif
                             </a>
                         </li>{{-- 16th submenu end --}}
-                        @if(request()->path()== "profitandlossaccount"){{-- 17th  submenu start --}}  
+                        @if(request()->path()== "profitandlossaccount"){{-- 17th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('profitandlossaccount')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Income and Expenditure Statement</span>
@@ -932,7 +932,7 @@
                         @endif
                             </a>
                         </li>{{-- 17th submenu end --}}
-                        @if(request()->path()== "trialbalance"){{-- 18th  submenu start --}}  
+                        @if(request()->path()== "trialbalance"){{-- 18th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('trialbalance')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Trial Balance</span>
@@ -943,7 +943,7 @@
                         @endif
                             </a>
                         </li>{{-- 18th submenu end --}}
-                        @if(request()->path()== "balancesheet"){{-- 19th  submenu start --}}  
+                        @if(request()->path()== "balancesheet"){{-- 19th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('balancesheet')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Balance Sheet</span>
@@ -954,7 +954,7 @@
                         @endif
                             </a>
                         </li>{{-- 19th submenu end --}}
-                        @if(request()->path()== ""){{-- 20th  submenu start --}}  
+                        @if(request()->path()== ""){{-- 20th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Budget Analysis</span>
@@ -965,7 +965,7 @@
                         @endif
                             </a>
                         </li>{{-- 20th submenu end --}}
-                        @if(request()->path()== "cash_flow_stmt"){{-- 21st  submenu start --}}  
+                        @if(request()->path()== "cash_flow_stmt"){{-- 21st  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('cash_flow_stmt')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Cash Flow Report</span>
@@ -975,8 +975,8 @@
                                     <span>Cash Flow Report</span>
                         @endif
                             </a>
-                        </li>{{-- 21st submenu end --}} 
-                        @if(request()->path()== ""){{-- 22nd  submenu start --}}  
+                        </li>{{-- 21st submenu end --}}
+                        @if(request()->path()== ""){{-- 22nd  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Partners Current Account</span>
@@ -989,7 +989,7 @@
                         </li>{{-- 22nd submenu end --}}
                     </ul>
                 </li>
-                <li class="sidebar-item  has-sub">{{-- Sixth menu --}} 
+                <li class="sidebar-item  has-sub">{{-- Sixth menu --}}
                     <a href="#" class='sidebar-link'>
                         <i id="icon" class="fas fa-database"  style="font-weight: 300;"></i>
                             <span style="margin-left: 1rem;">Store & Inventory</span>
@@ -1002,7 +1002,7 @@
                         @else
                             <ul class="submenu" style="display: none;">
                     @endif
-                        @if(request()->path()== "stock_list"){{-- 1st  submenu start --}}  
+                        @if(request()->path()== "stock_list"){{-- 1st  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('stock_list')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Stock List</span>
@@ -1013,7 +1013,7 @@
                         @endif
                             </a>
                         </li>{{-- 1st submenu end --}}
-                        @if(request()->path()== "add_categories"){{-- 2nd  submenu start --}}  
+                        @if(request()->path()== "add_categories"){{-- 2nd  submenu start --}}
                             <li class="submenu-item ">
                                 <a href="{{url('add_categories')}}" class='sidebar-link' style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Manage Categories</span>
@@ -1035,7 +1035,7 @@
                         @endif
                                 </a>
                             </li>{{--  3rd submenu end --}}
-                        @if(request()->path()== "request_item"){{-- 4th  submenu start --}}  
+                        @if(request()->path()== "request_item"){{-- 4th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('request_item')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">View Request</span>
@@ -1046,7 +1046,7 @@
                         @endif
                                 </a>
                             </li>{{-- 4th submenu end --}}
-                        @if(request()->path()== "item_movement"){{-- 5th  submenu start --}}  
+                        @if(request()->path()== "item_movement"){{-- 5th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('item_movement')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Item Movement Report</span>
@@ -1056,8 +1056,8 @@
                                     <span>>Item Movement Report</span>
                         @endif
                                 </a>
-                            </li>{{-- 5th submenu end --}} 
-                        @if(request()->path()== "re_order"){{-- 6th  submenu start --}}  
+                            </li>{{-- 5th submenu end --}}
+                        @if(request()->path()== "re_order"){{-- 6th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('re_order')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Re-order Report</span>
@@ -1067,10 +1067,10 @@
                                     <span>>Re-order Report</span>
                         @endif
                             </a>
-                        </li>{{-- 6th submenu end --}} 
+                        </li>{{-- 6th submenu end --}}
                     </ul>
                 </li>
-                <li class="sidebar-item  has-sub">{{-- Seventh menu --}} 
+                <li class="sidebar-item  has-sub">{{-- Seventh menu --}}
                     <a href="#" class='sidebar-link'>
                         <i id="icon" class="far fa-clipboard"  style="font-weight: 300;"></i>
                             <span style="margin-left: 1rem;">Procurement</span>
@@ -1083,7 +1083,7 @@
                         @else
                             <ul class="submenu" style="display: none;">
                     @endif
-                        @if(request()->path()== "purchase_order"){{-- 1st  submenu start --}}  
+                        @if(request()->path()== "purchase_order"){{-- 1st  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('purchase_order')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">New Purchase Orders</span>
@@ -1094,7 +1094,7 @@
                         @endif
                                 </a>
                             </li>{{-- 1st submenu end --}}
-                        @if(request()->path()== "purchase_order_report"){{-- 2nd  submenu start --}} 
+                        @if(request()->path()== "purchase_order_report"){{-- 2nd  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('purchase_order_report')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Purchase Orders reports</span>
@@ -1105,7 +1105,7 @@
                         @endif
                                 </a>
                             </li>{{-- 2nd submenu end --}}
-                        @if(request()->path()== "supplier"){{-- 3rd  submenu start --}}  
+                        @if(request()->path()== "supplier"){{-- 3rd  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('supplier')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Supplier</span>
@@ -1131,7 +1131,7 @@
                         @else
                             <ul class="submenu" style="display: none;">
                     @endif
-                        @if(request()->path()== "family_law"){{-- 1st  submenu start --}}  
+                        @if(request()->path()== "family_law"){{-- 1st  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('family_law')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Family Law</span>
@@ -1142,7 +1142,7 @@
                         @endif
                                 </a>
                             </li>{{-- 1st submenu end --}}
-                        @if(request()->path()== "personal_injury"){{-- 2nd  submenu start --}} 
+                        @if(request()->path()== "personal_injury"){{-- 2nd  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('personal_injury')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Personal Injury</span>
@@ -1153,7 +1153,7 @@
                         @endif
                                 </a>
                             </li>{{-- 2nd submenu end --}}
-                        @if(request()->path()== "general_practice"){{--  3rd  submenu start --}} 
+                        @if(request()->path()== "general_practice"){{--  3rd  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('general_practice')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">General Practice</span>
@@ -1163,8 +1163,8 @@
                                     <span>General Practice</span>
                         @endif
                                 </a>
-                            </li>{{-- 3rd submenu end --}} 
-                        @if(request()->path()== "estate_plan"){{-- 4th  submenu start --}}  
+                            </li>{{-- 3rd submenu end --}}
+                        @if(request()->path()== "estate_plan"){{-- 4th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('estate_plan')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Estate Planning</span>
@@ -1174,8 +1174,8 @@
                                     <span>Estate Planning</span>
                         @endif
                                 </a>
-                            </li>{{-- 4th submenu end --}} 
-                        @if(request()->path()== "real_estate"){{-- 5th  submenu start --}}  
+                            </li>{{-- 4th submenu end --}}
+                        @if(request()->path()== "real_estate"){{-- 5th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('real_estate')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Real Estate</span>
@@ -1185,8 +1185,8 @@
                                     <span>Real Estate</span>
                         @endif
                                 </a>
-                            </li>{{-- 5th submenu end --}} 
-                        @if(request()->path()== "criminal_law"){{-- 6th  submenu start --}}  
+                            </li>{{-- 5th submenu end --}}
+                        @if(request()->path()== "criminal_law"){{-- 6th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('criminal_law')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Criminal Law</span>
@@ -1196,8 +1196,8 @@
                                     <span>Criminal Law</span>
                         @endif
                                 </a>
-                            </li>{{-- 6th submenu end --}} 
-                        @if(request()->path()== "civil_litigation"){{-- 7th  submenu start --}}  
+                            </li>{{-- 6th submenu end --}}
+                        @if(request()->path()== "civil_litigation"){{-- 7th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('civil_litigation')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Civil Litigation</span>
@@ -1207,8 +1207,8 @@
                                     <span>Civil Litigation</span>
                         @endif
                                 </a>
-                            </li>{{-- 7th submenu end --}} 
-                        @if(request()->path()== "business_law"){{-- 8th  submenu start --}}  
+                            </li>{{-- 7th submenu end --}}
+                        @if(request()->path()== "business_law"){{-- 8th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('business_law')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Businesss Law</span>
@@ -1219,7 +1219,7 @@
                         @endif
                                 </a>
                             </li>{{-- 8th submenu end --}}
-                        @if(request()->path()== "guardianship_law"){{-- 9th  submenu start --}}  
+                        @if(request()->path()== "guardianship_law"){{-- 9th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('guardianship_law')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Guardianship Law</span>
@@ -1230,7 +1230,7 @@
                         @endif
                                 </a>
                             </li>{{-- 9th submenu end --}}
-                        @if(request()->path()== "probate_law"){{-- 10th  submenu start --}} 
+                        @if(request()->path()== "probate_law"){{-- 10th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('probate_law')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Probate Law</span>
@@ -1241,7 +1241,7 @@
                         @endif
                                 </a>
                             </li>{{-- 10th submenu end --}}
-                        @if(request()->path()== "workers_compensation"){{-- 11th  submenu start --}} 
+                        @if(request()->path()== "workers_compensation"){{-- 11th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('workers_compensation')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Workers Compensation</span>
@@ -1251,8 +1251,8 @@
                                     <span>Workers Compensation</span>
                         @endif
                                 </a>
-                            </li>{{-- 11th submenu end --}} 
-                        @if(request()->path()== "practice_area"){{-- 12th  submenu start --}}  
+                            </li>{{-- 11th submenu end --}}
+                        @if(request()->path()== "practice_area"){{-- 12th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('practice_area')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Practice Area</span>
@@ -1262,80 +1262,80 @@
                                     <span>Practice Area</span>
                         @endif
                                 </a>
-                            </li>{{-- 12th submenu end --}} 
+                            </li>{{-- 12th submenu end --}}
                     </ul>
                 </li>
-                <li class="sidebar-item  has-sub">{{-- Nineth menu --}} 
+                <li class="sidebar-item  has-sub">{{-- Nineth menu --}}
                     <a href="#" class='sidebar-link'>
                         <i id="icon" class="fa fa-book"  style="font-weight: 300;"></i>
                             <span style="margin-left: 1rem;">E- Library</span>
                     </a>
                     @php
-                        $admin = array("subject_category", "subject", "file", "precedence", "site");
+                        $admin = array("subject_category/".Auth::user()->company_id, "subject", "file", "precedence", "site");
                     @endphp
                     @if (in_array(request()->path(), $admin))
                         <ul class="submenu" style="display: block;">
                         @else
                             <ul class="submenu" style="display: none;">
                     @endif
-                        @if(request()->path()== "subject_category"){{-- 1st  submenu start --}} 
+                        @if(request()->path()== "subject_category/".Auth::user()->company_id){{-- 1st  submenu start --}}
                             <li class="submenu-item " >
-                                <a href="{{url('subject_category')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
-                                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Subject</span>
+                                <a href="{{url('subject_category/'.Auth::user()->company_id)}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
+                                    <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Book Category</span>
                             @else
                             <li class="submenu-item ">
-                                <a href="{{url('subject_category')}}" class='sidebar-link'>
+                                <a href="{{url('subject_category/'.Auth::user()->company_id)}}" class='sidebar-link'>
                                     <span>Book Category</span>
                         @endif
                                 </a>
                             </li>{{-- 1st submenu end --}}
-                        @if(request()->path()== "subject"){{-- 2nd  submenu start --}}  
+                        @if(request()->path()== "subject/".Auth::user()->company_id){{-- 2nd  submenu start --}}
                             <li class="submenu-item " >
-                                <a href="{{url('subject')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
+                                <a href="{{url('subject/'.Auth::user()->company_id)}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Subject</span>
                             @else
                             <li class="submenu-item ">
-                                <a href="{{url('subject')}}" class='sidebar-link'>
+                                <a href="{{url('subject/'.Auth::user()->company_id)}}" class='sidebar-link'>
                                     <span>Subject</span>
                         @endif
                                 </a>
                             </li>{{-- 2nd submenu end --}}
-                        @if(request()->path()== "file"){{-- 3rd  submenu start --}}  
+                        @if(request()->path()== "file/".Auth::user()->company_id){{-- 3rd  submenu start --}}
                             <li class="submenu-item " >
-                                <a href="{{url('file')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
+                                <a href="{{url('file/'.Auth::user()->company_id)}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">File</span>
                             @else
                             <li class="submenu-item ">
-                                <a href="{{url('file')}}" class='sidebar-link'>
+                                <a href="{{url('file/'.Auth::user()->company_id)}}" class='sidebar-link'>
                                     <span>File</span>
                         @endif
                                 </a>
                             </li>{{-- 3rd submenu end --}}
-                        @if(request()->path()== "precedence"){{-- 4th  submenu start --}}  
+                        @if(request()->path()== "precedence/".Auth::user()->company_id){{-- 4th  submenu start --}}
                             <li class="submenu-item " >
-                                <a href="{{url('precedence')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
+                                <a href="{{url('precedence/'.Auth::user()->company_id)}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Precedence Register</span>
                             @else
                             <li class="submenu-item ">
-                                <a href="{{url('precedence')}}" class='sidebar-link'>
+                                <a href="{{url('precedence/'.Auth::user()->company_id)}}" class='sidebar-link'>
                                     <span>Precedence Register</span>
                         @endif
                                 </a>
                             </li>{{-- 4th submenu end --}}
-                        @if(request()->path()== "site"){{-- 5th  submenu start --}}  
+                        @if(request()->path()== "site/".Auth::user()->company_id){{-- 5th  submenu start --}}
                             <li class="submenu-item " >
-                                <a href="{{url('site')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
+                                <a href="{{url('site/'.Auth::user()->company_id)}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Legal Sites</span>
                             @else
                             <li class="submenu-item ">
-                                <a href="{{url('site')}}" class='sidebar-link'>
+                                <a href="{{url('site/'.Auth::user()->company_id)}}" class='sidebar-link'>
                                     <span>Legal Sites</span>
                         @endif
                                 </a>
                             </li>  {{-- 5th submenu end --}}
                     </ul>
                 </li>
-                <li class="sidebar-item  has-sub">{{-- Tenth menu --}} 
+                <li class="sidebar-item  has-sub">{{-- Tenth menu --}}
                     <a href="#" class='sidebar-link'>
                         <i id="icon" class="fa fa-handshake-o"  style="font-weight: 300;"></i>
                             <span style="margin-left: 1rem;">Tender Management</span>
@@ -1348,7 +1348,7 @@
                         @else
                             <ul class="submenu" style="display: none;">
                     @endif
-                        @if(request()->path()== "tender_details"){{-- 1st  submenu start --}}  
+                        @if(request()->path()== "tender_details"){{-- 1st  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('tender_details')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Tender Details</span>
@@ -1359,7 +1359,7 @@
                         @endif
                                 </a>
                             </li>{{-- 1st submenu end --}}
-                        @if(request()->path()== "apply_tender"){{-- 2nd  submenu start --}}  
+                        @if(request()->path()== "apply_tender"){{-- 2nd  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('apply_tender')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Apply Tender</span>
@@ -1370,7 +1370,7 @@
                         @endif
                                 </a>
                             </li>{{-- 1st submenu end --}}
-                        @if(request()->path()== "tender_applied_details"){{-- 3rd  submenu start --}}  
+                        @if(request()->path()== "tender_applied_details"){{-- 3rd  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('tender_applied_details')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Tender Applied Details</span>
@@ -1380,10 +1380,10 @@
                                     <span>Tender Applied Details</span>
                         @endif
                                 </a>
-                            </li>{{-- 3rd submenu end --}} 
+                            </li>{{-- 3rd submenu end --}}
                     </ul>
                 </li>
-                <li class="sidebar-item  has-sub">{{-- Eleventh menu --}} 
+                <li class="sidebar-item  has-sub">{{-- Eleventh menu --}}
                     <a href="#" class='sidebar-link'>
                         <i id="icon" class="fa fa-briefcase"  style="font-weight: 300;"></i>
                             <span style="margin-left: 1rem;">Office Administration</span>
@@ -1396,7 +1396,7 @@
                         @else
                             <ul class="submenu" style="display: none;">
                     @endif
-                        @if(request()->path()== "creditor_list"){{-- 1st  submenu start --}}  
+                        @if(request()->path()== "creditor_list"){{-- 1st  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('creditor_list')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Creditor List</span>
@@ -1406,8 +1406,8 @@
                                     <span>Creditor List</span>
                         @endif
                                 </a>
-                            </li>{{-- 1st submenu end --}} 
-                        @if(request()->path()== "creditors_aging_report"){{-- 2nd submenu start --}}  
+                            </li>{{-- 1st submenu end --}}
+                        @if(request()->path()== "creditors_aging_report"){{-- 2nd submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('creditors_aging_report')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Creditors Aging Report</span>
@@ -1417,8 +1417,8 @@
                                     <span>Creditors Aging Report</span>
                         @endif
                                 </a>
-                            </li>{{-- 2nd submenu end --}} 
-                        @if(request()->path()== "supplier_expense_report"){{-- 3rd submenu start --}}  
+                            </li>{{-- 2nd submenu end --}}
+                        @if(request()->path()== "supplier_expense_report"){{-- 3rd submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('supplier_expense_report')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Supplier Expense Report</span>
@@ -1428,8 +1428,8 @@
                                     <span>Supplier Expense Report</span>
                         @endif
                                 </a>
-                            </li>{{-- 3rd submenu end --}} 
-                        @if(request()->path()== "pay_supplier_invoice"){{-- 4th submenu start --}}  
+                            </li>{{-- 3rd submenu end --}}
+                        @if(request()->path()== "pay_supplier_invoice"){{-- 4th submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('pay_supplier_invoice')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Pay Supplier Invoice</span>
@@ -1439,8 +1439,8 @@
                                     <span>Pay Supplier Invoice</span>
                         @endif
                                 </a>
-                            </li>{{-- 4th submenu end --}} 
-                        @if(request()->path()== "supplier_credit_notes"){{-- 5th submenu start --}}  
+                            </li>{{-- 4th submenu end --}}
+                        @if(request()->path()== "supplier_credit_notes"){{-- 5th submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('supplier_credit_notes')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Supplier Credit Notes</span>
@@ -1450,8 +1450,8 @@
                                     <span>Supplier Credit Notes</span>
                         @endif
                                 </a>
-                            </li>{{--5th submenu end  --}} 
-                        @if(request()->path()== "supplier_invoice"){{-- 6th submenu start --}}  
+                            </li>{{--5th submenu end  --}}
+                        @if(request()->path()== "supplier_invoice"){{-- 6th submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('supplier_invoice')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Supplier Invoice</span>
@@ -1461,8 +1461,8 @@
                                     <span>Supplier Invoice</span>
                         @endif
                                 </a>
-                            </li>{{-- 6th submenu end --}} 
-                        @if(request()->path()== "supplier_monthly_schedule"){{-- 7th submenu start --}}  
+                            </li>{{-- 6th submenu end --}}
+                        @if(request()->path()== "supplier_monthly_schedule"){{-- 7th submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('supplier_monthly_schedule')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Supplier Monthly Schedule</span>
@@ -1472,8 +1472,8 @@
                                     <span>Supplier Monthly Schedule</span>
                         @endif
                                 </a>
-                            </li>{{-- 7th submenu end --}} 
-                        @if(request()->path()== "suppliers_list"){{-- 8th submenu start --}}  
+                            </li>{{-- 7th submenu end --}}
+                        @if(request()->path()== "suppliers_list"){{-- 8th submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('suppliers_list')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Supplier List</span>
@@ -1483,8 +1483,8 @@
                                     <span>Supplier List</span>
                         @endif
                                 </a>
-                            </li>{{-- 8th submenu end --}} 
-                        @if(request()->path()== "balance"){{-- 9th submenu start --}}  
+                            </li>{{-- 8th submenu end --}}
+                        @if(request()->path()== "balance"){{-- 9th submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('balance')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Balance on Client Trust</span>
@@ -1494,8 +1494,8 @@
                                     <span>Balance on Client Trust</span>
                         @endif
                                 </a>
-                            </li>{{-- 9th submenu end --}} 
-                        @if(request()->path()== "cheque"){{-- 10th submenu start --}}  
+                            </li>{{-- 9th submenu end --}}
+                        @if(request()->path()== "cheque"){{-- 10th submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('cheque')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Cheque Cancellation</span>
@@ -1505,8 +1505,8 @@
                                     <span>Cheque Cancellation</span>
                         @endif
                                 </a>
-                            </li>{{-- 10th submenu end --}} 
-                        @if(request()->path()== "file_office"){{-- 11th submenu start --}}  
+                            </li>{{-- 10th submenu end --}}
+                        @if(request()->path()== "file_office"){{-- 11th submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('file_office')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">File - Office Journals</span>
@@ -1516,8 +1516,8 @@
                                     <span>File - Office Journals</span>
                         @endif
                                 </a>
-                            </li>{{-- 11th submenu end --}} 
-                        @if(request()->path()== "Payment"){{-- 12th submenu start --}}  
+                            </li>{{-- 11th submenu end --}}
+                        @if(request()->path()== "Payment"){{-- 12th submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('Payment')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">File Payments & Transfer</span>
@@ -1527,8 +1527,8 @@
                                     <span>File Payments & Transfer</span>
                         @endif
                                 </a>
-                            </li>{{-- 12th submenu end --}} 
-                        @if(request()->path()== "budget"){{-- 13th submenu start --}}  
+                            </li>{{-- 12th submenu end --}}
+                        @if(request()->path()== "budget"){{-- 13th submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('budget')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Monthly Budget planner</span>
@@ -1539,7 +1539,7 @@
                         @endif
                                 </a>
                             </li>{{-- 13th submenu end --}}
-                        @if(request()->path()== "contractual_supplier"){{-- 14th submenu start --}}  
+                        @if(request()->path()== "contractual_supplier"){{-- 14th submenu start --}}
                             <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
                                 <a href="{{url('contractual_supplier')}}" class='sidebar-link'>
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Non-Contractual Suppliers Voucher</span>
@@ -1550,7 +1550,7 @@
                         @endif
                                 </a>
                             </li>{{-- 14th submenu end --}}
-                        @if(request()->path()== "payments_transfer"){{-- 15th submenu start --}}  
+                        @if(request()->path()== "payments_transfer"){{-- 15th submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('payments_transfer')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Office Payments Transfers</span>
@@ -1561,7 +1561,7 @@
                         @endif
                                 </a>
                             </li>{{-- 15th submenu end --}}
-                        @if(request()->path()== "payment_report"){{-- 16th submenu start --}}  
+                        @if(request()->path()== "payment_report"){{-- 16th submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('payment_report')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Payment Reports</span>
@@ -1571,8 +1571,8 @@
                                     <span>Payment Reports</span>
                         @endif
                                 </a>
-                            </li>{{-- 16th submenu end --}} 
-                        @if(request()->path()== "petty_payment"){{-- 17th submenu start --}} 
+                            </li>{{-- 16th submenu end --}}
+                        @if(request()->path()== "petty_payment"){{-- 17th submenu start --}}
                             <li class="submenu-item " style="background-color:#1D1D50 ; color:white;">
                                 <a href="{{url('petty_payment')}}" class='sidebar-link'>
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Petty Cash Payments</span>
@@ -1583,7 +1583,7 @@
                         @endif
                                 </a>
                             </li>{{--  17th submenu end --}}
-                        @if(request()->path()== "petty_report"){{-- 18th submenu start --}}  
+                        @if(request()->path()== "petty_report"){{-- 18th submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('petty_report')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Petty Cash Report</span>
@@ -1593,8 +1593,8 @@
                                     <span>Petty Cash Report</span>
                         @endif
                                 </a>
-                            </li>{{-- 18th submenu end --}} 
-                        @if(request()->path()== "settled_fee"){{-- 19th submenu start --}}  
+                            </li>{{-- 18th submenu end --}}
+                        @if(request()->path()== "settled_fee"){{-- 19th submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('settled_fee')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Settled Paid Legal Fees</span>
@@ -1604,8 +1604,8 @@
                                     <span>Settled Paid Legal Fees</span>
                         @endif
                                 </a>
-                            </li>{{-- 19th submenu end --}} 
-                        @if(request()->path()== "settlement_report"){{-- 20th submenu start --}}  
+                            </li>{{-- 19th submenu end --}}
+                        @if(request()->path()== "settlement_report"){{-- 20th submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('settlement_report')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Settlement Report</span>
@@ -1615,8 +1615,8 @@
                                     <span>Settlement Report</span>
                         @endif
                                 </a>
-                            </li>{{-- 20th submenu end --}} 
-                        @if(request()->path()== "undeposited_fund"){{-- 21st submenu start --}}  
+                            </li>{{-- 20th submenu end --}}
+                        @if(request()->path()== "undeposited_fund"){{-- 21st submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('undeposited_fund')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Undeposited Funds Report</span>
@@ -1626,10 +1626,10 @@
                                     <span>Undeposited Funds Report</span>
                         @endif
                                 </a>
-                            </li>{{-- 21st submenu end --}} 
+                            </li>{{-- 21st submenu end --}}
                         </ul>
                 </li>
-                <li class="sidebar-item  has-sub">{{-- Twelveth menu --}} 
+                <li class="sidebar-item  has-sub">{{-- Twelveth menu --}}
                     <a href="#" class='sidebar-link'>
                         <i id="icon" class="fa fa-address-book-o"  style="font-weight: 300;"></i>
                             <span style="margin-left: 1rem;">CRM</span>
@@ -1642,7 +1642,7 @@
                         @else
                             <ul class="submenu" style="display: none;">
                     @endif
-                        @if(request()->path()== "Corporate"){{-- 1st  submenu start --}}  
+                        @if(request()->path()== "Corporate"){{-- 1st  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('Corporate')}}" class='sidebar-link'tyle="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Corporate Customers</span>
@@ -1652,8 +1652,8 @@
                                     <span>Corporate Customers</span>
                         @endif
                                 </a>
-                            </li>{{-- 1st submenu end --}} 
-                        @if(request()->path()== "view-registration"){{-- 2nd  submenu start --}}  
+                            </li>{{-- 1st submenu end --}}
+                        @if(request()->path()== "view-registration"){{-- 2nd  submenu start --}}
                             <li class="submenu-item " s>
                                 <a href="{{url('view-registration')}}" class='sidebar-link'tyle="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Individual Customers</span>
@@ -1663,8 +1663,8 @@
                                     <span>Individual Customers</span>
                         @endif
                                 </a>
-                            </li>{{-- 2nd submenu end --}} 
-                        @if(request()->path()== "lead"){{-- 3rd  submenu start --}}  
+                            </li>{{-- 2nd submenu end --}}
+                        @if(request()->path()== "lead"){{-- 3rd  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('lead')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Leads</span>
@@ -1674,8 +1674,8 @@
                                     <span>Leads</span>
                         @endif
                                 </a>
-                            </li>{{-- 3rd submenu end --}} 
-                        @if(request()->path()== "follow-up"){{-- 4th  submenu start --}}  
+                            </li>{{-- 3rd submenu end --}}
+                        @if(request()->path()== "follow-up"){{-- 4th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('follow-up')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Client Follow Up</span>
@@ -1685,8 +1685,8 @@
                                     <span>Client Follow Up</span>
                         @endif
                                 </a>
-                            </li>{{-- 4th submenu end --}} 
-                        @if(request()->path()== "Quotation"){{-- 5th  submenu start --}}  
+                            </li>{{-- 4th submenu end --}}
+                        @if(request()->path()== "Quotation"){{-- 5th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('Quotation')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Client Quotation</span>
@@ -1696,8 +1696,8 @@
                                     <span>Client Quotation</span>
                         @endif
                                 </a>
-                            </li>{{-- 5th submenu end --}} 
-                        @if(request()->path()== "manage_tasks"){{-- 6th  submenu start --}}  
+                            </li>{{-- 5th submenu end --}}
+                        @if(request()->path()== "manage_tasks"){{-- 6th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('manage_tasks')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Manage Tasks</span>
@@ -1707,8 +1707,8 @@
                                     <span>Manage Tasks</span>
                         @endif
                                 </a>
-                            </li>{{-- 6th submenu end --}} 
-                        @if(request()->path()== "projects"){{-- 7th  submenu start --}}  
+                            </li>{{-- 6th submenu end --}}
+                        @if(request()->path()== "projects"){{-- 7th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('projects')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Projects</span>
@@ -1718,8 +1718,8 @@
                                     <span>Projects</span>
                         @endif
                                 </a>
-                            </li>{{-- 7th submenu end --}} 
-                        @if(request()->path()== "expense"){{-- 8th  submenu start --}}  
+                            </li>{{-- 7th submenu end --}}
+                        @if(request()->path()== "expense"){{-- 8th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('expense')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Expense Reports</span>
@@ -1729,8 +1729,8 @@
                                     <span>Expense Reports</span>
                         @endif
                                 </a>
-                            </li>{{-- 8th submenu end --}} 
-                        @if(request()->path()== "crm_panel"){{-- 9th  submenu start --}} 
+                            </li>{{-- 8th submenu end --}}
+                        @if(request()->path()== "crm_panel"){{-- 9th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('crm_panel')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">CRM Panel</span>
@@ -1740,10 +1740,10 @@
                                     <span>CRM Panel</span>
                         @endif
                                 </a>
-                            </li>{{-- 9th submenu end --}} 
+                            </li>{{-- 9th submenu end --}}
                     </ul>
                 </li>
-                <li class="sidebar-item  has-sub">{{-- Thirteenth menu --}} 
+                <li class="sidebar-item  has-sub">{{-- Thirteenth menu --}}
                     <a href="#" class='sidebar-link'>
                         <i id="icon" class="fa fa-gear"  style="font-weight: 300;"></i>
                             <span style="margin-left: 1rem;">System Setup</span>
@@ -1756,7 +1756,7 @@
                         @else
                             <ul class="submenu" style="display: none;">
                     @endif
-                        @if(request()->path()== "company_details"){{-- 1st  submenu start --}}  
+                        @if(request()->path()== "company_details"){{-- 1st  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('company_details')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Company</span>
@@ -1766,8 +1766,8 @@
                                     <span>Company</span>
                         @endif
                                 </a>
-                            </li>{{-- 1st submenu end --}} 
-                        @if(request()->path()== "weekend_holiday"){{-- 2nd  submenu start --}}  
+                            </li>{{-- 1st submenu end --}}
+                        @if(request()->path()== "weekend_holiday"){{-- 2nd  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('weekend_holiday')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Weekends and Holidays</span>
@@ -1777,8 +1777,8 @@
                                     <span>Weekends and Holidays</span>
                         @endif
                                 </a>
-                            </li>{{-- 2nd submenu end --}} 
-                        @if(request()->path()== "other_confgn"){{-- 3rd  submenu start --}}  
+                            </li>{{-- 2nd submenu end --}}
+                        @if(request()->path()== "other_confgn"){{-- 3rd  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('other_confgn')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Other Configurations</span>
@@ -1788,8 +1788,8 @@
                                     <span>Other Configurations</span>
                         @endif
                                 </a>
-                            </li>{{-- 3rd submenu end --}} 
-                        @if(request()->path()== "file_types"){{-- 4th  submenu start --}}  
+                            </li>{{-- 3rd submenu end --}}
+                        @if(request()->path()== "file_types"){{-- 4th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('file_types')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">File Types</span>
@@ -1799,8 +1799,8 @@
                                     <span>File Types</span>
                         @endif
                                 </a>
-                            </li>{{-- 4th submenu end --}} 
-                        @if(request()->path()== "invoice_items"){{-- 5th  submenu start --}}  
+                            </li>{{-- 4th submenu end --}}
+                        @if(request()->path()== "invoice_items"){{-- 5th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('invoice_items')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Invoice Items</span>
@@ -1810,8 +1810,8 @@
                                     <span>Invoice Items</span>
                         @endif
                                 </a>
-                            </li>{{-- 5th submenu end --}} 
-                        @if(request()->path()== "currency_list"){{-- 6th  submenu start --}}  
+                            </li>{{-- 5th submenu end --}}
+                        @if(request()->path()== "currency_list"){{-- 6th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('currency_list')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Currency List</span>
@@ -1821,8 +1821,8 @@
                                     <span>Currency List</span>
                         @endif
                                 </a>
-                            </li>{{-- 6th submenu end --}} 
-                        @if(request()->path()== "database_backup"){{-- 7th  submenu start --}}  
+                            </li>{{-- 6th submenu end --}}
+                        @if(request()->path()== "database_backup"){{-- 7th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('database_backup')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Database Backup</span>
@@ -1832,8 +1832,8 @@
                                     <span>Database Backup</span>
                         @endif
                                 </a>
-                            </li>{{-- 7th submenu end --}} 
-                        @if(request()->path()== "Transport_zones"){{-- 8th  submenu start --}} 
+                            </li>{{-- 7th submenu end --}}
+                        @if(request()->path()== "Transport_zones"){{-- 8th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('Transport_zones')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Transport Zones</span>
@@ -1843,8 +1843,8 @@
                                     <span>Transport Zones</span>
                         @endif
                                 </a>
-                            </li>{{-- 8th submenu end --}} 
-                        @if(request()->path()== "billable_activities"){{-- 9th  submenu start --}}  
+                            </li>{{-- 8th submenu end --}}
+                        @if(request()->path()== "billable_activities"){{-- 9th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('billable_activities')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Billable Activities</span>
@@ -1854,8 +1854,8 @@
                                     <span>Billable Activities</span>
                         @endif
                                 </a>
-                            </li>{{-- 9th submenu end --}} 
-                        @if(request()->path()== "bank_details"){{-- 10th  submenu start --}}  
+                            </li>{{-- 9th submenu end --}}
+                        @if(request()->path()== "bank_details"){{-- 10th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('bank_details')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Bank Account Details</span>
@@ -1866,7 +1866,7 @@
                         @endif
                                 </a>
                             </li>{{-- 10th submenu end --}}
-                        @if(request()->path()== "leave_days_year"){{-- 11th  submenu start --}}  
+                        @if(request()->path()== "leave_days_year"){{-- 11th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('leave_days_year')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Leave Days Per Year</span>
@@ -1876,8 +1876,8 @@
                                     <span>Leave Days Per Year</span>
                         @endif
                                 </a>
-                            </li>{{-- 11th submenu end --}} 
-                        @if(request()->path()== "hourly_rates"){{-- 12th  submenu start --}}  
+                            </li>{{-- 11th submenu end --}}
+                        @if(request()->path()== "hourly_rates"){{-- 12th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('hourly_rates')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Hourly Rates</span>
@@ -1887,8 +1887,8 @@
                                     <span>Hourly Rates</span>
                         @endif
                                 </a>
-                            </li>{{-- 12th submenu end --}} 
-                        @if(request()->path()== "menu_access_configuration"){{-- 13th  submenu start --}}  
+                            </li>{{-- 12th submenu end --}}
+                        @if(request()->path()== "menu_access_configuration"){{-- 13th  submenu start --}}
                             <li class="submenu-item ">
                                 <a href="{{url('menu_access_configuration')}}" class='sidebar-link' style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Menu Access Configuration</span>
@@ -1898,8 +1898,8 @@
                                     <span>Menu Access Configuration</span>
                         @endif
                                 </a>
-                            </li>{{-- 13th submenu end --}} 
-                        @if(request()->path()== "useful_links"){{-- 14th  submenu start --}}  
+                            </li>{{-- 13th submenu end --}}
+                        @if(request()->path()== "useful_links"){{-- 14th  submenu start --}}
                             <li class="submenu-item " >
                                 <a href="{{url('useful_links')}}" class='sidebar-link'style="background-color:#1D1D50 ; color:white;">
                                     <span  style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Useful Link</span>
@@ -1909,7 +1909,7 @@
                                     <span>Useful Link</span>
                         @endif
                                 </a>
-                            </li>{{-- 14th submenu end --}} 
+                            </li>{{-- 14th submenu end --}}
                     </ul>
                 </li>
                 @endif

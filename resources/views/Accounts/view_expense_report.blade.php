@@ -1,6 +1,6 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
+<nav style="font-size:15px;">
   <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
   <a href="#" style="color: #1D1D50;">Accounts</a> /
   <a href="#" style="color: #1D1D50;">Expense Report</a>
@@ -10,7 +10,7 @@
 <html lang="en">
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
- 
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRA</title> -->
@@ -27,12 +27,12 @@
 	<br>
   {{-- heading --}}
   <h4 id="hdtpa"><b>Expense Report</b></h4>
-  
-    
+
+
 
         {{-- <button  class="btn btn-primary "  data-toggle="modal" id="patient" data-bs-toggle="modal"
         data-bs-target="#default"  class="btn btn-secondary">Add Groups</button> --}}
-       
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -47,13 +47,13 @@
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-   
+
 
     <div class="table-responsive">
         <table style="width:300%" class="table table-striped table-class" id= "table-id">
@@ -95,7 +95,7 @@
         <td></td>
         <td></td>
       </tr>
-    
+
   </tbody>
 </table>
 

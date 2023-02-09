@@ -1,23 +1,23 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
+<nav style="font-size:15px;">
     <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">Accounts</a> /
     <a href="#" style="color: #1D1D50;">Bank Reconciliation Report</a>
 </nav>
 <br><br>
 <head>
-   
+
 </head>
 
 <div class="container">
 
   <div>
-    
+
     {{-- heading --}}
     <h4 id="hdtpa"><b>Reconcile Bank Entries</b></h4>
     <br>
-   
+
           </div>
 
           <form method="post" action="" id="form">
@@ -43,7 +43,7 @@
                             </div>
                         </div>
                     </div>
-                 
+
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Month</label>
@@ -64,7 +64,7 @@
                                     <option>Sep</option>
                                     <option>Oct</option>
                                     <option>Nov</option>
-                                    <option>Dec</option> 
+                                    <option>Dec</option>
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -86,7 +86,7 @@
                                 <option>2021</option>
                                     <option>2022</option>
                                     <option>2023</option>
-                                 
+
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -96,7 +96,7 @@
                     </div>
 
                 <br>
-              
+
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label for="username">Report Type</label>
@@ -108,8 +108,8 @@
                                 <option>---select---</option>
                                     <option>Detailed</option>
                                     <option>Summary</option>
-                                
-                                
+
+
                                 </select>
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -117,10 +117,10 @@
                             </div>
                         </div>
                     </div>
-                   
-                    
+
+
  </div>
-              
+
                  <div class="row">
                         <div class="col-sm">
 
@@ -134,9 +134,9 @@
                             <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Reset</button>
                         </div>
                     </div>
-                
+
             </form>
-            
+
 
 </body>
 </div>

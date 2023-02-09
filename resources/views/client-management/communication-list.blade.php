@@ -1,7 +1,7 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">Client Management</a> /
     <a href="#" style="color: #1D1D50;">Communication Details</a>
 </nav>
@@ -52,11 +52,11 @@ float:right;
 text-align:right;
 color: #999;
 }
-</style>     
+</style>
     </head>
 
 <body>
-   
+
             <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;"><b><u>Client
                     Conversation</u></b></div><br><br> -->
             {{-- heading --}}
@@ -76,10 +76,10 @@ color: #999;
                 <button type="submit" class="btn btn-primary float:right;" Style="width:11%;">Phone Log</button>
                 <button type="submit" class="btn btn-primary float:right;" Style="width:11%;">Email Log</button>
             </div>
-           
+
             <br>
 
-            
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -94,18 +94,18 @@ color: #999;
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    
+
 
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
-	
+
                         <thead>
                             <tr>
                                 <th class="text-center">Date</th>
@@ -172,7 +172,7 @@ color: #999;
                     <div class="modal fade" id="myModal">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
-                                
+
 
                                 <!-- Modal Header -->
                                 <div class="modal-header">

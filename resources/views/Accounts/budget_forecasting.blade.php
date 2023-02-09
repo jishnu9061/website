@@ -1,6 +1,6 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
+<nav style="font-size:15px;">
     <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">Accounts</a> /
     <a href="#" style="color: #1D1D50;">Budget Forecasting</a>
@@ -14,16 +14,16 @@
     {{-- heading --}}
     <h4 id="hdtpa"><b>Budget Forecasting</b></h4>
     <br>
-   
+
           </div>
-          
+
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-           
+
   {{-- <a href="{{('')}}"><button class="btn btn-primary">Create New Budget</button></a> --}}
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Create New Budget</button>
                 <br>
 
-                
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -38,17 +38,17 @@
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-   
-                
+
+
                 <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
-                     
+
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 
 
@@ -70,12 +70,12 @@
                 <th>Jul 2022</th>
                 <th>Aug 2022</th>
                 <th>Sep 2022</th>
-                <th>Oct 2022</th> 
+                <th>Oct 2022</th>
                 <th>Nov 2022</th>
                 <th>Dec 2022</th>
                 <th>Action</th>
-            
-             
+
+
               </tr>
             </thead>
             <tbody>
@@ -83,7 +83,7 @@
                     <td colspan = "18"  style="color: #1D1D50;font-weight: bold;">Reciepts: &nbsp;&nbsp;&nbsp; <a href="{{('add_account')}}"style="color: #1D1D50;font-weight: normal;">Add Account</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{{('')}}"style="color: #1D1D50;font-weight: normal">View Chart</a></td>
                 </tr>
                 <tr>
-             
+
               <td></td>
                <td></td>
                <td></td>
@@ -100,15 +100,15 @@
                <td></td>
                <td></td>
                <td></td>
- 
+
                 <td  scope="row"class="text-center">
                     <!-- <a href="{{url('')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
                         <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                         <a href="{{url('')}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
-                        
+
              </tr>
-            
-                        
+
+
              </tr>
            </tbody>
 </table><br><br>
@@ -140,8 +140,8 @@
                                     <div class="modal-body">
                                         <div class="container">
                                             <form method="post" action="{{ url('') }}"
-                                                enctype="multipart/form-data"> 
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->       
+                                                enctype="multipart/form-data">
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 @csrf
 
 
@@ -194,7 +194,7 @@
                                 <option>---select---</option>
                                 <option></option>
                                 <option></option>
-                            
+
                                 </select>
                            <div class="invalid-feedback" style="width: 100%;">
                                     Required Field.
@@ -208,19 +208,19 @@
 
 
 
- 
+
                     <div class="row">
                         <div class="col-sm">
 
                         </div>
-                       
+
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
                             <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">Cancel</button>
                         </div>
                     </div>
-        
+
 </div>
             </form>
             </div>

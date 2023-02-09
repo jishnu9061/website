@@ -33,21 +33,6 @@
                 </li>
                 {{-- Management company end --}}
                 {{-- super admin setup start --}}
-                <li class="sidebar-item  ">
-                    <a href="{{url('superadminhome')}}" class='sidebar-link'>
-                        <i id="icon" class="fa-regular fa-user"  style="font-weight: 300;"></i>
-                            <span style="padding-left: 20px">SuperAdmin setup</span>
-                    </a>
-                    @php
-                        $admin = array("usermanagement", "adddepartments","add_labdept","add_surgery_types","adddepartmentadmin","addroomstypes","addroomtypes","beds","Add_Ambulance_details");
-                    @endphp
-                    @if (in_array(request()->path(), $admin))
-                        <ul class="submenu" style="display: block;">
-                        @else
-                            <ul class="submenu" style="display: none;">
-                    @endif
-                    </ul>
-                </li>
                 {{-- super admin setup end --}}
                 @endif
 

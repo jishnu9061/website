@@ -18,11 +18,15 @@ class superadminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
-        $total = DB::table('company_details')->count()??0;
-        $active = DB::table('company_details')->where('status',1)->count()??0;
-        $inactive = DB::table('company_details')->where('status',0)->count()??0;
+        $total = DB::table('company_details')->where('deleted_at',null)->count()??0;
+        $active = DB::table('company_details')->where('deleted_at',null)->where('status',1)->count()??0;
+        $inactive = DB::table('company_details')->where('deleted_at',null)->where('status',0)->count()??0;
         return view('superadmin.superadminhome',compact('total','active','inactive'));
     }
 

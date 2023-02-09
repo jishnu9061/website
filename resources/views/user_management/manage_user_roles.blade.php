@@ -1,3 +1,4 @@
+
 @extends('layouts.hmsmain')
 @section('content')
 <nav style="font-size:15px;">
@@ -106,7 +107,7 @@
                         <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
                         <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
+                                <div class="modal-content" >
 
                                     <!-- Modal Header -->
                                     <div class="modal-header">
@@ -119,85 +120,21 @@
                                         <div class="container">
                                             <form method="post" action="{{ url('add_user_roles') }}"
                                                 enctype="multipart/form-data">
-                                                <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-                                                @csrf
-                                                <div class="row">
-                                                    <div class="col-md-12 ">
-                                                        <label>Role Name:</label>
-                                                        <div class="row">
-                                                            <div class="col-md-11">
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend"></div>
-                                                                    <input type="text" id="" name="role_name"
-                                                                        value="" class="form-control">
-                                                                    <div class="invalid-feedback" style="width: 100%;">
-                                                                        Required Field.
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-sm">
-
-                                                        </div>
-                                                        <div class="col-sm">
-
-                                                        </div>
-                                                        <div class="col-sm">
-                                                            <br>
-                                                            <button type="submit" class="btn btn-primary float:right;"
-                                                                Style="width:45%;">Save</button>
-                                                            <button type="button" class="btn btn-primary float:left"
-                                                                Style="width:45%;"data-dismiss="modal">Cancel</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
+@csrf
+       <div class="row">
+                <div class="col-md-12 " >
+                    <label >Role Name:</label>
+                    <div class="row">
+                        <div class="col-md-11">
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div>
+                                <input type="text"  id="" name="role_name" value="" class="form-control">
+                            <div class="invalid-feedback" style="width: 100%;">
+                            Required Field.
                         </div>
                     </div>
-                    <div class="modal fade" id="deleterole" style="">
-                        <!-- delete company -->
-                        <div class="modal-dialog modal-lg" style="width:30%;">
-                            <div class="modal-content">
-                                <!---- Modal Header -->
-                                <form method="post" id="delete_role" action="#" enctype="multipart/form-data">
-                                    @csrf
-                                    <input type="hidden" id="deleteid" value="id">
-                                    <div class="modal-header" style="padding:0rem 0rem;">
-                                        <div style="padding:1rem 1rem;">
-                                            <h4 class="text-centre"><b>Delete <span id="deletrole_name"></span></b>
-                                            </h4>
-                                        </div>
-                                    </div>
-                                    <!-- Modal body -->
-                                    <div class="modal-body">
-                                        <div class="container">
-                                            <div class="row">
-                                                <h6><b><span>Are you sure?</span></b></h6>
-                                            </div>
-                                            <div class="row">
-                                                <div class="" style="width: 30%;">
-                                                </div>
-                                                <div lass="" style="width: 0%"></div>
-                                                <div class="col-sm" style="padding-right: 0px;width: 70%;">
-                                                    <br>
-                                                    <button type="submit" class="btn btn-primary float:right;"
-                                                        Style="width:45%;background-color:#DD4132;">Yes</button>
-                                                    <button type="button" class="btn btn-primary float:left"
-                                                        Style="width:45%;"data-dismiss="modal">No</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+                </div>
                 </div>
             </div>
         </div>

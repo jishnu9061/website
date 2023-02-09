@@ -1,6 +1,6 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
+<nav style="font-size:15px;">
     <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">Stores and Inventory</a> /
     <a href="#" style="color: #1D1D50;">Stock List</a>
@@ -19,10 +19,10 @@
 
 <body>
     <div class="container">
-       
+
         <div>
             <div>
-              
+
                 {{-- heading --}}
                 <h4 id="hdtpa"><b>Stock List</b></h4>
                 <br>
@@ -30,7 +30,7 @@
 
         </div>
         <!--filter-->
-   
+
 
         <!--filter end-->
 
@@ -93,9 +93,9 @@
                             </tbody>
 
                         </table>
-                        
+
                     </div>
-                    
+
                     <!--		Start Pagination -->
                     <div class='pagination-container'>
                         <nav>
@@ -105,7 +105,7 @@
                         </nav>
                     </div>
                     <div class="rows_count">Showing 11 to 20 of 100</div>
-                    
+
 
                     <!-- 		End of Container -->
 

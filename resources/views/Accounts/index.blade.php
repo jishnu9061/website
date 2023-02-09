@@ -1,6 +1,11 @@
 @extends('layouts.hmsmain')
 @section('content')
-
+<nav style="font-size:15px;">
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">Accounts</a> /
+    <a href="#" style="color: #1D1D50;">Ledger Accounts</a>
+</nav>
+<br><br>
 <style>.swal-button {
 
     width:fit-content;
@@ -18,7 +23,7 @@
     {{-- heading --}}
   <h4 id="hdtpa"><b>Ledger Accounts</b></h4>
   <br><br>
-   
+
 
         <button  class="btn btn-primary "  data-toggle="modal" id="patient" data-bs-toggle="modal"
         data-bs-target="#default"  class="btn btn-secondary">Add Account</button>
@@ -35,7 +40,7 @@
       <th scope="col">Default Currency</th>
       <th scope="col">Description </th>
       <th scope="col">Action</th>
-    
+
 
     </tr>
   </thead>
@@ -64,8 +69,8 @@ $no=1;
                        @if($exp_type->accounts_update_privilage==0)
                     <a onclick="delete_function({{ $exp_type->id }})" ><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></a>
                     @endif
-                    
-                 
+
+
                 </td>
       </tr>
  @endforeach
@@ -87,7 +92,7 @@ $no=1;
 
 
                                     <h2 class="text-centre"><b>Add Ledger Accounts</b></h2>
-                                   
+
 
 
 
@@ -137,7 +142,7 @@ $no=1;
                               @endforeach;
                            </select>
                         </div>
-                        
+
 
                         <div class="form-group mb-3">
                             <label>Default Currency</label>
@@ -153,14 +158,14 @@ $no=1;
                                 <option>DKK</option>
                                 <option>JPY</option>
                                 <option>CHF</option>
-                                <option>HKD</option> 
+                                <option>HKD</option>
                                <!-- @foreach($category as $cat):
                                 <option value="{{ $cat->id }}" > {{ $cat->ledgeraccount_categories }}</option>
                                @endforeach; -->
                                </select>
 
-                           
-                        </div> 
+
+                        </div>
                         <div class="form-group mb-3">
                             <label>Description </label>
 			                <textarea  class="form-control" name="accounts_desc">
@@ -199,7 +204,7 @@ $no=1;
 
                                     <h2 class="text-centre"><b>Edit Ledger Accounts</b></h2>
 
-                                  
+
 
 
 
@@ -263,14 +268,14 @@ $no=1;
                                 <option>DKK</option>
                                 <option>JPY</option>
                                 <option>CHF</option>
-                                <option>HKD</option> 
+                                <option>HKD</option>
                                <!-- @foreach($category as $cat):
                                 <option value="{{ $cat->id }}" > {{ $cat->ledgeraccount_categories }}</option>
                                @endforeach; -->
                                </select>
 
-                           
-                        </div> 
+
+                        </div>
                         <div class="form-group mb-3">
                             <label>Desctiption</label>
                             <textarea class="form-control" name="accounts_desc"   id="expanse-type-status">
@@ -310,7 +315,7 @@ $no=1;
        $("#expanse-type-status").val(val5);
        $('#editbudget_cat').val(val6).change();
        $("#edit_default_currency").val(val7).change();
-     
+
       };
 
 

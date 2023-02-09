@@ -1,8 +1,8 @@
 
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
-  <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> / 
+<nav style="font-size:15px;">
+  <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">HR</a> /
     <a href="#" style="color: #1D1D50;">Attendance (Manual)</a>
 </nav>
@@ -75,7 +75,7 @@
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
@@ -92,7 +92,7 @@
 	@for($i=1;$i<=$daysinmonth;$i++)
 <td id="daygeton">{{$i}}</td>
 @endfor
-	
+
 
 	</th>
     @foreach($attendancedata as $staff)
@@ -101,7 +101,7 @@
 
     <td>{{$staff->staffname}}</td>
     <td id="texst">{{$staff->staffid}}</td>
-        
+
 @php
 $attendancedatax=DB::table('dailyattendances')->where('month',$month)->where('year',$year)->where('staffname',$staff->staffname)->limit($daysinmonth)->get();
 @endphp
@@ -137,7 +137,7 @@ style="padding: 0.25px;
     @endforeach
 
 	</table>
-</div>  
+</div>
     <br>
 
     <!--		Start Pagination -->
@@ -154,7 +154,7 @@ style="padding: 0.25px;
 
     <script src="{{ url('assets/js') }}/jquery.min.js"></script>
 
- 
+
 
     <script type="text/javascript">
 
@@ -163,11 +163,11 @@ $(function () {
 })
     $(document).on('change','#mark',function(){
         var a=this.value;
-      
+
         var onename = $(this).closest('#datax').find('#hiddenalways').val();
         var qw = $(this).closest('#datax').find('#qw').val();
-        
-       
+
+
 
 
         $.ajaxSetup({
@@ -175,31 +175,31 @@ $(function () {
        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
    }
    });
-       
-        
+
+
          $.ajax({
            method:"POST",
            url:"/attendancetostaff",
            data:{
                'a':a,
                'onename':onename,
-               
+
            },
-         
+
            //success: function (response){
              //  alert(response.status);
            //},
 
 
          });
-   
+
     })
 </script>
 
 <script>
 $( document ).ready(function() {
     var sel = $(this).closest('#sele').find('#ds').val();
-    
+
 });
 </script>
     @endsection

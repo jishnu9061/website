@@ -1,6 +1,6 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
+<nav style="font-size:15px;">
     <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">Accounts</a> /
     <a href="#" style="color: #1D1D50;">Account Category</a>
@@ -15,7 +15,7 @@
         data-bs-target="#default"  class="btn btn-secondary">Add Category</button> --}}
         <button type="button" class="btn btn-primary" data-toggle="modal" data-bs-toggle="modal" data-target="#myModal">Add Category</button>
         <br>
-       
+
     <div class="header_wrap">
       <div class="num_rows">
         <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
@@ -30,13 +30,13 @@
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    
+
 
     <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
@@ -148,17 +148,17 @@ $no=1;
                                         <button type="submit" class="btn btn-primary" >Save</button>
                                         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
                                     </div>
-                                     
+
 
 
                                 </div>
-                            </form>        
+                            </form>
                         </div> --}}
                         <div class="modal fade" id="myModal" role="dialog">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
                                     <div class="modal-header">
-            
+
                                       <h2 class="text-centre"><b>Add Category</b></h2>
                                     </div>
                                     <div class="modal-body">
@@ -173,7 +173,7 @@ $no=1;
                                                        @foreach($categories as $cat):
                                                         <option value="{{ $cat->id }}" > {{ $cat->ledgeraccount_categories }}</option>
                                                        @endforeach;
-    
+
                                                    </select>
                                                 </div>
                                                 <div class="form-group mb-3">
@@ -183,20 +183,20 @@ $no=1;
                                                 </div>
                                             </div>
                                         </div>
-                                  
-                
+
+
                                     </div>
                                     <div class="modal-footer" style="background-color:#d3e0ed;">
                                       <button type="submit" class="btn btn-primary">Save</button>
                                       <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
                                   </div>
-                                </form>  
+                                </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-                  </div>  
-            
+                  </div>
+
 
 
 

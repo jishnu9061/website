@@ -1,6 +1,6 @@
 @extends('layouts.hmsmain')
 @section('content')
-<nav style="font-size:17px;">
+<nav style="font-size:15px;">
     <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">Accounts</a> /
     <a href="#" style="color: #1D1D50;">Balance Sheet</a>
@@ -162,7 +162,7 @@
         <td class="text-center">
              @if($sum_debit_transaction<$sum_credit_transaction)
 
-        
+
             @php
 
             $cr_sum += $sum_credit_transaction-$sum_debit_transaction;
@@ -201,9 +201,9 @@
 
 
                 @php
-            
-            
-            
+
+
+
                 $debit_transactions = DB::table('journal_items as q')
                                 ->Leftjoin('journal_transactions','journal_transactions.id','=','q.journal_items_transaction')
                                 ->Leftjoin('ledgeraccounts','ledgeraccounts.id','=','q.journal_transaction_account')
@@ -212,16 +212,16 @@
                                 ->whereBetween('journal_transactions.journal_date', [$ledger_from, $ledger_to])
                                 ->orderBy('q.journal_items_addedon', 'asc')
                                 ->get();
-            
+
                 $sum_debit_transaction=DB::table('journal_items as q')
                     ->Leftjoin('journal_transactions','journal_transactions.id','=','q.journal_items_transaction')
                     ->where('journal_transaction_account',$key->id)
                     ->where('q.journal_items_type',2)
                     ->whereBetween('journal_transactions.journal_date', [$ledger_from, $ledger_to])
                     ->sum('q.journal_items_amount');
-            
-            
-            
+
+
+
                  $credit_transactions = DB::table('journal_items as q')
                                 ->Leftjoin('journal_transactions','journal_transactions.id','=','q.journal_items_transaction')
                                 ->Leftjoin('ledgeraccounts','ledgeraccounts.id','=','q.journal_transaction_account')
@@ -230,34 +230,34 @@
                                 ->whereBetween('journal_transactions.journal_date', [$ledger_from, $ledger_to])
                                 ->orderBy('q.journal_items_addedon', 'asc')
                                 ->get();
-            
+
                  $sum_credit_transaction=DB::table('journal_items as q')
                                 ->Leftjoin('journal_transactions','journal_transactions.id','=','q.journal_items_transaction')
                                 ->where('journal_transaction_account',$key->id)
                                 ->where('q.journal_items_type',1)
                                 ->whereBetween('journal_transactions.journal_date', [$ledger_from, $ledger_to])
                                 ->sum('journal_items_amount');
-            
-            
-            
-            
+
+
+
+
             @endphp
             @if($sum_debit_transaction < $sum_credit_transaction || $sum_debit_transaction > $sum_credit_transaction)
                 <tr>
                     <td></td>
                     <td class="text-center">
                         @if($sum_debit_transaction<$sum_credit_transaction)
-           
-                   
+
+
                        @php
-           
+
                        $cr_sum += $sum_credit_transaction-$sum_debit_transaction;
-           
+
                        @endphp
-           
-           
+
+
                        {{ $sum_credit_transaction-$sum_debit_transaction }}
-           
+
                         @endif</td>
                 </tr>
             @endif
@@ -279,7 +279,7 @@
         </td>
     </tr>
 
-    
+
     </tr>
 </table>
 
