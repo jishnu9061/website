@@ -159,10 +159,10 @@
             {{-- heading --}}
             <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
             <div class="row" style="height:50px;">
-                {{-- <div class="col-sm-4" style="padding-top:5px;">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createmyModal"style="margin-left:10px;    --clr: #1D1D50;
-                    --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Create Company</button>
-                </div> --}}
+                <div class="col-sm-4" style="padding-top:5px;">
+                    {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createmyModal"style="margin-left:10px;    --clr: #1D1D50;
+                    --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Create Company</button> --}}
+                </div>
                 <div class="col-sm-4" style="">
                     <h4  style="border: 0.5px solid #f1d9b0;
                         border-radius: 25px;
@@ -206,36 +206,39 @@
                                 <tr>
                                     <th class="text-center" style="width:4%;">Sl.No</th>
                                     <th class="text-center" style="width:4%;">UniqueId</th>
-                                    <th class="text-center" >Employee Name</th>
+                                    <th class="text-center" style="width:50%;text">Employee Name</th>
+                                    <th class="text-center" style="width:8%;">Department</th>
+                                    <th class="text-center" style="width:4%;">Branch</th>
                                     <th class="text-center" >Designation</th>
                                     <th class="text-center" >Email</th>
                                     <th class="text-center" >Contant no</th>
                                     <th class="text-center" style="width:4%;">Status</th>
-                                    <th class="text-center"style="width:4%;" >Action</th>
+                                    <th class="text-center"style="width:3%;" >Action</th>
                                 </tr>
                             </thead>
-                            <tbody><?php $i=0; ?>
-                                @foreach ($result as $empolyee )
-                                    <?php  $i++; ?>
+                            <tbody><?php $i=0; ?><?php  //$i++; //print_r($all_employee);die;?>
+                                @foreach ($all_employee as $employee )
+                                    <?php  $i++; //dd($employee);?>
                                     <tr>
                                         <td class="text-center">{{ $i }}</td>
-                                        <td class="text-center">{{ $employee->uniqueid }}</td>
-                                        <td class="text-center">
-                                            <img id="employee_image" src="{{asset('/') }}/images/logo/{{ $employee->photo }}" alt="" style="border-radius:50%;height:40px;width:40px;"><span> </span>
-                                            {{ $employee->name }}</td>
-                                        <td class="text-center">{{ $employee->designation }}</td>
-                                        <td class="text-center">{{ $employee->email }}</td>
-                                        <td class="text-center">{{ $employee->contact }}</td>
-                                        <td class="text-center"><label class="switch">
-                                            <input type="checkbox" data-id="{{ $employee->uniqueid }}" onclick="changestatus(this)" id="status" class="check" {{ $employee->status == 1 ? 'checked' : '' }}>
-                                            <span class="slider round"></span>
-                                          </label>
-                                        </td>
+                                        <td class="text-center">{{ $employee['uniqueid'] }}</td>
+                                        <td class=""><div style="display: flex;">
+                                            <div><img id="employee_image" src="{{asset('/') }}/images/faces/{{ $employee['photo'] }}" alt="" style="border-radius:50%;height:40px;width:40px;border-color:rgb(random(255), random(255), random(255));border-style: solid;"></div>
+                                            <div style="padding-left: 5px">
+                                                {{ $employee['name'] }}</td>
+                                            </div>
+                                        </div>
+                                        <td class="text-center">{{ $employee['depart'] }}</td>
+                                        <td class="text-center">{{ $employee['barnch'] }}</td>
+                                        <td class="text-center">{{ $employee['designation'] }}</td>
+                                        <td class="text-center">{{ $employee['email'] }}</td>
+                                        <td class="text-center">{{ $employee['contact'] }}</td>
+                                        <td class="text-center"></td>
                                         <td scope="row"class="text-center">
                                             {{-- <a href="{{url('edit_company',$user->uniqueid)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i> --}}
-                                            <a href="#" data-toggle="modal" data-id="{{ $employee->uniqueid }}" onclick="editcompany(this)" data-target="#editcompany"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
+                                            {{-- <a href="#" data-toggle="modal" data-id="{{ $employee['uniqueid'] }}"  data-target="#editcompany"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i> --}}
                                             {{-- <a href="{{url('#',$user->uniqueid)}}"> <i style="color:rgb(13, 1, 56);padding-left:15px"class="fas fa-trash-alt"></i> --}}
-                                            <a href="#" data-toggle="modal" data-id="{{ $employee->uniqueid }}" data-name="{{ $employee->name }}"onclick="deletecompany(this)" data-target="#deletecompany"> <i style="color:rgb(13, 1, 56);padding-left:25px"class="fas fa-trash-alt"></i>
+                                            {{-- <a href="#" data-toggle="modal" data-id="{{ $employee['uniqueid'] }}" data-name="{{ $employee['name'] }}"  data-target="#deletecompany"> <i style="color:rgb(13, 1, 56);padding-left:25px"class="fas fa-trash-alt"></i> --}}
                                         </td>
                                     </tr>
                                 @endforeach
@@ -248,8 +251,7 @@
                             <ul class="pagination">
                                 <li data-page="prev">
                                     <span>
-                                        < <span class="sr-only">(current)
-                                    </span></span>
+                                        < <span class="sr-only">(current)</span>
                                 </li>
                                 <li data-page="next" id="prev">
                                     <span> > <span class="sr-only">(current)</span></span>
