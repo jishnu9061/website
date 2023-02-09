@@ -16,7 +16,7 @@
         
             <form method="post" action="{{url('update_ledger_add_payment')}}">
                 @csrf
-                <input type="hidden" value="{{$ledger_add_payment->purchase_id }}" name="purchase_id">
+                <input type="hidden" value="{{$ledger_add_payment->id }}" name="purchase_id">
                 <br>
                 <input type="hidden" value="{{$ledger_add_payment->pending_amount}}" id="pending-amount">
                 <div class="mb-3" id="form_logic">

@@ -112,6 +112,7 @@
                         <form method="post" action="{{url('store_supplier')}}" enctype="multipart/form-data">
 
                             @csrf
+                            <input type="hidden" name="company_id" value="{{Auth::user()->company_id}}">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-1">
