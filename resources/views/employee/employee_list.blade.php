@@ -23,6 +23,30 @@
             margin: 0;
             }
 
+            .radio{
+                display: block;
+                position: relative;
+                padding-left: -5px;
+                margin-bottom: 2px;
+                cursor: pointer;
+                font-size: 22px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            .round_radio{
+                display: block;
+                position: relative;
+                padding-left: 15px;
+                margin-bottom: 12px;
+                cursor: pointer;
+                font-size: 22px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
             .pagination li:hover{
             cursor: pointer;
             }
@@ -233,8 +257,21 @@
                                         <td class="text-center">{{ $employee['designation'] }}</td>
                                         <td class="text-center">{{ $employee['email'] }}</td>
                                         <td class="text-center">{{ $employee['contact'] }}</td>
-                                        <td class="text-center"></td>
+                                        <td class="text-center">
+                                            <input type="radio" name="radio" >
+                                            <span class="checkmark"></span>
+                                        </td>
                                         <td scope="row"class="text-center">
+                                        <div class="btn-group">
+                                            <a class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-color:none;" > ⋮ </a>
+                                          
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">edit Personal details</a>
+                                                <a class="dropdown-item" href="#">change destination</a>
+                                                <a class="dropdown-item" href="#">change status</a>
+                                                
+                                            </div>
+                                        </div>
                                             {{-- <a href="{{url('edit_company',$user->uniqueid)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i> --}}
                                             {{-- <a href="#" data-toggle="modal" data-id="{{ $employee['uniqueid'] }}"  data-target="#editcompany"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i> --}}
                                             {{-- <a href="{{url('#',$user->uniqueid)}}"> <i style="color:rgb(13, 1, 56);padding-left:15px"class="fas fa-trash-alt"></i> --}}
