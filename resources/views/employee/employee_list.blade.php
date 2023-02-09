@@ -263,7 +263,7 @@
                                         </td>
                                         <td scope="row"class="text-center">
                                         <div class="btn-group">
-                                            <a class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-color:none;" > ⋮ </a>
+                                            <a class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-color:none;" > ⋮ </a>
                                           
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item" href="#">edit Personal details</a>
