@@ -840,6 +840,6 @@
                 return true;
             }
             // edit password validation end here
-        </script>
+        </script> --}}
 
 @endsection
