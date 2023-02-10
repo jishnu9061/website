@@ -21,7 +21,6 @@ th {
     <form>
         <div class="table-responsive">
             <table class="table table-hover" style="border: 1px solid">
-
                 @csrf
                 <tbody>
                     <tr>

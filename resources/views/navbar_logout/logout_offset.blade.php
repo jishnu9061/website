@@ -62,81 +62,51 @@
   </style>
 
   <div class="back-o" id="backo">
-  <div id="myNav" class="overlay">
-    
-    <ul class="p-3"  style="
-    margin:0;
-    padding:0% 2%;
-    float: left;
-    height: 100px;
-    width:100%;
-  
-    display: flex;
-    flex-direction: row;
-    /* align-items: top;   */
-    list-style:none;
-    ">
-
-   
-    <li style=" text-align:left;" >
-    <a style="background-color: #ffffff; color: #ff0000;" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
- 
-      <li style=" text-align:right;"><a href= "{{url('logt')}}">Logout</a></li>
-  
-  </ul>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-3 center-xy" > <img style="max-width: 40px;" src="assets/img/cr_logo.jpeg" class="img-fluid" alt="Responsive image"></div>
-      <div class="col-9">
+    <div id="myNav" class="overlay">
+      <ul class="p-3"  style="
+        padding:0% 2%;
+        float: left;
+        height: 100px;
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        /* align-items: top;   */
+        list-style:none;margin:0px;
+        ">       
+      <li style=" text-align:left;" >
+      <a style="background-color: #ffffff; color: #ff0000;" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+        <li style=" text-align:right;"><a href= "{{url('logt')}}">Logout</a></li>
+      </ul>
+      <div class="container">
         <div class="row">
-          <div class="col" >Name</div>
-         
-          <div class="w-100"></div>
-          <div class="col" >Email</div>
-          <div class="w-100"></div>
-          <div class="col" >Proof Setting</div>
-          
+          <div class="col-3 center-xy" style="width:40%; "> <img style="width: 100px;height:auto;border:solid;border-radius:25%;" src="{{asset('/') }}/images/faces/{{ Auth::user()->photo_path}}" class="img-fluid" alt="Responsive image"></div>
+          <div class="col-9"style="width:60%; ">
+            <div class="row">
+              <div class="col" >Users Name: {{ Auth::user()->username }}</div>
+              <div class="w-100"></div>
+              <div class="col" >Email: {{ Auth::user()->email }}</div>
+              <div class="w-100"></div>
+              <div class="col" >Profile Setting(u/c)</div>
+            </div>
+          <br>
         </div>
-<br>
-      </div>
-      
-    </div>
-    <div class="row">
-      <div class="col-3 center-xy"><i  class="fa fa-address-card " aria-hidden="true"></i></div>
-      <div class="col-9">
-        <div class="row">
-          <div class="col" >Name</div>
-         
-          <div class="w-100"></div>
-          <div class="col" >Email</div>
-          <div class="w-100"></div>
-          <div class="col" >Proof Setting</div>
-          
         </div>
-
       </div>
+      <br><?php $ipaddress=DB::table('users_ip_track')->where('uniqueid',Auth::user()->uniqueid)->orderBy('id', 'desc')->get();$serial_no_logout=0; ?>
+      <div class="p-1">
+        <table class="table-responsive-xl" style="width:100%">
+          <thead>
+            <tr  >
+              <th scope="col">Sl.No:</th>
+              <th scope="col">IP Address</th>
+              <th scope="col">Login Time/Date</th>
+            </tr>
+          </thead>
+
+          <tbody>
+          </tbody>
+      </table>
     </div>
-  </div>
-  <br>
-
-  
-<div class="p-1">
-  <table class="table-responsive-xl">
-    <thead>
-      <tr style="color:#f1d9b0;">
-        <th scope="col">Sl.No:</th>
-        <th scope="col">IP Address</th>
-        <th scope="col">Login Time/Date</th>
-        
-      </tr>
-    </thead>
-    <tbody>
-
-    </tbody>
-  </table>
-</div>
-
   </div>
 </div>
 

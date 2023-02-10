@@ -562,7 +562,6 @@ use App\Http\Controllers\issued_summary;
         return view('testerr');
     }
     );
-
     Route::get('/patientinsurance', function () {
         return view('patient.patinsurance');
     }
@@ -585,7 +584,7 @@ use App\Http\Controllers\issued_summary;
 
 
 
-    Route::get('/home', 'homecontroller@index')->name('home');
+    // Route::get('/home', 'homecontroller@index')->name('home');
 
     //Accounts Module by Anu s Kumar
     Route::get('/ledger_acounts', 'AccountsController@ledger_acounts')->name('ledger_acounts');
@@ -1399,7 +1398,7 @@ Route::any('add-new-bringup', "filemanagement@addbringup")->name('add-new-bringu
     Route::any('annual_performance_form', 'hrindex@annual_performance_form')->name('annual_performance_form');
     Route::any('accindex', 'accindex@index')->name('accindex');
     Route::any('new_communication', 'ClientManagement@add_communication')->name('add_communication');
-    Route::any('calander', "Calender@index")->name('calander');
+    // Route::any('calander', "Calender@index")->name('calander');
 
     Route::any('over_time', 'hrindex@over_time_list')->name('over_time');
     Route::any('view_over_time', 'hrindex@viewover_time_list')->name('view_over_time');
@@ -2146,3 +2145,7 @@ Route::any('drop_manage_task/{id}', "CrmController@drop_manage_task")->name('dro
 Route::any('add_expense', "CrmController@add_expense")->name('add_expense');
 Route::any('update_expense', "CrmController@update_expense")->name('update_expense');
 Route::any('drop_expense/{id}', "CrmController@drop_expense")->name('drop_expense');
+
+
+Route::any('addemployee', "employeecontroller@store")->name('addemployee');
+Route::any('create_employee/{id}', "employeecontroller@create")->name('create_employee');
