@@ -352,8 +352,26 @@
                     </div>
         </nav>
             <div id="sidebar" class="active">
-                {{-- @include('sidebar.superadmin_sidebar') --}}
-                @include('sidebar.com_admin_sidebar')
+                @if (Auth::user()->role == 2)
+                    @include('sidebar.com_admin_sidebar')
+                @elseif (Auth::user()->role == 3 )
+                    @include('sidebar.legal_sidebar')
+                @elseif (Auth::user()->role == 7 )
+                    @include('sidebar.legal_sidebar')
+                @elseif (Auth::user()->role == 8 )
+                    @include('sidebar.legal_sidebar')
+                @elseif (Auth::user()->role == 4 )
+                    @include('sidebar.hr_sidebar')
+                @elseif (Auth::user()->role == 9 )
+                    @include('sidebar.hr_sidebar')
+                @elseif (Auth::user()->role == 5 )
+                    @include('sidebar.account_sidebar')
+                @elseif (Auth::user()->role ==10 )
+                    @include('sidebar.account_sidebar')
+                @elseif (Auth::user()->role == 11 )
+                    @include('sidebar.account_sidebar')
+                @endif
+                
             </div>
     <div id="main" style="padding-bottom:8px;padding-top: 2px;padding-right: 15px;margin-right:-8px;background-color: #1D1D50;margin-top:5px;">
      {{-- mian start --}}  
