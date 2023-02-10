@@ -11,10 +11,11 @@
 .btn-width {
     width: 10%;
 }
-tbody{
 
-}
-th{ width:30%;
+tbody {}
+
+th {
+    width: 30%;
 
 }
 </style>
@@ -32,7 +33,7 @@ th{ width:30%;
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
             {{-- heading --}}
-            <h4 id="hdtpa"><b>Supplier  Details</b></h4>
+            <h4 id="hdtpa"><b>Supplier Details</b></h4>
             <br><br>
         </div>
         <div class="table-responsive">
@@ -40,11 +41,10 @@ th{ width:30%;
 
                 @csrf
                 <tbody>
-                    
-
+                        @foreach($view_supplier as $list)
                     <tr>
                         <th>Vendor Name</th>
-                        <td></td>
+                        <td>{{$list->supplier_name}}</td>
                     </tr>
                     <tr>
                         <th>Product Supply</th>
@@ -52,23 +52,23 @@ th{ width:30%;
                     </tr>
                     <tr>
                         <th>TAX ID</th>
-                        <td></td>
+                        <td>{{$list->tax_id}}</td>
                     </tr>
                     <tr>
                         <th>Contact No</th>
-                        <td></td>
+                        <td>{{$list->contact_no}}</td>
                     </tr>
                     <tr>
                         <th>Email</th>
-                        <td></td>
+                        <td>{{$list->email}}</td>
                     </tr>
                     <tr>
                         <th>Address</th>
-                        <td></td>
+                        <td>{{$list->address}}</td>
                     </tr>
                     <tr>
                         <th>City</th>
-                        <td></td>
+                        <td>{{$list->city}}</td>
                     </tr>
                     <tr>
                         <th>State</th>
@@ -76,14 +76,13 @@ th{ width:30%;
                     </tr>
                     <tr>
                         <th>PIN code</th>
-                        <td></td>
+                        <td>{{$list->pincode}}</td>
                     </tr>
                     <tr style="height:200%;">
                         <th>Product Details</th>
                         <td></td>
                     </tr>
-                   
-
+                    @endforeach
                 </tbody>
             </table>
         </div>

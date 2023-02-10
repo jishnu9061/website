@@ -64,7 +64,7 @@
                 <td>{{$list->matter_type}}</td>
                 <td>{{$list->corporation}}</td>
                 <td>{{$list->case_details}}</td>
-                <td><a href="{{url('view_business_law') }}"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i><span
+                <td><a href="{{url('view_business_law',$list->id) }}"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i><span
                             class="m-2"></span>
                         <a href="{{url('edit_business_law',$list->id) }}"><i style="color:rgb(13, 1, 56);"
                                 class="fa fa-edit"></i><span class="m-2"></span>

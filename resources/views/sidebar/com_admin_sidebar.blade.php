@@ -1154,7 +1154,7 @@
                             @else
                     <li class="submenu-item ">
                         <a href="{{url('item_movement')}}" class='sidebar-link'>
-                            <span>>Item Movement Report</span>
+                            <span>Item Movement Report</span>
                             @endif
                         </a>
                     </li>{{-- 5th submenu end --}}
@@ -1167,7 +1167,7 @@
                             @else
                     <li class="submenu-item ">
                         <a href="{{url('re_order')}}" class='sidebar-link'>
-                            <span>>Re-order Report</span>
+                            <span>Re-order Report</span>
                             @endif
                         </a>
                     </li>{{-- 6th submenu end --}}

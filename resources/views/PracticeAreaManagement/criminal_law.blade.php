@@ -66,7 +66,7 @@
                 <td>{{$list->matter_type}}</td>
                 <td>{{$list->prosecutor}}</td>
                 <td>{{$list->case_detail}}</td>
-                <td><a href="{{ url('view_criminal_law') }}"><i style="color:rgb(13, 1, 56);"
+                <td><a href="{{ url('view_criminal_law',$list->id) }}"><i style="color:rgb(13, 1, 56);"
                             class="fa fa-eye"></i><span class="m-2"></span>
                         <a href="{{ url('edit_criminal_law', $list->id) }}"><i style="color:rgb(13, 1, 56);"
                                 class="fa fa-edit"></i><span class="m-2"></span>

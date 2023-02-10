@@ -24,7 +24,7 @@
                             <label for="exampleFormControlInput1" class="form-label">File No</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" placeholder="12T654C">
+                                <input type="text" class="form-control" value="{{$edit_family_law->file_no}}" >
                             </div>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                             <label for="exampleFormControlInput1" class="form-label">Client Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" placeholder="Alen">
+                                <input type="text" class="form-control" value="{{$edit_family_law->client_name}}">
                             </div>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
                             <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" placeholder="Pre Decree">
+                                <input type="text" class="form-control" value="{{$edit_family_law->matter_type}}">
                             </div>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
                             <label for="exampleFormControlInput1" class="form-label">Other Party</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" placeholder="Smith">
+                                <input type="text" class="form-control" value="{{$edit_family_law->other_party}}">
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                             <label for="exampleFormControlInput1" class="form-label">Attorney</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" placeholder="David">
+                                <input type="text" class="form-control" value="{{$edit_family_law->attorney}}">
                             </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@
                             <label for="exampleFormControlInput1" class="form-label">Case Details</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <textarea class="form-control" rows="2" placeholder="Divorce"></textarea>
+                                <textarea class="form-control" rows="2" ></textarea>
                             </div>
                         </div>
                     </div>
@@ -83,7 +83,7 @@
                             <label for="exampleFormControlInput1" class="form-label">Marriage Details</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <textarea class="form-control" rows="2" placeholder="Marriage Details"></textarea>
+                                <textarea class="form-control" rows="2" ></textarea>
                             </div>
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                             <label for="exampleFormControlInput1" class="form-label">Property Details</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <textarea class="form-control" rows="2" placeholder="Property Details"></textarea>
+                                <textarea class="form-control" rows="2" ></textarea>
                             </div>
                         </div>
                     </div>
@@ -101,7 +101,7 @@
                             <label for="exampleFormControlInput1" class="form-label">Child Details</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <textarea class="form-control" rows="2" placeholder="Child Details"></textarea>
+                                <textarea class="form-control" rows="2"></textarea>
                             </div>
                         </div>
                     </div>
