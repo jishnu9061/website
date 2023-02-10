@@ -321,7 +321,7 @@ class CrmController extends Controller
             'supporting_details' => $support_detail,
 
         ]);
-        return view('CRM.view_lead');
+        return redirect('/expense');
     }
 
     public function edit_expense($id)

@@ -562,7 +562,6 @@ use App\Http\Controllers\issued_summary;
         return view('testerr');
     }
     );
-
     Route::get('/patientinsurance', function () {
         return view('patient.patinsurance');
     }
