@@ -10,7 +10,6 @@
       <th scope="col">Employee Id</th>
       <th scope="col">Name</th>
       <th scope="col">Email</th>
-      <th scope="col">Phone</th >
       <th scope="col">PaySlip</th>
     </tr>
   </thead>
@@ -20,17 +19,17 @@
     @foreach($staffs as $alluser)
     
     <tr>
-      <th scope="row">{{$alluser->uniqueid}}</th>
-      <th>{{$alluser->username}}</th>
-      <th>{{$alluser->email}}</th>
-    <tr>  
-    <form method="post" action="{{url('allstaffsal')}}">
+      <td scope="row">{{$alluser->uniqueid}}</td>
+      <td>{{$alluser->username}}</td>
+      <td>{{$alluser->email}}</td> 
+    <form method="post" action="{{url('')}}">
         @csrf
         <input type="hidden" name="uniq" value="{{$alluser->uniqueid}}">
         <input type="hidden" name="hiddenmonth" value="{{$month}}">
         <input type="hidden" name="hiddenyear" value="{{$year}}">
       <td><button type="submit"><i class="fab fa-atlassian" style="color: green"></button></i></td>
       </form>
+    </tr>  
 
 <!--       <td><a href="{{url('viewstaff'.$alluser->id)}}">View</a></td>
       <td><a href="{{url('giveallowance'.$alluser->uniqueid)}}">Allowance</a></td>

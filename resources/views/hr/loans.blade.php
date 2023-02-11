@@ -27,7 +27,7 @@
    <br>
 
 
-<form method="post" action="{{url('addloan')}}">
+{{-- <form method="post" action=""> --}}
     @csrf
                     <div class="row">
                                     <div class="col-md-3">
@@ -79,7 +79,7 @@
       </div>
 
 
-</form>
+{{-- </form> --}}
  <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
             <thead>
@@ -123,7 +123,7 @@
                     <td>{{$loan->deduct}}</td>
 
                     <td>{{$loan->status}}</td>
-                    <form method="post" action="{{url('loandelete'.$loan->id)}}">
+                    <form method="" action="">
 					@csrf
 					<input type="hidden" name="delete">
 
