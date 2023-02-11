@@ -21,7 +21,7 @@
                 <div class="container">
 
                     <div class="row">
-                        <input type="hidden" value="{{$edit->id}}" name="id">
+                        <input type="hidden" value="{{$edit_real_estate->id}}" name="id">
                         <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="exampleFormControlInput1" class="form-label">File No</label>
@@ -29,7 +29,7 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <input type="text" class="form-control" name="file_no" value="{{$edit->file_no}}"
+                                    <input type="text" class="form-control" name="file_no" value="{{$edit_real_estate->file_no}}"
                                         placeholder="">
                                 </div>
                             </div>
@@ -42,7 +42,7 @@
 
                                     </div>
                                     <input type="text" class="form-control" name="client_name"
-                                        value="{{$edit->client_name}}" placeholder="">
+                                        value="{{$edit_real_estate->client_name}}" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
 
                                     </div>
                                     <input type="text" class="form-control" name="matter_type"
-                                        value="{{$edit->matter_type}}" placeholder="">
+                                        value="{{$edit_real_estate->matter_type}}" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -69,7 +69,7 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <input type="text" class="form-control" name="buyer" value="{{$edit->buyer}}"
+                                    <input type="text" class="form-control" name="buyer" value="{{$edit_real_estate->buyer}}"
                                         placeholder="">
                                 </div>
                             </div>
@@ -81,7 +81,7 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <input type="text" class="form-control" name="attroney" value="{{$edit->attroney}}"
+                                    <input type="text" class="form-control" name="attroney" value="{{$edit_real_estate->attroney}}"
                                         placeholder="">
                                 </div>
                             </div>
@@ -96,7 +96,7 @@
 
                                     </div>
                                     <textarea class="form-control" rows="2"
-                                        name="property">{{$edit->property}}</textarea>
+                                        name="property">{{$edit_real_estate->property}}</textarea>
                                 </div>
                             </div>
                         </div>
@@ -113,7 +113,7 @@
 
                                     </div>
                                     <textarea class="form-control" rows="2"
-                                        name="close_statement">{{$edit->close_statement}}</textarea>
+                                        name="close_statement">{{$edit_real_estate->close_statement}}</textarea>
                                 </div>
                             </div>
                         </div>
@@ -125,7 +125,7 @@
 
                                     </div>
                                     <textarea class="form-control" rows="2"
-                                        name="listing_realtor">{{$edit->listing_realtor}}</textarea>
+                                        name="listing_realtor">{{$edit_real_estate->listing_realtor}}</textarea>
                                 </div>
                             </div>
                         </div>
@@ -137,7 +137,7 @@
 
                                     </div>
                                     <textarea class="form-control" rows="2"
-                                        name="selling_realtor">{{$edit->selling_realtor}}</textarea>
+                                        name="selling_realtor">{{$edit_real_estate->selling_realtor}}</textarea>
                                 </div>
                             </div>
                         </div>
@@ -151,7 +151,7 @@
                                     <div class="input-group-prepend">
 
                                     </div>
-                                    <input type="text" class="form-control" placeholder="" value="{{$edit->file_no}}"
+                                    <input type="text" class="form-control" placeholder="" value="{{$edit_real_estate->company_title}}"
                                         name="company_title">
                                 </div>
                             </div>

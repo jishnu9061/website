@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Auth;
 
 class PurchaseManagement extends Controller
 {
@@ -15,7 +16,11 @@ class PurchaseManagement extends Controller
     public function purchase_order($id)
     {
         $supplier_order = DB::table('cra_add_supplier')->get();
-        $purchase_order = DB::table('cra_add_new_purchase')->where('company_id',$id)->get();
+        $purchase_order = DB::table('cra_add_new_purchase')
+        ->leftjoin('cra_add_supplier','cra_add_supplier.id','=','cra_add_new_purchase.supplier_name')
+        ->where('cra_add_new_purchase.company_id',$id)
+        ->get();
+        
         return view('purchase_management.purchase_order',compact('purchase_order','supplier_order','id'));
     }
 
@@ -98,7 +103,7 @@ class PurchaseManagement extends Controller
         ->leftjoin('cra_add_supplier','cra_add_supplier.id','=','cra_add_new_purchase.supplier_name')
         ->where('cra_add_new_purchase.id',$id)
         ->get();
-
+       
         $view_purchase_order = DB::table('cra_purchase_items')->where('id',$id)->get();
    
         return view('purchase_management.view_purchase_reports',compact('view_purchase_order','view_order','id'));
@@ -117,15 +122,22 @@ class PurchaseManagement extends Controller
     }
 
 
-    public function view_supplier()
+    public function view_supplier($id)
     {
-        return view('purchase_management.view_supplier');
+        $view_supplier   = DB::table('cra_add_supplier')->where('id',$id)->get();
+        return view('purchase_management.view_supplier',compact('view_supplier','id'));
     }
 
 
-    public function edit_supplier()
+    public function edit_supplier($id)
     {
-        return view('purchase_management.edit_supplier');
+        $edit_supplier  = DB::table('cra_add_supplier')->where('id',$id)->first();
+        return view('purchase_management.edit_supplier',compact('edit_supplier','id'));
+    }
+
+    public function delete_supplier($id){
+        DB::table('cra_add_supplier')->where('id',$id)->delete();
+        return redirect('supplier/'.Auth::user()->company_id);
     }
 
     // public function cost_variation_report()

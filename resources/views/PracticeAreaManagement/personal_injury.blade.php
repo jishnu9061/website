@@ -82,7 +82,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            @foreach($view_injury as $list)
+                            @foreach($personalinjury as $list)
 
                                 <tr id="data">
                                     
@@ -92,7 +92,7 @@
                                     <td class="text-center"></td>
                                     <td class="text-center"></td>
                                     <td class="text-center"></td>
-                                    <td class="text-center"><a href="{{url('view_injury')}}"><i style="color:black;" class="fa fa-eye"
+                                    <td class="text-center"><a href="{{url('view_injury',$list->id)}}"><i style="color:black;" class="fa fa-eye"
                                         aria-hidden="true"></i>
                                     <a href="{{url('edit_injury',$list->id)}}"><i style="color:black;" class="fa fa-edit"
                                             aria-hidden="true"></i> 

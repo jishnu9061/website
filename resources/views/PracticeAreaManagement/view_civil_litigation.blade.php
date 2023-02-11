@@ -18,82 +18,70 @@
             <div class="text-left">
                 <table class="table">
                     <tbody>
+                        @foreach($view_civil_litigation as $list)
                         <tr>
                             <td scope="row">Matter Info:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->matter_info}}
                             </td>
 
                         </tr>
                         <tr>
                             <td scope="row">Plaintiff:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->plaintiff}}
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Matter Type:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->matter_type}}
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Defendent:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->defendent}}
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Attorney:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->attroney}}
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Case Details:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->case_detail}}
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Plaintiff Insurer:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->insurer}}
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Plaintiff Witness:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->witness}}
                             </td>
 
                         </tr>
                         <tr>
                             <td scope="row">Plaintiff Expert:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->expert}}
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Defendant Insurer:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->def_insurer}}
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Defendant Witness:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->def_witness}}
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Defendant Expert:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->def_expert}}
                             </td>
                         </tr>
-
-
+                        @endforeach
                     </tbody>
                 </table>
 

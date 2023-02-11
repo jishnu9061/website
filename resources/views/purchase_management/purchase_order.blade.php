@@ -78,7 +78,7 @@
                                 <tr class="text-center">
                                     <td>{{$list->purchase_order_number}}</td>
                                     <td>{{$list->purchase_date}}</td>
-                                    <td></td>
+                                    <td>{{$list->supplier_name}}</td>
                                     <td>{{$list->status}}</td>
                                     <td scope="row" class="text-center">
                                         <a href="{{url('view_purchase_order',$list->id

@@ -55,74 +55,10 @@
             <tbody>
 
                 <tr>
-
-                    <td>Family Law</td>
+                    <td></td>
                     <td>
-                        <a href="edit_practice_area"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
-                            <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>Personal Injury</td>
-                    <td>
-                        <a href="edit_practice_area"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
-                            <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td>General Practice</td>
-                    <td>
-                        <a href="edit_practice_area"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
-                            <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Estate Planning</td>
-                    <td>
-                        <a href="edit_practice_area"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
-                            <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Real Estate</td>
-                    <td>
-                        <a href="edit_practice_area"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
-                            <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Criminal Law</td>
-                    <td>
-                        <a href="edit_practice_area"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
-                            <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Civil Litigation</td>
-                    <td>
-                        <a href="edit_practice_area"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
-                            <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Business Law</td>
-                    <td>
-                        <a href="edit_practice_area"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
-                            <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Guardianship</td>
-                    <td>
-                        <a href="edit_practice_area"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
-                            <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Probate Law</td>
-                    <td>
-                        <a href="edit_practice_area"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
+                        <a href="edit_practice_area"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span
+                                class="m-2"></span>
                             <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
                     </td>
                 </tr>
@@ -163,7 +99,7 @@
             <!-- Modal body -->
             <div class="modal-body">
                 <div class="container">
-                    <form>
+                    <form action="" method="">
 
                         <div class="mb-3">
                             <input class="form-control form-control-lg" type="text" placeholder=""

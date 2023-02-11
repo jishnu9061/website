@@ -65,7 +65,7 @@
                 <td>{{$list->attroney}}</td>
                 <td>{{$list->property}}</td>
                 <td>{{$list->selling_realtor}}</td>
-                <td><a href="{{ url('view_real_estate') }}"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i><span
+                <td><a href="{{ url('view_real_estate',$list->id) }}"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i><span
                             class="m-1"></span>
                         <a href="{{ url('edit_real_estate',$list->id) }}"><i style="color:rgb(13, 1, 56);"
                                 class="fa fa-edit"></i><span class="m-1"></span>

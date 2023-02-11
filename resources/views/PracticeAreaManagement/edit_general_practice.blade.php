@@ -24,7 +24,7 @@
                             <label for="exampleFormControlInput1" class="form-label">File No</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" value="52B6577Z">
+                                <input type="text" class="form-control" value="{{$edit_general_practice->file_no}}">
                             </div>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                             <label for="exampleFormControlInput1" class="form-label">Client Name</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" value="Michael">
+                                <input type="text" class="form-control" value="{{$edit_general_practice->client_name}}">
                             </div>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
                             <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" value="Civil Dispute">
+                                <input type="text" class="form-control" value="{{$edit_general_practice->matter_type}}">
                             </div>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
                             <label for="exampleFormControlInput1" class="form-label">Other Party</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" value="Jones">
+                                <input type="text" class="form-control" value="{{$edit_general_practice->other_party}}">
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                             <label for="exampleFormControlInput1" class="form-label">Attorney</label>
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
-                                <input type="text" class="form-control" value="Samuel">
+                                <input type="text" class="form-control" value="{{$edit_general_practice->attorney}}">
                             </div>
                         </div>
                     </div>
@@ -73,7 +73,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend"></div>
                                 <textarea class="form-control" rows="2"
-                                    value="Filed Date: 5/2/2019 Service by: Currier Los Angles"></textarea>
+                                    value=""></textarea>
                             </div>
                         </div>
                     </div>

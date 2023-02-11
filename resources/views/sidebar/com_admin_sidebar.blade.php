@@ -1095,92 +1095,89 @@
             @if (in_array(request()->path(), $admin))
                 <ul class="submenu" style="display: block;">
                 @else
-                    <ul class="submenu" style="display: none;">
-            @endif
-            @if (request()->path() == 'stock_list')
-                {{-- 1st  submenu start --}}
-        <li class="submenu-item ">
-            <a href="{{ url('stock_list') }}" class='sidebar-link' style="background-color:#1D1D50 ; color:white;">
-                <span style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Stock
-                    List</span>
-            @else
-        <li class="submenu-item ">
-            <a href="{{ url('stock_list') }}" class='sidebar-link'>
-                <span>Stock List</span>
-                @endif
-            </a>
-        </li>{{-- 1st submenu end --}}
-        @if (request()->path() == 'add_categories')
-            {{-- 2nd  submenu start --}}
-            <li class="submenu-item ">
-                <a href="{{ url('add_categories') }}" class='sidebar-link'
-                    style="background-color:#1D1D50 ; color:white;">
-                    <span style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Manage
-                        Categories</span>
-                @else
-            <li class="submenu-item ">
-                <a href="{{ url('add_categories') }}" class='sidebar-link'>
-                    <span>Manage Categories</span>
-        @endif
-        </a>
-        </li>{{-- 2nd submenu end --}}
-        @if (request()->path() == 'manage_items')
-            {{-- 3rd  submenu start --}}
-            <li class="submenu-item ">
-                <a href="{{ url('manage_items') }}" class='sidebar-link'
-                    style="background-color:#1D1D50 ; color:white;">
-                    <span style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Manage
-                        Items</span>
-                @else
-            <li class="submenu-item ">
-                <a href="{{ url('manage_items') }}" class='sidebar-link'>
-                    <span>Manage Items</span>
-        @endif
-        </a>
-        </li>{{--  3rd submenu end --}}
-        @if (request()->path() == 'request_item')
-            {{-- 4th  submenu start --}}
-            <li class="submenu-item ">
-                <a href="{{ url('request_item') }}" class='sidebar-link'
-                    style="background-color:#1D1D50 ; color:white;">
-                    <span style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">View
-                        Request</span>
-                @else
-            <li class="submenu-item ">
-                <a href="{{ url('request_item') }}" class='sidebar-link'>
-                    <span>View Request</span>
-        @endif
-        </a>
-        </li>{{-- 4th submenu end --}}
-        @if (request()->path() == 'item_movement')
-            {{-- 5th  submenu start --}}
-            <li class="submenu-item ">
-                <a href="{{ url('item_movement') }}" class='sidebar-link'
-                    style="background-color:#1D1D50 ; color:white;">
-                    <span style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Item
-                        Movement Report</span>
-                @else
-            <li class="submenu-item ">
-                <a href="{{ url('item_movement') }}" class='sidebar-link'>
-                    <span>>Item Movement Report</span>
-        @endif
-        </a>
-        </li>{{-- 5th submenu end --}}
-        @if (request()->path() == 're_order')
-            {{-- 6th  submenu start --}}
-            <li class="submenu-item ">
-                <a href="{{ url('re_order') }}" class='sidebar-link'
-                    style="background-color:#1D1D50 ; color:white;">
-                    <span style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Re-order
-                        Report</span>
-                @else
-            <li class="submenu-item ">
-                <a href="{{ url('re_order') }}" class='sidebar-link'>
-                    <span>>Re-order Report</span>
-        @endif
-        </a>
-        </li>{{-- 6th submenu end --}}
-        </ul>
+
+                <ul class="submenu" style="display: none;">
+                    @endif
+                    @if(request()->path()== "stock_list"){{-- 1st  submenu start --}}
+                    <li class="submenu-item ">
+                        <a href="{{url('stock_list')}}" class='sidebar-link'
+                            style="background-color:#1D1D50 ; color:white;">
+                            <span style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Stock
+                                List</span>
+                            @else
+                    <li class="submenu-item ">
+                        <a href="{{url('stock_list')}}" class='sidebar-link'>
+                            <span>Stock List</span>
+                            @endif
+                        </a>
+                    </li>{{-- 1st submenu end --}}
+                    @if(request()->path()== "add_categories"){{-- 2nd  submenu start --}}
+                    <li class="submenu-item ">
+                        <a href="{{url('add_categories')}}" class='sidebar-link'
+                            style="background-color:#1D1D50 ; color:white;">
+                            <span style="margin-left:0px;font-align:center;">●</span><span
+                                style="margin-left:5px">Manage Categories</span>
+                            @else
+                    <li class="submenu-item ">
+                        <a href="{{url('add_categories')}}" class='sidebar-link'>
+                            <span>Manage Categories</span>
+                            @endif
+                        </a>
+                    </li>{{-- 2nd submenu end --}}
+                    @if(request()->path()== "manage_items"){{-- 3rd  submenu start --}}
+                    <li class="submenu-item ">
+                        <a href="{{url('manage_items')}}" class='sidebar-link'
+                            style="background-color:#1D1D50 ; color:white;">
+                            <span style="margin-left:0px;font-align:center;">●</span><span
+                                style="margin-left:5px">Manage Items</span>
+                            @else
+                    <li class="submenu-item ">
+                        <a href="{{url('manage_items')}}" class='sidebar-link'>
+                            <span>Manage Items</span>
+                            @endif
+                        </a>
+                    </li>{{--  3rd submenu end --}}
+                    @if(request()->path()== "request_item"){{-- 4th  submenu start --}}
+                    <li class="submenu-item ">
+                        <a href="{{url('request_item')}}" class='sidebar-link'
+                            style="background-color:#1D1D50 ; color:white;">
+                            <span style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">View
+                                Request</span>
+                            @else
+                    <li class="submenu-item ">
+                        <a href="{{url('request_item')}}" class='sidebar-link'>
+                            <span>View Request</span>
+                            @endif
+                        </a>
+                    </li>{{-- 4th submenu end --}}
+                    @if(request()->path()== "item_movement"){{-- 5th  submenu start --}}
+                    <li class="submenu-item ">
+                        <a href="{{url('item_movement')}}" class='sidebar-link'
+                            style="background-color:#1D1D50 ; color:white;">
+                            <span style="margin-left:0px;font-align:center;">●</span><span style="margin-left:5px">Item
+                                Movement Report</span>
+                            @else
+                    <li class="submenu-item ">
+                        <a href="{{url('item_movement')}}" class='sidebar-link'>
+                            <span>Item Movement Report</span>
+                            @endif
+                        </a>
+                    </li>{{-- 5th submenu end --}}
+                    @if(request()->path()== "re_order"){{-- 6th  submenu start --}}
+                    <li class="submenu-item ">
+                        <a href="{{url('re_order')}}" class='sidebar-link'
+                            style="background-color:#1D1D50 ; color:white;">
+                            <span style="margin-left:0px;font-align:center;">●</span><span
+                                style="margin-left:5px">Re-order Report</span>
+                            @else
+                    <li class="submenu-item ">
+                        <a href="{{url('re_order')}}" class='sidebar-link'>
+                            <span>Re-order Report</span>
+                            @endif
+                        </a>
+                    </li>{{-- 6th submenu end --}}
+                </ul>
+
         </li>
         <li class="sidebar-item  has-sub">{{-- Seventh menu --}}
             <a href="#" class='sidebar-link'>
