@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Contracts\Routing\ResponseFactory;
+use Illuminate\Http\Response;
 
 class BaseController extends Controller
 {
@@ -42,12 +45,12 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
         if ( Auth::user()->role == 1) {// do your magic here
             return redirect('/superadminhome');
             }
-        return view('dashboard.dashboard');
+        return view('dashboard.cal_dashboard');
     }
     public function admindashboard()
     {
