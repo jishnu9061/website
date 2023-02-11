@@ -1056,7 +1056,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('update-client', "ClientManagement@updateClient")->name('update-client');
     Route::any('delete-client/{id}', "ClientManagement@deleteClient")->name('delete-client');
     //coporate
-    Route::any('add-corporate', 'ClientManagement@addCorporate')->name('add-corporate');
+    Route::any('add_corporate', 'ClientManagement@addCorporate')->name('add-corporate');
     // Route::any('store-corporate','ClientManagement@storeCorporate')->name('store-corporate');
     Route::any('corporate-list', 'ClientManagement@listCorporate')->name('corporate-list');
 
@@ -1367,6 +1367,10 @@ Route::any('add-new-bringup', "filemanagement@addbringup")->name('add-new-bringu
     // hr module belji
     Route::any('hrindex', 'hrindex@index')->name('hrindex');
     Route::any('recruitment', 'hrindex@recruitment')->name('recruitment');
+    //employee start
+    Route::any('addemployee', "employeecontroller@store")->name('addemployee');
+    Route::any('create_employee/{id}', "employeecontroller@create")->name('create_employee');
+    //employee end
 
     // HR-Manage Staffs Subhasree
 

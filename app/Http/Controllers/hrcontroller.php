@@ -44,9 +44,8 @@ class hrcontroller extends Controller
    	return view('hr.leaves',['leaves'=>$leaves]);
    }
       public function loans()
-   {
-     $hospital=Auth::user()->Hospital;
-    $loans=DB::table('loans')->where('hospital',$hospital)->get();
+   {  
+    $loans=DB::table('loans')->get();
     return view('hr.loans',['loans'=>$loans]);
    }
    public function dutyschedule(Request $Request)
@@ -210,8 +209,6 @@ class hrcontroller extends Controller
       $year= $date->format('Y');
       $month= $date->format('m');
       $daysinmonth=Carbon::Parse($todays)->daysInMonth;
-   
-      $hospital=Auth::user()->Hospital;
       $deps=DB::table('departments')->get();
       $check=DB::table('dailyattendances')->where('month',$month)->where('year',$year)->first();
       if($check)
@@ -221,7 +218,7 @@ class hrcontroller extends Controller
       }
       else{
        
-         $users=DB::table('users')->where('Hospital',$hospital)->get();
+         $users=DB::table('users')->get();
   
          foreach($users as $user)
         {
@@ -231,11 +228,10 @@ class hrcontroller extends Controller
               $attendance->year=$year;
               $attendance->month=$month;
               $attendance->staffid=$user->uniqueid;
-              $attendance->staffname=$user->name;
+              $attendance->staffname=$user->username;
               $attendance->attendance='P';
               $attendance->date=$i."-".$month."-".$year;
-              $attendance->hospital=$hospital;
-              $attendance->department=$user->departments;
+              // $attendance->department=$user->departments;
               $attendance->save();
            }
   
