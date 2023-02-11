@@ -50,8 +50,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>{{-- sweet alert script ref:https://sweetalert2.github.io/ --}}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -372,7 +371,7 @@
                     @include('sidebar.account_sidebar')
                 @endif
                 
-            </div>
+                </div>
     <div id="main" style="padding-bottom:8px;padding-top: 2px;padding-right: 15px;margin-right:-8px;background-color: #1D1D50;margin-top:5px;">
      {{-- mian start --}}  
         <style>

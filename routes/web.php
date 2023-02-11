@@ -2146,3 +2146,16 @@ Route::any('drop_manage_task/{id}', "CrmController@drop_manage_task")->name('dro
 Route::any('add_expense', "CrmController@add_expense")->name('add_expense');
 Route::any('update_expense', "CrmController@update_expense")->name('update_expense');
 Route::any('drop_expense/{id}', "CrmController@drop_expense")->name('drop_expense');
+
+//employee start
+Route::any('addemployee', "employeecontroller@store")->name('addemployee');
+Route::any('create_employee/{id}', "employeecontroller@create")->name('create_employee');
+//employee end
+
+//calender start
+Route::any('calendar_data', "calender@show")->name('calendar_data');
+Route::any('calendar/store', "calender@store")->name('calendar/store');
+Route::any('calendar/update/{id}', "calender@update");
+Route::any('calendar/delete/{id}', "calender@destroy");
+Route::any('update_calendar/{id}', "calender@updateall");
+//calender end
