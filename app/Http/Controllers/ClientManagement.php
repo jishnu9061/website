@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use DB;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class ClientManagement extends Controller
@@ -39,7 +40,8 @@ class ClientManagement extends Controller
     }
     public function add_lawyer(Request $Request)
     {
-
+        $company_id=Auth::user()->company_id;
+        $branch_id=Auth::user()->branch_id ?? null;
         $client_number = $Request['client_number'];
         $client_type  = $Request['client_type '];
         $client_name  = $Request['client_name '];
@@ -54,9 +56,10 @@ class ClientManagement extends Controller
             'file_number' => $file_number,
             'lawyer_name' => $lawyer_name,
             'court_name' => $court_name,
-
+            'company_id'=>$company_id,
+            'branch_id'=>$branch_id,
         ]);
-        return redirect('/asign-lawyer');
+        return redirect('/asign_lawyer');
 
     }
 
@@ -89,7 +92,7 @@ class ClientManagement extends Controller
         );
         DB::table('cra_asign_lawyer')->where('id', $id)->update($update_lawyer );
 
-       return redirect('/asign-lawyer');
+       return redirect('/asign_lawyer');
             }
 
     public function view_lawyer($id)
@@ -103,7 +106,7 @@ class ClientManagement extends Controller
     public function delete_lawyer($id)
     {
         DB::table('cra_asign_lawyer')->where('id',$id)->delete();
-        return redirect('/asign-lawyer');
+        return redirect('/asign_lawyer');
     }
 
 
@@ -127,6 +130,8 @@ class ClientManagement extends Controller
      */
 
     public function addNewclient(Request $Request){
+        $company_id=Auth::user()->company_id;
+        $branch_id=Auth::user()->branch_id ?? null;
         $number = $Request['number'];
         $client_type = $Request['type'];
         $citizen_status = $Request['citizen'];
@@ -172,13 +177,15 @@ class ClientManagement extends Controller
             'town' =>      $town ,
             'physical_address' =>   $physical_address,
             'notes' => $Notes,
+            'company_id'=>$company_id,
+            'branch_id'=>$branch_id,
         ]);
 
         DB::table('cra_mixed_table')->insertGetId([
             'client_name' =>    $client_name,
         ]);
 
-        return redirect('/client_list');
+        return redirect("/client_list/".$company_id);
     }
 
     //Asign Lawyer//
@@ -317,7 +324,8 @@ class ClientManagement extends Controller
   //end client-search
 
   public function addCorporate(Request $Request){
-
+    $company_id=Auth::user()->company_id;
+    $branch_id=Auth::user()->branch_id ?? null;
     $number = $Request['number'];
     $client_type = $Request['type'];
     $citizen_status = $Request['citizen'];
@@ -370,13 +378,15 @@ class ClientManagement extends Controller
         'designation' =>  $Designation,
         'Mobile_no' => $mobile_no,
         'email' =>$person_email,
+        'company_id'=>$company_id,
+        'branch_id'=>$branch_id,
     ]);
 
     DB::table('cra_mixed_table')->insertGetId([
         'client_name' =>    $client_name,
     ]);
 
-    return redirect("/corporate-list");
+    return redirect("/corporate-list/".$company_id);
 
     }
 
@@ -563,7 +573,7 @@ class ClientManagement extends Controller
         ->select('*')
         ->join('cra_document_detials','cra_document_detials.individual_id','=','cra_individual_client_details.id')
         ->get();
-        dd($client_document);
+    
 
         return view('client-management.client-document',compact('client_document'));
     }
@@ -1063,6 +1073,8 @@ class ClientManagement extends Controller
     }
 
     public function addCommunication(Request $Request){
+        $company_id=Auth::user()->company_id;
+        $branch_id=Auth::user()->branch_id ?? null;
         $communication_date = $Request['date'];
         $client = $Request['Client'];
         $file = $Request['File'];
@@ -1095,10 +1107,12 @@ class ClientManagement extends Controller
             'others' => $others ,
             'communicated_description' =>  $communicated_description,
             'action_plan' =>  $action_plan,
+            'company_id'=>$company_id,
+            'branch_id'=>$branch_id,
         ]);
 
 
-        return redirect('communication-list');
+        return redirect('/communication-list/'.$company_id);
     }
 
 
