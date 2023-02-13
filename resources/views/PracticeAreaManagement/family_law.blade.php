@@ -69,7 +69,7 @@
                     <td>{{$list->other_party}}</td>
                     <td>{{$list->case_details}}</td>
                     <td>{{$list->attorney}}</td>
-                    <td><a href="{{ url('view_family_law') }}"><i style="color:rgb(13, 1, 56);"
+                    <td><a href="{{ url('view_family_law',$list->id) }}"><i style="color:rgb(13, 1, 56);"
                                 class="fa fa-eye"></i><span class="m-2"></span>
                             <a href="{{ url('edit_family_law',$list->id) }}"><i style="color:rgb(13, 1, 56);"
                                     class="fa fa-edit"></i><span class="m-2"></span>

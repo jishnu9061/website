@@ -19,64 +19,55 @@
             <div class="text-left">
                 <table class="table">
                     <tbody>
+                        @foreach( $view_guardianship_law as $list)
                         <tr>
                             <td scope="row">Matter Info:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->matter_info}}
                             </td>
 
                         </tr>
                         <tr>
                             <td scope="row">Petitioner:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->petitioner}}
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Matter Type:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->matter_type}}
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Disabled Person:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->disable_person}}
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Attorney:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->attroney}}
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Disability Details:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->disadility_details}}
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Case Details:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->case_details}}
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Guardian:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->guardian}}
                             </td>
 
                         </tr>
                         <tr>
                             <td scope="row">Guardian Details:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->guardian_details}}
                             </td>
                         </tr>
-
-
+                        @endforeach
                     </tbody>
                 </table>
 

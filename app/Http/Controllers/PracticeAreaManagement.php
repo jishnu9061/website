@@ -22,8 +22,8 @@ class PracticeAreaManagement extends Controller
 
     public function personalinjury()
     {
-        $view_injury = DB::table('cra_add_injury')->get();
-        return view('PracticeAreaManagement.personal_injury',compact('view_injury'));
+        $personalinjury = DB::table('cra_add_injury')->get();
+        return view('PracticeAreaManagement.personal_injury',compact('personalinjury'));
     }
     public function addinjury(Request $request)
     {
@@ -89,10 +89,10 @@ class PracticeAreaManagement extends Controller
         return redirect('/personal_injury');
        
     }
-    public function view_injury()
+    public function view_injury($id)
     {
-
-        return view('PracticeAreaManagement.view_injury');
+        $view_injury = DB::table('cra_add_injury')->where('id',$id)->get();
+        return view('PracticeAreaManagement.view_injury',compact('view_injury','id'));
        
     }
 
@@ -147,15 +147,16 @@ class PracticeAreaManagement extends Controller
         return redirect('/family_law');
     }
 
-    public function view_family_law()
+    public function view_family_law($id)
     {
-        return view('PracticeAreaManagement.view_family_law');
+        $view_family_law  = DB::table('cra_family_law')->where('id',$id)->get();
+        return view('PracticeAreaManagement.view_family_law',compact('view_family_law','id'));
     }
 
     public function edit_family_law($id)
     {
-       $edit=DB::table('cra_family_law')->where('id',$id)->first();
-        return view('PracticeAreaManagement.edit_family_law',compact('edit','id'));
+       $edit_family_law=DB::table('cra_family_law')->where('id',$id)->first();
+        return view('PracticeAreaManagement.edit_family_law',compact('edit_family_law','id'));
     }
 
     public function updatefamilylaw(Request $request)
@@ -249,8 +250,8 @@ class PracticeAreaManagement extends Controller
     public function edit_general_practice($id)
     {
 
-        $edit=DB::table('cra_add_general_practice')->where('id',$id)->first();
-        return view('PracticeAreaManagement.edit_general_practice',compact('edit','id'));
+        $edit_general_practice=DB::table('cra_add_general_practice')->where('id',$id)->first();
+        return view('PracticeAreaManagement.edit_general_practice',compact('edit_general_practice','id'));
     }
 
     public function updatepractice(Request $request)
@@ -473,8 +474,8 @@ class PracticeAreaManagement extends Controller
 
     public function edit_real_estate($id)
     {
-        $edit = DB::table('cra_real_estate')->where('id',$id)->first();
-        return view('PracticeAreaManagement.edit_real_estate',compact('edit','id'));
+        $edit_real_estate = DB::table('cra_real_estate')->where('id',$id)->first();
+        return view('PracticeAreaManagement.edit_real_estate',compact('edit_real_estate','id'));
     }
 
     public function updaterealestate(Request $request)
@@ -533,9 +534,10 @@ class PracticeAreaManagement extends Controller
 
         return redirect('/real_estate');
     }
-    public function view_real_estate()
+    public function view_real_estate($id)
     {
-        return view('PracticeAreaManagement.view_real_estate');
+        $view_real_estate = DB::table('cra_real_estate')->where('id',$id)->get();
+        return view('PracticeAreaManagement.view_real_estate',compact('view_real_estate','id'));
     }
 
 
@@ -587,14 +589,15 @@ class PracticeAreaManagement extends Controller
         return redirect('/criminal_law');
     }
 
-    public function view_criminal_law()
+    public function view_criminal_law($id)
     {
-        return view('PracticeAreaManagement.view_criminal_law');
+        $view_criminal_law  =  DB::table('cra_criminal_law')->where('id',$id)->get();
+        return view('PracticeAreaManagement.view_criminal_law',compact('id','view_criminal_law'));
     }
 
     public function edit_criminal_law($id)
     {
-        $edit=DB::table('cra_criminal_law')->where('id',$id)->first();
+        $edit  =   DB::table('cra_criminal_law')->where('id',$id)->first();
         return view('PracticeAreaManagement.edit_criminal_law',compact('edit','id'));
     }
 
@@ -709,9 +712,10 @@ class PracticeAreaManagement extends Controller
         return redirect('/civil_litigation');
     }
 
-    public function view_civil_litigation()
+    public function view_civil_litigation($id)
     {
-        return view('PracticeAreaManagement.view_civil_litigation');
+        $view_civil_litigation = DB::table('cra_civil_litigation')->where('id',$id)->get();
+        return view('PracticeAreaManagement.view_civil_litigation',compact('view_civil_litigation','id'));
     }
     public function edit_civil_litigation($id)
     {
@@ -876,9 +880,10 @@ class PracticeAreaManagement extends Controller
         $delete_business = DB::table('cra_business_law')->where('id',$id)->delete();
         return redirect('/business_law');
     }
-    public function view_business_law()
+    public function view_business_law($id)
     {
-        return view('PracticeAreaManagement.view_business_law');
+        $view_business_law  =  DB::table('cra_business_law')->where('id',$id)->get();
+        return view('PracticeAreaManagement.view_business_law',compact('view_business_law','id'));
     }
 
     public function guardianship_law()
@@ -935,9 +940,10 @@ class PracticeAreaManagement extends Controller
         return redirect('/guardianship_law');
     }
 
-    public function view_guardianship_law()
+    public function view_guardianship_law($id)
     {
-        return view('PracticeAreaManagement.view_guardianship_law');
+        $view_guardianship_law   = DB::table('cra_guardianship_law')->where('id',$id)->get();
+        return view('PracticeAreaManagement.view_guardianship_law',compact('id','view_guardianship_law'));
     }
 
     public function edit_guardianship_law($id)
@@ -1160,9 +1166,10 @@ class PracticeAreaManagement extends Controller
 
         return redirect('/workers_compensation');
     }
-    public function view_workers_compensation()
+    public function view_workers_compensation($id)
     {
-        return view('PracticeAreaManagement.view_workers_compensation');
+        $view_workers_compensation   =   DB::table('cra_workers_compensation')->where('id',$id)->get();
+        return view('PracticeAreaManagement.view_workers_compensation',compact('view_workers_compensation','id'));
     }
 
     public function edit_workers_compensation($id)
@@ -1218,19 +1225,22 @@ class PracticeAreaManagement extends Controller
 
     }
 
-    public function view_general_practice()
+    public function view_general_practice($id)
     {
-        return view('PracticeAreaManagement.view_general_practice');
+        $view_general_practice   = DB::table('cra_add_general_practice')->where('id',$id)->get();
+        return view('PracticeAreaManagement.view_general_practice',compact('view_general_practice','id'));
     }
     
-    public function view_estate_plan()
+    public function view_estate_plan($id)
     {
-        return view('PracticeAreaManagement.view_estate_plan');
+        $view_estate_plan = DB::table('cra_estate_planning')->where('id',$id)->get();
+        return view('PracticeAreaManagement.view_estate_plan',compact('view_estate_plan','id'));
     }
     
-    public function view_probate_law()
+    public function view_probate_law($id)
     {
-        return view('PracticeAreaManagement.view_probate_law');
+        $view_probate_law   =  DB::table('cra_probate_law')->where('id',$id)->get();
+        return view('PracticeAreaManagement.view_probate_law',compact('view_probate_law','id'));
     }
     public function edit_practice_area()
     {

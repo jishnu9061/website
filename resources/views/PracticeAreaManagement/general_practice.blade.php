@@ -67,7 +67,7 @@
                     <td>{{$list->other_party}}</td>
                     <td>{{$list->case_details}}</td>
                     <!-- <td>Negotation</td> -->
-                    <td><a href="{{ url('view_general_practice') }}"><i style="color:rgb(13, 1, 56);"
+                    <td><a href="{{ url('view_general_practice',$list->id) }}"><i style="color:rgb(13, 1, 56);"
                                 class="fa fa-eye"></i><span class="m-2"></span>
                             <a href="{{ url('edit_general_practice',$list->id) }}"><i style="color:rgb(13, 1, 56);"
                                     class="fa fa-edit"></i><span class="m-2"></span>

@@ -66,7 +66,7 @@
                 <td>{{$list->matter_type}}</td>
                 <td>{{$list->defendent}}</td>
                 <td>{{$list->attroney}}</td>
-                <td><a href="{{ url('view_civil_litigation') }}"><i style="color:rgb(13, 1, 56);"
+                <td><a href="{{ url('view_civil_litigation',$list->id) }}"><i style="color:rgb(13, 1, 56);"
                             class="fa fa-eye"></i><span class="m-1"></span>
                         <a href="{{ url('edit_civil_litigation',$list->id)}}"><i style="color:rgb(13, 1, 56);"
                                 class="fa fa-edit"></i><span class="m-1"></span>

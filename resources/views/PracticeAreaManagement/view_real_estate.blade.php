@@ -19,70 +19,60 @@
             <div class="text-left">
                 <table class="table">
                     <tbody>
+                        @foreach($view_real_estate as $list)
                         <tr>
                             <td scope="row">File No:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->file_no}}
                             </td>
 
                         </tr>
                         <tr>
                             <td scope="row">Client Name:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->client_name}}
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Matter Type:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->matter_type}}
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Buyer:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->buyer}}
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Attorney:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->attroney}}
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Property Details:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->property}}
                             </td>
 
                         </tr>
                         <tr>
                             <td scope="row">Closing Statement:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->close_statement}}
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Listing Realtor:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->listing_realtor}}
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Selling Realtor:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->selling_realtor}}
                             </td>
                         </tr>
                         <tr>
                             <td scope="row">Company Title:</td>
-                            <td type="text" aria-label="default input example" value=""
-                                    Disabled>
+                            <td type="text" aria-label="default input example" value="" Disabled>{{$list->company_title}}
                             </td>
                         </tr>
-
-
+                        @endforeach
                     </tbody>
                 </table>
 

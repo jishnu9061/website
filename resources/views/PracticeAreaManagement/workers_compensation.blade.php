@@ -63,7 +63,7 @@
                 <td>{{$list->matter_type}}</td>
                 <td>{{$list->respondent}}</td>
                 <td>{{$list->insurer}}</td>
-                <td><a href="{{ url('view_workers_compensation') }}"><i style="color:rgb(13, 1, 56);"
+                <td><a href="{{ url('view_workers_compensation',$list->id) }}"><i style="color:rgb(13, 1, 56);"
                             class="fa fa-eye"></i><span class="m-1"></span>
                         <a href="{{ url('edit_workers_compensation',$list->id) }}"><i style="color:rgb(13, 1, 56);"
                                 class="fa fa-edit"></i><span class="m-1"></span>

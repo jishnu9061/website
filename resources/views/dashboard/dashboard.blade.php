@@ -32,7 +32,7 @@
         </div>
     </div>
 {{-- model start --}}
-    <div id="exampleModal" class="modal modal-top fade calendar-modal">
+    <div id="eventModal" class="modal modal-top fade calendar-modal">
         <div class="modal-dialog modal-lg">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -41,7 +41,7 @@
                         <div class="modal-body" id="slotdata">
                             <div class="modal-header">
                                 <h5 id="hdbtb">Add Event</h5>
-                            </div>
+                            </div> 
                             <div class="modal-body">
                                 <div class="row">
                                     <div class="col-md-4 col-lg-12">
@@ -121,7 +121,7 @@
                     //  else {
                     //     alert("This is previous day");
                     // }
-                    $('#exampleModal').modal('show');
+                    $('#eventModal').modal('show');
                     if (title) {
                         var start = $.fullCalendar.formatDate(start, 'Y-MM-DD HH:mm:ss');
                         var end = $.fullCalendar.formatDate(end, 'Y-MM-DD HH:mm:ss');
@@ -183,7 +183,7 @@
                             var event_end = $.fullCalendar.formatDate(event_end, "Y-MM-DD HH:mm:ss");
                             $.ajax({
                                 url: SITEURL + "/calendar-crud-ajax",
-                                data: {
+                                data: { 
                                     event_name: event_name,
                                     event_start: event_start,
                                     event_end: event_end,

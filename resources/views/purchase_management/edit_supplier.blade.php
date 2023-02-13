@@ -22,7 +22,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="" id="username" required>
+                    <input type="text" class="form-control" name="" id="username" value="{{$edit_supplier->supplier_name}}" required>
                     <div class="invalid-feedback" style="width: 100%;">
                         Number is required.
                     </div>
@@ -37,7 +37,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="" id="username" required>
+                    <input type="text" class="form-control" name="" id="username" value="" required>
                     <div class="invalid-feedback" style="width: 100%;">
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="" id="username" required>
+                    <input type="text" class="form-control" name="" id="username" value="{{$edit_supplier->tax_id}}" required>
                     <div class="invalid-feedback" style="width: 100%;">
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="" id="username" required>
+                    <input type="text" class="form-control" name="" id="username" value="{{$edit_supplier->contact_no}}" required>
                     <div class="invalid-feedback" style="width: 100%;">
                     </div>
                 </div>
@@ -86,7 +86,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="email" class="form-control" name="" id="username" required>
+                    <input type="email" class="form-control" name="" id="username" value="{{$edit_supplier->email}}" required>
                     <div class="invalid-feedback" style="width: 100%;">
                     </div>
                 </div>
@@ -118,7 +118,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="" id="username" required>
+                    <input type="text" class="form-control" name="" id="username" value="{{$edit_supplier->city}}" required>
                     <div class="invalid-feedback" style="width: 100%;">
                     </div>
                 </div>
@@ -149,7 +149,7 @@
                     <div class="input-group-prepend">
 
                     </div>
-                    <input type="text" class="form-control" name="" id="username" required>
+                    <input type="text" class="form-control" name="" id="username" value="{{$edit_supplier->pincode}}" required>
                     <div class="invalid-feedback" style="width: 100%;">
                     </div>
                 </div>
