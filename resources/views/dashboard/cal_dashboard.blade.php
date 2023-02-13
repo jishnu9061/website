@@ -18,6 +18,18 @@ var mquery = window.matchMedia("(max-width:767.98px)");
 
 <br>
 <br>
+<style>
+    .fc-event{
+        background-color: #1d1d50;
+        color:white;
+    }
+    .fc-time{
+        color:white;
+    }
+    .fc-title{
+        color:white;
+    }
+</style>
 <div class="row" style="width:100%">
     <div  style="width:65%">
         <div id="calendar">
@@ -237,11 +249,11 @@ var mquery = window.matchMedia("(max-width:767.98px)");
             eventClick: function(event){
                 var id = event.id;
                 document.getElementById("e_start").value =event.start._i ;
-                document.getElementById("e_end").value =event.end._i ;
                 document.getElementById("e_title").value =event.title ;
                 document.getElementById("e_description").value =event.description ;
                 $('#editevent').attr('action',"{{ url('update_calendar') }}"+"/"+id);
                 $('#editeventModal').modal('toggle');
+                document.getElementById("e_end").value =event.end._i??null ;
                 $('#deleteBtn').click(function(){
                     if(confirm('Are you sure want to remove it')){
                         $.ajax({
@@ -273,13 +285,21 @@ var mquery = window.matchMedia("(max-width:767.98px)");
                 $('#saveBtn').unbind();
             
         });
+        
+        $('.fc-event').css('font-size', '13px');
+        $('.fc-event').css('width', '20px');
+        $('.fc-event').css('border-radius', '50%');
+        $('.fc-event').css('background-color', '#1d1d50');
+        $('.fc-event').css('textcolor', 'white');
+        $('.fc-title').css('background-color', '#1d1d50');
+        $('.fc-title').css('textcolor', 'white');
     });// ---------------------------------------------------------calender script end
 
 
     function e_checkdate() {// to  check End Date must be greater than Strat Date
         var e_start_ck = document.getElementById("e_start").value;
         var e_end_ck = document.getElementById("e_end").value;
-        if (e_start_ck < e_end_ck) {
+        if (e_start_ck > e_end_ck) {
             alert("End Date must be greater than Strat Date");
                 return false;
         }

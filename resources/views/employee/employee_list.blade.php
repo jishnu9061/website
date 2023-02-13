@@ -253,7 +253,7 @@
                                             </div>
                                         </div>
                                         <td class="text-center">{{ $employee['depart'] }}</td>
-                                        <td class="text-center">{{ $employee['barnch'] }}</td>
+                                        <td class="text-center">{{ $employee['barnch']??null }}</td>
                                         <td class="text-center">{{ $employee['designation'] }}</td>
                                         <td class="text-center">{{ $employee['email'] }}</td>
                                         <td class="text-center">{{ $employee['contact'] }}</td>
