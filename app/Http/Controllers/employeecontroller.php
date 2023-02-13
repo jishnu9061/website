@@ -42,6 +42,9 @@ class employeecontroller extends Controller
         $all_employee =[] ;
         foreach($employee_list as $employee){
             $employee_branch=DB::table('cra_company_branch_details')->where('id',$employee->branch_id)->first();
+            if( empty($employee_branch)){
+                continue;
+            }
             $employee_role = DB::table('roles')->where('id', $employee->role_id)->first();
             $employee_depart=DB::table('departments')->where('id',$employee->dept_id)->first();
             $result_1 = [
