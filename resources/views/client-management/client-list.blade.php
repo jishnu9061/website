@@ -486,7 +486,7 @@
                                                                 <label for="username">Town</label>
                                                                 <div class="input-group">
                                                                     <div class="input-group-prepend"></div>
-                                                                    <select name="country" id="cars">
+                                                                    <select name="town" id="cars">
                                                                         <option>Nairobi</option>
 
                                                                     </select>
