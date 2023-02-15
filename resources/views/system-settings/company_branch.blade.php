@@ -9,64 +9,17 @@
     <br><br>
     <div class="container">
 
-        <head>
-            <style>
-                .pagination>li>span {
-                    position: relative;
-                    float: left;
-                    padding: 6px 12px;
-                    margin-left: -1px;
-                    line-height: 1.42857143;
-                    color: #337ab7;
-                    text-decoration: none;
-                    background-color: #fff;
-                    border: 1px solid #ddd;
-                }
-
-                .pagination {
-                    margin: 0;
-                }
-
-                .pagination li:hover {
-                    cursor: pointer;
-                }
-
-                .header_wrap {
-                    padding: 30px 0;
-                }
-
-                .num_rows {
-                    width: 20%;
-                    float: left;
-                }
-
-                .tb_search {
-                    width: 20%;
-                    float: right;
-                }
-
-                .pagination-container {
-                    width: 70%;
-                    float: left;
-                }
-
-                .rows_count {
-                    width: 20%;
-                    float: right;
-                    text-align: right;
-                    color: #999;
-                }
-            </style>
-
-        </head>
+      
         {{-- heading --}}
         <div class="container">
+          
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Branch</button>
             <h4 id="hdtpa"><b>Company Branch</b></h4>
             <br>
             <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 
             {{-- <a href="{{('add_company_branch')}}"><button class="btn btn-primary">Add Branch</button></a> --}}
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Branch</button>
+          
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
@@ -74,29 +27,17 @@
                     <!-- <a href="{{ 'add_company_branch' }}"><button class="btn btn-primary add-btn">Add Branch </button></a><br><br> -->
 
 
-                    <div class="header_wrap">
-                        <div class="num_rows">
-                            <div class="form-group">
-                                <!--		Show Numbers Of Rows 		-->
-                                <select class="form-control" aria-label="Page navigation example" name="state"
-                                    id="maxRows">
-
-                                    <option value="5">5</option>
-                                    <option value="10">10</option>
-                                    <option value="15">15</option>
-                                    <option value="20">20</option>
-                                    <option value="50">50</option>
-                                    <option value="70">70</option>
-                                    <option value="100">100</option>
-                                    <option value="5000">Show ALL Rows</option>
-                                </select>
-
-                            </div>
+           
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://t4.ftcdn.net/jpg/02/81/89/73/360_F_281897358_3rj9ZBSZHo5s0L1ug7uuIHadSxh9Cc75.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <h4><b>John Doe</b></h4>
+                            <p>Architect & Engineer</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
-                        <div class="tb_search">
-                            <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()"
-                                placeholder="Search.." class="form-control">
-                        </div>
+                      </div>
 
 
                         <div class="table-responsive">
