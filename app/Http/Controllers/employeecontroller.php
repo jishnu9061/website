@@ -61,7 +61,7 @@ class employeecontroller extends Controller
             ];
             array_push($all_employee,$result_1);
         }
-        
+    
         
         return view('employee.employee_list',compact('all_employee'));
     }
@@ -224,9 +224,10 @@ class employeecontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit_employee($id)
     {
-        //
+       $edit = DB::table('employee_dets')->where('id',$id)->first();
+       return view('employee.employee_list',compact('edit','id'));
     }
 
     /**
