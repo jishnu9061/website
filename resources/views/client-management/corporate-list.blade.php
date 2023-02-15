@@ -52,6 +52,139 @@
             text-align: right;
             color: #999;
         }
+
+        th {
+            width: 30%;
+        }
+
+        .outer {
+            border-color: #1d1d50;
+            width=45%;
+            border-radius: 7px;
+        }
+
+        .add_doc {
+            text-decoration: none;
+            display: inline-block;
+            */width: 30px;
+            height: 30px;
+            background: #8bc34a;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1d1d50;
+            align-items: center;
+            line-height: 0.7;
+            */display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .exdocdelete {
+            text-decoration: none;
+            display: inline-block;
+            background: #f44336;
+            color: #1d1d50;
+            font-size: 1.5rem;
+            font-weight: bold;
+            width: 30px;
+            height: 30px;
+            margin-left: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .docflex {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .doc_warp {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e4e1e1;
+        }
+
+        .doc_contanier {
+            max-width: 1000px;
+            background: white;
+            border-radius: 5px;
+            padding: 20px;
+            */box-shadow: 0 2px 2px 43px black;
+        }
+
+        .doc_input {
+            padding: 8px 10px;
+            width: 50%;
+            border-radius: 5px;
+            border-color: #1d1d50;
+        }
+
+        .doc_input:focus {
+            outline: 1px solid #efefef;
+        }
+
+        .add_decduct {
+            text-decoration: none;
+            display: inline-block;
+            */width: 30px;
+            height: 30px;
+            background: #8bc34a;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1d1d50;
+            justify-content: space-evenly;
+            align-items: center;
+            line-height: 0.9;
+            cursor: pointer;
+        }
+
+        .decduct_input {
+            padding: 8px 10px;
+            width: 20%;
+            border-radius: 5px;
+            border-color: #1d1d50;
+        }
+
+        #e_passmessage {
+            display: block;
+            color: #1d1d50;
+            position: relative;
+        }
+
+        /* Add a green text color and a checkmark when the requirements are right */
+        .passvalid {
+            color: green;
+            margin: 0px;
+            font-size: 10px;
+        }
+
+        .passvalid:before {
+            position: relative;
+            left: 0px;
+            content: "✔";
+        }
+
+        /* Add a red text color and an "x" when the requirements are wrong */
+        .passinvalid {
+            color: red;
+            margin: 0px;
+            font-size: 10px;
+            padding-left: 10px;
+        }
+
+        .passinvalid:before {
+            position: relative;
+            left: 0px;
+            content: "✖";
+        }
     </style>
 
     <div class="container">
@@ -210,23 +343,27 @@
                                                 No</label>
                                             <input type="text" placeholder="Enter Client No " style="width=45%"
                                                 class="form-control" name="number" id=""
+                                                style="border-color:#1d1d50;width=45%;border-radius: 7px;height:35px;"
                                                 value=""required>
                                             <div class="invalid-feedback" style="width: 100%;">
                                                 Client No is required.
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="" style="width:33%">
+                                    <div class="" style="width: 33%">
                                         {{-- <div class=""><span style="color: red">*</span> --}}
-                                        <label for="username"
+                                        <label for=""
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client
-                                            Type</label>
-                                        <input type="text" placeholder="Enter client type " style="width=45%"
-                                            class="form-control" name="type" id="" value=""required>
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                            company Type is required.
+                                            Type:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                            </div>
+                                            <select name="type" id="cars">
+                                                <option>Select Client Type</option>
+                                                <option>Corporate</option>
+                                                <option>Individual</option>
+                                            </select>
                                         </div>
-                                        {{-- </div> --}}
                                     </div>
                                     <div class="" style="width: 33%">
                                         {{-- <div class=""><span style="color: red">*</span> --}}
@@ -248,7 +385,7 @@
                                             <label for="company_name"
                                                 style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Certificate</label>
                                             <input type="text" placeholder="Enter Certificate Of Incorporation "
-                                                style="width=45%" class="form-control" name="address" id=""
+                                                style="width=45%" class="form-control" name="certificate" id=""
                                                 value="">
                                         </div>
                                     </div>
@@ -269,7 +406,7 @@
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Telephone
                                             No:</label>
                                         <input type="text" placeholder="Enter Telephone No" style="width=45%"
-                                            class="form-control" name="country" id="" value="">
+                                            class="form-control" name="telephone" id="" value="">
                                         <div class="invalid-feedback" style="width: 100%;">
                                         </div>
                                     </div>
@@ -282,7 +419,7 @@
                                                 style="width: 200px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Fax
                                                 No</label>
                                             <input type="text" placeholder="Enter Fax No " style="width=45%"
-                                                class="form-control" name="postal_code" id="" value="">
+                                                class="form-control" name="faxno" id="" value="">
                                         </div>
                                     </div>
                                     <div class="" style="width: 33%">
@@ -302,7 +439,7 @@
                                             <label for="company_name"
                                                 style="width: 200px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Website</label>
                                             <input type="text" placeholder="Enter Website " style="width=45%"
-                                                class="form-control" name="GSTin" id="" value="">
+                                                class="form-control" name="website" id="" value="">
                                         </div>
                                     </div>
                                 </div>
@@ -313,7 +450,7 @@
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Brought
                                             In By:</label>
                                         <input type="text" placeholder="Enter Brought In By" style="width=45%"
-                                            class="form-control" name="country" id="" value="">
+                                            class="form-control" name="brought" id="" value="">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             City/State/Country is required.
                                         </div>
@@ -346,7 +483,7 @@
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client
                                             Source:</label>
                                         <input type="text" placeholder="Enter Client Source" style="width=45%"
-                                            class="form-control" name="country" id="" value="">
+                                            class="form-control" name="source" id="" value="">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             City/State/Country is required.
                                         </div>
@@ -358,20 +495,22 @@
                                         <label for=""
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Naration:</label>
                                         <input type="text" placeholder="Enter Client Source Naration"
-                                            style="width=45%" class="form-control" name="country" id=""
+                                            style="width=45%" class="form-control" name="naration" id=""
                                             value="">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             City/State/Country is required.
                                         </div>
                                     </div>
                                     <div class="" style="width: 33%">
-                                        <label for=""
-                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client
-                                            Name:</label>
-                                        <input type="text" placeholder="Enter Client Name" style="width=45%"
-                                            class="form-control" name="country" id="" value="">
-                                        <div class="invalid-feedback" style="width: 100%;">
-                                            City/State/Country is required.
+                                        <div class=""><span style="color: red">*</span>
+                                            <label for=""
+                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client
+                                                Name:</label>
+                                            <input type="text" placeholder="Enter Client Name" style="width=45%"
+                                                class="form-control" name="name" id="" value="">
+                                            <div class="invalid-feedback" style="width: 100%;">
+                                                City/State/Country is required.
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="" style="width: 33%">
@@ -380,7 +519,7 @@
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client
                                             Industry:</label>
                                         <input type="text" placeholder="Enter Client Industry" style="width=45%"
-                                            class="form-control" name="country" id="" value="">
+                                            class="form-control" name="industry" id="" value="">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             City/State/Country is required.
                                         </div>
@@ -393,7 +532,7 @@
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Pin
                                             No:</label>
                                         <input type="text" placeholder="Enter Pin No" style="width=45%"
-                                            class="form-control" name="country" id="" value="">
+                                            class="form-control" name="pin" id="" value="">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             City/State/Country is required.
                                         </div>
@@ -403,7 +542,7 @@
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Postal
                                             Address:</label>
                                         <input type="text" placeholder="Enter Postal Address" style="width=45%"
-                                            class="form-control" name="country" id="" value="">
+                                            class="form-control" name="address" id="" value="">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             City/State/Country is required.
                                         </div>
@@ -414,7 +553,7 @@
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Postal
                                             Code:</label>
                                         <input type="text" placeholder="Enter Postal Code" style="width=45%"
-                                            class="form-control" name="country" id="" value="">
+                                            class="form-control" name="code" id="" value="">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             City/State/Country is required.
                                         </div>
@@ -425,7 +564,7 @@
                                         <label for=""
                                             style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Town:</label>
                                         <input type="text" placeholder="Enter Town" style="width=45%"
-                                            class="form-control" name="country" id="" value="">
+                                            class="form-control" name="town" id="" value="">
                                         <div class="invalid-feedback" style="width: 100%;">
                                             City/State/Country is required.
                                         </div>
@@ -434,31 +573,56 @@
                                 </div>
                                 <div class="row">
                                     <div style="width:50%">
-                                        <div class=""><span style="color: red">*</span>
-                                            <label for="postal_addr"
-                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Postal
-                                                Address</label>
-                                            <textarea class="outer" rows="4" style="width:100%;"cols="41" placeholder="Postal Address"
-                                                name="postal_addr" form="addemployee"></textarea>
-                                        </div>
+                                        <label for="postal_addr"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Physcical
+                                            Address</label>
+                                        <textarea class="outer" rows="4" style="width:100%;"cols="41" placeholder="Enter Physical Address"
+                                            name="physicaladdress" form="addemployee"></textarea>
                                     </div>
-                                    <div style="width:50%">
-                                        <div class=""><span style="color: red">*</span>
-                                            <label for="postal_addr"
-                                                style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Postal
-                                                Address</label>
-                                            <textarea class="outer" rows="4" style="width:100%;"cols="41" placeholder="Postal Address"
-                                                name="postal_addr" form="addemployee"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <br>
-                   
-                    
-                    <div class="row">
+                                    <div style="width:49%">
+                                        <label for="postal_addr"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Notes
+                                        </label>
+                                        <textarea class="outer" rows="4" style="width:100%;"cols="41" placeholder="Enter Notes" name="notes"
+                                            form="addemployee"></textarea>
 
+                                    </div>
+                                </diV>
+
+                            </div>
+
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                </div>
+                                <div class="col-sm-4">
+                                    <h4
+                                        style="border: 0.5px solid #f1d9b0;
+                                border-radius: 25px;
+                                background-color: #f1d9b0;
+                                padding: 2%;
+                                width: 100%;
+                                height:90%;
+                                text-align:center;
+                                box-shadow: inset 0 0 3px #d3d0ca;
+                                opacity: .9;">
+                                        <b style="font-size:18px;">Contact Person</b>
+                                    </h4>
+                                </div>
+                                <div class="col-sm-4">
+                                </div>
+                            </div>
+                            <div class="doc_contanier"style="*/background-color:orange;">
+                                <div class="doc_warp">
+                                    <h6>Add Contact Person details:-</h6>
+                                    <a class="add_doc">&plus;</a>
+                                </div>
+                                <div class="row document_details " style="margin-bottom: 20px;">
+                                    {{-- Add More Document details:- javascript --}}
+                                </div>
+                            </div>
+                    </div>
+                    <div class="row">
                         <div class="row">
                             <div class="" style="width: 50%;">
                             </div>
@@ -477,33 +641,98 @@
             </div>
         </div>
     </div>
-    </div>
 
     <script>
-        function myFunction() {
-            if (!confirm("Are you sure to delete this"))
-                event.preventDefault();
+        function exdocremoveinput() { // Add More Document details author@udayan --start
+            this.parentElement.remove();
         }
-    </script>
-    <script>
-        $(function() {
-            $("#new-item").dataTable();
-        })
-    </script>
+        const adddoc = document.querySelector(" .add_doc ");
+        const exdocinput = document.querySelector(" .document_details ");
+        let m = 0;
 
-    {{-- Search booking script --}}
-    <script>
-        $(document).ready(function() {
-            $('.searchingBook').select2();
-        });
-    </script>
-    {{-- search booking script end --}}
-    <!-- Delete  confirmation Message -->
-    <script>
-        function myFunction() {
-            if (!confirm("Are you sure to delete this"))
-                event.preventDefault();
+        function exdocaddinput() {
+            const exdocname = document.createElement("input");
+            exdocname.type = "text";
+            exdocname.className = "doc_input";
+            exdocname.placeholder = "Enter Persion Name";
+            exdocname.name = "exdoc[" + m + "][0]";
+
+            const docidnumber = document.createElement("input");
+            docidnumber.type = "text";
+            docidnumber.className = "doc_input";
+            docidnumber.placeholder = "Enter Designation";
+            docidnumber.name = "exdoc[" + m + "][1]";
+
+            const docidmobile = document.createElement("input");
+            docidmobile.type = "text";
+            docidmobile.className = "doc_input";
+            docidmobile.placeholder = "Enter Mobile No";
+            docidmobile.name = "exdoc[" + m + "][2]";
+
+            const docidemail = document.createElement("input");
+            docidemail.type = "text";
+            docidemail.className = "doc_input";
+            docidemail.placeholder = "Enter Email";
+            docidemail.name = "exdoc[" + m + "][3]";
+
+            const btndele = document.createElement("a");
+            btndele.className = "exdocdelete";
+            btndele.innerHTML = "&times;"
+
+            const exdocflex = document.createElement("div");
+            exdocflex.className = "docflex";
+
+            btndele.addEventListener("click", exdocremoveinput);
+
+            exdocinput.appendChild(exdocflex);
+            exdocflex.appendChild(exdocname);
+            exdocflex.appendChild(docidnumber);
+            exdocflex.appendChild(docidmobile);
+            exdocflex.appendChild(docidemail);
+            exdocflex.appendChild(btndele);
+            ++i;
         }
+        adddoc.addEventListener("click", exdocaddinput); // Add More Document details author@udayan --end
+
+
+
+        function decductremoveinput() { // Add More Decduction percentage author@udayan --start
+            this.parentElement.remove();
+        }
+        const add_decduct = document.querySelector(" .add_decduct  ");
+        const decduct_details = document.querySelector(" .decduct_details ");
+        let p = 0;
+
+        function add_decduct_input() {
+            const decductname = document.createElement("input");
+            decductname.type = "text";
+            decductname.className = "doc_input";
+            decductname.placeholder = "Enter Decduction Name";
+            decductname.name = "decduct[" + p + "][0]"
+
+            const decductnumber = document.createElement("input");
+            decductnumber.type = "number";
+            decductnumber.className = "decduct_input";
+            decductnumber.placeholder = "%";
+            decductnumber.name = "decduct[" + p + "][1]"
+
+            const decductdele = document.createElement("a");
+            decductdele.className = "exdocdelete";
+            decductdele.innerHTML = "&times;"
+
+            const decductflex = document.createElement("div");
+            decductflex.className = "docflex";
+
+            decductdele.addEventListener("click", decductremoveinput);
+
+            decduct_details.appendChild(decductflex);
+            decductflex.appendChild(decductname);
+            decductflex.appendChild(decductnumber);
+            decductflex.appendChild(decductdele);
+            ++p;
+
+        }
+        add_decduct.addEventListener("click", add_decduct_input); // Add More Decduction percentage author@udayan --end
     </script>
     <!-- End delete confirmation message -->
 
@@ -513,43 +742,4 @@
         src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 
     {{-- Supplier Edit start --}}
-
-    <script>
-        $(document).on('click', '#edit_medicine_details', function() {
-
-            var medicine_id_hidden = $(this).closest('#data').find('#medicine_id_hidden').val();
-            var medicine_name = $(this).closest('#data').find('#medicine_name_1').val();
-            var medicine_brand_name = $(this).closest('#data').find('#medicine_brand_name').val();
-            var medicine_group = $(this).closest('#data').find('#medicine_group').val();
-            var medicicine_category_name = $(this).closest('#data').find('#medicine_category_name1').val();
-            var medicine_generic_name = $(this).closest('#data').find('#medicine_generic_name').val();
-            var medicine_manufactuure_name = $(this).closest('#data').find('#medicine_manufactuure_name')
-                .val();
-            var medicine_supplier_name = $(this).closest('#data').find('#medicine_supplier_name').val();
-            var medicine_minimum_level = $(this).closest('#data').find('#medicine_minimum_level').val();
-            var medicine_reorder_level = $(this).closest('#data').find('#medicine_reorder_level').val();
-            var medicine_unit_packing = $(this).closest('#data').find('#medicine_unit_packing').val();
-            var medicine_composition = $(this).closest('#data').find('#medicine_composition').val();
-            var medicine_notes = $(this).closest('#data').find('#medicine_notes').val();
-            var medicine_images = $(this).closest('#data').find('#medicine_images').val();
-
-
-            $("#edit_id").val(medicine_id_hidden);
-            $("#edit_medicine_name").val(medicine_name);
-            $("#edit_brand_name").val(medicine_brand_name);
-            $("#edit_medicine_group").val(medicine_group);
-            $("#edit_category_name").val(medicine_category_name);
-            $("#edit_generic_name").val(medicicine_genric_name);
-            $("#edit_manufacture_name").val(medicine_manufactuure_name);
-            $("#edit_supplier_name").val(medicine_supplier_name);
-            $("#edit_minimum_level").val(medicine_minimum_level);
-            $("#edit_reorder").val(medicine_reorder_level);
-            $("#edit_minimum_level").val(medicine_minimum_level);
-            $("#edit_unit_packing").val(medicine_unit_packing);
-            $("#edit_medicine_details1").val(medicine_composition);
-            $("#edit_medicine_note").val(medicine_notes);
-            $("#edit_image").val(medicine_images);
-        });
-    </script>
-    {{-- Supplier Edit End --}}
 @endsection
