@@ -8,7 +8,7 @@
     z-index: 10000;
     top: 0;
     right: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(226, 226, 226);
    
     overflow-x: hidden;
     transition: 0.2s;
@@ -37,7 +37,7 @@
   .overlay ul li{
     width:50%;
   }
-  
+
   .overlay a:hover, .overlay a:focus {
     color: #c5bebe;
   }
@@ -57,12 +57,20 @@
     right: 35px;
     }
   }
+  .custom-table{
+    border-color:#696969;
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+    text-align: center;
+}
 
   
   </style>
 
   <div class="back-o" id="backo">
     <div id="myNav" class="overlay">
+      <div class="m-2 p-2" style="background-color: #ffffff;  border: 2px solid rgb(255, 255, 255); border-radius:1rem;  height: 98%;">
       <ul class="p-3"  style="
         padding:0% 2%;
         float: left;
@@ -75,13 +83,13 @@
         ">       
       <li style=" text-align:left;" >
       <a style="background-color: #ffffff; color: #ff0000;" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
-        <li style=" text-align:right;"><a href= "{{url('logt')}}">Logout</a></li>
+        <li style=" text-align:right; "><a style="border: 2px solid rgb(255, 255, 255); border-radius:20px;" href= "{{url('logt')}}">Logout</a></li>
       </ul>
       <div class="container">
-        <div class="row">
-          <div class="col-3 center-xy" style="width:40%; "> <img style="width: 100px;height:auto;border:solid;border-radius:25%;" src="{{asset('/') }}/images/faces/{{ Auth::user()->photo_path}}" class="img-fluid" alt="Responsive image"></div>
-          <div class="col-9"style="width:60%; ">
-            <div class="row">
+        <div class="row" style="border-bottom: 1px solid rgb(160, 160, 160);">
+          <div class="col-3 " style="width:40%; "> <img style="border:solid;border-radius:25%;" src="{{asset('/') }}/images/faces/{{ Auth::user()->photo_path}}" class="img-fluid" alt="Responsive image"></div>
+          <div class="col-9 "style="width:60%; ">
+            <div class="row" style="border-left: 4px solid green;">
               <div class="col" >Users Name: {{ Auth::user()->username }}</div>
               <div class="w-100"></div>
               <div class="col" >Email: {{ Auth::user()->email }}</div>
@@ -95,17 +103,18 @@
       <br><?php $ipaddress=DB::table('users_ip_track')->where('uniqueid',Auth::user()->uniqueid)->orderBy('id', 'desc')->get();$serial_no_logout=0; ?>
       <div class="p-1">
         <table class="table-responsive-xl" style="width:100%">
-          <thead>
-            <tr  >
-              <th scope="col">Sl.No:</th>
-              <th scope="col">IP Address</th>
-              <th scope="col">Login Time/Date</th>
+          <thead class="custom-table">
+            <tr class="custom-table">
+              <th  scope="col " class="custom-table">Sl.No:</th>
+              <th scope="col " class="custom-table">IP Address</th>
+              <th scope="col " class="custom-table">Login Time/Date</th>
             </tr>
           </thead>
 
           <tbody>
           </tbody>
       </table>
+      </div>
     </div>
   </div>
 </div>
