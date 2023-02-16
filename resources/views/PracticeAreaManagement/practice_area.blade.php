@@ -53,15 +53,16 @@
                 </tr>
             </thead>
             <tbody>
-
+                @foreach($practice_area as $list)
                 <tr>
-                    <td></td>
+                    <td>{{$list->practice_area}}</td>
                     <td>
-                        <a href="edit_practice_area"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span
+                        <a href="{{url('edit_practice_area',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span
                                 class="m-2"></span>
-                            <a href=""><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
+                            <a href="{{url('delete_practice_area',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
                     </td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
@@ -99,16 +100,16 @@
             <!-- Modal body -->
             <div class="modal-body">
                 <div class="container">
-                    <form action="" method="">
-
+                    <form action="{{url('store_practice_area')}}" method="post">
+                        @csrf
                         <div class="mb-3">
-                            <input class="form-control form-control-lg" type="text" placeholder=""
+                            <input class="form-control form-control-lg" type="text" placeholder="" name="area"
                                 aria-label=".form-control-lg example">
                         </div>
 
                         <div>
                             <br>
-                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+                            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
                             <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                         </div>
                 </div>

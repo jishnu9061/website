@@ -17,16 +17,16 @@
 
         <div class="card-body">
 
-            <form method="post" action="{{url('')}}" id="form">
+            <form method="post" action="{{url('update_practice_area')}}" id="form">
                 @csrf
                 <div class="form-row">
-                    <input type="hidden" name="id" value="">
+                    <input type="hidden" name="id" value="{{$edit_practice_area->id}}">
                     <div class="form-group col-md-4">
                     </div>
 
                     <div class="form-group col-md-4">
                         <label for="inputEmail4">Practice Area</label>
-                        <input type="text" class="form-control" id="w3review" value="Practice Area" name="bank_name"
+                        <input type="text" class="form-control" id="w3review" value="{{$edit_practice_area->practice_area}}" name="area"
                             id="username">
                     </div>
 

@@ -11,10 +11,11 @@
 .btn-width {
     width: 10%;
 }
-tbody{
 
-}
-th{ width:30%;
+tbody {}
+
+th {
+    width: 30%;
 
 }
 </style>
@@ -40,41 +41,48 @@ th{ width:30%;
 
                 @csrf
                 <tbody>
-                    
-
+                    @foreach($viewprecedences as $lists)
                     <tr>
                         <th>File No :</th>
-                        <td></td>
+                        <td>{{$lists->file_no}}</td>
                     </tr>
                     <tr>
                         <th>Client Name :</th>
-                        <td></td>
+                        <td>{{$lists->client_name}}</td>
                     </tr>
                     <tr>
                         <th>File Handled By :</th>
-                        <td></td>
+                        <td>{{$lists->file_handle}}</td>
+                      
                     </tr>
                     <tr>
                         <th>Date From :</th>
-                        <td></td>
+                        <td>{{$lists->date_from}}</td>
+                       
                     </tr>
                     <tr>
                         <th>Date To :</th>
-                        <td></td>
+                        <td>{{$lists->date_to}}</td>
+                       
                     </tr>
                     <tr>
                         <th>File Status :</th>
-                        <td></td>
+                        <td>{{$lists->file_status}}</td>
+                       
                     </tr>
-                  
+
                     <tr>
                         <th>File Discription:</th>
-                        <td ></td>
+                        <td>{{$lists->file_discription}}</td>
+                        
                     </tr>
                     <tr>
                         <th>Upload File :</th>
-                        <td><button class="doc-button  fa fa-download" style="width:20%; padding:7px; float:right; margin-right:5px;"><span class="m-2"></span> Download</button></td>
+                        <td><button class="doc-button  fa fa-download"
+                                style="width:20%; padding:7px; float:right; margin-right:5px;"><span class="m-2"></span>
+                                Download</button></td>
                     </tr>
+                    @endforeach
 
                 </tbody>
             </table>
