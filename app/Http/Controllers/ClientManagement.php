@@ -329,7 +329,7 @@ class ClientManagement extends Controller
     $number = $Request['number'];
     $client_type = $Request['type'];
     $citizen_status = $Request['citizen'];
-    $corporation = $Request['corporation'];
+    $corporation = $Request['certificate'];
     $country = $Request['country'];
     $telephone = $Request['telephone'];
     $fax_no = $Request['faxno'];
@@ -348,8 +348,8 @@ class ClientManagement extends Controller
     $physical_address = $Request['physicaladdress'];
     $Notes = $Request['notes'];
     $Person_Name = $Request['person'];
-    $Designation = $Request['Designation'];
-    $mobile_no = $Request['no'];
+    $Designation = $Request['designation'];
+    $mobile_no = $Request['mobile_no'];
     $person_email = $Request['person_email'];
 
     DB::table('cra_corporate_client_details')->insert([
