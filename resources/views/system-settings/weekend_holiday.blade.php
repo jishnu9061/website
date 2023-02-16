@@ -8,7 +8,7 @@
   <br><br>
 <head>
     <style>
-        
+
   .pagination>li>span {
     position: relative;
     float: left;
@@ -50,31 +50,43 @@ float:right;
 text-align:right;
 color: #999;
 }
-</style> 
-   
+</style>
+
 </head>
 
 <div class="container">
-
-  <div>
-    <div>
-    {{-- heading --}}
-    <h4 id="hdtpa"><b>Weekend and Holidays</b></h4>
-    <br>
-   
-          </div>
-          
+          <div class="row" style="height:50px;">
+            <div class="col-sm-4" style="padding-top:5px;">
+            </div>
+            <div class="col-sm-4" style="">
+                <h4
+                    style="border: 0.5px solid #f1d9b0;
+                    border-radius: 25px;
+                    background-color: #f1d9b0;
+                    padding: 2%;
+                    width: 100%;
+                    height:90%;
+                    text-align:center;
+                    box-shadow: inset 0 0 3px #d3d0ca;
+                    opacity: .9;">
+                    <b style="font-size:18px;">Weekends and Holidays</b>
+                </h4>
+            </div>
+            <div class="col-sm-4" style="">
+            </div>
+        </div>
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
-           
-  {{-- <a href="{{('add_new_holiday')}}"><button class="btn btn-primary">Add New Holiday / Weekend Date</button></a> --}}
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New Holiday / Weekend Date</button>
-                <p><a href="{{url('holiday_2017')}}"style="color:blue; font-size:x-small;">2017</a> | <a href="{{url('holiday_2018')}}"style="color:blue;font-size:x-small;">2018</a> | <a href="{{url('holiday_2019')}}"style="color:blue;font-size:x-small;">2019</a> | <a href="{{url('holiday_2020')}}"style="color:blue;font-size:x-small;">2020</a> | <a href="{{url('holiday_2021')}}"style="color:blue;font-size:x-small;">2021</a> | <a href="{{url('holiday_2022')}}"style="color:blue;font-size:x-small;">2022</a>
+
+                <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
+            --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add New Holiday / Weekend Date</button>
+                <p><a href="{{url('holiday_2017')}}"style="color:blue; font-size:x-small;">2017</a> | <a href="{{url('holiday_2018')}}"style="color:blue;font-size:x-small;">2018</a> | <a href="{{url('holiday_2019')}}"style="color:blue;font-size:x-small;">2019</a> | <a href="{{url('holiday_2020')}}"style="color:blue;font-size:x-small;">2020</a> | <a href="{{url('holiday_2021')}}"style="color:blue;font-size:x-small;">2021</a> | <a href="{{url('holiday_2022')}}"style="color:blue;font-size:x-small;">2022</a></p>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                     
+
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <!-- <a href="{{url('add_new_holiday')}}"><button type="button" class="btn btn-primary add-btn" style="width:30%" > Add New Holiday / Weekend Date</button></a>
-<p><a href="{{url('holiday_2017')}}"style="color:blue; font-size:x-small;">2017</a> | <a href="{{url('holiday_2018')}}"style="color:blue;font-size:x-small;">2018</a> | <a href="{{url('holiday_2019')}}"style="color:blue;font-size:x-small;">2019</a> | <a href="{{url('holiday_2020')}}"style="color:blue;font-size:x-small;">2020</a> | <a href="{{url('holiday_2021')}}"style="color:blue;font-size:x-small;">2021</a> | <a href="{{url('holiday_2022')}}"style="color:blue;font-size:x-small;">2022</a><br><br> -->
+<p><a href="{{url('holiday_2017')}}"style="color:blue; font-size:x-small;">2017</a> | <a href="{{url('holiday_2018')}}"style="color:blue;font-size:x-small;">2018</a> | <a href="{{url('holiday_2019')}}"style="color:blue;font-size:x-small;">2019</a> | <a href="{{url('holiday_2020')}}"style="color:blue;font-size:x-small;">2020</a> | <a href="{{url('holiday_2021')}}"style="color:blue;font-size:x-small;">2021</a> | <a href="{{url('holiday_2022')}}"style="color:blue;font-size:x-small;">2022</a></p><br><br> -->
 <div class="container">
     <div class="header_wrap">
       <div class="num_rows">
@@ -90,15 +102,15 @@ color: #999;
            <option value="100">100</option>
           <option value="5000">Show ALL Rows</option>
           </select>
-         
+
         </div>
       </div>
       <div class="tb_search">
 <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
       </div>
-    </div>         
+    </div>
 
-<h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Weekend & Holiday Dates - 2022</h3>
+<h3 style="color:rgb(13, 1, 56);font-size:large;font-weight:bold;text-align:center;">Weekends & Holidays Dates - 2022</h3>
         <div class="table-responsive">
         <table class="table table-striped table-class" id= "table-id">
             <thead>
@@ -115,29 +127,49 @@ color: #999;
               <!-- <td>{{$holiday->id}}</td> -->
     <td>{{$holiday->Date}}</td>
     <td>{{$holiday->Day}}</td>
- 
-                <td  scope="row" class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
+
+                {{-- <td  scope="row" class="text-center"><!--<a href="{{url('view_company_details')}}"><i  style=" color:rgb(13, 1, 56);" class="fa fa-eye" aria-hidden="true"></i> -->
                         <a href="{{url('edit_holiday',$holiday->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                         <span class="m-2"></span>
-                        <a href="{{url('delete_holiday',$holiday->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
-                        
+                        <a href="{{url('delete_holiday',$holiday->id)}}"> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td> --}}
+                            <td scope="row"class="text-center">
+                                <div class="btn-group">
+                                    <a class="btn" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false" style="border-color:none;"> ⋮ </a>
+
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item"
+                                            href="{{url('edit_holiday',$holiday->id)}}">Edit Holiday</a>
+                                        <a class="dropdown-item"
+                                            href="{{url('delete_holiday',$holiday->id)}}">Delete Holiday</a>
+                                    </div>
+                                </div>
+                            </td>
              </tr>
              @endforeach
            </tbody>
-</table><br><br>
+</table>
 </div >
 
 <!--		Start Pagination -->
-<div class='pagination-container'>
-      <nav>
-        <ul class="pagination">
-         <!--	Here the JS Function Will Add the Rows -->
-        </ul>
-      </nav>
+                <div class='pagination-container'>
+                    <nav>
+                        <ul class="pagination">
+                            <li data-page="prev">
+                                <span>
+                                    < <span class="sr-only">(current)
+                                </span></span>
+                            </li>
+                            <li data-page="next" id="prev">
+                                <span> > <span class="sr-only">(current)</span></span>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="rows_count"></div>
+</div>
+                <!-- 		End of Container -->
     </div>
-    <div class="rows_count">Showing 11 to 20 of 100</div>
-
- <!-- 		End of Container -->
 <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
@@ -153,11 +185,11 @@ color: #999;
                                     <div class="modal-body">
                                         <div class="container">
                                             <form method="post" action="{{ url('add_new_holiday') }}"
-                                                enctype="multipart/form-data"> 
-<!---------------------------------------------- MODAL ---------------------------------------------------------------------->       
+                                                enctype="multipart/form-data">
+<!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 @csrf
         <div class="row">
-       
+
                     <div class="col-md-6">
                         <div class="mb-1">
                             <label >Date:</label>
@@ -183,13 +215,13 @@ color: #999;
                         </div>
                      </div>
                     </div>
-                   
- 
+
+
                     <div class="row">
                         <div class="col-sm">
 
                         </div>
-                       
+
                         <div class="col-sm">
                             <br>
                             <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
