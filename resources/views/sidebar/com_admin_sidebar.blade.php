@@ -61,7 +61,7 @@
                 <span style="margin-left: 1rem;">Client Management</span>
             </a>
             @php
-            $admin = array("corporate-list", "client_list", "communication-list", "complaint-list", "asign-lawyer");
+            $admin = array("corporate-list/".Auth::user()->company_id, "client_list", "communication-list", "complaint-list", "asign-lawyer");
             @endphp
             @if (in_array(request()->path(), $admin))
             <ul class="submenu" style="display: block;">
@@ -70,13 +70,13 @@
                     @endif
                     @if(request()->path()== "corporate-list"){{--1st-> 1st  submenu start  --}}
                     <li class="submenu-item ">
-                        <a href="{{url('corporate-list')}}" class='sidebar-link'
+                        <a href="{{url('corporate-list/'.Auth::user()->company_id)}}" class='sidebar-link'
                             style="background-color:#1D1D50 ; color:white;">
                             <span style="margin-left:0px;font-align:center;">●</span><span
                                 style="margin-left:5px">Corporate Client List</span>
                             @else
                     <li class="submenu-item ">
-                        <a href="{{url('corporate-list')}}" class='sidebar-link'>
+                        <a href="{{url('corporate-list/'.Auth::user()->company_id)}}" class='sidebar-link'>
                             <span>Corporate Client List</span>
                             @endif
                         </a>

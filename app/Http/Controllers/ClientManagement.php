@@ -23,25 +23,24 @@ class ClientManagement extends Controller
 
 
 
-    public function view(){
+    public function view()
+    {
 
         $client_list = DB::table('cra_individual_client_details')->get();
-        return view('client-management.client-list',compact('client_list'));
+        return view('client-management.client-list', compact('client_list'));
     }
 
 
-  // Asign Lawyer
+    // Asign Lawyer
     public function asignlawyer()
     {
         $asign_lawyer = DB::table('cra_asign_lawyer')->get();
-        return view('client-management.Asign lawyer',compact('asign_lawyer'));
-
-
+        return view('client-management.Asign lawyer', compact('asign_lawyer'));
     }
     public function add_lawyer(Request $Request)
     {
-        $company_id=Auth::user()->company_id;
-        $branch_id=Auth::user()->branch_id ?? null;
+        $company_id = Auth::user()->company_id;
+        $branch_id = Auth::user()->branch_id ?? null;
         $client_number = $Request['client_number'];
         $client_type  = $Request['client_type '];
         $client_name  = $Request['client_name '];
@@ -51,24 +50,22 @@ class ClientManagement extends Controller
 
         DB::table('cra_asign_lawyer')->insert([
             'client_number' => $client_number,
-            'client_type' => $client_type ,
+            'client_type' => $client_type,
             'client_name' => $client_name,
             'file_number' => $file_number,
             'lawyer_name' => $lawyer_name,
             'court_name' => $court_name,
-            'company_id'=>$company_id,
-            'branch_id'=>$branch_id,
+            'company_id' => $company_id,
+            'branch_id' => $branch_id,
         ]);
         return redirect('/asign_lawyer');
-
     }
 
 
     public function edit_lawyer($id)
     {
-        $asign_lawyer = DB::table('cra_asign_lawyer')->where('id',$id)->first();
-        return view('client-management.edit_lawyer',compact('asign_lawyer','id'));
-
+        $asign_lawyer = DB::table('cra_asign_lawyer')->where('id', $id)->first();
+        return view('client-management.edit_lawyer', compact('asign_lawyer', 'id'));
     }
     public function update_lawyer(Request $Request)
     {
@@ -90,48 +87,32 @@ class ClientManagement extends Controller
             'lawyer_name' => $lawyer_name,
             'court_name' => $court_name,
         );
-        DB::table('cra_asign_lawyer')->where('id', $id)->update($update_lawyer );
+        DB::table('cra_asign_lawyer')->where('id', $id)->update($update_lawyer);
 
-       return redirect('/asign_lawyer');
-            }
+        return redirect('/asign_lawyer');
+    }
 
     public function view_lawyer($id)
     {
-        $asign_lawyer = DB::table('cra_asign_lawyer')->where('id',$id)->first();
-        return view('client-management.view_lawyer', compact('asign_lawyer' ,'id'));
-
-
+        $asign_lawyer = DB::table('cra_asign_lawyer')->where('id', $id)->first();
+        return view('client-management.view_lawyer', compact('asign_lawyer', 'id'));
     }
 
     public function delete_lawyer($id)
     {
-        DB::table('cra_asign_lawyer')->where('id',$id)->delete();
+        DB::table('cra_asign_lawyer')->where('id', $id)->delete();
         return redirect('/asign_lawyer');
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
 
-    public function addNewclient(Request $Request){
-        $company_id=Auth::user()->company_id;
-        $branch_id=Auth::user()->branch_id ?? null;
+    public function addNewclient(Request $Request)
+    {
+        $company_id = Auth::user()->company_id;
+        $branch_id = Auth::user()->branch_id ?? null;
         $number = $Request['number'];
         $client_type = $Request['type'];
         $citizen_status = $Request['citizen'];
@@ -159,12 +140,12 @@ class ClientManagement extends Controller
             'client_number' => $number,
             'client_type' =>  $client_type,
             'citizen_status' => $citizen_status,
-            'certificate_of_incorporation' => $incorporation ,
+            'certificate_of_incorporation' => $incorporation,
             'country' =>  $country,
             'telephone_no' =>   $telephone,
             'fax_no' =>  $fax_no,
             'email_address' =>  $email,
-            'website' =>  $website ,
+            'website' =>  $website,
             'brought_in_by' =>  $brought,
             'reporting_day' =>  $status,
             'client_source' => $source,
@@ -173,19 +154,19 @@ class ClientManagement extends Controller
             'client_industry' =>   $industry,
             'pin_no' =>    $pin_no,
             'postal_address' =>   $address,
-            'postal_code' =>  $postal_code ,
-            'town' =>      $town ,
+            'postal_code' =>  $postal_code,
+            'town' =>      $town,
             'physical_address' =>   $physical_address,
             'notes' => $Notes,
-            'company_id'=>$company_id,
-            'branch_id'=>$branch_id,
+            'company_id' => $company_id,
+            'branch_id' => $branch_id,
         ]);
 
         DB::table('cra_mixed_table')->insertGetId([
             'client_name' =>    $client_name,
         ]);
 
-        return redirect("/client_list/".$company_id);
+        return redirect("/client_list/" . $company_id);
     }
 
     //Asign Lawyer//
@@ -210,8 +191,8 @@ class ClientManagement extends Controller
      */
     public function show($id)
     {
-        $client_individual = DB::table('cra_individual_client_details')->where('id',$id)->first();
-        return view('client-management.view-client',compact('client_individual','id'));
+        $client_individual = DB::table('cra_individual_client_details')->where('id', $id)->first();
+        return view('client-management.view-client', compact('client_individual', 'id'));
     }
 
     /**
@@ -222,8 +203,8 @@ class ClientManagement extends Controller
      */
     public function edit_person($id)
     {
-        $edit_client = DB::table('cra_individual_client_details')->where('id',$id)->first();
-        return view('client-management.edit_person',compact('edit_client','id'));
+        $edit_client = DB::table('cra_individual_client_details')->where('id', $id)->first();
+        return view('client-management.edit_person', compact('edit_client', 'id'));
     }
 
     /**
@@ -260,7 +241,7 @@ class ClientManagement extends Controller
         $Notes = $Request['notes'];
 
 
-        DB::table('cra_individual_client_details')->where('id',$id)->update([
+        DB::table('cra_individual_client_details')->where('id', $id)->update([
             'client_number' => $number,
             'client_type' =>  $client_type,
             'citizen_status' => $citizen_status,
@@ -269,7 +250,7 @@ class ClientManagement extends Controller
             'telephone_no' =>   $telephone,
             'fax_no' =>  $fax_no,
             'email_address' =>  $email,
-            'website' =>  $website ,
+            'website' =>  $website,
             'brought_in_by' =>  $brought,
             'reporting_day' =>  $status,
             'client_source' => $source,
@@ -278,8 +259,8 @@ class ClientManagement extends Controller
             'client_industry' =>   $industry,
             'pin_no' =>    $pin_no,
             'postal_address' =>   $address,
-            'postal_code' =>  $postal_code ,
-            'town' =>      $town ,
+            'postal_code' =>  $postal_code,
+            'town' =>      $town,
             'physical_address' =>   $physical_address,
             'notes' => $Notes,
         ]);
@@ -295,7 +276,7 @@ class ClientManagement extends Controller
      */
     public function deleteClient($id)
     {
-        DB::table('cra_individual_client_details')->where('id',$id)->delete();
+        DB::table('cra_individual_client_details')->where('id', $id)->delete();
         return redirect('/client_list');
     }
 
@@ -312,193 +293,201 @@ class ClientManagement extends Controller
 
 
     //end communication
-     //client-Search
+    //client-Search
 
 
-    public function registerClient(){
+    public function registerClient()
+    {
         return view('client-management.register-client');
     }
 
 
 
-  //end client-search
+    //end client-search
 
-  public function addCorporate(Request $Request){
-    $company_id=Auth::user()->company_id;
-    $branch_id=Auth::user()->branch_id ?? null;
-    $number = $Request['number'];
-    $client_type = $Request['type'];
-    $citizen_status = $Request['citizen'];
-    $corporation = $Request['certificate'];
-    $country = $Request['country'];
-    $telephone = $Request['telephone'];
-    $fax_no = $Request['faxno'];
-    $email = $Request['email'];
-    $website = $Request['website'];
-    $brought = $Request['brought'];
-    $status = $Request['status'];
-    $source = $Request['source'];
-    $client_narration = $Request['narration'];
-    $client_name = $Request['name'];
-    $industry = $Request['industry'];
-    $pin_no = $Request['pin'];
-    $address = $Request['address'];
-    $postal_code = $Request['code'];
-    $town = $Request['town'];
-    $physical_address = $Request['physicaladdress'];
-    $Notes = $Request['notes'];
-    $Person_Name = $Request['person'];
-    $Designation = $Request['designation'];
-    $mobile_no = $Request['mobile_no'];
-    $person_email = $Request['person_email'];
+    public function addCorporate(Request $Request)
+    {
+        $company_id = Auth::user()->company_id;
+        $branch_id = Auth::user()->branch_id ?? null;
+        $number = $Request['number'];
+        $client_type = $Request['type'];
+        $citizen_status = $Request['citizen'];
+        $corporation = $Request['certificate'];
+        $country = $Request['country'];
+        $telephone = $Request['telephone'];
+        $fax_no = $Request['faxno'];
+        $email = $Request['email'];
+        $website = $Request['website'];
+        $brought = $Request['brought'];
+        $status = $Request['status'];
+        $source = $Request['source'];
+        $client_narration = $Request['narration'];
+        $client_name = $Request['name'];
+        $industry = $Request['industry'];
+        $pin_no = $Request['pin'];
+        $address = $Request['address'];
+        $postal_code = $Request['code'];
+        $town = $Request['town'];
+        $physical_address = $Request['physicaladdress'];
+        $Notes = $Request['notes'];
+        $Person_Name = $Request['person'];
+        $Designation = $Request['designation'];
+        $mobile_no = $Request['mobile_no'];
+        $person_email = $Request['person_email'];
 
-    DB::table('cra_corporate_client_details')->insert([
-        'client_number' => $number,
-        'Client_type' =>  $client_type,
-        'Cityzen_status' => $citizen_status,
-        'Certificate_of_incorporation' =>  $corporation,
-        'Country' =>  $country,
-        'Telephone_No' =>   $telephone,
-        'Fax_no' =>  $fax_no,
-        'Email_address' =>  $email,
-        'Website' =>  $website ,
-        'Brought_in_By' =>  $brought,
-        'Status_reporting_day' =>  $status,
-        'Client_source' => $source,
-        'Client_source_naration' =>  $client_narration,
-        'client_name' =>    $client_name,
-        'Client_industry' =>   $industry,
-        'Pin_no' =>    $pin_no,
-        'postal_address' =>   $address,
-        'postal_code' =>  $postal_code ,
-        'town' =>      $town ,
-        'physical_address' =>   $physical_address,
-        'notes' => $Notes,
-        'contact_person' => $Person_Name ,
-        'designation' =>  $Designation,
-        'Mobile_no' => $mobile_no,
-        'email' =>$person_email,
-        'company_id'=>$company_id,
-        'branch_id'=>$branch_id,
-    ]);
+        DB::table('cra_corporate_client_details')->insert([
+            'client_number' => $number,
+            'Client_type' =>  $client_type,
+            'Cityzen_status' => $citizen_status,
+            'Certificate_of_incorporation' =>  $corporation,
+            'Country' =>  $country,
+            'Telephone_No' =>   $telephone,
+            'Fax_no' =>  $fax_no,
+            'Email_address' =>  $email,
+            'Website' =>  $website,
+            'Brought_in_By' =>  $brought,
+            'Status_reporting_day' =>  $status,
+            'Client_source' => $source,
+            'Client_source_naration' =>  $client_narration,
+            'client_name' =>    $client_name,
+            'Client_industry' =>   $industry,
+            'Pin_no' =>    $pin_no,
+            'postal_address' =>   $address,
+            'postal_code' =>  $postal_code,
+            'town' =>      $town,
+            'physical_address' =>   $physical_address,
+            'notes' => $Notes,
+            'contact_person' => $Person_Name,
+            'designation' =>  $Designation,
+            'Mobile_no' => $mobile_no,
+            'email' => $person_email,
+            'company_id' => $company_id,
+            'branch_id' => $branch_id,
+        ]);
 
-    DB::table('cra_mixed_table')->insertGetId([
-        'client_name' =>    $client_name,
-    ]);
+        DB::table('cra_mixed_table')->insertGetId([
+            'client_name' =>    $client_name,
+        ]);
 
-    return redirect("/corporate-list/".$company_id);
-
+        return redirect('/corporate-list/'.$company_id);
     }
 
-    public function CorporateDocument($corporate_id){
-        $corporate_docs= DB::table('cra_corporate_client_details')->where('corporate_id',$corporate_id)->first();
-        return view('client-management.corporate-document',compact('corporate_docs','corporate_id'));
+    public function CorporateDocument($corporate_id)
+    {
+        $corporate_docs = DB::table('cra_corporate_client_details')->where('corporate_id', $corporate_id)->first();
+        return view('client-management.corporate-document', compact('corporate_docs', 'corporate_id'));
     }
 
 
-    public function viewCorporateDocument($corporate_id){
+    public function viewCorporateDocument($corporate_id)
+    {
 
         $view_corporate_document = DB::table('cra_document_detials')
-        ->join('cra_corporate_client_details','cra_corporate_client_details.corporate_id','=','cra_document_detials.corporate_id')
-        ->where('cra_document_detials.corporate_id',$corporate_id)
-        ->get();
+            ->join('cra_corporate_client_details', 'cra_corporate_client_details.corporate_id', '=', 'cra_document_detials.corporate_id')
+            ->where('cra_document_detials.corporate_id', $corporate_id)
+            ->get();
 
-        return view('client-management.corporate-document-detail',compact('view_corporate_document','corporate_id'));
+        return view('client-management.corporate-document-detail', compact('view_corporate_document', 'corporate_id'));
     }
 
-    public function editCorporateDocument($id){
-            $edit_corporate_document = DB::table('cra_document_detials')->where('id',$id)->first();
-            return view('client-management.edit-corporate-document',compact('edit_corporate_document','id'));
+    public function editCorporateDocument($id)
+    {
+        $edit_corporate_document = DB::table('cra_document_detials')->where('id', $id)->first();
+        return view('client-management.edit-corporate-document', compact('edit_corporate_document', 'id'));
     }
 
 
 
-    public function addCorporatedocument(Request $request){
+    public function addCorporatedocument(Request $request)
+    {
 
-       $testname    = count($request->input('testname'));
-       $insertdoc   = [];
+        $testname    = count($request->input('testname'));
+        $insertdoc   = [];
 
 
-       for($i = 0; $i < $testname; $i++){
+        for ($i = 0; $i < $testname; $i++) {
 
-        $file = $request->file('file')[$i];
+            $file = $request->file('file')[$i];
 
-        if(request()->hasfile('file')){
-            $uploadedImage = $file;
-            $imageName     = time() .'.'. $file->getClientOriginalExtension();
-            $destinationPath = public_path('images/file');
-            $uploadedImage->move($destinationPath,$imageName);
-            $file->file    = $destinationPath.$imageName;
-        }else{
-            $file = '';
+            if (request()->hasfile('file')) {
+                $uploadedImage = $file;
+                $imageName     = time() . '.' . $file->getClientOriginalExtension();
+                $destinationPath = public_path('images/file');
+                $uploadedImage->move($destinationPath, $imageName);
+                $file->file    = $destinationPath . $imageName;
+            } else {
+                $file = '';
+            }
+
+            $insertdoc[] = [
+
+                'document_type' => $request->input('testname')[$i],
+                'file'          =>  $imageName,
+                'client_types'  =>  $request->input('client'),
+                'date'          =>  $request->input('date')[$i],
+                'corporate_id'  =>  $request->input('corporate_id')
+            ];
         }
-
-        $insertdoc[] = [
-
-            'document_type' => $request->input('testname')[$i],
-            'file'          =>  $imageName,
-            'client_types'  =>  $request->input('client'),
-            'date'          =>  $request->input('date')[$i],
-            'corporate_id'  =>  $request->input('corporate_id')
-        ];
-
-       }
 
         DB::table('cra_document_detials')->insert($insertdoc);
         return redirect('/corporate-list');
-
     }
 
-    public function updateDocumentDetails(Request $request){
+    public function updateDocumentDetails(Request $request)
+    {
         $id   = $request['id'];
         $type = $request['type'];
         $file = $request['file'];
         $client_type = $request['client'];
 
-        if(!empty($request->file('file'))){
+        if (!empty($request->file('file'))) {
 
-            $this->validate($request,[
+            $this->validate($request, [
                 'file' => 'required|mimes:jpeg,jpg,png,gif,pdf,svg'
             ]);
         }
-        if(request()->hasfile('file')){
+        if (request()->hasfile('file')) {
             $uploadedImage = $request->file('file');
-            $imageName     = time() .'.'. $file->getClientOriginalExtension();
+            $imageName     = time() . '.' . $file->getClientOriginalExtension();
             $destinationPath = public_path('images/file');
-            $uploadedImage->move($destinationPath,$imageName);
-            $file->file    = $destinationPath.$imageName;
+            $uploadedImage->move($destinationPath, $imageName);
+            $file->file    = $destinationPath . $imageName;
         }
 
-        DB::table('cra_document_detials')->where('id',$id)->update([
+        DB::table('cra_document_detials')->where('id', $id)->update([
 
             'document_type' =>  $type,
             'file' =>   $imageName,
-            'client_types'=> $client_type,
+            'client_types' => $client_type,
         ]);
         return redirect('/corporate-document-details');
     }
 
-    public function viewDocummentDetails($id){
-        $view_document_details = DB::table('cra_document_detials')->where('id',$id)->first();
-        return view('client-management.view-corporate-document',compact('view_document_details','id'));
+    public function viewDocummentDetails($id)
+    {
+        $view_document_details = DB::table('cra_document_detials')->where('id', $id)->first();
+        return view('client-management.view-corporate-document', compact('view_document_details', 'id'));
     }
 
     //end document//
 
-    public function listCorporate(){
-
+    public function listCorporate($company_id)
+    {   
+        $company_id = Auth::user()->company_id;
+        $branch_id = Auth::user()->branch_id ?? null;
         $list_designation = DB::table('cra_add_user_roles')->get();
-        $corporate_list=DB::table('cra_corporate_client_details')->get();
-        return view('client-management.corporate-list',compact('corporate_list','list_designation'));
+        $corporate_list = DB::table('cra_corporate_client_details')->get();
+        return view('client-management.corporate-list', compact('corporate_list', 'list_designation','company_id','branch_id'));
     }
 
     public function edit_corporate($corporate_id)
     {
-        $corporate_details= DB::table('cra_corporate_client_details')->where('corporate_id',$corporate_id)->first();
-        return view('client-management.edit_client',compact('corporate_details','corporate_id'));
+        $corporate_details = DB::table('cra_corporate_client_details')->where('corporate_id', $corporate_id)->first();
+        return view('client-management.edit_client', compact('corporate_details', 'corporate_id'));
     }
 
-    public function Update_corporate(Request $Request){
+    public function Update_corporate(Request $Request)
+    {
         $corporate_id = $Request['corporate_id'];
         $number = $Request['number'];
         $client_type = $Request['type'];
@@ -526,7 +515,7 @@ class ClientManagement extends Controller
         $mobile_no = $Request['no'];
         $person_email = $Request['person_email'];
 
-        DB::table('cra_corporate_client_details')->where('corporate_id',$corporate_id)->update([
+        DB::table('cra_corporate_client_details')->where('corporate_id', $corporate_id)->update([
             'client_number' => $number,
             'Client_type' =>  $client_type,
             'Cityzen_status' => $citizen_status,
@@ -535,7 +524,7 @@ class ClientManagement extends Controller
             'Telephone_No' =>   $telephone,
             'Fax_no' =>  $fax_no,
             'Email_address' =>  $email,
-            'Website' =>  $website ,
+            'Website' =>  $website,
             'Brought_in_By' =>  $brought,
             'Status_reporting_day' =>  $status,
             'Client_source' => $source,
@@ -544,47 +533,51 @@ class ClientManagement extends Controller
             'Client_industry' =>   $industry,
             'Pin_no' =>    $pin_no,
             'postal_address' =>   $address,
-            'postal_code' =>  $postal_code ,
-            'town' =>      $town ,
+            'postal_code' =>  $postal_code,
+            'town' =>      $town,
             'physical_address' =>   $physical_address,
             'notes' => $Notes,
-            'contact_person' => $Person_Name ,
+            'contact_person' => $Person_Name,
             'designation' =>  $Designation,
             'Mobile_no' => $mobile_no,
-            'email' =>$person_email,
+            'email' => $person_email,
         ]);
 
         return redirect("/corporate-list");
     }
 
 
-    public function Corporate_destroy($corporate_id){
-        DB::table('cra_corporate_client_details')->where('corporate_id',$corporate_id)->delete();
+    public function Corporate_destroy($corporate_id)
+    {
+        DB::table('cra_corporate_client_details')->where('corporate_id', $corporate_id)->delete();
         return redirect('/corporate-list');
     }
 
     //end corporate_client
 
-//document
+    //document
 
 
-    public function document(){
+    public function document()
+    {
         $client_document = DB::table('cra_individual_client_details')
-        ->select('*')
-        ->join('cra_document_detials','cra_document_detials.individual_id','=','cra_individual_client_details.id')
-        ->get();
-    
+            ->select('*')
+            ->join('cra_document_detials', 'cra_document_detials.individual_id', '=', 'cra_individual_client_details.id')
+            ->get();
 
-        return view('client-management.client-document',compact('client_document'));
+
+        return view('client-management.client-document', compact('client_document'));
     }
 
 
-    public function createDocument($id){
-        $client_doc = DB::table('cra_individual_client_details')->where('id',$id)->first();
-        return view('client-management.add-document',compact('client_doc','id'));
+    public function createDocument($id)
+    {
+        $client_doc = DB::table('cra_individual_client_details')->where('id', $id)->first();
+        return view('client-management.add-document', compact('client_doc', 'id'));
     }
 
-    public function addDocument(Request $request){
+    public function addDocument(Request $request)
+    {
 
         $testname = count($request->input('testname'));
         $insertdoc   = [];
@@ -592,11 +585,11 @@ class ClientManagement extends Controller
 
 
 
-        for($i = 0; $i < $testname; $i++){
+        for ($i = 0; $i < $testname; $i++) {
 
             $file = $request->file('file')[$i];
 
-            if (request()->hasFile('file')){
+            if (request()->hasFile('file')) {
                 $uploadedImage = $file;
                 $imageName = time() . '.' . $file->getClientOriginalExtension();
                 $destinationPath = public_path('/images/file');
@@ -617,21 +610,23 @@ class ClientManagement extends Controller
         DB::table('cra_document_detials')->insert($insertdoc);
 
         return redirect('/client_list');
-
     }
 
 
-    public function viewDocument($id){
-        $view_document = DB::table('cra_document_detials')->where('id',$id)->first();
-        return view('client-management.view-document',compact('view_document','id'));
+    public function viewDocument($id)
+    {
+        $view_document = DB::table('cra_document_detials')->where('id', $id)->first();
+        return view('client-management.view-document', compact('view_document', 'id'));
     }
 
-    public function editDocument($id){
-        $edit_documents = DB::table('cra_document_detials')->where('id',$id)->first();
-        return view('client-management.edit-documents',compact('edit_documents','id'));
+    public function editDocument($id)
+    {
+        $edit_documents = DB::table('cra_document_detials')->where('id', $id)->first();
+        return view('client-management.edit-documents', compact('edit_documents', 'id'));
     }
 
-    public function updatedocument(Request $Request){
+    public function updatedocument(Request $Request)
+    {
 
         $id  = $Request['document_id'];
         $document_type = $Request['testname'];
@@ -639,7 +634,7 @@ class ClientManagement extends Controller
         $file = $Request['file'];
 
 
-        if (request()->hasFile('file')){
+        if (request()->hasFile('file')) {
             $uploadedImage = $Request->file('file');
             $imageName = time() . '.' . $file->getClientOriginalExtension();
             $destinationPath = public_path('/images/file');
@@ -648,22 +643,24 @@ class ClientManagement extends Controller
         }
 
 
-        DB::table('cra_document_detials')->where('id',$id)->update([
+        DB::table('cra_document_detials')->where('id', $id)->update([
 
             'document_type' =>  $document_type,
             'file' =>   $imageName,
-            'client_types' =>$client_type,
+            'client_types' => $client_type,
         ]);
         return redirect('/client-document');
     }
 
-    public function showcorporatedocument($id){
-      $view_document = DB::table('cra_document_detials')->where('id',$id)->first();
-       return view('client-management.view_corporate_document',compact('view_document','id'));
-   }
+    public function showcorporatedocument($id)
+    {
+        $view_document = DB::table('cra_document_detials')->where('id', $id)->first();
+        return view('client-management.view_corporate_document', compact('view_document', 'id'));
+    }
 
-    public function deleteDocument($id){
-        DB::table('cra_document_detials')->where('id',$id)->delete();
+    public function deleteDocument($id)
+    {
+        DB::table('cra_document_detials')->where('id', $id)->delete();
         return redirect('/corporate-list');
     }
 
@@ -671,19 +668,22 @@ class ClientManagement extends Controller
 
     //Pickup-client
 
-    public function clientPickup(){
+    public function clientPickup()
+    {
         $get_items  = DB::table('cra_individual_client_details')->get();
         $client_pickup = DB::table('cra_client_pickup_reception')->get();
-        return view('client-management.client-pickup',compact('client_pickup','get_items'));
+        return view('client-management.client-pickup', compact('client_pickup', 'get_items'));
     }
 
 
-    public function formPickup(){
+    public function formPickup()
+    {
         return view('client-management.add-pickup');
     }
 
 
-    public function storePickup(Request $Request){
+    public function storePickup(Request $Request)
+    {
 
         $client = $Request['client'];
         $file_name = $Request['file'];
@@ -701,25 +701,27 @@ class ClientManagement extends Controller
             'client' =>  $client,
             'file_name' =>   $file_name,
             'mobile' => $mobile,
-            'persion_handling' =>$persion_handling,
+            'persion_handling' => $persion_handling,
             'email' =>  $email,
             'client_name' =>  $client_name,
             'persion_picking_handling' =>  $persion_picking_handling,
             'reason' =>  $reason,
-            'visitors' =>  $visitors ,
+            'visitors' =>  $visitors,
             'time_in' => $time_in,
             'time_out' =>  $time_out,
         ]);
         return redirect('/client-pickup');
     }
 
-    public function viewPickups($id){
-        $view_pickup = DB::table('cra_client_pickup_reception')->where('id',$id)->first();
-        return view('client-management.view-pickup',compact('view_pickup','id'));
+    public function viewPickups($id)
+    {
+        $view_pickup = DB::table('cra_client_pickup_reception')->where('id', $id)->first();
+        return view('client-management.view-pickup', compact('view_pickup', 'id'));
     }
 
-    public function deletePickup($id){
-        DB::table('cra_client_pickup_reception')->where('id',$id)->delete();
+    public function deletePickup($id)
+    {
+        DB::table('cra_client_pickup_reception')->where('id', $id)->delete();
         return redirect('/client-pickup');
     }
 
@@ -727,13 +729,15 @@ class ClientManagement extends Controller
 
     //complaint
 
-    public function complaintList(){
+    public function complaintList()
+    {
         $complaint_list = DB::table('cra_complaint_register')->get();
-        return view('client-management.complaint-list',compact('complaint_list'));
+        return view('client-management.complaint-list', compact('complaint_list'));
     }
 
 
-    public function addComplaint(Request $Request){
+    public function addComplaint(Request $Request)
+    {
 
         $date = $Request['date'];
         $client_type = $Request['type'];
@@ -751,12 +755,12 @@ class ClientManagement extends Controller
             'date' =>  $date,
             'client_type' =>  $client_type,
             'files' => $files,
-            'customer_name' =>$customer_name,
+            'customer_name' => $customer_name,
             'staff_handling' => $staff_handling,
             'complaint_about' =>  $complaint_about,
             'telephone_no' =>  $telephone_no,
             'email' =>   $email,
-            'others' =>   $others ,
+            'others' =>   $others,
             'action_plan' => $action_plan,
             'complaint_description' => $complaint_description,
         ]);
@@ -765,12 +769,14 @@ class ClientManagement extends Controller
     }
 
 
-    public function editComplaint($id){
-        $edit_complaint = DB::table('cra_complaint_register')->where('id',$id)->first();
-        return view('client-management.edit-complaint',compact('edit_complaint','id'));
+    public function editComplaint($id)
+    {
+        $edit_complaint = DB::table('cra_complaint_register')->where('id', $id)->first();
+        return view('client-management.edit-complaint', compact('edit_complaint', 'id'));
     }
 
-    public function updateComplaint(Request $Request){
+    public function updateComplaint(Request $Request)
+    {
         $id   = $Request['id'];
         $date = $Request['date'];
         $client_type = $Request['type'];
@@ -784,16 +790,16 @@ class ClientManagement extends Controller
         $action_plan = $Request['plan'];
         $complaint_description = $Request['Description'];
 
-        DB::table('cra_complaint_register')->where('id',$id)->update([
+        DB::table('cra_complaint_register')->where('id', $id)->update([
             'date' =>  $date,
             'client_type' =>  $client_type,
             'files' => $files,
-            'customer_name' =>$customer_name,
+            'customer_name' => $customer_name,
             'staff_handling' => $staff_handling,
             'complaint_about' =>  $complaint_about,
             'telephone_no' =>  $telephone_no,
             'email' =>   $email,
-            'others' =>   $others ,
+            'others' =>   $others,
             'action_plan' => $action_plan,
             'complaint_description' => $complaint_description,
         ]);
@@ -801,26 +807,30 @@ class ClientManagement extends Controller
         return redirect('/complaint-list');
     }
 
-    public function viewComplaint($id){
-        $view_complaint = DB::table('cra_complaint_register')->where('id',$id)->first();
-        return view('client-management.view-complaint',compact('view_complaint','id'));
+    public function viewComplaint($id)
+    {
+        $view_complaint = DB::table('cra_complaint_register')->where('id', $id)->first();
+        return view('client-management.view-complaint', compact('view_complaint', 'id'));
     }
 
-    public function deleteComplaint($id){
-        $delete_complaint = DB::table('cra_complaint_register')->where('id',$id)->delete();
+    public function deleteComplaint($id)
+    {
+        $delete_complaint = DB::table('cra_complaint_register')->where('id', $id)->delete();
         return redirect('/complaint-list');
     }
 
     //end complaint
 
     //customer Followup
-    public function followup(){
+    public function followup()
+    {
         $followup = DB::table('cra_customer_followup')->get();
         $client   = DB::table('cra_mixed_table')->get();
-        return view('client-management.follow-up',compact('followup','client'));
+        return view('client-management.follow-up', compact('followup', 'client'));
     }
 
-    public function addFollowup(Request $Request){
+    public function addFollowup(Request $Request)
+    {
 
         $followup_date = $Request['date'];
         $client = $Request['client'];
@@ -834,10 +844,10 @@ class ClientManagement extends Controller
         $description = $Request['description'];
 
         DB::table('cra_customer_followup')->insert([
-            'followup_date' => $followup_date ,
+            'followup_date' => $followup_date,
             'customer' =>  $client,
             'followup_type' => $followup_type,
-            'staff_responsible' =>$staff_responsible,
+            'staff_responsible' => $staff_responsible,
             'send_remainder_to' => $send_remainder_to,
             'next_bringup_date' =>  $next_bringup_date,
             'alert_period' =>  $alert_period,
@@ -849,12 +859,14 @@ class ClientManagement extends Controller
     }
 
 
-    public function editFollow($id){
-        $edit_follow = DB::table('cra_customer_followup')->where('id',$id)->first();
-        return view('client-management.edit-followup',compact('edit_follow','id'));
+    public function editFollow($id)
+    {
+        $edit_follow = DB::table('cra_customer_followup')->where('id', $id)->first();
+        return view('client-management.edit-followup', compact('edit_follow', 'id'));
     }
 
-    public function updateFollow(Request $Request){
+    public function updateFollow(Request $Request)
+    {
 
         $id            = $Request['id'];
         $followup_date = $Request['date'];
@@ -868,11 +880,11 @@ class ClientManagement extends Controller
         $registered_by = $Request['Registered'];
         $description = $Request['description'];
 
-        DB::table('cra_customer_followup')->where('id',$id)->update([
-            'followup_date' => $followup_date ,
-            'customer' => $customer ,
+        DB::table('cra_customer_followup')->where('id', $id)->update([
+            'followup_date' => $followup_date,
+            'customer' => $customer,
             'followup_type' => $followup_type,
-            'staff_responsible' =>$staff_responsible,
+            'staff_responsible' => $staff_responsible,
             'send_remainder_to' => $send_remainder_to,
             'next_bringup_date' =>  $next_bringup_date,
             'alert_period' =>  $alert_period,
@@ -883,8 +895,9 @@ class ClientManagement extends Controller
         return redirect('/follow-up');
     }
 
-    public function deleteFollow($id){
-        $delete_follow = DB::table('cra_customer_followup')->where('id',$id)->delete();
+    public function deleteFollow($id)
+    {
+        $delete_follow = DB::table('cra_customer_followup')->where('id', $id)->delete();
         return redirect('/follow-up');
     }
 
@@ -892,16 +905,18 @@ class ClientManagement extends Controller
 
     //service-at-pickup
 
-    public function service(){
+    public function service()
+    {
         $get_items  = DB::table('cra_individual_client_details')->get();
         $service = DB::table('cra_client_service_at_reception')
-        ->leftjoin('cra_company_branch_details','cra_company_branch_details.id','=','cra_client_service_at_reception.id')
-        ->get();
-        return view('client-management.client-service',compact('service','get_items'));
+            ->leftjoin('cra_company_branch_details', 'cra_company_branch_details.id', '=', 'cra_client_service_at_reception.id')
+            ->get();
+        return view('client-management.client-service', compact('service', 'get_items'));
     }
 
 
-    public function addService(Request $Request){
+    public function addService(Request $Request)
+    {
 
         $receipt_no = $Request['Receipt'];
         $client_name = $Request['Name'];
@@ -913,10 +928,10 @@ class ClientManagement extends Controller
         $payment_method = $Request['Method'];
 
         DB::table('cra_client_service_at_reception')->insert([
-            'receipt_no' =>  $receipt_no ,
-            'client_name' =>   $client_name ,
+            'receipt_no' =>  $receipt_no,
+            'client_name' =>   $client_name,
             'mobile' => $mobile,
-            'amount_paid' =>$amount_paid,
+            'amount_paid' => $amount_paid,
             'date' => $date,
             'email' =>  $email,
             'code' =>   $code,
@@ -925,12 +940,14 @@ class ClientManagement extends Controller
         return redirect('/client-service');
     }
 
-    public function editService($id){
-        $edit_service = DB::table('cra_client_service_at_reception')->where('id',$id)->first();
-        return view('client-management.edit-service',compact('edit_service','id'));
+    public function editService($id)
+    {
+        $edit_service = DB::table('cra_client_service_at_reception')->where('id', $id)->first();
+        return view('client-management.edit-service', compact('edit_service', 'id'));
     }
 
-    public function updateService(Request $Request){
+    public function updateService(Request $Request)
+    {
         $id            = $Request['id'];
         $receipt_no = $Request['Receipt'];
         $client_name = $Request['Name'];
@@ -941,11 +958,11 @@ class ClientManagement extends Controller
         $code = $Request['code'];
         $payment_method = $Request['Method'];
 
-        DB::table('cra_client_service_at_reception')->where('id',$id)->update([
-            'receipt_no' =>  $receipt_no ,
-            'client_name' =>   $client_name ,
+        DB::table('cra_client_service_at_reception')->where('id', $id)->update([
+            'receipt_no' =>  $receipt_no,
+            'client_name' =>   $client_name,
             'mobile' => $mobile,
-            'amount_paid' =>$amount_paid,
+            'amount_paid' => $amount_paid,
             'date' => $date,
             'email' =>  $email,
             'code' =>   $code,
@@ -955,8 +972,9 @@ class ClientManagement extends Controller
         return redirect('/client-service');
     }
 
-    public function deleteService($id){
-        $delete_service = DB::table('cra_client_service_at_reception')->where('id',$id)->delete();
+    public function deleteService($id)
+    {
+        $delete_service = DB::table('cra_client_service_at_reception')->where('id', $id)->delete();
         return redirect('/client-service');
     }
 
@@ -964,13 +982,15 @@ class ClientManagement extends Controller
 
     //quotation
 
-    public function Quotation(){
+    public function Quotation()
+    {
         $quotation = DB::table('cra_customer_quotation')->get();
-        return view('client-management.Quotation',compact('quotation'));
+        return view('client-management.Quotation', compact('quotation'));
     }
 
 
-    public function addQuotation(Request $Request){
+    public function addQuotation(Request $Request)
+    {
 
         $document_type = $Request['document'];
         $issue_date = $Request['issue'];
@@ -990,11 +1010,11 @@ class ClientManagement extends Controller
         $comments = $Request['comments'];
 
         DB::table('cra_customer_quotation')->insert([
-            'document_type' => $document_type ,
+            'document_type' => $document_type,
             'issue_date' => $issue_date,
             'customer' =>   $customer,
             'client_ref_no' => $client_ref_no,
-            'currency' =>$currency,
+            'currency' => $currency,
             'exchange_rate' => $exchange_rate,
             'approver' =>  $approver,
             'bank_account' =>  $bank_account,
@@ -1003,7 +1023,7 @@ class ClientManagement extends Controller
             'subject' => $subject,
             'type' =>  $type,
             'particulers_of_service_rendered' => $particulers_of_service_rendered,
-            'amount' => $amount ,
+            'amount' => $amount,
             'vat' =>  $vat,
             'comments' => $comments,
         ]);
@@ -1011,12 +1031,14 @@ class ClientManagement extends Controller
     }
 
 
-    public function editQuotation($id){
-        $edit_quotation = DB::table('cra_customer_quotation')->where('id',$id)->first();
-        return view('client-management.edit-Quotation',compact('edit_quotation','id'));
+    public function editQuotation($id)
+    {
+        $edit_quotation = DB::table('cra_customer_quotation')->where('id', $id)->first();
+        return view('client-management.edit-Quotation', compact('edit_quotation', 'id'));
     }
 
-    public function updateQuotation(Request $Request){
+    public function updateQuotation(Request $Request)
+    {
 
         $id            = $Request['id'];
         $document_type = $Request['document'];
@@ -1036,12 +1058,12 @@ class ClientManagement extends Controller
         $vat = $Request['vat'];
         $comments = $Request['comments'];
 
-        DB::table('cra_customer_quotation')->where('id',$id)->update([
-            'document_type' => $document_type ,
+        DB::table('cra_customer_quotation')->where('id', $id)->update([
+            'document_type' => $document_type,
             'issue_date' => $issue_date,
             'customer' =>   $customer,
             'client_ref_no' => $client_ref_no,
-            'currency' =>$currency,
+            'currency' => $currency,
             'exchange_rate' => $exchange_rate,
             'approver' =>  $approver,
             'bank_account' =>  $bank_account,
@@ -1050,15 +1072,16 @@ class ClientManagement extends Controller
             'subject' => $subject,
             'type' =>  $type,
             'particulers_of_service_rendered' => $particulers_of_service_rendered,
-            'amount' =>$amount,
+            'amount' => $amount,
             'vat' =>  $vat,
             'comments' => $comments,
         ]);
         return redirect('/Quotation');
     }
 
-    public function deleteQuotation($id){
-        $edit_quotation = DB::table('cra_customer_quotation')->where('id',$id)->delete();
+    public function deleteQuotation($id)
+    {
+        $edit_quotation = DB::table('cra_customer_quotation')->where('id', $id)->delete();
         return redirect('/Quotation');
     }
 
@@ -1067,14 +1090,16 @@ class ClientManagement extends Controller
 
     //communication
 
-    public function ListCommunication(){
+    public function ListCommunication()
+    {
         $list_communication = DB::table('cra_conversations')->get();
-        return view('client-management.communication-list',compact('list_communication'));
+        return view('client-management.communication-list', compact('list_communication'));
     }
 
-    public function addCommunication(Request $Request){
-        $company_id=Auth::user()->company_id;
-        $branch_id=Auth::user()->branch_id ?? null;
+    public function addCommunication(Request $Request)
+    {
+        $company_id = Auth::user()->company_id;
+        $branch_id = Auth::user()->branch_id ?? null;
         $communication_date = $Request['date'];
         $client = $Request['Client'];
         $file = $Request['File'];
@@ -1095,37 +1120,40 @@ class ClientManagement extends Controller
             'communication_date' => $communication_date,
             'client' =>   $client,
             'file' => $file,
-            'customer' =>$customer,
+            'customer' => $customer,
             'telephone_no' => $telephone_no,
             'email' =>  $email,
             'communication_source' =>  $communication_source,
             'mode_of_communication' =>  $mode_of_communication,
-            'communicated' => $communicated ,
+            'communicated' => $communicated,
             'duration' => $duration,
             'person_handling' =>  $person_handling,
             'time' =>  $time,
-            'others' => $others ,
+            'others' => $others,
             'communicated_description' =>  $communicated_description,
             'action_plan' =>  $action_plan,
-            'company_id'=>$company_id,
-            'branch_id'=>$branch_id,
+            'company_id' => $company_id,
+            'branch_id' => $branch_id,
         ]);
 
 
-        return redirect('/communication-list/'.$company_id);
+        return redirect('/communication-list/' . $company_id);
     }
 
 
-    public function indexCommunication(){
+    public function indexCommunication()
+    {
         return view('client-management.add-communication');
     }
 
-    public function editCommunication($id){
-        $edit = DB::table('cra_conversations')->where('id',$id)->first();
-        return view('client-management.edit-communication',compact('edit','id'));
+    public function editCommunication($id)
+    {
+        $edit = DB::table('cra_conversations')->where('id', $id)->first();
+        return view('client-management.edit-communication', compact('edit', 'id'));
     }
 
-    public function updateCommunication(Request $Request){
+    public function updateCommunication(Request $Request)
+    {
 
         $id                 = $Request['id'];
         $communication_date = $Request['date'];
@@ -1145,20 +1173,20 @@ class ClientManagement extends Controller
         $action_plan = $Request['Action'];
 
 
-        DB::table('cra_conversations')->where('id',$id)->update([
+        DB::table('cra_conversations')->where('id', $id)->update([
             'communication_date' => $communication_date,
             'client' =>   $client,
             'file' => $file,
-            'customer' =>$customer,
+            'customer' => $customer,
             'telephone_no' => $telephone_no,
             'email' =>  $email,
             'communication_source' =>  $communication_source,
             'mode_of_communication' =>  $mode_of_communication,
-            'communicated' => $communicated ,
+            'communicated' => $communicated,
             'duration' => $duration,
             'person_handling' =>  $person_handling,
             'time' =>  $time,
-            'others' => $others ,
+            'others' => $others,
             'communicated_description' =>  $communicated_description,
             'action_plan' =>  $action_plan,
         ]);
@@ -1166,22 +1194,25 @@ class ClientManagement extends Controller
         return redirect('/communication-list');
     }
 
-    public function deleteCommunication($id){
-        $del_communication = DB::table('cra_conversations')->where('id',$id)->delete();
+    public function deleteCommunication($id)
+    {
+        $del_communication = DB::table('cra_conversations')->where('id', $id)->delete();
         return redirect('/communication-list');
     }
 
 
     //end communication
 
-     //client-Search
+    //client-Search
 
-    public function listSearch(){
+    public function listSearch()
+    {
         $list_search = DB::table('cra_client_search_detials')->get();
-        return view('client-management.search-list',compact('list_search'));
+        return view('client-management.search-list', compact('list_search'));
     }
 
-    public function addRegister(Request $Request){
+    public function addRegister(Request $Request)
+    {
 
         $client_type = $Request['type'];
         $client_category = $Request['Category'];
@@ -1197,13 +1228,13 @@ class ClientManagement extends Controller
             'file_type'       => $file_type,
             'country'         => $country,
             'status'          => $status,
-            'registration_date'=>$registration_date ,
+            'registration_date' => $registration_date,
         ]);
 
         return redirect('/search-list');
     }
 
-  //end client-search
+    //end client-search
 
 
 
