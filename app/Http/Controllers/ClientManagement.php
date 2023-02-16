@@ -386,7 +386,7 @@ class ClientManagement extends Controller
         'client_name' =>    $client_name,
     ]);
 
-    return redirect("/corporate-list/".$company_id);
+    return redirect("corporate-list/".$company_id);
 
     }
 
