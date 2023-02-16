@@ -23,8 +23,27 @@
    </head>
    <body>
    {{-- heading --}}
-  <h4 id="hdtpa"><b>WakiliCMS Notification Config</b></h4>
-
+  {{-- <h4 id="hdtpa"><b>WakiliCMS Notification Config</b></h4> --}}
+  <div class="row" style="height:50px;">
+    <div class="col-sm-4" style="padding-top:5px;">
+    </div>
+    <div class="col-sm-4" style="">
+        <h4
+            style="border: 0.5px solid #f1d9b0;
+            border-radius: 25px;
+            background-color: #f1d9b0;
+            padding: 2%;
+            width: 100%;
+            height:90%;
+            text-align:center;
+            box-shadow: inset 0 0 3px #d3d0ca;
+            opacity: .9;">
+            <b style="font-size:18px;">WakiliCMS Notification Config</b>
+        </h4>
+    </div>
+    <div class="col-sm-4" style="">
+    </div>
+</div>
   <div class="container">
     <div class="header_wrap">
       <div class="num_rows">
@@ -77,7 +96,7 @@
 </tbody>
                     </table>
 </div>
-<!--		Start Pagination -->
+{{-- <!--		Start Pagination -->
 <div class='pagination-container'>
       <nav>
         <ul class="pagination">
@@ -88,7 +107,25 @@
     <div class="rows_count">Showing 11 to 20 of 100</div>
 
  <!-- 		End of Container -->
- 
+  --}}
+  <!--		Start Pagination -->
+  <div class='pagination-container'>
+      <nav>
+          <ul class="pagination">
+              <li data-page="prev">
+                  <span>
+                      < <span class="sr-only">(current)
+                  </span></span>
+              </li>
+              <li data-page="next" id="prev">
+                  <span> > <span class="sr-only">(current)</span></span>
+              </li>
+          </ul>
+      </nav>
+  </div>
+  <div class="rows_count"></div>
+</div>
+  <!-- 		End of Container -->
                     <br>
                     <div class="class"style="text-align:center;">
                     <button type="submit" class="btn btn-primary float:right;" Style="width:10%;">Update</button>

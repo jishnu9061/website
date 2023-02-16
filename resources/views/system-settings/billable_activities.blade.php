@@ -66,7 +66,27 @@ color: #999;
         <div>
         {{-- heading --}}
         <div class="container">
-    <h4 id="hdtpa"><b>Billable Activities</b></h4>
+    {{-- <h4 id="hdtpa"><b>Billable Activities</b></h4> --}}
+    <div class="row" style="height:50px;">
+        <div class="col-sm-4" style="padding-top:5px;">
+        </div>
+        <div class="col-sm-4" style="">
+            <h4
+                style="border: 0.5px solid #f1d9b0;
+                border-radius: 25px;
+                background-color: #f1d9b0;
+                padding: 2%;
+                width: 100%;
+                height:90%;
+                text-align:center;
+                box-shadow: inset 0 0 3px #d3d0ca;
+                opacity: .9;">
+                <b style="font-size:18px;">Billable Activities</b>
+            </h4>
+        </div>
+        <div class="col-sm-4" style="">
+        </div>
+    </div>
     <br>
            
 
@@ -74,7 +94,10 @@ color: #999;
        <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
            
 {{-- <a href="{{('add_billable_activities')}}"><button class="btn btn-primary">Add Activity</button></a> --}}
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Activity</button>
+                {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Activity</button> --}}
+                <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
+            --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add Activity</button>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                       
@@ -125,17 +148,29 @@ color: #999;
                             <td>{{$activity->activity_name}}</td>
                             <td>{{$activity->cost}}</td>
                             <td></td>
-                            <td  scope="row"class="text-center">
+                            {{-- <td  scope="row"class="text-center">
                         <a href="{{url('edit_billable_activities',$activity->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
                         <span class="m-2"></span>
                         <a href="{{url('delete_billable_activities',$activity->id)}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
-                           </td>
+                           </td> --}}
+                           <td scope="row"class="text-center">
+                            <div class="btn-group">
+                                <a class="btn" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false" style="border-color:none;"> ⋮ </a>
+
+                           <div class="dropdown-menu">
+                            <a class="dropdown-item"
+                                href="{{url('edit_billable_activities',$activity->id)}}">Edit Billable Activities</a>
+                            <a class="dropdown-item"
+                                href="{{url('delete_billable_activities',$activity->id)}}">Delete Billable Activities</a>
+                        </div>
+                            </td>
          </tr>
          @endforeach
                     </tbody>
                 </table>
 </div>
-                <!--		Start Pagination -->
+                {{-- <!--		Start Pagination -->
     <div class='pagination-container'>
       <nav>
         <ul class="pagination">
@@ -146,7 +181,25 @@ color: #999;
     <div class="rows_count">Showing 11 to 20 of 100</div>
 
  <!-- 		End of Container -->
- 
+  --}}
+  <!--		Start Pagination -->
+                <div class='pagination-container'>
+                    <nav>
+                        <ul class="pagination">
+                            <li data-page="prev">
+                                <span>
+                                    < <span class="sr-only">(current)
+                                </span></span>
+                            </li>
+                            <li data-page="next" id="prev">
+                                <span> > <span class="sr-only">(current)</span></span>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="rows_count"></div>
+</div>
+                <!-- 		End of Container -->
                  <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">

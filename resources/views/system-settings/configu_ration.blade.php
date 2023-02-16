@@ -9,9 +9,28 @@
 <br><br>
 <div class="container">
     {{-- heading --}}
-    <h4 id="hdtpa"><b>Configuration Details</b></h4>
+    {{-- <h4 id="hdtpa"><b>Configuration Details</b></h4> --}}
+    <div class="row" style="height:50px;">
+        <div class="col-sm-4" style="padding-top:5px;">
+        </div>
+        <div class="col-sm-4" style="">
+            <h4
+                style="border: 0.5px solid #f1d9b0;
+                border-radius: 25px;
+                background-color: #f1d9b0;
+                padding: 2%;
+                width: 100%;
+                height:90%;
+                text-align:center;
+                box-shadow: inset 0 0 3px #d3d0ca;
+                opacity: .9;">
+                <b style="font-size:18px;">Other Configurations</b>
+            </h4>
+        </div>
+        <div class="col-sm-4" style="">
+        </div>
+    </div>
     <br><br>
-
     {{--sub heading --}}
     <h5 id="hdbtb">Appearences</h5>
     <br>
