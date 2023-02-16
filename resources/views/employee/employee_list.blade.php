@@ -403,7 +403,7 @@ input[type='file'] {
 
 <div class="modal fade" id="edit_personal_details" style="">
     <!-- create company -->
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <!---- Modal Header -->
             <form method="post" action="{{ url('') }}" enctype="multipart/form-data" id="addemployee">
@@ -637,7 +637,7 @@ input[type='file'] {
 <!-------------------------------------------------------------- START CHANGE DESTINATION ---------------------------------------------------->
 <div class="modal fade" id="change_destination" style="">
     <!-- create company -->
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <!---- Modal Header -->
             <form method="post" action="{{ url('') }}" enctype="multipart/form-data" id="addemployee">
@@ -1092,13 +1092,13 @@ input[type='file'] {
                 @csrf
                 <h5><b>Employee Status:-</b></h5>
 
-                <div class="row" style="*/background-color:orange;height:280px">
+                <div class="row" style="">
                 <div class="" style="width: 30%">
                                 <div class="">
                                     <label for="status"
-                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:15px;margin-top: 59%;margin-left: 124%;">Status</label>
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:15px;margin-top: 17%;margin-left: 118%;">Status</label>
                                     <select class="form-select" aria-label="Default select example"
-                                        style="height:35px;border-color: #1d1d50;width=45%;margin-left: 124%; border-radius: 7px;"
+                                        style="height:35px;border-color: #1d1d50;width:100%;margin-left: 118%;margin-bottom: 7%; border-radius: 7px;"
                                         name="gender" id="" required>
                                         <option>Select</option>
                                         <option value="1">Active</option>
