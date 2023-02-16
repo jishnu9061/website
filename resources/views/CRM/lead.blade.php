@@ -24,9 +24,23 @@
 
         <br>
     </div>
-
-    <h4 id="hdtpa"><b>Corporate Customers Leads</b></h4>
-    <br>
+    <div class="col-sm-4" style="">
+                <h4
+                    style="border: 0.5px solid #f1d9b0;
+                    margin-left:100%;
+                    border-radius: 25px;
+                    background-color: #f1d9b0;
+                    padding: 2%;
+                    width: 100%;
+                    height:90%;
+                    text-align:center;
+                    box-shadow: inset 0 0 3px #d3d0ca;
+                    opacity: .9;">
+                    <b style="font-size:18px;">Corporate Customers Leads</b>
+                </h4>
+            </div>
+    <!-- <h4 id="hdtpa"><b></b></h4>
+    <br> -->
 
     <br>
     <div class="header_wrap">
