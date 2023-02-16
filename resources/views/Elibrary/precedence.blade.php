@@ -56,19 +56,21 @@
                 </tr>
             </thead>
             <tbody>
-            @foreach($view as $list)
+                @foreach($view as $list)
                 <tr>
 
                     <td>{{$list->file_no}}</td>
                     <td>{{$list->client_name}}</td>
                     <td>{{$list->file_discription}}</td>
-                    <td> 
-                        <a href="viewprecedence"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i><span class="m-2"></span>
-                        <a href="{{url('editprecedence',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span
+                    <td>
+                        <a href="{{url('viewprecedence',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i><span
                                 class="m-2"></span>
-                            <a href="{{url('delete_precedence',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
-                            </i>        
-                           
+                            <a href="{{url('editprecedence',$list->id)}}"><i style="color:rgb(13, 1, 56);"
+                                    class="fa fa-edit"></i><span class="m-2"></span>
+                                <a href="{{url('delete_precedence',$list->id)}}"><i style="color:rgb(13, 1, 56);"
+                                        class="fas fa-trash-alt"></i>
+                                    </i>
+
 
                     </td>
 
@@ -114,9 +116,8 @@
                 <div class="container">
                     <form action="{{url('add_precedence')}}" method="post">
                         @csrf
-
+                        <input type="hidden" name="company_id" value="{{Auth::user()->company_id}}">
                         <div class="row">
-
                             <div class="col-md-4">
                                 <div class="mb-1">
                                     <label for="username">File No</label>

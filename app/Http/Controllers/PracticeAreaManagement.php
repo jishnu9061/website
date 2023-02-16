@@ -13,7 +13,19 @@ class PracticeAreaManagement extends Controller
     }
     public function practice_area()
     {
-        return view('PracticeAreaManagement.practice_area');
+        $practice_area  =  DB::table('cra_practice_area')->get();
+        return view('PracticeAreaManagement.practice_area',compact('practice_area'));
+    }
+
+    public function store_practice_area(Request $request){
+       
+        $practice_area      =  $request['area'];
+
+        DB::table('cra_practice_area')->insert([
+            'practice_area'     =>   $practice_area
+        ]);
+
+        return redirect('/practice_area');
     }
     public function matter_type()
     {
@@ -1242,9 +1254,27 @@ class PracticeAreaManagement extends Controller
         $view_probate_law   =  DB::table('cra_probate_law')->where('id',$id)->get();
         return view('PracticeAreaManagement.view_probate_law',compact('view_probate_law','id'));
     }
-    public function edit_practice_area()
+    public function edit_practice_area($id)
     {
-        return view('PracticeAreaManagement.edit_practice_area');
+        $edit_practice_area  = DB::table('cra_practice_area')->where('id',$id)->first();
+        return view('PracticeAreaManagement.edit_practice_area',compact('edit_practice_area','id'));
+    }
+
+    public function update_practice_area(Request $request){
+        $id            =   $request['id'];
+        $practice_area =   $request['area'];
+
+        DB::table('cra_practice_area')->where('id',$id)->update([
+            'practice_area'  =>  $practice_area
+        ]);
+
+        return redirect('/practice_area');
+    }
+
+    public function delete_practice_area($id)
+    {
+        $delete_practice_area  = DB::table('cra_practice_area')->where('id',$id)->delete();
+        return redirect('/practice_area');
     }
   
    

@@ -1,5 +1,14 @@
 @extends('layouts.hmsmain')
 @section('content')
+<style>
+    .fa-ban , .fa-bell{
+        color: red;
+    }
+    .fa-ban , .fa-bell{
+        padding: 5px;
+    }
+
+</style>
     <nav style="font-size:15px;">
         <a href="{{ url('home') }}" style="color: #1D1D50;">Home</a> /
         <a href="#" style="color: #1D1D50;">System Setup</a> /
@@ -12,6 +21,7 @@
       
         {{-- heading --}}
         <div class="container">
+
             <div class="row" style="height:50px;">
                 <div class="col-sm-4" style="padding-top:5px;">
                 </div>
@@ -38,6 +48,7 @@
                 {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Branch</button> --}}
             {{-- <h4 id="hdtpa"><b>Company Branch</b></h4> --}}
             <br><br>
+
             <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 
             {{-- <a href="{{('add_company_branch')}}"><button class="btn btn-primary">Add Branch</button></a> --}}
@@ -51,13 +62,40 @@
 
            
                     <div class="card" style="width: 18rem;">
+                        <div class="p-2" style="display: inline-block; width:fit-content; position: absolute;right: 0; ">
+                            <i class="fa fa-ban"></i>
+                            <i class="fa fa-bell"></i>
+                        </div>
                         <img class="card-img-top" src="https://t4.ftcdn.net/jpg/02/81/89/73/360_F_281897358_3rj9ZBSZHo5s0L1ug7uuIHadSxh9Cc75.jpg" alt="Card image cap">
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <h4><b>John Doe</b></h4>
-                            <p>Architect & Engineer</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <div style="  display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-around;align-items: center;">
+                          <div class="card-title m-0" style="padding: 0px; font-size:15px; ">Branch Name</div>
+                          <div class="" style="">
+                            <a href=""><i
+                                    style="  color:rgb(13, 1, 56);" class="fa fa-eye"
+                                    aria-hidden="true"></i> </a>
+                                <span class="m-1"></span>
+                            <a href=""><i
+                                    style="  color:rgb(13, 1, 56);" class="fa fa-edit"
+                                    aria-hidden="true"></i> </a>
+                                <span class="m-1"></span>
+                            <a href=""><i
+                                    style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt"
+                                    aria-hidden="true"></i> </a>
+                                <span class="m-1"></span>
+                            <a href=""><i
+                                    style="  color:rgb(13, 1, 56);" class="fa fa-add"
+                                    aria-hidden="true"></i> </a>
+                          </div>
+                            </div>
+  
+                          <p class="card-text mt-1 mb-1"> <b> Address:</b> Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <b><p class="mb-1">Email:</p></b>
+                            <p class="mb-1">Architect & Engineer</p>
+                          
+                          {{-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
                         </div>
                       </div>
 

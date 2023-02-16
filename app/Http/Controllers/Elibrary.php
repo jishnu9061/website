@@ -4,7 +4,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Auth;
 use DB;
 
 
@@ -188,16 +188,17 @@ class Elibrary extends Controller
     {
 
         $view=DB::table('cra_precedence')->where('company_id', $id)->get();
-        return view('Elibrary.precedence',compact('view'));
+        return view('Elibrary.precedence',compact('view','id'));
     }
 
     public function addprecedences(Request $request)
     {
-        $file_no = $request['file_no'];
+        $company_id  = $request['company_id'];
+        $file_no     = $request['file_no'];
         $client_name = $request['client_name'];
         $file_handle = $request['file_handle'];
-        $date_from = $request['date_from'];
-        $date_to = $request['date_to'];
+        $date_from   = $request['date_from'];
+        $date_to     = $request['date_to'];
         $file_status = $request['file_status'];
         $file_discription = $request['file_discription'];
         $upload_file = $request['upload_file'];
@@ -218,18 +219,18 @@ class Elibrary extends Controller
 
 
         DB::table('cra_precedence')->insert([
-
-            'file_no' => $file_no,
+            'company_id'  => $company_id,
+            'file_no'     => $file_no,
             'client_name' => $client_name,
             'file_handle' => $file_handle,
-            'date_from' => $date_from,
-            'date_to' => $date_to,
+            'date_from'   => $date_from,
+            'date_to'     => $date_to,
             'file_status' => $file_status,
             'file_discription' => $file_discription,
             'upload_file' => $upload_file,
 
         ]);
-        return redirect('/precedence');
+        return redirect('precedence/'.$company_id);
     }
 
     public function editprecedences($id)
@@ -278,7 +279,7 @@ class Elibrary extends Controller
             'upload_file' => $upload_file,
 
         ]);
-        return redirect('/precedence');
+        return redirect('precedence/'.Auth::user()->company_id);
     }
 
     public function deleteprecedence($id)
@@ -294,9 +295,10 @@ class Elibrary extends Controller
         return view('Elibrary.viewfile');
     }
 
-    public function viewprecedences()
+    public function viewprecedences($id)
     {
-        return view('Elibrary.viewprecedence');
+        $viewprecedences = DB::table('cra_precedence')->where('id',$id)->get();
+        return view('Elibrary.viewprecedence',compact('viewprecedences','id'));
     }
 
 
