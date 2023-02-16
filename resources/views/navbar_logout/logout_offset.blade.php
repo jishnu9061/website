@@ -83,13 +83,13 @@
         ">       
       <li style=" text-align:left;" >
       <a style="background-color: #ffffff; color: #ff0000;" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
-        <li style=" text-align:right; "><a style="border: 2px solid rgb(255, 255, 255); border-radius:20px;" href= "{{url('logt')}}">Logout</a></li>
+        <li style=" text-align:right; "><a style=" border-radius:20px;font-size:14px; " href= "{{url('logt')}}">Logout</a></li>
       </ul>
       <div class="container">
         <div class="row" style="border-bottom: 1px solid rgb(160, 160, 160);">
           <div class="col-3 " style="width:40%; "> <img style="border:solid;border-radius:25%;" src="{{asset('/') }}/images/faces/{{ Auth::user()->photo_path}}" class="img-fluid" alt="Responsive image"></div>
           <div class="col-9 "style="width:60%; ">
-            <div class="row" style="border-left: 4px solid green;">
+            <div class="row" style="border-left: 4px solid #1d1d50;">
               <div class="col" >Users Name: {{ Auth::user()->username }}</div>
               <div class="w-100"></div>
               <div class="col" >Email: {{ Auth::user()->email }}</div>
