@@ -1506,6 +1506,7 @@ Route::any('add-new-bringup', "filemanagement@addbringup")->name('add-new-bringu
     //practice Area Management
     Route::any('practice_area_index', 'PracticeAreaManagement@practice_area_index')->name('practice_area_index');
     Route::any('practice_area', 'PracticeAreaManagement@practice_area')->name('practice_area');
+    Route::any('store_practice_area', 'PracticeAreaManagement@store_practice_area')->name('store_practice_area');
     Route::any('matter_type', 'PracticeAreaManagement@matter_type')->name('matter_type');
     Route::any('personal_injury', 'PracticeAreaManagement@personalinjury')->name('personal_injury');
     Route::any('add_injury', 'PracticeAreaManagement@addinjury')->name('add_injury');
@@ -1573,8 +1574,9 @@ Route::any('add-new-bringup', "filemanagement@addbringup")->name('add-new-bringu
     Route::any('update_workers_compensation', 'PracticeAreaManagement@updateworkerscompensation')->name('update_workers_compensation');
     Route::any('/delete_workers_compensation/{id}', 'PracticeAreaManagement@deleteworkerscompensation')->name('delete_workers_compensation');
     Route::any('view_workers_compensation/{id}', 'PracticeAreaManagement@view_workers_compensation')->name('view_workers_compensation');
-    Route::any('edit_practice_area', 'PracticeAreaManagement@edit_practice_area')->name('edit_practice_area');
-
+    Route::any('edit_practice_area/{id}', 'PracticeAreaManagement@edit_practice_area')->name('edit_practice_area');
+    Route::any('update_practice_area', 'PracticeAreaManagement@update_practice_area')->name('update_practice_area');
+    Route::any('delete_practice_area/{id}', 'PracticeAreaManagement@delete_practice_area')->name('delete_practice_area');
     //Elibrary
     Route::any('libraryindex', 'elibrary@index')->name('libraryindex');
     Route::any('subject/{id}', 'elibrary@subjects')->name('subject');
@@ -1598,7 +1600,7 @@ Route::any('add-new-bringup', "filemanagement@addbringup")->name('add-new-bringu
     Route::any('/editprecedence/{id}', 'elibrary@editprecedences')->name('editprecedence');
     Route::any('update_precedence', 'elibrary@updateprecedences')->name('update_precedence');
     Route::any('/delete_precedence/{id}', 'elibrary@deleteprecedence')->name('delete_precedence');
-    Route::any('viewprecedence', 'elibrary@viewprecedences')->name('viewprecedence');
+    Route::any('viewprecedence/{id}', 'elibrary@viewprecedences')->name('viewprecedence');
 
     Route::any('subject_category/{id}', 'elibrary@subject_categorys')->name('subject_category');
 
