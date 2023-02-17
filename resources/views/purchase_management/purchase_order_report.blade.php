@@ -81,9 +81,21 @@
                 <td>{{$list->purchase_order_number}}</td>
                 <td>{{$list->supplier_name}}</td>
                 <td>{{$list->status}}</td>
-                <td><a href="{{url('purchase_view',$list->id)}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-2"></span>
+                {{-- <td><a href="{{url('purchase_view',$list->id)}}"> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i><span class="m-2"></span>
                       <a href="{{url('edit_purchase',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit" ></i>
-                </td>
+                </td> --}}
+                <td scope="row"class="text-center">
+                    <div class="btn-group">
+                        <a class="btn" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false" style="border-color:none;"> ⋮ </a>
+
+                   <div class="dropdown-menu">
+                    <a class="dropdown-item"
+                        href="{{url('purchase_view',$list->id)}}">View Purchase</a>
+                    <a class="dropdown-item"
+                        href="{{url('edit_purchase',$list->id)}}">Edit Purchase</a>
+                </div>
+                    </td>
               </tr>
               @endforeach
 
@@ -93,7 +105,7 @@
 
 
     </div>
-     <!--		Start Pagination -->
+     {{-- <!--		Start Pagination -->
      <div class='pagination-container'>
                             <nav>
                                 <ul class="pagination">
@@ -103,8 +115,25 @@
                         </div>
                         <div class="rows_count">Showing 11 to 20 of 100</div>
 
+                        <!-- 		End of Container --> --}}
+                        <!--		Start Pagination -->
+                        <div class='pagination-container'>
+                            <nav>
+                                <ul class="pagination">
+                                    <li data-page="prev">
+                                        <span>
+                                            < <span class="sr-only">(current)
+                                        </span></span>
+                                    </li>
+                                    <li data-page="next" id="prev">
+                                        <span> > <span class="sr-only">(current)</span></span>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="rows_count"></div>
+                    </div>
                         <!-- 		End of Container -->
-
   </div>
 
 
