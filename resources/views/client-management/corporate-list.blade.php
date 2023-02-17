@@ -185,66 +185,67 @@
             left: 0px;
             content: "✖";
         }
+
         /*Toggle button*/
         .switch {
-              position: relative;
-              display: inline-block;
-              width: 50px;
-              height: 20px;
-            }
-            
-            .switch input { 
-              opacity: 0;
-              width: 0;
-              height: 0;
-            }
-            
-            .slider {
-              position: absolute;
-              cursor: pointer;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              background-color: #6c757d;
-              -webkit-transition: .4s;
-              transition: .4s;
-            }
-            
-            .slider:before {
-              position: absolute;
-              content: "";
-              height: 15px;
-              width: 15px;
-              left: 4px;
-              bottom: 2.5px;
-              background-color: white;
-              -webkit-transition: .4s;
-              transition: .4s;
-            }
-            
-            .check:checked + .slider {
-              background-color: #0edb7c;
-            }
-            
-            .check:focus + .slider {
-              box-shadow: 0 0 1px #0edb7c;
-            }
-            
-            .check:checked + .slider:before {
-              -webkit-transform: translateX(26px);
-              -ms-transform: translateX(26px);
-              transform: translateX(26px);
-            }
-            
-            /* Rounded sliders */
-            .slider.round {
-              border-radius: 34px;
-            }
-            
-            .slider.round:before {
-              border-radius: 50%;
-            }
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 20px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #6c757d;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 15px;
+            width: 15px;
+            left: 4px;
+            bottom: 2.5px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .check:checked+.slider {
+            background-color: #0edb7c;
+        }
+
+        .check:focus+.slider {
+            box-shadow: 0 0 1px #0edb7c;
+        }
+
+        .check:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
     </style>
 
     <div class="container">
@@ -319,9 +320,10 @@
                                     <td class="text-center"></td>
                                     <td class="text-center"></td>
                                     <td class="text-center"><label class="switch">
-                                        <input type="checkbox" data-id="" onclick="changestatus(this)" id="status" class="check">
-                                        <span class="slider round"></span>
-                                      </label>
+                                            <input type="checkbox" data-id="" onclick="changestatus(this)"
+                                                id="status" class="check">
+                                            <span class="slider round"></span>
+                                        </label>
                                     </td>
                                     <td scope="row"class="text-center">
                                         <div class="btn-group">
@@ -329,13 +331,18 @@
                                                 aria-expanded="false" style="border-color:none;"> ⋮ </a>
 
                                             <div class="dropdown-menu">
+                                                <a class="dropdown-item" data-toggle="modal"
+                                                    data-target="#edit_corporate_client_details" href="#">Edit Client
+                                                    Details
+                                                </a>
                                                 <a class="dropdown-item"
                                                     href="{{ url('edit_client', $list->corporate_id) }}">Edit Client
                                                     Details</a>
-                                                <a class="dropdown-item"
-                                                    href="{{ url('delete_client', $list->corporate_id) }}"data-toggle="modal" data-id="" data-name=""onclick="deletecompany(this)" data-target="#deletecompany">Delete Client
+                                                <a class="dropdown-item" href=""data-toggle="modal" data-id=""
+                                                    data-name=""onclick="deletecompany(this)"
+                                                    data-target="#deletecompany">Delete Client
                                                     Details</a>
-                                                    <a href="" >
+
                                                 <a class="dropdown-item"
                                                     href="{{ url('corporate-document', $list->corporate_id) }}">Add
                                                     Documents</a>
@@ -376,7 +383,7 @@
             </div>
         </div>
     </div>
-    <!-- The Modal -->
+    {{-- <!-- The Modal --> Create New Corporate Client --}}
     <div class="modal fade" id="myModal">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
@@ -699,48 +706,254 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="deletecompany" style=""><!-- delete company -->
-        <div class="modal-dialog modal-lg" style="width:30%;">
+    {{-- </div>End create corporate client --}}
+    {{-- Start Edit Cororate Client --}}
+    <div class="modal fade" id="edit_corporate_client_details" style="">
+        <!-- create company -->
+        <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <!---- Modal Header -->
-                <form method="post"  id="delete_company" action="#" enctype="multipart/form-data"> 
+                <form method="post" action="{{ url('') }}" enctype="multipart/form-data" id="addemployee">
                     @csrf
-                    <input type="hidden" id="deleteuniqueid" value="uniqueid">
-                    <div class="modal-header" style="padding:0rem 0rem;">
-                        <div style="padding:1rem 1rem;"><h4 class="text-centre"><b>Delete <span id="deletcompany_name"></span></b></h4></div>
-                    </div>
-                    <!-- Modal body -->
-                    <div class="modal-body" >
-                        <div class="container">
-                            <div class="row"><h6><b><span>Are you sure?</span></b></h6> 
-                            </div>
-                                <div class="row">
-                                    <div class="" style="width: 30%;">
+                    <h5><b>Edit Corporate Client Details:-</b></h5>
+
+                    <div class="row" >
+                        <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
+                            <div class="row">
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="client_no"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client
+                                            No</label>
+                                        <input type="text" placeholder="Enter Client No "
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="first_name" id="" value=""
+                                            required>
                                     </div>
-                                    <div lass="" style="width: 0%"></div>
-                                    <div class="col-sm" style="padding-right: 0px;width: 70%;">
-                                        <br>
-                                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;background-color:#DD4132;">Yes</button>
-                                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">No</button>
+                                </div>
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="gender"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client
+                                            Type</label>
+                                        <select class="form-select" aria-label="Default select example"
+                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                            name="gender" id="" required>
+                                            <option>Select Client Type</option>
+                                            <option value="1">Corporate</option>
+                                            <option value="2">Individual</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="gender"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Citizen
+                                            Status</label>
+                                        <select class="form-select" aria-label="Default select example"
+                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                            name="gender" id="" required>
+                                            <option>Select Cityzen</option>
+                                            <option value="1">Residental</option>
+                                            <option value="2">Non Residential</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="client_no"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Certificate</label>
+                                        <input type="text" placeholder="Enter Certificate "
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="first_name" id="" value=""
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="" style="width:33%;"><span style="color: red">*</span>
+                                    <label for="city"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Country</label>
+                                    <input type="text" placeholder="Country"
+                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                        class="form-control" name="city" id="" value="" required>
+                                </div>
+                                <div class="" style="width:33%;"><span style="color: red">*</span>
+                                    <label for="city"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Telephone
+                                        No</label>
+                                    <input type="text" placeholder="Telephone"
+                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                        class="form-control" name="city" id="" value="" required>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: 0px;">
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="client_no"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Fax
+                                            No</label>
+                                        <input type="text" placeholder="Fax No "
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="first_name" id="" value=""
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="" style="width:33%;"><span style="color: red">*</span>
+                                    <label for="city"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Email</label>
+                                    <input type="email" placeholder="Email"
+                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                        class="form-control" name="city" id="" value="" required>
+                                </div>
+                                <div class="" style="width:33%;"><span style="color: red">*</span>
+                                    <label for="city"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Website</label>
+                                    <input type="text" placeholder="Website"
+                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                        class="form-control" name="city" id="" value="" required>
+                                </div>
+
+                            </div>
+                            <div class="row" style="margin-top: 0px;">
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="gender"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Brought
+                                            In
+                                            By</label>
+                                        <select class="form-select" aria-label="Default select example"
+                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                            name="gender" id="" required>
+                                            <option>Brought in By</option>
+                                            <option value="1">Corporate</option>
+                                            <option value="2">Individual</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="gender"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Status
+                                            Reporting Day
+                                        </label>
+                                        <select class="form-select" aria-label="Default select example"
+                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                            name="gender" id="" required>
+                                            <option>Select Reporting Day</option>
+                                            <option value="1">Monday</option>
+                                            <option value="2">Tuesday</option>
+                                            <option value="3">Wednesday</option>
+                                            <option value="4">Thursday</option>
+                                            <option value="5">Friday</option>
+                                            <option value="6">Saturday</option>
+                                            <option value="7">Sunday</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="gender"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client
+                                            Source
+                                        </label>
+                                        <select class="form-select" aria-label="Default select example"
+                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                            name="gender" id="" required>
+                                            <option>Select Client Source</option>
+                                            <option value="1">Existing Client</option>
+                                            <option value="2">Online</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: 0px;">
+                                <div class="" style="width:33%;"><span style="color: red">*</span>
+                                    <label for="city"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client Source</label>
+                                    <input type="text" placeholder="Client Source"
+                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                        class="form-control" name="city" id="" value="" required>
+                                </div>
+                                <div class="" style="width:33%;"><span style="color: red">*</span>
+                                    <label for="city"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client Name</label>
+                                    <input type="text" placeholder="Client Name"
+                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                        class="form-control" name="city" id="" value="" required>
+                                </div>
+                                <div class="" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="gender"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client
+                                            Industry
+                                        </label>
+                                        <select class="form-select" aria-label="Default select example"
+                                            style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                            name="gender" id="" required>
+                                            <option>Select Client Industry</option>
+                                            <option value="1">Construction</option>
+                                            <option value="2">Auto Mobile</option>
+                                            <option value="2">Hospital</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class style="width: 20%">
+                    </div>
+                    <div class="col-sm">
+                        <br>
+                        <button type="submit" class="btn btn-primary float:right;"
+                            style="margin-left: 61%;--clr: #1D1D50;width:19%;
+                            --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
+                            </button>
+                        <button type="button" class="btn btn-primary float:left" Style="width:19%;"
+                            onclick="history.back()">Cancel</button>
+                    </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    {{-- End edit corporate client --}}
+    <div class="modal fade" id="deletecompany" style="">
+        <!-- delete company -->
+        <div class="modal-dialog modal-lg" style="width:30%;">
+            <div class="modal-content">
+                <!---- Modal Header -->
+                <form method="post" id="delete_company" action="#" enctype="multipart/form-data">
+                    @csrf
+                    <input type="hidden" id="deleteuniqueid" value="uniqueid">
+                    <div class="modal-header" style="padding:0rem 0rem;">
+                        <div style="padding:1rem 1rem;">
+                            <h4 class="text-centre"><b>Delete <span id="deletcompany_name"></span></b></h4>
+                        </div>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <h6><b><span>Are you sure?</span></b></h6>
+                            </div>
+                            <div class="row">
+                                <div class="" style="width: 30%;">
+                                </div>
+                                <div lass="" style="width: 0%"></div>
+                                <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                    <br>
+                                    <button type="submit" class="btn btn-primary float:right;"
+                                        Style="width:45%;background-color:#DD4132;">Yes</button>
+                                    <button type="button" class="btn btn-primary float:left"
+                                        Style="width:45%;"data-dismiss="modal">No</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
-    {{-- Delete Corporate client details --start --}}
-    <script>
-        function deletecorporate(param){// edit company get details 
-                var deleteuniqueid = $(param).data('corporate_id');
-                var deletecompany_name = $(param).data('name');
-                $('#deleteuniqueid').val(deleteuniqueid);
-                $('#deletcompany_name').html(deletecompany_name);
-                document.getElementById("deletcompany_name").innerHTML = deletecompany_name;
-                $('#delete_company').attr('action',"{{ url('delete_company') }}"+"/"+deleteuniqueid);
-            }
-    </script>
     <script>
         function exdocremoveinput() { // Add More Document details author@udayan --start
             this.parentElement.remove();
@@ -833,8 +1046,17 @@
         }
         add_decduct.addEventListener("click", add_decduct_input); // Add More Decduction percentage author@udayan --end
     </script>
-    <!-- End delete confirmation message -->
 
+    <script>
+        function deletecompany(param) { //Delete clent confirmation message 
+            var deleteuniqueid = $(param).data('id');
+            var deletecompany_name = $(param).data('name');
+            $('#deleteuniqueid').val(deleteuniqueid);
+            $('#deletcompany_name').html(deletecompany_name);
+            document.getElementById("deletcompany_name").innerHTML = deletecompany_name;
+            $('#delete_company').attr('action', "{{ url('delete_company') }}" + "/" + deleteuniqueid);
+        }
+    </script>
     <script src="{{ url('assets/js') }}/jquery.min.js"></script>
     <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
     <script type="text/javascript" charset="utf8"
