@@ -9,10 +9,9 @@
 <br><br>
 {{-- heading --}}
 <div class="container">
-    <h4 id="hdtpa"><b>Supplier Monthly Schedule Details</b></h4>
-    <br>
-    <br>
 
+<h4 id="hdtpa"><b>Supplier Monthly Schedule Details</b></h4>
+<br>
     <div class="container">
         <div class="row align-items-start">
             <div class="col">

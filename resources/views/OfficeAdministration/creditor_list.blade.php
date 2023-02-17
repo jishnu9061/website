@@ -85,12 +85,19 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td><a href="{{ url('') }}"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i><span
-                                class="m-2"></span>
-                            <a href="{{ url('') }}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span
-                                    class="m-2"></span>
-                                <a href="{{url('')}}"> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
-                    </td>
+                    
+                    <td scope="row" class="text-center">
+                                        <div class="btn-group">
+                                            <a class="btn" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false" style="border-color:none;"> ⋮ </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="{{url('')}}">View Creditor List</a>
+                                                <a class="dropdown-item" href="{{url('')}}">Edit Creditor List</a>
+                                                <a class="dropdown-item" href="#">Delete  Creditor List</a>
+
+                                            </div>
+                                        </div>
+                                    </td>
 
                 </tr>
             </tbody>

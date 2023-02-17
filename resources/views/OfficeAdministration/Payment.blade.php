@@ -8,13 +8,9 @@
 <br><br>
 <div class="container">
 
-    <h4 id="hdtpa"><b>File Payments & Transfer</b></h4>
-
-
-
-    <br>
-
-    <br>
+<h4 id="hdtpa"><b>File Payments & Transfer</b></h4>
+<br>
+ 
     <div style="text-align: center;">
         <input class="btn btn-primary" type="button" value="View File Balance">
         <input class="btn btn-primary" type="button" value="View File Details">

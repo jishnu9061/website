@@ -7,14 +7,9 @@
 </nav>
 <br><br>
 <div class="container">
+<h4 id="hdtpa"><b>Non-Contractual Suppliers Voucher</b></h4>
+<br>
 
-    <h4 id="hdtpa"><b>Non-Contractual Suppliers Voucher</b></h4>
-
-
-
-    <br>
-
-    <br>
 
     <br>
     <div class="card">

@@ -8,9 +8,9 @@
 <br><br>
 <div class="container">
 
-    <h4 id="hdtpa"><b>Balance on Client Trust</b></h4>
-
+<h4 id="hdtpa"><b>Balance on Client Trust</b></h4>
 <br>
+    
 
     <br>
     <div class="text-center">

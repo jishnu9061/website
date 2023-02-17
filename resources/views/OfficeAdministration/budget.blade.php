@@ -9,11 +9,13 @@
 
 {{-- heading --}}
 <div class="container">
-    <h4 id="hdtpa"><b>Monthly Budget planner</b></h4>
-    <br>
-
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add File
-    </button></a>
+<h4 id="hdtpa"><b>Monthly Budget planner</b></h4>
+<br>
+<div class="row" style="height:50px;">
+        <div class="col-sm-4" style="padding-top:5px;">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin-left:10px;    --clr: #1D1D50;
+                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add File</button>
+        </div>
     <br>
     <br>
     <a href="">2022</a><span class="m-1"></span><a href="">2021</a><span class="m-1"></span> <a href="">2020</a><span

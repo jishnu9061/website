@@ -8,14 +8,8 @@
 <br><br>
 <div class="container">
 
-    <h4 id="hdtpa"><b>Petty Cash Payments</b></h4>
-
-
-
-    <br>
-
-    <br>
-
+<h4 id="hdtpa"><b>Petty Cash Payments</b></h4>
+<br>
     <br>
     <div class="card">
 
