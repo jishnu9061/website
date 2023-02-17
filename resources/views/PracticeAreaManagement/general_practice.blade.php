@@ -3,7 +3,7 @@
 <nav style="font-size:15px;">
     <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
     <a href="#" style="color: #1D1D50;">Practice Management</a> /
-    <a href="#" style="color: #1D1D50;">General Practice</a> 
+    <a href="#" style="color: #1D1D50;">General Practice</a>
    </nav>
 <br><br>
 
@@ -12,7 +12,10 @@
     <h4 id="hdtpa"><b>General Practice</b></h4>
     <br>
 
-    <input class="btn btn-primary" type="button" value="Add New Matter" data-toggle="modal" data-target="#myModal">
+    {{-- <input class="btn btn-primary" type="button" value="Add New Matter" data-toggle="modal" data-target="#myModal"> --}}
+    <button type="button" class="btn btn-primary" data-toggle="modal"
+    data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
+--outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add New Matter</button>
     <br>
 
     <div class="header_wrap">
@@ -67,13 +70,26 @@
                     <td>{{$list->other_party}}</td>
                     <td>{{$list->case_details}}</td>
                     <!-- <td>Negotation</td> -->
-                    <td><a href="{{ url('view_general_practice',$list->id) }}"><i style="color:rgb(13, 1, 56);"
+                    {{-- <td><a href="{{ url('view_general_practice',$list->id) }}"><i style="color:rgb(13, 1, 56);"
                                 class="fa fa-eye"></i><span class="m-2"></span>
                             <a href="{{ url('edit_general_practice',$list->id) }}"><i style="color:rgb(13, 1, 56);"
                                     class="fa fa-edit"></i><span class="m-2"></span>
                                 <a href="{{ url('delete_practice',$list->id) }}"> <i style="color:rgb(13, 1, 56);"
-                                        class="fas fa-trash-alt"></i></td>
+                                        class="fas fa-trash-alt"></i></td> --}}
+                                        <td scope="row"class="text-center">
+                                            <div class="btn-group">
+                                                <a class="btn" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false" style="border-color:none;"> ⋮ </a>
 
+                                           <div class="dropdown-menu">
+                                            <a class="dropdown-item"
+                                                href="{{ url('view_general_practice',$list->id) }}">View General Practice</a>
+                                            <a class="dropdown-item"
+                                                href="{{ url('edit_general_practice',$list->id) }}">Edit General Practice</a>
+                                            <a class="dropdown-item"
+                                                href="{{ url('delete_practice',$list->id) }}">Delete General Practice</a>
+                                        </div>
+                                            </td>
                 </tr>
                 @endforeach
             </tbody>
@@ -82,7 +98,7 @@
 
 
 
-    <!--		Start Pagination -->
+    {{-- <!--		Start Pagination -->
     <div class='pagination-container'>
         <nav>
             <ul class="pagination">
@@ -92,9 +108,26 @@
     </div>
     <div class="rows_count">Showing 11 to 20 of 100</div>
 
+    <!-- 		End of Container --> --}}
+
+    <!--		Start Pagination -->
+    <div class='pagination-container'>
+        <nav>
+            <ul class="pagination">
+                <li data-page="prev">
+                    <span>
+                        < <span class="sr-only">(current)
+                    </span></span>
+                </li>
+                <li data-page="next" id="prev">
+                    <span> > <span class="sr-only">(current)</span></span>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="rows_count"></div>
+</div>
     <!-- 		End of Container -->
-
-
 </div>
 
 
@@ -140,7 +173,7 @@
                                     </div>
                                 </div>
                             </div>
-                       
+
                         <div class="col-md-4">
                             <div class="mb-1">
                                 <label for="exampleFormControlInput1" class="form-label">Matter Type</label>
