@@ -61,6 +61,7 @@
             color: #999;
         }
     </style>
+    
     <div class='container'>
         <h4 id="hdtpa"><b>Employee Details</b></h4><br>
         <a type="button" class="btn btn-primary" href="{{ url('add_staff') }}">Add New Employee</a>
