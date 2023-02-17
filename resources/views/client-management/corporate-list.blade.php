@@ -185,66 +185,67 @@
             left: 0px;
             content: "✖";
         }
+
         /*Toggle button*/
         .switch {
-              position: relative;
-              display: inline-block;
-              width: 50px;
-              height: 20px;
-            }
-            
-            .switch input { 
-              opacity: 0;
-              width: 0;
-              height: 0;
-            }
-            
-            .slider {
-              position: absolute;
-              cursor: pointer;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              background-color: #6c757d;
-              -webkit-transition: .4s;
-              transition: .4s;
-            }
-            
-            .slider:before {
-              position: absolute;
-              content: "";
-              height: 15px;
-              width: 15px;
-              left: 4px;
-              bottom: 2.5px;
-              background-color: white;
-              -webkit-transition: .4s;
-              transition: .4s;
-            }
-            
-            .check:checked + .slider {
-              background-color: #0edb7c;
-            }
-            
-            .check:focus + .slider {
-              box-shadow: 0 0 1px #0edb7c;
-            }
-            
-            .check:checked + .slider:before {
-              -webkit-transform: translateX(26px);
-              -ms-transform: translateX(26px);
-              transform: translateX(26px);
-            }
-            
-            /* Rounded sliders */
-            .slider.round {
-              border-radius: 34px;
-            }
-            
-            .slider.round:before {
-              border-radius: 50%;
-            }
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 20px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #6c757d;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 15px;
+            width: 15px;
+            left: 4px;
+            bottom: 2.5px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .check:checked+.slider {
+            background-color: #0edb7c;
+        }
+
+        .check:focus+.slider {
+            box-shadow: 0 0 1px #0edb7c;
+        }
+
+        .check:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
     </style>
 
     <div class="container">
@@ -319,9 +320,10 @@
                                     <td class="text-center"></td>
                                     <td class="text-center"></td>
                                     <td class="text-center"><label class="switch">
-                                        <input type="checkbox" data-id="" onclick="changestatus(this)" id="status" class="check">
-                                        <span class="slider round"></span>
-                                      </label>
+                                            <input type="checkbox" data-id="" onclick="changestatus(this)"
+                                                id="status" class="check">
+                                            <span class="slider round"></span>
+                                        </label>
                                     </td>
                                     <td scope="row"class="text-center">
                                         <div class="btn-group">
@@ -332,10 +334,11 @@
                                                 <a class="dropdown-item"
                                                     href="{{ url('edit_client', $list->corporate_id) }}">Edit Client
                                                     Details</a>
-                                                <a class="dropdown-item"
-                                                    href="{{ url('delete_client', $list->corporate_id) }}"data-toggle="modal" data-id="" data-name=""onclick="deletecompany(this)" data-target="#deletecompany">Delete Client
+                                                <a class="dropdown-item" href=""data-toggle="modal" data-id=""
+                                                    data-name=""onclick="deletecompany(this)"
+                                                    data-target="#deletecompany">Delete Client
                                                     Details</a>
-                                                    <a href="" >
+
                                                 <a class="dropdown-item"
                                                     href="{{ url('corporate-document', $list->corporate_id) }}">Add
                                                     Documents</a>
@@ -699,48 +702,43 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="deletecompany" style=""><!-- delete company -->
+    <div class="modal fade" id="deletecompany" style="">
+        <!-- delete company -->
         <div class="modal-dialog modal-lg" style="width:30%;">
             <div class="modal-content">
                 <!---- Modal Header -->
-                <form method="post"  id="delete_company" action="#" enctype="multipart/form-data"> 
+                <form method="post" id="delete_company" action="#" enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" id="deleteuniqueid" value="uniqueid">
                     <div class="modal-header" style="padding:0rem 0rem;">
-                        <div style="padding:1rem 1rem;"><h4 class="text-centre"><b>Delete <span id="deletcompany_name"></span></b></h4></div>
+                        <div style="padding:1rem 1rem;">
+                            <h4 class="text-centre"><b>Delete <span id="deletcompany_name"></span></b></h4>
+                        </div>
                     </div>
                     <!-- Modal body -->
-                    <div class="modal-body" >
+                    <div class="modal-body">
                         <div class="container">
-                            <div class="row"><h6><b><span>Are you sure?</span></b></h6> 
+                            <div class="row">
+                                <h6><b><span>Are you sure?</span></b></h6>
                             </div>
-                                <div class="row">
-                                    <div class="" style="width: 30%;">
-                                    </div>
-                                    <div lass="" style="width: 0%"></div>
-                                    <div class="col-sm" style="padding-right: 0px;width: 70%;">
-                                        <br>
-                                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;background-color:#DD4132;">Yes</button>
-                                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">No</button>
-                                    </div>
+                            <div class="row">
+                                <div class="" style="width: 30%;">
+                                </div>
+                                <div lass="" style="width: 0%"></div>
+                                <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                    <br>
+                                    <button type="submit" class="btn btn-primary float:right;"
+                                        Style="width:45%;background-color:#DD4132;">Yes</button>
+                                    <button type="button" class="btn btn-primary float:left"
+                                        Style="width:45%;"data-dismiss="modal">No</button>
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
-    {{-- Delete Corporate client details --start --}}
-    <script>
-        function deletecorporate(param){// edit company get details 
-                var deleteuniqueid = $(param).data('corporate_id');
-                var deletecompany_name = $(param).data('name');
-                $('#deleteuniqueid').val(deleteuniqueid);
-                $('#deletcompany_name').html(deletecompany_name);
-                document.getElementById("deletcompany_name").innerHTML = deletecompany_name;
-                $('#delete_company').attr('action',"{{ url('delete_company') }}"+"/"+deleteuniqueid);
-            }
-    </script>
     <script>
         function exdocremoveinput() { // Add More Document details author@udayan --start
             this.parentElement.remove();
@@ -833,8 +831,17 @@
         }
         add_decduct.addEventListener("click", add_decduct_input); // Add More Decduction percentage author@udayan --end
     </script>
-    <!-- End delete confirmation message -->
 
+    <script>
+        function deletecompany(param) { //Delete clent confirmation message 
+            var deleteuniqueid = $(param).data('id');
+            var deletecompany_name = $(param).data('name');
+            $('#deleteuniqueid').val(deleteuniqueid);
+            $('#deletcompany_name').html(deletecompany_name);
+            document.getElementById("deletcompany_name").innerHTML = deletecompany_name;
+            $('#delete_company').attr('action', "{{ url('delete_company') }}" + "/" + deleteuniqueid);
+        }
+    </script>
     <script src="{{ url('assets/js') }}/jquery.min.js"></script>
     <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
     <script type="text/javascript" charset="utf8"

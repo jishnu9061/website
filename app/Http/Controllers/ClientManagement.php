@@ -309,6 +309,22 @@ class ClientManagement extends Controller
     {
         $company_id = Auth::user()->company_id;
         $branch_id = Auth::user()->branch_id ?? null;
+        if (!empty($Request->exdoc)) { // more contact personf details start
+            $ext_per = $Request->exdoc;
+            $extra_person = [];
+            foreach ($ext_per as $ex) {
+                $ex_per = [
+                    "ex_name" => $ex[0],
+                    "ex_designation" => $ex[1],
+                    "ex_mobileno" => $ex[2],
+                    "ex_email" => $ex[3],
+                ];
+                array_push($extra_person, $ex_per);
+            }
+            $doc_json = json_encode($extra_person);
+        } else {
+            $doc_json = "";
+        } // --------------------------more document details end
         $number = $Request['number'];
         $client_type = $Request['type'];
         $citizen_status = $Request['citizen'];
@@ -334,7 +350,6 @@ class ClientManagement extends Controller
         $Designation = $Request['designation'];
         $mobile_no = $Request['mobile_no'];
         $person_email = $Request['person_email'];
-
         DB::table('cra_corporate_client_details')->insert([
             'client_number' => $number,
             'Client_type' =>  $client_type,
@@ -363,13 +378,15 @@ class ClientManagement extends Controller
             'email' => $person_email,
             'company_id' => $company_id,
             'branch_id' => $branch_id,
+            "extra_person" => $doc_json,
+            'created_at'=>date('Y-m-d H:i:s'),
         ]);
 
         DB::table('cra_mixed_table')->insertGetId([
             'client_name' =>    $client_name,
         ]);
 
-        return redirect('/corporate-list/'.$company_id);
+        return redirect('/corporate-list/' . $company_id);
     }
 
     public function CorporateDocument($corporate_id)
@@ -472,12 +489,12 @@ class ClientManagement extends Controller
     //end document//
 
     public function listCorporate($company_id)
-    {   
+    {
         $company_id = Auth::user()->company_id;
         $branch_id = Auth::user()->branch_id ?? null;
         $list_designation = DB::table('cra_add_user_roles')->get();
         $corporate_list = DB::table('cra_corporate_client_details')->get();
-        return view('client-management.corporate-list', compact('corporate_list', 'list_designation','company_id','branch_id'));
+        return view('client-management.corporate-list', compact('corporate_list', 'list_designation', 'company_id', 'branch_id'));
     }
 
     public function edit_corporate($corporate_id)
