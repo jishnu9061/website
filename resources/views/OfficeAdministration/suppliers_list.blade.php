@@ -11,6 +11,7 @@
     
 <h4 id="hdtpa"><b>Supplier List</b></h4>
 <br>
+
     <div class="row" style="height:50px;">
         <div class="col-sm-4" style="padding-top:5px;">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin-left:10px;    --clr: #1D1D50;

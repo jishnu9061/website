@@ -12,12 +12,8 @@
     <h4 id="hdtpa"><b>Book Category Details</b></h4>
     <br>
 
-    <div class="row" style="height:50px;">
-        <div class="col-sm-4" style="padding-top:5px;">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin-left:10px;    --clr: #1D1D50;
-                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add Category</button>
-        </div>
-
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Category
+    </button></a>
 
     <br>
     <div class="header_wrap">
@@ -59,18 +55,11 @@
             @foreach($view_category as $list)
                 <tr>
                     <td>{{$list->title}}</td>
-                    <td scope="row" class="text-center">
-                            <div class="btn-group">
-                                <a class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                    style="border-color:none;"> ⋮ </a>
-                                <div class="dropdown-menu">
-                                  
-                                    <a class="dropdown-item" href="{{url('editsubject_category',$list->id)}}">Edit Book Category</a>
-                                    <a class="dropdown-item" href="{{url('deletesubject_category',$list->id)}}">Delete Book Category</a>
+                    <td>
+                        <a href="{{url('editsubject_category',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span class="m-2"></span>
+                            <a href="{{url('deletesubject_category',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
 
-                                </div>
-                            </div>
-                        </td>
+                    </td>
                 </tr>
 
                 @endforeach
