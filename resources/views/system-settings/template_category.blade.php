@@ -147,7 +147,9 @@ color: #999;
                                     <a class="dropdown-item"
                                         href="{{url('edit_template_category',$category->id)}}">Edit Template Category</a>
                                     <a class="dropdown-item"
-                                        href="{{url('delete_template_category',$category->id)}}">Delete Template Category</a>
+                                        {{-- href="{{url('delete_template_category',$category->id)}}">Delete Template Category</a> --}}
+                                        <a href="#"onclick=deletetemplate(this) data-id="{{ $category->id }}"data-toggle="modal"
+                                            data-target="#deleteTemplate">Delete Template Category</a>
                                 </div>
                             </div>
                         </td>
@@ -285,7 +287,37 @@ color: #999;
 </div>
 </div>
     </div>
-
+    <div class="modal fade" id="deleteTemplate" style=""> <!-- delete template category -->
+        <div class="modal-dialog modal-lg" style="width:30%;">
+            <div class="modal-content">
+                <!---- Modal Header -->
+                <form method="post"  id="delete_template_category" action="{{url('delete_template_category',$category->id)}}" enctype="multipart/form-data"> 
+                    @csrf
+                    <input type="hidden" id="id" value="id">
+                    <div class="modal-header" style="padding:0rem 0rem;">
+                        <div style="padding:1rem 1rem;"><h4 class="text-centre"><b>Delete <span id="delete_template"></span></b></h4></div>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body" >
+                        <div class="container">
+                            <div class="row"><h6><b><span>Are you sure?</span></b></h6> 
+                            </div>
+                                <div class="row">
+                                    <div class="" style="width: 30%;">
+                                    </div>
+                                    <div lass="" style="width: 0%"></div>
+                                    <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                        <br>
+                                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;background-color:#DD4132;">Yes</button>
+                                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">No</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
         </body>
         </div>
 </html>
