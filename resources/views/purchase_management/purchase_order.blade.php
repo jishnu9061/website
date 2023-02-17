@@ -24,9 +24,12 @@
 
 <div>
     <div class="container">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New
-            Purchase</button></a>
-
+        {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New
+            Purchase</button></a> --}}
+            <button type="button" class="btn btn-primary" data-toggle="modal"
+            data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
+        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add New
+        Purchase</button>
         <!-- <button type="button" class="btn btn-primary" data-toggle="modal"
                 data-target="#myModal1">Add New Item</button></a> -->
 
@@ -80,15 +83,27 @@
                                     <td>{{$list->purchase_date}}</td>
                                     <td>{{$list->supplier_name}}</td>
                                     <td>{{$list->status}}</td>
-                                    <td scope="row" class="text-center">
+                                    {{-- <td scope="row" class="text-center">
                                         <a href="{{url('view_purchase_order',$list->id
                                             )}}"> <i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
 
                                             <a href="{{url('purchase_print',$list->id)}}"> <i
                                                     style="color:rgb(13, 1, 56);" class="fa fa-print"></i>
-                                    </td>
+                                    </td> --}}
 
+                                    <td scope="row"class="text-center">
+                                        <div class="btn-group">
+                                            <a class="btn" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false" style="border-color:none;"> ⋮ </a>
 
+                                       <div class="dropdown-menu">
+                                        <a class="dropdown-item"
+                                            href="{{url('view_purchase_order',$list->id
+                                            )}}">View Purchase Order</a>
+                                        <a class="dropdown-item"
+                                            href="{{url('purchase_print',$list->id)}}">Print Purchase Order</a>
+                                    </div>
+                                        </td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -96,7 +111,7 @@
                         </table>
                     </div>
 
-                    <!--		Start Pagination -->
+                    {{-- <!--		Start Pagination -->
                     <div class='pagination-container'>
                         <nav>
                             <ul class="pagination">
@@ -106,8 +121,25 @@
                     </div>
                     <div class="rows_count">Showing 11 to 20 of 100</div>
 
+                    <!-- 		End of Container --> --}}
+                    <!--		Start Pagination -->
+                    <div class='pagination-container'>
+                        <nav>
+                            <ul class="pagination">
+                                <li data-page="prev">
+                                    <span>
+                                        < <span class="sr-only">(current)
+                                    </span></span>
+                                </li>
+                                <li data-page="next" id="prev">
+                                    <span> > <span class="sr-only">(current)</span></span>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="rows_count"></div>
+                </div>
                     <!-- 		End of Container -->
-
 
 
 

@@ -12,7 +12,10 @@
 <br>
 
 
-<input class="btn btn-primary" type="button" value="Add New Matter" data-toggle="modal" data-target="#myModal">
+{{-- <input class="btn btn-primary" type="button" value="Add New Matter" data-toggle="modal" data-target="#myModal"> --}}
+<button type="button" class="btn btn-primary" data-toggle="modal"
+data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
+--outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add New Matter</button>
 <br>
 
 
@@ -63,13 +66,26 @@
                 <td>{{$list->executor}}</td>
                 <td>{{$list->matter_type}}</td>
                 <td>{{$list->deceased}}</td>
-                <td><a href="{{ url('view_probate_law',$list->id) }}"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i><span
+                {{-- <td><a href="{{ url('view_probate_law',$list->id) }}"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i><span
                             class="m-2"></span>
                         <a href="{{ url('edit_probate_law',$list->id) }}"><i style="color:rgb(13, 1, 56);"
                                 class="fa fa-edit"></i><span class="m-2"></span>
                             <a href="{{ url('delete_probate_law',$list->id) }}"> <i style="color:rgb(13, 1, 56);"
-                                    class="fas fa-trash-alt"></i></td>
+                                    class="fas fa-trash-alt"></i></td> --}}
+                                    <td scope="row"class="text-center">
+                                        <div class="btn-group">
+                                            <a class="btn" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false" style="border-color:none;"> ⋮ </a>
 
+                                       <div class="dropdown-menu">
+                                        <a class="dropdown-item"
+                                            href="{{ url('view_probate_law',$list->id) }}">View Probate Law</a>
+                                        <a class="dropdown-item"
+                                            href="{{ url('edit_probate_law',$list->id) }}">Edit Probate Law</a>
+                                        <a class="dropdown-item"
+                                            href="{{ url('delete_probate_law',$list->id) }}">Delete Probate Law</a>
+                                    </div>
+                                        </td>
             </tr>
             @endforeach
 
@@ -79,7 +95,7 @@
 
 
 
-<!--		Start Pagination -->
+{{-- <!--		Start Pagination -->
 <div class='pagination-container'>
     <nav>
         <ul class="pagination">
@@ -89,8 +105,25 @@
 </div>
 <div class="rows_count">Showing 11 to 20 of 100</div>
 
+<!-- 		End of Container --> --}}
+<!--		Start Pagination -->
+<div class='pagination-container'>
+    <nav>
+        <ul class="pagination">
+            <li data-page="prev">
+                <span>
+                    < <span class="sr-only">(current)
+                </span></span>
+            </li>
+            <li data-page="next" id="prev">
+                <span> > <span class="sr-only">(current)</span></span>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="rows_count"></div>
+</div>
 <!-- 		End of Container -->
-
 
 
 

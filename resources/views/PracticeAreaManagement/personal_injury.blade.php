@@ -18,10 +18,10 @@
 
 <body>
     <div class="container">
-       
+
         <div>
             <div>
-              
+
                 {{-- heading --}}
                 <h4 id="hdtpa"><b>Personal Injury</b></h4>
                 <br>
@@ -29,13 +29,16 @@
 
         </div>
         <!--filter-->
-   
-      
+
+
 
         <!--filter end-->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">New
-                  Details</button>
-
+        {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">New
+                  Details</button> --}}
+                  <button type="button" class="btn btn-primary" data-toggle="modal"
+                  data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
+              --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">New
+              Details</button>
         <div class="header_wrap">
             <div class="num_rows">
                 <div class="form-group">
@@ -70,7 +73,7 @@
 
                             <thead>
                                 <tr>
-                                    
+
                                     <th class="text-center">File No</th>
                                     <th class="text-center">Client Name</th>
                                     <th class="text-center">Matter Type</th>
@@ -85,29 +88,42 @@
                             @foreach($personalinjury as $list)
 
                                 <tr id="data">
-                                    
+
                                     <td class="text-center">{{$list->id}}</td>
                                     <td class="text-center"></td>
                                     <td class="text-center">{{$list->matter_type}}</td>
                                     <td class="text-center"></td>
                                     <td class="text-center"></td>
                                     <td class="text-center"></td>
-                                    <td class="text-center"><a href="{{url('view_injury',$list->id)}}"><i style="color:black;" class="fa fa-eye"
+                                    {{-- <td class="text-center"><a href="{{url('view_injury',$list->id)}}"><i style="color:black;" class="fa fa-eye"
                                         aria-hidden="true"></i>
                                     <a href="{{url('edit_injury',$list->id)}}"><i style="color:black;" class="fa fa-edit"
-                                            aria-hidden="true"></i> 
+                                            aria-hidden="true"></i>
                                         <a onClick="return myFunction();" href="{{url('delete_injury',$list->id)}}" style="color:black;"><i
-                                                class="fas fa-trash-alt"></i></a></td>
+                                                class="fas fa-trash-alt"></i></a></td> --}}
+                                                <td scope="row"class="text-center">
+                                                    <div class="btn-group">
+                                                        <a class="btn" data-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false" style="border-color:none;"> ⋮ </a>
 
+                                                   <div class="dropdown-menu">
+                                                    <a class="dropdown-item"
+                                                        href="{{url('view_injury',$list->id)}}">View Injury</a>
+                                                    <a class="dropdown-item"
+                                                        href="{{url('edit_injury',$list->id)}}">Edit Injury</a>
+                                                    <a class="dropdown-item"
+                                                        href="{{url('delete_injury',$list->id)}}">Delete Injury</a>
+                                                </div>
+                                                    </td>
                                 </tr>
                             @endforeach
                             </tbody>
 
                         </table>
-                        
+
                     </div>
-                    
-                    <!--		Start Pagination -->
+
+                    {{-- <!--		Start Pagination -->
                     <div class='pagination-container'>
                         <nav>
                             <ul class="pagination">
@@ -116,11 +132,29 @@
                         </nav>
                     </div>
                     <div class="rows_count">Showing 11 to 20 of 100</div>
-                    
 
+
+                    <!-- 		End of Container --> --}}
+                    <!--		Start Pagination -->
+                    <div class='pagination-container'>
+                        <nav>
+                            <ul class="pagination">
+                                <li data-page="prev">
+                                    <span>
+                                        < <span class="sr-only">(current)
+                                    </span></span>
+                                </li>
+                                <li data-page="next" id="prev">
+                                    <span> > <span class="sr-only">(current)</span></span>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="rows_count"></div>
+                </div>
                     <!-- 		End of Container -->
 
-     <!-- <-------------------------------------PERSONAL INJURY START-------------------------------------------------------------> 
+     <!-- <-------------------------------------PERSONAL INJURY START------------------------------------------------------------->
      <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content" >
@@ -154,7 +188,7 @@
                                                             <option>Box Type 2</option>
                                                             <option>Box Type 3</option>
                                                             <option>Box Type 4</option>
-                                                            
+
                                 </select> -->
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -182,7 +216,7 @@
                                                             <option>Box Type 2</option>
                                                             <option>Box Type 3</option>
                                                             <option>Box Type 4</option>
-                                                            
+
                                 </select> -->
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -191,7 +225,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <h4>Plaintiff</h4>
                 <br>
                 <div class="row">
@@ -210,7 +244,7 @@
                                                             <option>Box Type 2</option>
                                                             <option>Box Type 3</option>
                                                             <option>Box Type 4</option>
-                                                            
+
                                 </select> -->
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -218,7 +252,7 @@
                             </div>
                         </div>
                     </div>
-               
+
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label for="username">Damage Details</label>
@@ -245,7 +279,7 @@
                                                             <option>Box Type 2</option>
                                                             <option>Box Type 3</option>
                                                             <option>Box Type 4</option>
-                                                            
+
                                 </select> -->
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -268,7 +302,7 @@
                                                             <option>Box Type 2</option>
                                                             <option>Box Type 3</option>
                                                             <option>Box Type 4</option>
-                                                            
+
                                 </select> -->
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -276,7 +310,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
 
                 </div>
                 <div class="row">
@@ -295,7 +329,7 @@
                                                             <option>Box Type 2</option>
                                                             <option>Box Type 3</option>
                                                             <option>Box Type 4</option>
-                                                            
+
                                 </select> -->
                                 <div class="invalid-feedback" style="width: 100%;">
                                     Incorporation is required
@@ -303,9 +337,9 @@
                             </div>
                         </div>
                     </div>
-                
+
                 <br>
-              
+
                 <div class="row">
                         <div class="col-sm">
 
@@ -360,10 +394,10 @@
     </div>
 </div>
 </div>
-       
+
 
             <br>
-     <!-- <-------------------------------------PERSONAL INJURY END----------------------------------------------------------------> 
+     <!-- <-------------------------------------PERSONAL INJURY END---------------------------------------------------------------->
 
 
                 <!-- The Modal -->
