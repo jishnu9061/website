@@ -60,6 +60,7 @@
                     <td>{{$list->item_name}}</td>
                     <td>{{$list->description}}</td>
                     <td></td>
+                    
                     <td scope="row" class="text-center">
                             <div class="btn-group">
                                 <a class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
