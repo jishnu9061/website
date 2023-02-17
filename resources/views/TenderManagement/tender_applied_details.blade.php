@@ -48,8 +48,8 @@
                     <th scope="col">Supplier Name</th>
                     <th scope="col">Item</th>
                     <th scope="col">Description</th>
-                    <th scope="col">View</th>
                     <th scope="col">Status</th>
+                    <th scope="col">View</th>
 
                 </tr>
             </thead>
@@ -59,10 +59,17 @@
                     <td>{{$list->supplier_name}}</td>
                     <td>{{$list->item_name}}</td>
                     <td>{{$list->description}}</td>
-                    <td>
-                        <a href="{{url('view_tender_applied',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
-                    </td>
                     <td></td>
+                    <td scope="row" class="text-center">
+                            <div class="btn-group">
+                                <a class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    style="border-color:none;"> ⋮ </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="{{url('view_tender_applied',$list->id)}}">View Tender Details</a>
+                                </div>
+                            </div>
+                        </td>
+                    
                 </tr>
                 @endforeach
             </tbody>
