@@ -90,17 +90,15 @@
                                         <td scope="row" class="text-center">Hr Department</td>
                                         <td scope="row" class="text-center">Department Head</td>
                                         <td scope="row" class="text-center">
-                                            <!-- <a href="edit_request_item"><i style="  color:rgb(13, 1, 56);"
-                                                    class="fa fa-edit"></i> -->
-                                                    <a href="view_requst"><i style="color:rgb(13, 1, 56);"
-                                                    class="fa fa-eye"></i>
-                                                <!-- <a href=""> <i style="color:rgb(13, 1, 56);"
-                                                        class="fas fa-trash-alt"></i> -->
+                                        <div class="btn-group">
+                                            <a class="btn" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false" style="border-color:none;"> ⋮ </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item"
+                                                    href="view_requst">View Request Item</a>
 
-
-
-                                        </td>
-
+                                            </div>
+                                        </div>
                                     </tr>
 
                                 </tbody>
