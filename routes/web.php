@@ -1058,7 +1058,7 @@ use App\Http\Controllers\issued_summary;
     //coporate
     Route::any('add_corporate', 'ClientManagement@addCorporate')->name('add-corporate');
     // Route::any('store-corporate','ClientManagement@storeCorporate')->name('store-corporate');
-    Route::any('corporate-list', 'ClientManagement@listCorporate')->name('corporate-list');
+    Route::any('corporate-list/{company_id}', 'ClientManagement@listCorporate')->name('corporate-list');
 
 // Lawyernt
 Route::any('asign-lawyer','ClientManagement@asignlawyer')->name('asign-lawyer');

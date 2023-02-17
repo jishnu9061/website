@@ -1,5 +1,14 @@
 @extends('layouts.hmsmain')
 @section('content')
+<style>
+    .fa-ban , .fa-bell{
+        color: red;
+    }
+    .fa-ban , .fa-bell{
+        padding: 5px;
+    }
+
+</style>
     <nav style="font-size:15px;">
         <a href="{{ url('home') }}" style="color: #1D1D50;">Home</a> /
         <a href="#" style="color: #1D1D50;">System Setup</a> /
@@ -12,10 +21,34 @@
       
         {{-- heading --}}
         <div class="container">
-          
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Branch</button>
-            <h4 id="hdtpa"><b>Company Branch</b></h4>
-            <br>
+
+            <div class="row" style="height:50px;">
+                <div class="col-sm-4" style="padding-top:5px;">
+                </div>
+                <div class="col-sm-4" style="">
+                    <h4
+                        style="border: 0.5px solid #f1d9b0;
+                        border-radius: 25px;
+                        background-color: #f1d9b0;
+                        padding: 2%;
+                        width: 100%;
+                        height:90%;
+                        text-align:center;
+                        box-shadow: inset 0 0 3px #d3d0ca;
+                        opacity: .9;">
+                        <b style="font-size:18px;">Company Branch</b>
+                    </h4>
+                </div>
+                <div class="col-sm-4" style="">
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" data-toggle="modal"
+            data-target="#myModal"style="margin-left:10px;    --clr: #1D1D50;
+        --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add Branch</button>
+                {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Branch</button> --}}
+            {{-- <h4 id="hdtpa"><b>Company Branch</b></h4> --}}
+            <br><br>
+
             <!---------------------------------------------- MODAL ---------------------------------------------------------------------->
 
             {{-- <a href="{{('add_company_branch')}}"><button class="btn btn-primary">Add Branch</button></a> --}}
@@ -29,13 +62,40 @@
 
            
                     <div class="card" style="width: 18rem;">
+                        <div class="p-2" style="display: inline-block; width:fit-content; position: absolute;right: 0; ">
+                            <i class="fa fa-ban"></i>
+                            <i class="fa fa-bell"></i>
+                        </div>
                         <img class="card-img-top" src="https://t4.ftcdn.net/jpg/02/81/89/73/360_F_281897358_3rj9ZBSZHo5s0L1ug7uuIHadSxh9Cc75.jpg" alt="Card image cap">
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <h4><b>John Doe</b></h4>
-                            <p>Architect & Engineer</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <div style="  display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-around;align-items: center;">
+                          <div class="card-title m-0" style="padding: 0px; font-size:15px; ">Branch Name</div>
+                          <div class="" style="">
+                            <a href=""><i
+                                    style="  color:rgb(13, 1, 56);" class="fa fa-eye"
+                                    aria-hidden="true"></i> </a>
+                                <span class="m-1"></span>
+                            <a href=""><i
+                                    style="  color:rgb(13, 1, 56);" class="fa fa-edit"
+                                    aria-hidden="true"></i> </a>
+                                <span class="m-1"></span>
+                            <a href=""><i
+                                    style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt"
+                                    aria-hidden="true"></i> </a>
+                                <span class="m-1"></span>
+                            <a href=""><i
+                                    style="  color:rgb(13, 1, 56);" class="fa fa-add"
+                                    aria-hidden="true"></i> </a>
+                          </div>
+                            </div>
+  
+                          <p class="card-text mt-1 mb-1"> <b> Address:</b> Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <b><p class="mb-1">Email:</p></b>
+                            <p class="mb-1">Architect & Engineer</p>
+                          
+                          {{-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
                         </div>
                       </div>
 
@@ -60,7 +120,7 @@
                                             <td>{{$branch->address}}</td>
                                             <td>{{$branch->email}}</td>
                                             <td style="color:green;font-weight:bold;"></td>
-                                            <td scope="row">
+                                            {{-- <td scope="row">
                                                 <a href="{{ url('edit_company_branch', $branch->id) }}"><i
                                                         style="  color:rgb(13, 1, 56);" class="fa fa-edit"
                                                         aria-hidden="true"></i>
@@ -68,6 +128,19 @@
                                                     <a href="{{ url('delete_company_branch', $branch->id) }}"><i
                                                             style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt"
                                                             aria-hidden="true"></i>
+                                            </td> --}}
+                                            <td scope="row"class="text-center">
+                                                <div class="btn-group">
+                                                    <a class="btn" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false" style="border-color:none;"> ⋮ </a>
+                
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item"
+                                                            href="{{ url('edit_company_branch', $branch->id) }}">Edit Branch</a>
+                                                        <a class="dropdown-item"
+                                                            href="{{ url('delete_company_branch', $branch->id) }}">Delete Branch</a>
+                                                    </div>
+                                                </div>
                                             </td>
                                     @endforeach
                                     </tr>
@@ -76,7 +149,7 @@
 
                             </table>
                             <br>
-                            <!--		Start Pagination -->
+                            {{-- <!--		Start Pagination -->
                             <div class='pagination-container'>
                                 <nav>
                                     <ul class="pagination">
@@ -86,7 +159,25 @@
                             </div>
                             <div class="rows_count">Showing 11 to 20 of 100</div>
 
-                            <!-- 		End of Container -->
+                            <!-- 		End of Container --> --}}
+                            <!--		Start Pagination -->
+                <div class='pagination-container'>
+                    <nav>
+                        <ul class="pagination">
+                            <li data-page="prev">
+                                <span>
+                                    < <span class="sr-only">(current)
+                                </span></span>
+                            </li>
+                            <li data-page="next" id="prev">
+                                <span> > <span class="sr-only">(current)</span></span>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="rows_count"></div>
+</div>
+                <!-- 		End of Container -->
 
                             <!-- <div class="class"style="text-align:right;">
                             <select style="width:10%;height:100%;color:rgb(13, 1, 56);font-size:small;background-color:#FFFBF4;"type="text" value="" >

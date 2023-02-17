@@ -344,8 +344,6 @@ class CrmController extends Controller
         ->get();
         return view('CRM.individual_lead',compact('individual_leads'));
     }
-
-
     public function view_individual_leads($id)
     {
         $view_individual_leads = DB::table('cra_customer_registration')->where('id',$id)->first();

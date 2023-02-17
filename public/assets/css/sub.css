@@ -242,6 +242,13 @@ color: #003169;
   border: .5px solid #000000 ;
  }
 
+ .center-xy{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  }
+
 
 
 
