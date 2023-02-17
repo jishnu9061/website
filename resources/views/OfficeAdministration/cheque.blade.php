@@ -8,12 +8,8 @@
 <br><br>
 <div class="container">
 
-    <h4 id="hdtpa"><b>Cheque Cancellation</b></h4>
-
-
-
-    <br>
-   
+<h4 id="hdtpa"><b>Cheque Cancellation</b></h4>
+<br>
 <br>
 <div>
 <div class="card">

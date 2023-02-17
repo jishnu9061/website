@@ -8,9 +8,8 @@
 <br><br>
 {{-- heading --}}
 <div class="container">
-    <h4 id="hdtpa"><b>Pay Supplier Invoice</b></h4>
-    <br>
-    <br>
+    
+
 
 
     <div class="form-row">

@@ -8,8 +8,9 @@
 <br><br>
 {{-- heading --}}
 <div class="container">
-    <h4 id="hdtpa"><b>Creditor Aging Report</b></h4>
-    <br>
+
+<h4 id="hdtpa"><b>Creditor Aging Report</b></h4>
+<br>
 
 
     <div class="form-row">

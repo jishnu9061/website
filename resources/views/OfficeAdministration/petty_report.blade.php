@@ -8,11 +8,9 @@
 <br><br>
 <div class="container">
 
-    <h4 id="hdtpa"><b>Petty Cash Report</b></h4>
+<h4 id="hdtpa"><b>Petty Cash Report</b></h4>
+<br>
 
-
-    <br>
-    <br>
     <div class="text-center">
 
 <button type="button" class="gp_btn left">Today</button>

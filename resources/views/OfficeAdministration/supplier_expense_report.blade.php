@@ -8,8 +8,9 @@
 <br><br>
 {{-- heading --}}
 <div class="container">
-    <h4 id="hdtpa"><b>Supplier Expense Report</b></h4>
-    <br>
+
+<h4 id="hdtpa"><b>Supplier Expense Report</b></h4>
+<br>
 
 
     <!-- table -->
@@ -45,11 +46,18 @@
                             disabled readonly></td>
                     <td><input class="form-control" type="text" value="1,000.00" aria-label="Disabled input example"
                             disabled readonly></td>
-                    <td class="text-center"><a href="{{ url('') }}"><i style="color:rgb(13, 1, 56);"
-                                class="fa fa-eye"></i>
-                            <a href="{{ url('') }}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i>
-                                <a href="{{url('')}}"> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
+                    <td>
+                        <div class="btn-group">
+                            <a class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                style="border-color:none;"> ⋮ </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">View Expence Report</a>
+                                <a class="dropdown-item" href="#">Edit Expence Report</a>
+                                <a class="dropdown-item" href="#">Delete Expence Report</a>
+                            </div>
+                        </div>
                     </td>
+
                 </tr>
 
                 <tr>
@@ -79,10 +87,17 @@
                             disabled readonly></td>
                     <td><input class="form-control" type="text" value="1,900.00" aria-label="Disabled input example"
                             disabled readonly></td>
-                    <td class="text-center"><a href="{{ url('') }}"><i style="color:rgb(13, 1, 56);"
-                                class="fa fa-eye"></i>
-                            <a href="{{ url('') }}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i>
-                                <a href="{{url('')}}"> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i></td>
+                            <td>
+                        <div class="btn-group">
+                            <a class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                style="border-color:none;"> ⋮ </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">View Expence Report</a>
+                                <a class="dropdown-item" href="#">Edit Expence Report</a>
+                                <a class="dropdown-item" href="#">Delete Expence Report</a>
+                            </div>
+                        </div>
+                    </td>
                 </tr>
 
                 <tr>

@@ -12,8 +12,11 @@
     <h4 id="hdtpa"><b>Subject</b></h4>
     <br>
 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Subject
-    </button></a>
+    <div class="row" style="height:50px;">
+        <div class="col-sm-4" style="padding-top:5px;">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin-left:10px;    --clr: #1D1D50;
+                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add Subject</button>
+        </div>
 
     <br>
     <div class="header_wrap">
@@ -62,12 +65,18 @@
                     <td>{{$list->sub_name}}</td>
                     <td>{{$list->category}}</td>
                     <td>{{$list->discription}}</td>
-                    <td>
-                        <a href="{{url('editsubject',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-edit"></i><span
-                                class="m-2"></span>
-                            <a href="{{url('deletesubject',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
+                    <td scope="row" class="text-center">
+                            <div class="btn-group">
+                                <a class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    style="border-color:none;"> ⋮ </a>
+                                <div class="dropdown-menu">
+                                  
+                                    <a class="dropdown-item" href="{{url('editsubject',$list->id)}}">Edit Book Category</a>
+                                    <a class="dropdown-item" href="{{url('deletesubject',$list->id)}}">Delete Book Category</a>
 
-                    </td>
+                                </div>
+                            </div>
+                        </td>
 
                 </tr>
                 @endforeach
