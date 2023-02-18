@@ -64,7 +64,7 @@
                     <div class="card" style="width: 18rem;">
                         <div class="p-2" style="display: inline-block; width:fit-content; position: absolute;right: 0; ">
                             <i class="fa fa-ban"></i>
-                            <i class="fa fa-bell"></i>
+                            <i class="fa fa-bell" style="color:rgb(0, 255, 0);"></i>
                         </div>
                         <img class="card-img-top" src="https://t4.ftcdn.net/jpg/02/81/89/73/360_F_281897358_3rj9ZBSZHo5s0L1ug7uuIHadSxh9Cc75.jpg" alt="Card image cap">
                         <div class="card-body">
@@ -93,7 +93,7 @@
   
                           <p class="card-text mt-1 mb-1"> <b> Address:</b> Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                           <b><p class="mb-1">Email:</p></b>
-                            <p class="mb-1">Architect & Engineer</p>
+                           
                           
                           {{-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
                         </div>
