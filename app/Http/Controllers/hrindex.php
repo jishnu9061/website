@@ -14,6 +14,7 @@ use DB;
 
 class hrindex extends Controller
 {
+    
     public function index()
     {
         return view('hr.hrindex');
