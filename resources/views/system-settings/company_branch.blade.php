@@ -138,7 +138,9 @@
                                                         <a class="dropdown-item"
                                                             href="{{ url('edit_company_branch', $branch->id) }}">Edit Branch</a>
                                                         <a class="dropdown-item"
-                                                            href="{{ url('delete_company_branch', $branch->id) }}">Delete Branch</a>
+                                                            {{-- href="{{ url('delete_company_branch', $branch->id) }}">Delete Branch</a> --}}
+                                                            <a href="#"onclick=deletebranch(this) data-id="{{ $branch->id }}"data-toggle="modal"
+                                                                data-target="#deleteBranch">Delete Branch</a>
                                                     </div>
                                                 </div>
                                             </td>
@@ -402,7 +404,37 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="modal fade" id="deleteBranch" style=""> <!-- delete company branch -->
+                                <div class="modal-dialog modal-lg" style="width:30%;">
+                                    <div class="modal-content">
+                                        <!---- Modal Header -->
+                                        <form method="post"  id="delete_branch" action="{{ url('delete_company_branch') }}" enctype="multipart/form-data"> 
+                                            @csrf
+                                            <input type="hidden" id="id" value="id">
+                                            <div class="modal-header" style="padding:0rem 0rem;">
+                                                <div style="padding:1rem 1rem;"><h4 class="text-centre"><b>Delete <span id="delete_branch"></span></b></h4></div>
+                                            </div>
+                                            <!-- Modal body -->
+                                            <div class="modal-body" >
+                                                <div class="container">
+                                                    <div class="row"><h6><b><span>Are you sure?</span></b></h6> 
+                                                    </div>
+                                                        <div class="row">
+                                                            <div class="" style="width: 30%;">
+                                                            </div>
+                                                            <div lass="" style="width: 0%"></div>
+                                                            <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                                                <br>
+                                                                <button type="submit" class="btn btn-primary float:right;" Style="width:45%;background-color:#DD4132;">Yes</button>
+                                                                <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">No</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                             </body>
                         </div>
 
