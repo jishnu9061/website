@@ -25,9 +25,10 @@ class ClientManagement extends Controller
 
     public function view()
     {
-
+        $company_id = Auth::user()->company_id;
+        $branch_id = Auth::user()->branch_id ?? null;
         $client_list = DB::table('cra_individual_client_details')->get();
-        return view('client-management.client-list', compact('client_list'));
+        return view('client-management.client-list', compact('client_list', 'branch_id', 'company_id'));
     }
 
 
@@ -166,7 +167,7 @@ class ClientManagement extends Controller
             'client_name' =>    $client_name,
         ]);
 
-        return redirect("/client_list/" . $company_id);
+        return redirect('/client_list/' . $company_id);
     }
 
     //Asign Lawyer//
@@ -379,7 +380,7 @@ class ClientManagement extends Controller
             'company_id' => $company_id,
             'branch_id' => $branch_id,
             "extra_person" => $doc_json,
-            'created_at'=>date('Y-m-d H:i:s'),
+            'created_at' => date('Y-m-d H:i:s'),
         ]);
 
         DB::table('cra_mixed_table')->insertGetId([
@@ -581,8 +582,6 @@ class ClientManagement extends Controller
             ->select('*')
             ->join('cra_document_detials', 'cra_document_detials.individual_id', '=', 'cra_individual_client_details.id')
             ->get();
-
-
         return view('client-management.client-document', compact('client_document'));
     }
 

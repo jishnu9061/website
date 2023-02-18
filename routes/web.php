@@ -1049,7 +1049,7 @@ use App\Http\Controllers\issued_summary;
     //Client-list
     Route::any('add-client', "ClientManagement@addNewClient")->name('add-client');
     Route::any('add_newclient', "ClientManagement@addNewclient")->name('add_newclient');
-    Route::any('client_list', 'ClientManagement@view')->name('client_list');
+    Route::any('client_list/{id}', 'ClientManagement@view')->name('client_list');
     Route::any('/edit_person/{individual_id}', 'ClientManagement@edit_person')->name('edit_person');
     Route::any('show-client/{id}', 'ClientManagement@show')->name('show-client');
     Route::any('client-index', "ClientManagement@index")->name('client-index');
@@ -1081,7 +1081,7 @@ Route::any('view-document-details/{id}','ClientManagement@viewDocummentDetails')
 //end Client-List
 
     //Client-Documents
-    Route::any('client-document', 'ClientManagement@document')->name('client-document');
+    Route::any('client-document/{id}', 'ClientManagement@document')->name('client-document');
     Route::any('create-document/{individual_id}', 'ClientManagement@createDocument')->name('create-document');
     Route::any('add-document', 'ClientManagement@addDocument')->name('add-document');
     Route::any('view-document/{id}', 'ClientManagement@viewDocument')->name('view-document');

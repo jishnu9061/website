@@ -700,6 +700,7 @@
             </div>
         </div>
     </div>
+    
     {{-- </div>End create corporate client --}}
     {{-- Start Edit Cororate Client --}}
     <div class="modal fade" id="edit_corporate_client_details" style="">
