@@ -335,9 +335,6 @@
                                                     data-target="#edit_corporate_client_details" href="#">Edit Client
                                                     Details
                                                 </a>
-                                                <a class="dropdown-item"
-                                                    href="{{ url('edit_client', $list->corporate_id) }}">Edit Client
-                                                    Details</a>
                                                 <a class="dropdown-item" href=""data-toggle="modal" data-id=""
                                                     data-name=""onclick="deletecompany(this)"
                                                     data-target="#deletecompany">Delete Client
@@ -650,12 +647,9 @@
                                         </label>
                                         <textarea class="outer" rows="4" style="width:100%;"cols="41" placeholder="Enter Notes" name="notes"
                                             form="addemployee"></textarea>
-
                                     </div>
                                 </diV>
-
                             </div>
-
                             <br>
                             <div class="row">
                                 <div class="col-sm-4">
@@ -686,7 +680,7 @@
                                     {{-- Add More Document details:- javascript --}}
                                 </div>
                             </div>
-                    </div>
+                        </div>
                     <div class="row">
                         <div class="row">
                             <div class="" style="width: 50%;">
@@ -710,14 +704,14 @@
     {{-- Start Edit Cororate Client --}}
     <div class="modal fade" id="edit_corporate_client_details" style="">
         <!-- create company -->
-        <div class="modal-dialog modal-xl">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <!---- Modal Header -->
                 <form method="post" action="{{ url('') }}" enctype="multipart/form-data" id="addemployee">
                     @csrf
                     <h5><b>Edit Corporate Client Details:-</b></h5>
 
-                    <div class="row" >
+                    <div class="row">
                         <div class="" style="*/background-color: #d3d0ca;border-radius:5px;">
                             <div class="row">
                                 <div class="" style="width: 33%">
@@ -870,14 +864,16 @@
                             <div class="row" style="margin-top: 0px;">
                                 <div class="" style="width:33%;"><span style="color: red">*</span>
                                     <label for="city"
-                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client Source</label>
-                                    <input type="text" placeholder="Client Source"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client
+                                        Source</label>
+                                    <input type="text" placeholder="Client Source Narration"
                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
                                         class="form-control" name="city" id="" value="" required>
                                 </div>
                                 <div class="" style="width:33%;"><span style="color: red">*</span>
                                     <label for="city"
-                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client Name</label>
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client
+                                        Name</label>
                                     <input type="text" placeholder="Client Name"
                                         style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
                                         class="form-control" name="city" id="" value="" required>
@@ -899,6 +895,93 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="" style="width:25%;"><span style="color: red">*</span>
+                                    <label for="city"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Postal
+                                        Address</label>
+                                    <input type="text" placeholder="Pin No "
+                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                        class="form-control" name="first_name" id="" value="" required>
+                                </div>
+                                <div class="" style="width: 25%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="client_no"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Pin
+                                            No</label>
+                                        <input type="text" placeholder="Pin No "
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="first_name" id="" value=""
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="" style="width:25%;"><span style="color: red">*</span>
+                                    <label for="city"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Postal
+                                        Code</label>
+                                    <input type="text" placeholder="Postal Code"
+                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                        class="form-control" name="city" id="" value="" required>
+                                </div>
+                                <div class="" style="width:25%;"><span style="color: red">*</span>
+                                    <label for="city"
+                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Town
+                                    </label>
+                                    <input type="text" placeholder="Town"
+                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                        class="form-control" name="city" id="" value="" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div style="width:50%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="postal_addr"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Physical
+                                            Address</label>
+                                        <textarea class="outer" rows="4" style="width:100%;" cols="41" placeholder="Physical Address"
+                                            name="postal_addr" form="addemployee"></textarea>
+                                    </div>
+                                </div>
+                                <div style="width:50%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="postal_addr"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Notes
+                                        </label>
+                                        <textarea class="outer" rows="4" style="width:100%;" cols="41" placeholder="Notes" name="postal_addr"
+                                            form="addemployee"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                </div>
+                                <div class="col-sm-4">
+                                    <h4
+                                        style="border: 0.5px solid #f1d9b0;
+                                border-radius: 25px;
+                                background-color: #f1d9b0;
+                                padding: 2%;
+                                width: 100%;
+                                height:90%;
+                                text-align:center;
+                                box-shadow: inset 0 0 3px #d3d0ca;
+                                opacity: .9;">
+                                        <b style="font-size:18px;">Contact Person</b>
+                                    </h4>
+                                </div>
+                                <div class="col-sm-4">
+                                </div>
+                            </div>
+                            <div class="doc_contanier"style="*/background-color:orange;">
+                                <div class="doc_warp">
+                                    <h6>Add Contact Person details:-</h6>
+                                    <a class="add_doc">&plus;</a>
+                                </div>
+                                <div class="row document_details " style="margin-bottom: 20px;">
+                                    {{-- Add More Document details:- javascript --}}
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class style="width: 20%">
@@ -908,7 +991,7 @@
                         <button type="submit" class="btn btn-primary float:right;"
                             style="margin-left: 61%;--clr: #1D1D50;width:19%;
                             --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Update
-                            </button>
+                        </button>
                         <button type="button" class="btn btn-primary float:left" Style="width:19%;"
                             onclick="history.back()">Cancel</button>
                     </div>
