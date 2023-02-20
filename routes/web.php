@@ -99,19 +99,8 @@ use App\Http\Controllers\issued_summary;
     Route::any('/file', 'doctorController@file');
    
     
-    
 
    
-    Route::any('/givereduction{id}', 'addController@givereduction');
-    Route::any('/allowancetostaff', 'addController@allowancetostaff');
-    Route::any('/counter', 'hospitalController@counter');
-    Route::any('/Pharmacy', 'PharmacyController@pharmacy');
-    Route::any('/addmedicinez', 'PharmacyController@addmedicinez');
-    Route::any('/allmedicinez', 'PharmacyController@allmedicinez');
-    Route::any('/todaysappointments', 'doctorController@todaysappointments');
-    Route::any('/todaysappointmentsall', 'hospitalController@todaysappointmentsall');
-    Route::any('/reappointments', 'doctorController@reappointments');
-    Route::any('/dutyschedulefetch', 'doctorController@dutyschedulefetch');
     Route::any('/dutyschedule', 'hrController@dutyschedule');
     Route::any('/dutydelete{id}', 'hrController@dutydelete');
     Route::any('/applyleave', 'doctorController@applyleave');
