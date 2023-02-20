@@ -50,7 +50,7 @@
                     <th scope="col">ID</th>
                     <th scope="col">Department</th>
                     <th scope="col">Total Hours/Week</th>
-                    <th scope="col">View</th>
+                    <th scope="col">Action</th>
 
                 </tr>
             </thead>
@@ -61,9 +61,16 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td>
-                        <a href="timesheetweek"><i style="color:rgb(13, 1, 56);" class="far fa-file-alt"></i>
+                    <td scope="row" class="text-center">
+                        <div class="btn-group">
+                            <a class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                style="border-color:none;"> ⋮ </a>
+                            <div class="dropdown-menu">
+                                <a onclick="return confirm('Are you sure?');" class="dropdown-item"
+                                    href="timesheetweek">View Time Sheet</a>
 
+                            </div>
+                        </div>
                     </td>
 
                 </tr>
@@ -217,8 +224,8 @@
                                         <div class="input-group-prepend">
 
                                         </div>
-                                        <textarea rows="4" cols="50" name="paddress"
-                                                                    class="form-control" type="text"></textarea>
+                                        <textarea rows="4" cols="50" name="paddress" class="form-control"
+                                            type="text"></textarea>
                                         <div class="invalid-feedback" style="width: 100%;">
                                             Incorporation is required
                                         </div>
@@ -259,20 +266,20 @@
 
 
                         <div class="row">
-                                                        <div class="col-sm">
+                            <div class="col-sm">
 
-                                                        </div>
-                                                        <div class="col-sm">
+                            </div>
+                            <div class="col-sm">
 
-                                                        </div>
-                                                        <div class="col-sm">
-                                                            <br>
-                                                            <button type="submit" class="btn btn-primary float:right;"
-                                                                Style="width:50%;">Save</button>
-                                                            <button type="button" class="btn btn-primary float:left"
-                                                                Style="width:45%;" data-dismiss="modal">Cancel</button>
-                                                        </div>
-                                                    </div>
+                            </div>
+                            <div class="col-sm">
+                                <br>
+                                <button type="submit" class="btn btn-primary float:right;"
+                                    Style="width:50%;">Save</button>
+                                <button type="button" class="btn btn-primary float:left" Style="width:45%;"
+                                    data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
                 </div>
 
                 </form>

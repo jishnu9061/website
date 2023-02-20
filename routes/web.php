@@ -31,79 +31,25 @@ use App\Http\Controllers\issued_summary;
     Route::put('/update_company/{id}', "superadmincontroller@update_company")->name('update_company');
     Route::any('/delete_company/{id}', "superadmincontroller@delete_company")->name('delete_company');
     //superadmin
-
-    //mange employee route start
-    Route::any('employee_list/{id}', "employeecontroller@employee_list")->name('employee_list');
+//mange employee route start
+    Route::any('employee_list/{id}',"employeecontroller@employee_list")->name('employee_list');
     Route::any('create_employee/getrole/{id}', "addcontroller@get_role")->name('getrole');
-
-
     //mange employee route end
-
+//home controller
     Route::get('/', 'homecontroller@index')->name('home');
     Route::get('/home', 'homecontroller@index')->name('home');
     Route::get('/admin', 'homecontroller@index')->name('home');
     Route::get('/admindashboard', 'homecontroller@admindashboard')->name('admindashboard');
     Route::get('/logt', 'homecontroller@logout')->name('home');
-    Route::any('/patientregistration', 'patientcontroller@patientregistration')->name('allpatients');
-    Route::any('/getdepartmentdoctor', 'patientcontroller@getdepartmentdoctor')->name('getdepartmentdoctor');
-    Route::post('/addpatient', 'patientcontroller@addpatient')->name('addpatient');
-    Route::any('/allpatients', 'patientcontroller@allpatients')->name('allpatients');
-    Route::any('/viewpatient{id}', 'patientController@viewpatient');
-    Route::any('/editpatient{id}', 'patientController@editpatient');
-    Route::any('editthepatient', 'patientController@editthepatient');
-    Route::any('/beds', 'bedsController@beds');
-    Route::any('/allocatebed', 'bedsController@allocatebed');
-    Route::any('/allocateroom', 'bedsController@allocateroom');
-    Route::any('/allocatenonacroom', 'bedsController@allocatenonacroom');
-    Route::any('/hospitals', 'hospitalController@hospitals');
-    Route::any('/addhospital', 'hospitalController@addhospital');
-    // Route::any('/admins', 'hospitalController@admins');
-    Route::any('/roles', 'hospitalController@roles');
-    //rooms
-    Route::any('/addroomtypes', 'hospitalController@addroomtypes');
-    Route::any('/saveroomtypes', 'hospitalController@saveroomtypes');
-    Route::any('/delroomtypes{id}', 'hospitalController@delroomtypes');
-    Route::any('/delrooms{id}', 'hospitalController@delrooms');
-    Route::any('/update_roomtypes', 'hospitalController@update_roomtypes');
-    Route::any('/addroomstypes', 'hospitalController@addroomstypes');
-    Route::any('/saveroomstypes', 'hospitalController@saveroomstypes');
-    Route::any('/update_roomstype', 'hospitalController@update_roomstype');
-    //stafs
-    Route::any('/addadmins', 'hospitalController@addadmins');
-    Route::any('/allhospitals', 'hospitalController@allhospitals');
-    Route::any('/appointment{id}', 'hospitalController@appointment');
-    Route::any('/getdoctordetails{id}', 'hospitalController@getdoctordetails');
-    Route::any('/get_cons_fees', 'hospitalController@get_cons_fees');
-    Route::any('/bookappointment', 'hospitalController@bookappointment');
-    Route::any('/allappointment', 'hospitalController@allappointment');
-    Route::any('/print_appointment{id}', 'hospitalController@print_appointment')->name('print_appointment');
-    Route::any('/edit_appointment{id}', 'hospitalController@edit_appointment');
-    Route::any('/update_appointment', 'hospitalController@update_appointment')->name('update_appointment');
-    Route::any('/delete_appointment{id}', 'hospitalController@delete_appointment')->name('delete_appointment');
-    Route::any('/cross_consult{id}', 'hospitalController@cross_consult')->name('cross_consult');
-    Route::any('/queuemanagement', 'hospitalController@queuemanagement');
-    Route::any('/clinicalnotes', 'bedsController@clinicalnotes');
-    Route::any('/callthepatient{id}', 'hospitalController@callthepatient');
+    //home controller
+//add controller
     Route::any('/addstaffs', 'addController@addstaffs');
-
     Route::any('/editstafff', 'addController@editstafff');
     Route::post('/addthestaffs', 'addController@addthestaffs');
     Route::post('/addstaffss', 'addController@addstaffss');
     Route::any('/add_staff', 'addController@add_staff');
-    Route::any('/managestaff{id}', 'hrcontroller@managestaff');
-    Route::any('/managedepstaff{id}', 'departmentcontroller@managedepstaff');
-    Route::any('/disableuser{id}', 'addController@disableuser');
-    Route::any('/enableuser{id}', 'addController@enableuser');
-    Route::any('/Consultation{id}/{patient_id}', 'doctorController@consultation');
-    Route::any('/managepatient{id}', 'doctorController@managepatient');
     Route::any('/staffsalary{id}', 'addController@staffsalary');
     Route::any('/paysalary', 'addController@paysalary');
-    Route::any('/attendanceview', 'hrcontroller@attendanceview');
-    Route::any('/monthwise', 'hrController@monthwise');
-    Route::any('/attendancetostaff', 'hrController@attendancetostaff');
-
-
-    Route::any('/consult', 'doctorController@consult');
     Route::any('/addsalary', 'addController@addsalary');
     Route::any('/addallowance', 'addController@addallowance');
     Route::any('/addleavetype', 'addController@addleavetype');
@@ -112,6 +58,22 @@ use App\Http\Controllers\issued_summary;
     Route::any('/allowancedelete{id}', 'addController@allowancedelete');
     Route::any('/leavetypedelete{id}', 'addController@leavetypedelete');
     Route::any('/reductiondelete{id}', 'addController@reductiondelete');
+
+    //add controller
+//hr controller
+    Route::any('/managestaff{id}', 'hrcontroller@managestaff');
+    Route::any('/attendanceview', 'hrcontroller@attendanceview');
+    Route::any('/monthwise', 'hrController@monthwise');
+    Route::any('/attendancetostaff', 'hrController@attendancetostaff');
+
+    //hr controller
+//department controller
+    Route::any('/managedepstaff{id}', 'departmentcontroller@managedepstaff');
+
+    
+    
+    
+    
     Route::any('/giveallowance{id}', 'addController@giveallowance');
     Route::any('/givereduction{id}', 'addController@givereduction');
     Route::any('/allowancetostaff', 'addController@allowancetostaff');
@@ -1049,7 +1011,7 @@ use App\Http\Controllers\issued_summary;
     //Client-list
     Route::any('add-client', "ClientManagement@addNewClient")->name('add-client');
     Route::any('add_newclient', "ClientManagement@addNewclient")->name('add_newclient');
-    Route::any('client_list', 'ClientManagement@view')->name('client_list');
+    Route::any('client_list/{id}', 'ClientManagement@view')->name('client_list');
     Route::any('/edit_person/{individual_id}', 'ClientManagement@edit_person')->name('edit_person');
     Route::any('show-client/{id}', 'ClientManagement@show')->name('show-client');
     Route::any('client-index', "ClientManagement@index")->name('client-index');
@@ -1081,7 +1043,7 @@ Route::any('view-document-details/{id}','ClientManagement@viewDocummentDetails')
 //end Client-List
 
     //Client-Documents
-    Route::any('client-document', 'ClientManagement@document')->name('client-document');
+    Route::any('client-document/{id}', 'ClientManagement@document')->name('client-document');
     Route::any('create-document/{individual_id}', 'ClientManagement@createDocument')->name('create-document');
     Route::any('add-document', 'ClientManagement@addDocument')->name('add-document');
     Route::any('view-document/{id}', 'ClientManagement@viewDocument')->name('view-document');

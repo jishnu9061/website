@@ -157,7 +157,9 @@ color: #999;
                             <a class="dropdown-item"
                                 href="{{url('edit_invoice_item',$invoice->id)}}">Edit Invoice Item</a>
                             <a class="dropdown-item"
-                                href="{{url('delete_invoice_item',$invoice->id)}}">Delete Invoice Item</a>
+                                {{-- href="{{url('delete_invoice_item',$invoice->id)}}">Delete Invoice Item</a> --}}
+                                <a href="#"onclick=deleteinvoice(this) data-id="{{ $invoice->id }}"data-toggle="modal"
+                                    data-target="#deleteInvoice">Delete Invoice Item</a>
                         </div>
                             </td>
                     </tr>
@@ -330,6 +332,37 @@ color: #999;
 </div>
 </div>
 </div>
+</div>
+<div class="modal fade" id="deleteInvoice" style=""> <!-- delete Invoice Items -->
+    <div class="modal-dialog modal-lg" style="width:30%;">
+        <div class="modal-content">
+            <!---- Modal Header -->
+            <form method="post"  id="delete_invoice_items" action="{{url('delete_invoice_item')}}" enctype="multipart/form-data"> 
+                @csrf
+                <input type="hidden" id="id" value="id">
+                <div class="modal-header" style="padding:0rem 0rem;">
+                    <div style="padding:1rem 1rem;"><h4 class="text-centre"><b>Delete <span id="delete_rate"></span></b></h4></div>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body" >
+                    <div class="container">
+                        <div class="row"><h6><b><span>Are you sure?</span></b></h6> 
+                        </div>
+                            <div class="row">
+                                <div class="" style="width: 30%;">
+                                </div>
+                                <div lass="" style="width: 0%"></div>
+                                <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                    <br>
+                                    <button type="submit" class="btn btn-primary float:right;" Style="width:45%;background-color:#DD4132;">Yes</button>
+                                    <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">No</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div>
 </div>
         </body>
     </div>

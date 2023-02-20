@@ -73,29 +73,34 @@
 
         <div style="display:flex;   margin-top: 3%;">
             <div class="dropdown" style="width:25%;">
-                <div class="btn btn-primary add-btn" type="button" style="width:97%;" id="dropdownMenuButton"
+                <div class="btn btn-primary add-btn" type="button" style="width:97%;margin-left:10px;    --clr: #1D1D50;
+                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;margin-bottom:1px;" id="dropdownMenuButton"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Add New Progress
                 </div>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <!-- <a class="dropdown-item" href="{{url('add-file-progress')}}">Add File Progress</a> -->
 
-                    <button type="button" class="btn btn-primary" data-toggle="modal" style="width:100%;"
+                    <button type="button" class="btn btn-primary" data-toggle="modal" style="width:100%;margin-left:10px;    --clr: #1D1D50;
+                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;margin-bottom:1px;"
                         data-target="#myModal">
                         Add File Progress</button>
                     <!-- <a class="dropdown-item" href="{{url('add-file-progress-action')}}">Add File Progress/Action</a> -->
 
-                    <button type="button" class="btn btn-primary" data-toggle="modal" style="width:100%;"
+                    <button type="button" class="btn btn-primary" data-toggle="modal" style="width:100%;margin-left:10px;    --clr: #1D1D50;
+                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;margin-bottom:1px;"
                         data-target="#myModal-1">
                         Add File Progress/Action</button>
                     <!-- <a class="dropdown-item" href="{{url('add-file-bringup-reminder')}}">Add File Bringup/Reminder</a> -->
 
-                    <button type="button" class="btn btn-primary" data-toggle="modal" style="width:100%;"
+                    <button type="button" class="btn btn-primary" data-toggle="modal" style="width:100%;margin-left:10px;    --clr: #1D1D50;
+                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;margin-bottom:1px;"
                         data-target="#myModal-2">
                         Add File Bringup/Reminder</button>
                     <!-- <a class="dropdown-item" href="{{url('book-court')}}">Book a Court Date</a> -->
 
-                    <button type="button" class="btn btn-primary" data-toggle="modal" style="width:100%;"
+                    <button type="button" class="btn btn-primary" data-toggle="modal" style="width:100%;margin-left:10px;    --clr: #1D1D50;
+                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;margin-bottom:1px;"
                         data-target="#myModal-3">
                         Book A Court Date </button>
 
@@ -103,27 +108,25 @@
             </div>
 
             <div class="dropdown" style="width:25%;" style="margin-left:10px;">
-                <button class="btn btn-primary add-btn" type="button" style="width:97%;" id="dropdownMenuButton"
+                <button class="btn btn-primary add-btn" type="button" style="width:97%;margin-left:10px;    --clr: #1D1D50;
+                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px; margin-bottom:1px;" id="dropdownMenuButton"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Dispute Resolution forms
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <!-- <a class="dropdown-item" href="{{url('court-attendance-sheet')}}">Fill Court Attendance Sheet</a> -->
-                    {{-- <a href="{{('court-attendance-sheet')}}"><button class="btn btn-primary">
-                    </button></a> --}}
-                    <button type="button" class="btn btn-primary" data-toggle="modal" style="width:100%;"
+                    <button type="button" class="btn btn-primary" data-toggle="modal" style="width:100%;margin-left:10px;    --clr: #1D1D50;
+                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;margin-bottom:1px;"
                         data-target="#myModal-4">
                         Fill Court Attendance Sheet </button>
                     <!-- <a class="dropdown-item" href="{{url('arbiration-sheet')}}">Fill New Arbiration Form</a> -->
-                    {{-- <a href="{{('arbiration-sheet')}}"><button class="btn btn-primary">
-                    </button></a> --}}
-                    <button type="button" class="btn btn-primary" data-toggle="modal" style="width:100%;"
+                    <button type="button" class="btn btn-primary" data-toggle="modal" style="width:100%;margin-left:10px;    --clr: #1D1D50;
+                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;margin-bottom:1px;"
                         data-target="#myModal-5">
                         Fill New Arbiration Form </button>
                     <!-- <a class="dropdown-item" href="{{url('conveyance-sheet')}}">Fill Conveyance Sheet</a> -->
-                    {{-- <a href="{{('conveyance-sheet')}}"><button class="btn btn-primary">
-                    </button></a> --}}
-                    <button type="button" class="btn btn-primary" data-toggle="modal" style="width:100%;"
+                    <button type="button" class="btn btn-primary" data-toggle="modal" style="width:100%;margin-left:10px;    --clr: #1D1D50;
+                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;margin-bottom:1px;"
                         data-target="#myModal-6">
                         Fill New Conveyance Sheet </button>
                 </div>
@@ -201,14 +204,20 @@
                                     <!-- <td scope="row" class="text-center">{{$list->activity}}</td> -->
                                     <!-- <td scope="row" class="text-center"><input type="checkbox" name="" id=""></td> -->
                                     <td scope="row" class="text-center">
+                                    <div class="btn-group">
+                                        <a class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            style="border-color:none;"> ⋮ </a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">View File
+                                               </a>
+                                            <a class="dropdown-item" href="{{url('edit-file-progress',$list->id)}}">Edit File
+                                                </a>
+                                            <a  onClick="return myFunction();" class="dropdown-item" href="{{url('delete-file-progress',$list->id)}}">Delete
+                                                File</a>
 
-                                        <a href="{{url('edit-file-progress',$list->id)}}"><i style="color:black;" class="fa fa-edit" aria-hidden="true"></i>
-
-                                            <a onClick="return myFunction();" href="{{url('delete-file-progress',$list->id)}}"><i style="  color:rgb(13, 1, 56)";
-
-
-                                                    class="fas fa-trash-alt" aria-hidden="true"></i>
-                                    </td>
+                                        </div>
+                                    </div>
+                                </td>
                                 </tr>
                                 @endforeach
 

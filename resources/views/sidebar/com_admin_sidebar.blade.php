@@ -83,13 +83,13 @@
                     </li>{{--  1st-> 1st submenu end--}}
                     @if(request()->path()== "client_list"){{-- 1st->2nd submenu start --}}
                     <li class="submenu-item ">
-                        <a href="{{url('client_list')}}" class='sidebar-link'
+                        <a href="{{url('client_list/'.Auth::user()->company_id)}}" class='sidebar-link'
                             style="background-color:#1D1D50 ; color:white;">
                             <span style="margin-left:0px;font-align:center;">●</span><span
                                 style="margin-left:5px">Individual Client List</span>
                             @else
                     <li class="submenu-item ">
-                        <a href="{{url('client_list')}}" class='sidebar-link'>
+                        <a href="{{url('client_list/'.Auth::user()->company_id)}}" class='sidebar-link'>
                             <span>Individual Client List</span>
                             @endif
                         </a>
