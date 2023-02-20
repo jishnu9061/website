@@ -50,19 +50,6 @@ use App\Http\Controllers\issued_summary;
     Route::any('/add_staff', 'addController@add_staff');
     Route::any('/staffsalary{id}', 'addController@staffsalary');
     Route::any('/paysalary', 'addController@paysalary');
-    //add controller
-//hr controller
-    Route::any('/managestaff{id}', 'hrcontroller@managestaff');
-    Route::any('/attendanceview', 'hrcontroller@attendanceview');
-    Route::any('/monthwise', 'hrController@monthwise');
-    //hr controller
-//department controller
-    Route::any('/managedepstaff{id}', 'departmentcontroller@managedepstaff');
-
-    
-    
-    Route::any('/attendancetostaff', 'hrController@attendancetostaff');
-    Route::any('/consult', 'doctorController@consult');
     Route::any('/addsalary', 'addController@addsalary');
     Route::any('/addallowance', 'addController@addallowance');
     Route::any('/addleavetype', 'addController@addleavetype');
@@ -71,6 +58,22 @@ use App\Http\Controllers\issued_summary;
     Route::any('/allowancedelete{id}', 'addController@allowancedelete');
     Route::any('/leavetypedelete{id}', 'addController@leavetypedelete');
     Route::any('/reductiondelete{id}', 'addController@reductiondelete');
+
+    //add controller
+//hr controller
+    Route::any('/managestaff{id}', 'hrcontroller@managestaff');
+    Route::any('/attendanceview', 'hrcontroller@attendanceview');
+    Route::any('/monthwise', 'hrController@monthwise');
+    Route::any('/attendancetostaff', 'hrController@attendancetostaff');
+
+    //hr controller
+//department controller
+    Route::any('/managedepstaff{id}', 'departmentcontroller@managedepstaff');
+
+    
+    
+    
+    
     Route::any('/giveallowance{id}', 'addController@giveallowance');
     Route::any('/givereduction{id}', 'addController@givereduction');
     Route::any('/allowancetostaff', 'addController@allowancetostaff');
