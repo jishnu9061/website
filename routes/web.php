@@ -71,20 +71,19 @@ use App\Http\Controllers\issued_summary;
     //hr controller
 //department controller
     Route::any('/managedepstaff{id}', 'departmentcontroller@managedepstaff');
-
-    
-    
-    
-    Route::any('/dutyschedulefetch', 'doctorController@dutyschedulefetch');
-    Route::any('/dutyschedule', 'hrController@dutyschedule');
-    Route::any('/dutydelete{id}', 'hrController@dutydelete');
-    Route::any('/applyleave', 'doctorController@applyleave');
-    Route::any('/file', 'doctorController@file');
     Route::any('/appliedleave', 'hrcontroller@appliedleave');
     Route::any('/hrleaveapprove', 'hrcontroller@hrleaveapprove');
     Route::any('/leaves', 'hrcontroller@leaves');
     Route::any('/leaveapprove', 'departmentcontroller@leaveapprove');
     Route::any('/leavedecline', 'departmentcontroller@leavedecline');
+   
+    
+//doctor controller
+    Route::any('/applyleave', 'doctorController@applyleave');
+    Route::any('/file', 'doctorController@file');
+   
+    
+    
     Route::any('/depleaves', 'departmentcontroller@depleaves');
     Route::any('/addloan', 'hrcontroller@addloan')->name('addloan');
     Route::any('/payslip', 'hrcontroller@payslip')->name('payslip');
