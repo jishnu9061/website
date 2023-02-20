@@ -58,7 +58,9 @@ use App\Http\Controllers\issued_summary;
     Route::any('/allowancedelete{id}', 'addController@allowancedelete');
     Route::any('/leavetypedelete{id}', 'addController@leavetypedelete');
     Route::any('/reductiondelete{id}', 'addController@reductiondelete');
-
+    Route::any('/giveallowance{id}', 'addController@giveallowance');
+    Route::any('/givereduction{id}', 'addController@givereduction');
+    Route::any('/allowancetostaff', 'addController@allowancetostaff');
     //add controller
 //hr controller
     Route::any('/managestaff{id}', 'hrcontroller@managestaff');
@@ -73,17 +75,6 @@ use App\Http\Controllers\issued_summary;
     
     
     
-    
-    Route::any('/giveallowance{id}', 'addController@giveallowance');
-    Route::any('/givereduction{id}', 'addController@givereduction');
-    Route::any('/allowancetostaff', 'addController@allowancetostaff');
-    Route::any('/counter', 'hospitalController@counter');
-    Route::any('/Pharmacy', 'PharmacyController@pharmacy');
-    Route::any('/addmedicinez', 'PharmacyController@addmedicinez');
-    Route::any('/allmedicinez', 'PharmacyController@allmedicinez');
-    Route::any('/todaysappointments', 'doctorController@todaysappointments');
-    Route::any('/todaysappointmentsall', 'hospitalController@todaysappointmentsall');
-    Route::any('/reappointments', 'doctorController@reappointments');
     Route::any('/dutyschedulefetch', 'doctorController@dutyschedulefetch');
     Route::any('/dutyschedule', 'hrController@dutyschedule');
     Route::any('/dutydelete{id}', 'hrController@dutydelete');
