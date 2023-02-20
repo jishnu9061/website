@@ -15,17 +15,14 @@
         <div>
             {{-- heading --}}
             <h4 id="hdtpa"><b>Request Safe Item</b></h4>
-
-
-
-
             <br>
-
         </div>
-
-        {{-- <a href="{{('add-corporate')}}"><button class="btn btn-primary">Register Safe Item</button></a> --}}
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Register Safe
+        <div class="row" style="height:50px;">
+        <div class="col-sm-4" style="padding-top:5px;">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin-left:10px;    --clr: #1D1D50;
+                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Register Safe
             Item</button>
+        </div>
 
 
         <div class="header_wrap">
@@ -86,13 +83,20 @@
                                     <td scope="row" class="text-center"></td>
                                     <td scope="row" class="text-center"></td>
                                     <td scope="row" class="text-center">
-                                        <a href=""> <i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
-
-                                            <a href=""><i style="  color:rgb(13, 1, 56);" class="fa fa-edit"></i>
-
-                                                <a href=""> <i style="color:rgb(13, 1, 56);"
-                                                        class="fas fa-trash-alt"></i>
-
+                                        <div class="btn-group">
+                                            <a class="btn" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false" style="border-color:none;"> ⋮ </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">View File
+                                                </a>
+                                                <a class="dropdown-item"
+                                                    href="#">Edit File
+                                                </a>
+                                                <a class="dropdown-item"
+                                                    href="#">Delete
+                                                    File </a>
+                                            </div>
+                                        </div>
                                     </td>
                                 </tr>
 

@@ -121,18 +121,21 @@
                                 <td class="text-center"></td>
                                 <td class="text-center"></td>
                                 <td class="text-center">{{$list->Duration}}</td>
-                                <td class="text-center"></td>
-
-                                <td scope="row" class="text-center">
-                                    <a href="{{url('edit-workflow',$list->id)}}"><i style="  color:rgb(13, 1, 56);"
-                                            class="fa fa-edit"></i>
-                                        <a onClick="return myFunction();" href="{{url('delete-workflow',$list->id)}}">
-                                            <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
-                                            {{-- <a href="{{url('edit-workflow',$list->id)}}"><i
-                                                style="  color:rgb(13, 1, 56);" class="fa fa-eye"></i> --}}
+                                <td class="text-center">
                                 </td>
+                                <td scope="row" class="text-center">
+                                    <div class="btn-group">
+                                        <a class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            style="border-color:none;"> ⋮ </a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">View Workflow</a>
+                                            <a class="dropdown-item" href="{{url('edit-workflow',$list->id)}}">Edit Workflow</a>
+                                            <a class="dropdown-item" href="{{url('delete-workflow',$list->id)}}">Delete
+                                               Workflow</a>
 
-
+                                        </div>
+                                    </div>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>

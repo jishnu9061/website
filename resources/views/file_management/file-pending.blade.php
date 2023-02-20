@@ -8,101 +8,111 @@
 <br><br>
 
 <html>
-    <head>
+
+<head>
     <style>
 
-</style>
+    </style>
 
-    </head>
-    <body>
-  <div class="container">
-<div>
-  {{-- heading --}}
-  <h4 id="hdtpa"><b>Files Pending Closure</b></h4>
-</div>
+</head>
 
-    <div class="header_wrap">
-      <div class="num_rows">
-        <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
-         <select class  ="form-control" aria-label="Page navigation example" name="state" id="maxRows">
-
-           <option value="5"> 5 </option>
-           <option value="10">10</option>
-           <option value="15">15</option>
-           <option value="20">20</option>
-           <option value="50">50</option>
-           <option value="70">70</option>
-           <option value="100">100</option>
-          <option value="5000">Show ALL Rows</option>
-          </select>
-
+<body>
+    <div class="container">
+        <div>
+            {{-- heading --}}
+            <h4 id="hdtpa"><b>Files Pending Closure</b></h4>
         </div>
-      </div>
-      <div class="tb_search">
-<input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
-      </div>
+
+        <div class="header_wrap">
+            <div class="num_rows">
+                <div class="form-group">
+                    <!--		Show Numbers Of Rows 		-->
+                    <select class="form-control" aria-label="Page navigation example" name="state" id="maxRows">
+
+                        <option value="5"> 5 </option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="70">70</option>
+                        <option value="100">100</option>
+                        <option value="5000">Show ALL Rows</option>
+                    </select>
+
+                </div>
+            </div>
+            <div class="tb_search">
+                <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.."
+                    class="form-control">
+            </div>
 
 
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            <div class="table-responsive">
-        <table class="table table-striped table-class" id= "table-id">
-                    <thead >
-                        <tr>
-                            <!-- <th class="text-center">*</th> -->
-                            <th class="text-center">Client</th>
-                            <th class="text-center">File No</th>
-                            <th class="text-center">File Name</th>
-                            <th class="text-center">File Type</th>
-                            <th class="text-center">Approving <br>Partner</th>
-                            <th class="text-center">Responsible<br> Advocate</th>
-                            <th class="text-center">Date Opened</th>
-                            <th class="text-center">File<br> Balance<br>(Kshs)</th>
-                            <th class="text-center">File<br> Outstanding<br>(Kshs)</th>
-                            <th class="text-center">Action</th>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-class" id="table-id">
+                            <thead>
+                                <tr>
+                                    <!-- <th class="text-center">*</th> -->
+                                    <th class="text-center">Client</th>
+                                    <th class="text-center">File No</th>
+                                    <th class="text-center">File Name</th>
+                                    <th class="text-center">File Type</th>
+                                    <th class="text-center">Approving <br>Partner</th>
+                                    <th class="text-center">Responsible<br> Advocate</th>
+                                    <th class="text-center">Date Opened</th>
+                                    <th class="text-center">File<br> Balance<br>(Kshs)</th>
+                                    <th class="text-center">File<br> Outstanding<br>(Kshs)</th>
+                                    <th class="text-center">Action</th>
 
-                        </tr>
-                    </thead>
+                                </tr>
+                            </thead>
 
-                    <tbody>
-                    @foreach($file_pending_closure as $pending)
-                        <tr id="data">
+                            <tbody>
+                                @foreach($file_pending_closure as $pending)
+                                <tr id="data">
 
-                            <!-- <td scope="row" class="text-center">{{$pending->id}}</td> -->
-                            <td scope="row" class="text-center">{{$pending->client}}</td>
-                            <td scope="row" class="text-center">{{$pending->id}}</td>
-                            <td scope="row" class="text-center">{{$pending->file_name}}</td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center">{{$pending->advocate}}</td>
-                            <td scope="row" class="text-center">{{$pending->open_date}}</td>
-                            <td scope="row" class="text-center"></td>
-                            <td scope="row" class="text-center"></td>
-                            <td  scope="row"class="text-center">
+                                    <!-- <td scope="row" class="text-center">{{$pending->id}}</td> -->
+                                    <td scope="row" class="text-center">{{$pending->client}}</td>
+                                    <td scope="row" class="text-center">{{$pending->id}}</td>
+                                    <td scope="row" class="text-center">{{$pending->file_name}}</td>
+                                    <td scope="row" class="text-center"></td>
+                                    <td scope="row" class="text-center"></td>
+                                    <td scope="row" class="text-center">{{$pending->advocate}}</td>
+                                    <td scope="row" class="text-center">{{$pending->open_date}}</td>
+                                    <td scope="row" class="text-center"></td>
+                                    <td scope="row" class="text-center"></td>
+                                    <td scope="row" class="text-center">
+                                        <div class="btn-group">
+                                            <a class="btn" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false" style="border-color:none;"> ⋮ </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">View File
+                                                    Report</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
 
-                        <a href=""> <i style="color:rgb(13, 1, 56);"class="fa fa-eye"></i></td>
+                                @endforeach
 
-                        </tr>
+                            </tbody>
 
-                        @endforeach
+                        </table>
+                    </div>
 
-                    </tbody>
+                    <!--		Start Pagination -->
+                    <div class='pagination-container'>
+                        <nav>
+                            <ul class="pagination">
+                                <!--	Here the JS Function Will Add the Rows -->
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="rows_count">Showing 11 to 20 of 100</div>
 
-                </table>
-</div>
-
-               	<!--		Start Pagination -->
-    <div class='pagination-container'>
-      <nav>
-        <ul class="pagination">
-         <!--	Here the JS Function Will Add the Rows -->
-        </ul>
-      </nav>
-    </div>
-    <div class="rows_count">Showing 11 to 20 of 100</div>
-
- <!-- 		End of Container -->
-</div>
+                    <!-- 		End of Container -->
+                </div>
 
                 <!-- The Modal -->
                 <div class="modal fade" id="editmed">

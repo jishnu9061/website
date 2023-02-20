@@ -1,52 +1,56 @@
 @extends('layouts.hmsmain')
 @section('content')
 <nav style="font-size:15px;">
-  <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
-  <a href="#" style="color: #1D1D50;">File Management</a> /
-  <a href="#" style="color: #1D1D50;">Instructions Past TAT</a>
+    <a href="{{url('home')}}" style="color: #1D1D50;">Home</a> /
+    <a href="#" style="color: #1D1D50;">File Management</a> /
+    <a href="#" style="color: #1D1D50;">Instructions Past TAT</a>
 </nav>
 <br><br>
 <html>
-    <head>
+
+<head>
     <style>
 
-</style>
-    </head>
-    <body>
+    </style>
+</head>
+
+<body>
     <div class="container">
 
 
-         {{-- heading --}}
-         <h4 id="hdtpa"><b>Instructions Past TAT</b></h4>
+        {{-- heading --}}
+        <h4 id="hdtpa"><b>Instructions Past TAT</b></h4>
 
 
 
-    <div class="header_wrap">
-      <div class="num_rows">
-        <div class="form-group"> 	<!--		Show Numbers Of Rows 		-->
-         <select class  ="form-control" aria-label="Page navigation example" name="state" id="maxRows">
+        <div class="header_wrap">
+            <div class="num_rows">
+                <div class="form-group">
+                    <!--		Show Numbers Of Rows 		-->
+                    <select class="form-control" aria-label="Page navigation example" name="state" id="maxRows">
 
-          <option value="5">5</option>
-          <option value="10">10</option>
-           <option value="15">15</option>
-           <option value="20">20</option>
-           <option value="50">50</option>
-           <option value="70">70</option>
-           <option value="100">100</option>
-          <option value="5000">Show ALL Rows</option>
-          </select>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="70">70</option>
+                        <option value="100">100</option>
+                        <option value="5000">Show ALL Rows</option>
+                    </select>
 
-        </div>
-      </div>
-      <div class="tb_search">
-<input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.." class="form-control">
-      </div>
+                </div>
+            </div>
+            <div class="tb_search">
+                <input type="text" id="search_input_all" onkeyup="FilterkeyWord_all_table()" placeholder="Search.."
+                    class="form-control">
+            </div>
 
 
 
-    <div class="table-responsive">
-        <table class="table table-striped table-class" id= "table-id">
-                    <thead >
+            <div class="table-responsive">
+                <table class="table table-striped table-class" id="table-id">
+                    <thead>
                         <tr>
                             <!-- <th class="text-center">ID</th> -->
                             <th class="text-center">Post Date</th>
@@ -69,7 +73,7 @@
 
 
                     <tbody>
-                    @foreach($instruction_past as $instruction)
+                        @foreach($instruction_past as $instruction)
                         <tr id="data">
 
                             <!-- <td scope="row" class="text-center">{{$instruction->id}}</td> -->
@@ -84,11 +88,18 @@
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
-                            <td  scope="row"class="text-center">
-                        <a href=""><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-
-
-                        <a href=""> <i style="color:rgb(13, 1, 56);"class="fas fa-trash-alt"></i></td>
+                            <td scope="row" class="text-center">
+                                <div class="btn-group">
+                                    <a class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                        style="border-color:none;"> ⋮ </a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">View File
+                                            Report</a>
+                                        <a class="dropdown-item" href="#">Delete File
+                                            Report</a>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
 
                         @endforeach
@@ -96,22 +107,23 @@
                     </tbody>
 
                 </table>
-</div>
+            </div>
 </body>
+
 </html>
 <!--		Start Pagination -->
 <div class='pagination-container'>
-      <nav>
+    <nav>
         <ul class="pagination">
-         <!--	Here the JS Function Will Add the Rows -->
+            <!--	Here the JS Function Will Add the Rows -->
         </ul>
-      </nav>
-    </div>
-    <div class="rows_count">Showing 11 to 20 of 100</div>
+    </nav>
+</div>
+<div class="rows_count">Showing 11 to 20 of 100</div>
 
- <!-- 		End of Container -->
+<!-- 		End of Container -->
 
-                <!-- The Modal -->
+<!-- The Modal -->
 
-        {{-- Supplier Edit End --}}
-        @endsection
+{{-- Supplier Edit End --}}
+@endsection
