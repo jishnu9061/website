@@ -101,24 +101,9 @@ use App\Http\Controllers\issued_summary;
     
 
    
-  
-    Route::any('/addloan', 'hrcontroller@addloan')->name('addloan');
-    Route::any('/payslip', 'hrcontroller@payslip')->name('payslip');
-    Route::any('/payslipbulk', 'hrcontroller@payslipbulk')->name('payslipbulk');
-    Route::any('/generatepayslip', 'hrcontroller@generatepayslip')->name('generatepayslip');
-    Route::any('/generatebbulkpayslip', 'hrcontroller@generatebbulkpayslip')->name('generatebbulkpayslip');
-    Route::any('/allstaffsal', 'hrcontroller@allstaffsal');
-    Route::get('/loans', 'hrcontroller@loans')->name('loans');
-    Route::get('/addleavecategory', 'hrcontroller@addleavecategory')->name('addleavecategory');
-    Route::any('/editdeallowance', 'hrcontroller@editdeallowance')->name('editdeallowance');
-    Route::any('/editdereduction', 'hrcontroller@editdereduction')->name('editdereduction');
 
-    Route::any('/addnonfixedallowance', 'addController@addnonfixedallowance')->name('addnonfixedallowance');
-    Route::any('/depqueue', 'doctorController@depqueue');
-    Route::any('/filedownload{id}', 'PharmacyController@filedownload');
-    Route::any('/loandelete{id}', 'hrcontroller@loandelete');
+    
     // Pharmacy
-
     Route::any('/serving', 'PharmacyController@serving');
     Route::any('/alldoctors', 'PharmacyController@alldoctors');
     Route::any('/pharmacyserved{id}', 'PharmacyController@pharmacyserve');
