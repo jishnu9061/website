@@ -12,18 +12,16 @@
 
     {{-- heading --}}
     <h4 id="hdtpa"><b>Clients Outgoing Letters</b></h4>
-    <br><br>
-
-
     <br>
+    <div class="row" style="height:50px;">
+    <div class="col-sm-4" style="padding-top:5px;">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin-left:10px;    --clr: #1D1D50;
+                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add Outgoing Letter</button>
+    </div>
 
     <!-- <a href="{{url('add-outgoing-letters')}}"><button class="btn btn-primary add-btn"
                 style="width: 20%;">Add Outgoing Letter</button></a> -->
-    {{-- <a href="{{('add-corporate')}}"><button class="btn btn-primary">Add Outgoing Letter</button></a> --}}
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-        Add Outgoing Letter</button>
-
-
+   
     <div class="header_wrap">
         <div class="num_rows">
             <div class="form-group">
@@ -89,12 +87,16 @@
                                 <td scope="row" class="text-center"></td>
                                 <td scope="row" class="text-center"></td>
                                 <td scope="row" class="text-center">
-                                    <a href=""> <i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
+                                    <div class="btn-group">
+                                        <a class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            style="border-color:none;"> ⋮ </a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">View Letter Details</a>
+                                            <a class="dropdown-item" href="#">Edit Letter Details</a>
+                                            <a class="dropdown-item" href="#">Delete Letter Details</a>
 
-                                        <a href=""><i style="  color:rgb(13, 1, 56);" class="fa fa-edit"></i>
-
-                                            <a href=""> <i style="color:rgb(13, 1, 56);" class="fas fa-trash-alt"></i>
-
+                                        </div>
+                                    </div>
                                 </td>
                                 <!-- <td scope="row" class="text-center"><input type="checkbox" name="" id=""></td> -->
                             </tr>
