@@ -101,16 +101,7 @@ use App\Http\Controllers\issued_summary;
     
     
 
-    Route::any('/consult', 'doctorController@consult');
-    Route::any('/addsalary', 'addController@addsalary');
-    Route::any('/addallowance', 'addController@addallowance');
-    Route::any('/addleavetype', 'addController@addleavetype');
-    Route::any('/editleavetype', 'addController@editleavetype');
-    Route::any('/addreduction', 'addController@addreduction');
-    Route::any('/allowancedelete{id}', 'addController@allowancedelete');
-    Route::any('/leavetypedelete{id}', 'addController@leavetypedelete');
-    Route::any('/reductiondelete{id}', 'addController@reductiondelete');
-    Route::any('/giveallowance{id}', 'addController@giveallowance');
+   
     Route::any('/givereduction{id}', 'addController@givereduction');
     Route::any('/allowancetostaff', 'addController@allowancetostaff');
     Route::any('/counter', 'hospitalController@counter');
