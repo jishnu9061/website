@@ -62,6 +62,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('/givereduction{id}', 'addController@givereduction');
     Route::any('/allowancetostaff', 'addController@allowancetostaff');
     Route::any('/addnonfixedallowance', 'addController@addnonfixedallowance')->name('addnonfixedallowance');
+    Route::any('/staffs', 'addController@allstaffs');
 
     //add controller
 //hr controller
@@ -69,16 +70,9 @@ use App\Http\Controllers\issued_summary;
     Route::any('/attendanceview', 'hrcontroller@attendanceview');
     Route::any('/monthwise', 'hrController@monthwise');
     Route::any('/attendancetostaff', 'hrController@attendancetostaff');
-
-    //hr controller
-//department controller
-    Route::any('/managedepstaff{id}', 'departmentcontroller@managedepstaff');
     Route::any('/appliedleave', 'hrcontroller@appliedleave');
     Route::any('/hrleaveapprove', 'hrcontroller@hrleaveapprove');
     Route::any('/leaves', 'hrcontroller@leaves');
-    Route::any('/leaveapprove', 'departmentcontroller@leaveapprove');
-    Route::any('/leavedecline', 'departmentcontroller@leavedecline');
-    Route::any('/depleaves', 'departmentcontroller@depleaves');
     Route::any('/addloan', 'hrcontroller@addloan')->name('addloan');
     Route::any('/payslip', 'hrcontroller@payslip')->name('payslip');
     Route::any('/payslipbulk', 'hrcontroller@payslipbulk')->name('payslipbulk');
@@ -91,6 +85,14 @@ use App\Http\Controllers\issued_summary;
     Route::any('/editdereduction', 'hrcontroller@editdereduction')->name('editdereduction');
     Route::any('/loandelete{id}', 'hrcontroller@loandelete');
 
+    //hr controller
+//department controller
+    Route::any('/managedepstaff{id}', 'departmentcontroller@managedepstaff');
+    Route::any('/leaveapprove', 'departmentcontroller@leaveapprove');
+    Route::any('/leavedecline', 'departmentcontroller@leavedecline');
+    Route::any('/depleaves', 'departmentcontroller@depleaves');
+    
+    
     
 //doctor controller
     Route::any('/applyleave', 'doctorController@applyleave');
@@ -98,26 +100,6 @@ use App\Http\Controllers\issued_summary;
    
     
     
-   
-   
-   
-   
-    Route::any('/addstaffs', 'addController@addstaffs');
-    Route::any('/editstafff', 'addController@editstafff');
-    Route::any('/addthestaffs', 'addController@addthestaffs');
-    Route::any('/staffs', 'addController@allstaffs');
-    Route::any('/managestaff{id}', 'hrcontroller@managestaff');
-    Route::any('/managedepstaff{id}', 'departmentcontroller@managedepstaff');
-    Route::any('/disableuser{id}', 'addController@disableuser');
-    Route::any('/enableuser{id}', 'addController@enableuser');
-    Route::any('/Consultation{id}', 'doctorController@consultation');
-    Route::any('/managepatient{id}', 'doctorController@managepatient');
-    Route::any('/staffsalary{id}', 'addController@staffsalary');
-    Route::any('/paysalary', 'addController@paysalary');
-    Route::any('/attendanceview', 'hrController@attendanceview');
-    Route::any('/monthwise', 'hrController@monthwise');
-    Route::any('/attendancetostaff', 'hrController@attendancetostaff');
-
 
     Route::any('/consult', 'doctorController@consult');
     Route::any('/addsalary', 'addController@addsalary');
