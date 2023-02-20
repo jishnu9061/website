@@ -116,15 +116,21 @@
                                             <td scope="row" class="text-center"></td>
                                             <td scope="row" class="text-center">{{ $list->close_date }}</td>
                                             <td scope="row" class="text-center">
-                                                <a href="#"onclick=viewbox(this) data-id="{{ $list->id }}"data-toggle="modal"
-                                                    data-target="#viewmyModal"><i style="color:black;" class="fa fa-eye"
-                                                        aria-hidden="true"></i></a>
-                                                <a href="{{ url('edit-box-no', $list->id) }}"><i style="color:black;"
-                                                        class="fa fa-edit"aria-hidden="true"></i></a>
-                                                <a onClick="return myFunction();"
-                                                    href="{{ url('delete-box-no', $list->id) }}" style="color:black;"><i
-                                                        class="fas fa-trash-alt"></i></a>
-                                            </td>
+                                    <div class="btn-group">
+                                        <a class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            style="border-color:none;"> ⋮ </a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item"  href="#"onclick=viewbox(this) data-id="{{ $list->id }}"data-toggle="modal"
+                                                    data-target="#viewmyModal" href="{{url('view-list',$list->id)}}">View File
+                                                </a>
+                                            <a class="dropdown-item" href="{{url('edit-box-no',$list->id)}}">Edit File
+                                                </a>
+                                            <a class="dropdown-item" href="{{url('delete-box-no',$list->id)}}">Delete
+                                                File </a>
+
+                                        </div>
+                                    </div>
+                                </td>
                                         </tr>
                                     @endforeach
                                 </tbody>
