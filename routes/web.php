@@ -44,21 +44,7 @@ use App\Http\Controllers\issued_summary;
     Route::get('/admin', 'homecontroller@index')->name('home');
     Route::get('/admindashboard', 'homecontroller@admindashboard')->name('admindashboard');
     Route::get('/logt', 'homecontroller@logout')->name('home');
-    Route::any('/patientregistration', 'patientcontroller@patientregistration')->name('allpatients');
-    Route::any('/getdepartmentdoctor', 'patientcontroller@getdepartmentdoctor')->name('getdepartmentdoctor');
-    Route::post('/addpatient', 'patientcontroller@addpatient')->name('addpatient');
-    Route::any('/allpatients', 'patientcontroller@allpatients')->name('allpatients');
-    Route::any('/viewpatient{id}', 'patientController@viewpatient');
-    Route::any('/editpatient{id}', 'patientController@editpatient');
-    Route::any('editthepatient', 'patientController@editthepatient');
-    Route::any('/beds', 'bedsController@beds');
-    Route::any('/allocatebed', 'bedsController@allocatebed');
-    Route::any('/allocateroom', 'bedsController@allocateroom');
-    Route::any('/allocatenonacroom', 'bedsController@allocatenonacroom');
-    Route::any('/hospitals', 'hospitalController@hospitals');
-    Route::any('/addhospital', 'hospitalController@addhospital');
-    // Route::any('/admins', 'hospitalController@admins');
-    Route::any('/roles', 'hospitalController@roles');
+   
     //rooms
     Route::any('/addroomtypes', 'hospitalController@addroomtypes');
     Route::any('/saveroomtypes', 'hospitalController@saveroomtypes');
