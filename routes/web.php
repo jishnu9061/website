@@ -61,6 +61,8 @@ use App\Http\Controllers\issued_summary;
     Route::any('/giveallowance{id}', 'addController@giveallowance');
     Route::any('/givereduction{id}', 'addController@givereduction');
     Route::any('/allowancetostaff', 'addController@allowancetostaff');
+    Route::any('/addnonfixedallowance', 'addController@addnonfixedallowance')->name('addnonfixedallowance');
+
     //add controller
 //hr controller
     Route::any('/managestaff{id}', 'hrcontroller@managestaff');
@@ -86,7 +88,9 @@ use App\Http\Controllers\issued_summary;
     Route::get('/loans', 'hrcontroller@loans')->name('loans');
     Route::get('/addleavecategory', 'hrcontroller@addleavecategory')->name('addleavecategory');
     Route::any('/editdeallowance', 'hrcontroller@editdeallowance')->name('editdeallowance');
-    
+    Route::any('/editdereduction', 'hrcontroller@editdereduction')->name('editdereduction');
+    Route::any('/loandelete{id}', 'hrcontroller@loandelete');
+
     
 //doctor controller
     Route::any('/applyleave', 'doctorController@applyleave');
@@ -95,16 +99,7 @@ use App\Http\Controllers\issued_summary;
     
     
    
-    Route::any('/editdereduction', 'hrcontroller@editdereduction')->name('editdereduction');
-    Route::any('/addnonfixedallowance', 'addController@addnonfixedallowance')->name('addnonfixedallowance');
-    Route::any('/depqueue', 'doctorController@depqueue');
-    Route::any('/filedownload{id}', 'PharmacyController@filedownload');
-    Route::any('/loandelete{id}', 'hrcontroller@loandelete');
-    Route::any('/addadmins', 'hospitalController@addadmins');
-    Route::any('/allhospitals', 'hospitalController@allhospitals');
-    Route::any('/appointment{id}', 'hospitalController@appointment');
-    Route::any('/getdoctordetails{id}', 'hospitalController@getdoctordetails');
-    Route::any('/get_cons_fees', 'hospitalController@get_cons_fees');
+   
     Route::any('/bookappointment', 'hospitalController@bookappointment');
     Route::any('/allappointment', 'hospitalController@allappointment');
     Route::any('/print_appointment{id}', 'hospitalController@print_appointment')->name('print_appointment');
@@ -115,6 +110,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('/queuemanagement', 'hospitalController@queuemanagement');
     Route::any('/clinicalnotes', 'bedsController@clinicalnotes');
     Route::any('/callthepatient{id}', 'hospitalController@callthepatient');
+   
     Route::any('/addstaffs', 'addController@addstaffs');
     Route::any('/editstafff', 'addController@editstafff');
     Route::any('/addthestaffs', 'addController@addthestaffs');
