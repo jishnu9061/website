@@ -335,7 +335,7 @@ color: #999;
     <div class="modal-dialog modal-lg" style="width:30%;">
         <div class="modal-content">
             <!---- Modal Header -->
-            <form method="post"  id="delete_payment_item" action="{{url('delete_payment_item')}}" enctype="multipart/form-data"> 
+            <form method="post"  id="delete_payment_item" action="{{url('delete_payment_item',$payment->id)}}" enctype="multipart/form-data"> 
                 @csrf
                 <input type="hidden" id="id" value="id">
                 <div class="modal-header" style="padding:0rem 0rem;">

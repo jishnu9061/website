@@ -58,6 +58,11 @@ use App\Http\Controllers\issued_summary;
     Route::any('/allowancedelete{id}', 'addController@allowancedelete');
     Route::any('/leavetypedelete{id}', 'addController@leavetypedelete');
     Route::any('/reductiondelete{id}', 'addController@reductiondelete');
+    Route::any('/giveallowance{id}', 'addController@giveallowance');
+    Route::any('/givereduction{id}', 'addController@givereduction');
+    Route::any('/allowancetostaff', 'addController@allowancetostaff');
+    Route::any('/addnonfixedallowance', 'addController@addnonfixedallowance')->name('addnonfixedallowance');
+    Route::any('/staffs', 'addController@allstaffs');
 
     //add controller
 //hr controller
@@ -65,148 +70,40 @@ use App\Http\Controllers\issued_summary;
     Route::any('/attendanceview', 'hrcontroller@attendanceview');
     Route::any('/monthwise', 'hrController@monthwise');
     Route::any('/attendancetostaff', 'hrController@attendancetostaff');
+    Route::any('/appliedleave', 'hrcontroller@appliedleave');
+    Route::any('/hrleaveapprove', 'hrcontroller@hrleaveapprove');
+    Route::any('/leaves', 'hrcontroller@leaves');
+    Route::any('/addloan', 'hrcontroller@addloan')->name('addloan');
+    Route::any('/payslip', 'hrcontroller@payslip')->name('payslip');
+    Route::any('/payslipbulk', 'hrcontroller@payslipbulk')->name('payslipbulk');
+    Route::any('/generatepayslip', 'hrcontroller@generatepayslip')->name('generatepayslip');
+    Route::any('/generatebbulkpayslip', 'hrcontroller@generatebbulkpayslip')->name('generatebbulkpayslip');
+    Route::any('/allstaffsal', 'hrcontroller@allstaffsal');
+    Route::get('/loans', 'hrcontroller@loans')->name('loans');
+    Route::get('/addleavecategory', 'hrcontroller@addleavecategory')->name('addleavecategory');
+    Route::any('/editdeallowance', 'hrcontroller@editdeallowance')->name('editdeallowance');
+    Route::any('/editdereduction', 'hrcontroller@editdereduction')->name('editdereduction');
+    Route::any('/loandelete{id}', 'hrcontroller@loandelete');
 
     //hr controller
 //department controller
     Route::any('/managedepstaff{id}', 'departmentcontroller@managedepstaff');
-
-    
-    
-    
-    
-    Route::any('/giveallowance{id}', 'addController@giveallowance');
-    Route::any('/givereduction{id}', 'addController@givereduction');
-    Route::any('/allowancetostaff', 'addController@allowancetostaff');
-    Route::any('/counter', 'hospitalController@counter');
-    Route::any('/Pharmacy', 'PharmacyController@pharmacy');
-    Route::any('/addmedicinez', 'PharmacyController@addmedicinez');
-    Route::any('/allmedicinez', 'PharmacyController@allmedicinez');
-    Route::any('/todaysappointments', 'doctorController@todaysappointments');
-    Route::any('/todaysappointmentsall', 'hospitalController@todaysappointmentsall');
-    Route::any('/reappointments', 'doctorController@reappointments');
-    Route::any('/dutyschedulefetch', 'doctorController@dutyschedulefetch');
-    Route::any('/dutyschedule', 'hrController@dutyschedule');
-    Route::any('/dutydelete{id}', 'hrController@dutydelete');
-    Route::any('/applyleave', 'doctorController@applyleave');
-    Route::any('/file', 'doctorController@file');
-    Route::any('/appliedleave', 'hrcontroller@appliedleave');
-    Route::any('/hrleaveapprove', 'hrcontroller@hrleaveapprove');
-    Route::any('/leaves', 'hrcontroller@leaves');
     Route::any('/leaveapprove', 'departmentcontroller@leaveapprove');
     Route::any('/leavedecline', 'departmentcontroller@leavedecline');
     Route::any('/depleaves', 'departmentcontroller@depleaves');
-    Route::any('/addloan', 'hrcontroller@addloan')->name('addloan');
-    Route::any('/payslip', 'hrcontroller@payslip')->name('payslip');
-    Route::any('/payslipbulk', 'hrcontroller@payslipbulk')->name('payslipbulk');
-    Route::any('/generatepayslip', 'hrcontroller@generatepayslip')->name('generatepayslip');
-    Route::any('/generatebbulkpayslip', 'hrcontroller@generatebbulkpayslip')->name('generatebbulkpayslip');
-    Route::any('/allstaffsal', 'hrcontroller@allstaffsal');
-    Route::get('/loans', 'hrcontroller@loans')->name('loans');
-    Route::get('/addleavecategory', 'hrcontroller@addleavecategory')->name('addleavecategory');
-    Route::any('/editdeallowance', 'hrcontroller@editdeallowance')->name('editdeallowance');
-    Route::any('/editdereduction', 'hrcontroller@editdereduction')->name('editdereduction');
-
-    Route::any('/addnonfixedallowance', 'addController@addnonfixedallowance')->name('addnonfixedallowance');
-    Route::any('/depqueue', 'doctorController@depqueue');
-    Route::any('/filedownload{id}', 'PharmacyController@filedownload');
-    Route::any('/loandelete{id}', 'hrcontroller@loandelete');
-    Route::any('/addadmins', 'hospitalController@addadmins');
-    Route::any('/allhospitals', 'hospitalController@allhospitals');
-    Route::any('/appointment{id}', 'hospitalController@appointment');
-    Route::any('/getdoctordetails{id}', 'hospitalController@getdoctordetails');
-    Route::any('/get_cons_fees', 'hospitalController@get_cons_fees');
-    Route::any('/bookappointment', 'hospitalController@bookappointment');
-    Route::any('/allappointment', 'hospitalController@allappointment');
-    Route::any('/print_appointment{id}', 'hospitalController@print_appointment')->name('print_appointment');
-    Route::any('/edit_appointment{id}', 'hospitalController@edit_appointment');
-    Route::any('/update_appointment', 'hospitalController@update_appointment')->name('update_appointment');
-    Route::any('/delete_appointment{id}', 'hospitalController@delete_appointment')->name('delete_appointment');
-    Route::any('/cross_consult{id}', 'hospitalController@cross_consult')->name('cross_consult');
-    Route::any('/queuemanagement', 'hospitalController@queuemanagement');
-    Route::any('/clinicalnotes', 'bedsController@clinicalnotes');
-    Route::any('/callthepatient{id}', 'hospitalController@callthepatient');
-    Route::any('/addstaffs', 'addController@addstaffs');
-    Route::any('/editstafff', 'addController@editstafff');
-    Route::any('/addthestaffs', 'addController@addthestaffs');
-    Route::any('/staffs', 'addController@allstaffs');
-    Route::any('/managestaff{id}', 'hrcontroller@managestaff');
-    Route::any('/managedepstaff{id}', 'departmentcontroller@managedepstaff');
-    Route::any('/disableuser{id}', 'addController@disableuser');
-    Route::any('/enableuser{id}', 'addController@enableuser');
-    Route::any('/Consultation{id}', 'doctorController@consultation');
-    Route::any('/managepatient{id}', 'doctorController@managepatient');
-    Route::any('/staffsalary{id}', 'addController@staffsalary');
-    Route::any('/paysalary', 'addController@paysalary');
-    Route::any('/attendanceview', 'hrController@attendanceview');
-    Route::any('/monthwise', 'hrController@monthwise');
-    Route::any('/attendancetostaff', 'hrController@attendancetostaff');
-
-
-    Route::any('/consult', 'doctorController@consult');
-    Route::any('/addsalary', 'addController@addsalary');
-    Route::any('/addallowance', 'addController@addallowance');
-    Route::any('/addleavetype', 'addController@addleavetype');
-    Route::any('/editleavetype', 'addController@editleavetype');
-    Route::any('/addreduction', 'addController@addreduction');
-    Route::any('/allowancedelete{id}', 'addController@allowancedelete');
-    Route::any('/leavetypedelete{id}', 'addController@leavetypedelete');
-    Route::any('/reductiondelete{id}', 'addController@reductiondelete');
-    Route::any('/giveallowance{id}', 'addController@giveallowance');
-    Route::any('/givereduction{id}', 'addController@givereduction');
-    Route::any('/allowancetostaff', 'addController@allowancetostaff');
-    Route::any('/counter', 'hospitalController@counter');
-    Route::any('/Pharmacy', 'PharmacyController@pharmacy');
-    Route::any('/addmedicinez', 'PharmacyController@addmedicinez');
-    Route::any('/allmedicinez', 'PharmacyController@allmedicinez');
-    Route::any('/todaysappointments', 'doctorController@todaysappointments');
-    Route::any('/todaysappointmentsall', 'hospitalController@todaysappointmentsall');
-    Route::any('/reappointments', 'doctorController@reappointments');
-    Route::any('/dutyschedulefetch', 'doctorController@dutyschedulefetch');
-    Route::any('/dutyschedule', 'hrController@dutyschedule');
-    Route::any('/dutydelete{id}', 'hrController@dutydelete');
+    
+    
+    
+//doctor controller
     Route::any('/applyleave', 'doctorController@applyleave');
     Route::any('/file', 'doctorController@file');
-    Route::any('/appliedleave', 'hrcontroller@appliedleave');
-    Route::any('/hrleaveapprove', 'hrcontroller@hrleaveapprove');
-    Route::any('/leaves', 'hrcontroller@leaves');
-    Route::any('/leaveapprove', 'departmentcontroller@leaveapprove');
-    Route::any('/leavedecline', 'departmentcontroller@leavedecline');
-    Route::any('/depleaves', 'departmentcontroller@depleaves');
-    Route::any('/addloan', 'hrcontroller@addloan')->name('addloan');
-    Route::any('/payslip', 'hrcontroller@payslip')->name('payslip');
-    Route::any('/payslipbulk', 'hrcontroller@payslipbulk')->name('payslipbulk');
-    Route::any('/generatepayslip', 'hrcontroller@generatepayslip')->name('generatepayslip');
-    Route::any('/generatebbulkpayslip', 'hrcontroller@generatebbulkpayslip')->name('generatebbulkpayslip');
-    Route::any('/allstaffsal', 'hrcontroller@allstaffsal');
-    Route::get('/loans', 'hrcontroller@loans')->name('loans');
-    Route::get('/addleavecategory', 'hrcontroller@addleavecategory')->name('addleavecategory');
-    Route::any('/editdeallowance', 'hrcontroller@editdeallowance')->name('editdeallowance');
-    Route::any('/editdereduction', 'hrcontroller@editdereduction')->name('editdereduction');
-
-    Route::any('/addnonfixedallowance', 'addController@addnonfixedallowance')->name('addnonfixedallowance');
-    Route::any('/depqueue', 'doctorController@depqueue');
-    Route::any('/filedownload{id}', 'PharmacyController@filedownload');
-    Route::any('/loandelete{id}', 'hrcontroller@loandelete');
-    // Pharmacy
-
-    Route::any('/serving', 'PharmacyController@serving');
-    Route::any('/alldoctors', 'PharmacyController@alldoctors');
-    Route::any('/pharmacyserved{id}', 'PharmacyController@pharmacyserve');
-    Route::any('/yoyo', 'PharmacyController@pharmacyserved');
-    Route::any('/reorder', 'PharmacyController@reorder');
-    Route::any('/expired', 'PharmacyController@expired');
-    Route::any('/addmed', 'PharmacyController@addmed');
-    Route::get('/searchmeds', 'PharmacyController@searchmeds')->name('searchmeds');
-    Route::get('/wardbeds', 'departmentcontroller@wardbeds')->name('wardbeds');
-    Route::get('/ip', 'patientcontroller@ip')->name('ip');
-    Route::any('/manage_biils', 'pharmacycontroller@view_bill')->name('manage_bills');
-    Route::any('/request_items', 'PharmacyController@request_items')->name('request_items');
-    Route::any('/add_request_items', 'PharmacyController@add_request_items')->name('add_request_items');
-    Route::any('/view_request_items{request_intendid}', 'PharmacyController@view_request_items')->name('view_request_items');
-    Route::any('/edit_request_items{request_intendid}', 'PharmacyController@edit_request_items')->name('edit_request_items');
-    Route::any('/update_request_items', 'PharmacyController@update_request_items')->name('update_request_items');
+   
+//store controller 
     Route::any('/requestitems', 'storecontroller@create_requestitems')->name('requestitems');
-    Route::any('/depstaffs', 'departmentcontroller@depstaffs')->name('depstaffs');
+
+   
+
+   
     //department
     Route::any('/depstock', 'departmentcontroller@depstock')->name('depstock');
     Route::any('/depbeds', 'departmentcontroller@depbeds')->name('depbeds');
