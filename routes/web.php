@@ -98,18 +98,12 @@ use App\Http\Controllers\issued_summary;
     Route::any('/applyleave', 'doctorController@applyleave');
     Route::any('/file', 'doctorController@file');
    
-    
+//store controller 
+    Route::any('/requestitems', 'storecontroller@create_requestitems')->name('requestitems');
 
    
 
-    Route::any('/manage_biils', 'pharmacycontroller@view_bill')->name('manage_bills');
-    Route::any('/request_items', 'PharmacyController@request_items')->name('request_items');
-    Route::any('/add_request_items', 'PharmacyController@add_request_items')->name('add_request_items');
-    Route::any('/view_request_items{request_intendid}', 'PharmacyController@view_request_items')->name('view_request_items');
-    Route::any('/edit_request_items{request_intendid}', 'PharmacyController@edit_request_items')->name('edit_request_items');
-    Route::any('/update_request_items', 'PharmacyController@update_request_items')->name('update_request_items');
-    Route::any('/requestitems', 'storecontroller@create_requestitems')->name('requestitems');
-    Route::any('/depstaffs', 'departmentcontroller@depstaffs')->name('depstaffs');
+   
     //department
     Route::any('/depstock', 'departmentcontroller@depstock')->name('depstock');
     Route::any('/depbeds', 'departmentcontroller@depbeds')->name('depbeds');
