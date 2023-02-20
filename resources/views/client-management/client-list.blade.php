@@ -151,7 +151,7 @@
 
 
         <!-- style="width:100%;background-color:#d6ba8a;color:#1D1D50;border:1px solid gold;font-size:25px;">
-                                                                                                                                    <b><u>Individual Client List</u></b> -->
+                                                                                                                                            <b><u>Individual Client List</u></b> -->
         {{-- heading --}}
         <div class="container">
             <div class="row" style="height:50px;">
@@ -172,7 +172,7 @@
                     text-align:center;
                     box-shadow: inset 0 0 3px #d3d0ca;
                     opacity: .9;">
-                        <b style="font-size:18px;">Corporate Client List</b>
+                        <b style="font-size:18px;">Individual Client List</b>
                     </h4>
                 </div>
                 <div class="col-sm-4" style="">
@@ -219,7 +219,7 @@
                                         {{-- <th class="text-center">Documents</th> --}}
                                         <th class="text-center">Actions</th>
                                         <!-- <th class="text-center">Edit</th>
-                                                                                                                                                        <th class="text-center">Delete</th> -->
+                                                                                                                                                                <th class="text-center">Delete</th> -->
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -889,18 +889,59 @@
                                 </form>
                             </div>
                         </div>
-
-
-
-                        <!-- The Modal -->
-
-
-                        <!-- Modal body -->
-
-
-
-                        <script src="{{ url('assets/js') }}/jquery.min.js"></script>
-                        <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
-                        <script type="text/javascript" charset="utf8"
-                            src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
-                    @endsection
+                    </div>
+                </div>
+                <div class="modal fade" id="deletecompany" style="">
+                    <!-- delete company -->
+                    <div class="modal-dialog modal-lg" style="width:30%;">
+                        <div class="modal-content">
+                            <!---- Modal Header -->
+                            <form method="post" id="delete_company" action="#" enctype="multipart/form-data">
+                                @csrf
+                                <input type="hidden" id="deleteuniqueid" value="uniqueid">
+                                <div class="modal-header" style="padding:0rem 0rem;">
+                                    <div style="padding:1rem 1rem;">
+                                        <h4 class="text-centre"><b>Delete <span id="deletcompany_name"></span></b>
+                                        </h4>
+                                    </div>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <div class="row">
+                                            <h6><b><span>Are you sure?</span></b></h6>
+                                        </div>
+                                        <div class="row">
+                                            <div class="" style="width: 30%;">
+                                            </div>
+                                            <div lass="" style="width: 0%"></div>
+                                            <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                                <br>
+                                                <button type="submit" class="btn btn-primary float:right;"
+                                                    Style="width:45%;background-color:#DD4132;">Yes</button>
+                                                <button type="button" class="btn btn-primary float:left"
+                                                    Style="width:45%;"data-dismiss="modal">No</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function deletecompany(param) { //Delete clent confirmation message 
+                    var deleteuniqueid = $(param).data('id');
+                    var deletecompany_name = $(param).data('name');
+                    $('#deleteuniqueid').val(deleteuniqueid);
+                    $('#deletcompany_name').html(deletecompany_name);
+                    document.getElementById("deletcompany_name").innerHTML = deletecompany_name;
+                    $('#delete_company').attr('action', "{{ url('delete_company') }}" + "/" + deleteuniqueid);
+                }
+            </script>
+            <script src="{{ url('assets/js') }}/jquery.min.js"></script>
+            <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+            <script type="text/javascript" charset="utf8"
+                src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+        @endsection

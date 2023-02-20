@@ -14,7 +14,7 @@
             <div class="col-sm-4" style="padding-top:5px;">
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin-left:10px;    --clr: #1D1D50;
                 --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add
-        Task</button>
+        Project</button>
             </div>
    
 
@@ -90,8 +90,9 @@
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item" href="{{url('view_project')}}">View Projects</a>
                                                 <a class="dropdown-item" href="{{url('edit_project')}}">Edit Projects</a>
-                                                <a class="dropdown-item" href="#">Delete Client Projects</a>
-
+                                                {{-- <a class="dropdown-item" href="#">Delete Client Projects</a> --}}
+                                                <a  href="#"onclick=deleteproject(this) data-id="{{ }}"data-toggle="modal"
+                                                data-target="#deleteProject">Delete Project</a>
                                             </div>
                                         </div>
                                     </td>
@@ -300,6 +301,37 @@
                         </form>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="deleteProject" style=""> <!-- delete project -->
+        <div class="modal-dialog modal-lg" style="width:30%;">
+            <div class="modal-content">
+                <!---- Modal Header -->
+                <form method="post"  id="delete_project" action="#" enctype="multipart/form-data">
+                    @csrf
+                    <input type="hidden" id="id" value="id">
+                    <div class="modal-header" style="padding:0rem 0rem;">
+                        <div style="padding:1rem 1rem;"><h4 class="text-centre"><b>Delete <span id="delete_project"></span></b></h4></div>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body" >
+                        <div class="container">
+                            <div class="row"><h6><b><span>Are you sure?</span></b></h6>
+                            </div>
+                                <div class="row">
+                                    <div class="" style="width: 30%;">
+                                    </div>
+                                    <div lass="" style="width: 0%"></div>
+                                    <div class="col-sm" style="padding-right: 0px;width: 70%;">
+                                        <br>
+                                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;background-color:#DD4132;">Yes</button>
+                                        <button type="button" class="btn btn-primary float:left" Style="width:45%;"data-dismiss="modal">No</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </form>
             </div>
         </div>
     </div>
