@@ -76,14 +76,6 @@ use App\Http\Controllers\issued_summary;
     Route::any('/leaves', 'hrcontroller@leaves');
     Route::any('/leaveapprove', 'departmentcontroller@leaveapprove');
     Route::any('/leavedecline', 'departmentcontroller@leavedecline');
-   
-    
-//doctor controller
-    Route::any('/applyleave', 'doctorController@applyleave');
-    Route::any('/file', 'doctorController@file');
-   
-    
-    
     Route::any('/depleaves', 'departmentcontroller@depleaves');
     Route::any('/addloan', 'hrcontroller@addloan')->name('addloan');
     Route::any('/payslip', 'hrcontroller@payslip')->name('payslip');
@@ -94,8 +86,16 @@ use App\Http\Controllers\issued_summary;
     Route::get('/loans', 'hrcontroller@loans')->name('loans');
     Route::get('/addleavecategory', 'hrcontroller@addleavecategory')->name('addleavecategory');
     Route::any('/editdeallowance', 'hrcontroller@editdeallowance')->name('editdeallowance');
+    
+    
+//doctor controller
+    Route::any('/applyleave', 'doctorController@applyleave');
+    Route::any('/file', 'doctorController@file');
+   
+    
+    
+   
     Route::any('/editdereduction', 'hrcontroller@editdereduction')->name('editdereduction');
-
     Route::any('/addnonfixedallowance', 'addController@addnonfixedallowance')->name('addnonfixedallowance');
     Route::any('/depqueue', 'doctorController@depqueue');
     Route::any('/filedownload{id}', 'PharmacyController@filedownload');
