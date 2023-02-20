@@ -102,18 +102,6 @@ use App\Http\Controllers\issued_summary;
 
    
 
-    
-    // Pharmacy
-    Route::any('/serving', 'PharmacyController@serving');
-    Route::any('/alldoctors', 'PharmacyController@alldoctors');
-    Route::any('/pharmacyserved{id}', 'PharmacyController@pharmacyserve');
-    Route::any('/yoyo', 'PharmacyController@pharmacyserved');
-    Route::any('/reorder', 'PharmacyController@reorder');
-    Route::any('/expired', 'PharmacyController@expired');
-    Route::any('/addmed', 'PharmacyController@addmed');
-    Route::get('/searchmeds', 'PharmacyController@searchmeds')->name('searchmeds');
-    Route::get('/wardbeds', 'departmentcontroller@wardbeds')->name('wardbeds');
-    Route::get('/ip', 'patientcontroller@ip')->name('ip');
     Route::any('/manage_biils', 'pharmacycontroller@view_bill')->name('manage_bills');
     Route::any('/request_items', 'PharmacyController@request_items')->name('request_items');
     Route::any('/add_request_items', 'PharmacyController@add_request_items')->name('add_request_items');
