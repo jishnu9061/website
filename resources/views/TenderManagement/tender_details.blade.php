@@ -88,8 +88,11 @@
                 @endforeach
             </tbody>
         </table>
+        
     </div>
 
+
+    
 
 
     <!--		Start Pagination -->
