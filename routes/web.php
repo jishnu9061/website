@@ -48,22 +48,20 @@ use App\Http\Controllers\issued_summary;
     Route::post('/addthestaffs', 'addController@addthestaffs');
     Route::post('/addstaffss', 'addController@addstaffss');
     Route::any('/add_staff', 'addController@add_staff');
-
-  
-    
-    Route::any('/managestaff{id}', 'hrcontroller@managestaff');
-    Route::any('/managedepstaff{id}', 'departmentcontroller@managedepstaff');
-    Route::any('/disableuser{id}', 'addController@disableuser');
-    Route::any('/enableuser{id}', 'addController@enableuser');
-    Route::any('/Consultation{id}/{patient_id}', 'doctorController@consultation');
-    Route::any('/managepatient{id}', 'doctorController@managepatient');
     Route::any('/staffsalary{id}', 'addController@staffsalary');
     Route::any('/paysalary', 'addController@paysalary');
+    //add controller
+//hr controller
+    Route::any('/managestaff{id}', 'hrcontroller@managestaff');
     Route::any('/attendanceview', 'hrcontroller@attendanceview');
     Route::any('/monthwise', 'hrController@monthwise');
+    //hr controller
+//department controller
+    Route::any('/managedepstaff{id}', 'departmentcontroller@managedepstaff');
+
+    
+    
     Route::any('/attendancetostaff', 'hrController@attendancetostaff');
-
-
     Route::any('/consult', 'doctorController@consult');
     Route::any('/addsalary', 'addController@addsalary');
     Route::any('/addallowance', 'addController@addallowance');
