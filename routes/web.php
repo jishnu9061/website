@@ -42,19 +42,15 @@ use App\Http\Controllers\issued_summary;
     Route::get('/admindashboard', 'homecontroller@admindashboard')->name('admindashboard');
     Route::get('/logt', 'homecontroller@logout')->name('home');
     //home controller
-   
-  
-    Route::any('/delete_appointment{id}', 'hospitalController@delete_appointment')->name('delete_appointment');
-    Route::any('/cross_consult{id}', 'hospitalController@cross_consult')->name('cross_consult');
-    Route::any('/queuemanagement', 'hospitalController@queuemanagement');
-    Route::any('/clinicalnotes', 'bedsController@clinicalnotes');
-    Route::any('/callthepatient{id}', 'hospitalController@callthepatient');
+//add controller
     Route::any('/addstaffs', 'addController@addstaffs');
-
     Route::any('/editstafff', 'addController@editstafff');
     Route::post('/addthestaffs', 'addController@addthestaffs');
     Route::post('/addstaffss', 'addController@addstaffss');
     Route::any('/add_staff', 'addController@add_staff');
+
+  
+    
     Route::any('/managestaff{id}', 'hrcontroller@managestaff');
     Route::any('/managedepstaff{id}', 'departmentcontroller@managedepstaff');
     Route::any('/disableuser{id}', 'addController@disableuser');
