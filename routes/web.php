@@ -43,17 +43,7 @@ use App\Http\Controllers\issued_summary;
     Route::get('/logt', 'homecontroller@logout')->name('home');
     //home controller
    
-    //stafs
-    Route::any('/addadmins', 'hospitalController@addadmins');
-    Route::any('/allhospitals', 'hospitalController@allhospitals');
-    Route::any('/appointment{id}', 'hospitalController@appointment');
-    Route::any('/getdoctordetails{id}', 'hospitalController@getdoctordetails');
-    Route::any('/get_cons_fees', 'hospitalController@get_cons_fees');
-    Route::any('/bookappointment', 'hospitalController@bookappointment');
-    Route::any('/allappointment', 'hospitalController@allappointment');
-    Route::any('/print_appointment{id}', 'hospitalController@print_appointment')->name('print_appointment');
-    Route::any('/edit_appointment{id}', 'hospitalController@edit_appointment');
-    Route::any('/update_appointment', 'hospitalController@update_appointment')->name('update_appointment');
+  
     Route::any('/delete_appointment{id}', 'hospitalController@delete_appointment')->name('delete_appointment');
     Route::any('/cross_consult{id}', 'hospitalController@cross_consult')->name('cross_consult');
     Route::any('/queuemanagement', 'hospitalController@queuemanagement');
