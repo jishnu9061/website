@@ -31,29 +31,18 @@ use App\Http\Controllers\issued_summary;
     Route::put('/update_company/{id}', "superadmincontroller@update_company")->name('update_company');
     Route::any('/delete_company/{id}', "superadmincontroller@delete_company")->name('delete_company');
     //superadmin
-
-    //mange employee route start
+//mange employee route start
     Route::any('employee_list/{id}',"employeecontroller@employee_list")->name('employee_list');
     Route::any('create_employee/getrole/{id}', "addcontroller@get_role")->name('getrole');
-
-
     //mange employee route end
-
+//home controller
     Route::get('/', 'homecontroller@index')->name('home');
     Route::get('/home', 'homecontroller@index')->name('home');
     Route::get('/admin', 'homecontroller@index')->name('home');
     Route::get('/admindashboard', 'homecontroller@admindashboard')->name('admindashboard');
     Route::get('/logt', 'homecontroller@logout')->name('home');
+    //home controller
    
-    //rooms
-    Route::any('/addroomtypes', 'hospitalController@addroomtypes');
-    Route::any('/saveroomtypes', 'hospitalController@saveroomtypes');
-    Route::any('/delroomtypes{id}', 'hospitalController@delroomtypes');
-    Route::any('/delrooms{id}', 'hospitalController@delrooms');
-    Route::any('/update_roomtypes', 'hospitalController@update_roomtypes');
-    Route::any('/addroomstypes', 'hospitalController@addroomstypes');
-    Route::any('/saveroomstypes', 'hospitalController@saveroomstypes');
-    Route::any('/update_roomstype', 'hospitalController@update_roomstype');
     //stafs
     Route::any('/addadmins', 'hospitalController@addadmins');
     Route::any('/allhospitals', 'hospitalController@allhospitals');
