@@ -62,7 +62,7 @@
                     <td>
                         <a href="{{url('view_tender_applied',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
                     </td>
-                    <td></td>
+                    <td><span class="badge bg-success">Opened</span></td>
                 </tr>
                 @endforeach
             </tbody>

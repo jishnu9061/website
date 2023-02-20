@@ -19,60 +19,50 @@
                 <tbody>
                     <tr>
                         <td scope="row">Date</td>
-                        <td>{{$view_tender_applied->date}}
-                        </td>
+                        <td>{{$view_tender_applied->date}}</td>
 
                     </tr>
                     <tr>
                         <td scope="row">Item Name</td>
-                        <td>{{$view_tender_applied->item_name}}
-                        </td>
+                        <td>{{$view_tender_applied->item_name}}</td>
                     </tr>
                     <tr>
                         <td scope="row">Quantity</td>
-                        <td>{{$view_tender_applied->quantity}}
-                        </td>
+                        <td>{{$view_tender_applied->quantity}}</td>
                     </tr>
                     <tr>
                         <td scope="row">Supplier Name</td>
-                        <td>{{$view_tender_applied->supplier_name}}
-                        </td>
+                        <td>{{$view_tender_applied->supplier_name}}</td>
                     </tr>
                     <tr>
                         <td scope="row">Mobile No.</td>
-                        <td>{{$view_tender_applied->mobile_no}}
-                        </td>
+                        <td>{{$view_tender_applied->mobile_no}}</td>
                     </tr>
                     <tr>
                         <td scope="row">Address</td>
-                        <td>{{$view_tender_applied->address}}
-                        </td>
+                        <td>{{$view_tender_applied->address}}</td>
                     </tr>
                     <tr>
                         <td scope="row">Description</td>
-                        <td></td>
+                        <td>{{$view_tender_applied->description}}</td>
                     </tr>
                     <tr>
                         <td scope="row">Supporting Documents</td>
-                        <td>
-                        </td>
+                        <td>{{$view_tender_applied->document}}</td>
 
                     </tr>
                     <tr>
                         <td scope="row">Period of Contract (in Days)</td>
-                        <td>{{$view_tender_applied->period_of_contract}}
-                        </td>
+                        <td>{{$view_tender_applied->period_of_contract}}</td>
                     </tr>
                     <tr>
                         <td scope="row">Total Cost of Tender</td>
-                        <td>{{$view_tender_applied->cost_of_tender}}
-                        </td>
+                        <td>{{$view_tender_applied->cost_of_tender}}</td>
                     </tr>
 
                     <tr>
                         <td scope="row">Payment Type</td>
-                        <td>{{$view_tender_applied->payment_type}}
-                        </td>
+                        <td>{{$view_tender_applied->payment_type}}</td>
                     </tr>
 
                 </tbody>

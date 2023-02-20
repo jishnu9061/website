@@ -50,7 +50,7 @@
             <div class="form-row">
                 <div class="col-md-12 mb-3">
                     <label for="inputAddress">Description</label>
-                    <textarea class="form-control" rows="3" name="Description"></textarea>
+                    <textarea class="form-control" rows="3" name="Description">{{$edit_tender_details->description}}</textarea>
                 </div>
             </div>
             <br>

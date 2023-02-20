@@ -16,8 +16,6 @@
     </div>
     <div class="table-responsive">
         <table class="table table-hover" style="border: 1px solid">
-
-
             <tbody class="text-center">
                 <tr>
                     <th>Client Document</th>
@@ -42,6 +40,5 @@
         </div>
     </div>
 </div>
-
 
 @endsection
