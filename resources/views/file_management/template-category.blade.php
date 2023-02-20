@@ -20,21 +20,17 @@
         {{-- heading --}}
     <h4 id="hdtpa"><b>Template Category</b></h4>
     <br>
-
-
-
-
-
-
             </div>
-
+            <div class="row" style="height:50px;">
+    <div class="col-sm-4" style="padding-top:5px;">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin-left:10px;    --clr: #1D1D50;
+                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add Template</button>
+    </div>
 
 
 <!--
         <a href="{{url('add-template')}}"><button class="btn btn-primary add-btn">Add Template</button></a>
         <div class="tab-content" id="myTabContent"> -->
-        {{-- <a href="{{('')}}"><button class="btn btn-primary">Add Template</button></a> --}}
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Template</button>
 
     <div class="header_wrap">
       <div class="num_rows">
@@ -81,10 +77,17 @@
 
                             <td scope="row" class="text-center"></td>
                             <td scope="row" class="text-center"></td>
-                            <td  scope="row"class="text-center">
-                        <a href="{{url('edit_template')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                        <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
-                           </td>
+                            <td scope="row" class="text-center">
+                                    <div class="btn-group">
+                                        <a class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            style="border-color:none;"> ⋮ </a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="{{url('edit_template')}}">Edit Template</a>
+                                            <a class="dropdown-item" href="#">Delete
+                                            Template</a>
+                                        </div>
+                                    </div>
+                                </td>
                         </tr>
                         @endforeach
                     </tbody>

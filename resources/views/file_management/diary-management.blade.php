@@ -79,10 +79,14 @@
 
         <!-- <a href="{{url('add-event')}}"><button class="btn btn-primary add-btn" style="width: 20%; ">Add
                 Event</button></a> -->
-        {{-- <a href="{{('add-event')}}"><button class="btn btn-primary">Add Event</button></a> --}}
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add
+       
+        
+            <div class="row" style="height:50px;">
+    <div class="col-sm-4" style="padding-top:5px;">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin-left:10px;    --clr: #1D1D50;
+                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;">Add
             Event</button>
-
+    </div>
 
         <div class="header_wrap">
             <div class="num_rows">

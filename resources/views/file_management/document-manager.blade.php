@@ -25,16 +25,19 @@
         <br>
 
         <div class="dropdown">
-            <button class="btn btn-primary add-btn" type="button" style="width:20%;" id="dropdownMenuButton"
+            <button class="btn btn-primary add-btn" type="button" style="width:20%;margin-left:10px;    --clr: #1D1D50;
+                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px; " id="dropdownMenuButton"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Upload Document
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <!-- <a class="dropdown-item" href="{{url('upload-document')}}">File Upload</a> -->
-                <button type="button" class="btn btn-primary" data-toggle="modal"  style="width:100%;" data-target="#myModal">
+                <button type="button" class="btn btn-primary" data-toggle="modal"  style="width:100%;margin-left:10px;    --clr: #1D1D50;
+                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px; margin-bottom:1px;" data-target="#myModal">
                     File Upload </button>
                 <!-- <a class="dropdown-item" href="{{url('generate-document')}}">Generate Document</a> -->
-                <button type="button" class="btn btn-primary" data-toggle="modal"  style="width:100%;" data-target="#myModal-1">
+                <button type="button" class="btn btn-primary" data-toggle="modal"  style="width:100%;margin-left:10px;    --clr: #1D1D50;
+                --outline: .001px solid var(--clr);color: white;background-color: #1D1D50;border-radius: 5px;margin-bottom:1px;" data-target="#myModal-1">
                 Generate Document </button>
             </div>
         </div>
@@ -84,11 +87,20 @@
 
                             <td scope="row" class="text-center"> <img src="{{asset('/image/'.$document->document_upload)}}" width="80px" height="50px" alt="image"></td>
                             <td scope="row" class="text-center"> <img src="{{asset('/image/'.$document->folder_upload)}}" width="80px" height="50px" alt="image"></td>
+                            <td scope="row" class="text-center">
+                                    <div class="btn-group">
+                                        <a class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            style="border-color:none;"> ⋮ </a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">View Document</a>
+                                            <a class="dropdown-item" href="#">Edit Document</a>
+                                            <a class="dropdown-item" href="#">Delete
+                                                Document</a>
 
-                            <td  scope="row"class="text-center">
-                        <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fa fa-edit" aria-hidden="true"></i>
-                        <a href="{{url('')}}"><i  style="  color:rgb(13, 1, 56);" class="fas fa-trash-alt" aria-hidden="true"></i>
-                           </td>
+                                        </div>
+                                    </div>
+                                </td>
+                            
                         </tr>
 
                         @endforeach
