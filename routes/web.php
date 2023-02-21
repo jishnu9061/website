@@ -659,16 +659,17 @@ use App\Http\Controllers\issued_summary;
     Route::any('edit-assigment/{id}', 'hrindex@editassigment')->name('edit-assigment');
     Route::any('update-assigment', 'hrindex@updateassigment')->name('update-assigment');
     Route::any('drop-assigment/{id}', 'hrindex@dropassigment')->name('drop-assigment');
-
+        //bank 
     Route::any('add_bank_names', 'hrindex@addbanknames')->name('add_bank_names');
     Route::any('bank_names', 'hrindex@bank_names')->name('bank_names');
     Route::any('/edit_bank_name/{id}', 'hrindex@editbanknames')->name('edit_bank_name');
     Route::any('/update_bank', 'hrindex@updatebankname')->name('update_bank');
     Route::any('/delete_bank/{id}', 'hrindex@deletebank')->name('delete_bank');
-
+        //task allocation
     Route::any('task_allocation', 'hrindex@task_allocation')->name('task_allocation');
     Route::any('view_task_allocation', 'hrindex@view_task_allocation')->name('view_task_allocation');
     Route::any('edit_task_allocation', 'hrindex@edit_task_allocation')->name('edit_task_allocation');
+        //timesheet
     Route::any('timesheet', 'hrindex@timesheets')->name('timesheet');
     Route::any('timesheetweek', 'hrindex@timesheetweeks')->name('timesheetweek');
     Route::any('viewsheet', 'hrindex@viewsheets')->name('viewsheet');
