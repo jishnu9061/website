@@ -102,20 +102,6 @@ use App\Http\Controllers\issued_summary;
     //hospital controller
 
 
-
-    // vipin
-    Route::any('/requestitems_save', 'storecontroller@save_item')->name('requestitems_save');
-    // Route::any('/request','requestcontroller@index')->name('request');
-    Route::any('/pharmarequest_save', 'requestcontroller@store')->name('pharmarequest_save');
-    Route::any('/pharma_orders', 'requestcontroller@view_request')->name('pharma_orders');
-    Route::any('/upload_request', 'requestcontroller@update')->name('upload_request');
-    Route::any('/delete_request{id}', 'requestcontroller@destroy')->name('delete_request');
-    // vipin
-    Route::any('/store_addmedicine', 'Medicine_details@index')->name('store_addmedicine');
-    Route::any('/save_medicine', 'Medicine_details@store')->name('save_medicine');
-    Route::any('/update_medicine', 'Medicine_details@update')->name('update_medicine');
-    Route::any('/delete_medicines{id}', 'Medicine_details@destroy')->name('delete_medicines');
-
     //Store Suppliers
     Route::any('/addsuppliers', 'storecontroller@index')->name('addsuppliers');
     Route::any('/suppliers_save', 'storecontroller@store')->name('suppliers_save');
