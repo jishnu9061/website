@@ -675,8 +675,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('viewsheet', 'hrindex@viewsheets')->name('viewsheet');
     Route::any('timesheetmonth', 'hrindex@timesheetmonths')->name('timesheetmonth');
     Route::any('monthviewsheet', 'hrindex@monthviewsheets')->name('monthviewsheet');
-
-    //HR-leave request Subhasree
+        //leave request 
     Route::any('leave_request_details', 'hrindex@leave_request')->name('leave_request_details');
     Route::any('addleaverequest', 'hrindex@addleaverequest')->name('addleaverequest');
     Route::any('approve_leave_request', 'hrindex@approve_leave_request')->name('approve_leave_request');
@@ -684,12 +683,11 @@ use App\Http\Controllers\issued_summary;
     Route::any('edit_leave_request/{id}', 'hrindex@edit_leave_request')->name('edit_leave_request');
     Route::any('/update_leave_request', 'hrindex@update_leave_request')->name('update_leave_request');
     Route::any('/leave_balance', 'hrindex@leave_balance')->name('leave_balance');
-
+        //internal memo
     Route::any('internal_memos', 'hrindex@internal_memos')->name('internal_memos');
     Route::any('view_memo', 'hrindex@view_memo')->name('view_memo');
     Route::any('edit_memo', 'hrindex@edit_memo')->name('edit_memo');
-
-    //HR-Attendance Sheet Subhasree
+        //Attendance Sheet 
     Route::any('attendance_sheet', 'hrindex@attendance_sheet')->name('attendance_sheet');
     Route::any('view_attendance', 'hrindex@view_attendance')->name('view_attendance');
 
