@@ -113,22 +113,7 @@ use App\Http\Controllers\issued_summary;
     //store controller
 
      
-   
 
-
-
-
-
-
-    // Store Request items
-    Route::any('/Emergency_care', 'Emergencycare@index')->name('Emergency_care');
-    Route::get('/Nursing_station', 'NursingStation@index')->name('Nursing_station');
-
-    Route::any('/Add_Ambulance_details', 'ambulancecontroller@index')->name('Add_Ambulance_details');
-    Route::any('/saveamb_details', 'ambulancecontroller@store_data')->name('saveamb_details');
-    Route::any('/update_details', 'ambulancecontroller@update_data')->name('update_details');
-    Route::any('/delete_ambulance{id}', 'ambulancecontroller@destroy')->name('delete_ambulance');
-    Route::any('/savepatientamb_details', 'ambulancecontroller@save')->name('savepatientamb_details');
     // vipin
     Route::any('/casuality_patient', 'casualitycontroller@index')->name('casuality_patient');
     Route::any('/catuality_register', 'casualitycontroller@create')->name('catuality_register');
