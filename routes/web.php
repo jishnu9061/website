@@ -116,50 +116,34 @@ use App\Http\Controllers\issued_summary;
     Route::any('/update_installment_details', 'storecontroller@update_installment_details')->name('update_installment_details');
     Route::any('/supplier_paid_details{id}', 'storecontroller@supplier_paid_details')->name('paid_details');
     //store controller
-
-     
-   
-
-
-    //Accounts Module by Anu s Kumar
+//accounts controller
     Route::get('/ledger_acounts', 'AccountsController@ledger_acounts')->name('ledger_acounts');
     Route::post('/save_ledger_acounts', 'AccountsController@save_ledger_acounts')->name('save_ledger_acounts');
     Route::post('/update_ledger_acounts', 'AccountsController@update_ledger_acounts')->name('update_ledger_acounts');
     Route::any('/delete_ledger_accounts', 'AccountsController@delete_ledger_accounts')->name('delete_ledger_accounts');
-
     Route::any('/journal', 'AccountsController@journal')->name('journal');
     Route::post('/save_journal', 'AccountsController@save_journal')->name('save_journal');
     Route::post('/update_journal_acounts', 'AccountsController@update_journal_acounts')->name('update_journal_acounts');
     Route::any('/delete_journal{id}', 'AccountsController@delete_journal')->name('delete_journal');
-
     Route::get('/ledger_acount_categories', 'AccountsController@ledger_acount_categories')->name('ledger_acount_categories');
     Route::post('/save_ledger_acounts_categories', 'AccountsController@save_ledger_acounts_categories')->name('save_ledger_acounts_categories');
     Route::post('/update_ledger_acount_categories', 'AccountsController@update_ledger_acount_categories')->name('update_ledger_acount_categories');
     Route::any('/delete_ledger_accounts_categories/{id}', 'AccountsController@delete_ledger_categories')->name('delete_ledger_accounts_categories');
-
     Route::get('/ledger_acount_subcategories', 'AccountsController@ledger_acount_subcategories')->name('ledger_acount_subcategories');
     Route::post('/save_ledger_acounts_subcategories', 'AccountsController@save_ledger_acounts_subcategories')->name('save_ledger_acounts_subcategories');
     Route::post('/update_ledger_acount_subcategories', 'AccountsController@update_ledger_acount_subcategories')->name('update_ledger_acount_subcategories');
     Route::any('/delete_ledger_accounts_subcategories/{id}', 'AccountsController@delete_ledger_accounts_subcategories')->name('delete_ledger_accounts_subcategories');
-
-    //vipin start
     Route::any('/ledger_budget_category', 'AccountsController@ledger_budget_category')->name('ledger_budget_category');
     Route::any('/save_ledger_budget_category', 'AccountsController@save_ledger_budget_category')->name('save_ledger_budget_category');
     Route::any('/update_ledger_budget_category', 'AccountsController@update_ledger_budget_category')->name('update_ledger_budget_category');
     Route::any('/delete_ledger_budget_category/{id}', 'AccountsController@delete_ledger_budget_category')->name('delete_ledger_budget_category');
-
     Route::any('/expense_report', 'AccountsController@expense_report')->name('expense_report');
-    //vipin end
-
-    //--------reshma------------accounts-----
     Route::any('/budget_forecasting', 'AccountsController@budget_forecasting')->name('budget_forecasting');
     Route::any('/add_account', 'AccountsController@add_account')->name('add_account');
     Route::any('/budget_forecat_dept', 'AccountsController@budget_forecat_dept')->name('budget_forecat_dept');
     Route::any('/i_p_bank_bal', 'AccountsController@i_p_bank_bal')->name('i_p_bank_bal');
     Route::any('/reconcile_bank_entries', 'AccountsController@reconcile_bank_entries')->name('reconcile_bank_entries');
     Route::any('/bank_recon_report', 'AccountsController@bank_recon_report')->name('bank_recon_report');
-    //--------reshma------------accounts-----
-
     Route::any('/get_subcat', 'AccountsController@get_subcat')->name('get_subcat');
     Route::any('/create_transaction', 'AccountsController@create_transaction')->name('create_transaction');
     Route::post('/create_new_journal', 'AccountsController@create_new_journal')->name('create_new_journal');
@@ -191,7 +175,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('/store_ledger', 'AccountsController@store_ledger')->name('store_ledger');
     Route::any('/get_total_number_of_item', 'AccountsController@get_total_number_of_item')->name('get_total_number_of_item');
     Route::post('/create_new_stock_issue', 'AccountsController@create_new_stock_issue')->name('create_new_stock_issue');
-    //Ended Accounts module
+    //accounts controller
 //sarjana added consultation
     Route::post('/addhistory', 'doctorController@addhistory')->name('addhistory');
     Route::post('/managehistory', 'doctorController@managehistory')->name('managehistory');
