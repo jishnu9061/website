@@ -560,60 +560,37 @@ use App\Http\Controllers\issued_summary;
     Route::any('document-manager', "filemanagement@documentmanager")->name('document-manager');
     Route::any('upload-document', "filemanagement@uploaddocument")->name('upload-document');
     Route::any('generate-document', "filemanagement@generatedocument")->name('generate-document');
-    
-
-  //file report
+        //file report
     Route::any('file-report', "filemanagement@filereport")->name('file-report');
     Route::any('file-opened-report', "filemanagement@fileopenreport")->name('file-opened-report');
     Route::any('file-closed-report', "filemanagement@fileclosedreport")->name('file-closed-report');
     Route::any('file-pending', "filemanagement@filepending")->name('file-pending');
     Route::any('file-pending-approval', "filemanagement@filependingapproval")->name('file-pending-approval');
     Route::any('instructions-past', "filemanagement@instructionspast")->name('instructions-past');
-    //file report
-
-    //add ons
+        //add ons
     Route::any('outgoing-letters', "filemanagement@outgoingletter")->name('outgoing-letters');
     Route::any('add-outgoing-letters', "filemanagement@addoutgoingletters")->name('add-outgoing-letters');
     Route::any('incomming-letters', "filemanagement@incommingletters")->name('incomming-letters');
     Route::any('add-incomming-letters', "filemanagement@addincommingletters")->name('add-incomming-letters');
     Route::any('safe-item-request', "filemanagement@safeitemrequest")->name('safe-item-request');
-
     Route::any('safe-register-report', "filemanagement@saferegisterreport")->name('safe-register-report');
-    //add ons
-
-
-    //vinu
-
-    //beljin
-
     Route::any('/u_details', "filemanagement@u_details")->name('u_details');
-
-    //beljin
-
-
-    //Anandhu
+        //office instructions
     Route::any('/office_instructions', "filemanagement@new_instructions")->name('new_instruction');
     Route::any('/new_office_instructions', "filemanagement@add_new_instructions")->name('add_new_instructions');
     Route::any('/update_office_instruction', "filemanagement@updateofficeinstructions")->name('update_office_instruction');
     Route::any('/delete_office/{id}', "filemanagement@destroyofficeinstruction")->name('delete_office');
-
     Route::any('/instructions_report', "filemanagement@view_new_instructions")->name('view_new_instructions');
-
     Route::any('/file_instruction', "filemanagement@new_file_instructions")->name('new_file_instructions');
-
     Route::any('/file_new_instruction', "filemanagement@add_new_file_instructions")->name('add_new_file_instructions');
-
+        //safe management
     Route::any('/Safe_management', "filemanagement@safe_management_list")->name('safe_management_list');
-
     Route::any('/new_Safe_management', "filemanagement@new_safe_management_list")->name('new_safe_management_list');
     Route::any('/edit_Safe_management/{id}', "filemanagement@editsafemanagement_list")->name('edit_Safe_management');
     Route::any('/update_Safe_management', "filemanagement@updatesafemanagement_list")->name('update_Safe_management');
     Route::any('/delete_Safe_management/{id}', "filemanagement@deletesafemanagement")->name('edit_Safe_management');
-
     Route::any('/Request_staff_item', "filemanagement@Request_staff_item_list")->name('Request_staff_item_list');
-
     Route::any('/new_Request_staff_item', "filemanagement@add_Request_staff_item_list")->name('add_Request_staff_item_list');
-
     Route::any('/Process_Request', "filemanagement@Process_Request_list")->name('Process_Request_list');
 
     Route::any('/edit_file_instruction/{id}', "filemanagement@edit_file_instruction_list")->name('edit_file_instruction');
