@@ -470,16 +470,22 @@ use App\Http\Controllers\issued_summary;
     Route::any('edit-service/{id}', 'ClientManagement@editService')->name('edit-service');
     Route::any('update-service', 'ClientManagement@updateService')->name('update-service');
     Route::any('delete-service/{id}', 'ClientManagement@deleteService')->name('delete-service');
-    
-
-    //Quotation
+        //Quotation
     Route::any('Quotation', 'ClientManagement@Quotation')->name('Quotation');
     Route::any('add-Quotation', 'ClientManagement@addQuotation')->name('add-Quotation');
     Route::any('edit-Quotation/{id}', 'ClientManagement@editQuotation')->name('edit-Quotation');
     Route::any('update-Quotation', 'ClientManagement@updateQuotation')->name('update-Quotation');
     Route::any('delete-Quotation/{id}', 'ClientManagement@deleteQuotation')->name('delete-Quotation');
-    //end Quotation
-
+        //communication
+    Route::any('communication-list', 'ClientManagement@ListCommunication')->name('communication-list');
+    Route::any('add-communication', 'ClientManagement@addCommunication')->name('add-communication');
+    Route::any('edit-communication/{id}', 'ClientManagement@editCommunication')->name('edit-communication');
+    Route::any('/update-communication', 'ClientManagement@updateCommunication')->name('update-communication');
+    Route::any('/delete-communication/{id}', 'ClientManagement@deleteCommunication')->name('delete-communication');
+    Route::any('new_communication', 'ClientManagement@add_communication')->name('add_communication');
+        //search list
+    Route::any('search-list', 'ClientManagement@listSearch')->name('search-list');
+    Route::any('register-client', 'ClientManagement@registerClient')->name('register-client');
     //CRM-Registration
     Route::any('view-registration', 'CrmController@viewRegistration')->name('view-registration');
     Route::any('add-registration', 'CrmController@addRegistration')->name('add-registration');
@@ -489,18 +495,10 @@ use App\Http\Controllers\issued_summary;
     Route::any('show-registration/{id}', 'CrmController@showRegistration')->name('show-registration');
     //end registration
 
-    //communication
-    Route::any('communication-list', 'ClientManagement@ListCommunication')->name('communication-list');
-    Route::any('add-communication', 'ClientManagement@addCommunication')->name('add-communication');
-    Route::any('edit-communication/{id}', 'ClientManagement@editCommunication')->name('edit-communication');
-    Route::any('/update-communication', 'ClientManagement@updateCommunication')->name('update-communication');
-    Route::any('/delete-communication/{id}', 'ClientManagement@deleteCommunication')->name('delete-communication');
-    Route::any('new_communication', 'ClientManagement@add_communication')->name('add_communication');
+   
     //end communication
 
-    //search list
-    Route::any('search-list', 'ClientManagement@listSearch')->name('search-list');
-    Route::any('register-client', 'ClientManagement@registerClient')->name('register-client');
+    
     //end search list
 
 
