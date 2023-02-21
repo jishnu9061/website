@@ -84,6 +84,10 @@ use App\Http\Controllers\issued_summary;
     Route::any('/editdereduction', 'hrcontroller@editdereduction')->name('editdereduction');
     Route::any('/loandelete{id}', 'hrcontroller@loandelete');
     Route::any('/manualattendance', 'hrcontroller@manualattendance')->name('manualattendance');
+    Route::get('/attendance', function () {
+        return view('hr/attendance');
+    }
+    );
     //hr controller
 //department controller
     Route::any('/managedepstaff{id}', 'departmentcontroller@managedepstaff');
@@ -114,27 +118,6 @@ use App\Http\Controllers\issued_summary;
     //store controller
 
      
-    Route::get('/billing', function () {
-        return view('hospitals/billing');
-    }
-    );
-    Route::get('/addmedicines', function () {
-        return view('pharmacy/addmedicine');
-    }
-    );
-    Route::get('/attendance', function () {
-        return view('hr/attendance');
-    }
-    );
-    Route::get('/addeps', function () {
-        return view('addeps');
-    }
-    );
-
-    Route::get('/medicine', function () {
-        return view('pharmacy/addmed');
-    }
-    );
     Route::any('/allocatebedsandrooms', 'bedsController@allocatebedsandrooms');
     Route::any('/allocatebedsnrooms', 'hospitalController@allocatebedsnrooms');
     Route::any('/addit', 'hospitalcontroller@addit');
