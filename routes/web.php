@@ -111,16 +111,6 @@ use App\Http\Controllers\issued_summary;
     Route::any('/update_installment_details', 'storecontroller@update_installment_details')->name('update_installment_details');
     Route::any('/supplier_paid_details{id}', 'storecontroller@supplier_paid_details')->name('paid_details');
     //store controller
-   
-
-  
-    
-    Route::any('/show_items_details', 'store_oneController@show_new_item')->name('show_items_details');
-    Route::any('/create_new_item', 'store_oneController@create_new_item')->name('create_new_item');
-    Route::any('/view_new_items{id}', 'store_oneController@view_new_items')->name('view_new_items');
-    Route::any('/edit_item{id}', 'store_oneController@edit_item')->name('edit_item');
-    Route::any('/item_update', 'store_oneController@update_item')->name('item_update');
-    Route::any('/item_delete{id}', 'store_oneController@delete_item_details')->name('delete_item_details');
 
     // add Purchase
     Route::any('view_purchase', 'storecontroller@create_purchase')->name('create_purchase');
@@ -133,6 +123,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('create_purchase_new_item', 'storecontroller@create_purchase_new_item')->name('create_purchase_new_item');
     Route::any('edit_purchase_detailes{id}', 'storecontroller@edit_purchase_detailes')->name('edit_purchase_detailes');
     Route::any('purchase_detailes_view{id}', 'storecontroller@purchase_detailes_view')->name('purchase_detailes_view');
+    
     Route::any('item_edit_detailes{id}', 'storecontroller@item_edit_detailes')->name('edit_purchase_detailes');
     Route::any('item_edit', 'storecontroller@item_edit')->name('item_edit');
     Route::any('item_update', 'storecontroller@item_update')->name('item_update');
