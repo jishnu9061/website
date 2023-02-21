@@ -113,20 +113,6 @@ use App\Http\Controllers\issued_summary;
     //store controller
    
 
-
-    // Unit
-    Route::any('/view_unit', 'storecontroller@create_unit_details')->name('view_unit');
-    Route::any('/create_unit', 'storecontroller@add_unit')->name('create_unit');
-    Route::any('/edit_unit', 'storecontroller@edit_unit')->name('edit_unit');
-    Route::any('/update_unit', 'storecontroller@update_unit')->name('update_unit');
-    Route::any('/delete_unit{id}', 'storecontroller@delete_unit')->name('delete_unit');
-    // Add New Item
-    Route::any('/view_item', 'store_oneController@create_item_details')->name('view_item');
-    Route::any('/create_item', 'store_oneController@add_item')->name('create_item');
-    Route::any('/edit_item', 'store_oneController@edit_item1')->name('edit_item');
-    Route::any('/update_item', 'store_oneController@update_new_item')->name('update_item');
-    Route::any('/delete_item{id}', 'store_oneController@item_delete')->name('delete_item');
-
     // Medecine Group
     Route::any('/view_medicine_group', 'storecontroller@create_medicine_group')->name('view_medicine_group');
     Route::any('/create_medicine_group', 'storecontroller@add_group')->name('create_medicine_group');
