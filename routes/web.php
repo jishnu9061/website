@@ -273,24 +273,20 @@ use App\Http\Controllers\issued_summary;
     Route::any('/delete_tax_wht-vat/{id}', 'SystemSetup@deletetaxwhtvat')->name('delete_tax_wht-vat');
         //notifications
     Route::any('notifications', 'SystemSetup@notifications')->name('notifications');
-    //end
-//template category
+        //template category
     Route::any('template_category', 'SystemSetup@templatecategory')->name('template_category');
     Route::any('add_template_category', 'SystemSetup@addtemplatecategory')->name('add_template_category');
     Route::any('edit_template_category/{id}', 'SystemSetup@edittemplatecategory')->name('edit_template_category');
     Route::any('/update_template_category', 'SystemSetup@updatetemplatecategory')->name('update_template_category');
     Route::any('/delete_template_category/{id}', 'SystemSetup@deletetemplatecategory')->name('delete_template_category');
     Route::any('document_template_category', 'SystemSetup@documenttemplatecategory')->name('document_template_category');
-
-    //end
-//paired accounts
+        //paired accounts
     Route::any('paired_account', 'SystemSetup@pairedaccount')->name('paired_account');
     Route::any('add_account_pairs', 'SystemSetup@addaccountpairs')->name('add_account_pairs');
     Route::any('edit_account_pairs/{id}', 'SystemSetup@editaccountpairs')->name('edit_account_pairs');
     Route::any('/update_paired_account', 'SystemSetup@updatepairedaccount')->name('update_paired_account');
     Route::any('/delete_account_pairs/{id}', 'SystemSetup@deletepairedaccount')->name('delete_account_pairs');
-    //end
-//file types
+        //file types
     Route::any('file_types', 'SystemSetup@filetypes')->name('file_types');
     Route::any('add_file_types', 'SystemSetup@addfiletypes')->name('add_file_types');
     Route::any('edit_file_types/{id}', 'SystemSetup@editfiletypes')->name('edit_file_types');
