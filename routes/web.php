@@ -240,24 +240,20 @@ use App\Http\Controllers\issued_summary;
     Route::any('edit_desc_sel/{id}', 'SystemSetup@editdescsel')->name('edit_desc_sel');
     Route::any('/update_desc_sel', 'SystemSetup@updatedescsel')->name('update_desc_sel');
     Route::any('/delete_desc_sel/{id}', 'SystemSetup@deletedescsel')->name('delete_desc_sel');
-
-    //end
-//tax chart
+        //tax chart
     Route::any('tax_chart_main', '   @taxchartmain')->name('tax_chart_main');
     Route::any('tax_chart', 'SystemSetup@taxchart')->name('tax_chart');
     Route::any('add_tax_chart', 'SystemSetup@addtaxchart')->name('add_tax_chart');
     Route::any('edit_tax_chart/{id}', 'SystemSetup@edittaxchart')->name('edit_tax_chart');
     Route::any('/update_tax_chart', 'SystemSetup@updatetaxchart')->name('update_tax_chart');
     Route::any('/delete_tax_chart/{id}', 'SystemSetup@deletetaxchart')->name('delete_tax_chart');
-    //end
-//taxexcise
+        //taxexcise
     Route::any('tax_excise', 'SystemSetup@taxexcise')->name('tax_excise');
     Route::any('add_tax_excise', 'SystemSetup@addtaxexcise')->name('add_tax_excise');
     Route::any('edit_tax_excise/{id}', 'SystemSetup@edittaxexcise')->name('edit_tax_excise');
     Route::any('/update_tax_excise', 'SystemSetup@updatetaxexcise')->name('update_tax_excise');
     Route::any('/delete_tax_excise/{id}', 'SystemSetup@deletetaxexcise')->name('delete_tax_excise');
-    //end
-//tax_vat
+        //tax_vat
     Route::any('tax_vat', 'SystemSetup@taxvat')->name('tax_vat');
     Route::any('add_tax_vat', 'SystemSetup@addtaxvat')->name('add_tax_vat');
     Route::any('edit_tax_vat/{id}', 'SystemSetup@edittaxvat')->name('edit_tax_vat');
