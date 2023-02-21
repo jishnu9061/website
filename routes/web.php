@@ -112,24 +112,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('/supplier_paid_details{id}', 'storecontroller@supplier_paid_details')->name('paid_details');
     //store controller
 
-    
-    Route::any('add_advance_payment', 'storecontroller@create_advance_payment')->name('create_advance_payment');
-    Route::any('update_payment', 'storecontroller@update_payment')->name('update_payment');
-    Route::any('received_order_detailes', 'storecontroller@received_order_detailes')->name('received_order_detailes');
-    Route::any('store_request_view', 'storecontroller@store_request_view')->name('store_request_view');
-    Route::any('add_installment_details{id}', 'storecontroller@add_installment_details')->name('add_installment_details');
-
-    //add issue request from another departments
-    Route::any('view_request', 'storecontroller@department_request')->name('view_request');
-    Route::any('view_request_details{request_intendid}', 'storecontroller@department_view_request_details')->name('view_request_details');
-    Route::any('issue_request', 'storecontroller@issue_request')->name('issue_request');
-    Route::any('issued_items{id}', 'storecontroller@requested_items')->name('issued_items');
-    Route::any('store_issued_items{id}', 'storecontroller@store_issued_items')->name('issued_items');
-    Route::any('issued_inventory', 'storecontroller@issue_stock')->name('issued_inventory');
-
-
-
-    // Store Stock details
+     // Store Stock details
     Route::any('view_stock_details', 'store_oneController@stock_details')->name('stock_details');
     Route::any('stock_details', 'store_oneController@stock_details')->name('stock_details');
     Route::any('create_stock{id}', 'store_oneController@create_stock')->name('create_stock');
