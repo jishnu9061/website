@@ -458,25 +458,19 @@ use App\Http\Controllers\issued_summary;
     Route::any('update-Complaint', 'ClientManagement@updateComplaint')->name('update-Complaint');
     Route::any('view-Complaint/{id}', 'ClientManagement@viewComplaint')->name('view-Complaint');
     Route::any('delete-Complaint/{id}', 'ClientManagement@deleteComplaint')->name('delete-Complaint');
-
-    Route::any('new_communication', 'ClientManagement@add_communication')->name('add_communication');
-    
-
-    //Follow Up
+        //Follow Up
     Route::any('follow-up', 'ClientManagement@followup')->name('follow-up');
     Route::any('add-follow', 'ClientManagement@addFollowup')->name('add-follow');
     Route::any('edit-follow/{id}', 'ClientManagement@editFollow')->name('edit-follow');
     Route::any('update-follow', 'ClientManagement@updateFollow')->name('update-follow');
     Route::any('delete-follow/{id}', 'ClientManagement@deleteFollow')->name('delete-follow');
-    //end Follow Up
-
-    //service
+        //service
     Route::any('client-service', 'ClientManagement@service')->name('client-service');
     Route::any('add-service', 'ClientManagement@addService')->name('add-service');
     Route::any('edit-service/{id}', 'ClientManagement@editService')->name('edit-service');
     Route::any('update-service', 'ClientManagement@updateService')->name('update-service');
     Route::any('delete-service/{id}', 'ClientManagement@deleteService')->name('delete-service');
-    //end service
+    
 
     //Quotation
     Route::any('Quotation', 'ClientManagement@Quotation')->name('Quotation');
@@ -501,6 +495,7 @@ use App\Http\Controllers\issued_summary;
     Route::any('edit-communication/{id}', 'ClientManagement@editCommunication')->name('edit-communication');
     Route::any('/update-communication', 'ClientManagement@updateCommunication')->name('update-communication');
     Route::any('/delete-communication/{id}', 'ClientManagement@deleteCommunication')->name('delete-communication');
+    Route::any('new_communication', 'ClientManagement@add_communication')->name('add_communication');
     //end communication
 
     //search list
