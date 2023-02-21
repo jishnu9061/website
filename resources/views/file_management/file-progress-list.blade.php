@@ -1253,362 +1253,259 @@
                                     <form method="post" action="" id="form">
                                         @csrf
                                         <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Date Of Attendance</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="date" class="form-control" name="attendance_date"
-                                                            id="confirm_password" required>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="attendance_date"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date
+                                                        Of Attendance</label>
+                                                    <input type="text" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="attendance_date" id="" value=""
+                                                        required>
                                                 </div>
                                             </div>
-
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Client</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <select name="client_name" id="">
-                                                            <option value="">select</option>
-                                                            @if(count($client_list))
-                                                            @foreach($client_list as $list_category)
-                                                            <option>{{$list_category->client_name}}</option>
-                                                            @endforeach
-                                                            @endif
-                                                        </select>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="client_name"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="client_name" id="" required>
+                                                        @if(count($client_list))
+                                                        @foreach($client_list as $list_category)
+                                                        <option>{{$list_category->client_name}}</option>
+                                                        @endforeach
+                                                        @endif
+                                                    </select>
                                                 </div>
                                             </div>
-
-
-
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">File</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <select name="file_name" id="cars">
-                                                            <option>select...</option>
-                                                            <option>file 1</option>
-                                                            <option>file 2</option>
-                                                            <option>file 3</option>
-                                                            <option>file 4</option>
-                                                        </select>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="file_name"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">File</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="file_name" id="" required>
+                                                        <option>.....select.....</option>
+                                                        <option>file 1</option>
+                                                        <option>file 2</option>
+                                                        <option>file 3</option>
+                                                        <option>file 4</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
-                                        <br>
+
                                         <div class="row">
-                                            <div class="col-md-3">
-                                                <div class="mb-1">
-                                                    <label for="username">Other File</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <select name="other_file" id="cars">
-                                                            <option>select...</option>
-                                                            <option>other file 1</option>
-                                                            <option>other file 2</option>
-                                                            <option>other file 3</option>
-                                                            <option>other file 4</option>
-                                                        </select>
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Number is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="col-md-3" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="other_file"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Other
+                                                        File</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="other_file" id="" required>
+                                                        <option>.....select.....</option>
+                                                        <option>other file 1</option>
+                                                        <option>other file 2</option>
+                                                        <option>other file 3</option>
+                                                        <option>other file 4</option>
+                                                    </select>
                                                 </div>
                                             </div>
-                                            <div class="col-md-3">
-                                                <div class="mb-1">
-                                                    <label for="username">Court</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="text" class="form-control" name="court_name"
-                                                            id="confirm_password" required>
-                                                    </div>
+                                            <div class="col-md-3" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="court_name"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Court</label>
+                                                    <input type="text" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="court_name" id="" value="" required>
                                                 </div>
                                             </div>
-                                            <div class="col-md-3">
-                                                <div class="mb-1">
-                                                    <label for="username">Judical Officer</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="text" class="form-control" name="judicial_officer"
-                                                            id="confirm_password" required>
-                                                    </div>
+                                            <div class="col-md-3" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="judicial_officer"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Judical
+                                                        Officer</label>
+                                                    <input type="text" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="judicial_officer" id="" value=""
+                                                        required>
                                                 </div>
                                             </div>
-                                            <div class="col-md-3">
-                                                <div class="mb-1">
-                                                    <label for="username">Case No</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="text" class="form-control" name="case_no"
-                                                            id="confirm_password" required>
-                                                    </div>
+                                            <div class="col-md-3" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="case_no"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Case
+                                                        No</label>
+                                                    <input type="text" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="case_no" id="" value="" required>
                                                 </div>
                                             </div>
                                         </div>
-                                        <br>
                                         <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Parties</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="text" class="form-control" name="parties"
-                                                            id="confirm_password" required>
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Telephone Number is required.
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Acting For</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="text" class="form-control" name="acting_for"
-                                                            id="confirm_password" required>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="parties"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Parties</label>
+                                                    <input type="text" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="parties" id="" value="" required>
                                                 </div>
                                             </div>
-                                            <!-- <div class="col-md-3">
-                        <div class="mb-1">
-                            <label for="username">Person Dealing</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-
-                                </div>
-                                <select name="person_dealing" id="cars">
-                                    <option value="volvo"></option>
-                                </select>
-                            </div>
-                        </div>
-                    </div> -->
-
-
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Instructions</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="text" class="form-control" name="instructions"
-                                                            id="confirm_password" required>
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Telephone Number is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="acting_for"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Acting
+                                                        For</label>
+                                                    <input type="text" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="acting_for" id="" value="" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="instructions"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Instructions</label>
+                                                    <input type="text" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="instructions" id="" value=""
+                                                        required>
                                                 </div>
                                             </div>
                                         </div>
-                                        <br>
                                         <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">What Transpired In Court</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <textarea class="form-control" id="form7Example7" rows="3"
-                                                            name="transpired_in_court"></textarea>
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Number is required.
-                                                        </div>
-                                                    </div>
+                                            <div style="width:33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="transpired_in_court"
+                                                        style="width: 111px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">What
+                                                        Transpired In Court</label>
+                                                    <textarea class="outer" rows="4"
+                                                        style="border-color:#1d1d50;border-radius:7px;width:100%;"
+                                                        cols="41" placeholder="Physical Address"
+                                                        name="transpired_in_court" form="addemployee"></textarea>
                                                 </div>
                                             </div>
-
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Remarks</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <textarea class="form-control" id="form7Example7" rows="3"
-                                                            name="remarks"></textarea>
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Number is required.
-                                                        </div>
-                                                    </div>
+                                            <div style="width:33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="remarks"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Remarks</label>
+                                                    <textarea class="outer" rows="4"
+                                                        style="border-color:#1d1d50;border-radius:7px;width:100%;"
+                                                        cols="41" placeholder="Physical Address" name="remarks"
+                                                        form="addemployee"></textarea>
                                                 </div>
                                             </div>
-
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Notes</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <textarea class="form-control" id="form7Example7" rows="3"
-                                                            name="notes"></textarea>
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Number is required.
-                                                        </div>
-                                                    </div>
+                                            <div style="width:33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="notes"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Notes</label>
+                                                    <textarea class="outer" rows="4"
+                                                        style="border-color: #1d1d50;border-radius:7px;width:100%;"
+                                                        cols="41" placeholder="Physical Address" name="notes"
+                                                        form="addemployee"></textarea>
                                                 </div>
                                             </div>
                                         </div>
-                                        <br>
                                         <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Person Dealing</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <select name="person_dealing" id="cars">
-                                                            <option>select...</option>
-                                                            <option>person 1</option>
-                                                            <option>person 2</option>
-                                                            <option>person 3</option>
-                                                            <option>person 4</option>
-                                                        </select>
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Number is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="person_dealing"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Person
+                                                        Dealing</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="person_dealing" id="" required>
+                                                        <option>.....select.....</option>
+                                                        <option>person 1</option>
+                                                        <option>person 2</option>
+                                                        <option>person 3</option>
+                                                        <option>person 4</option>
+                                                    </select>
                                                 </div>
                                             </div>
-
-
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Time Taken(Hours)</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="time" class="form-control" name="website"
-                                                            id="time_taken_hours">
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Number is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="time_taken_hours"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time
+                                                        Taken(Hours)</label>
+                                                    <input type="time" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="time_taken_hours" id="" value=""
+                                                        required>
                                                 </div>
                                             </div>
-
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Time Taken(Minutes)</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="time" class="form-control" name="website"
-                                                            id="time_taken_minutes">
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Number is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="time_taken_minutes"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time
+                                                        Taken(Minutes)</label>
+                                                    <input type="time" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="time_taken_minutes" id="" value=""
+                                                        required>
                                                 </div>
                                             </div>
                                         </div>
-                                        <br>
                                         <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Bring Up Date</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="date" class="form-control" name="website"
-                                                            id="bring_up_date">
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Number is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="bring_up_date"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Bring
+                                                        Up Date</label>
+                                                    <input type="date" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="bring_up_date" id="" value=""
+                                                        required>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Reminder Period Days</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="text" class="form-control" name="website"
-                                                            id="remind_period_days">
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Number is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="remind_period_days"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Reminder
+                                                        Period Days</label>
+                                                    <input type="text" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="remind_period_days" id="" value=""
+                                                        required>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Send Reminder To</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="text" class="form-control" name="website"
-                                                            id="send_remind_to">
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Number is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="send_remind_to"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Send
+                                                        Reminder To</label>
+                                                    <input type="text" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="send_remind_to" id="" value=""
+                                                        required>
                                                 </div>
                                             </div>
                                         </div>
-                                        <br>
-
                                 </div>
                             </div>
-
-
-                    </div>
-                    <br>
-
-
-                    <br>
-                    <div class="row">
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-
-                        </div>
-                        <div class="col-sm">
-                            <br>
-                            <button type="submit" class="btn btn-primary float:right;" Style="width:60%;">Save</button>
-                            <button type="button" class="btn btn-primary float:right;"
-                                data-dismiss="modal">Cancel</button>
-                        </div>
                     </div>
                 </div>
-                </form>
+
+                <div class="row">
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+
+                    </div>
+                    <div class="col-sm">
+                        <br>
+                        <button type="submit" class="btn btn-primary float:right;" Style="width:45%;">Save</button>
+                        <button type="button" Style="width:45%;" class="btn btn-primary float:right;"
+                            data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
             </div>
+            </form>
         </div>
+    </div>
     </div>
 
     </div>
@@ -1675,239 +1572,175 @@
                                     <form method="post" action="" id="form">
                                         @csrf
                                         <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="mb-1">
-                                                    <label for="username">Court Event Type</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <select name="court_type" id="cars">
-                                                            <option>select....</option>
-                                                            <option>court type 1</option>
-                                                            <option>court type 2</option>
-                                                            <option>court type 3</option>
-                                                            <option>court type 4</option>
-                                                        </select>
-                                                    </div>
+                                            <div class="col-md-6" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="court_type"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Court
+                                                        Event Type</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="court_type" id="" required>
+                                                        <option>.....select.....</option>
+                                                        <option>court type 1</option>
+                                                        <option>court type 2</option>
+                                                        <option>court type 3</option>
+                                                        <option>court type 4</option>
+                                                    </select>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6">
-                                                <div class="mb-1">
-                                                    <label for="username">Client</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <select name="client_name" id="">
-                                                            <option value="">select</option>
-                                                            @if(count($client_list))
-                                                            @foreach($client_list as $list_category)
-                                                            <option>{{$list_category->client_name}}</option>
-                                                            @endforeach
-                                                            @endif
-                                                        </select>
-                                                    </div>
+                                            <div class="col-md-6" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="client_name"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="client_name" id="" required>
+                                                        @if(count($client_list))
+                                                        @foreach($client_list as $list_category)
+                                                        <option>{{$list_category->client_name}}</option>
+                                                        @endforeach
+                                                        @endif
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
-                                        <br>
                                         <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="mb-1">
-                                                    <label for="username">File</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <select name="file_name" id="cars">
-                                                            <option>select....</option>
-                                                            <option>file 1</option>
-                                                            <option>file 2</option>
-                                                            <option>file 3</option>
-                                                            <option>file 4</option>
-                                                        </select>
-                                                    </div>
+                                            <div class="col-md-6" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="file_name"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">File</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="file_name" id="" required>
+                                                        <option>.....select.....</option>
+                                                        <option>file 1</option>
+                                                        <option>file 2</option>
+                                                        <option>file 3</option>
+                                                        <option>file 4</option>
+                                                    </select>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6">
-                                                <div class="mb-1">
-                                                    <label for="username">Court</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <select name="court_name" id="cars">
-                                                            <option>select....</option>
-                                                            <option>court name 1</option>
-                                                            <option>court name 2</option>
-                                                            <option>court name 3</option>
-                                                            <option>court name 4</option>
-                                                        </select>
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Number is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="col-md-6" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="court_name"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Court</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="court_name" id="" required>
+                                                        <option>.....select.....</option>
+                                                        <option>court name 1</option>
+                                                        <option>court name 2</option>
+                                                        <option>court name 3</option>
+                                                        <option>court name 4</option>
+                                                    </select>
                                                 </div>
                                             </div>
-
                                         </div>
-                                        <br>
-
                                         <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="mb-1">
-                                                    <label for="username">Start Date</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="date" class="form-control" name="start_date"
-                                                            id="confirm_password" required>
-                                                    </div>
+                                            <div class="col-md-6" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="start_date"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Start
+                                                        Date</label>
+                                                    <input type="date" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="start_date" id="" value="" required>
                                                 </div>
                                             </div>
-
-
-                                            <div class="col-md-6">
-                                                <div class="mb-1">
-                                                    <label for="username">Time</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="time" class="form-control" name="start_time"
-                                                            id="confirm_password" required>
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Telephone Number is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="col-md-6" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="start_time"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time</label>
+                                                    <input type="date" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="start_time" id="" value="" required>
                                                 </div>
-
-
                                             </div>
                                         </div>
-                                        <br>
-
-
                                         <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="mb-1">
-                                                    <label for="username">End Date</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="date" class="form-control" name="end_date"
-                                                            id="confirm_password" required>
-                                                    </div>
+                                            <div class="col-md-6" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="end_date"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">End
+                                                        Date</label>
+                                                    <input type="date" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="end_date" id="" value="" required>
                                                 </div>
                                             </div>
-
-                                            <div class="col-md-6">
-                                                <div class="mb-1">
-                                                    <label for="username">Time</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="time" class="form-control" name="end_time"
-                                                            id="confirm_password" required>
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Telephone Number is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="col-md-6" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="end_time"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time</label>
+                                                    <input type="date" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="end_time" id="" value="" required>
                                                 </div>
                                             </div>
                                         </div>
-                                        <br>
-
-
                                         <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">User Assigned</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <select name="user_assigned" id="cars">
-                                                            <option>select....</option>
-                                                            <option>user 1</option>
-                                                            <option>user 2</option>
-                                                            <option>user 3</option>
-                                                            <option>user 4</option>
-                                                        </select>
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Number is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="user_assigned"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">User
+                                                        Assigned</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="user_assigned" id="" required>
+                                                        <option>.....select.....</option>
+                                                        <option>user 1</option>
+                                                        <option>user 2</option>
+                                                        <option>user 3</option>
+                                                        <option>user 4</option>
+                                                    </select>
                                                 </div>
                                             </div>
-
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Sent Notification To</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <select name="sent_notification" id="cars">
-                                                            <option>select....</option>
-                                                            <option>notification 1</option>
-                                                            <option>notification 2</option>
-                                                            <option>notification 3</option>
-                                                            <option>notification 4</option>
-                                                        </select>
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Number is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="sent_notification"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Sent
+                                                        Notification To</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="sent_notification" id="" required>
+                                                        <option>.....select.....</option>
+                                                        <option>notification 1</option>
+                                                        <option>notification 2</option>
+                                                        <option>notification 3</option>
+                                                        <option>notification 4</option>
+                                                    </select>
                                                 </div>
                                             </div>
-
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Set Reminder</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <select name="set_reminder" id="cars">
-                                                            <option>select....</option>
-                                                            <option>reminder 1</option>
-                                                            <option>reminder 2</option>
-                                                            <option>reminder 3</option>
-                                                            <option>reminder 4</option>
-                                                        </select>
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Number is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="set_reminder"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Set
+                                                        Reminder</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="set_reminder" id="" required>
+                                                        <option>.....select.....</option>
+                                                        <option>reminder 1</option>
+                                                        <option>reminder 2</option>
+                                                        <option>reminder 3</option>
+                                                        <option>reminder 4</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
-                                        <br>
                                         <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="mb-1">
-                                                    <label for="username">Notes</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <textarea class="form-control" id="form7Example7" rows="3"
-                                                            name="notes"></textarea>
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Number is required.
-                                                        </div>
-                                                    </div>
+                                            <div style="width:205%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="notes"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Notes</label>
+                                                    <textarea class="outer" rows="4"
+                                                        style="border-color:#1d1d50;border-radius:7px;width:100%;"
+                                                        cols="41" placeholder="Physical Address" name="notes"
+                                                        form="addemployee"></textarea>
                                                 </div>
                                             </div>
                                         </div>
 
-
-                                        <br>
                                         <div class="row">
                                             <div class="col-sm">
 
@@ -1918,8 +1751,9 @@
                                             <div class="col-sm">
                                                 <br>
                                                 <button type="submit" class="btn btn-primary float:right;"
-                                                    Style="width:60%;">Save</button>
-                                                <button type="button" class="btn btn-primary float:right;"
+                                                    Style="width:45%;">Save</button>
+                                                <button type="button" Style="width:45%;"
+                                                    class="btn btn-primary float:right;"
                                                     data-dismiss="modal">Cancel</button>
                                             </div>
                                         </div>
@@ -1992,440 +1826,308 @@
                                     <form method="post" action="" id="form">
                                         @csrf
                                         <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Date Of Arbiration</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="date" class="form-control" name="arbiration_date"
-                                                            id="confirm_password" required>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="arbiration_date"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Date
+                                                        Of Arbiration</label>
+                                                    <input type="date" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="arbiration_date" id="" value=""
+                                                        required>
                                                 </div>
                                             </div>
-
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Client</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <select name="client_name" id="">
-                                                            <option value="">select</option>
-                                                            @if(count($client_list))
-                                                            @foreach($client_list as $list_category)
-                                                            <option>{{$list_category->client_name}}</option>
-                                                            @endforeach
-                                                            @endif
-                                                        </select>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="client_name"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Client</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="client_name" id="" required>
+                                                        @if(count($client_list))
+                                                        @foreach($client_list as $list_category)
+                                                        <option>{{$list_category->client_name}}</option>
+                                                        @endforeach
+                                                        @endif
+                                                    </select>
                                                 </div>
                                             </div>
-
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">File</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <select name="file_name" id="cars">
-                                                            <option>select....</option>
-                                                            <option>file 1</option>
-                                                            <option>file 2</option>
-                                                            <option>file 3</option>
-                                                            <option>file 4</option>
-                                                        </select>
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Number is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="file_name"
+                                                        style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">File</label>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        style="height:35px;border-color: #1d1d50;width=45%;border-radius: 7px;"
+                                                        name="file_name" id="" required>
+                                                        <option>.....select.....</option>
+                                                        <option>file 1</option>
+                                                        <option>file 2</option>
+                                                        <option>file 3</option>
+                                                        <option>file 4</option>
+                                                    </select>
                                                 </div>
                                             </div>
-
                                         </div>
-                                        </br>
-                                        <!--  -->
-
-
                                         <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Seller's Name</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="text" class="form-control" name="seller_name"
-                                                            id="confirm_password" required>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="seller_name"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Seller's
+                                                        Name</label>
+                                                    <input type="text" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="seller_name" id="" value="" required>
                                                 </div>
                                             </div>
-
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">ID.No/Passport No</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="text" class="form-control" name="seller_id_no"
-                                                            id="confirm_password" required>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="seller_id_no"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">ID.No/Passport
+                                                        No</label>
+                                                    <input type="text" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="seller_id_no" id="" value=""
+                                                        required>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Postal Address</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="text" class="form-control" name="seller_address"
-                                                            id="confirm_password" required>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="seller_address"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Postal
+                                                        Address</label>
+                                                    <input type="text" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="seller_address" id="" value=""
+                                                        required>
                                                 </div>
                                             </div>
                                         </div>
-                                        <br>
                                         <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Mobile No</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="number" class="form-control" name="seller_contact"
-                                                            id="confirm_password" required>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="seller_contact"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Mobile
+                                                        No</label>
+                                                    <input type="number" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="seller_contact" id="" value=""
+                                                        required>
                                                 </div>
                                             </div>
-
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Email Address</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="email" class="form-control" name="seller_email"
-                                                            id="confirm_password" required>
-                                                        <div class="invalid-feedback" style="width: 100%;">
-                                                            Telephone Number is required.
-                                                        </div>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="seller_email"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Email
+                                                        Address</label>
+                                                    <input type="email" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="seller_email" id="" value=""
+                                                        required>
                                                 </div>
-
-
                                             </div>
                                         </div>
-
-
-                                        </br>
-
-
-
-
-
-
-
                                         <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Property / Land Ref No</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="text" class="form-control" name="land_ref_no"
-                                                            id="confirm_password" required>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="land_ref_no"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Property
+                                                        / Land Ref No</label>
+                                                    <input type="text" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="land_ref_no" id="" value="" required>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Title Deed No</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="text" class="form-control" name="title_deed_no"
-                                                            id="confirm_password" required>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="title_deed_no"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Title
+                                                        Deed No</label>
+                                                    <input type="text" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="title_deed_no" id="" value=""
+                                                        required>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Location</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="text" class="form-control" name="location"
-                                                            id="confirm_password" required>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="location"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Location</label>
+                                                    <input type="text" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="location" id="" value="" required>
                                                 </div>
                                             </div>
                                         </div>
-                                        <br>
                                         <div class="row">
-
-                                            <div class="col-md-4">
-                                                <div class="mb-1">
-                                                    <label for="username">Property / Land Description{size}</label>
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-
-                                                        </div>
-                                                        <input type="text" class="form-control" name="property_size"
-                                                            id="confirm_password" required>
-                                                    </div>
+                                            <div class="col-md-4" style="width: 33%">
+                                                <div class=""><span style="color: red">*</span>
+                                                    <label for="property_size"
+                                                        style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Property
+                                                        / Land Description{size}</label>
+                                                    <input type="text" placeholder=""
+                                                        style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                                        class="form-control" name="property_size" id="" value=""
+                                                        required>
                                                 </div>
                                             </div>
-
                                         </div>
-
 
                                 </div>
                             </div>
+                            
                             <hr class="mb-4">
-                            <br>
-
-
                             <div class="row">
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="username">Buyer's Name</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-
-                                            </div>
-                                            <input type="text" class="form-control" name="buyer_name"
-                                                id="confirm_password" required>
-                                        </div>
+                                <div class="col-md-4" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="buyer_name"
+                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Buyer's
+                                            Name</label>
+                                        <input type="text" placeholder=""
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="buyer_name" id="" value="" required>
                                     </div>
                                 </div>
-
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="username">ID.No</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-
-                                            </div>
-                                            <input type="text" class="form-control" name="buyer_id_no"
-                                                id="confirm_password" required>
-                                        </div>
+                                <div class="col-md-4" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="buyer_id_no"
+                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">ID.No</label>
+                                        <input type="text" placeholder=""
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="buyer_id_no" id="" value="" required>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="username">Postal Address</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-
-                                            </div>
-                                            <input type="text" class="form-control" name="buyer_address"
-                                                id="confirm_password" required>
-                                        </div>
+                                <div class="col-md-4" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="buyer_address"
+                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Postal
+                                            Address</label>
+                                        <input type="text" placeholder=""
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="buyer_address" id="" value="" required>
                                     </div>
                                 </div>
                             </div>
-                            <br>
                             <div class="row">
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="username">Mobile Number</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-
-                                            </div>
-                                            <input type="number" class="form-control" name="buyer_contact"
-                                                id="confirm_password" required>
-                                        </div>
+                                <div class="col-md-4" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="buyer_contact"
+                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Mobile
+                                            Number</label>
+                                        <input type="text" placeholder=""
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="buyer_contact" id="" value="" required>
                                     </div>
                                 </div>
-
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="username">Email Address</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-
-                                            </div>
-                                            <input type="email" class="form-control" name="buyer_email"
-                                                id="confirm_password" required>
-                                            <div class="invalid-feedback" style="width: 100%;">
-                                                Telephone Number is required.
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                            </div>
-
-                            </br>
-
-
-
-                            <div class="row">
-
-                                <div class="col-md-6">
-                                    <div class="mb-1">
-                                        <label for="username">Dispute Solving Process</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-
-                                            </div>
-                                            <textarea class="form-control" id="form7Example7" rows="3"
-                                                name="solving_process"></textarea>
-                                            <div class="invalid-feedback" style="width: 100%;">
-                                                Number is required.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="mb-1">
-                                        <label for="username">Final Aggrement</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-
-                                            </div>
-                                            <textarea class="form-control" id="form7Example7" rows="3"
-                                                name="final_aggremnt"></textarea>
-                                            <div class="invalid-feedback" style="width: 100%;">
-                                                Number is required.
-                                            </div>
-                                        </div>
+                                <div class="col-md-4" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="buyer_email"
+                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Email
+                                            Address</label>
+                                        <input type="email" placeholder=""
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="buyer_email" id="" value="" required>
                                     </div>
                                 </div>
                             </div>
-                            <br>
                             <div class="row">
-
-
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="username">Person Dealing</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-
-                                            </div>
-                                            <input type="text" class="form-control" name="person_dealing"
-                                                id="confirm_password" required>
-                                            <div class="invalid-feedback" style="width: 100%;">
-                                                Number is required.
-                                            </div>
-                                        </div>
+                                <div style="width:50%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="solving_process"
+                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Dispute
+                                            Solving Process</label>
+                                        <textarea class="outer" rows="4"
+                                            style="border-color:#1d1d50;border-radius:7px;width:100%;" cols="41"
+                                            placeholder="" name="solving_process" form="addemployee"></textarea>
                                     </div>
                                 </div>
-
-
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="username">Time Taken(Hours)</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-
-                                            </div>
-                                            <input type="time" class="form-control" name="time_taken_hours"
-                                                id="confirm_password" required>
-                                            <div class="invalid-feedback" style="width: 100%;">
-                                                Number is required.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="username">Time Taken(Minutes)</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-
-                                            </div>
-                                            <input type="time" class="form-control" name="time_taken_minutes"
-                                                id="confirm_password" required>
-                                            <div class="invalid-feedback" style="width: 100%;">
-                                                Number is required.
-                                            </div>
-                                        </div>
+                                <div style="width:50%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="final_aggremnt"
+                                            style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Final
+                                            Aggrement</label>
+                                        <textarea class="outer" rows="4"
+                                            style="border-color:#1d1d50;border-radius:7px;width:100%;" cols="41"
+                                            placeholder="" name="final_aggremnt" form="addemployee"></textarea>
                                     </div>
                                 </div>
                             </div>
-                            <br>
+
                             <div class="row">
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="username">Bring Up Date</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
 
-                                            </div>
-                                            <input type="date" class="form-control" name="bringup_date"
-                                                id="confirm_password" required>
-                                            <div class="invalid-feedback" style="width: 100%;">
-                                                Number is required.
-                                            </div>
-                                        </div>
+                                <div class="col-md-4" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="person_dealing"
+                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Person
+                                            Dealing</label>
+                                        <input type="text" placeholder=""
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="person_dealing" id="" value="" required>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="username">Reminder Period Days</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-
-                                            </div>
-                                            <input type="text" class="form-control" name="remind_period_days"
-                                                id="confirm_password" required>
-                                            <div class="invalid-feedback" style="width: 100%;">
-                                                Number is required.
-                                            </div>
-                                        </div>
+                                <div class="col-md-4" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="time_taken_hours"
+                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time
+                                            Taken(Hours)</label>
+                                        <input type="text" placeholder=""
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="time_taken_hours" id="" value="" required>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="mb-1">
-                                        <label for="username">Send Reminder To</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-
-                                            </div>
-                                            <input type="text" class="form-control" name="send_reminder_to"
-                                                id="confirm_password" required>
-                                            <div class="invalid-feedback" style="width: 100%;">
-                                                Number is required.
-                                            </div>
-                                        </div>
+                                <div class="col-md-4" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="time_taken_hours"
+                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Time
+                                            Taken(Minutes)</label>
+                                        <input type="text" placeholder=""
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="time_taken_minutes" id="" value="" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="bringup_date"
+                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Bring
+                                            Up Date</label>
+                                        <input type="text" placeholder=""
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="bringup_date" id="" value="" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="remind_period_days"
+                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Reminder
+                                            Period Days</label>
+                                        <input type="text" placeholder=""
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="remind_period_days" id="" value="" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4" style="width: 33%">
+                                    <div class=""><span style="color: red">*</span>
+                                        <label for="send_reminder_to"
+                                            style="width: 110px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Send
+                                            Reminder To</label>
+                                        <input type="text" placeholder=""
+                                            style="border-color: #1d1d50;width=45%;border-radius: 7px;height:35px;"
+                                            class="form-control" name="send_reminder_to" id="" value="" required>
                                     </div>
                                 </div>
                                 <div>
-                                    <br>
                                     <div class="row">
-
-                                        <div class="col-md-4">
-                                            <div class="mb-1">
-                                                <label for="username">Next Action</label>
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-
-                                                    </div>
-                                                    <textarea class="form-control" id="form7Example7" rows="3"
-                                                        name="next_action"></textarea>
-                                                    <div class="invalid-feedback" style="width: 100%;">
-                                                        Number is required.
-                                                    </div>
-                                                </div>
+                                        <div style="width:50%">
+                                            <div class=""><span style="color: red">*</span>
+                                                <label for="next_action"
+                                                    style="width: 100px;margin-bottom: 0px;margin-right: 2px;font-size:10px;">Next
+                                                    Action</label>
+                                                <textarea class="outer" rows="4"
+                                                    style="border-color:#1d1d50;border-radius:7px;width:100%;" cols="41"
+                                                    placeholder="" name="next_action" form="addemployee"></textarea>
                                             </div>
                                         </div>
-                                        <div id="test" style="height:20px;"></div>
                                     </div>
                                 </div>
 
