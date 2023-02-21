@@ -360,25 +360,18 @@ use App\Http\Controllers\issued_summary;
     Route::any('/update_user', 'UserManagement@userupdate')->name('update_user');
     Route::any('user_attachments', 'UserManagement@attachments')->name('user_attachments');
     Route::any('user_comments', 'UserManagement@comments')->name('user_comments');
-    
-//change password
+        //change password
     Route::any('change_user_password', 'UserManagement@changepassword')->name('change_user_password');
-
-    //end
-//manage user group
+        //manage user group
     Route::any('manage_user_group', 'UserManagement@manageusergrp')->name('manage_user_group');
     Route::any('add_new_user_grp', 'UserManagement@addnewusergrp')->name('add_new_user_grp');
-
     Route::any('/update_group', 'UserManagement@updategroup')->name('update_group');
-
     Route::any('/edit_new_user_grp/{id}', 'UserManagement@editnewusergrp')->name('edit_new_user_grp');
-
     Route::any('/user_group_destroy/{id}', "UserManagement@usergroupdestroy")->name('user_group_destroy');
-    //end
-//view roles per user
+        //view roles per user
     Route::any('view_roles_per_user', 'UserManagement@rolesperuser')->name('view_roles_per_user');
     Route::any('edit_view_roles', 'UserManagement@editviewroles')->name('edit_view_roles');
-    //end
+    
 //manage user roles
     Route::any('manage_user_roles', 'UserManagement@manageuserroles')->name('manage_user_roles');
     Route::any('add_user_roles', 'UserManagement@adduserrole')->name('add_user_roles');
