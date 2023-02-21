@@ -113,18 +113,7 @@ use App\Http\Controllers\issued_summary;
     //store controller
    
 
-    // Store Medicines
-    Route::any('/view_medicine_category', 'storecontroller@create_category_details')->name('view_medicine_category');
-    Route::any('/create_category', 'storecontroller@add_category')->name('create_category');
-    Route::any('/edit_category', 'storecontroller@category_edit')->name('edit_category');
-    Route::any('/update_category', 'storecontroller@update_category')->name('update_category');
-    Route::any('/delete_category{id}', 'storecontroller@delete_category')->name('delete_category');
-    // Medicine Type
-    Route::any('/view_medicine_type', 'storecontroller@create_type_details')->name('view_medicine_type');
-    Route::any('/create_type', 'storecontroller@add_type')->name('create_type');
-    Route::any('/edit_type', 'storecontroller@type_edit')->name('edit_type');
-    Route::any('/update_type', 'storecontroller@update_type')->name('update_type');
-    Route::any('/delete_type{id}', 'storecontroller@delete_type')->name('delete_type');
+
     // Unit
     Route::any('/view_unit', 'storecontroller@create_unit_details')->name('view_unit');
     Route::any('/create_unit', 'storecontroller@add_unit')->name('create_unit');
