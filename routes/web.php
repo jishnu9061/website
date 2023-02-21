@@ -100,9 +100,7 @@ use App\Http\Controllers\issued_summary;
 //hospital controller
     Route::any('/usermanagement', 'hospitalcontroller@usermanagement')->name('usermanagement');
     //hospital controller
-
-
-    //Store Suppliers
+//store controller
     Route::any('/addsuppliers', 'storecontroller@index')->name('addsuppliers');
     Route::any('/suppliers_save', 'storecontroller@store')->name('suppliers_save');
     Route::any('/suppliers_details{id}', 'storecontroller@show')->name('suppliers_details');
@@ -112,6 +110,8 @@ use App\Http\Controllers\issued_summary;
     Route::any('/add_installment_details{id}', 'storecontroller@add_installment_details')->name('add_installment_details');
     Route::any('/update_installment_details', 'storecontroller@update_installment_details')->name('update_installment_details');
     Route::any('/supplier_paid_details{id}', 'storecontroller@supplier_paid_details')->name('paid_details');
+    //store controller
+   
 
     // Store Manufacturer
 
