@@ -46,7 +46,7 @@
                   
                     <tr>
                         <th>Description:</th>
-                        <td></td>
+                        <td>{{$view_tender_details->description}}</td>
                     </tr>
 
                 </tbody>

@@ -59,18 +59,12 @@
                     <td>{{$list->supplier_name}}</td>
                     <td>{{$list->item_name}}</td>
                     <td>{{$list->description}}</td>
-                    <td></td>
-                    
-                    <td scope="row" class="text-center">
-                            <div class="btn-group">
-                                <a class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                    style="border-color:none;"> ⋮ </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="{{url('view_tender_applied',$list->id)}}">View Tender Details</a>
-                                </div>
-                            </div>
-                        </td>
-                    
+
+                    <td>
+                        <a href="{{url('view_tender_applied',$list->id)}}"><i style="color:rgb(13, 1, 56);" class="fa fa-eye"></i>
+                    </td>
+                    <td><span class="badge bg-success">Opened</span></td>
+
                 </tr>
                 @endforeach
             </tbody>

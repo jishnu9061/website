@@ -12,8 +12,6 @@
 <div class="container">
     <h4 id="hdtpa"><b> Apply Tender </b></h4>
     <br><br>
-
-
     <div class="header_wrap">
         <div class="num_rows">
             <div class="form-group">
@@ -37,8 +35,6 @@
                 class="form-control">
         </div>
     </div>
-
-
 
     <div class="table-responsive">
         <table class="table text-center" id="table-id">
@@ -79,8 +75,6 @@
         </table>
     </div>
 
-
-
     <!--		Start Pagination -->
     <div class='pagination-container'>
         <nav>
@@ -93,10 +87,6 @@
 
     <!-- 		End of Container -->
 
-
-
-
 </div>
-
 
 @endsection
