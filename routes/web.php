@@ -521,23 +521,16 @@ use App\Http\Controllers\issued_summary;
     Route::any('view-box-no', "filemanagement@viewboxno")->name('view-box-no');
     Route::any('/edit-box-no/{id}', "filemanagement@editboxno")->name('edit-box-no');
     Route::any('/update-box', "filemanagement@updatebox")->name('update-box');
-    
-
-    //document templates
+        //document templates
     Route::any('template-category', "filemanagement@template")->name('template-category');
     Route::any('add-template', "filemanagement@addtemplate")->name('add-template');
-    //document templates
-
-    //file progress
+        //file progress/bringup
     Route::any('add-file-progress', "filemanagement@addprogress")->name('add-file-progress');
-    // Route::any('file_corporate',"filemanagement@file_corporate")->name('file_corporate');
-
     Route::any('/edit-file-progress/{id}', "filemanagement@editprogress")->name('edit-file-progress');
     Route::any('/update_progress', "filemanagement@update_progress")->name('update_progress');
     Route::any('/delete-file-progress/{id}', "filemanagement@delete_progress")->name('delete-file-progress');
     Route::any('progress-bringup', "filemanagement@progressbringup")->name('progress-bringup');
     Route::any('add-new-bringup', "filemanagement@addbringup")->name('add-new-bringup');
-
     Route::any('file-action-hours', "filemanagement@fileactionhours")->name('file-action-hours');
     Route::any('add-file-progress-action', "filemanagement@addfileprogressaction")->name('add-file-progress-action');
     Route::any('add-file-bringup-reminder', "filemanagement@addfilebringupreminder")->name('add-file-bringupreminder');
@@ -546,28 +539,24 @@ use App\Http\Controllers\issued_summary;
     Route::any('arbiration-sheet', "filemanagement@arbirationsheet")->name('arbiration-sheet');
     Route::any('conveyance-sheet', "filemanagement@conveyance")->name('conveyance-sheet');
     Route::any('file-progress-list', "filemanagement@fileprogresslist")->name('file-progress-list');
-
-
-    //notes
-    Route::any('diary-management', "filemanagement@diarymanagement")->name('diary-management');
     Route::any('meeting-rooms', "filemanagement@meetingrooms")->name('meeting-rooms');
+        //diary management
+    Route::any('diary-management', "filemanagement@diarymanagement")->name('diary-management');
     Route::any('add-event', "filemanagement@addevent")->name('add-event');
-    Route::any('work-flow', "filemanagement@workflow")->name('work-flow');
-    Route::any('new-workflow', "filemanagement@newworkflow")->name('new-workflow');
     Route::any('/event_delete/{id}', "filemanagement@eventdelete")->name('eventdelete');
     Route::any('/edit_event/{id}', "filemanagement@editevent")->name('editevent');
     Route::any('/update_event', "filemanagement@updateevent")->name('update_event');
-    //workflow
+        //workflow
+    Route::any('work-flow', "filemanagement@workflow")->name('work-flow');
+    Route::any('new-workflow', "filemanagement@newworkflow")->name('new-workflow');
     Route::any('/delete-workflow/{id}', "filemanagement@deleteworkflow")->name('delete-workflow');
     Route::any('/edit-workflow/{id}', "filemanagement@editworkflow")->name('editworkflow');
     Route::any('/update-workflow', "filemanagement@updatworkflow")->name('update-workflow');
-
-    //document manager
+        //document manager
     Route::any('document-manager', "filemanagement@documentmanager")->name('document-manager');
     Route::any('upload-document', "filemanagement@uploaddocument")->name('upload-document');
     Route::any('generate-document', "filemanagement@generatedocument")->name('generate-document');
-    //document manager
-//vinu
+    
 
 //manage files
 Route::any('file_managementindex', "filemanagement@index")->name('file_managementindex');
