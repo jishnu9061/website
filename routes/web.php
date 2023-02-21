@@ -178,16 +178,7 @@ use App\Http\Controllers\issued_summary;
     //accounts controller
 
     
-    // Route::post('/add_labtest','doctorController@add_labtest')->name('add_labtest');
-// Route::any('/edit_labtest{id}','doctorController@update_labtest')->name('edit_labtest');
-    Route::any('/add_labtest', 'doctorController@add_labtest')->name('add_labtest');
-    Route::any('/view_lab_description/{id}', 'doctorController@view_lab_description')->name('view_lab_description');
-    Route::any('/edit_labtest/{id}', 'doctorController@edit_labtest')->name('edit_labtest');
-    Route::any('/update_labtest', 'doctorController@update_labtest')->name('update_labtest');
-    Route::any('/delete_labtest/{id}', 'doctorController@delete_labtest')->name('delete_labtest');
-    route::any('/delete_preclab{id}', 'doctorController@delete_preclab');
-    Route::any('/add_surgery', 'doctorController@add_surgery')->name('add_surgery');
-    Route::any('/print_uploads{id}', 'doctorController@print_uploads')->name('print_uploads');
+   
     Route::any('/add_procedure/{id}', 'doctorController@add_procedure')->name('add_procedure');
     Route::any('/otpatient_details', 'doctorController@otpatient_details')->name('otpatient_details');
     Route::any('/add_ot_patient', 'doctorController@add_ot_patient')->name('add_ot_patient');
