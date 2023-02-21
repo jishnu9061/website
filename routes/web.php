@@ -612,34 +612,36 @@ use App\Http\Controllers\issued_summary;
     Route::any('/edit_office_instruction/{id}', "filemanagement@edit_office_instruction_list")->name('edit_office_instruction_list');
     Route::any('/delete_file/{id}', "filemanagement@destroyfileinstruction")->name('delete_file');
     //file management controller
-// hr module belji
+// hr index controller
+        //index
     Route::any('hrindex', 'hrindex@index')->name('hrindex');
+        //recruitment
     Route::any('recruitment', 'hrindex@recruitment')->name('recruitment');
-    //employee start
-    Route::any('addemployee', "employeecontroller@store")->name('addemployee');
-    Route::any('create_employee/{id}', "employeecontroller@create")->name('create_employee');
-    //employee end
-
-    // HR-Manage Staffs Subhasree
-
-    Route::any('/edit_staff_details/{id}', 'hrindex@edit_staff_details')->name('edit_staff_details');
-    Route::any('/view_staff_details/{id}', 'hrindex@view_staff_details')->name('view_staff_details');
-
-    //reshma
-    Route::any('hr_department', 'hrindex@hrdepartment')->name('hr_department');
-    Route::any('performance_department', 'hrindex@performance_department')->name('performance_department');
+             //job posts
     Route::any('job_posts', 'hrindex@job_posts')->name('job_posts');
     Route::any('edit_job_post/{id}', 'hrindex@edit_job_post')->name('edit_job_post');
     Route::any('/update_job_post', 'hrindex@update_job_post')->name('update_job_post');
     Route::any('/delete_job_post/{id}', 'hrindex@delete_job_post')->name('delete_job_post');
     Route::any('/view_job_post/{id}', 'hrindex@view_job_post')->name('view_job_post');
-    //reshma
+    Route::any('create_job_post', 'hrindex@create_job_post')->name('create_job_post');
+            //job applications
     Route::any('view_job_applications', 'hrindex@view_job_applications')->name('view_job_applications');
     Route::any('view_application_details', 'hrindex@view_application_details')->name('view_application_details');
     Route::any('view_job_appl_details_1', 'hrindex@view_job_appl_details_1')->name('view_job_appl_details_1');
     Route::any('view_job_appl_details_2', 'hrindex@view_job_appl_details_2')->name('view_job_appl_details_2');
-    Route::any('create_job_post', 'hrindex@create_job_post')->name('create_job_post');
+            //reviewd applications
     Route::any('reviewed_details', 'hrindex@reviewed_details')->name('reviewed_details');
+        //employee 
+    Route::any('addemployee', "employeecontroller@store")->name('addemployee');
+    Route::any('create_employee/{id}', "employeecontroller@create")->name('create_employee');
+        //Manage Staffs
+    Route::any('/edit_staff_details/{id}', 'hrindex@edit_staff_details')->name('edit_staff_details');
+    Route::any('/view_staff_details/{id}', 'hrindex@view_staff_details')->name('view_staff_details');
+        //department
+    Route::any('hr_department', 'hrindex@hrdepartment')->name('hr_department');
+    Route::any('performance_department', 'hrindex@performance_department')->name('performance_department');
+       
+   
     Route::any('quarterly_performance_form', 'hrindex@quarterly_performance_form')->name('quarterly_performance_form');
     Route::any('add_kpi', 'hrindex@add_kpi')->name('add_kpi');
     Route::any('mid_year_performance', 'hrindex@mid_year_performance')->name('mid_year_performance');
