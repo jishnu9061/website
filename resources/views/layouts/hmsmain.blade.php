@@ -355,17 +355,7 @@
                 aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class=""><i class="fa fa-ellipsis-v"></i></span>
             </button>
-            <div>
-                <div class="stopwatch">
-                    <h8 id="displayWatch" style="border:1px solid black; padding:4px;  border-radius: 10px;">00:00:00
-                    </h8>
-                    <i class="bi bi-caret-right" onclick="watchstart()"></i>
-                    <i class="bi bi-arrow-clockwise" onclick="watchReset()"></i>
-                    <i class="bi bi-stop-circle" onclick="watchstop()"></i>
-
-                </div>
-
-            </div>
+           
             <div class="collapse navbar-collapse ml-2" id="navbarTogglerDemo01">
                 <ul class="navbar-nav mr-auto">
                 </ul>
@@ -491,7 +481,7 @@
     </div>
 
     <script>
-    // to show/hide the side-bar @author:udayan
+   
     function hideee() {
         var x = document.getElementById("sidebar");
         if (x.classList.contains("active")) {
@@ -527,48 +517,7 @@
     }
     </script>
 
-    <script>
-    let [seconds, minutes, hours] = [0, 0, 0];
-    let displayWatch = document.getElementById("displayWatch");
-    let timer = null;
-
-    function stopwatch() {
-        seconds++;
-        if (seconds == 60) {
-            seconds = 0;
-            minutes++;
-            if (minutes == 60) {
-                minutes = 0;
-                hours++;
-            }
-        }
-
-        let h = hours < 10 ? "0" + hours : hours;
-        let m = minutes < 10 ? "0" + minutes : minutes;
-        let s = seconds < 10 ? "0" + seconds : seconds;
-
-        displayWatch.innerHTML = h + ":" + m + ":" + s;
-    }
-
-    function watchstart() {
-
-        if (timer !== null) {
-            clearInterval(timer);
-        }
-        timer = setInterval(stopwatch, 1000);
-    }
-
-    function watchstop() {
-        clearInterval(timer);
-    }
-
-    function watchReset() {
-        clearInterval(timer);
-        [seconds, minutes, hours] = [0, 0, 0];
-        displayWatch.innerHTML = "00:00:00";
-    }
-    </script>
-
+   
     <script>
     //time script important@udayan
     const displayTime = document.querySelector(".display-time");
