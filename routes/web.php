@@ -292,16 +292,14 @@ use App\Http\Controllers\issued_summary;
     Route::any('edit_file_types/{id}', 'SystemSetup@editfiletypes')->name('edit_file_types');
     Route::any('/update_file_types', 'SystemSetup@updatefiletypes')->name('update_file_types');
     Route::any('/delete_file_types/{id}', 'SystemSetup@deletefiletypes')->name('delete_file_types');
-    //end
-//invoice_items
+        //invoice_items
     Route::any('invoice_items', 'SystemSetup@invoiceitems')->name('invoice_items');
     Route::any('add_invoice_item', 'SystemSetup@addinvoiceitem')->name('add_invoice_item');
     Route::any('edit_invoice_item/{id}', 'SystemSetup@editinvoiceitem')->name('edit_invoice_item');
     Route::any('/update_invoice_item', 'SystemSetup@updateinvoiceitem')->name('update_invoice_item');
     Route::any('/delete_invoice_item/{id}', 'SystemSetup@deleteinvoiceitem')->name('delete_invoice_item');
     Route::any('add_gl_account', 'SystemSetup@addglaccount')->name('add_gl_account');
-    //end
-//currency_list
+        //currency_list
     Route::any('currency_list', 'SystemSetup@currencylist')->name('currency_list');
     Route::any('add_currency', 'SystemSetup@addcurrency')->name('add_currency');
     Route::any('edit_currency/{id}', 'SystemSetup@editcurrency')->name('edit_currency');
