@@ -118,27 +118,7 @@ use App\Http\Controllers\issued_summary;
     //store controller
 
      
-    Route::any('/allocatebedsandrooms', 'bedsController@allocatebedsandrooms');
-    Route::any('/allocatebedsnrooms', 'hospitalController@allocatebedsnrooms');
-    Route::any('/addit', 'hospitalcontroller@addit');
-    Route::any('/log', 'homecontroller@log');
-    Route::any('/reg', 'homecontroller@reg');
-    Route::get('/adminlog', function () {
-        return view('admindashboard/adminlogin');
-    }
-    );
-    Route::get('/myaccount', function () {
-        return view('home');
-    }
-    );
-    Route::get('/testerr', function () {
-        return view('testerr');
-    }
-    );
-    Route::get('/patientinsurance', function () {
-        return view('patient.patinsurance');
-    }
-    );
+   
     Route::any('/addpatinsurance', 'patientcontroller@addpatinsurance');
     Route::post('projects/importProject', 'ProjectController@importProject')->name('importProject');
     Route::resource('projects', ProjectController::class);
