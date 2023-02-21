@@ -91,33 +91,22 @@ use App\Http\Controllers\issued_summary;
     Route::any('/leaveapprove', 'departmentcontroller@leaveapprove');
     Route::any('/leavedecline', 'departmentcontroller@leavedecline');
     Route::any('/depleaves', 'departmentcontroller@depleaves');
-    
-    
-    
+
+
+
 //doctor controller
     Route::any('/applyleave', 'doctorController@applyleave');
     Route::any('/file', 'doctorController@file');
-   
-//store controller 
+
+//store controller
     Route::any('/requestitems', 'storecontroller@create_requestitems')->name('requestitems');
 
-   
-
-   
-    //department
-    Route::any('/depstock', 'departmentcontroller@depstock')->name('depstock');
-    Route::any('/depbeds', 'departmentcontroller@depbeds')->name('depbeds');
-    Route::any('/deppats', 'departmentcontroller@deppats')->name('deppats');
-    Route::any('/removepatientfrombed', 'departmentcontroller@removepatientfrombed')->name('removepatientfrombed');
+//hospital controller
     Route::any('/usermanagement', 'hospitalcontroller@usermanagement')->name('usermanagement');
-    Route::any('/adddepartments', 'hospitalcontroller@adddepartments')->name('adddepartments');
-    Route::any('/add_phardept', 'hospitalcontroller@add_phardept')->name('add_phardept');
-    Route::any('/view_dept_sub{phar_deptid}', 'hospitalcontroller@view_dept_sub')->name('view_dept_sub');
-    Route::any('/edit_dep_sub{phar_deptid}', 'hospitalcontroller@edit_dep_sub')->name('edit_dep_sub');
-    Route::any('/addfloor', 'hospitalcontroller@addfloor')->name('addfloor');
-    Route::any('/save_floor', 'hospitalcontroller@save_floor')->name('save_floor');
-    Route::any('/update_floor', 'hospitalcontroller@update_floor')->name('update_floor');
-    Route::any('/delete_floor/{floor_id}', 'hospitalcontroller@delete_floor')->name('delete_floor');
+
+
+
+
     // vipin
     Route::any('/add_labdept', 'labdepartment_controller@add_labdept')->name('add_labdept');
     Route::any('/lab_departments', 'labdepartment_controller@store')->name('lab_departments');
