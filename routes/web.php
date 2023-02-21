@@ -405,16 +405,9 @@ use App\Http\Controllers\issued_summary;
     Route::any('advocates_target_2024', 'UserManagement@advocatestarget2024')->name('advocates_target_2024');
     Route::any('advocates_target_2025', 'UserManagement@advocatestarget2025')->name('advocates_target_2025');
     Route::any('advocates_target_2026', 'UserManagement@advocatestarget2026')->name('advocates_target_2026');
-
- 
-
-
-
-
-
-    //Mugunthan
-
-    //Client-list
+    //user management controller
+//client management controller
+        //Client-list
     Route::any('add-client', "ClientManagement@addNewClient")->name('add-client');
     Route::any('add_newclient', "ClientManagement@addNewclient")->name('add_newclient');
     Route::any('client_list/{id}', 'ClientManagement@view')->name('client_list');
@@ -423,9 +416,8 @@ use App\Http\Controllers\issued_summary;
     Route::any('client-index', "ClientManagement@index")->name('client-index');
     Route::any('update-client', "ClientManagement@updateClient")->name('update-client');
     Route::any('delete-client/{id}', "ClientManagement@deleteClient")->name('delete-client');
-    //coporate
+        //coporate
     Route::any('add_corporate', 'ClientManagement@addCorporate')->name('add-corporate');
-    // Route::any('store-corporate','ClientManagement@storeCorporate')->name('store-corporate');
     Route::any('corporate-list/{company_id}', 'ClientManagement@listCorporate')->name('corporate-list');
 
 // Lawyernt
