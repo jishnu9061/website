@@ -63,7 +63,6 @@ use App\Http\Controllers\issued_summary;
     Route::any('/allowancetostaff', 'addController@allowancetostaff');
     Route::any('/addnonfixedallowance', 'addController@addnonfixedallowance')->name('addnonfixedallowance');
     Route::any('/staffs', 'addController@allstaffs');
-
     //add controller
 //hr controller
     Route::any('/managestaff{id}', 'hrcontroller@managestaff');
@@ -84,40 +83,24 @@ use App\Http\Controllers\issued_summary;
     Route::any('/editdeallowance', 'hrcontroller@editdeallowance')->name('editdeallowance');
     Route::any('/editdereduction', 'hrcontroller@editdereduction')->name('editdereduction');
     Route::any('/loandelete{id}', 'hrcontroller@loandelete');
-
     //hr controller
 //department controller
     Route::any('/managedepstaff{id}', 'departmentcontroller@managedepstaff');
     Route::any('/leaveapprove', 'departmentcontroller@leaveapprove');
     Route::any('/leavedecline', 'departmentcontroller@leavedecline');
     Route::any('/depleaves', 'departmentcontroller@depleaves');
-
-
-
+    //department controller
 //doctor controller
     Route::any('/applyleave', 'doctorController@applyleave');
     Route::any('/file', 'doctorController@file');
-
+    //doctor controller
 //store controller
     Route::any('/requestitems', 'storecontroller@create_requestitems')->name('requestitems');
-
+    //store controller
 //hospital controller
     Route::any('/usermanagement', 'hospitalcontroller@usermanagement')->name('usermanagement');
+    //hospital controller
 
-
-
-
-    // vipin
-    Route::any('/add_labdept', 'labdepartment_controller@add_labdept')->name('add_labdept');
-    Route::any('/lab_departments', 'labdepartment_controller@store')->name('lab_departments');
-    Route::any('/update_labdepartment', 'labdepartment_controller@update')->name('update_labdepartment');
-    Route::any('/delete_labdepartment{id}', 'labdepartment_controller@destroy')->name('delete_department');
-    Route::any('/theatre_category', 'operation_theatre_controller@add_theatre')->name('theatre_category');
-    Route::any('/add_theatrecat', 'operation_theatre_controller@store')->name('add_theatrecat');
-    Route::any('/update_theatrecat', 'operation_theatre_controller@update')->name('update_theatrecat');
-    Route::any('/delete_theatre{id}', 'operation_theatre_controller@destroy')->name('delete_theatre');
-    Route::any('/doctor_preclabtest', 'labdepartment_controller@doctor_preclabtest')->name('doctor_preclabtest');
-    Route::any('/view_patient_test/{id}/{patient_id}', 'labdepartment_controller@display_test_details')->name('view_patient_test');
     Route::any('/add_labdept', 'labdepartment_controller@add_labdept')->name('add_labdept');
     Route::any('/lab_departments', 'labdepartment_controller@store')->name('lab_departments');
     Route::any('/update_labdepartment', 'labdepartment_controller@update')->name('update_labdepartment');
