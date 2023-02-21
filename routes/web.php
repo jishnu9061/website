@@ -113,23 +113,7 @@ use App\Http\Controllers\issued_summary;
     //store controller
 
      
-    //inventory settings
-    Route::any('inventory_setting', 'storecontroller@inventory_setting')->name('inventory_setting');
-    Route::any('view_setting', 'storecontroller@view_setting')->name('view_setting');
-    Route::any('accounting_method', 'storecontroller@accounting_method')->name('accounting_method');
-    Route::any('update_profit_percentage', 'storecontroller@profit_percentage')->name('update_profit_percentage');
-
-    // Store Substore Details
-    Route::any('view_substore_details', 'storecontroller@substore_details')->name('substore_details');
-    Route::any('add_substore', 'storecontroller@add_substore')->name('add_substore');
-    Route::any('view_substore', 'storecontroller@view_substore')->name('view_substore');
-    Route::any('/edit_substore{id}', 'storeController@edit_substore')->name('edit_item');
-    Route::any('/update_substore', 'storeController@update_substore')->name('update_substore');
-    Route::any('/delete_substore{id}', 'storecontroller@delete_substore')->name('delete_substore');
-    Route::any('/show_substore', 'storecontroller@show_substore')->name('show_substore');
-    Route::any('/show_store_details{id}', 'storecontroller@show_store_details')->name('show_store_details');
-    Route::any('/department_store_details{id}', 'storecontroller@department_store_details')->name('department_store_details');
-
+   
 
 
 
